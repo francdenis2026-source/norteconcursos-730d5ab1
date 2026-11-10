@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { supabase } from "@/integrations/supabase/client";
 import {
   pcAcVerticalCargos,
   pcAcInstitutionalLaws,
@@ -57,6 +58,7 @@ import {
   readPcAcStudyConfig,
   writePcAcStudyConfig,
   type PcAcStudyPlanConfig,
+  type PcAcWeeklyGridRow,
 } from "@/lib/pcAcreStudyPlan";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
@@ -72,6 +74,7 @@ import {
   buildPcAcFinalDays,
   buildPcAcMasterPlan,
   pcAcDaysBetween,
+  pcAcLastStudyDate,
   type PcAcPlanWeek,
 } from "@/lib/pcAcreMasterPlan";
 import "@/styles/pcac-edital.css";
@@ -419,13 +422,57 @@ function PcAcCronogramaCard({
   userId: string;
 }) {
   const [cfg, setCfg] = React.useState<PcAcStudyPlanConfig>(DEFAULT_PCAC_STUDY_CONFIG);
+  const [loadedConfigKey, setLoadedConfigKey] = React.useState("");
   const [exporting, setExporting] = React.useState(false);
   const showDetailedPlan = cargo.id === "investigador";
+  const configKey = `${userId}:${cargo.id}`;
+  const configLoaded = loadedConfigKey === configKey;
 
+  // Prioriza a configuração remota da conta; o localStorage é cache/fallback para indisponibilidade.
+  // Assim o aluno recupera a mesma programação ao entrar noutro dispositivo.
   React.useEffect(() => {
-    if (typeof window === "undefined") return;
-    setCfg(readPcAcStudyConfig(window.localStorage, userId, cargo.id));
-  }, [userId, cargo.id]);
+    let active = true;
+    const loadConfig = async () => {
+      const localConfig = readPcAcStudyConfig(window.localStorage, userId, cargo.id);
+      let nextConfig = localConfig;
+
+      if (userId !== "guest") {
+        const { data, error } = await supabase
+          .from("user_study_plan_configs")
+          .select("config")
+          .eq("user_id", userId)
+          .eq("cargo_id", cargo.id)
+          .maybeSingle();
+
+        if (!error && data?.config) {
+          const serialized = JSON.stringify(data.config);
+          nextConfig = readPcAcStudyConfig(
+            { getItem: () => serialized, setItem: () => undefined },
+            userId,
+            cargo.id,
+          );
+        } else if (error) {
+          console.warn("Não foi possível carregar a configuração remota do cronograma; usando o cache local.", error);
+        }
+      }
+
+      if (!nextConfig.startDate) {
+        const today = platformDate();
+        nextConfig = {
+          ...nextConfig,
+          startDate: `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`,
+        };
+      }
+
+      if (!active) return;
+      writePcAcStudyConfig(window.localStorage, userId, cargo.id, nextConfig);
+      setCfg(nextConfig);
+      setLoadedConfigKey(configKey);
+    };
+
+    if (typeof window !== "undefined") void loadConfig();
+    return () => { active = false; };
+  }, [configKey, userId, cargo.id]);
 
   const update = (patch: Partial<PcAcStudyPlanConfig>) => {
     setCfg((prev) => {
@@ -435,26 +482,100 @@ function PcAcCronogramaCard({
     });
   };
 
-  const week = React.useMemo(() => buildPcAcStudyWeek(cargo, cfg), [cargo, cfg]);
-  const grid = React.useMemo(
-    () => buildPcAcWeeklyGrid(cargo, week, showDetailedPlan ? INVESTIGATOR_DISCIPLINE_PESO : {}),
-    [cargo, week, showDetailedPlan],
-  );
+  // Salva com debounce no Supabase, isolado por user_id + cargo_id e protegido por RLS.
+  React.useEffect(() => {
+    if (!configLoaded || userId === "guest") return;
+    const timer = window.setTimeout(() => {
+      void supabase
+        .from("user_study_plan_configs")
+        .upsert(
+          { user_id: userId, cargo_id: cargo.id, config: cfg, updated_at: new Date().toISOString() },
+          { onConflict: "user_id,cargo_id" },
+        )
+        .then(({ error }) => {
+          if (error) console.warn("Não foi possível sincronizar o cronograma; a cópia local foi mantida.", error);
+        });
+    }, 350);
+    return () => window.clearTimeout(timer);
+  }, [configLoaded, cfg, userId, cargo.id]);
+
   const todayKey = React.useMemo(() => {
     const today = platformDate();
     return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
   }, []);
   const effectiveStartDate = cfg.startDate || todayKey;
+  const lastStudyDate = pcAcLastStudyDate(PCAC_EXAM_DATE);
   const daysLeft = pcAcDaysBetween(todayKey, PCAC_EXAM_DATE);
   const effectiveCfg = React.useMemo(() => ({ ...cfg, startDate: effectiveStartDate }), [cfg, effectiveStartDate]);
-  const startError = effectiveStartDate >= PCAC_EXAM_DATE ? "A data inicial precisa ser anterior à prova." : "";
+  const startError = effectiveStartDate > lastStudyDate
+    ? `A data inicial deve ser até ${lastStudyDate.split("-").reverse().join("/")}, três dias antes da prova.`
+    : "";
 
   const weeks = React.useMemo(
-    () => (showDetailedPlan && !startError
+    () => (showDetailedPlan && configLoaded && !startError
       ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, { startDate: effectiveStartDate, startTime: cfg.startTime, weeklyHours: cfg.weeklyHours })
       : []),
-    [showDetailedPlan, startError, cfg.days, cfg.startTime, cfg.weeklyHours, effectiveStartDate],
+    [showDetailedPlan, configLoaded, startError, cfg.days, cfg.startTime, cfg.weeklyHours, effectiveStartDate],
   );
+
+  // A grade semanal do Investigador é extraída de uma semana de referência do próprio plano,
+  // nunca de um segundo algoritmo. Prefere uma semana completa; em períodos curtos, usa a mais longa.
+  const referenceWeek = React.useMemo(() => {
+    if (!showDetailedPlan || !weeks.length) return null;
+    return weeks.reduce((best, current) => current.days.length > best.days.length ? current : best, weeks[0]!);
+  }, [showDetailedPlan, weeks]);
+
+  const grid: PcAcWeeklyGridRow[] = React.useMemo(() => {
+    if (!configLoaded) return [];
+    if (!showDetailedPlan) {
+      const simpleWeek = buildPcAcStudyWeek(cargo, cfg);
+      return buildPcAcWeeklyGrid(cargo, simpleWeek, {});
+    }
+    if (!referenceWeek) return [];
+
+    const byName = new Map<string, { minutes: number; days: Set<number>; ranges: Set<string> }>();
+    const toMinutes = (value?: string) => {
+      if (!value) return 0;
+      const [hours, minutes] = value.split(":").map(Number);
+      return (hours ?? 0) * 60 + (minutes ?? 0);
+    };
+
+    for (const day of referenceWeek.days) {
+      for (const activity of day.activities) {
+        const name = activity.subject ??
+          (activity.type === "redacao" ? "Redação" :
+            activity.type === "simulado" ? "Simulado" :
+              activity.type === "revisao" ? "Revisão geral" : undefined);
+        if (!name) continue;
+        const item = byName.get(name) ?? { minutes: 0, days: new Set<number>(), ranges: new Set<string>() };
+        const duration = activity.minutes ?? Math.max(0, toMinutes(activity.end) - toMinutes(activity.start));
+        item.minutes += duration;
+        item.days.add(day.weekday);
+        item.ranges.add(`${activity.start ?? cfg.startTime}–${activity.end ?? cfg.startTime}`);
+        byName.set(name, item);
+      }
+    }
+
+    const idByName = new Map<string, string>();
+    for (const block of cargo.blocks) {
+      for (const discipline of block.disciplines) idByName.set(discipline.name, discipline.id);
+    }
+
+    return [...byName.entries()]
+      .map(([name, item]) => {
+        const id = idByName.get(name) ?? name;
+        return {
+          id,
+          name,
+          peso: (INVESTIGATOR_DISCIPLINE_PESO[id] ?? 1) as 1 | 2,
+          totalMinutes: item.minutes,
+          days: [...item.days].sort((a, b) => a - b),
+          horario: item.ranges.size === 1 ? [...item.ranges][0]! : "variável",
+        };
+      })
+      .sort((a, b) => b.peso - a.peso || b.totalMinutes - a.totalMinutes);
+  }, [cargo, cfg, configLoaded, showDetailedPlan, referenceWeek]);
+
   const finalDays = React.useMemo(() => buildPcAcFinalDays(PCAC_EXAM_DATE, effectiveStartDate), [effectiveStartDate]);
   const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
 
@@ -517,11 +638,11 @@ function PcAcCronogramaCard({
             <Badge variant="outline" className="text-sm">
               {daysLeft} dias até a prova ({PCAC_EXAM_DATE.split("-").reverse().join("/")})
             </Badge>
-            <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting}>
+            <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting || !configLoaded || !!startError}>
               <Download className="mr-2 h-4 w-4" />
               {exporting ? "Gerando…" : "Exportar em PDF"}
             </Button>
-            <Button variant="outline" onClick={() => void exportBrandedPdf()} disabled={!weeks.length}>
+            <Button variant="outline" onClick={() => void exportBrandedPdf()} disabled={!configLoaded || !weeks.length || !!startError}>
               <Download className="mr-2 h-4 w-4" /> PDF Norte + QR
             </Button>
           </div>
@@ -544,6 +665,7 @@ function PcAcCronogramaCard({
               min={1}
               max={80}
               value={cfg.weeklyHours}
+              disabled={!configLoaded}
               onChange={(e) => update({ weeklyHours: Math.min(80, Math.max(1, Number(e.target.value) || 1)) })}
             />
           </div>
@@ -553,7 +675,8 @@ function PcAcCronogramaCard({
               type="date"
               value={effectiveStartDate}
               min={todayKey}
-              max={PCAC_EXAM_DATE}
+              max={lastStudyDate}
+              disabled={!configLoaded}
               onChange={(e) => e.target.value && update({ startDate: e.target.value })}
             />
             {startError && <p role="alert" className="text-xs text-destructive">{startError}</p>}
@@ -563,6 +686,7 @@ function PcAcCronogramaCard({
             <Input
               type="time"
               value={cfg.startTime}
+              disabled={!configLoaded}
               onChange={(e) => e.target.value && update({ startTime: e.target.value })}
             />
           </div>
@@ -576,6 +700,7 @@ function PcAcCronogramaCard({
                     key={d}
                     type="button"
                     aria-pressed={on}
+                    disabled={!configLoaded}
                     onClick={() => {
                       const days = on ? cfg.days.filter((x) => x !== d) : [...cfg.days, d];
                       if (days.length) update({ days });
@@ -601,6 +726,11 @@ function PcAcCronogramaCard({
           <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
             Grade semanal por disciplina
           </p>
+          {referenceWeek && (
+            <p className="mb-2 text-[11px] text-muted-foreground">
+              Derivada da semana {referenceWeek.weekNumber} ({referenceWeek.startDate.split("-").reverse().join("/")} a {referenceWeek.endDate.split("-").reverse().join("/")}) do mesmo plano detalhado.
+            </p>
+          )}
           <div className="overflow-x-auto rounded-lg border">
             <table className="w-full min-w-[640px] border-collapse text-xs">
               <thead>
@@ -631,7 +761,7 @@ function PcAcCronogramaCard({
                 {!grid.length && (
                   <tr>
                     <td colSpan={10} className="px-2.5 py-3 text-center text-muted-foreground">
-                      Escolha ao menos um dia de estudo para gerar a grade.
+                      {startError || "Aguarde o carregamento das suas preferências ou escolha os dias de estudo."}
                     </td>
                   </tr>
                 )}
