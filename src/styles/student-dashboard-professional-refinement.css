@@ -1,0 +1,43 @@
+/* Student home: color-coded command center for fast orientation. */
+.app-shell[data-area="student"] .student-home {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+  --dash-blue: #7faaff;
+  --dash-cyan: #5edbe5;
+  --dash-green: #50d0a2;
+  --dash-amber: #e3b560;
+  --dash-violet: #b99aef;
+  --dash-rose: #e090b0;
+  --dash-line: color-mix(in srgb, var(--border) 88%, transparent);
+}
+.dark .app-shell[data-area="student"] .student-home { --dash-blue: #96bdff; --dash-cyan: #79e9ef; --dash-green: #64dfb2; --dash-amber: #f0c879; --dash-violet: #c8aaf6; --dash-rose: #efa6c2; }
+.app-shell[data-area="student"] .student-hub__masthead { border-top: 2px solid var(--dash-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--dash-cyan) 10%, var(--card)), var(--card) 68%); }
+.app-shell[data-area="student"] .student-hub__exam-spotlight { border-color: color-mix(in srgb, var(--dash-amber) 58%, var(--border)); background: color-mix(in srgb, var(--dash-amber) 9%, var(--card)); }
+.app-shell[data-area="student"] .student-desk__next { border-left: 3px solid var(--dash-amber); background: color-mix(in srgb, var(--dash-amber) 7%, var(--card)); }
+.app-shell[data-area="student"] .student-desk__panel { border-color: var(--dash-line); background: linear-gradient(145deg, color-mix(in srgb, var(--dash-blue) 5%, var(--card)), var(--card) 68%); }
+.app-shell[data-area="student"] .student-home__metrics > * { border-color: var(--dash-line); background: color-mix(in srgb, var(--dash-blue) 6%, var(--card)); }
+.app-shell[data-area="student"] .student-home__metrics > *:nth-child(1) { border-top: 2px solid var(--dash-blue); }
+.app-shell[data-area="student"] .student-home__metrics > *:nth-child(2) { border-top: 2px solid var(--dash-green); }
+.app-shell[data-area="student"] .student-home__metrics > *:nth-child(3) { border-top: 2px solid var(--dash-amber); }
+.app-shell[data-area="student"] .student-home__metrics > *:nth-child(4) { border-top: 2px solid var(--dash-violet); }
+.app-shell[data-area="student"] .student-hub__shortcuts { gap: 10px; }
+.app-shell[data-area="student"] .student-hub__shortcuts > a { border-color: var(--dash-line); background: color-mix(in srgb, var(--dash-blue) 5%, var(--card)); transition: transform .16s ease, border-color .16s ease, background-color .16s ease; }
+.app-shell[data-area="student"] .student-hub__shortcuts > a[data-accent="teal"] { border-top: 2px solid var(--dash-cyan); }
+.app-shell[data-area="student"] .student-hub__shortcuts > a[data-accent="gold"] { border-top: 2px solid var(--dash-amber); }
+.app-shell[data-area="student"] .student-hub__shortcuts > a:hover { transform: translateY(-2px); border-color: var(--dash-cyan); background: color-mix(in srgb, var(--dash-cyan) 9%, var(--card)); }
+.app-shell[data-area="student"] .student-home__card { border-color: var(--dash-line); }
+.app-shell[data-area="student"] .student-home__card:nth-of-type(odd) { border-top: 2px solid var(--dash-violet); }
+.app-shell[data-area="student"] .student-home__card:nth-of-type(even) { border-top: 2px solid var(--dash-blue); }
+.app-shell[data-area="student"] .student-home__schedule { border-top: 2px solid var(--dash-amber); }
+.app-shell[data-area="student"] .student-home__adaptive-agenda--focus { border-color: color-mix(in srgb, var(--dash-rose) 60%, var(--border)); background: color-mix(in srgb, var(--dash-rose) 8%, var(--card)); }
+.app-shell[data-area="student"] .student-home__primary { background: var(--dash-amber); color: #21190b; }
+.app-shell[data-area="student"] .student-home__primary:hover { background: color-mix(in srgb, var(--dash-amber) 82%, white); }
+@media (max-width: 700px) {
+  .app-shell[data-area="student"] .student-home { gap: 14px; }
+  .app-shell[data-area="student"] .student-hub__shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-shell[data-area="student"] .student-home__metrics { gap: 8px; }
+}
+@media (max-width: 420px) {
+  .app-shell[data-area="student"] .student-hub__shortcuts { grid-template-columns: 1fr; }
+}

@@ -10,6 +10,7 @@ import "@/styles/student-dashboard-premium.css";
 import "@/styles/student-adaptive-agenda.css";
 import "@/styles/student-overview-card-refinement.css";
 import "@/styles/student-home-hero-rework.css";
+import "@/styles/student-dashboard-professional-refinement.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
