@@ -394,17 +394,6 @@ function RankingPage() {
       <RankingHeader />
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
-          <details className="rounded-lg border border-border/70 bg-muted/20 px-3 py-2 text-xs">
-            <summary className="cursor-pointer font-semibold text-foreground">Como funciona a classificação e o desempate?</summary>
-            <div className="mt-2 space-y-2 leading-relaxed text-muted-foreground">
-              <p><strong className="text-foreground">Pontuação primeiro.</strong> A classificação mantém os pontos já conquistados; não há bônus por assinatura ou tempo conectado.</p>
-              <p><strong className="text-foreground">Geral:</strong> pontos, percentual real de acertos, número de acertos, questões válidas e pontos de simulados.</p>
-              <p><strong className="text-foreground">Questões:</strong> pontos, percentual de acertos, acertos e quantidade de questões válidas.</p>
-              <p><strong className="text-foreground">Simulados:</strong> pontos de simulados e número de simulados pontuados. Questões repetidas não geram novos pontos.</p>
-              <p>Quando todos os critérios coincidem, os candidatos compartilham a mesma posição. Os nomes são exibidos em ordem estável, sem alterar a colocação.</p>
-              <p>Os dados vêm dos registros válidos do banco. Horas de estudo são informativas e não somam pontos.</p>
-            </div>
-          </details>
           <div className="flex gap-1.5" role="group" aria-label="Seção do ranking">
             {TABS.map(([id, label]) => (
               <button
@@ -428,34 +417,31 @@ function RankingPage() {
           </div>
           <CardTitle className="text-xl">{tab[1]}</CardTitle>
           <CardDescription>{tab[2]}</CardDescription>
-          <details className="rounded-lg border bg-muted/30 p-3 text-xs text-muted-foreground">
+          <details className="ranking-rules rounded-lg border bg-muted/30 p-3 text-xs text-muted-foreground">
             <summary className="cursor-pointer font-semibold text-foreground">
-              Como a pontuação funciona (e por que é justa)
+              Como a pontuação e o desempate funcionam
             </summary>
             <ul className="mt-2 list-disc space-y-1 pl-4">
               <li>
-                <b>Questões:</b> certo sem ajuda +3, com ajuda +1, errado -2. O acerto é conferido
-                no servidor com o gabarito oficial. Só vale por inteiro com 70% ou mais de acertos
-                no dia (50% ou menos não pontua), então chutar não compensa. Até 100 questões
-                pontuadas por dia.
+                <b>Questões:</b> certo sem ajuda +3, com ajuda +1, errado -2, conferido no servidor
+                pelo gabarito oficial. Só vale por inteiro com 70%+ de acertos no dia (50% ou menos
+                não pontua) — até 100 por dia, cada questão conta uma vez só (Treinador + Simulados).
               </li>
               <li>
-                <b>Cada questão conta uma vez só</b>, somando Treinador e Simulados: refazer a mesma
-                questão não rende ponto. Respostas em menos de 4 segundos não contam.
+                <b>Simulados:</b> mesma conta das questões, tentativa de 10s+ por questão. Bônus de
+                precisão (+25/+50/+100 com 70/80/90%) a partir de 20 questões inéditas.
               </li>
               <li>
-                <b>Simulados:</b> mesma conta das questões; a tentativa precisa durar pelo menos 10
-                s por questão. Bônus de precisão (+25, +50, +100 com 70%, 80%, 90%) a partir de 20
-                questões inéditas.
+                <b>Flashcards:</b> +1 por cartão (até 50/dia). <b>Redação:</b> +20 por texto de
+                150+ palavras (1/dia). Horas de estudo são só métrica de dedicação, sem pontos.
               </li>
               <li>
-                <b>Estudo:</b> as horas ficam visíveis como métrica de dedicação e não geram pontos.{" "}
-                <b>Flashcards:</b> +1 por cartão revisado (até 50 por dia). <b>Redação:</b> +20 por
-                texto de 150 palavras ou mais (1 por dia).
+                <b>Desempate:</b> pontos, % de acertos, acertos e questões válidas (critérios
+                variam por seção). Empate total compartilha a mesma posição. Sem bônus por
+                assinatura, tempo conectado ou ordem de cadastro — e administradores ficam fora.
               </li>
               <li>
-                Níveis na pontuação geral: Competidor 250, Avançado 750, Especialista 1.500, Elite
-                3.000. Administradores ficam fora.
+                Níveis: Competidor 250, Avançado 750, Especialista 1.500, Elite 3.000 pontos.
               </li>
             </ul>
           </details>
@@ -463,84 +449,61 @@ function RankingPage() {
         <CardContent>
           {real && pageData && !loadError && (
             <>
-              <div className="mb-5 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border bg-muted/30 p-4">
-                  <p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
-                    <Users className="h-4 w-4" />
-                    {pageData.partial ? "Participantes carregados" : "Candidatos nesta seção"}
-                  </p>
-                  <p className="mt-1 text-2xl font-black tabular-nums">
-                    {pageData.participants.toLocaleString("pt-BR")}
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {pageData.partial
-                      ? "Lista parcial de candidatos disponíveis."
-                      : kind === "general"
-                        ? "Inclui candidatos com zero pontos."
-                        : "Inclui candidatos com pontos nesta seção."}
-                  </p>
-                </div>
-                <div className="rounded-xl border border-primary/40 bg-primary/5 p-4" role="status">
-                  <p className="text-xs font-semibold text-muted-foreground">Sua posição</p>
+              <div className="ranking-mepos mb-4" role="status">
+                <div className="ranking-mepos__me">
+                  <span className="ranking-mepos__label">Sua posição</span>
                   {me ? (
                     <>
-                      <p className="mt-1 text-xl font-black">
-                        {me.rank_position
-                          ? `${me.rank_position}º lugar`
-                          : "Ainda sem posição nesta seção"}{" "}
-                        <span className="text-sm font-semibold">· {me.points} pts</span>
+                      <p className="ranking-mepos__value">
+                        {me.rank_position ? `${me.rank_position}º` : "—"}
+                        <span className="ranking-mepos__pts">{me.points} pts</span>
                       </p>
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {me.questions} questões · {me.accuracy}% de acertos
+                      <p className="ranking-mepos__meta">
+                        {me.questions} questões · {me.accuracy}%
                       </p>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {me.rank_position && !pageData.partial && (
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            onClick={() => {
-                              setQuery("");
-                              setLocating(true);
-                              void navigate({
-                                search: {
-                                  ...search,
-                                  q: "",
-                                  page: rankingPositionPage(me.rank_position!, search.size),
-                                },
-                              });
-                            }}
-                          >
-                            <LocateFixed className="mr-1.5 h-4 w-4" />
-                            Encontrar minha posição
-                          </Button>
-                        )}
-                        <Button size="sm" variant="ghost" onClick={() => setViewing(user.id)}>
-                          Meu desempenho
-                        </Button>
-                      </div>
                     </>
                   ) : (
-                    <>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        {pageData.partial
-                          ? "Sua posição completa está temporariamente indisponível."
-                          : user.role === "admin"
-                            ? "Administradores não participam do ranking."
-                            : "Sua posição ainda não está disponível. Atualize a lista para tentar novamente."}
-                      </p>
-                      {user.role !== "admin" && (
-                        <Button
-                          className="mt-3"
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => setViewing(user.id)}
-                        >
-                          Meu desempenho
-                        </Button>
-                      )}
-                    </>
+                    <p className="ranking-mepos__meta ranking-mepos__meta--empty">
+                      {pageData.partial
+                        ? "Indisponível agora"
+                        : user.role === "admin"
+                          ? "Admins não participam"
+                          : "Ainda sem posição"}
+                    </p>
                   )}
                 </div>
+                <div className="ranking-mepos__actions">
+                  {me?.rank_position && !pageData.partial && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => {
+                        setQuery("");
+                        setLocating(true);
+                        void navigate({
+                          search: {
+                            ...search,
+                            q: "",
+                            page: rankingPositionPage(me.rank_position!, search.size),
+                          },
+                        });
+                      }}
+                    >
+                      <LocateFixed className="mr-1.5 h-4 w-4" />
+                      Minha posição
+                    </Button>
+                  )}
+                  {(user.role !== "admin" || me) && (
+                    <Button size="sm" variant="ghost" onClick={() => setViewing(user.id)}>
+                      Meu desempenho
+                    </Button>
+                  )}
+                </div>
+                <p className="ranking-mepos__total">
+                  <Users className="h-3.5 w-3.5" aria-hidden="true" />
+                  {pageData.participants.toLocaleString("pt-BR")}{" "}
+                  {pageData.partial ? "carregados" : "candidatos"}
+                </p>
               </div>
               {pageData.partial && (
                 <p
@@ -630,36 +593,49 @@ function RankingPage() {
               start={(pageData!.page - 1) * pageData!.page_size + 1}
               aria-label="Classificação dos candidatos"
             >
-              {rows.map((r) => (
-                <li key={r.user_id}>
-                  <button
-                    id={`ranking-${r.user_id}`}
-                    type="button"
-                    onClick={() => setViewing(r.user_id)}
-                    aria-label={`Ver perfil de ${r.display_name}`}
-                    className={cn(
-                      "grid w-full grid-cols-[42px_1fr_auto] items-center gap-3 rounded-xl border p-3 text-left transition hover:border-primary",
-                      r.is_me && "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20",
-                    )}
-                  >
-                    <PositionBadge pos={Number(r.rank_position)} />
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-bold">
-                        {r.display_name}
-                        {r.is_me && " (você)"}
-                      </p>
-                      <p className="flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground">
-                        <Stars n={r.stars} /> {r.level_name}
-                        <span>
-                          · {r.questions} questões ({r.accuracy}%) · {r.simulators} simulados ·{" "}
-                          {r.study_hours} h
-                        </span>
-                      </p>
-                    </div>
-                    <span className="text-sm font-black tabular-nums">{r.points} pts</span>
-                  </button>
-                </li>
-              ))}
+              {rows.map((r) => {
+                const pos = Number(r.rank_position);
+                const initial = (r.display_name ?? "?").trim().charAt(0).toUpperCase() || "?";
+                return (
+                  <li key={r.user_id}>
+                    <button
+                      id={`ranking-${r.user_id}`}
+                      type="button"
+                      onClick={() => setViewing(r.user_id)}
+                      aria-label={`Ver perfil de ${r.display_name}`}
+                      className={cn(
+                        "ranking-row grid w-full grid-cols-[42px_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border p-3 text-left transition hover:border-primary",
+                        pos <= 3 && "ranking-row--podium",
+                        r.is_me && "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20",
+                      )}
+                    >
+                      <PositionBadge pos={pos} />
+                      <div className="min-w-0">
+                        <p className="ranking-row__name truncate text-sm font-bold">
+                          <span className="ranking-row__avatar" aria-hidden="true">
+                            {initial}
+                          </span>
+                          <span className="truncate">
+                            {r.display_name}
+                            {r.is_me && " (você)"}
+                          </span>
+                        </p>
+                        <p className="ranking-row__meta flex flex-wrap items-center gap-x-1.5 text-xs text-muted-foreground">
+                          <Stars n={r.stars} />
+                          <span className="ranking-row__level">{r.level_name}</span>
+                          <span className="ranking-row__stats">
+                            {r.questions}q ({r.accuracy}%) · {r.simulators} sim
+                          </span>
+                        </p>
+                      </div>
+                      <span className="ranking-row__points text-sm font-black tabular-nums">
+                        {r.points}
+                        <small>pts</small>
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
             </ol>
           ) : (
             <p className="py-6 text-center text-sm text-muted-foreground">
