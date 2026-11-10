@@ -127,8 +127,11 @@ export function dashboardSchedule(
     discs: config.discs.map((d) => ({ ...d, nome: canonicalDiscipline(d.nome) })),
   };
   const topics = cfg.discs.flatMap((d) => d.topicos);
+  const orderedDays = [...cfg.days].sort((a, b) => a - b);
+  const nextDay = orderedDays.find((candidate) => candidate > day) ?? orderedDays[0] ?? null;
   return {
     blocks: buildWeek(cfg, progress)[day] ?? [],
+    nextStudyDay: nextDay,
     next: nextTopic(cfg, progress),
     completed: topics.filter((t) => topicDone(progress[t.id])).length,
     total: topics.length,

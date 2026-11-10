@@ -19,3 +19,6 @@
 .student-home__agenda-status small { margin-top:2px; color:var(--muted-foreground); font-size:10px; }
 .student-home__agenda-status a { display:inline-flex; align-items:center; gap:4px; flex:none; color:var(--primary); font-size:11px; font-weight:700; }
 .student-home__agenda-status a svg { width:13px; height:13px; }
+.student-home__schedule-empty { display:grid; gap:3px; padding:11px 0; }
+.student-home__schedule-empty strong { color:var(--foreground); font-size:12px; }
+.student-home__schedule-empty span { font-size:11px; }

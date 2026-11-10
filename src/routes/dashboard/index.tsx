@@ -707,10 +707,12 @@ function StudentHome({ user }: { user: UserProfile }) {
                         ))}
                       </ol>
                     ) : (
-                      <p className="student-home__quiet">
-                        Este cronograma não prevê blocos para hoje. Consulte os próximos dias ou use
-                        um dos caminhos de estudo abaixo.
-                      </p>
+                      <div className="student-home__quiet student-home__schedule-empty">
+                        <strong>Hoje não há bloco previsto.</strong>
+                        <span>
+                          Seu próximo dia de estudo é {schedule.nextStudyDay === null ? "definido no cronograma" : ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"][schedule.nextStudyDay]}.
+                        </span>
+                      </div>
                     )}
                     {schedule.blocks.length > 4 && (
                       <p className="student-home__quiet">
