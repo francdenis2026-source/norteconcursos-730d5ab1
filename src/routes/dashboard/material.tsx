@@ -300,7 +300,7 @@ function MaterialHub() {
             Acesse o edital verticalizado, organize sua semana e estude cada disciplina com os materiais já disponíveis na plataforma.
           </p>
           <div className="pcac-material-focus__meta">
-            <span>{pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.name ?? "Oficial Investigador"}</span>
+            <span>{pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.label ?? "Oficial Investigador"}</span>
             <span>Prova objetiva: {new Date(`${PCAC_EXAM_DATE}T12:00:00`).toLocaleDateString("pt-BR")}</span>
           </div>
         </div>
