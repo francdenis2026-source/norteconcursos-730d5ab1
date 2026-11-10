@@ -375,3 +375,120 @@
   .pcac-schedule__body,
   .pcac-schedule__panel { height: auto; max-height: none; overflow: visible; }
 }
+
+/* Final contrast pass — keep the schedule controls legible over the charcoal
+   student workspace, including Astryx buttons that do not forward aria-pressed. */
+.pcac-schedule {
+  --pcac-surface: #262d34;
+  --pcac-panel: #303a44;
+  --pcac-panel-soft: #37434e;
+  --pcac-ink: #f1f5f8;
+  --pcac-muted: #c0cbd4;
+  --pcac-line: #46535e;
+  --pcac-line-strong: #71808b;
+  --pcac-green: #287653;
+  --pcac-green-hover: #348965;
+  --pcac-green-soft: #294638;
+  --pcac-brass: #e0bd78;
+}
+:root:not(.dark) .pcac-schedule {
+  --pcac-surface: #f3f5f7;
+  --pcac-panel: #ffffff;
+  --pcac-panel-soft: #edf1f4;
+  --pcac-ink: #243342;
+  --pcac-muted: #526474;
+  --pcac-line: #d3dce3;
+  --pcac-line-strong: #9aaab6;
+  --pcac-green: #24694d;
+  --pcac-green-hover: #1c573f;
+  --pcac-green-soft: #e5f1e9;
+  --pcac-brass: #946b2d;
+}
+.pcac-schedule .pcac-schedule__panel,
+.pcac-schedule .pcac-schedule__panel :is(p, li, label, h3, h4, strong, span, small, legend) {
+  color: var(--pcac-ink);
+}
+.pcac-schedule .pcac-schedule__panel :is(.text-muted-foreground, [data-muted="true"]) {
+  color: var(--pcac-muted) !important;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] :is(button, [role="button"]) {
+  color: var(--pcac-ink) !important;
+  background: var(--pcac-panel-soft) !important;
+  border: 1px solid var(--pcac-line-strong) !important;
+  box-shadow: none !important;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] :is(
+  button[aria-pressed="true"],
+  button[data-state="on"],
+  button[data-selected="true"],
+  [role="button"][aria-pressed="true"],
+  [role="button"][data-state="on"],
+  [role="button"][data-selected="true"],
+  button:has(> svg),
+  [role="button"]:has(> svg)
+) {
+  color: #ffffff !important;
+  background: #287653 !important;
+  border-color: #55a27e !important;
+  box-shadow: inset 0 -2px 0 rgb(0 0 0 / 16%), 0 2px 7px rgb(0 0 0 / 12%) !important;
+}
+:root:not(.dark) .pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] :is(
+  button[aria-pressed="true"],
+  button[data-state="on"],
+  button[data-selected="true"],
+  [role="button"][aria-pressed="true"],
+  [role="button"][data-state="on"],
+  [role="button"][data-selected="true"],
+  button:has(> svg),
+  [role="button"]:has(> svg)
+) {
+  color: #ffffff !important;
+  background: #24694d !important;
+  border-color: #24694d !important;
+}
+.pcac-schedule [role="group"][aria-labelledby="schedule-days-label"] :is(button, [role="button"]) :is(svg, span) {
+  color: inherit !important;
+  stroke: currentColor;
+}
+.pcac-schedule .astryx-tab:not([data-selected="true"]):not([aria-selected="true"]) {
+  color: var(--pcac-muted) !important;
+  background: transparent !important;
+}
+.pcac-schedule .astryx-tab:is([data-selected="true"], [aria-selected="true"]) {
+  color: #292317 !important;
+  background: #e0bd78 !important;
+  border-color: #c49c50 !important;
+  box-shadow: inset 0 -2px 0 #946b2d !important;
+}
+.pcac-schedule :is(input, select, textarea) {
+  color: var(--pcac-ink) !important;
+  background: var(--pcac-panel) !important;
+  border-color: var(--pcac-line-strong) !important;
+}
+.pcac-schedule :is(input, select, textarea)::placeholder {
+  color: var(--pcac-muted) !important;
+  opacity: 1;
+}
+.pcac-schedule :is(.pcac-week-card, .pcac-week-card *) {
+  max-inline-size: 100%;
+}
+.pcac-schedule .pcac-week-card :is(p, li, td, th, span, strong) {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.pcac-schedule .pcac-week-card table {
+  width: 100%;
+  table-layout: fixed;
+}
+.pcac-schedule .pcac-week-card :is(td, th) {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.pcac-schedule .pcac-week-card td:first-child {
+  width: 94px;
+}
+.pcac-schedule :is(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid var(--pcac-brass) !important;
+  outline-offset: 2px;
+}
