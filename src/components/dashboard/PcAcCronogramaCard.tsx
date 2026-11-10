@@ -141,7 +141,7 @@ export function PcAcCronogramaCard({
     () => (showDetailedPlan && configLoaded && !startError
       ? buildPcAcMasterPlan(cfg.days, PCAC_EXAM_DATE, { ...effectiveCfg }, cargo)
       : []),
-    [showDetailedPlan, configLoaded, startError, cfg.days, cfg.startTime, cfg.weeklyHours, effectiveStartDate],
+    [showDetailedPlan, configLoaded, startError, cfg, effectiveStartDate, cargo],
   );
 
   // A grade semanal do Investigador é extraída de uma semana de referência do próprio plano,
@@ -234,7 +234,7 @@ export function PcAcCronogramaCard({
           date: day.date,
           start: activity.start ?? cfg.startTime,
           end: activity.end ?? cfg.startTime,
-          kind: activity.type === "teoria" ? "teoria" : activity.type === "questoes" ? "questoes" : activity.type === "revisao" ? "revisao" : activity.type === "redacao" ? "redacao" : activity.type === "simulado" ? "simulado" : "descanso",
+          kind: activity.type === "video" || activity.type === "teoria" ? "teoria" : activity.type === "questoes" ? "questoes" : activity.type === "revisao" ? "revisao" : activity.type === "redacao" ? "redacao" : activity.type === "simulado" ? "simulado" : activity.type === "pausa" ? "pausa" : activity.type === "rotina" ? "refeicao" : activity.type === "exercicio" ? "exercicio" : "descanso",
           ...(activity.subject ? { discipline: activity.subject } : {}),
           ...(activity.topic ? { topic: activity.topic } : {}),
           phase: week.phase === "fundamentos" ? "base" : week.phase,
