@@ -22,3 +22,6 @@
 .student-home__schedule-empty { display:grid; gap:3px; padding:11px 0; }
 .student-home__schedule-empty strong { color:var(--foreground); font-size:12px; }
 .student-home__schedule-empty span { font-size:11px; }
+.student-home__agenda-alert { display:flex; align-items:center; gap:8px; margin:8px 0; padding:9px 11px; border:1px solid rgb(245 158 11 / .35); border-radius:10px; background:rgb(245 158 11 / .1); color:#92400e; font-size:11px; line-height:1.4; }
+.student-home__agenda-alert svg { width:15px; height:15px; flex:none; color:#d97706; }
+.dark .student-home__agenda-alert { color:#fde68a; background:rgb(146 64 14 / .22); }

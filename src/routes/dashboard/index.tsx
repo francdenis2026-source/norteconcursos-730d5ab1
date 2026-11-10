@@ -661,6 +661,12 @@ function StudentHome({ user }: { user: UserProfile }) {
                         Abrir painel <ArrowRight aria-hidden="true" />
                       </Link>
                     </div>
+                    {days !== null && days <= 14 && (
+                      <div className="student-home__agenda-alert" role="alert">
+                        <Clock aria-hidden="true" />
+                        <span>{days < 0 ? "A data da prova já passou. Atualize seu objetivo." : days === 0 ? "A prova é hoje. Faça uma revisão leve e preserve seu ritmo." : `Faltam ${days} ${days === 1 ? "dia" : "dias"} para a prova. Priorize os blocos sinalizados.`}</span>
+                      </div>
+                    )}
                     <div className="student-home__coverage">
                       <span>Progresso do conteúdo</span>
                       <strong>

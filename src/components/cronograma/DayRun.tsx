@@ -197,6 +197,10 @@ export function DayRun({
           qtde: cur.qtde + q,
           acertos: cur.acertos + Math.min(q, Math.max(0, Math.floor(Number(acertos) || 0))),
         });
+      } else if (step.kind === "teoria") {
+        // Concluir a etapa de teoria registra o estudo no tópico; o cronograma
+        // passa a considerar o conteúdo apto para a próxima etapa.
+        setTopic(step.topicId, { pdf: true });
       }
     }
     go("done");
