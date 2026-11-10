@@ -71,6 +71,9 @@ export interface PcAcPlanActivity {
   /** Tópico (ou subtópico) exato do Anexo III a que a atividade se refere, quando houver um. */
   topic?: string;
   detail: string;
+  start?: string;
+  end?: string;
+  minutes?: number;
 }
 
 export interface PcAcPlanDay {
@@ -95,15 +98,34 @@ export interface PcAcPlanWeek {
   days: PcAcPlanDay[];
 }
 
+/* Datas de calendário tratadas como YYYY-MM-DD puras (aritmética em UTC, sem fuso local),
+ * para nunca deslocar um dia. */
 const toIso = (d: Date) => d.toISOString().slice(0, 10);
+const parseIso = (iso: string) => new Date(`${iso}T00:00:00Z`);
 const addDays = (d: Date, n: number) => new Date(d.getTime() + n * 86_400_000);
+const weekdayOf = (d: Date) => d.getUTCDay();
+const toMin = (hhmm: string) => { const [h, m] = hhmm.split(":").map(Number); return (h ?? 0) * 60 + (m ?? 0); };
+const fmtMin = (min: number) => `${String(Math.floor(min / 60) % 24).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
 
-/** Próxima segunda-feira a partir de `from` (ou o próprio dia, se já for segunda). Toda semana do
- * plano começa na segunda para ficar fácil de ler. */
-function nextMonday(from: Date): Date {
-  const day = from.getDay();
-  const diff = day === 1 ? 0 : day === 0 ? 1 : 8 - day;
-  return new Date(from.getFullYear(), from.getMonth(), from.getDate() + diff);
+export interface PcAcMasterPlanOptions {
+  startDate: string; // YYYY-MM-DD local
+  startTime: string; // HH:MM
+  weeklyHours: number;
+}
+
+/** Distribui `total` minutos entre as atividades do dia e grava início/fim sequenciais. */
+function assignTimes(acts: PcAcPlanActivity[], startTime: string, total: number): PcAcPlanActivity[] {
+  const weights = acts.map((a) => (a.type === "teoria" ? 3 : a.type === "simulado" ? 4 : 2));
+  const sum = weights.reduce((x, y) => x + y, 0) || 1;
+  let cursor = toMin(startTime);
+  let used = 0;
+  return acts.map((a, i) => {
+    const m = i === acts.length - 1 ? total - used : Math.round((total * weights[i]!) / sum / 5) * 5;
+    used += m;
+    const out = { ...a, start: fmtMin(cursor), end: fmtMin(cursor + m), minutes: m };
+    cursor += m;
+    return out;
+  });
 }
 
 const REDACAO_THEMES = [
@@ -153,69 +175,68 @@ function activitiesForRevisao(topic: PcAcStudyTopic | undefined, isLastStudyDayO
   ];
 }
 
-/** Monta o plano completo entre `fromDate` e `examDateIso`, parando de estudar conteúdo novo
- * `PCAC_LAST_STUDY_OFFSET_DAYS` dias antes da prova. `studyDays` são os dias da semana (0–6) em
- * que o aluno estuda — a mesma configuração usada no cronograma de horários. */
+/** Monta o plano entre a data inicial escolhida (primeiro dia possível) e o último dia de
+ * conteúdo (prova − PCAC_LAST_STUDY_OFFSET_DAYS). Só agenda nos dias selecionados, no horário
+ * escolhido; cada dia recebe weeklyHours/nº de dias, então semanas parciais ficam proporcionais.
+ * Semana 1 vai da data inicial ao domingo; as demais, segunda a domingo. */
 export function buildPcAcMasterPlan(
   studyDays: number[],
   examDateIso: string = PCAC_EXAM_DATE,
-  fromDate: Date = new Date(),
+  opts: PcAcMasterPlanOptions,
 ): PcAcPlanWeek[] {
-  const days = [...new Set(studyDays)].sort((a, b) => a - b);
-  if (!days.length) return [];
-
-  const examDate = new Date(`${examDateIso}T00:00:00`);
-  const lastStudyDate = addDays(examDate, -PCAC_LAST_STUDY_OFFSET_DAYS);
-  const start = nextMonday(new Date(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate()));
+  const days = [...new Set(studyDays)].filter((d) => d >= 0 && d <= 6).sort((a, b) => a - b);
+  if (!days.length || !(opts.weeklyHours > 0) || !/^\d{4}-\d{2}-\d{2}$/.test(opts.startDate)) return [];
+  const lastStudyDate = addDays(parseIso(examDateIso), -PCAC_LAST_STUDY_OFFSET_DAYS);
+  const start = parseIso(opts.startDate);
   if (start.getTime() > lastStudyDate.getTime()) return [];
 
-  const totalWeeks = Math.max(1, Math.ceil((lastStudyDate.getTime() - start.getTime() + 86_400_000) / (7 * 86_400_000)));
+  const weeklyMin = Math.round(opts.weeklyHours * 60);
+  const base = Math.floor(weeklyMin / days.length);
+  const extra = weeklyMin - base * days.length;
+  const minutesFor = (wd: number) => base + (days.indexOf(wd) < extra ? 1 : 0);
+
+  // Semanas de calendário (seg–dom) recortadas por início e último dia.
+  const ranges: { from: Date; to: Date }[] = [];
+  let cur = start;
+  while (cur.getTime() <= lastStudyDate.getTime()) {
+    const toSunday = (7 - weekdayOf(cur)) % 7;
+    const end = addDays(cur, toSunday);
+    const to = end.getTime() > lastStudyDate.getTime() ? lastStudyDate : end;
+    ranges.push({ from: cur, to });
+    cur = addDays(end, 1);
+  }
+  const totalWeeks = ranges.length;
   const fundamentosWeeks = Math.max(1, Math.round(totalWeeks * 0.5));
   const praticaWeeks = totalWeeks <= 2 ? 0 : Math.max(1, Math.round(totalWeeks * 0.3));
-
   const nextTopic = createTopicCursor();
 
   const weeks: PcAcPlanWeek[] = [];
-  let cursor = start;
-  for (let w = 0; w < totalWeeks; w += 1) {
+  ranges.forEach(({ from, to }, w) => {
     const phase: PcAcPlanPhase = w < fundamentosWeeks ? "fundamentos" : w < fundamentosWeeks + praticaWeeks ? "pratica" : "revisao";
-    const weekDays: PcAcPlanDay[] = [];
-    const studyDaysThisWeek = days
-      .map((wd) => addDays(cursor, (wd - cursor.getDay() + 7) % 7))
-      .filter((d) => d.getTime() <= lastStudyDate.getTime())
-      .sort((a, b) => a.getTime() - b.getTime());
-
-    studyDaysThisWeek.forEach((date, i) => {
-      const isLast = i === studyDaysThisWeek.length - 1;
+    const dates: Date[] = [];
+    for (let d = from; d.getTime() <= to.getTime(); d = addDays(d, 1)) if (days.includes(weekdayOf(d))) dates.push(d);
+    const weekDays: PcAcPlanDay[] = dates.map((date, i) => {
+      const isLast = i === dates.length - 1;
       let activities: PcAcPlanActivity[];
-      if (phase === "fundamentos") {
-        activities = activitiesForFundamentos(nextTopic(), i);
-      } else if (phase === "pratica") {
-        activities = activitiesForPratica(nextTopic(), isLast, w);
-      } else {
-        activities = activitiesForRevisao(isLast ? undefined : nextTopic(), isLast, w);
-      }
-      weekDays.push({ date: toIso(date), weekday: date.getDay(), activities });
+      if (phase === "fundamentos") activities = activitiesForFundamentos(nextTopic(), i);
+      else if (phase === "pratica") activities = activitiesForPratica(nextTopic(), isLast, w);
+      else activities = activitiesForRevisao(isLast ? undefined : nextTopic(), isLast, w);
+      return { date: toIso(date), weekday: weekdayOf(date), activities: assignTimes(activities, opts.startTime, minutesFor(weekdayOf(date))) };
     });
-
-    if (weekDays.length) {
-      weeks.push({
-        weekNumber: w + 1,
-        phase,
-        startDate: toIso(cursor),
-        endDate: toIso(addDays(cursor, 6)),
-        days: weekDays,
-      });
-    }
-    cursor = addDays(cursor, 7);
-  }
+    if (weekDays.length) weeks.push({ weekNumber: weeks.length + 1, phase, startDate: toIso(from), endDate: toIso(to), days: weekDays });
+  });
   return weeks;
+}
+
+/** Dias de calendário entre duas datas YYYY-MM-DD (0 se já passou). */
+export function pcAcDaysBetween(fromIso: string, toIsoDate: string): number {
+  return Math.max(0, Math.round((parseIso(toIsoDate).getTime() - parseIso(fromIso).getTime()) / 86_400_000));
 }
 
 /** Os últimos dias antes da prova (não incluídos no plano de estudo novo): revisão leve e
  * descanso, para chegar na prova com a cabeça fresca. */
-export function buildPcAcFinalDays(examDateIso: string = PCAC_EXAM_DATE): PcAcPlanDay[] {
-  const examDate = new Date(`${examDateIso}T00:00:00`);
+export function buildPcAcFinalDays(examDateIso: string = PCAC_EXAM_DATE, fromIso = ""): PcAcPlanDay[] {
+  const examDate = parseIso(examDateIso);
   const out: PcAcPlanDay[] = [];
   for (let i = PCAC_LAST_STUDY_OFFSET_DAYS; i >= 1; i -= 1) {
     const date = addDays(examDate, -i);
@@ -225,7 +246,8 @@ export function buildPcAcFinalDays(examDateIso: string = PCAC_EXAM_DATE): PcAcPl
         : i === 2
           ? "Descanso ativo: durma bem, organize seus documentos e o caminho até o local de prova."
           : "Véspera: revisão rápida de 30 minutos no máximo, depois descanse. Chegue descansado é mais importante que estudar mais.";
-    out.push({ date: toIso(date), weekday: date.getDay(), activities: [{ type: "descanso", detail }] });
+    if (fromIso && toIso(date) < fromIso) continue;
+    out.push({ date: toIso(date), weekday: weekdayOf(date), activities: [{ type: "descanso", detail }] });
   }
   return out;
 }
