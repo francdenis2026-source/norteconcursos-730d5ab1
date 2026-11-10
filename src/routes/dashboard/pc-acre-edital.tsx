@@ -14,9 +14,7 @@ import {
   Scale,
   ShieldCheck,
   Users,
-  Wallet,
 } from "lucide-react";
-import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -906,12 +904,24 @@ function PcAcreEditalVerticalizadoPage() {
   const search = useSearch({ strict: false }) as { cargo?: string; view?: string };
   const cargoParam = search.cargo;
   const digitalView = search.view === "digital";
+  const workspaceRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    const node = workspaceRef.current;
+    if (!node) return;
+    const resize = () => node.style.setProperty("--pcac-available-height", `${Math.max(320, window.innerHeight - node.getBoundingClientRect().top - 12)}px`);
+    const observer = new ResizeObserver(resize);
+    observer.observe(document.documentElement);
+    window.addEventListener("resize", resize);
+    resize();
+    return () => { observer.disconnect(); window.removeEventListener("resize", resize); };
+  }, [digitalView]);
   const [editalTab, setEditalTab] = React.useState(() =>
-    typeof window !== "undefined" && window.location.hash === "#pcac-cronograma" ? "cronograma" : "resumo",
+    typeof window !== "undefined" && window.location.hash === "#pcac-cronograma" ? "cronograma" : typeof window !== "undefined" && window.location.hash === "#pcac-legislacao-institucional" ? "leis" : "resumo",
   );
   React.useEffect(() => {
     const syncHash = () => {
       if (window.location.hash === "#pcac-cronograma") setEditalTab("cronograma");
+      if (window.location.hash === "#pcac-legislacao-institucional") setEditalTab("leis");
     };
     window.addEventListener("hashchange", syncHash);
     syncHash();
@@ -947,10 +957,6 @@ function PcAcreEditalVerticalizadoPage() {
   const examDate = new Date(`${PCAC_EXAM_DATE}T00:00:00-05:00`);
   const remainingMs = Math.max(0, examDate.getTime() - clockNow.getTime());
   const daysToExam = Math.floor(remainingMs / 86_400_000);
-  const hoursToExam = Math.floor((remainingMs % 86_400_000) / 3_600_000);
-  const minutesToExam = Math.floor((remainingMs % 3_600_000) / 60_000);
-  const secondsToExam = Math.floor((remainingMs % 60_000) / 1_000);
-  const pad = (value: number) => String(value).padStart(2, "0");
 
   const [progress, setProgress] = React.useState<Record<string, PcAcVerticalStatus>>({});
 
@@ -1022,146 +1028,46 @@ function PcAcreEditalVerticalizadoPage() {
   }
 
   return (
-    <div className={`pcac-edital-page space-y-5 pb-10${editalTab === "cronograma" ? " pcac-schedule-focus" : ""}`}>
-      {editalTab === "cronograma" ? (
-        <div className="pcac-schedule-toolbar" aria-label="Concurso e cargo selecionados">
-          <div className="pcac-schedule-toolbar__identity">
-            <svg viewBox="0 0 50 35" role="img" aria-label="Bandeira do Acre">
-              <rect width="50" height="35" fill="#f5da25" />
-              <path d="M0 35L50 0V35Z" fill="#078348" />
-              <path d="M11 3.8l1.9 5.8h6.1l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8-4.9-3.6h6.1Z" fill="#ce2935" />
-            </svg>
-            <span><strong>PC-AC 2026</strong><small>Planejamento de estudos</small></span>
-          </div>
-          <label className="pcac-schedule-toolbar__selector">
-            <span>Cargo selecionado</span>
-            <select
-              value={cargo.id}
-              aria-label="Selecionar cargo para o cronograma"
-              onChange={(event) => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: event.target.value as PcAcVerticalCargoId } })}
-            >
-              {pcAcVerticalCargos.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
-            </select>
-          </label>
+    <div ref={workspaceRef} className={`pcac-edital-page pcac-compact-workspace${editalTab === "cronograma" ? " pcac-schedule-focus" : ""}`}>
+      <header className="pcac-command-bar">
+        <svg className="pcac-command-bar__flag" viewBox="0 0 50 35" role="img" aria-label="Bandeira do Acre">
+          <rect width="50" height="35" fill="#f5da25" />
+          <path d="M0 35L50 0V35Z" fill="#078348" />
+          <path d="M11 3.8l1.9 5.8h6.1l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8-4.9-3.6h6.1Z" fill="#ce2935" />
+        </svg>
+        <div className="pcac-command-bar__title">
+          <span>POLÍCIA CIVIL DO ACRE · IDECAN</span>
+          <h1>Edital PC-AC <small>001/2026</small></h1>
         </div>
-      ) : (
-      <>
-      <PageHero
-        className="pcac-astrix-edital-hero"
-        image="careers-team"
-        kicker="ÁREA PROFISSIONAL · POLÍCIA CIVIL DO ACRE"
-        icon={ShieldCheck}
-        title={
-          <span className="pcac-astrix-edital-hero__title">
-            <svg className="pcac-astrix-edital-hero__flag" viewBox="0 0 50 35" role="img" aria-label="Bandeira do Estado do Acre">
-              <rect width="50" height="35" fill="#f5da25" />
-              <path d="M0 35L50 0V35Z" fill="#078348" />
-              <path d="M11 3.8l1.9 5.8h6.1l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8-4.9-3.6h6.1Z" fill="#ce2935" />
-            </svg>
-            <span>Edital verticalizado <span className="pcac-astrix-edital-hero__em">PC-AC 001/2026</span></span>
-          </span>
-        }
-        description="Marque o que já estudou, acompanhe o progresso por cargo e exporte seu edital verticalizado em PDF. Conteúdo organizado a partir do Edital nº 001 SEAD/PCAC, banca IDECAN."
-        actions={
-          <div className="flex max-w-[760px] flex-wrap items-center justify-end gap-2">
-            <div className="flex items-center gap-2 rounded-lg border border-white/15 bg-slate-950/20 px-2.5 py-1.5 text-[10px] leading-tight text-slate-200">
-              <span><strong className="block text-[9px] uppercase tracking-wide text-slate-400">Edital lançado</strong>06/11/2026</span>
-              <span className="h-6 w-px bg-white/15" />
-              <span><strong className="block text-[9px] uppercase tracking-wide text-slate-400">Prova</strong>24/01/2027</span>
-              <span className="h-6 w-px bg-white/15" />
-              <span className="text-center"><strong className="block text-[9px] uppercase tracking-wide text-amber-300">Faltam</strong><span className="font-black tabular-nums text-amber-200">{daysToExam}d {pad(hoursToExam)}:{pad(minutesToExam)}:{pad(secondsToExam)}</span></span>
-            </div>
-            <Button variant="outline" asChild>
-              <Link to="/dashboard/inteligencia-idecan">
-                <ScanSearch className="mr-2 h-4 w-4" />
-                Raio-X da banca
-              </Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href={`#${CRONOGRAMA_ANCHOR}`}>
-                <CalendarClock className="mr-2 h-4 w-4" />
-                Cronograma de estudos
-              </a>
-            </Button>
-            <Button variant="secondary" onClick={() => void exportPdf()}>
-              <Download className="mr-2 h-4 w-4" />
-              Exportar PDF
-            </Button>
-          </div>
-        }
-      >
-        <div className="page-hero__stats">
-          <HeroStat icon={Users} label="Vagas" value={cargo.vagas} />
-          <HeroStat icon={BookOpenCheck} label="Disciplinas" value={counts.total} />
-          <HeroStat icon={CheckCircle2} label="Estudado" value={`${percent}%`} />
+        <label className="pcac-command-bar__cargo">
+          <span>Seu cargo</span>
+          <select value={cargo.id} onChange={(event) => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: event.target.value as PcAcVerticalCargoId } })}>
+            {pcAcVerticalCargos.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
+          </select>
+        </label>
+        <div className="pcac-command-bar__actions">
+          <Button variant="outline" asChild><Link to="/dashboard/inteligencia-idecan"><ScanSearch aria-hidden="true" className="h-4 w-4" /> Raio-X</Link></Button>
+          <Button variant="secondary" onClick={() => void exportPdf()}><Download aria-hidden="true" className="h-4 w-4" /> PDF</Button>
         </div>
-      </PageHero>
-
-      <Card className="pcac-edital-card pcac-edital-cargos pcac-astrix-cargos">
-        <CardHeader className="pb-0">
-          <CardTitle className="text-sm font-semibold text-muted-foreground">
-            <span className="pcac-astrix-cargos__title"><ShieldCheck className="h-4 w-4" aria-hidden="true" /> Selecione seu cargo <span className="pcac-astrix-cargos__hint">PC-AC 2026</span></span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent
-          className="grid grid-cols-2 gap-2 pt-4 sm:grid-cols-3 lg:grid-cols-6"
-          role="group"
-          aria-label="Escolha o cargo"
-        >
-          {pcAcVerticalCargos.map((item) => {
-            const active = item.id === cargo.id;
-            return (
-              <button
-                key={item.id}
-                type="button"
-                aria-pressed={active}
-                onClick={() =>
-                  void navigate({
-                    to: "/dashboard/pc-acre-edital",
-                    search: { cargo: item.id as PcAcVerticalCargoId },
-                  })
-                }
-                className={
-                  "pcac-astrix-cargo-option flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-colors " +
-                  (active
-                    ? "border-primary bg-primary/10 text-foreground"
-                    : item.id === "investigador"
-                      ? "border-amber-400/70 bg-amber-400/10 text-foreground hover:bg-amber-400/15"
-                      : "border-border bg-background/50 text-foreground hover:bg-muted/60")
-                }
-              >
-                <span className="text-xs font-bold leading-snug">{item.label}</span>
-                {item.id === "investigador" && <span className="rounded-full bg-amber-400/20 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-amber-700 dark:text-amber-300">Foco recomendado</span>}
-                <span className="flex items-center gap-2 text-[11px] text-muted-foreground">
-                  <span className="inline-flex items-center gap-0.5">
-                    <Users className="h-3 w-3" aria-hidden="true" />
-                    {item.vagas}
-                  </span>
-                  <span className="inline-flex items-center gap-0.5">
-                    <Wallet className="h-3 w-3" aria-hidden="true" />
-                    {item.salario}
-                  </span>
-                </span>
-              </button>
-            );
-          })}
-        </CardContent>
-      </Card>
-      </>
-      )}
+      </header>
+      <div className="pcac-metrics" aria-label="Resumo do cargo e da preparação">
+        <span><Users aria-hidden="true" /> <strong>{cargo.vagas}</strong> vagas · {cargo.salario}</span>
+        <span><CheckCircle2 aria-hidden="true" /> <strong>{percent}%</strong> estudado</span>
+        <span><CalendarClock aria-hidden="true" /> Prova 24/01/2027 · <strong>{daysToExam} dias</strong></span>
+      </div>
 
       <Tabs
         value={editalTab}
         onValueChange={(next) => {
           setEditalTab(next);
           const url = new URL(window.location.href);
-          url.hash = next === "cronograma" ? CRONOGRAMA_ANCHOR : "";
+          url.hash = next === "cronograma" ? CRONOGRAMA_ANCHOR : next === "leis" ? LEGISLACAO_INSTITUCIONAL_ANCHOR : "";
           window.history.replaceState(window.history.state, "", url);
         }}
         className="pcac-edital-tabs pcac-astrix-section-tabs"
       >
         <TabsList className="pcac-edital-tabs__list" aria-label="Navegação pelas seções do edital">
-          <TabsTrigger value="resumo"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Resumo</TabsTrigger>
+          <TabsTrigger value="resumo"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Visão geral</TabsTrigger>
           <TabsTrigger value="conteudo"><CheckCircle2 aria-hidden="true" className="h-4 w-4" /> Conteúdo e progresso</TabsTrigger>
           <TabsTrigger value="cronograma"><CalendarClock aria-hidden="true" className="h-4 w-4" /> Cronograma</TabsTrigger>
           <TabsTrigger value="leis"><Scale aria-hidden="true" className="h-4 w-4" /> Legislação</TabsTrigger>

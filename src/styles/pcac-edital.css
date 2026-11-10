@@ -688,3 +688,50 @@
   .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary,
   .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-focus-disclosure > summary svg { transition: none; }
 }
+
+/* Compact PC-AC workspace: only the active panel scrolls. */
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace {
+  display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 1440px;
+  height: var(--pcac-available-height, calc(100dvh - 116px)); min-height: 320px; padding: 0 12px 8px; overflow: hidden;
+}
+.pcac-command-bar { display: flex; align-items: center; gap: 14px; flex-shrink: 0; min-width: 0; padding: 8px 12px 8px 0; border-radius: 12px; border: 1px solid #3c9168; background: linear-gradient(110deg,#087846,#104b36); color: #fff; overflow: hidden; }
+.pcac-command-bar__flag { width: 82px; height: 58px; align-self: stretch; flex-shrink: 0; object-fit: cover; margin-block: -8px; }
+.pcac-command-bar__title { min-width: 0; margin-right: auto; }
+.pcac-command-bar__title > span { display: block; font-size: 9px; font-weight: 800; letter-spacing: .09em; color: #ffe76b; }
+.pcac-command-bar h1 { margin: 2px 0 0; color: white; font-size: 20px; font-weight: 800; line-height: 1.25; }
+.pcac-command-bar h1 small { font-size: 12px; color: #d9f2e3; }
+.pcac-command-bar__cargo { display: grid; gap: 2px; min-width: 0; }
+.pcac-command-bar__cargo > span { font-size: 10px; color: #d9f2e3; }
+.pcac-command-bar__cargo select { width: 100%; max-width: 240px; min-height: 34px; border: 1px solid #8dbba4; border-radius: 7px; background: #fff; color: #163d2a; padding: 4px 24px 4px 9px; font-size: 12px; font-weight: 650; }
+.pcac-command-bar__actions { display: flex; gap: 6px; }
+.pcac-command-bar__actions :is(button,a) { display: inline-flex; gap: 6px; min-height: 34px; height: auto; padding: 6px 10px; border: 1px solid #ffe467; border-radius: 7px; background: #ffe467; color: #163d2a; font-size: 12px; }
+.pcac-command-bar__actions :is(button,a):hover { background: #fff0a0; }
+.pcac-command-bar :is(select,button,a):focus-visible { outline: 2px solid white; outline-offset: 3px; }
+.pcac-metrics { display: flex; flex-wrap: wrap; gap: 6px 20px; flex-shrink: 0; font-size: 11px; color: var(--pcac-muted); }
+.pcac-metrics > span { display: inline-flex; align-items: center; gap: 5px; }
+.pcac-metrics svg { width: 14px; height: 14px; color: #16885a; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs { flex: 1; min-height: 0; overflow: hidden; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); min-height: 44px; padding: 4px; background: var(--pcac-soft); border-color: var(--pcac-line); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list [role="tab"] { min-width: 0; white-space: normal; font-size: 12px; padding: 6px; color: var(--pcac-ink); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list [role="tab"][data-state="active"] { color: #162337; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs > [role="tabpanel"] { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; margin: 0; padding: 2px 4px 16px 0; }
+.pcac-compact-workspace .pcac-edital-card { box-shadow: none; border-radius: 12px; }
+.pcac-compact-workspace .pcac-edital-card > [data-slot="card-header"] { padding: 14px 16px 8px; }
+.pcac-compact-workspace .pcac-edital-card > [data-slot="card-content"] { padding: 10px 16px 16px; }
+@media (max-width: 760px) {
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace { height: var(--pcac-available-height, calc(100dvh - 132px)); padding-inline: 0; gap: 7px; }
+  .pcac-command-bar { flex-wrap: wrap; gap: 8px; padding: 8px; }
+  .pcac-command-bar__flag { width: 50px; height: 35px; margin: 0; align-self: center; }
+  .pcac-command-bar h1 { font-size: 17px; }
+  .pcac-command-bar__title > span { font-size: 8px; }
+  .pcac-command-bar__cargo { flex: 1; min-width: 130px; }
+  .pcac-command-bar__cargo select { max-width: none; }
+  .pcac-command-bar__actions { margin-left: auto; }
+  .pcac-metrics { font-size: 10px; gap: 4px 10px; }
+  .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list [role="tab"] { flex-direction: column; gap: 3px; font-size: 10px; line-height: 1.2; }
+}
+@media print { .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace { height: auto; overflow: visible; } .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs > [role="tabpanel"] { overflow: visible; } }
+
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-workspace.pcac-edital-card { height: auto; min-height: 0; max-height: none; overflow: visible; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-identity { display: none; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-header { padding: 10px 14px; }

@@ -385,3 +385,23 @@
     transform: none;
   }
 }
+
+/* Low announcement strip with the Acre flag integrated into its left edge. */
+.home .acre-banner { margin-block: 8px; }
+.home .acre-banner__inner { min-height: 48px; gap: 8px; padding: 6px 8px 6px 90px; border-radius: 9px; }
+.home .acre-banner__flag { width: 80px; }
+.home .acre-banner__flag svg { left: 14px; width: 24px; height: 24px; }
+.home .acre-banner__tag { font-size: 9px; }
+.home .acre-banner__headline { font-size: 14px; }
+.home .acre-banner__summary { display: none; }
+.home .acre-banner__link { min-height: 32px; padding: 0 10px; font-size: 12px; border-radius: 7px; }
+.home .acre-banner__close { width: 32px; height: 32px; }
+@media (max-width: 767px) {
+  .home .acre-banner__inner { grid-template-columns: minmax(0,1fr) auto 28px; padding-left: 58px; }
+  .home .acre-banner__flag { width: 54px; }
+  .home .acre-banner__flag svg { top: 12px; left: 8px; width: 20px; height: 20px; }
+  .home .acre-banner__tag { font-size: 8px; letter-spacing: .02em; }
+  .home .acre-banner__headline { font-size: 12px; }
+  .home .acre-banner__link { grid-column: 2; grid-row: 1; padding-inline: 7px; font-size: 11px; }
+  .home .acre-banner__close { grid-column: 3; grid-row: 1; width: 28px; }
+}
