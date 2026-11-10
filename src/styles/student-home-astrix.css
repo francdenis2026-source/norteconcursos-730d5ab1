@@ -310,3 +310,92 @@
     width: 100%;
   }
 }
+
+
+/* ASTRYX brand pass — stronger Norte Concursos presence in the client shell. */
+.app-shell.navigation-v2[data-area="student"] .student-navigation .app-sidebar__head,
+.app-sheet.student-navigation .app-sidebar__head {
+  position: relative;
+  height: 78px !important;
+  min-height: 78px !important;
+  padding-inline: 17px 12px !important;
+  background:
+    linear-gradient(135deg, rgb(19 34 45 / 96%), rgb(24 40 48 / 96%)) !important;
+  border-bottom-color: rgb(214 173 99 / 26%) !important;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation .app-sidebar__head::after,
+.app-sheet.student-navigation .app-sidebar__head::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  left: 17px;
+  height: 3px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, #e2b866 0%, #55d5cb 52%, #8777ff 100%);
+  opacity: .95;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation .app-sidebar__head > a,
+.app-sheet.student-navigation .app-sidebar__head > a {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  text-decoration: none;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation .norte-brand,
+.app-sheet.student-navigation .norte-brand {
+  --brand-size: 1.95rem;
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+  color: #f8fafc;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation .norte-brand__mark,
+.app-sheet.student-navigation .norte-brand__mark {
+  width: 48px !important;
+  height: 48px !important;
+  padding: 6px;
+  border: 1px solid rgb(226 184 102 / 58%);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1c3641 0%, #0d1c27 68%);
+  box-shadow:
+    0 8px 18px rgb(0 0 0 / 22%),
+    inset 0 1px 0 rgb(255 255 255 / 14%);
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation .norte-brand__wordmark,
+.app-sheet.student-navigation .norte-brand__wordmark {
+  width: 148px !important;
+  max-width: 148px;
+  filter: drop-shadow(0 1px 6px rgb(0 0 0 / 22%));
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation[data-collapsed="true"] .app-sidebar__head,
+.app-shell.navigation-v2[data-area="student"] .student-navigation[data-collapsed="true"] .app-sidebar__head > a {
+  justify-content: center;
+}
+
+.app-shell.navigation-v2[data-area="student"] .student-navigation[data-collapsed="true"] .norte-brand__mark {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+@media (max-width: 720px) {
+  .app-sheet.student-navigation .app-sidebar__head {
+    height: 74px !important;
+    min-height: 74px !important;
+  }
+  .app-sheet.student-navigation .norte-brand__mark {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .app-sheet.student-navigation .norte-brand__wordmark {
+    width: 136px !important;
+    max-width: 136px;
+  }
+}
