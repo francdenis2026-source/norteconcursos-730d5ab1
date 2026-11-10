@@ -4,7 +4,6 @@
 import { jsPDF } from "jspdf/dist/jspdf.es.min.js";
 import type { PcAcVerticalCargo } from "@/data/pcAcreVerticalizado";
 import {
-  pcAcDaysUntilExam,
   PCAC_BOARD,
   PCAC_EXAM_DATE,
   type PcAcStudyPlanConfig,
@@ -14,8 +13,10 @@ import {
   PCAC_ACTIVITY_LABEL,
   PCAC_PHASE_LABEL,
   type PcAcPlanDay,
+  pcAcDaysBetween,
   type PcAcPlanWeek,
 } from "@/lib/pcAcreMasterPlan";
+import { platformDate } from "@/lib/platformClock";
 
 const LOGO_URL = "/media/brand/norte-identity/emblema.png";
 
@@ -156,7 +157,9 @@ function drawCoverPage(
   doc.text(labelLines, PAGE_W / 2, y, { align: "center" });
   y += labelLines.length * 22 + 4;
 
-  const daysLeft = pcAcDaysUntilExam(PCAC_EXAM_DATE);
+  const today = platformDate();
+  const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const daysLeft = pcAcDaysBetween(todayKey, PCAC_EXAM_DATE);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10.5);
   doc.setTextColor(...MUTED);
@@ -380,7 +383,8 @@ function drawWeekTable(doc: jsPDF, week: PcAcPlanWeek, cursor: { y: number }, ne
       doc.setFontSize(7.5);
       const topicText = activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail;
       const topicLines = doc.splitTextToSize(topicText, TOPIC_COL_W - 10);
-      const estRowH = Math.max(15, topicLines.length * 9.5 + 6);
+      const subjectLines = doc.splitTextToSize(activity.subject ?? "—", SUBJECT_COL_W - 10);
+      const estRowH = Math.max(activity.start ? 24 : 15, Math.max(topicLines.length, subjectLines.length, 1) * 9.5 + 6);
       if (cursor.y + estRowH > FOOTER_Y - 18) {
         newPage();
         cursor.y = drawWeekTableHeader(doc, cursor.y);
