@@ -7313,7 +7313,7 @@ iframe[src*="gpteng.co"] {
   transform: scale(1.15);
 }
 .app-streak:has(.lucide-flame) svg {
-  animation: flame-flicker 2.4s ease-in-out infinite;
+  animation: none;
   transform-origin: 50% 90%;
 }
 @keyframes flame-flicker {
@@ -7337,6 +7337,48 @@ iframe[src*="gpteng.co"] {
   .app-streak:hover svg {
     transform: none;
   }
+}
+
+/* Compact control rail: consistent hit area, restrained feedback, no decorative
+   icon rotation. This keeps the toolbar readable beside the dashboard content. */
+.app-shell .app-topbar__actions {
+  gap: 8px;
+}
+.app-shell .app-topbar__actions .app-top-btn,
+.app-shell .app-topbar__actions .app-top-search,
+.app-shell .app-topbar__actions .workspace-fullscreen-trigger {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-card);
+  box-shadow: var(--shadow-xs);
+}
+.app-shell .app-topbar__actions .app-top-search {
+  padding-inline: 0;
+  justify-content: center;
+}
+.app-shell .app-topbar__actions .app-top-search > span,
+.app-shell .app-topbar__actions .app-top-search .kbd {
+  display: none;
+}
+.app-shell .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger):hover {
+  border-color: color-mix(in oklab, var(--brass) 55%, var(--color-border));
+  color: var(--color-foreground);
+  background: var(--color-accent);
+}
+.app-shell .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger):focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+.app-shell .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger) svg {
+  transform: none;
+  transition: color 160ms ease;
+}
+.app-shell .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger):active {
+  transform: translateY(1px);
 }
 
 /* ===== Heros dos painéis: compactas, mais claras e com a cor da área ===== */
