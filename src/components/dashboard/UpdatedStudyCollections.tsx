@@ -36,10 +36,16 @@ const COURSES: Course[] = [
     {title:"04 · Administração direta, indireta e descentralização",body:["Administração direta abrange órgãos integrantes das pessoas políticas; administração indireta reúne entidades dotadas de personalidade jurídica própria, como autarquias, fundações públicas, empresas públicas e sociedades de economia mista, segundo a legislação aplicável.","Desconcentração distribui competências internamente em uma mesma pessoa jurídica, enquanto descentralização transfere a execução ou titularidade de atividades conforme os modelos legalmente admitidos. Delegar tarefas a unidades internas não cria automaticamente nova pessoa jurídica."],example:"Criar unidades regionais dentro do mesmo órgão exemplifica desconcentração; instituir autarquia por lei integra a administração indireta.",question:"Criar uma unidade interna sem personalidade jurídica é descentralização?",answer:"Em regra, é desconcentração administrativa.",source:OFFICIAL.edital}
   ]}
 ];
-export function UpdatedStudyCollections() {
-  const [selected,setSelected]=React.useState(COURSES[0]!.id);
+export function UpdatedStudyCollections({initialCourseId,storageScope="public"}: {initialCourseId?: string;storageScope?: string}) {
+  const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
+  const [completed,setCompleted]=React.useState<Record<string,boolean>>({});
+  React.useEffect(()=>{if(COURSES.some(c=>c.id===initialCourseId))setSelected(initialCourseId!);},[initialCourseId]);
+  const storageKey=`norte-study-guides:v1:${storageScope}`;
+  React.useEffect(()=>{try{const data=JSON.parse(localStorage.getItem(storageKey)||"{}") as Record<string,boolean>;setCompleted(data&&typeof data==="object"?data:{});}catch{setCompleted({});}},[storageKey]);
+  const toggleCompleted=(key:string)=>setCompleted(prev=>{const next={...prev,[key]:!prev[key]};try{localStorage.setItem(storageKey,JSON.stringify(next));}catch{}return next;});
   const course=COURSES.find(c=>c.id===selected)!;
+  const countCompleted=course.lessons.filter(l=>completed[`${course.id}:${l.title}`]).length;
   return <section id="materiais-atualizados-pcac" className="space-y-4 rounded-2xl border border-emerald-700/40 bg-card p-4 shadow-sm md:p-6" aria-labelledby="pcac-new-study-title">
     <header className="space-y-2">
       <p className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 dark:text-emerald-300">Biblioteca temática · Revisão 10/11/2026</p>
@@ -56,10 +62,11 @@ export function UpdatedStudyCollections() {
         <p className="mt-2 text-xs font-semibold text-foreground">{course.applicability}</p>
         <p className="mt-1 text-xs text-muted-foreground">{course.origin}</p>
         <p className="mt-1 text-xs text-emerald-600 dark:text-emerald-300">{course.updated}</p>
+        <p className="mt-2 text-xs font-semibold text-foreground" role="status">{countCompleted} de {course.lessons.length} aulas concluídas neste navegador.</p>
       </div>
       {course.lessons.map((l,i)=><details key={l.title} className="group rounded-xl border border-border bg-background open:border-emerald-500/60">
         <summary className="cursor-pointer select-none px-4 py-3 text-sm font-bold text-foreground hover:bg-emerald-600/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">{l.title}</summary>
-        <div className="space-y-3 border-t border-border px-4 py-4 text-sm leading-6 text-foreground">
+        <div className="space-y-3 border-t border-border px-4 py-4 text-sm leading-6 text-foreground"><label className="flex items-center gap-2 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs font-bold text-foreground"><input type="checkbox" checked={!!completed[`${course.id}:${l.title}`]} onChange={()=>toggleCompleted(`${course.id}:${l.title}`)} className="h-4 w-4 accent-emerald-600" /> Marcar aula como concluída</label>
           {l.body.map((p,j)=><p key={j}>{p}</p>)}
           <p className="rounded-lg border-l-4 border-amber-500 bg-amber-500/10 px-3 py-2"><strong>Aplicação prática:</strong> {l.example}</p>
           <div className="rounded-lg border border-border bg-muted/20 p-3">
