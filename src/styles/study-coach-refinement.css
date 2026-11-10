@@ -155,6 +155,18 @@
   background: #203f45;
   color: #a9e0dc;
 }
+/* The active step follows the workspace's cool action color. Gold remains a
+   brand accent elsewhere, so it does not compete with this blue surface. */
+:root:not(.dark) .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-primary {
+  border-color: #315fa8;
+  background: #315fa8;
+  color: #ffffff;
+}
+:root.dark .app-shell[data-area="student"] .plan-workspace-window ol[aria-label="Etapas"] li.bg-primary {
+  border-color: #91a8ff;
+  background: #91a8ff;
+  color: #17213a;
+}
 .app-shell[data-area="student"] .plan-workspace-window [role="radio"] {
   border-color: var(--border);
   background: var(--card);
