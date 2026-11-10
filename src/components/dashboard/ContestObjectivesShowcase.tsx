@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarClock, CalendarDays, MapPin, Users, Wallet, GraduationCap, Target } from "lucide-react";
+import { ArrowRight, CalendarClock, CalendarDays, GraduationCap, MapPin, Target, Users, Wallet } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Contest } from "@/types";
 import { contestDisplay } from "@/lib/contestDisplay";
@@ -17,26 +17,26 @@ function money(value: number) {
 }
 
 function dateLabel(value?: string) {
-  if (!value) return "Data não definida";
+  if (!value) return "A definir";
   const [year, month, day] = value.split("-");
   return year && month && day ? `${day}/${month}/${year}` : value;
 }
 
-function ContestFacts({ contest, compact = false }: { contest: Contest; compact?: boolean }) {
+function ContestFacts({ contest }: { contest: Contest }) {
   const facts = [
     { icon: Users, label: "Vagas", value: contest.vacancies > 0 ? contest.vacancies.toLocaleString("pt-BR") : "A confirmar" },
     { icon: Wallet, label: "Remuneração", value: money(contest.salary) },
     { icon: GraduationCap, label: "Escolaridade", value: contest.educationLevel || "Não informada" },
   ];
   return (
-    <div className={compact ? "contest-showcase__facts contest-showcase__facts--compact" : "contest-showcase__facts"}>
+    <dl className="contest-showcase__facts">
       {facts.map(({ icon: Icon, label, value }) => (
         <div className="contest-showcase__fact" key={label}>
-          <Icon aria-hidden="true" />
-          <span><small>{label}</small><strong>{value}</strong></span>
+          <dt><Icon aria-hidden="true" />{label}</dt>
+          <dd>{value}</dd>
         </div>
       ))}
-    </div>
+    </dl>
   );
 }
 
@@ -55,94 +55,106 @@ export function ContestObjectivesShowcase({
 }) {
   const featured = focusedContest ?? contests[0];
   const others = contests.filter((contest) => contest.id !== featured?.id).slice(0, 3);
-  const featuredDisplay = featured ? contestDisplay(featured) : null;
+  const display = featured ? contestDisplay(featured) : null;
+  const isLocked = !!focusedContest;
 
   return (
     <section className="contest-showcase" aria-labelledby="contest-showcase-title">
-      <div className="contest-showcase__backdrop" aria-hidden="true" />
-      <div className="contest-showcase__inner">
-        <div className="contest-showcase__lead">
-          <div className="contest-showcase__intro">
-            <h1 id="contest-showcase-title">{focusedContest ? "Seu próximo objetivo." : "Escolha seu próximo objetivo."}</h1>
-            <p>Defina o concurso que orienta sua preparação e acompanhe as informações mais importantes em um só lugar.</p>
+      <header className="contest-showcase__heading">
+        <div>
+          <h1 id="contest-showcase-title">{isLocked ? "Seu objetivo em foco" : "Escolha seu objetivo"}</h1>
+          <p>{isLocked
+            ? "Seu plano de estudos está organizado em torno deste cargo."
+            : "Selecione um cargo para vincular seu edital, cronograma e preparação."}</p>
+        </div>
+        {isLocked && <span className="contest-showcase__active-state"><Target aria-hidden="true" /> Objetivo ativo</span>}
+      </header>
+
+      {featured ? (
+        <article className="contest-showcase__featured">
+          <div className="contest-showcase__featured-art">
+            <img src={contestArt(featured)} alt={`Imagem ilustrativa de ${featured.agency || featured.name}`} loading="eager" decoding="async" />
           </div>
-          {featured ? (
-            <article className="contest-showcase__featured">
-              <div className="contest-showcase__featured-art">
-                <img src={contestArt(featured)} alt={`Imagem ilustrativa de ${featured.agency || featured.name}`} loading="eager" decoding="async" />
-                <span className="contest-showcase__art-caption">{featured.name}</span>
-              </div>
-              <div className="contest-showcase__featured-body">
-                <div className="contest-showcase__featured-head">
-                  <span className="contest-showcase__tag"><Target aria-hidden="true" /> {focusedContest ? "OBJETIVO PRINCIPAL" : "CONCURSO EM DESTAQUE"}</span>
-                  <span className="contest-showcase__status">{featured.status}</span>
-                </div>
-                <div>
-                  <span className="contest-showcase__context">{featuredDisplay?.context}</span>
-                  <h2>{featuredDisplay?.role}</h2>
-                  <p className="contest-showcase__role">{featuredDisplay?.career} <span>·</span> {featuredDisplay?.education} <span>·</span> {featured.examBoard || "Banca a confirmar"}</p>
-                </div>
-                <div className="contest-showcase__date"><CalendarDays aria-hidden="true" /><span><small>Data da prova</small><strong>{dateLabel(featured.examDate)}</strong></span></div>
-                <ContestFacts contest={featured} />
-                <div className="contest-showcase__featured-actions">
-                  {focusedContest ? (
-                    <Link to="/dashboard/edital" className="contest-showcase__primary-action">Estudar pelo edital <ArrowRight aria-hidden="true" /></Link>
-                  ) : (
-                    <button type="button" className="contest-showcase__primary-action" onClick={() => onSelect(featured)} disabled={savingId === featured.id}>
-                      {savingId === featured.id ? "Salvando objetivo…" : "Definir como objetivo"} <ArrowRight aria-hidden="true" />
+          <div className="contest-showcase__featured-body">
+            <div className="contest-showcase__featured-topline">
+              <span>{featured.name}</span>
+              <span className="contest-showcase__status">{featured.status}</span>
+            </div>
+            <div className="contest-showcase__title-group">
+              <h2>{display?.role}</h2>
+              <p>{display?.career} <span aria-hidden="true">·</span> {featured.examBoard || "Banca a confirmar"}</p>
+            </div>
+            <div className="contest-showcase__summary">
+              <span className="contest-showcase__exam-date"><CalendarDays aria-hidden="true" /> Prova: <strong>{dateLabel(featured.examDate)}</strong></span>
+              <ContestFacts contest={featured} />
+            </div>
+            <div className="contest-showcase__actions">
+              {!isLocked ? (
+                <button
+                  type="button"
+                  className="contest-showcase__primary-action"
+                  onClick={() => onSelect(featured)}
+                  disabled={savingId === featured.id}
+                >
+                  {savingId === featured.id ? "Salvando…" : "Definir como objetivo"}
+                  <ArrowRight aria-hidden="true" />
+                </button>
+              ) : (
+                <>
+                  <Link to="/dashboard/cronograma" className="contest-showcase__secondary-action">
+                    <CalendarClock aria-hidden="true" /> Abrir cronograma
+                  </Link>
+                  {onClear && (
+                    <button type="button" className="contest-showcase__clear-action" onClick={onClear} disabled={!!savingId}>
+                      Desmarcar objetivo
                     </button>
                   )}
-                  <Link to="/dashboard/cronograma" className="contest-showcase__secondary-action">
-                    <CalendarClock aria-hidden="true" /> Cronograma de estudos
-                  </Link>
-                  {focusedContest && onClear && <button type="button" className="contest-showcase__clear-action" onClick={onClear}>Desmarcar cargo e liberar catálogo</button>}
-                  {featured.officialEditalUrl && <a className="contest-showcase__secondary-action" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">Edital oficial</a>}
-                </div>
-              </div>
-            </article>
-          ) : (
-            <div className="contest-showcase__empty">
-              <Target aria-hidden="true" />
-              <div><strong>Nenhum concurso publicado no catálogo ainda.</strong><p>Consulte as opções disponíveis na área de concursos.</p></div>
-              <Link to="/dashboard/questions">Explorar concursos <ArrowRight aria-hidden="true" /></Link>
-            </div>
-          )}
-        </div>
-
-        {others.length > 0 && (
-          <div className="contest-showcase__others">
-            <div className="contest-showcase__section-heading">
-              <h2>{focusedContest ? "Outros cargos bloqueados" : "Escolha um cargo para focar"}</h2>
-              <span className="contest-showcase__count">{focusedContest ? "1 objetivo ativo" : `${others.length} opções disponíveis`}</span>
-            </div>
-            {focusedContest && <p className="contest-showcase__lock-note">Seu objetivo está ativo. Para escolher outro cargo, desmarque primeiro o objetivo principal nesta tela.</p>}
-            <div className="contest-showcase__grid">
-              {others.map((contest) => (
-                <article className={`contest-showcase__card ${focusedContest ? "contest-showcase__card--locked" : ""}`} key={contest.id} aria-disabled={!!focusedContest}>
-                  <div className="contest-showcase__card-art">
-                    <img src={contestArt(contest)} alt="" loading="lazy" decoding="async" />
-                    <span>{contest.name}</span>
-                  </div>
-                  <div className="contest-showcase__card-body">
-                    <span className="contest-showcase__card-status">{contest.status}</span>
-                    <span className="contest-showcase__card-context">{contestDisplay(contest).context}</span>
-                    <h3>{contestDisplay(contest).role}</h3>
-                    <p>{contestDisplay(contest).career} · {contestDisplay(contest).education} · {contest.examBoard || "Banca a confirmar"}</p>
-                    <div className="contest-showcase__card-meta">
-                      <span><CalendarDays aria-hidden="true" /> {dateLabel(contest.examDate)}</span>
-                      <span><MapPin aria-hidden="true" /> {contest.location || "Local a confirmar"}</span>
-                    </div>
-                    <ContestFacts contest={contest} compact />
-                    <button type="button" className="contest-showcase__choose" onClick={() => onSelect(contest)} disabled={!!focusedContest || savingId === contest.id}>
-                      {focusedContest ? "Bloqueado pelo objetivo ativo" : savingId === contest.id ? "Salvando…" : "Definir como objetivo"} {!focusedContest && <ArrowRight aria-hidden="true" />}
-                    </button>
-                  </div>
-                </article>
-              ))}
+                </>
+              )}
+              {featured.officialEditalUrl && (
+                <a className="contest-showcase__official-link" href={featured.officialEditalUrl} target="_blank" rel="noreferrer">
+                  Consultar edital oficial
+                </a>
+              )}
             </div>
           </div>
-        )}
-      </div>
+        </article>
+      ) : (
+        <div className="contest-showcase__empty">
+          <Target aria-hidden="true" />
+          <p>Nenhum concurso disponível no momento. Volte ao catálogo para consultar novas oportunidades.</p>
+          <Link to="/dashboard/questions">Explorar concursos <ArrowRight aria-hidden="true" /></Link>
+        </div>
+      )}
+
+      {others.length > 0 && (
+        <section className="contest-showcase__others" aria-labelledby="contest-showcase-others">
+          <div className="contest-showcase__section-heading">
+            <h2 id="contest-showcase-others">{isLocked ? "Outros cargos" : "Outras opções"}</h2>
+            <span>{isLocked ? "Indisponíveis enquanto o objetivo estiver ativo" : `${others.length} opções`}</span>
+          </div>
+          <ul className={`contest-showcase__list ${isLocked ? "is-locked" : ""}`}>
+            {others.map((contest) => {
+              const item = contestDisplay(contest);
+              return (
+                <li key={contest.id}>
+                  <div className="contest-showcase__list-copy">
+                    <strong>{item.role}</strong>
+                    <span>{contest.name} · {contest.examBoard || "Banca a confirmar"}</span>
+                  </div>
+                  {isLocked ? (
+                    <span className="contest-showcase__lock-label">Bloqueado pelo objetivo ativo</span>
+                  ) : (
+                    <button type="button" onClick={() => onSelect(contest)} disabled={savingId === contest.id}>
+                      {savingId === contest.id ? "Salvando…" : "Selecionar"} <ArrowRight aria-hidden="true" />
+                    </button>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </section>
   );
 }
