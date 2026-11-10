@@ -1,6 +1,7 @@
 import { ArrowRight, CalendarDays, MapPin, Users, Wallet, GraduationCap, Target } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { Contest } from "@/types";
+import { contestDisplay } from "@/lib/contestDisplay";
 
 function contestArt(contest: Contest) {
   const value = `${contest.name} ${contest.agency} ${contest.location}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -52,6 +53,7 @@ export function ContestObjectivesShowcase({
 }) {
   const featured = focusedContest ?? contests[0];
   const others = contests.filter((contest) => contest.id !== featured?.id).slice(0, 3);
+  const featuredDisplay = featured ? contestDisplay(featured) : null;
 
   return (
     <section className="contest-showcase" aria-labelledby="contest-showcase-title">
@@ -74,8 +76,9 @@ export function ContestObjectivesShowcase({
                   <span className="contest-showcase__status">{featured.status}</span>
                 </div>
                 <div>
-                  <h2>{featured.agency || featured.name}</h2>
-                  <p className="contest-showcase__role">{featured.role} <span>·</span> {featured.examBoard || "Banca a confirmar"}</p>
+                  <span className="contest-showcase__context">{featuredDisplay?.context}</span>
+                  <h2>{featuredDisplay?.role}</h2>
+                  <p className="contest-showcase__role">{featuredDisplay?.career} <span>·</span> {featuredDisplay?.education} <span>·</span> {featured.examBoard || "Banca a confirmar"}</p>
                 </div>
                 <div className="contest-showcase__date"><CalendarDays aria-hidden="true" /><span><small>Data da prova</small><strong>{dateLabel(featured.examDate)}</strong></span></div>
                 <ContestFacts contest={featured} />
@@ -115,8 +118,9 @@ export function ContestObjectivesShowcase({
                   </div>
                   <div className="contest-showcase__card-body">
                     <span className="contest-showcase__card-status">{contest.status}</span>
-                    <h3>{contest.agency || contest.name}</h3>
-                    <p>{contest.role} · {contest.examBoard || "Banca a confirmar"}</p>
+                    <span className="contest-showcase__card-context">{contestDisplay(contest).context}</span>
+                    <h3>{contestDisplay(contest).role}</h3>
+                    <p>{contestDisplay(contest).career} · {contestDisplay(contest).education} · {contest.examBoard || "Banca a confirmar"}</p>
                     <div className="contest-showcase__card-meta">
                       <span><CalendarDays aria-hidden="true" /> {dateLabel(contest.examDate)}</span>
                       <span><MapPin aria-hidden="true" /> {contest.location || "Local a confirmar"}</span>

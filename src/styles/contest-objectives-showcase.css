@@ -175,7 +175,20 @@
   font-weight: 850;
   line-height: 1.16;
   letter-spacing: -.03em;
+  overflow-wrap: anywhere;
 }
+.app-shell[data-area="student"] #dashboard-content .contest-showcase__context,
+.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-context {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--co-gold-light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .045em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.app-shell[data-area="student"] #dashboard-content .contest-showcase__context { max-width: 42ch; }
 .app-shell[data-area="student"] #dashboard-content .contest-showcase__role {
   margin: 5px 0 0;
   color: #c2cdd0;
@@ -331,9 +344,16 @@
 .app-shell[data-area="student"] #dashboard-content .contest-showcase__card-body h3 {
   margin: 0;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 850;
   line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.app-shell[data-area="student"] #dashboard-content .contest-showcase__card-context {
+  margin-bottom: 0;
+  color: #d5b778;
+  font-size: 8px;
+  letter-spacing: .035em;
 }
 .app-shell[data-area="student"] #dashboard-content .contest-showcase__card-body > p {
   margin: 0;
