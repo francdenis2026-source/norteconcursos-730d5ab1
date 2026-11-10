@@ -1150,7 +1150,16 @@ function PcAcreEditalVerticalizadoPage() {
       </>
       )}
 
-      <Tabs value={editalTab} onValueChange={setEditalTab} className="pcac-edital-tabs pcac-astrix-section-tabs">
+      <Tabs
+        value={editalTab}
+        onValueChange={(next) => {
+          setEditalTab(next);
+          const url = new URL(window.location.href);
+          url.hash = next === "cronograma" ? CRONOGRAMA_ANCHOR : "";
+          window.history.replaceState(window.history.state, "", url);
+        }}
+        className="pcac-edital-tabs pcac-astrix-section-tabs"
+      >
         <TabsList className="pcac-edital-tabs__list" aria-label="Navegação pelas seções do edital">
           <TabsTrigger value="resumo"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Resumo</TabsTrigger>
           <TabsTrigger value="conteudo"><CheckCircle2 aria-hidden="true" className="h-4 w-4" /> Conteúdo e progresso</TabsTrigger>
