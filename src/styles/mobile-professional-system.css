@@ -1,0 +1,90 @@
+/* Mobile system pass: one palette, one spacing rhythm, predictable touch surfaces. */
+@media (max-width: 760px) {
+  .home.home {
+    --mobile-space-section: clamp(28px, 7vw, 40px);
+    --mobile-space-card: 16px;
+    --mobile-radius-card: 16px;
+    --mobile-surface: color-mix(in srgb, var(--card) 94%, var(--background));
+    --mobile-surface-raised: var(--card);
+    --mobile-surface-soft: color-mix(in srgb, var(--card) 82%, var(--muted));
+    --mobile-line: color-mix(in srgb, var(--foreground) 14%, transparent);
+    --mobile-text: var(--foreground);
+    --mobile-muted: color-mix(in srgb, var(--foreground) 62%, var(--muted-foreground));
+    --mobile-accent: var(--brass);
+  }
+  .dark .home.home {
+    --mobile-surface: color-mix(in srgb, var(--card) 90%, var(--background));
+    --mobile-surface-raised: color-mix(in srgb, var(--card) 96%, white 4%);
+    --mobile-surface-soft: color-mix(in srgb, var(--card) 76%, var(--background));
+    --mobile-line: color-mix(in srgb, var(--foreground) 18%, transparent);
+    --mobile-muted: color-mix(in srgb, var(--foreground) 68%, var(--muted-foreground));
+  }
+
+  .home.home .mobile-homepage {
+    overflow-x: clip;
+  }
+  .home.home .mobile-homepage > :is(section, footer) {
+    scroll-margin-top: 76px;
+  }
+  .home.home .mobile-homepage .sx-section,
+  .home.home .mobile-plans,
+  .home.home .mobile-homepage__footer {
+    padding-block: var(--mobile-space-section);
+  }
+  .home.home .mobile-homepage .sx-card,
+  .home.home .mobile-homepage .sx-exam,
+  .home.home .mobile-homepage .hr-m-card {
+    border-radius: var(--mobile-radius-card);
+    border-color: var(--mobile-line);
+    background: var(--mobile-surface-raised);
+    box-shadow: 0 14px 30px -24px rgb(15 23 42 / 45%);
+  }
+  .dark .home.home .mobile-homepage .sx-card,
+  .dark .home.home .mobile-homepage .sx-exam,
+  .dark .home.home .mobile-homepage .hr-m-card {
+    box-shadow: 0 16px 34px -22px rgb(0 0 0 / 70%);
+  }
+  .home.home .mobile-homepage .sx-card,
+  .home.home .mobile-homepage .sx-exam__body,
+  .home.home .mobile-homepage .hr-m-card { padding: var(--mobile-space-card); }
+
+  .home.home .mobile-homepage__section-head h2 { letter-spacing: -.025em; }
+  .home.home .mobile-homepage__section-head span,
+  .home.home .mobile-plans__note { color: var(--mobile-muted); }
+  .home.home .mobile-plans__list { gap: 10px; }
+  .home.home .mobile-plans__list .hr-m-card { min-height: 82px; }
+  .home.home .mobile-plans__list .hr-m-plan-featured {
+    border-color: color-mix(in srgb, var(--mobile-accent) 55%, var(--mobile-line));
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--mobile-accent) 14%, transparent), 0 18px 34px -24px rgb(15 23 42 / 55%);
+  }
+  .home.home .mobile-homepage__wide-link,
+  .home.home .mobile-plans a { min-height: 48px; border-radius: 12px; }
+
+  /* Keep the signup path available on every phone size. */
+  .home.home .home-header__register { display: inline-flex; }
+  .home.home .home-header__register { min-height: 44px; }
+  .home.home .home-header__actions { gap: 6px; }
+
+  /* Preserve the first viewport for the message and its CTA. */
+  .home.home .home-hero { padding-bottom: clamp(184px, 48vw, 224px); }
+  .home.home .home-intro { height: clamp(184px, 48vw, 224px); }
+  .home.home :is(.home-hero__image, .home-intro video) { max-height: 224px; }
+
+  /* The fixed artwork remains decorative and does not compete with content. */
+  .home-backdrop { background-position: 52% center; }
+  .home.home .home-app-nav.mobile-nav-glass { border-radius: 16px; }
+  .home.home .mobile-nav-shelf__sign { pointer-events: none; }
+}
+
+@media (max-width: 359px) {
+  .home.home .home-header__register { min-width: 0; padding-inline: 9px; font-size: 11px; }
+  .home.home .home-header__register svg { display: none; }
+  .home.home .home-hero h1 { font-size: clamp(29px, 8.5vw, 36px); }
+  .home.home .mobile-homepage .sx-exams--mobile-carousel { scroll-padding-inline: 16px; }
+}
+
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  .home.home .mobile-homepage .sx-card,
+  .home.home .mobile-homepage .sx-exam,
+  .home.home .mobile-homepage .hr-m-card { box-shadow: none; }
+}

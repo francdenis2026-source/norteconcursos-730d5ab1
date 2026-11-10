@@ -87,6 +87,7 @@ import "@/styles/home-preparation-premium.css";
 import "@/styles/home-mobile-compact.css";
 import "@/styles/mobile-home-polish-nov10.css";
 import "@/styles/home-professional-refinement.css";
+import "@/styles/mobile-professional-system.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
