@@ -232,8 +232,8 @@ export function PcAcCronogramaCard({
         events: week.days.flatMap((day) => day.activities.map((activity, index) => ({
           id: `${day.date}-${index}`,
           date: day.date,
-          start: activity.start ?? cfg.startTime,
-          end: activity.end ?? cfg.startTime,
+          start: activity.start ?? (activity.type === "descanso" ? "00:00" : cfg.startTime),
+          end: activity.end ?? (activity.type === "descanso" ? "23:59" : cfg.startTime),
           kind: activity.type === "video" || activity.type === "teoria" ? "teoria" : activity.type === "questoes" ? "questoes" : activity.type === "revisao" ? "revisao" : activity.type === "redacao" ? "redacao" : activity.type === "simulado" ? "simulado" : activity.type === "pausa" ? "pausa" : activity.type === "rotina" ? "refeicao" : activity.type === "exercicio" ? "exercicio" : "descanso",
           ...(activity.subject ? { discipline: activity.subject } : {}),
           ...(activity.topic ? { topic: activity.topic } : {}),
