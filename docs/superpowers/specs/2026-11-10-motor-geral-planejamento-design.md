@@ -19,6 +19,15 @@ Plano automático editável. O sistema gera uma proposta inicial e permite ajust
 - Responsividade com visão semanal no desktop e agenda diária no mobile.
 - Estados claros para gerado, editado, concluído, atrasado e reagendado.
 
+## Alinhamento com conteúdo e edital
+- O motor recebe uma matriz de disciplinas e assuntos do edital ativo.
+- Cada disciplina deve aparecer no plano; peso, incidência, dificuldade e progresso definem a ordem.
+- Disciplinas de maior peso entram primeiro e recebem mais blocos, sem excluir as demais.
+- Cada bloco de teoria, questão e revisão referencia disciplina e assunto concretos.
+- Assuntos concluídos avançam para revisão; assuntos críticos recebem reforço.
+- O motor calcula cobertura por disciplina, assunto e fase, sinalizando lacunas.
+- Simulados usam a distribuição do edital e redações seguem a fase e o objetivo do concurso.
+
 ## Dados e compatibilidade
 - Preservar configurações existentes de cronograma e PC-AC, migrando-as para o novo formato com defaults seguros.
 - Datas devem ser formatadas no fuso do Acre sem `toISOString()` para exibição de calendário.
