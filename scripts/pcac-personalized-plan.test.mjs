@@ -26,7 +26,7 @@ test("PC-AC: cada especialidade recebe plano detalhado com tópicos do próprio 
     assert.ok(day.activities.some((item) => item.topic && item.subject), `sem tópico específico para ${cargo.id}`);
     assert.ok(day.activities.some((item) => item.type === "rotina" && item.subject === "Café da manhã"));
     assert.ok(day.activities.some((item) => item.type === "pausa"), `sem pausa calculada para ${cargo.id}`);
-    assert.ok(weeks[0]!.days.some((plannedDay) => plannedDay.activities.some((item) => item.type === "descanso")), "a semana precisa reservar recuperação");
+    assert.ok(weeks[0].days.some((plannedDay) => plannedDay.activities.some((item) => item.type === "descanso")), "a semana precisa reservar recuperação");
     const allTopics = cargo.blocks.flatMap((block) => block.disciplines.flatMap((discipline) => discipline.topics ?? []));
     assert.ok(allTopics.length > 0, `cargo sem tópicos oficiais: ${cargo.id}`);
   }
@@ -36,7 +36,7 @@ test("PC-AC: carga líquida semanal respeita horas escolhidas e TAF não sobrep�
   const cargo = pcAcVerticalCargos.find((item) => item.id === "investigador");
   assert.ok(cargo);
   const weeks = buildPcAcMasterPlan(config.days, PCAC_EXAM_DATE, config, cargo);
-  const firstWeek = weeks[0]!;
+  const firstWeek = weeks[0];
   const studyTypes = new Set(["teoria", "video", "questoes", "redacao", "revisao", "simulado"]);
   const studyMinutes = firstWeek.days.reduce((sum, day) =>
     sum + day.activities.reduce((daily, item) => daily + (studyTypes.has(item.type) ? item.minutes ?? 0 : 0), 0), 0);
@@ -44,17 +44,17 @@ test("PC-AC: carga líquida semanal respeita horas escolhidas e TAF não sobrep�
   const tuesday = firstWeek.days.find((day) => day.weekday === 2);
   assert.ok(tuesday?.activities.some((item) => item.type === "exercicio"));
   for (const day of firstWeek.days) {
-    const timed = day.activities.filter((item) => item.start && item.end).sort((a, b) => a.start!.localeCompare(b.start!));
+    const timed = day.activities.filter((item) => item.start && item.end).sort((a, b) => a.start.localeCompare(b.start));
     for (let i = 1; i < timed.length; i++) {
-      assert.ok(timed[i - 1]!.end! <= timed[i]!.start!, `atividades sobrepostas em ${day.date}`);
+      assert.ok(timed[i - 1].end <= timed[i].start, `atividades sobrepostas em ${day.date}`);
     }
   }
 });
 
 test("PC-AC: rotina de refeições, pausas e TAF são independentes da carga líquida de estudo", () => {
-  const cargo = pcAcVerticalCargos[0]!;
+  const cargo = pcAcVerticalCargos[0];
   const weeks = buildPcAcMasterPlan(config.days, PCAC_EXAM_DATE, config, cargo);
-  const tuesday = weeks[0]!.days.find((day) => day.weekday === 2)!;
+  const tuesday = weeks[0].days.find((day) => day.weekday === 2);
   const labels = tuesday.activities.map((item) => item.subject);
   assert.ok(labels.includes("Café da manhã"));
   assert.ok(labels.includes("Almoço"));
