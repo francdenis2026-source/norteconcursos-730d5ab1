@@ -123,3 +123,160 @@
 @media (prefers-reduced-transparency: reduce), (forced-colors: active) {
   .app-shell.navigation-v2[data-area="student"] .app-topbar::after { display: none; }
 }
+
+
+/* --------------------------------------------------------------------------
+   ASTRYX corrective pass — true viewport-pinned command bar.
+   The dashboard has nested scroll surfaces and shell ancestors; sticky was
+   therefore not reliable in every route. Keep the complete desktop command
+   bar attached to the viewport and reserve its exact space in the content.
+   -------------------------------------------------------------------------- */
+.app-shell.navigation-v2[data-area="student"] {
+  --astrix-topbar-height: 76px;
+}
+.app-shell.navigation-v2[data-area="student"] > .app-main {
+  padding-top: var(--astrix-topbar-height);
+}
+.app-shell.navigation-v2[data-area="student"] .app-topbar {
+  position: fixed !important;
+  inset: 0 0 auto 0 !important;
+  width: 100% !important;
+  height: var(--astrix-topbar-height) !important;
+  min-height: var(--astrix-topbar-height) !important;
+  z-index: 1000 !important;
+  overflow: visible !important;
+  isolation: isolate;
+  border-bottom: 1px solid rgb(229 184 94 / 34%) !important;
+  background:
+    radial-gradient(ellipse at 16% -95%, rgb(229 184 94 / 13%), transparent 48%),
+    linear-gradient(110deg, #111a25 0%, #182330 52%, #101a25 100%) !important;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 5%),
+    0 12px 30px -22px rgb(0 0 0 / 86%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  backdrop-filter: blur(18px) saturate(135%);
+  transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.app-shell.navigation-v2[data-area="student"] .app-topbar[data-scrolled="true"] {
+  border-bottom-color: rgb(229 184 94 / 58%) !important;
+  background:
+    radial-gradient(ellipse at 16% -95%, rgb(229 184 94 / 17%), transparent 48%),
+    linear-gradient(110deg, rgb(13 22 32 / 98%) 0%, rgb(20 32 45 / 98%) 52%, rgb(12 21 31 / 98%) 100%) !important;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 7%),
+    0 16px 34px -18px rgb(0 0 0 / 92%),
+    0 2px 0 rgb(229 184 94 / 7%) !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation {
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  min-height: 0;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+  transform: none;
+  transition:
+    color 170ms ease,
+    background-color 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease,
+    transform 170ms cubic-bezier(.2,.75,.25,1);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover {
+  transform: translateY(-1px);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:active {
+  transform: translateY(0) scale(.975);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:focus-visible,
+.app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a):focus-visible {
+  outline: 2px solid #e5b85e !important;
+  outline-offset: 3px;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] {
+  border-color: rgb(229 184 94 / 58%) !important;
+  background: linear-gradient(135deg, rgb(229 184 94 / 18%), rgb(229 184 94 / 7%)) !important;
+  box-shadow: inset 0 -2px 0 #e5b85e, 0 5px 16px rgb(0 0 0 / 18%) !important;
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover .student-top-navigation__icon-wrap {
+  transform: translateY(-1px) scale(1.04);
+}
+.app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap {
+  transition: transform 170ms cubic-bezier(.2,.75,.25,1), background-color 170ms ease, border-color 170ms ease;
+}
+.app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a) {
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a):hover {
+  transform: translateY(-1px);
+  border-color: rgb(229 184 94 / 55%);
+  box-shadow: 0 5px 14px rgb(0 0 0 / 20%);
+}
+.app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a):active {
+  transform: scale(.96);
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content {
+  scroll-padding-top: calc(var(--astrix-topbar-height) + 16px);
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content :where([id]) {
+  scroll-margin-top: calc(var(--astrix-topbar-height) + 20px);
+}
+
+/* Light theme keeps the same graphite/brass hierarchy with opaque contrast. */
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar {
+  border-bottom-color: rgb(150 112 43 / 35%) !important;
+  background:
+    radial-gradient(ellipse at 16% -95%, rgb(198 155 75 / 12%), transparent 48%),
+    linear-gradient(110deg, #f8fafc 0%, #eef2f6 52%, #f8fafc 100%) !important;
+  box-shadow: 0 8px 24px -20px rgb(25 39 55 / 45%) !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar[data-scrolled="true"] {
+  background: rgb(247 249 252 / 98%) !important;
+  border-bottom-color: rgb(150 112 43 / 52%) !important;
+  box-shadow: 0 12px 28px -18px rgb(25 39 55 / 35%) !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger {
+  color: #344252 !important;
+  border-color: transparent !important;
+  background: transparent !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger:hover,
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-active="true"] {
+  color: #382d1c !important;
+  border-color: rgb(150 112 43 / 42%) !important;
+  background: rgb(198 155 75 / 13%) !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__label {
+  color: inherit !important;
+}
+:root:not(.dark) .app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a) {
+  color: #344252;
+  border-color: #cbd4de;
+  background: rgb(255 255 255 / 78%);
+}
+
+@media (max-width: 767px) {
+  .app-shell.navigation-v2[data-area="student"] { --astrix-topbar-height: 64px; }
+  .app-shell.navigation-v2[data-area="student"] .app-topbar {
+    height: var(--astrix-topbar-height) !important;
+    min-height: var(--astrix-topbar-height) !important;
+    padding-top: env(safe-area-inset-top, 0px) !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] > .app-main {
+    padding-top: var(--astrix-topbar-height);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"] .app-topbar,
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger,
+  .app-shell.navigation-v2[data-area="student"] .student-top-navigation__icon-wrap,
+  .app-shell.navigation-v2[data-area="student"] .app-topbar__actions :is(button,a) {
+    transition: none !important;
+    transform: none !important;
+  }
+}
