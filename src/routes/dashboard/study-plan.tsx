@@ -27,6 +27,7 @@ import { Progress } from "@/components/ui/progress";
 import { AgenteContabilidadePlan } from "@/components/dashboard/AgenteContabilidadePlan";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
+import "@/styles/study-plan-professional.css";
 
 export const Route = createFileRoute("/dashboard/study-plan")({ component: StudyPlanPage });
 
@@ -475,7 +476,7 @@ function StudyPlanPage() {
   const solid = subjects.filter((s) => s.level === "solido");
 
   return (
-    <div className="study-plan-page space-y-7 pb-10">
+    <div className="study-plan-page space-y-7 pb-10" data-career={career}>
       <PageHero
         image="journey"
         size="sm"
@@ -499,7 +500,7 @@ function StudyPlanPage() {
         </Card>
       )}
 
-      <Card>
+      <Card className="study-plan__objective">
         <CardHeader className="pb-3">
           <CardTitle className="flex items-center gap-2 text-lg">
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-black text-primary-foreground">
@@ -583,7 +584,7 @@ function StudyPlanPage() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="study-plan__starting-point">
         <CardHeader className="pb-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <CardTitle className="flex items-center gap-2 text-lg">
@@ -663,8 +664,8 @@ function StudyPlanPage() {
         </CardContent>
       </Card>
 
-      <section className="grid gap-5 xl:grid-cols-[1.35fr_.65fr]">
-        <Card className="overflow-hidden">
+      <section className="study-plan__work-area grid gap-5 xl:grid-cols-[1.35fr_.65fr]">
+        <Card className="study-plan__priorities overflow-hidden">
           <CardHeader className="border-b bg-muted/25">
             <CardTitle className="flex items-center gap-2 text-lg">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-black text-primary-foreground">
@@ -735,7 +736,7 @@ function StudyPlanPage() {
         </Card>
 
         <div className="space-y-5">
-          <Card>
+          <Card className="study-plan__goals">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
                 <Target className="h-5 w-5 text-primary" /> Metas da semana
@@ -763,7 +764,7 @@ function StudyPlanPage() {
               </p>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="study-plan__strategy">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
                 <BrainCircuit className="h-5 w-5 text-amber-600" /> Estratégia — {plan.board}
@@ -784,7 +785,7 @@ function StudyPlanPage() {
         </div>
       </section>
 
-      <Card>
+      <Card className="study-plan__week">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-lg">
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-black text-primary-foreground">

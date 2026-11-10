@@ -1,0 +1,76 @@
+/* Study plan: a calm operational hierarchy for daily decisions. */
+.study-plan-page {
+  --plan-surface: var(--card);
+  --plan-surface-soft: color-mix(in srgb, var(--card) 88%, var(--muted));
+  --plan-line: color-mix(in srgb, var(--border) 82%, transparent);
+  --plan-muted: color-mix(in srgb, var(--foreground) 62%, var(--muted-foreground));
+  --plan-accent: var(--primary);
+  --plan-radius: 18px;
+}
+.dark .study-plan-page {
+  --plan-surface-soft: color-mix(in srgb, var(--card) 90%, white 4%);
+  --plan-line: color-mix(in srgb, var(--border) 92%, transparent);
+  --plan-muted: color-mix(in srgb, var(--foreground) 70%, var(--muted-foreground));
+}
+.study-plan-page > .page-hero { min-height: 0; padding-block: 22px; }
+.study-plan-page > .page-hero .page-hero__desc { max-width: 70ch; }
+.study-plan-page > .page-hero .page-hero__stats { gap: 8px; }
+.study-plan-page > .page-hero .hero-stat { min-width: 116px; border-radius: 14px; background: color-mix(in srgb, var(--card) 72%, transparent); border-color: var(--plan-line); }
+.study-plan-page > .card,
+.study-plan-page > .study-plan__work-area > .card,
+.study-plan-page > .study-plan__work-area > div > .card { border-color: var(--plan-line); border-radius: var(--plan-radius); box-shadow: 0 18px 42px -34px rgb(15 23 42 / 45%); }
+.dark .study-plan-page > .card,
+.dark .study-plan-page > .study-plan__work-area > .card,
+.dark .study-plan-page > .study-plan__work-area > div > .card { box-shadow: 0 20px 44px -28px rgb(0 0 0 / 70%); }
+.study-plan__objective { border-top: 2px solid color-mix(in srgb, var(--brass) 72%, var(--border)); }
+.study-plan__objective .grid > div:first-child { min-width: 0; }
+.study-plan__objective [aria-pressed="true"] { box-shadow: 0 0 0 2px color-mix(in srgb, var(--brass) 55%, transparent), 0 8px 20px -14px rgb(0 0 0 / 60%); }
+.study-plan__objective [aria-pressed="true"][data-control-tone="sky"] { box-shadow: 0 0 0 2px color-mix(in srgb, var(--sky-500) 65%, transparent), 0 8px 20px -14px rgb(0 0 0 / 60%); }
+.study-plan__objective [aria-pressed="true"][data-control-tone="violet"] { box-shadow: 0 0 0 2px color-mix(in srgb, var(--violet-500, #8b5cf6) 65%, transparent), 0 8px 20px -14px rgb(0 0 0 / 60%); }
+.study-plan__objective button,
+.study-plan__objective input,
+.study-plan__priorities a { min-height: 44px; }
+.study-plan__priorities { border-top: 2px solid color-mix(in srgb, var(--brass) 58%, var(--border)) !important; }
+.study-plan__priorities > [data-slot="card-header"] { background: color-mix(in srgb, var(--primary) 5%, var(--card)); }
+.study-plan__priorities > [data-slot="card-content"] > div { transition: background-color 160ms ease; }
+.study-plan__priorities > [data-slot="card-content"] > div:hover { background: color-mix(in srgb, var(--brass) 5%, transparent); }
+.study-plan__priorities .text-lg { font-variant-numeric: tabular-nums; }
+.study-plan__goals,
+.study-plan__strategy { background: var(--plan-surface-soft); }
+.study-plan__goals { border-left: 3px solid color-mix(in srgb, var(--brass) 68%, var(--border)) !important; }
+.study-plan__strategy { border-left: 3px solid color-mix(in srgb, var(--emerald-500, #10b981) 65%, var(--border)) !important; }
+.study-plan__week [class*="rounded-2xl border p-3"] { background: var(--plan-surface-soft); transition: border-color 160ms ease, transform 160ms ease; }
+.study-plan__week [class*="rounded-2xl border p-3"]:hover { border-color: color-mix(in srgb, var(--brass) 48%, var(--border)); transform: translateY(-1px); }
+.study-plan__execution [class*="rounded-2xl border p-4"] { background: var(--plan-surface-soft); }
+.study-plan__execution [class*="rounded-2xl border p-4"]:first-child { border-color: color-mix(in srgb, var(--brass) 52%, var(--border)); }
+.study-plan-page .btn-brass,
+.study-plan-page button[data-state="on"],
+.study-plan-page [data-slot="button"] { min-height: 40px; }
+@media (max-width: 767px) {
+  .study-plan-page { gap: 20px; padding-bottom: 24px; }
+  .study-plan-page > .page-hero { margin-inline: -1rem; padding: 18px 1rem; border-radius: 0; }
+  .study-plan-page > .page-hero .page-hero__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+  .study-plan-page > .page-hero .hero-stat { min-width: 0; padding: 10px; }
+  .study-plan-page > .page-hero .hero-stat p { font-size: 1rem; }
+  .study-plan__objective .grid { gap: 14px; }
+  .study-plan__objective .grid-cols-1 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .study-plan__objective .grid-cols-1 button { min-height: 68px; text-align: center; }
+  .study-plan__objective .grid-cols-1 button span:last-child { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .study-plan__objective .flex.flex-wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .study-plan__objective .flex.flex-wrap button { min-height: 44px; }
+  .study-plan__priorities > [data-slot="card-content"] > div { padding: 16px; }
+  .study-plan__priorities > [data-slot="card-content"] > div > div:last-child { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 12px; }
+  .study-plan__priorities > [data-slot="card-content"] > div > div:last-child .mt-2 { grid-column: 1 / -1; }
+  .study-plan__week [class*="grid gap-3 sm:grid-cols-2"] { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .study-plan__week [class*="grid gap-3 sm:grid-cols-2"] > div { min-width: 78%; scroll-snap-align: start; }
+  .study-plan__execution [class*="grid gap-3"] { grid-template-columns: 1fr; }
+  .study-plan-page > .flex.flex-wrap { align-items: stretch; }
+  .study-plan-page > .flex.flex-wrap > div:last-child { width: 100%; display: grid; grid-template-columns: 1fr; }
+  .study-plan-page > .flex.flex-wrap > div:last-child a { justify-content: center; min-height: 46px; }
+}
+@media (max-width: 380px) {
+  .study-plan-page > .page-hero .page-hero__stats { gap: 5px; }
+  .study-plan-page > .page-hero .hero-stat { padding-inline: 6px; }
+  .study-plan-page > .page-hero .hero-stat p { font-size: .9rem; }
+  .study-plan__objective .grid-cols-1 button { padding-inline: 6px; }
+}
