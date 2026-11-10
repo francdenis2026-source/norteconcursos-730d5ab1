@@ -343,7 +343,7 @@ function NotebooksPage() {
               <CardContent className="pt-2">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] text-muted-foreground font-medium flex items-center gap-1">
-                    <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+                    <CheckCircle2 className="h-3 w-3 text-emerald-500 dark:text-emerald-400" />
                     {nb.questionIds.length} questões
                   </span>
                   <Button

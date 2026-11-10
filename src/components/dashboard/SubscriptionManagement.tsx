@@ -97,7 +97,7 @@ export function SubscriptionManagement() {
 
           <div className="mt-6 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <Shield className="h-5 w-5 text-emerald-500" />
+              <Shield className="h-5 w-5 text-emerald-500 dark:text-emerald-400" />
               <div className="text-sm">
                 <p className="font-medium">Assinatura Segura</p>
                 <p className="text-muted-foreground text-xs">
@@ -156,7 +156,7 @@ export function SubscriptionManagement() {
                       })}
                     </span>
                     {typeof log.metadata?.["reason"] === "string" && (
-                      <span className="text-[9px] text-rose-500/80 mt-0.5 italic">
+                      <span className="text-[9px] text-rose-500/80 dark:text-rose-400/90 mt-0.5 italic">
                         Motivo: {String(log.metadata?.["reason"])}
                       </span>
                     )}

@@ -147,7 +147,7 @@ export function EnemVideos({
                     x.id === video.id && "border-amber-400/60 bg-amber-400/10",
                   )}
                 >
-                  <PlayCircle className="mt-0.5 h-4 w-4 shrink-0 !text-rose-500" />
+                  <PlayCircle className="mt-0.5 h-4 w-4 shrink-0 !text-rose-500 dark:!text-rose-400" />
                   <span className="min-w-0">
                     <span className="block font-medium leading-snug">{x.title}</span>
                     <span className="block text-[11px] text-muted-foreground">

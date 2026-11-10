@@ -179,7 +179,7 @@ function HistoryPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
-              <Trophy className="h-5 w-5 text-amber-500" /> Sua posição
+              <Trophy className="h-5 w-5 text-amber-500 dark:text-amber-400" /> Sua posição
             </CardTitle>
             <CardDescription>
               {me?.rank_position ? (

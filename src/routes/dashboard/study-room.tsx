@@ -504,7 +504,7 @@ function StudyRoomPage() {
               )}
             >
               {n > 0 ? (
-                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
               ) : (
                 <Minus className="h-3.5 w-3.5" />
               )}
@@ -816,7 +816,7 @@ function StudyRoomPage() {
                 search={questionSearch}
                 className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
               >
-                <BookOpenCheck className="h-4 w-4 text-emerald-600" /> Praticar questões deste
+                <BookOpenCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" /> Praticar questões deste
                 assunto
               </Link>
               <Link
@@ -824,7 +824,7 @@ function StudyRoomPage() {
                 search={{ subject, ...(topic ? { topic } : {}) }}
                 className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
               >
-                <Layers className="h-4 w-4 text-cyan-600" /> Flashcards do assunto
+                <Layers className="h-4 w-4 text-cyan-600 dark:text-cyan-400" /> Flashcards do assunto
               </Link>
               <Link
                 to="/dashboard/edital"
@@ -836,7 +836,7 @@ function StudyRoomPage() {
                 to="/dashboard/library"
                 className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
               >
-                <Library className="h-4 w-4 text-amber-600" /> Biblioteca completa
+                <Library className="h-4 w-4 text-amber-600 dark:text-amber-400" /> Biblioteca completa
               </Link>
             </CardContent>
           </Card>

@@ -325,7 +325,7 @@ export function DayRun({
                         <p
                           className={cn(
                             "font-mono text-5xl font-black tabular-nums",
-                            overtime && "animate-pulse text-rose-500",
+                            overtime && "animate-pulse text-rose-500 dark:text-rose-400",
                           )}
                         >
                           {overtime ? "00:00" : mmss(left)}

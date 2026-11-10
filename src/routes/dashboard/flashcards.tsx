@@ -676,7 +676,7 @@ function FlashcardsPage() {
                             <span
                               className={cn(
                                 "font-semibold",
-                                due ? "text-amber-600" : "text-muted-foreground",
+                                due ? "text-amber-600 dark:text-amber-400" : "text-muted-foreground",
                               )}
                             >
                               {due

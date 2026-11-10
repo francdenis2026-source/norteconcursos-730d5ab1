@@ -103,10 +103,10 @@ export function LawPracticeQuiz({ law }: { law: string }) {
               </span>
               <span className="min-w-0 flex-1 leading-6">{option.text}</span>
               {reveal && isAnswer && (
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden />
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden />
               )}
               {reveal && isPicked && !isAnswer && (
-                <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-600" aria-hidden />
+                <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" aria-hidden />
               )}
             </button>
           );
