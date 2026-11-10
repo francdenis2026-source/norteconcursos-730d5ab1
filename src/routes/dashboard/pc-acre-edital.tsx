@@ -73,6 +73,7 @@ import {
   type PcAcPlanWeek,
 } from "@/lib/pcAcreMasterPlan";
 import "@/styles/pcac-edital.css";
+import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
 
 const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
@@ -452,6 +453,37 @@ function PcAcCronogramaCard({
     }
   };
 
+  const exportBrandedPdf = async () => {
+    const now = new Date();
+    const startDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    await generateStudyPlanPdf(
+      {
+        startDate,
+        examDate: PCAC_EXAM_DATE,
+        studyDays: cfg.days,
+        weeklyHours: cfg.weeklyHours,
+        startTime: cfg.startTime,
+      },
+      weeks.map((week) => ({
+        week: week.weekNumber,
+        startDate: week.startDate,
+        endDate: week.endDate,
+        events: week.days.flatMap((day) => day.activities.map((activity, index) => ({
+          id: `${day.date}-${index}`,
+          date: day.date,
+          start: cfg.startTime,
+          end: cfg.startTime,
+          kind: activity.type === "teoria" ? "teoria" : activity.type === "questoes" ? "questoes" : activity.type === "revisao" ? "revisao" : activity.type === "redacao" ? "redacao" : activity.type === "simulado" ? "simulado" : "descanso",
+          discipline: activity.subject,
+          topic: activity.topic,
+          phase: week.phase === "fundamentos" ? "base" : week.phase,
+          generated: true as const,
+        }))),
+      })),
+      `Plano de estudos · ${cargo.label}`,
+    );
+  };
+
   const phaseWeeks = (phase: PcAcPlanWeek["phase"]) => weeks.filter((w) => w.phase === phase);
 
   return (
@@ -475,6 +507,9 @@ function PcAcCronogramaCard({
             <Button variant="secondary" onClick={() => void exportPdf()} disabled={exporting}>
               <Download className="mr-2 h-4 w-4" />
               {exporting ? "Gerando…" : "Exportar em PDF"}
+            </Button>
+            <Button variant="outline" onClick={() => void exportBrandedPdf()} disabled={!weeks.length}>
+              <Download className="mr-2 h-4 w-4" /> PDF Norte + QR
             </Button>
           </div>
         </div>
