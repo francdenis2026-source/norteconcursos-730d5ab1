@@ -187,6 +187,17 @@
 }
 .app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head {
   min-height: 64px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, var(--practice-paper) 0%, color-mix(in oklab, var(--practice-paper) 92%, transparent) 42%, color-mix(in oklab, var(--practice-paper) 28%, transparent) 100%),
+    url("/media/hero/question-trainer.webp") right center / cover no-repeat;
+}
+.dark .app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head {
+  background:
+    linear-gradient(90deg, #172b33 0%, rgb(23 43 51 / 92%) 42%, rgb(23 43 51 / 18%) 100%),
+    url("/media/hero/question-trainer.webp") right center / cover no-repeat;
 }
 .app-shell[data-area="student"] .trainer-setup :is([data-slot="select-trigger"], button[data-slot="select-trigger"]):hover,
 .app-shell[data-area="student"] .trainer-setup .trainer-more > summary:hover {
