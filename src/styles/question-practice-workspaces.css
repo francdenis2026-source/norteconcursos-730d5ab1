@@ -179,6 +179,34 @@
   opacity: .48;
 }
 
+/* Final control pass: the trainer uses the same cool action color as its
+   fields and selected metrics; avoid a competing gold CTA. */
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified {
+  border-radius: 16px;
+  box-shadow: 0 14px 36px -28px rgb(8 25 38 / 45%);
+}
+.app-shell[data-area="student"] .trainer-setup .trainer-setup__unified-head {
+  min-height: 64px;
+}
+.app-shell[data-area="student"] .trainer-setup :is([data-slot="select-trigger"], button[data-slot="select-trigger"]):hover,
+.app-shell[data-area="student"] .trainer-setup .trainer-more > summary:hover {
+  border-color: color-mix(in oklab, var(--practice-accent) 55%, var(--practice-line));
+  background: color-mix(in oklab, var(--practice-accent) 5%, var(--practice-paper));
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action {
+  background: var(--practice-accent-strong);
+  border: 1px solid color-mix(in oklab, var(--practice-accent) 70%, var(--practice-line));
+  color: #fff;
+  box-shadow: 0 8px 18px -14px var(--practice-accent);
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action:hover:not(:disabled) {
+  background: var(--practice-accent);
+  transform: translateY(-1px);
+}
+.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action:active:not(:disabled) {
+  transform: translateY(0);
+}
+
 /* Question bank: search first, source filters second, catalog statistics as one compact strip. */
 .app-shell[data-area="student"] .question-catalog {
   gap: 13px;
