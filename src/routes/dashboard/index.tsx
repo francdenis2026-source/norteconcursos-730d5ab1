@@ -706,7 +706,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                             </span>
                             <div>
                               <strong>{block.nome}</strong>
-                              <small>{block.minutes} min previstos</small>
+                              <small>{block.topic ? `${block.topic} · ` : ""}{block.minutes} min previstos</small>
                             </div>
                             <Clock aria-hidden="true" />
                           </li>

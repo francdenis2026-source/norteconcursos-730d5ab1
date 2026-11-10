@@ -67,7 +67,7 @@ export function discStats(d: CronoDisc, progress: Record<string, TopicProgress>)
   return { done, total: d.topicos.length, qtde, acertos };
 }
 
-export interface WeekBlock { discId: string; nome: string; minutes: number; start: string; end: string; first: boolean }
+export interface WeekBlock { discId: string; nome: string; topic: string; topicId: string; minutes: number; start: string; end: string; first: boolean }
 export const MIN_BLOCK = 30;
 export const MAX_BLOCK = 120; // PDF: peso 2, primeira vez que vai estudar = 2 horas
 const GAP = 10;
@@ -104,7 +104,7 @@ export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgre
   // cada disciplina vira blocos de até 2 h; coloca sempre no dia mais vazio que ainda não a tem
   const load = Object.fromEntries(days.map((d) => [d, 0]));
   const has = Object.fromEntries(days.map((d) => [d, new Set<string>()]));
-  const perDay: Record<number, { d: CronoDisc; minutes: number; first: boolean }[]> = Object.fromEntries(days.map((d) => [d, []]));
+  const perDay: Record<number, { d: CronoDisc; topic: string; topicId: string; minutes: number; first: boolean }[]> = Object.fromEntries(days.map((d) => [d, []]));
   const order = cfg.discs.map((d, i) => ({ d, n: alloc[i] ?? 0 })).sort((a, b) => b.n - a.n);
   for (const { d, n } of order) {
     let remaining = n * MIN_BLOCK;
@@ -112,7 +112,8 @@ export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgre
     while (remaining > 0) {
       const m = Math.min(remaining, MAX_BLOCK);
       const day = [...days].sort((a, b) => Number(has[a]!.has(d.id)) - Number(has[b]!.has(d.id)) || load[a]! - load[b]! || a - b)[0]!;
-      perDay[day]!.push({ d, minutes: m, first });
+      const pending = d.topicos.find((topic) => !topicDone(progress[topic.id]));
+      perDay[day]!.push({ d, topic: pending?.t ?? "Próximo conteúdo", topicId: pending?.id ?? "", minutes: m, first });
       has[day]!.add(d.id);
       load[day]! += m;
       remaining -= m;
@@ -124,7 +125,7 @@ export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgre
   for (const day of days) {
     let t = (h ?? 19) * 60 + (m ?? 0);
     for (const b of perDay[day]!.sort((a, b2) => b2.minutes - a.minutes || a.d.nome.localeCompare(b2.d.nome))) {
-      out[day]!.push({ discId: b.d.id, nome: b.d.nome, minutes: b.minutes, start: hhmm(t), end: hhmm(t + b.minutes), first: b.first });
+      out[day]!.push({ discId: b.d.id, nome: b.d.nome, topic: b.topic, topicId: b.topicId, minutes: b.minutes, start: hhmm(t), end: hhmm(t + b.minutes), first: b.first });
       t += b.minutes + GAP;
     }
   }

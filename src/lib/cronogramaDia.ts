@@ -165,8 +165,8 @@ export function selfCheckDia() {
   const mk = (id: string): CronoDisc => ({ id, nome: id, peso: 1, topicos: [{ id: id + ".0", t: "t0" }, { id: id + ".1", t: "t1" }] });
   const cfg: CronoConfig = { discs: [mk("a"), mk("b")], days: [1, 2], startTime: "19:00", weeklyHours: 4 };
   const blocks: WeekBlock[] = [
-    { discId: "a", nome: "a", minutes: 60, start: "19:00", end: "20:00", first: true },
-    { discId: "b", nome: "b", minutes: 60, start: "20:10", end: "21:10", first: true },
+    { discId: "a", nome: "a", topic: "t0", topicId: "a.0", minutes: 60, start: "19:00", end: "20:00", first: true },
+    { discId: "b", nome: "b", topic: "t0", topicId: "b.0", minutes: 60, start: "20:10", end: "21:10", first: true },
   ];
   const steps = buildDaySteps(cfg, blocks, {}, { simulado: true, essay: true, isLastStudyDay: true, isSecondLastOrOnly: true });
   if (stepMinutes(steps, ["teoria", "flashcards", "questoes", "erros"]) !== 120) throw new Error("minutos de estudo");
