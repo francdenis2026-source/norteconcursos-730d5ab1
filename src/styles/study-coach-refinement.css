@@ -59,3 +59,55 @@
     font-size: 12px;
   }
 }
+/* Desktop refinement: keep the planning flow readable and visually calm. */
+.app-shell[data-area="student"] .plan-workspace-window {
+  --coach-line: color-mix(in oklab, var(--border) 88%, var(--primary));
+  --coach-soft: color-mix(in oklab, var(--muted) 78%, var(--card));
+  gap: 16px;
+}
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero {
+  min-height: 150px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--coach-line);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px -24px rgb(8 25 38 / 38%);
+}
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero h1 {
+  margin-block: 8px 6px;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  letter-spacing: -.04em;
+}
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero p {
+  max-width: 62ch;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.app-shell[data-area="student"] .plan-workspace-window section[aria-label="Concurso e edital do seu plano"] {
+  border: 1px solid var(--coach-line);
+  border-radius: 14px;
+  background: var(--coach-soft);
+  box-shadow: none;
+}
+.app-shell[data-area="student"] .plan-workspace-window .coach-view-switch {
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--coach-line);
+  border-radius: 11px;
+  background: var(--coach-soft);
+}
+.app-shell[data-area="student"] .plan-workspace-window .coach-view-switch button {
+  min-height: 36px;
+  border-radius: 8px;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+.app-shell[data-area="student"] .plan-workspace-window .coach-view-switch button[aria-pressed="true"] {
+  box-shadow: 0 1px 4px rgb(8 25 38 / 14%);
+}
+.app-shell[data-area="student"] .plan-workspace-window .coach-view-switch button:active,
+.app-shell[data-area="student"] .plan-workspace-window .study-assistant-hero__action:active {
+  transform: translateY(1px);
+}
+.app-shell[data-area="student"] .plan-workspace-window :is(button, a, input, select):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
