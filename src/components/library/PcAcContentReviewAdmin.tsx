@@ -39,11 +39,16 @@ export function PcAcContentReviewAdmin() {
   }
   setBusy(row.id);
   const now=new Date().toISOString();
-  const {error:failure}=await supabase.from("study_materials").update({
+  const {data:updated,error:failure}=await supabase.from("study_materials").update({
     content_status:"active",reviewed_by:user.id,reviewed_at:now,law_version_checked_at:now
-  }).eq("id",row.id).eq("content_status","under_review");
+  }).eq("id",row.id).eq("content_status","under_review").select("id,reviewed_by,reviewed_at").maybeSingle();
   setBusy(null);
   if(failure){toast.error(failure.message);return;}
+  if(!updated || updated.reviewed_by !== user.id || !updated.reviewed_at){
+    toast.error("A aprovação não foi confirmada pelo banco. Atualize os materiais e tente novamente.");
+    void load();
+    return;
+  }
   toast.success("Aula homologada com identificação do revisor.");
   setChecked(previous=>({...previous,[row.id]:false}));
   void load();
