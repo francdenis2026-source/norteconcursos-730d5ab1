@@ -12,3 +12,40 @@
   .auth .auth-heading h2 { font-size: 1.3rem; }
   .auth .auth-submit { min-height: 46px; }
 }
+
+
+/* Compact session feedback in the Norte Concursos palette. */
+.auth .auth-session-notice,
+li[data-sonner-toast].auth-session-toast {
+  border: 1px solid color-mix(in srgb, var(--brass) 35%, var(--border));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--brass) 7%, var(--card));
+  color: var(--foreground);
+  font-size: .875rem;
+  line-height: 1.4;
+}
+
+.auth .auth-session-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 9px 11px;
+}
+
+li[data-sonner-toast].auth-session-toast {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 9px 13px;
+  box-shadow: 0 5px 18px rgb(0 0 0 / 14%);
+}
+
+:is(.auth-session-notice, .auth-session-toast) svg {
+  flex: none;
+  color: var(--brass-deep);
+}
+
+.dark :is(.auth-session-notice, .auth-session-toast) svg {
+  color: var(--brass);
+}
