@@ -30,7 +30,7 @@ export function PcAcreEditalSpotlight() {
         <div className="pcpr-spot__actions">
           <Link to="/dashboard/inteligencia-idecan" className="pcpr-spot__cta pcpr-spot__cta--ghost">
             <ScanSearch aria-hidden="true" />
-            Raio-X da banca
+            Radar IDECAN
           </Link>
           <Link
             to="/dashboard/pc-acre-edital"
