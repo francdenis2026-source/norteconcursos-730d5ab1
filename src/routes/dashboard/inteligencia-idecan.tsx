@@ -42,6 +42,7 @@ import {
 import { cn } from "@/lib/utils";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { INVESTIGATOR_FOCUS } from "@/data/pcAcreIdecanRadar";
+import "@/styles/inteligencia-idecan-refinement.css";
 
 export const Route = createFileRoute("/dashboard/inteligencia-idecan")({
   component: InteligenciaIdecan,
@@ -332,7 +333,7 @@ function InteligenciaIdecan() {
     );
 
   return (
-    <div className="mx-auto max-w-5xl space-y-6 pb-8">
+    <div className="idecan-intelligence-page mx-auto space-y-6 pb-8">
       <PageHero
         image="field-map"
         size="sm"
