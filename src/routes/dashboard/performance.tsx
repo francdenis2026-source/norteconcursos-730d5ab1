@@ -29,6 +29,7 @@ import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
 import { PerformanceChartsGrid } from "@/components/dashboard/PerformanceCharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import "@/styles/performance-refinement.css";
+import "@/styles/performance-professional-refinement.css";
 import "@/styles/student-workspace-unified.css";
 
 import "@/styles/student-internal-workspace-system.css";
