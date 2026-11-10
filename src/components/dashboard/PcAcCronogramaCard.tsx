@@ -1,7 +1,12 @@
 import * as React from "react";
-import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag } from "lucide-react";
+import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2 } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
+import { Card } from "@astryxdesign/core/Card";
+import { List } from "@astryxdesign/core/List";
+import { Item } from "@astryxdesign/core/Item";
+import { Badge as AstryxBadge } from "@astryxdesign/core/Badge";
+import { Table, proportional } from "@astryxdesign/core/Table";
 import { Theme } from "@astryxdesign/core/theme";
 import { themes, defaultThemeSlug } from "../../astryx-themes";
 import { getActiveTheme } from "@/lib/theme";
@@ -13,7 +18,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { DEFAULT_PCAC_STUDY_CONFIG, PCAC_EXAM_DATE, readPcAcStudyConfig, writePcAcStudyConfig, type PcAcStudyPlanConfig, type PcAcWeeklyGridRow } from "@/lib/pcAcreStudyPlan";
 import { INVESTIGATOR_DISCIPLINE_PESO } from "@/data/pcAcreIdecanRadar";
-import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
+import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcActivityType, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
 import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
 import { platformDate } from "@/lib/platformClock";
 import { findPcAcStudyResource, pcAcStudyResources, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
@@ -24,6 +29,53 @@ const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 const WEEKDAY_FULL = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 const GRID_DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 const GRID_DAY_LETTER = ["D", "S", "T", "Q", "Q", "S", "S"]; // índice = weekday (0 domingo)
+
+/** Ícone e badge por tipo de atividade — usados no resumo "Hoje" e nas tabelas de dia, para o
+ * aluno reconhecer de imediato o tipo de bloco (teoria, questões, pausa, refeição, TAF…). */
+const ACTIVITY_ICON: Record<PcAcActivityType, React.ComponentType<{ "aria-hidden"?: boolean }>> = {
+  teoria: BookOpen,
+  video: Video,
+  questoes: ListChecks,
+  redacao: PenLine,
+  revisao: RotateCcw,
+  simulado: Trophy,
+  descanso: Moon,
+  pausa: Coffee,
+  rotina: Coffee,
+  exercicio: Dumbbell,
+};
+const ACTIVITY_BADGE_VARIANT: Record<PcAcActivityType, "info" | "success" | "warning" | "neutral" | "purple" | "teal"> = {
+  teoria: "info",
+  video: "info",
+  questoes: "success",
+  redacao: "purple",
+  revisao: "teal",
+  simulado: "warning",
+  descanso: "neutral",
+  pausa: "neutral",
+  rotina: "neutral",
+  exercicio: "warning",
+};
+
+/** `Table` do Astryx exige `T extends Record<string, unknown>`; nossas interfaces de domínio
+ * (`PcAcWeeklyGridRow`, `PcAcPlanActivity`) não declaram índice de string, então tipamos os dois
+ * usos aqui uma única vez em vez de espalhar `as unknown as` pelo JSX. */
+type AstryxTableColumn<T> = {
+  key: string;
+  header?: React.ReactNode;
+  align?: "start" | "center" | "end";
+  width?: ReturnType<typeof proportional>;
+  renderCell: (row: T) => React.ReactNode;
+};
+type AstryxTableComponent<T> = React.FC<{
+  data: T[];
+  density?: "compact" | "balanced" | "spacious";
+  dividers?: "rows" | "columns" | "grid" | "none";
+  isStriped?: boolean;
+  columns: AstryxTableColumn<T>[];
+}>;
+const GridTable = Table as unknown as AstryxTableComponent<PcAcWeeklyGridRow>;
+const DayActivityTable = Table as unknown as AstryxTableComponent<PcAcPlanWeek["days"][number]["activities"][number] & { rowId: string }>;
 
 /** Cronograma de estudos único da área do aluno: une a grade semanal por disciplina (peso,
  * horário e dias da semana — mesmo formato do cronograma em papel que serviu de modelo) com a
@@ -42,7 +94,7 @@ export function PcAcCronogramaCard({
   const [cfg, setCfg] = React.useState<PcAcStudyPlanConfig>(DEFAULT_PCAC_STUDY_CONFIG);
   const [loadedConfigKey, setLoadedConfigKey] = React.useState("");
   const [mode, setMode] = React.useState(getActiveTheme);
-  const [tab, setTab] = React.useState("grade");
+  const [tab, setTab] = React.useState("semanas");
   const [exportError, setExportError] = React.useState("");
   React.useEffect(() => {
     const observer = new MutationObserver(() => setMode(getActiveTheme()));
@@ -198,6 +250,16 @@ export function PcAcCronogramaCard({
       .sort((a, b) => b.peso - a.peso || b.totalMinutes - a.totalMinutes);
   }, [cargo, cfg, configLoaded, showDetailedPlan, referenceWeek]);
 
+  // Visão imediata "Hoje": destaca, sem precisar trocar de aba, a mesma programação detalhada
+  // (horário, disciplina, tópico, pausas, refeições, TAF) do dia corrente dentro do plano gerado.
+  const todayPlanDay = React.useMemo(() => {
+    for (const week of weeks) {
+      const found = week.days.find((day) => day.date === todayKey);
+      if (found) return found;
+    }
+    return null;
+  }, [weeks, todayKey]);
+
   const finalDays = React.useMemo(() => buildPcAcFinalDays(PCAC_EXAM_DATE, effectiveStartDate), [effectiveStartDate]);
   const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
 
@@ -260,6 +322,36 @@ export function PcAcCronogramaCard({
       </header>
       {exportError && <p role="alert">{exportError}</p>}
       <section className="pcac-schedule__body">
+        {todayPlanDay && (
+          <Card variant="teal" className="pcac-schedule__today">
+            <div className="flex flex-wrap items-center justify-between gap-2 px-1 pt-1">
+              <p className="flex items-center gap-2 text-sm font-bold text-foreground">
+                <CalendarCheck2 aria-hidden="true" className="h-4 w-4" />
+                Hoje · {WEEKDAY_FULL[todayPlanDay.weekday]} ({todayPlanDay.date.split("-").reverse().join("/")})
+              </p>
+              <AstryxBadge variant="info" label={`${todayPlanDay.activities.length} ${todayPlanDay.activities.length === 1 ? "bloco" : "blocos"} planejados`} />
+            </div>
+            <List density="compact" hasDividers>
+              {todayPlanDay.activities.map((activity, index) => {
+                const Icon = ACTIVITY_ICON[activity.type];
+                return (
+                  <Item
+                    key={index}
+                    startContent={<Icon aria-hidden />}
+                    label={
+                      <span className="flex items-center gap-2">
+                        {activity.start ? `${activity.start}–${activity.end}` : ""} {PCAC_ACTIVITY_LABEL[activity.type]}
+                        {activity.subject ? ` · ${activity.subject}` : ""}
+                      </span>
+                    }
+                    description={activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail}
+                    endContent={<AstryxBadge variant={ACTIVITY_BADGE_VARIANT[activity.type]} label={activity.type === "rotina" ? "Rotina" : activity.type === "pausa" ? "Pausa" : PCAC_ACTIVITY_LABEL[activity.type]} />}
+                  />
+                );
+              })}
+            </List>
+          </Card>
+        )}
         <aside className="pcac-schedule__resources rounded-xl border border-emerald-700/30 bg-emerald-500/5 px-3 py-2" aria-label="Materiais vinculados ao cronograma">
           <div className="flex flex-wrap items-center gap-2">
             <strong className="mr-1 text-xs text-foreground">Materiais de apoio</strong>
@@ -375,46 +467,44 @@ export function PcAcCronogramaCard({
               Derivada da semana {referenceWeek.weekNumber} ({referenceWeek.startDate.split("-").reverse().join("/")} a {referenceWeek.endDate.split("-").reverse().join("/")}) do mesmo plano detalhado.
             </p>
           )}
-          <div className="pcac-schedule__table">
-            <table className="w-full border-collapse text-xs">
-              <thead>
-                <tr className="bg-primary text-primary-foreground">
-                  <th className="px-2.5 py-2 text-left font-semibold">Disciplina</th>
-                  <th className="px-2 py-2 text-center font-semibold">Peso</th>
-                  <th className="px-2 py-2 text-center font-semibold">Horário</th>
-                  {GRID_DAY_ORDER.map((weekday) => (
-                    <th key={weekday} className="px-1.5 py-2 text-center font-semibold" title={WEEKDAY_FULL[weekday]}>
-                      {GRID_DAY_LETTER[weekday]}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {grid.map((row, i) => (
-                  <tr key={row.id} className={i % 2 === 1 ? "bg-muted/30" : undefined}>
-                    <td className="px-2.5 py-1.5">
-                       <span className="font-semibold">{row.name}</span>
-                       {findPcAcStudyResource(row.name) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(row.name)!.courseId)} className="ml-2 inline-block whitespace-nowrap text-[11px] font-semibold text-emerald-600 underline-offset-2 hover:underline dark:text-emerald-300">Estudar teoria</a>}
-                     </td>
-                    <td className="px-2 py-1.5 text-center font-semibold text-primary">{row.peso}</td>
-                    <td className="px-2 py-1.5 text-center text-muted-foreground">{row.horario}</td>
-                    {GRID_DAY_ORDER.map((weekday) => (
-                      <td key={weekday} className="px-1.5 py-1.5 text-center font-bold text-primary">
-                        {row.days.includes(weekday) ? "×" : ""}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-                {!grid.length && (
-                  <tr>
-                    <td colSpan={10} className="px-2.5 py-3 text-center text-muted-foreground">
-                      {startError || "Aguarde o carregamento das suas preferências ou escolha os dias de estudo."}
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
+          {grid.length ? (
+            <GridTable
+              data={grid}
+              density="compact"
+              dividers="grid"
+              isStriped
+              columns={[
+                {
+                  key: "name",
+                  header: "Disciplina",
+                  width: proportional(2, { minWidth: 160 }),
+                  renderCell: (row) => (
+                    <span className="flex flex-wrap items-center gap-2">
+                      <span className="font-semibold">{row.name}</span>
+                      {findPcAcStudyResource(row.name) && (
+                        <a href={pcAcStudyResourceUrl(findPcAcStudyResource(row.name)!.courseId)} className="whitespace-nowrap text-[11px] font-semibold text-emerald-600 underline-offset-2 hover:underline dark:text-emerald-300">
+                          Estudar teoria
+                        </a>
+                      )}
+                    </span>
+                  ),
+                },
+                { key: "peso", header: "Peso", align: "center", width: proportional(1, { minWidth: 56 }), renderCell: (row) => <strong className="text-primary">{row.peso}</strong> },
+                { key: "horario", header: "Horário", align: "center", width: proportional(1, { minWidth: 92 }), renderCell: (row) => <span className="text-muted-foreground">{row.horario}</span> },
+                ...GRID_DAY_ORDER.map((weekday) => ({
+                  key: `day-${weekday}`,
+                  header: GRID_DAY_LETTER[weekday]!,
+                  align: "center" as const,
+                  width: proportional(1, { minWidth: 32 }),
+                  renderCell: (row: PcAcWeeklyGridRow) => (row.days.includes(weekday) ? <strong className="text-primary">×</strong> : null),
+                })),
+              ]}
+            />
+          ) : (
+            <p className="rounded-lg border px-2.5 py-3 text-center text-xs text-muted-foreground">
+              {startError || "Aguarde o carregamento das suas preferências ou escolha os dias de estudo."}
+            </p>
+          )}
           <p className="mt-1.5 text-[11px] text-muted-foreground">
             A distribuição considera os tópicos do cargo e prioriza conhecimentos específicos. O peso IDECAN é exibido quando há classificação específica disponível.
           </p>
@@ -454,62 +544,65 @@ export function PcAcCronogramaCard({
                         </AccordionTrigger>
                         <AccordionContent className="space-y-3">
                           {items.map((week) => (
-                            <div key={week.weekNumber} className={`pcac-week-card pcac-week-card--${((week.weekNumber - 1) % 5) + 1} rounded-lg border bg-background/60 p-3`}>
-                              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                            <div key={week.weekNumber} className={`pcac-week-card pcac-week-card--${((week.weekNumber - 1) % 5) + 1} rounded-lg border bg-background/60 p-3 space-y-3`}>
+                              <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
                                 Semana {week.weekNumber} · {week.startDate.split("-").reverse().join("/")} a{" "}
                                 {week.endDate.split("-").reverse().join("/")}
                               </p>
-                              <div className="overflow-x-auto rounded-md border">
-                                <table className="w-full border-collapse text-xs">
-                                  <thead>
-                                    <tr className="bg-muted/60">
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Dia</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Horário</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Etapa</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Disciplina / rotina</th>
-                                      <th className="px-2.5 py-1.5 text-left font-semibold">Tópico / orientação</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    {week.days.flatMap((day, di) =>
-                                      day.activities.map((activity, ai) => (
-                                        <tr
-                                          key={`${day.date}-${ai}`}
-                                          className={di % 2 === 1 ? "bg-muted/20 align-top" : "align-top"}
-                                        >
-                                          {ai === 0 && (
-                                            <td
-                                              className="whitespace-nowrap border-t px-2.5 py-1.5 font-semibold text-foreground/90"
-                                              rowSpan={day.activities.length}
-                                            >
-                                              {(WEEKDAY_FULL[day.weekday] ?? "Dia").slice(0, 3)} ·{" "}
-                                              {day.date.split("-").reverse().slice(0, 2).join("/")}
-                                            </td>
-                                          )}
-                                          <td className="border-t px-2.5 py-1.5 font-semibold text-primary">
-                                            {PCAC_ACTIVITY_LABEL[activity.type]}
+                              {week.days.map((day) => (
+                                <Card key={day.date} variant="muted" className="pcac-schedule__day">
+                                  <p className="mb-2 flex items-center gap-2 px-1 text-xs font-bold text-foreground/90">
+                                    <CalendarDays aria-hidden="true" className="h-3.5 w-3.5" />
+                                    {WEEKDAY_FULL[day.weekday]} · {day.date.split("-").reverse().slice(0, 2).join("/")}
+                                  </p>
+                                  <DayActivityTable
+                                    data={day.activities.map((activity, index) => ({ ...activity, rowId: `${day.date}-${index}` }))}
+                                    density="compact"
+                                    dividers="rows"
+                                    isStriped
+                                    columns={[
+                                      {
+                                        key: "etapa",
+                                        header: "Etapa",
+                                        width: proportional(1, { minWidth: 110 }),
+                                        renderCell: (activity) => (
+                                          <span>
+                                            <span className="font-semibold text-primary">{PCAC_ACTIVITY_LABEL[activity.type]}</span>
                                             {activity.start && <span className="block font-normal text-muted-foreground">{activity.start}–{activity.end}</span>}
-                                          </td>
-                                          <td className="border-t px-2.5 py-1.5 text-foreground/90">
+                                          </span>
+                                        ),
+                                      },
+                                      {
+                                        key: "disciplina",
+                                        header: "Disciplina / rotina",
+                                        width: proportional(1, { minWidth: 130 }),
+                                        renderCell: (activity) => (
+                                          <span>
                                             {activity.subject ?? "—"}
-                                             {findPcAcStudyResource(activity.subject) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(activity.subject)!.courseId)} className="ml-1 block text-[11px] font-bold text-emerald-600 hover:underline dark:text-emerald-300">Abrir aulas</a>}
-                                          </td>
-                                          <td className="border-t px-2.5 py-1.5 text-muted-foreground">
+                                            {findPcAcStudyResource(activity.subject) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(activity.subject)!.courseId)} className="ml-1 block text-[11px] font-bold text-emerald-600 hover:underline dark:text-emerald-300">Abrir aulas</a>}
+                                          </span>
+                                        ),
+                                      },
+                                      {
+                                        key: "topico",
+                                        header: "Tópico / orientação",
+                                        width: proportional(2, { minWidth: 180 }),
+                                        renderCell: (activity) => (
+                                          <span className="text-muted-foreground">
                                             {activity.topic ? (
                                               <>
-                                                <span className="text-foreground/90">{activity.topic}</span>{" "}
-                                                <span>— {activity.detail}</span>
+                                                <span className="text-foreground/90">{activity.topic}</span> — {activity.detail}
                                               </>
                                             ) : (
                                               activity.detail
                                             )}
-                                          </td>
-                                        </tr>
-                                      )),
-                                    )}
-                                  </tbody>
-                                </table>
-                              </div>
+                                          </span>
+                                        ),
+                                      },
+                                    ]}
+                                  />
+                                </Card>
+                              ))}
                             </div>
                           ))}
                         </AccordionContent>
