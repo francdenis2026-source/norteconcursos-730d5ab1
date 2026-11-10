@@ -1,4 +1,5 @@
 import * as React from "react";
+import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
 import { BookOpenCheck, CheckCircle2, ExternalLink, ShieldAlert } from "lucide-react";
 
 type Lesson = { title: string; body: string[]; example: string; question: string; answer: string; source: string };
@@ -12,7 +13,7 @@ const OFFICIAL = {
   edital: "https://pc.ac.gov.br/governo-do-acre-lanca-edital-de-concurso-da-policia-civil-com-139-vagas/",
   digitization: "https://www.gov.br/conarq/pt-br/legislacao-arquivistica/decretos-federais/decreto-no-10-278-de-18-de-marco-de-2020",
 };
-const COURSES: Course[] = [
+const BASE_COURSES: Course[] = [
   { id:"arquivologia", title:"Arquivologia", subtitle:"Documentos, protocolo, classificação e preservação digital", applicability:"PC-AC: Oficial Investigador (Arquivologia nos específicos) e Papiloscopista (Noções de Arquivologia em Ciências Forenses). Em outros concursos, usar apenas quando o edital exigir a disciplina.", origin:"Referência temática: Arquivologia para Concursos Públicos (edição 2011), reescrito e complementado a partir de fontes institucionais.",updated:"Normas e fontes verificadas em 10/11/2026", lessons:[
     {title:"01 · Arquivo e documento arquivístico",body:["Arquivo é um conjunto orgânico de documentos acumulados por pessoa ou instituição no exercício de suas atividades, independentemente do suporte. Não se limita a papéis: documentos digitais também podem ser arquivísticos.","O vínculo com as atividades produtoras e a manutenção de contexto, autoria e autenticidade diferenciam documentos de arquivo de coleções temáticas. A gestão deve respeitar proveniência e organicidade."],example:"Um inquérito reúne peças produzidas e recebidas no curso de determinada atividade. Sua organização deve preservar vínculos processuais e histórico de tramitação.",question:"Todo arquivo precisa estar em papel?",answer:"Não. A natureza arquivística independe do suporte, físico ou digital.",source:OFFICIAL.archives},
     {title:"02 · Ciclo vital e três idades",body:["Documentos correntes são necessários às atividades em andamento e consultados com frequência; intermediários têm uso administrativo reduzido, mas permanecem guardados por prazo estabelecido; permanentes possuem valor que justifica preservação definitiva.","Transferência é a passagem entre fases de guarda, normalmente de corrente a intermediária; recolhimento é a entrada em custódia permanente. Nem todo documento passa obrigatoriamente por depósito intermediário."],example:"Um processo concluído pode ficar em guarda intermediária até cumprir seu prazo; documentos de valor permanente serão recolhidos em vez de eliminados.",question:"Um documento permanente pode ser eliminado só porque é pouco consultado?",answer:"Não. A destinação permanente decorre de avaliação e valor, não da frequência de consulta.",source:OFFICIAL.archives},
@@ -36,6 +37,7 @@ const COURSES: Course[] = [
     {title:"04 · Administração direta, indireta e descentralização",body:["Administração direta abrange órgãos integrantes das pessoas políticas; administração indireta reúne entidades dotadas de personalidade jurídica própria, como autarquias, fundações públicas, empresas públicas e sociedades de economia mista, segundo a legislação aplicável.","Desconcentração distribui competências internamente em uma mesma pessoa jurídica, enquanto descentralização transfere a execução ou titularidade de atividades conforme os modelos legalmente admitidos. Delegar tarefas a unidades internas não cria automaticamente nova pessoa jurídica."],example:"Criar unidades regionais dentro do mesmo órgão exemplifica desconcentração; instituir autarquia por lei integra a administração indireta.",question:"Criar uma unidade interna sem personalidade jurídica é descentralização?",answer:"Em regra, é desconcentração administrativa.",source:OFFICIAL.edital}
   ]}
 ];
+const COURSES: Course[] = BASE_COURSES.map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? [])]}));
 export function UpdatedStudyCollections({initialCourseId,storageScope="public"}: {initialCourseId?: string;storageScope?: string}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
