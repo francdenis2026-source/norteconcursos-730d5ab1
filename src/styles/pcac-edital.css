@@ -167,3 +167,81 @@
     min-height: 640px;
   }
 }
+
+/* Cronograma: use the available canvas while preserving table readability. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-cronograma {
+  width: 100%;
+  max-width: none;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .pcac-edital-cronograma > [data-slot="card-header"] {
+  background: linear-gradient(110deg, color-mix(in srgb, var(--primary) 9%, var(--card)), var(--card));
+  border-bottom: 1px solid var(--pcac-line, var(--border));
+}
+.pcac-edital-cronograma .grid.sm\:grid-cols-2 > div input {
+  min-height: 44px;
+}
+.pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) {
+  padding-top: 2px;
+}
+.pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) button {
+  min-width: 46px;
+  min-height: 40px;
+  border: 1px solid color-mix(in srgb, var(--primary) 26%, var(--border));
+}
+.pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) button[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--brass) 26%, transparent);
+}
+.pcac-edital-cronograma table {
+  font-variant-numeric: tabular-nums;
+}
+.pcac-edital-cronograma > [data-slot="card-content"] > div:has(> table),
+.pcac-edital-cronograma > [data-slot="card-content"] .overflow-x-auto {
+  min-width: 0;
+}
+.pcac-edital-cronograma > [data-slot="card-content"] .overflow-x-auto {
+  scrollbar-gutter: stable;
+  overscroll-behavior-inline: contain;
+}
+.pcac-edital-cronograma > [data-slot="card-content"] > div > .overflow-x-auto > table thead,
+.pcac-edital-cronograma .overflow-x-auto > table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.pcac-edital-cronograma > [data-slot="card-content"] > div > .overflow-x-auto > table tbody tr:hover,
+.pcac-edital-cronograma .overflow-x-auto > table tbody tr:hover {
+  background: color-mix(in srgb, var(--primary) 7%, var(--card));
+}
+.pcac-edital-cronograma .accordion-item,
+.pcac-edital-cronograma [data-state="open"] {
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--border));
+}
+.pcac-edital-cronograma [data-radix-accordion-content] > div {
+  background: color-mix(in srgb, var(--card) 94%, var(--muted));
+  border-color: var(--pcac-line, var(--border));
+}
+.pcac-edital-cronograma .rounded-lg.border.border-amber-400\/40 {
+  border-left-width: 3px;
+}
+@media (min-width: 1100px) {
+  .pcac-edital-cronograma > [data-slot="card-content"] { padding-inline: clamp(20px, 2.6vw, 40px); }
+  .pcac-edital-cronograma > [data-slot="card-header"] { padding-inline: clamp(20px, 2.6vw, 40px); }
+}
+@media (max-width: 760px) {
+  .pcac-edital-cronograma > [data-slot="card-header"] > div { align-items: stretch; }
+  .pcac-edital-cronograma > [data-slot="card-header"] > div > div:last-child { width: 100%; justify-content: stretch; }
+  .pcac-edital-cronograma > [data-slot="card-header"] > div > div:last-child > * { flex: 1 1 auto; justify-content: center; }
+  .pcac-edital-cronograma .grid.sm\:grid-cols-2 { grid-template-columns: minmax(0, 1fr); }
+  .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) { grid-column: auto; }
+  .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) > div { gap: 6px; }
+  .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) button { flex: 1 1 0; }
+  .pcac-edital-cronograma .overflow-x-auto { margin-inline: -2px; }
+  .pcac-edital-cronograma .overflow-x-auto > table { min-width: 700px; }
+  .pcac-edital-cronograma [data-radix-accordion-trigger] { min-height: 48px; }
+}
+@media (max-width: 420px) {
+  .pcac-edital-cronograma > [data-slot="card-header"] > div > div:last-child { flex-direction: column; align-items: stretch; }
+  .pcac-edital-cronograma > [data-slot="card-header"] > div > div:last-child > * { width: 100%; }
+  .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) { overflow-x: auto; }
+  .pcac-edital-cronograma .grid.sm\:grid-cols-2 > div:nth-child(3) > div { min-width: 330px; }
+}
