@@ -65,6 +65,12 @@ function mapContest(row: Record<string, unknown>): Contest {
   };
 }
 
+const PC_ACRE_CONTESTS: Contest[] = [
+  { id: "pcac-2026-investigador", name: "PC-AC 001/2026", agency: "Polícia Civil do Acre", career: "Policial", role: "Oficial Investigador de Polícia", examBoard: "IDECAN", educationLevel: "Superior", location: "Acre", status: "Edital Publicado", vacancies: 74, salary: 6342.07, examDate: "2027-01-24", isDemo: false },
+  { id: "pcac-2026-delegado", name: "PC-AC 001/2026", agency: "Polícia Civil do Acre", career: "Policial", role: "Delegado de Polícia Civil", examBoard: "IDECAN", educationLevel: "Superior", location: "Acre", status: "Edital Publicado", vacancies: 8, salary: 19506.66, examDate: "2027-01-24", isDemo: false },
+  { id: "pcac-2026-perito", name: "PC-AC 001/2026", agency: "Polícia Civil do Acre", career: "Policial", role: "Perito Criminal", examBoard: "IDECAN", educationLevel: "Superior", location: "Acre", status: "Edital Publicado", vacancies: 11, salary: 14629.25, examDate: "2027-01-24", isDemo: false },
+];
+
 export const MockService = {
   // Contests
   getContests: async (): Promise<Contest[]> => {
@@ -74,7 +80,10 @@ export const MockService = {
       .eq("is_demo", false)
       .eq("content_status", "publicado");
     if (error) throw error;
-    return (data ?? []).map(mapContest).filter((c) => !/fict[ií]cio/i.test(c.name));
+    const loaded = (data ?? []).map(mapContest).filter((c) => !/fict[ií]cio/i.test(c.name));
+    // Keep the PC-AC objective available while the public contest catalog is being hydrated.
+    if (!loaded.length) return PC_ACRE_CONTESTS;
+    return loaded;
   },
   getContestById: async (id: string): Promise<Contest | undefined> => {
     const { data, error } = await supabase
@@ -84,7 +93,7 @@ export const MockService = {
       .eq("is_demo", false)
       .maybeSingle();
     if (error) throw error;
-    return data ? mapContest(data) : undefined;
+    return data ? mapContest(data) : PC_ACRE_CONTESTS.find((contest) => contest.id === id);
   },
   setFocusedContest: async (id: string) => {
     const {
