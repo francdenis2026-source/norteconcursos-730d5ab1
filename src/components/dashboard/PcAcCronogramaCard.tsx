@@ -50,8 +50,10 @@ function materialShortcut(activity: { type: PcAcActivityType; subject?: string; 
   const href = type === "questoes"
     ? `/dashboard/question-trainer?subject=${discipline}&topic=${q}&back=${back}`
     : type === "simulado"
-      ? `/dashboard/mock-exams?subject=${discipline}&topic=${q}`
-      : `/dashboard/library?collection=subjects&discipline=${discipline}&q=${q}&back=${back}`;
+      ? `/dashboard/mock-exams?studySubject=${discipline}&materialTopic=${q}`
+      : type === "video"
+        ? `/dashboard/media?tab=assuntos&subject=${discipline}&topic=${q}`
+        : `/dashboard/library?collection=subjects&discipline=${discipline}&q=${q}&back=${back}`;
   return { ...MATERIAL_SHORTCUTS[type], href };
 }
 
