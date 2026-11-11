@@ -1,0 +1,22 @@
+/* Banner PC-AC (desktop): a arte cobre o card inteiro, ancorada à direita, com degradê só
+   do lado do texto — antes ela ficava "contain" e deixava uma faixa preta à direita. */
+@media (min-width: 761px) {
+  .home.hr-canvas .desktop-homepage .sx-banner-wrap,
+  .home.hr-canvas .desktop-homepage .sx-banner-wrap .sx-banner { max-width: 1180px; margin-inline: auto; }
+  .home.hr-canvas .desktop-homepage .sx-banner {
+    min-height: 330px;
+    padding: 40px 48px;
+    gap: 32px;
+    border-radius: 20px;
+  }
+  .home.hr-canvas .desktop-homepage .sx-banner > img.sx-banner__art {
+    object-fit: cover !important;
+    object-position: 85% 30% !important;
+  }
+  .home.hr-canvas .desktop-homepage .sx-banner::after {
+    background: linear-gradient(90deg, #0b1018 0%, rgb(11 16 24 / .94) 38%, rgb(11 16 24 / .35) 68%, rgb(11 16 24 / 0) 100%);
+  }
+  .home.hr-canvas .desktop-homepage .sx-banner__crest { width: 112px; }
+  .home.hr-canvas .desktop-homepage .sx-banner h2 { font-size: clamp(30px, 3vw, 42px); line-height: 1.08; }
+  .home.hr-canvas .desktop-homepage .sx-banner__facts dd { font-size: 26px; }
+}

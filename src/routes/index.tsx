@@ -1,7 +1,6 @@
 import { useHomeSection } from "@/hooks/useHomeSection";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
-import { PcacBanner } from "@/components/landing/PcacBanner";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -50,10 +49,8 @@ import "@/styles/nc-footer.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
 import "@/styles/home-layout-fixes.css";
-import "@/styles/news-banner.css";
 import "@/styles/general-access-banner.css";
 import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
-import { NewsBanner } from "@/components/landing/NewsBanner";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -90,6 +87,7 @@ import "@/styles/mobile-home-polish-nov10.css";
 import "@/styles/home-professional-refinement.css";
 import "@/styles/mobile-professional-system.css";
 import "@/styles/home-codex-refinement.css";
+import "@/styles/home-pcac-banner-desktop.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -368,12 +366,10 @@ function Index() {
       </header>
 
       <GeneralAccessBanner />
-      <NewsBanner />
 
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
         <HomeIntro />
-        <PcacBanner />
 
         <section id="concursos" className="sx-section" aria-label="Concursos em foco">
           <ContestShowcase />
