@@ -21,8 +21,9 @@
   color: #fff;
   isolation: isolate;
 }
-.trainer-setup.qt2 .qt2-hero > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: left 30%; transform: scaleX(-1); }
-.trainer-setup.qt2 .qt2-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, oklch(0.14 0.03 265 / 0.96) 0%, oklch(0.14 0.03 265 / 0.82) 55%, oklch(0.18 0.05 60 / 0.25) 100%); }
+/* Foto num bloco à direita (espelhada), enquadrada no rosto e esmaecida para a esquerda. */
+.trainer-setup.qt2 .qt2-hero > img { position: absolute; inset: 0 0 0 auto; z-index: -2; width: min(46%, 34rem); height: 100%; object-fit: cover; object-position: 50% 9%; transform: scaleX(-1); -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%); mask-image: linear-gradient(90deg, transparent 0%, #000 45%); }
+.trainer-setup.qt2 .qt2-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, oklch(0.14 0.03 265 / 0.9) 0%, oklch(0.14 0.03 265 / 0.55) 55%, transparent 100%); }
 .trainer-setup.qt2 .qt2-hero__copy { display: grid; gap: 0.125rem; min-width: 0; }
 .trainer-setup.qt2 .qt2-hero small { font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--qt2-gold); }
 .trainer-setup.qt2 .qt2-hero h1 { margin: 0; font-size: 1.5rem; font-weight: 800; line-height: 1.15; color: #fff; }
@@ -90,4 +91,39 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .trainer-setup.qt2 .qt2-quick a { transition: none; }
+}
+
+/* Montagem compacta: cabe numa janela e o botão de iniciar nunca fica escondido. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 { gap: 0.5rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-setup__unified { overflow: visible; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-setup__unified > [data-slot="card-content"] { padding: 0.75rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero { gap: 0.5rem; margin: 0 0 0.625rem; padding: 0.75rem 1rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters > * { min-width: 0; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 :is([data-slot="select-trigger"], button[data-slot="select-trigger"]) { width: 100%; min-width: 0; min-height: 2.5rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-more { margin-top: 0.5rem; padding-block: 0.25rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar {
+  position: sticky;
+  bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 2.5rem)) + 0.375rem);
+  z-index: 5;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-color: color-mix(in srgb, var(--qt2-gold) 55%, transparent);
+  background: color-mix(in srgb, var(--qt2-gold) 14%, oklch(0.17 0.03 265));
+  box-shadow: 0 -0.5rem 1.5rem -1rem oklch(0 0 0 / 0.7);
+}
+@media (min-width: 40rem) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 72rem) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+@media (max-width: 40rem) {
+  .trainer-setup.qt2 .qt2-hero > img { width: 100%; opacity: 0.45; }
+  .trainer-setup.qt2 .qt2-hero h1 { font-size: 1.25rem; }
+  .trainer-setup.qt2 .qt2-quick { flex-wrap: nowrap; margin-inline: -1rem; padding-inline: 1rem; overflow-x: auto; scrollbar-width: none; }
+  .trainer-setup.qt2 .qt2-quick a { flex: none; }
+}
+@media (max-height: 30rem) {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar { position: static; }
 }
