@@ -88,7 +88,12 @@ import {
 } from "@/components/ui/select";
 import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
-import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, trainerPracticeQuestions } from "@/lib/trainerFilters";
+import {
+  filterTrainerQuestions,
+  trainerBoard,
+  trainerFilterFacets,
+  trainerPracticeQuestions,
+} from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { materialPracticePool, type MaterialPracticeScope } from "@/lib/materialPractice";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
@@ -107,14 +112,22 @@ import "@/styles/question-filter-contrast.css";
 import "@/styles/question-practice-workspaces.css";
 import "@/styles/student-assessment-workspaces.css";
 import "@/styles/question-trainer-professional-refinement.css";
+import "@/styles/question-trainer-wide.css";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({
     meta: [
       { title: "Treinador de questões | Norte Concursos" },
-      { name: "description", content: "Treine questões de concursos por banca, cargo e disciplina na sua preparação Norte Concursos." },
+      {
+        name: "description",
+        content:
+          "Treine questões de concursos por banca, cargo e disciplina na sua preparação Norte Concursos.",
+      },
       { property: "og:title", content: "Treinador de questões | Norte Concursos" },
-      { property: "og:description", content: "Sua sessão de questões de concursos por banca, cargo e disciplina." },
+      {
+        property: "og:description",
+        content: "Sua sessão de questões de concursos por banca, cargo e disciplina.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -165,7 +178,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     limit: typeof search["limit"] === "string" ? search["limit"] : undefined,
     reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
     studySubject: typeof search["studySubject"] === "string" ? search["studySubject"] : undefined,
-    materialTopic: typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
+    materialTopic:
+      typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
     studyArticle: typeof search["studyArticle"] === "string" ? search["studyArticle"] : undefined,
     back: typeof search["back"] === "string" ? search["back"] : undefined,
   }),
@@ -261,7 +275,9 @@ function QuestionTrainer() {
     // The fixed bottom nav's real height varies by device/safe-area; the trainer dock sits right above it.
     const sync = () => {
       const visible = getComputedStyle(nav).display !== "none";
-      const offset = visible ? Math.max(0, Math.ceil(window.innerHeight - nav.getBoundingClientRect().top)) : 0;
+      const offset = visible
+        ? Math.max(0, Math.ceil(window.innerHeight - nav.getBoundingClientRect().top))
+        : 0;
       root.style.setProperty("--trainer-dock-bottom", `${offset}px`);
     };
     sync();
@@ -279,14 +295,18 @@ function QuestionTrainer() {
   const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
   const [year, setYear] = React.useState(routeFilters.year || "all");
   const [appliedExam, setAppliedExam] = React.useState("all");
-  const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.studySubject ?? routeFilters.subject) || "all");
+  const [subject, setSubject] = React.useState(
+    canonicalSubject(routeFilters.studySubject ?? routeFilters.subject) || "all",
+  );
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
   const [state, setState] = React.useState(routeFilters.state || "all");
   const [category, setCategory] = React.useState(routeFilters.category || "all");
   // Vindos do cronograma: matéria do plano (pode juntar várias do banco) e assunto classificado por palavras-chave.
   const [area, setArea] = React.useState(routeFilters.area || "all");
-  const [topic, setTopic] = React.useState(routeFilters.materialTopic || routeFilters.topic || "all");
+  const [topic, setTopic] = React.useState(
+    routeFilters.materialTopic || routeFilters.topic || "all",
+  );
   const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
@@ -308,9 +328,12 @@ function QuestionTrainer() {
     successTimer.current = null;
     setSuccessFeedback(false);
   }, []);
-  React.useEffect(() => () => {
-    if (successTimer.current !== null) clearTimeout(successTimer.current);
-  }, []);
+  React.useEffect(
+    () => () => {
+      if (successTimer.current !== null) clearTimeout(successTimer.current);
+    },
+    [],
+  );
 
   const [reviewingPast, setReviewingPast] = React.useState(false);
   const [supportNotice, setSupportNotice] = React.useState(false);
@@ -674,10 +697,16 @@ function QuestionTrainer() {
     const key = `${question.source}:${question.id}`;
     try {
       const saved = JSON.parse(localStorage.getItem(savedQuestionsKey) || "[]") as string[];
-      const nextSaved = saved.includes(key) ? saved.filter((item) => item !== key) : [...saved, key];
+      const nextSaved = saved.includes(key)
+        ? saved.filter((item) => item !== key)
+        : [...saved, key];
       localStorage.setItem(savedQuestionsKey, JSON.stringify(nextSaved));
       setSavedForStudy(nextSaved.includes(key));
-      toast.success(nextSaved.includes(key) ? "Questão salva para estudar depois." : "Questão removida dos estudos salvos.");
+      toast.success(
+        nextSaved.includes(key)
+          ? "Questão salva para estudar depois."
+          : "Questão removida dos estudos salvos.",
+      );
     } catch {
       toast.error("Não foi possível salvar esta questão agora.");
     }
@@ -788,32 +817,40 @@ function QuestionTrainer() {
         .eq("id", responseIdRef.current)
         .eq("user_id", user.id)
         .maybeSingle();
-      if (verifyError || !stored ||
+      if (
+        verifyError ||
+        !stored ||
         stored.question_id !== question.id ||
         stored.question_source !== question.source ||
         stored.question_table !== question.table ||
-        stored.selected_answer !== selected) {
+        stored.selected_answer !== selected
+      ) {
         responseIdRef.current = crypto.randomUUID();
         throw new Error("ANSWER_SAVE_NOT_CONFIRMED");
       }
       finishAnswer(elapsedSeconds, isCorrect, selected);
     } catch (error) {
       // Never show raw database internals to students. Surface known recoverable causes.
-      const code = typeof error === "object" && error !== null && "code" in error
-        ? String((error as { code?: unknown }).code ?? "")
-        : "";
-      const detail = typeof error === "object" && error !== null && "details" in error
-        ? String((error as { details?: unknown }).details ?? "")
-        : "";
-      const message = typeof error === "object" && error !== null && "message" in error
-        ? String((error as { message?: unknown }).message ?? "")
-        : "";
+      const code =
+        typeof error === "object" && error !== null && "code" in error
+          ? String((error as { code?: unknown }).code ?? "")
+          : "";
+      const detail =
+        typeof error === "object" && error !== null && "details" in error
+          ? String((error as { details?: unknown }).details ?? "")
+          : "";
+      const message =
+        typeof error === "object" && error !== null && "message" in error
+          ? String((error as { message?: unknown }).message ?? "")
+          : "";
       if (detail.includes("NORTE_SESSION_REPLACED")) {
         toast.error("Sua sessão foi substituída por outro login. Entre novamente para continuar.");
       } else if (code === "P0429") {
         toast.error("O limite de questões do seu plano foi atingido. Confira a renovação diária.");
       } else if (message.includes("Question origin is missing or ambiguous")) {
-        toast.error("Não foi possível identificar a origem da questão. Atualize a página e tente novamente.");
+        toast.error(
+          "Não foi possível identificar a origem da questão. Atualize a página e tente novamente.",
+        );
       } else {
         console.error("Falha ao gravar resposta do treino", { code, message, detail });
         // Não trava o aluno: mostra o gabarito agora, guarda a resposta no aparelho e reenvia sozinho.
@@ -1000,7 +1037,7 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="nc-learning-workspace question-workspace trainer-session-shell trainer-reading-workspace mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+    <div className="nc-learning-workspace question-workspace trainer-session-shell trainer-reading-workspace qt2-session space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       <BackToEdital back={routeFilters.back} />
       {lawNotice}
       {successFeedback && (
@@ -1013,13 +1050,23 @@ function QuestionTrainer() {
             <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" className="h-11 w-11 shrink-0">
               <circle cx="24" cy="24" r="22" fill="#1BAF83" fillOpacity=".17" />
               <circle cx="24" cy="24" r="16" fill="#24B487" />
-              <path d="m17 24 5 5 10-11" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="m17 24 5 5 10-11"
+                stroke="white"
+                strokeWidth="3.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
               <circle cx="24" cy="24" r="21" stroke="#5EE1B6" strokeOpacity=".4" />
             </svg>
             <div className="min-w-0 flex-1">
-              <p className="text-[11px] font-bold uppercase tracking-[.12em] text-emerald-200">Resposta correta</p>
+              <p className="text-[11px] font-bold uppercase tracking-[.12em] text-emerald-200">
+                Resposta correta
+              </p>
               <p className="mt-0.5 text-sm font-semibold leading-5">Muito bem! Você acertou.</p>
-              <p className="mt-0.5 text-xs text-emerald-100/75">Avançando para a próxima questão…</p>
+              <p className="mt-0.5 text-xs text-emerald-100/75">
+                Avançando para a próxima questão…
+              </p>
             </div>
             <span className="absolute inset-x-0 bottom-0 h-[3px] bg-emerald-200/15">
               <span className="trainer-success-progress block h-full w-full origin-left bg-emerald-400" />
@@ -1087,7 +1134,11 @@ function QuestionTrainer() {
             aria-pressed={savedForStudy}
             aria-label={savedForStudy ? "Questão salva para estudar" : "Salvar para estudar"}
           >
-            {savedForStudy ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
+            {savedForStudy ? (
+              <BookmarkCheck className="h-4 w-4" />
+            ) : (
+              <Bookmark className="h-4 w-4" />
+            )}
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -1170,167 +1221,183 @@ function QuestionTrainer() {
                 {correct} certas · {wrong} erradas
               </p>
             </div>
-
           </div>
           <div className="trainer-reading-progress mb-4 flex gap-1 sm:mb-6 sm:gap-1.5">
-            <div className="trainer-reading-progress__bars" role="img" aria-label={`Questão ${index + 1} de ${questions.length}`}>
+            <div
+              className="trainer-reading-progress__bars"
+              role="img"
+              aria-label={`Questão ${index + 1} de ${questions.length}`}
+            >
               {questions.map((q, i) => (
-                <i key={q.id} className={cn(
-                  "h-1.5 min-w-0 flex-1 rounded-full transition-colors",
-                  results[i] === "ok" && "bg-emerald-500",
-                  results[i] === "err" && "bg-rose-500",
-                  !results[i] && i === index && "bg-amber-400",
-                  !results[i] && i !== index && "bg-muted",
-                )} />
+                <i
+                  key={q.id}
+                  className={cn(
+                    "h-1.5 min-w-0 flex-1 rounded-full transition-colors",
+                    results[i] === "ok" && "bg-emerald-500",
+                    results[i] === "err" && "bg-rose-500",
+                    !results[i] && i === index && "bg-amber-400",
+                    !results[i] && i !== index && "bg-muted",
+                  )}
+                />
               ))}
             </div>
             <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
           {pendingAnswers > 0 && (
-            <div className="trainer-reading-pending mb-2 flex items-center justify-between gap-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs font-semibold" role="status">
-              <span>{pendingAnswers} resposta{pendingAnswers > 1 ? "s" : ""} aguardando envio</span>
-              <Button size="sm" variant="outline" className="h-8" onClick={() => void retryPendingAnswers()}>
+            <div
+              className="trainer-reading-pending mb-2 flex items-center justify-between gap-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs font-semibold"
+              role="status"
+            >
+              <span>
+                {pendingAnswers} resposta{pendingAnswers > 1 ? "s" : ""} aguardando envio
+              </span>
+              <Button
+                size="sm"
+                variant="outline"
+                className="h-8"
+                onClick={() => void retryPendingAnswers()}
+              >
                 Tentar novamente
               </Button>
             </div>
           )}
           <section className="trainer-reading-stem" aria-label="Enunciado da questão">
-          {parsed.base && (
-            <details
-              open
-              className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
-            >
-              <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                {parsed.baseLabel}
-                <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
-              </summary>
-              <div className="max-h-52 overflow-y-auto whitespace-pre-line px-3 pb-3 text-sm leading-6 text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
-                {parsed.base}
-              </div>
-            </details>
-          )}
-          <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
-            {parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}
-          </p>
-          <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
+            {parsed.base && (
+              <details
+                open
+                className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
+              >
+                <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                  {parsed.baseLabel}
+                  <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
+                </summary>
+                <div className="max-h-52 overflow-y-auto whitespace-pre-line px-3 pb-3 text-sm leading-6 text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
+                  {parsed.base}
+                </div>
+              </details>
+            )}
+            <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
+              {parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}
+            </p>
+            <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
           </section>
           <section className="trainer-reading-answers" aria-label="Alternativas da questão">
-          <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
-            {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
-          </p>
-          {hasOptions && (
-            <div className="mt-3 space-y-2">
-              {parsed.options.map((option) => {
-                const isStruck = struck.includes(option.letter);
-                const isSelected = selected === option.letter;
-                const isRight = answered && option.letter === question.answer;
-                const isWrong = answered && isSelected && option.letter !== question.answer;
-                return (
-                  <div key={option.letter} className="flex items-start gap-2">
-                    <button
-                      type="button"
-                      aria-pressed={isSelected}
-                      disabled={answered || saving}
-                      onClick={() => chooseOption(option.letter)}
-                      className={cn(
-                        "group flex flex-1 items-center gap-2 rounded-xl border border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-background sm:gap-3 sm:p-3 sm:leading-6",
-                        isStruck && "opacity-50",
-                        isSelected &&
-                          !answered &&
-                          "border-amber-400/70 bg-amber-400/10 ring-4 ring-amber-400/10 hover:bg-amber-400/10",
-                        isRight &&
-                          "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
-                        isWrong && "border-rose-500/70 bg-rose-500/10 hover:bg-rose-500/10",
-                      )}
-                    >
-                      <span
+            <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
+              {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
+            </p>
+            {hasOptions && (
+              <div className="mt-3 space-y-2">
+                {parsed.options.map((option) => {
+                  const isStruck = struck.includes(option.letter);
+                  const isSelected = selected === option.letter;
+                  const isRight = answered && option.letter === question.answer;
+                  const isWrong = answered && isSelected && option.letter !== question.answer;
+                  return (
+                    <div key={option.letter} className="flex items-start gap-2">
+                      <button
+                        type="button"
+                        aria-pressed={isSelected}
+                        disabled={answered || saving}
+                        onClick={() => chooseOption(option.letter)}
                         className={cn(
-                          "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
-                          isSelected && !answered && "bg-amber-400 text-slate-900",
-                          isRight && "bg-emerald-600 text-white",
-                          isWrong && "bg-rose-600 text-white",
+                          "trainer-option group flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-background sm:gap-3 sm:p-3 sm:leading-6",
+                          isStruck && "opacity-50",
+                          isSelected &&
+                            !answered &&
+                            "border-amber-400/70 bg-amber-400/10 ring-4 ring-amber-400/10 hover:bg-amber-400/10",
+                          isRight &&
+                            "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
+                          isWrong && "border-rose-500/70 bg-rose-500/10 hover:bg-rose-500/10",
                         )}
                       >
-                        {option.letter}
-                      </span>
-                      <span className={cn("flex-1", isStruck && "line-through")}>
-                        {option.text}
-                      </span>
-                      {isRight && (
-                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-                          <Check className="h-3.5 w-3.5" /> Correta
+                        <span
+                          className={cn(
+                            "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
+                            isSelected && !answered && "bg-amber-400 text-slate-900",
+                            isRight && "bg-emerald-600 text-white",
+                            isWrong && "bg-rose-600 text-white",
+                          )}
+                        >
+                          {option.letter}
                         </span>
-                      )}
-                      {isWrong && (
-                        <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
-                          <XCircle className="h-3.5 w-3.5" /> Sua resposta
+                        <span className={cn("flex-1", isStruck && "line-through")}>
+                          {option.text}
                         </span>
-                      )}
-                    </button>
-                    <Button
-                      type="button"
-                      variant={isStruck ? "secondary" : "ghost"}
-                      size="icon"
-                      className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
-                      disabled={answered || saving}
-                      aria-pressed={isStruck}
-                      aria-label={
-                        isStruck
-                          ? `Desfazer risco da alternativa ${option.letter}`
-                          : `Riscar alternativa ${option.letter}`
-                      }
-                      title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
-                      onClick={() => toggleStrike(option.letter)}
-                    >
-                      <Strikethrough className="h-4 w-4" />
-                    </Button>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-          <div
-            className={cn(
-              "mt-3 grid gap-2",
-              hasOptions && "hidden",
-              questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+                        {isRight && (
+                          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
+                            <Check className="h-3.5 w-3.5" /> Correta
+                          </span>
+                        )}
+                        {isWrong && (
+                          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
+                            <XCircle className="h-3.5 w-3.5" /> Sua resposta
+                          </span>
+                        )}
+                      </button>
+                      <Button
+                        type="button"
+                        variant={isStruck ? "secondary" : "ghost"}
+                        size="icon"
+                        className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
+                        disabled={answered || saving}
+                        aria-pressed={isStruck}
+                        aria-label={
+                          isStruck
+                            ? `Desfazer risco da alternativa ${option.letter}`
+                            : `Riscar alternativa ${option.letter}`
+                        }
+                        title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
+                        onClick={() => toggleStrike(option.letter)}
+                      >
+                        <Strikethrough className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  );
+                })}
+              </div>
             )}
-          >
-            {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
-              <button
-                key={answer}
-                type="button"
-                aria-pressed={selected === answer}
-                disabled={answered || saving}
-                onClick={() => setSelected(answer)}
-                className={cn(
-                  "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
-                  selected === answer &&
-                    !answered &&
-                    "scale-[1.02] border-amber-400 bg-amber-400 text-slate-900 shadow-lg shadow-amber-400/20 ring-4 ring-amber-400/15 hover:bg-amber-400 hover:text-slate-900",
-                  answered &&
-                    answer === question.answer &&
-                    "border-emerald-500 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
-                  answered &&
-                    selected === answer &&
-                    answer !== question.answer &&
-                    "border-rose-500 bg-rose-500/10 text-rose-700 dark:text-rose-300",
-                )}
-              >
-                <span
+            <div
+              className={cn(
+                "mt-3 grid gap-2",
+                hasOptions && "hidden",
+                questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+              )}
+            >
+              {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
+                <button
+                  key={answer}
+                  type="button"
+                  aria-pressed={selected === answer}
+                  disabled={answered || saving}
+                  onClick={() => setSelected(answer)}
                   className={cn(
-                    "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
+                    "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
                     selected === answer &&
                       !answered &&
-                      "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
+                      "scale-[1.02] border-amber-400 bg-amber-400 text-slate-900 shadow-lg shadow-amber-400/20 ring-4 ring-amber-400/15 hover:bg-amber-400 hover:text-slate-900",
+                    answered &&
+                      answer === question.answer &&
+                      "border-emerald-500 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
+                    answered &&
+                      selected === answer &&
+                      answer !== question.answer &&
+                      "border-rose-500 bg-rose-500/10 text-rose-700 dark:text-rose-300",
                   )}
                 >
-                  {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
-                </span>
-                {labelFor(answer)}
-              </button>
-            ))}
-          </div>
+                  <span
+                    className={cn(
+                      "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
+                      selected === answer &&
+                        !answered &&
+                        "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
+                    )}
+                  >
+                    {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
+                  </span>
+                  {labelFor(answer)}
+                </button>
+              ))}
+            </div>
           </section>
           <div className="trainer-reading-actions trainer-action-dock mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="trainer-action-dock__secondary flex flex-wrap gap-2">
@@ -1392,7 +1459,8 @@ function QuestionTrainer() {
                 onClick={submit}
                 className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
               >
-                {selected ? "Confirmar resposta" : "Escolha uma alternativa"} <Check className="ml-2 h-4 w-4" />
+                {selected ? "Confirmar resposta" : "Escolha uma alternativa"}{" "}
+                <Check className="ml-2 h-4 w-4" />
               </Button>
             ) : (
               <Button
@@ -1406,22 +1474,39 @@ function QuestionTrainer() {
             )}
           </div>
           {answered && (
-            <div className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4" role="region" aria-label="Explicação da questão">
+            <div
+              className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4"
+              role="region"
+              aria-label="Explicação da questão"
+            >
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <p className="text-xs font-black uppercase tracking-wider text-primary">Explicação da questão</p>
+                <p className="text-xs font-black uppercase tracking-wider text-primary">
+                  Explicação da questão
+                </p>
                 {responseSeconds !== null && (
                   <span className="rounded-full border border-primary/20 bg-background/70 px-2.5 py-1 text-xs font-semibold text-muted-foreground">
                     Tempo de resposta: {formatResponseTime(responseSeconds)}
                   </span>
                 )}
               </div>
-              {!isCorrect && <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">Resposta correta: {labelFor(question.answer)}</p>}
+              {!isCorrect && (
+                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">
+                  Resposta correta: {labelFor(question.answer)}
+                </p>
+              )}
               {isPlaceholderExplanation(explanation.main) ? (
-                <p className="text-sm leading-6 text-muted-foreground">Esta questão ainda não tem um comentário detalhado. Consulte os materiais relacionados.</p>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  Esta questão ainda não tem um comentário detalhado. Consulte os materiais
+                  relacionados.
+                </p>
               ) : (
                 <p className="whitespace-pre-line text-sm leading-6">{explanation.main}</p>
               )}
-              {explanation.example && <p className="text-sm leading-6"><strong>Exemplo:</strong> {explanation.example}</p>}
+              {explanation.example && (
+                <p className="text-sm leading-6">
+                  <strong>Exemplo:</strong> {explanation.example}
+                </p>
+              )}
             </div>
           )}
           {supportNotice && !supportAvailable && !answered && (
@@ -1438,12 +1523,16 @@ function QuestionTrainer() {
               </p>
             </div>
           )}
-
         </CardContent>
       </Card>
       {answered && (
-        <details className="trainer-review-community" aria-label="Desempenho e comentários da questão">
-          <summary className="trainer-review-community__toggle">Desempenho e comentários desta questão</summary>
+        <details
+          className="trainer-review-community"
+          aria-label="Desempenho e comentários da questão"
+        >
+          <summary className="trainer-review-community__toggle">
+            Desempenho e comentários desta questão
+          </summary>
           <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
         </details>
       )}
@@ -1462,24 +1551,51 @@ function QuestionTrainer() {
           <div className="trainer-exit-dialog__art" aria-hidden="true">
             <svg viewBox="0 0 440 190" preserveAspectRatio="xMidYMid slice" role="presentation">
               <defs>
-                <linearGradient id="trainer-exit-scene" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#1b2937"/><stop offset="1" stopColor="#080e15"/></linearGradient>
-                <linearGradient id="trainer-exit-book" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#304054"/><stop offset="1" stopColor="#101923"/></linearGradient>
+                <linearGradient id="trainer-exit-scene" x1="0" y1="0" x2="1" y2="1">
+                  <stop stopColor="#1b2937" />
+                  <stop offset="1" stopColor="#080e15" />
+                </linearGradient>
+                <linearGradient id="trainer-exit-book" x1="0" y1="0" x2="1" y2="1">
+                  <stop stopColor="#304054" />
+                  <stop offset="1" stopColor="#101923" />
+                </linearGradient>
               </defs>
-              <rect width="440" height="190" fill="url(#trainer-exit-scene)"/>
+              <rect width="440" height="190" fill="url(#trainer-exit-scene)" />
               <g opacity=".27" stroke="#92a6bb" strokeWidth="2" fill="url(#trainer-exit-book)">
-                <path d="M-20 125 90 112 130 127 22 145Z"/><path d="M-15 147 97 135 136 151 18 170Z"/>
-                <path d="M345 84 461 70 470 130 354 146Z"/><path d="M293 150 429 126 449 171 310 190Z"/>
+                <path d="M-20 125 90 112 130 127 22 145Z" />
+                <path d="M-15 147 97 135 136 151 18 170Z" />
+                <path d="M345 84 461 70 470 130 354 146Z" />
+                <path d="M293 150 429 126 449 171 310 190Z" />
               </g>
-              <g opacity=".25" stroke="#94a3b8" strokeWidth="1.6"><path d="M20 145 119 130M20 157 123 143M358 113l92-12M317 171l107-19"/></g>
-              <rect width="440" height="190" fill="#090f17" opacity=".54"/>
-              <circle cx="220" cy="93" r="51" fill="#e65c6b" opacity=".07"/>
-              <circle cx="220" cy="93" r="35" fill="#e65c6b" opacity=".14" stroke="#fb8493" strokeOpacity=".23"/>
-              <path d="M207 77v-5a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v12m-32 0v29a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4v-12M223 93h29m-9-9 9 9-9 9" fill="none" stroke="#f8a0ab" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
+              <g opacity=".25" stroke="#94a3b8" strokeWidth="1.6">
+                <path d="M20 145 119 130M20 157 123 143M358 113l92-12M317 171l107-19" />
+              </g>
+              <rect width="440" height="190" fill="#090f17" opacity=".54" />
+              <circle cx="220" cy="93" r="51" fill="#e65c6b" opacity=".07" />
+              <circle
+                cx="220"
+                cy="93"
+                r="35"
+                fill="#e65c6b"
+                opacity=".14"
+                stroke="#fb8493"
+                strokeOpacity=".23"
+              />
+              <path
+                d="M207 77v-5a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v12m-32 0v29a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4v-12M223 93h29m-9-9 9 9-9 9"
+                fill="none"
+                stroke="#f8a0ab"
+                strokeWidth="3.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </div>
           <div className="trainer-exit-dialog__body">
             <DialogHeader className="space-y-2 text-center sm:text-center">
-              <DialogTitle className="text-xl font-bold tracking-tight text-slate-50">Sair do treino?</DialogTitle>
+              <DialogTitle className="text-xl font-bold tracking-tight text-slate-50">
+                Sair do treino?
+              </DialogTitle>
               <DialogDescription className="mx-auto max-w-[330px] text-sm leading-6 text-slate-300">
                 {blocker.status === "blocked"
                   ? "O cronômetro está pausado. As respostas já registradas continuam no seu histórico."
@@ -1733,23 +1849,40 @@ function TrainerSetup({
     setters.setIncludeAnswered(false);
   };
   return (
-    <div className="trainer-setup mx-auto max-w-5xl space-y-2 pb-4 animate-in fade-in duration-300 sm:space-y-3 sm:pb-6">
+    <div className="trainer-setup qt2 space-y-2 pb-4 animate-in fade-in duration-300 sm:space-y-3 sm:pb-6">
       <Card className="trainer-setup__unified command-panel overflow-hidden border border-border/80 shadow-lg">
         <CardContent className="p-3 sm:p-4 md:p-5">
-          <header className="trainer-setup__unified-head mb-3 flex flex-wrap items-center justify-between gap-3 border-b border-border/70 pb-3">
-            <div className="flex min-w-0 items-center gap-3">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-amber-400/20 bg-amber-400/10 text-amber-300">
-                <BookOpenCheck className="h-4 w-4" aria-hidden="true" />
-              </span>
-              <div className="min-w-0">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Treinamento de precisão</span>
-                <h1 className="text-lg font-extrabold leading-tight sm:text-xl">Monte sua sessão de questões</h1>
-              </div>
+          <header className="qt2-hero">
+            <img src="/media/hero/toolkit.webp" alt="" aria-hidden="true" decoding="async" />
+            <div className="qt2-hero__copy">
+              <small>Treinamento de precisão</small>
+              <h1>Monte sua sessão de questões</h1>
+              <p aria-label="Resumo das questões">
+                <strong>{total.toLocaleString("pt-BR")}</strong> ativas ·{" "}
+                <strong>{available.toLocaleString("pt-BR")}</strong> na seleção
+              </p>
             </div>
-            <div className="flex shrink-0 items-center gap-2" aria-label="Resumo das questões">
-              <span className="trainer-setup__metric"><strong>{total}</strong><small>ativas</small></span>
-              <span className="trainer-setup__metric trainer-setup__metric--selected"><strong>{available}</strong><small>na seleção</small></span>
-            </div>
+            <nav className="qt2-quick" aria-label="Acesso rápido">
+              <Link
+                to="/dashboard/question-trainer"
+                search={{ mode: "reforco" } as never}
+                data-tone="rose"
+              >
+                <RotateCcw aria-hidden="true" /> Revisar erros
+              </Link>
+              <Link to="/dashboard/notebooks" data-tone="violet">
+                <Bookmark aria-hidden="true" /> Cadernos
+              </Link>
+              <Link to="/dashboard/mock-exams" data-tone="gold">
+                <Target aria-hidden="true" /> Simulados
+              </Link>
+              <Link to="/dashboard/question-bank" data-tone="blue">
+                <ListOrdered aria-hidden="true" /> Banco de questões
+              </Link>
+              <Link to="/dashboard/performance" data-tone="green">
+                <TrendingUp aria-hidden="true" /> Desempenho
+              </Link>
+            </nav>
           </header>
           {values.area !== "all" && (
             <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
@@ -1766,7 +1899,7 @@ function TrainerSetup({
               </button>
             </p>
           )}
-          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
+          <div className="qt2-filters grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             <TrainerFilter
               counts={facets.counts["board"]}
               allCount={facets.totals["board"]}
@@ -1835,92 +1968,93 @@ function TrainerSetup({
               <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" />
             </summary>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
-            <TrainerFilter
-              counts={facets.counts["contest"]}
-              allCount={facets.totals["contest"]}
-              label="Concurso"
-              value={values.contest}
-              setValue={setters.setContest}
-              options={choices.contests}
-            />
-            <TrainerFilter
-              counts={facets.counts["career"]}
-              allCount={facets.totals["career"]}
-              label="Carreira ou cargo"
-              value={values.career}
-              setValue={setters.setCareer}
-              options={choices.careers}
-            />
-            <TrainerFilter
-              counts={facets.counts["state"]}
-              allCount={facets.totals["state"]}
-              label="Estado"
-              value={values.state}
-              setValue={setters.setState}
-              options={choices.states}
-            />
-            <TrainerFilter
-              counts={facets.counts["category"]}
-              allCount={facets.totals["category"]}
-              label="Categoria"
-              value={values.category}
-              setValue={setters.setCategory}
-              options={choices.categories}
-            />
-            <TrainerFilter
-              counts={facets.counts["year"]}
-              allCount={facets.totals["year"]}
-              label="Ano"
-              value={values.year}
-              setValue={setters.setYear}
-              options={choices.years}
-            />
-            <TrainerFilter
-              counts={facets.counts["exam"]}
-              allCount={facets.totals["exam"]}
-              label="Prova aplicada"
-              value={values.appliedExam}
-              setValue={setters.setAppliedExam}
-              options={choices.exams.map(([value]) => value)}
-              labels={Object.fromEntries(choices.exams)}
-            />
-            <TrainerFilter
-              counts={facets.counts["source"]}
-              allCount={facets.totals["source"]}
-              label="Origem"
-              value={values.source}
-              setValue={setters.setSource}
-              options={["official", "curated", "personal"]}
-              labels={{
-                official: "Provas oficiais",
-                curated: "Questões autorais",
-                personal: "Meu caderno",
-              }}
-            />
-            <TrainerFilter
-              counts={facets.counts["reviewed"]}
-              allCount={facets.totals["reviewed"]}
-              label="Explicação didática"
-              value={values.reviewed}
-              setValue={setters.setReviewed}
-              options={["reviewed"]}
-              labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
-              allLabel="Todas as questões"
-            />
-            <label className="flex items-center gap-3 rounded-lg border bg-background px-3 py-2.5 sm:col-span-2 lg:col-span-3">
-              <input
-                type="checkbox"
-                checked={values.includeAnswered}
-                onChange={(event) => setters.setIncludeAnswered(event.target.checked)}
-                className="h-4 w-4 accent-primary"
+              <TrainerFilter
+                counts={facets.counts["contest"]}
+                allCount={facets.totals["contest"]}
+                label="Concurso"
+                value={values.contest}
+                setValue={setters.setContest}
+                options={choices.contests}
               />
-              <span>
-                <span className="block text-sm font-bold">Incluir questões já respondidas</span>
-                <span className="block text-xs text-muted-foreground">
-                  Exibe questões anteriores para revisão. Elas continuarão bloqueadas para novo envio.
+              <TrainerFilter
+                counts={facets.counts["career"]}
+                allCount={facets.totals["career"]}
+                label="Carreira ou cargo"
+                value={values.career}
+                setValue={setters.setCareer}
+                options={choices.careers}
+              />
+              <TrainerFilter
+                counts={facets.counts["state"]}
+                allCount={facets.totals["state"]}
+                label="Estado"
+                value={values.state}
+                setValue={setters.setState}
+                options={choices.states}
+              />
+              <TrainerFilter
+                counts={facets.counts["category"]}
+                allCount={facets.totals["category"]}
+                label="Categoria"
+                value={values.category}
+                setValue={setters.setCategory}
+                options={choices.categories}
+              />
+              <TrainerFilter
+                counts={facets.counts["year"]}
+                allCount={facets.totals["year"]}
+                label="Ano"
+                value={values.year}
+                setValue={setters.setYear}
+                options={choices.years}
+              />
+              <TrainerFilter
+                counts={facets.counts["exam"]}
+                allCount={facets.totals["exam"]}
+                label="Prova aplicada"
+                value={values.appliedExam}
+                setValue={setters.setAppliedExam}
+                options={choices.exams.map(([value]) => value)}
+                labels={Object.fromEntries(choices.exams)}
+              />
+              <TrainerFilter
+                counts={facets.counts["source"]}
+                allCount={facets.totals["source"]}
+                label="Origem"
+                value={values.source}
+                setValue={setters.setSource}
+                options={["official", "curated", "personal"]}
+                labels={{
+                  official: "Provas oficiais",
+                  curated: "Questões autorais",
+                  personal: "Meu caderno",
+                }}
+              />
+              <TrainerFilter
+                counts={facets.counts["reviewed"]}
+                allCount={facets.totals["reviewed"]}
+                label="Explicação didática"
+                value={values.reviewed}
+                setValue={setters.setReviewed}
+                options={["reviewed"]}
+                labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
+                allLabel="Todas as questões"
+              />
+              <label className="flex items-center gap-3 rounded-lg border bg-background px-3 py-2.5 sm:col-span-2 lg:col-span-3">
+                <input
+                  type="checkbox"
+                  checked={values.includeAnswered}
+                  onChange={(event) => setters.setIncludeAnswered(event.target.checked)}
+                  className="h-4 w-4 accent-primary"
+                />
+                <span>
+                  <span className="block text-sm font-bold">Incluir questões já respondidas</span>
+                  <span className="block text-xs text-muted-foreground">
+                    Exibe questões anteriores para revisão. Elas continuarão bloqueadas para novo
+                    envio.
+                  </span>
                 </span>
-              </span>
-            </label>
+              </label>
             </div>
           </details>
           <div className="trainer-start-bar mt-3 flex flex-row items-center justify-between gap-2 rounded-xl border bg-muted/30 p-2 sm:p-3">
@@ -1928,7 +2062,12 @@ function TrainerSetup({
               {usedCount.toLocaleString("pt-BR")} questões serão usadas
             </p>
             <div className="trainer-start-bar__actions flex w-full items-center gap-2 sm:w-auto">
-              <Button variant="outline" size="sm" onClick={reset} className="shrink-0 sm:h-10 sm:px-4">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={reset}
+                className="shrink-0 sm:h-10 sm:px-4"
+              >
                 Limpar
               </Button>
               <Button
@@ -1938,7 +2077,8 @@ function TrainerSetup({
               >
                 <Sparkles className="mr-2 h-4 w-4 shrink-0" />
                 <span className="truncate">
-                  Iniciar<span className="sm:hidden"> · {usedCount.toLocaleString("pt-BR")} questões</span>
+                  Iniciar
+                  <span className="sm:hidden"> · {usedCount.toLocaleString("pt-BR")} questões</span>
                   <span className="hidden sm:inline"> treinamento</span>
                 </span>
               </Button>

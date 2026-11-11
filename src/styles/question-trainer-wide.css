@@ -1,0 +1,93 @@
+/* Treinador de questões — largura total, faixa com imagem e leitura confortável (qt2). */
+.app-shell .trainer-setup.qt2,
+.app-shell .trainer-session-shell.qt2-session {
+  --qt2-gold: oklch(0.8 0.14 82);
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* Faixa de abertura */
+.trainer-setup.qt2 .qt2-hero {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  margin: -0.25rem -0.25rem 0.875rem;
+  padding: 1rem 1.125rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--qt2-gold) 45%, transparent);
+  border-radius: 0.875rem;
+  background: oklch(0.16 0.03 265);
+  color: #fff;
+  isolation: isolate;
+}
+.trainer-setup.qt2 .qt2-hero > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: left 30%; transform: scaleX(-1); }
+.trainer-setup.qt2 .qt2-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, oklch(0.14 0.03 265 / 0.96) 0%, oklch(0.14 0.03 265 / 0.82) 55%, oklch(0.18 0.05 60 / 0.25) 100%); }
+.trainer-setup.qt2 .qt2-hero__copy { display: grid; gap: 0.125rem; min-width: 0; }
+.trainer-setup.qt2 .qt2-hero small { font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--qt2-gold); }
+.trainer-setup.qt2 .qt2-hero h1 { margin: 0; font-size: 1.5rem; font-weight: 800; line-height: 1.15; color: #fff; }
+.trainer-setup.qt2 .qt2-hero p { margin: 0; font-size: 0.8125rem; color: oklch(0.9 0.02 90); }
+.trainer-setup.qt2 .qt2-hero p strong { color: var(--qt2-gold); font-variant-numeric: tabular-nums; }
+.trainer-setup.qt2 .qt2-quick { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.trainer-setup.qt2 .qt2-quick a {
+  --t: var(--qt2-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--t) 60%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--t) 18%, oklch(0.14 0.03 265 / 0.8));
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+.trainer-setup.qt2 .qt2-quick a:hover { background: color-mix(in srgb, var(--t) 34%, oklch(0.14 0.03 265 / 0.8)); }
+.trainer-setup.qt2 .qt2-quick svg { width: 1rem; height: 1rem; color: var(--t); }
+.trainer-setup.qt2 .qt2-quick [data-tone="rose"] { --t: oklch(0.72 0.19 15); }
+.trainer-setup.qt2 .qt2-quick [data-tone="violet"] { --t: oklch(0.74 0.16 300); }
+.trainer-setup.qt2 .qt2-quick [data-tone="blue"] { --t: oklch(0.72 0.15 255); }
+.trainer-setup.qt2 .qt2-quick [data-tone="green"] { --t: oklch(0.76 0.16 150); }
+
+/* Filtros numa linha só quando há largura */
+.trainer-setup.qt2 .qt2-filters { grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.trainer-setup.qt2 .trainer-start-bar { border-color: color-mix(in srgb, var(--qt2-gold) 40%, var(--border)); background: color-mix(in srgb, var(--qt2-gold) 8%, var(--card)); }
+
+/* Sessão: enunciado e alternativas lado a lado em telas largas */
+.trainer-session-shell.qt2-session .trainer-reading-content { min-width: 0; }
+.trainer-session-shell.qt2-session :is(.trainer-reading-stem, .trainer-reading-answers) { min-width: 0; }
+.trainer-session-shell.qt2-session .trainer-reading-stem > p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  overflow: visible;
+  max-height: none;
+}
+.trainer-session-shell.qt2-session .trainer-option {
+  height: auto;
+  min-height: 3rem;
+  padding: 0.625rem 0.75rem;
+  overflow: visible;
+  font-size: 1rem;
+  line-height: 1.55;
+  white-space: normal;
+}
+.trainer-session-shell.qt2-session .trainer-option > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
+@media (min-width: 75rem) {
+  .trainer-session-shell.qt2-session .trainer-reading-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    column-gap: 1.75rem;
+    align-items: start;
+  }
+  .trainer-session-shell.qt2-session .trainer-reading-content > * { grid-column: 1 / -1; }
+  .trainer-session-shell.qt2-session .trainer-reading-content > .trainer-reading-stem { grid-column: 1; }
+  .trainer-session-shell.qt2-session .trainer-reading-content > .trainer-reading-answers { grid-column: 2; }
+  .trainer-session-shell.qt2-session .trainer-reading-answers > p:first-child { margin-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trainer-setup.qt2 .qt2-quick a { transition: none; }
+}
