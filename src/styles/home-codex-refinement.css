@@ -215,3 +215,43 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+
+/* Face-safe homepage artwork — final cascade layer.
+   Keep the entire source image visible instead of zooming/cropping portraits. */
+.home.hr-canvas :is(.desktop-homepage, .mobile-homepage) .sx-exams .sx-exam {
+  min-width: 0;
+  overflow: hidden;
+}
+.home.hr-canvas :is(.desktop-homepage, .mobile-homepage) .sx-exams .sx-exam > img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 1672 / 941 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+  scale: none !important;
+  flex-shrink: 0;
+  background: #101c25;
+}
+@media (max-width: 1023px) {
+  .home.hr-canvas :is(.desktop-homepage, .mobile-homepage) .sx-exams .sx-exam {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto minmax(0, 1fr) !important;
+  }
+}
+/* The featured PC-AC banner uses an actual image behind text.
+   Fit its full composition and avoid cutting off people near the edges. */
+.home.hr-canvas :is(.desktop-homepage, .mobile-homepage) .sx-banner > img.sx-banner__art {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+  scale: none !important;
+}
