@@ -1,5 +1,6 @@
 import type { PcAcVerticalCargo, PcAcVerticalCargoId } from "@/data/pcAcreVerticalizado";
 import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
+import { pcAcDisciplinePoints } from "@/lib/pcAcreExamWeights";
 
 /** Data da prova objetiva do Edital nº 001 SEAD/PCAC (fonte: comunicado oficial do processo,
  * 06/11/2026) e banca responsável. Usada para o cronograma de estudos se ajustar ao tempo real
@@ -12,6 +13,38 @@ export interface PcAcStudyBlock {
   minutes: number;
   start: string;
   end: string;
+}
+
+/** Compromissos do aluno que ocupam horário fixo no dia e que o cronograma precisa respeitar. */
+export type PcAcCommitmentKind =
+  | "trabalho" | "intervalo-trabalho" | "banho" | "descanso" | "deslocamento"
+  | "escola" | "medico" | "reuniao" | "emergencia" | "outro";
+
+export const PCAC_COMMITMENT_LABEL: Record<PcAcCommitmentKind, string> = {
+  trabalho: "Trabalho",
+  "intervalo-trabalho": "Intervalo do trabalho",
+  banho: "Banho / cuidados pessoais",
+  descanso: "Descanso / sono",
+  deslocamento: "Deslocamento",
+  escola: "Levar ou buscar filho na escola",
+  medico: "Consulta médica",
+  reuniao: "Reunião",
+  emergencia: "Emergência",
+  outro: "Outro compromisso",
+};
+
+export interface PcAcCommitment {
+  id: string;
+  kind: PcAcCommitmentKind;
+  /** Nome livre; quando vazio usa o rótulo do tipo. */
+  label?: string;
+  /** Horário de início (HH:MM). */
+  time: string;
+  minutes: number;
+  /** Compromisso recorrente: dias da semana (0 domingo … 6 sábado). */
+  days?: number[];
+  /** Compromisso pontual: data única (yyyy-mm-dd). Tem prioridade sobre `days`. */
+  date?: string;
 }
 
 export interface PcAcStudyPlanConfig {
@@ -31,6 +64,8 @@ export interface PcAcStudyPlanConfig {
   tafDays: number[];
   tafTime: string;
   tafDurationMinutes: number;
+  /** Compromissos informados pelo aluno; o cronograma desvia o estudo em volta deles. */
+  commitments: PcAcCommitment[];
 }
 
 export const DEFAULT_PCAC_STUDY_CONFIG: PcAcStudyPlanConfig = {
@@ -49,16 +84,48 @@ export const DEFAULT_PCAC_STUDY_CONFIG: PcAcStudyPlanConfig = {
   tafDays: [2, 4, 6],
   tafTime: "17:00",
   tafDurationMinutes: 60,
+  commitments: [],
 };
+
+const COMMITMENT_KINDS = new Set<string>(Object.keys(PCAC_COMMITMENT_LABEL));
+const isHhMm = (value: unknown): value is string => typeof value === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(value);
+
+/** Valida os compromissos vindos do armazenamento local ou da conta, descartando o que não serve. */
+export function sanitizePcAcCommitments(value: unknown): PcAcCommitment[] {
+  if (!Array.isArray(value)) return [];
+  const out: PcAcCommitment[] = [];
+  for (const item of value) {
+    if (!item || typeof item !== "object") continue;
+    const raw = item as Partial<PcAcCommitment> & Record<string, unknown>;
+    if (!isHhMm(raw.time) || typeof raw.kind !== "string" || !COMMITMENT_KINDS.has(raw.kind)) continue;
+    const minutes = Number(raw.minutes);
+    if (!Number.isFinite(minutes) || minutes < 5 || minutes > 16 * 60) continue;
+    const days = Array.isArray(raw.days)
+      ? [...new Set(raw.days.filter((day) => Number.isInteger(day) && day >= 0 && day <= 6))].sort((a, b) => a - b)
+      : [];
+    const date = typeof raw.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.date) ? raw.date : undefined;
+    if (!date && !days.length) continue;
+    out.push({
+      id: typeof raw.id === "string" && raw.id ? raw.id : `${raw.kind}-${raw.time}-${out.length}`,
+      kind: raw.kind as PcAcCommitmentKind,
+      ...(typeof raw.label === "string" && raw.label.trim() ? { label: raw.label.trim().slice(0, 80) } : {}),
+      time: raw.time,
+      minutes: Math.round(minutes),
+      ...(date ? { date } : { days }),
+    });
+    if (out.length >= 40) break;
+  }
+  return out;
+}
 
 const MIN_BLOCK = 30;
 const MAX_BLOCK = 90;
 
-/** Peso da disciplina: conhecimentos específicos pesam mais que os básicos, e uma disciplina com
- * mais itens no Anexo III do edital ganha mais tempo de estudo. */
-function disciplineWeight(blockTitle: string, topicsCount: number): number {
-  const especifico = /espec[ií]fic/i.test(blockTitle);
-  return (especifico ? 1.6 : 1) * Math.max(1, topicsCount);
+/** Peso da disciplina na semana: acompanha os pontos que ela vale na prova objetiva (ANEXO II do
+ * edital). O número de itens do conteúdo programático entra apenas como ajuste fino, para uma
+ * matéria extensa não ficar com blocos curtos demais. */
+function disciplineWeight(share: number, topicsCount: number): number {
+  return Math.max(0.01, share) * Math.sqrt(Math.max(1, topicsCount));
 }
 
 /** Dias corridos até a prova, a partir de hoje (0 se já passou). */
@@ -84,11 +151,12 @@ export function buildPcAcStudyWeek(
   for (const d of days) out[d] = [];
   if (!days.length) return out;
 
+  const shareById = new Map(pcAcDisciplinePoints(cargo).map((row) => [row.id, row.share]));
   const entries = cargo.blocks.flatMap((block) =>
     block.disciplines.map((d) => ({
       name: d.name,
       weight: disciplineWeight(
-        block.title,
+        shareById.get(d.id) ?? 0,
         Math.max(
           1,
           pcAcVerticalTopicGroups(d).reduce(
@@ -228,6 +296,7 @@ export function readPcAcStudyConfig(
       tafDays: Array.isArray(parsed.tafDays) ? parsed.tafDays.filter((d) => Number.isInteger(d) && d >= 0 && d <= 6) : DEFAULT_PCAC_STUDY_CONFIG.tafDays,
       tafTime: typeof parsed.tafTime === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(parsed.tafTime) ? parsed.tafTime : DEFAULT_PCAC_STUDY_CONFIG.tafTime,
       tafDurationMinutes: [30, 45, 60, 75, 90].includes(Number(parsed.tafDurationMinutes)) ? Number(parsed.tafDurationMinutes) : DEFAULT_PCAC_STUDY_CONFIG.tafDurationMinutes,
+      commitments: sanitizePcAcCommitments(parsed.commitments),
     };
   } catch {
     return DEFAULT_PCAC_STUDY_CONFIG;

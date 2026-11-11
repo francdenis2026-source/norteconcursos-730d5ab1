@@ -8,10 +8,10 @@ import {
 } from "../src/lib/rankingPage.ts";
 
 test("ranking URLs validate page limits, section and search without accepting arbitrary sizes", () => {
-  assert.deepEqual(rankingSearch({}), { section: "general", page: 1, size: 20, q: "" });
+  assert.deepEqual(rankingSearch({}), { section: "general", page: 1, size: 20, q: "", period: "all" });
   assert.deepEqual(
     rankingSearch({ section: "questions", page: "12", size: "50", q: " Antônia " }),
-    { section: "questions", page: 12, size: 50, q: "Antônia" },
+    { section: "questions", page: 12, size: 50, q: "Antônia", period: "all" },
   );
   for (const page of [-1, 0, NaN, Infinity, "foo", 1.5])
     assert.equal(rankingSearch({ page }).page, 1);

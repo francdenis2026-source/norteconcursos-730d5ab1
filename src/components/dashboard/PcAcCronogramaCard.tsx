@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, ChevronLeft, ChevronRight, Clock } from "lucide-react";
+import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, ChevronLeft, ChevronRight, Clock, Plus, X } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { Card } from "@astryxdesign/core/Card";
@@ -16,7 +16,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
-import { DEFAULT_PCAC_STUDY_CONFIG, PCAC_EXAM_DATE, readPcAcStudyConfig, writePcAcStudyConfig, type PcAcStudyPlanConfig, type PcAcWeeklyGridRow } from "@/lib/pcAcreStudyPlan";
+import { DEFAULT_PCAC_STUDY_CONFIG, PCAC_COMMITMENT_LABEL, PCAC_EXAM_DATE, readPcAcStudyConfig, writePcAcStudyConfig, type PcAcCommitment, type PcAcCommitmentKind, type PcAcStudyPlanConfig, type PcAcWeeklyGridRow } from "@/lib/pcAcreStudyPlan";
+import { pcAcBlockPoints } from "@/lib/pcAcreExamWeights";
 import { INVESTIGATOR_DISCIPLINE_PESO } from "@/data/pcAcreIdecanRadar";
 import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcActivityType, type PcAcPlanDay, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
 import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
@@ -75,6 +76,177 @@ function MaterialShortcut({ activity }: { activity: { type: PcAcActivityType; su
   );
 }
 
+const COMMITMENT_KINDS = Object.keys(PCAC_COMMITMENT_LABEL) as PcAcCommitmentKind[];
+const COMMITMENT_DEFAULT_MINUTES: Partial<Record<PcAcCommitmentKind, number>> = {
+  trabalho: 480,
+  "intervalo-trabalho": 60,
+  banho: 30,
+  descanso: 60,
+  deslocamento: 40,
+  escola: 40,
+  medico: 90,
+  reuniao: 60,
+  emergencia: 120,
+};
+
+/** Compromissos do aluno: horários fixos da semana ou de uma data específica que o cronograma
+ * precisa respeitar. Ao salvar, o plano é recalculado e o estudo passa a ocupar só os espaços
+ * livres do dia. */
+function CommitmentsEditor({
+  commitments,
+  disabled,
+  onChange,
+}: {
+  commitments: PcAcCommitment[];
+  disabled: boolean;
+  onChange: (next: PcAcCommitment[]) => void;
+}) {
+  const [kind, setKind] = React.useState<PcAcCommitmentKind>("trabalho");
+  const [label, setLabel] = React.useState("");
+  const [time, setTime] = React.useState("08:00");
+  const [minutes, setMinutes] = React.useState(480);
+  const [repeat, setRepeat] = React.useState<"semana" | "data">("semana");
+  const [days, setDays] = React.useState<number[]>([1, 2, 3, 4, 5]);
+  const [date, setDate] = React.useState("");
+  const [error, setError] = React.useState("");
+
+  const pickKind = (next: PcAcCommitmentKind) => {
+    setKind(next);
+    setMinutes(COMMITMENT_DEFAULT_MINUTES[next] ?? 60);
+    if (next === "medico" || next === "reuniao" || next === "emergencia") setRepeat("data");
+  };
+
+  const add = () => {
+    if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) return setError("Informe um horário válido.");
+    if (minutes < 5) return setError("A duração mínima é de 5 minutos.");
+    if (repeat === "semana" && !days.length) return setError("Escolha ao menos um dia da semana.");
+    if (repeat === "data" && !/^\d{4}-\d{2}-\d{2}$/.test(date)) return setError("Escolha a data do compromisso.");
+    setError("");
+    onChange([
+      ...commitments,
+      {
+        id: `c${Date.now().toString(36)}`,
+        kind,
+        ...(label.trim() ? { label: label.trim() } : {}),
+        time,
+        minutes,
+        ...(repeat === "data" ? { date } : { days: [...days].sort((a, b) => a - b) }),
+      },
+    ]);
+    setLabel("");
+  };
+
+  return (
+    <div className="pcac-commitments">
+      {commitments.length > 0 && (
+        <ul className="pcac-commitments__list">
+          {commitments.map((commitment) => {
+            const end = (() => {
+              const [h, m] = commitment.time.split(":").map(Number);
+              const total = (h ?? 0) * 60 + (m ?? 0) + commitment.minutes;
+              return `${String(Math.floor(total / 60) % 24).padStart(2, "0")}:${String(total % 60).padStart(2, "0")}`;
+            })();
+            return (
+              <li key={commitment.id} className="pcac-commitments__item">
+                <span className="pcac-commitments__time">{commitment.time}–{end}</span>
+                <span className="pcac-commitments__name">
+                  {commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}
+                  <small>
+                    {commitment.date
+                      ? commitment.date.split("-").reverse().join("/")
+                      : (commitment.days ?? []).map((day) => DAY_SHORT[day]).join(", ")}
+                  </small>
+                </span>
+                <AstryxButton
+                  variant="ghost"
+                  size="sm"
+                  isIconOnly
+                  icon={<X />}
+                  label={`Remover ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`}
+                  isDisabled={disabled}
+                  onClick={() => onChange(commitments.filter((item) => item.id !== commitment.id))}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <div className="pcac-commitments__form">
+        <div className="space-y-1">
+          <Label htmlFor="commitment-kind">Tipo</Label>
+          <select
+            id="commitment-kind"
+            className="pcac-commitments__select"
+            value={kind}
+            disabled={disabled}
+            onChange={(event) => pickKind(event.target.value as PcAcCommitmentKind)}
+          >
+            {COMMITMENT_KINDS.map((option) => (
+              <option key={option} value={option}>{PCAC_COMMITMENT_LABEL[option]}</option>
+            ))}
+          </select>
+        </div>
+        <div className="space-y-1">
+          <Label htmlFor="commitment-label">Nome (opcional)</Label>
+          <Input id="commitment-label" value={label} disabled={disabled} placeholder="Ex.: plantão, fisioterapia" onChange={(event) => setLabel(event.target.value)} />
+        </div>
+        <div className="space-y-1">
+          <Label htmlFor="commitment-time">Começa às</Label>
+          <Input id="commitment-time" type="time" value={time} disabled={disabled} onChange={(event) => setTime(event.target.value)} />
+        </div>
+        <div className="space-y-1">
+          <Label htmlFor="commitment-minutes">Duração (minutos)</Label>
+          <Input id="commitment-minutes" type="number" min={5} max={960} step={5} value={minutes} disabled={disabled} onChange={(event) => setMinutes(Math.min(960, Math.max(5, Number(event.target.value) || 60)))} />
+        </div>
+        <div className="space-y-1">
+          <Label htmlFor="commitment-repeat">Quando</Label>
+          <select
+            id="commitment-repeat"
+            className="pcac-commitments__select"
+            value={repeat}
+            disabled={disabled}
+            onChange={(event) => setRepeat(event.target.value as "semana" | "data")}
+          >
+            <option value="semana">Toda semana</option>
+            <option value="data">Só numa data</option>
+          </select>
+        </div>
+        {repeat === "data" ? (
+          <div className="space-y-1">
+            <Label htmlFor="commitment-date">Data</Label>
+            <Input id="commitment-date" type="date" value={date} disabled={disabled} onChange={(event) => setDate(event.target.value)} />
+          </div>
+        ) : (
+          <div className="pcac-commitments__days">
+            <p className="mb-2 text-xs font-semibold">Dias</p>
+            <div className="flex flex-wrap gap-2">
+              {DAY_ORDER.map((day) => (
+                <label key={day} className="inline-flex items-center gap-1.5 rounded-lg border px-2 py-1.5 text-xs">
+                  <input
+                    type="checkbox"
+                    checked={days.includes(day)}
+                    disabled={disabled}
+                    onChange={(event) => setDays(event.target.checked ? [...days, day] : days.filter((value) => value !== day))}
+                  />
+                  {DAY_SHORT[day]}
+                </label>
+              ))}
+            </div>
+          </div>
+        )}
+        <div className="pcac-commitments__submit">
+          <AstryxButton variant="secondary" size="sm" icon={<Plus />} label="Adicionar compromisso" isDisabled={disabled} onClick={add} />
+        </div>
+      </div>
+      {error && <p className="pcac-commitments__error" role="alert">{error}</p>}
+      <p className="pcac-commitments__hint">
+        O estudo nunca é marcado sobre um compromisso: o plano usa só os horários livres do dia. Se um
+        dia ficar cheio, as horas da semana continuam as mesmas e se redistribuem nos outros dias.
+      </p>
+    </div>
+  );
+}
+
 /** Ícone e badge por tipo de atividade — usados no resumo "Hoje" e nas tabelas de dia, para o
  * aluno reconhecer de imediato o tipo de bloco (teoria, questões, pausa, refeição, TAF…). */
 const ACTIVITY_ICON: Record<PcAcActivityType, React.ComponentType<{ "aria-hidden"?: boolean; className?: string }>> = {
@@ -88,6 +260,7 @@ const ACTIVITY_ICON: Record<PcAcActivityType, React.ComponentType<{ "aria-hidden
   pausa: Coffee,
   rotina: Coffee,
   exercicio: Dumbbell,
+  compromisso: CalendarCheck2,
 };
 const ACTIVITY_BADGE_VARIANT: Record<PcAcActivityType, "info" | "success" | "warning" | "neutral" | "purple" | "teal"> = {
   teoria: "info",
@@ -100,6 +273,7 @@ const ACTIVITY_BADGE_VARIANT: Record<PcAcActivityType, "info" | "success" | "war
   pausa: "neutral",
   rotina: "neutral",
   exercicio: "warning",
+  compromisso: "purple",
 };
 
 /** `Table` do Astryx exige `T extends Record<string, unknown>`; nossas interfaces de domínio
@@ -121,7 +295,7 @@ type AstryxTableComponent<T> = React.FC<{
 }>;
 const GridTable = Table as unknown as AstryxTableComponent<PcAcWeeklyGridRow>;
 
-const NON_STUDY: ReadonlySet<PcAcActivityType> = new Set(["rotina", "pausa", "exercicio", "descanso"]);
+const NON_STUDY: ReadonlySet<PcAcActivityType> = new Set(["rotina", "pausa", "exercicio", "descanso", "compromisso"]);
 const fmtDateBr = (iso: string) => iso.split("-").reverse().join("/");
 const fmtDuration = (minutes: number) => {
   const h = Math.floor(minutes / 60);
@@ -543,6 +717,51 @@ export function PcAcCronogramaCard({
             </div>}
           </div>
         </details>
+
+        <details className="pcac-schedule__details" open={cfg.commitments.length > 0}>
+          <summary>Meus compromissos do dia</summary>
+          <div className="pt-3">
+            <p className="mb-3 text-xs text-muted-foreground">
+              Informe trabalho, intervalo, banho, descanso, deslocamento, consulta médica, escola dos
+              filhos, reunião ou uma emergência. Pode ser um horário fixo da semana ou de uma data só.
+            </p>
+            <CommitmentsEditor
+              commitments={cfg.commitments}
+              disabled={!configLoaded}
+              onChange={(commitments) => update({ commitments })}
+            />
+          </div>
+        </details>
+
+        <details className="pcac-schedule__details">
+          <summary>Como este cronograma é calculado</summary>
+          <div className="pcac-logic pt-3">
+            <p>
+              O tempo de cada matéria segue o que ela vale na prova objetiva, pelo quadro do edital —
+              não o tamanho do conteúdo programático. Para o seu cargo:
+            </p>
+            <ul className="pcac-logic__blocks">
+              {pcAcBlockPoints(cargo).map((block) => (
+                <li key={block.title}>
+                  <strong>{block.title}</strong>
+                  <span>{block.questions} questões · {block.points} pontos · {Math.round(block.share * 100)}% da nota</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3">E a rotina de cada dia segue quatro regras:</p>
+            <ol className="pcac-logic__rules">
+              <li><strong>Revisão espaçada:</strong> todo assunto estudado volta ao plano depois de 1 dia, 1 semana e 1 mês, que é quando a memória começa a falhar.</li>
+              <li><strong>Recuperação ativa:</strong> cada dia fecha com um bloco em que você tenta lembrar do conteúdo sem olhar o material — lembrar fixa mais do que reler.</li>
+              <li><strong>Questões desde o começo:</strong> a resolução de questões entra junto com a teoria e cresce nas fases seguintes, até o simulado cronometrado do fim de semana.</li>
+              <li><strong>Pausas em ciclos:</strong> uma pausa curta a cada bloco de estudo e uma pausa longa a cada quatro ciclos, no ritmo da técnica Pomodoro.</li>
+            </ol>
+            <p className="pcac-logic__note">
+              As semanas são divididas em três fases: base (35%), prática em questões (35%) e revisão
+              com simulados (30%). O conteúdo novo encerra três dias antes da prova.
+            </p>
+          </div>
+        </details>
+
 
           </section>
           <section role="tabpanel" tabIndex={0} id="schedule-panel-grade" aria-labelledby="schedule-tab-grade" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "grade"} className="pcac-schedule__panel space-y-5">

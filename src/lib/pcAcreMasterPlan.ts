@@ -1,6 +1,7 @@
 import type { PcAcVerticalCargo } from "@/data/pcAcreVerticalizado";
 import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
-import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
+import { PCAC_COMMITMENT_LABEL, PCAC_EXAM_DATE, type PcAcCommitment } from "@/lib/pcAcreStudyPlan";
+import { pcAcDisciplinePoints, pcAcDiscursiveBrief } from "@/lib/pcAcreExamWeights";
 
 /** Planejador individual por cargo: usa exclusivamente disciplinas e itens do Anexo III
  * pertencentes ao cargo selecionado. A rotina pessoal é separada da carga líquida de estudo. */
@@ -15,7 +16,7 @@ export const PCAC_LAST_STUDY_OFFSET_DAYS = 3;
 
 export type PcAcActivityType =
   | "teoria" | "video" | "questoes" | "redacao" | "revisao" | "simulado"
-  | "descanso" | "pausa" | "rotina" | "exercicio";
+  | "descanso" | "pausa" | "rotina" | "exercicio" | "compromisso";
 
 export interface PcAcPlanActivity {
   type: PcAcActivityType;
@@ -76,6 +77,9 @@ export interface PcAcMasterPlanOptions {
   tafDays?: number[];
   tafTime?: string;
   tafDurationMinutes?: number;
+  /** Compromissos do aluno (trabalho, banho, médico, escola, reunião, emergência…). O estudo é
+   * encaixado nos espaços livres, sem invadir esses horários. */
+  commitments?: PcAcCommitment[];
 }
 
 interface StudyTask extends PcAcPlanActivity {
@@ -88,7 +92,15 @@ interface FixedEvent extends PcAcPlanActivity {
   end: string;
 }
 
+/** Ordem de estudo das disciplinas: a recorrência de cada matéria acompanha a fatia que ela vale
+ * na prova objetiva (ANEXO II do edital), não a quantidade de itens do conteúdo programático.
+ * Toda disciplina do cargo entra pelo menos uma vez no ciclo, e o próximo evento é sempre o da
+ * matéria mais "atrasada" em relação ao seu peso, para nenhuma delas dominar a semana inteira. */
+const TOPIC_CYCLE_MIN_SLOTS = 24;
+const TOPIC_CYCLE_SLOTS_PER_DISCIPLINE = 5;
+
 function createTopicCursor(cargo: PcAcVerticalCargo) {
+  const pointsById = new Map(pcAcDisciplinePoints(cargo).map((row) => [row.id, row]));
   const disciplines = cargo.blocks.flatMap((block) => block.disciplines.map((discipline) => {
     const groups = pcAcVerticalTopicGroups(discipline);
     const topics = groups.flatMap((group) =>
@@ -100,29 +112,104 @@ function createTopicCursor(cargo: PcAcVerticalCargo) {
       id: discipline.id,
       name: discipline.name,
       topics: topics.length ? topics : discipline.topics?.length ? discipline.topics : [discipline.name],
-      priority: /espec[ií]fic/i.test(block.title) ? 1.5 : 1,
+      share: pointsById.get(discipline.id)?.share ?? 0,
     };
   })).filter((discipline) => discipline.topics.length);
 
-  // Alternância ponderada: conhecimentos específicos recebem mais recorrência, sem excluir
-  // nenhuma disciplina nem deixar uma única matéria dominar toda a semana.
-  const order = disciplines.flatMap((discipline) => {
-    const repeats = Math.max(1, Math.min(3, Math.round(discipline.priority * Math.sqrt(discipline.topics.length) / 2)));
-    return Array.from({ length: repeats }, () => discipline.id);
-  });
-  const byId = new Map(disciplines.map((discipline) => [discipline.id, discipline]));
+  // Cada disciplina recebe slots proporcionais aos seus pontos, com o mínimo de um slot: mesmo a
+  // matéria de menor peso continua no plano, porque as questões dela também valem ponto.
+  const cycle = Math.max(TOPIC_CYCLE_MIN_SLOTS, disciplines.length * TOPIC_CYCLE_SLOTS_PER_DISCIPLINE);
+  const extra = Math.max(0, cycle - disciplines.length);
+  const totalShare = disciplines.reduce((sum, discipline) => sum + discipline.share, 0) || 1;
+  const slots = disciplines.map((discipline) => 1 + Math.round(extra * discipline.share / totalShare));
+
+  // Agendamento por próximo evento: espalha os slots de cada disciplina ao longo do ciclo.
+  const step = slots.map((count) => cycle / Math.max(1, count));
+  const nextAt = step.map((value) => value / 2);
   const topicIndexes = new Map<string, number>();
-  let cursor = 0;
 
   return (): PcAcStudyTopic => {
-    if (!order.length) return { discipline: "Conteúdo do edital", disciplineId: "geral", topic: "Revisão do conteúdo programático" };
-    const id = order[cursor % order.length]!;
-    cursor += 1;
-    const discipline = byId.get(id)!;
-    const index = topicIndexes.get(id) ?? 0;
-    topicIndexes.set(id, (index + 1) % discipline.topics.length);
-    return { discipline: discipline.name, disciplineId: id, topic: discipline.topics[index]! };
+    if (!disciplines.length) return { discipline: "Conteúdo do edital", disciplineId: "geral", topic: "Revisão do conteúdo programático" };
+    let pick = 0;
+    for (let i = 1; i < disciplines.length; i += 1) if (nextAt[i]! < nextAt[pick]!) pick = i;
+    nextAt[pick] = nextAt[pick]! + step[pick]!;
+    const discipline = disciplines[pick]!;
+    const index = topicIndexes.get(discipline.id) ?? 0;
+    topicIndexes.set(discipline.id, (index + 1) % discipline.topics.length);
+    return { discipline: discipline.name, disciplineId: discipline.id, topic: discipline.topics[index]! };
   };
+}
+
+/** Revisão espaçada: todo tópico estudado volta ao plano em ~1 dia, ~7 dias e ~30 dias. Prática
+ * de recuperação (fechar o material e tentar lembrar) e espaçamento são as duas técnicas com
+ * melhor evidência de retenção a longo prazo, por isso o cronograma reserva tempo fixo para elas
+ * em vez de deixar a revisão a critério do aluno. */
+const REVIEW_OFFSETS_DAYS = [1, 7, 30];
+
+interface ReviewItem {
+  subject: string;
+  topic: string;
+  stage: number;
+  dueIso: string;
+}
+
+function createSpacedReview() {
+  const queue: ReviewItem[] = [];
+  const known = new Set<string>();
+
+  const schedule = (subject: string, topic: string, fromIso: string, stage: number) => {
+    const offset = REVIEW_OFFSETS_DAYS[stage];
+    if (offset === undefined) return;
+    queue.push({ subject, topic, stage: stage + 1, dueIso: toIso(addDays(parseIso(fromIso), offset)) });
+  };
+
+  return {
+    /** Registra o tópico estudado hoje e agenda a primeira revisão. */
+    learned(subject: string | undefined, topic: string | undefined, dateIso: string) {
+      if (!subject || !topic) return;
+      const key = `${subject}::${topic}`;
+      if (known.has(key)) return;
+      known.add(key);
+      schedule(subject, topic, dateIso, 0);
+    },
+    /** Tópicos cuja revisão está vencida até a data, dos mais antigos para os mais recentes. */
+    due(dateIso: string, limit: number): ReviewItem[] {
+      const ready = queue.filter((item) => item.dueIso <= dateIso).slice(0, Math.max(0, limit));
+      for (const item of ready) {
+        queue.splice(queue.indexOf(item), 1);
+        schedule(item.subject, item.topic, dateIso, item.stage);
+      }
+      return ready;
+    },
+    pending() {
+      return queue.length;
+    },
+  };
+}
+
+type SpacedReview = ReturnType<typeof createSpacedReview>;
+
+const REVIEW_STAGE_LABEL = ["1ª revisão (24 h)", "2ª revisão (1 semana)", "3ª revisão (1 mês)"];
+
+/** Blocos de revisão espaçada do dia, em fatias de no mínimo 15 minutos. */
+function reviewTasks(minutes: number, dateIso: string, memory: SpacedReview): StudyTask[] {
+  if (minutes < 10) return [];
+  const slots = Math.max(1, Math.min(3, Math.floor(minutes / 15)));
+  const items = memory.due(dateIso, slots);
+  if (!items.length) return [];
+  const shares = allocateMinutes(minutes, items.map(() => 1));
+  return items.map((item, index) => ({
+    type: "revisao" as const,
+    subject: item.subject,
+    topic: item.topic,
+    detail: `${REVIEW_STAGE_LABEL[item.stage - 1] ?? "Revisão espaçada"}: feche o material, escreva de memória o que lembra do tópico e só depois confira o resumo para corrigir o que faltou.`,
+    minutes: shares[index] ?? 0,
+  })).filter((task) => task.minutes > 0);
+}
+
+/** Fatia do dia reservada à revisão espaçada em cada fase. */
+function reviewShare(phase: PcAcPlanPhase): number {
+  return phase === "fundamentos" ? 0.15 : phase === "pratica" ? 0.2 : 0.3;
 }
 
 function allocateMinutes(total: number, weights: number[]): number[] {
@@ -134,23 +221,30 @@ function allocateMinutes(total: number, weights: number[]): number[] {
   return values;
 }
 
-function learningTasks(totalMinutes: number, phase: PcAcPlanPhase, nextTopic: () => PcAcStudyTopic): StudyTask[] {
+function learningTasks(
+  totalMinutes: number,
+  phase: PcAcPlanPhase,
+  nextTopic: () => PcAcStudyTopic,
+  memory?: SpacedReview,
+  dateIso?: string,
+): StudyTask[] {
   const tasks: StudyTask[] = [];
   let remaining = totalMinutes;
   while (remaining > 0) {
     const session = Math.min(75, remaining);
     const topic = nextTopic();
     const base = { subject: topic.discipline, topic: topic.topic };
+    if (memory && dateIso) memory.learned(topic.discipline, topic.topic, dateIso);
     const templates = phase === "fundamentos"
       ? [
           { type: "video" as const, weight: 20, detail: "Assista a uma videoaula introdutória do assunto, se houver material disponível." },
-          { type: "teoria" as const, weight: 45, detail: "Estude a teoria e registre conceitos, regras, exceções e exemplos do tópico." },
+          { type: "teoria" as const, weight: 45, detail: "Estude a teoria e registre conceitos, regras, exceções e exemplos do tópico. Ao fechar o material, explique o assunto em voz alta com suas palavras antes de seguir." },
           { type: "questoes" as const, weight: 35, detail: "Resolva questões do tópico e anote por que cada alternativa está certa ou errada." },
         ]
       : phase === "pratica"
         ? [
-            { type: "questoes" as const, weight: 55, detail: "Resolva questões direcionadas ao tópico, preferencialmente da banca IDECAN." },
-            { type: "revisao" as const, weight: 25, detail: "Corrija os erros, identifique lacunas e atualize seu caderno de erros." },
+            { type: "questoes" as const, weight: 60, detail: "Resolva questões direcionadas ao tópico, preferencialmente da banca IDECAN." },
+            { type: "revisao" as const, weight: 20, detail: "Corrija os erros, identifique lacunas e atualize seu caderno de erros." },
             { type: "teoria" as const, weight: 20, detail: "Retome somente os pontos teóricos em que houve dificuldade." },
           ]
         : [
@@ -168,7 +262,14 @@ function learningTasks(totalMinutes: number, phase: PcAcPlanPhase, nextTopic: ()
   return tasks;
 }
 
-function routineEvents(options: PcAcMasterPlanOptions, weekday: number): FixedEvent[] {
+/** Compromissos válidos para a data: os pontuais valem só no dia marcado, os recorrentes em todo
+ * dia da semana escolhido. */
+function commitmentsFor(options: PcAcMasterPlanOptions, weekday: number, dateIso: string): PcAcCommitment[] {
+  return (options.commitments ?? []).filter((commitment) =>
+    commitment.date ? commitment.date === dateIso : (commitment.days ?? []).includes(weekday));
+}
+
+function routineEvents(options: PcAcMasterPlanOptions, weekday: number, dateIso: string): FixedEvent[] {
   const events: FixedEvent[] = [];
   const add = (type: PcAcActivityType, title: string, time: string | undefined, duration: number, detail: string) => {
     if (!time || !/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) return;
@@ -180,19 +281,42 @@ function routineEvents(options: PcAcMasterPlanOptions, weekday: number): FixedEv
   add("rotina", "Almoço", options.lunchTime ?? "12:30", 60, "Almoço e descanso longe das telas.");
   add("rotina", "Lanche da tarde", options.afternoonSnackTime ?? "16:00", 15, "Lanche leve e pausa para recuperar a energia.");
   add("rotina", "Jantar", options.dinnerTime ?? "19:30", 45, "Jantar com calma e preparação para o período noturno.");
+  for (const commitment of commitmentsFor(options, weekday, dateIso)) {
+    add(
+      "compromisso",
+      commitment.label?.trim() || PCAC_COMMITMENT_LABEL[commitment.kind],
+      commitment.time,
+      Math.max(5, Math.round(commitment.minutes)),
+      commitment.date
+        ? `Compromisso informado por você para esta data (${PCAC_COMMITMENT_LABEL[commitment.kind].toLocaleLowerCase("pt-BR")}). O estudo do dia foi remanejado para os horários livres.`
+        : `Compromisso fixo da sua semana (${PCAC_COMMITMENT_LABEL[commitment.kind].toLocaleLowerCase("pt-BR")}). O estudo do dia foi remanejado para os horários livres.`,
+    );
+  }
   if (options.includeTaf && (options.tafDays ?? [2, 4, 6]).includes(weekday)) {
     add("exercicio", "Preparação física / TAF", options.tafTime ?? "17:00", options.tafDurationMinutes ?? 60,
       "Treino físico planejado pelo candidato. Ajuste intensidade e exercícios ao edital, à avaliação profissional e à sua condição física.");
   }
-  events.sort((a, b) => a.start.localeCompare(b.start));
-  // Se o aluno configurar dois compromissos no mesmo horário, preserve ambos em sequência.
-  let previousEnd = 0;
-  return events.map((event) => {
-    const start = Math.max(toMin(event.start), previousEnd);
-    const end = start + event.minutes;
-    previousEnd = end;
-    return { ...event, start: fmtMin(start), end: fmtMin(end) };
-  });
+  // Os compromissos entram primeiro, para nenhuma refeição empurrar uma consulta ou reunião.
+  const anchorFirst = (event: FixedEvent) => (event.type === "compromisso" ? 0 : 1);
+  events.sort((a, b) => anchorFirst(a) - anchorFirst(b) || a.start.localeCompare(b.start));
+  // Compromissos do aluno são âncoras: não saem do lugar. Refeições e treino cedem o horário e
+  // seguem para o primeiro espaço livre; se o atraso passar de 90 minutos a refeição sai do plano,
+  // porque nesse caso ela aconteceu fora de casa (no trabalho, por exemplo).
+  const MAX_ROUTINE_DELAY = 90;
+  const placed: FixedEvent[] = [];
+  const collides = (start: number, minutes: number) =>
+    placed.find((event) => start < toMin(event.end) && start + minutes > toMin(event.start));
+  for (const event of events) {
+    let start = toMin(event.start);
+    let blocker = collides(start, event.minutes);
+    while (blocker) {
+      start = toMin(blocker.end);
+      blocker = collides(start, event.minutes);
+    }
+    if (event.type === "rotina" && start - toMin(event.start) > MAX_ROUTINE_DELAY) continue;
+    placed.push({ ...event, start: fmtMin(start), end: fmtMin(start + event.minutes) });
+  }
+  return placed.sort((a, b) => a.start.localeCompare(b.start));
 }
 
 function overlaps(start: number, end: number, event: FixedEvent): boolean {
@@ -209,6 +333,7 @@ function placeStudyTasks(
   const placed: PcAcPlanActivity[] = [];
   let cursor = toMin(startTime);
   let studySinceBreak = 0;
+  let breakCount = 0;
 
   const movePastEvents = (start: number, duration: number) => {
     let next = start;
@@ -226,15 +351,22 @@ function placeStudyTasks(
   };
 
   const addBreak = () => {
-    cursor = movePastEvents(cursor, breakDuration);
+    // A cada quatro ciclos de estudo entra uma pausa longa — é o ritmo da técnica Pomodoro, cuja
+    // eficácia vem das pausas regulares que sustentam a atenção ao longo do dia.
+    breakCount += 1;
+    const isLongBreak = breakCount % 4 === 0;
+    const duration = isLongBreak ? Math.max(breakDuration, Math.min(30, breakDuration * 2)) : breakDuration;
+    cursor = movePastEvents(cursor, duration);
     placed.push({
       type: "pausa",
-      detail: `Pausa de ${breakDuration} minutos: levante-se, alongue-se e descanse a visão.`,
+      detail: isLongBreak
+        ? `Pausa longa de ${duration} minutos: saia da mesa, caminhe, hidrate-se e descanse a visão antes do próximo ciclo.`
+        : `Pausa de ${duration} minutos: levante-se, alongue-se e descanse a visão.`,
       start: fmtMin(cursor),
-      end: fmtMin(cursor + breakDuration),
-      minutes: breakDuration,
+      end: fmtMin(cursor + duration),
+      minutes: duration,
     });
-    cursor += breakDuration;
+    cursor += duration;
     studySinceBreak = 0;
   };
 
@@ -275,31 +407,40 @@ function placeStudyTasks(
   return [...placed, ...fixed].sort((a, b) => (a.start ?? "").localeCompare(b.start ?? ""));
 }
 
+/** Treino de prova no fim de cada semana: simulado cronometrado e produção de texto, com
+ * frequência crescente conforme a prova se aproxima. Resolver prova sob tempo é a forma mais
+ * eficaz de testar o que foi aprendido e de calibrar o ritmo do dia da prova. */
 function specialTasks(
   cargo: PcAcVerticalCargo,
   weekIndex: number,
+  phase: PcAcPlanPhase,
   isLastStudyDay: boolean,
   availableMinutes: number,
 ): StudyTask[] {
   if (!isLastStudyDay || availableMinutes < 45) return [];
-  const tasks: StudyTask[] = [];
-  const hasDiscursive = Boolean(cargo.exam?.discursive?.trim());
-  if (hasDiscursive && weekIndex % 2 === 0) {
-    const minutes = Math.min(45, availableMinutes);
-    tasks.push({
-      type: "redacao",
-      detail: `Treino de prova discursiva: produza um texto de acordo com a orientação do edital. ${cargo.exam!.discursive}`,
-      minutes,
-    });
-  } else if (weekIndex % 2 === 1) {
-    const minutes = Math.min(60, availableMinutes);
-    tasks.push({
-      type: "simulado",
-      detail: "Simulado objetivo cronometrado. Respeite o tempo de prova e faça a correção comentada ao terminar.",
-      minutes,
-    });
+  const limit = Math.floor(availableMinutes * 0.6);
+  if (limit < 30) return [];
+  const simulado = (minutes: number, detail: string): StudyTask[] => [{ type: "simulado", detail, minutes: Math.min(minutes, limit) }];
+  const redacao = (minutes: number): StudyTask[] => [{
+    type: "redacao",
+    detail: `Treino de prova discursiva: produza um texto completo sob tempo e revise a estrutura ao final. ${pcAcDiscursiveBrief(cargo)}`,
+    minutes: Math.min(minutes, limit),
+  }];
+
+  if (phase === "revisao") {
+    return weekIndex % 2 === 0
+      ? simulado(90, "Simulado completo cronometrado, no formato da prova objetiva. Faça a correção comentada e leve os erros para o caderno de erros.")
+      : [...simulado(60, "Simulado cronometrado das disciplinas de maior peso. Corrija na sequência e registre os erros."), ...redacao(45)];
   }
-  return tasks;
+  if (phase === "pratica") {
+    return weekIndex % 2 === 0
+      ? simulado(75, "Simulado cronometrado das disciplinas estudadas nas últimas semanas, com correção comentada.")
+      : redacao(45);
+  }
+  // Na fase de fundamentos o treino de prova é quinzenal: serve para diagnóstico, não para nota.
+  return weekIndex >= 1 && weekIndex % 2 === 1
+    ? simulado(50, "Simulado curto de diagnóstico sobre o que já foi estudado. O objetivo é medir lacunas, não acertar tudo.")
+    : [];
 }
 
 export function buildPcAcMasterPlan(
@@ -335,9 +476,12 @@ export function buildPcAcMasterPlan(
   }
 
   const totalWeeks = ranges.length;
-  const foundationsWeeks = totalWeeks <= 2 ? 1 : Math.max(1, Math.round(totalWeeks * 0.4));
+  // Base (35%), prática em questões (35%) e revisão/simulados (30%): a reta final concentra
+  // revisão espaçada e prova cronometrada, que é quando elas rendem mais.
+  const foundationsWeeks = totalWeeks <= 2 ? 1 : Math.max(1, Math.round(totalWeeks * 0.35));
   const practiceWeeks = totalWeeks <= 2 ? 0 : Math.max(1, Math.round(totalWeeks * 0.35));
   const nextTopic = createTopicCursor(cargo);
+  const memory = createSpacedReview();
   const weeks: PcAcPlanWeek[] = [];
 
   ranges.forEach(({ from, to }, weekIndex) => {
@@ -352,24 +496,45 @@ export function buildPcAcMasterPlan(
 
     const weekDays = dates.map((date) => {
       const weekday = weekdayOf(date);
+      const dateIso = toIso(date);
       const isStudyDay = days.includes(weekday);
       const isTafDay = opts.includeTaf && tafDays.includes(weekday);
       const totalForDay = minutesFor(weekday);
       const isLastStudyDay = isStudyDay && date.getTime() === lastStudyTimestamp;
       if (!isStudyDay && !isTafDay) {
+        const dayCommitments = routineEvents({ ...opts, breakfastTime: "", morningSnackTime: "", lunchTime: "", afternoonSnackTime: "", dinnerTime: "", includeTaf: false }, weekday, dateIso);
         return {
-          date: toIso(date),
+          date: dateIso,
           weekday,
-          activities: [{
-            type: "descanso" as const,
-            detail: "Dia reservado para recuperação, sono, lazer e organização da próxima semana. Não é necessário compensar horas de estudo.",
-          }],
+          activities: [
+            {
+              type: "descanso" as const,
+              detail: "Dia reservado para recuperação, sono, lazer e organização da próxima semana. Não é necessário compensar horas de estudo.",
+            },
+            ...dayCommitments,
+          ],
         };
       }
-      const special = isStudyDay ? specialTasks(cargo, weekIndex, isLastStudyDay, totalForDay) : [];
-      const coreMinutes = Math.max(0, totalForDay - special.reduce((sum, task) => sum + task.minutes, 0));
-      const tasks = [...learningTasks(coreMinutes, phase, nextTopic), ...special];
-      const fixed = routineEvents(opts, weekday);
+      const special = isStudyDay ? specialTasks(cargo, weekIndex, phase, isLastStudyDay, totalForDay) : [];
+      const specialMinutes = special.reduce((sum, task) => sum + task.minutes, 0);
+      const studyMinutes = Math.max(0, totalForDay - specialMinutes);
+      // Recuperação ativa: fecha o dia tentando lembrar do conteúdo sem consultar o material.
+      const recallMinutes = studyMinutes >= 60 ? Math.min(15, Math.round(studyMinutes * 0.08)) : 0;
+      const review = reviewTasks(Math.round((studyMinutes - recallMinutes) * reviewShare(phase)), dateIso, memory);
+      const reviewMinutes = review.reduce((sum, task) => sum + task.minutes, 0);
+      const coreMinutes = Math.max(0, studyMinutes - recallMinutes - reviewMinutes);
+      const recall: StudyTask[] = recallMinutes > 0 ? [{
+        type: "revisao",
+        detail: "Recuperação ativa do dia: sem olhar o material, escreva ou diga tudo o que lembra dos tópicos de hoje; depois confira e marque no caderno de erros só o que faltou.",
+        minutes: recallMinutes,
+      }] : [];
+      const tasks = [
+        ...review,
+        ...learningTasks(coreMinutes, phase, nextTopic, memory, dateIso),
+        ...special,
+        ...recall,
+      ];
+      const fixed = routineEvents(opts, weekday, dateIso);
       const activities = placeStudyTasks(
         tasks,
         opts.startTime,
@@ -377,7 +542,7 @@ export function buildPcAcMasterPlan(
         opts.breakEveryMinutes ?? 50,
         opts.breakDurationMinutes ?? 10,
       );
-      return { date: toIso(date), weekday, activities };
+      return { date: dateIso, weekday, activities };
     });
 
     if (weekDays.length) weeks.push({
@@ -421,5 +586,6 @@ export const PCAC_ACTIVITY_LABEL: Record<PcAcActivityType, string> = {
   descanso: "Descanso",
   pausa: "Intervalo",
   rotina: "Alimentação / rotina",
+  compromisso: "Compromisso pessoal",
   exercicio: "Treino físico / TAF",
 };
