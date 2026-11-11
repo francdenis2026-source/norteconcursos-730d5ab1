@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
-import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
 import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
@@ -38,6 +38,7 @@ import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import "@/styles/study-area-compact.css";
+import "@/styles/student-area-kit.css";
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -56,6 +57,31 @@ const SUBJECT_ICONS: Record<SubjectIcon, LucideIcon> = {
   ingles: Languages,
   geral: BookOpen,
 };
+
+const TILE_TONES = [
+  "oklch(0.8 0.14 82)",
+  "oklch(0.72 0.15 255)",
+  "oklch(0.76 0.16 150)",
+  "oklch(0.74 0.16 300)",
+  "oklch(0.76 0.16 55)",
+  "oklch(0.72 0.19 15)",
+  "oklch(0.78 0.13 110)",
+  "oklch(0.72 0.16 330)",
+  "oklch(0.74 0.13 230)",
+  "oklch(0.78 0.15 35)",
+];
+const TILE_IMAGES = [
+  "study-desk",
+  "exam-hall",
+  "trainer-study",
+  "painel-aluno-estudo",
+  "study-assistant",
+  "exam-simulator",
+  "dashboard",
+  "trainer",
+  "painel-aluno-direcao-estudos",
+  "field-map",
+];
 
 const OTHER_RESOURCES: {
   to: string;
@@ -257,40 +283,71 @@ function MaterialHub() {
 
   return (
     <div className="nc-learning-workspace material-hub space-y-4 pb-8">
-      <PageHero
-        image="study-desk"
-        kicker="Material didático"
-        icon={Library}
-        title={
-          <>
-            Materiais <em>de estudo</em>
-          </>
-        }
-        description="Estude por legislação, disciplina ou formato."
-      >
-        <div className="page-hero__stats max-w-xl">
-          <Link
-            to="/dashboard/material"
-            hash="hub-laws"
-            className="hero-stat transition hover:border-emerald-400/60 hover:bg-emerald-950/20"
-            aria-label="Abrir materiais de leis"
-          >
-            <span><Scale />Materiais de leis</span>
-            <strong className="tabular">{isPending ? "—" : lawTotal}</strong>
-            <small>Textos oficiais, súmulas e explicações</small>
-          </Link>
-          <Link
-            to="/dashboard/material"
-            hash="hub-subjects"
-            className="hero-stat transition hover:border-violet-400/60 hover:bg-violet-950/20"
-            aria-label="Abrir disciplinas com conteúdo"
-          >
-            <span><BookOpen />Disciplinas com conteúdo</span>
-            <strong className="tabular">{isPending ? "—" : subjectTotal}</strong>
-            <small>Roteiros, prática e revisão por tema</small>
-          </Link>
+      <header className="ak-hero">
+        <img src="/media/hero/painel-aluno-estudo.webp" alt="" aria-hidden="true" decoding="async" />
+        <div className="ak-hero__copy">
+          <small>Material didático</small>
+          <h1>Materiais de estudo</h1>
+          <p>Estude por legislação, disciplina ou formato.</p>
         </div>
-      </PageHero>
+        <nav className="ak-quick" aria-label="Acesso rápido">
+          <Link to="/dashboard/material" hash="hub-laws" style={{ "--ak-tone": "oklch(0.76 0.16 150)" } as React.CSSProperties}>
+            <Scale aria-hidden="true" /> Leis <strong>{isPending ? "—" : lawTotal}</strong>
+          </Link>
+          <Link to="/dashboard/disciplinas" style={{ "--ak-tone": "oklch(0.74 0.16 300)" } as React.CSSProperties}>
+            <BookOpen aria-hidden="true" /> Disciplinas <strong>{isPending ? "—" : subjectTotal}</strong>
+          </Link>
+          <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} style={{ "--ak-tone": "oklch(0.82 0.14 82)" } as React.CSSProperties}>
+            <Library aria-hidden="true" /> Edital PC-AC
+          </Link>
+          <Link to="/dashboard/question-trainer" style={{ "--ak-tone": "oklch(0.72 0.15 255)" } as React.CSSProperties}>
+            <ClipboardCheck aria-hidden="true" /> Treinar questões
+          </Link>
+        </nav>
+      </header>
+
+      <section className="ak-strip" aria-labelledby="hub-subjects">
+        <header>
+          <h2 id="hub-subjects">Disciplinas</h2>
+          <Link to="/dashboard/disciplinas">Abrir todas as disciplinas →</Link>
+        </header>
+        {isPending && signedIn ? (
+          <div className="ak-tiles">
+            {[0, 1, 2, 3, 4, 5].map((n) => (
+              <Skeleton key={n} className="h-[7.5rem] rounded-2xl" />
+            ))}
+          </div>
+        ) : (
+          <ul className="ak-tiles">
+            {availableSubjects.map((entry, i) => {
+              const Icon = SUBJECT_ICONS[entry.icon];
+              return (
+                <li key={entry.name}>
+                  <Link
+                    to="/dashboard/disciplinas"
+                    search={{ d: entry.name }}
+                    className="ak-tile"
+                    style={{ "--ak-tone": TILE_TONES[i % TILE_TONES.length] } as React.CSSProperties}
+                  >
+                    <img
+                      src={`/media/hero/${TILE_IMAGES[i % TILE_IMAGES.length]}.webp`}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="ak-tile__icon">
+                      <Icon aria-hidden="true" />
+                    </span>
+                    <strong>{entry.name}</strong>
+                    <span>{summary(entry)}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
 
       <UpdatedStudyCollections storageScope={user?.id ?? "anonymous"} />
 
@@ -437,67 +494,6 @@ function MaterialHub() {
                 </span>
               </Link>
             </li>
-          </ul>
-        )}
-      </section>
-
-      <section aria-labelledby="hub-subjects" className="space-y-3">
-        <header className="flex flex-wrap items-end justify-between gap-2">
-          <div>
-            <h2 id="hub-subjects" className="text-xl font-bold">
-              Disciplinas
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              Língua Portuguesa, Matemática, Raciocínio Lógico, Química, Física, Estatística,
-              Contabilidade e mais.
-            </p>
-          </div>
-          <Link
-            to="/dashboard/disciplinas"
-            className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
-          >
-            Abrir todas as disciplinas →
-          </Link>
-        </header>
-        {isPending && signedIn ? (
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {[0, 1, 2, 3, 4, 5].map((n) => (
-              <Skeleton key={n} className="h-24 rounded-2xl" />
-            ))}
-          </div>
-        ) : (
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {availableSubjects.map((entry) => {
-              const Icon = SUBJECT_ICONS[entry.icon];
-              const content = (
-                <>
-                  <span className="material-card__icon" data-subject={entry.icon}>
-                    <Icon aria-hidden="true" />
-                  </span>
-                  <span className="material-card__body">
-                    <strong>{entry.name}</strong>
-                    <span>{summary(entry)}</span>
-                  </span>
-                </>
-              );
-              return (
-                <li key={entry.name}>
-                  {entry.hasContent ? (
-                    <Link
-                      to="/dashboard/disciplinas"
-                      search={{ d: entry.name }}
-                      className="material-card"
-                    >
-                      {content}
-                    </Link>
-                  ) : (
-                    <div className="material-card" data-empty="true" aria-disabled="true">
-                      {content}
-                    </div>
-                  )}
-                </li>
-              );
-            })}
           </ul>
         )}
       </section>

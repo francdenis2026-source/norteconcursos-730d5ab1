@@ -59,6 +59,7 @@ import {
   PCAC_IDECAN_PRIORITY,
 } from "@/data/pcAcreIdecanRadar";
 import "@/styles/pcac-edital.css";
+import "@/styles/pcac-edital-photo.css";
 import { platformDate } from "@/lib/platformClock";
 
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";

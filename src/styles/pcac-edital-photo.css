@@ -1,0 +1,21 @@
+/* Edital PC-AC: largura total e faixa com foto no lugar do verde chapado. */
+.app-shell .pcac-edital-page.pcac-compact-workspace { width: 100%; max-width: none; }
+.pcac-edital-page .pcac-command-bar {
+  position: relative;
+  min-height: 6.5rem;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-color: oklch(0.82 0.14 82 / 0.5);
+  border-radius: 1rem;
+  background: oklch(0.16 0.03 265) url("/media/hero/pcac-capa.webp") right 35% / cover no-repeat;
+  isolation: isolate;
+}
+.pcac-edital-page .pcac-command-bar::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, oklch(0.2 0.07 155 / 0.97) 0%, oklch(0.16 0.04 200 / 0.8) 40%, oklch(0.14 0.03 265 / 0.1) 85%); }
+.pcac-edital-page .pcac-command-bar__flag { width: 6.5rem; height: auto; margin-block: -0.75rem; }
+.pcac-edital-page .pcac-command-bar__title > span { font-size: 0.6875rem; }
+.pcac-edital-page .pcac-command-bar h1 { font-size: 1.5rem; }
+.pcac-edital-page .pcac-command-bar h1 small { font-size: 0.875rem; }
+.pcac-edital-page .pcac-metrics { gap: 0.5rem; font-size: 0.8125rem; }
+.pcac-edital-page .pcac-metrics > span { --m: oklch(0.72 0.15 255); padding: 0.3125rem 0.75rem; border: 1px solid color-mix(in srgb, var(--m) 50%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--m) 12%, transparent); }
+.pcac-edital-page .pcac-metrics > span:nth-child(2) { --m: oklch(0.74 0.16 150); }
+.pcac-edital-page .pcac-metrics > span:nth-child(3) { --m: oklch(0.78 0.15 70); }
+.pcac-edital-page .pcac-metrics > span svg { color: var(--m); }
