@@ -1,5 +1,6 @@
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
+import { AnswerInsights } from "@/components/dashboard/AnswerInsights";
 import "@/styles/student-desk.css";
 import "@/styles/student-overview.css";
 import "@/styles/student-overview-v3.css";
@@ -817,7 +818,8 @@ function StudentHome({ user }: { user: UserProfile }) {
       </div>
 
       <section
-        className="sh2-card sh2-card--wide"
+        className="sh2-card sh2-card--wide sh2-card--photo"
+        style={{ "--sh2-photo": "url(/media/hero/painel-aluno-direcao-estudos.webp)" } as React.CSSProperties}
         data-tone="blue"
         aria-labelledby="dashboard-rhythm-title"
       >
@@ -842,6 +844,32 @@ function StudentHome({ user }: { user: UserProfile }) {
               onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
               onOpenHistory={(trigger) => openMetric("week", trigger)}
             />
+          )}
+        </div>
+      </section>
+
+      <section
+        className="sh2-card sh2-card--wide sh2-card--photo"
+        data-tone="green"
+        aria-labelledby="dashboard-answers-title"
+        style={{ "--sh2-photo": "url(/media/hero/dashboard.webp)" } as React.CSSProperties}
+      >
+        <SectionTitle
+          icon={CheckCircle2}
+          title="Acertos e erros"
+          id="dashboard-answers-title"
+          onOpen={(event) => openMetric("accuracy", event.currentTarget)}
+        />
+        <div className="sh2-card__body">
+          {q.training.isError ? (
+            <QueryError
+              text="Não conseguimos consultar suas respostas."
+              retry={() => q.training.refetch()}
+            />
+          ) : !q.training.data ? (
+            <PanelLoading />
+          ) : (
+            <AnswerInsights rows={q.training.data} today={today} />
           )}
         </div>
       </section>

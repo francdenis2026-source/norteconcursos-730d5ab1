@@ -186,3 +186,37 @@
 @media (prefers-reduced-motion: reduce) {
   .student-home.sh2 :is(.sh2-kpi, .sh2-shortcuts img) { transition: none; }
 }
+
+/* Acertos e erros: faixa ilustrada, abas de período, gráfico e disciplinas */
+.student-home.sh2 .sh2-card--photo .sh2-card__head { position: relative; min-height: 4.5rem; padding-block: 0.75rem; overflow: hidden; background: oklch(0.16 0.03 265); isolation: isolate; }
+.student-home.sh2 .sh2-card--photo .sh2-card__head::before { content: ""; position: absolute; inset: 0 0 0 auto; z-index: -2; width: min(55%, 36rem); background: var(--sh2-photo) center 35% / cover no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent, #000 50%); mask-image: linear-gradient(90deg, transparent, #000 50%); }
+.student-home.sh2 .sh2-card--photo .sh2-card__head::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, color-mix(in srgb, var(--sh2-tone) 30%, oklch(0.16 0.03 265)) 0%, transparent 70%); }
+.student-home.sh2 .sh2-card--photo .sh2-card__head h2 { font-size: 1.0625rem; color: #fff; }
+.student-home.sh2 .sh2-card--photo .sh2-card__head h2 button svg, .student-home.sh2 .sh2-card--photo .sh2-card__head > svg { color: #fff; }
+.student-home.sh2 .sh2-insights { display: grid; gap: 0.625rem; min-width: 0; }
+.student-home.sh2 .sh2-insights__tabs { display: flex; gap: 0.25rem; padding: 0.1875rem; overflow-x: auto; border: 1px solid var(--border); border-radius: 0.625rem; scrollbar-width: none; }
+.student-home.sh2 .sh2-insights__tabs button { flex: 1 0 auto; min-height: 2rem; padding: 0.25rem 0.75rem; border: 0; border-radius: 0.4375rem; background: none; color: var(--sh2-dim); font-size: 0.8125rem; font-weight: 700; cursor: pointer; }
+.student-home.sh2 .sh2-insights__tabs button[aria-selected="true"] { background: var(--sh2-green); color: var(--background); }
+.student-home.sh2 .sh2-insights__kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: 0.5rem; }
+.student-home.sh2 .sh2-insights__kpis > span { display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem; align-items: center; padding: 0.4375rem 0.625rem; border: 1px solid color-mix(in srgb, var(--sh2-tone) 40%, var(--border)); border-radius: 0.625rem; background: color-mix(in srgb, var(--sh2-tone) 10%, transparent); }
+.student-home.sh2 .sh2-insights__kpis svg { grid-row: span 2; width: 1.25rem; height: 1.25rem; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-insights__kpis small { grid-column: 2; font-size: 0.6875rem; font-weight: 700; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-insights__kpis strong { grid-column: 2; font-size: 1.25rem; font-weight: 800; line-height: 1.1; color: var(--sh2-ink); font-variant-numeric: tabular-nums; }
+.student-home.sh2 .sh2-insights__kpis > span:not(:has(svg)) :is(small, strong) { grid-column: 1 / -1; }
+.student-home.sh2 .sh2-insights__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 0.75rem; min-width: 0; }
+.student-home.sh2 .sh2-insights__chart { min-width: 0; margin: 0; padding: 0.5rem 0.625rem; border: 1px solid var(--border); border-radius: 0.75rem; color: var(--sh2-ink); }
+.student-home.sh2 .sh2-insights__chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 0.75rem; font-size: 0.8125rem; font-weight: 800; }
+.student-home.sh2 .sh2-insights__chart figcaption span { display: inline-flex; align-items: center; gap: 0.3125rem; font-size: 0.75rem; font-weight: 600; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-insights__chart figcaption i { width: 0.625rem; height: 0.625rem; border-radius: 0.1875rem; }
+.student-home.sh2 .sh2-insights__chart figcaption i:not(:first-child) { margin-left: 0.5rem; }
+.student-home.sh2 .sh2-insights__subjects { display: grid; gap: 0.5rem; align-content: start; min-width: 0; padding: 0.5rem 0.625rem; border: 1px solid var(--border); border-radius: 0.75rem; }
+.student-home.sh2 .sh2-insights__subjects h3 { margin: 0; font-size: 0.8125rem; font-weight: 800; color: var(--sh2-ink); }
+.student-home.sh2 .sh2-insights__subjects ul { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.student-home.sh2 .sh2-insights__subjects li { display: grid; gap: 0.1875rem; min-width: 0; }
+.student-home.sh2 .sh2-insights__subjects li > div { display: flex; justify-content: space-between; gap: 0.75rem; min-width: 0; font-size: 0.75rem; }
+.student-home.sh2 .sh2-insights__subjects li strong { overflow: hidden; color: var(--sh2-ink); text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-insights__subjects li > div > span { flex: none; color: var(--sh2-dim); font-variant-numeric: tabular-nums; }
+.student-home.sh2 .sh2-insights__subjects b { color: var(--sh2-ink); }
+.student-home.sh2 .sh2-insights__bar { display: block; height: 0.4375rem; overflow: hidden; border-radius: 999px; background: #f0527a; }
+.student-home.sh2 .sh2-insights__bar i { display: block; height: 100%; border-right: 2px solid var(--card); background: #34c27a; }
+.student-home.sh2 .sh2-insights__subjects p, .student-home.sh2 .sh2-insights__empty { margin: 0; font-size: 0.75rem; color: var(--sh2-dim); }
