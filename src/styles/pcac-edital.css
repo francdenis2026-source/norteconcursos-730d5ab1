@@ -574,8 +574,7 @@
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(1) { --ax-tab: var(--ax-pcac-resumo); }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(2) { --ax-tab: var(--ax-pcac-conteudo); }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(3) { --ax-tab: var(--ax-pcac-cronograma); }
-.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:nth-child(4) { --ax-tab: var(--ax-pcac-leis); }
-.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"] svg { width: 15px; height: 15px; color: var(--ax-tab); flex-shrink: 0; }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list.app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"] svg { width: 15px; height: 15px; color: var(--ax-tab); flex-shrink: 0; }
 @media (hover: hover) and (pointer: fine) {
   .app-shell[data-area="student"] #dashboard-content .pcac-edital-page .pcac-astrix-section-tabs > .pcac-edital-tabs__list [role="tab"]:not([data-state="active"]):hover {
     color: var(--ax-tab);
@@ -711,7 +710,7 @@
 .pcac-metrics > span { display: inline-flex; align-items: center; gap: 5px; }
 .pcac-metrics svg { width: 14px; height: 14px; color: #16885a; }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs { flex: 1; min-height: 0; overflow: hidden; }
-.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); min-height: 44px; padding: 4px; background: var(--pcac-soft); border-color: var(--pcac-line); }
+.app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); min-height: 44px; padding: 4px; background: var(--pcac-soft); border-color: var(--pcac-line); }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list [role="tab"] { min-width: 0; white-space: normal; font-size: 12px; padding: 6px; color: var(--pcac-ink); }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-edital-tabs__list [role="tab"][data-state="active"] { color: #162337; }
 .app-shell[data-area="student"] #dashboard-content .pcac-edital-page.pcac-compact-workspace .pcac-astrix-section-tabs > [role="tabpanel"] { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; margin: 0; padding: 2px 4px 16px 0; }

@@ -12,7 +12,6 @@ import {
   PlayCircle,
   ScanSearch,
   Share2,
-  Scale,
   ShieldCheck,
   Users,
   GraduationCap,
@@ -35,7 +34,6 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import {
   pcAcVerticalCargos,
-  pcAcInstitutionalLaws,
   type PcAcVerticalCargoId,
   type PcAcVerticalDiscipline,
 } from "@/data/pcAcreVerticalizado";
@@ -62,7 +60,6 @@ import {
 import "@/styles/pcac-edital.css";
 import { platformDate } from "@/lib/platformClock";
 
-const LEGISLACAO_INSTITUCIONAL_ANCHOR = "pcac-legislacao-institucional";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 
 const PCAC_DISCIPLINE_GUIDE: Record<string, string> = {
@@ -419,12 +416,11 @@ function PcAcreEditalVerticalizadoPage() {
     return () => { observer.disconnect(); chromeObserver.disconnect(); document.removeEventListener("fullscreenchange", resize); window.removeEventListener("resize", resize); };
   }, [digitalView]);
   const [editalTab, setEditalTab] = React.useState(() =>
-    typeof window !== "undefined" && window.location.hash === "#pcac-cronograma" ? "cronograma" : typeof window !== "undefined" && window.location.hash === "#pcac-legislacao-institucional" ? "leis" : "resumo",
+    typeof window !== "undefined" && window.location.hash === "#pcac-cronograma" ? "cronograma" : "resumo",
   );
   React.useEffect(() => {
     const syncHash = () => {
       if (window.location.hash === "#pcac-cronograma") setEditalTab("cronograma");
-      if (window.location.hash === "#pcac-legislacao-institucional") setEditalTab("leis");
     };
     window.addEventListener("hashchange", syncHash);
     syncHash();
@@ -564,7 +560,7 @@ function PcAcreEditalVerticalizadoPage() {
         onValueChange={(next) => {
           setEditalTab(next);
           const url = new URL(window.location.href);
-          url.hash = next === "cronograma" ? CRONOGRAMA_ANCHOR : next === "leis" ? LEGISLACAO_INSTITUCIONAL_ANCHOR : "";
+          url.hash = next === "cronograma" ? CRONOGRAMA_ANCHOR : "";
           window.history.replaceState(window.history.state, "", url);
         }}
         className="pcac-edital-tabs pcac-astrix-section-tabs"
@@ -573,7 +569,6 @@ function PcAcreEditalVerticalizadoPage() {
           <TabsTrigger value="resumo"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Visão geral</TabsTrigger>
           <TabsTrigger value="conteudo"><CheckCircle2 aria-hidden="true" className="h-4 w-4" /> Conteúdo e progresso</TabsTrigger>
           <TabsTrigger value="cronograma"><CalendarClock aria-hidden="true" className="h-4 w-4" /> Cronograma</TabsTrigger>
-          <TabsTrigger value="leis"><Scale aria-hidden="true" className="h-4 w-4" /> Legislação</TabsTrigger>
         </TabsList>
         <TabsContent value="resumo" className="pcac-astrix-summary space-y-3">
       {cargo.id === "investigador" && (
@@ -745,71 +740,7 @@ function PcAcreEditalVerticalizadoPage() {
       <PcAcCronogramaCard cargo={cargo} userId={userId} />
 
         </TabsContent>
-        <TabsContent value="leis" className="space-y-5">
 
-      <Card id={LEGISLACAO_INSTITUCIONAL_ANCHOR} className="pcac-edital-card pcac-edital-laws scroll-mt-20">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-base">
-            <Scale className="h-5 w-5 text-primary" />
-            Legislação institucional
-          </CardTitle>
-          <CardDescription>
-            As leis exigidas no bloco "Legislação Institucional" do edital, com resumo e pontos
-            principais para revisão rápida.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Accordion type="multiple">
-            {pcAcInstitutionalLaws.map((law) => (
-              <AccordionItem key={law.id} value={law.id}>
-                <AccordionTrigger className="text-left">
-                  <span className="flex items-center gap-2">
-                    {law.title}
-                    {!law.verified && (
-                      <Badge variant="outline" className="shrink-0 text-[10px] font-normal">
-                        conteúdo a confirmar
-                      </Badge>
-                    )}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="space-y-3">
-                  <p className="text-sm text-muted-foreground">{law.ementa}</p>
-                  {law.resumo.length > 0 && (
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-                        Resumo
-                      </p>
-                      <ul className="mt-1 list-disc space-y-1 pl-5 text-sm">
-                        {law.resumo.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {law.pontosPrincipais.length > 0 && (
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-                        Pontos principais
-                      </p>
-                      <ul className="mt-1 list-disc space-y-1 pl-5 text-sm">
-                        {law.pontosPrincipais.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {law.nota && (
-                    <p className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-muted-foreground">
-                      {law.nota}
-                    </p>
-                  )}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </CardContent>
-      </Card>
-        </TabsContent>
       </Tabs>
     </div>
   );
