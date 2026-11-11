@@ -128,7 +128,11 @@ function CommitmentsEditor({
     if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) return setError("Informe um horário válido.");
     const startMinutes = clockToMinutes(time);
     const finishMinutes = clockToMinutes(endTime);
-    const calculatedMinutes = finishMinutes - startMinutes;
+    // Plantão que vira a noite (ex.: entra 19:00, sai 07:00): hora final menor ou igual à inicial
+    // vira "do dia seguinte" em vez de erro — "igual" é um plantão de 24h.
+    const calculatedMinutes = finishMinutes > startMinutes
+      ? finishMinutes - startMinutes
+      : 24 * 60 - startMinutes + finishMinutes;
     if (calculatedMinutes < 5) return setError("A hora final deve ser pelo menos 5 minutos depois do início.");
     if (repeat === "semana" && !days.length) return setError("Escolha ao menos um dia da semana.");
     if (repeat === "data" && !/^\d{4}-\d{2}-\d{2}$/.test(date)) return setError("Escolha a data do compromisso.");
@@ -287,6 +291,10 @@ function CommitmentsEditor({
       <p className="pcac-commitments__hint">
         O estudo nunca é marcado sobre um compromisso: o plano usa só os horários livres do dia. Se um
         dia ficar cheio, as horas da semana continuam as mesmas e se redistribuem nos outros dias.
+        Plantão que passa da meia-noite (ex.: entra 19:00, sai 07:00): pode colocar a hora final menor
+        que a inicial, conta como virada de dia. Se o plantão continuar depois das 00:00, cadastre
+        outro compromisso igual para a data (ou dia da semana) seguinte, das 00:00 até a hora de saída
+        — assim o cronograma também não marca estudo na manhã seguinte.
       </p>
     </div>
   );
