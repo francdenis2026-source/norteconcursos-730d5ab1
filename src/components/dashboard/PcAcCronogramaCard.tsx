@@ -259,7 +259,6 @@ function CommitmentsEditor({
       <Dialog isOpen={!!pendingDelete} onOpenChange={(open) => { if (!open) setPendingDelete(null); }} width={420} padding={0}>
         {pendingDelete && (
           <div className="pcac-delete-dialog">
-            <div className="pcac-delete-dialog__illustration" aria-hidden="true"><Trash2 /></div>
             <DialogHeader
               title="Excluir compromisso?"
               subtitle="O compromisso será removido do cronograma."
@@ -267,8 +266,13 @@ function CommitmentsEditor({
               hasDivider
             />
             <div className="pcac-delete-dialog__body">
-              <p className="pcac-delete-dialog__item">{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</p>
-              <p className="pcac-delete-dialog__meta">{pendingDelete.time} · {pendingDelete.minutes} min</p>
+              <div className="pcac-delete-dialog__summary">
+                <div className="pcac-delete-dialog__illustration" aria-hidden="true"><Trash2 /></div>
+                <div>
+                  <p className="pcac-delete-dialog__item">{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</p>
+                  <p className="pcac-delete-dialog__meta">{pendingDelete.time} · {pendingDelete.minutes} min</p>
+                </div>
+              </div>
               <div className="pcac-delete-dialog__actions">
                 <AstryxButton label="Cancelar" variant="secondary" size="sm" onClick={() => setPendingDelete(null)} />
                 <AstryxButton label="Excluir compromisso" variant="danger" size="sm" icon={<X />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
