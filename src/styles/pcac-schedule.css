@@ -954,3 +954,5 @@
 .pcac-schedule__save-feedback { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 8px; color: #2f9b6f; font-size: 12px; font-weight: 700; }
 .pcac-schedule__save-feedback svg { width: 15px; height: 15px; }
 .pcac-schedule__save-feedback--error { color: #d98b72; }
+.pcac-commitments__lock { width: 14px; height: 14px; color: #75d0a8; margin-left: auto; }
+.pcac-commitments__item .pcac-commitments__lock + button { margin-left: 4px; }

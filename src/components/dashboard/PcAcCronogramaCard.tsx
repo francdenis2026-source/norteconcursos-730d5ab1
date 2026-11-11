@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, ChevronLeft, ChevronRight, Clock, Plus, X } from "lucide-react";
+import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, LockKeyhole, Pencil, ChevronLeft, ChevronRight, Clock, Plus, X } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { Card } from "@astryxdesign/core/Card";
@@ -96,10 +96,12 @@ const COMMITMENT_DEFAULT_MINUTES: Partial<Record<PcAcCommitmentKind, number>> = 
 function CommitmentsEditor({
   commitments,
   disabled,
+  saved,
   onChange,
 }: {
   commitments: PcAcCommitment[];
   disabled: boolean;
+  saved: boolean;
   onChange: (next: PcAcCommitment[]) => void;
 }) {
   const [kind, setKind] = React.useState<PcAcCommitmentKind>("trabalho");
@@ -110,6 +112,7 @@ function CommitmentsEditor({
   const [days, setDays] = React.useState<number[]>([1, 2, 3, 4, 5]);
   const [date, setDate] = React.useState("");
   const [error, setError] = React.useState("");
+  const [editingId, setEditingId] = React.useState<string | null>(null);
 
   const pickKind = (next: PcAcCommitmentKind) => {
     setKind(next);
@@ -123,18 +126,29 @@ function CommitmentsEditor({
     if (repeat === "semana" && !days.length) return setError("Escolha ao menos um dia da semana.");
     if (repeat === "data" && !/^\d{4}-\d{2}-\d{2}$/.test(date)) return setError("Escolha a data do compromisso.");
     setError("");
-    onChange([
-      ...commitments,
-      {
-        id: `c${Date.now().toString(36)}`,
-        kind,
-        ...(label.trim() ? { label: label.trim() } : {}),
-        time,
-        minutes,
-        ...(repeat === "data" ? { date } : { days: [...days].sort((a, b) => a - b) }),
-      },
-    ]);
+    const next = {
+      id: editingId ?? `c${Date.now().toString(36)}`,
+      kind,
+      ...(label.trim() ? { label: label.trim() } : {}),
+      time,
+      minutes,
+      ...(repeat === "data" ? { date } : { days: [...days].sort((a, b) => a - b) }),
+    };
+    onChange(editingId ? commitments.map((item) => item.id === editingId ? next : item) : [...commitments, next]);
+    setEditingId(null);
     setLabel("");
+  };
+
+  const edit = (commitment: PcAcCommitment) => {
+    setEditingId(commitment.id);
+    setKind(commitment.kind);
+    setLabel(commitment.label ?? "");
+    setTime(commitment.time);
+    setMinutes(commitment.minutes);
+    setRepeat(commitment.date ? "data" : "semana");
+    setDate(commitment.date ?? "");
+    setDays(commitment.days ?? [1, 2, 3, 4, 5]);
+    setError("");
   };
 
   return (
@@ -158,15 +172,9 @@ function CommitmentsEditor({
                       : (commitment.days ?? []).map((day) => DAY_SHORT[day]).join(", ")}
                   </small>
                 </span>
-                <AstryxButton
-                  variant="ghost"
-                  size="sm"
-                  isIconOnly
-                  icon={<X />}
-                  label={`Remover ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`}
-                  isDisabled={disabled}
-                  onClick={() => onChange(commitments.filter((item) => item.id !== commitment.id))}
-                />
+                {saved && <LockKeyhole aria-hidden="true" className="pcac-commitments__lock" title="Compromisso guardado" />}
+                <AstryxButton variant="ghost" size="sm" isIconOnly icon={<Pencil />} label={`Editar ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => edit(commitment)} />
+                <AstryxButton variant="ghost" size="sm" isIconOnly icon={<X />} label={`Excluir ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => { if (editingId === commitment.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== commitment.id)); }} />
               </li>
             );
           })}
@@ -236,7 +244,7 @@ function CommitmentsEditor({
           </div>
         )}
         <div className="pcac-commitments__submit">
-          <AstryxButton variant="secondary" size="sm" icon={<Plus />} label="Adicionar compromisso" isDisabled={disabled} onClick={add} />
+          <AstryxButton variant="secondary" size="sm" icon={<Plus />} label={editingId ? "Guardar edição" : "Adicionar compromisso"} isDisabled={disabled} onClick={add} />
         </div>
       </div>
       {error && <p className="pcac-commitments__error" role="alert">{error}</p>}
@@ -756,7 +764,8 @@ export function PcAcCronogramaCard({
             <CommitmentsEditor
               commitments={cfg.commitments}
               disabled={!configLoaded}
-              onChange={(commitments) => update({ commitments })}
+              saved={saveStatus === "saved"}
+              onChange={(commitments) => { setSaveStatus("idle"); update({ commitments }); }}
             />
           </div>
         </details>
