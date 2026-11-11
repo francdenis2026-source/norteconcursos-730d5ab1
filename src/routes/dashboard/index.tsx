@@ -80,6 +80,7 @@ const formatExamDate = (value?: string | null) => {
 const destinations = [
   {
     to: "/dashboard/cronograma",
+    image: "/media/hero/journey.webp",
     title: "Agenda de estudos",
     text: "Organize seu dia de estudo",
     tone: "gold",
@@ -87,6 +88,7 @@ const destinations = [
   },
   {
     to: "/dashboard/question-trainer",
+    image: "/media/hero/toolkit.webp",
     title: "Treinar questões",
     tone: "teal",
     text: "Pratique e revise seus erros",
@@ -94,6 +96,7 @@ const destinations = [
   },
   {
     to: "/dashboard/library",
+    image: "/media/hero/preparacao-n-cenas.webp",
     title: "Material de estudo",
     tone: "gold",
     text: "Leis, teoria e disciplinas",
@@ -101,6 +104,7 @@ const destinations = [
   },
   {
     to: "/dashboard/edital",
+    image: "/media/hero/pcac-capa.webp",
     title: "Edital e disciplinas",
     tone: "gold",
     text: "Estude o que será cobrado",
@@ -108,6 +112,7 @@ const destinations = [
   },
   {
     to: "/dashboard/mock-exams",
+    image: "/media/hero/plano-premium-equipe.webp",
     title: "Simulados",
     tone: "gold",
     text: "Prepare seu ritmo de prova",
@@ -115,6 +120,7 @@ const destinations = [
   },
   {
     to: "/dashboard/ranking",
+    image: "/media/hero/careers-team.webp",
     title: "Ranking",
     tone: "gold",
     text: "Veja sua posição entre os alunos",
@@ -207,7 +213,9 @@ function StudentHome({ user }: { user: UserProfile }) {
     const ranked = schedule.blocks
       .map((block) => ({ block, stat: subjectStats.get(canonicalDiscipline(block.nome)) }))
       .sort((a, b) => (a.stat?.accuracy ?? 101) - (b.stat?.accuracy ?? 101));
-    const focus = ranked.find((item) => item.stat && item.stat.total >= 3 && item.stat.accuracy < 70);
+    const focus = ranked.find(
+      (item) => item.stat && item.stat.total >= 3 && item.stat.accuracy < 70,
+    );
     if (focus?.stat) {
       return {
         tone: "focus" as const,
@@ -217,7 +225,11 @@ function StudentHome({ user }: { user: UserProfile }) {
     }
     const first = ranked[0];
     return first
-      ? { tone: "next" as const, title: `Próximo foco: ${first.block.nome}`, text: "Siga o bloco previsto e registre teoria e questões no painel do dia." }
+      ? {
+          tone: "next" as const,
+          title: `Próximo foco: ${first.block.nome}`,
+          text: "Siga o bloco previsto e registre teoria e questões no painel do dia.",
+        }
       : null;
   }, [schedule, stats]);
   const objective = q.objective.data;
@@ -225,9 +237,7 @@ function StudentHome({ user }: { user: UserProfile }) {
   const examDate = objective?.examDate || undefined;
   const isPcAcre = Boolean(
     objective &&
-      /acre|pc[-\s]?ac/i.test(
-        `${objective.agency} ${objective.role} ${objective.examBoard}`,
-      ),
+    /acre|pc[-\s]?ac/i.test(`${objective.agency} ${objective.role} ${objective.examBoard}`),
   );
   const days = daysToExam(examDate, today);
   const examCountdown =
@@ -237,7 +247,10 @@ function StudentHome({ user }: { user: UserProfile }) {
         ? "Faltam " + days + " " + (days === 1 ? "dia" : "dias") + " para a prova"
         : days === 0
           ? "Sua prova é hoje. Boa preparação!"
-          : "A prova ocorreu há " + Math.abs(days) + " " + (Math.abs(days) === 1 ? "dia." : "dias.");
+          : "A prova ocorreu há " +
+            Math.abs(days) +
+            " " +
+            (Math.abs(days) === 1 ? "dia." : "dias.");
   const firstName = user.full_name?.trim().split(/\s+/)[0] || "Estudante";
   const hour = acreHour(now),
     hello = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
@@ -303,7 +316,18 @@ function StudentHome({ user }: { user: UserProfile }) {
   };
   return (
     <div className="student-home student-hub student-desk student-overview sh2">
-      <header className="sh2-hero workspace-banner">
+      <header className="sh2-hero">
+        <img
+          className="sh2-hero__art"
+          src={
+            isPcAcre
+              ? "/media/hero/landing-pcac.webp"
+              : "/media/hero/meu-concurso-seguranca-publica.webp"
+          }
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+        />
         <div className="sh2-hero__hello">
           <p>
             {hello}, {firstName}.
@@ -414,6 +438,62 @@ function StudentHome({ user }: { user: UserProfile }) {
         />
       </section>
 
+      <nav className="sh2-shortcuts" aria-label="Atalhos de estudo">
+        {destinations.map(({ to, title, text, image, icon: Icon }, i) => (
+          <Link
+            key={to}
+            to={to}
+            data-tone={tones[i % tones.length]}
+            {...(to === "/dashboard/ranking"
+              ? {
+                  search: { section: "general", period: "all", page: 1, size: 20, q: "" } as never,
+                }
+              : {})}
+          >
+            <img src={image} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            <span>
+              <strong>
+                <Icon aria-hidden="true" />
+                {title}
+              </strong>
+              <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
+            </span>
+          </Link>
+        ))}
+        <Link to="/dashboard/performance" data-tone="blue">
+          <img
+            src="/media/hero/pcpr-investigacao.webp"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>
+            <strong>
+              <TrendingUp aria-hidden="true" />
+              Desempenho
+            </strong>
+            <small>Evolução e pontos fracos</small>
+          </span>
+        </Link>
+        <Link to="/dashboard/student-exams" search={{ career: undefined }} data-tone="rose">
+          <img
+            src="/media/hero/plano-plus-carreira.webp"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>
+            <strong>
+              <FileText aria-hidden="true" />
+              Minhas provas
+            </strong>
+            <small>Provas e diagnóstico</small>
+          </span>
+        </Link>
+      </nav>
+
       <StudentMetricPanel
         metric={metric}
         userId={user.id}
@@ -513,9 +593,10 @@ function StudentHome({ user }: { user: UserProfile }) {
               <>
                 <div className="sh2-progress">
                   <span>
-                    {new Intl.DateTimeFormat("pt-BR", { weekday: "long", timeZone: ACRE_TZ }).format(
-                      now,
-                    )}
+                    {new Intl.DateTimeFormat("pt-BR", {
+                      weekday: "long",
+                      timeZone: ACRE_TZ,
+                    }).format(now)}
                   </span>
                   <strong>
                     {schedule.completed} de {schedule.total} conteúdos
@@ -581,7 +662,9 @@ function StudentHome({ user }: { user: UserProfile }) {
                   </p>
                 )}
                 {schedule.blocks.length > 4 && (
-                  <p className="sh2-note">Mais {schedule.blocks.length - 4} blocos no cronograma.</p>
+                  <p className="sh2-note">
+                    Mais {schedule.blocks.length - 4} blocos no cronograma.
+                  </p>
                 )}
                 {schedule.next && (
                   <p className="sh2-note">
@@ -620,101 +703,83 @@ function StudentHome({ user }: { user: UserProfile }) {
           </footer>
         </section>
 
-        <section className="sh2-card" data-tone="blue" aria-labelledby="dashboard-rhythm-title">
+        <section className="sh2-card" data-tone="rose" aria-labelledby="dashboard-review-title">
           <SectionTitle
-            icon={TrendingUp}
-            title="Seu ritmo na semana"
-            id="dashboard-rhythm-title"
-            onOpen={(event) => openMetric("week", event.currentTarget)}
+            icon={BrainCircuit}
+            title="Prioridades de revisão"
+            id="dashboard-review-title"
+            aside={
+              stats && stats.pending !== null && !q.reinforcement.isError ? (
+                <span className="sh2-tag">{stats.pending} erros pendentes</span>
+              ) : null
+            }
           />
           <div className="sh2-card__body">
-            {q.activity.isError ? (
+            {q.training.isError ? (
               <QueryError
-                text="Não foi possível consultar o tempo de estudo."
-                retry={() => q.activity.refetch()}
+                text="Não conseguimos consultar suas respostas."
+                retry={() => q.training.refetch()}
               />
-            ) : !time ? (
+            ) : !stats ? (
               <PanelLoading />
+            ) : !stats.total ? (
+              <p className="sh2-note">Responda questões para receber sugestões de revisão.</p>
+            ) : stats.signals.length ? (
+              <ul className="sh2-signals">
+                {stats.signals.map((s) => (
+                  <li key={s.subject}>
+                    <div>
+                      <strong title={s.subject}>{s.subject}</strong>
+                      <small>
+                        {s.correct} {s.correct === 1 ? "acerto" : "acertos"} em {s.total}
+                      </small>
+                    </div>
+                    <Link
+                      to="/dashboard/question-trainer"
+                      search={{ mode: "reforco", subject: s.subject }}
+                      aria-label={`Revisar erros de ${s.subject}`}
+                    >
+                      Revisar
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             ) : (
-              <WeeklyRhythmChart
-                days={time.days}
-                formatDuration={duration}
-                onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
-                onOpenHistory={(trigger) => openMetric("week", trigger)}
+              <p className="sh2-note">
+                Nenhum sinal de reforço por enquanto. As sugestões aparecem a partir de 5 respostas
+                por disciplina, com acerto abaixo de 60%.
+              </p>
+            )}
+            {q.reinforcement.isError && (
+              <QueryError
+                text="Não conseguimos conferir as tentativas de reforço."
+                retry={() => q.reinforcement.refetch()}
               />
             )}
           </div>
+          <footer className="sh2-card__foot">
+            <Link
+              to="/dashboard/question-trainer"
+              {...(stats?.total ? { search: { mode: "reforco" } } : {})}
+              className="sh2-link"
+            >
+              {stats?.total ? "Abrir revisão de erros" : "Resolver primeiras questões"}
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          </footer>
         </section>
 
         <div className="sh2-stack">
-          <section className="sh2-card" data-tone="rose" aria-labelledby="dashboard-review-title">
+          <section
+            className="sh2-card"
+            data-tone="violet"
+            aria-labelledby="dashboard-reading-title"
+          >
             <SectionTitle
-              icon={BrainCircuit}
-              title="Prioridades de revisão"
-              id="dashboard-review-title"
-              aside={
-                stats && stats.pending !== null && !q.reinforcement.isError ? (
-                  <span className="sh2-tag">{stats.pending} erros pendentes</span>
-                ) : null
-              }
+              icon={BookOpen}
+              title="Continue sua leitura"
+              id="dashboard-reading-title"
             />
-            <div className="sh2-card__body">
-              {q.training.isError ? (
-                <QueryError
-                  text="Não conseguimos consultar suas respostas."
-                  retry={() => q.training.refetch()}
-                />
-              ) : !stats ? (
-                <PanelLoading />
-              ) : !stats.total ? (
-                <p className="sh2-note">Responda questões para receber sugestões de revisão.</p>
-              ) : stats.signals.length ? (
-                <ul className="sh2-signals">
-                  {stats.signals.map((s) => (
-                    <li key={s.subject}>
-                      <div>
-                        <strong title={s.subject}>{s.subject}</strong>
-                        <small>
-                          {s.correct} {s.correct === 1 ? "acerto" : "acertos"} em {s.total}
-                        </small>
-                      </div>
-                      <Link
-                        to="/dashboard/question-trainer"
-                        search={{ mode: "reforco", subject: s.subject }}
-                        aria-label={`Revisar erros de ${s.subject}`}
-                      >
-                        Revisar
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="sh2-note">
-                  Nenhum sinal de reforço por enquanto. As sugestões aparecem a partir de 5
-                  respostas por disciplina, com acerto abaixo de 60%.
-                </p>
-              )}
-              {q.reinforcement.isError && (
-                <QueryError
-                  text="Não conseguimos conferir as tentativas de reforço."
-                  retry={() => q.reinforcement.refetch()}
-                />
-              )}
-            </div>
-            <footer className="sh2-card__foot">
-              <Link
-                to="/dashboard/question-trainer"
-                {...(stats?.total ? { search: { mode: "reforco" } } : {})}
-                className="sh2-link"
-              >
-                {stats?.total ? "Abrir revisão de erros" : "Resolver primeiras questões"}
-                <ArrowRight aria-hidden="true" />
-              </Link>
-            </footer>
-          </section>
-
-          <section className="sh2-card" data-tone="violet" aria-labelledby="dashboard-reading-title">
-            <SectionTitle icon={BookOpen} title="Continue sua leitura" id="dashboard-reading-title" />
             <div className="sh2-card__body">
               {q.reading.isPending ? (
                 <PanelLoading />
@@ -751,39 +816,35 @@ function StudentHome({ user }: { user: UserProfile }) {
         </div>
       </div>
 
-      <nav className="sh2-shortcuts" aria-label="Atalhos de estudo">
-        {destinations.map(({ to, title, text, icon: Icon }, i) => (
-          <Link
-            key={to}
-            to={to}
-            data-tone={tones[i % tones.length]}
-            title={text}
-            {...(to === "/dashboard/ranking"
-              ? {
-                  search: { section: "general", period: "all", page: 1, size: 20, q: "" } as never,
-                }
-              : {})}
-          >
-            <Icon aria-hidden="true" />
-            <span>
-              <strong>{title}</strong>
-              {to === "/dashboard/ranking" && rankText && <small>{rankText}</small>}
-            </span>
-          </Link>
-        ))}
-        <Link to="/dashboard/performance" data-tone="blue">
-          <TrendingUp aria-hidden="true" />
-          <span>
-            <strong>Desempenho</strong>
-          </span>
-        </Link>
-        <Link to="/dashboard/student-exams" search={{ career: undefined }} data-tone="rose">
-          <FileText aria-hidden="true" />
-          <span>
-            <strong>Minhas provas</strong>
-          </span>
-        </Link>
-      </nav>
+      <section
+        className="sh2-card sh2-card--wide"
+        data-tone="blue"
+        aria-labelledby="dashboard-rhythm-title"
+      >
+        <SectionTitle
+          icon={TrendingUp}
+          title="Seu ritmo na semana"
+          id="dashboard-rhythm-title"
+          onOpen={(event) => openMetric("week", event.currentTarget)}
+        />
+        <div className="sh2-card__body">
+          {q.activity.isError ? (
+            <QueryError
+              text="Não foi possível consultar o tempo de estudo."
+              retry={() => q.activity.refetch()}
+            />
+          ) : !time ? (
+            <PanelLoading />
+          ) : (
+            <WeeklyRhythmChart
+              days={time.days}
+              formatDuration={duration}
+              onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
+              onOpenHistory={(trigger) => openMetric("week", trigger)}
+            />
+          )}
+        </div>
+      </section>
 
       <section className="sh2-resources" aria-labelledby="dashboard-resources-title">
         <h2 id="dashboard-resources-title">Editais e acervo</h2>
