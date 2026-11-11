@@ -17295,6 +17295,38 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   cursor: not-allowed !important;
 }
 
+/* Treinador de questões — filtros (Select): o menu abre via Portal e sai do escopo que
+   define as variáveis de cor da área do aluno, então herda o fallback global de --popover/
+   --accent em vez do azul-petróleo/dourado da marca — por isso cores explícitas aqui, não
+   dependentes de variável herdada. Opção realçada ao navegar: fundo sólido da marca; opção
+   já escolhida: fundo suave + negrito, pra ficar clara mesmo sem passar o mouse por cima. */
+.trainer-select-content {
+  background: #ffffff;
+  color: #18353b;
+  border-color: #d4e3e4;
+}
+.trainer-select-content [data-state="checked"] {
+  background: #e6f4f3 !important;
+  color: #145b66 !important;
+}
+.trainer-select-content [data-highlighted] {
+  background: #1d7c86 !important;
+  color: #ffffff !important;
+}
+.dark .trainer-select-content {
+  background: #12252c;
+  color: #e8f4f3;
+  border-color: #2e5057;
+}
+.dark .trainer-select-content [data-state="checked"] {
+  background: #183f45 !important;
+  color: #a2e6df !important;
+}
+.dark .trainer-select-content [data-highlighted] {
+  background: #73d4d3 !important;
+  color: #0b1a1e !important;
+}
+
 @import "./styles/norte-refinement-2026.css";
 
 @import "./styles/student-study-areas-refinement.css";

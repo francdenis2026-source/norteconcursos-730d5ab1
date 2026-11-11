@@ -9,6 +9,10 @@ import "@/styles/offline-connection.css";
 export function OfflineConnectionGuard() {
   const [mounted, setMounted] = useState(false);
   const [offline, setOffline] = useState(false);
+  // Deixa o aluno fechar a tela quando a sondagem for um falso positivo (rede do
+  // próprio dispositivo instável, mas o site continua funcionando) sem travar ele lá.
+  // É esquecido de novo assim que a conexão é confirmada de volta.
+  const [dismissed, setDismissed] = useState(false);
   const frame = useRef<HTMLIFrameElement>(null);
   const layer = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -20,17 +24,28 @@ export function OfflineConnectionGuard() {
         const response = await fetch("/favicon.svg", { method: "HEAD", cache: "no-store", signal });
         return response.ok;
       },
+      // 6s em vez de 3s: tolera a latência normal de uma conexão móvel 3G/4G fraca sem marcar
+      // como "sem conexão" só porque uma resposta demorou um pouco mais que o usual.
+      timeoutMs: 6000,
       publish: reachable => {
         setOffline(!reachable);
-        if (reachable) window.dispatchEvent(new Event("norte:connection-restored"));
+        if (reachable) {
+          setDismissed(false);
+          window.dispatchEvent(new Event("norte:connection-restored"));
+        }
       },
     });
     const check = () => monitor.check();
     const lost = () => monitor.offline();
     const resumed = () => { void check(); };
     const visible = () => { if (document.visibilityState === "visible") void check(); };
-    const retry = async (event: MessageEvent) => {
-      if (event.origin !== location.origin || event.source !== frame.current?.contentWindow || event.data?.type !== "norte:retry-connection") return;
+    const onMessage = async (event: MessageEvent) => {
+      if (event.origin !== location.origin || event.source !== frame.current?.contentWindow || !event.data) return;
+      if (event.data.type === "norte:dismiss-offline") {
+        setDismissed(true);
+        return;
+      }
+      if (event.data.type !== "norte:retry-connection") return;
       frame.current?.contentWindow?.postMessage({ type: "norte:connection-status", checking: true }, location.origin);
       const reachable = await check();
       if (active) frame.current?.contentWindow?.postMessage({ type: "norte:connection-status", checking: false, reachable }, location.origin);
@@ -39,7 +54,7 @@ export function OfflineConnectionGuard() {
     window.addEventListener("online", resumed);
     window.addEventListener("focus", resumed);
     window.addEventListener("pageshow", resumed);
-    window.addEventListener("message", retry);
+    window.addEventListener("message", onMessage);
     document.addEventListener("visibilitychange", visible);
     // 20s em vez de 5s: a cada aba aberta isso faz uma requisição HEAD para a própria origem,
     // o tempo todo. Em 5s isso é +700 reqs/h por aba — volume alto o bastante para disparar
@@ -57,14 +72,15 @@ export function OfflineConnectionGuard() {
       window.removeEventListener("online", resumed);
       window.removeEventListener("focus", resumed);
       window.removeEventListener("pageshow", resumed);
-      window.removeEventListener("message", retry);
+      window.removeEventListener("message", onMessage);
       document.removeEventListener("visibilitychange", visible);
     };
   }, []);
   useEffect(() => {
     if (!mounted) return;
-    frame.current?.contentWindow?.postMessage({ type: "norte:offline-visibility", visible: offline }, location.origin);
-    if (!offline) return;
+    const visible = offline && !dismissed;
+    frame.current?.contentWindow?.postMessage({ type: "norte:offline-visibility", visible }, location.origin);
+    if (!visible) return;
     const previousFocus = document.activeElement;
     const siblings = Array.from(document.body.children).filter((node): node is HTMLElement => node instanceof HTMLElement && node !== layer.current);
     const previous = siblings.map(node => ({ node, inert: node.inert }));
@@ -77,9 +93,9 @@ export function OfflineConnectionGuard() {
       delete document.documentElement.dataset["norteOffline"];
       if (previousFocus instanceof HTMLElement && previousFocus.isConnected) previousFocus.focus({ preventScroll: true });
     };
-  }, [offline, mounted]);
+  }, [offline, dismissed, mounted]);
   if (!mounted) return null;
-  return createPortal(<div ref={layer} className="offline-connection" hidden={!offline} role="dialog" aria-modal={offline ? true : undefined} aria-label="Você está sem conexão">
-    <iframe ref={frame} data-norte-offline="" title="Sem conexão — Norte Concursos" srcDoc={offlineDocument} onLoad={() => frame.current?.contentWindow?.postMessage({ type: "norte:offline-visibility", visible: offline }, location.origin)} tabIndex={offline ? 0 : -1} />
+  return createPortal(<div ref={layer} className="offline-connection" hidden={!offline || dismissed} role="dialog" aria-modal={offline && !dismissed ? true : undefined} aria-label="Você está sem conexão">
+    <iframe ref={frame} data-norte-offline="" title="Sem conexão — Norte Concursos" srcDoc={offlineDocument} onLoad={() => frame.current?.contentWindow?.postMessage({ type: "norte:offline-visibility", visible: offline && !dismissed }, location.origin)} tabIndex={offline && !dismissed ? 0 : -1} />
   </div>, document.body);
 }

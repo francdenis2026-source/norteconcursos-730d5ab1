@@ -181,6 +181,21 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 9px;
   }
+
+  /* "Iniciar treinamento" ficava fora da tela em celulares pequenos (320–390px): a lista de
+     filtros é alta e a barra com o total de questões + botões só aparecia depois de rolar a
+     página inteira. Fixa essa barra no rodapé da tela (acima da navegação inferior fixa, que
+     tem ~64px) assim que ela deixa de caber no fluxo normal, pra o botão nunca ficar escondido. */
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup {
+    padding-bottom: 76px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
+    position: sticky;
+    bottom: calc(68px + env(safe-area-inset-bottom));
+    z-index: 5;
+    box-shadow: 0 10px 26px -16px rgb(0 0 0 / .4);
+  }
 }
 
 @media (max-width: 430px) {
