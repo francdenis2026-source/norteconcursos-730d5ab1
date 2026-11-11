@@ -12,6 +12,7 @@ import "@/styles/student-overview-card-refinement.css";
 import "@/styles/student-home-hero-rework.css";
 import "@/styles/student-dashboard-professional-refinement.css";
 import "@/styles/student-home-astrix.css";
+import "@/styles/student-home-compact.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -49,7 +50,6 @@ import { acreDateKey, acreHour, ACRE_TZ } from "@/lib/acreTime";
 import { platformDate } from "@/lib/platformClock";
 import { hasActiveEdital } from "@/lib/cronogramaGuard";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
@@ -302,132 +302,118 @@ function StudentHome({ user }: { user: UserProfile }) {
     }
   };
   return (
-    <div className="student-home student-hub student-desk student-overview">
-      <header className="student-hub__masthead student-hub__masthead--careers student-hub__masthead--revamped student-hub__masthead--compact workspace-banner">
-        <div className="student-hub__welcome-layout">
-          <div className="student-hub__hero-copy">
-            <p className="student-hub__welcome">
-              {hello}, {firstName}.
-            </p>
-            <h1 id="student-home-title">Área do aluno</h1>
-            <div className="student-hub__masthead-actions">
-              <span className="student-hub__date">
-                <CalendarClock aria-hidden="true" />
-                {new Intl.DateTimeFormat("pt-BR", {
-                  day: "2-digit",
-                  month: "long",
-                  timeZone: ACRE_TZ,
-                }).format(now)}
-                <small>Acre</small>
-              </span>
-            </div>
-          </div>
-
-          <section className="student-hub__exam-summary" aria-label="Concurso e prova">
-            <div className="student-hub__contest-summary">
-              <div className="student-hub__contest-heading">
-                {isPcAcre ? (
-                  <span className="student-hub__acre-flag" aria-label="Bandeira do Acre" role="img" />
-                ) : (
-                  <Trophy className="student-hub__contest-icon" size={18} aria-hidden="true" />
-                )}
-                <div>
-                  <p className="student-hub__summary-label">Concurso ativo</p>
-                  <h2>
-                    {objective?.agency ??
-                      (q.objective.isPending
-                        ? "Carregando…"
-                        : q.objective.isError
-                          ? "Concurso indisponível"
-                          : "Nenhum concurso selecionado")}
-                  </h2>
-                  {objective && (
-                    <p className="student-hub__summary-meta">
-                      {[objective.role, objective.examBoard].filter(Boolean).join(" · ")}
-                    </p>
-                  )}
-                </div>
-              </div>
-              {q.objective.isError ? (
-                <button
-                  type="button"
-                  className="student-hub__contest-link"
-                  onClick={() => void q.objective.refetch()}
-                  disabled={q.objective.isFetching}
-                >
-                  Tentar novamente
-                </button>
-              ) : (
-                <Link to="/dashboard/my-contest" className="student-hub__contest-link">
-                  {objective ? "Trocar concurso" : "Meu concurso"} <ArrowRight size={14} aria-hidden="true" />
-                </Link>
-              )}
-            </div>
-            {objective && (
-              <div className="student-hub__exam-summary-date">
-                <p className="student-hub__summary-label">Data da prova</p>
-                {examDate && days !== null ? (
-                  <time dateTime={examDate}>{formatExamDate(examDate)}</time>
-                ) : (
-                  <strong>A definir</strong>
-                )}
-                {examCountdown && <p className="student-hub__summary-meta">{examCountdown}</p>}
-              </div>
-            )}
-          </section>
+    <div className="student-home student-hub student-desk student-overview sh2">
+      <header className="sh2-hero workspace-banner">
+        <div className="sh2-hero__hello">
+          <p>
+            {hello}, {firstName}.
+          </p>
+          <h1 id="student-home-title">Área do aluno</h1>
+          <span className="sh2-hero__date">
+            <CalendarClock aria-hidden="true" />
+            {new Intl.DateTimeFormat("pt-BR", {
+              day: "2-digit",
+              month: "long",
+              timeZone: ACRE_TZ,
+            }).format(now)}{" "}
+            · Acre
+          </span>
         </div>
-      </header>
-      {!schedule && (
-        <section
-          className="student-desk__next"
-          data-accent="gold"
-          aria-labelledby="dashboard-next-step"
-        >
-          <div className="student-hub__resume-copy">
-            <span className="student-desk__eyebrow">
-              <Sparkles aria-hidden="true" /> Seu próximo passo
-            </span>
-            <h2 id="dashboard-next-step">{priority.title}</h2>
-            <p>{priority.reason}</p>
+        <section className="sh2-hero__contest" aria-label="Concurso e prova">
+          {isPcAcre ? (
+            <span className="student-hub__acre-flag" aria-label="Bandeira do Acre" role="img" />
+          ) : (
+            <Trophy className="sh2-hero__icon" aria-hidden="true" />
+          )}
+          <div className="sh2-hero__contest-copy">
+            <small>Concurso ativo</small>
+            <h2>
+              {objective?.agency ??
+                (q.objective.isPending
+                  ? "Carregando…"
+                  : q.objective.isError
+                    ? "Concurso indisponível"
+                    : "Nenhum concurso selecionado")}
+            </h2>
+            {objective && (
+              <p>{[objective.role, objective.examBoard].filter(Boolean).join(" · ")}</p>
+            )}
           </div>
-          <Link
-            className="student-home__primary"
-            to={priority.to}
-            {...("params" in priority ? { params: priority.params } : {})}
-            {...("search" in priority ? { search: priority.search } : {})}
-          >
-            {priority.label}
-            <ArrowRight aria-hidden="true" />
-          </Link>
-        </section>
-      )}
-      <section className="student-hub__quick-panel" aria-labelledby="dashboard-quick-title">
-        <h2 id="dashboard-quick-title">Atalhos de estudo</h2>
-        <nav className="student-hub__shortcuts" aria-label="Atalhos de estudo">
-          {destinations.map(({ to, title, text, tone, icon: Icon }) => (
-            <Link
-              key={to}
-              to={to}
-              data-accent={tone}
-              {...(to === "/dashboard/ranking"
-                ? {
-                    search: { section: "general", period: "all", page: 1, size: 20, q: "" } as never,
-                    "data-rank": "",
-                  }
-                : {})}
+          {objective && (
+            <div className="sh2-hero__exam">
+              <small>Data da prova</small>
+              {examDate && days !== null ? (
+                <time dateTime={examDate}>{formatExamDate(examDate)}</time>
+              ) : (
+                <strong>A definir</strong>
+              )}
+              {examCountdown && <p>{examCountdown}</p>}
+            </div>
+          )}
+          {q.objective.isError ? (
+            <button
+              type="button"
+              className="sh2-link"
+              onClick={() => void q.objective.refetch()}
+              disabled={q.objective.isFetching}
             >
-              <span className="student-home__tool-icon">
-                <Icon aria-hidden="true" />
-              </span>
-              <div>
-                <strong>{title}</strong>
-                <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
-              </div>
-              <ArrowRight aria-hidden="true" />
+              Tentar novamente
+            </button>
+          ) : (
+            <Link to="/dashboard/my-contest" className="sh2-link">
+              {objective ? "Trocar concurso" : "Meu concurso"} <ArrowRight aria-hidden="true" />
             </Link>
-          ))}
-        </nav>
+          )}
+        </section>
+      </header>
+
+      <section className="sh2-kpis" aria-label="Seu progresso">
+        <Metric
+          icon={BrainCircuit}
+          label="Questões resolvidas"
+          tone="blue"
+          onOpen={(event) => openMetric("questions", event.currentTarget)}
+          value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
+          detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
+        />
+        <Metric
+          icon={CheckCircle2}
+          label="Taxa de acerto"
+          tone="green"
+          onOpen={(event) => openMetric("accuracy", event.currentTarget)}
+          value={
+            q.training.isError
+              ? "Indisponível"
+              : stats
+                ? stats.accuracy === null
+                  ? "Sem respostas"
+                  : `${stats.accuracy}%`
+                : "…"
+          }
+          detail={
+            stats?.total
+              ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
+              : "Comece pelas questões"
+          }
+        />
+        <Metric
+          icon={Clock}
+          label="Tempo ativo hoje"
+          tone="amber"
+          onOpen={(event) => openMetric("today", event.currentTarget)}
+          value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
+          detail="Somando suas sessões"
+        />
+        <Metric
+          icon={TrendingUp}
+          label="Estudo nesta semana"
+          tone="violet"
+          onOpen={(event) => openMetric("week", event.currentTarget)}
+          value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
+          detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
+        />
       </section>
+
       <StudentMetricPanel
         metric={metric}
         userId={user.id}
@@ -453,23 +439,33 @@ function StudentHome({ user }: { user: UserProfile }) {
         onClose={() => setMetric(null)}
         returnFocus={metricTrigger.current}
       />
-      <div
-        className="student-hub__workspace"
-        role="region"
-        aria-label="Seu estudo de hoje e prioridades"
-      >
-        <div className="student-hub__main">
-          <section
-            className="student-home__card student-home__schedule"
-            data-accent="gold"
-            aria-labelledby="dashboard-schedule-title"
-          >
-            <SectionTitle
-              icon={CalendarClock}
-              title="Agenda de estudos"
-              id="dashboard-schedule-title"
-              description="Atividades do dia, conectadas ao seu cronograma."
-            />
+
+      <div className="sh2-board" role="region" aria-label="Seu estudo de hoje e prioridades">
+        <section className="sh2-card" data-tone="gold" aria-labelledby="dashboard-schedule-title">
+          <SectionTitle
+            icon={CalendarClock}
+            title="Agenda de estudos"
+            id="dashboard-schedule-title"
+            aside={
+              plan && (q.plans.data?.length ?? 0) > 1 ? (
+                <select
+                  className="sh2-select"
+                  aria-label="Cronograma exibido"
+                  value={plan.id}
+                  onChange={(e) => choosePlan(e.target.value)}
+                >
+                  {q.plans.data!.map((p) => (
+                    <option value={p.id} key={p.id}>
+                      {p.name}
+                    </option>
+                  ))}
+                </select>
+              ) : plan ? (
+                <span className="sh2-tag">{plan.name}</span>
+              ) : null
+            }
+          />
+          <div className="sh2-card__body">
             {q.plans.isPending ? (
               <PanelLoading />
             ) : q.plans.isError ? (
@@ -478,196 +474,160 @@ function StudentHome({ user }: { user: UserProfile }) {
                 retry={() => q.plans.refetch()}
               />
             ) : !plan ? (
-              <EmptyPanel
-                title={cronogramaLocked ? "Cronograma vinculado ao edital ativo" : "Seu dia de estudo começa com um plano"}
-                text={cronogramaLocked
-                  ? `O edital ${objective?.agency} · ${objective?.role} está ativo. Para manter disciplinas e assuntos organizados, a criação de novos cronogramas fica bloqueada enquanto ele estiver em foco.`
-                  : "Distribua disciplinas e assuntos nos dias em que você pode estudar."}
-              >
-                {cronogramaLocked ? (
-                  <div className="flex items-center gap-3 rounded-lg border border-amber-500/25 bg-amber-500/5 p-3 text-sm text-muted-foreground" role="status">
-                    <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" className="h-8 w-8 shrink-0 text-amber-400">
-                      <path d="M14 21v-5a10 10 0 0 1 20 0v5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                      <rect x="10" y="20" width="28" height="20" rx="4" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                      <circle cx="24" cy="29" r="2" fill="currentColor" /><path d="M24 31v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                    </svg>
-                    <span>Edite ou troque o edital ativo em <Link to="/dashboard/my-contest">Meu concurso</Link> para liberar um novo planejamento.</span>
+              <>
+                <div className="sh2-next">
+                  <Sparkles aria-hidden="true" />
+                  <div>
+                    <strong>{priority.title}</strong>
+                    <small>{priority.reason}</small>
                   </div>
+                </div>
+                {cronogramaLocked ? (
+                  <p className="sh2-note" role="status">
+                    Edital {objective?.agency} ativo: novos cronogramas ficam bloqueados. Troque o
+                    edital em <Link to="/dashboard/my-contest">Meu concurso</Link> para liberar.
+                  </p>
                 ) : (
-                  <Button variant="outline" asChild>
-                    <Link to="/dashboard/cronograma">
-                      Montar meu cronograma
-                      <ArrowRight aria-hidden="true" />
-                    </Link>
-                  </Button>
+                  <Link to="/dashboard/cronograma" className="sh2-link">
+                    Montar meu cronograma <ArrowRight aria-hidden="true" />
+                  </Link>
                 )}
+              </>
+            ) : !validDashboardConfig(plan.config) ? (
+              <EmptyPanel
+                title="Este plano precisa de ajustes"
+                text="Abra o cronograma para conferir disciplinas, dias e horários."
+              >
+                <Link to="/dashboard/cronograma" search={{ plano: plan.id }} className="sh2-link">
+                  Conferir cronograma <ArrowRight aria-hidden="true" />
+                </Link>
               </EmptyPanel>
+            ) : q.progress.isError ? (
+              <QueryError
+                text="Não conseguimos consultar o progresso deste cronograma."
+                retry={() => q.progress.refetch()}
+              />
+            ) : !schedule ? (
+              <PanelLoading />
             ) : (
               <>
-                {(q.plans.data?.length ?? 0) > 1 ? (
-                  <label className="student-home__select">
-                    Cronograma exibido
-                    <select value={plan.id} onChange={(e) => choosePlan(e.target.value)}>
-                      {q.plans.data!.map((p) => (
-                        <option value={p.id} key={p.id}>
-                          {p.name}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                ) : (
-                  <p className="student-home__plan-name">{plan.name}</p>
-                )}
-                {!validDashboardConfig(plan.config) ? (
-                  <EmptyPanel
-                    title="Este plano precisa de ajustes"
-                    text="Abra o cronograma para conferir disciplinas, dias e horários."
-                  >
-                    <Button variant="outline" asChild>
-                      <Link to="/dashboard/cronograma" search={{ plano: plan.id }}>
-                        Conferir cronograma
-                      </Link>
-                    </Button>
-                  </EmptyPanel>
-                ) : q.progress.isError ? (
-                  <QueryError
-                    text="Não conseguimos consultar o progresso deste cronograma."
-                    retry={() => q.progress.refetch()}
+                <div className="sh2-progress">
+                  <span>
+                    {new Intl.DateTimeFormat("pt-BR", { weekday: "long", timeZone: ACRE_TZ }).format(
+                      now,
+                    )}
+                  </span>
+                  <strong>
+                    {schedule.completed} de {schedule.total} conteúdos
+                  </strong>
+                  <progress
+                    value={schedule.completed}
+                    max={Math.max(1, schedule.total)}
+                    aria-label="Conteúdos com teoria e questões concluídos"
                   />
-                ) : !schedule ? (
-                  <PanelLoading />
-                ) : (
-                  <>
-                    <div className="student-home__agenda-status" role="status">
-                      <span className={schedule.completed > 0 ? "is-active" : "is-new"} aria-hidden="true" />
-                      <div>
-                        <strong>{schedule.completed > 0 ? "Plano em andamento" : "Plano pronto para começar"}</strong>
-                        <small>
-                          {schedule.completed} de {schedule.total} conteúdos concluídos
-                          {schedule.blocks.length ? ` · ${schedule.blocks.length} blocos previstos hoje` : " · sem blocos previstos hoje"}
-                        </small>
-                      </div>
-                      <Link to="/dashboard/cronograma" search={{ plano: plan.id, painel: "1" }}>
-                        Abrir painel <ArrowRight aria-hidden="true" />
-                      </Link>
+                </div>
+                {days !== null && days <= 14 && (
+                  <p className="sh2-note sh2-note--alert" role="alert">
+                    <Clock aria-hidden="true" />
+                    {days < 0
+                      ? "A data da prova já passou. Atualize seu objetivo."
+                      : days === 0
+                        ? "A prova é hoje. Faça uma revisão leve e preserve seu ritmo."
+                        : `Faltam ${days} ${days === 1 ? "dia" : "dias"} para a prova. Priorize os blocos sinalizados.`}
+                  </p>
+                )}
+                {adaptiveAgenda && (
+                  <div className="sh2-next" data-kind={adaptiveAgenda.tone}>
+                    <Target aria-hidden="true" />
+                    <div>
+                      <strong>{adaptiveAgenda.title}</strong>
+                      <small>{adaptiveAgenda.text}</small>
                     </div>
-                    {days !== null && days <= 14 && (
-                      <div className="student-home__agenda-alert" role="alert">
-                        <Clock aria-hidden="true" />
-                        <span>{days < 0 ? "A data da prova já passou. Atualize seu objetivo." : days === 0 ? "A prova é hoje. Faça uma revisão leve e preserve seu ritmo." : `Faltam ${days} ${days === 1 ? "dia" : "dias"} para a prova. Priorize os blocos sinalizados.`}</span>
-                      </div>
-                    )}
-                    <div className="student-home__coverage">
-                      <span>Progresso do conteúdo</span>
-                      <strong>
-                        {schedule.completed} de {schedule.total}
-                      </strong>
-                      <progress
-                        value={schedule.completed}
-                        max={Math.max(1, schedule.total)}
-                        aria-label="Conteúdos com teoria e questões concluídos"
-                      />
-                    </div>
-                    <div className="student-home__day-heading">
-                      <h3>
-                        {new Intl.DateTimeFormat("pt-BR", {
-                          weekday: "long",
-                          timeZone: ACRE_TZ,
-                        }).format(now)}
-                      </h3>
-                      <span>Horários previstos · Acre</span>
-                    </div>
-                    {adaptiveAgenda && (
-                      <div className={`student-home__adaptive-agenda student-home__adaptive-agenda--${adaptiveAgenda.tone}`}>
-                        <Target aria-hidden="true" />
+                  </div>
+                )}
+                {schedule.blocks.length ? (
+                  <ol className="sh2-blocks">
+                    {schedule.blocks.slice(0, 4).map((block, i) => (
+                      <li key={`${block.discId}:${i}`}>
+                        <time>
+                          {block.start}
+                          <small>{block.end}</small>
+                        </time>
                         <div>
-                          <strong>{adaptiveAgenda.title}</strong>
-                          <small>{adaptiveAgenda.text}</small>
+                          <strong>{block.nome}</strong>
+                          <small>
+                            {block.topic ? `${block.topic} · ` : ""}
+                            {block.minutes} min
+                          </small>
                         </div>
-                      </div>
-                    )}
-                    {schedule.blocks.length ? (
-                      <ol className="student-home__blocks">
-                        {schedule.blocks.slice(0, 4).map((block, i) => (
-                          <li key={`${block.discId}:${i}`}>
-                            <span>
-                              {block.start}
-                              <small>{block.end}</small>
-                            </span>
-                            <div>
-                              <strong>{block.nome}</strong>
-                              <small>{block.topic ? `${block.topic} · ` : ""}{block.minutes} min previstos</small>
-                            </div>
-                            <Clock aria-hidden="true" />
-                          </li>
-                        ))}
-                      </ol>
-                    ) : (
-                      <div className="student-home__quiet student-home__schedule-empty">
-                        <strong>Hoje não há bloco previsto.</strong>
-                        <span>
-                          Seu próximo dia de estudo é {schedule.nextStudyDay === null ? "definido no cronograma" : ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"][schedule.nextStudyDay]}.
-                        </span>
-                      </div>
-                    )}
-                    {schedule.blocks.length > 4 && (
-                      <p className="student-home__quiet">
-                        Mais {schedule.blocks.length - 4} blocos no cronograma.
-                      </p>
-                    )}
-                    {schedule.next && (
-                      <div className="student-home__next-topic">
-                        <span>Próximo assunto</span>
-                        <strong>{schedule.next.t.t}</strong>
-                        <small>{schedule.next.d.nome}</small>
-                      </div>
-                    )}
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="student-home__primary student-home__wide-action"
-                    >
-                      <Link to="/dashboard/cronograma" search={{ plano: plan.id, painel: "1" }}>
-                        {schedule.blocks.length
-                          ? "Abrir atividades do dia"
-                          : "Abrir cronograma completo"}
-                        <ArrowRight aria-hidden="true" />
-                      </Link>
-                    </Button>
-                  </>
+                      </li>
+                    ))}
+                  </ol>
+                ) : (
+                  <p className="sh2-note">
+                    Hoje não há bloco previsto. Próximo dia de estudo:{" "}
+                    {schedule.nextStudyDay === null
+                      ? "definido no cronograma"
+                      : [
+                          "domingo",
+                          "segunda-feira",
+                          "terça-feira",
+                          "quarta-feira",
+                          "quinta-feira",
+                          "sexta-feira",
+                          "sábado",
+                        ][schedule.nextStudyDay]}
+                    .
+                  </p>
+                )}
+                {schedule.blocks.length > 4 && (
+                  <p className="sh2-note">Mais {schedule.blocks.length - 4} blocos no cronograma.</p>
+                )}
+                {schedule.next && (
+                  <p className="sh2-note">
+                    Próximo assunto: <strong>{schedule.next.t.t}</strong> · {schedule.next.d.nome}
+                  </p>
                 )}
               </>
             )}
-          </section>
-
-          <div className="student-hub__planning-link">
-            <Sparkles aria-hidden="true" />
-            <p>
-              Precisa ajustar sua rotina?
-              {cronogramaLocked ? (
-                <span className="student-hub__planning-link--locked" role="status">
-                  Planejamento bloqueado pelo edital ativo
-                </span>
-              ) : (
-                <Link to="/dashboard/study-coach">
-                  {q.strategy.data ? "Rever minha estratégia" : "Organizar com o assistente"}
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              )}
-            </p>
           </div>
-          <section
-            className="student-home__card"
-            data-accent="gold"
-            aria-labelledby="dashboard-rhythm-title"
-          >
-            <SectionTitle
-              icon={TrendingUp}
-              title="Seu ritmo na semana"
-              id="dashboard-rhythm-title"
-              onOpen={(event) => openMetric("week", event.currentTarget)}
-              description="Seu tempo ativo nos últimos 7 dias."
-            />
+          <footer className="sh2-card__foot">
+            {plan ? (
+              <Link
+                to="/dashboard/cronograma"
+                search={{ plano: plan.id, painel: "1" }}
+                className="sh2-cta"
+              >
+                {schedule?.blocks.length ? "Abrir atividades do dia" : "Abrir cronograma"}
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            ) : (
+              <Link
+                className="sh2-cta"
+                to={priority.to}
+                {...("params" in priority ? { params: priority.params } : {})}
+                {...("search" in priority ? { search: priority.search } : {})}
+              >
+                {priority.label}
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            )}
+            {!cronogramaLocked && (
+              <Link to="/dashboard/study-coach" className="sh2-link">
+                {q.strategy.data ? "Rever estratégia" : "Ajustar rotina"}
+              </Link>
+            )}
+          </footer>
+        </section>
+
+        <section className="sh2-card" data-tone="blue" aria-labelledby="dashboard-rhythm-title">
+          <SectionTitle
+            icon={TrendingUp}
+            title="Seu ritmo na semana"
+            id="dashboard-rhythm-title"
+            onOpen={(event) => openMetric("week", event.currentTarget)}
+          />
+          <div className="sh2-card__body">
             {q.activity.isError ? (
               <QueryError
                 text="Não foi possível consultar o tempo de estudo."
@@ -676,221 +636,156 @@ function StudentHome({ user }: { user: UserProfile }) {
             ) : !time ? (
               <PanelLoading />
             ) : (
-              <>
-                <WeeklyRhythmChart
-                  days={time.days}
-                  formatDuration={duration}
-                  onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
-                  onOpenHistory={(trigger) => openMetric("week", trigger)}
-                />
-              </>
+              <WeeklyRhythmChart
+                days={time.days}
+                formatDuration={duration}
+                onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
+                onOpenHistory={(trigger) => openMetric("week", trigger)}
+              />
             )}
-          </section>
-        </div>
-        <aside className="student-hub__rail" aria-label="Progresso e prioridades">
-          <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
-          <section className="student-desk__panel student-hub__progress-panel" aria-labelledby="student-metrics-title">
-            <div className="student-desk__section-heading">
-              <h2 id="student-metrics-title">Seu progresso</h2>
-            </div>
-            <section className="student-home__metrics" aria-label="Seu progresso">
-              <Metric
-                icon={BrainCircuit}
-                label="Questões resolvidas"
-                tone="blue"
-                onOpen={(event) => openMetric("questions", event.currentTarget)}
-                value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
-                detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
-              />
-              <Metric
-                icon={CheckCircle2}
-                label="Taxa de acerto"
-                tone="teal"
-                onOpen={(event) => openMetric("accuracy", event.currentTarget)}
-                value={
-                  q.training.isError
-                    ? "Indisponível"
-                    : stats
-                      ? stats.accuracy === null
-                        ? "Sem respostas"
-                        : `${stats.accuracy}%`
-                      : "…"
-                }
-                detail={
-                  stats?.total
-                    ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
-                    : "Comece pelas questões"
-                }
-              />
-              <Metric
-                icon={Clock}
-                label="Tempo ativo hoje"
-                tone="amber"
-                onOpen={(event) => openMetric("today", event.currentTarget)}
-                value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
-                detail="Somando suas sessões"
-              />
-              <Metric
-                icon={TrendingUp}
-                label="Estudo nesta semana"
-                tone="violet"
-                onOpen={(event) => openMetric("week", event.currentTarget)}
-                value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
-                detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
-              />
-            </section>
-          </section>
-          <section
-            className="student-home__card"
-            data-accent="gold"
-            aria-labelledby="dashboard-reading-title"
-          >
-            <SectionTitle
-              icon={BookOpen}
-              title="Continue sua leitura"
-              id="dashboard-reading-title"
-            />
-            {q.reading.isPending ? (
-              <PanelLoading />
-            ) : q.reading.isError ? (
-              <QueryError
-                text="Não conseguimos recuperar sua última leitura."
-                retry={() => q.reading.refetch()}
-              />
-            ) : q.reading.data ? (
-              <>
-                <h3 className="student-home__objective-name">{q.reading.data.title}</h3>
-                <p className="student-home__quiet">
-                  Última leitura disponível · {q.reading.data.label}
-                </p>
-                <Link
-                  to="/dashboard/legal-course/$slug"
-                  params={{ slug: q.reading.data.slug }}
-                  search={{ art: q.reading.data.article }}
-                  className="student-home__text-link"
-                >
-                  Continuar leitura
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              </>
-            ) : (
-              <EmptyPanel
-                title="Encontre seu próximo conteúdo"
-                text="Leis e disciplinas organizadas para estudar por assunto."
-              >
-                <Link to="/dashboard/library" className="student-home__text-link">
-                  Explorar conteúdo
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              </EmptyPanel>
-            )}
-          </section>
+          </div>
+        </section>
 
-          <section
-            className="student-home__card"
-            data-accent="rose"
-            aria-labelledby="dashboard-review-title"
-          >
+        <div className="sh2-stack">
+          <section className="sh2-card" data-tone="rose" aria-labelledby="dashboard-review-title">
             <SectionTitle
               icon={BrainCircuit}
               title="Prioridades de revisão"
               id="dashboard-review-title"
-              description="Disciplinas que pedem mais atenção."
+              aside={
+                stats && stats.pending !== null && !q.reinforcement.isError ? (
+                  <span className="sh2-tag">{stats.pending} erros pendentes</span>
+                ) : null
+              }
             />
-            {q.training.isError ? (
-              <QueryError
-                text="Não conseguimos consultar suas respostas."
-                retry={() => q.training.refetch()}
-              />
-            ) : !stats ? (
-              <PanelLoading />
-            ) : !stats.total ? (
-              <EmptyPanel
-                title="Descubra seus pontos de atenção"
-                text="Responda questões para receber sugestões de revisão."
-              >
-                <Link to="/dashboard/question-trainer" className="student-home__text-link">
-                  Resolver minhas primeiras questões
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              </EmptyPanel>
-            ) : (
-              <>
-                {stats.signals.length ? (
-                  <ul className="student-home__signals">
-                    {stats.signals.map((s) => (
-                      <li key={s.subject}>
-                        <div>
-                          <strong>{s.subject}</strong>
-                          <small>
-                            {s.correct} {s.correct === 1 ? "acerto" : "acertos"} em {s.total}{" "}
-                            questões
-                          </small>
-                        </div>
-                        <Link
-                          to="/dashboard/question-trainer"
-                          search={{ mode: "reforco", subject: s.subject }}
-                          aria-label={`Revisar erros de ${s.subject}`}
-                        >
-                          Revisar
-                          <ArrowRight aria-hidden="true" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="student-home__quiet">
-                    Nenhum sinal de reforço por enquanto. As sugestões aparecem a partir de 5
-                    respostas por disciplina, com acerto abaixo de 60%.
-                  </p>
-                )}
-                {q.reinforcement.isError ? (
-                  <QueryError
-                    text="Seu desempenho está disponível, mas não conseguimos conferir as tentativas de reforço."
-                    retry={() => q.reinforcement.refetch()}
-                  />
-                ) : (
-                  stats.pending !== null && (
-                    <p className="student-home__review-count">
-                      <strong>{stats.pending}</strong> erros sem acerto posterior registrado no
-                      reforço.
-                    </p>
-                  )
-                )}
-                {q.reinforcement.isSuccess && q.reinforcement.data === null && (
-                  <p className="student-home__footnote">
-                    Recuperações no reforço ainda não estão disponíveis neste resumo.
-                  </p>
-                )}
-                <Link
-                  to="/dashboard/question-trainer"
-                  search={{ mode: "reforco" }}
-                  className="student-home__text-link"
-                >
-                  Abrir revisão de erros
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-                <p className="student-home__footnote">
-                  A revisão usa as questões atualmente disponíveis no acervo.
+            <div className="sh2-card__body">
+              {q.training.isError ? (
+                <QueryError
+                  text="Não conseguimos consultar suas respostas."
+                  retry={() => q.training.refetch()}
+                />
+              ) : !stats ? (
+                <PanelLoading />
+              ) : !stats.total ? (
+                <p className="sh2-note">Responda questões para receber sugestões de revisão.</p>
+              ) : stats.signals.length ? (
+                <ul className="sh2-signals">
+                  {stats.signals.map((s) => (
+                    <li key={s.subject}>
+                      <div>
+                        <strong title={s.subject}>{s.subject}</strong>
+                        <small>
+                          {s.correct} {s.correct === 1 ? "acerto" : "acertos"} em {s.total}
+                        </small>
+                      </div>
+                      <Link
+                        to="/dashboard/question-trainer"
+                        search={{ mode: "reforco", subject: s.subject }}
+                        aria-label={`Revisar erros de ${s.subject}`}
+                      >
+                        Revisar
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="sh2-note">
+                  Nenhum sinal de reforço por enquanto. As sugestões aparecem a partir de 5
+                  respostas por disciplina, com acerto abaixo de 60%.
                 </p>
-              </>
-            )}
+              )}
+              {q.reinforcement.isError && (
+                <QueryError
+                  text="Não conseguimos conferir as tentativas de reforço."
+                  retry={() => q.reinforcement.refetch()}
+                />
+              )}
+            </div>
+            <footer className="sh2-card__foot">
+              <Link
+                to="/dashboard/question-trainer"
+                {...(stats?.total ? { search: { mode: "reforco" } } : {})}
+                className="sh2-link"
+              >
+                {stats?.total ? "Abrir revisão de erros" : "Resolver primeiras questões"}
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            </footer>
           </section>
-          <nav className="student-hub__results" aria-label="Resultados e provas">
-            <Link to="/dashboard/performance">
-              <TrendingUp aria-hidden="true" />
-              <span>Desempenho na plataforma</span>
-              <ArrowRight aria-hidden="true" />
-            </Link>
-            <Link to="/dashboard/student-exams" search={{ career: undefined }}>
-              <FileText aria-hidden="true" />
-              <span>Minhas provas e diagnóstico</span>
-              <ArrowRight aria-hidden="true" />
-            </Link>
-          </nav>
-        </aside>
+
+          <section className="sh2-card" data-tone="violet" aria-labelledby="dashboard-reading-title">
+            <SectionTitle icon={BookOpen} title="Continue sua leitura" id="dashboard-reading-title" />
+            <div className="sh2-card__body">
+              {q.reading.isPending ? (
+                <PanelLoading />
+              ) : q.reading.isError ? (
+                <QueryError
+                  text="Não conseguimos recuperar sua última leitura."
+                  retry={() => q.reading.refetch()}
+                />
+              ) : q.reading.data ? (
+                <Link
+                  to="/dashboard/legal-course/$slug"
+                  params={{ slug: q.reading.data.slug }}
+                  search={{ art: q.reading.data.article }}
+                  className="sh2-row-link"
+                >
+                  <div>
+                    <strong>{q.reading.data.title}</strong>
+                    <small>{q.reading.data.label}</small>
+                  </div>
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              ) : (
+                <Link to="/dashboard/library" className="sh2-row-link">
+                  <div>
+                    <strong>Encontre seu próximo conteúdo</strong>
+                    <small>Leis e disciplinas por assunto</small>
+                  </div>
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              )}
+            </div>
+          </section>
+          <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
+        </div>
       </div>
-      <section className="student-hub__resources" aria-labelledby="dashboard-resources-title">
+
+      <nav className="sh2-shortcuts" aria-label="Atalhos de estudo">
+        {destinations.map(({ to, title, text, icon: Icon }, i) => (
+          <Link
+            key={to}
+            to={to}
+            data-tone={tones[i % tones.length]}
+            title={text}
+            {...(to === "/dashboard/ranking"
+              ? {
+                  search: { section: "general", period: "all", page: 1, size: 20, q: "" } as never,
+                }
+              : {})}
+          >
+            <Icon aria-hidden="true" />
+            <span>
+              <strong>{title}</strong>
+              {to === "/dashboard/ranking" && rankText && <small>{rankText}</small>}
+            </span>
+          </Link>
+        ))}
+        <Link to="/dashboard/performance" data-tone="blue">
+          <TrendingUp aria-hidden="true" />
+          <span>
+            <strong>Desempenho</strong>
+          </span>
+        </Link>
+        <Link to="/dashboard/student-exams" search={{ career: undefined }} data-tone="rose">
+          <FileText aria-hidden="true" />
+          <span>
+            <strong>Minhas provas</strong>
+          </span>
+        </Link>
+      </nav>
+
+      <section className="sh2-resources" aria-labelledby="dashboard-resources-title">
         <h2 id="dashboard-resources-title">Editais e acervo</h2>
         <PcAcreEditalSpotlight />
         <PcprExamSpotlight compact />
@@ -903,14 +798,16 @@ function StudentHome({ user }: { user: UserProfile }) {
           pontuam novamente. Tempo ativo vem das sessões da plataforma; hoje usa o maior valor entre
           o registro sincronizado e o relógio ao vivo, sem duplicar minutos. Dias seguem o horário
           do Acre. A cobertura do cronograma exige teoria e questões registradas no assunto; não
-          representa aprovação nem domínio da disciplina. As informações são atualizadas ao retornar
-          à aba e periodicamente enquanto o painel está aberto.
+          representa aprovação nem domínio da disciplina. Erros pendentes são erros sem acerto
+          posterior registrado no reforço, considerando as questões disponíveis no acervo.
         </p>
         <Link to="/dashboard/performance">Consultar desempenho detalhado</Link>
       </details>
     </div>
   );
 }
+
+const tones = ["gold", "blue", "green", "violet", "amber", "rose"] as const;
 
 function Metric({
   icon: Icon,
@@ -925,28 +822,23 @@ function Metric({
   value: string;
   detail: string;
   onOpen: React.MouseEventHandler<HTMLButtonElement>;
-  tone?: "blue" | "teal" | "amber" | "violet";
+  tone: "blue" | "green" | "amber" | "violet";
 }) {
   return (
     <button
       type="button"
-      className="student-home__metric"
+      className="sh2-kpi"
       data-tone={tone}
       onClick={onOpen}
       aria-haspopup="dialog"
       aria-label={`${label}: ${value}. Ver detalhes`}
     >
+      <Icon aria-hidden="true" />
       <span>
-        <Icon aria-hidden="true" />
+        <small>{label}</small>
+        <strong>{value}</strong>
+        <em>{detail}</em>
       </span>
-      <div>
-        <h2>{label}</h2>
-        <strong data-placeholder={/^(Indisponível|Sem respostas)$/.test(value) || undefined}>
-          {value}
-        </strong>
-        <p>{detail}</p>
-      </div>
-      <ArrowRight className="student-home__metric-arrow" aria-hidden="true" />
     </button>
   );
 }
@@ -954,38 +846,29 @@ function SectionTitle({
   icon: Icon,
   title,
   id,
-  description,
+  aside,
   onOpen,
 }: {
   icon: LucideIcon;
   title: string;
   id: string;
-  description?: string;
+  aside?: React.ReactNode;
   onOpen?: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <header className="student-home__section-title">
-      <span>
-        <Icon aria-hidden="true" />
-      </span>
-      <div>
-        <h2 id={id}>
-          {onOpen ? (
-            <button
-              type="button"
-              className="student-home__section-button"
-              aria-haspopup="dialog"
-              onClick={onOpen}
-            >
-              {title}
-              <ArrowRight aria-hidden="true" />
-            </button>
-          ) : (
-            title
-          )}
-        </h2>
-        {description && <p>{description}</p>}
-      </div>
+    <header className="sh2-card__head">
+      <Icon aria-hidden="true" />
+      <h2 id={id}>
+        {onOpen ? (
+          <button type="button" aria-haspopup="dialog" onClick={onOpen}>
+            {title}
+            <ArrowRight aria-hidden="true" />
+          </button>
+        ) : (
+          title
+        )}
+      </h2>
+      {aside}
     </header>
   );
 }
