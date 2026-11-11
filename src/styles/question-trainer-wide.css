@@ -236,3 +236,42 @@ html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspa
 .trainer-session-shell.qt2-session .qt2-strip [data-hint]:is(:hover, :focus-visible)::after { transform: translate(0, 0); }
 @media (hover: none) { .trainer-session-shell.qt2-session [data-hint]::after { display: none; } }
 @media (prefers-reduced-motion: reduce) { .trainer-session-shell.qt2-session [data-hint]::after { transition: none; } }
+
+/* Montagem numa janela só, inclusive com a fonte ampliada: faixa em uma linha,
+   filtros lado a lado pelo que couber (medidas em rem acompanham o tamanho do texto)
+   e controles baixos. */
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.375rem 1rem;
+  margin: 0 0 0.5rem;
+  padding: 0.5rem 0.875rem;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero__copy { grid-template-columns: auto auto; column-gap: 0.75rem; align-items: baseline; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero small { grid-column: 1 / -1; font-size: 0.625rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero h1 { font-size: 1.1875rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero p { font-size: 0.75rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-quick { gap: 0.375rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-quick a { min-height: 1.875rem; padding: 0.125rem 0.625rem; font-size: 0.75rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-quick svg { width: 0.875rem; height: 0.875rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters { grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)) !important; gap: 0.375rem 0.5rem !important; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters label { display: grid; gap: 0.125rem; margin: 0; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters label > * { margin-top: 0 !important; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters label > span:first-child { font-size: 0.6875rem; line-height: 1.2; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 :is([data-slot="select-trigger"], button[data-slot="select-trigger"]) {
+  height: 2.125rem !important;
+  min-height: 2.125rem !important;
+  padding: 0 0.5rem !important;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem !important;
+  line-height: 1.2 !important;
+}
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 [data-slot="select-trigger"] > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-more { margin-top: 0.375rem !important; padding: 0.125rem 0.625rem !important; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-more > summary { min-height: 1.75rem; font-size: 0.6875rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar { margin-top: 0.375rem !important; padding: 0.375rem 0.625rem !important; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar p { font-size: 0.875rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar button { height: 2.125rem !important; min-height: 2.125rem !important; font-size: 0.8125rem; }
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-setup__unified > [data-slot="card-content"] { padding: 0.5rem !important; }
