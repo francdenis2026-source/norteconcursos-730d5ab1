@@ -13,7 +13,7 @@
   --nc-home-radius: 16px;
   color: var(--nc-home-ink);
   background: var(--nc-home-bg);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-size: 14px;
   line-height: 1.55;
   letter-spacing: -.005em;

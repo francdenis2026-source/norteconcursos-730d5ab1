@@ -11,7 +11,7 @@
   --plan-accent-soft: #f3ecdf;
   min-width: 0;
   color: var(--plan-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 .dark .app-shell[data-area="student"] :is(.study-assistant,.agenda-workspace-window) {

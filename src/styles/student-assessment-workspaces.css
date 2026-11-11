@@ -10,7 +10,7 @@
   --assessment-accent-strong: #20565d;
   --assessment-accent-soft: #eaf2f2;
   color: var(--assessment-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 .dark .app-shell[data-area="student"] :is(.student-exams-page,.question-catalog,.trainer-session-shell) {

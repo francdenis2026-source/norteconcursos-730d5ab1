@@ -10,7 +10,7 @@
   --exam-accent-strong: #20565d;
   --exam-accent-soft: #eaf2f2;
   color: var(--exam-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 .dark .app-shell[data-area="student"] :is(.simulator-workspace,.performance-page,.ranking-workspace,.exam-panorama-workspace) {

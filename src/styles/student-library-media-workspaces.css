@@ -11,7 +11,7 @@
   --study-accent-soft: #f3ecdf;
   min-width: 0;
   color: var(--study-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 .dark .app-shell[data-area="student"] :is(.material-hub,.library-reading-workspace,.nc-learning-workspace.material-library,.nc-learning-workspace.question-flashcards,.nc-learning-workspace.video-study-page) {

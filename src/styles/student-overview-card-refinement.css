@@ -14,7 +14,7 @@
   --home-violet: #287b83;
   --home-rose: #b45c64;
   color: var(--home-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 :root.dark .app-shell[data-area="student"] .student-overview {

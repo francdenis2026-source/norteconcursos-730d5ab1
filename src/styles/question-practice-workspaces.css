@@ -14,7 +14,7 @@
   --question-accent: var(--practice-accent);
   --trainer-accent: var(--practice-accent);
   color: var(--practice-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-variant-numeric: tabular-nums;
 }
 .dark .app-shell[data-area="student"] :is(.trainer-setup,.question-catalog,.question-flashcards,.question-errors) {

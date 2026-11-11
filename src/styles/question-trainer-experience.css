@@ -12,7 +12,7 @@
   max-width: 1120px;
   gap: 13px;
   color: var(--trainer-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
 }
 :root.dark .app-shell[data-area="student"] .nc-learning-workspace.question-workspace {
   --trainer-paper: #172b34;
@@ -79,7 +79,7 @@
 }
 .app-shell[data-area="student"] .question-workspace .trainer-reading-heading h2 {
   color: var(--trainer-ink);
-  font-family: Inter, "Archivo", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   font-size: clamp(21px,2.3vw,29px);
   font-weight: 800;
   letter-spacing: -.04em;
