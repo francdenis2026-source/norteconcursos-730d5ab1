@@ -10,6 +10,7 @@
     align-items: center;
     gap: clamp(16px, 2.2vw, 34px);
     min-height: 62px;
+    min-width: 0;
     padding: 8px clamp(18px, 2.4vw, 38px);
     border-bottom: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
     background: color-mix(in srgb, var(--card) 94%, transparent);
@@ -290,6 +291,15 @@
     background: var(--nav-wash);
   }
   .student-top-navigation__trigger[data-tone] { --nav-accent: var(--nc-color-action); --nav-wash: var(--nc-color-action-soft); }
+  .student-top-navigation__trigger[data-tone="gold"] { --nav-accent: #e2bd75; }
+  .student-top-navigation__trigger[data-tone="sky"] { --nav-accent: #79bff5; }
+  .student-top-navigation__trigger[data-tone="violet"] { --nav-accent: #bd9ef6; }
+  .student-top-navigation__trigger[data-tone="teal"] { --nav-accent: #61cfc8; }
+  .student-top-navigation__trigger[data-tone="emerald"] { --nav-accent: #75d6a0; }
+  .student-top-navigation__trigger[data-tone="rose"] { --nav-accent: #efa0ba; }
+  .student-top-navigation__trigger[data-tone="indigo"] { --nav-accent: #aeb7ff; }
+  .student-top-navigation__trigger[data-tone="orange"] { --nav-accent: #f1b57a; }
+  .student-top-navigation__trigger[data-tone="slate"] { --nav-accent: #a4bfd5; }
   .student-top-navigation__label {
     color: var(--nav-accent);
     font-weight: 720;
@@ -633,6 +643,15 @@
     box-shadow: 0 1px 3px rgb(29 57 85 / 5%);
   }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone] { --nav-accent: var(--nc-color-action-text); }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="gold"] { --nav-accent: #956015; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="sky"] { --nav-accent: #176caa; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="violet"] { --nav-accent: #7550b5; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="teal"] { --nav-accent: #087d79; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="emerald"] { --nav-accent: #21804f; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="rose"] { --nav-accent: #b03f61; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="indigo"] { --nav-accent: #464cb0; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="orange"] { --nav-accent: #a65c23; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="slate"] { --nav-accent: #42617d; }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger .student-top-navigation__label {
     color: var(--nav-accent) !important;
     font-weight: 800;
