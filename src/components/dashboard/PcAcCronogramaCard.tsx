@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2 } from "lucide-react";
+import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { Card } from "@astryxdesign/core/Card";
@@ -29,6 +29,49 @@ const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 const WEEKDAY_FULL = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 const GRID_DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 const GRID_DAY_LETTER = ["D", "S", "T", "Q", "Q", "S", "S"]; // índice = weekday (0 domingo)
+
+const MATERIAL_SHORTCUTS = {
+  teoria: { label: "Teoria", icon: BookOpen },
+  video: { label: "Vídeo", icon: Video },
+  questoes: { label: "Questões", icon: ListChecks },
+  simulado: { label: "Simulado", icon: Trophy },
+} as const;
+type MaterialShortcutType = keyof typeof MATERIAL_SHORTCUTS;
+
+function materialShortcut(activity: { type: PcAcActivityType; subject?: string; topic?: string; detail?: string }) {
+  const subject = activity.subject?.trim();
+  const topic = activity.topic?.trim();
+  if (!subject || !topic) return null;
+  const q = encodeURIComponent(topic);
+  const discipline = encodeURIComponent(subject);
+  const back = encodeURIComponent("/dashboard/pc-acre-edital#pcac-cronograma");
+  const type = activity.type as MaterialShortcutType;
+  if (!(type in MATERIAL_SHORTCUTS)) return null;
+  const href = type === "questoes"
+    ? `/dashboard/question-trainer?subject=${discipline}&topic=${q}&back=${back}`
+    : type === "simulado"
+      ? `/dashboard/mock-exams?subject=${discipline}&topic=${q}`
+      : `/dashboard/library?collection=subjects&discipline=${discipline}&q=${q}&back=${back}`;
+  return { ...MATERIAL_SHORTCUTS[type], href };
+}
+
+function MaterialShortcut({ activity }: { activity: { type: PcAcActivityType; subject?: string; topic?: string; detail?: string } }) {
+  const shortcut = materialShortcut(activity);
+  if (!shortcut) return null;
+  const Icon = shortcut.icon;
+  return (
+    <a
+      href={shortcut.href}
+      className="pcac-material-shortcut"
+      aria-label={`Abrir ${shortcut.label.toLocaleLowerCase("pt-BR")}: ${activity.topic}`}
+      title={`Abrir ${shortcut.label}`}
+    >
+      <Icon aria-hidden="true" className="pcac-material-shortcut__icon" />
+      <span>{shortcut.label}</span>
+      <ExternalLink aria-hidden="true" className="pcac-material-shortcut__external" />
+    </a>
+  );
+}
 
 /** Ícone e badge por tipo de atividade — usados no resumo "Hoje" e nas tabelas de dia, para o
  * aluno reconhecer de imediato o tipo de bloco (teoria, questões, pausa, refeição, TAF…). */
@@ -579,7 +622,10 @@ export function PcAcCronogramaCard({
                                         renderCell: (activity) => (
                                           <span>
                                             {activity.subject ?? "—"}
-                                            {findPcAcStudyResource(activity.subject) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(activity.subject)!.courseId)} className="ml-1 block text-[11px] font-bold text-emerald-600 hover:underline dark:text-emerald-300">Abrir aulas</a>}
+                                            <span className="pcac-material-shortcuts" aria-label="Atalhos de material">
+                                              <MaterialShortcut activity={activity} />
+                                              {findPcAcStudyResource(activity.subject) && <a href={pcAcStudyResourceUrl(findPcAcStudyResource(activity.subject)!.courseId)} className="pcac-material-shortcut pcac-material-shortcut--secondary">Abrir aulas</a>}
+                                            </span>
                                           </span>
                                         ),
                                       },
