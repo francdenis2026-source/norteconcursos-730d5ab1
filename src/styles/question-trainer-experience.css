@@ -70,7 +70,7 @@
   border-color: color-mix(in srgb,var(--trainer-gold) 40%,var(--trainer-line));
   background: color-mix(in srgb,var(--trainer-gold) 10%,var(--trainer-paper));
   color: var(--trainer-ink);
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
   letter-spacing: .025em;
 }
 .app-shell[data-area="student"] .question-workspace .trainer-reading-heading {
