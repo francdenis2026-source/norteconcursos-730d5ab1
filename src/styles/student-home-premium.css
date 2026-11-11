@@ -869,9 +869,9 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 :root.dark .app-shell.navigation-v2[data-area="student"] .student-home.student-desk.student-overview {
   --home-ink: #edf0f3;
   --home-muted: #b4bdc7;
-  --home-line: #3b4652;
-  --home-surface: #202832;
-  --home-surface-2: #28323d;
+  --home-line: #294e64;
+  --home-surface: #182e3a;
+  --home-surface-2: #1d3848;
   --home-blue: #aebbc8;
   --home-cyan: #8eb0b8;
   --home-green: #77b99b;
@@ -884,11 +884,11 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__masthead {
   min-height: 112px !important;
   padding: 17px 22px !important;
-  border: 1px solid #39424c !important;
+  border: 1px solid #274a5e !important;
   border-radius: 14px !important;
   background:
     radial-gradient(ellipse at 92% 12%, rgb(181 138 67 / 17%), transparent 34%),
-    linear-gradient(112deg, #202832 0%, #2b333d 58%, #343b43 100%) !important;
+    linear-gradient(112deg, #182e3a 0%, #1e3a4a 58%, #234254 100%) !important;
   box-shadow: 0 8px 24px rgb(20 28 36 / 13%), inset 0 1px 0 rgb(255 255 255 / 5%) !important;
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__welcome {
