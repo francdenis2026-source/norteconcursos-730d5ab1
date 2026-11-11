@@ -83,6 +83,7 @@ const COMMITMENT_DEFAULT_MINUTES: Partial<Record<PcAcCommitmentKind, number>> = 
   banho: 30,
   descanso: 60,
   deslocamento: 40,
+  academia: 90,
   escola: 40,
   medico: 90,
   reuniao: 60,
@@ -722,8 +723,10 @@ export function PcAcCronogramaCard({
           <summary>Meus compromissos do dia</summary>
           <div className="pt-3">
             <p className="mb-3 text-xs text-muted-foreground">
-              Informe trabalho, intervalo, banho, descanso, deslocamento, consulta médica, escola dos
-              filhos, reunião ou uma emergência. Pode ser um horário fixo da semana ou de uma data só.
+              Informe trabalho, intervalo, banho, descanso, deslocamento, academia, consulta médica,
+              escola dos filhos, reunião ou uma emergência. Pode ser um horário fixo da semana ou de
+              uma data só. A academia aqui é o seu treino livre: se você também marcou o treino de
+              TAF acima, os dois convivem no mesmo dia, cada um no seu horário.
             </p>
             <CommitmentsEditor
               commitments={cfg.commitments}
