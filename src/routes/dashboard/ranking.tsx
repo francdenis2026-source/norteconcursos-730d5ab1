@@ -1,7 +1,7 @@
 import "@/styles/exam-performance-workspaces.css";
 import "@/styles/ranking-professional-refinement.css";
 import * as React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Award,
   Flame,
@@ -14,6 +14,7 @@ import {
   ChevronLeft,
   ChevronRight,
   LocateFixed,
+  TrendingUp,
   Users,
   RefreshCw,
 } from "lucide-react";
@@ -402,6 +403,16 @@ function RankingPage() {
   return (
     <div className="ranking-workspace space-y-6">
       <RankingHeader />
+      <Link
+        to="/dashboard/performance"
+        className="ranking-evolution-link flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm shadow-sm transition-colors hover:border-primary/50 hover:bg-primary/5"
+      >
+        <span className="flex items-center gap-2 font-semibold">
+          <TrendingUp className="h-4 w-4 text-primary" aria-hidden="true" />
+          Veja seu gráfico de evolução (dia, semana, mês e ano) e saiba se está avançando ou cometendo muitos erros
+        </span>
+        <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+      </Link>
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
           <div className="flex flex-wrap items-center gap-3">

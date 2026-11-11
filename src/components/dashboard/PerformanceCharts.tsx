@@ -6,6 +6,9 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  ComposedChart,
+  Legend,
+  Line,
   Pie,
   PieChart,
   PolarAngleAxis,
@@ -16,6 +19,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { acreDateKey } from "@/lib/acreTime";
 import type {
@@ -56,18 +60,23 @@ function ChartCard({
   title,
   description,
   className,
+  headerExtra,
   children,
 }: {
   title: string;
   description?: string;
   className?: string;
+  headerExtra?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <Card className={className}>
-      <CardHeader className="pb-2">
-        <CardTitle className="text-sm font-bold">{title}</CardTitle>
-        {description && <CardDescription className="text-xs">{description}</CardDescription>}
+      <CardHeader className="flex-row items-start justify-between gap-2 pb-2 space-y-0">
+        <div>
+          <CardTitle className="text-sm font-bold">{title}</CardTitle>
+          {description && <CardDescription className="text-xs">{description}</CardDescription>}
+        </div>
+        {headerExtra}
       </CardHeader>
       <CardContent className="h-[200px] pt-0">{children}</CardContent>
     </Card>
@@ -94,7 +103,77 @@ function dayLabel(key: string): string {
   return `${d}/${m}`;
 }
 
-const WEEKS = 8;
+const MONTH_LABEL = [
+  "jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez",
+];
+
+export type EvolutionPeriod = "day" | "week" | "month" | "year";
+export const EVOLUTION_PERIOD_LABEL: Record<EvolutionPeriod, string> = {
+  day: "Dia",
+  week: "Semana",
+  month: "Mês",
+  year: "Ano",
+};
+export type EvolutionPoint = { label: string; correct: number; wrong: number; accuracy: number | null };
+
+/** Agrega respostas do Treinador por dia, semana, mês ou ano — pro gráfico de evolução
+ * (acertos, erros e % de aproveitamento) mostrar se o aluno está avançando ou cometendo
+ * muitos erros ao longo do tempo, não só a semana. */
+export function buildEvolution(responses: TrainingActivity[], period: EvolutionPeriod): EvolutionPoint[] {
+  const keyOf = (iso: string): string => {
+    const dateKey = acreDateKey(new Date(iso));
+    if (period === "day") return dateKey;
+    if (period === "week") return weekMondayKey(iso);
+    if (period === "month") return dateKey.slice(0, 7);
+    return dateKey.slice(0, 4);
+  };
+  const byKey = new Map<string, { correct: number; wrong: number }>();
+  for (const r of responses) {
+    const key = keyOf(r.created_at);
+    const entry = byKey.get(key) ?? { correct: 0, wrong: 0 };
+    if (r.is_correct) entry.correct += 1; else entry.wrong += 1;
+    byKey.set(key, entry);
+  }
+
+  const labelOf = (key: string): string => {
+    if (period === "month") {
+      const [, m] = key.split("-");
+      return MONTH_LABEL[Number(m) - 1] ?? key;
+    }
+    if (period === "year") return key;
+    return dayLabel(key);
+  };
+
+  const todayKey = acreDateKey();
+  const cursor = new Date(`${todayKey}T00:00:00`);
+  const keys: string[] = [];
+  const span = period === "day" ? 14 : period === "week" ? 8 : period === "month" ? 12 : 5;
+  if (period === "year") {
+    const currentYear = Number(todayKey.slice(0, 4));
+    for (let i = span - 1; i >= 0; i--) keys.push(String(currentYear - i));
+  } else {
+    for (let i = 0; i < span; i++) {
+      if (period === "day") keys.unshift(acreDateKey(cursor));
+      else if (period === "week") keys.unshift(weekMondayKey(cursor.toISOString()));
+      else keys.unshift(`${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, "0")}`);
+      if (period === "day") cursor.setDate(cursor.getDate() - 1);
+      else if (period === "week") cursor.setDate(cursor.getDate() - 7);
+      else cursor.setMonth(cursor.getMonth() - 1);
+    }
+  }
+
+  return keys.map((key) => {
+    const entry = byKey.get(key);
+    const total = entry ? entry.correct + entry.wrong : 0;
+    return {
+      label: labelOf(key),
+      correct: entry?.correct ?? 0,
+      wrong: entry?.wrong ?? 0,
+      accuracy: total > 0 ? Math.round(((entry?.correct ?? 0) / total) * 100) : null,
+    };
+  });
+}
+
 const DAYS = 14;
 
 export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverview }) {
@@ -109,9 +188,10 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
     ].filter((d) => d.value > 0);
   }, [trainer.totalAnswered, trainer.totalCorrect]);
 
+  const [evolutionPeriod, setEvolutionPeriod] = React.useState<EvolutionPeriod>("week");
   const evolutionData = React.useMemo(
-    () => buildWeeklyEvolution(responses, WEEKS),
-    [responses],
+    () => buildEvolution(responses, evolutionPeriod),
+    [responses, evolutionPeriod],
   );
 
   const subjectData = React.useMemo(
@@ -177,24 +257,45 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
       </ChartCard>
 
       <ChartCard
-        title="Evolução do aproveitamento"
-        description="Aproveitamento médio por semana (Treinador)"
+        title="Evolução do desempenho"
+        description="Acertos, erros e aproveitamento no Treinador"
         className="xl:col-span-2"
+        headerExtra={
+          <div className="flex gap-1" role="group" aria-label="Período da evolução">
+            {(Object.keys(EVOLUTION_PERIOD_LABEL) as EvolutionPeriod[]).map((p) => (
+              <button
+                key={p}
+                type="button"
+                onClick={() => setEvolutionPeriod(p)}
+                aria-pressed={evolutionPeriod === p}
+                className={cn(
+                  "rounded-md px-2 py-0.5 text-[11px] font-semibold transition-colors",
+                  evolutionPeriod === p
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-muted",
+                )}
+              >
+                {EVOLUTION_PERIOD_LABEL[p]}
+              </button>
+            ))}
+          </div>
+        }
       >
         {!available.training || evolutionData.every((d) => d.accuracy === null) ? (
-          <EmptyChart message="Ainda não há semanas suficientes com questões respondidas." />
+          <EmptyChart message="Responda questões no Treinador pra ver sua evolução aqui." />
         ) : (
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={evolutionData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-              <defs>
-                <linearGradient id="evolutionGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor={GOLD} stopOpacity={0.45} />
-                  <stop offset="100%" stopColor={GOLD} stopOpacity={0.03} />
-                </linearGradient>
-              </defs>
+            <ComposedChart
+              key={evolutionPeriod}
+              data={evolutionData}
+              margin={{ top: 8, right: 8, left: -20, bottom: 0 }}
+            >
               <CartesianGrid vertical={false} stroke="var(--border)" strokeDasharray="3 3" />
               <XAxis dataKey="label" tick={AXIS_TICK} axisLine={false} tickLine={false} />
+              <YAxis yAxisId="count" tick={AXIS_TICK} axisLine={false} tickLine={false} width={28} allowDecimals={false} />
               <YAxis
+                yAxisId="pct"
+                orientation="right"
                 tick={AXIS_TICK}
                 axisLine={false}
                 tickLine={false}
@@ -206,21 +307,27 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value) =>
-                  value == null
-                    ? ["sem dados", "Aproveitamento"]
-                    : [`${Number(value)}%`, "Aproveitamento"]
+                formatter={(value, name) =>
+                  name === "Aproveitamento"
+                    ? [value == null ? "sem dados" : `${Number(value)}%`, name]
+                    : [`${Number(value ?? 0)} questões`, name]
                 }
               />
-              <Area
+              <Legend wrapperStyle={{ fontSize: 11 }} />
+              <Bar yAxisId="count" dataKey="correct" name="Acertos" stackId="r" fill={EMERALD} radius={[3, 3, 0, 0]} animationDuration={600} />
+              <Bar yAxisId="count" dataKey="wrong" name="Erros" stackId="r" fill={ROSE} radius={[3, 3, 0, 0]} animationDuration={600} />
+              <Line
+                yAxisId="pct"
                 type="monotone"
                 dataKey="accuracy"
+                name="Aproveitamento"
                 stroke={GOLD}
                 strokeWidth={2.5}
-                fill="url(#evolutionGradient)"
+                dot={{ r: 3 }}
                 connectNulls
+                animationDuration={600}
               />
-            </AreaChart>
+            </ComposedChart>
           </ResponsiveContainer>
         )}
       </ChartCard>
@@ -350,31 +457,6 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
       </ChartCard>
     </div>
   );
-}
-
-function buildWeeklyEvolution(responses: TrainingActivity[], weeks: number) {
-  const byWeek = new Map<string, { correct: number; total: number }>();
-  for (const r of responses) {
-    const key = weekMondayKey(r.created_at);
-    const entry = byWeek.get(key) ?? { correct: 0, total: 0 };
-    entry.total += 1;
-    if (r.is_correct) entry.correct += 1;
-    byWeek.set(key, entry);
-  }
-  const currentMonday = weekMondayKey(new Date().toISOString());
-  const keys: string[] = [];
-  const cursor = new Date(`${currentMonday}T00:00:00`);
-  for (let i = 0; i < weeks; i++) {
-    keys.unshift(cursor.toISOString().slice(0, 10));
-    cursor.setDate(cursor.getDate() - 7);
-  }
-  return keys.map((key) => {
-    const entry = byWeek.get(key);
-    return {
-      label: dayLabel(key),
-      accuracy: entry && entry.total > 0 ? Math.round((entry.correct / entry.total) * 100) : null,
-    };
-  });
 }
 
 function buildDailyActivity(responses: TrainingActivity[], days: number) {
