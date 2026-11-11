@@ -180,7 +180,11 @@ function CommitmentsEditor({
                       : (commitment.days ?? []).map((day) => DAY_SHORT[day]).join(", ")}
                   </small>
                 </span>
-                {saved && <LockKeyhole aria-hidden="true" className="pcac-commitments__lock" title="Compromisso guardado" />}
+                {saved && (
+                  <span className="pcac-commitments__lock" title="Compromisso guardado">
+                    <LockKeyhole aria-hidden="true" size={14} />
+                  </span>
+                )}
                 <AstryxButton variant="ghost" size="sm" isIconOnly icon={<Pencil />} label={`Editar ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => edit(commitment)} />
                 <AstryxButton variant="ghost" size="sm" isIconOnly icon={<X />} label={`Excluir ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => setPendingDelete(commitment)} />
               </li>
@@ -273,7 +277,7 @@ function CommitmentsEditor({
               </div>
               <div className="pcac-delete-dialog__actions">
                 <AstryxButton label="Manter compromisso" variant="secondary" size="sm" onClick={() => setPendingDelete(null)} />
-                <AstryxButton label="Excluir" variant="danger" size="sm" icon={<Trash2 />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
+                <AstryxButton label="Excluir" variant="destructive" size="sm" icon={<Trash2 />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
               </div>
             </div>
           </section>

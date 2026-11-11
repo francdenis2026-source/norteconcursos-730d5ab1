@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   Download,
   PlayCircle,
+  Scale,
   ScanSearch,
   Share2,
   ShieldCheck,
