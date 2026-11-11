@@ -184,7 +184,9 @@ export async function generatePcAcVerticalPdf(
   };
 
   for (const block of cargo.blocks) {
-    if (cursor.y > TOP_SAFE) newContentPage(); // cada bloco começa em página própria
+    // Só quebra a página se a faixa do bloco (e ao menos a primeira linha de conteúdo) não
+    // couber no que resta da página atual — evita desperdiçar página inteira em blocos curtos.
+    ensureSpace(70);
     drawBlockBand(doc, block.title, cursor.y);
     cursor.y += 34;
 

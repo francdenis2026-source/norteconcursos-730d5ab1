@@ -5,7 +5,7 @@ import {
   type TrainerBookmark,
 } from "@/lib/internalNavigation";
 import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, useBlocker, useNavigate } from "@tanstack/react-router";
 import {
   ArrowRight,
   Bookmark,
@@ -322,6 +322,23 @@ function QuestionTrainer() {
   const [startedAt, setStartedAt] = React.useState(Date.now());
   const [pausedAt, setPausedAt] = React.useState<number | null>(null);
   const routeKey = trainerRouteKey(routeFilters);
+  // Tentar sair do Treinador (home, outro menu, outra aba da área) com um treino em andamento
+  // pede confirmação em vez de perder a sessão silenciosamente; o relógio pausa enquanto a
+  // confirmação está na tela e volta a contar de onde parou se o aluno decidir continuar.
+  const blocker = useBlocker({
+    shouldBlockFn: ({ current, next }) => started && current.routeId !== next.routeId,
+    enableBeforeUnload: started,
+    withResolver: true,
+  });
+  React.useEffect(() => {
+    if (blocker.status === "blocked") setPausedAt(Date.now());
+  }, [blocker.status]);
+  const resumeFromPause = () => {
+    if (pausedAt) {
+      setStartedAt((value) => value + (Date.now() - pausedAt));
+      setPausedAt(null);
+    }
+  };
   const pendingRestore = React.useRef(false);
   const restoredSelection = React.useRef<string | null>(null);
   const bookmarkRef = React.useRef<{ userId: string; value: TrainerBookmark } | null>(null);
@@ -427,7 +444,9 @@ function QuestionTrainer() {
       setResults(b.results);
       setSelected(b.selected as Answer | null);
       setStruck(b.struck as Answer[]);
-      setStartedAt(b.startedAt);
+      // O treino fica "pausado" enquanto o aluno está fora desta área: o relógio não deve
+      // contar o tempo entre sair e voltar, só o tempo de fato gasto respondendo.
+      setStartedAt(b.startedAt + Math.max(0, Date.now() - b.savedAt));
       setPausedAt(null);
       setStarted(true);
       setModal(null);
@@ -1418,7 +1437,17 @@ function QuestionTrainer() {
           <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
         </details>
       )}
-      <Dialog open={confirmExit} onOpenChange={setConfirmExit}>
+      <Dialog
+        open={confirmExit || blocker.status === "blocked"}
+        onOpenChange={(open) => {
+          if (open) return;
+          if (blocker.status === "blocked") {
+            resumeFromPause();
+            blocker.reset?.();
+          }
+          setConfirmExit(false);
+        }}
+      >
         <DialogContent className="trainer-exit-dialog max-w-[440px] overflow-hidden border-slate-600/40 p-0 text-slate-50 shadow-2xl">
           <div className="trainer-exit-dialog__art" aria-hidden="true">
             <svg viewBox="0 0 440 190" preserveAspectRatio="xMidYMid slice" role="presentation">
@@ -1442,14 +1471,34 @@ function QuestionTrainer() {
             <DialogHeader className="space-y-2 text-center sm:text-center">
               <DialogTitle className="text-xl font-bold tracking-tight text-slate-50">Sair do treino?</DialogTitle>
               <DialogDescription className="mx-auto max-w-[330px] text-sm leading-6 text-slate-300">
-                As respostas já registradas continuam no seu histórico. Deseja encerrar esta sessão?
+                {blocker.status === "blocked"
+                  ? "O cronômetro está pausado. As respostas já registradas continuam no seu histórico."
+                  : "As respostas já registradas continuam no seu histórico. Deseja encerrar esta sessão?"}
               </DialogDescription>
             </DialogHeader>
             <DialogFooter className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:space-x-0">
-              <Button variant="outline" className="w-full border-slate-500/60 bg-slate-800/70 text-slate-50 hover:bg-slate-700 hover:text-white" onClick={() => setConfirmExit(false)}>
+              <Button
+                variant="outline"
+                className="w-full border-slate-500/60 bg-slate-800/70 text-slate-50 hover:bg-slate-700 hover:text-white"
+                onClick={() => {
+                  if (blocker.status === "blocked") {
+                    resumeFromPause();
+                    blocker.reset?.();
+                  }
+                  setConfirmExit(false);
+                }}
+              >
                 <BookOpenCheck className="mr-2 h-4 w-4" /> Continuar treinando
               </Button>
-              <Button variant="destructive" className="w-full bg-rose-600 text-white hover:bg-rose-500" onClick={() => { setConfirmExit(false); setStarted(false); }}>
+              <Button
+                variant="destructive"
+                className="w-full bg-rose-600 text-white hover:bg-rose-500"
+                onClick={() => {
+                  setConfirmExit(false);
+                  if (blocker.status === "blocked") blocker.proceed?.();
+                  else setStarted(false);
+                }}
+              >
                 <ArrowRight className="mr-2 h-4 w-4" /> Sair do treino
               </Button>
             </DialogFooter>
