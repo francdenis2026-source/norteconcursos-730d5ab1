@@ -224,6 +224,26 @@ function QuestionTrainer() {
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
+  React.useEffect(() => {
+    const root = document.documentElement;
+    const nav = document.querySelector<HTMLElement>(".app-bottom-nav");
+    if (!nav || typeof ResizeObserver === "undefined") return;
+    // The fixed bottom nav's real height varies by device/safe-area; the trainer dock sits right above it.
+    const sync = () => {
+      const visible = getComputedStyle(nav).display !== "none";
+      const offset = visible ? Math.max(0, Math.ceil(window.innerHeight - nav.getBoundingClientRect().top)) : 0;
+      root.style.setProperty("--trainer-dock-bottom", `${offset}px`);
+    };
+    sync();
+    const observer = new ResizeObserver(sync);
+    observer.observe(nav);
+    window.addEventListener("resize", sync);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", sync);
+      root.style.removeProperty("--trainer-dock-bottom");
+    };
+  }, []);
   const [contest, setContest] = React.useState(routeFilters.contest || "all");
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
   const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
@@ -1243,51 +1263,63 @@ function QuestionTrainer() {
             ))}
           </div>
           </section>
-          <div className="trainer-reading-actions mt-4 flex flex-col-reverse gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
-            {!answered ? (
-              <>
-                <div className="flex flex-wrap gap-2">
-                  <Button
-                    variant="ghost"
-                    aria-disabled={!supportAvailable}
-                    aria-describedby={supportNotice ? supportNoticeId : undefined}
-                    className="text-muted-foreground"
-                    onClick={openLearning}
-                  >
-                    <Lock className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este assunto
-                  </Button>
-                  <Button variant="outline" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
-                    {savedForStudy ? <BookmarkCheck className="mr-2 h-4 w-4" /> : <Bookmark className="mr-2 h-4 w-4" />}
-                    {savedForStudy ? "Salva para estudar" : "Salvar para estudar"}
-                  </Button>
-                  <Button variant="ghost" onClick={next} disabled={index + 1 >= questions.length}>
-                    <SkipForward className="mr-2 h-4 w-4" /> Pular questão
-                  </Button>
-                </div>
+          <div className="trainer-reading-actions trainer-action-dock mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="trainer-action-dock__secondary flex flex-wrap gap-2">
+              <Button
+                variant="ghost"
+                className="trainer-action-dock__btn"
+                onClick={() => goTo(index - 1)}
+                disabled={index === 0}
+                aria-label="Questão anterior"
+              >
+                <ChevronLeft className="h-4 w-4" aria-hidden="true" />
+                <span>Anterior</span>
+              </Button>
+              <Button
+                variant={answered ? "outline" : "ghost"}
+                aria-disabled={!answered && !supportAvailable}
+                aria-describedby={!answered && supportNotice ? supportNoticeId : undefined}
+                className={cn("trainer-action-dock__btn", !answered && "text-muted-foreground")}
+                onClick={openLearning}
+              >
+                {answered ? (
+                  <BookOpenCheck className="h-4 w-4" aria-hidden="true" />
+                ) : (
+                  <Lock className="h-4 w-4" aria-hidden="true" />
+                )}
+                <span>Entender assunto</span>
+              </Button>
+              {!answered && (
                 <Button
-                  size="lg"
-                  disabled={!selected || saving || reachedDailyLimit}
-                  onClick={submit}
-                  className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
-                >
-                  Confirmar resposta <Check className="ml-2 h-4 w-4" />
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button variant="outline" onClick={openLearning}>
-                  <BookOpenCheck className="mr-2 h-4 w-4" aria-hidden="true" /> Entender este
-                  assunto
-                </Button>
-                <Button
-                  size="lg"
+                  variant="ghost"
+                  className="trainer-action-dock__btn"
                   onClick={next}
-                  className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+                  disabled={index + 1 >= questions.length}
+                  aria-label="Pular questão"
                 >
-                  {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <SkipForward className="h-4 w-4" aria-hidden="true" />
+                  <span>Pular</span>
                 </Button>
-              </>
+              )}
+            </div>
+            {!answered ? (
+              <Button
+                size="lg"
+                disabled={!selected || saving || reachedDailyLimit}
+                onClick={submit}
+                className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+              >
+                {selected ? "Confirmar resposta" : "Escolha uma alternativa"} <Check className="ml-2 h-4 w-4" />
+              </Button>
+            ) : (
+              <Button
+                size="lg"
+                onClick={next}
+                className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+              >
+                {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             )}
           </div>
           {answered && (

@@ -187,14 +187,70 @@
      página inteira. Fixa essa barra no rodapé da tela (acima da navegação inferior fixa, que
      tem ~64px) assim que ela deixa de caber no fluxo normal, pra o botão nunca ficar escondido. */
   .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup {
-    padding-bottom: 76px;
+    padding-bottom: 16px;
   }
 
   .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
     position: sticky;
-    bottom: calc(68px + env(safe-area-inset-bottom));
+    bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 68px)) + 8px);
     z-index: 5;
+    gap: 8px;
+    padding: 10px 12px;
     box-shadow: 0 10px 26px -16px rgb(0 0 0 / .4);
+  }
+
+  /* Ações da questão: barra fixa logo acima da navegação inferior. Antes ficavam no fim do card,
+     abaixo do enunciado e das alternativas — no celular só apareciam depois de rolar tudo e
+     acabavam escondidas atrás da barra de menu. */
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell {
+    padding-bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 68px)) + 132px);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell .trainer-reading-actions.trainer-action-dock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: var(--trainer-dock-bottom, var(--student-nav-h, 68px));
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 8px max(12px, env(safe-area-inset-right)) 10px max(12px, env(safe-area-inset-left));
+    border-top: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    background: var(--card);
+    box-shadow: 0 -12px 28px -18px rgb(0 0 0 / .55);
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-action-dock .trainer-action-dock__secondary {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-action-dock .trainer-action-dock__btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 46px;
+    height: auto;
+    padding: 4px 6px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-action-dock .trainer-action-dock__primary {
+    width: 100%;
+    min-height: 48px;
+    font-size: 15px;
   }
 }
 
