@@ -136,37 +136,35 @@
   transform: translateY(-4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  .home {
-    --home-canvas: oklch(0.17 0.03 215);
-    --home-surface: oklch(0.23 0.035 215 / 0.88);
-    --home-surface-strong: oklch(0.27 0.04 215);
-    --home-ink: oklch(0.94 0.02 210);
-    --home-ink-muted: oklch(0.74 0.025 210);
-    --home-line: oklch(0.94 0.02 210 / 0.14);
-    --home-brand: oklch(0.72 0.1 200);
-    --home-brand-strong: oklch(0.62 0.095 205);
-    --home-brass: oklch(0.8 0.12 78);
-    background:
-      radial-gradient(circle at 12% 4%, oklch(0.35 0.08 205 / 0.24), transparent 28rem),
-      radial-gradient(circle at 90% 12%, oklch(0.38 0.06 78 / 0.14), transparent 24rem),
-      var(--home-canvas);
-  }
+.dark .home {
+  --home-canvas: oklch(0.17 0.03 215);
+  --home-surface: oklch(0.23 0.035 215 / 0.88);
+  --home-surface-strong: oklch(0.27 0.04 215);
+  --home-ink: oklch(0.94 0.02 210);
+  --home-ink-muted: oklch(0.74 0.025 210);
+  --home-line: oklch(0.94 0.02 210 / 0.14);
+  --home-brand: oklch(0.72 0.1 200);
+  --home-brand-strong: oklch(0.62 0.095 205);
+  --home-brass: oklch(0.8 0.12 78);
+  background:
+    radial-gradient(circle at 12% 4%, oklch(0.35 0.08 205 / 0.24), transparent 28rem),
+    radial-gradient(circle at 90% 12%, oklch(0.38 0.06 78 / 0.14), transparent 24rem),
+    var(--home-canvas);
+}
 
-  .home-nav a:hover,
-  .home-nav a[aria-current="location"] {
-    color: var(--home-ink);
-    background: oklch(0.72 0.1 200 / 0.16);
-  }
+.dark .home .home-nav a:hover,
+.dark .home .home-nav a[aria-current="location"] {
+  color: var(--home-ink);
+  background: oklch(0.72 0.1 200 / 0.16);
+}
 
-  .home-button--primary {
-    color: oklch(0.18 0.03 215);
-    background: var(--home-brand);
-  }
+.dark .home .home-button--primary {
+  color: oklch(0.18 0.03 215);
+  background: var(--home-brand);
+}
 
-  .home-menu-trigger:hover {
-    background: oklch(0.72 0.1 200 / 0.16);
-  }
+.dark .home .home-menu-trigger:hover {
+  background: oklch(0.72 0.1 200 / 0.16);
 }
 
 @media (max-width: 60rem) {
