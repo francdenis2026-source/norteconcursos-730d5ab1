@@ -523,3 +523,283 @@
 .pcac-schedule .pcac-schedule__today {
   margin-block-end: 14px;
 }
+
+/* Navegação por semanas: cada semana recebe um acento próprio (ciclo de 5 tons). */
+.pcac-schedule .pcac-week--1 { --pcac-week-accent: #c79a45; }
+.pcac-schedule .pcac-week--2 { --pcac-week-accent: #3f9a72; }
+.pcac-schedule .pcac-week--3 { --pcac-week-accent: #4a8fd0; }
+.pcac-schedule .pcac-week--4 { --pcac-week-accent: #8f7bd6; }
+.pcac-schedule .pcac-week--5 { --pcac-week-accent: #2fa3a8; }
+.pcac-schedule .pcac-week {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--pcac-line);
+  border-block-start: 3px solid var(--pcac-week-accent);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--pcac-week-accent) 7%, var(--pcac-panel));
+}
+.pcac-schedule .pcac-week__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pcac-schedule .pcac-week__title {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  text-align: center;
+}
+.pcac-schedule .pcac-week__title strong {
+  color: var(--pcac-ink);
+  font-size: 16px;
+  line-height: 1.2;
+}
+.pcac-schedule .pcac-week__title span {
+  color: var(--pcac-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+.pcac-schedule .pcac-week__strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pcac-schedule .pcac-week__pip {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid color-mix(in oklab, var(--pcac-week-accent) 55%, var(--pcac-line));
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--pcac-week-accent) 12%, var(--pcac-panel));
+  color: var(--pcac-ink);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background-color .15s ease, transform .15s ease;
+}
+.pcac-schedule .pcac-week__pip:hover { background: color-mix(in oklab, var(--pcac-week-accent) 28%, var(--pcac-panel)); }
+.pcac-schedule .pcac-week__pip:active { transform: scale(.94); }
+.pcac-schedule .pcac-week__pip[aria-current="true"] {
+  border-color: var(--pcac-week-accent);
+  background: var(--pcac-week-accent);
+  color: #10161c;
+}
+.pcac-schedule .pcac-week__days {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pcac-schedule .pcac-day-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 76px;
+  padding: 10px 12px;
+  border: 1px solid var(--pcac-line);
+  border-inline-start: 3px solid var(--pcac-week-accent);
+  border-radius: 10px;
+  background: var(--pcac-panel);
+  color: var(--pcac-ink);
+  text-align: start;
+  cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+}
+.pcac-schedule .pcac-day-card:hover {
+  border-color: var(--pcac-week-accent);
+  background: color-mix(in oklab, var(--pcac-week-accent) 10%, var(--pcac-panel));
+}
+.pcac-schedule .pcac-day-card:active { transform: scale(.985); }
+.pcac-schedule .pcac-day-card[data-rest="true"] {
+  border-inline-start-color: var(--pcac-line-strong);
+  background: var(--pcac-panel-soft);
+}
+.pcac-schedule .pcac-day-card[data-today="true"] {
+  box-shadow: 0 0 0 2px var(--pcac-week-accent);
+}
+.pcac-schedule .pcac-day-card__date {
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  min-width: 46px;
+  font-variant-numeric: tabular-nums;
+}
+.pcac-schedule .pcac-day-card__date strong { font-size: 14px; line-height: 1.2; }
+.pcac-schedule .pcac-day-card__date span { color: var(--pcac-muted); font-size: 12px; }
+.pcac-schedule .pcac-day-card__date em {
+  margin-top: 2px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--pcac-week-accent);
+  color: #10161c;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+.pcac-schedule .pcac-day-card__body { display: grid; gap: 3px; min-width: 0; }
+.pcac-schedule .pcac-day-card__load {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.pcac-schedule .pcac-day-card__subjects {
+  overflow: hidden;
+  color: var(--pcac-muted);
+  font-size: 12px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.pcac-schedule .pcac-day-card__taf {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--pcac-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.pcac-schedule .pcac-day-card svg { width: 14px; height: 14px; flex: none; }
+.pcac-schedule .pcac-day-card__go { color: var(--pcac-muted); }
+.pcac-schedule .pcac-week__hint {
+  margin: 10px 0 0;
+  color: var(--pcac-muted);
+  font-size: 12px;
+}
+
+/* Janela do dia: cronologia com trilho de horário. */
+.pcac-schedule .pcac-day-timeline {
+  margin: 0;
+  padding: 16px 18px;
+  list-style: none;
+}
+.pcac-schedule .pcac-day-timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px 30px minmax(0, 1fr);
+  gap: 10px;
+  padding-block-end: 14px;
+}
+.pcac-schedule .pcac-day-timeline__item:last-child { padding-block-end: 0; }
+.pcac-schedule .pcac-day-timeline__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  inset-block: 30px 0;
+  inset-inline-start: 76px;
+  width: 2px;
+  background: var(--pcac-line);
+}
+.pcac-schedule .pcac-day-timeline__time {
+  display: grid;
+  align-content: start;
+  justify-items: end;
+  padding-top: 5px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+.pcac-schedule .pcac-day-timeline__time strong { color: var(--pcac-ink); font-size: 13px; }
+.pcac-schedule .pcac-day-timeline__time span { color: var(--pcac-muted); font-size: 11px; }
+.pcac-schedule .pcac-day-timeline__dot {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--pcac-line-strong);
+  border-radius: 50%;
+  background: var(--pcac-panel-soft);
+  color: var(--pcac-muted);
+}
+.pcac-schedule .pcac-day-timeline__item[data-kind="study"] .pcac-day-timeline__dot {
+  border-color: var(--pcac-week-accent);
+  background: color-mix(in oklab, var(--pcac-week-accent) 22%, var(--pcac-panel));
+  color: var(--pcac-ink);
+}
+.pcac-schedule .pcac-day-timeline__dot svg { width: 15px; height: 15px; }
+.pcac-schedule .pcac-day-timeline__content {
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid var(--pcac-line);
+  border-radius: 10px;
+  background: var(--pcac-panel);
+}
+.pcac-schedule .pcac-day-timeline__item:not([data-kind="study"]) .pcac-day-timeline__content {
+  border-style: dashed;
+  background: transparent;
+}
+.pcac-schedule .pcac-day-timeline__content p { margin: 0; overflow-wrap: anywhere; }
+.pcac-schedule .pcac-day-timeline__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: var(--pcac-ink);
+  font-size: 13px;
+}
+.pcac-schedule .pcac-day-timeline__head > span:last-child {
+  margin-inline-start: auto;
+  color: var(--pcac-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.pcac-schedule .pcac-day-timeline__topic {
+  margin-top: 6px !important;
+  color: var(--pcac-ink);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.pcac-schedule .pcac-day-timeline__detail {
+  margin-top: 4px !important;
+  color: var(--pcac-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.pcac-schedule .pcac-day-timeline__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px !important;
+}
+.pcac-schedule .pcac-day-timeline__actions a {
+  padding: 5px 10px;
+  border: 1px solid var(--pcac-green);
+  border-radius: 7px;
+  color: var(--pcac-ink);
+  background: var(--pcac-green-soft);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.pcac-schedule .pcac-day-timeline__actions a:hover { background: color-mix(in oklab, var(--pcac-green) 30%, var(--pcac-panel)); }
+.pcac-schedule .pcac-day-dialog__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+@media (max-width: 560px) {
+  .pcac-schedule .pcac-week { padding: 10px; }
+  .pcac-schedule .pcac-week__nav { flex-wrap: wrap; }
+  .pcac-schedule .pcac-week__title { order: -1; flex-basis: 100%; }
+  .pcac-schedule .pcac-week__nav > :not(.pcac-week__title) { flex: 1 1 0; }
+  .pcac-schedule .pcac-week__days { grid-template-columns: 1fr; }
+  .pcac-schedule .pcac-day-timeline { padding: 12px 10px; }
+  .pcac-schedule .pcac-day-timeline__item { grid-template-columns: 42px 26px minmax(0, 1fr); gap: 7px; }
+  .pcac-schedule .pcac-day-timeline__item:not(:last-child)::before { inset-inline-start: 61px; }
+  .pcac-schedule .pcac-day-timeline__dot { width: 26px; height: 26px; }
+}
