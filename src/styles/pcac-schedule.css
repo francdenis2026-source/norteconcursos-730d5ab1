@@ -842,3 +842,111 @@
   .pcac-schedule .pcac-day-timeline__item:not(:last-child)::before { inset-inline-start: 61px; }
   .pcac-schedule .pcac-day-timeline__dot { width: 26px; height: 26px; }
 }
+
+
+/* Blocos recolhíveis da aba "Personalizar" (compromissos e lógica do plano). */
+.pcac-schedule .pcac-schedule__details {
+  border: 1px solid var(--pcac-line);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--pcac-panel);
+  color: var(--pcac-ink);
+}
+.pcac-schedule .pcac-schedule__details > summary {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pcac-ink);
+  cursor: pointer;
+  list-style-position: inside;
+}
+.pcac-schedule .pcac-schedule__details :is(label, p, summary, li) { overflow-wrap: anywhere; }
+.pcac-schedule .pcac-schedule__details input[type="checkbox"] { accent-color: var(--pcac-green); }
+/* Compromissos do aluno e explicação da lógica do plano (aba "Personalizar"). */
+.pcac-schedule .pcac-commitments__list {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+.pcac-schedule .pcac-commitments__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border: 1px solid var(--pcac-line);
+  border-radius: 10px;
+  background: var(--pcac-panel-soft);
+}
+.pcac-schedule .pcac-commitments__time {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--pcac-ink);
+  white-space: nowrap;
+}
+.pcac-schedule .pcac-commitments__name {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--pcac-ink);
+}
+.pcac-schedule .pcac-commitments__name small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--pcac-muted);
+}
+.pcac-schedule .pcac-commitments__form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: end;
+}
+.pcac-schedule .pcac-commitments__days,
+.pcac-schedule .pcac-commitments__submit { grid-column: 1 / -1; }
+.pcac-schedule .pcac-commitments__select {
+  width: 100%;
+  height: 36px;
+  padding: 0 8px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 8px;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 13px;
+}
+.pcac-schedule .pcac-commitments__error {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(var(--destructive));
+}
+.pcac-schedule .pcac-commitments__hint {
+  margin: 10px 0 0;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--pcac-muted);
+}
+.pcac-schedule .pcac-logic { font-size: 12.5px; line-height: 1.55; color: var(--pcac-muted); }
+.pcac-schedule .pcac-logic strong { color: var(--pcac-ink); }
+.pcac-schedule .pcac-logic__blocks {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pcac-schedule .pcac-logic__blocks li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 7px 10px;
+  border: 1px solid var(--pcac-line);
+  border-left: 3px solid var(--pcac-brass);
+  border-radius: 8px;
+  background: var(--pcac-panel-soft);
+}
+.pcac-schedule .pcac-logic__rules { margin: 8px 0 0; padding-inline-start: 20px; display: grid; gap: 6px; }
+.pcac-schedule .pcac-logic__note { margin: 12px 0 0; font-size: 11.5px; }
