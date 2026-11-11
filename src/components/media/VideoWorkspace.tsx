@@ -1,6 +1,7 @@
 import { useId, useMemo, useState } from "react";
 import { BookOpen, ListVideo, PanelRightClose, PanelRightOpen, Search } from "lucide-react";
 import { useMediaCatalog } from "@/lib/mediaStore";
+import { canonicalSubject, topicIdentity } from "@/lib/subjects";
 import { isPlaylistId } from "@/lib/arsenal";
 import { LessonPlayer, type LessonSource } from "./LessonPlayer";
 
@@ -35,9 +36,15 @@ export function VideoWorkspace({
           ),
     [catalog, mode],
   );
-  const subject = subjects.includes(pickedSubject) ? pickedSubject : subjects[0] || "";
+  const requestedSubject = canonicalSubject(initialSubject);
+  const matchedSubject = subjects.find((candidate) => canonicalSubject(candidate) === requestedSubject);
+  const subject = pickedSubject
+    ? (matchedSubject ?? (initialSubject ? "" : subjects[0] || ""))
+    : subjects[0] || "";
   const topics = Object.keys(catalog.topicVideos[subject] || {}).filter((t) => t !== "*");
-  const topicFilter = topics.includes(topic) ? topic : topics.find((candidate) => fold(candidate) === fold(topic)) ?? "all";
+  const topicFilter = topic === "all"
+    ? "all"
+    : topics.find((candidate) => topicIdentity(candidate) === topicIdentity(topic)) ?? "__no_topic_match__";
   const entries: LessonSource[] = useMemo(
     () =>
       mode === "playlists"
