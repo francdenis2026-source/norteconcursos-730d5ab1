@@ -193,16 +193,46 @@ html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspa
   padding: 0.25rem 0.5rem !important;
   border-radius: 0.75rem;
 }
-/* Faixa do cartão com foto colorida */
+/* Faixa do cartão: título, estado, comandos e foto enquadrada no rosto */
+.trainer-session-shell.qt2-session > .question-window { position: relative; }
 .trainer-session-shell.qt2-session .qt2-strip {
   position: relative;
-  min-height: 3.25rem;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem 0.875rem;
+  min-height: 3.5rem;
+  padding: 0.375rem 0.875rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--qt2-gold) 45%, transparent);
   border-radius: 1rem 1rem 0 0;
-  background: oklch(0.2 0.07 262) !important;
+  background: linear-gradient(90deg, oklch(0.22 0.09 262), oklch(0.2 0.06 285));
   color: #fff;
   isolation: isolate;
 }
-.trainer-session-shell.qt2-session .qt2-strip::before { content: ""; position: absolute; inset: 0 0 0 auto; z-index: -1; width: min(60%, 40rem); background: url("/media/hero/trainer.webp") center 42% / cover no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%); mask-image: linear-gradient(90deg, transparent, #000 45%); }
-.trainer-session-shell.qt2-session .qt2-strip > span { color: #fff !important; text-shadow: 0 1px 2px oklch(0 0 0 / 0.6); }
-.trainer-session-shell.qt2-session .qt2-strip > span:first-child { font-size: 0.8125rem; color: var(--qt2-gold) !important; }
+/* Recorte ampliado (300%) centrado no rosto: numa faixa baixa, "cover" mostraria só o tronco. */
+.trainer-session-shell.qt2-session .qt2-strip::before { content: ""; position: absolute; inset: 0 auto 0 34%; z-index: -1; width: 16rem; background: url("/media/hero/trainer.webp") 84% 36% / 260% auto no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent, #000 35%, #000 65%, transparent); mask-image: linear-gradient(90deg, transparent, #000 35%, #000 65%, transparent); }
+.trainer-session-shell.qt2-session .qt2-strip__title { font-size: 0.875rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--qt2-gold); }
+.trainer-session-shell.qt2-session .qt2-strip__live { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.86 0.15 150); }
+.trainer-session-shell.qt2-session .qt2-strip__live i { width: 0.4375rem; height: 0.4375rem; border-radius: 50%; background: oklch(0.8 0.18 150); }
+.trainer-session-shell.qt2-session .qt2-strip__actions { display: flex; align-items: center; gap: 0.375rem; margin-left: auto; }
+.trainer-session-shell.qt2-session .qt2-strip__actions button { min-height: 2.25rem; border: 1px solid oklch(1 0 0 / 0.22); border-radius: 0.625rem; background: oklch(0.14 0.03 265 / 0.7); color: #fff; font-weight: 700; }
+.trainer-session-shell.qt2-session .qt2-strip__actions button:hover { border-color: var(--qt2-gold); background: oklch(0.14 0.03 265 / 0.9); }
+.trainer-session-shell.qt2-session .qt2-strip__btn { gap: 0.375rem; padding-inline: 0.75rem; }
+.trainer-session-shell.qt2-session .qt2-strip__btn--stop { border-color: oklch(0.7 0.19 15 / 0.7) !important; color: oklch(0.86 0.1 15) !important; }
+.trainer-session-shell.qt2-session .qt2-strip__btn--stop:hover { background: oklch(0.45 0.17 15 / 0.55) !important; color: #fff !important; }
+
+/* Pausa: cobre a questão até o aluno retomar */
+.trainer-session-shell.qt2-session .qt2-paused { position: absolute; inset: 3.5rem 0 0; z-index: 8; display: grid; place-content: center; justify-items: center; gap: 0.5rem; padding: 1.5rem; border-radius: 0 0 1rem 1rem; background: color-mix(in srgb, var(--card) 96%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); text-align: center; }
+.trainer-session-shell.qt2-session .qt2-paused > svg { width: 2.5rem; height: 2.5rem; color: var(--qt2-gold); }
+.trainer-session-shell.qt2-session .qt2-paused strong { font-size: 1.375rem; font-weight: 800; }
+.trainer-session-shell.qt2-session .qt2-paused p { max-width: 28rem; margin: 0; font-size: 0.875rem; opacity: 0.8; }
+.trainer-session-shell.qt2-session .qt2-paused__resume { min-height: 2.75rem; margin-top: 0.5rem; background: var(--qt2-gold); color: oklch(0.18 0.02 265); font-weight: 800; }
+
+/* Dica discreta ao apontar o mouse (botões da barra de ações) */
+.trainer-session-shell.qt2-session [data-hint] { position: relative; }
+.trainer-session-shell.qt2-session [data-hint]::after { content: attr(data-hint); position: absolute; bottom: calc(100% + 0.375rem); left: 50%; z-index: 20; width: max-content; max-width: 16rem; padding: 0.3125rem 0.5rem; border: 1px solid oklch(1 0 0 / 0.14); border-radius: 0.5rem; background: oklch(0.16 0.03 265); color: #fff; font-size: 0.75rem; font-weight: 600; line-height: 1.3; white-space: normal; text-transform: none; letter-spacing: 0; opacity: 0; pointer-events: none; transform: translate(-50%, 0.25rem); transition: opacity 0.15s ease 0.25s, transform 0.15s ease 0.25s; }
+.trainer-session-shell.qt2-session .qt2-strip [data-hint]::after { top: calc(100% + 0.375rem); bottom: auto; left: auto; right: 0; transform: translate(0, -0.25rem); }
+.trainer-session-shell.qt2-session [data-hint]:is(:hover, :focus-visible)::after { opacity: 1; transform: translate(-50%, 0); }
+.trainer-session-shell.qt2-session .qt2-strip [data-hint]:is(:hover, :focus-visible)::after { transform: translate(0, 0); }
+@media (hover: none) { .trainer-session-shell.qt2-session [data-hint]::after { display: none; } }
+@media (prefers-reduced-motion: reduce) { .trainer-session-shell.qt2-session [data-hint]::after { transition: none; } }

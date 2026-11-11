@@ -20,6 +20,8 @@ import {
   Lock,
   Loader2,
   LogOut,
+  Pause,
+  Play,
   MoreHorizontal,
   RotateCcw,
   Settings2,
@@ -113,6 +115,7 @@ import "@/styles/question-practice-workspaces.css";
 import "@/styles/student-assessment-workspaces.css";
 import "@/styles/question-trainer-professional-refinement.css";
 import "@/styles/question-trainer-wide.css";
+import { Hint } from "@/components/ui/hint";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({
@@ -356,11 +359,20 @@ function QuestionTrainer() {
   React.useEffect(() => {
     if (blocker.status === "blocked") setPausedAt(Date.now());
   }, [blocker.status]);
+  const [userPaused, setUserPaused] = React.useState(false);
+  const pauseByUser = () => {
+    setPausedAt((value) => value ?? Date.now());
+    setUserPaused(true);
+  };
   const resumeFromPause = () => {
     if (pausedAt) {
       setStartedAt((value) => value + (Date.now() - pausedAt));
       setPausedAt(null);
     }
+  };
+  const resumeUserPause = () => {
+    setUserPaused(false);
+    resumeFromPause();
   };
   const pendingRestore = React.useRef(false);
   const restoredSelection = React.useRef<string | null>(null);
@@ -1102,47 +1114,41 @@ function QuestionTrainer() {
           </span>
         </div>
       )}
-      <header className="trainer-topbar flex items-center justify-between gap-2">
-        <div className="trainer-topbar__group trainer-topbar__group--left flex min-w-0 items-center gap-1">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="shrink-0"
-            disabled={index === 0}
-            onClick={() => goTo(index - 1)}
-            aria-label="Questão anterior"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="shrink-0"
-            disabled={index + 1 >= questions.length}
-            onClick={next}
-            aria-label="Pular questão"
-          >
-            <SkipForward className="h-4 w-4" />
-          </Button>
-        </div>
-        <div className="trainer-topbar__group trainer-topbar__group--right flex shrink-0 items-center gap-1.5">
-          <Button
-            variant={savedForStudy ? "secondary" : "ghost"}
-            size="icon"
-            onClick={toggleSavedForStudy}
-            disabled={savedForStudy}
-            aria-pressed={savedForStudy}
-            aria-label={savedForStudy ? "Questão salva para estudar" : "Salvar para estudar"}
-          >
-            {savedForStudy ? (
-              <BookmarkCheck className="h-4 w-4" />
-            ) : (
-              <Bookmark className="h-4 w-4" />
-            )}
-          </Button>
+      <Card
+        className="question-window overflow-hidden border border-border bg-card text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
+        key={question.id}
+      >
+        <div className="qt2-strip">
+          <span className="qt2-strip__title">Treinador de questões</span>
+          <span className="qt2-strip__live">
+            <i aria-hidden /> Correção imediata
+          </span>
+          <div className="qt2-strip__actions">
+            <Hint content={userPaused ? "Retomar o treino e o cronômetro" : "Pausar o treino; o cronômetro para até você retomar"}>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="qt2-strip__btn"
+                aria-pressed={userPaused}
+                onClick={userPaused ? resumeUserPause : pauseByUser}
+              >
+                {userPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+                {userPaused ? "Retomar" : "Pausar"}
+              </Button>
+            </Hint>
+            <Hint content="Encerrar o treino; pedimos confirmação antes de sair">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="qt2-strip__btn qt2-strip__btn--stop"
+                onClick={() => setConfirmExit(true)}
+              >
+                <LogOut className="h-4 w-4" /> Encerrar
+              </Button>
+            </Hint>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Mais opções do treino">
+              <Button variant="ghost" size="icon" aria-label="Mais opções do treino" data-hint="Configuração, desempenho e ranking">
                 <MoreHorizontal className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -1171,21 +1177,18 @@ function QuestionTrainer() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          </div>
         </div>
-      </header>
-      <Card
-        className="question-window overflow-hidden border border-border bg-card text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
-        key={question.id}
-      >
-        <div className="qt2-strip flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/50 px-4 py-2.5">
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
-            Treinador de questões
-          </span>
-          <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700 dark:text-emerald-400">
-            <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />{" "}
-            Correção imediata
-          </span>
-        </div>
+        {userPaused && (
+          <div className="qt2-paused" role="dialog" aria-modal="false" aria-label="Treino pausado">
+            <Pause aria-hidden="true" />
+            <strong>Treino pausado</strong>
+            <p>O cronômetro está parado e a questão fica oculta até você retomar.</p>
+            <Button onClick={resumeUserPause} className="qt2-paused__resume">
+              <Play className="mr-2 h-4 w-4" /> Retomar treino
+            </Button>
+          </div>
+        )}
         <CardContent className="trainer-reading-content p-3.5 sm:p-5 md:p-7">
           <div className="trainer-reading-meta mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
             <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
@@ -1407,6 +1410,7 @@ function QuestionTrainer() {
                 onClick={() => goTo(index - 1)}
                 disabled={index === 0}
                 aria-label="Questão anterior"
+                data-hint="Voltar à questão anterior"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden="true" />
                 <span>Anterior</span>
@@ -1417,6 +1421,7 @@ function QuestionTrainer() {
                 aria-describedby={!answered && supportNotice ? supportNoticeId : undefined}
                 className={cn("trainer-action-dock__btn", !answered && "text-muted-foreground")}
                 onClick={openLearning}
+                data-hint="Abrir a explicação do assunto; o cronômetro pausa"
               >
                 {answered ? (
                   <BookOpenCheck className="h-4 w-4" aria-hidden="true" />
@@ -1432,6 +1437,7 @@ function QuestionTrainer() {
                   onClick={next}
                   disabled={index + 1 >= questions.length}
                   aria-label="Pular questão"
+                  data-hint="Pular sem responder; ela volta depois"
                 >
                   <SkipForward className="h-4 w-4" aria-hidden="true" />
                   <span>Pular</span>
@@ -1441,6 +1447,7 @@ function QuestionTrainer() {
                 variant={savedForStudy ? "secondary" : "ghost"}
                 className="trainer-action-dock__btn"
                 onClick={toggleSavedForStudy}
+                data-hint="Guardar esta questão no caderno de estudo"
                 disabled={savedForStudy}
                 aria-pressed={savedForStudy}
               >
