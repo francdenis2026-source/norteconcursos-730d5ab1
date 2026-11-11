@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, LockKeyhole, Pencil, ChevronLeft, ChevronRight, Clock, Plus, X } from "lucide-react";
+import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, LockKeyhole, Pencil, Trash2, ChevronLeft, ChevronRight, Clock, Plus, X } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
 import { Card } from "@astryxdesign/core/Card";
@@ -259,15 +259,16 @@ function CommitmentsEditor({
       <Dialog isOpen={!!pendingDelete} onOpenChange={(open) => { if (!open) setPendingDelete(null); }} width={420} padding={0}>
         {pendingDelete && (
           <div className="pcac-delete-dialog">
+            <div className="pcac-delete-dialog__illustration" aria-hidden="true"><Trash2 /></div>
             <DialogHeader
               title="Excluir compromisso?"
-              subtitle="Esta ação remove o compromisso do seu cronograma."
+              subtitle="O compromisso será removido do cronograma."
               onOpenChange={() => setPendingDelete(null)}
               hasDivider
             />
             <div className="pcac-delete-dialog__body">
-              <p><strong>{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</strong></p>
-              <p className="text-sm text-muted-foreground">{pendingDelete.time} · {pendingDelete.minutes} min</p>
+              <p className="pcac-delete-dialog__item">{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</p>
+              <p className="pcac-delete-dialog__meta">{pendingDelete.time} · {pendingDelete.minutes} min</p>
               <div className="pcac-delete-dialog__actions">
                 <AstryxButton label="Cancelar" variant="secondary" size="sm" onClick={() => setPendingDelete(null)} />
                 <AstryxButton label="Excluir compromisso" variant="danger" size="sm" icon={<X />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
