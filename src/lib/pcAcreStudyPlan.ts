@@ -18,7 +18,7 @@ export interface PcAcStudyBlock {
 /** Compromissos do aluno que ocupam horário fixo no dia e que o cronograma precisa respeitar. */
 export type PcAcCommitmentKind =
   | "trabalho" | "intervalo-trabalho" | "banho" | "descanso" | "deslocamento"
-  | "escola" | "medico" | "reuniao" | "emergencia" | "outro";
+  | "academia" | "escola" | "medico" | "reuniao" | "emergencia" | "outro";
 
 export const PCAC_COMMITMENT_LABEL: Record<PcAcCommitmentKind, string> = {
   trabalho: "Trabalho",
@@ -26,6 +26,7 @@ export const PCAC_COMMITMENT_LABEL: Record<PcAcCommitmentKind, string> = {
   banho: "Banho / cuidados pessoais",
   descanso: "Descanso / sono",
   deslocamento: "Deslocamento",
+  academia: "Academia / treino livre",
   escola: "Levar ou buscar filho na escola",
   medico: "Consulta médica",
   reuniao: "Reunião",
