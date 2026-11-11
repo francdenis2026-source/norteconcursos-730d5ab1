@@ -129,23 +129,33 @@
   }
 
   /* ---------------------------------------------------------------- */
-  /* PC-AC banner: show the officer photo at a readable opacity.       */
+  /* PC-AC banner: a arte (com texto próprio, "PC-AC") vira capa no    */
+  /* topo do card em vez de fundo — antes o texto da arte brigava com  */
+  /* os números de vagas/cargos/salário por cima dela.                 */
   /* ---------------------------------------------------------------- */
-  .home.hr-canvas .mobile-homepage .sx-banner__art {
-    opacity: 0.8;
-    object-position: 0% 15%;
-    transform: scale(1.55);
-    transform-origin: 2% 28%;
+  .home.hr-canvas .mobile-homepage .sx-banner {
+    display: flex !important;
+    flex-direction: column;
+    padding: 0 !important;
+    overflow: hidden;
   }
-  .home.hr-canvas .mobile-homepage .sx-banner::after {
-    background: linear-gradient(
-      180deg,
-      rgb(8 11 16 / 0.9) 0%,
-      rgb(8 11 16 / 0.72) 30%,
-      rgb(8 11 16 / 0.66) 100%
-    );
+  .home.hr-canvas .mobile-homepage .sx-banner > img.sx-banner__art {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 0 !important;
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1672 / 941;
+    object-fit: cover !important;
+    opacity: 1 !important;
   }
-
+  .home.hr-canvas .mobile-homepage .sx-banner::after { display: none; }
+  .home.hr-canvas .mobile-homepage .sx-banner .sx-banner__crest { display: none !important; }
+  .home.hr-canvas .mobile-homepage .sx-banner .sx-banner__copy {
+    position: relative;
+    padding: 14px 16px 16px;
+  }
   /* ---------------------------------------------------------------- */
   /* Plans: shorter, denser cards.                                     */
   /* ---------------------------------------------------------------- */

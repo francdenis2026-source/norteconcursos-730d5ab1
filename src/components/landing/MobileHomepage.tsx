@@ -3,6 +3,7 @@ import { ArrowRight, Gift, Crown, Gem, Mail, MapPin, MessageCircle, ShieldCheck,
 import { HomeIntro } from "@/components/landing/HomeIntro";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
+import { PcacBanner } from "@/components/landing/PcacBanner";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 
@@ -10,6 +11,7 @@ export function MobileHomepage() {
   return (
     <main className="mobile-homepage mobile-homepage--recomposed" id="conteudo-mobile" tabIndex={-1} aria-label="Norte Concursos para celular">
       <HomeIntro mobile />
+      <PcacBanner mobile />
       <section id="mobile-concursos" className="sx-section" aria-label="Concursos em foco">
         <ContestShowcase mobile />
       </section>

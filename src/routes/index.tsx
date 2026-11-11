@@ -1,6 +1,7 @@
 import { useHomeSection } from "@/hooks/useHomeSection";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
+import { PcacBanner } from "@/components/landing/PcacBanner";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -372,6 +373,7 @@ function Index() {
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
         <HomeIntro />
+        <PcacBanner />
 
         <section id="concursos" className="sx-section" aria-label="Concursos em foco">
           <ContestShowcase />
