@@ -100,7 +100,8 @@ export function sanitizePcAcCommitments(value: unknown): PcAcCommitment[] {
     const raw = item as Partial<PcAcCommitment> & Record<string, unknown>;
     if (!isHhMm(raw.time) || typeof raw.kind !== "string" || !COMMITMENT_KINDS.has(raw.kind)) continue;
     const minutes = Number(raw.minutes);
-    if (!Number.isFinite(minutes) || minutes < 5 || minutes > 16 * 60) continue;
+    // Até 24h: plantão (ex.: entra 19:00, sai 07:00 do dia seguinte) é um compromisso só, não dois.
+    if (!Number.isFinite(minutes) || minutes < 5 || minutes > 24 * 60) continue;
     const days = Array.isArray(raw.days)
       ? [...new Set(raw.days.filter((day) => Number.isInteger(day) && day >= 0 && day <= 6))].sort((a, b) => a - b)
       : [];

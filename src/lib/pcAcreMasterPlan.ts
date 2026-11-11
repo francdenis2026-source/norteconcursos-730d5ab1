@@ -282,11 +282,19 @@ function routineEvents(options: PcAcMasterPlanOptions, weekday: number, dateIso:
   add("rotina", "Lanche da tarde", options.afternoonSnackTime ?? "16:00", 15, "Lanche leve e pausa para recuperar a energia.");
   add("rotina", "Jantar", options.dinnerTime ?? "19:30", 45, "Jantar com calma e preparação para o período noturno.");
   for (const commitment of commitmentsFor(options, weekday, dateIso)) {
+    // Plantão que passa da meia-noite (ex.: entra 19:00, sai 07:00 do dia seguinte): o compromisso
+    // guarda a duração real (até 24h), mas aqui só bloqueia até o fim DESTE dia — a manhã do dia
+    // seguinte precisa de outro compromisso cadastrado para aquela data/dia da semana (ver dica no
+    // formulário). Sem esse corte, a matemática de colisão do dia quebra: "termina" enrolaria pra
+    // uma hora pequena (ex.: 07:00) e pareceria anterior ao início, liberando o resto do dia.
+    const start = toMin(commitment.time);
+    const fullDuration = Math.max(5, Math.round(commitment.minutes));
+    const duration = Math.min(fullDuration, 24 * 60 - start);
     add(
       "compromisso",
       commitment.label?.trim() || PCAC_COMMITMENT_LABEL[commitment.kind],
       commitment.time,
-      Math.max(5, Math.round(commitment.minutes)),
+      duration,
       commitment.date
         ? `Compromisso informado por você para esta data (${PCAC_COMMITMENT_LABEL[commitment.kind].toLocaleLowerCase("pt-BR")}). O estudo do dia foi remanejado para os horários livres.`
         : `Compromisso fixo da sua semana (${PCAC_COMMITMENT_LABEL[commitment.kind].toLocaleLowerCase("pt-BR")}). O estudo do dia foi remanejado para os horários livres.`,

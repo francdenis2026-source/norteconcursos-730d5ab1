@@ -149,3 +149,34 @@ test("PC-AC: compromissos do aluno são respeitados e o estudo é remanejado em 
     }
   }
 });
+
+test("PC-AC: plantão que passa da meia-noite é aceito e não quebra o dia", () => {
+  const cargo = pcAcVerticalCargos.find((item) => item.id === "investigador");
+  // Entra 19:00, sai 07:00 do dia seguinte (12h) numa data pontual.
+  const overnight = sanitizePcAcCommitments([
+    { id: "plantao", kind: "trabalho", label: "Plantão", time: "19:00", minutes: 12 * 60, date: "2026-11-18" },
+  ]);
+  assert.equal(overnight.length, 1, "plantão de 12h virando o dia deveria ser aceito");
+  assert.equal(overnight[0].minutes, 720);
+
+  // 24h cheias (entra e sai no mesmo horário, dia seguinte) — o limite agora é 24h, não 16h.
+  const fullDay = sanitizePcAcCommitments([
+    { id: "plantao24", kind: "trabalho", time: "07:00", minutes: 24 * 60, date: "2026-11-19" },
+  ]);
+  assert.equal(fullDay.length, 1, "plantão de 24h deveria ser aceito (antes o limite era 16h)");
+
+  const weeks = buildPcAcMasterPlan(config.days, PCAC_EXAM_DATE, { ...config, commitments: overnight }, cargo);
+  const day = weeks.flatMap((week) => week.days).find((d) => d.date === "2026-11-18");
+  assert.ok(day, "dia do plantão não foi gerado");
+  const work = day.activities.find((item) => item.type === "compromisso");
+  assert.ok(work, "plantão não apareceu como compromisso no dia");
+  assert.equal(work.start, "19:00");
+  // Bloqueado só até o fim deste dia — a madrugada é responsabilidade de outro compromisso
+  // cadastrado pro dia seguinte (ver dica do formulário).
+  assert.equal(work.end, "00:00");
+
+  const timed = day.activities.filter((item) => item.start && item.end).sort((a, b) => a.start.localeCompare(b.start));
+  for (let i = 1; i < timed.length; i += 1) {
+    assert.ok(timed[i - 1].end <= timed[i].start, "estudo marcado sobre o plantão");
+  }
+});
