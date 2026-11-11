@@ -24,12 +24,12 @@
   border-color: var(--legal-line);
 }
 .app-shell[data-area="student"] .legal-course-page .legal-course-toolbar { border-top: 2px solid var(--legal-cyan); background: color-mix(in srgb, var(--legal-cyan) 6%, var(--card)); }
-.app-shell[data-area="student"] .legal-course-page .legal-course-filters { border-left: 3px solid var(--legal-violet); background: color-mix(in srgb, var(--legal-violet) 6%, var(--card)); }
+.app-shell[data-area="student"] .legal-course-page .legal-course-filters { border-left: 1px solid var(--legal-violet); background: color-mix(in srgb, var(--legal-violet) 6%, var(--card)); }
 .app-shell[data-area="student"] .legal-course-page .legal-course-filters :is(input, select):focus { border-color: var(--legal-cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--legal-cyan) 15%, transparent); }
 .app-shell[data-area="student"] .legal-course-page .legal-unit-row { border-color: var(--legal-line); background: color-mix(in srgb, var(--legal-blue) 5%, var(--card)); }
 .app-shell[data-area="student"] .legal-course-page .legal-unit-row[aria-current="true"],
 .app-shell[data-area="student"] .legal-course-page .legal-unit-row.is-selected { border-color: var(--legal-amber); background: color-mix(in srgb, var(--legal-amber) 12%, var(--card)); }
-.app-shell[data-area="student"] .legal-course-page .legal-unit-row[data-due="true"] { border-left: 3px solid var(--legal-violet); }
+.app-shell[data-area="student"] .legal-course-page .legal-unit-row[data-due="true"] { border-left: 1px solid var(--legal-violet); }
 .app-shell[data-area="student"] .legal-course-page .legal-study-stage,
 .app-shell[data-area="student"] .legal-course-page [role="tablist"] { border-color: var(--legal-line); background: color-mix(in srgb, var(--legal-blue) 5%, var(--card)); }
 .app-shell[data-area="student"] .legal-course-page [role="tab"][data-state="active"] { background: var(--legal-amber); color: #201a0d; box-shadow: 0 5px 16px -12px var(--legal-amber); }

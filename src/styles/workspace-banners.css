@@ -30,7 +30,7 @@
   padding: 14px 18px !important;
   overflow: hidden;
   border: 1px solid #e1d3b52e !important;
-  border-left: 3px solid var(--workspace-banner-accent) !important;
+  border-left: 1px solid var(--workspace-banner-accent) !important;
   border-image: none !important;
   border-radius: 14px;
   color: var(--on-ink) !important;

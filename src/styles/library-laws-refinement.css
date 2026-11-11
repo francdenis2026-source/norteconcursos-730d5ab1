@@ -61,5 +61,5 @@
 .app-shell[data-area="student"] .material-library .library-reading-link { color: var(--library-blue); }
 @media (max-width: 700px) {
   .app-shell[data-area="student"] .material-library > nav[aria-label="Coleções de estudo"] > a { min-height: 76px; }
-  .app-shell[data-area="student"] .material-library .library-law-card { border-left-width: 3px; }
+  .app-shell[data-area="student"] .material-library .library-law-card { border-left-width: 1px; }
 }

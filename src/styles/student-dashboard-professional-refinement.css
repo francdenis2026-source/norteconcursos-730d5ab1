@@ -14,7 +14,7 @@
 .dark .app-shell[data-area="student"] .student-home { --dash-blue: #96bdff; --dash-cyan: #79e9ef; --dash-green: #64dfb2; --dash-amber: #f0c879; --dash-violet: #c8aaf6; --dash-rose: #efa6c2; }
 .app-shell[data-area="student"] .student-hub__masthead { border-top: 2px solid var(--dash-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--dash-cyan) 10%, var(--card)), var(--card) 68%); }
 .app-shell[data-area="student"] .student-hub__exam-spotlight { border-color: color-mix(in srgb, var(--dash-amber) 58%, var(--border)); background: color-mix(in srgb, var(--dash-amber) 9%, var(--card)); }
-.app-shell[data-area="student"] .student-desk__next { border-left: 3px solid var(--dash-amber); background: color-mix(in srgb, var(--dash-amber) 7%, var(--card)); }
+.app-shell[data-area="student"] .student-desk__next { border-left: 1px solid var(--dash-amber); background: color-mix(in srgb, var(--dash-amber) 7%, var(--card)); }
 .app-shell[data-area="student"] .student-desk__panel { border-color: var(--dash-line); background: linear-gradient(145deg, color-mix(in srgb, var(--dash-blue) 5%, var(--card)), var(--card) 68%); }
 .app-shell[data-area="student"] .student-home__metrics > * { border-color: var(--dash-line); background: color-mix(in srgb, var(--dash-blue) 6%, var(--card)); }
 .app-shell[data-area="student"] .student-home__metrics > *:nth-child(1) { border-top: 2px solid var(--dash-blue); }

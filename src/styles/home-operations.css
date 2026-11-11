@@ -74,7 +74,7 @@
   gap: 2px;
   padding: 7px 12px;
   border: 1px solid var(--stage-gold);
-  border-left-width: 3px;
+  border-left-width: 1px;
   border-radius: 4px;
   background: rgb(13 20 24 / 96%);
   color: var(--stage-gold);

@@ -505,7 +505,7 @@
   gap: 8px 16px;
   padding: 12px 14px;
   border: 1px solid var(--border);
-  border-left: 3px solid var(--question-accent);
+  border-left: 1px solid var(--question-accent);
   border-radius: 10px;
   background: var(--card);
 }
@@ -858,7 +858,7 @@
   align-items: stretch;
 }
 .question-workspace .catalog-metric:first-child {
-  border-left: 3px solid var(--question-accent);
+  border-left: 1px solid var(--question-accent);
   background: var(--card);
 }
 .question-workspace .catalog-metric:hover {

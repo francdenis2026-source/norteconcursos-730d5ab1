@@ -5,7 +5,7 @@
   --feedback-icon: #d6f0e0;
   scroll-margin-block: 110px 24px;
   border: 1px solid var(--feedback-line);
-  border-left: 4px solid var(--feedback-ink);
+  border-left: 1px solid var(--feedback-ink);
   border-radius: 14px;
   padding: 20px;
   background: var(--feedback-soft);

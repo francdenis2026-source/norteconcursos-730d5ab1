@@ -11,7 +11,7 @@
   padding: clamp(20px, 2.2vw, 30px) !important;
   overflow: hidden;
   border: 1px solid rgb(222 198 151 / 42%) !important;
-  border-left: 4px solid #d7b36e !important;
+  border-left: 1px solid #d7b36e !important;
   border-radius: 18px !important;
   background:
     linear-gradient(90deg, rgb(14 20 22 / 94%) 0%, rgb(17 25 28 / 88%) 42%, rgb(18 27 30 / 72%) 70%, rgb(18 27 30 / 58%) 100%),

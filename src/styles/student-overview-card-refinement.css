@@ -163,7 +163,7 @@
   gap: 22px;
   padding: 18px 22px;
   border: 1px solid color-mix(in srgb, var(--home-gold) 30%, var(--home-line));
-  border-left: 3px solid var(--home-gold);
+  border-left: 1px solid var(--home-gold);
   border-radius: 15px;
   background: color-mix(in srgb, var(--home-gold) 5%, var(--home-surface));
   box-shadow: none;

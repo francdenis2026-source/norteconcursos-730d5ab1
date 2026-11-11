@@ -47,9 +47,9 @@
   transition: transform .16s ease, border-color .16s ease, background-color .16s ease;
 }
 .app-shell[data-area="student"] .ranking-workspace .ranking-row:hover { transform: translateX(2px); border-color: var(--rank-cyan); background: color-mix(in srgb, var(--rank-cyan) 8%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(1) { border-left: 3px solid var(--rank-blue); background: color-mix(in srgb, var(--rank-blue) 10%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(2) { border-left: 3px solid var(--rank-gold); background: color-mix(in srgb, var(--rank-gold) 10%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(3) { border-left: 3px solid var(--rank-violet); background: color-mix(in srgb, var(--rank-violet) 9%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(1) { border-left: 1px solid var(--rank-blue); background: color-mix(in srgb, var(--rank-blue) 10%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(2) { border-left: 1px solid var(--rank-gold); background: color-mix(in srgb, var(--rank-gold) 10%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(3) { border-left: 1px solid var(--rank-violet); background: color-mix(in srgb, var(--rank-violet) 9%, var(--card)); }
 .app-shell[data-area="student"] .ranking-workspace .ranking-row__points { color: var(--rank-gold); font-size: 1rem; }
 .app-shell[data-area="student"] .ranking-workspace .ranking-row__avatar { border-color: color-mix(in srgb, var(--rank-cyan) 50%, var(--border)); background: color-mix(in srgb, var(--rank-cyan) 12%, var(--card)); }
 .app-shell[data-area="student"] .ranking-workspace input:focus,

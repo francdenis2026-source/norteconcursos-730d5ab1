@@ -86,7 +86,7 @@
   .app-shell .student-hub__masthead.student-hub__masthead--careers .student-hub__hero-visual img { width: 100%; object-fit: cover; object-position: 65% center; }
   .app-shell .student-hub__masthead.student-hub__masthead--careers .student-hub__hero-visual::after { background: linear-gradient(90deg, color-mix(in srgb, var(--card) 98%, transparent), color-mix(in srgb, var(--card) 92%, transparent) 48%, color-mix(in srgb, var(--card) 40%, transparent)); }
 }
-.achievement-notice { display: flex; align-items: flex-start; gap: 12px; width: min(360px, calc(100vw - 32px)); padding: 14px; border: 1px solid var(--border); border-left: 3px solid var(--brass); border-radius: 12px; background: var(--card); color: var(--foreground); box-shadow: 0 12px 36px rgb(0 0 0 / 16%); }
+.achievement-notice { display: flex; align-items: flex-start; gap: 12px; width: min(360px, calc(100vw - 32px)); padding: 14px; border: 1px solid var(--border); border-left: 1px solid var(--brass); border-radius: 12px; background: var(--card); color: var(--foreground); box-shadow: 0 12px 36px rgb(0 0 0 / 16%); }
 .achievement-notice > svg { width: 22px; height: 22px; flex: none; margin-top: 3px; color: var(--brass); }
 .achievement-notice > div { flex: 1; min-width: 0; }
 .achievement-notice > div > span { display: block; color: var(--muted-foreground); font-size: 10px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }

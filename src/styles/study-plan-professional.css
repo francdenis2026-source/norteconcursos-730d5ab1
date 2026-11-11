@@ -37,8 +37,8 @@
 .study-plan__priorities .text-lg { font-variant-numeric: tabular-nums; }
 .study-plan__goals,
 .study-plan__strategy { background: var(--plan-surface-soft); }
-.study-plan__goals { border-left: 3px solid color-mix(in srgb, var(--brass) 68%, var(--border)) !important; }
-.study-plan__strategy { border-left: 3px solid color-mix(in srgb, var(--emerald-500, #10b981) 65%, var(--border)) !important; }
+.study-plan__goals { border-left: 1px solid color-mix(in srgb, var(--brass) 68%, var(--border)) !important; }
+.study-plan__strategy { border-left: 1px solid color-mix(in srgb, var(--emerald-500, #10b981) 65%, var(--border)) !important; }
 .study-plan__week [class*="rounded-2xl border p-3"] { background: var(--plan-surface-soft); transition: border-color 160ms ease, transform 160ms ease; }
 .study-plan__week [class*="rounded-2xl border p-3"]:hover { border-color: color-mix(in srgb, var(--brass) 48%, var(--border)); transform: translateY(-1px); }
 .study-plan__execution [class*="rounded-2xl border p-4"] { background: var(--plan-surface-soft); }

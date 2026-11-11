@@ -374,7 +374,7 @@
   min-width: 0;
   padding: 18px;
   border: 1px solid var(--nc-student-line);
-  border-left: 3px solid var(--nc-student-cyan);
+  border-left: 1px solid var(--nc-student-cyan);
   border-radius: 15px;
   background: var(--nc-student-surface);
   color: var(--nc-student-ink);

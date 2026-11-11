@@ -20,7 +20,7 @@
   --perf-violet: #c7a9f5;
 }
 .app-shell[data-area="student"] .performance-page .performance-hero { min-height: 0; border-top: 2px solid var(--perf-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--perf-cyan) 9%, var(--card)), var(--card) 65%); }
-.app-shell[data-area="student"] .performance-page > .flex.flex-wrap.items-center.justify-between { border-color: var(--perf-line); border-left: 3px solid var(--perf-blue); background: color-mix(in srgb, var(--perf-blue) 6%, var(--card)); }
+.app-shell[data-area="student"] .performance-page > .flex.flex-wrap.items-center.justify-between { border-color: var(--perf-line); border-left: 1px solid var(--perf-blue); background: color-mix(in srgb, var(--perf-blue) 6%, var(--card)); }
 .app-shell[data-area="student"] .performance-page .performance-fold { border-color: var(--perf-line); background: color-mix(in srgb, var(--perf-violet) 5%, var(--card)); }
 .app-shell[data-area="student"] .performance-page .performance-fold > summary { min-height: 54px; }
 .app-shell[data-area="student"] .performance-page .performance-overview > section.grid { gap: 12px; }

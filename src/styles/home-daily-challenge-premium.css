@@ -18,7 +18,7 @@
   overflow: hidden;
   text-decoration: none !important;
   border: 1px solid rgb(203 160 76 / 56%);
-  border-left: 3px solid #d6a84f;
+  border-left: 1px solid #d6a84f;
   border-radius: 5px;
   background:
     radial-gradient(ellipse at 4% 50%, rgb(213 169 83 / 15%), transparent 32%),

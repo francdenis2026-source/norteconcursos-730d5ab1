@@ -770,7 +770,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 /* Action-first refinement: the recommended study step leads the page without
    making the supporting metrics compete with it. */
 .app-shell[data-area="student"] .student-overview .student-desk__next {
-  border-left-width: 4px !important;
+  border-left-width: 1px !important;
   box-shadow: 0 12px 26px rgb(15 23 42 / 10%) !important;
 }
 .app-shell[data-area="student"] .student-overview .student-desk__next .student-home__primary {
@@ -992,7 +992,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 /* Next action reads as one compact call-to-action, not a second hero. */
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next {
   border: 1px solid color-mix(in srgb, var(--home-gold) 42%, var(--home-line)) !important;
-  border-left: 3px solid var(--home-gold) !important;
+  border-left: 1px solid var(--home-gold) !important;
   border-radius: 12px;
   padding: 10px 14px;
   background: color-mix(in srgb, var(--home-gold) 7%, var(--home-surface)) !important;

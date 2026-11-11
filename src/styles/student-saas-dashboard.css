@@ -125,7 +125,7 @@
 .app-shell[data-area="student"] .student-overview :is(.student-hub__main,.student-hub__rail) { gap: 16px; }
 .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
   padding: 20px; border: 1px solid var(--saas-line); border-radius: 16px;
-  border-left: 3px solid var(--saas-blue);
+  border-left: 1px solid var(--saas-blue);
   background: var(--saas-panel); box-shadow: 0 7px 20px -18px rgb(20 45 70 / 35%);
 }
 :root.dark .app-shell[data-area="student"] .student-overview .student-home__card[data-accent] {
@@ -152,7 +152,7 @@
 :root.dark .app-shell[data-area="student"] .student-overview .student-home__text-link { color: var(--nc-color-action); }
 .app-shell[data-area="student"] .student-overview .student-desk__next {
   border: 1px solid color-mix(in srgb,var(--saas-amber) 42%,var(--saas-line));
-  border-left: 4px solid var(--saas-amber); border-radius: 15px;
+  border-left: 1px solid var(--saas-amber); border-radius: 15px;
   background: color-mix(in srgb,var(--saas-amber) 8%,var(--saas-panel));
   padding: 18px 20px;
 }

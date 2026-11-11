@@ -165,7 +165,7 @@
   box-shadow: 0 1px 2px rgb(16 21 28 / 0.05) !important;
 }
 .app-shell[data-area="student"]:not(#_):not(#_) .student-desk__next {
-  border-left: 3px solid var(--sp-gold-bg) !important;
+  border-left: 1px solid var(--sp-gold-bg) !important;
 }
 .app-shell[data-area="student"]:not(#_):not(#_) .student-home__empty {
   padding: 4px 0 0 !important;

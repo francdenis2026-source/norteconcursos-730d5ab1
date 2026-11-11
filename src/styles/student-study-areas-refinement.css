@@ -28,9 +28,9 @@
 .app-shell[data-area="student"] .law-finder { width: 100%; max-width: 1480px; margin-inline: auto; }
 .app-shell[data-area="student"] .law-finder__search { border-color: color-mix(in srgb, var(--area-cyan, #5edbe5) 48%, var(--border)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--area-cyan, #5edbe5) 8%, transparent); }
 .app-shell[data-area="student"] .law-finder__themes-panel { border-top: 2px solid var(--area-violet, #b99aef); background: color-mix(in srgb, var(--area-violet, #b99aef) 5%, var(--card)); }
-.app-shell[data-area="student"] .law-finder__group:nth-child(3n + 1) { border-left: 3px solid var(--area-blue, #82aaff); }
-.app-shell[data-area="student"] .law-finder__group:nth-child(3n + 2) { border-left: 3px solid var(--area-amber, #e4b461); }
-.app-shell[data-area="student"] .law-finder__group:nth-child(3n) { border-left: 3px solid var(--area-green, #54d1a5); }
+.app-shell[data-area="student"] .law-finder__group:nth-child(3n + 1) { border-left: 1px solid var(--area-blue, #82aaff); }
+.app-shell[data-area="student"] .law-finder__group:nth-child(3n + 2) { border-left: 1px solid var(--area-amber, #e4b461); }
+.app-shell[data-area="student"] .law-finder__group:nth-child(3n) { border-left: 1px solid var(--area-green, #54d1a5); }
 .app-shell[data-area="student"] .dictionary-workspace > .page-hero { border-top-color: var(--area-violet); }
 .app-shell[data-area="student"] .dictionary-workspace .rounded-md.border:hover,
 .app-shell[data-area="student"] .dictionary-workspace [data-slot="card"]:hover { border-color: var(--area-cyan); }

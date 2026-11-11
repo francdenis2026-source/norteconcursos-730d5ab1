@@ -72,7 +72,7 @@
 :root.dark .app-shell[data-area="student"] #dashboard-content :is(.page-hero,.tactical-feature-hero,.catalog-command-hero,.study-assistant-hero,.exam-simulator-hero,.trainer-workbench-hero,.library-header,.edital-heading,.edital-topic-heading,.ranking-glass-header,.video-study-page__header) {
   color: var(--student-ink);
   border: 1px solid var(--student-border-strong) !important;
-  border-left: 3px solid var(--student-teal) !important;
+  border-left: 1px solid var(--student-teal) !important;
   border-radius: 16px;
   background: linear-gradient(112deg,#18233b 0%,#202d4a 68%,#25314b 100%) !important;
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%), 0 12px 30px -26px #000 !important;
@@ -157,7 +157,7 @@
 :root.dark .app-shell[data-area="student"] .student-overview .student-hub__masthead {
   min-height: 116px !important;
   border: 1px solid #405174 !important;
-  border-left: 4px solid #7695ff !important;
+  border-left: 1px solid #7695ff !important;
   border-radius: 16px !important;
   background: linear-gradient(112deg,#18233b 0%,#202d4b 64%,#25324e 100%) !important;
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%),0 14px 32px -28px #000;

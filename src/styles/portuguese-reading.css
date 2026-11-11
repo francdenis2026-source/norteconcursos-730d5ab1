@@ -112,7 +112,7 @@
 .portuguese-reader .study-prose h3 {
   margin-top: 20px;
   padding-left: 10px;
-  border-left: 3px solid var(--brass);
+  border-left: 1px solid var(--brass);
   font-size: 1rem;
   line-height: 1.5;
   color: var(--foreground);

@@ -221,7 +221,7 @@
   border-color: var(--pcac-line, var(--border));
 }
 .pcac-edital-cronograma .rounded-lg.border.border-amber-400\/40 {
-  border-left-width: 3px;
+  border-left-width: 1px;
 }
 @media (min-width: 1100px) {
   .pcac-edital-cronograma > [data-slot="card-content"] { padding-inline: clamp(20px, 2.6vw, 40px); }
@@ -314,7 +314,7 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
 }
 .pcac-edital-cronograma .pcac-week-card {
-  border-left-width: 4px;
+  border-left-width: 1px;
   box-shadow: 0 7px 18px -16px rgb(0 0 0 / 55%);
 }
 .pcac-edital-cronograma .pcac-week-card > p {
@@ -482,7 +482,7 @@
 .pcac-astrix-body .grid.sm\:grid-cols-2 button { border: 1px solid #52745b; border-radius: 7px; }
 .pcac-astrix-body .grid.sm\:grid-cols-2 button[aria-pressed="true"] { background: #27714e; color: #fff; }
 .pcac-astrix-body .grid.sm\:grid-cols-2 button[aria-pressed="false"] { background: #304035; color: #d5dfd6; }
-.pcac-astrix-body .pcac-week-card { background: #22352a; border: 1px solid #49614f; border-left: 3px solid #d6ba54; border-radius: 8px; box-shadow: none; }
+.pcac-astrix-body .pcac-week-card { background: #22352a; border: 1px solid #49614f; border-left: 1px solid #d6ba54; border-radius: 8px; box-shadow: none; }
 .pcac-astrix-body .pcac-week-card > p { color: #f2d678; }
 .pcac-astrix-body [data-slot="accordion-item"] { border-color: #3a5747; }
 .pcac-astrix-body [data-slot="accordion-trigger"] { color: #e8efe8; }
@@ -623,7 +623,7 @@
   min-height: 65px;
   padding: 10px 11px;
   border: 1px solid #45525c;
-  border-left: 3px solid #bd9955;
+  border-left: 1px solid #bd9955;
   border-radius: 9px;
   background: #181f27;
 }
