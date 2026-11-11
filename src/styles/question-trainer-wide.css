@@ -127,3 +127,82 @@
 @media (max-height: 30rem) {
   .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar { position: static; }
 }
+
+/* ── Sessão: fluxo natural em janela normal e em tela cheia ─────────────────────
+   As camadas antigas fixavam a altura do cartão e rolavam enunciado e alternativas
+   por dentro; com fonte ampliada a questão ficava cortada. Aqui a página inteira rola
+   e só a barra de ações fica presa no rodapé. Os !important vencem os das camadas antigas. */
+html .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace.qt2-session {
+  position: relative !important;
+  inset: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 0 0.75rem !important;
+  overflow: visible !important;
+}
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session > .question-window,
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session > .question-window > .trainer-reading-content,
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session .trainer-reading-content > :is(.trainer-reading-stem, .trainer-reading-answers, .trainer-reading-explanation) {
+  flex: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session > .question-window { display: block !important; border-radius: 1rem; }
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session > .question-window > .trainer-reading-content {
+  display: block !important;
+  padding: 0.75rem 1rem 0 !important;
+}
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session .trainer-reading-content > .trainer-reading-answers { margin-top: 0.75rem; padding-left: 0 !important; border-left: 0 !important; }
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session .trainer-reading-content > .trainer-reading-stem { padding-right: 0 !important; }
+@media (min-width: 75rem) {
+  html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session > .question-window > .trainer-reading-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) !important;
+    grid-template-rows: none !important;
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+  html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session .trainer-reading-content > .trainer-reading-answers { margin-top: 0; }
+}
+/* Barra de ações sempre à vista, acima da faixa do rodapé */
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session .trainer-reading-content > .trainer-reading-actions {
+  position: sticky !important;
+  bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 2.5rem)) + 0.25rem) !important;
+  z-index: 6;
+  margin: 0.75rem -1rem 0 !important;
+  padding: 0.5rem 1rem !important;
+  border-top: 1px solid color-mix(in srgb, var(--qt2-gold) 45%, var(--border)) !important;
+  border-radius: 0 0 1rem 1rem;
+  background: color-mix(in srgb, var(--qt2-gold) 8%, var(--card)) !important;
+  box-shadow: 0 -0.5rem 1.25rem -1rem oklch(0 0 0 / 0.7);
+}
+/* Barra de comandos da sessão: uma linha baixa */
+html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspace.qt2-session > .trainer-topbar {
+  flex: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 0.75rem;
+}
+/* Faixa do cartão com foto colorida */
+.trainer-session-shell.qt2-session .qt2-strip {
+  position: relative;
+  min-height: 3.25rem;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  background: oklch(0.2 0.07 262) !important;
+  color: #fff;
+  isolation: isolate;
+}
+.trainer-session-shell.qt2-session .qt2-strip::before { content: ""; position: absolute; inset: 0 0 0 auto; z-index: -1; width: min(60%, 40rem); background: url("/media/hero/trainer.webp") center 42% / cover no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%); mask-image: linear-gradient(90deg, transparent, #000 45%); }
+.trainer-session-shell.qt2-session .qt2-strip > span { color: #fff !important; text-shadow: 0 1px 2px oklch(0 0 0 / 0.6); }
+.trainer-session-shell.qt2-session .qt2-strip > span:first-child { font-size: 0.8125rem; color: var(--qt2-gold) !important; }

@@ -1177,7 +1177,7 @@ function QuestionTrainer() {
         className="question-window overflow-hidden border border-border bg-card text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
         key={question.id}
       >
-        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/50 px-4 py-2.5">
+        <div className="qt2-strip flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/50 px-4 py-2.5">
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
             Treinador de questões
           </span>
