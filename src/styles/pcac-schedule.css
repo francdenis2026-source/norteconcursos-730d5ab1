@@ -950,3 +950,7 @@
 }
 .pcac-schedule .pcac-logic__rules { margin: 8px 0 0; padding-inline-start: 20px; display: grid; gap: 6px; }
 .pcac-schedule .pcac-logic__note { margin: 12px 0 0; font-size: 11.5px; }
+
+.pcac-schedule__save-feedback { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 8px; color: #2f9b6f; font-size: 12px; font-weight: 700; }
+.pcac-schedule__save-feedback svg { width: 15px; height: 15px; }
+.pcac-schedule__save-feedback--error { color: #d98b72; }

@@ -348,6 +348,7 @@ export function PcAcCronogramaCard({
     return () => observer.disconnect();
   }, []);
   const [exporting, setExporting] = React.useState(false);
+  const [saveStatus, setSaveStatus] = React.useState<"idle" | "saving" | "saved" | "error">("idle");
   const showDetailedPlan = true;
   const configKey = `${userId}:${cargo.id}`;
   const configLoaded = loadedConfigKey === configKey;
@@ -404,6 +405,30 @@ export function PcAcCronogramaCard({
       if (typeof window !== "undefined") writePcAcStudyConfig(window.localStorage, userId, cargo.id, next);
       return next;
     });
+  };
+
+  const saveConfiguration = async () => {
+    if (!configLoaded || saveStatus === "saving") return;
+    setSaveStatus("saving");
+    writePcAcStudyConfig(window.localStorage, userId, cargo.id, cfg);
+    if (userId === "guest") {
+      setSaveStatus("saved");
+      window.setTimeout(() => setSaveStatus("idle"), 2800);
+      return;
+    }
+    const { error } = await supabase
+      .from("user_study_plan_configs")
+      .upsert(
+        { user_id: userId, cargo_id: cargo.id, config: cfg, updated_at: new Date().toISOString() },
+        { onConflict: "user_id,cargo_id" },
+      );
+    if (error) {
+      console.warn("Não foi possível guardar o cronograma; a cópia local foi mantida.", error);
+      setSaveStatus("error");
+      return;
+    }
+    setSaveStatus("saved");
+    window.setTimeout(() => setSaveStatus("idle"), 2800);
   };
 
   // Salva com debounce no Supabase, isolado por user_id + cargo_id e protegido por RLS.
@@ -579,12 +604,22 @@ export function PcAcCronogramaCard({
       <header className="pcac-schedule__header">
         <h2><CalendarClock aria-hidden="true" /> Seu cronograma</h2>
         <p>{daysLeft} dias até a prova · {cfg.weeklyHours}h por semana · {cfg.days.length} dias de estudo</p>
-        <nav aria-label="Exportar cronograma">
+        <nav aria-label="Ações do cronograma">
+          <AstryxButton
+            label={saveStatus === "saving" ? "Guardando…" : "Guardar configurações"}
+            size="sm"
+            variant="primary"
+            icon={saveStatus === "saved" ? <CheckCircle2 /> : <CalendarCheck2 />}
+            clickAction={saveConfiguration}
+            isDisabled={!configLoaded || saveStatus === "saving"}
+          />
           <AstryxButton label="Exportar PDF" size="sm" variant="secondary" icon={<Download />} clickAction={exportPdf} isDisabled={!configLoaded || !!startError || exporting} />
           <AstryxButton label="PDF Norte + QR" size="sm" variant="primary" icon={<Download />} clickAction={exportBrandedPdf} isDisabled={!configLoaded || !weeks.length || !!startError || exporting} />
         </nav>
       </header>
       {exportError && <p role="alert">{exportError}</p>}
+      {saveStatus === "saved" && <p className="pcac-schedule__save-feedback" role="status"><CheckCircle2 aria-hidden="true" /> Configurações guardadas com sucesso.</p>}
+      {saveStatus === "error" && <p className="pcac-schedule__save-feedback pcac-schedule__save-feedback--error" role="alert">Não foi possível guardar na conta. A cópia local foi mantida.</p>}
       <section className="pcac-schedule__body">
         {todayPlanDay && (
           <Card variant="teal" className="pcac-schedule__today">
