@@ -18,15 +18,26 @@ export function useLockedAnswers(userId: string | undefined, enabled: boolean, c
     queryKey: key,
     enabled: enabled && !!userId,
     staleTime: 0,
-    retry: 0,
+    // 1 nova tentativa: sobrevive a um blip isolado sem travar a tela por muito tempo numa
+    // conexão já lenta de verdade (ver CATALOG_RETRY em useQuestionCatalog.ts).
+    retry: 1,
+    retryDelay: 1000,
     refetchOnWindowFocus: true,
-    queryFn: async () => {
-      const { error: probeError } = await supabase.rpc("get_question_first_answers" as never).range(0, 0);
+    // Sem `abortSignal`, uma chamada que nunca resolve (conexão travada) deixava
+    // `result.isPending` true pra sempre — e esse hook nunca tem seu próprio `error`
+    // conferido pelo Treinador, então a tela ficava presa em "Preparando seu treino"
+    // sem jeito de sair. Cada chamada agora tem um teto de 20s, como no acervo.
+    queryFn: async ({ signal }) => {
+      const withTimeout = () => AbortSignal.any([signal, AbortSignal.timeout(20000)]);
+      const { error: probeError } = await supabase.rpc("get_question_first_answers" as never)
+        .range(0, 0)
+        .abortSignal(withTimeout());
       if (!probeError) {
         const rows = await fetchAllRows<AnswerHistoryRow>((from, to) =>
           supabase.rpc("get_question_first_answers" as never)
             .order("answered_at").order("question_table").order("question_id")
-            .range(from, to) as unknown as PromiseLike<{ data: AnswerHistoryRow[] | null; error: unknown }>,
+            .range(from, to)
+            .abortSignal(withTimeout()) as unknown as PromiseLike<{ data: AnswerHistoryRow[] | null; error: unknown }>,
         );
         return { rows, identityReady: true };
       }
@@ -35,11 +46,13 @@ export function useLockedAnswers(userId: string | undefined, enabled: boolean, c
       const rows = await Promise.all([
         fetchAllRows<AnswerHistoryRow>((from, to) => supabase.from("question_training_responses")
           .select("question_id,question_source,selected_answer,is_correct,created_at")
-          .eq("user_id", userId!).order("created_at").order("id").range(from, to)),
+          .eq("user_id", userId!).order("created_at").order("id").range(from, to)
+          .abortSignal(withTimeout())),
         fetchAllRows<AnswerHistoryRow>((from, to) => supabase.from("simulator_responses")
           .select("question_id,question_source,selected_answer,is_correct,created_at")
           .eq("user_id", userId!).not("selected_answer", "is", null)
-          .order("created_at").order("id").range(from, to)),
+          .order("created_at").order("id").range(from, to)
+          .abortSignal(withTimeout())),
       ]);
       return { rows: rows.flat(), identityReady: false };
     },
