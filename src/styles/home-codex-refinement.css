@@ -1,0 +1,217 @@
+/* Norte homepage refinement layer
+ * Scoped to the public homepage so existing study and admin surfaces remain unchanged.
+ */
+.home {
+  --home-canvas: oklch(0.975 0.006 220);
+  --home-surface: oklch(1 0 0 / 0.94);
+  --home-surface-strong: oklch(1 0 0);
+  --home-ink: oklch(0.24 0.035 215);
+  --home-ink-muted: oklch(0.49 0.035 215);
+  --home-line: oklch(0.24 0.035 215 / 0.12);
+  --home-brand: oklch(0.46 0.09 205);
+  --home-brand-strong: oklch(0.36 0.075 210);
+  --home-brass: oklch(0.72 0.12 78);
+  --home-shadow: 0 18px 48px oklch(0.24 0.035 215 / 0.09);
+  color: var(--home-ink);
+  background:
+    radial-gradient(circle at 12% 4%, oklch(0.86 0.045 205 / 0.32), transparent 28rem),
+    radial-gradient(circle at 90% 12%, oklch(0.91 0.06 78 / 0.2), transparent 24rem),
+    var(--home-canvas);
+}
+
+.home-header {
+  background: color-mix(in oklab, var(--home-surface) 88%, transparent);
+  border-bottom: 1px solid var(--home-line);
+  box-shadow: 0 8px 28px oklch(0.24 0.035 215 / 0.05);
+  backdrop-filter: blur(18px);
+}
+
+.home-header[data-scrolled="true"] {
+  box-shadow: var(--home-shadow);
+}
+
+.home-container {
+  width: min(100% - 2rem, 76rem);
+  margin-inline: auto;
+}
+
+.home-header__inner {
+  min-height: 4.5rem;
+  gap: 1rem;
+}
+
+.home-brand-lockup {
+  gap: 0.75rem;
+}
+
+.home-nav {
+  gap: 0.25rem;
+}
+
+.home-nav a {
+  min-height: 2.75rem;
+  padding-inline: 0.8rem;
+  border-radius: 999px;
+  color: var(--home-ink-muted);
+  transition: color 420ms cubic-bezier(0.32, 0.72, 0, 1), background-color 420ms cubic-bezier(0.32, 0.72, 0, 1), transform 420ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.home-nav a:hover,
+.home-nav a[aria-current="location"] {
+  color: var(--home-brand-strong);
+  background: oklch(0.92 0.035 205 / 0.72);
+  transform: translateY(-1px);
+}
+
+.home-nav__icon {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 1.7;
+}
+
+.home-header__actions {
+  gap: 0.5rem;
+}
+
+.home-button--primary {
+  min-height: 2.75rem;
+  padding-inline: 1rem;
+  border-radius: 999px;
+  color: white;
+  background: var(--home-brand-strong);
+  box-shadow: 0 8px 20px oklch(0.36 0.075 210 / 0.2);
+  transition: transform 520ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 520ms cubic-bezier(0.32, 0.72, 0, 1), background-color 520ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.home-button--primary:hover {
+  background: var(--home-brand);
+  box-shadow: 0 12px 28px oklch(0.36 0.075 210 / 0.26);
+  transform: translateY(-2px);
+}
+
+.home-button--primary:active {
+  transform: scale(0.98);
+}
+
+.home-menu-trigger {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  color: var(--home-ink);
+  background: var(--home-surface);
+  transition: transform 520ms cubic-bezier(0.32, 0.72, 0, 1), background-color 520ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.home-menu-trigger:hover {
+  background: oklch(0.93 0.035 205);
+  transform: translateY(-2px);
+}
+
+.home-skip:focus-visible,
+.home a:focus-visible,
+.home button:focus-visible {
+  outline: 3px solid var(--home-brass);
+  outline-offset: 3px;
+}
+
+.home [class*="card"],
+.home [class*="panel"],
+.home [class*="feature"] {
+  border-color: var(--home-line);
+}
+
+.home .hm2-tile {
+  min-height: 7rem;
+  border: 1px solid var(--home-line);
+  border-radius: 1.25rem;
+  background: var(--home-surface);
+  box-shadow: 0 12px 32px oklch(0.24 0.035 215 / 0.06);
+  transition: transform 600ms cubic-bezier(0.32, 0.72, 0, 1), box-shadow 600ms cubic-bezier(0.32, 0.72, 0, 1), border-color 600ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.home .hm2-tile:hover {
+  border-color: oklch(0.46 0.09 205 / 0.36);
+  box-shadow: var(--home-shadow);
+  transform: translateY(-4px);
+}
+
+.dark .home {
+  --home-canvas: oklch(0.17 0.03 215);
+  --home-surface: oklch(0.23 0.035 215 / 0.88);
+  --home-surface-strong: oklch(0.27 0.04 215);
+  --home-ink: oklch(0.94 0.02 210);
+  --home-ink-muted: oklch(0.74 0.025 210);
+  --home-line: oklch(0.94 0.02 210 / 0.14);
+  --home-brand: oklch(0.72 0.1 200);
+  --home-brand-strong: oklch(0.62 0.095 205);
+  --home-brass: oklch(0.8 0.12 78);
+  background:
+    radial-gradient(circle at 12% 4%, oklch(0.35 0.08 205 / 0.24), transparent 28rem),
+    radial-gradient(circle at 90% 12%, oklch(0.38 0.06 78 / 0.14), transparent 24rem),
+    var(--home-canvas);
+}
+
+.dark .home .home-nav a:hover,
+.dark .home .home-nav a[aria-current="location"] {
+  color: var(--home-ink);
+  background: oklch(0.72 0.1 200 / 0.16);
+}
+
+.dark .home .home-button--primary {
+  color: oklch(0.18 0.03 215);
+  background: var(--home-brand);
+}
+
+.dark .home .home-menu-trigger:hover {
+  background: oklch(0.72 0.1 200 / 0.16);
+}
+
+@media (max-width: 60rem) {
+  .home-nav a {
+    padding-inline: 0.55rem;
+  }
+
+  .home-nav a span {
+    display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .home-container {
+    width: min(100% - 2rem, 40rem);
+  }
+
+  .home-header__inner {
+    min-height: 4rem;
+  }
+
+  .home-header__register {
+    min-width: 2.75rem;
+    padding-inline: 0.75rem;
+  }
+
+  .home-header__register:not(:focus-visible) {
+    font-size: 0;
+  }
+
+  .home-header__register svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .home .hm2-tile {
+    min-height: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home *,
+  .home *::before,
+  .home *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
