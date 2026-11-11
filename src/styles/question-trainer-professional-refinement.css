@@ -108,13 +108,13 @@
   background: var(--trainer-surface-muted);
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-start-bar {
   border-color: var(--trainer-border);
   background: var(--trainer-surface-muted);
   padding: 14px;
 }
 
-.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl p {
+.app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-start-bar p {
   color: var(--trainer-text);
 }
 
@@ -187,16 +187,21 @@
      página inteira. Fixa essa barra no rodapé da tela (acima da navegação inferior fixa, que
      tem ~64px) assim que ela deixa de caber no fluxo normal, pra o botão nunca ficar escondido. */
   .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup {
-    padding-bottom: 16px;
+    padding-bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 68px)) + 20px);
   }
 
-  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-start-bar {
     position: sticky;
-    bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 68px)) + 8px);
+    bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 68px)) + 6px);
     z-index: 5;
-    gap: 8px;
-    padding: 10px 12px;
-    box-shadow: 0 10px 26px -16px rgb(0 0 0 / .4);
+    margin-top: 12px;
+    padding: 6px;
+    box-shadow: 0 8px 20px -14px rgb(0 0 0 / .5);
+  }
+
+  /* Telas baixas: a barra rola junto com o conteúdo em vez de ficar fixa e comer espaço. */
+  @media (max-height: 560px) {
+    .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup .trainer-start-bar { position: static; }
   }
 
   /* Ações da questão: barra fixa logo acima da navegação inferior. Antes ficavam no fim do card,
