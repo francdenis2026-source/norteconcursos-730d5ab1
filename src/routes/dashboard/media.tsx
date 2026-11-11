@@ -143,7 +143,7 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
 function MediaCenterPage() {
   const { isAdmin } = useAuthStatus();
   const { catalog } = useMediaCatalog();
-  const { tab } = Route.useSearch();
+  const { tab, subject, topic } = Route.useSearch();
   const hasPodcasts = catalog.podcasts.length > 0;
   return (
     <div className="nc-learning-workspace video-study-page">
@@ -174,7 +174,7 @@ function MediaCenterPage() {
           <VideoWorkspace mode="playlists" />
         </TabsContent>
         <TabsContent value="assuntos">
-          <VideoWorkspace mode="topics" />
+          <VideoWorkspace mode="topics" initialSubject={subject} initialTopic={topic} />
         </TabsContent>
         <TabsContent value="enem">
           <VideoWorkspace mode="enem" />

@@ -524,6 +524,45 @@
   margin-block-end: 14px;
 }
 
+/* Inline material shortcuts stay inside the discipline cell and never change row sizing. */
+.pcac-material-shortcuts {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.pcac-material-shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 20px;
+  max-width: 100%;
+  padding: 2px 5px;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+  border-radius: 5px;
+  color: hsl(var(--primary));
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+.pcac-material-shortcut:hover,
+.pcac-material-shortcut:focus-visible {
+  border-color: hsl(var(--primary));
+  background: color-mix(in srgb, hsl(var(--primary)) 12%, transparent);
+  outline: none;
+}
+.pcac-material-shortcut__icon { width: 12px; height: 12px; }
+.pcac-material-shortcut__external { width: 9px; height: 9px; opacity: .65; }
+.pcac-material-shortcut--secondary { color: hsl(var(--muted-foreground)); border-style: dashed; }
+@media (max-width: 720px) {
+  .pcac-material-shortcuts { display: flex; margin: 3px 0 0; }
+}
+
 /* Navegação por semanas: cada semana recebe um acento próprio (ciclo de 5 tons). */
 .pcac-schedule .pcac-week--1 { --pcac-week-accent: #c79a45; }
 .pcac-schedule .pcac-week--2 { --pcac-week-accent: #3f9a72; }

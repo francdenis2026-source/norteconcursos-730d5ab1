@@ -1,6 +1,7 @@
 import { useId, useMemo, useState } from "react";
 import { BookOpen, ListVideo, PanelRightClose, PanelRightOpen, Search } from "lucide-react";
 import { useMediaCatalog } from "@/lib/mediaStore";
+import { canonicalSubject, topicIdentity } from "@/lib/subjects";
 import { isPlaylistId } from "@/lib/arsenal";
 import { LessonPlayer, type LessonSource } from "./LessonPlayer";
 
@@ -10,12 +11,20 @@ const fold = (text: string) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 const label = (text: string) => text.replace(/^ENEM\s*[—-]\s*/, "");
-export function VideoWorkspace({ mode }: { mode: "playlists" | "topics" | "enem" }) {
+export function VideoWorkspace({
+  mode,
+  initialSubject,
+  initialTopic,
+}: {
+  mode: "playlists" | "topics" | "enem";
+  initialSubject?: string | undefined;
+  initialTopic?: string | undefined;
+}) {
   const { catalog } = useMediaCatalog();
   const id = useId();
-  const [pickedSubject, setSubject] = useState("");
+  const [pickedSubject, setSubject] = useState(initialSubject ?? "");
   const [picked, setPicked] = useState("");
-  const [topic, setTopic] = useState("all");
+  const [topic, setTopic] = useState(initialTopic ?? "all");
   const [search, setSearch] = useState("");
   const [focus, setFocus] = useState(false);
   const subjects = useMemo(
@@ -27,8 +36,15 @@ export function VideoWorkspace({ mode }: { mode: "playlists" | "topics" | "enem"
           ),
     [catalog, mode],
   );
-  const subject = subjects.includes(pickedSubject) ? pickedSubject : subjects[0] || "";
+  const requestedSubject = canonicalSubject(initialSubject);
+  const matchedSubject = subjects.find((candidate) => canonicalSubject(candidate) === requestedSubject);
+  const subject = pickedSubject
+    ? (matchedSubject ?? (initialSubject ? "" : subjects[0] || ""))
+    : subjects[0] || "";
   const topics = Object.keys(catalog.topicVideos[subject] || {}).filter((t) => t !== "*");
+  const topicFilter = topic === "all"
+    ? "all"
+    : topics.find((candidate) => topicIdentity(candidate) === topicIdentity(topic)) ?? "__no_topic_match__";
   const entries: LessonSource[] = useMemo(
     () =>
       mode === "playlists"
@@ -36,7 +52,7 @@ export function VideoWorkspace({ mode }: { mode: "playlists" | "topics" | "enem"
             .filter((p) => p.discipline === subject)
             .map((p) => ({ ...p, subject, topic: "Curso completo" }))
         : Object.entries(catalog.topicVideos[subject] || {})
-            .filter(([t]) => topic === "all" || t === topic)
+            .filter(([t]) => topicFilter === "all" || t === topicFilter)
             .flatMap(([t, videos]) =>
               videos.map((v) => ({
                 ...v,
@@ -44,7 +60,7 @@ export function VideoWorkspace({ mode }: { mode: "playlists" | "topics" | "enem"
                 topic: t === "*" ? "Revisões e aulas gerais" : t,
               })),
             ),
-    [catalog, mode, subject, topic],
+    [catalog, mode, subject, topicFilter],
   );
   // Keep the current lesson mounted when search only filters the sidebar.
   const current = entries.find((p) => `${p.topic}:${p.id}` === picked) || entries[0];
