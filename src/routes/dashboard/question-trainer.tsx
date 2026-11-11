@@ -7,7 +7,6 @@ import {
 import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
-  ArrowLeft,
   ArrowRight,
   Bookmark,
   BookmarkCheck,
@@ -16,10 +15,14 @@ import {
   Check,
   CheckCircle2,
   ChevronDown,
-  Flame,
+  ChevronLeft,
+  ListOrdered,
   Lock,
   Loader2,
+  LogOut,
+  MoreHorizontal,
   RotateCcw,
+  Settings2,
   SkipForward,
   Sparkles,
   Strikethrough,
@@ -54,6 +57,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Dialog,
   DialogContent,
@@ -965,45 +974,71 @@ function QuestionTrainer() {
           </span>
         </div>
       )}
-      <header className="trainer-topbar flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-        <span className="trainer-shield" role="img" aria-label="Norte Concurso">
-          <img src="/media/brand/norte-identity/emblema.svg" alt="" width={38} height={38} />
-        </span>
-        <div className="trainer-topbar__group trainer-topbar__group--left flex items-center gap-1.5">
-          <Button variant="outline" size="sm" onClick={() => setStarted(false)}>
-            <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
-          </Button>
-          <Button variant="ghost" size="sm" onClick={() => setConfirmExit(true)}>
-            Sair do treino
-          </Button>
-          <Button variant="ghost" size="sm" disabled={index === 0} onClick={() => goTo(index - 1)}>
-            <ArrowLeft className="mr-1.5 h-4 w-4" /> Anterior
+      <header className="trainer-topbar flex items-center justify-between gap-2">
+        <div className="trainer-topbar__group trainer-topbar__group--left flex min-w-0 items-center gap-1">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="shrink-0"
+            disabled={index === 0}
+            onClick={() => goTo(index - 1)}
+            aria-label="Questão anterior"
+          >
+            <ChevronLeft className="h-4 w-4" />
           </Button>
           <Button
             variant="ghost"
-            size="sm"
+            size="icon"
+            className="shrink-0"
             disabled={index + 1 >= questions.length}
             onClick={next}
+            aria-label="Pular questão"
           >
-            <SkipForward className="mr-1.5 h-4 w-4" /> Pular
+            <SkipForward className="h-4 w-4" />
           </Button>
         </div>
-        <div className="trainer-topbar__group trainer-topbar__group--right flex items-center gap-2">
-          <Button variant={savedForStudy ? "secondary" : "outline"} size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
-            {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
-            {savedForStudy ? "Salva" : "Salvar"}
-          </Button>
-          <Badge variant="secondary">
-            <Flame className="mr-1 h-3.5 w-3.5" /> Treinador
-          </Badge>
-          <Link
-            to="/dashboard/performance"
-            className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-primary/30 bg-primary/5 px-2.5 text-xs font-semibold text-primary hover:bg-primary/10"
+        <div className="trainer-topbar__group trainer-topbar__group--right flex shrink-0 items-center gap-1.5">
+          <Button
+            variant={savedForStudy ? "secondary" : "ghost"}
+            size="icon"
+            onClick={toggleSavedForStudy}
+            disabled={savedForStudy}
+            aria-pressed={savedForStudy}
+            aria-label={savedForStudy ? "Questão salva para estudar" : "Salvar para estudar"}
           >
-            <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
-            Análise
-          </Link>
-          <Badge variant="outline">Ranking de questões</Badge>
+            {savedForStudy ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
+          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Mais opções do treino">
+                <MoreHorizontal className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => setStarted(false)}>
+                <Settings2 className="mr-2 h-4 w-4" /> Configuração do treino
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/dashboard/performance">
+                  <TrendingUp className="mr-2 h-4 w-4" /> Análise de desempenho
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link
+                  to="/dashboard/ranking"
+                  search={{ section: "general", period: "all", page: 1, size: 20, q: "" }}
+                >
+                  <ListOrdered className="mr-2 h-4 w-4" /> Ranking de questões
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => setConfirmExit(true)}
+                className="text-destructive focus:text-destructive"
+              >
+                <LogOut className="mr-2 h-4 w-4" /> Sair do treino
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </header>
       <Card
@@ -1011,17 +1046,10 @@ function QuestionTrainer() {
         key={question.id}
       >
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-muted/50 px-4 py-2.5">
-          <div className="flex items-center gap-3">
-            <span className="flex gap-1.5" aria-hidden>
-              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
-              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
-              <i className="h-2.5 w-2.5 rounded-full bg-muted-foreground/25" />
-            </span>
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-              Treinador de questões
-            </span>
-          </div>
-          <span className="flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-emerald-700 dark:text-emerald-400">
+          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-muted-foreground">
+            Treinador de questões
+          </span>
+          <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-700 dark:text-emerald-400">
             <i className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />{" "}
             Correção imediata
           </span>
