@@ -154,28 +154,28 @@
   height: 18px;
   accent-color: var(--practice-accent);
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar {
   align-items: center;
   padding: 12px 14px;
   border-color: var(--practice-line);
   border-radius: 11px;
   background: var(--practice-soft);
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl p {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar p {
   color: var(--practice-ink);
   font-size: 13px;
   font-weight: 750;
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar button {
   min-height: 44px;
   border-radius: 9px;
   font-weight: 700;
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar button.hero-primary-action {
   background: var(--practice-accent-strong);
   color: #fff;
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action:disabled {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar button.hero-primary-action:disabled {
   opacity: .48;
 }
 
@@ -204,17 +204,17 @@
   border-color: color-mix(in oklab, var(--practice-accent) 55%, var(--practice-line));
   background: color-mix(in oklab, var(--practice-accent) 5%, var(--practice-paper));
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar button.hero-primary-action {
   background: var(--practice-accent-strong);
   border: 1px solid color-mix(in oklab, var(--practice-accent) 70%, var(--practice-line));
   color: #fff;
   box-shadow: 0 8px 18px -14px var(--practice-accent);
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action:hover:not(:disabled) {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar button.hero-primary-action:hover:not(:disabled) {
   background: var(--practice-accent);
   transform: translateY(-1px);
 }
-.app-shell[data-area="student"] .trainer-setup .mt-3.flex.flex-col.gap-2.rounded-xl button.hero-primary-action:active:not(:disabled) {
+.app-shell[data-area="student"] .trainer-setup .trainer-start-bar button.hero-primary-action:active:not(:disabled) {
   transform: translateY(0);
 }
 

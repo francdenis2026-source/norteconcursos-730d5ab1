@@ -1606,6 +1606,7 @@ function TrainerSetup({
   setters: SetupSetters;
   start: () => void;
 }) {
+  const usedCount = values.limit === "all" ? available : Math.min(available, Number(values.limit));
   const reset = () => {
     setters.setContest("all");
     setters.setBoard("all");
@@ -1813,22 +1814,24 @@ function TrainerSetup({
             </label>
             </div>
           </details>
-          <div className="mt-3 flex flex-col gap-2 rounded-xl border bg-muted/30 p-2.5 sm:flex-row sm:items-center sm:justify-between sm:p-3">
-            <div>
-              <p className="font-black">
-                {values.limit === "all" ? available.toLocaleString("pt-BR") : Math.min(available, Number(values.limit))} questões serão usadas
-              </p>
-            </div>
-            <div className="grid grid-cols-[auto_1fr] gap-2 sm:flex">
-              <Button variant="outline" size="sm" onClick={reset} className="sm:h-10 sm:px-4">
-                Limpar filtros
+          <div className="trainer-start-bar mt-3 flex flex-row items-center justify-between gap-2 rounded-xl border bg-muted/30 p-2 sm:p-3">
+            <p className="trainer-start-bar__count hidden font-black sm:block">
+              {usedCount.toLocaleString("pt-BR")} questões serão usadas
+            </p>
+            <div className="trainer-start-bar__actions flex w-full items-center gap-2 sm:w-auto">
+              <Button variant="outline" size="sm" onClick={reset} className="shrink-0 sm:h-10 sm:px-4">
+                Limpar
               </Button>
               <Button
                 disabled={!available}
                 onClick={start}
-                className="hero-primary-action h-9 sm:h-10"
+                className="hero-primary-action h-10 min-w-0 flex-1 sm:flex-none"
               >
-                <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
+                <Sparkles className="mr-2 h-4 w-4 shrink-0" />
+                <span className="truncate">
+                  Iniciar<span className="sm:hidden"> · {usedCount.toLocaleString("pt-BR")} questões</span>
+                  <span className="hidden sm:inline"> treinamento</span>
+                </span>
               </Button>
             </div>
           </div>
