@@ -1057,3 +1057,50 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
     overflow: visible;
   }
 }
+
+
+/* 2026-11-11: preserve the complete original contest cover in homepage cards.
+   Previously object-fit: cover cropped artwork and mobile forced image stretching. */
+.home.hr-canvas .sx-exams > .sx-exam {
+  min-width: 0;
+  overflow: hidden;
+}
+.home.hr-canvas .sx-exams > .sx-exam > img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  max-width: 100%;
+  min-width: 0;
+  object-fit: contain;
+  object-position: center center;
+  background-color: #101c25;
+  flex-shrink: 0;
+}
+@media (max-width: 1023px) {
+  .home.hr-canvas .sx-exams > .sx-exam {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+  .home.hr-canvas .sx-exams > .sx-exam > img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1672 / 941;
+    align-self: auto;
+  }
+}
+@media (max-width: 767px) {
+  .home.hr-canvas .sx-exams--mobile-carousel > .sx-exam {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+  .home.hr-canvas .sx-exams--mobile-carousel > .sx-exam > img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1672 / 941;
+    object-fit: contain;
+  }
+}
