@@ -1187,7 +1187,7 @@ function QuestionTrainer() {
             <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
           {pendingAnswers > 0 && (
-            <div className="mb-2 flex items-center justify-between gap-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs font-semibold" role="status">
+            <div className="trainer-reading-pending mb-2 flex items-center justify-between gap-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs font-semibold" role="status">
               <span>{pendingAnswers} resposta{pendingAnswers > 1 ? "s" : ""} aguardando envio</span>
               <Button size="sm" variant="outline" className="h-8" onClick={() => void retryPendingAnswers()}>
                 Tentar novamente
@@ -1370,6 +1370,20 @@ function QuestionTrainer() {
                   <span>Pular</span>
                 </Button>
               )}
+              <Button
+                variant={savedForStudy ? "secondary" : "ghost"}
+                className="trainer-action-dock__btn"
+                onClick={toggleSavedForStudy}
+                disabled={savedForStudy}
+                aria-pressed={savedForStudy}
+              >
+                {savedForStudy ? (
+                  <BookmarkCheck className="h-4 w-4" aria-hidden="true" />
+                ) : (
+                  <Bookmark className="h-4 w-4" aria-hidden="true" />
+                )}
+                <span>{savedForStudy ? "Salva" : "Salvar p/ estudar"}</span>
+              </Button>
             </div>
             {!answered ? (
               <Button
@@ -1400,10 +1414,6 @@ function QuestionTrainer() {
                     Tempo de resposta: {formatResponseTime(responseSeconds)}
                   </span>
                 )}
-                <Button variant="outline" size="sm" onClick={toggleSavedForStudy} disabled={savedForStudy} aria-pressed={savedForStudy}>
-                  {savedForStudy ? <BookmarkCheck className="mr-1.5 h-4 w-4" /> : <Bookmark className="mr-1.5 h-4 w-4" />}
-                  {savedForStudy ? "Salva" : "Salvar para estudar"}
-                </Button>
               </div>
               {!isCorrect && <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">Resposta correta: {labelFor(question.answer)}</p>}
               {isPlaceholderExplanation(explanation.main) ? (
