@@ -32,9 +32,10 @@ function withSupportText(support: unknown, text: string): string {
 const EMPTY_CATALOG: Question[] = [];
 
 // Conexões móveis instáveis derrubam uma única requisição sem o acervo estar de
-// fato indisponível. 2 novas tentativas (com espera progressiva) evitam que uma
-// falha passageira esconda o Treinador inteiro atrás da tela de erro.
-const CATALOG_RETRY = 2;
+// fato indisponível. 1 nova tentativa evita que uma falha passageira esconda o
+// Treinador inteiro atrás da tela de erro, sem multiplicar demais a espera numa
+// conexão que já está genuinamente lenta (cada tentativa pode levar até 20s).
+const CATALOG_RETRY = 1;
 const CATALOG_RETRY_DELAY = (attempt: number) => Math.min(1000 * 2 ** attempt, 8000);
 
 /** Linha de official_exam_questions -> questão do acervo (mesma regra no treinador e na contagem de provas). */
