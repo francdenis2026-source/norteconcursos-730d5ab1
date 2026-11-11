@@ -1,0 +1,171 @@
+/* Área do aluno — painel compacto (sh2).
+   Classes próprias para não herdar as camadas antigas de .student-hub__*.
+   Medidas em rem: com fonte ampliada as colunas quebram em vez de espremer. */
+.student-home.sh2 {
+  --sh2-gold: oklch(0.74 0.14 82);
+  --sh2-blue: oklch(0.66 0.16 255);
+  --sh2-green: oklch(0.7 0.16 150);
+  --sh2-violet: oklch(0.68 0.17 300);
+  --sh2-amber: oklch(0.74 0.16 55);
+  --sh2-rose: oklch(0.68 0.19 15);
+  --sh2-tone: var(--sh2-gold);
+  --sh2-ink: var(--foreground);
+  --sh2-dim: color-mix(in srgb, var(--foreground) 72%, transparent);
+  display: grid;
+  gap: 0.625rem;
+  min-width: 0;
+  padding-bottom: 0.75rem;
+}
+:root:not(.dark) .student-home.sh2 {
+  --sh2-gold: oklch(0.5 0.11 80);
+  --sh2-blue: oklch(0.45 0.17 258);
+  --sh2-green: oklch(0.45 0.13 152);
+  --sh2-violet: oklch(0.46 0.18 300);
+  --sh2-amber: oklch(0.52 0.15 50);
+  --sh2-rose: oklch(0.5 0.19 18);
+}
+.student-home.sh2 [data-tone="gold"] { --sh2-tone: var(--sh2-gold); }
+.student-home.sh2 [data-tone="blue"] { --sh2-tone: var(--sh2-blue); }
+.student-home.sh2 [data-tone="green"] { --sh2-tone: var(--sh2-green); }
+.student-home.sh2 [data-tone="violet"] { --sh2-tone: var(--sh2-violet); }
+.student-home.sh2 [data-tone="amber"] { --sh2-tone: var(--sh2-amber); }
+.student-home.sh2 [data-tone="rose"] { --sh2-tone: var(--sh2-rose); }
+.student-home.sh2 :is(h1, h2, p, small, strong, em) { margin: 0; }
+.student-home.sh2 svg { flex: none; }
+
+/* Faixa de boas-vindas */
+.student-home.sh2 .sh2-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.25rem;
+  min-height: 0;
+  margin: 0;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid color-mix(in srgb, var(--sh2-gold) 35%, var(--border));
+  border-radius: 0.875rem;
+  background: linear-gradient(100deg, color-mix(in srgb, var(--sh2-gold) 14%, var(--card)), var(--card) 55%, color-mix(in srgb, var(--sh2-blue) 10%, var(--card)));
+}
+.student-home.sh2 .sh2-hero__hello { display: grid; gap: 0.0625rem; min-width: 0; }
+.student-home.sh2 .sh2-hero__hello p { font-size: 0.8125rem; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-hero__hello h1 { font-size: 1.25rem; font-weight: 800; line-height: 1.15; color: var(--sh2-ink); }
+.student-home.sh2 .sh2-hero__date { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-hero__date svg { width: 0.875rem; height: 0.875rem; color: var(--sh2-gold); }
+.student-home.sh2 .sh2-hero__contest { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; min-width: 0; }
+.student-home.sh2 .sh2-hero__icon { width: 1.5rem; height: 1.5rem; color: var(--sh2-gold); }
+.student-home.sh2 .sh2-hero__contest .student-hub__acre-flag { width: 2.25rem; height: 1.5rem; flex: none; border-radius: 0.25rem; }
+.student-home.sh2 :is(.sh2-hero__contest-copy, .sh2-hero__exam) { display: grid; gap: 0.0625rem; min-width: 0; }
+.student-home.sh2 .sh2-hero__exam { padding-left: 1rem; border-left: 1px solid var(--border); }
+.student-home.sh2 .sh2-hero small { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sh2-gold); }
+.student-home.sh2 .sh2-hero :is(h2, time, .sh2-hero__exam strong) { font-size: 0.9375rem; font-weight: 800; line-height: 1.2; color: var(--sh2-ink); }
+.student-home.sh2 .sh2-hero :is(.sh2-hero__contest-copy, .sh2-hero__exam) p { font-size: 0.75rem; color: var(--sh2-dim); }
+
+/* Indicadores */
+.student-home.sh2 .sh2-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0.625rem; }
+.student-home.sh2 .sh2-kpi {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--sh2-tone) 40%, var(--border));
+  border-left-width: 0.25rem;
+  border-left-color: var(--sh2-tone);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--sh2-tone) 9%, var(--card));
+  color: var(--sh2-ink);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.student-home.sh2 .sh2-kpi:hover { background: color-mix(in srgb, var(--sh2-tone) 16%, var(--card)); }
+.student-home.sh2 .sh2-kpi:active { transform: scale(0.985); }
+.student-home.sh2 .sh2-kpi > svg { width: 1.375rem; height: 1.375rem; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-kpi > span { display: grid; min-width: 0; }
+.student-home.sh2 .sh2-kpi small { font-size: 0.6875rem; font-weight: 700; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-kpi strong { font-size: 1.25rem; font-weight: 800; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.student-home.sh2 .sh2-kpi em { overflow: hidden; font-size: 0.6875rem; font-style: normal; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
+
+/* Quadro principal: agenda, ritmo e revisão lado a lado */
+.student-home.sh2 .sh2-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 0.625rem; align-items: stretch; min-width: 0; }
+.student-home.sh2 .sh2-stack { display: grid; gap: 0.625rem; align-content: start; min-width: 0; }
+.student-home.sh2 .sh2-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-top: 0.1875rem solid var(--sh2-tone);
+  border-radius: 0.875rem;
+  background: var(--card);
+  box-shadow: none;
+}
+.student-home.sh2 .sh2-card__head { display: flex; align-items: center; gap: 0.5rem; min-width: 0; padding: 0.5rem 0.75rem; background: color-mix(in srgb, var(--sh2-tone) 9%, transparent); }
+.student-home.sh2 .sh2-card__head > svg { width: 1rem; height: 1rem; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-card__head h2 { flex: 1; min-width: 0; font-size: 0.875rem; font-weight: 800; line-height: 1.2; color: var(--sh2-ink); }
+.student-home.sh2 .sh2-card__head h2 button { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.student-home.sh2 .sh2-card__head h2 button svg { width: 0.875rem; height: 0.875rem; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-card__body { display: grid; gap: 0.5rem; align-content: start; flex: 1; min-width: 0; max-height: 21rem; padding: 0.625rem 0.75rem; overflow-y: auto; }
+.student-home.sh2 .sh2-stack .sh2-card__body { max-height: 10.5rem; }
+.student-home.sh2 .sh2-card__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0.75rem; border-top: 1px solid var(--border); }
+.student-home.sh2 .sh2-tag { max-width: 50%; padding: 0.125rem 0.5rem; overflow: hidden; border-radius: 999px; background: color-mix(in srgb, var(--sh2-tone) 16%, transparent); color: var(--sh2-tone); font-size: 0.6875rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-select { max-width: 55%; min-height: 1.75rem; padding: 0 0.375rem; border: 1px solid var(--border); border-radius: 0.5rem; background: var(--card); color: var(--sh2-ink); font-size: 0.75rem; }
+.student-home.sh2 .sh2-link { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0; border: 0; background: none; color: var(--sh2-tone); font-size: 0.8125rem; font-weight: 700; text-decoration: none; cursor: pointer; }
+.student-home.sh2 .sh2-link:hover { text-decoration: underline; }
+.student-home.sh2 :is(.sh2-link, .sh2-cta, .sh2-row-link) svg { width: 0.875rem; height: 0.875rem; }
+.student-home.sh2 .sh2-cta { display: inline-flex; align-items: center; gap: 0.375rem; min-height: 2rem; padding: 0.25rem 0.75rem; border-radius: 0.5rem; background: var(--sh2-tone); color: var(--background); font-size: 0.8125rem; font-weight: 800; text-decoration: none; }
+.student-home.sh2 .sh2-cta:hover { filter: brightness(1.08); }
+.student-home.sh2 .sh2-note { display: block; }
+.student-home.sh2 .sh2-note strong { color: var(--sh2-ink); }
+.student-home.sh2 .sh2-note a { color: var(--sh2-tone); font-weight: 700; }
+.student-home.sh2 .sh2-note svg { display: inline; width: 0.875rem; height: 0.875rem; margin-right: 0.25rem; vertical-align: -0.125rem; }
+.student-home.sh2 .sh2-note--alert { padding: 0.375rem 0.5rem; border-radius: 0.5rem; background: color-mix(in srgb, var(--sh2-rose) 14%, transparent); color: var(--sh2-ink); }
+.student-home.sh2 .sh2-next { display: flex; gap: 0.5rem; padding: 0.375rem 0.5rem; border-radius: 0.5rem; background: color-mix(in srgb, var(--sh2-tone) 10%, transparent); }
+.student-home.sh2 .sh2-next[data-kind="focus"] { --sh2-tone: var(--sh2-rose); }
+.student-home.sh2 .sh2-next svg { width: 1rem; height: 1rem; margin-top: 0.125rem; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-next div { display: grid; gap: 0.0625rem; min-width: 0; }
+.student-home.sh2 .sh2-next strong { font-size: 0.8125rem; color: var(--sh2-ink); }
+.student-home.sh2 .sh2-next small { font-size: 0.75rem; line-height: 1.35; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-progress { display: grid; grid-template-columns: 1fr auto; gap: 0.25rem 0.5rem; align-items: baseline; font-size: 0.75rem; }
+.student-home.sh2 .sh2-progress span { font-weight: 700; text-transform: capitalize; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-progress strong { color: var(--sh2-ink); font-variant-numeric: tabular-nums; }
+.student-home.sh2 .sh2-progress progress { grid-column: 1 / -1; width: 100%; height: 0.375rem; overflow: hidden; border: 0; border-radius: 999px; background: color-mix(in srgb, var(--sh2-tone) 18%, transparent); accent-color: var(--sh2-tone); appearance: none; }
+.student-home.sh2 .sh2-progress progress::-webkit-progress-bar { background: transparent; }
+.student-home.sh2 .sh2-progress progress::-webkit-progress-value { border-radius: 999px; background: var(--sh2-tone); }
+.student-home.sh2 .sh2-progress progress::-moz-progress-bar { border-radius: 999px; background: var(--sh2-tone); }
+.student-home.sh2 :is(.sh2-blocks, .sh2-signals) { display: grid; gap: 0.25rem; margin: 0; padding: 0; list-style: none; }
+.student-home.sh2 :is(.sh2-blocks, .sh2-signals) li { display: flex; align-items: center; gap: 0.625rem; min-width: 0; padding: 0.375rem 0.5rem; border-radius: 0.5rem; background: color-mix(in srgb, var(--sh2-tone) 7%, transparent); }
+.student-home.sh2 :is(.sh2-blocks, .sh2-signals) li > div { display: grid; flex: 1; min-width: 0; }
+.student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) strong { overflow: hidden; font-size: 0.8125rem; line-height: 1.25; color: var(--sh2-ink); text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) small { overflow: hidden; font-size: 0.6875rem; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-blocks time { display: grid; flex: none; font-size: 0.8125rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-signals a { flex: none; padding: 0.125rem 0.5rem; border: 1px solid color-mix(in srgb, var(--sh2-tone) 50%, transparent); border-radius: 999px; color: var(--sh2-tone); font-size: 0.75rem; font-weight: 700; text-decoration: none; }
+.student-home.sh2 .sh2-signals a:hover { background: color-mix(in srgb, var(--sh2-tone) 16%, transparent); }
+.student-home.sh2 .sh2-row-link { display: flex; align-items: center; gap: 0.5rem; min-width: 0; color: var(--sh2-tone); text-decoration: none; }
+.student-home.sh2 .sh2-row-link div { display: grid; flex: 1; min-width: 0; }
+.student-home.sh2 .sh2-stack > .student-desk__sessions { margin: 0; }
+
+/* Atalhos */
+.student-home.sh2 .sh2-shortcuts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0.5rem; }
+.student-home.sh2 .sh2-shortcuts a { display: flex; align-items: center; gap: 0.5rem; min-width: 0; min-height: 2.5rem; padding: 0.375rem 0.625rem; border: 1px solid color-mix(in srgb, var(--sh2-tone) 35%, var(--border)); border-radius: 0.625rem; background: color-mix(in srgb, var(--sh2-tone) 8%, var(--card)); color: var(--sh2-ink); text-decoration: none; transition: background-color 0.15s ease; }
+.student-home.sh2 .sh2-shortcuts a:hover { background: color-mix(in srgb, var(--sh2-tone) 18%, var(--card)); }
+.student-home.sh2 .sh2-shortcuts svg { width: 1.125rem; height: 1.125rem; color: var(--sh2-tone); }
+.student-home.sh2 .sh2-shortcuts span { display: grid; min-width: 0; }
+.student-home.sh2 .sh2-shortcuts strong { overflow: hidden; font-size: 0.8125rem; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-shortcuts small { font-size: 0.6875rem; color: var(--sh2-tone); }
+
+/* Editais e acervo */
+.student-home.sh2 .sh2-resources { display: grid; gap: 0.625rem; min-width: 0; }
+.student-home.sh2 .sh2-resources > h2 { font-size: 0.875rem; font-weight: 800; color: var(--sh2-ink); }
+
+@media (max-width: 40rem) {
+  .student-home.sh2 .sh2-hero__exam { padding-left: 0; border-left: 0; }
+  .student-home.sh2 .sh2-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .student-home.sh2 .sh2-card__body { max-height: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-home.sh2 :is(.sh2-kpi, .sh2-shortcuts a) { transition: none; }
+}
