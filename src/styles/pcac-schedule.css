@@ -969,3 +969,16 @@
 .pcac-delete-dialog__actions { margin-top: 16px; }
 .pcac-delete-dialog__summary { display: flex; align-items: center; gap: 11px; }
 .pcac-delete-dialog__illustration { flex: 0 0 auto; width: 40px; height: 40px; margin: 0; border-radius: 11px; }
+.pcac-delete-dialog { overflow: hidden; background: color-mix(in srgb, hsl(var(--background)) 96%, #23443d); }
+.pcac-delete-dialog__header { display: flex; align-items: center; justify-content: space-between; min-height: 42px; padding: 8px 10px 8px 18px; border-bottom: 1px solid color-mix(in srgb, hsl(var(--border)) 72%, transparent); }
+.pcac-delete-dialog__eyebrow { color: hsl(var(--muted-foreground)); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.pcac-delete-dialog__content { padding: 18px 20px 20px; }
+.pcac-delete-dialog__hero { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 12px; border: 1px solid color-mix(in srgb, #e89a83 55%, transparent); border-radius: 15px; color: #f0a18c; background: linear-gradient(145deg, color-mix(in srgb, #e89a83 22%, transparent), color-mix(in srgb, #e89a83 7%, transparent)); box-shadow: 0 8px 20px color-mix(in srgb, #e89a83 12%, transparent); }
+.pcac-delete-dialog__hero svg { width: 23px; height: 23px; }
+.pcac-delete-dialog__content h2 { margin: 0; color: hsl(var(--foreground)); font-size: 18px; font-weight: 800; letter-spacing: -.02em; }
+.pcac-delete-dialog__description { max-width: 310px; margin: 5px 0 14px; color: hsl(var(--muted-foreground)); font-size: 12px; line-height: 1.45; }
+.pcac-delete-dialog__record { display: grid; gap: 3px; padding: 10px 12px; border: 1px solid color-mix(in srgb, hsl(var(--primary)) 25%, transparent); border-radius: 10px; background: color-mix(in srgb, hsl(var(--primary)) 8%, transparent); }
+.pcac-delete-dialog__record strong { color: hsl(var(--foreground)); font-size: 13px; }
+.pcac-delete-dialog__record span { color: hsl(var(--muted-foreground)); font-size: 11px; }
+.pcac-delete-dialog__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
+@media (max-width: 480px) { .pcac-delete-dialog__actions { flex-direction: column-reverse; } .pcac-delete-dialog__actions button { width: 100%; } }

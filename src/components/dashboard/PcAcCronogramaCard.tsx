@@ -256,29 +256,27 @@ function CommitmentsEditor({
           <AstryxButton variant="secondary" size="sm" icon={<Plus />} label={editingId ? "Guardar edição" : "Adicionar compromisso"} isDisabled={disabled} onClick={add} />
         </div>
       </div>
-      <Dialog isOpen={!!pendingDelete} onOpenChange={(open) => { if (!open) setPendingDelete(null); }} width={420} padding={0}>
+      <Dialog isOpen={!!pendingDelete} onOpenChange={(open) => { if (!open) setPendingDelete(null); }} width={390} padding={0}>
         {pendingDelete && (
-          <div className="pcac-delete-dialog">
-            <DialogHeader
-              title="Excluir compromisso?"
-              subtitle="O compromisso será removido do cronograma."
-              onOpenChange={() => setPendingDelete(null)}
-              hasDivider
-            />
-            <div className="pcac-delete-dialog__body">
-              <div className="pcac-delete-dialog__summary">
-                <div className="pcac-delete-dialog__illustration" aria-hidden="true"><Trash2 /></div>
-                <div>
-                  <p className="pcac-delete-dialog__item">{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</p>
-                  <p className="pcac-delete-dialog__meta">{pendingDelete.time} · {pendingDelete.minutes} min</p>
-                </div>
+          <section className="pcac-delete-dialog" aria-labelledby="pcac-delete-title" aria-describedby="pcac-delete-description">
+            <header className="pcac-delete-dialog__header">
+              <div className="pcac-delete-dialog__eyebrow">Ação do cronograma</div>
+              <AstryxButton variant="ghost" size="sm" isIconOnly icon={<X />} label="Fechar confirmação" onClick={() => setPendingDelete(null)} />
+            </header>
+            <div className="pcac-delete-dialog__content">
+              <div className="pcac-delete-dialog__hero" aria-hidden="true"><Trash2 /></div>
+              <h2 id="pcac-delete-title">Excluir compromisso?</h2>
+              <p id="pcac-delete-description" className="pcac-delete-dialog__description">Esta alteração remove o compromisso dos horários usados pelo seu cronograma.</p>
+              <div className="pcac-delete-dialog__record">
+                <strong>{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</strong>
+                <span>{pendingDelete.time} · {pendingDelete.minutes} min</span>
               </div>
               <div className="pcac-delete-dialog__actions">
-                <AstryxButton label="Cancelar" variant="secondary" size="sm" onClick={() => setPendingDelete(null)} />
-                <AstryxButton label="Excluir compromisso" variant="danger" size="sm" icon={<X />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
+                <AstryxButton label="Manter compromisso" variant="secondary" size="sm" onClick={() => setPendingDelete(null)} />
+                <AstryxButton label="Excluir" variant="danger" size="sm" icon={<Trash2 />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
               </div>
             </div>
-          </div>
+          </section>
         )}
       </Dialog>
       {error && <p className="pcac-commitments__error" role="alert">{error}</p>}
