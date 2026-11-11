@@ -28,20 +28,8 @@
   padding: 6px 0;
   border-bottom: 1px solid var(--trainer-line);
 }
-.app-shell[data-area="student"] .question-workspace .trainer-shield {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--trainer-line);
-  border-radius: 10px;
-  background: var(--trainer-paper);
-}
-.app-shell[data-area="student"] .question-workspace .trainer-shield img {
-  width: 27px;
-  height: 27px;
-  object-fit: contain;
+.app-shell[data-area="student"] .question-workspace .trainer-topbar button {
+  border-radius: 9px;
 }
 .app-shell[data-area="student"] .question-workspace .question-window {
   overflow: hidden;
@@ -202,8 +190,7 @@
   border-top: 1px solid var(--trainer-line);
 }
 .app-shell[data-area="student"] .question-workspace .trainer-reading-actions > button,
-.app-shell[data-area="student"] .question-workspace .trainer-reading-actions a,
-.app-shell[data-area="student"] .question-workspace .trainer-topbar button {
+.app-shell[data-area="student"] .question-workspace .trainer-reading-actions a {
   min-height: 40px;
   border-radius: 9px;
   font-size: 12px;
@@ -237,12 +224,11 @@
   }
   .app-shell[data-area="student"] .question-workspace .trainer-topbar__group--left,
   .app-shell[data-area="student"] .question-workspace .trainer-topbar__group--right {
-    gap: 6px;
+    gap: 4px;
   }
   .app-shell[data-area="student"] .question-workspace .trainer-topbar button {
-    min-height: 36px;
-    padding-inline: 9px;
-    font-size: 11px;
+    height: 36px;
+    width: 36px;
   }
   .app-shell[data-area="student"] .question-workspace .question-window {
     border-radius: 14px;

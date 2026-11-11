@@ -260,18 +260,6 @@
 @media (prefers-reduced-motion: reduce) {
   .trainer-select-content { scroll-behavior: auto; }
 }
-@media (prefers-color-scheme: light) {
-  .trainer-select-content {
-    border-color: #c8d5da;
-    background: #ffffff;
-    color: #24333b;
-    box-shadow: 0 18px 42px rgb(22 48 58 / 18%);
-  }
-  .trainer-select-content [role="option"] { color: #334b53; }
-  .trainer-select-content [role="option"]:hover,
-  .trainer-select-content [role="option"][data-highlighted] { background: #e5f1f1; color: #173f45; }
-  .trainer-select-content [role="option"][data-state="checked"] { background: #286a70; color: #ffffff; }
-}
 .dark .trainer-select-content {
   border-color: #344a52;
   background: #172b33;
