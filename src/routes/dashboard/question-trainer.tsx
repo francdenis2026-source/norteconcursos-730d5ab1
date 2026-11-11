@@ -36,6 +36,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers } from "@/hooks/useLockedAnswers";
+import {
+  enqueuePendingAnswer,
+  flushPendingAnswers,
+  insertTrainerAnswer,
+  readPendingAnswers,
+  type TrainerAnswerRow,
+} from "@/lib/trainerAnswerQueue";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
@@ -224,6 +231,29 @@ function QuestionTrainer() {
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
+  const pendingRowRef = React.useRef<TrainerAnswerRow | null>(null);
+  const [pendingAnswers, setPendingAnswers] = React.useState(0);
+  const retryPendingAnswers = React.useCallback(async () => {
+    if (!userId) return;
+    const left = await flushPendingAnswers(userId);
+    setPendingAnswers(left);
+    if (!left) toast.success("Respostas salvas.");
+  }, [userId]);
+  React.useEffect(() => {
+    if (!userId) return;
+    const sync = () => {
+      if (!readPendingAnswers(userId).length) return;
+      void flushPendingAnswers(userId).then(setPendingAnswers);
+    };
+    setPendingAnswers(readPendingAnswers(userId).length);
+    sync();
+    window.addEventListener("online", sync);
+    const timer = window.setInterval(sync, 30_000);
+    return () => {
+      window.removeEventListener("online", sync);
+      window.clearInterval(timer);
+    };
+  }, [userId]);
   React.useEffect(() => {
     const root = document.documentElement;
     const nav = document.querySelector<HTMLElement>(".app-bottom-nav");
@@ -672,6 +702,30 @@ function QuestionTrainer() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
   }, [index, question?.id, question?.source, lockedLoading]);
+  const finishAnswer = (elapsedSeconds: number, isCorrect: boolean, answer: Answer) => {
+    if (!question) return;
+    setResponseSeconds(elapsedSeconds);
+    setAnswered(true);
+    setDailyUsed((n) => n + 1);
+    markLocked(question, { selected: answer, isCorrect });
+    setResults((prev) => {
+      const copy = [...prev];
+      copy[index] = isCorrect ? "ok" : "err";
+      return copy;
+    });
+    if (!isCorrect) {
+      setModal("result");
+    } else {
+      clearSuccessFeedback();
+      setSuccessFeedback(true);
+      // Duração suficiente para leitura; saída automática sem clique.
+      // O timer é cancelado se o usuário navegar manualmente.
+      successTimer.current = setTimeout(() => {
+        successTimer.current = null;
+        next();
+      }, 3500);
+    }
+  };
   const submit = async () => {
     if (
       !selected ||
@@ -688,25 +742,24 @@ function QuestionTrainer() {
     const isCorrect = selected === question.answer;
     const elapsedSeconds = Math.max(0, Math.round((Date.now() - startedAt) / 1000));
     try {
-      const { error } = await supabase.from("question_training_responses").upsert(
-        {
-          id: responseIdRef.current,
-          user_id: user.id,
-          question_id: question.id,
-          question_source: question.source,
-          question_table: question.table,
-          contest_name: question.contest,
-          subject: question.subject,
-          selected_answer: selected,
-          official_answer: question.answer,
-          is_correct: isCorrect,
-          // Learning support is available only after this answer is saved.
-          asked_for_help: false,
-          topic: questionTopic(question),
-          response_seconds: elapsedSeconds,
-        },
-        { onConflict: "id", ignoreDuplicates: true },
-      );
+      const row: TrainerAnswerRow = {
+        id: responseIdRef.current,
+        user_id: user.id,
+        question_id: question.id,
+        question_source: question.source,
+        question_table: question.table,
+        contest_name: question.contest,
+        subject: question.subject,
+        selected_answer: selected,
+        official_answer: question.answer,
+        is_correct: isCorrect,
+        // Learning support is available only after this answer is saved.
+        asked_for_help: false,
+        topic: questionTopic(question),
+        response_seconds: elapsedSeconds,
+      };
+      pendingRowRef.current = row;
+      const error = await insertTrainerAnswer(row);
       if (error) throw error;
       // A request may have succeeded before a network retry. A duplicate ID must
       // never UPDATE an immutable answer or be credited as a different question.
@@ -724,27 +777,7 @@ function QuestionTrainer() {
         responseIdRef.current = crypto.randomUUID();
         throw new Error("ANSWER_SAVE_NOT_CONFIRMED");
       }
-      setResponseSeconds(elapsedSeconds);
-      setAnswered(true);
-      setDailyUsed((n) => n + 1);
-      markLocked(question, { selected, isCorrect });
-      setResults((prev) => {
-        const copy = [...prev];
-        copy[index] = isCorrect ? "ok" : "err";
-        return copy;
-      });
-      if (!isCorrect) {
-        setModal("result");
-      } else {
-        clearSuccessFeedback();
-        setSuccessFeedback(true);
-        // Duração suficiente para leitura; saída automática sem clique.
-        // O timer é cancelado se o usuário navegar manualmente.
-        successTimer.current = setTimeout(() => {
-          successTimer.current = null;
-          next();
-        }, 3500);
-      }
+      finishAnswer(elapsedSeconds, isCorrect, selected);
     } catch (error) {
       // Never show raw database internals to students. Surface known recoverable causes.
       const code = typeof error === "object" && error !== null && "code" in error
@@ -763,9 +796,18 @@ function QuestionTrainer() {
       } else if (message.includes("Question origin is missing or ambiguous")) {
         toast.error("Não foi possível identificar a origem da questão. Atualize a página e tente novamente.");
       } else {
-        toast.error("Não foi possível registrar sua resposta. Verifique a conexão e tente novamente.");
+        console.error("Falha ao gravar resposta do treino", { code, message, detail });
+        // Não trava o aluno: mostra o gabarito agora, guarda a resposta no aparelho e reenvia sozinho.
+        const row = pendingRowRef.current;
+        if (row) {
+          enqueuePendingAnswer(row);
+          setPendingAnswers(readPendingAnswers(row.user_id).length);
+        }
+        finishAnswer(elapsedSeconds, isCorrect, selected);
+        toast.warning("Resposta mostrada, mas ainda não salva. Vamos reenviar sozinhos.", {
+          action: { label: "Tentar novamente", onClick: () => void retryPendingAnswers() },
+        });
       }
-      // Keep the selected answer so the learner can retry without losing progress.
     } finally {
       savingRef.current = false;
       setSaving(false);
@@ -1125,6 +1167,14 @@ function QuestionTrainer() {
             </div>
             <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
+          {pendingAnswers > 0 && (
+            <div className="mb-2 flex items-center justify-between gap-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs font-semibold" role="status">
+              <span>{pendingAnswers} resposta{pendingAnswers > 1 ? "s" : ""} aguardando envio</span>
+              <Button size="sm" variant="outline" className="h-8" onClick={() => void retryPendingAnswers()}>
+                Tentar novamente
+              </Button>
+            </div>
+          )}
           <section className="trainer-reading-stem" aria-label="Enunciado da questão">
           {parsed.base && (
             <details
@@ -1141,7 +1191,7 @@ function QuestionTrainer() {
             </details>
           )}
           <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
-            {parsed.stem}
+            {parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}
           </p>
           <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
           </section>
