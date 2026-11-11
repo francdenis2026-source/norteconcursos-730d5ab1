@@ -188,6 +188,7 @@ function QuestionTrainer() {
     catalog: fullCatalog,
     loading: catalogLoading,
     error,
+    reload: reloadCatalog,
   } = useQuestionCatalog(userId, canLoad);
   const law = routeFilters.law;
   const scoped = React.useMemo(
@@ -788,9 +789,15 @@ function QuestionTrainer() {
       <Center>
         <XCircle className="h-10 w-10 text-destructive" />
         <p>{error}</p>
-        <Button asChild variant="outline">
-          <Link to="/dashboard/question-bank">Voltar ao banco</Link>
-        </Button>
+        <p className="text-xs text-muted-foreground">
+          Em conexões instáveis isso pode acontecer sem o acervo estar indisponível de verdade.
+        </p>
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <Button onClick={() => void reloadCatalog()}>Tentar novamente</Button>
+          <Button asChild variant="outline">
+            <Link to="/dashboard/question-bank">Voltar ao banco</Link>
+          </Button>
+        </div>
       </Center>
     );
   if (!started)

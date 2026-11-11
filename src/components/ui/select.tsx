@@ -111,14 +111,17 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center min-h-[44px] rounded-lg py-2.5 pl-3 pr-8 text-[0.9375rem] outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      // data-[highlighted] é o estado real do Radix pra navegação por teclado/mouse (mais
+      // confiável que :focus em touch); data-[state=checked] é a opção já escolhida — precisa
+      // ficar visivelmente diferente das demais, não só com o ícone de check de 14px.
+      "relative flex w-full cursor-default select-none items-center min-h-[44px] rounded-lg py-2.5 pl-3 pr-8 text-[0.9375rem] outline-none focus:bg-accent focus:text-accent-foreground data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground data-[state=checked]:bg-accent/70 data-[state=checked]:font-bold data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className,
     )}
     {...props}
   >
-    <span className="absolute right-2 top-1/2 flex h-3.5 w-3.5 -translate-y-1/2 items-center justify-center">
+    <span className="absolute right-2 top-1/2 flex h-4 w-4 -translate-y-1/2 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+        <Check className="h-4 w-4 stroke-[3]" />
       </SelectPrimitive.ItemIndicator>
     </span>
     <SelectPrimitive.ItemText className="whitespace-normal break-words">

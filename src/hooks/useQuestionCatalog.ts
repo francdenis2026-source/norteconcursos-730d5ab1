@@ -31,6 +31,12 @@ function withSupportText(support: unknown, text: string): string {
 
 const EMPTY_CATALOG: Question[] = [];
 
+// Conexões móveis instáveis derrubam uma única requisição sem o acervo estar de
+// fato indisponível. 2 novas tentativas (com espera progressiva) evitam que uma
+// falha passageira esconda o Treinador inteiro atrás da tela de erro.
+const CATALOG_RETRY = 2;
+const CATALOG_RETRY_DELAY = (attempt: number) => Math.min(1000 * 2 ** attempt, 8000);
+
 /** Linha de official_exam_questions -> questão do acervo (mesma regra no treinador e na contagem de provas). */
 function officialRowToQuestion(row: Record<string, unknown>): Question {
   return {
@@ -78,7 +84,8 @@ export function useOfficialYearQuestions(year: string, enabled: boolean) {
     queryKey: ["official-year-questions", year],
     enabled,
     staleTime: 5 * 60_000,
-    retry: 0,
+    retry: CATALOG_RETRY,
+    retryDelay: CATALOG_RETRY_DELAY,
     queryFn: async ({ signal }) => {
       const load = (withSupport: boolean) =>
         fetchAllRows<Record<string, unknown>>(
@@ -133,7 +140,8 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
       // useQuestionCatalogRealtime invalida esta chave assim que uma questão muda no banco —
       // não depende de expirar rápido por conta própria pra ficar correto.
       staleTime: 15 * 60_000,
-      retry: 0,
+      retry: CATALOG_RETRY,
+      retryDelay: CATALOG_RETRY_DELAY,
       queryFn: ({ signal }) =>
         fetchAllRows(
           (from, to) =>
@@ -359,7 +367,8 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
     queryKey: ["question-catalog-view", userId],
     enabled,
     staleTime: 15 * 60_000,
-    retry: 0,
+    retry: CATALOG_RETRY,
+    retryDelay: CATALOG_RETRY_DELAY,
     queryFn: () => loadQuestionCatalog(queryClient, userId),
   });
   const reload = () => {
