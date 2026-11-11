@@ -957,3 +957,6 @@
 .pcac-commitments__lock { width: 14px; height: 14px; color: #75d0a8; margin-left: auto; }
 .pcac-commitments__item .pcac-commitments__lock + button { margin-left: 4px; }
 .pcac-commitments__calculated { display: block; margin-top: 3px; color: hsl(var(--muted-foreground)); font-size: 10px; }
+.pcac-delete-dialog__body { padding: 18px; }
+.pcac-delete-dialog__body p { margin: 0; }
+.pcac-delete-dialog__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }

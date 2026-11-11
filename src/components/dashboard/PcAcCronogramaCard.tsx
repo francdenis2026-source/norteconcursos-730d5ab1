@@ -113,6 +113,7 @@ function CommitmentsEditor({
   const [date, setDate] = React.useState("");
   const [error, setError] = React.useState("");
   const [editingId, setEditingId] = React.useState<string | null>(null);
+  const [pendingDelete, setPendingDelete] = React.useState<PcAcCommitment | null>(null);
 
   const pickKind = (next: PcAcCommitmentKind) => {
     setKind(next);
@@ -181,7 +182,7 @@ function CommitmentsEditor({
                 </span>
                 {saved && <LockKeyhole aria-hidden="true" className="pcac-commitments__lock" title="Compromisso guardado" />}
                 <AstryxButton variant="ghost" size="sm" isIconOnly icon={<Pencil />} label={`Editar ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => edit(commitment)} />
-                <AstryxButton variant="ghost" size="sm" isIconOnly icon={<X />} label={`Excluir ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => { if (editingId === commitment.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== commitment.id)); }} />
+                <AstryxButton variant="ghost" size="sm" isIconOnly icon={<X />} label={`Excluir ${commitment.label || PCAC_COMMITMENT_LABEL[commitment.kind]}`} isDisabled={disabled} onClick={() => setPendingDelete(commitment)} />
               </li>
             );
           })}
@@ -255,6 +256,26 @@ function CommitmentsEditor({
           <AstryxButton variant="secondary" size="sm" icon={<Plus />} label={editingId ? "Guardar edição" : "Adicionar compromisso"} isDisabled={disabled} onClick={add} />
         </div>
       </div>
+      <Dialog isOpen={!!pendingDelete} onOpenChange={(open) => { if (!open) setPendingDelete(null); }} width={420} padding={0}>
+        {pendingDelete && (
+          <div className="pcac-delete-dialog">
+            <DialogHeader
+              title="Excluir compromisso?"
+              subtitle="Esta ação remove o compromisso do seu cronograma."
+              onOpenChange={() => setPendingDelete(null)}
+              hasDivider
+            />
+            <div className="pcac-delete-dialog__body">
+              <p><strong>{pendingDelete.label || PCAC_COMMITMENT_LABEL[pendingDelete.kind]}</strong></p>
+              <p className="text-sm text-muted-foreground">{pendingDelete.time} · {pendingDelete.minutes} min</p>
+              <div className="pcac-delete-dialog__actions">
+                <AstryxButton label="Cancelar" variant="secondary" size="sm" onClick={() => setPendingDelete(null)} />
+                <AstryxButton label="Excluir compromisso" variant="danger" size="sm" icon={<X />} onClick={() => { if (editingId === pendingDelete.id) setEditingId(null); onChange(commitments.filter((item) => item.id !== pendingDelete.id)); setPendingDelete(null); }} />
+              </div>
+            </div>
+          </div>
+        )}
+      </Dialog>
       {error && <p className="pcac-commitments__error" role="alert">{error}</p>}
       <p className="pcac-commitments__hint">
         O estudo nunca é marcado sobre um compromisso: o plano usa só os horários livres do dia. Se um
