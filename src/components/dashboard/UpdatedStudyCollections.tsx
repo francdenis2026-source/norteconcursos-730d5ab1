@@ -2,7 +2,18 @@ import * as React from "react";
 import { useStudyGuideProgress } from "@/lib/useStudyGuideProgress";
 import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
 import { pcAcProgramGapLessons } from "@/data/pcAcProgramGapLessons";
-import { CheckCircle2, ExternalLink, ShieldAlert } from "lucide-react";
+import { normalizeLibrarySearch } from "@/lib/librarySearch";
+import {
+  Archive,
+  CheckCircle2,
+  ClipboardList,
+  ExternalLink,
+  Landmark,
+  Search,
+  ShieldAlert,
+  X,
+  type LucideIcon,
+} from "lucide-react";
 
 type Lesson = { title: string; body: string[]; example: string; question: string; answer: string; source: string };
 type Course = { id: string; title: string; subtitle: string; applicability: string; origin: string; updated: string; lessons: Lesson[] };
@@ -40,47 +51,146 @@ const BASE_COURSES: Course[] = [
   ]}
 ];
 const COURSES: Course[] = BASE_COURSES.map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? []), ...(pcAcProgramGapLessons[course.id] ?? [])]}));
+
+const COURSE_ICONS: Record<string, LucideIcon> = {
+  arquivologia: Archive,
+  "administracao-geral": ClipboardList,
+  "administracao-publica": Landmark,
+};
+
 export function UpdatedStudyCollections({initialCourseId,storageScope="public"}: {initialCourseId?: string;storageScope?: string}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
+  const [query,setQuery]=React.useState("");
   React.useEffect(()=>{if(COURSES.some(c=>c.id===initialCourseId))setSelected(initialCourseId!);},[initialCourseId]);
   const {completed,toggleCompleted,syncState,syncError}=useStudyGuideProgress(storageScope);
-  const course=COURSES.find(c=>c.id===selected)!;
-  const countCompleted=course.lessons.filter(l=>completed[`${course.id}:${l.title}`]).length;
-  return <section id="materiais-atualizados-pcac" className="space-y-4 rounded-2xl border border-emerald-700/40 bg-card p-4 shadow-sm md:p-6" aria-labelledby="pcac-new-study-title">
-    <header className="space-y-2">
-      <p className="text-xs font-extrabold uppercase tracking-widest text-emerald-600 dark:text-emerald-300">Biblioteca temática · Alinhamento ao edital PC-AC 2026</p>
-      <h2 id="pcac-new-study-title" className="text-xl font-extrabold text-foreground">Aulas atualizadas: Administração e Arquivologia</h2>
-      <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">Conteúdo didático original organizado a partir de três apostilas de referência, revisado com fontes oficiais. A indicação de cargo é temática: confirme sempre o tópico exato do edital e suas retificações.</p>
+
+  const normalizedQuery = normalizeLibrarySearch(query);
+  const matches = React.useCallback((text: string) => !normalizedQuery || normalizeLibrarySearch(text).includes(normalizedQuery), [normalizedQuery]);
+  const lessonMatches = React.useCallback((lesson: Lesson) => matches(lesson.title) || lesson.body.some(matches), [matches]);
+
+  const entries = React.useMemo(() => COURSES.map((course) => {
+    const courseMatches = matches(course.title) || matches(course.subtitle);
+    const matchingLessons = course.lessons.filter(lessonMatches).length;
+    return { course, courseMatches, matchingLessons, visible: !normalizedQuery || courseMatches || matchingLessons > 0 };
+  }), [matches, lessonMatches, normalizedQuery]);
+  const visibleEntries = entries.filter((entry) => entry.visible);
+
+  React.useEffect(() => {
+    if (!normalizedQuery) return;
+    if (visibleEntries.some((entry) => entry.course.id === selected)) return;
+    if (visibleEntries[0]) setSelected(visibleEntries[0].course.id);
+  }, [normalizedQuery, visibleEntries, selected]);
+
+  const activeEntry = visibleEntries.find((entry) => entry.course.id === selected) ?? visibleEntries[0];
+  const course = activeEntry?.course;
+  const displayedLessons = course ? (activeEntry!.courseMatches || !normalizedQuery ? course.lessons : course.lessons.filter(lessonMatches)) : [];
+  const countCompleted = course ? course.lessons.filter(l=>completed[`${course.id}:${l.title}`]).length : 0;
+
+  return <section id="materiais-atualizados-pcac" className="updated-study-collections" aria-labelledby="pcac-new-study-title">
+    <header className="updated-study-collections__header">
+      <p className="updated-study-collections__eyebrow">Biblioteca temática · Alinhamento ao edital PC-AC 2026</p>
+      <h2 id="pcac-new-study-title">Aulas atualizadas por matéria</h2>
+      <p className="updated-study-collections__lede">Escolha uma matéria para abrir suas aulas, exemplos e perguntas de verificação.</p>
     </header>
-    <div className="flex flex-wrap gap-2" role="group" aria-label="Escolher disciplina">
-      {COURSES.map(c=><button key={c.id} type="button" aria-pressed={selected===c.id} onClick={()=>{setSelected(c.id);setRevealed({});}} className={`rounded-lg border px-3 py-2 text-left text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 ${selected===c.id?"border-emerald-500 bg-emerald-700 text-white":"border-border bg-background text-foreground hover:border-emerald-500 hover:bg-emerald-600/10"}`}>{c.title}</button>)}
+
+    <div className="updated-study-collections__search">
+      <Search aria-hidden="true" size={17} />
+      <input
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="Buscar matéria ou aula, ex.: protocolo, PODC..."
+        aria-label="Buscar nas aulas atualizadas"
+      />
+      {query && (
+        <button type="button" onClick={() => setQuery("")} aria-label="Limpar a busca">
+          <X aria-hidden="true" size={15} />
+        </button>
+      )}
     </div>
-    <div className="space-y-3">
-      <div className="rounded-xl border border-border bg-muted/20 p-3">
-        <h3 className="text-base font-extrabold text-foreground">{course.title} <span className="text-xs font-normal text-muted-foreground">· {course.lessons.length} aulas</span></h3>
-        <p className="mt-1 text-sm text-muted-foreground">{course.subtitle}</p>
-        <p className="mt-2 text-xs font-semibold text-foreground">{course.applicability}</p>
-        <p className="mt-1 text-xs text-muted-foreground">{course.origin}</p>
-        <p className="mt-1 text-xs text-emerald-600 dark:text-emerald-300">{course.updated}</p>
-        <p className="mt-2 text-xs font-semibold text-foreground" role="status">{countCompleted} de {course.lessons.length} aulas concluídas · {syncState === "synced" ? "salvas na nuvem" : syncState === "loading" ? "sincronizando…" : "armazenadas neste navegador"}.</p>
-        {syncError && <p role="status" className="mt-2 text-xs font-semibold text-amber-600 dark:text-amber-300">{syncError}</p>}
+
+    {visibleEntries.length === 0 ? (
+      <p className="updated-study-collections__empty">Nenhuma matéria ou aula encontrada para “{query}”.</p>
+    ) : (
+      <div className="updated-study-collections__grid" role="group" aria-label="Escolher matéria">
+        {visibleEntries.map(({ course: c }) => {
+          const Icon = COURSE_ICONS[c.id] ?? Archive;
+          const done = c.lessons.filter((l) => completed[`${c.id}:${l.title}`]).length;
+          const isSelected = course?.id === c.id;
+          return (
+            <button
+              key={c.id}
+              type="button"
+              aria-pressed={isSelected}
+              data-active={isSelected || undefined}
+              onClick={() => { setSelected(c.id); setRevealed({}); }}
+              className="updated-study-collections__card"
+            >
+              <span className="updated-study-collections__card-icon"><Icon aria-hidden="true" /></span>
+              <span className="updated-study-collections__card-body">
+                <strong>{c.title}</strong>
+                <span>{c.subtitle}</span>
+                <small>{done} de {c.lessons.length} aulas concluídas</small>
+              </span>
+            </button>
+          );
+        })}
       </div>
-      {course.lessons.map((l)=><details key={l.title} className="group rounded-xl border border-border bg-background open:border-emerald-500/60">
-        <summary className="cursor-pointer select-none px-4 py-3 text-sm font-bold text-foreground hover:bg-emerald-600/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">{l.title}</summary>
-        <div className="space-y-3 border-t border-border px-4 py-4 text-sm leading-6 text-foreground"><label className="flex items-center gap-2 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs font-bold text-foreground"><input type="checkbox" checked={!!completed[`${course.id}:${l.title}`]} onChange={()=>void toggleCompleted(course.id,l.title)} disabled={syncState==="loading"} className="h-4 w-4 accent-emerald-600 disabled:opacity-50" /> Marcar aula como concluída</label>
-          {l.body.map((p,j)=><p key={j}>{p}</p>)}
-          <p className="rounded-lg ring-1 ring-amber-500/35 bg-amber-500/10 px-3 py-2"><strong>Aplicação prática:</strong> {l.example}</p>
-          <div className="rounded-lg border border-border bg-muted/20 p-3">
-            <p className="font-bold">Verifique o aprendizado</p>
-            <p className="mt-1">{l.question}</p>
-            <button type="button" className="mt-2 rounded-md border border-border px-3 py-1.5 text-xs font-bold hover:bg-emerald-600/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400" onClick={()=>setRevealed(prev=>({...prev,[l.title]:!prev[l.title]}))}>{revealed[l.title]?"Ocultar resposta":"Ver resposta comentada"}</button>
-            {revealed[l.title]&&<p className="mt-2 flex gap-2 text-sm text-emerald-700 dark:text-emerald-300"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0" />{l.answer}</p>}
-          </div>
-          <a href={l.source} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-semibold text-primary underline underline-offset-4">Conferir fonte institucional <ExternalLink className="h-3 w-3" /></a>
+    )}
+
+    {course && (
+      <div className="updated-study-collections__panel">
+        <div className="updated-study-collections__panel-head">
+          <h3>{course.title} <span>· {displayedLessons.length} {displayedLessons.length === 1 ? "aula" : "aulas"}</span></h3>
+          <p>{course.subtitle}</p>
+          <p className="updated-study-collections__progress" role="status">{countCompleted} de {course.lessons.length} aulas concluídas · {syncState === "synced" ? "salvas na nuvem" : syncState === "loading" ? "sincronizando…" : "armazenadas neste navegador"}.</p>
+          {syncError && <p role="status" className="updated-study-collections__sync-error">{syncError}</p>}
+          <details className="updated-study-collections__meta">
+            <summary>Sobre este conteúdo</summary>
+            <p><strong>Aplicabilidade:</strong> {course.applicability}</p>
+            <p><strong>Origem:</strong> {course.origin}</p>
+            <p><strong>Atualização:</strong> {course.updated}</p>
+          </details>
         </div>
-      </details>)}
-    </div>
-    <footer className="flex gap-2 rounded-lg border border-amber-600/30 bg-amber-500/10 p-3 text-xs leading-relaxed text-foreground"><ShieldAlert className="h-4 w-4 shrink-0 text-amber-600" /><span>Não reproduz apostilas de terceiros. Os tópicos foram reescritos e verificados. A aplicação de normas federais a órgãos estaduais depende de competência e regulamentação próprias. Conteúdo complementar não significa cobrança garantida no edital.</span></footer>
+
+        <div className="updated-study-collections__lessons">
+          {displayedLessons.length === 0 && (
+            <p className="updated-study-collections__empty">Nenhuma aula de {course.title} encontrada para “{query}”.</p>
+          )}
+          {displayedLessons.map((l) => (
+            <details key={l.title} className="updated-study-collections__lesson group">
+              <summary>{l.title}</summary>
+              <div className="updated-study-collections__lesson-body">
+                <label className="updated-study-collections__done">
+                  <input type="checkbox" checked={!!completed[`${course.id}:${l.title}`]} onChange={() => void toggleCompleted(course.id, l.title)} disabled={syncState === "loading"} />
+                  Marcar aula como concluída
+                </label>
+                {l.body.map((p, j) => <p key={j}>{p}</p>)}
+                <p className="updated-study-collections__example"><strong>Aplicação prática:</strong> {l.example}</p>
+                <div className="updated-study-collections__check">
+                  <p className="updated-study-collections__check-label">Verifique o aprendizado</p>
+                  <p>{l.question}</p>
+                  <button type="button" onClick={() => setRevealed((prev) => ({ ...prev, [l.title]: !prev[l.title] }))}>
+                    {revealed[l.title] ? "Ocultar resposta" : "Ver resposta comentada"}
+                  </button>
+                  {revealed[l.title] && (
+                    <p className="updated-study-collections__answer"><CheckCircle2 aria-hidden="true" />{l.answer}</p>
+                  )}
+                </div>
+                <a href={l.source} target="_blank" rel="noopener noreferrer" className="updated-study-collections__source">
+                  Conferir fonte institucional <ExternalLink aria-hidden="true" />
+                </a>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <footer className="updated-study-collections__disclaimer">
+      <ShieldAlert aria-hidden="true" />
+      <span>Não reproduz apostilas de terceiros. Os tópicos foram reescritos e verificados. A aplicação de normas federais a órgãos estaduais depende de competência e regulamentação próprias. Conteúdo complementar não significa cobrança garantida no edital.</span>
+    </footer>
   </section>;
 }
