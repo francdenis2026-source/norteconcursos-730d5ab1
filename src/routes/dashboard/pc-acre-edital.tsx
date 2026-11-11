@@ -15,7 +15,9 @@ import {
   Scale,
   ShieldCheck,
   Users,
+  GraduationCap,
 } from "lucide-react";
+import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -148,6 +150,9 @@ function DisciplineStudyLinks({
   cargoId: PcAcVerticalCargoId;
 }) {
   const link = pcAcDisciplineLink(discipline.id);
+  // Curso autoral da plataforma correspondente a esta disciplina do Anexo III, quando existe.
+  // Fica junto da própria matéria, que é onde o aluno procura o material — não no cronograma.
+  const course = findPcAcStudyResource(discipline.name);
   const { catalog } = useMediaCatalog();
   const videos = link?.subjects?.flatMap((subject) => relatedVideos(catalog, subject, "*", 2)).slice(0, 3) ?? [];
   const topicVideos = link?.subjects
@@ -160,9 +165,19 @@ function DisciplineStudyLinks({
     )
     .filter((video, index, all) => all.findIndex((item) => item.id === video.id) === index)
     .slice(0, 24) ?? [];
-  if (!link && !videos.length && !topicVideos.length) return null;
+  if (!link && !course && !videos.length && !topicVideos.length) return null;
   const linkClass =
     "inline-flex items-center gap-1 rounded-md border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary transition-colors hover:bg-primary/10";
+  const courseChip = course ? (
+    <a
+      href={pcAcStudyResourceUrl(course.courseId)}
+      className="inline-flex items-center gap-1 rounded-md border border-emerald-600/40 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-700 transition-colors hover:bg-emerald-500/20 dark:text-emerald-300"
+      title="Aulas autorais em revisão editorial; consulte o programa do cargo para confirmar a abrangência."
+    >
+      <GraduationCap className="h-3 w-3" aria-hidden="true" />
+      Aulas Norte: {course.label}
+    </a>
+  ) : null;
   const back = `/dashboard/pc-acre-edital?cargo=${cargoId}`;
   if (link?.anchor)
     return (
@@ -171,11 +186,13 @@ function DisciplineStudyLinks({
           <Scale className="h-3 w-3" aria-hidden="true" />
           Ver leis institucionais abaixo
         </a>
+        {courseChip}
       </div>
     );
   return (
     <div className="pcac-discipline-actions space-y-2">
       <div className="flex flex-wrap gap-1.5">
+        {courseChip}
         {link?.subjects?.map((subject) => (
           <React.Fragment key={subject}>
             <Link
