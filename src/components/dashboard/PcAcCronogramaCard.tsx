@@ -107,7 +107,7 @@ function CommitmentsEditor({
   const [kind, setKind] = React.useState<PcAcCommitmentKind>("trabalho");
   const [label, setLabel] = React.useState("");
   const [time, setTime] = React.useState("08:00");
-  const [minutes, setMinutes] = React.useState(480);
+  const [endTime, setEndTime] = React.useState("16:00");
   const [repeat, setRepeat] = React.useState<"semana" | "data">("semana");
   const [days, setDays] = React.useState<number[]>([1, 2, 3, 4, 5]);
   const [date, setDate] = React.useState("");
@@ -116,13 +116,19 @@ function CommitmentsEditor({
 
   const pickKind = (next: PcAcCommitmentKind) => {
     setKind(next);
-    setMinutes(COMMITMENT_DEFAULT_MINUTES[next] ?? 60);
+    const defaultMinutes = COMMITMENT_DEFAULT_MINUTES[next] ?? 60;
+    const startMinutes = clockToMinutes(time);
+    const total = Math.min(23 * 60 + 59, startMinutes + defaultMinutes);
+    setEndTime(`${String(Math.floor(total / 60)).padStart(2, "0")}:${String(total % 60).padStart(2, "0")}`);
     if (next === "medico" || next === "reuniao" || next === "emergencia") setRepeat("data");
   };
 
   const add = () => {
     if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) return setError("Informe um horário válido.");
-    if (minutes < 5) return setError("A duração mínima é de 5 minutos.");
+    const startMinutes = clockToMinutes(time);
+    const finishMinutes = clockToMinutes(endTime);
+    const calculatedMinutes = finishMinutes - startMinutes;
+    if (calculatedMinutes < 5) return setError("A hora final deve ser pelo menos 5 minutos depois do início.");
     if (repeat === "semana" && !days.length) return setError("Escolha ao menos um dia da semana.");
     if (repeat === "data" && !/^\d{4}-\d{2}-\d{2}$/.test(date)) return setError("Escolha a data do compromisso.");
     setError("");
@@ -131,7 +137,7 @@ function CommitmentsEditor({
       kind,
       ...(label.trim() ? { label: label.trim() } : {}),
       time,
-      minutes,
+      minutes: calculatedMinutes,
       ...(repeat === "data" ? { date } : { days: [...days].sort((a, b) => a - b) }),
     };
     onChange(editingId ? commitments.map((item) => item.id === editingId ? next : item) : [...commitments, next]);
@@ -144,7 +150,8 @@ function CommitmentsEditor({
     setKind(commitment.kind);
     setLabel(commitment.label ?? "");
     setTime(commitment.time);
-    setMinutes(commitment.minutes);
+    const finishMinutes = clockToMinutes(commitment.time) + commitment.minutes;
+    setEndTime(`${String(Math.floor(finishMinutes / 60) % 24).padStart(2, "0")}:${String(finishMinutes % 60).padStart(2, "0")}`);
     setRepeat(commitment.date ? "data" : "semana");
     setDate(commitment.date ?? "");
     setDays(commitment.days ?? [1, 2, 3, 4, 5]);
@@ -204,8 +211,9 @@ function CommitmentsEditor({
           <Input id="commitment-time" type="time" value={time} disabled={disabled} onChange={(event) => setTime(event.target.value)} />
         </div>
         <div className="space-y-1">
-          <Label htmlFor="commitment-minutes">Duração (minutos)</Label>
-          <Input id="commitment-minutes" type="number" min={5} max={960} step={5} value={minutes} disabled={disabled} onChange={(event) => setMinutes(Math.min(960, Math.max(5, Number(event.target.value) || 60)))} />
+          <Label htmlFor="commitment-end">Termina às</Label>
+          <Input id="commitment-end" type="time" value={endTime} disabled={disabled} onChange={(event) => setEndTime(event.target.value)} />
+          <small className="pcac-commitments__calculated">{Math.max(0, clockToMinutes(endTime) - clockToMinutes(time))} min calculados</small>
         </div>
         <div className="space-y-1">
           <Label htmlFor="commitment-repeat">Quando</Label>
