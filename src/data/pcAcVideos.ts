@@ -111,4 +111,72 @@ export const PCAC_VIDEOS_EXTRA: Record<string, Record<string, TopicVideo[]>> = {
       { id: "QXXHPHUUIjs", title: "Estatística: média, moda, mediana, variância e desvio padrão" },
     ],
   },
+  // "Legislação Penal Extravagante" não tinha nenhum vídeo no catálogo (nem aqui, nem em
+  // topicVideos.ts) — as leis extravagantes aparecem espalhadas sob outras matérias (ex.:
+  // "Legislação Especial e Direitos Humanos"), mas não sob o nome usado pelo edital PC-AC.
+  // Vídeos abaixo vieram de busca pública; a incorporação e a data ainda precisam ser
+  // conferidas com `node scripts/video-meta.mjs` (mesma ressalva já usada acima neste arquivo).
+  "Legislação Penal Extravagante": {
+    "Lei de Drogas": [
+      { id: "i5lcZyzzP_k", title: "AULA GRATUITA: Lei de Drogas (Lei nº 11.343/06) — Legislação Penal Especial" },
+      { id: "AYn7n5NhNAM", title: "Lei Esquematizada — Lei de Drogas (Lei nº 11.343/2006)" },
+    ],
+    "Organizações criminosas": [
+      { id: "buqlGgZa668", title: "Lei de Organização Criminosa — Lei 12.850/2013 — Parte 1" },
+      { id: "2BV1ZPPW2YI", title: "Lei de Organização Criminosa — Lei 12.850/2013 — Parte 2" },
+    ],
+    "Lavagem de dinheiro": [
+      { id: "UaMAsy-YvOk", title: "AULA GRATUITA: Lei de Lavagem de Dinheiro (Lei nº 9.613/98) — Legislação Penal Especial" },
+      { id: "5oKPsxpSG9k", title: "Lei nº 9.613 de 1998 — Lavagem de Capitais", channel: "Professor Raphael Pinho" },
+    ],
+    "Abuso de autoridade": [
+      { id: "AzVpuQfcjPw", title: "AULA GRATUITA: Lei de Abuso de Autoridade (Lei nº 13.869/19) — Legislação Penal Especial" },
+      { id: "8g1qujVd6XU", title: "Lei de Abuso de Autoridade (Lei nº 13.869/19)", channel: "Professora Priscilla Fernandes" },
+    ],
+    "Tortura": [
+      { id: "bb_QBPdvrn4", title: "Lei de Tortura — Nº 9.455/97 — Polícia Penal/AC", channel: "Prof. Kelsen Pantoja" },
+      { id: "gr7tf8O8O6M", title: "Lei 9.455/97 — Lei de Tortura — Teoria + Questões" },
+    ],
+    "Estatuto do Desarmamento": [
+      { id: "6WqqpOA5qKs", title: "AULA GRATUITA: Estatuto do Desarmamento (Lei nº 10.826/03) — Legislação Penal Especial" },
+      { id: "hx4edhZh_Oo", title: "Lei Esquematizada — Estatuto do Desarmamento (Lei nº 10.826 de 2003)" },
+    ],
+    "Interceptação das comunicações telefônicas": [
+      { id: "ir_YQ4qTHEI", title: "Lei Esquematizada — Lei de Interceptação Telefônica (Lei nº 9.296 de 1996)" },
+      { id: "z4ffpcWRH7A", title: "Lei de interceptações telefônicas — Parte I (Lei 9.296 de 1996)" },
+    ],
+    "Crimes hediondos": [
+      { id: "qzPbBDWCO-w", title: "AULA GRATUITA: Lei de Crimes Hediondos (Lei nº 8.072/90) — Legislação Penal Especial" },
+      { id: "RA21YMfH2_U", title: "Aula completa — Lei de Crimes Hediondos — 8.072/90" },
+    ],
+    "Crimes cibernéticos": [
+      { id: "y7o6IIOD18E", title: "Lei “Carolina Dieckmann” (12.737/2012)" },
+      { id: "eAkn8X6qpwk", title: "Delitos Informáticos — Lei Carolina Dieckmann", channel: "Monster Concursos" },
+    ],
+    "Juizados especiais criminais": [
+      { id: "balpCDf-QWo", title: "JECRIM — Aula animada — Juizado Especial Criminal — Lei 9.099/95" },
+      { id: "j5wpylJ_QRY", title: "Juizado Especial Criminal — Lei 9.099/95" },
+    ],
+    "Crimes ambientais": [
+      { id: "JrSKZNmOyik", title: "Lei nº 9.605/1998 — Crimes Ambientais" },
+      { id: "OWt4mOzeqQw", title: "Lei de Crimes Ambientais (Lei 9.605/1998) — Aula 02" },
+    ],
+    "Prisão temporária": [
+      { id: "FZ74mEnvUg0", title: "Aula Lei 7.960/89 — Prisão Temporária — Concurso PC-SP" },
+      { id: "mcG4ECMzeUE", title: "Prisão Temporária (Lei 7.960/89) — Lei completa" },
+    ],
+    "Violência doméstica e familiar contra a mulher": [
+      { id: "2kKfq68qVXo", title: "Aula completa — Lei 11.340/2006 — Lei Maria da Penha (Atualizada)" },
+      { id: "xw2ig9iHLiA", title: "Lei Maria da Penha (Atualizada) — Revisão completa + questões comentadas" },
+    ],
+    "Estatuto da Criança e do Adolescente": [
+      { id: "bbLFKngrBQE", title: "Crimes previstos no Estatuto da Criança e do Adolescente", channel: "Professor Rodrigues" },
+      { id: "dSLYCs3CwU4", title: "ECA comentado e atualizado para concursos (revisão artigo por artigo)" },
+    ],
+    "*": [
+      { id: "qzPbBDWCO-w", title: "AULA GRATUITA: Lei de Crimes Hediondos (Lei nº 8.072/90) — Legislação Penal Especial" },
+      { id: "buqlGgZa668", title: "Lei de Organização Criminosa — Lei 12.850/2013 — Parte 1" },
+      { id: "i5lcZyzzP_k", title: "AULA GRATUITA: Lei de Drogas (Lei nº 11.343/06) — Legislação Penal Especial" },
+    ],
+  },
 };
