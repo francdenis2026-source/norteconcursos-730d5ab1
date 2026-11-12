@@ -256,6 +256,29 @@ function DisciplineIndex({
               </Link>
             </li>
           )}
+          {!normalized && (
+            <>
+            {[
+              { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", tone: "oklch(0.78 0.13 110)", image: "trainer-study" },
+              { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", tone: "oklch(0.8 0.14 82)", image: "study-assistant" },
+              { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", tone: "oklch(0.74 0.14 200)", image: "exam-hall" },
+            ].map((guide) => (
+              <li key={guide.id}>
+                <Link
+                  to="/dashboard/library"
+                  search={{ collection: "subjects", guia: guide.id } as never}
+                  hash="materiais-atualizados-pcac"
+                  className="ak-tile"
+                  style={{ "--ak-tone": guide.tone, height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
+                >
+                  <img src={`/media/hero/${guide.image}.webp`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                  <strong>{guide.name}</strong>
+                  <span>{guide.text}</span>
+                </Link>
+              </li>
+            ))}
+            </>
+          )}
           {shown.map((card) => {
             const Icon = ICONS[card.icon];
             const body = (

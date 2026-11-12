@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpenText, CalendarDays, Download, ListChecks, ScanSearch } from "lucide-react";
+import { ArrowRight, CalendarDays, Download, ListChecks, ScanSearch } from "lucide-react";
 
 export function PcAcreEditalSpotlight() {
   return (
@@ -15,7 +15,7 @@ export function PcAcreEditalSpotlight() {
       />
       <div className="student-pcac-spotlight__copy">
         <h3 id="student-pcac-spotlight-title">PC-AC 2026 · Edital verticalizado</h3>
-        <p>139 vagas em 6 cargos. Acompanhe o que já estudou e exporte seu progresso em PDF.</p>
+        <p>139 vagas em 6 cargos · IDECAN · prova em 24/01/2027. Acompanhe o que já estudou.</p>
       </div>
       {/* Bandeira do Acre, conforme a referência visual do Wikimedia Commons. */}
       <svg
@@ -43,10 +43,6 @@ export function PcAcreEditalSpotlight() {
         <Link to="/dashboard/inteligencia-idecan" data-tone="blue">
           <ScanSearch aria-hidden="true" />
           <span>Radar IDECAN</span>
-        </Link>
-        <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} data-tone="green">
-          <BookOpenText aria-hidden="true" />
-          <span>Edital digital</span>
         </Link>
         <a
           href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf"

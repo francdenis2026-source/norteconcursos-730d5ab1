@@ -33,7 +33,6 @@ import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
-import { UpdatedStudyCollections } from "@/components/dashboard/UpdatedStudyCollections";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
@@ -307,6 +306,25 @@ function MaterialHub() {
                 <span>História, geografia, economia e atualidades</span>
               </Link>
             </li>
+            {[
+              { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", tone: "oklch(0.78 0.13 110)", image: "trainer-study" },
+              { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", tone: "oklch(0.8 0.14 82)", image: "study-assistant" },
+              { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", tone: "oklch(0.74 0.14 200)", image: "exam-hall" },
+            ].map((guide) => (
+              <li key={guide.id}>
+                <Link
+                  to="/dashboard/library"
+                  search={{ collection: "subjects", guia: guide.id } as never}
+                  hash="materiais-atualizados-pcac"
+                  className="ak-tile"
+                  style={{ "--ak-tone": guide.tone, height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
+                >
+                  <img src={`/media/hero/${guide.image}.webp`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                  <strong>{guide.name}</strong>
+                  <span>{guide.text}</span>
+                </Link>
+              </li>
+            ))}
             {availableSubjects.map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
               const theme = disciplineTheme(entry.name);
@@ -337,8 +355,6 @@ function MaterialHub() {
           </ul>
         )}
       </section>
-
-      <UpdatedStudyCollections storageScope={user?.id ?? "anonymous"} />
 
       <section className="pcac-material-focus" aria-labelledby="pcac-material-focus-title">
         <div className="pcac-material-focus__glow" aria-hidden="true" />
