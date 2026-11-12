@@ -140,3 +140,63 @@
 .ak-themed :is(.material-card, .library-card, .surface-card) { border-color: color-mix(in srgb, var(--ak-tone) 38%, var(--border)); border-left: 0.25rem solid var(--ak-tone); }
 .ak-themed :is(.material-card, .library-card):hover { border-color: var(--ak-tone); background: color-mix(in srgb, var(--ak-tone) 12%, var(--card)); }
 .ak-themed :is(.material-card__icon, .library-card__icon) { background: color-mix(in srgb, var(--ak-tone) 22%, transparent); color: var(--ak-tone); }
+
+
+/* Navegação das áreas internas de Realidade do Acre */
+.ak-axis-index { display: grid; gap: .65rem; min-width: 0; }
+.ak-axis-index__heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .35rem 1rem; }
+.ak-axis-index__heading > div { display: grid; gap: .12rem; }
+.ak-axis-index__heading > div > span,
+.ak-axis-detail__section-head > div > span { color: var(--ak-gold, var(--ak-tone)); font-size: .65rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.ak-axis-index__heading h2 { margin: 0; font-size: 1rem; font-weight: 850; line-height: 1.25; }
+.ak-axis-index__meta { color: var(--muted-foreground); font-size: .72rem; font-weight: 700; }
+.ak-axis--interactive { display: block; height: 100%; color: inherit; text-decoration: none; cursor: pointer; transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease; }
+.ak-axis--interactive .ak-axis__head { align-items: center; }
+.ak-axis--interactive .ak-axis__head h3 { flex: 1; min-width: 0; margin: 0; color: #fff; font-size: .96rem; font-weight: 850; line-height: 1.2; }
+.ak-axis__open { display: grid; flex: none; place-items: center; width: 1.8rem; height: 1.8rem; border: 1px solid color-mix(in srgb, white 24%, transparent); border-radius: .55rem; background: color-mix(in srgb, white 9%, transparent); color: white; transition: transform 180ms ease, background-color 180ms ease; }
+.ak-axis__body { display: grid; gap: .55rem; padding: .7rem .85rem .8rem; }
+.ak-axis__body > p { display: -webkit-box; overflow: hidden; min-height: 3.6em; margin: 0; color: var(--muted-foreground); font-size: .77rem; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.ak-axis__action { display: inline-flex; align-items: center; gap: .2rem; width: fit-content; color: var(--ak-tone); font-size: .72rem; font-weight: 850; }
+.ak-axis--interactive:hover { transform: translateY(-2px); border-color: var(--ak-tone); box-shadow: 0 .65rem 1.5rem -1rem color-mix(in srgb, var(--ak-tone) 65%, transparent); }
+.ak-axis--interactive:hover .ak-axis__open { transform: translateX(2px); background: color-mix(in srgb, var(--ak-tone) 28%, transparent); }
+.ak-axis--interactive:focus-visible { outline: 3px solid var(--ak-tone); outline-offset: 3px; }
+.ak-axis--interactive:active { transform: translateY(0); }
+.ak-axis-detail { --ak-gold: var(--ak-tone); }
+.ak-axis-detail__hero { min-height: 10.5rem; }
+.ak-axis-detail__hero .ak-hero__copy h1 { font-size: clamp(1.45rem, 2.8vw, 2rem); }
+.ak-axis-detail__hero .ak-hero__copy p { max-width: 68ch; line-height: 1.5; }
+.ak-axis-detail__workspace { display: grid; gap: .85rem; min-width: 0; padding: .95rem; border: 1px solid color-mix(in srgb, var(--ak-tone) 38%, var(--border)); border-radius: 1rem; background: color-mix(in srgb, var(--ak-tone) 4%, var(--card)); }
+.ak-axis-detail__section-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; min-width: 0; }
+.ak-axis-detail__section-head > div:first-child { display: grid; gap: .18rem; min-width: 0; }
+.ak-axis-detail__section-head h2 { margin: 0; font-size: 1.12rem; font-weight: 900; line-height: 1.2; }
+.ak-axis-detail__section-head p { margin: 0; color: var(--muted-foreground); font-size: .76rem; line-height: 1.45; }
+.ak-axis-detail__count { display: grid; flex: none; justify-items: center; min-width: 4.2rem; padding: .5rem .65rem; border: 1px solid color-mix(in srgb, var(--ak-tone) 42%, var(--border)); border-radius: .75rem; background: color-mix(in srgb, var(--ak-tone) 10%, transparent); }
+.ak-axis-detail__count strong { color: var(--ak-tone); font-size: 1.35rem; font-weight: 900; line-height: 1; }
+.ak-axis-detail__count span { margin-top: .2rem; color: var(--muted-foreground); font-size: .65rem; font-weight: 750; }
+.ak-axis-detail__groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.ak-axis-detail__group { min-width: 0; overflow: hidden; border: 1px solid color-mix(in srgb, var(--ak-tone) 34%, var(--border)); border-radius: .85rem; background: var(--card); }
+.ak-axis-detail__group > header { display: flex; align-items: center; gap: .6rem; padding: .75rem .8rem; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--ak-tone) 9%, var(--card)); }
+.ak-axis-detail__index { display: grid; flex: none; place-items: center; width: 2rem; height: 2rem; border-radius: .6rem; background: color-mix(in srgb, var(--ak-tone) 18%, transparent); color: var(--ak-tone); font-size: .72rem; font-weight: 900; }
+.ak-axis-detail__group > header > div { flex: 1; min-width: 0; }
+.ak-axis-detail__group > header h3 { margin: 0; font-size: .85rem; font-weight: 850; line-height: 1.3; }
+.ak-axis-detail__group > header p { margin: .12rem 0 0; color: var(--muted-foreground); font-size: .67rem; }
+.ak-axis-detail__group > header > svg { flex: none; color: var(--ak-tone); }
+.ak-axis-detail__group > ul { display: grid; gap: .35rem; margin: 0; padding: .75rem .85rem .85rem 2rem; }
+.ak-axis-detail__group > ul li { padding-left: .1rem; color: var(--foreground); font-size: .77rem; line-height: 1.5; }
+.ak-axis-detail__group > ul li::marker { color: var(--ak-tone); }
+.ak-axis-detail__single-topic { margin: 0; padding: .8rem; color: var(--foreground); font-size: .78rem; line-height: 1.5; }
+.ak-axis-detail__source-note { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; padding: .7rem .8rem; border: 1px dashed color-mix(in srgb, var(--ak-tone) 55%, var(--border)); border-radius: .75rem; background: color-mix(in srgb, var(--ak-tone) 6%, transparent); }
+.ak-axis-detail__source-note > svg { flex: none; color: var(--ak-tone); }
+.ak-axis-detail__source-note p { flex: 1 1 18rem; margin: 0; color: var(--muted-foreground); font-size: .72rem; line-height: 1.45; }
+.ak-axis-detail__source-note a { display: inline-flex; align-items: center; gap: .3rem; color: var(--ak-tone); font-size: .72rem; font-weight: 850; text-decoration: none; }
+.ak-axis-detail__source-note a:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .ak-axis-detail__groups { grid-template-columns: minmax(0, 1fr); }
+  .ak-axis-detail__section-head { align-items: flex-start; }
+  .ak-axis-detail__hero { min-height: 0; }
+  .ak-axis-detail__source-note a { margin-left: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ak-axis--interactive, .ak-axis__open { transition: none; }
+  .ak-axis--interactive:hover { transform: none; }
+}
