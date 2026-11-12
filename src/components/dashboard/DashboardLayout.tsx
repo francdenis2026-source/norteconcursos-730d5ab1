@@ -212,6 +212,12 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Central de Estudos",
+    label: "Central de Estudos",
+    icon: BookOpenCheck,
+    href: "/dashboard/study-tools",
+  },
+  {
+    group: "Central de Estudos",
     label: "Redação para concursos",
     icon: PenLine,
     href: "/dashboard/essays",

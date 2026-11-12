@@ -27,3 +27,13 @@ test('an absent landing route falls back to an authorized destination',()=>{
  const only=[{group:'Questões',href:'/dashboard/errors'}];
  assert.equal(studentSections(only)[0].entry,only[0]);
 });
+
+test('Central de Estudos opens its own workspace and keeps Redação as a secondary destination',()=>{
+ const central=[
+  {group:'Central de Estudos',href:'/dashboard/study-tools',label:'Central de Estudos'},
+  {group:'Central de Estudos',href:'/dashboard/essays',label:'Redação para concursos'},
+ ];
+ const section=studentSections(central)[0];
+ assert.equal(section.entry.href,'/dashboard/study-tools');
+ assert.deepEqual(section.entries.map(item=>item.href),['/dashboard/study-tools','/dashboard/essays']);
+});

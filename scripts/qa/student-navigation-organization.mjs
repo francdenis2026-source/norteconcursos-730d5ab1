@@ -45,7 +45,8 @@ async function seeded(role) {
 const sections=[
  ['Meu planejamento','/dashboard/study-coach',['/dashboard/study-coach','/dashboard/cronograma','/dashboard/study-plan','/dashboard/study-tools']],
  ['Meu objetivo','/dashboard/my-contest',['/dashboard/my-contest','/dashboard/edital','/dashboard/careers','/dashboard/questions','/dashboard/edital-radar','/dashboard/exam-panorama','/dashboard/perfil-bancas']],
- ['Materiais','/dashboard/material',['/dashboard/material','/dashboard/library','/dashboard/leis','/dashboard/ctb','/dashboard/calculadora-penal','/dashboard/disciplinas','/dashboard/media','/dashboard/dicionario','/dashboard/essays']],
+ ['Central de Estudos','/dashboard/study-tools',['/dashboard/study-tools','/dashboard/essays']],
+ ['Materiais','/dashboard/material',['/dashboard/material','/dashboard/library','/dashboard/leis','/dashboard/ctb','/dashboard/calculadora-penal','/dashboard/disciplinas','/dashboard/media','/dashboard/dicionario']],
  ['Questões e revisão','/dashboard/question-trainer',['/dashboard/question-trainer','/dashboard/errors','/dashboard/flashcards','/dashboard/notebooks','/dashboard/question-bank']],
  ['Provas','/dashboard/mock-exams',['/dashboard/mock-exams','/dashboard/student-exams']],
  ['Desempenho','/dashboard/performance',['/dashboard/performance','/dashboard/history','/dashboard/ranking','/dashboard/medals']],
@@ -55,7 +56,7 @@ const sections=[
 async function ready(p) {await p.locator('.app-shell').waitFor({timeout:30000});await p.locator('#norte-initial-loading').waitFor({state:'hidden',timeout:30000});}
 try {
  const {context}=await seeded('user');const p=await context.newPage();await p.setViewportSize({width:1440,height:1000});await p.goto(base+'/dashboard/profile');await ready(p);
- const sidebar=p.locator('.app-sidebar .student-direct-navigation');assert.equal(await sidebar.getByRole('link').count(),9);
+ const sidebar=p.locator('.app-sidebar .student-direct-navigation');assert.equal(await sidebar.getByRole('link').count(),10);
  for(const [name,entry,destinations] of sections){
   await sidebar.locator(`a[href="${entry}"]`).click();await p.waitForURL(url=>url.pathname===entry);
   assert.ok((await sidebar.locator('[data-active=true]').innerText()).includes(name),name);
@@ -64,7 +65,6 @@ try {
    const nav=name==='Meu planejamento'?p.getByRole('navigation',{name:'Planejamento de estudos',exact:true}):p.locator('.workspace-section-nav');
    if(destinations.length>1){await nav.locator(`a[href^="${path}"]`).filter({hasText:/./}).first().click();await p.waitForURL(url=>url.pathname===path);}
    if(path==='/dashboard/library') assert.equal(new URL(p.url()).searchParams.get('collection'),'laws');
-   if(path==='/dashboard/study-tools') assert.equal(await p.getByRole('navigation',{name:'Planejamento de estudos',exact:true}).getByRole('link').count(),4);
    if(path==='/dashboard/student-exams') await p.getByRole('heading',{level:1,name:'Provas realizadas e diagnóstico'}).waitFor();
    if(path==='/dashboard/profile') assert.equal(await p.locator('#dashboard-content').getByRole('button',{name:'Gerenciar Assinatura',exact:true}).count(),0);
    if(path==='/dashboard/subscriptions') await p.getByRole('region',{name:'Gestão da assinatura'}).waitFor();

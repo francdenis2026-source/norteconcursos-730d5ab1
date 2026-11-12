@@ -47,7 +47,7 @@ import "@/styles/study-tools-refinement.css";
 import "@/styles/study-area-compact.css";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
-  head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
+  head: () => ({ meta: [{ title: "Central de Estudos | Norte Concurso" }] }),
   validateSearch: (search: Record<string, unknown>): { context?: "enem" | undefined } => ({ context: search["context"] === "enem" ? "enem" : undefined }),
   component: StudyToolsPage,
 });
