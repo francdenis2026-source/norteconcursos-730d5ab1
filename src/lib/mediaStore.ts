@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { PLAYLISTS, PODCASTS, type Podcast, type VideoPlaylist } from "@/data/mediaCatalog";
 import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
-import { PCAC_VIDEOS } from "@/data/pcAcVideos";
+import { PCAC_VIDEOS, PCAC_VIDEOS_EXTRA } from "@/data/pcAcVideos";
 import { ENEM_VIDEOS } from "@/data/enemVideos";
 
 export interface MediaCatalog {
@@ -103,7 +103,7 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
 }
 
 export const STATIC_CATALOG: MediaCatalog = {
-  topicVideos: mergeTopicVideos({ ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, PCAC_VIDEOS),
+  topicVideos: mergeTopicVideos(mergeTopicVideos({ ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, PCAC_VIDEOS), PCAC_VIDEOS_EXTRA),
   playlists: PLAYLISTS,
   podcasts: PODCASTS,
   fromDb: false,
