@@ -77,8 +77,8 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
               Preparação estratégica para sua carreira <em>policial.</em>
             </h1>
             <p className="sx-lead">
-              Editais organizados, questões por banca, simulados e desempenho em um único ambiente
-              de estudo.
+              Do edital à aprovação: questões por banca, simulados cronometrados e desempenho por
+              disciplina, em um único ambiente de estudo.
             </p>
             <div className="sx-actions">
               <Link to="/auth" search={{ mode: "register" }} className="sx-btn sx-btn--primary">

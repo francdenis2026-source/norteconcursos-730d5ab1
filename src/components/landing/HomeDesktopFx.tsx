@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const CARD_SELECTOR = ".desktop-homepage :is(.sx-card, .sx-exam, .home-ranking__card, .home-plan, .hp-promo__card)";
 const REVEAL_SELECTOR =
-  ".desktop-homepage :is(.sx-head, .sx-hero__copy, .sx-hero__panel, .sx-card, .sx-exam, .home-ranking__heading, .home-ranking__card, .home-plans__intro, .home-plan, .hp-promo__copy, .hp-promo__card)";
+  ".desktop-homepage :is(.sx-head, .sx-hero__copy, .sx-hero__panel, .sx-card, .sx-exam, .home-ranking__heading, .home-ranking__card, .home-plans__intro, .home-plan, .hp-promo__copy, .hp-promo__card, .hd__media, .hd__copy)";
 
 /** Efeitos da home no desktop: holofote no fundo, cards que reagem ao mouse e revelação ao rolar. */
 export function HomeDesktopFx() {

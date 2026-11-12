@@ -3,9 +3,9 @@ import { ArrowRight, BookOpenCheck, CalendarCheck, Sparkles, Target, Trophy } fr
 import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 
 const PERKS = [
-  { icon: Target, title: "Questões por banca", text: "Treine no estilo de quem vai aplicar a sua prova." },
-  { icon: CalendarCheck, title: "Plano de estudos", text: "Cronograma pelo edital, com revisões no ritmo certo." },
-  { icon: Trophy, title: "Ranking e medalhas", text: "Compare o seu desempenho com a comunidade." },
+  { icon: Target, title: "Questões por banca", text: "Pratique no estilo da banca que vai aplicar a sua prova." },
+  { icon: CalendarCheck, title: "Plano de estudos", text: "Um cronograma montado a partir do edital, com revisões programadas." },
+  { icon: Trophy, title: "Ranking e medalhas", text: "Veja a sua posição entre os candidatos e acompanhe a evolução." },
 ];
 
 /** Faixa de divulgação da plataforma na home do desktop. */
@@ -15,7 +15,7 @@ export function HomePromo() {
       <div className="hp-promo__inner">
         <img
           className="hp-promo__art"
-          src="/media/hero/careers-team.webp"
+          src="/media/hero/exam-hall.webp"
           alt=""
           aria-hidden="true"
           loading="lazy"
@@ -23,14 +23,14 @@ export function HomePromo() {
         />
         <div className="hp-promo__copy">
           <span className="hp-promo__tag">
-            <Sparkles aria-hidden="true" /> Comece hoje, sem cartão
+            <Sparkles aria-hidden="true" /> Treino com cara de prova
           </span>
           <h2 id="hp-promo-title">
-            Sua farda começa <em>no estudo de hoje.</em>
+            No dia da prova, <em>nada vai ser novidade.</em>
           </h2>
           <p>
-            Questões oficiais, simulados cronometrados e desempenho por disciplina em um só lugar.
-            Experimente agora com {GUEST_DAILY_LIMIT} questões grátis no Desafio diário.
+            Treine com questões oficiais, faça simulados com o tempo correndo e veja em quais
+            disciplinas você ainda perde pontos. Comece com {GUEST_DAILY_LIMIT} questões grátis por dia.
           </p>
           <div className="hp-promo__actions">
             <Link to="/auth" search={{ mode: "register" }} className="hp-promo__primary">
