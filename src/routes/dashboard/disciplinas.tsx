@@ -71,7 +71,7 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
 type SyllabusTopic = { id: string; discipline: string; topic_text: string; topic_order: number | null };
 
 function subjectKey(name: string) {
-  const value = canonicalSubject(name).normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+  const value = canonicalSubject(name).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   if (value.includes("portugues") || value.includes("redacao")) return "portugues";
   if (value.includes("matematica")) return "matematica";
   if (value.includes("raciocinio") || value.includes("logica")) return "logica";
