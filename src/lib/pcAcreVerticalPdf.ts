@@ -12,13 +12,13 @@ import {
   type PcAcVerticalStatus,
 } from "@/lib/pcAcreVerticalizado";
 import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
+import { loadPcAcPdfAssets } from "@/lib/pcAcPdfAssets";
 
 const STATUS_LABEL: Record<PcAcVerticalStatus, string> = {
   estudado: "Estudado",
   "a-estudar": "A estudar",
 };
 
-const LOGO_URL = "/media/brand/norte-identity/emblema.png";
 const DEV_SIGNATURE = "Desenvolvido por Franc Denis · Feijó, Acre, Brasil";
 
 /** Paleta da marca (mesmas cores do emblema — dourado e azul-marinho quase preto), em RGB 0-255. */
@@ -43,34 +43,16 @@ const CONTENT_W = PAGE_W - MARGIN_X * 2;
 const FOOTER_Y = PAGE_H - 44;
 const TOP_SAFE = 56;
 
-/** Busca o emblema do site (caveira com pistola) e devolve como data URL, para embutir no PDF.
- * `null` se a busca falhar (ex. offline) — o PDF ainda assim é gerado, só sem a imagem. */
-async function loadLogoDataUrl(): Promise<string | null> {
-  try {
-    const res = await fetch(LOGO_URL);
-    if (!res.ok) return null;
-    const blob = await res.blob();
-    return await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result as string);
-      reader.onerror = reject;
-      reader.readAsDataURL(blob);
-    });
-  } catch {
-    return null;
-  }
-}
-
 /** Marca d'água do site: o emblema centralizado em opacidade baixa, mas nitidamente visível —
  * não o texto diagonal genérico de antes, que ficava quase invisível. */
 function drawWatermark(doc: jsPDF, logo: string | null) {
   doc.saveGraphicsState();
   if (logo) {
-    const size = 300;
-    doc.setGState(new doc.GState({ opacity: 0.08 }));
+    const size = 244;
+    doc.setGState(new doc.GState({ opacity: 0.035 }));
     doc.addImage(logo, "PNG", (PAGE_W - size) / 2, (PAGE_H - size) / 2, size, size);
   } else {
-    doc.setGState(new doc.GState({ opacity: 0.08 }));
+    doc.setGState(new doc.GState({ opacity: 0.035 }));
     doc.setTextColor(...NAVY);
     doc.setFontSize(50);
     doc.setFont("helvetica", "bold");
@@ -160,14 +142,14 @@ export async function generatePcAcVerticalPdf(
   cargo: PcAcVerticalCargo,
   progress: Record<string, PcAcVerticalStatus>,
 ) {
-  const logo = await loadLogoDataUrl();
+  const { logo, cover, qr } = await loadPcAcPdfAssets();
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const counts = pcAcVerticalCounts(cargo, progress);
   const percent = counts.total ? Math.round((counts.estudado / counts.total) * 100) : 0;
 
-  drawCoverPage(doc, cargo, logo, percent, counts);
+  drawCoverPage(doc, cargo, logo, cover, qr, percent, counts);
 
-  const cursor: Cursor = { y: TOP_SAFE, page: 2 };
+  const cursor: Cursor = { y: TOP_SAFE + 12, page: 2 };
   doc.addPage();
   drawWatermark(doc, logo);
   drawRunningHeader(doc, logo, cargo.label);
@@ -182,6 +164,21 @@ export async function generatePcAcVerticalPdf(
   const ensureSpace = (needed: number) => {
     if (cursor.y + needed > FOOTER_Y - 18) newContentPage();
   };
+  const drawLinesAcrossPages = (lines: string[], x: number, lineHeight: number) => {
+    let offset = 0;
+    while (offset < lines.length) {
+      const availableLines = Math.floor((FOOTER_Y - 18 - cursor.y - 2) / lineHeight);
+      if (availableLines < 1) {
+        newContentPage();
+        continue;
+      }
+      const chunk = lines.slice(offset, offset + availableLines);
+      doc.text(chunk, x, cursor.y);
+      cursor.y += chunk.length * lineHeight;
+      offset += chunk.length;
+      if (offset < lines.length) newContentPage();
+    }
+  };
 
   for (const block of cargo.blocks) {
     // Só quebra a página se a faixa do bloco (e ao menos a primeira linha de conteúdo) não
@@ -195,11 +192,11 @@ export async function generatePcAcVerticalPdf(
       const topics = groups.length ? groups : [{ title: discipline.name, subtopics: [] }];
       const dCounts = pcAcVerticalDisciplineCounts(block.title, discipline, progress);
 
-      ensureSpace(30);
       doc.setFont("helvetica", "bold");
       doc.setFontSize(10.5);
       doc.setTextColor(...NAVY);
       const nameLines = doc.splitTextToSize(discipline.name, CONTENT_W - 110);
+      ensureSpace(Math.max(30, nameLines.length * 13 + 12));
       doc.text(nameLines, MARGIN_X + 4, cursor.y + 10);
       doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
@@ -216,13 +213,12 @@ export async function generatePcAcVerticalPdf(
       doc.circle(MARGIN_X - 1, cursor.y + 6.5, 2, "F");
       cursor.y += nameLines.length * 13 + 12;
       if (discipline.note) {
-        ensureSpace(14);
         doc.setFont("helvetica", "italic");
         doc.setFontSize(8);
         doc.setTextColor(...MUTED);
         const noteLines = doc.splitTextToSize(discipline.note, CONTENT_W - 8);
-        doc.text(noteLines, MARGIN_X + 4, cursor.y);
-        cursor.y += noteLines.length * 10 + 8;
+        drawLinesAcrossPages(noteLines, MARGIN_X + 4, 10);
+        cursor.y += 8;
       }
 
       for (let i = 0; i < topics.length; i++) {
@@ -258,15 +254,25 @@ export async function generatePcAcVerticalPdf(
         for (let j = 0; j < group.subtopics.length; j++) {
           const subtopic = group.subtopics[j]!;
           const subLines = doc.splitTextToSize(subtopic, CONTENT_W - 112);
-          const subRowH = Math.max(subLines.length * 10.5, 10.5) + 6;
-          ensureSpace(subRowH);
-          doc.setFillColor(...CARD_BG);
-          doc.setDrawColor(...LINE);
-          doc.roundedRect(MARGIN_X + 7, cursor.y - 8, CONTENT_W - 14, subRowH - 2, 2, 2, "FD");
-          doc.setTextColor(...MUTED);
-          doc.text(subLines, MARGIN_X + 15, cursor.y);
-          drawStatusPill(doc, groupStatuses[j], MARGIN_X + CONTENT_W - 15, cursor.y + 1.5);
-          cursor.y += subRowH + 2;
+          let subOffset = 0;
+          while (subOffset < subLines.length) {
+            const availableLines = Math.floor((FOOTER_Y - 18 - cursor.y - 8) / 10.5);
+            if (availableLines < 1) {
+              newContentPage();
+              continue;
+            }
+            const chunk = subLines.slice(subOffset, subOffset + availableLines);
+            const subRowH = Math.max(chunk.length * 10.5, 10.5) + 6;
+            doc.setFillColor(...CARD_BG);
+            doc.setDrawColor(...LINE);
+            doc.roundedRect(MARGIN_X + 7, cursor.y - 8, CONTENT_W - 14, subRowH - 2, 2, 2, "FD");
+            doc.setTextColor(...MUTED);
+            doc.text(chunk, MARGIN_X + 15, cursor.y);
+            if (subOffset === 0) drawStatusPill(doc, groupStatuses[j], MARGIN_X + CONTENT_W - 15, cursor.y + 1.5);
+            cursor.y += subRowH + 2;
+            subOffset += chunk.length;
+            if (subOffset < subLines.length) newContentPage();
+          }
         }
       }
       cursor.y += 6;
@@ -283,7 +289,7 @@ export async function generatePcAcVerticalPdf(
     "Lei nº 14.735/2023 (Lei Orgânica Nacional das Polícias Civis), LC nº 129/2004 (Lei Orgânica da Polícia Civil do Acre), Lei nº 2.250/2009 e LC nº 39/1993 (Estatuto dos Servidores Públicos Civis do Acre). Resumo completo de cada lei disponível na área do aluno em norteconcursos.xyz.",
     CONTENT_W - 8,
   );
-  doc.text(legislacaoNote, MARGIN_X, cursor.y);
+  drawLinesAcrossPages(legislacaoNote, MARGIN_X, 12);
 
   const contentPageCount = doc.getNumberOfPages() - 1; // exclui a capa
   for (let i = 2; i <= doc.getNumberOfPages(); i++) {
@@ -291,7 +297,7 @@ export async function generatePcAcVerticalPdf(
     drawFooter(doc, logo, i - 1, contentPageCount);
   }
 
-  drawBackCover(doc, logo);
+  drawBackCover(doc, logo, qr);
 
   doc.save(`edital-verticalizado-pc-ac-${cargo.id}.pdf`);
 }
@@ -300,6 +306,8 @@ function drawCoverPage(
   doc: jsPDF,
   cargo: PcAcVerticalCargo,
   logo: string | null,
+  cover: string | null,
+  qr: string | null,
   percent: number,
   counts: { total: number; estudado: number },
 ) {
@@ -310,22 +318,30 @@ function drawCoverPage(
   doc.setFillColor(...GOLD);
   doc.rect(0, 228, PAGE_W, 2.5, "F");
 
-  if (logo) {
-    const size = 72;
-    doc.addImage(logo, "PNG", (PAGE_W - size) / 2, 34, size, size);
-  }
+  if (logo) doc.addImage(logo, "PNG", MARGIN_X, 43, 54, 54);
   doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+  doc.setTextColor(...GOLD);
+  doc.text("NORTE CONCURSOS", MARGIN_X + 66, 58);
+  doc.setFontSize(23);
+  doc.setTextColor(255, 255, 255);
+  doc.text("Edital verticalizado", MARGIN_X + 66, 94);
   doc.setFontSize(11);
   doc.setTextColor(...GOLD);
-  doc.text("NORTE CONCURSOS", PAGE_W / 2, logo ? 128 : 60, { align: "center" });
+  doc.text("PC-AC 001/2026 · banca IDECAN", MARGIN_X + 66, 119);
 
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(27);
-  doc.setTextColor(255, 255, 255);
-  doc.text("Edital verticalizado", PAGE_W / 2, logo ? 158 : 95, { align: "center" });
-  doc.setFontSize(14);
-  doc.setTextColor(...GOLD);
-  doc.text("PC-AC 001/2026 · banca IDECAN", PAGE_W / 2, logo ? 180 : 118, { align: "center" });
+  if (cover) {
+    const imageX = PAGE_W - MARGIN_X - 170;
+    const imageY = 42;
+    doc.addImage(cover, "JPEG", imageX, imageY, 170, 96);
+    doc.setDrawColor(...GOLD);
+    doc.setLineWidth(0.8);
+    doc.roundedRect(imageX - 1, imageY - 1, 172, 98, 4, 4, "S");
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
+    doc.setTextColor(218, 218, 224);
+    doc.text("Imagem ilustrativa · PC-AC", imageX, imageY + 110);
+  }
 
   let y = 268;
   doc.setFont("helvetica", "bold");
@@ -397,14 +413,21 @@ function drawCoverPage(
   doc.text("Legislação institucional", MARGIN_X + 12, y);
 
   doc.setFont("helvetica", "normal");
-  doc.setFontSize(8.5);
+  doc.setFontSize(8);
   doc.setTextColor(...MUTED);
   doc.text(
-    "Marque o que já estudou na área do aluno — o progresso deste PDF reflete o que estava salvo no seu navegador no momento da exportação.",
+    "Progresso registrado no momento da exportação. Fonte do conteúdo: Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Material de apoio; consulte o edital oficial e eventuais retificações.",
     MARGIN_X,
-    PAGE_H - 62,
-    { maxWidth: CONTENT_W },
+    PAGE_H - 78,
+    { maxWidth: CONTENT_W - (qr ? 70 : 0) },
   );
+  if (qr) {
+    const qrX = PAGE_W - MARGIN_X - 48;
+    doc.addImage(qr, "PNG", qrX, PAGE_H - 112, 48, 48);
+    doc.setFontSize(6.5);
+    doc.setTextColor(...MUTED);
+    doc.text("Acesse a plataforma", qrX + 24, PAGE_H - 58, { align: "center" });
+  }
   doc.setFont("helvetica", "bold");
   doc.setFontSize(9);
   doc.setTextColor(...NAVY);
@@ -416,7 +439,7 @@ function drawCoverPage(
 }
 
 /** Contracapa: fecha o documento reforçando a marca, o site e a assinatura do desenvolvedor. */
-function drawBackCover(doc: jsPDF, logo: string | null) {
+function drawBackCover(doc: jsPDF, logo: string | null, qr: string | null) {
   doc.addPage();
   doc.setFillColor(...NAVY);
   doc.rect(0, 0, PAGE_W, PAGE_H, "F");
@@ -440,4 +463,10 @@ function drawBackCover(doc: jsPDF, logo: string | null) {
   doc.setFontSize(9.5);
   doc.setTextColor(210, 210, 216);
   doc.text(DEV_SIGNATURE, PAGE_W / 2, PAGE_H / 2 + 24, { align: "center" });
+  if (qr) {
+    doc.addImage(qr, "PNG", (PAGE_W - 58) / 2, PAGE_H / 2 + 62, 58, 58);
+    doc.setFontSize(8);
+    doc.setTextColor(...GOLD);
+    doc.text("Acesse seu ambiente de estudos", PAGE_W / 2, PAGE_H / 2 + 134, { align: "center" });
+  }
 }
