@@ -205,7 +205,7 @@ html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspa
   padding: 0.375rem 0.875rem;
   border-bottom: 1px solid color-mix(in srgb, var(--qt2-gold) 45%, transparent);
   border-radius: 1rem 1rem 0 0;
-  background: linear-gradient(90deg, oklch(0.22 0.09 262), oklch(0.2 0.06 285));
+  background: linear-gradient(90deg, oklch(0.22 0.07 255), oklch(0.2 0.05 240));
   color: #fff;
   isolation: isolate;
 }
