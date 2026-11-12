@@ -159,7 +159,7 @@ export async function generatePcAcVerticalPdf(
     cursor.page += 1;
     drawWatermark(doc, logo);
     drawRunningHeader(doc, logo, cargo.label);
-    cursor.y = TOP_SAFE;
+    cursor.y = TOP_SAFE + 12;
   };
   const ensureSpace = (needed: number) => {
     if (cursor.y + needed > FOOTER_Y - 18) newContentPage();

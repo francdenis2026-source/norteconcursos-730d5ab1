@@ -20,7 +20,6 @@ import { DEFAULT_PCAC_STUDY_CONFIG, PCAC_COMMITMENT_LABEL, PCAC_EXAM_DATE, readP
 import { pcAcBlockPoints } from "@/lib/pcAcreExamWeights";
 import { INVESTIGATOR_DISCIPLINE_PESO } from "@/data/pcAcreIdecanRadar";
 import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcActivityType, type PcAcPlanDay, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
-import { generateStudyPlanPdf } from "@/lib/studyPlanPdf";
 import { platformDate } from "@/lib/platformClock";
 import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import "@/styles/pcac-schedule.css";
@@ -599,37 +598,6 @@ export function PcAcCronogramaCard({
     }
   };
 
-  const exportBrandedPdf = async () => {
-    setExportError("");
-    setExporting(true);
-    try { await generateStudyPlanPdf(
-      {
-        startDate: effectiveStartDate,
-        examDate: PCAC_EXAM_DATE,
-        studyDays: cfg.days,
-        weeklyHours: cfg.weeklyHours,
-        startTime: cfg.startTime,
-      },
-      weeks.map((week) => ({
-        week: week.weekNumber,
-        startDate: week.startDate,
-        endDate: week.endDate,
-        events: week.days.flatMap((day) => day.activities.map((activity, index) => ({
-          id: `${day.date}-${index}`,
-          date: day.date,
-          start: activity.start ?? (activity.type === "descanso" ? "00:00" : cfg.startTime),
-          end: activity.end ?? (activity.type === "descanso" ? "23:59" : cfg.startTime),
-          kind: activity.type === "video" || activity.type === "teoria" ? "teoria" : activity.type === "questoes" ? "questoes" : activity.type === "revisao" ? "revisao" : activity.type === "redacao" ? "redacao" : activity.type === "simulado" ? "simulado" : activity.type === "pausa" ? "pausa" : activity.type === "rotina" ? "refeicao" : activity.type === "exercicio" ? "exercicio" : "descanso",
-          ...(activity.subject ? { discipline: activity.subject } : {}),
-          ...(activity.topic ? { topic: activity.topic } : {}),
-          phase: week.phase === "fundamentos" ? "base" : week.phase,
-          generated: true as const,
-        }))),
-      })),
-      `Plano de estudos · ${cargo.label}`,
-    ); } catch { setExportError("Não foi possível gerar o PDF Norte. Tente novamente."); } finally { setExporting(false); }
-  };
-
   // Semana em foco: começa na semana que contém hoje (ou na primeira) e se mantém ao navegar.
   const [weekIndex, setWeekIndex] = React.useState(0);
   const [openDate, setOpenDate] = React.useState<string | null>(null);
@@ -665,8 +633,7 @@ export function PcAcCronogramaCard({
             clickAction={saveConfiguration}
             isDisabled={!configLoaded || saveStatus === "saving"}
           />
-          <AstryxButton label="Exportar PDF" size="sm" variant="secondary" icon={<Download />} clickAction={exportPdf} isDisabled={!configLoaded || !!startError || exporting} />
-          <AstryxButton label="PDF Norte + QR" size="sm" variant="primary" icon={<Download />} clickAction={exportBrandedPdf} isDisabled={!configLoaded || !weeks.length || !!startError || exporting} />
+          <AstryxButton label={exporting ? "Gerando PDF…" : "Exportar cronograma em PDF"} size="sm" variant="primary" icon={<Download />} clickAction={exportPdf} isDisabled={!configLoaded || !weeks.length || !!startError || exporting} />
         </nav>
       </header>
       {exportError && <p role="alert">{exportError}</p>}
