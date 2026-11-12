@@ -252,3 +252,53 @@
 .student-home.sh2 .student-pcac-spotlight__actions a[data-tone="gold"] { --t: oklch(0.82 0.14 82); background: oklch(0.82 0.14 82); color: oklch(0.18 0.03 265); }
 .student-home.sh2 .student-pcac-spotlight__actions svg { width: 1rem; height: 1rem; color: var(--t); }
 .student-home.sh2 .student-pcac-spotlight__actions a[data-tone="gold"] svg { color: inherit; }
+
+
+/* PC-AC spotlight: one primary study action, grouped secondary actions and clear document links. */
+.student-home.sh2 .student-pcac-spotlight__actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 0.7rem 1.15rem;
+}
+.student-home.sh2 .student-pcac-spotlight__action-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+.student-home.sh2 .student-pcac-spotlight__action-label {
+  flex: 0 0 100%;
+  color: oklch(0.82 0.025 90 / 0.82);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+.student-home.sh2 .student-pcac-spotlight__action-group a {
+  min-height: 2.35rem;
+  padding: 0.3rem 0.72rem;
+  white-space: nowrap;
+}
+.student-home.sh2 .student-pcac-spotlight__action-group a[data-tone="teal"] { --t: oklch(0.76 0.12 195); }
+.student-home.sh2 .student-pcac-spotlight__action-group--documents a {
+  background: oklch(0.15 0.03 265 / 0.72);
+  border-color: color-mix(in srgb, var(--t) 42%, transparent);
+}
+.student-home.sh2 .student-pcac-spotlight__action-group a:focus-visible {
+  outline: 2px solid oklch(0.86 0.12 86);
+  outline-offset: 3px;
+}
+@media (max-width: 1120px) {
+  .student-home.sh2 .student-pcac-spotlight__actions { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+  .student-home.sh2 .student-pcac-spotlight__action-group { gap: 0.4rem; }
+  .student-home.sh2 .student-pcac-spotlight__action-group a {
+    flex: 1 1 auto;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+}

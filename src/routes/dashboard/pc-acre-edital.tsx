@@ -504,7 +504,7 @@ function PcAcreEditalVerticalizadoPage() {
           <div className="min-w-0">
             <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide text-cyan-200"><BookOpenCheck className="h-3.5 w-3.5 text-amber-300" /> Área do aluno · edital digital</p>
             <h1 className="mt-1 text-xl font-black tracking-tight">Edital digital PC-AC 2026</h1>
-            <p className="mt-0.5 text-xs text-slate-300">Marque tópicos por cargo e acompanhe seu progresso dentro da plataforma.</p>
+            <p className="mt-0.5 text-xs text-slate-300">Leitura e pesquisa do conteúdo programático completo. O progresso fica centralizado no checklist do edital.</p>
           </div>
           <div className="hidden items-center gap-3 lg:flex">
             <div className="text-right text-[10px] leading-tight text-slate-300"><strong className="block text-slate-100">Inscrições</strong>11/11 a 14/12/2026</div>
@@ -516,12 +516,12 @@ function PcAcreEditalVerticalizadoPage() {
             <Button size="sm" variant="outline" className="border-cyan-300/50 bg-cyan-400/15 text-white hover:bg-cyan-400/25" onClick={() => void shareDigitalEdital()} aria-label="Compartilhar edital digital">
               <Share2 className="mr-2 h-4 w-4" />{shareFeedback || "Compartilhar"}
             </Button>
-            <Button size="sm" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Voltar ao edital verticalizado</Button>
+            <Button size="sm" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Abrir checklist e progresso</Button>
           </div>
         </div>
         <Card className="overflow-hidden border-primary/20">
           <CardContent className="p-0">
-            <iframe title="Edital digital PC-AC 2026" src="/pcac-edital-digital/index.html" className="h-[calc(100vh-140px)] min-h-[760px] w-full border-0" />
+            <iframe title="Edital digital PC-AC 2026" src={`/pcac-edital-digital/index.html?cargo=${encodeURIComponent(cargo.id)}`} className="h-[calc(100vh-140px)] min-h-[760px] w-full border-0" />
           </CardContent>
         </Card>
       </div>
@@ -548,7 +548,7 @@ function PcAcreEditalVerticalizadoPage() {
         </label>
         <div className="pcac-command-bar__actions">
           <Button variant="outline" asChild><Link to="/dashboard/inteligencia-idecan"><ScanSearch aria-hidden="true" className="h-4 w-4" /> Raio-X</Link></Button>
-          <Button variant="secondary" onClick={() => void exportPdf()}><Download aria-hidden="true" className="h-4 w-4" /> PDF</Button>
+          <Button variant="secondary" onClick={() => void exportPdf()}><Download aria-hidden="true" className="h-4 w-4" /> Exportar checklist</Button>
         </div>
       </header>
       <div className="pcac-metrics" aria-label="Resumo do cargo e da preparação">
