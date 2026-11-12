@@ -1,0 +1,200 @@
+/*
+ * Question Trainer — viewport framing
+ * The focus workspace can use native Fullscreen API or the CSS fallback.
+ * Scope to the custom focus-mode attribute so both paths receive identical layout.
+ */
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content:has(.trainer-setup.qt2) {
+  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
+  padding-right: clamp(0.75rem, 2vw, 2rem);
+  padding-left: clamp(0.75rem, 2vw, 2rem);
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .app-content__inner:has(.trainer-setup.qt2) {
+  width: 100%;
+  max-width: 1600px;
+  min-width: 0;
+  margin-inline: auto;
+}
+
+/* Do not stretch the setup page or its card to the full viewport height.
+   The previous flex sizing enlarged the hero and left a large empty card below the CTA. */
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1560px !important;
+  min-width: 0;
+  min-height: 0 !important;
+  height: auto !important;
+  flex: none !important;
+  margin: 0 auto !important;
+  padding: 0 0 1rem !important;
+  gap: 0 !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 > .trainer-setup__unified {
+  display: block !important;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 0 !important;
+  height: auto !important;
+  flex: none !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 > .trainer-setup__unified > [data-slot="card-content"] {
+  display: block !important;
+  min-width: 0;
+  min-height: 0 !important;
+  flex: none !important;
+  padding: clamp(0.75rem, 1.4vw, 1.25rem) !important;
+}
+
+/* Keep the photographic banner proportional instead of using it as a vertical spacer. */
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  flex: none !important;
+  min-height: clamp(9rem, 20vh, 11.5rem) !important;
+  height: auto !important;
+  gap: 0.65rem;
+  margin: 0 0 0.75rem !important;
+  padding: clamp(0.9rem, 1.5vw, 1.25rem) clamp(1rem, 2vw, 1.75rem) !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-hero__copy {
+  max-width: 58rem;
+  min-width: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-hero h1 {
+  font-size: clamp(1.45rem, 2.25vw, 2rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-quick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-quick a {
+  min-height: 2.35rem;
+  padding-inline: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Use the full available width while retaining readable controls. */
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-filters {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 0.6rem 0.7rem !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-filters > * {
+  min-width: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-filters label {
+  min-width: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 :is([data-slot="select-trigger"], button[data-slot="select-trigger"]) {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.6rem !important;
+  height: 2.6rem !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .trainer-more {
+  margin-top: 0.65rem !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .trainer-more[open] {
+  max-height: min(38vh, 22rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar {
+  position: static !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.7rem !important;
+  padding: 0.65rem 0.8rem !important;
+  box-shadow: none !important;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar__actions {
+  min-width: 0;
+}
+
+.app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar button {
+  min-height: 2.6rem !important;
+  height: 2.6rem !important;
+}
+
+@media (min-width: 768px) and (max-width: 1151px) {
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content:has(.trainer-setup.qt2) {
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+  }
+
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-hero {
+    min-height: 0 !important;
+  }
+
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-quick {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: thin;
+  }
+
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar {
+    align-items: stretch;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 768px) {
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 > .trainer-setup__unified > [data-slot="card-content"] {
+    padding: 0.7rem !important;
+  }
+
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-hero {
+    min-height: 8rem !important;
+    gap: 0.45rem;
+    margin-bottom: 0.55rem !important;
+    padding-block: 0.75rem !important;
+  }
+
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 .qt2-quick a {
+    min-height: 2.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2 * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
