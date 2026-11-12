@@ -19,6 +19,7 @@ import "@/styles/student-light-mobile.css";
 import "@/styles/workspace-banners.css";
 import "@/styles/workspace-topbar.css";
 import "@/styles/workspace-fullscreen.css";
+import "@/styles/student-mobile-menu.css";
 import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation } from "@/lib/dashboardNavigation";
@@ -775,33 +776,35 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <div className="app-sidebar__head">
                     <NorteBrand light />
                   </div>
-                  <button
-                    type="button"
-                    className="app-sidebar__search"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setPaletteOpen(true);
-                    }}
-                  >
-                    <Search aria-hidden="true" />
-                    <span>Buscar área da plataforma</span>
-                  </button>
-                  {nav(false)}
-                  <div className="app-sidebar__foot">
+                  <div className="app-sheet__tools">
+                    <button
+                      type="button"
+                      className="app-sidebar__search"
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setPaletteOpen(true);
+                      }}
+                    >
+                      <Search aria-hidden="true" />
+                      <span>Buscar área da plataforma</span>
+                    </button>
                     {!isAdmin && (
                       <button
                         type="button"
                         className="workspace-focus-entry"
+                        aria-label="Expandir área de estudo em tela cheia"
                         onClick={() => {
                           setMobileOpen(false);
                           fullscreen.enter();
                         }}
                       >
-                        <Maximize aria-hidden="true" /> Expandir área de estudo
+                        <Maximize aria-hidden="true" />
+                        <span>Tela cheia</span>
                       </button>
                     )}
-                    {userMenu(false)}
                   </div>
+                  {nav(false)}
+                  <div className="app-sidebar__foot">{userMenu(false)}</div>
                 </SheetContent>
               </Sheet>
             </div>
