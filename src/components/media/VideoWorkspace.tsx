@@ -101,25 +101,6 @@ export function VideoWorkspace({
           {focus ? "Mostrar playlist" : "Modo foco"}
         </button>
       </div>
-      {subjects.length > 1 && (
-        <nav className="video-study__subjects" hidden={focus} aria-label="Disciplinas">
-          {subjects.map((s) => (
-            <button
-              key={s}
-              type="button"
-              aria-pressed={s === subject}
-              onClick={() => {
-                setSubject(s);
-                setPicked("");
-                setTopic("all");
-                setSearch("");
-              }}
-            >
-              {label(s)}
-            </button>
-          ))}
-        </nav>
-      )}
       <div className="video-study__filters" hidden={focus}>
         <label htmlFor={`${id}-subject`}>
           Disciplina
@@ -170,7 +151,38 @@ export function VideoWorkspace({
               : "conteúdos"}
         </span>
       </div>
-      <div className="video-study__layout">
+      <div className="video-study__layout" data-rail={subjects.length > 1 || undefined}>
+        {subjects.length > 1 && (
+          <nav className="video-study__subjects" hidden={focus} aria-label="Disciplinas">
+            <p className="video-study__subjects-title">
+              <BookOpen size={15} aria-hidden="true" /> Disciplinas <span>{subjects.length}</span>
+            </p>
+            <ul>
+              {subjects.map((s) => {
+                const count =
+                  catalog.playlists.filter((p) => p.discipline === s).length +
+                  Object.values(catalog.topicVideos[s] || {}).reduce((n, list) => n + list.length, 0);
+                return (
+                  <li key={s}>
+                    <button
+                      type="button"
+                      aria-pressed={s === subject}
+                      onClick={() => {
+                        setSubject(s);
+                        setPicked("");
+                        setTopic("all");
+                        setSearch("");
+                      }}
+                    >
+                      <span>{label(s)}</span>
+                      <small>{count > 0 ? count : "texto"}</small>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        )}
         <div className="video-study__main">
           {current ? (
             <LessonPlayer

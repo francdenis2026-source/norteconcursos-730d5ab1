@@ -632,70 +632,158 @@
   width: 100%;
   max-width: none;
 }
+/* Disciplinas em lista lateral: uma linha por disciplina, com a quantidade de aulas */
 .video-study__subjects {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-height: 132px;
-  padding: 2px;
-  overflow-y: auto;
-  scrollbar-width: thin;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  overflow: hidden;
 }
 .video-study__subjects[hidden] {
   display: none;
 }
+.video-study__subjects-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.video-study__subjects-title svg {
+  color: #f59e0b;
+}
+.video-study__subjects-title span {
+  margin-left: auto;
+  padding: 1px 8px;
+  border-radius: 999px;
+  color: #1c1403;
+  background: #fcd34d;
+  font-size: 12px;
+}
+.video-study__subjects ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 0;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-width: thin;
+}
 .video-study__subjects button {
   --tone: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
   min-height: 38px;
-  padding: 0 14px;
-  border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent);
-  border-radius: 999px;
+  padding: 6px 10px 6px 12px;
+  border: 0;
+  border-left: 3px solid color-mix(in srgb, var(--tone) 55%, transparent);
+  border-radius: 9px;
   color: var(--foreground);
-  background: color-mix(in srgb, var(--tone) 10%, transparent);
+  background: none;
   font: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  transition: background 0.15s;
 }
-.video-study__subjects button:nth-child(5n + 2) { --tone: #a78bfa; }
-.video-study__subjects button:nth-child(5n + 3) { --tone: #34d399; }
-.video-study__subjects button:nth-child(5n + 4) { --tone: #fb923c; }
-.video-study__subjects button:nth-child(5n + 5) { --tone: #fb7185; }
+.video-study__subjects li:nth-child(5n + 2) button { --tone: #a78bfa; }
+.video-study__subjects li:nth-child(5n + 3) button { --tone: #34d399; }
+.video-study__subjects li:nth-child(5n + 4) button { --tone: #fb923c; }
+.video-study__subjects li:nth-child(5n + 5) button { --tone: #fb7185; }
+.video-study__subjects button > span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.video-study__subjects button > small {
+  flex: none;
+  min-width: 28px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  color: var(--tone);
+  background: color-mix(in srgb, var(--tone) 14%, transparent);
+  font-size: 11.5px;
+  font-weight: 800;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
 .video-study__subjects button:hover {
-  border-color: var(--tone);
+  background: color-mix(in srgb, var(--tone) 10%, transparent);
 }
 .video-study__subjects button[aria-pressed="true"] {
-  border-color: var(--tone);
-  color: #0b1220;
-  background: var(--tone);
+  border-left-color: var(--tone);
+  background: color-mix(in srgb, var(--tone) 20%, transparent);
+  font-weight: 800;
 }
 .video-study__subjects button:focus-visible {
   outline: 2px solid var(--tone);
-  outline-offset: 2px;
+  outline-offset: -2px;
 }
-/* Com os atalhos visíveis, o seletor de disciplina fica só no celular */
-@media (min-width: 851px) {
-  .video-study__subjects + .video-study__filters > label:first-child {
+
+/* Três colunas em telas largas, cabendo na altura da janela */
+@media (min-width: 1100px) {
+  .video-study__layout[data-rail] {
+    grid-template-columns: minmax(200px, 250px) minmax(0, 1fr) minmax(280px, 360px);
+    gap: 16px;
+  }
+  .video-study[data-focus="true"] .video-study__layout[data-rail] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .video-study__layout[data-rail] > :is(.video-study__subjects, .video-study__playlist) {
+    position: sticky;
+    top: 12px;
+    max-height: calc(100dvh - 190px);
+  }
+  .video-study__layout[data-rail] > .video-study__playlist {
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  /* Com a lista lateral, o seletor de disciplina é redundante */
+  .video-study__filters > label:first-child {
     display: none;
   }
-  .video-study__layout {
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
-    gap: 20px;
-  }
 }
-@media (max-width: 850px) {
-  .video-study__subjects {
-    flex-wrap: nowrap;
-    max-height: none;
+/* Telas médias e celular: disciplinas numa única faixa que rola de lado */
+@media (max-width: 1099px) {
+  .video-study__layout[data-rail] > .video-study__subjects {
+    grid-column: 1 / -1;
+    border: 0;
+    background: none;
+  }
+  .video-study__subjects-title {
+    display: none;
+  }
+  .video-study__subjects ul {
+    flex-direction: row;
+    gap: 6px;
+    padding: 2px;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x proximity;
   }
-  .video-study__subjects button {
+  .video-study__subjects li {
     flex: none;
     scroll-snap-align: start;
+  }
+  .video-study__subjects button {
+    border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent);
+    border-radius: 999px;
+    white-space: nowrap;
   }
 }
 .video-study__toolbar {
