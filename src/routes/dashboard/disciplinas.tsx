@@ -6,6 +6,7 @@ import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
+  ChevronRight,
   Atom,
   BarChart3,
   BookOpen,
@@ -24,7 +25,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import { PageHero, LockedState, type HeroImage } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat, LockedState, type HeroImage } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
