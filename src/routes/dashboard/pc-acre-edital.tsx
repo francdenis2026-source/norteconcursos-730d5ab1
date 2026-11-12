@@ -18,6 +18,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
+import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -153,6 +154,9 @@ function DisciplineStudyLinks({
   // Fica junto da própria matéria, que é onde o aluno procura o material — não no cronograma.
   const course = findPcAcStudyResource(discipline.name);
   const { catalog } = useMediaCatalog();
+  // Assistir não navega pra fora da plataforma: abre num modal sobre o edital, então fechar
+  // (ou Esc) volta direto pra lista de matérias, sem precisar "voltar" pelo navegador.
+  const [watching, setWatching] = React.useState<WatchableVideo | null>(null);
   const videos = link?.subjects?.flatMap((subject) => relatedVideos(catalog, subject, "*", 2)).slice(0, 3) ?? [];
   const topicVideos = link?.subjects
     ?.flatMap((subject) =>
@@ -218,15 +222,17 @@ function DisciplineStudyLinks({
             )}
           </React.Fragment>
         ))}
-        {videos.map((video) => {
-          const href = video.id.startsWith("PL") ? "https://www.youtube.com/playlist?list=" + video.id : "https://www.youtube.com/watch?v=" + video.id;
-          return (
-            <a key={video.id} href={href} target="_blank" rel="noreferrer" className="pcac-video-link inline-flex items-center gap-1 rounded-md border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10">
-              <PlayCircle className="h-3 w-3" aria-hidden="true" />
-              Vídeo{video.channel ? " · " + video.channel : ""}
-            </a>
-          );
-        })}
+        {videos.map((video) => (
+          <button
+            key={video.id}
+            type="button"
+            onClick={() => setWatching(video)}
+            className="pcac-video-link inline-flex items-center gap-1 rounded-md border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10"
+          >
+            <PlayCircle className="h-3 w-3" aria-hidden="true" />
+            Vídeo{video.channel ? " · " + video.channel : ""}
+          </button>
+        ))}
       </div>
       {topicVideos.length > 0 && (
         <details className="rounded-md border border-rose-500/20 bg-rose-500/[0.03] px-2.5 py-2">
@@ -234,23 +240,25 @@ function DisciplineStudyLinks({
             Videoteca por assunto · {topicVideos.length} aulas encontradas
           </summary>
           <ul className="mt-2 grid gap-1.5">
-            {topicVideos.map((video) => {
-              const href = video.id.startsWith("PL") ? "https://www.youtube.com/playlist?list=" + video.id : "https://www.youtube.com/watch?v=" + video.id;
-              return (
-                <li key={`${video.editalTopic}:${video.id}`}>
-                  <a href={href} target="_blank" rel="noreferrer" className="flex min-w-0 items-start gap-2 rounded-md border border-rose-500/15 bg-background/70 px-2 py-1.5 text-[11px] hover:bg-rose-500/10">
-                    <PlayCircle className="mt-0.5 h-3 w-3 shrink-0 text-rose-600" aria-hidden="true" />
-                    <span className="min-w-0">
-                      <strong className="block truncate font-semibold">{video.title}</strong>
-                      <small className="block truncate text-muted-foreground">{video.editalTopic} · {video.channel ?? "YouTube"}</small>
-                    </span>
-                  </a>
-                </li>
-              );
-            })}
+            {topicVideos.map((video) => (
+              <li key={`${video.editalTopic}:${video.id}`}>
+                <button
+                  type="button"
+                  onClick={() => setWatching(video)}
+                  className="flex w-full min-w-0 items-start gap-2 rounded-md border border-rose-500/15 bg-background/70 px-2 py-1.5 text-left text-[11px] hover:bg-rose-500/10"
+                >
+                  <PlayCircle className="mt-0.5 h-3 w-3 shrink-0 text-rose-600" aria-hidden="true" />
+                  <span className="min-w-0">
+                    <strong className="block truncate font-semibold">{video.title}</strong>
+                    <small className="block truncate text-muted-foreground">{video.editalTopic} · {video.channel ?? "YouTube"}</small>
+                  </span>
+                </button>
+              </li>
+            ))}
           </ul>
         </details>
       )}
+      <VideoWatchDialog video={watching} onClose={() => setWatching(null)} />
     </div>
   );
 }
