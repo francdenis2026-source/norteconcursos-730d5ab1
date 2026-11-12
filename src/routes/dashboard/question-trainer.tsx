@@ -46,6 +46,7 @@ import {
   type TrainerAnswerRow,
 } from "@/lib/trainerAnswerQueue";
 import { questionIdentity } from "@/lib/questionIdentity";
+import { normalizeTrainerQuestionQuantity, trainerQuestionQuantityOptions } from "@/lib/trainerSession";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
 import {
   type Answer,
@@ -649,10 +650,20 @@ function QuestionTrainer() {
       category,
     ],
   );
+  const normalizedLimit = normalizeTrainerQuestionQuantity(limit, pool.length);
+  React.useEffect(() => {
+    if (loading || started || restoredSelection.current) return;
+    if (normalizedLimit !== limit) setLimit(normalizedLimit);
+  }, [loading, started, normalizedLimit, limit]);
+
   const startTraining = () => {
     responseIdRef.current = crypto.randomUUID();
     const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
-    setQuestions(limit === "all" ? ordered : ordered.slice(0, Number(limit)));
+    const requestedCount =
+      normalizedLimit === "all"
+        ? pool.length
+        : Math.max(0, Math.min(pool.length, Math.floor(Number(normalizedLimit) || 0)));
+    setQuestions(ordered.slice(0, requestedCount));
     setIndex(0);
     setResults([]);
     setSelected(null);
@@ -667,8 +678,8 @@ function QuestionTrainer() {
     if (!autoStart.current || loading || started || pool.length === 0) return;
     autoStart.current = false;
     responseIdRef.current = crypto.randomUUID();
-    setLimit("10");
-    const ordered = shuffled(pool).slice(0, 10);
+    setLimit(normalizeTrainerQuestionQuantity("10", pool.length));
+    const ordered = shuffled(pool).slice(0, Math.min(pool.length, 10));
     setQuestions(ordered);
     setIndex(0);
     setResults([]);
@@ -964,7 +975,7 @@ function QuestionTrainer() {
             category,
             area,
             topic,
-            limit,
+            limit: normalizedLimit,
             orderMode,
             includeAnswered,
           }}
@@ -1949,8 +1960,12 @@ function TrainerSetup({
               label="Quantidade"
               value={values.limit}
               setValue={setters.setLimit}
-              options={["5", "10", "20", "30", "50"]}
+              options={trainerQuestionQuantityOptions(available)}
               allLabel="Todas as questões"
+              allCount={available}
+              hideAll={available <= 50}
+              disabled={!available}
+              placeholder="Sem questões disponíveis"
             />
             <label className="space-y-1">
               <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
@@ -2108,9 +2123,13 @@ function TrainerFilter({
   hideAll = false,
   counts,
   allCount,
+  disabled = false,
+  placeholder,
 }: {
   counts?: Map<string, number> | undefined;
   allCount?: number | undefined;
+  disabled?: boolean;
+  placeholder?: string;
   label: string;
   value: string;
   setValue: (value: string) => void;
@@ -2124,9 +2143,9 @@ function TrainerFilter({
       <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
         {label}
       </span>
-      <Select value={value} onValueChange={setValue}>
-        <SelectTrigger className="h-9 bg-background sm:h-10">
-          <SelectValue />
+      <Select disabled={disabled} value={disabled ? "" : value} onValueChange={setValue}>
+        <SelectTrigger disabled={disabled} className="h-9 bg-background sm:h-10">
+          <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent className="trainer-select-content">
           {!hideAll && (

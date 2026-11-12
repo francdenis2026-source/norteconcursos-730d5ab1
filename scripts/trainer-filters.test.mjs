@@ -129,7 +129,12 @@ test("syllabus practice targets the exact topic and never broadens to the whole 
 });
 
 const { availableQuestionBank, questionBankSearch, questionBankExams, searchQuestionCatalog } = await import('../src/lib/questionBank.ts');
-const { trainerSessionSize, catalogSessionQuestions } = await import('../src/lib/trainerSession.ts');
+const {
+ trainerSessionSize,
+ catalogSessionQuestions,
+ trainerQuestionQuantityOptions,
+ normalizeTrainerQuestionQuantity,
+} = await import('../src/lib/trainerSession.ts');
 const { examKey } = await import('../src/lib/questionFormat.ts');
 const bankItem=(id,extra={})=>({...q(id,'FGV'),contest:'Polícia Civil do Acre',year:'2025',career:'Agente',subject:'Matemática',text:'Resolva: quanto é dois mais dois?',...extra});
 const bankItems=[...Array.from({length:62},(_,i)=>bankItem(`a${i}`)),bankItem('ano',{year:'2024'}),bankItem('banca',{board:'CEBRASPE'}),bankItem('cargo',{career:'Delegado'}),bankItem('concurso',{contest:'Polícia Civil do Amazonas'}),bankItem('autoral',{source:'curated'}),bankItem('pessoal',{source:'personal',board:'Meu caderno',career:'Meu caderno'}),bankItem('enem',{contest:'ENEM',board:'INEP',career:'Estudante'}),bankItem('portugues',{subject:'Língua Portuguesa',text:'Assinale a alternativa em que a palavra está grafada corretamente.'}),bankItem('sem-texto',{subject:'Língua Portuguesa',text:'De acordo com o texto, julgue a afirmação.'})];
@@ -253,4 +258,25 @@ test('origin and job facets stay distinct and unattributed jobs do not remove qu
  assert.deepEqual([...facets.counts.career.keys()],['Agente de Polícia Federal']);
  assert.equal(filterTrainerQuestions(catalog,all,new Map()).length,3);
  assert.deepEqual(filterTrainerQuestions(catalog,{...all,career:'Agente de Polícia Federal'},new Map()).map(q=>q.id),['job']);
+});
+
+
+test("trainer quantity options never exceed the filtered stock and include its exact size", () => {
+ assert.deepEqual(trainerQuestionQuantityOptions(0), []);
+ assert.deepEqual(trainerQuestionQuantityOptions(2), ["2"]);
+ assert.deepEqual(trainerQuestionQuantityOptions(7), ["5", "7"]);
+ assert.deepEqual(trainerQuestionQuantityOptions(12), ["5", "10", "12"]);
+ assert.deepEqual(trainerQuestionQuantityOptions(40), ["5", "10", "20", "30", "40"]);
+ assert.deepEqual(trainerQuestionQuantityOptions(50), ["5", "10", "20", "30", "50"]);
+ assert.deepEqual(trainerQuestionQuantityOptions(80), ["5", "10", "20", "30", "50"]);
+});
+
+test("trainer quantity is normalized immediately when filters reduce or expand the pool", () => {
+ assert.equal(normalizeTrainerQuestionQuantity("20", 2), "2");
+ assert.equal(normalizeTrainerQuestionQuantity("20", 12), "12");
+ assert.equal(normalizeTrainerQuestionQuantity("20", 40), "20");
+ assert.equal(normalizeTrainerQuestionQuantity("all", 40), "40");
+ assert.equal(normalizeTrainerQuestionQuantity("all", 80), "all");
+ assert.equal(normalizeTrainerQuestionQuantity("0", 12), "5");
+ assert.equal(normalizeTrainerQuestionQuantity("20", 0), "0");
 });

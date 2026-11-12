@@ -66,3 +66,40 @@ export function trainerCanFinish(results: readonly (string | null | undefined)[]
   const { answered, skipped } = trainerTally(results, total);
   return answered + skipped >= total;
 }
+
+
+/** Fixed training sizes plus the exact remaining stock when it is below the "all" range. */
+const TRAINER_QUESTION_QUANTITY_PRESETS = [5, 10, 20, 30, 50] as const;
+
+function normalizedTrainerStock(available: number): number {
+  return Number.isFinite(available) ? Math.max(0, Math.floor(available)) : 0;
+}
+
+/** Values shown in the quantity selector for the current filtered question pool. */
+export function trainerQuestionQuantityOptions(available: number): string[] {
+  const stock = normalizedTrainerStock(available);
+  if (stock === 0) return [];
+  const options = TRAINER_QUESTION_QUANTITY_PRESETS.filter((size) => size <= stock);
+  if (stock <= 50 && !options.includes(stock as (typeof TRAINER_QUESTION_QUANTITY_PRESETS)[number]))
+    options.push(stock as (typeof TRAINER_QUESTION_QUANTITY_PRESETS)[number]);
+  return options.map(String);
+}
+
+/**
+ * Keep the selected session size valid whenever filters change.
+ * For pools up to 50, the exact stock replaces the separate "all" choice;
+ * above 50, "all" remains available alongside the fixed session sizes.
+ */
+export function normalizeTrainerQuestionQuantity(requested: string, available: number): string {
+  const stock = normalizedTrainerStock(available);
+  if (stock === 0) return "0";
+  if (requested === "all") return stock > 50 ? "all" : String(stock);
+
+  const selected = Number(requested);
+  const options = trainerQuestionQuantityOptions(stock).map(Number);
+  if (Number.isSafeInteger(selected) && options.includes(selected)) return String(selected);
+  if (Number.isFinite(selected) && selected > stock) return stock > 50 ? "all" : String(stock);
+
+  const previous = options.filter((size) => size <= selected).at(-1);
+  return String(previous ?? options[0] ?? stock);
+}
