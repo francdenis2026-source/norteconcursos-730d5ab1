@@ -749,13 +749,44 @@
     top: 12px;
     max-height: calc(100dvh - 190px);
   }
+  /* A lista de conteúdos rola dentro da própria coluna (flex + min-height:0) em vez
+     de um max-height fixo em pixels, que tanto deixava espaço vazio em telas altas
+     quanto cortava itens em janelas mais baixas. */
   .video-study__layout[data-rail] > .video-study__playlist {
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .video-study__layout[data-rail] > .video-study__playlist .video-study__queue {
+    flex: 1;
+    min-height: 0;
+    max-height: none;
     scrollbar-width: thin;
   }
   /* Com a lista lateral, o seletor de disciplina é redundante */
   .video-study__filters > label:first-child {
     display: none;
+  }
+  /* O player (coluna central) também precisa caber na altura da janela: em telas
+     largas, a razão 16/9 fixa deixava o vídeo alto demais e empurrava os controles
+     para fora da área visível. Aqui ele vira coluna flex com altura limitada, e o
+     vídeo ocupa o espaço restante em vez de ditar a altura pela largura. */
+  .video-study__layout > .video-study__main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    max-height: calc(100dvh - 190px);
+  }
+  .video-study__layout > .video-study__main .lesson-player {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+  .video-study__layout > .video-study__main .lesson-player__viewport {
+    flex: 1;
+    min-height: 0;
+    aspect-ratio: auto;
   }
 }
 /* Telas médias e celular: disciplinas numa única faixa que rola de lado */
