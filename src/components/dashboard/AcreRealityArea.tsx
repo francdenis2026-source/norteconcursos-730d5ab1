@@ -163,7 +163,7 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
   );
 }
 
-export function AcreRealityArea({ axisId }: { axisId?: string }) {
+export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
   const topics = React.useMemo(() => {
     for (const cargo of pcAcVerticalCargos)
       for (const block of cargo.blocks)
