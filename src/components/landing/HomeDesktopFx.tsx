@@ -50,8 +50,8 @@ export function HomeDesktopFx() {
         card.style.setProperty("--hfx-cx", `${(x * 100).toFixed(1)}%`);
         card.style.setProperty("--hfx-cy", `${(y * 100).toFixed(1)}%`);
         if (!calm.matches) {
-          card.style.setProperty("--hfx-rx", `${((0.5 - y) * 5).toFixed(2)}deg`);
-          card.style.setProperty("--hfx-ry", `${((x - 0.5) * 6).toFixed(2)}deg`);
+          card.style.setProperty("--hfx-rx", `${((0.5 - y) * 2).toFixed(2)}deg`);
+          card.style.setProperty("--hfx-ry", `${((x - 0.5) * 2.4).toFixed(2)}deg`);
         }
       });
     };
