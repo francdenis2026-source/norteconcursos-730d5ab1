@@ -186,7 +186,7 @@ function TrackCard({
   return (
     <section
       aria-label={track.title}
-      className="flex flex-col rounded-2xl border bg-card p-5 shadow-sm"
+      className="medal-card flex flex-col rounded-2xl border bg-card p-5 shadow-sm"
     >
       <div className="flex items-start gap-3">
         <span
@@ -322,7 +322,7 @@ function MedalsPage() {
   const trackOf = (code: string) => TRACKS.find((t) => t.codes.includes(code));
 
   return (
-    <div className="mx-auto max-w-6xl space-y-6">
+    <div className="medals-page mx-auto w-full max-w-none space-y-6">
       <PageHero
         image="careers-team"
         size="sm"
@@ -421,7 +421,7 @@ function MedalsPage() {
             </div>
           </section>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="medals-page__grid grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {TRACKS.map((track) => {
               const medals = track.codes
                 .map((c) => byCode.get(c))
@@ -440,7 +440,7 @@ function MedalsPage() {
               Aprovações em concursos reais, registradas pela administração depois de conferidas.
             </p>
             {wins.length > 0 ? (
-              <ul className="mt-4 grid gap-3 md:grid-cols-2">
+              <ul className="medals-page__earned mt-4 grid gap-3 md:grid-cols-2">
                 {wins.map((w) => (
                   <li
                     key={w.code}

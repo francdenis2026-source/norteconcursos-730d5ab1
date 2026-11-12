@@ -626,3 +626,91 @@
   > :is(button, label):not([data-fullscreen]) {
   display: none;
 }
+
+/* ===== Videoteca: disciplinas em atalhos, player e playlist usando a largura toda ===== */
+.video-study-page {
+  width: 100%;
+  max-width: none;
+}
+.video-study__subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 132px;
+  padding: 2px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.video-study__subjects[hidden] {
+  display: none;
+}
+.video-study__subjects button {
+  --tone: #38bdf8;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent);
+  border-radius: 999px;
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--tone) 10%, transparent);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.video-study__subjects button:nth-child(5n + 2) { --tone: #a78bfa; }
+.video-study__subjects button:nth-child(5n + 3) { --tone: #34d399; }
+.video-study__subjects button:nth-child(5n + 4) { --tone: #fb923c; }
+.video-study__subjects button:nth-child(5n + 5) { --tone: #fb7185; }
+.video-study__subjects button:hover {
+  border-color: var(--tone);
+}
+.video-study__subjects button[aria-pressed="true"] {
+  border-color: var(--tone);
+  color: #0b1220;
+  background: var(--tone);
+}
+.video-study__subjects button:focus-visible {
+  outline: 2px solid var(--tone);
+  outline-offset: 2px;
+}
+/* Com os atalhos visíveis, o seletor de disciplina fica só no celular */
+@media (min-width: 851px) {
+  .video-study__subjects + .video-study__filters > label:first-child {
+    display: none;
+  }
+  .video-study__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
+    gap: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .video-study__subjects {
+    flex-wrap: nowrap;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+  }
+  .video-study__subjects button {
+    flex: none;
+    scroll-snap-align: start;
+  }
+}
+.video-study__toolbar {
+  border-radius: 16px;
+}
+.video-study__discipline > svg {
+  box-sizing: content-box;
+  padding: 9px;
+  border-radius: 12px;
+  color: #0b1220;
+  background: linear-gradient(140deg, #fde68a, #f59e0b);
+}
+.video-study__playlist {
+  border-radius: 16px;
+}
+.video-study__playlist-heading > svg {
+  color: #f59e0b;
+}

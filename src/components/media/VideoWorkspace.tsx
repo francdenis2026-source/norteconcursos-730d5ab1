@@ -90,6 +90,25 @@ export function VideoWorkspace({
           {focus ? "Mostrar playlist" : "Modo foco"}
         </button>
       </div>
+      {subjects.length > 1 && (
+        <nav className="video-study__subjects" hidden={focus} aria-label="Disciplinas">
+          {subjects.map((s) => (
+            <button
+              key={s}
+              type="button"
+              aria-pressed={s === subject}
+              onClick={() => {
+                setSubject(s);
+                setPicked("");
+                setTopic("all");
+                setSearch("");
+              }}
+            >
+              {label(s)}
+            </button>
+          ))}
+        </nav>
+      )}
       <div className="video-study__filters" hidden={focus}>
         <label htmlFor={`${id}-subject`}>
           Disciplina
