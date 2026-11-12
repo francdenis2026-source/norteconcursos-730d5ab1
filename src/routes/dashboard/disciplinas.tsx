@@ -52,8 +52,9 @@ import "@/styles/discipline-experience.css";
 
 export const Route = createFileRoute("/dashboard/disciplinas")({
   component: DisciplinesPage,
-  validateSearch: (s: Record<string, unknown>): { d?: string | undefined } => ({
+  validateSearch: (s: Record<string, unknown>): { d?: string | undefined; eixo?: string | undefined } => ({
     d: typeof s["d"] === "string" && s["d"].trim() ? s["d"] : undefined,
+    eixo: typeof s["eixo"] === "string" && s["eixo"].trim() ? s["eixo"] : undefined,
   }),
   head: () => ({ meta: [{ title: "Disciplinas | Norte Concurso" }] }),
 });
@@ -127,7 +128,7 @@ const doneLessons = (slug: string) => {
 function DisciplinesPage() {
   const { user, isLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
-  const { d } = Route.useSearch();
+  const { d, eixo } = Route.useSearch();
   const { data, isPending } = useStudyMaterialList(signedIn);
   const materials = data ?? [];
   const cards = React.useMemo(() => disciplineCards(materials, TRACKS, PLAYLISTS), [materials]);
@@ -149,7 +150,7 @@ function DisciplinesPage() {
     ? (cards.find((card) => card.name === d) ??
       cards.find((card) => card.name === canonicalSubject(d)))
     : undefined;
-  if (d === ACRE_DISCIPLINE) return <AcreRealityArea />;
+  if (d === ACRE_DISCIPLINE) return <AcreRealityArea axisId={eixo} />;
   return current ? (
     <DisciplineDetail key={current.name} card={current} materials={materials} />
   ) : (
