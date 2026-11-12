@@ -60,6 +60,8 @@ import { HomeIntro } from "@/components/landing/HomeIntro";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 import { MobileHomepage } from "@/components/landing/MobileHomepage";
+import { HomeDesktopFx } from "@/components/landing/HomeDesktopFx";
+import { HomePromo } from "@/components/landing/HomePromo";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
@@ -88,6 +90,7 @@ import "@/styles/home-professional-refinement.css";
 import "@/styles/mobile-professional-system.css";
 import "@/styles/home-codex-refinement.css";
 import "@/styles/home-mobile-color.css";
+import "@/styles/home-desktop-premium.css";
 import "@/styles/home-pcac-banner-desktop.css";
 
 export const Route = createFileRoute("/")({
@@ -157,6 +160,7 @@ function Index() {
   }, []);
   return (
     <div className="home home-recomposition hr-canvas">
+      <HomeDesktopFx />
       <PublicAchievementSignal />
       <a href="#conteudo" className="home-skip home-skip--desktop">
         Pular para o conteúdo
@@ -375,6 +379,7 @@ function Index() {
         <section id="concursos" className="sx-section" aria-label="Concursos em foco">
           <ContestShowcase />
         </section>
+        <HomePromo />
 
         <HomeRankingShowcase anchorId="ranking-destaque" />
         <PlansSection />
