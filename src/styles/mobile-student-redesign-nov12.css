@@ -1,0 +1,96 @@
+/* Remodelação mobile (12/11): leitura confortável, cartões coloridos e compactos, sem texto esticado. */
+
+/* Aviso "edital ativo" (Agenda e Meu plano) — todas as larguras */
+.nc-focus-notice {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--brass, #d4a85a) 38%, var(--border));
+  border-radius: 20px;
+  background:
+    radial-gradient(120% 90% at 0% 0%, color-mix(in srgb, var(--brass, #d4a85a) 16%, transparent), transparent 60%),
+    var(--card);
+  box-shadow: 0 18px 36px -28px rgb(0 0 0 / 60%);
+}
+.nc-focus-notice__head { display: flex; gap: 12px; align-items: flex-start; }
+.nc-focus-notice__icon {
+  display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 14px;
+  color: var(--brass, #d4a85a);
+  background: color-mix(in srgb, var(--brass, #d4a85a) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brass, #d4a85a) 40%, transparent);
+}
+.nc-focus-notice__icon svg { width: 20px; height: 20px; }
+.nc-focus-notice h2 { margin: 0; font-size: 1.05rem; font-weight: 800; line-height: 1.25; letter-spacing: -.01em; }
+.nc-focus-notice__head p { margin: 4px 0 0; font-size: .875rem; line-height: 1.5; color: var(--muted-foreground); }
+.nc-focus-notice__edital {
+  display: flex; align-items: center; gap: 10px; margin: 0; padding: 10px 12px; border-radius: 14px;
+  background: color-mix(in srgb, var(--foreground) 6%, transparent);
+  border: 1px solid var(--border);
+}
+.nc-focus-notice__edital svg { flex: none; width: 20px; height: 20px; color: #34d399; }
+.nc-focus-notice__edital span { display: grid; min-width: 0; }
+.nc-focus-notice__edital small { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); }
+.nc-focus-notice__edital strong { font-size: .9rem; line-height: 1.3; overflow-wrap: anywhere; }
+.nc-focus-notice__actions { display: grid; gap: 8px; }
+.nc-focus-notice__actions a {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-height: 48px; padding: 0 16px; border-radius: 14px; font-size: .9rem; font-weight: 700;
+  text-decoration: none; color: var(--foreground); border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+}
+.nc-focus-notice__actions a[data-primary="true"] {
+  color: #1a1206; border-color: transparent;
+  background: linear-gradient(180deg, #f3cf86, #dca95c);
+  box-shadow: 0 10px 22px -14px #dca95c;
+}
+.nc-focus-notice__actions svg { width: 18px; height: 18px; }
+.nc-empty-hint { margin: 0; padding: 14px; border: 1px dashed var(--border); border-radius: 16px; font-size: .9rem; color: var(--muted-foreground); }
+@media (min-width: 640px) {
+  .nc-focus-notice__actions { grid-template-columns: repeat(2, max-content); }
+}
+
+@media (max-width: 640px) {
+  /* Texto de interface nunca justificado (evita "buracos" entre palavras em telas estreitas) */
+  html body :is(.nc-student-workspace, .agenda-workspace-window, .performance-page, .page-hero, .workspace-banner) p:not(:is(.q-text, .question-prose-block, .study-prose p, .legal-reading-paragraph)) {
+    text-align: left !important;
+    text-align-last: auto !important;
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+    text-wrap: pretty;
+  }
+
+  /* Ritmo geral das áreas do aluno */
+  .nc-student-workspace, .agenda-workspace-window { gap: 12px; padding-inline: 2px; }
+  :is(.nc-student-workspace, .agenda-workspace-window) > section,
+  :is(.nc-student-workspace, .agenda-workspace-window) > div { border-radius: 18px; }
+
+  /* Faixa de identificação compacta */
+  .agenda-workspace-window .page-hero { padding: 16px; }
+  .agenda-workspace-window .page-hero h1 { font-size: 1.6rem; line-height: 1.1; }
+  .agenda-workspace-window .page-hero__desc { font-size: .85rem; line-height: 1.45; }
+  .agenda-workspace-window .page-hero__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .agenda-workspace-window .hero-stat { min-width: 0; padding: 10px 12px; }
+  .agenda-workspace-window .hero-stat span { font-size: .7rem; line-height: 1.25; white-space: normal; }
+  .agenda-workspace-window .hero-stat strong { font-size: 1.15rem; }
+
+  /* Gráfico de atividade: sem vazio acima das barras, rótulos legíveis */
+  .student-home__rhythm-chart, .daily-study-activity { min-height: 0; }
+  .student-home__rhythm-plot { height: 150px; }
+  .student-home__rhythm-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .student-home__rhythm-day { min-width: 0; padding: 6px 2px; }
+  .student-home__rhythm-day small { font-size: .6rem; }
+
+  /* Desempenho: abas e cartões respiram melhor */
+  .performance-page { gap: 12px; }
+  .performance-page .performance-fold { border-radius: 16px; }
+  .performance-page [role="tablist"] { overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
+  .performance-page [role="tab"] { flex: none; min-height: 44px; }
+
+  /* Login: cartão completo, sem vazio embaixo, alvos de toque grandes */
+  .auth { min-height: 100dvh; }
+  .auth-card { display: flex; flex-direction: column; }
+  .auth-card input { min-height: 52px; font-size: 16px; }
+  .auth-card :is(button[type="submit"], .auth-submit) { min-height: 54px; border-radius: 16px; font-weight: 800; }
+  .auth-heading h2 { font-size: 1.35rem; letter-spacing: -.02em; }
+  .auth-tabs button { min-height: 46px; }
+}

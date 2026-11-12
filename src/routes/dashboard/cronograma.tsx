@@ -36,6 +36,7 @@ import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
 import { hasActiveEdital, activeEditalLabel } from "@/lib/cronogramaGuard";
 import { MockService } from "@/services/mockService";
+import { EditalFocusNotice } from "@/components/dashboard/EditalFocusNotice";
 
 import "@/styles/student-internal-workspace-system.css";
 import "@/styles/student-planning-workspaces.css";
@@ -121,7 +122,7 @@ function CronogramaPage() {
           <HeroStat icon={NotebookPen} label="Cronogramas" value={plans?.length ?? 0} />
           <HeroStat
             icon={Target}
-            label="Dias p/ a mais próxima"
+            label="Próxima prova (dias)"
             value={(() => {
               const dates = (plans ?? [])
                 .map((p) => p.exam_date)
@@ -144,7 +145,7 @@ function CronogramaPage() {
           onChange={(p) => setPlans((all) => all!.map((x) => (x.id === p.id ? p : x)))}
           onDeleted={async () => { setOpenId(null); await load(); }} />
       ) : (
-        <PlanList plans={plans!} onOpen={setOpenId} canCreate={canCreate} creationLocked={hasActiveEdital(activeContest)} />
+        <PlanList plans={plans!} onOpen={setOpenId} canCreate={canCreate} creationLocked={hasActiveEdital(activeContest)} editalLabel={hasActiveEdital(activeContest) ? activeEditalLabel(activeContest!) : undefined} />
       )}
     </div>
   );
@@ -183,11 +184,22 @@ function ActiveEditalLocked({ contest, onBack }: { contest: NonNullable<Awaited<
   );
 }
 
-function PlanList({ plans, onOpen, canCreate, creationLocked }: { plans: Plan[]; onOpen: (id: string | "new") => void; canCreate: boolean; creationLocked: boolean }) {
+function PlanList({ plans, onOpen, canCreate, creationLocked, editalLabel }: { plans: Plan[]; onOpen: (id: string | "new") => void; canCreate: boolean; creationLocked: boolean; editalLabel?: string | undefined }) {
   return (
     <div className="space-y-3">
-      {plans.length === 0 && (
-        <p className="rounded-xl border bg-card p-4 text-sm text-muted-foreground">
+      {plans.length === 0 && creationLocked && (
+        <EditalFocusNotice
+          title="Sua agenda segue o edital ativo"
+          description="Para não misturar disciplinas de concursos diferentes, o cronograma é montado a partir do edital em foco. Abra o edital para estudar por tópicos."
+          edital={editalLabel}
+          actions={[
+            { label: "Abrir meu edital", to: "/dashboard/edital", primary: true },
+            { label: "Gerenciar concurso", to: "/dashboard/my-contest" },
+          ]}
+        />
+      )}
+      {plans.length === 0 && !creationLocked && (
+        <p className="nc-empty-hint">
           Você ainda não tem cronograma. Escolha o modelo do edital do seu concurso: ele já traz as
           disciplinas e os tópicos, e a semana se ajusta ao que você estuda.
         </p>
@@ -202,9 +214,9 @@ function PlanList({ plans, onOpen, canCreate, creationLocked }: { plans: Plan[];
           </p>
         </button>
       ))}
-      <button type="button" onClick={() => onOpen("new")} disabled={creationLocked} aria-disabled={creationLocked} title={creationLocked ? "O edital ativo bloqueia a criação de outro cronograma." : undefined} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:border-dashed disabled:hover:text-muted-foreground">
+      {!(creationLocked && plans.length === 0) && <button type="button" onClick={() => onOpen("new")} disabled={creationLocked} aria-disabled={creationLocked} title={creationLocked ? "O edital ativo bloqueia a criação de outro cronograma." : undefined} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:border-dashed disabled:hover:text-muted-foreground">
         {creationLocked || !canCreate ? <Lock className="h-4 w-4" /> : <Plus className="h-4 w-4" />} {creationLocked ? "Cronograma bloqueado pelo edital ativo" : "Novo cronograma"}
-      </button>
+      </button>}
     </div>
     </div>
   );

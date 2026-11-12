@@ -1,3 +1,4 @@
+import { EditalFocusNotice } from "@/components/dashboard/EditalFocusNotice";
 import { platformDate } from "@/lib/platformClock";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -660,17 +661,15 @@ function StudyCoachPage() {
   if (hasActiveEdital(activeContest)) {
     return (
       <div className="nc-student-workspace plan-workspace-window mx-auto w-full max-w-none space-y-4">
-        <section className="rounded-2xl border border-amber-500/30 bg-card p-6" role="status" aria-labelledby="study-plan-locked-title">
-          <div className="flex items-start gap-4">
-            <span className="mt-1 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-amber-400/40 bg-amber-400/10 text-amber-300" aria-hidden="true"><Lock className="h-5 w-5" /></span>
-            <div className="space-y-2">
-              <h1 id="study-plan-locked-title" className="text-lg font-black">Meu plano está vinculado ao edital ativo</h1>
-              <p className="text-sm text-muted-foreground">O planejamento personalizado fica temporariamente desativado para evitar que sua rotina misture disciplinas de outro concurso ou cargo.</p>
-              <p className="text-sm font-semibold">Edital em foco: {activeEditalLabel(activeContest!)}</p>
-              <Link className="inline-flex text-sm font-bold text-primary underline-offset-4 hover:underline" to="/dashboard/my-contest">Gerenciar concurso e cargo <ArrowRight className="ml-1 h-4 w-4" /></Link>
-            </div>
-          </div>
-        </section>
+        <EditalFocusNotice
+          title="Meu plano segue o edital ativo"
+          description="O planejamento personalizado fica pausado para sua rotina não misturar disciplinas de outro concurso ou cargo."
+          edital={activeEditalLabel(activeContest!)}
+          actions={[
+            { label: "Abrir meu edital", to: "/dashboard/edital", primary: true },
+            { label: "Gerenciar concurso e cargo", to: "/dashboard/my-contest" },
+          ]}
+        />
       </div>
     );
   }
