@@ -45,8 +45,9 @@
     --plan: var(--mc-essential);
     position: relative;
     min-height: 60px !important;
-    overflow: hidden;
+    overflow: visible !important;
     padding-left: 15px !important;
+    box-shadow: inset 4px 0 0 var(--plan) !important;
     border-color: color-mix(in srgb, var(--plan) 32%, transparent) !important;
     background-image: linear-gradient(90deg, color-mix(in srgb, var(--plan) 10%, transparent), transparent 55%) !important;
   }
@@ -58,13 +59,6 @@
   }
   .home.home.home .mobile-homepage--recomposed .mobile-plans__list > li[data-plan="premium"] {
     --plan: var(--mc-premium);
-  }
-  .home.home.home .mobile-homepage--recomposed .mobile-plans__list > li[data-plan]::before {
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 4px;
-    content: "";
-    background: var(--plan);
   }
   .home.home.home .mobile-homepage--recomposed .mobile-plans__list > li[data-plan] .mobile-plans__icon {
     width: 32px !important;
@@ -93,7 +87,8 @@
     opacity: 0.85;
   }
   .home.home.home .mobile-homepage--recomposed .mobile-plans__list > li[data-plan="plus"] {
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--plan) 45%, transparent), 0 16px 30px -22px color-mix(in srgb, var(--plan) 70%, transparent) !important;
+    margin-top: 8px;
+    box-shadow: inset 4px 0 0 var(--plan), 0 0 0 1px color-mix(in srgb, var(--plan) 45%, transparent), 0 16px 30px -22px color-mix(in srgb, var(--plan) 70%, transparent) !important;
   }
   .home.home.home .mobile-homepage--recomposed .mobile-plans__trial {
     border: 1px solid color-mix(in srgb, var(--mc-free) 35%, transparent);
@@ -123,11 +118,6 @@
     color: inherit !important;
   }
 
-  /* Rodapé: marca e ícones com a cor de destaque */
-  .home.home.home .mobile-homepage--recomposed .mobile-homepage__footer-brand span,
-  .home.home.home .mobile-homepage--recomposed .mobile-homepage__footer-contact svg {
-    color: var(--mc-plus) !important;
-  }
 }
 
 @media (max-width: 359px) {
@@ -241,46 +231,148 @@
     height: 15px !important;
   }
 
-  /* Rodapé: links em 3 botões iguais, contatos legíveis, assinatura só na barra fixa */
-  .home.home.home .mobile-homepage__footer-nav {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 6px !important;
-    margin-top: 12px !important;
-  }
-  .home.home.home .mobile-homepage__footer-nav a {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-    padding: 0 6px !important;
-    border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
-    border-radius: 10px;
-    font-size: 12.5px !important;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .home.home.home .mobile-homepage__footer-nav a::before,
-  .home.home.home .mobile-homepage__footer-nav a::after {
-    display: none !important;
-  }
-  .home.home.home .mobile-homepage__footer-contact a {
-    gap: 10px !important;
-    min-height: 36px;
-    font-size: 13px !important;
-  }
-  .home.home.home .mobile-homepage__footer-contact a svg {
-    box-sizing: content-box;
-    width: 15px !important;
-    height: 15px !important;
-    padding: 6px;
-    border-radius: 9px;
-    background: rgb(245 158 11 / 14%);
-  }
-  .home.home.home .mobile-homepage__footer-copy > span + span {
-    display: none !important;
-  }
   .home.home.home .hr-footer-cta {
     display: none !important;
+  }
+}
+
+/* Rodapé do celular: cartão compacto com faixa de imagem, links e contatos coloridos. */
+.mf {
+  display: none;
+}
+@media (max-width: 760px) {
+  .home.home.home .mobile-homepage .mf {
+    display: grid;
+    gap: 12px;
+    margin: 16px 12px 0 !important;
+    padding: 0 0 14px !important;
+    overflow: hidden;
+    border: 1px solid rgb(245 158 11 / 32%);
+    border-radius: 20px;
+    color: #e8edf5;
+    background: #0b1220;
+    box-shadow: 0 20px 40px -28px rgb(2 6 23 / 85%);
+  }
+  .home.home.home .mobile-homepage .mf * {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .home.home.home .mobile-homepage .mf__hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: 4px;
+    padding: 18px 16px 14px;
+  }
+  .home.home.home .mobile-homepage .mf__hero > img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80% 28%;
+  }
+  .home.home.home .mobile-homepage .mf__hero::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    background: linear-gradient(100deg, rgb(11 18 32 / 96%) 10%, rgb(11 18 32 / 70%) 60%, rgb(11 18 32 / 35%)),
+      linear-gradient(0deg, #0b1220, transparent 60%);
+  }
+  .home.home.home .mobile-homepage .mf__brand {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .home.home.home .mobile-homepage .mf__brand span {
+    color: #fbbf24;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+  }
+  .home.home.home .mobile-homepage .mf__hero p {
+    margin: 0;
+    color: #b8c2d3;
+    font-size: 12.5px;
+  }
+  .home.home.home .mobile-homepage .mf__links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding: 0 12px;
+  }
+  .home.home.home .mobile-homepage .mf__links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 40px;
+    padding: 0 4px;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 11px;
+    color: #e8edf5;
+    background: rgb(255 255 255 / 5%);
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .home.home.home .mobile-homepage .mf__links svg {
+    flex: none;
+    width: 14px;
+    height: 14px;
+    color: #fbbf24;
+  }
+  .home.home.home .mobile-homepage .mf__contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    padding: 0 12px;
+    font-style: normal;
+  }
+  .home.home.home .mobile-homepage .mf__contact a {
+    --tone: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 6px 10px;
+    border-radius: 11px;
+    color: #e8edf5;
+    background: color-mix(in srgb, var(--tone) 12%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tone) 30%, transparent);
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .home.home.home .mobile-homepage .mf__contact a[data-tone="whats"] {
+    --tone: #22c55e;
+  }
+  .home.home.home .mobile-homepage .mf__contact a[data-tone="map"] {
+    --tone: #f59e0b;
+    grid-column: 1 / -1;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .home.home.home .mobile-homepage .mf__contact svg {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    color: var(--tone);
+  }
+  .home.home.home .mobile-homepage .mf__copy {
+    padding: 2px 16px 0;
+    color: #8792a6;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+@media (max-width: 340px) {
+  .home.home.home .mobile-homepage .mf__links svg {
+    display: none;
   }
 }
