@@ -111,7 +111,7 @@ function disciplinePresentation(name: string): { key: string; image: HeroImage; 
     ingles: "Vocabulário, leitura e compreensão de textos voltados para concursos.",
     geral: "Materiais, trilhas e prática organizados para sua preparação.",
   };
-  return { key, image: images[key] ?? "study-desk", description: descriptions[key] ?? descriptions.geral! };
+  return { key, image: images[key] ?? "study-desk", description: descriptions[key] ?? descriptions["geral"]! };
 }
 
 const doneLessons = (slug: string) => {
