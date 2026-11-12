@@ -97,6 +97,7 @@ function orderedStudentSections<T extends { group: string }>(sections: T[]) {
   return [...sections].sort((a, b) => rank(a.group) - rank(b.group));
 }
 function studentSectionHeading(group: string) {
+  if (!group) return "";
   if (group === "ENEM") return "Outros objetivos";
   if (group === "Conta") return "Sua conta";
   return "Sua jornada";
@@ -136,7 +137,7 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
         const Icon = groupIcons[group] ?? BookOpen;
         const active = current?.href !== "/dashboard" && current?.group === group;
         const heading = studentSectionHeading(group);
-        const showHeading = !collapsed && heading !== (index > 0 ? studentSectionHeading(sections[index - 1].group) : "");
+        const showHeading = !collapsed && heading !== studentSectionHeading(sections[index - 1]?.group ?? "");
         const sectionLink = (
           <Link to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? studentGroupLabel(group) : undefined} onClick={onNavigate}>
             <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
