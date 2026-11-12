@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Award, Gem, Medal, ShieldCheck, Trophy } from "lucide-react";
+import { ArrowRight, Award, BookOpenCheck, ChevronDown, ClipboardCheck, Crown, Gem, Medal, ShieldCheck, Star, Target, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import "./HomeRankingShowcase.css";
+import "./MobileRanking.css";
 
 type Candidate = {
   rank_position: number;
@@ -61,7 +62,75 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
     };
   }, []);
 
-  const titleId = anchorId === "ranking-destaque-mobile" ? "home-ranking-title-mobile" : "home-ranking-title";
+  const [open, setOpen] = useState<number | null>(0);
+  const emptyMessage = unavailable
+    ? "O ranking está temporariamente indisponível."
+    : candidates
+      ? `Os candidatos aparecerão aqui quando alcançarem pelo menos ${MIN_SHOWCASE_POINTS} pontos.`
+      : "Consultando a classificação da plataforma…";
+  if (anchorId === "ranking-destaque-mobile") {
+    const top = candidates?.[0]?.points ?? 0;
+    return (
+      <section id={anchorId} className="rk" aria-labelledby="home-ranking-title-mobile">
+        <header className="rk__banner">
+          <img src="/media/hero/careers-team.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <p className="rk__eyebrow"><Trophy aria-hidden="true" /> Ranking da comunidade</p>
+          <h2 id="home-ranking-title-mobile">Quem está no <em>topo da preparação?</em></h2>
+          <span className="rk__live"><i aria-hidden="true" /> {updated && !unavailable ? "Atualizado periodicamente" : "Classificação da plataforma"}</span>
+        </header>
+        {candidates && candidates.length > 0 ? (
+          <ol className="rk__list" aria-label="Candidatos em destaque">
+            {candidates.map((c, i) => {
+              const name = c.display_name.trim() || "Candidato";
+              const expanded = open === i;
+              const tier = c.rank_position <= 3 ? c.rank_position : 4;
+              const TierIcon = tier === 1 ? Crown : tier === 4 ? Award : Medal;
+              return (
+                <li key={`${c.rank_position}-${name}`} className="rk__item" data-tier={tier} data-open={expanded}>
+                  <button
+                    type="button"
+                    className="rk__row"
+                    aria-expanded={expanded}
+                    aria-controls={`rk-stats-${i}`}
+                    onClick={() => setOpen(expanded ? null : i)}
+                  >
+                    <span className="rk__medal"><TierIcon aria-hidden="true" /><b>{c.rank_position}º</b></span>
+                    <span className="rk__who">
+                      <strong>{name}</strong>
+                      <span className="rk__stars" aria-label={`Nível: ${c.stars} estrelas`}>
+                        {Array.from({ length: 5 }, (_, s) => (
+                          <Star key={s} aria-hidden="true" data-on={s < c.stars} />
+                        ))}
+                      </span>
+                    </span>
+                    <span className="rk__points"><strong>{number.format(c.points)}</strong><small>pontos</small></span>
+                    <ChevronDown className="rk__chevron" aria-hidden="true" />
+                    <span className="rk__bar" aria-hidden="true"><i style={{ width: `${top > 0 ? Math.max(8, Math.round((c.points / top) * 100)) : 0}%` }} /></span>
+                  </button>
+                  <dl className="rk__stats" id={`rk-stats-${i}`} hidden={!expanded}>
+                    <div><Target aria-hidden="true" /><dd>{c.accuracy}%</dd><dt>Acertos</dt></div>
+                    <div><BookOpenCheck aria-hidden="true" /><dd>{number.format(c.questions)}</dd><dt>Questões</dt></div>
+                    <div><ClipboardCheck aria-hidden="true" /><dd>{c.simulators}</dd><dt>Simulados</dt></div>
+                  </dl>
+                </li>
+              );
+            })}
+          </ol>
+        ) : (
+          <div className="rk__empty" role="status">{emptyMessage}</div>
+        )}
+        <p className="rk__trust"><ShieldCheck aria-hidden="true" /> Pontos e acertos reais. Empates legítimos compartilham a posição.</p>
+        <Link to="/dashboard/ranking" search={{ section: "general", period: "all", page: 1, size: 20, q: "" }} className="rk__cta">
+          Ver ranking completo <ArrowRight aria-hidden="true" />
+        </Link>
+        <details className="rk__details">
+          <summary>Como funciona a classificação?</summary>
+          <p>Esta vitrine pública exibe somente candidatos com pelo menos {MIN_SHOWCASE_POINTS} pontos válidos; o ranking completo mantém suas regras próprias. O ranking Geral considera os pontos registrados na plataforma. Quando há empate em pontos, utiliza taxa de acertos, número de acertos, questões válidas e pontos de simulados. Empates completos compartilham a mesma posição. Repetições de questões não somam novos pontos. Nomes são exibidos de forma abreviada; não são divulgados dados pessoais.</p>
+        </details>
+      </section>
+    );
+  }
+  const titleId = "home-ranking-title";
   const icon = (position: number) =>
     position === 1 ? <Gem aria-hidden="true" /> :
     position === 2 || position === 3 ? <Medal aria-hidden="true" /> : <Award aria-hidden="true" />;
@@ -69,7 +138,6 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
     <section
       id={anchorId}
       className="home-ranking hr-section"
-      data-mobile-showcase={anchorId === "ranking-destaque-mobile" ? "true" : undefined}
       aria-labelledby={titleId}
     >
       <div className="home-container">
@@ -126,7 +194,7 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
             </ol>
           ) : (
             <div className="home-ranking__empty" role="status">
-              {unavailable ? "O ranking está temporariamente indisponível." : candidates ? `Os candidatos aparecerão aqui quando alcançarem pelo menos ${MIN_SHOWCASE_POINTS} pontos.` : "Consultando a classificação da plataforma…"}
+              {emptyMessage}
             </div>
           )}
           <div className="home-ranking__bottom">

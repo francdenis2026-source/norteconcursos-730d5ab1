@@ -30,6 +30,7 @@ export function MobileHomepage() {
               key={plan.id}
               className={`hr-m-card${plan.id === "plus" ? " hr-m-plan-featured" : ""}`}
               data-featured={plan.id === "plus" || undefined}
+              data-plan={plan.id}
             >
               <div>
                 {plan.id === "plus" ? <Crown className="mobile-plans__icon" aria-hidden="true" /> : plan.id === "premium" ? <Gem className="mobile-plans__icon" aria-hidden="true" /> : plan.price === 0 ? <Gift className="mobile-plans__icon" aria-hidden="true" /> : <Target className="mobile-plans__icon" aria-hidden="true" />}

@@ -87,6 +87,7 @@ import "@/styles/mobile-home-polish-nov10.css";
 import "@/styles/home-professional-refinement.css";
 import "@/styles/mobile-professional-system.css";
 import "@/styles/home-codex-refinement.css";
+import "@/styles/home-mobile-color.css";
 import "@/styles/home-pcac-banner-desktop.css";
 
 export const Route = createFileRoute("/")({
