@@ -1,5 +1,5 @@
 import { studentSections, studentGroupLabel } from "@/lib/studentNavigation";
-import { useEffect, useId, useState } from "react";
+import { Fragment, useEffect, useId, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Hint } from "@/components/ui/hint";
 import {
@@ -52,7 +52,7 @@ const groupIcons: Record<string, LucideIcon> = {
 const groupDetails: Record<string, string> = {
   "Minha Preparação": "Objetivo, cargo e edital",
   Planejamento: "Plano personalizado e agenda de estudos",
-  "Central de Estudos": "Notas, guias, simplificação, comparações, quiz e evolução",
+  "Central de Estudos": "Notas, guias, quiz e redação",
   "Material didático": "Legislação, disciplinas, vídeos e redação",
   Ferramentas: "Foco, calculadora e painéis",
   Questões: "Treino, erros, coleções e flashcards",
@@ -88,6 +88,21 @@ type NavigationProps = {
   appearance?: "default" | "student";
 };
 
+const STUDENT_SECTION_ORDER = ["Minha Preparação", "Planejamento", "Central de Estudos", "Material didático", "Questões", "Provas", "Desempenho", "ENEM", "Conta"];
+function orderedStudentSections<T extends { group: string }>(sections: T[]) {
+  const rank = (group: string) => {
+    const index = STUDENT_SECTION_ORDER.indexOf(group);
+    return index === -1 ? STUDENT_SECTION_ORDER.length : index;
+  };
+  return [...sections].sort((a, b) => rank(a.group) - rank(b.group));
+}
+function studentSectionHeading(group: string) {
+  if (!group) return "";
+  if (group === "ENEM") return "Outros objetivos";
+  if (group === "Conta") return "Sua conta";
+  return "Sua jornada";
+}
+
 export function DashboardNavigation(props: NavigationProps) {
   return props.appearance === "student" ? <StudentDashboardNavigation {...props} /> : <GroupedDashboardNavigation {...props} />;
 }
@@ -118,12 +133,13 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
           </div>
         );
       })()}
-      {!collapsed && <p className="nav-section-label">Sua jornada</p>}
-      {studentSections(available).map(({ group, entry, entries }) => {
+      {orderedStudentSections(studentSections(available)).map(({ group, entry, entries }, index, sections) => {
         const Icon = groupIcons[group] ?? BookOpen;
         const active = current?.href !== "/dashboard" && current?.group === group;
+        const heading = studentSectionHeading(group);
+        const showHeading = !collapsed && heading !== studentSectionHeading(sections[index - 1]?.group ?? "");
         const sectionLink = (
-          <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? studentGroupLabel(group) : undefined} onClick={onNavigate}>
+          <Link to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? studentGroupLabel(group) : undefined} onClick={onNavigate}>
             <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
             {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
               <span className="app-nav__label"><strong>{studentGroupLabel(group)}</strong><small>{groupDetails[group]}</small></span>
@@ -131,33 +147,34 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
             </>}
           </Link>
         );
-        // Expanded, the group name and description already read on the card — a tooltip would only repeat them.
-        if (group === 'ENEM' && !collapsed) return <div key={group} className="student-navigation__other"><p className="nav-section-label">Outros objetivos</p>{sectionLink}</div>;
-        if (group === "Central de Estudos" && !collapsed) {
+        let row = sectionLink;
+        if (collapsed) {
+          row = <Hint content={<>{studentGroupLabel(group)} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>;
+        } else if (group === "Central de Estudos" && entries.some((item) => !(item.href === entry.href && !item.search))) {
           const childItems = entries.filter((item) => !(item.href === entry.href && !item.search));
-          return (
-            <div key={group} className="student-central-nav">
-              <div className="student-central-nav__header flex items-center gap-1">
-                <div className="min-w-0 flex-1">{sectionLink}</div>
+          row = (
+            <div className="student-central-nav">
+              <div className="student-central-nav__header">
+                <div className="student-central-nav__link">{sectionLink}</div>
                 <button
                   type="button"
-                  className="app-nav__link shrink-0 justify-center"
+                  className="student-central-nav__toggle"
                   aria-label={centralOpen ? "Recolher menu da Central de Estudos" : "Expandir menu da Central de Estudos"}
                   aria-expanded={centralOpen}
                   aria-controls="student-central-nav-entries"
                   onClick={() => setCentralOpen((open) => !open)}
                 >
-                  <ChevronDown aria-hidden="true" className="transition-transform" data-open={centralOpen} />
+                  <ChevronDown aria-hidden="true" data-open={centralOpen} />
                 </button>
               </div>
-              <div id="student-central-nav-entries" hidden={!centralOpen} className="student-central-nav__entries ml-4 grid gap-1 border-l border-border/60 py-1 pl-3">
+              <div id="student-central-nav-entries" hidden={!centralOpen} className="student-central-nav__entries">
                 {childItems.map((item) => {
                   const selected = !!current && navigationKey(current) === navigationKey(item);
                   const ChildIcon = item.icon;
                   return (
-                    <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} className="app-nav__link" data-active={selected} aria-current={selected ? "page" : undefined} onClick={onNavigate}>
-                      <span className="app-ico" data-hue={hues[group] ?? "gold"}><ChildIcon aria-hidden="true" /></span>
-                      <span className="app-nav__label">{item.label}</span>
+                    <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} className="student-central-nav__entry" data-active={selected} aria-current={selected ? "page" : undefined} onClick={onNavigate}>
+                      <ChildIcon aria-hidden="true" />
+                      <span>{item.label}</span>
                     </Link>
                   );
                 })}
@@ -165,9 +182,12 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
             </div>
           );
         }
-        return collapsed
-          ? <Hint key={group} content={<>{studentGroupLabel(group)} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>
-          : sectionLink;
+        return (
+          <Fragment key={group}>
+            {showHeading && <p className="nav-section-label">{heading}</p>}
+            {row}
+          </Fragment>
+        );
       })}
     </nav>
   );

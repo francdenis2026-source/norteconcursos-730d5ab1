@@ -52,6 +52,7 @@ import "@/styles/home-layout-fixes.css";
 import "@/styles/general-access-banner.css";
 import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
+import { BetaNotice } from "@/components/landing/BetaNotice";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
@@ -460,6 +461,7 @@ function Index() {
           </div>
         </div>
       </footer>
+      <BetaNotice />
       <HomeAppNavigation />
     </div>
   );
