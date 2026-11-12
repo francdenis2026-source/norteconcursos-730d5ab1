@@ -11,6 +11,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { canonicalSubject } from "@/lib/subjects";
 import { fetchAllRows } from "@/lib/catalog";
+import { readActiveStudyEdition, saveActiveStudyEdition } from "@/lib/activeStudyEdition";
 import { needsMissingSupportText } from "@/lib/questionText";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -57,6 +58,7 @@ function EditalPage() {
     [progressFilter, setProgressFilter] = React.useState<"all" | "pending" | "done">("all"),
     [revision, setRevision] = React.useState(0);
   const [completed, setCompleted] = React.useState<Record<string, boolean>>({});
+  const [activeEditionId, setActiveEditionId] = React.useState<string | null>(null);
   const [shareFeedback, setShareFeedback] = React.useState("");
   const [downloadBusy, setDownloadBusy] = React.useState(false);
   const [downloadFeedback, setDownloadFeedback] = React.useState("");
@@ -133,6 +135,9 @@ function EditalPage() {
   const edition = editions.find((e) => e.id === selected);
   const editionId = edition?.id;
   React.useEffect(() => {
+    setActiveEditionId(user?.id ? readActiveStudyEdition(user.id)?.id ?? null : null);
+  }, [user?.id, editionId]);
+  React.useEffect(() => {
     if (!editionId) return;
     try { setCompleted(JSON.parse(localStorage.getItem(`norte-edital-progress:${editionId}`) ?? "{}")); } catch { setCompleted({}); }
   }, [editionId]);
@@ -205,6 +210,17 @@ function EditalPage() {
   }
   const chooseEdition = (id?: string) =>
     void navigate({ to: "/dashboard/edital", search: { edition: id } });
+  const adoptEdition = () => {
+    if (!user?.id || !edition) return;
+    const saved = saveActiveStudyEdition(user.id, {
+      id: edition.id,
+      contestName: edition.contest_name,
+      roleName: edition.role_name,
+      year: edition.contest_year,
+      examBoard: edition.exam_board,
+    });
+    if (saved) setActiveEditionId(edition.id);
+  };
   if (authLoading || loading)
     return (
       <div className="flex h-64 items-center justify-center" role="status">
@@ -248,9 +264,18 @@ function EditalPage() {
             <Badge variant="outline">
               {edition.status === "archived" ? "Edição arquivada" : editalSourceLabel(edition)}
             </Badge>
-            <Button variant="outline" onClick={() => chooseEdition()}>
-              Trocar concurso ou edição
-            </Button>
+            <div className="flex flex-wrap items-center gap-2">
+              <Button
+                variant={activeEditionId === edition.id ? "default" : "outline"}
+                onClick={adoptEdition}
+                disabled={activeEditionId === edition.id || !user?.id}
+              >
+                {activeEditionId === edition.id ? "Edital ativo" : "Usar como edital principal"}
+              </Button>
+              <Button variant="outline" onClick={() => chooseEdition()}>
+                Trocar concurso ou edição
+              </Button>
+            </div>
           </div>
           <h2>
             {edition.contest_name} · {edition.contest_year}
@@ -262,6 +287,11 @@ function EditalPage() {
                 ? `${examQuestions[0].board} · identificada nas questões desta prova`
                 : "Banca não informada")}
           </p>
+          {activeEditionId === edition.id && (
+            <p role="status" className="text-xs font-semibold text-primary">
+              Este edital está ativo como referência de estudo nas disciplinas da plataforma.
+            </p>
+          )}
           <div className="edital-summary-grid" aria-label="Resumo da edição selecionada">
             <div className="edital-summary-card edital-summary-card--progress">
               <span>Progresso do edital</span>

@@ -1,4 +1,5 @@
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
+import { useQuery } from "@tanstack/react-query";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialTopic } from "@/lib/materialPractice";
 import * as React from "react";
@@ -23,9 +24,12 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, type HeroImage } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { supabase } from "@/integrations/supabase/client";
+import { fetchAllRows } from "@/lib/catalog";
+import { ACTIVE_STUDY_EDITION_EVENT, readActiveStudyEdition, type ActiveStudyEdition } from "@/lib/activeStudyEdition";
 import { readSlugs, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS, youtubePlaylistUrl } from "@/data/mediaCatalog";
@@ -41,6 +45,7 @@ import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
+import "@/styles/discipline-experience.css";
 
 export const Route = createFileRoute("/dashboard/disciplinas")({
   component: DisciplinesPage,
@@ -63,6 +68,51 @@ const ICONS: Record<SubjectIcon, LucideIcon> = {
   geral: BookOpen,
 };
 const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+type SyllabusTopic = { id: string; discipline: string; topic_text: string; topic_order: number | null };
+
+function subjectKey(name: string) {
+  const value = canonicalSubject(name).normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+  if (value.includes("portugues") || value.includes("redacao")) return "portugues";
+  if (value.includes("matematica")) return "matematica";
+  if (value.includes("raciocinio") || value.includes("logica")) return "logica";
+  if (value.includes("informatica") || value.includes("comput")) return "informatica";
+  if (value.includes("quimica")) return "quimica";
+  if (value.includes("fisica")) return "fisica";
+  if (value.includes("estatistica")) return "estatistica";
+  if (value.includes("contabilidade")) return "contabilidade";
+  if (value.includes("ingles")) return "ingles";
+  return "geral";
+}
+
+function disciplinePresentation(name: string): { key: string; image: HeroImage; description: string } {
+  const key = subjectKey(name);
+  const images: Record<string, HeroImage> = {
+    portugues: "study-desk",
+    matematica: "toolkit",
+    logica: "command-room",
+    informatica: "dashboard",
+    quimica: "field-map",
+    fisica: "field-map",
+    estatistica: "dashboard",
+    contabilidade: "exam-hall",
+    ingles: "careers-team",
+    geral: "journey",
+  };
+  const descriptions: Record<string, string> = {
+    portugues: "Interpretação, gramática e leitura estratégica para resolver questões com segurança.",
+    matematica: "Conceitos, cálculos e resolução de problemas com prática progressiva.",
+    logica: "Raciocínio estruturado, padrões e estratégias para ganhar precisão nas questões.",
+    informatica: "Conceitos digitais, sistemas e tecnologia organizados para a prova.",
+    quimica: "Fundamentos, relações e aplicações organizados por assunto.",
+    fisica: "Princípios, fórmulas e interpretação de fenômenos com aplicação prática.",
+    estatistica: "Leitura de dados, medidas e interpretação de resultados.",
+    contabilidade: "Conceitos, demonstrações e lançamentos com foco na resolução de questões.",
+    ingles: "Vocabulário, leitura e compreensão de textos voltados para concursos.",
+    geral: "Materiais, trilhas e prática organizados para sua preparação.",
+  };
+  return { key, image: images[key] ?? "study-desk", description: descriptions[key] ?? descriptions.geral! };
+}
+
 const doneLessons = (slug: string) => {
   try {
     return (JSON.parse(localStorage.getItem(`trilha-feitas:${slug}`) ?? "[]") as unknown[]).length;
@@ -119,10 +169,10 @@ function DisciplineIndex({
     ? available.filter((c) => normalizeLibrarySearch(c.name).includes(normalized))
     : available;
   return (
-    <div className="discipline-workspace space-y-6 pb-10">
+    <div className="discipline-workspace space-y-4 pb-8" data-view="index">
       <PageHero
         image="study-desk"
-        size="lg"
+        size="md"
         kicker="Material didático"
         icon={GraduationCap}
         title={
@@ -192,7 +242,7 @@ function DisciplineIndex({
             const Icon = ICONS[card.icon];
             const body = (
               <>
-                <span className="discipline-card__icon">
+                <span className="discipline-card__icon" data-subject={subjectKey(card.name)}>
                   <Icon aria-hidden="true" />
                 </span>
                 <strong>{card.name}</strong>
@@ -218,11 +268,12 @@ function DisciplineIndex({
                     to="/dashboard/disciplinas"
                     search={{ d: card.name }}
                     className="discipline-card"
+                    data-subject={subjectKey(card.name)}
                   >
                     {body}
                   </Link>
                 ) : (
-                  <div className="discipline-card" data-empty="true" aria-disabled="true">
+                  <div className="discipline-card" data-subject={subjectKey(card.name)} data-empty="true" aria-disabled="true">
                     {body}
                   </div>
                 )}
@@ -245,23 +296,78 @@ function DisciplineDetail({
   const { user } = useAuthStatus();
   const [practiceTopic, setPracticeTopic] = React.useState("");
   const Icon = ICONS[card.icon];
+  const presentation = disciplinePresentation(card.name);
   const items = materialsOf(card.name, materials as never) as typeof materials;
   const tracks = tracksOf(card.name, TRACKS);
   const playlists = playlistsOf(card.name, PLAYLISTS);
   const [read, setRead] = React.useState<Set<string>>(new Set());
+  const [activeEdition, setActiveEdition] = React.useState<ActiveStudyEdition | null>(null);
+  const [completedTopics, setCompletedTopics] = React.useState<Record<string, boolean>>({});
   React.useEffect(() => setRead(readSlugs()), []);
+  React.useEffect(() => {
+    const sync = () => setActiveEdition(readActiveStudyEdition(user?.id));
+    sync();
+    window.addEventListener(ACTIVE_STUDY_EDITION_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(ACTIVE_STUDY_EDITION_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, [user?.id]);
+  const activeEditionId = activeEdition?.id;
+  const syllabusQuery = useQuery({
+    queryKey: ["active-syllabus-topics", activeEditionId],
+    enabled: !!activeEditionId,
+    queryFn: () =>
+      fetchAllRows<SyllabusTopic>((from, to) =>
+        supabase
+          .from("syllabus_topics")
+          .select("id,discipline,topic_text,topic_order")
+          .eq("edition_id", activeEditionId!)
+          .eq("content_status", "current")
+          .order("id")
+          .range(from, to),
+      ),
+  });
+  const syllabusTopics = (syllabusQuery.data ?? []).filter(
+    (topic) => canonicalSubject(topic.discipline) === canonicalSubject(card.name),
+  );
+  React.useEffect(() => {
+    if (!activeEditionId) {
+      setCompletedTopics({});
+      return;
+    }
+    try {
+      setCompletedTopics(JSON.parse(localStorage.getItem("norte-edital-progress:" + activeEditionId) ?? "{}"));
+    } catch {
+      setCompletedTopics({});
+    }
+  }, [activeEditionId]);
+  const toggleSyllabusTopic = (topicId: string) => {
+    setCompletedTopics((current) => {
+      const next = { ...current, [topicId]: !current[topicId] };
+      if (activeEditionId) {
+        try {
+          localStorage.setItem("norte-edital-progress:" + activeEditionId, JSON.stringify(next));
+        } catch {
+          // O progresso continua atualizado nesta sessão se o armazenamento estiver indisponível.
+        }
+      }
+      return next;
+    });
+  };
   return (
-    <div className="discipline-workspace discipline-workspace--detail space-y-6 pb-10">
+    <div className="discipline-workspace discipline-workspace--detail space-y-4 pb-8" data-subject={presentation.key}>
       <Link to="/dashboard/disciplinas" className="discipline-back">
         <ArrowLeft aria-hidden="true" size={16} /> Todas as disciplinas
       </Link>
       <PageHero
-        image="study-desk"
-        size="lg"
-        kicker="Disciplina"
+        image={presentation.image}
+        size="sm"
+        kicker="Sua área de estudo"
         icon={Icon}
         title={<>{card.name}</>}
-        description="Materiais, roteiro de estudo, vídeos e questões reunidos nesta disciplina."
+        description={presentation.description}
         actions={
           <Link
             to="/dashboard/question-trainer"
@@ -272,11 +378,20 @@ function DisciplineDetail({
           </Link>
         }
       >
-        <div className="page-hero__stats">
-          <HeroStat icon={BookOpen} label="Materiais" value={card.materials} />
-          <HeroStat icon={PlayCircle} label="Videoaulas" value={card.videos} />
+        <div className="discipline-hero-meta" aria-label="Conteúdo disponível nesta disciplina">
+          {card.materials > 0 && <span><BookOpen aria-hidden="true" /> {plural(card.materials, "material", "materiais")}</span>}
+          {card.lessons > 0 && <span><GraduationCap aria-hidden="true" /> {plural(card.lessons, "aula na trilha", "aulas na trilha")}</span>}
+          {card.videos > 0 && <span><PlayCircle aria-hidden="true" /> {plural(card.videos, "videoaula", "videoaulas")}</span>}
         </div>
       </PageHero>
+
+      <DisciplineSyllabusPanel
+        edition={activeEdition}
+        loading={syllabusQuery.isLoading}
+        topics={syllabusTopics}
+        completed={completedTopics}
+        onToggle={toggleSyllabusTopic}
+      />
 
       <MaterialStudyTabs
         key={card.name}
@@ -309,7 +424,7 @@ function DisciplineDetail({
                           params={{ slug: m.slug }}
                           className="material-card"
                         >
-                          <span className="material-card__icon" data-tone="subject">
+                          <span className="material-card__icon" data-tone="subject" data-subject={presentation.key}>
                             {read.has(m.slug) ? (
                               <Check aria-hidden="true" />
                             ) : (
@@ -352,7 +467,7 @@ function DisciplineDetail({
                           search={{ t: track.slug }}
                           className="material-card"
                         >
-                          <span className="material-card__icon" data-tone="more">
+                          <span className="material-card__icon" data-tone="more" data-subject={presentation.key}>
                             <GraduationCap aria-hidden="true" />
                           </span>
                           <span className="material-card__body">
@@ -382,7 +497,7 @@ function DisciplineDetail({
                   {playlists.map((list) => (
                     <li key={list.id}>
                       <Link to="/dashboard/media" className="material-card">
-                        <span className="material-card__icon" data-tone="law">
+                        <span className="material-card__icon" data-tone="law" data-subject={presentation.key}>
                           <PlayCircle aria-hidden="true" />
                         </span>
                         <span className="material-card__body">
@@ -449,6 +564,96 @@ function DisciplineDetail({
         }
       />
     </div>
+  );
+}
+
+
+function DisciplineSyllabusPanel({
+  edition,
+  loading,
+  topics,
+  completed,
+  onToggle,
+}: {
+  edition: ActiveStudyEdition | null;
+  loading: boolean;
+  topics: SyllabusTopic[];
+  completed: Record<string, boolean>;
+  onToggle: (topicId: string) => void;
+}) {
+  if (!edition) {
+    return (
+      <section className="discipline-edital-panel discipline-edital-panel--empty">
+        <div>
+          <span className="discipline-edital-panel__eyebrow">ESTUDO ORIENTADO</span>
+          <strong>Organize esta disciplina pelo seu edital</strong>
+          <p>Ative a edição do concurso que você vai prestar para acompanhar os assuntos e o progresso em cada matéria.</p>
+        </div>
+        <Link to="/dashboard/edital" className="discipline-edital-panel__action">
+          Escolher edital <ChevronRight aria-hidden="true" size={16} />
+        </Link>
+      </section>
+    );
+  }
+
+  const completedCount = topics.filter((topic) => completed[topic.id]).length;
+  const percent = topics.length ? Math.round((completedCount / topics.length) * 100) : 0;
+  const pending = topics.filter((topic) => !completed[topic.id]);
+  const visibleTopics = (pending.length ? pending : topics).slice(0, 4);
+
+  return (
+    <section className="discipline-edital-panel" aria-label="Progresso desta disciplina no edital ativo">
+      <header className="discipline-edital-panel__header">
+        <div className="discipline-edital-panel__identity">
+          <span className="discipline-edital-panel__eyebrow">EDITAL ATIVO</span>
+          <strong>{edition.contestName} · {edition.year}</strong>
+          <span>{edition.roleName} · {topics.length} {topics.length === 1 ? "assunto" : "assuntos"} nesta disciplina</span>
+        </div>
+        <div className="discipline-edital-panel__score">
+          <strong>{percent}%</strong>
+          <span>{completedCount} de {topics.length} concluídos</span>
+        </div>
+      </header>
+      <div className="discipline-edital-panel__progress" role="progressbar" aria-label="Progresso dos assuntos desta disciplina" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} aria-valuetext={percent + "% concluído"}>
+        <span style={{ width: percent + "%" }} />
+      </div>
+      {loading ? (
+        <p className="discipline-edital-panel__empty">Carregando os assuntos do edital…</p>
+      ) : topics.length ? (
+        <ul className="discipline-edital-panel__topics">
+          {visibleTopics.map((topic) => (
+            <li key={topic.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={!!completed[topic.id]}
+                  onChange={() => onToggle(topic.id)}
+                  aria-label={(completed[topic.id] ? "Marcar como pendente: " : "Marcar como concluído: ") + topic.topic_text}
+                />
+                <span>{topic.topic_text}</span>
+              </label>
+              <Link
+                to="/dashboard/edital/$topicId"
+                params={{ topicId: topic.id }}
+                aria-label={"Abrir assunto: " + topic.topic_text}
+              >
+                <ChevronRight aria-hidden="true" size={17} />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="discipline-edital-panel__empty">
+          Esta disciplina não possui assuntos publicados nesta edição. Consulte o programa completo para conferir a estrutura do edital.
+        </p>
+      )}
+      <footer className="discipline-edital-panel__footer">
+        <Link to="/dashboard/edital" search={{ edition: edition.id }}>
+          Ver edital completo <ChevronRight aria-hidden="true" size={15} />
+        </Link>
+        {topics.length > 0 && <span>{topics.length - completedCount} pendentes</span>}
+      </footer>
+    </section>
   );
 }
 

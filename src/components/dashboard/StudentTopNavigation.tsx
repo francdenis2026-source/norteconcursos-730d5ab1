@@ -25,6 +25,9 @@ import {
 import type { NavigationItem } from "./DashboardNavigation";
 import { MockService } from "@/services/mockService";
 import { hasActiveEdital } from "@/lib/cronogramaGuard";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { ACTIVE_STUDY_EDITION_EVENT, readActiveStudyEdition, type ActiveStudyEdition } from "@/lib/activeStudyEdition";
+import "@/styles/active-study-edition.css";
 import "@/styles/student-home-navigation-refinement.css";
 
 const sections: {
@@ -80,6 +83,18 @@ export function StudentTopNavigation({
   pathname: string;
   search: Record<string, unknown>;
 }) {
+  const { user } = useAuthStatus();
+  const [studyEdition, setStudyEdition] = React.useState<ActiveStudyEdition | null>(null);
+  React.useEffect(() => {
+    const sync = () => setStudyEdition(readActiveStudyEdition(user?.id));
+    sync();
+    window.addEventListener(ACTIVE_STUDY_EDITION_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(ACTIVE_STUDY_EDITION_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, [user?.id]);
   const current = activeNavigation(items, pathname, search);
   const isHome = pathname === "/dashboard" || pathname === "/dashboard/";
   const isPlanningPage =
@@ -126,6 +141,21 @@ export function StudentTopNavigation({
         </span>
       </Link>
       <div className="student-top-navigation__links" data-contextual={!isHome}>
+        {studyEdition && (
+          <Link
+            to="/dashboard/edital"
+            search={{ edition: studyEdition.id }}
+            className="student-top-navigation__active-edition"
+            aria-label={"Edital ativo: " + studyEdition.contestName + ", " + studyEdition.roleName + ". Abrir programa."}
+            title={studyEdition.contestName + " · " + studyEdition.roleName}
+          >
+            <span className="student-top-navigation__active-edition-dot" aria-hidden="true" />
+            <span className="student-top-navigation__active-edition-copy">
+              <span>Edital ativo</span>
+              <strong>{studyEdition.contestName} · {studyEdition.roleName}</strong>
+            </span>
+          </Link>
+        )}
         {!isHome && (
           <Link
             to="/dashboard"
