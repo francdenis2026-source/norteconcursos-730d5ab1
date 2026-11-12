@@ -289,20 +289,23 @@ function drawWeeklyGridTable(doc: jsPDF, grid: PcAcWeeklyGridRow[], y: number): 
       doc.rect(MARGIN_X, y, CONTENT_W, rowH, "F");
     }
     doc.setTextColor(...INK);
+    doc.setFontSize(7.5);
     doc.text(nameLines, xDisciplina + 6, y + 10.5);
+    const centerY = y + rowH / 2 + 2.5;
     doc.setTextColor(...GOLD_DEEP);
     doc.setFont("helvetica", "bold");
-    doc.text(String(row.peso), xPeso + colPeso / 2, y + 11.5, { align: "center" });
+    doc.setFontSize(7.5);
+    doc.text(String(row.peso), xPeso + colPeso / 2, centerY, { align: "center" });
     doc.setFont("helvetica", "normal");
     doc.setTextColor(...MUTED);
     doc.setFontSize(7);
-    doc.text(row.horario, xHorario + colHorario / 2, y + 11.5, { align: "center" });
+    doc.text(row.horario, xHorario + colHorario / 2, centerY, { align: "center" });
     GRID_DAY_ORDER.forEach((weekday, di) => {
       if (row.days.includes(weekday)) {
         doc.setTextColor(...GOLD_DEEP);
         doc.setFont("helvetica", "bold");
         doc.setFontSize(8);
-        doc.text("X", xDayStart + colDay * di + colDay / 2, y + 11.5, { align: "center" });
+        doc.text("X", xDayStart + colDay * di + colDay / 2, centerY, { align: "center" });
         doc.setFont("helvetica", "normal");
       }
     });

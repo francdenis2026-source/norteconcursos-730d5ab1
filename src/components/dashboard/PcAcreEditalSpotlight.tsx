@@ -50,7 +50,7 @@ export function PcAcreEditalSpotlight() {
           <span className="student-pcac-spotlight__action-label">CONSULTAR</span>
           <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} data-tone="teal">
             <BookOpen aria-hidden="true" />
-            <span>Leitura digital</span>
+            <span>Ler conteúdo programático</span>
           </Link>
           <a
             href="/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf"
