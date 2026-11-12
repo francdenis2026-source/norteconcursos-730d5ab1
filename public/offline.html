@@ -14,25 +14,25 @@
   body::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg, #070a08a6, #070a0850 54%, #070a087d), linear-gradient(0deg, #070a08bc, transparent 35%, #070a0840); }
   .top { width: min(100%, 1440px); margin-inline: auto; padding: clamp(16px, 2.5dvh, 28px) clamp(22px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
   .brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
-  .brand img { width: 42px; height: 48px; }
+  .brand img { width: 44px; height: 44px; object-fit: contain; }
   .brand strong { display: block; font-size: 22px; letter-spacing: .23em; line-height: 1.1; }
   .brand small { display: block; margin-top: 7px; color: #e5bc70; font-size: 9px; font-weight: 700; letter-spacing: .36em; }
   .motion-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid #d4b16d40; border-radius: 10px; background: #0d120ebd; color: #d6c9aa; font: inherit; font-size: 11px; cursor: pointer; }
-  .motion-toggle:hover { border-color: #e5bc7090; background: #181e17; }
+  .motion-toggle:hover { border-color: #e5bc7090; background: #16203a; }
   main { width: min(100%, 1320px); min-height: 0; justify-self: center; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 88px); align-items: center; padding: 8px clamp(22px, 5vw, 76px); }
   .emblem { min-width: 0; min-height: 0; height: 100%; margin: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 26px; }
-  .badge-stage { --badge-size: min(34vw, 54dvh, 440px); position: relative; width: var(--badge-size); aspect-ratio: 779 / 847; perspective: 1200px; }
+  .badge-stage { --badge-size: min(34vw, 54dvh, 440px); position: relative; width: var(--badge-size); aspect-ratio: 1; perspective: 1200px; }
   .badge-stage::after { content: ''; position: absolute; bottom: -18px; left: 20%; width: 60%; height: 12px; border-radius: 50%; background: #0009; filter: blur(8px); }
   .badge-rotor { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; will-change: transform; animation: badge-sway 14s ease-in-out infinite; }
   .badge-face, .badge-edge { position: absolute; inset: 0; width: 100%; height: 100%; }
   .badge-face { object-fit: contain; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
   .badge-front { transform: translateZ(6px); }
   .badge-back { transform: rotateY(180deg) translateZ(6px); }
-  .badge-edge { background: linear-gradient(115deg, #58432c, #bfa064 45%, #382c1e); mask: url('/media/brand/distintivo-carreiras-hd-v2.webp') center / contain no-repeat; -webkit-mask: url('/media/brand/distintivo-carreiras-hd-v2.webp') center / contain no-repeat; transform: translateZ(var(--depth)); }
+  .badge-edge { background: linear-gradient(115deg, #58432c, #bfa064 45%, #382c1e); mask: url('/media/brand/norte-identity/emblema-premium.webp') center / contain no-repeat; -webkit-mask: url('/media/brand/norte-identity/emblema-premium.webp') center / contain no-repeat; transform: translateZ(var(--depth)); }
   .motion-paused .badge-rotor, body[data-overlay-hidden] .badge-rotor { animation-play-state: paused; }
   .emblem figcaption { color: #e1cb9a; font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; text-shadow: 0 2px 12px #000; }
-  .panel { position: relative; width: 100%; max-width: 480px; justify-self: end; overflow: hidden; border: 1px solid #d9b77055; border-radius: 24px; background: #121811ed; box-shadow: inset 0 1px 0 #fff09, 0 24px 70px #0005; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-  .panel-art { display: flex; align-items: center; min-height: 76px; padding: 20px 28px; border-bottom: 1px solid #d9b77035; background: linear-gradient(90deg, #11170ff2, #11170f38), url('/media/hero/norte-atmosphere.webp') right 36% / 150% auto; }
+  .panel { position: relative; width: 100%; max-width: 480px; justify-self: end; overflow: hidden; border: 1px solid #d9b77055; border-radius: 24px; background: #0f1728f2; box-shadow: inset 0 1px 0 #fff09, 0 24px 70px #0005; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .panel-art { display: flex; align-items: center; min-height: 76px; padding: 20px 28px; border-bottom: 1px solid #d9b77035; background: linear-gradient(90deg, #0f1728f2, #0f172838), url('/media/hero/norte-atmosphere.webp') right 36% / 150% auto; }
   .panel-content { padding: clamp(22px, 2.4vw, 30px); }
   .eyebrow { display: flex; align-items: center; gap: 9px; color: #e4bd75; font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
   svg { flex: 0 0 auto; }
@@ -56,7 +56,7 @@
   @media (max-width: 1000px) and (orientation: portrait) {
     .scene { object-position: 66% center; }
     .top { padding: 14px 20px 4px; }
-    .brand img { width: 32px; height: 38px; }
+    .brand img { width: 34px; height: 34px; }
     .brand strong { font-size: 18px; }
     .brand small { font-size: 8px; margin-top: 5px; }
     .motion-label { display: none; }
@@ -95,7 +95,7 @@
   }
   @media (max-height: 600px) and (orientation: landscape) {
     .top { padding: 8px 20px; }
-    .brand img { width: 30px; height: 34px; }
+    .brand img { width: 32px; height: 32px; }
     .brand strong { font-size: 17px; }
     .brand small { font-size: 7px; margin-top: 4px; }
     main { gap: 24px; padding: 4px 24px; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); }
@@ -126,13 +126,22 @@
   }
   @media (prefers-reduced-motion: reduce) { .badge-rotor { animation: none; transform: rotateY(-10deg); will-change: auto; } .motion-toggle { display: none; } .retry { transition: none; } }
   @media (forced-colors: active) { .scene, .emblem { display: none; } body::before { display: none; } body { background: Canvas; } main { display: flex; justify-content: center; } .panel { background: Canvas; border: 1px solid CanvasText; color: CanvasText; } .panel-art { background: Canvas; } .retry { border: 1px solid ButtonText; } }
+
+  .checks { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 4px; padding: 0; list-style: none; }
+  .checks li { --tone: #38bdf8; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--tone) 12%, transparent); color: #e8edf5; font-size: 11.5px; font-weight: 600; }
+  .checks li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tone); }
+  .checks li[data-tone="violet"] { --tone: #a78bfa; }
+  .checks li[data-tone="green"] { --tone: #34d399; }
+  .retry { font-size: 14px; font-weight: 800; color: #1c1403; box-shadow: 0 14px 28px -16px #f59e0bcc; }
+  .dismiss { border-color: #38bdf870; }
+  @media (max-height: 620px) { .checks { display: none; } }
 </style>
 </head>
 <body>
-<img class="scene" src="/media/hero/norte-atmosphere.webp" alt="" width="1942" height="809" fetchpriority="high" decoding="async">
+<img class="scene" src="/media/hero/norte-atmosphere.webp" alt="" width="1942" height="809" fetchpriority="high" decoding="async" onerror="this.hidden=true">
 <header class="top">
   <a class="brand" href="/" aria-label="Norte Concursos — página inicial">
-    <img src="/favicon.svg" alt="" width="42" height="48">
+    <img src="/media/brand/norte-identity/emblema-premium.webp" alt="" width="44" height="44" onerror="this.hidden=true">
     <span><strong>NORTE</strong><small>CONCURSOS</small></span>
   </a>
   <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Pausar animação do emblema"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 8v8m6-8v8"/></svg><span class="motion-label">Pausar animação</span></button>
@@ -147,8 +156,8 @@
         <span class="badge-edge" style="--depth:1px"></span>
         <span class="badge-edge" style="--depth:3px"></span>
         <span class="badge-edge" style="--depth:5px"></span>
-        <img class="badge-face badge-front" src="/media/brand/distintivo-carreiras-hd-v2.webp" width="779" height="847" alt="" decoding="async">
-        <img class="badge-face badge-back" src="/media/brand/distintivo-carreiras-hd-v2.webp" width="779" height="847" alt="" decoding="async">
+        <img class="badge-face badge-front" src="/media/brand/norte-identity/emblema-premium.webp" width="768" height="768" alt="" decoding="async" onerror="this.closest('.emblem').hidden=true">
+        <img class="badge-face badge-back" src="/media/brand/norte-identity/emblema-premium.webp" width="768" height="768" alt="" decoding="async" onerror="this.closest('.emblem').hidden=true">
       </div>
     </div>
     <figcaption>Carreiras policiais · Norte Concursos</figcaption>
@@ -161,6 +170,11 @@
     <div class="panel-content">
     <h1 id="offline-title">Você está sem conexão<span>.</span></h1>
     <p class="description">Reconecte-se à internet para continuar sua preparação.</p>
+    <ul class="checks" aria-label="O que conferir">
+      <li data-tone="blue">Wi-Fi ou dados móveis ligados</li>
+      <li data-tone="violet">Modo avião desligado</li>
+      <li data-tone="green">Sinal da rede estável</li>
+    </ul>
     <div class="saved">
       <svg width="18" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 4v5c0 5-5 8-8 10-3-2-8-5-8-10V7zM8 12l3 3 5-6"/></svg>
       <p><strong>Seu progresso confirmado está salvo.</strong>Novas respostas precisam de conexão para serem registradas na sua conta.</p>
