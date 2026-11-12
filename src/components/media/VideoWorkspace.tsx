@@ -3,6 +3,7 @@ import { BookOpen, ListVideo, PanelRightClose, PanelRightOpen, Search } from "lu
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { canonicalSubject, topicIdentity } from "@/lib/subjects";
 import { isPlaylistId } from "@/lib/arsenal";
+import { findPcAcStudyResource, pcAcStudyResources, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import { LessonPlayer, type LessonSource } from "./LessonPlayer";
 
 const fold = (text: string) =>
@@ -27,27 +28,37 @@ export function VideoWorkspace({
   const [topic, setTopic] = useState(initialTopic ?? "all");
   const [search, setSearch] = useState("");
   const [focus, setFocus] = useState(false);
-  const subjects = useMemo(
-    () =>
-      mode === "playlists"
-        ? [...new Set(catalog.playlists.map((p) => p.discipline))]
-        : Object.keys(catalog.topicVideos).filter((s) =>
-            mode === "enem" ? s.startsWith("ENEM") : !s.startsWith("ENEM"),
-          ),
-    [catalog, mode],
-  );
-  const requestedSubject = canonicalSubject(initialSubject);
+  const subjects = useMemo(() => {
+    if (mode === "enem") return Object.keys(catalog.topicVideos).filter((s) => s.startsWith("ENEM"));
+    // Todas as disciplinas com vídeo aparecem nas duas abas; as do edital que só têm aulas
+    // escritas entram no fim, para o aluno saber onde estudá-las.
+    const withVideo = [
+      ...(mode === "playlists" ? catalog.playlists.map((p) => p.discipline) : []),
+      ...Object.keys(catalog.topicVideos).filter((s) => !s.startsWith("ENEM")),
+    ];
+    const seen = new Set<string>();
+    return [...withVideo, ...pcAcStudyResources.map((r) => r.subject)].filter((s) => {
+      const key = canonicalSubject(s);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }, [catalog, mode]);
+  // A disciplina pedida é a que o aluno escolheu; a do link só vale até ele escolher outra.
+  const requestedSubject = canonicalSubject(pickedSubject || undefined);
   const matchedSubject = subjects.find((candidate) => canonicalSubject(candidate) === requestedSubject);
   const subject = pickedSubject
-    ? (matchedSubject ?? (initialSubject ? "" : subjects[0] || ""))
+    ? (matchedSubject ?? (pickedSubject === initialSubject ? "" : subjects[0] || ""))
     : subjects[0] || "";
+  const usePlaylists = mode === "playlists" && catalog.playlists.some((p) => p.discipline === subject);
+  const writtenLessons = findPcAcStudyResource(subject);
   const topics = Object.keys(catalog.topicVideos[subject] || {}).filter((t) => t !== "*");
   const topicFilter = topic === "all"
     ? "all"
     : topics.find((candidate) => topicIdentity(candidate) === topicIdentity(topic)) ?? "__no_topic_match__";
   const entries: LessonSource[] = useMemo(
     () =>
-      mode === "playlists"
+      usePlaylists
         ? catalog.playlists
             .filter((p) => p.discipline === subject)
             .map((p) => ({ ...p, subject, topic: "Curso completo" }))
@@ -60,7 +71,7 @@ export function VideoWorkspace({
                 topic: t === "*" ? "Revisões e aulas gerais" : t,
               })),
             ),
-    [catalog, mode, subject, topicFilter],
+    [catalog, usePlaylists, subject, topicFilter],
   );
   // Keep the current lesson mounted when search only filters the sidebar.
   const current = entries.find((p) => `${p.topic}:${p.id}` === picked) || entries[0];
@@ -129,7 +140,7 @@ export function VideoWorkspace({
             ))}
           </select>
         </label>
-        {mode !== "playlists" && topics.length > 0 && (
+        {!usePlaylists && topics.length > 0 && (
           <label htmlFor={`${id}-topic`}>
             Conteúdo
             <select
@@ -150,7 +161,7 @@ export function VideoWorkspace({
         )}
         <span>
           {entries.length}{" "}
-          {mode === "playlists"
+          {usePlaylists
             ? entries.length === 1
               ? "playlist"
               : "playlists"
@@ -165,10 +176,10 @@ export function VideoWorkspace({
             <LessonPlayer
               source={current}
               onPrevious={
-                mode !== "playlists" && index > 0 ? () => select(entries[index - 1]!) : undefined
+                !usePlaylists && index > 0 ? () => select(entries[index - 1]!) : undefined
               }
               onNext={
-                mode !== "playlists" && index < entries.length - 1
+                !usePlaylists && index < entries.length - 1
                   ? () => select(entries[index + 1]!)
                   : undefined
               }
@@ -176,8 +187,20 @@ export function VideoWorkspace({
           ) : (
             <div className="video-study__empty">
               <ListVideo size={32} />
-              <h3>Nenhuma aula disponível</h3>
-              <p>Escolha outra disciplina ou conteúdo para continuar.</p>
+              <h3>{writtenLessons ? "Ainda sem videoaulas nesta disciplina" : "Nenhuma aula disponível"}</h3>
+              {writtenLessons ? (
+                <>
+                  <p>
+                    {writtenLessons.label} estão disponíveis em texto no material de estudo, com
+                    exemplo e questão comentada.
+                  </p>
+                  <a className="video-study__written" href={pcAcStudyResourceUrl(writtenLessons.courseId)}>
+                    <BookOpen size={16} aria-hidden="true" /> Abrir as aulas escritas
+                  </a>
+                </>
+              ) : (
+                <p>Escolha outra disciplina ou conteúdo para continuar.</p>
+              )}
             </div>
           )}
         </div>
@@ -186,7 +209,7 @@ export function VideoWorkspace({
             <ListVideo size={18} />
             <div>
               <h3>
-                {mode === "playlists" ? "Playlists da disciplina" : "Conteúdos da disciplina"}
+                {usePlaylists ? "Playlists da disciplina" : "Conteúdos da disciplina"}
               </h3>
               <p>
                 {visible.length} de {entries.length} disponíveis
