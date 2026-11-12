@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { splitPcAcTopic, pcAcVerticalTopicGroups } from "../src/lib/pcAcreTopicStructure.ts";
+import { ACRE_CURRENT_IBGE_REGIONS, ACRE_EDITAL_REGIONS, ACRE_MESOREGIONS, ACRE_MICROREGIONS } from "../src/data/acreGeography.ts";
 
 const acreTopics = [
   "Formação histórica do Acre: ocupação, ciclos da borracha, antecedentes diplomáticos (Tratado de Ayacucho), Revolução Acreana, Tratado de Petrópolis, Território Federal, movimento autonomista e elevação a Estado.",
@@ -104,4 +105,27 @@ test("normalizes every topic in a discipline", () => {
   });
   assert.equal(groups.length, 2);
   assert.equal(groups[0].subtopics.length, 2);
+});
+
+
+test("Acre historical geography has two mesoregions, five microregions and 22 municipalities", () => {
+  assert.equal(ACRE_MESOREGIONS.length, 2);
+  assert.equal(ACRE_MICROREGIONS.length, 5);
+  const municipalities = ACRE_MICROREGIONS.flatMap((region) => region.municipalities);
+  assert.equal(municipalities.length, 22);
+  assert.equal(new Set(municipalities).size, 22);
+  assert.deepEqual(ACRE_MESOREGIONS.map((region) => region.municipalityCount), [14, 8]);
+});
+
+test("current IBGE regions are clearly separated from the historical meso/micro names", () => {
+  assert.equal(ACRE_CURRENT_IBGE_REGIONS.length, 2);
+  assert.equal(ACRE_CURRENT_IBGE_REGIONS.reduce((sum, region) => sum + region.immediateRegions.length, 0), 5);
+  assert.deepEqual(ACRE_CURRENT_IBGE_REGIONS.map((region) => region.municipalityCount), [14, 8]);
+});
+
+test("PC-AC edital regional groups cover all municipalities and place Capixaba in Baixo Acre", () => {
+  const municipalities = ACRE_EDITAL_REGIONS.flatMap((region) => region.municipalities);
+  assert.equal(municipalities.length, 22);
+  assert.equal(new Set(municipalities).size, 22);
+  assert.ok(ACRE_EDITAL_REGIONS.find((region) => region.name === "Baixo Acre")?.municipalities.includes("Capixaba"));
 });
