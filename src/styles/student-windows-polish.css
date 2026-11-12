@@ -136,3 +136,38 @@
     transform: none !important;
   }
 }
+
+/* Janelas de métricas sem o roxo: azul-marinho com destaque azul, igual ao restante do painel */
+.student-metric-panel {
+  --smp-accent: #1d6fd1;
+  --smp-accent-soft: #e6f0fb;
+  --smp-accent-deep: #14508f;
+}
+.dark .student-metric-panel {
+  --smp-accent: #5aa9f5;
+  --smp-accent-soft: rgb(90 169 245 / 16%);
+  --smp-accent-deep: #a9d2fb;
+  border-color: rgb(255 255 255 / 12%);
+  background: linear-gradient(165deg, #16213a 0%, #0f1728 100%);
+}
+.dark .student-metric-panel__header {
+  border-color: rgb(255 255 255 / 10%);
+}
+.dark .student-metric-panel__summary {
+  border-color: rgb(90 169 245 / 28%);
+  background: linear-gradient(150deg, #1b2a48, #131d33);
+}
+.dark .student-metric-panel__days li {
+  border-color: rgb(255 255 255 / 10%);
+  background: #18233d;
+}
+.dark .student-metric-panel__summary > div > strong {
+  color: #fcd34d;
+}
+.student-metric-panel .study-period-controls__options :is(button, [role="tab"], label)[aria-pressed="true"],
+.student-metric-panel .study-period-controls__options :is(button, [role="tab"])[aria-selected="true"],
+.student-metric-panel .study-period-controls__options [data-state="on"] {
+  border-color: #f59e0b;
+  color: #1c1403;
+  background: linear-gradient(92deg, #fcd34d, #f59e0b);
+}
