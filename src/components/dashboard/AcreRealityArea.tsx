@@ -13,6 +13,7 @@ import {
   Users,
 } from "lucide-react";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { AcreGeographyStudy } from "@/components/dashboard/AcreGeographyStudy";
 import "@/styles/student-area-kit.css";
 
 export const ACRE_DISCIPLINE = "Realidade do Acre";
@@ -151,13 +152,16 @@ export function AcreRealityArea() {
         })}
       </ul>
 
+      <AcreGeographyStudy />
+
       <section id="acre-atualidades" className="ak-note">
         <h2>
           <Newspaper aria-hidden="true" size={18} /> Atualidades do Acre
         </h2>
         <p>
-          As aulas de teoria e o boletim de atualidades desta disciplina estão em preparação.
-          Enquanto isso, use os tópicos acima como roteiro e pratique pelo treinador de questões.
+          Acompanhe os temas do estado por fontes oficiais e observe sempre a data de referência.
+          O módulo de Geografia acima aprofunda a divisão regional, os municípios e as mudanças de
+          nomenclatura adotadas pelo IBGE.
         </p>
       </section>
     </div>
