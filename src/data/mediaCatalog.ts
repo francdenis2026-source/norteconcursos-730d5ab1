@@ -23,6 +23,31 @@ export const DISCIPLINES = [
 
 export const PLAYLISTS: VideoPlaylist[] = [
   {
+    id: "PL2PrBeiapz78cs0Th9SySO_kD5gXcJ-Vc",
+    title: "Português do Zero — banca IDECAN",
+    discipline: "Língua Portuguesa",
+  },
+  {
+    id: "PL6FQt62UPfQ5ZKMLHI6sMZxr2J1qVT01W",
+    title: "Resolução de provas IDECAN — Língua Portuguesa",
+    discipline: "Língua Portuguesa",
+  },
+  {
+    id: "PL-4cMc9KcAt5HuK2LF1jrxBZXl6Jpeqa8",
+    title: "Curso grátis de interpretação de textos para concursos",
+    discipline: "Língua Portuguesa",
+  },
+  {
+    id: "PLA0675987914E07BB",
+    title: "Curso de Estatística e Probabilidade",
+    discipline: "Estatística",
+  },
+  {
+    id: "PLn4Cro58kshzFutbc6oq6AJFo1qRODWrb",
+    title: "Estatística e Probabilidade — descritiva, inferencial e distribuições",
+    discipline: "Estatística",
+  },
+  {
     id: "PLAzcWdLW0AoEuf22APsWkvR8WU3Si29qO",
     title: "Português para Concurso Público",
     discipline: "Língua Portuguesa",
