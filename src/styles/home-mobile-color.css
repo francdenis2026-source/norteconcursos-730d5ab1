@@ -140,3 +140,147 @@
     display: none !important;
   }
 }
+
+/* Concursos em foco + rodapé no celular: cards compactos e proporcionais. */
+@media (max-width: 760px) {
+  .home.home.home .mobile-homepage .sx-exams--mobile-carousel {
+    gap: 10px !important;
+    padding-bottom: 6px !important;
+  }
+  .home.home.home .mobile-homepage .sx-exams--mobile-carousel .sx-exam {
+    flex: 0 0 clamp(220px, 66vw, 264px) !important;
+    width: clamp(220px, 66vw, 264px) !important;
+    min-height: 0 !important;
+    overflow: hidden;
+    border-radius: 16px !important;
+  }
+  .home.home.home .mobile-homepage .sx-exams--mobile-carousel .sx-exam > img {
+    width: 100% !important;
+    height: 112px !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: cover !important;
+    object-position: 50% 32% !important;
+  }
+  .home.home.home .mobile-homepage .sx-exams--mobile-carousel .sx-exam__body {
+    display: grid !important;
+    gap: 4px !important;
+    padding: 12px 14px 14px !important;
+  }
+  .home.home.home .mobile-homepage .sx-exam__body strong {
+    display: grid !important;
+    gap: 1px;
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+  }
+  .home.home.home .mobile-homepage .sx-exam__body strong span {
+    display: block !important;
+    overflow: hidden;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.72;
+  }
+  .home.home.home .mobile-homepage .sx-exam__body small {
+    width: fit-content;
+    margin-top: 4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #92400e !important;
+    background: rgb(245 158 11 / 16%);
+    font-size: 11px !important;
+    font-weight: 800 !important;
+  }
+  .dark .home.home.home .mobile-homepage .sx-exam__body small {
+    color: #fcd34d !important;
+  }
+  .home.home.home .mobile-homepage .sx-exam__body p {
+    display: -webkit-box !important;
+    margin: 2px 0 0 !important;
+    overflow: hidden;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .home.home.home .mobile-homepage .sx-exam__link {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    min-height: 40px;
+    margin-top: 8px !important;
+    padding: 0 12px !important;
+    border: 0 !important;
+    border-radius: 11px !important;
+    color: #1c1403 !important;
+    background: linear-gradient(90deg, #fcd34d, #f59e0b) !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+  }
+  .home.home.home .mobile-homepage .sx-exam__link::after {
+    display: none !important;
+  }
+  .home.home.home .mobile-homepage .sx-exam__link svg {
+    width: 15px;
+    height: 15px;
+  }
+  .home.home.home .mobile-homepage .sx-note {
+    gap: 8px !important;
+    margin-top: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+  .home.home.home .mobile-homepage .sx-note__icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  /* Rodapé: links em 3 botões iguais, contatos legíveis, assinatura só na barra fixa */
+  .home.home.home .mobile-homepage__footer-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px !important;
+    margin-top: 12px !important;
+  }
+  .home.home.home .mobile-homepage__footer-nav a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 6px !important;
+    border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+    border-radius: 10px;
+    font-size: 12.5px !important;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .home.home.home .mobile-homepage__footer-nav a::before,
+  .home.home.home .mobile-homepage__footer-nav a::after {
+    display: none !important;
+  }
+  .home.home.home .mobile-homepage__footer-contact a {
+    gap: 10px !important;
+    min-height: 36px;
+    font-size: 13px !important;
+  }
+  .home.home.home .mobile-homepage__footer-contact a svg {
+    box-sizing: content-box;
+    width: 15px !important;
+    height: 15px !important;
+    padding: 6px;
+    border-radius: 9px;
+    background: rgb(245 158 11 / 14%);
+  }
+  .home.home.home .mobile-homepage__footer-copy > span + span {
+    display: none !important;
+  }
+  .home.home.home .hr-footer-cta {
+    display: none !important;
+  }
+}
