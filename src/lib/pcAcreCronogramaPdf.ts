@@ -379,7 +379,7 @@ function drawActivityRow(
   doc.setTextColor(...GOLD_DEEP);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(7);
-  doc.text(content.typeLines, TYPE_COL_X + 6, y + 10.5);
+  if (content.typeLines.length) doc.text(content.typeLines, TYPE_COL_X + 6, y + 10.5);
   if (activity.start && !content.continuation) {
     doc.setFont("helvetica", "normal");
     doc.setFontSize(6.5);
@@ -388,9 +388,9 @@ function drawActivityRow(
   doc.setFont("helvetica", "normal");
   doc.setFontSize(7.5);
   doc.setTextColor(...INK);
-  doc.text(content.subjectLines, SUBJECT_COL_X + 6, y + 10.5);
+  if (content.subjectLines.length) doc.text(content.subjectLines, SUBJECT_COL_X + 6, y + 10.5);
   doc.setTextColor(...MUTED);
-  doc.text(content.topicLines, TOPIC_COL_X + 6, y + 10.5);
+  if (content.topicLines.length) doc.text(content.topicLines, TOPIC_COL_X + 6, y + 10.5);
 
   doc.setDrawColor(...LINE);
   doc.setLineWidth(0.5);
@@ -399,7 +399,7 @@ function drawActivityRow(
   return rowH;
 }
 
-/** Desenha a semana inteira/** Desenha a semana inteira como tabela (uma linha por atividade), quebrando página quando
+/** Desenha a semana inteira como tabela (uma linha por atividade), quebrando página quando
  * necessário e repetindo o cabeçalho da tabela no topo de cada página nova. */
 function drawWeekTable(doc: jsPDF, week: PcAcPlanWeek, cursor: { y: number }, newPage: () => void) {
   cursor.y = drawWeekTableHeader(doc, cursor.y);
@@ -437,7 +437,9 @@ function drawWeekTable(doc: jsPDF, week: PcAcPlanWeek, cursor: { y: number }, ne
 
       let offset = 0;
       while (offset < lineCount) {
-        const availableLines = Math.floor((pageBottom - cursor.y - 8) / 9.5);
+        const availableLines = Math.floor(
+          (pageBottom - cursor.y - 8 - (activity.start && offset === 0 ? 7 : 0)) / 9.5,
+        );
         if (availableLines < 1) {
           newPage();
           cursor.y = drawWeekTableHeader(doc, cursor.y);

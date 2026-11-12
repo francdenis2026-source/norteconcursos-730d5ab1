@@ -164,19 +164,24 @@ export async function generatePcAcVerticalPdf(
   const ensureSpace = (needed: number) => {
     if (cursor.y + needed > FOOTER_Y - 18) newContentPage();
   };
-  const drawLinesAcrossPages = (lines: string[], x: number, lineHeight: number) => {
+  const drawLinesAcrossPages = (lines: string[], x: number, lineHeight: number, applyStyle: () => void) => {
     let offset = 0;
     while (offset < lines.length) {
       const availableLines = Math.floor((FOOTER_Y - 18 - cursor.y - 2) / lineHeight);
       if (availableLines < 1) {
         newContentPage();
+        applyStyle();
         continue;
       }
       const chunk = lines.slice(offset, offset + availableLines);
+      applyStyle();
       doc.text(chunk, x, cursor.y);
       cursor.y += chunk.length * lineHeight;
       offset += chunk.length;
-      if (offset < lines.length) newContentPage();
+      if (offset < lines.length) {
+        newContentPage();
+        applyStyle();
+      }
     }
   };
 
@@ -197,6 +202,9 @@ export async function generatePcAcVerticalPdf(
       doc.setTextColor(...NAVY);
       const nameLines = doc.splitTextToSize(discipline.name, CONTENT_W - 110);
       ensureSpace(Math.max(30, nameLines.length * 13 + 12));
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(10.5);
+      doc.setTextColor(...NAVY);
       doc.text(nameLines, MARGIN_X + 4, cursor.y + 10);
       doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
@@ -217,7 +225,11 @@ export async function generatePcAcVerticalPdf(
         doc.setFontSize(8);
         doc.setTextColor(...MUTED);
         const noteLines = doc.splitTextToSize(discipline.note, CONTENT_W - 8);
-        drawLinesAcrossPages(noteLines, MARGIN_X + 4, 10);
+        drawLinesAcrossPages(noteLines, MARGIN_X + 4, 10, () => {
+          doc.setFont("helvetica", "italic");
+          doc.setFontSize(8);
+          doc.setTextColor(...MUTED);
+        });
         cursor.y += 8;
       }
 
@@ -243,6 +255,9 @@ export async function generatePcAcVerticalPdf(
         const lines = doc.splitTextToSize(group.title, CONTENT_W - 100);
         const rowH = Math.max(lines.length * 11.5, 11.5) + 7;
         ensureSpace(rowH);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(9);
+        doc.setTextColor(...INK);
         doc.setFillColor(...CARD_BG);
         doc.setDrawColor(...LINE);
         doc.setLineWidth(0.6);
@@ -263,6 +278,8 @@ export async function generatePcAcVerticalPdf(
             }
             const chunk = subLines.slice(subOffset, subOffset + availableLines);
             const subRowH = Math.max(chunk.length * 10.5, 10.5) + 6;
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(8.5);
             doc.setFillColor(...CARD_BG);
             doc.setDrawColor(...LINE);
             doc.roundedRect(MARGIN_X + 7, cursor.y - 8, CONTENT_W - 14, subRowH - 2, 2, 2, "FD");
@@ -289,7 +306,11 @@ export async function generatePcAcVerticalPdf(
     "Lei nº 14.735/2023 (Lei Orgânica Nacional das Polícias Civis), LC nº 129/2004 (Lei Orgânica da Polícia Civil do Acre), Lei nº 2.250/2009 e LC nº 39/1993 (Estatuto dos Servidores Públicos Civis do Acre). Resumo completo de cada lei disponível na área do aluno em norteconcursos.xyz.",
     CONTENT_W - 8,
   );
-  drawLinesAcrossPages(legislacaoNote, MARGIN_X, 12);
+  drawLinesAcrossPages(legislacaoNote, MARGIN_X, 12, () => {
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.setTextColor(...INK);
+  });
 
   const contentPageCount = doc.getNumberOfPages() - 1; // exclui a capa
   for (let i = 2; i <= doc.getNumberOfPages(); i++) {
@@ -411,6 +432,26 @@ function drawCoverPage(
   y += 8;
   doc.setTextColor(...INK);
   doc.text("Legislação institucional", MARGIN_X + 12, y);
+  y += 18;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(7.5);
+  doc.setTextColor(...MUTED);
+  doc.text("LEGENDA", MARGIN_X, y);
+  const legend = [
+    ["estudado", "Estudado"],
+    ["a-estudar", "A estudar"],
+    ["pendente", "Pendente"],
+  ] as const;
+  let legendX = MARGIN_X + 48;
+  legend.forEach(([status, label]) => {
+    doc.setFillColor(...STATUS_COLOR[status]);
+    doc.circle(legendX, y - 2.5, 3, "F");
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7.5);
+    doc.setTextColor(...MUTED);
+    doc.text(label, legendX + 8, y);
+    legendX += status === "a-estudar" ? 88 : 76;
+  });
 
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8);
