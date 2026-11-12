@@ -982,3 +982,198 @@
 .pcac-delete-dialog__record span { color: hsl(var(--muted-foreground)); font-size: 11px; }
 .pcac-delete-dialog__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
 @media (max-width: 480px) { .pcac-delete-dialog__actions { flex-direction: column-reverse; } .pcac-delete-dialog__actions button { width: 100%; } }
+
+/* ===== Montagem do plano em três passos, largura total e janela do dia didática ===== */
+.pcac-schedule {
+  max-width: none;
+}
+.pcac-setup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 14px;
+}
+.pcac-setup__card {
+  --tone: #d99a1c;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--tone) 35%, var(--pcac-line));
+  border-top: 3px solid var(--tone);
+  border-radius: 16px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tone) 8%, var(--pcac-panel)), var(--pcac-panel) 60%);
+}
+.pcac-setup__card[data-tone="blue"] { --tone: #2f80d0; }
+.pcac-setup__card[data-tone="green"] { --tone: #1f9d6b; }
+.pcac-setup__card > header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.pcac-setup__card > header b {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--tone);
+  font-size: 15px;
+  font-weight: 900;
+}
+.pcac-setup__card h3 {
+  margin: 0;
+  color: var(--pcac-ink);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.pcac-setup__card > header p {
+  margin: 4px 0 0;
+  color: var(--pcac-muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+.pcac-setup__presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px;
+}
+.pcac-setup__presets > button {
+  min-width: 56px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid color-mix(in srgb, var(--tone) 40%, var(--pcac-line));
+  border-radius: 12px;
+  color: var(--pcac-ink);
+  background: var(--pcac-panel);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.pcac-setup__presets > button:hover:not(:disabled) {
+  border-color: var(--tone);
+}
+.pcac-setup__presets > button[aria-pressed="true"] {
+  border-color: var(--tone);
+  color: #fff;
+  background: var(--tone);
+}
+.pcac-setup__presets > button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.pcac-setup__custom {
+  display: grid;
+  gap: 3px;
+  width: 104px;
+  color: var(--pcac-muted);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.pcac-setup__result {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--pcac-ink);
+  background: color-mix(in srgb, var(--tone) 13%, transparent);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.pcac-setup__hint {
+  margin: 0;
+  color: var(--pcac-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* Resumo no topo da janela do dia */
+.pcac-day-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px 4px;
+}
+.pcac-day-summary > span {
+  --tone: #d99a1c;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--tone) 13%, transparent);
+  font-size: 13px;
+}
+.pcac-day-summary > span[data-tone="blue"] { --tone: #3b8fe0; }
+.pcac-day-summary > span[data-tone="green"] { --tone: #22a873; }
+.pcac-day-summary > span[data-tone="rose"] { --tone: #e2607a; }
+.pcac-day-summary svg {
+  width: 15px;
+  height: 15px;
+  color: var(--tone);
+}
+.pcac-day-summary small {
+  flex-basis: 100%;
+  opacity: 0.75;
+  font-size: 12.5px;
+}
+
+/* Linha do tempo: uma cor por tipo de atividade */
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item {
+  --kind: #3b8fe0;
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="video"] { --kind: #8b6cf0; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="questoes"] { --kind: #e08a1e; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="redacao"] { --kind: #d9558a; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="revisao"] { --kind: #22a873; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="simulado"] { --kind: #d99a1c; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="exercicio"] { --kind: #e2607a; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-type="compromisso"] { --kind: #6b7f95; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item:is([data-type="pausa"], [data-type="rotina"], [data-type="descanso"]) { --kind: #8a97a6; }
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__dot {
+  border-color: var(--kind);
+  color: var(--kind);
+  background: color-mix(in srgb, var(--kind) 14%, transparent);
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item[data-kind="study"] .pcac-day-timeline__content {
+  border: 1px solid color-mix(in srgb, var(--kind) 40%, transparent);
+  border-left: 4px solid var(--kind);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--kind) 9%, transparent);
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__item:not([data-kind="study"]) .pcac-day-timeline__content {
+  border-radius: 12px;
+  opacity: 0.92;
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__time strong {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__head > span:last-child {
+  padding: 2px 9px;
+  border-radius: 999px;
+  color: var(--kind);
+  background: color-mix(in srgb, var(--kind) 14%, transparent);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__topic {
+  font-weight: 700;
+  text-align: left;
+  hyphens: manual;
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__detail {
+  text-align: left;
+  hyphens: manual;
+}
+.pcac-day-timeline.pcac-day-timeline .pcac-day-timeline__actions a {
+  min-height: 38px;
+  border-radius: 10px;
+}
