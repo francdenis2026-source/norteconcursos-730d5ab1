@@ -79,9 +79,8 @@ function normalizedTrainerStock(available: number): number {
 export function trainerQuestionQuantityOptions(available: number): string[] {
   const stock = normalizedTrainerStock(available);
   if (stock === 0) return [];
-  const options = TRAINER_QUESTION_QUANTITY_PRESETS.filter((size) => size <= stock);
-  if (stock <= 50 && !options.includes(stock as (typeof TRAINER_QUESTION_QUANTITY_PRESETS)[number]))
-    options.push(stock as (typeof TRAINER_QUESTION_QUANTITY_PRESETS)[number]);
+  const options: number[] = TRAINER_QUESTION_QUANTITY_PRESETS.filter((size) => size <= stock);
+  if (stock <= 50 && !options.includes(stock)) options.push(stock);
   return options.map(String);
 }
 
