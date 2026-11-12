@@ -46,6 +46,7 @@ import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
+import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
 
 export const Route = createFileRoute("/dashboard/disciplinas")({
@@ -147,6 +148,7 @@ function DisciplinesPage() {
     ? (cards.find((card) => card.name === d) ??
       cards.find((card) => card.name === canonicalSubject(d)))
     : undefined;
+  if (d === ACRE_DISCIPLINE) return <AcreRealityArea />;
   return current ? (
     <DisciplineDetail key={current.name} card={current} materials={materials} />
   ) : (
@@ -239,6 +241,20 @@ function DisciplineIndex({
         </p>
       ) : (
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {!normalized && (
+            <li>
+              <Link
+                to="/dashboard/disciplinas"
+                search={{ d: ACRE_DISCIPLINE }}
+                className="ak-tile"
+                style={{ "--ak-tone": "oklch(0.8 0.16 140)", height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
+              >
+                <img src="/media/hero/landing-pcac.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                <strong>Realidade do Acre</strong>
+                <span>História, geografia, economia e atualidades</span>
+              </Link>
+            </li>
+          )}
           {shown.map((card) => {
             const Icon = ICONS[card.icon];
             const body = (

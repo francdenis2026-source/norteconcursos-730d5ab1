@@ -295,6 +295,18 @@ function MaterialHub() {
           </div>
         ) : (
           <ul className="ak-tiles">
+            <li>
+              <Link
+                to="/dashboard/disciplinas"
+                search={{ d: "Realidade do Acre" }}
+                className="ak-tile"
+                style={{ "--ak-tone": "oklch(0.8 0.16 140)" } as React.CSSProperties}
+              >
+                <img src="/media/hero/landing-pcac.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                <strong>Realidade do Acre</strong>
+                <span>História, geografia, economia e atualidades</span>
+              </Link>
+            </li>
             {availableSubjects.map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
               const theme = disciplineTheme(entry.name);

@@ -1,4 +1,7 @@
 import "@/styles/student-library-media-workspaces.css";
+import "@/styles/student-area-kit.css";
+import type { CSSProperties } from "react";
+import { disciplineTheme } from "@/lib/disciplineTheme";
 import { PortugueseStudyReading } from "@/components/library/PortugueseStudyReading";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
@@ -175,7 +178,10 @@ function MaterialPage() {
   const sources = (material.legal_basis ?? []).filter((item) => item.title || item.url);
 
   return (
-    <article className={`nc-learning-workspace library-reading-workspace mx-auto max-w-[min(96vw,1180px)] space-y-4 pb-10 ${fm.containerClass}`}>
+    <article
+      className={`nc-learning-workspace library-reading-workspace lr-themed space-y-3 pb-10 ${fm.containerClass}`}
+      style={{ "--ak-tone": disciplineTheme(material.discipline).tone } as CSSProperties}
+    >
       {fm.bar({
         kicker: material.discipline,
         title: material.title,
@@ -226,16 +232,19 @@ function MaterialPage() {
         </div>
       )}
 
-      <header className="library-header workspace-banner">
-        <span className="hero-chip">
-          <ScrollText /> {material.discipline}
-        </span>
-        <h1>{material.title}</h1>
-        {material.summary && <p>{material.summary}</p>}
-        <ul className="library-meta">
-          <li><strong>Assunto:</strong> {material.topic_label}</li>
+      <header className="ak-hero lr-hero">
+        <img src={disciplineTheme(material.discipline).image} alt="" aria-hidden="true" decoding="async" />
+        <div className="ak-hero__copy">
+          <small>
+            <ScrollText size={14} aria-hidden="true" /> {material.discipline}
+          </small>
+          <h1>{material.title}</h1>
+          {material.summary && <p>{material.summary}</p>}
+        </div>
+        <ul className="lr-meta">
+          <li>Assunto: {material.topic_label}</li>
           <li>
-            <Clock3 /> {readingMinutes(material.body_md)} min de leitura
+            <Clock3 aria-hidden="true" /> {readingMinutes(material.body_md)} min de leitura
           </li>
         </ul>
       </header>

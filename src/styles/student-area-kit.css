@@ -79,3 +79,41 @@
 @media (prefers-reduced-motion: reduce) {
   .ak-tile > img, .ak-quick a { transition: none; }
 }
+
+.ak-hero__back { display: inline-flex; align-items: center; gap: 0.3rem; width: fit-content; color: oklch(0.92 0.02 90); font-size: 0.75rem; font-weight: 700; text-decoration: none; }
+.ak-hero__back:hover { color: var(--ak-gold); }
+.ak-hero__copy small { display: inline-flex; align-items: center; gap: 0.3rem; }
+
+/* Eixos temáticos (Realidade do Acre) */
+.ak-axes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
+.ak-axis { overflow: hidden; border: 1px solid color-mix(in srgb, var(--ak-tone) 50%, var(--border)); border-radius: 0.875rem; background: color-mix(in srgb, var(--ak-tone) 7%, var(--card)); }
+.ak-axis__head { position: relative; display: flex; align-items: flex-end; gap: 0.625rem; height: 5.5rem; padding: 0.625rem 0.75rem; overflow: hidden; background: oklch(0.16 0.03 265); isolation: isolate; }
+.ak-axis__head > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.ak-axis__head::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, color-mix(in srgb, var(--ak-tone) 35%, transparent), oklch(0.13 0.03 265 / 0.92)); }
+.ak-axis__head .ak-tile__icon { position: static; flex: none; }
+.ak-axis__head h2 { margin: 0; font-size: 1.0625rem; font-weight: 800; line-height: 1.2; color: #fff; }
+.ak-axis > ul { display: grid; gap: 0.5rem; margin: 0; padding: 0.75rem 0.875rem 0.875rem 1.75rem; }
+.ak-axis > ul li { font-size: 0.875rem; line-height: 1.5; }
+.ak-axis > ul li::marker { color: var(--ak-tone); }
+.ak-axis > p { margin: 0; padding: 0.75rem 0.875rem; font-size: 0.8125rem; opacity: 0.75; }
+.ak-note { padding: 0.75rem 0.875rem; border: 1px dashed oklch(0.74 0.17 15 / 0.6); border-radius: 0.875rem; background: oklch(0.74 0.17 15 / 0.08); }
+.ak-note h2 { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.25rem; font-size: 1rem; font-weight: 800; }
+.ak-note h2 svg { color: oklch(0.74 0.17 15); }
+.ak-note p { margin: 0; font-size: 0.875rem; line-height: 1.5; opacity: 0.85; }
+
+/* Leitura de material: largura total e identidade da disciplina por --ak-tone */
+.app-shell .library-reading-workspace.lr-themed { width: 100%; max-width: none; }
+.lr-themed .lr-hero { border-color: color-mix(in srgb, var(--ak-tone) 60%, transparent); }
+.lr-themed .lr-hero::after { background: linear-gradient(90deg, color-mix(in srgb, var(--ak-tone) 30%, oklch(0.14 0.03 265)) 0%, oklch(0.14 0.03 265 / 0.85) 45%, oklch(0.14 0.03 265 / 0.08) 90%); }
+.lr-themed .lr-hero .ak-hero__copy small { color: var(--ak-tone); }
+.lr-themed .lr-hero h1 { font-size: clamp(1.375rem, 2.4vw, 2rem); }
+.lr-themed .lr-hero p { max-width: 70ch; }
+.lr-themed .lr-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.lr-themed .lr-meta li { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.1875rem 0.625rem; border: 1px solid color-mix(in srgb, var(--ak-tone) 55%, transparent); border-radius: 999px; background: oklch(0.14 0.03 265 / 0.7); color: #fff; font-size: 0.75rem; font-weight: 600; }
+.lr-themed .lr-meta svg { width: 0.875rem; height: 0.875rem; color: var(--ak-tone); }
+.lr-themed .surface-card { border-color: color-mix(in srgb, var(--ak-tone) 35%, var(--border)); border-top: 0.1875rem solid var(--ak-tone); }
+.lr-themed .surface-card :is(h2, h3) { color: color-mix(in srgb, var(--ak-tone) 70%, var(--foreground)); }
+.lr-themed .library-body > * { max-width: 96ch; }
+.lr-themed .library-body :is(blockquote, pre) { border-left: 0.25rem solid var(--ak-tone); background: color-mix(in srgb, var(--ak-tone) 8%, transparent); }
+.lr-themed .library-body strong { color: color-mix(in srgb, var(--ak-tone) 60%, var(--foreground)); }
+.lr-themed [role="tab"][aria-selected="true"], .lr-themed [role="tab"][data-state="active"] { border-color: var(--ak-tone) !important; box-shadow: inset 0 -0.1875rem 0 var(--ak-tone); }
