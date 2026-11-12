@@ -376,3 +376,124 @@
     display: none;
   }
 }
+
+/* ===== Menu do celular: cores por atalho, grade sem buraco e blocos compactos ===== */
+html body .hm2.hm2 .hm2-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 7px;
+}
+html body .hm2.hm2 .hm2-grid > * {
+  --tone: #38bdf8;
+  grid-column: span 2;
+  min-width: 0;
+}
+html body .hm2.hm2 .hm2-grid > :nth-child(2) { --tone: #a78bfa; }
+html body .hm2.hm2 .hm2-grid > :nth-child(3) { --tone: #fbbf24; }
+html body .hm2.hm2 .hm2-grid > :nth-child(4) { --tone: #fb923c; grid-column: span 3; }
+html body .hm2.hm2 .hm2-grid > :nth-child(5) { --tone: #34d399; grid-column: span 3; }
+html body .hm2.hm2 .hm2-tile {
+  width: 100%;
+  min-height: 62px;
+  padding: 9px 6px;
+  gap: 5px;
+  border-color: color-mix(in srgb, var(--tone) 40%, transparent);
+  border-radius: 14px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--tone) 16%, transparent), rgb(15 23 40 / 70%));
+  font-size: 13px;
+}
+html body .hm2.hm2 .hm2-grid > :nth-child(n + 4) .hm2-tile,
+html body .hm2.hm2 .hm2-grid > .hm2-tile:nth-child(n + 4) {
+  flex-direction: row;
+  justify-content: center;
+  min-height: 46px;
+  gap: 8px;
+}
+html body .hm2.hm2 .hm2-tile svg {
+  box-sizing: content-box;
+  width: 18px;
+  height: 18px;
+  padding: 6px;
+  border-radius: 10px;
+  color: var(--tone);
+  background: color-mix(in srgb, var(--tone) 18%, transparent);
+}
+
+html body .hm2.hm2 .hm2-plans {
+  padding: 9px 10px;
+  gap: 7px;
+  border-color: rgb(251 191 36 / 45%);
+  background: linear-gradient(120deg, rgb(251 191 36 / 14%), rgb(15 23 40 / 70%) 60%);
+}
+html body .hm2.hm2 .hm2-plans__lead > svg {
+  color: #fbbf24;
+}
+html body .hm2.hm2 .hm2-plans__lead small {
+  color: #fde68a;
+}
+html body .hm2.hm2 .hm2-plans__prices i {
+  --plan: #34d399;
+  border: 0;
+  border-top: 2px solid var(--plan);
+  background: color-mix(in srgb, var(--plan) 12%, transparent);
+  font-size: 10.5px;
+}
+html body .hm2.hm2 .hm2-plans__prices i:nth-child(2) { --plan: #38bdf8; }
+html body .hm2.hm2 .hm2-plans__prices i:nth-child(3) { --plan: #fbbf24; }
+html body .hm2.hm2 .hm2-plans__prices i:nth-child(4) { --plan: #a78bfa; }
+html body .hm2.hm2 .hm2-plans__prices i b,
+html body .hm2.hm2 .hm2-plans__prices i[data-featured] b {
+  color: var(--plan);
+}
+
+html body .hm2.hm2 .hm2-chips {
+  gap: 6px;
+}
+html body .hm2.hm2 .hm2-chips a {
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 11px;
+  font-size: 13px;
+}
+html body .hm2.hm2 .hm2-chips a::before {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  content: "";
+  background: var(--dot, #38bdf8);
+}
+html body .hm2.hm2 .hm2-chips li:nth-child(2) a { --dot: #a78bfa; }
+html body .hm2.hm2 .hm2-chips li:nth-child(3) a { --dot: #fbbf24; }
+html body .hm2.hm2 .hm2-chips li:nth-child(4) a { --dot: #34d399; }
+
+html body .hm2.hm2 .hm2-contact a {
+  --tone: #fbbf24;
+  min-height: 42px;
+  border-color: color-mix(in srgb, var(--tone) 40%, transparent);
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--tone) 12%, transparent);
+  font-size: 13px;
+}
+html body .hm2.hm2 .hm2-contact a:nth-child(2) { --tone: #38bdf8; }
+html body .hm2.hm2 .hm2-contact a:nth-child(3) { --tone: #22c55e; }
+html body .hm2.hm2 .hm2-contact svg {
+  color: var(--tone);
+}
+html body .hm2.hm2 .hm2-address {
+  margin-top: 6px;
+  font-size: 10px;
+}
+
+html body .hm2.hm2 .hm2-access .home-button--primary {
+  border: 0;
+  color: #1c1403;
+  background: linear-gradient(92deg, #fcd34d, #f59e0b);
+  font-weight: 800;
+  box-shadow: 0 12px 24px -14px rgb(245 158 11 / 80%);
+}
+html body .hm2.hm2 .hm2-secondary {
+  border-color: rgb(56 189 248 / 50%);
+  background: rgb(56 189 248 / 10%);
+}
