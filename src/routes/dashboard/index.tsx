@@ -915,7 +915,7 @@ function SectionLabel({ step, title, text, id }: { step: number; title: string; 
     <div className="sh2-label">
       <b aria-hidden="true">{step}</b>
       <div>
-        <h2 id={id}>{title}</h2>
+        <p className="sh2-label__title" id={id}>{title}</p>
         <p>{text}</p>
       </div>
     </div>
