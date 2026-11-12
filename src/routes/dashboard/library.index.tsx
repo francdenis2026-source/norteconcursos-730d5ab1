@@ -6,6 +6,8 @@ import { tracksOf } from "@/lib/disciplineHub";
 import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
 import { useEffect, useMemo, useRef, useState } from "react";
+import "@/styles/student-area-kit.css";
+import { disciplineTheme, themeStyle } from "@/lib/disciplineTheme";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -278,11 +280,14 @@ function LibraryIndex() {
   }
 
   return (
-    <div className="nc-learning-workspace material-library space-y-4 pb-8">
+    <div
+      className={`nc-learning-workspace material-library space-y-4 pb-8 ${focused ? "ak-themed" : ""}`}
+      style={focused ? themeStyle(disciplineTheme(discipline)) : undefined}
+    >
       <BackToPlan back={back} topic={initialQuery} />
       <BackToEdital back={back} />
       {focused ? (
-        <header className={`library-focus library-tone-${libraryTone(discipline)}`}>
+        <header className={`library-focus ak-themed-head library-tone-${libraryTone(discipline)}`}>
           <Link to="/dashboard/material" className="library-focus__back">
             ← Todas as matérias
           </Link>

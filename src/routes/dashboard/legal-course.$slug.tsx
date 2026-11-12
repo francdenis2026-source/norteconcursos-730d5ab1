@@ -3,6 +3,8 @@ import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useRef, useState } from "react";
+import "@/styles/student-area-kit.css";
+import { disciplineTheme, themeStyle } from "@/lib/disciplineTheme";
 import { createFileRoute, Link, useNavigate, useParams } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
@@ -277,7 +279,10 @@ function LegalCoursePage() {
           </nav>
         )}
         {!fm.focus && (
-          <header className="workspace-banner workspace-banner--reading surface-card overflow-hidden p-0">
+          <header
+            className="workspace-banner workspace-banner--reading surface-card ak-themed-head overflow-hidden p-0"
+            style={themeStyle(disciplineTheme(course.title))}
+          >
             <div className="space-y-3 p-5 sm:p-7">
               <p className="text-xs font-semibold uppercase tracking-widest text-primary">
                 Percurso de legislação

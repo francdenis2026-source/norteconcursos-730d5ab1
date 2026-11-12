@@ -37,3 +37,8 @@ export function disciplineTheme(name: string): DisciplineTheme {
   for (const char of key) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
   return FALLBACK[hash % FALLBACK.length] ?? FALLBACK[0]!;
 }
+
+/** Variáveis CSS da identidade, para aplicar em qualquer contêiner ou cabeçalho. */
+export function themeStyle(theme: DisciplineTheme) {
+  return { "--ak-tone": theme.tone, "--ak-photo": `url(${theme.image})` } as Record<string, string>;
+}

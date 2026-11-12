@@ -46,6 +46,7 @@ import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
+import { disciplineTheme } from "@/lib/disciplineTheme";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
 
@@ -374,7 +375,15 @@ function DisciplineDetail({
     });
   };
   return (
-    <div className="discipline-workspace discipline-workspace--detail space-y-4 pb-8" data-subject={presentation.key}>
+    <div
+      className="discipline-workspace discipline-workspace--detail space-y-4 pb-8"
+      data-subject={presentation.key}
+      style={
+        presentation.key === "geral"
+          ? ({ "--discipline-accent": disciplineTheme(card.name).tone } as React.CSSProperties)
+          : undefined
+      }
+    >
       <Link to="/dashboard/disciplinas" className="discipline-back">
         <ArrowLeft aria-hidden="true" size={16} /> Todas as disciplinas
       </Link>

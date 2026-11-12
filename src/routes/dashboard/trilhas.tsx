@@ -2,6 +2,8 @@ import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import React from "react";
+import "@/styles/student-area-kit.css";
+import { disciplineTheme, themeStyle } from "@/lib/disciplineTheme";
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -396,6 +398,7 @@ function TracksPage() {
         </Link>
       )}
       {!fm.focus && (
+        <div className="ak-themed" style={themeStyle(disciplineTheme(track.title))}>
         <PageHero
           image="study-desk"
           kicker="Material didático"
@@ -403,6 +406,7 @@ function TracksPage() {
           title={track.title}
           description={`${track.source}. Roteiro que reúne os materiais principais e as aulas complementares, sem repetir o estudo em áreas diferentes.`}
         />
+        </div>
       )}
       {!fm.focus && (
         <div className="flex flex-wrap items-center gap-2">

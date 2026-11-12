@@ -117,3 +117,26 @@
 .lr-themed .library-body :is(blockquote, pre) { border-left: 0.25rem solid var(--ak-tone); background: color-mix(in srgb, var(--ak-tone) 8%, transparent); }
 .lr-themed .library-body strong { color: color-mix(in srgb, var(--ak-tone) 60%, var(--foreground)); }
 .lr-themed [role="tab"][aria-selected="true"], .lr-themed [role="tab"][data-state="active"] { border-color: var(--ak-tone) !important; box-shadow: inset 0 -0.1875rem 0 var(--ak-tone); }
+
+/* Identidade da disciplina em qualquer página interna: basta --ak-tone e --ak-photo. */
+.app-shell .ak-themed { width: 100%; max-width: none; }
+.ak-themed-head {
+  position: relative;
+  min-height: 8rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--ak-tone) 60%, transparent) !important;
+  border-radius: 1rem;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ak-tone) 30%, oklch(0.14 0.03 265)) 0%, oklch(0.14 0.03 265 / 0.88) 45%, oklch(0.14 0.03 265 / 0.15) 92%),
+    var(--ak-photo) right 30% / cover no-repeat,
+    oklch(0.16 0.03 265) !important;
+  color: #fff !important;
+}
+.ak-themed-head :is(h1, h2, strong) { color: #fff !important; }
+.ak-themed-head :is(p, span, li, a) { color: oklch(0.93 0.02 90) !important; }
+.ak-themed-head :is(.library-eyebrow, .text-primary) { color: var(--ak-tone) !important; }
+.ak-themed-head .rounded-full { background: oklch(0.14 0.03 265 / 0.7) !important; }
+.ak-themed .page-hero { border: 1px solid color-mix(in srgb, var(--ak-tone) 60%, transparent); box-shadow: inset 0 -0.25rem 0 var(--ak-tone); }
+.ak-themed :is(.material-card, .library-card, .surface-card) { border-color: color-mix(in srgb, var(--ak-tone) 38%, var(--border)); border-left: 0.25rem solid var(--ak-tone); }
+.ak-themed :is(.material-card, .library-card):hover { border-color: var(--ak-tone); background: color-mix(in srgb, var(--ak-tone) 12%, var(--card)); }
+.ak-themed :is(.material-card__icon, .library-card__icon) { background: color-mix(in srgb, var(--ak-tone) 22%, transparent); color: var(--ak-tone); }
