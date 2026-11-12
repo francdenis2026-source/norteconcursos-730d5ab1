@@ -62,6 +62,7 @@ import { ThemeToggle } from "@/components/landing/ThemeToggle";
 import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import { HomeDesktopFx } from "@/components/landing/HomeDesktopFx";
 import { HomePromo } from "@/components/landing/HomePromo";
+import { HomeDailyChallenge } from "@/components/landing/HomeDailyChallenge";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
@@ -375,6 +376,7 @@ function Index() {
       <MobileHomepage />
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
         <HomeIntro />
+        <HomeDailyChallenge />
 
         <section id="concursos" className="sx-section" aria-label="Concursos em foco">
           <ContestShowcase />
@@ -387,8 +389,8 @@ function Index() {
 
       <div className="hr-footer-cta">
         <div>
-          <h2>Comece a treinar hoje.</h2>
-          <p>Conta gratuita, sem cartão.</p>
+          <h2>A sua aprovação começa na próxima questão.</h2>
+          <p>Conta gratuita, sem cartão de crédito. Comece agora e evolua no seu ritmo.</p>
         </div>
         <Link to="/auth" search={{ mode: "register" }} className="hr-btn hr-btn--gold">
           Criar conta grátis <ArrowUpRight aria-hidden="true" />

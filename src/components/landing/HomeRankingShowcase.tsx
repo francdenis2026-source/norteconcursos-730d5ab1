@@ -142,11 +142,12 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
     >
       <div className="home-container">
         <div className="home-ranking__shell">
+          <img className="home-ranking__art" src="/media/hero/careers-team.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="home-ranking__heading">
             <div>
               <p className="home-ranking__eyebrow"><Trophy aria-hidden="true" /> DESTAQUE DA COMUNIDADE</p>
               <h2 id={titleId}>Quem está no <em>topo da preparação?</em></h2>
-              <p>Acompanhe os quatro primeiros candidatos do ranking Geral do Norte Concurso.</p>
+              <p>Os quatro primeiros colocados do ranking Geral. O próximo nome aqui pode ser o seu.</p>
             </div>
             <span className="home-ranking__status">
               <span className="home-ranking__status-dot" />
