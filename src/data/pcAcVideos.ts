@@ -134,8 +134,8 @@ export const PCAC_VIDEOS_EXTRA: Record<string, Record<string, TopicVideo[]>> = {
       { id: "8g1qujVd6XU", title: "Lei de Abuso de Autoridade (Lei nº 13.869/19)", channel: "Professora Priscilla Fernandes" },
     ],
     "Tortura": [
-      { id: "bb_QBPdvrn4", title: "Lei de Tortura — Nº 9.455/97 — Polícia Penal/AC", channel: "Prof. Kelsen Pantoja" },
       { id: "gr7tf8O8O6M", title: "Lei 9.455/97 — Lei de Tortura — Teoria + Questões" },
+      { id: "NLPsV5ARlUQ", title: "Lei de Tortura — Lei nº 9.455 de 1997", channel: "Prof. Ayres Barros" },
     ],
     "Estatuto do Desarmamento": [
       { id: "6WqqpOA5qKs", title: "AULA GRATUITA: Estatuto do Desarmamento (Lei nº 10.826/03) — Legislação Penal Especial" },
@@ -162,8 +162,8 @@ export const PCAC_VIDEOS_EXTRA: Record<string, Record<string, TopicVideo[]>> = {
       { id: "OWt4mOzeqQw", title: "Lei de Crimes Ambientais (Lei 9.605/1998) — Aula 02" },
     ],
     "Prisão temporária": [
-      { id: "FZ74mEnvUg0", title: "Aula Lei 7.960/89 — Prisão Temporária — Concurso PC-SP" },
       { id: "mcG4ECMzeUE", title: "Prisão Temporária (Lei 7.960/89) — Lei completa" },
+      { id: "7yXMmD0Cf5k", title: "Prisão Temporária (Lei nº 7.960/1989) para a Polícia Civil SP", channel: "Prof. Diego Pureza" },
     ],
     "Violência doméstica e familiar contra a mulher": [
       { id: "2kKfq68qVXo", title: "Aula completa — Lei 11.340/2006 — Lei Maria da Penha (Atualizada)" },
