@@ -40,6 +40,7 @@ import "@/styles/student-shell-premium.css";
 import "@/styles/student-viewport-efficiency.css";
 import "@/styles/student-pro.css";
 import "@/styles/student-astryx-interactions.css";
+import "@/styles/student-areas-polish.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
