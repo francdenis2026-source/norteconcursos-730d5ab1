@@ -1568,3 +1568,204 @@ body:has(.daily-page) {
   hyphens: auto;
   text-wrap: pretty;
 }
+
+/* ===== Abertura com foto e cores; tela da questão mais compacta ===== */
+.daily-page .dt-photo {
+  position: relative;
+  flex: none;
+  height: clamp(84px, 14vh, 128px);
+  margin: calc(-1 * clamp(16px, 2.6vh, 24px)) calc(-1 * clamp(16px, 5vw, 26px)) 0;
+  overflow: hidden;
+}
+.daily-page .dt-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 82% 55%;
+}
+.daily-page .dt-photo::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(0deg, rgb(8 14 26 / 88%), rgb(8 14 26 / 15%) 70%);
+}
+.daily-page .dt-photo p {
+  position: absolute;
+  inset: auto 16px 12px;
+  z-index: 1;
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  color: #fff;
+  line-height: 1.2;
+}
+.daily-page .dt-photo strong {
+  font-size: 17px;
+  font-weight: 800;
+}
+.daily-page .dt-photo span {
+  color: #d5dbe6;
+  font-size: 12.5px;
+}
+.daily-page .dt-body {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: clamp(10px, 2vh, 18px);
+}
+.daily-page .dt-panel {
+  border-radius: 20px;
+}
+.daily-page .dt-metrics > div {
+  --tone: #38bdf8;
+  border-top: 3px solid var(--tone);
+  background: color-mix(in srgb, var(--tone) 9%, transparent);
+}
+.daily-page .dt-metrics > div:nth-child(2) {
+  --tone: #34d399;
+}
+.daily-page .dt-metrics > div:nth-child(3) {
+  --tone: #fb923c;
+}
+.daily-page .dt-metrics dd {
+  color: var(--tone);
+}
+.daily-page .dt-subjects li {
+  border-color: color-mix(in srgb, var(--chip, #38bdf8) 45%, transparent);
+  background: color-mix(in srgb, var(--chip, #38bdf8) 12%, transparent);
+}
+.daily-page .dt-subjects li:nth-child(4n + 2) {
+  --chip: #a78bfa;
+}
+.daily-page .dt-subjects li:nth-child(4n + 3) {
+  --chip: #34d399;
+}
+.daily-page .dt-subjects li:nth-child(4n + 4) {
+  --chip: #fb923c;
+}
+.daily-page .dt-start {
+  border: 0;
+  border-radius: 14px;
+  color: #1c1403;
+  background: linear-gradient(92deg, #fcd34d, #f59e0b);
+  font-weight: 800;
+  box-shadow: 0 14px 28px -14px rgb(245 158 11 / 75%);
+}
+.daily-page .dt-start:hover {
+  filter: brightness(1.06);
+}
+
+/* Em telas largas a foto vai para a esquerda e o conteúdo ocupa a direita */
+@media (min-width: 960px) and (min-height: 560px) {
+  .daily-page .dt-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    gap: 0;
+    max-width: 1040px;
+    max-height: 640px;
+    padding: 0;
+  }
+  .daily-page .dt-photo {
+    height: 100%;
+    margin: 0;
+  }
+  .daily-page .dt-photo::after {
+    background: linear-gradient(0deg, rgb(8 14 26 / 90%), rgb(8 14 26 / 10%) 55%);
+  }
+  .daily-page .dt-photo p {
+    inset: auto 24px 24px;
+  }
+  .daily-page .dt-photo strong {
+    font-size: 26px;
+  }
+  .daily-page .dt-photo span {
+    font-size: 14px;
+  }
+  .daily-page .dt-body {
+    justify-content: center;
+    gap: clamp(8px, 1.6vh, 14px);
+    padding: clamp(16px, 2.6vh, 26px) clamp(20px, 2.4vw, 32px);
+    overflow: hidden;
+  }
+  .daily-page .dt-protocol {
+    display: none;
+  }
+}
+
+/* Tela da questão */
+.daily-page .daily-session {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  overflow: hidden auto;
+}
+.daily-page .daily-session > * {
+  margin-block: 0;
+}
+.daily-page .daily-session__photo {
+  flex: none;
+  width: calc(100% + 28px);
+  max-width: none;
+  height: 76px;
+  margin: -14px -14px 0;
+  object-fit: cover;
+  object-position: 70% 50%;
+}
+.daily-page .daily-session h1 {
+  font-size: 18px;
+  line-height: 1.15;
+}
+.daily-page .daily-session__scores {
+  gap: 8px;
+}
+.daily-page .daily-session__scores > div {
+  --tone: #34d399;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--tone) 12%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tone) 35%, transparent);
+}
+.daily-page .daily-session__scores > div[data-kind="wrong"] {
+  --tone: #fb7185;
+}
+.daily-page .daily-session__scores strong {
+  color: var(--tone);
+  font-size: 24px;
+  line-height: 1;
+}
+.daily-page .daily-session__tip {
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+}
+.daily-page .daily-session [role="progressbar"] > * {
+  background: linear-gradient(90deg, #fcd34d, #f59e0b);
+}
+.daily-page .daily-question-heading h2,
+.daily-page .daily-question-heading h1 {
+  line-height: 1.1;
+}
+.daily-page .daily-question-meta {
+  gap: 6px;
+}
+.daily-page .daily-question-code {
+  opacity: 0.6;
+  font-size: 11px;
+}
+.daily-page .daily-answer[data-answer="C"]:not(:disabled):hover,
+.daily-page .daily-answer[data-answer="C"].daily-answer-selected {
+  border-color: #34d399;
+  background: rgb(52 211 153 / 14%);
+}
+.daily-page .daily-answer[data-answer="E"]:not(:disabled):hover,
+.daily-page .daily-answer[data-answer="E"].daily-answer-selected {
+  border-color: #fb7185;
+  background: rgb(251 113 133 / 14%);
+}
+@media (max-width: 1000px), (max-height: 620px) {
+  .daily-page .daily-session__photo {
+    display: none;
+  }
+}
