@@ -175,7 +175,7 @@ export function AcreRealityArea({ axisId }: { axisId?: string }) {
   const selectedAxis = AXES.find((axis) => axis.id === axisId);
 
   if (selectedAxis) {
-    const selectedGroups = groups.filter((group) => selectedAxis.groupTitles.includes(group.title));
+    const selectedGroups = groups.filter((group) => selectedAxis.groupTitles.some((title) => title === group.title));
     return <AcreAxisDetail axis={selectedAxis} groups={selectedGroups} />;
   }
 
@@ -221,7 +221,7 @@ export function AcreRealityArea({ axisId }: { axisId?: string }) {
               <li key={axis.id}>
                 <Link
                   to="/dashboard/disciplinas"
-                  search={{ d: ACRE_DISCIPLINA, eixo: axis.id }}
+                  search={{ d: ACRE_DISCIPLINE, eixo: axis.id }}
                   className="ak-axis ak-axis--interactive"
                   style={{ "--ak-tone": axis.tone } as React.CSSProperties}
                   aria-label={`Abrir área: ${axis.title}`}
