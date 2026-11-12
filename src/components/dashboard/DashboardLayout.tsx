@@ -41,6 +41,7 @@ import "@/styles/student-viewport-efficiency.css";
 import "@/styles/student-pro.css";
 import "@/styles/student-astryx-interactions.css";
 import "@/styles/student-areas-polish.css";
+import "@/styles/student-windows-polish.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,

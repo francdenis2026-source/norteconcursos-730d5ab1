@@ -1,0 +1,138 @@
+/* Janela de métricas (taxa de acerto e afins) e medalhas: mais largura, cor e hierarquia. */
+
+/* Janela de métricas */
+.student-metric-panel {
+  width: min(1180px, calc(100vw - 24px));
+  max-width: 1180px;
+}
+.student-metric-panel__header {
+  align-items: center;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--smp-accent) 14%, transparent), transparent 70%);
+}
+.student-metric-panel__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--smp-accent) 40%, transparent);
+}
+.student-metric-panel__header h2 {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.student-metric-panel__summary {
+  border-radius: 18px;
+  border-left: 4px solid var(--smp-accent);
+}
+.student-metric-panel__summary dl > div,
+.student-metric-panel__facts > div {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--smp-accent) 9%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--smp-accent) 22%, transparent);
+}
+.student-metric-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.student-metric-panel h3::before {
+  width: 4px;
+  height: 1em;
+  border-radius: 2px;
+  content: "";
+  background: var(--smp-accent);
+}
+/* Disciplinas em cartões lado a lado, em vez de uma lista estreita */
+.student-metric-panel__subjects {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 12px;
+}
+.student-metric-panel__subjects > div {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--foreground) 3%, transparent);
+}
+.student-metric-panel progress {
+  height: 9px;
+}
+.student-metric-panel progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+.student-metric-panel progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+/* Histórico em duas colunas, com acerto em verde e erro em vermelho */
+.student-metric-panel__history {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+  gap: 8px;
+}
+.student-metric-panel__history li {
+  padding: 10px 12px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+}
+.student-metric-panel__history [data-correct="true"] {
+  border-color: #10b981;
+  color: #047857;
+  background: rgb(16 185 129 / 14%);
+}
+.dark .student-metric-panel__history [data-correct="true"] {
+  color: #6ee7b7;
+}
+.student-metric-panel__history [data-correct="false"] {
+  border-color: #f43f5e;
+  color: #be123c;
+  background: rgb(244 63 94 / 14%);
+}
+.dark .student-metric-panel__history [data-correct="false"] {
+  color: #fda4af;
+}
+.student-metric-panel__chips a,
+.student-metric-panel__chips button {
+  border-radius: 12px;
+}
+
+/* Medalhas */
+.medals-page__grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)) !important;
+}
+.medals-page__earned {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)) !important;
+}
+.medals-page .medal-card {
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #f59e0b;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.medals-page .medal-card:nth-child(4n + 2) { border-top-color: #38bdf8; }
+.medals-page .medal-card:nth-child(4n + 3) { border-top-color: #34d399; }
+.medals-page .medal-card:nth-child(4n + 4) { border-top-color: #a78bfa; }
+.medals-page .medal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px -24px rgb(245 158 11 / 70%);
+}
+.medals-page .medal-card::after {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgb(245 158 11 / 16%), transparent 70%);
+}
+.medals-page__earned > li {
+  border-radius: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .medals-page .medal-card {
+    transition: none;
+    transform: none !important;
+  }
+}
