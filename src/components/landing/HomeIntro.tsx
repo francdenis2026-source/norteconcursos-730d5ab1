@@ -102,9 +102,39 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
                 <dd>{GUEST_DAILY_LIMIT}</dd>
               </div>
             </dl>
+            <ul className="sx-hero__chips" aria-label="O que você encontra">
+              {FEATURES.slice(0, 4).map(({ icon: Icon, title }) => (
+                <li key={title}>
+                  <Icon aria-hidden="true" /> {title}
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="sx-hero__panel">
             <DailyChallengeBadge />
+            <ol className="sx-hero__steps" aria-label="Como funciona">
+              <li>
+                <b>1</b>
+                <span>
+                  <strong>Escolha o concurso</strong>
+                  <small>O edital vira uma trilha de estudo.</small>
+                </span>
+              </li>
+              <li>
+                <b>2</b>
+                <span>
+                  <strong>Treine por banca</strong>
+                  <small>Questões oficiais com comentário.</small>
+                </span>
+              </li>
+              <li>
+                <b>3</b>
+                <span>
+                  <strong>Acompanhe a evolução</strong>
+                  <small>Desempenho por disciplina e ranking.</small>
+                </span>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
