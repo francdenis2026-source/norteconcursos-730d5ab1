@@ -354,6 +354,14 @@ function IntroBriefing({
   return (
     <section className="dt-panel" aria-labelledby="dt-title">
       <span className="dt-mark" aria-hidden="true" />
+      <div className="dt-photo" aria-hidden="true">
+        <img src="/media/hero/exam-simulator.webp" alt="" decoding="async" />
+        <p>
+          <strong>{GUEST_DAILY_LIMIT} questões por dia</strong>
+          <span>Treino gratuito, no ritmo de prova.</span>
+        </p>
+      </div>
+      <div className="dt-body">
       <header className="dt-status">
         <span className="dt-status__tag">
           <Zap size={13} aria-hidden="true" /> MISSÃO DIÁRIA · ACESSO LIVRE
@@ -417,6 +425,7 @@ function IntroBriefing({
           Conheça a preparação completa <ArrowRight size={13} aria-hidden="true" />
         </Link>
       </footer>
+      </div>
     </section>
   );
 }
@@ -467,6 +476,7 @@ function QuestionPlayer({
   return (
     <div className="daily-player">
       <aside className="daily-session" aria-label="Progresso do desafio">
+        <img className="daily-session__photo" src="/media/hero/study-desk.webp" alt="" aria-hidden="true" decoding="async" />
         <span className="daily-eyebrow">DESAFIO DIÁRIO</span>
         <h1>Seu treino de hoje</h1>
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -485,11 +495,11 @@ function QuestionPlayer({
           <Progress value={((index + (answered ? 1 : 0)) / total) * 100} className="h-1.5" />
         </div>
         <div className="daily-session__scores">
-          <div>
+          <div data-kind="right">
             <strong>{correct}</strong>
             <span>Certas hoje</span>
           </div>
-          <div>
+          <div data-kind="wrong">
             <strong>{wrong}</strong>
             <span>Erradas hoje</span>
           </div>
@@ -606,6 +616,7 @@ function QuestionPlayer({
                   key={answer}
                   type="button"
                   data-aim
+                  data-answer={answer}
                   aria-pressed={selected === answer}
                   disabled={answered}
                   onClick={() => onSelect(answer)}
