@@ -677,66 +677,124 @@ export function PcAcCronogramaCard({
           <Tab id="schedule-tab-final" value="final" label="Revisão final" icon={<Flag />} panelId="schedule-panel-final" />
         </TabList>
           <section role="tabpanel" tabIndex={0} id="schedule-panel-visao" aria-labelledby="schedule-tab-visao" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "visao"} className="pcac-schedule__panel space-y-5">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="space-y-1.5">
-            <Label htmlFor="schedule-hours">Horas de estudo por semana</Label>
-            <Input
-              id="schedule-hours"
-              type="number"
-              min={1}
-              max={80}
-              value={cfg.weeklyHours}
-              disabled={!configLoaded}
-              onChange={(e) => update({ weeklyHours: Math.min(80, Math.max(1, Number(e.target.value) || 1)) })}
-            />
-          </div>
-          <div className="space-y-1.5">
-            <Label htmlFor="schedule-date">Data de início</Label>
-            <Input
-              id="schedule-date"
-              type="date"
-              value={effectiveStartDate}
-              min={todayKey}
-              max={lastStudyDate}
-              disabled={!configLoaded}
-              onChange={(e) => e.target.value && update({ startDate: e.target.value })}
-            />
-            {startError && <p role="alert" className="text-xs text-destructive">{startError}</p>}
-          </div>
-          <div className="space-y-1.5">
-            <Label htmlFor="schedule-time">Começo do estudo</Label>
-            <Input
-              id="schedule-time"
-              type="time"
-              value={cfg.startTime}
-              disabled={!configLoaded}
-              onChange={(e) => e.target.value && update({ startTime: e.target.value })}
-            />
-          </div>
-          <div className="space-y-1.5 sm:col-span-2">
-            <p id="schedule-days-label">Dias de estudo</p>
-            <div role="group" aria-labelledby="schedule-days-label" className="flex flex-wrap gap-1.5">
-              {DAY_ORDER.map((d) => {
-                const on = cfg.days.includes(d);
-                return (
-                  <AstryxButton
-                    key={d}
-                    label={DAY_SHORT[d]!}
-                    size="sm"
-                    variant={on ? "primary" : "secondary"}
-                    aria-pressed={on}
-                    isDisabled={!configLoaded || (on && cfg.days.length === 1)}
-                    onClick={() => {
-                      const days = on ? cfg.days.filter((x) => x !== d) : [...cfg.days, d];
-                      if (days.length) update({ days });
-                    }}
-                    icon={on ? <CheckCircle2 /> : undefined}
-                  />
-                );
-              })}
+        {(() => {
+          // A configuração guarda horas por semana; o aluno pensa em horas por dia. O campo converte os dois lados.
+          const dayCount = Math.max(1, cfg.days.length);
+          const perDay = Math.round((cfg.weeklyHours / dayCount) * 2) / 2;
+          const setPerDay = (hours: number, days = cfg.days) =>
+            update({ days, weeklyHours: Math.min(80, Math.max(1, Math.round(hours * days.length))) });
+          const endMinutes = clockToMinutes(cfg.startTime) + Math.round((cfg.weeklyHours / dayCount) * 60);
+          const endClock = `${String(Math.floor(endMinutes / 60) % 24).padStart(2, "0")}:${String(endMinutes % 60).padStart(2, "0")}`;
+          const fmtHours = (h: number) => `${String(h).replace(".", ",")} h`;
+          const level = perDay <= 1.5 ? "leve" : perDay <= 3.5 ? "equilibrado" : perDay <= 6 ? "intenso" : "muito intenso";
+          return (
+            <div className="pcac-setup">
+              <section className="pcac-setup__card" data-tone="gold" aria-labelledby="pcac-setup-hours">
+                <header>
+                  <b>1</b>
+                  <div>
+                    <h3 id="pcac-setup-hours">Quanto tempo você tem por dia?</h3>
+                    <p>Conte só o tempo em que consegue estudar com atenção, já descontando trabalho, deslocamento, refeições e sono.</p>
+                  </div>
+                </header>
+                <div className="pcac-setup__presets" role="group" aria-label="Horas de estudo por dia">
+                  {[1, 2, 3, 4, 6].map((h) => (
+                    <button key={h} type="button" aria-pressed={perDay === h} disabled={!configLoaded} onClick={() => setPerDay(h)}>
+                      {h} h
+                    </button>
+                  ))}
+                  <label className="pcac-setup__custom">
+                    <span>Outro valor</span>
+                    <Input
+                      id="schedule-hours"
+                      type="number"
+                      min={0.5}
+                      max={12}
+                      step={0.5}
+                      value={perDay}
+                      disabled={!configLoaded}
+                      aria-label="Horas de estudo por dia"
+                      onChange={(e) => setPerDay(Math.min(12, Math.max(0.5, Number(e.target.value) || 0.5)))}
+                    />
+                  </label>
+                </div>
+                <p className="pcac-setup__result" role="status">
+                  <strong>{fmtHours(perDay)} por dia</strong> × {dayCount} {dayCount === 1 ? "dia" : "dias"} ={" "}
+                  <strong>{cfg.weeklyHours} h por semana</strong> · ritmo {level}
+                </p>
+                <p className="pcac-setup__hint">
+                  Começando às {cfg.startTime}, o estudo vai até por volta de {endClock}, sem contar pausas e refeições. Prefira um
+                  número que você consiga manter todos os dias a um número alto que dure uma semana.
+                </p>
+              </section>
+
+              <section className="pcac-setup__card" data-tone="blue" aria-labelledby="schedule-days-label">
+                <header>
+                  <b>2</b>
+                  <div>
+                    <h3 id="schedule-days-label">Em quais dias você estuda?</h3>
+                    <p>O plano distribui as disciplinas só nos dias marcados. Ao mudar os dias, as horas por dia são mantidas.</p>
+                  </div>
+                </header>
+                <div role="group" aria-labelledby="schedule-days-label" className="flex flex-wrap gap-1.5">
+                  {DAY_ORDER.map((d) => {
+                    const on = cfg.days.includes(d);
+                    return (
+                      <AstryxButton
+                        key={d}
+                        label={DAY_SHORT[d]!}
+                        size="sm"
+                        variant={on ? "primary" : "secondary"}
+                        aria-pressed={on}
+                        isDisabled={!configLoaded || (on && cfg.days.length === 1)}
+                        onClick={() => {
+                          const days = on ? cfg.days.filter((x) => x !== d) : [...cfg.days, d];
+                          if (days.length) setPerDay(perDay, days);
+                        }}
+                        icon={on ? <CheckCircle2 /> : undefined}
+                      />
+                    );
+                  })}
+                </div>
+              </section>
+
+              <section className="pcac-setup__card" data-tone="green" aria-labelledby="pcac-setup-start">
+                <header>
+                  <b>3</b>
+                  <div>
+                    <h3 id="pcac-setup-start">Quando você começa?</h3>
+                    <p>Defina a data de início do plano e o horário em que costuma sentar para estudar.</p>
+                  </div>
+                </header>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="schedule-date">Data de início</Label>
+                    <Input
+                      id="schedule-date"
+                      type="date"
+                      value={effectiveStartDate}
+                      min={todayKey}
+                      max={lastStudyDate}
+                      disabled={!configLoaded}
+                      onChange={(e) => e.target.value && update({ startDate: e.target.value })}
+                    />
+                    {startError && <p role="alert" className="text-xs text-destructive">{startError}</p>}
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="schedule-time">Começo do estudo</Label>
+                    <Input
+                      id="schedule-time"
+                      type="time"
+                      value={cfg.startTime}
+                      disabled={!configLoaded}
+                      onChange={(e) => e.target.value && update({ startTime: e.target.value })}
+                    />
+                  </div>
+                </div>
+              </section>
             </div>
-          </div>
-        </div>
+          );
+        })()}
 
         <details className="pcac-schedule__preferences rounded-xl border p-3">
           <summary className="cursor-pointer text-sm font-bold">Rotina diária, pausas e preparação física</summary>
@@ -978,7 +1036,7 @@ export function PcAcCronogramaCard({
         </div>
           </section>
       </section>
-      <Dialog isOpen={!!openEntry} onOpenChange={(open) => { if (!open) setOpenDate(null); }} width={720} maxHeight="86dvh" padding={0}>
+      <Dialog isOpen={!!openEntry} onOpenChange={(open) => { if (!open) setOpenDate(null); }} width={1040} maxHeight="92dvh" padding={0}>
         {openEntry && (() => {
           const { day, week } = openEntry;
           const summary = summarizeDay(day);
@@ -994,13 +1052,20 @@ export function PcAcCronogramaCard({
               }
               content={
                 <LayoutContent>
+                  <div className="pcac-day-summary">
+                    <span data-tone="gold"><Clock aria-hidden /> <strong>{summary.studyMinutes ? fmtDuration(summary.studyMinutes) : "Sem estudo"}</strong> de estudo</span>
+                    <span data-tone="blue"><BookOpen aria-hidden /> <strong>{day.activities.filter((a) => !NON_STUDY.has(a.type)).length}</strong> blocos</span>
+                    <span data-tone="green"><Coffee aria-hidden /> <strong>{day.activities.filter((a) => a.type === "pausa").length}</strong> pausas</span>
+                    {summary.hasTaf && <span data-tone="rose"><Dumbbell aria-hidden /> Treino físico</span>}
+                    <small>Siga a ordem de cima para baixo. Cada bloco traz o que fazer e por quanto tempo.</small>
+                  </div>
                   <ol className={`pcac-day-timeline pcac-week--${((week.weekNumber - 1) % 5) + 1}`}>
                     {day.activities.map((activity, index) => {
                       const Icon = ACTIVITY_ICON[activity.type];
                       const resource = findPcAcStudyResource(activity.subject);
                       const isStudy = !NON_STUDY.has(activity.type);
                       return (
-                        <li key={index} className="pcac-day-timeline__item" data-kind={isStudy ? "study" : activity.type}>
+                        <li key={index} className="pcac-day-timeline__item" data-kind={isStudy ? "study" : activity.type} data-type={activity.type}>
                           <span className="pcac-day-timeline__time">
                             {activity.start ? <><strong>{activity.start}</strong><span>{activity.end}</span></> : <strong>Dia todo</strong>}
                           </span>
