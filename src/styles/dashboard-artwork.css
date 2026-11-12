@@ -3,7 +3,8 @@
  * Approved artwork: auth-carreiras-composicao.webp and auth-distintivo.webp.
  */
 .app-shell[data-area="student"] #dashboard-content {
-  --section-art: url('/media/hero/auth-carreiras-composicao.webp');
+  /* O arquivo auth-carreiras-composicao.webp não existe no projeto; sem arte até haver uma aprovada. */
+  --section-art: none;
 }
 /* Only the platform's police/skull identity is used in the identification bands. */
 .app-shell[data-area="student"] #dashboard-content:is(

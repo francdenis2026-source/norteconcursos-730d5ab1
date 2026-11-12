@@ -1,0 +1,101 @@
+/* Área do aluno: enquadramento das imagens, ícones e cores dos cards. Estrutura e dados não mudam. */
+
+/* Faixa de boas-vindas: a foto entra com fade, sem troca de imagem */
+.student-home.sh2 .sh2-hero__art {
+  object-position: 62% 20%;
+  animation: sh2-art-in 0.45s ease both;
+}
+@keyframes sh2-art-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Atalhos: foto enquadrada no rosto/assunto, ícone em selo colorido e faixa da cor do atalho */
+.student-home.sh2 .sh2-shortcuts a {
+  height: 6.25rem;
+  padding: 0.625rem 0.75rem;
+  border-color: color-mix(in srgb, var(--sh2-tone) 45%, transparent);
+  box-shadow: inset 0 -3px 0 var(--sh2-tone);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+.student-home.sh2 .sh2-shortcuts a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 -3px 0 var(--sh2-tone),
+    0 14px 26px -18px var(--sh2-tone);
+}
+.student-home.sh2 .sh2-shortcuts img {
+  object-position: center 26%;
+}
+.student-home.sh2 .sh2-shortcuts img[src*="careers-team"] {
+  object-position: 72% 24%;
+}
+.student-home.sh2 .sh2-shortcuts img[src*="pcpr-investigacao"] {
+  object-position: 58% 22%;
+}
+.student-home.sh2 .sh2-shortcuts img[src*="pcac-capa"] {
+  object-position: center 30%;
+}
+.student-home.sh2 .sh2-shortcuts a::after {
+  background: linear-gradient(
+    180deg,
+    oklch(0.15 0.03 265 / 0.05) 0%,
+    oklch(0.15 0.03 265 / 0.5) 42%,
+    color-mix(in srgb, var(--sh2-tone) 22%, oklch(0.13 0.03 265 / 0.96)) 100%
+  );
+}
+.student-home.sh2 .sh2-shortcuts strong {
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.student-home.sh2 .sh2-shortcuts strong svg {
+  box-sizing: content-box;
+  flex: none;
+  width: 0.95rem;
+  height: 0.95rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  color: oklch(0.16 0.03 265);
+  background: var(--sh2-tone);
+}
+.student-home.sh2 .sh2-shortcuts small {
+  padding-left: 2.05rem;
+  color: oklch(0.94 0.02 90);
+}
+
+/* Cards: borda superior na cor do card e cabeçalho com foto bem enquadrada */
+.student-home.sh2 .sh2-card[data-tone] {
+  border-top: 2px solid var(--sh2-tone);
+}
+.student-home.sh2 .sh2-card--photo .sh2-card__head::before {
+  background-position: center 28%;
+}
+.student-home.sh2 .sh2-card--photo .sh2-card__head::after {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--sh2-tone) 38%, oklch(0.16 0.03 265)) 0%,
+    color-mix(in srgb, var(--sh2-tone) 12%, transparent) 55%,
+    transparent 80%
+  );
+}
+
+@media (max-width: 640px) {
+  .student-home.sh2 .sh2-shortcuts a {
+    height: 5.5rem;
+  }
+  .student-home.sh2 .sh2-shortcuts small {
+    padding-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-home.sh2 .sh2-hero__art {
+    animation: none;
+  }
+  .student-home.sh2 .sh2-shortcuts a {
+    transition: none;
+  }
+}

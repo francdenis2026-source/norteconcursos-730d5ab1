@@ -14,6 +14,7 @@ import "@/styles/student-home-hero-rework.css";
 import "@/styles/student-dashboard-professional-refinement.css";
 import "@/styles/student-home-astrix.css";
 import "@/styles/student-home-compact.css";
+import "@/styles/student-home-polish.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -318,17 +319,21 @@ function StudentHome({ user }: { user: UserProfile }) {
   return (
     <div className="student-home student-hub student-desk student-overview sh2">
       <header className="sh2-hero">
-        <img
-          className="sh2-hero__art"
-          src={
-            isPcAcre
-              ? "/media/hero/landing-pcac.webp"
-              : "/media/hero/meu-concurso-seguranca-publica.webp"
-          }
-          alt=""
-          aria-hidden="true"
-          decoding="async"
-        />
+        {/* Só entra quando o objetivo já carregou: evita baixar a imagem genérica e trocá-la em seguida. */}
+        {!q.objective.isPending && (
+          <img
+            className="sh2-hero__art"
+            src={
+              isPcAcre
+                ? "/media/hero/landing-pcac.webp"
+                : "/media/hero/meu-concurso-seguranca-publica.webp"
+            }
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+            fetchPriority="high"
+          />
+        )}
         <div className="sh2-hero__hello">
           <p>
             {hello}, {firstName}.
