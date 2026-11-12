@@ -39,6 +39,7 @@ import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import "@/styles/study-area-compact.css";
 import "@/styles/student-area-kit.css";
+import { disciplineTheme } from "@/lib/disciplineTheme";
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -57,31 +58,6 @@ const SUBJECT_ICONS: Record<SubjectIcon, LucideIcon> = {
   ingles: Languages,
   geral: BookOpen,
 };
-
-const TILE_TONES = [
-  "oklch(0.8 0.14 82)",
-  "oklch(0.72 0.15 255)",
-  "oklch(0.76 0.16 150)",
-  "oklch(0.74 0.16 300)",
-  "oklch(0.76 0.16 55)",
-  "oklch(0.72 0.19 15)",
-  "oklch(0.78 0.13 110)",
-  "oklch(0.72 0.16 330)",
-  "oklch(0.74 0.13 230)",
-  "oklch(0.78 0.15 35)",
-];
-const TILE_IMAGES = [
-  "study-desk",
-  "exam-hall",
-  "trainer-study",
-  "painel-aluno-estudo",
-  "study-assistant",
-  "exam-simulator",
-  "dashboard",
-  "trainer",
-  "painel-aluno-direcao-estudos",
-  "field-map",
-];
 
 const OTHER_RESOURCES: {
   to: string;
@@ -319,18 +295,19 @@ function MaterialHub() {
           </div>
         ) : (
           <ul className="ak-tiles">
-            {availableSubjects.map((entry, i) => {
+            {availableSubjects.map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
+              const theme = disciplineTheme(entry.name);
               return (
                 <li key={entry.name}>
                   <Link
                     to="/dashboard/disciplinas"
                     search={{ d: entry.name }}
                     className="ak-tile"
-                    style={{ "--ak-tone": TILE_TONES[i % TILE_TONES.length] } as React.CSSProperties}
+                    style={{ "--ak-tone": theme.tone } as React.CSSProperties}
                   >
                     <img
-                      src={`/media/hero/${TILE_IMAGES[i % TILE_IMAGES.length]}.webp`}
+                      src={theme.image}
                       alt=""
                       aria-hidden="true"
                       loading="lazy"
