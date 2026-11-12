@@ -275,3 +275,58 @@ html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspa
 .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar p { font-size: 0.875rem; }
 .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar button { height: 2.125rem !important; min-height: 2.125rem !important; font-size: 0.8125rem; }
 .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-setup__unified > [data-slot="card-content"] { padding: 0.5rem !important; }
+
+/* Montagem ocupa a janela inteira (≥768px): o cartão estica até o rodapé, a faixa com
+   foto cresce para preencher a sobra e filtros + barra de início ficam ancorados embaixo.
+   Antes o cartão ficava pequeno e centralizado, com a tela vazia em volta. */
+@media (min-width: 768px) {
+  html .app-shell[data-area="student"]:has(.trainer-setup.qt2) .app-content__inner { max-width: none !important; }
+  html .app-shell[data-area="student"]:has(.trainer-setup.qt2) .trainer-setup.qt2 {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: calc(100dvh - 9rem) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: stretch !important;
+  }
+  html:not(:fullscreen) .app-shell[data-area="student"]:has(.trainer-setup.qt2) .trainer-setup.qt2 { min-height: 0 !important; }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 > .trainer-setup__unified {
+    display: flex;
+    flex: 1 1 auto !important;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-setup__unified > [data-slot="card-content"] {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0.75rem !important;
+  }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero {
+    flex: 1 1 9rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    min-height: 9rem;
+    margin: 0 0 0.75rem;
+    padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 2.5vw, 2.25rem);
+  }
+  .trainer-setup.qt2 .qt2-hero > img { width: 62%; object-position: 50% 18%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%); mask-image: linear-gradient(90deg, transparent 0%, #000 55%); }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero__copy { grid-template-columns: 1fr; row-gap: 0.25rem; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero small { font-size: 0.75rem; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero h1 { font-size: clamp(1.5rem, 4.5vh, 2.75rem); }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-hero p { font-size: 0.9375rem; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-quick a { min-height: 2.25rem; padding: 0.25rem 0.875rem; font-size: 0.8125rem; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-quick svg { width: 1rem; height: 1rem; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters { gap: 0.5rem 0.75rem !important; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .qt2-filters label > span:first-child { font-size: 0.75rem; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 :is([data-slot="select-trigger"], button[data-slot="select-trigger"]) { height: 2.5rem !important; min-height: 2.5rem !important; padding: 0 0.75rem !important; font-size: 0.875rem !important; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-more { margin-top: 0.625rem !important; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar { position: static; margin-top: 0.625rem !important; padding: 0.625rem 0.875rem !important; box-shadow: none; }
+  .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar button { height: 2.5rem !important; min-height: 2.5rem !important; padding-inline: 1.25rem; font-size: 0.875rem; }
+}
