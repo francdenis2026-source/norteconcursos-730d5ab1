@@ -99,3 +99,113 @@
     transition: none;
   }
 }
+
+/* ===== Reorganização da tela inicial: seções numeradas, distribuição em colunas e mais largura ===== */
+.student-home.sh2 {
+  gap: 1rem;
+}
+.student-home.sh2 .sh2-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+.student-home.sh2 .sh2-label > b {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.5rem;
+  color: oklch(0.2 0.04 80);
+  background: linear-gradient(140deg, #fde68a, #f59e0b);
+  font-size: 0.8125rem;
+  font-weight: 900;
+}
+.student-home.sh2 .sh2-label h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--sh2-ink);
+}
+.student-home.sh2 .sh2-label p {
+  margin: 0.125rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--sh2-dim);
+}
+.student-home.sh2 .sh2-resources > .sh2-label {
+  margin-top: 0;
+}
+
+/* Indicadores: número maior e quatro colunas fixas quando há espaço */
+.student-home.sh2 .sh2-kpis {
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+}
+.student-home.sh2 .sh2-kpi {
+  padding: 0.75rem 1rem;
+  border-radius: 0.875rem;
+}
+.student-home.sh2 .sh2-kpi > svg {
+  box-sizing: content-box;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  background: color-mix(in srgb, var(--sh2-tone) 16%, transparent);
+}
+.student-home.sh2 .sh2-kpi strong {
+  font-size: 1.5rem;
+}
+
+/* Quadro do dia: coluna do plano mais larga, revisão e leitura ao lado */
+@media (min-width: 1180px) {
+  .student-home.sh2 .sh2-board {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.875rem;
+  }
+}
+.student-home.sh2 .sh2-board .sh2-card__body {
+  max-height: 16rem;
+}
+
+/* Ritmo e respostas lado a lado */
+.student-home.sh2 .sh2-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.875rem;
+}
+@media (min-width: 1100px) {
+  .student-home.sh2 .sh2-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.student-home.sh2 .sh2-pair > .sh2-card {
+  margin: 0;
+}
+
+/* Editais e acervo em colunas, em vez de uma pilha estreita */
+@media (min-width: 1100px) {
+  .student-home.sh2 .sh2-resources {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  .student-home.sh2 .sh2-resources > :is(.sh2-label, :last-child) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Atalhos: oito atalhos em duas linhas de quatro */
+@media (min-width: 1024px) {
+  .student-home.sh2 .sh2-shortcuts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .student-home.sh2 .sh2-label p {
+    display: none;
+  }
+}
