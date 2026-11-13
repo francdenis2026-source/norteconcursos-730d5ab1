@@ -4,9 +4,9 @@ import { BUILD_ID } from "@/build-info";
 import { ACRE_TZ } from "@/lib/acreTime";
 import "@/styles/update-prompt.css";
 
-const CHECK_INTERVAL_MS = 10 * 60 * 1000;
+const CHECK_INTERVAL_MS = 60 * 1000;
 /** Depois de "Agora não", o aviso volta a aparecer passado este tempo. */
-const SNOOZE_MS = 60 * 60 * 1000;
+const SNOOZE_MS = 30 * 60 * 1000;
 
 function publishedLabel(builtAt: string | null) {
   if (!builtAt) return null;
@@ -96,10 +96,9 @@ export function UpdateAvailablePrompt() {
         <Sparkles />
       </span>
       <div className="update-prompt__copy">
-        <strong id="update-prompt-title">Nova versão disponível</strong>
+        <strong id="update-prompt-title">Atualização disponível</strong>
         <p>
-          Publicamos melhorias na plataforma{published ? ` em ${published} (horário do Acre)` : ""}.
-          Atualize para usar a versão mais recente.
+          Há melhorias e ajustes nesta versão{published ? ` (${published})` : ""}. Atualize para continuar com tudo em dia.
         </p>
         <small>
           <ShieldCheck aria-hidden="true" /> Você continua conectado e volta para esta mesma tela.
