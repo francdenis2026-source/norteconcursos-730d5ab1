@@ -97,7 +97,7 @@ const destinations = [
     icon: BrainCircuit,
   },
   {
-    to: "/dashboard/library",
+    to: "/dashboard/material",
     image: "/media/hero/preparacao-n-cenas.webp",
     title: "Material de estudo",
     tone: "gold",
