@@ -50,6 +50,13 @@ const fmtDate = (iso: string) =>
 function HistoryPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const { day } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // O parâmetro inicial (vindo de um link) é lido uma vez e removido da
+  // barra de endereço; não deve continuar visível enquanto o aluno navega.
+  React.useEffect(() => {
+    if (day) void navigate({ search: { day: undefined }, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const real = !!user && user.id !== "demo-user";
   const [attempts, setAttempts] = React.useState<AttemptWithDetails[]>([]);
   const [answers, setAnswers] = React.useState<Answer[]>([]);

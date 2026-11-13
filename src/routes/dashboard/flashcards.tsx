@@ -194,7 +194,16 @@ function CardForm({
 
 function FlashcardsPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
-  const search = Route.useSearch();
+  const routeSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // Parâmetros vindos de um link são lidos uma vez (a cópia local abaixo nunca
+  // muda) e removidos da barra de endereço; não devem continuar visíveis.
+  const [search] = React.useState(routeSearch);
+  React.useEffect(() => {
+    if (routeSearch.planned || routeSearch.subject || routeSearch.topic)
+      void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const [cards, setCards] = React.useState<Card_[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [tab, setTab] = React.useState<"study" | "cards">(

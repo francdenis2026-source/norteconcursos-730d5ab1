@@ -196,7 +196,16 @@ const DURATIONS = [15, 30, 60, 120, 180, 240, 300];
 
 function ProfessionalSimulator() {
   const loadGeneration = React.useRef(0);
-  const routeSearch = Route.useSearch();
+  const liveSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // Parâmetros vindos de um link são lidos uma vez (a cópia local nunca
+  // muda) e removidos da barra de endereço; não devem continuar visíveis.
+  const routeSearch = React.useState(liveSearch)[0];
+  React.useEffect(() => {
+    if (Object.values(liveSearch).some((value) => value !== undefined))
+      void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const isEnemMode =
     routeSearch.mode === "enem" || routeSearch.contest?.trim().toUpperCase() === "ENEM";
   const [enemArea, setEnemArea] = React.useState(routeSearch.area || "all");

@@ -4,7 +4,7 @@ import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalo
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import "@/styles/student-workspace-unified.css";
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeftRight, BookOpenText, Check, ChevronRight, ClipboardCheck, ExternalLink, FileText, Layers, ListChecks, Loader2, Search, Share2, Download, Star, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -49,8 +49,15 @@ type Topic = { id: string; discipline: string; topic_text: string; topic_order: 
 function EditalPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
-  const navigate = useNavigate();
-  const { edition: selected } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const { edition: initialEdition } = Route.useSearch();
+  const [selected, setSelected] = React.useState(initialEdition);
+  // Trocar de edição não deve escrever na URL; o parâmetro inicial (vindo de
+  // um link de outra tela) é lido uma vez e removido da barra de endereço.
+  React.useEffect(() => {
+    if (initialEdition) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const [editions, setEditions] = React.useState<Edition[]>([]),
     [topics, setTopics] = React.useState<Topic[]>([]);
   const [loading, setLoading] = React.useState(true),
@@ -212,8 +219,7 @@ function EditalPage() {
     const name = canonicalSubject(t.discipline);
     groups.set(name, [...(groups.get(name) ?? []), t]);
   }
-  const chooseEdition = (id?: string) =>
-    void navigate({ to: "/dashboard/edital", search: { edition: id } });
+  const chooseEdition = (id?: string) => setSelected(id);
   const adoptEdition = () => {
     if (!user?.id || !edition) return;
     const saved = saveActiveStudyEdition(user.id, {

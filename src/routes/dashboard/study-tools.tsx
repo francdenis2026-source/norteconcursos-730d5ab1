@@ -189,7 +189,15 @@ function readDay(): { day: string; cycles: number; minutes: number } {
 function StudyToolsPage() {
   const ctx = useStudyContext();
   const fullscreen = useWorkspaceFullscreen(true);
-  const { context } = Route.useSearch();
+  const liveSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // O parâmetro inicial (vindo de um link) é lido uma vez (a cópia local
+  // nunca muda) e removido da barra de endereço.
+  const { context } = React.useState(liveSearch)[0];
+  React.useEffect(() => {
+    if (liveSearch.context) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const enem = context === "enem";
   const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
   const subjects = enem ? enemSubjects.map(item => item.name) : ctx.subjects;

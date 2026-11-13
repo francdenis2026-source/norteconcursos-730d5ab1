@@ -26,16 +26,20 @@ export const Route = createFileRoute("/dashboard/media")({
   }),
 });
 
-function PodcastsTab({ canPreview }: { canPreview: boolean }) {
-  const selection = Route.useSearch();
+function PodcastsTab({
+  canPreview,
+  subject,
+  topic,
+}: {
+  canPreview: boolean;
+  subject?: string | undefined;
+  topic?: string | undefined;
+}) {
   const PODCASTS = useMediaCatalog().catalog.podcasts.filter(
     (p) =>
-      (!selection.subject ||
-        canonicalSubject(p.discipline) === canonicalSubject(selection.subject)) &&
-      (!selection.topic ||
-        `${p.title} ${p.description ?? ""}`
-          .toLocaleLowerCase("pt-BR")
-          .includes(selection.topic.toLocaleLowerCase("pt-BR"))),
+      (!subject || canonicalSubject(p.discipline) === canonicalSubject(subject)) &&
+      (!topic ||
+        `${p.title} ${p.description ?? ""}`.toLocaleLowerCase("pt-BR").includes(topic.toLocaleLowerCase("pt-BR"))),
   );
   const [pick, setSelected] = React.useState<Podcast | null>(null);
   const selected = PODCASTS.find((p) => p.id === pick?.id) ?? PODCASTS[0] ?? null;
@@ -79,8 +83,8 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
           ) : (
             <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
               <FileAudio className="mx-auto mb-2 h-8 w-8 opacity-50" />
-              {selection.subject
-                ? `Não há podcast disponível para ${selection.subject}${selection.topic ? ` — ${selection.topic}` : ""}. Nenhum conteúdo de outra área foi selecionado.`
+              {subject
+                ? `Não há podcast disponível para ${subject}${topic ? ` — ${topic}` : ""}. Nenhum conteúdo de outra área foi selecionado.`
                 : "Os primeiros episódios chegam em breve."}
             </div>
           )}
@@ -143,7 +147,16 @@ function PodcastsTab({ canPreview }: { canPreview: boolean }) {
 function MediaCenterPage() {
   const { isAdmin } = useAuthStatus();
   const { catalog } = useMediaCatalog();
-  const { tab, subject, topic } = Route.useSearch();
+  const routeSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // Parâmetros vindos de um link são lidos uma vez e removidos da barra de
+  // endereço; não devem continuar visíveis enquanto o aluno troca de aba.
+  const { tab, subject, topic } = React.useState(routeSearch)[0];
+  React.useEffect(() => {
+    if (routeSearch.tab || routeSearch.subject || routeSearch.topic)
+      void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const hasPodcasts = catalog.podcasts.length > 0;
   return (
     <div className="nc-learning-workspace video-study-page">
@@ -182,7 +195,7 @@ function MediaCenterPage() {
           </p>
         </TabsContent>
         <TabsContent value="podcasts">
-          <PodcastsTab canPreview={isAdmin} />
+          <PodcastsTab canPreview={isAdmin} subject={subject} topic={topic} />
         </TabsContent>
       </Tabs>
     </div>

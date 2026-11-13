@@ -442,8 +442,15 @@ function PcAcreEditalVerticalizadoPage() {
   const { user } = useAuthStatus();
   const userId = user?.id ?? "guest";
   const search = useSearch({ strict: false }) as { cargo?: string; view?: string };
-  const cargoParam = search.cargo;
-  const digitalView = search.view === "digital";
+  const navigateTop = useNavigate();
+  const [cargoParam, setCargoParam] = React.useState(search.cargo);
+  // O cargo escolhido e o parâmetro inicial (vindo de um link) não devem
+  // continuar visíveis na barra de endereço enquanto o aluno navega.
+  const [digitalView, setDigitalView] = React.useState(search.view === "digital");
+  React.useEffect(() => {
+    if (search.cargo || search.view) void navigateTop({ to: "/dashboard/pc-acre-edital", search: {} });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const workspaceRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const node = workspaceRef.current;
@@ -491,7 +498,6 @@ function PcAcreEditalVerticalizadoPage() {
       window.prompt("Copie o link do edital digital:", url);
     }
   };
-  const navigate = useNavigate();
   const cargo = pcAcVerticalCargo(cargoParam);
   const [clockNow, setClockNow] = React.useState(() => new Date());
   React.useEffect(() => {
@@ -569,7 +575,7 @@ function PcAcreEditalVerticalizadoPage() {
             <Button size="sm" variant="outline" className="border-cyan-300/50 bg-cyan-400/15 text-white hover:bg-cyan-400/25" onClick={() => void shareDigitalEdital()} aria-label="Compartilhar edital digital">
               <Share2 className="mr-2 h-4 w-4" />{shareFeedback || "Compartilhar"}
             </Button>
-            <Button size="sm" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: cargo.id } })}>Abrir checklist e progresso</Button>
+            <Button size="sm" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10" onClick={() => setDigitalView(false)}>Abrir checklist e progresso</Button>
           </div>
         </div>
         <Card className="overflow-hidden border-primary/20">
@@ -595,7 +601,7 @@ function PcAcreEditalVerticalizadoPage() {
         </div>
         <label className="pcac-command-bar__cargo">
           <span>Seu cargo</span>
-          <select value={cargo.id} onChange={(event) => void navigate({ to: "/dashboard/pc-acre-edital", search: { cargo: event.target.value as PcAcVerticalCargoId } })}>
+          <select value={cargo.id} onChange={(event) => setCargoParam(event.target.value)}>
             {pcAcVerticalCargos.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}
           </select>
         </label>

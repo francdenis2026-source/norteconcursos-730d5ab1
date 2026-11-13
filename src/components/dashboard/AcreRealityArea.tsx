@@ -93,7 +93,15 @@ const AXES = [
 
 type AcreAxis = (typeof AXES)[number];
 
-function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGroup[] }) {
+function AcreAxisDetail({
+  axis,
+  groups,
+  onBackToOverview,
+}: {
+  axis: AcreAxis;
+  groups: PcAcTopicGroup[];
+  onBackToOverview: () => void;
+}) {
   const Icon = axis.icon;
   const subtopicCount = groups.reduce((total, group) => total + Math.max(group.subtopics.length, 1), 0);
   const practice = { area: ACRE_DISCIPLINE, subject: ACRE_DISCIPLINE, go: "1" } as never;
@@ -102,9 +110,9 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
     <div className="ak-axis-detail space-y-3 pb-10" style={{ "--ak-tone": axis.tone } as React.CSSProperties} data-axis={axis.id}>
       <header className="ak-hero ak-axis-detail__hero">
         <img src={`/media/hero/${axis.image}.webp`} alt="" aria-hidden="true" decoding="async" />
-        <Link to="/dashboard/disciplinas" search={{ d: ACRE_DISCIPLINE }} className="ak-hero__back">
+        <button type="button" onClick={onBackToOverview} className="ak-hero__back">
           <ArrowLeft aria-hidden="true" size={14} /> Visão geral de Realidade do Acre
-        </Link>
+        </button>
         <div className="ak-hero__copy">
           <small><Icon aria-hidden="true" size={14} /> Área de estudo · PC-AC 2026</small>
           <h1>{axis.title}</h1>
@@ -225,7 +233,15 @@ const fmtChecked = (iso: string) => {
   return `${d}/${m}/${y}`;
 };
 
-export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
+export function AcreRealityArea({
+  axisId,
+  onExit,
+  onAxisChange,
+}: {
+  axisId?: string | undefined;
+  onExit: () => void;
+  onAxisChange: (axisId?: string) => void;
+}) {
   const topics = React.useMemo(() => {
     for (const cargo of pcAcVerticalCargos)
       for (const block of cargo.blocks)
@@ -238,7 +254,13 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
 
   if (selectedAxis) {
     const selectedGroups = groups.filter((group) => selectedAxis.groupTitles.some((title) => title === group.title));
-    return <AcreAxisDetail axis={selectedAxis} groups={selectedGroups} />;
+    return (
+      <AcreAxisDetail
+        axis={selectedAxis}
+        groups={selectedGroups}
+        onBackToOverview={() => onAxisChange(undefined)}
+      />
+    );
   }
 
   const practice = { area: ACRE_DISCIPLINE, subject: ACRE_DISCIPLINE, go: "1" } as never;
@@ -246,9 +268,9 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
     <div className="space-y-3 pb-10">
       <header className="ak-hero" style={{ "--ak-gold": "oklch(0.8 0.16 140)" } as React.CSSProperties}>
         <img src="/media/hero/landing-pcac.webp" alt="" aria-hidden="true" decoding="async" />
-        <Link to="/dashboard/disciplinas" className="ak-hero__back">
+        <button type="button" onClick={onExit} className="ak-hero__back">
           <ArrowLeft aria-hidden="true" size={14} /> Todas as disciplinas
-        </Link>
+        </button>
         <div className="ak-hero__copy">
           <small><Leaf aria-hidden="true" size={14} /> Disciplina · Edital PC-AC 2026</small>
           <h1>Realidade do Acre</h1>
@@ -281,9 +303,9 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
             const items = topics.filter((topic) => axis.match.test(topic));
             return (
               <li key={axis.id}>
-                <Link
-                  to="/dashboard/disciplinas"
-                  search={{ d: ACRE_DISCIPLINE, eixo: axis.id }}
+                <button
+                  type="button"
+                  onClick={() => onAxisChange(axis.id)}
                   className="ak-axis ak-axis--interactive"
                   style={{ "--ak-tone": axis.tone } as React.CSSProperties}
                   aria-label={`Abrir área: ${axis.title}`}
@@ -298,7 +320,7 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
                     <p>{items.join(" ")}</p>
                     <span className="ak-axis__action">Explorar conteúdo <ChevronRight aria-hidden="true" size={13} /></span>
                   </div>
-                </Link>
+                </button>
               </li>
             );
           })}
@@ -329,9 +351,9 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
                   </a>
                 </div>
                 {axis && (
-                  <Link to="/dashboard/disciplinas" search={{ d: ACRE_DISCIPLINE, eixo: axis.id }} className="ak-fresh__axis">
+                  <button type="button" onClick={() => onAxisChange(axis.id)} className="ak-fresh__axis">
                     {axis.title}
-                  </Link>
+                  </button>
                 )}
               </li>
             );

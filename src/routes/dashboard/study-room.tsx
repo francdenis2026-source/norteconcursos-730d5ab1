@@ -325,7 +325,16 @@ function TimerPanel({
 // ───────────────────────── Página ─────────────────────────
 
 function StudyRoomPage() {
-  const sp = Route.useSearch();
+  const liveSp = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // Parâmetros vindos de um link são lidos uma vez (a cópia local nunca
+  // muda) e removidos da barra de endereço; não devem continuar visíveis.
+  const sp = React.useState(liveSp)[0];
+  React.useEffect(() => {
+    if (Object.values(liveSp).some((value) => value !== undefined))
+      void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const subject = sp.subject ?? "";

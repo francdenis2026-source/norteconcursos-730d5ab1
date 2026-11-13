@@ -40,6 +40,7 @@ const GRAV_STYLE: Record<Gravidade, string> = {
 
 function CtbPanelPage() {
   const search = Route.useSearch();
+  const navigate = Route.useNavigate();
   const [tab, setTab] = React.useState<string>(search.tab ?? "infracoes");
   const [q, setQ] = React.useState("");
   const [grav, setGrav] = React.useState<Gravidade | "todas">("todas");
@@ -47,7 +48,11 @@ function CtbPanelPage() {
   React.useEffect(() => {
     if (search.tab) setTab(search.tab);
     setQRes(search.q ?? "");
-  }, [search.tab, search.q]);
+    // O parâmetro inicial (vindo de um link) é lido uma vez e removido da
+    // barra de endereço: não deve continuar visível enquanto o aluno navega.
+    if (search.tab || search.q) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
 
   const infracoes = React.useMemo(
     () =>

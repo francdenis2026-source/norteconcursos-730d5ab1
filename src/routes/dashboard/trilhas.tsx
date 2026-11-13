@@ -305,11 +305,19 @@ function Lesson({
 }
 
 function TracksPage() {
-  const { t, l } = Route.useSearch();
+  const initialSearch = Route.useSearch();
   const { user } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const catalog = useStudyMaterialList(signedIn);
   const navigate = useNavigate({ from: "/dashboard/trilhas" });
+  const [t, setT] = React.useState(initialSearch.t);
+  const [l, setL] = React.useState(initialSearch.l);
+  // Trocar de aula ou de trilha não deve escrever na URL; o parâmetro inicial
+  // (vindo de um link) é lido uma vez e removido da barra de endereço.
+  React.useEffect(() => {
+    if (initialSearch.t || initialSearch.l) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const track: Track = TRACKS.find((x) => x.slug === t) ?? TRACKS[0]!;
   const [done, setDone] = React.useState<string[]>([]);
   React.useEffect(() => setDone(loadDone(track.slug)), [track.slug]);
@@ -318,8 +326,10 @@ function TracksPage() {
     track.lessons.findIndex((x) => x.id === l),
   );
   const lesson = track.lessons[index]!;
-  const go = (i: number) =>
-    void navigate({ search: { t: track.slug, l: track.lessons[i]!.id }, replace: true });
+  const go = (i: number) => {
+    setT(track.slug);
+    setL(track.lessons[i]!.id);
+  };
   const toggle = () => {
     const next = done.includes(lesson.id)
       ? done.filter((x) => x !== lesson.id)
@@ -415,7 +425,10 @@ function TracksPage() {
               key={x.slug}
               size="sm"
               variant={x.slug === track.slug ? "default" : "outline"}
-              onClick={() => void navigate({ search: { t: x.slug }, replace: true })}
+              onClick={() => {
+                setT(x.slug);
+                setL(undefined);
+              }}
             >
               {x.discipline}
             </Button>

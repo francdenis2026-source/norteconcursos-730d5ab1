@@ -130,7 +130,16 @@ const doneLessons = (slug: string) => {
 function DisciplinesPage() {
   const { user, isLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
-  const { d, eixo } = Route.useSearch();
+  const initialSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const [d, setD] = React.useState(initialSearch.d);
+  const [eixo, setEixo] = React.useState(initialSearch.eixo);
+  // Navegar entre disciplinas e áreas não deve escrever na URL; o parâmetro
+  // inicial (vindo de um link) é lido uma vez e removido da barra de endereço.
+  React.useEffect(() => {
+    if (initialSearch.d || initialSearch.eixo) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const { data, isPending } = useStudyMaterialList(signedIn);
   const materials = data ?? [];
   const cards = React.useMemo(() => disciplineCards(materials, TRACKS, PLAYLISTS), [materials]);
@@ -152,11 +161,26 @@ function DisciplinesPage() {
     ? (cards.find((card) => card.name === d) ??
       cards.find((card) => card.name === canonicalSubject(d)))
     : undefined;
-  if (d === ACRE_DISCIPLINE) return <AcreRealityArea axisId={eixo} />;
+  if (d === ACRE_DISCIPLINE)
+    return (
+      <AcreRealityArea
+        axisId={eixo}
+        onExit={() => {
+          setD(undefined);
+          setEixo(undefined);
+        }}
+        onAxisChange={setEixo}
+      />
+    );
   return current ? (
-    <DisciplineDetail key={current.name} card={current} materials={materials} />
+    <DisciplineDetail
+      key={current.name}
+      card={current}
+      materials={materials}
+      onBack={() => setD(undefined)}
+    />
   ) : (
-    <DisciplineIndex cards={cards} loading={isPending && signedIn} unknown={d} />
+    <DisciplineIndex cards={cards} loading={isPending && signedIn} unknown={d} onPick={setD} />
   );
 }
 
@@ -164,10 +188,12 @@ function DisciplineIndex({
   cards,
   loading,
   unknown,
+  onPick,
 }: {
   cards: DisciplineCard[];
   loading: boolean;
   unknown: string | undefined;
+  onPick: (name: string) => void;
 }) {
   const [query, setQuery] = React.useState("");
   const normalized = normalizeLibrarySearch(query);
@@ -259,16 +285,16 @@ function DisciplineIndex({
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {!normalized && (
             <li>
-              <Link
-                to="/dashboard/disciplinas"
-                search={{ d: ACRE_DISCIPLINE }}
-                className="ak-tile"
+              <button
+                type="button"
+                onClick={() => onPick(ACRE_DISCIPLINE)}
+                className="ak-tile w-full text-left"
                 style={{ "--ak-tone": "oklch(0.8 0.16 140)", height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
               >
                 <img src="/media/hero/landing-pcac.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
                 <strong>Realidade do Acre</strong>
                 <span>História, geografia, economia e atualidades</span>
-              </Link>
+              </button>
             </li>
           )}
           {!normalized && (
@@ -320,14 +346,14 @@ function DisciplineIndex({
             return (
               <li key={card.name}>
                 {card.hasContent ? (
-                  <Link
-                    to="/dashboard/disciplinas"
-                    search={{ d: card.name }}
-                    className="discipline-card"
+                  <button
+                    type="button"
+                    onClick={() => onPick(card.name)}
+                    className="discipline-card w-full text-left"
                     data-subject={subjectKey(card.name)}
                   >
                     {body}
-                  </Link>
+                  </button>
                 ) : (
                   <div className="discipline-card" data-subject={subjectKey(card.name)} data-empty="true" aria-disabled="true">
                     {body}
@@ -345,9 +371,11 @@ function DisciplineIndex({
 function DisciplineDetail({
   card,
   materials,
+  onBack,
 }: {
   card: DisciplineCard;
   materials: Parameters<typeof materialsOf>[1];
+  onBack: () => void;
 }) {
   const { user } = useAuthStatus();
   const [practiceTopic, setPracticeTopic] = React.useState("");
@@ -422,9 +450,9 @@ function DisciplineDetail({
           : undefined
       }
     >
-      <Link to="/dashboard/disciplinas" className="discipline-back">
+      <button type="button" onClick={onBack} className="discipline-back">
         <ArrowLeft aria-hidden="true" size={16} /> Todas as disciplinas
-      </Link>
+      </button>
       <PageHero
         image={presentation.image}
         size="sm"

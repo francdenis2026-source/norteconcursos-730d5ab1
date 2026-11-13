@@ -101,11 +101,11 @@ function LibraryIndex() {
   const {
     q: initialQuery,
     back,
-    collection = "laws",
+    collection: initialCollection = "laws",
     guia,
     discipline: initialDiscipline,
   } = Route.useSearch();
-  const lawsOnly = collection === "laws";
+  const navigate = Route.useNavigate();
   const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
   const [discipline, setDiscipline] = useState<string>(
@@ -114,6 +114,16 @@ function LibraryIndex() {
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
   const [law, setLaw] = useState("all");
+  const [collection, setCollection] = useState(initialCollection);
+  // Trocar de coleção (Leis / Demais disciplinas) não deve escrever na URL;
+  // os parâmetros iniciais (vindos de um link) são lidos uma vez e removidos
+  // da barra de endereço.
+  useEffect(() => {
+    if (initialCollection !== "laws" || initialQuery || back || guia || initialDiscipline)
+      void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
+  const lawsOnly = collection === "laws";
   const restoredFilters = useRef(false);
   const filterKey = `library-filters:v3:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}:${initialDiscipline ?? ""}`;
   useEffect(() => {
@@ -402,26 +412,26 @@ function LibraryIndex() {
 
       {!focused && (
         <nav aria-label="Coleções de estudo" className="grid gap-3 sm:grid-cols-3">
-          <Link
-            to="/dashboard/library"
-            search={{ collection: "laws" }}
+          <button
+            type="button"
+            onClick={() => setCollection("laws")}
             aria-current={lawsOnly ? "page" : undefined}
-            className="rounded-xl border bg-card p-4 hover:border-primary"
+            className="w-full rounded-xl border bg-card p-4 text-left hover:border-primary"
           >
             <strong>Leis e Direito</strong>
             <p className="mt-1 text-sm text-muted-foreground">Legislação e fundamentos jurídicos</p>
-          </Link>
-          <Link
-            to="/dashboard/library"
-            search={{ collection: "subjects" }}
+          </button>
+          <button
+            type="button"
+            onClick={() => setCollection("subjects")}
             aria-current={!lawsOnly ? "page" : undefined}
-            className="rounded-xl border bg-card p-4 hover:border-primary"
+            className="w-full rounded-xl border bg-card p-4 text-left hover:border-primary"
           >
             <strong>Demais disciplinas</strong>
             <p className="mt-1 text-sm text-muted-foreground">
               Materiais por matéria para concursos
             </p>
-          </Link>
+          </button>
           <Link
             to="/dashboard/enem"
             search={{ tab: "materiais" }}
