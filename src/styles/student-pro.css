@@ -1,6 +1,7 @@
 /* Área do aluno — paleta única e profissional para todas as telas internas.
-   Superfícies neutras (grafite no escuro, branco no claro), dourado como destaque,
-   contraste AA. Carregado por último; redefine as famílias de tokens antigas. */
+   Superfícies petróleo/navy no escuro (mesmo tom já aprovado em toda a plataforma),
+   branco no claro, dourado como destaque, contraste AA. Carregado por último;
+   redefine as famílias de tokens antigas. */
 .app-shell[data-area="student"]:not(#_):not(#_),
 .app-shell[data-area="student"]:not(#_):not(#_) * {
   --sp-canvas: #f3f5f9;
@@ -84,27 +85,27 @@
 }
 .dark .app-shell[data-area="student"]:not(#_):not(#_),
 .dark .app-shell[data-area="student"]:not(#_):not(#_) * {
-  --sp-canvas: #101318;
-  --sp-surface: #171b22;
-  --sp-soft: #1e232b;
-  --sp-line: #2c333e;
+  --sp-canvas: #0c161c;
+  --sp-surface: #112028;
+  --sp-soft: #152934;
+  --sp-line: #1f3b4b;
   --sp-ink: #eef1f5;
   --sp-muted: #a7b0bd;
   --sp-gold: #e3b14b;
   --sp-gold-soft: #2e2817;
 
-  /* No escuro, os antigos tons petróleo viram grafite neutro. */
-  --nc-student-petrol-950: #101318 !important;
-  --nc-student-petrol-900: #171b22 !important;
-  --nc-student-petrol-800: #1e232b !important;
-  --nc-student-petrol-700: #2c333e !important;
-  --nc-shell-petrol-950: #101318 !important;
-  --nc-shell-petrol-900: #171b22 !important;
-  --nc-shell-petrol-800: #1e232b !important;
-  --nc-student-cyan-soft: #1e232b !important;
-  --ink: #101318 !important;
-  --ink-deep: #0d1015 !important;
-  --ink-raised: #171b22 !important;
+  /* No escuro, mantém o tom petróleo/navy já aprovado (mesma luminosidade, hue ~202°). */
+  --nc-student-petrol-950: #0c161c !important;
+  --nc-student-petrol-900: #112028 !important;
+  --nc-student-petrol-800: #152934 !important;
+  --nc-student-petrol-700: #1f3b4b !important;
+  --nc-shell-petrol-950: #0c161c !important;
+  --nc-shell-petrol-900: #112028 !important;
+  --nc-shell-petrol-800: #152934 !important;
+  --nc-student-cyan-soft: #152934 !important;
+  --ink: #0c161c !important;
+  --ink-deep: #0a1318 !important;
+  --ink-raised: #112028 !important;
 }
 
 .app-shell[data-area="student"]:not(#_):not(#_),
@@ -230,12 +231,12 @@
   color: var(--sp-ink) !important;
 }
 
-/* Faixas de identificação das áreas internas no escuro: grafite, sem azul. */
+/* Faixas de identificação das áreas internas no escuro: mesmo petróleo/navy do resto do painel. */
 .dark
   .app-shell[data-area="student"]:not(#_):not(#_)
   .workspace-banner:not(.student-hub__masthead) {
   border-color: var(--sp-line) !important;
-  background: linear-gradient(120deg, #171b22, #1e232b) !important;
+  background: linear-gradient(120deg, #112028, #152934) !important;
 }
 
 /* ---------- Tipografia: um só tipo de letra nos títulos das telas internas ---------- */
