@@ -5,7 +5,7 @@
 - Material: `study_materials.ufac-2026-direito-penal-i-aulas-9-14`
 - ID: `850c316d-0878-43d2-b75d-ebbd75c2b005`
 - Estado: **`active`** — liberado para alunos autenticados.
-- Apostila original: 29 páginas; texto integral preservado em `body_md` (77.910 caracteres após as correções editoriais).
+- Apostila original: 29 páginas; texto integral preservado em `body_md` (78.069 caracteres após as correções editoriais).
 - Flashcards: **31**, disponíveis na biblioteca e salváveis no baralho pessoal.
 - Fixação autoral: **12 itens Certo/Errado**, com `practice_review` validado para a bateria pontuada e registro de respostas.
 - Questões das avaliações acadêmicas: **21 ativas** em `board_exam_questions` (N1: 9; N2: 12), com explicações e bases legais.
@@ -51,12 +51,13 @@ As marcações manuscritas dos PDFs foram tratadas como indicação visual, não
 - Código Penal — Planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
 - Código de Processo Penal — Planalto: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm
 - Código de Trânsito Brasileiro — Planalto: https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm
-- STF — Tema 169: https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=169
+- STF — Tema 169: https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=2684368&numeroProcesso=600817&numeroTema=169
 - STJ — Súmula 501: https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=%40NUM%3D%22501%22&ordenacao=-%40NUM&p=true
-- STJ — Tema 934: https://scon.stj.jus.br/SCON/recrep/toc.jsp?LREF=REPETITIVOS&tema=%27934%27
+- STJ — Tema 934: https://processo.stj.jus.br/SCON/GetPDFINFJ?edicao=0572
 - STJ — Súmula 567: https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%27567%27.num.
+- STJ — Informativo 886/2026: https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270886%27.cod.
 - STF — Súmula 610: https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=610
-- STF — ADPF 779: https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=511556&ori=1.
+- STF — ADPF 779: https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=511556
 
 ## Classificação da origem
 
