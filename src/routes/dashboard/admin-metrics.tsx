@@ -78,6 +78,18 @@ const lastDays = (n: number) =>
 /** Auto-atualização silenciosa da visão ao vivo, sem piscar a tela com um spinner. */
 const LIVE_REFRESH_MS = 20_000;
 
+/** Data e hora no fuso do Acre (America/Rio_Branco), ex.: 13/11/2026 18:42. */
+function acreDateTime(iso: string): string {
+  return new Intl.DateTimeFormat("pt-BR", {
+    timeZone: "America/Rio_Branco",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(iso));
+}
+
 function timeAgo(iso: string): string {
   const ms = Date.now() - new Date(iso).getTime();
   const min = Math.floor(ms / 60_000);
@@ -149,7 +161,8 @@ function AdminMetricsPage() {
     const signups: ActivityEvent[] = raw.profiles.map((p) => ({
       key: `signup-${p.id}`,
       at: p.created_at,
-      label: `${p.full_name || p.email || "Novo aluno"} se cadastrou`,
+      // Sem nome nem e-mail no perfil, mostra um trecho do identificador para distinguir os cadastros.
+      label: `${p.full_name || p.email || `Cadastro sem nome (ID ${p.id.slice(0, 8)})`} se cadastrou`,
       icon: UserPlus,
     }));
     const exams: ActivityEvent[] = raw.results.map((r, i) => ({
@@ -284,7 +297,10 @@ function AdminMetricsPage() {
                 <li key={ev.key} className="flex items-center gap-3">
                   <ev.icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
                   <span className="flex-1 text-foreground">{ev.label}</span>
-                  <span className="shrink-0 text-xs text-muted-foreground">{timeAgo(ev.at)}</span>
+                  <span className="shrink-0 text-right text-xs text-muted-foreground">
+                    <span className="block font-semibold text-foreground/80">{acreDateTime(ev.at)}</span>
+                    {timeAgo(ev.at)}
+                  </span>
                 </li>
               ))}
             </ul>
