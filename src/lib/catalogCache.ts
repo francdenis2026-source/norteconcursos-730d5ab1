@@ -69,3 +69,12 @@ export async function writeCatalogCache<T>(userId: string, value: T): Promise<vo
 export async function clearCatalogCache(): Promise<void> {
   await withStore("readwrite", (store) => store.clear());
 }
+
+/** Lê do cache do aparelho; se não houver (ou estiver vencido), carrega e guarda para a próxima visita. */
+export async function withCatalogCache<T>(key: string, load: () => Promise<T>): Promise<T> {
+  const cached = await readCatalogCache<T>(key);
+  if (cached !== undefined) return cached;
+  const fresh = await load();
+  void writeCatalogCache(key, fresh);
+  return fresh;
+}

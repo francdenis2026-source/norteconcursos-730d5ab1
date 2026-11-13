@@ -15,6 +15,7 @@ import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { withCatalogCache } from "@/lib/catalogCache";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
 import { canonicalBoard, canonicalCareerName, canonicalSubject } from "@/lib/subjects";
@@ -146,7 +147,7 @@ function PerfilBancasPage() {
     queryKey: ["perfil-bancas"],
     enabled: real,
     staleTime: 10 * 60_000,
-    queryFn: loadQuestions,
+    queryFn: () => withCatalogCache(`perfil-bancas:${user?.id ?? ""}`, loadQuestions),
   });
   const [boardChoice, setBoardChoice] = React.useState<string | null>(null);
   const [orgChoice, setOrgChoice] = React.useState<string>("");

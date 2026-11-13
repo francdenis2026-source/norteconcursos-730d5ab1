@@ -4,6 +4,7 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
+import { withCatalogCache } from "@/lib/catalogCache";
 import { canonicalBoard, canonicalCareerName, canonicalSubject } from "@/lib/subjects";
 import { unifiedCareer, type BancaQuestion } from "@/lib/bancaProfile";
 import { IdecanIntelligenceWorkspace } from "@/components/dashboard/IdecanIntelligenceWorkspace";
@@ -70,7 +71,7 @@ async function loadIdecanQuestions(): Promise<BancaQuestion[]> {
 function InteligenciaIdecan() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
-  const query = useQuery({ queryKey: ["inteligencia-idecan"], enabled: real, staleTime: 10 * 60_000, queryFn: loadIdecanQuestions });
+  const query = useQuery({ queryKey: ["inteligencia-idecan"], enabled: real, staleTime: 10 * 60_000, queryFn: () => withCatalogCache(`idecan:${user?.id ?? ""}`, loadIdecanQuestions) });
   if (!authLoading && !real) return <LockedState image="field-map" title="Inteligência IDECAN" description="Entre na sua conta para ver a análise real das provas da IDECAN no acervo." />;
   return <IdecanIntelligenceWorkspace rows={query.data ?? []} loading={authLoading || query.isLoading} error={query.isError} onRetry={() => void query.refetch()} />;
 }
