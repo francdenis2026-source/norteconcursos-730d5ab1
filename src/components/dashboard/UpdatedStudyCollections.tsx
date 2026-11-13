@@ -4,14 +4,23 @@ import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 import { useStudyGuideProgress } from "@/lib/useStudyGuideProgress";
 import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
 import { pcAcProgramGapLessons } from "@/data/pcAcProgramGapLessons";
+import { pcAcCoreStudyCourses } from "@/data/pcAcCoreStudyCourses";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import {
   Archive,
+  BookOpen,
+  Building2,
+  Calculator,
   CheckCircle2,
+  Cpu,
   ClipboardList,
   ExternalLink,
   Landmark,
+  MapPin,
+  Scale,
   Search,
+  ShieldCheck,
+  Sigma,
   ShieldAlert,
   X,
   type LucideIcon,
@@ -52,12 +61,22 @@ const BASE_COURSES: Course[] = [
     {title:"04 · Administração direta, indireta e descentralização",body:["Administração direta abrange órgãos integrantes das pessoas políticas; administração indireta reúne entidades dotadas de personalidade jurídica própria, como autarquias, fundações públicas, empresas públicas e sociedades de economia mista, segundo a legislação aplicável.","Desconcentração distribui competências internamente em uma mesma pessoa jurídica, enquanto descentralização transfere a execução ou titularidade de atividades conforme os modelos legalmente admitidos. Delegar tarefas a unidades internas não cria automaticamente nova pessoa jurídica."],example:"Criar unidades regionais dentro do mesmo órgão exemplifica desconcentração; instituir autarquia por lei integra a administração indireta.",question:"Criar uma unidade interna sem personalidade jurídica é descentralização?",answer:"Em regra, é desconcentração administrativa.",source:OFFICIAL.edital}
   ]}
 ];
-const COURSES: Course[] = BASE_COURSES.map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? []), ...(pcAcProgramGapLessons[course.id] ?? [])]}));
+const COURSES: Course[] = [...BASE_COURSES, ...pcAcCoreStudyCourses].map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? []), ...(pcAcProgramGapLessons[course.id] ?? [])]}));
 
 const COURSE_ICONS: Record<string, LucideIcon> = {
   arquivologia: Archive,
   "administracao-geral": ClipboardList,
   "administracao-publica": Landmark,
+  "raciocinio-logico": Sigma,
+  informatica: Cpu,
+  "realidade-acre": MapPin,
+  "direito-constitucional": Landmark,
+  "direito-penal-processual": Scale,
+  "direito-administrativo": Building2,
+  "legislacao-institucional": ShieldCheck,
+  "contabilidade-analise-financeira": Calculator,
+  estatistica: Sigma,
+  "ti-seguranca": Cpu,
 };
 
 export function UpdatedStudyCollections({initialCourseId,storageScope="public",materials=[]}: {initialCourseId?: string;storageScope?: string;materials?: StudyMaterialSummary[]}) {
