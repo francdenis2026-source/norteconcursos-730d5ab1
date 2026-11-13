@@ -22,6 +22,8 @@ import { INVESTIGATOR_DISCIPLINE_PESO } from "@/data/pcAcreIdecanRadar";
 import { PCAC_ACTIVITY_LABEL, PCAC_PHASE_LABEL, buildPcAcFinalDays, buildPcAcMasterPlan, pcAcDaysBetween, pcAcLastStudyDate, type PcAcActivityType, type PcAcPlanDay, type PcAcPlanWeek } from "@/lib/pcAcreMasterPlan";
 import { platformDate } from "@/lib/platformClock";
 import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
+import { useMediaCatalog, type MediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
 import "@/styles/pcac-schedule.css";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
@@ -38,11 +40,17 @@ const MATERIAL_SHORTCUTS = {
   redacao: { label: "Redação", icon: PenLine },
 } as const;
 type MaterialShortcutType = keyof typeof MATERIAL_SHORTCUTS;
+type MaterialShortcutIcon = (typeof MATERIAL_SHORTCUTS)[MaterialShortcutType]["icon"];
 
 /** Simulado e redação entram no plano sem disciplina/tópico (são blocos de revisão geral), então
  * levam direto para a área correspondente; os demais tipos exigem disciplina + tópico para abrir
- * já filtrados no assunto certo. */
-function materialShortcut(activity: { type: PcAcActivityType; subject?: string; topic?: string; detail?: string }) {
+ * já filtrados no assunto certo. Para vídeo, só devolve um link quando existe de fato uma
+ * videoaula para essa matéria+assunto — sem catálogo compatível, a biblioteca de vídeos cairia
+ * numa disciplina qualquer (ver VideoWorkspace), então aqui vira "sem material" em vez de link. */
+function materialShortcut(
+  activity: { type: PcAcActivityType; subject?: string; topic?: string; detail?: string },
+  catalog: MediaCatalog,
+): ({ label: string; icon: MaterialShortcutIcon; href: string | null; unavailable?: boolean }) | null {
   const type = activity.type as MaterialShortcutType;
   if (!(type in MATERIAL_SHORTCUTS)) return null;
   const subject = activity.subject?.trim();
@@ -57,6 +65,10 @@ function materialShortcut(activity: { type: PcAcActivityType; subject?: string; 
   }
 
   if (!subject || !topic) return null;
+  if (type === "video") {
+    const hasVideo = relatedVideos(catalog, subject, topic, 1).length > 0;
+    if (!hasVideo) return { ...MATERIAL_SHORTCUTS.video, href: null, unavailable: true };
+  }
   const q = encodeURIComponent(topic);
   const discipline = encodeURIComponent(subject);
   const back = encodeURIComponent("/dashboard/pc-acre-edital#pcac-cronograma");
@@ -69,9 +81,21 @@ function materialShortcut(activity: { type: PcAcActivityType; subject?: string; 
 }
 
 function MaterialShortcut({ activity }: { activity: { type: PcAcActivityType; subject?: string; topic?: string; detail?: string } }) {
-  const shortcut = materialShortcut(activity);
+  const { catalog } = useMediaCatalog();
+  const shortcut = materialShortcut(activity, catalog);
   if (!shortcut) return null;
   const Icon = shortcut.icon;
+  if (!shortcut.href)
+    return (
+      <span
+        className="pcac-material-shortcut pcac-material-shortcut--unavailable"
+        aria-label={`${shortcut.label} indisponível: nenhum material cadastrado ainda`}
+        title={`Ainda não há ${shortcut.label.toLocaleLowerCase("pt-BR")} cadastrada para este assunto`}
+      >
+        <Icon aria-hidden="true" className="pcac-material-shortcut__icon" />
+        <span>{shortcut.label} indisponível</span>
+      </span>
+    );
   return (
     <a
       href={shortcut.href}
@@ -399,6 +423,7 @@ export function PcAcCronogramaCard({
   cargo: (typeof pcAcVerticalCargos)[number];
   userId: string;
 }) {
+  const { catalog } = useMediaCatalog();
   const [cfg, setCfg] = React.useState<PcAcStudyPlanConfig>(DEFAULT_PCAC_STUDY_CONFIG);
   const [loadedConfigKey, setLoadedConfigKey] = React.useState("");
   const [mode, setMode] = React.useState(getActiveTheme);
@@ -663,10 +688,10 @@ export function PcAcCronogramaCard({
             <List density="compact" hasDividers>
               {todayPlanDay.activities.map((activity, index) => {
                 const Icon = ACTIVITY_ICON[activity.type];
-                const shortcut = materialShortcut(activity);
+                const shortcut = materialShortcut(activity, catalog);
                 const badge = (
                   <AstryxBadge
-                    variant={ACTIVITY_BADGE_VARIANT[activity.type]}
+                    variant={shortcut?.unavailable ? "neutral" : ACTIVITY_BADGE_VARIANT[activity.type]}
                     label={activity.type === "rotina" ? "Rotina" : activity.type === "pausa" ? "Pausa" : PCAC_ACTIVITY_LABEL[activity.type]}
                   />
                 );
@@ -681,16 +706,28 @@ export function PcAcCronogramaCard({
                       </span>
                     }
                     description={activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail}
-                    endContent={shortcut ? (
-                      <a
-                        href={shortcut.href}
-                        className="pcac-today-badge-link"
-                        aria-label={`Abrir ${shortcut.label.toLocaleLowerCase("pt-BR")}${activity.subject ? `: ${activity.subject}` : ""}`}
-                        title={`Abrir ${shortcut.label}`}
-                      >
-                        {badge}
-                      </a>
-                    ) : badge}
+                    endContent={
+                      shortcut?.href ? (
+                        <a
+                          href={shortcut.href}
+                          className="pcac-today-badge-link"
+                          aria-label={`Abrir ${shortcut.label.toLocaleLowerCase("pt-BR")}${activity.subject ? `: ${activity.subject}` : ""}`}
+                          title={`Abrir ${shortcut.label}`}
+                        >
+                          {badge}
+                        </a>
+                      ) : shortcut?.unavailable ? (
+                        <span
+                          className="pcac-today-badge-link pcac-today-badge-link--unavailable"
+                          aria-label={`${shortcut.label} indisponível: nenhum material cadastrado ainda`}
+                          title={`Ainda não há ${shortcut.label.toLocaleLowerCase("pt-BR")} cadastrada para este assunto`}
+                        >
+                          {badge}
+                        </span>
+                      ) : (
+                        badge
+                      )
+                    }
                   />
                 );
               })}
@@ -1105,7 +1142,7 @@ export function PcAcCronogramaCard({
                             </p>
                             {activity.topic && <p className="pcac-day-timeline__topic">{activity.topic}</p>}
                             <p className="pcac-day-timeline__detail">{activity.detail}</p>
-                            {isStudy && (resource || materialShortcut(activity)) && (
+                            {isStudy && (resource || materialShortcut(activity, catalog)) && (
                               <p className="pcac-day-timeline__actions">
                                 <MaterialShortcut activity={activity} />
                                 {resource && <a href={pcAcStudyResourceUrl(resource.courseId)}>Abrir aulas</a>}
