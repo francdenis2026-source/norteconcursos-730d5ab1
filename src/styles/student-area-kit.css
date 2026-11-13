@@ -474,3 +474,6 @@
 .acre-radar__src { display: flex; flex-wrap: wrap; gap: .3rem .8rem; }
 .acre-radar__src a { display: inline-flex; align-items: center; gap: .25rem; color: var(--rd); font-size: .7rem; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 .acre-radar__note { margin: 0; color: var(--muted-foreground); font-size: .68rem; }
+
+.ak-video__more { margin: 0; color: var(--muted-foreground); font-size: .74rem; }
+.ak-video__more a { color: #c2527c; font-weight: 800; text-decoration: underline; }

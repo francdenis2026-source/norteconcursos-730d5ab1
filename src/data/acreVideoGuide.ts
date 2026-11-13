@@ -54,7 +54,7 @@ export const ACRE_VIDEO_GUIDE: Record<string, AcreVideoGuide> = {
     ],
   },
   politica: {
-    topics: [],
+    topics: ["Constituição do Estado do Acre"],
     searches: [
       { label: "Constituição do Estado do Acre", query: "Constituição do Estado do Acre aula concurso" },
       { label: "Organização política do Acre", query: "organização política do Acre Poderes aula" },
@@ -69,7 +69,7 @@ export const ACRE_VIDEO_GUIDE: Record<string, AcreVideoGuide> = {
     ],
   },
   atualidades: {
-    topics: [],
+    topics: ["Questões e revisão de História e Geografia do Acre"],
     searches: [
       { label: "Atualidades do Acre", query: "atualidades do Acre concurso" },
       { label: "Notícias do Acre", query: "notícias do Acre esta semana" },

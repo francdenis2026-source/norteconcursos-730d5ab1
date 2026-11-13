@@ -12,7 +12,8 @@ import {
 export function AcreVideoPanel({ axisId, title = "Vídeos desta área" }: { axisId: string; title?: string }) {
   const guide = ACRE_VIDEO_GUIDE[axisId];
   if (!guide) return null;
-  const videos = acreVideosFor(axisId);
+  const all = acreVideosFor(axisId);
+  const videos = all.slice(0, 6);
   const topic = acreVideoLibraryTopic(axisId);
   return (
     <section className="ak-video" aria-labelledby={`acre-video-${axisId}`}>
@@ -46,6 +47,11 @@ export function AcreVideoPanel({ axisId, title = "Vídeos desta área" }: { axis
         </ul>
       ) : (
         <p className="ak-video__empty">Ainda não há aulas desta área na videoteca. Use as buscas abaixo.</p>
+      )}
+      {all.length > videos.length && topic && (
+        <p className="ak-video__more">
+          Mostrando {videos.length} de {all.length} aulas. <Link to="/dashboard/media" search={{ tab: "assuntos", subject: "Realidade do Acre", topic }}>Ver todas na videoteca</Link>
+        </p>
       )}
       <div className="ak-video__searches" aria-label="Buscar no YouTube">
         <span><Search aria-hidden="true" size={13} /> Buscar no YouTube</span>
