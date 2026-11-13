@@ -33,7 +33,7 @@ const PALETTES: Record<LayerId, string[]> = {
   dev: ["#2FA37A", "#E0813B", "#8E7CD8", "#D9657F", "#3E8FD1"],
 };
 
-const SEATS = new Set(ACRE_MICROREGIONS.map((region) => region.name));
+const SEATS = new Set<string>(ACRE_MICROREGIONS.map((region) => region.name));
 
 type RegionInfo = { micro: string; meso: string; dev: string };
 const INFO: Record<string, RegionInfo> = {};
