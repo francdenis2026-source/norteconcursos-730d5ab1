@@ -199,10 +199,20 @@ function DisciplineIndex({
         </div>
       </PageHero>
       <section className="rounded-xl border border-emerald-600/30 bg-emerald-600/5 p-4" aria-labelledby="study-guides-title">
-        <h2 id="study-guides-title" className="text-sm font-extrabold text-foreground">Guias revisados para a PC-AC e outras carreiras</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Aulas originais com fontes institucionais, exercícios de revisão e marcação de progresso. A aplicabilidade depende do edital de cada cargo.</p>
+        <h2 id="study-guides-title" className="text-sm font-extrabold text-foreground">Aulas por disciplina · PC-AC 2026</h2>
+        <p className="mt-1 text-xs text-muted-foreground">Abra diretamente os módulos autorais, exemplos e perguntas de revisão. Os conteúdos complementares estão identificados; confira sempre a aderência ao cargo.</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {[
+            {id:"raciocinio-logico",label:"Raciocínio Lógico"},
+            {id:"informatica",label:"Noções de Informática"},
+            {id:"realidade-acre",label:"Realidade do Acre"},
+            {id:"direito-constitucional",label:"Direito Constitucional"},
+            {id:"direito-penal-processual",label:"Direito Penal e Processual Penal"},
+            {id:"direito-administrativo",label:"Direito Administrativo"},
+            {id:"legislacao-institucional",label:"Legislação Institucional"},
+            {id:"contabilidade-analise-financeira",label:"Contabilidade e Análise Financeira"},
+            {id:"estatistica",label:"Estatística"},
+            {id:"ti-seguranca",label:"TI e Segurança da Informação"},
             {id:"arquivologia",label:"Arquivologia · Investigador e Papiloscopista"},
             {id:"administracao-geral",label:"Noções de Administração · Investigador"},
             {id:"administracao-publica",label:"Evolução da Administração Pública · Complementar"},
