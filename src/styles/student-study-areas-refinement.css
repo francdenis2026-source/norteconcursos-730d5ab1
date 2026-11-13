@@ -40,7 +40,11 @@
 .app-shell[data-area="student"] .ctb-workspace [data-slot="card"]:nth-child(3n + 2) { border-top: 2px solid var(--area-amber); }
 .app-shell[data-area="student"] .ctb-workspace [data-slot="card"]:nth-child(3n) { border-top: 2px solid var(--area-blue); }
 .app-shell[data-area="student"] .video-study-page,
-.app-shell[data-area="student"] .nc-learning-workspace.video-study-page { width: 100%; max-width: 1480px; margin-inline: auto; }
+.app-shell[data-area="student"] .nc-learning-workspace.video-study-page { width: 100%; max-width: 1760px; margin-inline: auto; }
+/* A biblioteca de videoaulas (3 colunas: disciplinas, player, conteúdos) se beneficia de mais
+   largura do que o teto padrão de 1440px do miolo da página; sem isto sobrava bastante espaço
+   lateral em telas largas mesmo com o próprio .video-study-page liberado para 1760px. */
+.app-content__inner:has(> .video-study-page) { max-width: 1760px; }
 .app-shell[data-area="student"] .video-study-page__header { border-top: 2px solid var(--area-rose, #df91b1); }
 .app-shell[data-area="student"] .video-study-page__tabs [role="tab"][data-state="active"] { background: var(--area-cyan, #5edbe5); color: #10252b; }
 @media (max-width: 700px) {

@@ -670,6 +670,28 @@ function StudyCoachPage() {
             { label: "Gerenciar concurso e cargo", to: "/dashboard/my-contest" },
           ]}
         />
+        <section aria-label="Continue estudando" className="nc-plan-shortcuts">
+          <Link to="/dashboard/cronograma">
+            <CalendarDays aria-hidden="true" />
+            <span>Cronograma da semana<small>Organize seus horários de estudo por dia</small></span>
+            <ArrowRight aria-hidden="true" />
+          </Link>
+          <Link to="/dashboard/question-trainer">
+            <Target aria-hidden="true" />
+            <span>Treinador de questões<small>Pratique com correção imediata</small></span>
+            <ArrowRight aria-hidden="true" />
+          </Link>
+          <Link to="/dashboard/performance">
+            <Gauge aria-hidden="true" />
+            <span>Painel de desempenho<small>Veja acertos, erros e evolução</small></span>
+            <ArrowRight aria-hidden="true" />
+          </Link>
+          <Link to="/dashboard/pc-acre-edital">
+            <BookOpenCheck aria-hidden="true" />
+            <span>Edital verticalizado<small>Conteúdo e progresso por disciplina</small></span>
+            <ArrowRight aria-hidden="true" />
+          </Link>
+        </section>
       </div>
     );
   }
