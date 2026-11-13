@@ -33,7 +33,7 @@ export function HomeDailyChallenge() {
     <section id="desafio-diario-home" className="hd" aria-labelledby="hd-title">
       <div className="hd__inner">
         <div className="hd__media">
-          <img src="/media/hero/study-desk.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <img src="/media/photos/desafio-gabarito.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="hd__clock" aria-label={`Novas questões em ${countdown}`}>
             <Clock3 aria-hidden="true" />
             <span>

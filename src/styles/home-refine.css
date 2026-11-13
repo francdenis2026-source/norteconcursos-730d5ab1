@@ -215,8 +215,9 @@ html body .home.hr-canvas .desktop-homepage :is(.sx-card, .sx-exam, .home-rankin
 }
 @media (min-width: 1024px) {
   /* A foto turva atrás do bloco "Treino com cara de prova" saiu: painel limpo, filete dourado no topo. */
-  html body .home.hr-canvas .hp-promo__art,
   html body .home.hr-canvas .hp-promo__inner::before { display: none !important; }
+  /* Foto real de sala de prova como coluna própria, nítida e sem véu. */
+  html body .home.hr-canvas .hp-promo__art { display: none !important; }
   html body .home.hr-canvas .hp-promo__inner { border-top: 2px solid rgb(227 177 75 / 0.55) !important; }
   html body .home.hr-canvas .hd__copy > * { max-width: 560px; }
 }
@@ -233,4 +234,21 @@ html body .home.hr-canvas > .desktop-homepage .home-plan { box-shadow: none !imp
 html body .home.hr-canvas > .desktop-homepage .home-plan--featured {
   animation: none !important;
   box-shadow: 0 0 0 1px rgb(227 177 75 / 0.55) !important;
+}
+
+@media (min-width: 1280px) {
+  html body .home.hr-canvas .hp-promo__inner { grid-template-columns: 300px minmax(0, 1fr) minmax(0, 1fr) !important; align-items: stretch !important; }
+  html body .home.hr-canvas .hp-promo__art {
+    display: block !important;
+    position: static !important;
+    z-index: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 240px;
+    transform: none !important;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: 60% 50%;
+  }
+  html body .home.hr-canvas .hp-promo__inner:hover .hp-promo__art { transform: none !important; }
 }
