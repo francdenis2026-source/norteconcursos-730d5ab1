@@ -35,25 +35,36 @@ const MATERIAL_SHORTCUTS = {
   video: { label: "Vídeo", icon: Video },
   questoes: { label: "Questões", icon: ListChecks },
   simulado: { label: "Simulado", icon: Trophy },
+  redacao: { label: "Redação", icon: PenLine },
 } as const;
 type MaterialShortcutType = keyof typeof MATERIAL_SHORTCUTS;
 
+/** Simulado e redação entram no plano sem disciplina/tópico (são blocos de revisão geral), então
+ * levam direto para a área correspondente; os demais tipos exigem disciplina + tópico para abrir
+ * já filtrados no assunto certo. */
 function materialShortcut(activity: { type: PcAcActivityType; subject?: string; topic?: string; detail?: string }) {
+  const type = activity.type as MaterialShortcutType;
+  if (!(type in MATERIAL_SHORTCUTS)) return null;
   const subject = activity.subject?.trim();
   const topic = activity.topic?.trim();
+
+  if (type === "redacao") return { ...MATERIAL_SHORTCUTS.redacao, href: "/dashboard/essays" };
+  if (type === "simulado") {
+    const href = subject
+      ? `/dashboard/mock-exams?studySubject=${encodeURIComponent(subject)}${topic ? `&materialTopic=${encodeURIComponent(topic)}` : ""}`
+      : "/dashboard/mock-exams";
+    return { ...MATERIAL_SHORTCUTS.simulado, href };
+  }
+
   if (!subject || !topic) return null;
   const q = encodeURIComponent(topic);
   const discipline = encodeURIComponent(subject);
   const back = encodeURIComponent("/dashboard/pc-acre-edital#pcac-cronograma");
-  const type = activity.type as MaterialShortcutType;
-  if (!(type in MATERIAL_SHORTCUTS)) return null;
   const href = type === "questoes"
     ? `/dashboard/question-trainer?subject=${discipline}&topic=${q}&back=${back}`
-    : type === "simulado"
-      ? `/dashboard/mock-exams?studySubject=${discipline}&materialTopic=${q}`
-      : type === "video"
-        ? `/dashboard/media?tab=assuntos&subject=${discipline}&topic=${q}`
-        : `/dashboard/library?collection=subjects&discipline=${discipline}&q=${q}&back=${back}`;
+    : type === "video"
+      ? `/dashboard/media?tab=assuntos&subject=${discipline}&topic=${q}`
+      : `/dashboard/library?collection=subjects&discipline=${discipline}&q=${q}&back=${back}`;
   return { ...MATERIAL_SHORTCUTS[type], href };
 }
 
@@ -652,6 +663,13 @@ export function PcAcCronogramaCard({
             <List density="compact" hasDividers>
               {todayPlanDay.activities.map((activity, index) => {
                 const Icon = ACTIVITY_ICON[activity.type];
+                const shortcut = materialShortcut(activity);
+                const badge = (
+                  <AstryxBadge
+                    variant={ACTIVITY_BADGE_VARIANT[activity.type]}
+                    label={activity.type === "rotina" ? "Rotina" : activity.type === "pausa" ? "Pausa" : PCAC_ACTIVITY_LABEL[activity.type]}
+                  />
+                );
                 return (
                   <Item
                     key={index}
@@ -663,7 +681,16 @@ export function PcAcCronogramaCard({
                       </span>
                     }
                     description={activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail}
-                    endContent={<AstryxBadge variant={ACTIVITY_BADGE_VARIANT[activity.type]} label={activity.type === "rotina" ? "Rotina" : activity.type === "pausa" ? "Pausa" : PCAC_ACTIVITY_LABEL[activity.type]} />}
+                    endContent={shortcut ? (
+                      <a
+                        href={shortcut.href}
+                        className="pcac-today-badge-link"
+                        aria-label={`Abrir ${shortcut.label.toLocaleLowerCase("pt-BR")}${activity.subject ? `: ${activity.subject}` : ""}`}
+                        title={`Abrir ${shortcut.label}`}
+                      >
+                        {badge}
+                      </a>
+                    ) : badge}
                   />
                 );
               })}
