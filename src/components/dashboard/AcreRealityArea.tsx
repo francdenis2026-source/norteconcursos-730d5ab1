@@ -20,6 +20,8 @@ import { AcreGeographyStudy } from "@/components/dashboard/AcreGeographyStudy";
 import { AcreVideoPanel } from "@/components/dashboard/AcreVideoPanel";
 import { AcreTimeline } from "@/components/dashboard/AcreTimeline";
 import { AcreStrategicFacts } from "@/components/dashboard/AcreStrategicFacts";
+import { AcreResexMap } from "@/components/dashboard/AcreResexMap";
+import { AcreIndigenousStudy } from "@/components/dashboard/AcreIndigenousStudy";
 import { pcAcVerticalTopicGroups, type PcAcTopicGroup } from "@/lib/pcAcreTopicStructure";
 import { ACRE_CONTENT_CHECKED_ON, ACRE_CURRENT_AFFAIRS, ACRE_STUDY_CONTENT } from "@/data/acreStudyContent";
 import "@/styles/student-area-kit.css";
@@ -118,6 +120,8 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
         </nav>
       </header>
 
+      {axis.id === "cultura" && <AcreIndigenousStudy />}
+      {axis.id === "cultura" && <AcreResexMap />}
       {axis.id === "historia" && <AcreTimeline initial="history" />}
       {axis.id === "historia" && <AcreStrategicFacts groups={["questao", "imprensa"]} />}
       {axis.id === "politica" && <AcreStrategicFacts groups={["poder"]} />}

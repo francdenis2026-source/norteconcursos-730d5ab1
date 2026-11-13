@@ -182,8 +182,8 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       points: [
         "Resex é uma unidade de conservação de uso sustentável: o território é público e o uso é concedido às populações extrativistas tradicionais (SNUC, Lei nº 9.985/2000).",
         "O Acre tem cinco Resex federais: Chico Mendes (Decreto nº 99.144, de 12/3/1990), Alto Juruá (criada em 23/1/1990), Alto Tarauacá (2000), Cazumbá-Iracema (decreto de 19/9/2002, em Sena Madureira e Manoel Urbano) e Riozinho da Liberdade (decreto de 17/2/2005).",
-        "A Chico Mendes, com cerca de 970.570 hectares no decreto, é a maior do Acre e abrange Xapuri, Rio Branco, Brasiléia e Assis Brasil.",
-        "A Riozinho da Liberdade abrange Cruzeiro do Sul, Marechal Thaumaturgo, Porto Walter e Tarauacá, no Acre, e Ipixuna, no Amazonas.",
+        "A Chico Mendes, com 970.570 hectares no decreto (931.452 ha por geoprocessamento, segundo o CNUC), é a maior do Acre; o decreto cita Xapuri, Rio Branco, Brasiléia e Assis Brasil, e o CNUC hoje lista sete municípios.",
+        "A Riozinho da Liberdade abrange, no Acre, Cruzeiro do Sul, Marechal Thaumaturgo, Porto Walter e Tarauacá.",
       ],
       source: { label: "Planalto — Decreto nº 99.144/1990 (Resex Chico Mendes)", url: "https://planalto.gov.br/ccivil_03/decreto/1990-1994/D99144.htm" },
       alternatives: [{ label: "Câmara — Decreto de 17/2/2005 (Riozinho da Liberdade)", url: "https://www2.camara.leg.br/legin/fed/decret_sn/2005/decreto-35342-17-fevereiro-2005-535739-publicacaooriginal-25100-pe.html" }, { label: "Planalto — decreto do Cazumbá-Iracema (2002)", url: "https://planalto.gov.br/ccivil_03/DNN/2002/Dnn9663.htm" }, { label: "Wikipédia — Resex do Alto Juruá", url: "https://en.wikipedia.org/wiki/Alto_Juru%C3%A1_Extractive_Reserve" }],
