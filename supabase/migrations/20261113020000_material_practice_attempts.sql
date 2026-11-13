@@ -61,7 +61,7 @@ begin
     raise exception 'Autenticação necessária' using errcode = '28000';
   end if;
   if p_attempt_id is null or p_material_id is null or p_item_index is null
-     or p_item_index < 0 or p_selected_answer not in ('C','E')
+     or p_item_index < 0 or p_selected_answer is null or p_selected_answer not in ('C','E')
      or p_response_seconds is null or p_response_seconds < 0 or p_response_seconds > 900 then
     raise exception 'Resposta inválida' using errcode = '22023';
   end if;
@@ -72,8 +72,11 @@ begin
   if not found then
     raise exception 'Material indisponível' using errcode = 'P0002';
   end if;
-  if jsonb_typeof(v_material.quiz) <> 'array'
-     or p_item_index >= jsonb_array_length(v_material.quiz) then
+  if case
+       when jsonb_typeof(v_material.quiz) = 'array'
+         then p_item_index >= jsonb_array_length(v_material.quiz)
+       else true
+     end then
     raise exception 'Exercício não encontrado neste material' using errcode = '22023';
   end if;
 
@@ -94,10 +97,16 @@ begin
        or v_review ->> 'subject' is distinct from v_material.discipline
        or v_review ->> 'topic_label' is distinct from v_material.topic_label
        or nullif(v_review ->> 'scope', '') is null
-       or jsonb_typeof(v_review -> 'items') <> 'array'
-       or jsonb_array_length(v_review -> 'items') <> jsonb_array_length(v_material.quiz)
-       or jsonb_typeof(v_review -> 'sources') <> 'array'
-       or jsonb_array_length(v_review -> 'sources') = 0
+       or case
+         when jsonb_typeof(v_review -> 'items') = 'array'
+           then jsonb_array_length(v_review -> 'items') <> jsonb_array_length(v_material.quiz)
+         else true
+       end
+       or case
+         when jsonb_typeof(v_review -> 'sources') = 'array'
+           then jsonb_array_length(v_review -> 'sources') = 0
+         else true
+       end
        or (v_review ->> 'syllabus_topic_id') !~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
     id, user_id, material_id, item_index, material_slug, material_title,
     subject, topic, question_text, selected_answer, official_answer,
