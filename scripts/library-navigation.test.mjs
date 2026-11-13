@@ -330,6 +330,8 @@ function renderGlobalLibrary(filters={}, search={q:"estupro"}) {
   '@/components/library/StartHere':{StartHere:()=>React.createElement('div',null,'GENERAL_RECOMMENDATIONS')},
   '@/components/library/LegalPathCatalog':catalog,'@/components/library/ContentSearchResults':results,'@/components/library/LibrarySearchMatch':match,
   '@/components/library/LibraryNavigation':load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization,'@/lib/filterTaxonomy':sharedTaxonomy}),
+  '@/lib/subjects':sharedSubjects,
+  '@/components/dashboard/UpdatedStudyCollections':{UpdatedStudyCollections:()=>React.createElement('div',null,'TRILHA_GUIADA'),COURSES:[],COURSE_ICONS:{}},
  };
  const nullModule=new Proxy({}, {get:()=>none});
  for(const m of readFileSync('src/routes/dashboard/library.index.tsx','utf8').matchAll(/from "([^"]+)"/g))if(!stubs[m[1]])stubs[m[1]]=nullModule;
