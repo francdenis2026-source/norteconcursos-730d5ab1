@@ -3,15 +3,17 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Activity,
-  BarChart3,
   FileStack,
   Loader2,
+  Radar,
   RefreshCw,
   ShieldCheck,
   Sparkles,
   Trophy,
+  UserPlus,
   Users,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -26,13 +28,13 @@ import { useQuestionStats } from "@/hooks/useQuestionStats";
 export const Route = createFileRoute("/dashboard/admin-metrics")({
   head: () => ({
     meta: [
-      { title: "Números gerais | Norte Concurso" },
+      { title: "Central de controle | Norte Concurso" },
       {
         name: "description",
-        content: "Alunos cadastrados, provas resolvidas e uso de IA por plano e por dia.",
+        content: "Visão ao vivo da plataforma: cadastros, atividade e desempenho dos alunos.",
       },
-      { property: "og:title", content: "Números gerais | Norte Concurso" },
-      { property: "og:description", content: "Painel de métricas da administração." },
+      { property: "og:title", content: "Central de controle | Norte Concurso" },
+      { property: "og:description", content: "Painel de controle da administração." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex" },
@@ -42,7 +44,13 @@ export const Route = createFileRoute("/dashboard/admin-metrics")({
 });
 
 interface Raw {
-  profiles: { id: string; subscription_tier: string | null; created_at: string }[];
+  profiles: {
+    id: string;
+    subscription_tier: string | null;
+    created_at: string;
+    full_name: string | null;
+    email: string | null;
+  }[];
   usage: { user_id: string; used_on: string }[];
   results: { user_id: string; created_at: string }[];
   docs: number;
@@ -54,11 +62,31 @@ interface Raw {
   roles: { user_id: string; role: string }[];
 }
 
+interface ActivityEvent {
+  key: string;
+  at: string;
+  label: string;
+  icon: LucideIcon;
+}
+
 /** Últimos N dias em ISO (yyyy-mm-dd), do mais antigo ao mais recente. */
 const lastDays = (n: number) =>
   Array.from({ length: n }, (_, i) => {
     return acreDaysAgoKey(n - 1 - i);
   });
+
+/** Auto-atualização silenciosa da visão ao vivo, sem piscar a tela com um spinner. */
+const LIVE_REFRESH_MS = 20_000;
+
+function timeAgo(iso: string): string {
+  const ms = Date.now() - new Date(iso).getTime();
+  const min = Math.floor(ms / 60_000);
+  if (min < 1) return "agora mesmo";
+  if (min < 60) return `há ${min} min`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `há ${h} h`;
+  return `há ${Math.floor(h / 24)} d`;
+}
 
 function AdminMetricsPage() {
   const { isAdmin, user } = useAuthStatus();
@@ -66,12 +94,15 @@ function AdminMetricsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
-    setLoading(true);
+  const load = useCallback(async (opts?: { silent?: boolean }) => {
+    if (!opts?.silent) setLoading(true);
     setError(null);
     try {
       const [p, u, r, d, ro, sim, sent, off] = await Promise.all([
-        supabase.from("profiles").select("id, subscription_tier, created_at").limit(10000),
+        supabase
+          .from("profiles")
+          .select("id, subscription_tier, created_at, full_name, email")
+          .limit(10000),
         supabase.from("ai_usage_logs").select("user_id, used_on").limit(50000),
         supabase.from("mock_exam_results").select("user_id, created_at").limit(50000),
         supabase.from("student_exam_documents").select("id", { count: "exact", head: true }),
@@ -92,15 +123,43 @@ function AdminMetricsPage() {
         roles: ro.data ?? [],
       });
     } catch {
-      setError("Não foi possível carregar os números. Confirme que entrou como administrador.");
+      if (!opts?.silent)
+        setError("Não foi possível carregar os números. Confirme que entrou como administrador.");
     } finally {
-      setLoading(false);
+      if (!opts?.silent) setLoading(false);
     }
   }, []);
 
   useEffect(() => {
     void load();
   }, [load]);
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    const id = setInterval(() => void load({ silent: true }), LIVE_REFRESH_MS);
+    return () => clearInterval(id);
+  }, [isAdmin, load]);
+
+  const activity = useMemo<ActivityEvent[]>(() => {
+    if (!raw) return [];
+    const nameOf = (id: string) => {
+      const p = raw.profiles.find((x) => x.id === id);
+      return p?.full_name || p?.email || "Aluno";
+    };
+    const signups: ActivityEvent[] = raw.profiles.map((p) => ({
+      key: `signup-${p.id}`,
+      at: p.created_at,
+      label: `${p.full_name || p.email || "Novo aluno"} se cadastrou`,
+      icon: UserPlus,
+    }));
+    const exams: ActivityEvent[] = raw.results.map((r, i) => ({
+      key: `exam-${r.user_id}-${r.created_at}-${i}`,
+      at: r.created_at,
+      label: `${nameOf(r.user_id)} concluiu um simulado`,
+      icon: Trophy,
+    }));
+    return [...signups, ...exams].sort((a, b) => b.at.localeCompare(a.at)).slice(0, 12);
+  }, [raw]);
 
   const content = useQuestionStats(isAdmin);
   const byBoardDocs = useMemo(() => {
@@ -176,14 +235,14 @@ function AdminMetricsPage() {
       <PageHero
         image="command-room"
         size="sm"
-        kicker="Administração"
-        icon={BarChart3}
+        kicker="Administração · ao vivo"
+        icon={Radar}
         title={
           <>
-            Números <em>gerais</em>
+            Central de <em>controle</em>
           </>
         }
-        description="Visão consolidada de alunos, provas e uso de IA na plataforma."
+        description="Visão ao vivo de cadastros, atividade e desempenho dos alunos na plataforma. Atualiza sozinha a cada 20 segundos."
         actions={
           <Button className="hero-btn-ghost gap-2" onClick={() => void load()} disabled={loading}>
             <RefreshCw className="h-4 w-4" aria-hidden /> Atualizar
@@ -206,6 +265,35 @@ function AdminMetricsPage() {
           {error}
         </p>
       )}
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            </span>
+            Atividade ao vivo
+          </CardTitle>
+          <CardDescription>Últimos cadastros e simulados concluídos na plataforma.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          {activity.length ? (
+            <ul className="space-y-2.5 text-sm">
+              {activity.map((ev) => (
+                <li key={ev.key} className="flex items-center gap-3">
+                  <ev.icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                  <span className="flex-1 text-foreground">{ev.label}</span>
+                  <span className="shrink-0 text-xs text-muted-foreground">{timeAgo(ev.at)}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-sm text-muted-foreground">Nenhuma atividade registrada ainda.</p>
+          )}
+        </CardContent>
+      </Card>
+
       {loading || !stats ? (
         <div className="flex justify-center py-10">
           <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" />

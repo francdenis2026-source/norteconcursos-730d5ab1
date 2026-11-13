@@ -97,7 +97,6 @@ import {
   Gavel,
   Scale,
   BookA,
-  Headphones,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -147,6 +146,28 @@ const MOBILE_HUE: Record<string, Hue> = {
 const MENU: MenuItem[] = [
   {
     group: "Administração",
+    label: "Central de controle",
+    icon: Radar,
+    href: "/dashboard/admin-metrics",
+    adminOnly: true,
+    primary: true,
+  },
+  {
+    group: "Administração",
+    label: "Alunos, planos e IA",
+    icon: User,
+    href: "/dashboard/admin-students",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Cadastros por dia",
+    icon: User,
+    href: "/dashboard/admin-signups",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
     label: "Atendimento",
     icon: FileStack,
     href: "/dashboard/admin-support",
@@ -154,9 +175,44 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Administração",
+    label: "Financeiro",
+    icon: Wallet,
+    href: "/dashboard/admin-finance",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Conteúdo da plataforma",
+    icon: Settings,
+    href: "/dashboard/admin",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
     label: "Concursos — curadoria",
     icon: Search,
     href: "/dashboard/admin-contests",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Questões de bancas",
+    icon: BookMarked,
+    href: "/dashboard/admin-questions",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Questões reportadas",
+    icon: Flag,
+    href: "/dashboard/admin-question-reports",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Central de mídia (admin)",
+    icon: PlayCircle,
+    href: "/dashboard/admin-media",
     adminOnly: true,
   },
   { group: "Planejamento", label: "Meu painel", icon: Radar, href: "/dashboard", primary: true },
@@ -277,75 +333,12 @@ const MENU: MenuItem[] = [
   { group: "Conta", label: "Plano e assinatura", icon: Sparkles, href: "/dashboard/subscriptions" },
   { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },
   { group: "ENEM", label: "ENEM", icon: GraduationCap, href: "/dashboard/enem", primary: true },
-  {
-    group: "Administração",
-    label: "Conteúdo da plataforma",
-    icon: Settings,
-    href: "/dashboard/admin",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Alunos, planos e IA",
-    icon: User,
-    href: "/dashboard/admin-students",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Números gerais",
-    icon: Layers,
-    href: "/dashboard/admin-metrics",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Questões de bancas",
-    icon: BookMarked,
-    href: "/dashboard/admin-questions",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Central de mídia (admin)",
-    icon: PlayCircle,
-    href: "/dashboard/admin-media",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Leitura em voz alta",
-    icon: Headphones,
-    href: "/dashboard/admin-voice-studio",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Financeiro",
-    icon: Wallet,
-    href: "/dashboard/admin-finance",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Cadastros por dia",
-    icon: User,
-    href: "/dashboard/admin-signups",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
-    label: "Questões reportadas",
-    icon: Flag,
-    href: "/dashboard/admin-question-reports",
-    adminOnly: true,
-  },
 ];
 
 const ADMIN_MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
+  { label: "Controle", href: "/dashboard/admin-metrics", icon: Radar },
   { label: "Alunos", href: "/dashboard/admin-students", icon: User },
   { label: "Financeiro", href: "/dashboard/admin-finance", icon: Wallet },
-  { label: "Números", href: "/dashboard/admin-metrics", icon: Layers },
   { label: "Conteúdo", href: "/dashboard/admin", icon: Settings },
   { label: "Perfil", href: "/dashboard/profile", icon: User },
 ];
@@ -510,7 +503,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     if (!isAdmin) return;
     const path = normalize(location.pathname);
     if (path.startsWith("/dashboard/admin") || path === "/dashboard/profile") return;
-    navigate({ to: "/dashboard/admin-students", replace: true });
+    navigate({ to: "/dashboard/admin-metrics", replace: true });
   }, [isAdmin, location.pathname, navigate]);
   const activeItem = activeNavigation(items, location.pathname, location.search);
   const current =
