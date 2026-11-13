@@ -452,3 +452,25 @@
   .acre-tl__list > li::before { left: 0; top: .2rem; }
   .acre-tl__list time { padding-top: 0; text-align: left; }
 }
+
+/* Radar de provas */
+.acre-radar { display: grid; gap: .7rem; min-width: 0; padding: .9rem; border: 1px solid color-mix(in srgb, #7c6bd6 36%, var(--border)); border-radius: 1rem; background: color-mix(in srgb, #7c6bd6 4%, var(--card)); }
+.acre-radar__head { display: flex; align-items: center; gap: .65rem; }
+.acre-radar__head > svg { flex: none; color: #7c6bd6; }
+.acre-radar__head h2 { margin: 0; font-size: 1rem; font-weight: 850; }
+.acre-radar__head p { margin: .1rem 0 0; color: var(--muted-foreground); font-size: .74rem; line-height: 1.45; }
+.acre-radar__groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: .7rem; align-items: start; }
+.acre-radar__group { min-width: 0; overflow: hidden; border: 1px solid color-mix(in srgb, var(--rd) 38%, var(--border)); border-radius: .85rem; background: var(--card); }
+.acre-radar__group > header { display: flex; align-items: center; gap: .6rem; padding: .65rem .8rem; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--rd) 10%, var(--card)); }
+.acre-radar__group > header > span { display: grid; flex: none; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .55rem; background: color-mix(in srgb, var(--rd) 22%, transparent); color: var(--rd); }
+.acre-radar__group h3 { margin: 0; font-size: .88rem; font-weight: 850; line-height: 1.25; }
+.acre-radar__group > header p { margin: .1rem 0 0; color: var(--muted-foreground); font-size: .68rem; line-height: 1.4; }
+.acre-radar__group > ul { display: grid; margin: 0; padding: 0; list-style: none; }
+.acre-radar__group > ul > li + li { border-top: 1px solid var(--border); }
+.acre-radar__group summary { padding: .6rem .8rem; font-size: .8rem; font-weight: 800; line-height: 1.35; cursor: pointer; overflow-wrap: anywhere; }
+.acre-radar__group details[open] > summary { color: var(--rd); }
+.acre-radar__group details > p { margin: 0; padding: 0 .8rem .55rem; font-size: .78rem; line-height: 1.55; overflow-wrap: anywhere; }
+.acre-radar__care { margin: 0 .8rem .55rem !important; padding: .45rem .6rem !important; border-radius: .55rem; background: color-mix(in srgb, #e6a64a 16%, transparent); font-size: .73rem !important; }
+.acre-radar__src { display: flex; flex-wrap: wrap; gap: .3rem .8rem; }
+.acre-radar__src a { display: inline-flex; align-items: center; gap: .25rem; color: var(--rd); font-size: .7rem; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.acre-radar__note { margin: 0; color: var(--muted-foreground); font-size: .68rem; }
