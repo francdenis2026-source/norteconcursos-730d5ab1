@@ -147,19 +147,14 @@ function MediaCenterPage() {
   const hasPodcasts = catalog.podcasts.length > 0;
   return (
     <div className="nc-learning-workspace video-study-page">
-      <header className="video-study-page__header workspace-banner">
-        <PlayCircle size={28} aria-hidden="true" />
-        <div>
-          <h1>{hasPodcasts ? "Videoaulas e podcasts" : "Videoaulas"}</h1>
-        </div>
-      </header>
-      <Tabs defaultValue={hasPodcasts && tab === "podcasts" ? "podcasts" : tab === "assuntos" ? "assuntos" : tab === "enem" ? "enem" : "videos"}>
+      <h1 className="sr-only">{hasPodcasts ? "Biblioteca de videoaulas e podcasts" : "Biblioteca de videoaulas"}</h1>
+      <Tabs defaultValue={hasPodcasts && tab === "podcasts" ? "podcasts" : tab === "videos" ? "videos" : tab === "enem" ? "enem" : "assuntos"}>
         <TabsList className="video-study-page__tabs" aria-label="Tipo de material">
-          <TabsTrigger value="videos">
-            <PlayCircle size={16} /> Playlists
-          </TabsTrigger>
           <TabsTrigger value="assuntos">
-            <ListVideo size={16} /> Assuntos do edital
+            <ListVideo size={16} /> Por disciplina
+          </TabsTrigger>
+          <TabsTrigger value="videos">
+            <PlayCircle size={16} /> Cursos em playlist
           </TabsTrigger>
           <TabsTrigger value="enem">
             <GraduationCap size={16} /> ENEM

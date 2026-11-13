@@ -19,7 +19,8 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content :is(
   .ak-tile,
   .ak-axis__head,
   .ak-hero,
-  .student-pcac-spotlight__copy
+  .student-pcac-spotlight__copy,
+  .vp2__poster-copy
 ) :is(h1, h2, h3, h4, strong, b, time) {
   color: var(--on-dark-ink) !important;
 }
@@ -29,8 +30,9 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content :is(
   .ak-tile,
   .ak-axis__head,
   .ak-hero,
-  .student-pcac-spotlight__copy
-) :is(p, small, span, li):not(.sh2-link, .hero-chip, .sh2-hero__date svg) {
+  .student-pcac-spotlight__copy,
+  .vp2__poster-copy
+) :is(p, small, span, li):not(.sh2-link, .hero-chip, .sh2-hero__date svg, .vp2__chip) {
   color: var(--on-dark-ink-soft) !important;
 }
 html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.sh2-hero, .student-pcac-spotlight__copy) :is(.sh2-link, a) {
@@ -69,3 +71,8 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content .sh2-card--
 html body .app-shell[data-area] #dashboard-content#dashboard-content .student-pcac-spotlight__action-group a :is(span, small, strong) {
   color: inherit !important;
 }
+
+/* Chip do pôster do player: texto escuro sobre o dourado, nos dois temas. */
+html body .app-shell[data-area] #dashboard-content#dashboard-content .vp2__poster-copy .vp2__chip { color: #1c1403 !important; }
+html body .app-shell[data-area] #dashboard-content#dashboard-content .vp2__poster-copy .vp2__alert { color: #fecaca !important; }
+html body .app-shell[data-area] #dashboard-content#dashboard-content .vp2__poster-copy :is(.vp2__start, .vp2__link) { color: #fff !important; }
