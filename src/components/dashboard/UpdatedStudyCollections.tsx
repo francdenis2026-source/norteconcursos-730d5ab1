@@ -1,6 +1,4 @@
 import * as React from "react";
-import { Link } from "@tanstack/react-router";
-import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 import { useStudyGuideProgress } from "@/lib/useStudyGuideProgress";
 import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
 import { pcAcProgramGapLessons } from "@/data/pcAcProgramGapLessons";
@@ -82,7 +80,7 @@ const COURSE_ICONS: Record<string, LucideIcon> = {
   "lingua-portuguesa": BookOpen,
 };
 
-export function UpdatedStudyCollections({initialCourseId,storageScope="public",materials=[]}: {initialCourseId?: string;storageScope?: string;materials?: StudyMaterialSummary[]}) {
+export function UpdatedStudyCollections({initialCourseId,storageScope="public"}: {initialCourseId?: string;storageScope?: string}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
   const [query,setQuery]=React.useState("");
@@ -110,64 +108,21 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public",m
   const course = activeEntry?.course;
   const displayedLessons = course ? (activeEntry!.courseMatches || !normalizedQuery ? course.lessons : course.lessons.filter(lessonMatches)) : [];
   const countCompleted = course ? course.lessons.filter(l=>completed[`${course.id}:${l.title}`]).length : 0;
-  const publishedGroups = React.useMemo(() => {
-    const groups = new Map<string, StudyMaterialSummary[]>();
-    for (const material of materials) {
-      if (material.contest_name !== "PC-AC 2026") continue;
-      const list = groups.get(material.discipline) ?? [];
-      list.push(material);
-      groups.set(material.discipline, list);
-    }
-    return [...groups.entries()]
-      .map(([discipline, rows]) => [discipline, rows.sort((x, y) => x.sort_order - y.sort_order)] as const)
-      .sort((x, y) => x[0].localeCompare(y[0], "pt-BR"));
-  }, [materials]);
-  const publishedCount = publishedGroups.reduce((total, [, rows]) => total + rows.length, 0);
 
   return <section id="materiais-atualizados-pcac" className="updated-study-collections" aria-labelledby="pcac-new-study-title">
     <header className="updated-study-collections__header">
-      <p className="updated-study-collections__eyebrow">Biblioteca temática · Alinhamento ao edital PC-AC 2026</p>
-      <h2 id="pcac-new-study-title">Aulas atualizadas por matéria</h2>
-      <p className="updated-study-collections__lede">Escolha uma matéria para abrir suas aulas, exemplos e perguntas de verificação.</p>
+      <p className="updated-study-collections__eyebrow">Aulas guiadas · Alinhadas ao edital PC-AC 2026</p>
+      <h2 id="pcac-new-study-title">Trilha de aulas por matéria</h2>
+      <p className="updated-study-collections__lede">
+        Conteúdo autoral e sequencial: teoria, exemplo prático e uma pergunta de verificação em cada aula. Para
+        buscar um material específico por banca ou assunto, use a lista completa logo abaixo.
+      </p>
       <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
-        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.length} disciplinas integradas</span>
-        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.reduce((total, item) => total + item.lessons.length, 0)} aulas autorais disponíveis</span>
+        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.length} matérias com trilha</span>
+        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.reduce((total, item) => total + item.lessons.length, 0)} aulas guiadas</span>
       </p>
     </header>
 
-    <section className="rounded-2xl border border-emerald-500/30 bg-emerald-500/[0.045] p-4" aria-label="Materiais publicados no banco de estudos PC-AC 2026">
-      <header className="mb-3 flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <h3 className="text-base font-extrabold text-foreground">Materiais publicados no banco de estudos</h3>
-          <p className="text-sm text-muted-foreground">Aulas ligadas ao edital PC-AC 2026. Abra diretamente o texto, os flashcards e as questões.</p>
-        </div>
-        <span className="rounded-full border px-3 py-1 text-xs font-bold">{publishedCount} aulas · {publishedGroups.length} disciplinas</span>
-      </header>
-      {publishedCount === 0 ? (
-        <p className="text-sm text-muted-foreground">Nenhuma aula adicional foi retornada pelo banco nesta consulta. Os módulos autorais alinhados ao edital permanecem disponíveis logo abaixo, organizados por disciplina.</p>
-      ) : (
-        <div className="space-y-4">
-          {publishedGroups.map(([discipline, rows]) => (
-            <div key={discipline}>
-              <h4 className="mb-2 text-sm font-bold">{discipline} <span className="font-normal text-muted-foreground">· {rows.length} {rows.length === 1 ? "aula" : "aulas"}</span></h4>
-              <ul className="grid gap-2 sm:grid-cols-2">
-                {rows.map((material) => (
-                  <li key={material.id}>
-                    <Link to="/dashboard/library/$slug" params={{ slug: material.slug }} className="flex min-h-14 items-center justify-between gap-3 rounded-xl border bg-card px-3 py-2 text-sm transition hover:border-primary hover:bg-muted/50">
-                      <span className="min-w-0">
-                        <strong className="block">{material.title}</strong>
-                        <span className="block truncate text-xs text-muted-foreground">{material.topic_label}</span>
-                      </span>
-                      <span className="shrink-0 font-semibold text-primary">Estudar →</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
-    </section>
     <div className="updated-study-collections__search">
       <Search aria-hidden="true" size={17} />
       <input

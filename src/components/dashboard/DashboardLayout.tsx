@@ -233,7 +233,7 @@ const MENU: MenuItem[] = [
   { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
   {
     group: "Questões",
-    label: "Coleções de questões",
+    label: "Caderno de estudo",
     icon: BookOpen,
     href: "/dashboard/notebooks",
   },

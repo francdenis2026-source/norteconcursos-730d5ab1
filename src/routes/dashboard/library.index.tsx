@@ -401,9 +401,22 @@ function LibraryIndex() {
         </nav>
       )}
 
-      {!lawsOnly && signedIn && <UpdatedStudyCollections {...(guia ? { initialCourseId: guia } : {})} storageScope={user?.id ?? "anonymous"} materials={items} />}
+      {!lawsOnly && signedIn && <UpdatedStudyCollections {...(guia ? { initialCourseId: guia } : {})} storageScope={user?.id ?? "anonymous"} />}
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
+
+      {!lawsOnly && !focused && signedIn && !isPending && !isError && items.length > 0 && (
+        <div className="flex items-center gap-3 pb-1 pt-2">
+          <h2 className="shrink-0 text-lg font-bold">Lista completa por disciplina</h2>
+          <span aria-hidden="true" className="h-px flex-1 bg-border" />
+        </div>
+      )}
+      {!lawsOnly && !focused && signedIn && !isPending && !isError && items.length > 0 && (
+        <p className="-mt-3 text-sm text-muted-foreground">
+          Todos os {items.length} materiais publicados, por disciplina e assunto. Use a busca ou os filtros abaixo
+          para achar um material específico — diferente da trilha guiada acima, aqui você escolhe livremente.
+        </p>
+      )}
 
       {isPending && signedIn ? (
         <div className="space-y-3">
