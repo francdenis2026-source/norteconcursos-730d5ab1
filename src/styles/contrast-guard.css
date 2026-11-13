@@ -43,10 +43,10 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.sh2-he
    fundo por um cartão plano (fundo claro no modo claro), então o texto segue o tema, não branco
    fixo como os demais .ak-tile com foto. */
 html body .app-shell[data-area] #dashboard-content#dashboard-content .material-hub .ak-tile :is(h1, h2, h3, h4, strong, b, time) {
-  color: hsl(var(--foreground)) !important;
+  color: var(--foreground) !important;
 }
-html body .app-shell[data-area] #dashboard-content#dashboard-content .material-hub .ak-tile :is(p, small, span, li) {
-  color: hsl(var(--muted-foreground)) !important;
+html body .app-shell[data-area] #dashboard-content#dashboard-content .material-hub .ak-tile :is(p, small, span, li):not(.sh2-link, .hero-chip, .sh2-hero__date svg, .vp2__chip) {
+  color: var(--muted-foreground) !important;
 }
 html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.page-hero, .workspace-banner, .study-assistant-hero, .edital-modern-hero) :is(.hero-chip, .edital-eyebrow, .study-assistant-hero__eyebrow) {
   color: var(--on-dark-accent) !important;

@@ -81,8 +81,8 @@
   height: auto;
   min-height: 7.25rem;
   padding: 0.75rem;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--card));
+  border: 1px solid var(--border);
+  background: var(--card);
   box-shadow: none;
 }
 
@@ -91,8 +91,8 @@
 }
 
 .material-hub .ak-tile:hover {
-  border-color: hsl(var(--primary) / 0.5);
-  background: hsl(var(--muted) / 0.4);
+  border-color: color-mix(in oklab, var(--primary) 50%, transparent);
+  background: color-mix(in oklab, var(--muted) 40%, transparent);
   box-shadow: none;
 }
 
@@ -102,15 +102,15 @@
   width: 2.125rem;
   height: 2.125rem;
   margin-bottom: 0.125rem;
-  background: hsl(var(--primary) / 0.12);
-  color: hsl(var(--primary));
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+  color: var(--primary);
 }
 
 .material-hub .ak-tile strong {
   display: -webkit-box;
   overflow: hidden;
   font-size: 0.8125rem;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -120,7 +120,7 @@
   overflow: hidden;
   white-space: normal;
   line-height: 1.25;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
