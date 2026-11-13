@@ -28,3 +28,13 @@ test("every municipality note refers to a real Acre municipality", () => {
   assert.ok(keys.length >= 10);
   for (const key of keys) assert.ok(names.has(key), `unknown municipality: ${key}`);
 });
+
+test("Acre strategic facts name the people and sources banks ask about", () => {
+  const facts = read("src/data/acreStrategicFacts.ts");
+  for (const text of ["Mailza Assis", "Jéssica Alves", "José Manuel Pando", "Guachalla", "Pinilla", "Assis Brasil", "El Acre", "Gálvez", "Bolivian Syndicate"])
+    assert.ok(facts.includes(text), `missing: ${text}`);
+  const questions = (facts.match(/question: "/g) ?? []).length;
+  const sources = (facts.match(/sources: \[/g) ?? []).length;
+  assert.equal(questions, sources);
+  assert.match(read("src/components/dashboard/AcreRealityArea.tsx"), /AcreStrategicFacts/);
+});

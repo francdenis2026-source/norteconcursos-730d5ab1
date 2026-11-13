@@ -19,6 +19,7 @@ import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { AcreGeographyStudy } from "@/components/dashboard/AcreGeographyStudy";
 import { AcreVideoPanel } from "@/components/dashboard/AcreVideoPanel";
 import { AcreTimeline } from "@/components/dashboard/AcreTimeline";
+import { AcreStrategicFacts } from "@/components/dashboard/AcreStrategicFacts";
 import { pcAcVerticalTopicGroups, type PcAcTopicGroup } from "@/lib/pcAcreTopicStructure";
 import { ACRE_CONTENT_CHECKED_ON, ACRE_CURRENT_AFFAIRS, ACRE_STUDY_CONTENT } from "@/data/acreStudyContent";
 import "@/styles/student-area-kit.css";
@@ -118,6 +119,8 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
       </header>
 
       {axis.id === "historia" && <AcreTimeline initial="history" />}
+      {axis.id === "historia" && <AcreStrategicFacts groups={["questao", "imprensa"]} />}
+      {axis.id === "politica" && <AcreStrategicFacts groups={["poder"]} />}
       {axis.id === "geografia" && <AcreTimeline initial="geography" />}
       <AcreVideoPanel axisId={axis.id} />
       {axis.id === "geografia" ? (
@@ -298,6 +301,7 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
         </ul>
       </section>
 
+      <AcreStrategicFacts />
       <AcreVideoPanel axisId="atualidades" title="Vídeos e atualidades do Acre" />
       <section id="acre-atualidades" className="ak-fresh" aria-labelledby="acre-atualidades-title">
         <header className="ak-fresh__head">
