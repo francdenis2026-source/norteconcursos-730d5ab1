@@ -1,4 +1,5 @@
 import { DidacticSourceNotice } from "@/components/dashboard/DidacticSourceNotice";
+import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { isPracticeOfficialSource } from "@/lib/materialPracticeReview";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -151,13 +152,16 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
     );
   const q = questions[index]!;
   const parsed = parseQuestion(q.text);
-  const options = parsed.options.length
+  const hasOptions = parsed.options.length > 0;
+  const options = hasOptions
     ? parsed.options
     : [
         { letter: "C" as const, text: "Certo" },
         { letter: "E" as const, text: "Errado" },
       ];
+  const labelFor = (answer: Answer) => (hasOptions ? `Alternativa ${answer}` : answer === "C" ? "Certo" : "Errado");
   const picked = answers[index];
+  const isCorrect = picked === q.answer;
   return (
     <div className="min-w-0 space-y-4 border-t pt-4">
       <p className="text-xs text-muted-foreground">
@@ -179,6 +183,7 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
             type="button"
             key={o.letter}
             disabled={!!picked}
+            aria-pressed={picked === o.letter}
             onClick={() => {
               if (picked) return;
               setAnswers((a) => ({ ...a, [index]: o.letter }));
@@ -215,11 +220,15 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
         ))}
       </div>
       {picked && (
-        <div role="status" className="space-y-3 rounded-xl border bg-muted/40 p-4">
-          <p className="font-semibold">
-            {picked === q.answer ? "Resposta correta." : `Resposta correta: ${q.answer}.`}
-          </p>
-          <QuestionText text={q.explanation} />
+        <div className="space-y-3">
+          <AnswerFeedback
+            selected={labelFor(picked)}
+            answer={labelFor(q.answer)}
+            correct={isCorrect}
+            sourceLabel="Gabarito"
+          >
+            <QuestionText text={q.explanation} />
+          </AnswerFeedback>
           {q.legalBasis
             .filter((b) => b.url && isPracticeOfficialSource(b.url))
             .map((b) => (
