@@ -237,7 +237,7 @@ function PlanList({ plans, onOpen, canCreate, creationLocked, editalLabel }: { p
 
 function SettingsFields({ cfg, onChange }: { cfg: Pick<CronoConfig, "days" | "startTime" | "weeklyHours">; onChange: (p: Partial<CronoConfig>) => void }) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 [&>*]:min-w-0">
       <div className="space-y-1.5">
         <Label>Horas de estudo por semana</Label>
         <Input type="number" min={1} max={80} value={cfg.weeklyHours} onChange={(e) => onChange({ weeklyHours: Math.min(80, Math.max(1, Number(e.target.value) || 1)) })} />
@@ -333,7 +333,7 @@ function NewPlan({ userId, onBack, onCreated }: { userId: string; onBack: () => 
         <Card>
           <CardHeader><CardTitle>{model === "custom" ? "Cronograma personalizado" : `${model.orgao} — ${model.cargo}`}</CardTitle></CardHeader>
           <CardContent className="space-y-4">
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 [&>*]:min-w-0">
               <div className="space-y-1.5"><Label>Nome</Label><Input value={name} maxLength={120} onChange={(e) => setName(e.target.value)} /></div>
               <div className="space-y-1.5"><Label>Data da prova (opcional)</Label><Input type="date" value={examDate} onChange={(e) => setExamDate(e.target.value)} /></div>
             </div>

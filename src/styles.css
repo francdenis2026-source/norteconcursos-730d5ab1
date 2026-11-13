@@ -17299,3 +17299,22 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 
 @import "./styles/student-study-areas-refinement.css";
 @import "./styles/mobile-student-redesign-nov12.css";
+
+/* Campos de data e hora: no iPhone têm largura própria e passavam da borda do cartão. */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  min-width: 0;
+  max-width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+}
+input[type="date"]::-webkit-date-and-time-value,
+input[type="time"]::-webkit-date-and-time-value,
+input[type="datetime-local"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.2em;
+}
