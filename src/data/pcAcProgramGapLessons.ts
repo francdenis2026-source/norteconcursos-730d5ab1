@@ -1,7 +1,7 @@
 /* Aulas originais de fechamento de lacunas cotejadas com o Anexo III do Edital 001 SEAD/PCAC de 05/11/2026.
    As afirmações não são transcrições das apostilas comerciais. */
 import type { SupplementalStudyLesson } from "@/data/pcAcSupplementalStudyLessons";
-export const pcAcOfficialProgramUrl="https://agencia.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf";
+export const pcAcOfficialProgramUrl="https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf";
 const conarq="https://www.gov.br/conarq/pt-br/legislacao-arquivistica/resolucoes-do-conarq/resolucoes-do-conarq/";
 const archive="https://www.gov.br/arquivonacional/pt-br/servicos/gestao-de-documentos/orientacao-tecnica-1/codigo-de-classificacao-e-tabela-de-temporalidade-e-destinacao-de-documentos-de-arquivo/codigo-de-classificacao-e-tabela-de-temporalidade-e-destinacao-de-documentos-de-arquivo-1";
 export const pcAcProgramGapLessons:Record<string,SupplementalStudyLesson[]>={
