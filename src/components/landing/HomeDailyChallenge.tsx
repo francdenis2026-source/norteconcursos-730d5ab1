@@ -32,16 +32,6 @@ export function HomeDailyChallenge() {
   return (
     <section id="desafio-diario-home" className="hd" aria-labelledby="hd-title">
       <div className="hd__inner">
-        <div className="hd__media">
-          <img src="/media/photos/desafio-gabarito.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <div className="hd__clock" aria-label={`Novas questões em ${countdown}`}>
-            <Clock3 aria-hidden="true" />
-            <span>
-              <small>Novas questões em</small>
-              <strong>{countdown}</strong>
-            </span>
-          </div>
-        </div>
         <div className="hd__copy">
           <span className="hd__tag">
             <Flame aria-hidden="true" /> Desafio diário · grátis
@@ -86,6 +76,15 @@ export function HomeDailyChallenge() {
             <Link to="/auth" search={{ mode: "register" }} className={done ? "hd__primary" : "hd__ghost"}>
               <UserPlus aria-hidden="true" /> Criar conta grátis
             </Link>
+          </div>
+        </div>
+        <div className="hd__media">
+          <div className="hd__clock" aria-label={`Novas questões em ${countdown}`}>
+            <Clock3 aria-hidden="true" />
+            <span>
+              <small>Novas questões em</small>
+              <strong>{countdown}</strong>
+            </span>
           </div>
         </div>
       </div>
