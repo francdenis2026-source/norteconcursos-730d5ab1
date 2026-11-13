@@ -7,7 +7,7 @@
 //  - /offline.html, mostrada quando não há nem página guardada.
 // O que NUNCA é guardado: dados do Supabase e qualquer outro domínio, nem requisições que não sejam GET.
 // Questões, respostas, ranking e login continuam sempre ao vivo.
-const VERSION = "v10";
+const VERSION = "v11";
 const SHELL_CACHE = `norte-app-shell-${VERSION}`;
 const ASSET_CACHE = `norte-assets-${VERSION}`;
 const PAGE_CACHE = `norte-pages-${VERSION}`;
@@ -65,6 +65,40 @@ async function remember(cacheName, request, response, max) {
   await cache.put(request, response);
   await trim(cacheName, max);
 }
+
+
+self.addEventListener("push", (event) => {
+  event.waitUntil((async () => {
+    let data = {};
+    try { data = event.data ? event.data.json() : {}; } catch {
+      data = { title: "Norte Concursos", body: event.data?.text() ?? "Há uma novidade na plataforma." };
+    }
+    await self.registration.showNotification(String(data.title || "Norte Concursos").slice(0, 55), {
+      body: String(data.body || "Há uma novidade para você.").slice(0, 180),
+      icon: data.icon || "/icons/norte-192.png",
+      badge: data.badge || "/icons/favicon-32.png",
+      tag: data.tag || "norte-notification",
+      renotify: false,
+      data: { url: data.url || "/dashboard" },
+    });
+  })());
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const raw = event.notification.data?.url || "/dashboard";
+  const target = new URL(raw, self.location.origin);
+  if (target.origin !== self.location.origin) target.href = new URL("/dashboard", self.location.origin).href;
+  event.waitUntil((async () => {
+    const windows = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    const existing = windows.find((client) => client.url.startsWith(self.location.origin));
+    if (existing) {
+      await existing.navigate(target.href);
+      return existing.focus();
+    }
+    return self.clients.openWindow(target.href);
+  })());
+});
 
 self.addEventListener("fetch", (event) => {
   const { request } = event;
