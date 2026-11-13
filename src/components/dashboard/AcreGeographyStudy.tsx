@@ -7,6 +7,7 @@ import {
   ACRE_MESOREGIONS,
   ACRE_MICROREGIONS,
 } from "@/data/acreGeography";
+import { AcreInteractiveMap } from "@/components/dashboard/AcreInteractiveMap";
 import "@/styles/acre-geography-study.css";
 
 const REGION_COLORS = ["#9B83E8", "#39A6D8", "#70C58A", "#E6A64A", "#D8799D"];
@@ -167,6 +168,7 @@ export function AcreGeographyStudy() {
         </div>
       </header>
 
+      <AcreInteractiveMap />
       <AcreMapGallery />
 
       <div className="acre-geo__section-title">

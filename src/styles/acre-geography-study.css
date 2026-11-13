@@ -103,3 +103,44 @@
 @media (prefers-reduced-motion: reduce) {
   .acre-geo__map-tab { transition: none; }
 }
+
+/* Mapa interativo */
+.acre-imap { display: grid; gap: .7rem; min-width: 0; }
+.acre-imap__tabs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .4rem; }
+.acre-imap__tabs button { display: grid; gap: .1rem; justify-items: center; min-height: 2.75rem; padding: .45rem .3rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--card); color: var(--foreground); font: inherit; font-size: .78rem; font-weight: 800; line-height: 1.2; text-align: center; cursor: pointer; }
+.acre-imap__tabs button small { color: var(--muted-foreground); font-size: .64rem; font-weight: 600; }
+.acre-imap__tabs button[aria-pressed="true"] { border-color: var(--acre-gold); background: color-mix(in srgb, var(--acre-gold) 16%, var(--card)); }
+.acre-imap__note { margin: 0; color: var(--muted-foreground); font-size: .75rem; line-height: 1.5; }
+.acre-imap__body { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); gap: .8rem; align-items: start; }
+.acre-imap__map { min-width: 0; padding: .5rem; border: 1px solid var(--border); border-radius: .85rem; background: color-mix(in srgb, var(--muted) 45%, var(--card)); }
+.acre-imap__map svg { display: block; width: 100%; height: auto; }
+.acre-imap__shape { stroke: var(--card); stroke-width: 1.4; stroke-linejoin: round; cursor: pointer; transition: opacity .2s, filter .2s; }
+.acre-imap__shape:hover { filter: brightness(1.12); }
+.acre-imap__shape:focus-visible { outline: none; stroke: var(--foreground); stroke-width: 3; }
+.acre-imap__shape[data-selected] { stroke: var(--foreground); stroke-width: 3; }
+.acre-imap__label { fill: #0b1220; font-size: 12px; font-weight: 800; paint-order: stroke; stroke: rgb(255 255 255 / 75%); stroke-width: 3px; pointer-events: none; }
+.acre-imap__credit { margin: .4rem 0 0; color: var(--muted-foreground); font-size: .66rem; line-height: 1.4; }
+.acre-imap__side { display: grid; gap: .6rem; min-width: 0; }
+.acre-imap__legend { display: grid; gap: .3rem; }
+.acre-imap__legend button { display: flex; align-items: center; gap: .5rem; min-height: 2.25rem; padding: .3rem .6rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--card); color: var(--foreground); font: inherit; font-size: .78rem; font-weight: 700; text-align: left; cursor: pointer; }
+.acre-imap__legend button[aria-pressed="true"] { border-color: var(--foreground); }
+.acre-imap__legend i { flex: none; width: .8rem; height: .8rem; border-radius: 50%; }
+.acre-imap__legend span { flex: 1; min-width: 0; }
+.acre-imap__legend small { color: var(--muted-foreground); }
+.acre-imap__card { display: grid; gap: .5rem; padding: .75rem; border: 1px solid color-mix(in srgb, var(--acre-gold) 35%, var(--border)); border-radius: .8rem; background: var(--card); }
+.acre-imap__card header { display: flex; align-items: center; gap: .4rem; }
+.acre-imap__card header svg { flex: none; color: var(--acre-gold); }
+.acre-imap__card h4 { margin: 0; font-size: .92rem; font-weight: 850; }
+.acre-imap__card header span { display: inline-flex; align-items: center; gap: .2rem; margin-left: auto; padding: .1rem .4rem; border-radius: 999px; background: color-mix(in srgb, var(--acre-gold) 20%, transparent); font-size: .65rem; font-weight: 800; }
+.acre-imap__card dl { display: grid; gap: .35rem; margin: 0; }
+.acre-imap__card dl > div { display: grid; gap: .05rem; }
+.acre-imap__card dt { color: var(--muted-foreground); font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.acre-imap__card dd { margin: 0; font-size: .8rem; line-height: 1.4; }
+.acre-imap__group { margin: 0; font-size: .76rem; line-height: 1.7; }
+.acre-imap__group button { padding: 0 .1rem; border: 0; background: none; color: var(--acre-gold); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.acre-imap__alert { display: flex; gap: .4rem; margin: 0; padding: .5rem; border-radius: .6rem; background: color-mix(in srgb, var(--acre-gold) 14%, transparent); font-size: .72rem; line-height: 1.45; }
+.acre-imap__alert svg { flex: none; margin-top: .1rem; }
+@media (max-width: 760px) {
+  .acre-imap__body { grid-template-columns: minmax(0,1fr); }
+  .acre-imap__label { font-size: 15px; }
+}

@@ -148,3 +148,16 @@ test("Acre geography renders the three supplied detailed maps as responsive imag
   assert.match(component, /Juruá \/ Tarauacá-Envira/);
   assert.doesNotMatch(component, /function AcreSchematicMap/);
 });
+
+test("Acre geography uses a vector interactive map built from IBGE municipal shapes", async () => {
+  const component = readFileSync(new URL("../src/components/dashboard/AcreGeographyStudy.tsx", import.meta.url), "utf8");
+  assert.match(component, /<AcreInteractiveMap \/>/);
+  const map = readFileSync(new URL("../src/components/dashboard/AcreInteractiveMap.tsx", import.meta.url), "utf8");
+  assert.match(map, /Mesorregiões/);
+  assert.match(map, /Regionais do edital/);
+  const shapes = readFileSync(new URL("../src/data/acreMapShapes.ts", import.meta.url), "utf8");
+  const names = [...shapes.matchAll(/name: "([^"]+)"/g)].map((m) => m[1]);
+  assert.equal(names.length, 22);
+  const expected = ACRE_EDITAL_REGIONS.flatMap((region) => region.municipalities);
+  assert.deepEqual([...names].sort(), [...expected].sort());
+});
