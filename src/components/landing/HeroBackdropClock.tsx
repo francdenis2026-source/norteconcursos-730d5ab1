@@ -2,24 +2,18 @@ import { useEffect, useRef } from "react";
 import { platformNow } from "@/lib/platformClock";
 import { backdropClockAngles } from "@/lib/backdropClock";
 
-// Geometria do mostrador: centro e alcance dos ponteiros (antes medidos sobre a arte
-// rasterizada do emblema; mantidos aqui para o relógio continuar no mesmo lugar).
+// Geometria medida na arte de fundo (1926×816): centro do mostrador do emblema e alcance dos ponteiros.
 const W = 1926;
 const H = 816;
 const CX = 949;
 const CY = 405;
-/** Desloca o relógio para ficar entre o texto e o cartão do desafio. */
+/** Desloca a arte para o emblema ficar entre o texto e o cartão do desafio. */
 const SHIFT = 135;
-/** Raio do aro do mostrador, cobrindo a ponta do ponteiro de segundos. */
-const FACE_R = 186;
 
 /**
- * Fundo do hero: só o relógio tático, em SVG vetorial puro (sem imagem raster).
- * Antes a arte do emblema "Carreiras Policiais" (274KB, webp) era carregada aqui
- * via <image>, duplicada porque a home monta a versão mobile e a desktop ao mesmo
- * tempo (uma delas só fica oculta por CSS) — duas decodificações do mesmo raster
- * pesado na primeira pintura da home. Removida a pedido do Franc: o mostrador
- * agora é um aro + marcações vetoriais, leve e já alinhado com os ponteiros.
+ * Fundo do hero: arte do emblema (caveira com pistola) com os ponteiros no próprio relógio.
+ * Imagem e ponteiros ficam no mesmo SVG, então continuam alinhados em qualquer recorte.
+ * Devolvida a pedido do Franc (2026-11-13) depois de ter sido trocada por um aro vetorial.
  */
 export function HeroBackdropClock() {
   const hour = useRef<SVGLineElement>(null);
@@ -55,20 +49,7 @@ export function HeroBackdropClock() {
       focusable="false"
     >
       <g transform={`translate(${SHIFT} 0)`}>
-        <g className="sx-band__face" aria-hidden="true">
-          <circle cx={CX} cy={CY} r={FACE_R} />
-          {Array.from({ length: 12 }, (_, i) => (
-            <line
-              key={i}
-              className="sx-band__face-tick"
-              x1={CX}
-              y1={CY - FACE_R + (i % 3 === 0 ? 14 : 8)}
-              x2={CX}
-              y2={CY - FACE_R}
-              transform={`rotate(${i * 30} ${CX} ${CY})`}
-            />
-          ))}
-        </g>
+        <image href="/media/hero/carreiras-background.webp" width={W} height={H} />
         <g className="sx-band__hands">
           <line
             ref={hour}
