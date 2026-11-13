@@ -72,7 +72,8 @@ export function useStudyMaterialList(enabled: boolean) {
   return useQuery({
     queryKey: ["study-materials", "list"],
     enabled,
-    staleTime: 5 * 60 * 1000,
+    staleTime: 15 * 1000,
+    refetchOnWindowFocus: true,
     queryFn: fetchStudyMaterialList,
   });
 }
