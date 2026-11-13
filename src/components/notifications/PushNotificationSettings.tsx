@@ -76,7 +76,7 @@ export function PushNotificationSettings() {
       setPermission(result);
       if (result !== "granted") throw new Error("Permissão de notificação não concedida.");
       const registration = await navigator.serviceWorker.ready;
-      const subscription = await registration.pushManager.subscribe({
+      const subscription = await registration.pushManager.getSubscription() ?? await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: decodeBase64Url(VAPID_PUBLIC_KEY) as BufferSource,
       });
