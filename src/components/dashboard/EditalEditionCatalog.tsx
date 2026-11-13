@@ -47,11 +47,7 @@ export function EditalEditionCatalog({
   }, [roles, selectedRole]);
   useEffect(() => {
     if (!availableEditions.some((edition) => edition.id === selectedEdition)) {
-      const onlyEdition = availableEditions.length === 1 ? availableEditions[0] : undefined;
-      setSelectedEdition(onlyEdition?.id ?? "");
-      if (onlyEdition) {
-        window.location.href = `/dashboard/edital?edition=${encodeURIComponent(onlyEdition.id)}`;
-      }
+      setSelectedEdition(availableEditions.length === 1 ? availableEditions[0]!.id : "");
     }
   }, [availableEditions, selectedEdition]);
   if (failed) return null;
@@ -96,15 +92,15 @@ export function EditalEditionCatalog({
         <div>
           <h2>{showMine ? "Outros concursos" : "Escolha o concurso e o cargo"}</h2>
           <p>
-            {orderedGroups.length} {orderedGroups.length === 1 ? "concurso" : "concursos"} · cada um
-            com suas edições e cargos, separados do seu
+            {orderedGroups.length} {orderedGroups.length === 1 ? "concurso" : "concursos"} · separados do seu
           </p>
         </div>
         <Badge variant="outline">
           {editions.filter((e) => e.status === "archived").length} arquivadas
         </Badge>
       </div>
-      <div className="edital-catalog-filters">
+      <div className="ed2-pick" role="group" aria-label="Escolher edital">
+      <div className="ed2-picker">
         <div>
           <Label htmlFor="edition-contest">1. Concurso ativo</Label>
           <select
@@ -149,11 +145,7 @@ export function EditalEditionCatalog({
             id="edition-selection"
             value={selectedEdition}
             disabled={!selectedRole}
-            onChange={(e) => {
-              const id = e.target.value;
-              setSelectedEdition(id);
-              if (id) window.location.href = `/dashboard/edital?edition=${encodeURIComponent(id)}`;
-            }}
+            onChange={(e) => setSelectedEdition(e.target.value)}
           >
             <option value="">Selecione o ano do edital</option>
             {availableEditions.map((edition) => (
@@ -163,6 +155,22 @@ export function EditalEditionCatalog({
             ))}
           </select>
         </div>
+      </div>
+        <div className="ed2-open">
+          {selectedEdition ? (
+            <Link to="/dashboard/edital" search={{ edition: selectedEdition }} className="ed2-open__btn">
+              Abrir programa <ChevronRight aria-hidden className="h-4 w-4" />
+            </Link>
+          ) : (
+            <span className="ed2-open__btn" aria-disabled="true">
+              Abrir programa <ChevronRight aria-hidden className="h-4 w-4" />
+            </span>
+          )}
+        </div>
+      </div>
+      <details className="ed2-filters">
+        <summary>Buscar por nome, ano ou documentação</summary>
+        <div className="edital-catalog-filters ed2-filters__grid">
         <div>
           <Label htmlFor="edition-search">Concurso, cargo ou banca</Label>
           <Input
@@ -193,6 +201,7 @@ export function EditalEditionCatalog({
           </select>
         </div>
       </div>
+      </details>
       <p className="edital-note">
         O ano identifica a edição do concurso. A presença no catálogo não significa inscrições
         abertas. Referências de prova podem ter apenas parte do programa revisada.
