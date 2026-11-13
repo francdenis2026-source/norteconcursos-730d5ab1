@@ -120,6 +120,7 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
   const startedAt = useRef(Date.now());
   const [savedAnswers, setSavedAnswers] = useState(0);
   const [saveErrors, setSaveErrors] = useState(0);
+  const [pendingSaves, setPendingSaves] = useState(0);
   useEffect(() => { startedAt.current = Date.now(); }, [index]);
   if (finished)
     return (
@@ -179,8 +180,9 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
             onClick={() => {
               if (picked) return;
               setAnswers((a) => ({ ...a, [index]: o.letter }));
-              if (q.id.startsWith(`material:${authoredKey}:`)) {
+              if (userId !== "demo-user" && q.id.startsWith(`material:${authoredKey}:`)) {
                 const itemIndex = Number(q.id.slice(q.id.lastIndexOf(":") + 1));
+                setPendingSaves((n) => n + 1);
                 void supabase.rpc("record_material_practice_answer", {
                   p_attempt_id: crypto.randomUUID(),
                   p_material_id: materialId,
@@ -190,7 +192,7 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
                 }).then(({ error }) => {
                   if (error) setSaveErrors((n) => n + 1);
                   else setSavedAnswers((n) => n + 1);
-                }).catch(() => setSaveErrors((n) => n + 1));
+                }).catch(() => setSaveErrors((n) => n + 1)).finally(() => setPendingSaves((n) => Math.max(0, n - 1)));
               }
             }}
             className={`flex min-h-11 w-full gap-3 rounded-xl border p-3 text-left text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${picked && o.letter === q.answer ? "border-emerald-500 bg-emerald-500/10" : picked === o.letter ? "border-rose-500 bg-rose-500/10" : "hover:bg-muted"}`}
@@ -222,11 +224,12 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
               </a>
             ))}
           <Button
+            disabled={pendingSaves > 0}
             onClick={() =>
               index + 1 === questions.length ? setFinished(true) : setIndex(index + 1)
             }
           >
-            {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+            {pendingSaves > 0 ? "Salvando resposta…" : index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
           </Button>
         </div>
       )}
