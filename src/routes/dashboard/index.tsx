@@ -90,7 +90,7 @@ const destinations = [
   },
   {
     to: "/dashboard/question-trainer",
-    image: "/media/hero/treinar-questoes-foco.webp",
+    image: "/media/hero/toolkit.webp",
     title: "Treinar questões",
     tone: "teal",
     text: "Pratique e revise seus erros",
@@ -122,7 +122,7 @@ const destinations = [
   },
   {
     to: "/dashboard/ranking",
-    image: "/media/hero/ranking-celebracao.webp",
+    image: "/media/hero/careers-team.webp",
     title: "Ranking",
     tone: "gold",
     text: "Veja sua posição entre os alunos",
