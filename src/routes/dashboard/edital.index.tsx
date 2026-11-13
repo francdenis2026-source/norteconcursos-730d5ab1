@@ -5,7 +5,7 @@ import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import "@/styles/student-workspace-unified.css";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { BookOpenText, Check, ChevronRight, ExternalLink, Loader2, Search, Share2, Download } from "lucide-react";
+import { ArrowLeftRight, BookOpenText, Check, ChevronRight, ClipboardCheck, ExternalLink, FileText, Layers, ListChecks, Loader2, Search, Share2, Download, Star, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
@@ -29,6 +29,9 @@ import {
 import "@/styles/student-internal-workspace-system.css";
 import "@/styles/edital-pdf-refinement.css";
 import "@/styles/edital-compact.css";
+import "@/styles/edital-study.css";
+
+const ED3_TONES = ["#39A6D8", "#E6A64A", "#70C58A", "#9B83E8", "#D8799D", "#4FB6A8"];
 
 export const Route = createFileRoute("/dashboard/edital/")({
   component: EditalPage,
@@ -259,143 +262,83 @@ function EditalPage() {
       {!edition ? (
         <EditalEditionCatalog editions={editions} failed={!!error} activeEditionId={activeEditionId} />
       ) : (
-        <section className={`edital-selected ${edition.contest_name.toLowerCase().includes("acre") ? "edital-selected--pcac" : ""}`}>
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <Badge variant="outline">
-              {edition.status === "archived" ? "Edição arquivada" : editalSourceLabel(edition)}
-            </Badge>
-            <div className="flex flex-wrap items-center gap-2">
+        <section className="ed3-identity" aria-label="Edição selecionada">
+          <header className="ed3-identity__head">
+            <div className="ed3-identity__title">
+              <Badge variant="outline">
+                {edition.status === "archived" ? "Edição arquivada" : editalSourceLabel(edition)}
+              </Badge>
+              <h2>{edition.contest_name} · {edition.contest_year}</h2>
+              <p>
+                {edition.role_name} ·{" "}
+                {edition.exam_board ||
+                  (examQuestions[0]?.board ? `${examQuestions[0].board} (identificada nas questões)` : "Banca não informada")}
+              </p>
+            </div>
+            <div className="ed3-identity__actions">
               <Button
                 variant={activeEditionId === edition.id ? "default" : "outline"}
+                size="sm"
                 onClick={adoptEdition}
                 disabled={activeEditionId === edition.id || !user?.id}
               >
-                {activeEditionId === edition.id ? "Edital ativo" : "Usar como edital principal"}
+                <Star className="mr-2 h-4 w-4" aria-hidden="true" />
+                {activeEditionId === edition.id ? "Edital principal" : "Usar como principal"}
               </Button>
-              <Button variant="outline" onClick={() => chooseEdition()}>
-                Trocar concurso ou edição
+              <Button variant="outline" size="sm" onClick={() => chooseEdition()}>
+                <ArrowLeftRight className="mr-2 h-4 w-4" aria-hidden="true" /> Trocar edição
               </Button>
+              {editalSourceUrl(edition.source) && (
+                <>
+                  <Button asChild variant="outline" size="sm">
+                    <a href={editalSourceUrl(edition.source)!} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
+                      {edition.source?.source_type === "edital" ? "Abrir edital" : "Abrir referência"}
+                    </a>
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    disabled={downloadBusy}
+                    onClick={() => void downloadEdital(editalSourceUrl(edition.source)!, `${edition.contest_name}-${edition.contest_year}`)}
+                  >
+                    <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+                    {downloadBusy ? "Baixando…" : "PDF"}
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => void shareEdital(editalSourceUrl(edition.source)!, `${edition.contest_name} — ${edition.contest_year}`)}
+                  >
+                    <Share2 className="mr-2 h-4 w-4" aria-hidden="true" /> Compartilhar
+                  </Button>
+                </>
+              )}
             </div>
-          </div>
-          <h2>
-            {edition.contest_name} · {edition.contest_year}
-          </h2>
-          <p>{edition.role_name}</p>
-          <p className="text-sm text-muted-foreground">
-            {edition.exam_board ||
-              (examQuestions[0]?.board
-                ? `${examQuestions[0].board} · identificada nas questões desta prova`
-                : "Banca não informada")}
-          </p>
+            {(shareFeedback || downloadFeedback) && <span role="status" className="ed3-identity__feedback">{downloadFeedback || shareFeedback}</span>}
+          </header>
+          <dl className="ed3-stats" aria-label="Resumo da edição">
+            <div className="ed3-stat ed3-stat--progress">
+              <ClipboardCheck aria-hidden="true" />
+              <dt>Progresso</dt>
+              <dd>{completionPercent}%</dd>
+              <small>{completedCount} de {topics.length} assuntos estudados</small>
+              <div className="edital-progress-track" role="progressbar" aria-label="Progresso do edital" aria-valuenow={completionPercent} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${completionPercent}%` }} /></div>
+            </div>
+            <div className="ed3-stat ed3-stat--disc"><Layers aria-hidden="true" /><dt>Disciplinas</dt><dd>{disciplines.length}</dd><small>no programa</small></div>
+            <div className="ed3-stat ed3-stat--topics"><ListChecks aria-hidden="true" /><dt>Assuntos</dt><dd>{topics.length}</dd><small>itens da edição</small></div>
+            <div className="ed3-stat ed3-stat--q"><Target aria-hidden="true" /><dt>Questões da prova</dt><dd>{catalogLoading ? "—" : examQuestions.length}</dd><small>{examQuestions.length ? "para treinar" : "nenhuma identificada"}</small></div>
+          </dl>
           {activeEditionId === edition.id && (
-            <p role="status" className="text-xs font-semibold text-primary">
-              Este edital está ativo como referência de estudo nas disciplinas da plataforma.
-            </p>
+            <p role="status" className="ed3-note ed3-note--ok">Este edital é a referência de estudo nas disciplinas da plataforma.</p>
           )}
-          <div className="edital-summary-grid" aria-label="Resumo da edição selecionada">
-            <div className="edital-summary-card edital-summary-card--progress">
-              <span>Progresso do edital</span>
-              <strong>{completionPercent}%</strong>
-              <small>{completedCount} de {topics.length} tópicos concluídos</small>
-              <div className="edital-progress-track" role="progressbar" aria-valuenow={completionPercent} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${completionPercent}%` }} /></div>
-            </div>
-            <div className="edital-summary-card"><span>Disciplinas</span><strong>{disciplines.length}</strong><small>áreas no conteúdo carregado</small></div>
-            <div className="edital-summary-card"><span>Tópicos</span><strong>{topics.length}</strong><small>itens atuais da edição</small></div>
-            <div className="edital-summary-card"><span>Questões elegíveis</span><strong>{catalogLoading ? "—" : examQuestions.length}</strong><small>{examQuestions.length ? "disponíveis para treinar" : "nenhuma identificada nesta prova"}</small></div>
-          </div>
-          {editalSourceUrl(edition.source) && (
-            <div className="flex flex-wrap items-center gap-2" aria-label="Ações do documento do edital">
-              <Button asChild variant="outline" size="sm">
-                <a href={editalSourceUrl(edition.source)!} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
-                  {edition.source?.source_type === "edital" ? "Abrir edital" : "Abrir referência"}
-                </a>
-              </Button>
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                disabled={downloadBusy}
-                onClick={() => void downloadEdital(
-                  editalSourceUrl(edition.source)!,
-                  `${edition.contest_name}-${edition.contest_year}`
-                )}
-              >
-                <Download className="mr-2 h-4 w-4" aria-hidden="true" />
-                {downloadBusy ? "Baixando…" : "Baixar PDF"}
-              </Button>
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => void shareEdital(
-                  editalSourceUrl(edition.source)!,
-                  `${edition.contest_name} — ${edition.contest_year}`
-                )}
-              >
-                <Share2 className="mr-2 h-4 w-4" aria-hidden="true" />
-                Compartilhar
-              </Button>
-              {(shareFeedback || downloadFeedback) && <span role="status" className="text-xs text-muted-foreground">{downloadFeedback || shareFeedback}</span>}
-            </div>
-          )}
-          <div
-            className="mt-4 rounded-xl border border-primary/25 bg-primary/5 p-4"
-            role="region"
-            aria-label="Treinar a prova desta edição"
-          >
-            <h3 className="font-semibold">Resolva a prova escolhida</h3>
-            <p className="my-2 text-sm text-muted-foreground">
-              Treinador: entre direto nas questões desta prova, com correção após cada resposta. A
-              seleção usa concurso, cargo, banca e ano. Questões por assunto abaixo podem ter origem
-              em outras provas.
-            </p>
-            {catalogLoading ? (
-              <p role="status">Conferindo questões desta prova…</p>
-            ) : catalogError ? (
-              <Button variant="outline" onClick={reloadCatalog}>
-                Tentar carregar questões da prova
-              </Button>
-            ) : examQuestions.length ? (
-              <>
-                <Button asChild>
-                  <Link to="/dashboard/question-trainer" search={editalPracticeSearch(edition)}>
-                    Resolver questões desta prova ({examQuestions.length})
-                  </Link>
-                </Button>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  {examCoverage(
-                    {
-                      contest: edition.contest_name,
-                      career: edition.role_name,
-                      year: edition.contest_year,
-                    },
-                    examQuestions.length,
-                  )}{" "}
-                  Quantidade disponível no acervo revisado; pode ser menor que a prova completa.
-                  Respostas anteriores ficam em revisão. Os limites diários do seu plano continuam
-                  valendo.
-                </p>
-              </>
-            ) : (
-              <p role="status" className="text-sm">
-                Ainda não há questões elegíveis identificadas para esta prova no acervo. Você pode
-                estudar pelos assuntos abaixo; questões de outras provas não serão incluídas neste
-                treino.
-              </p>
-            )}
-          </div>
           {edition.status === "archived" && (
-            <p className="edital-note">
-              Programa histórico para consulta. Os materiais relacionados apresentam conteúdo atual
-              e não reproduzem necessariamente a legislação vigente na data desta prova.
-            </p>
+            <p className="ed3-note">Programa histórico para consulta. Os materiais apresentam conteúdo atual e não reproduzem necessariamente a legislação vigente na data desta prova.</p>
           )}
           {edition.source?.source_type !== "edital" && (
-            <p className="edital-note">
-              Esta edição tem uma referência de prova cadastrada. Os assuntos disponíveis não
-              representam necessariamente o programa completo do edital.
-            </p>
+            <p className="ed3-note">Esta edição tem uma referência de prova cadastrada; os assuntos podem não representar o programa completo do edital.</p>
           )}
         </section>
       )}
@@ -425,40 +368,47 @@ function EditalPage() {
       )}
       {edition && (
         <>
-          <section
-            className="grid grid-cols-1 gap-3 sm:grid-cols-3"
-            aria-label="Cobertura do edital"
-          >
-            {[
-              [topics.length, "Assuntos"],
-              [disciplines.length, "Disciplinas"],
-              [
-                catalogLoading || catalogError
-                  ? "—"
-                  : topics.reduce((n, t) => n + (counts.get(t.id) ?? 0), 0),
-                "Questões vinculadas",
-              ],
-            ].map(([value, label]) => (
-              <div key={label} className="rounded-xl border bg-card p-4">
-                <p className="text-xl font-bold">{value}</p>
-                <p className="text-xs text-muted-foreground">{label}</p>
-              </div>
-            ))}
+          <ol className="ed3-trail" aria-label="Como estudar por este edital">
+            <li><span>1</span><div><strong>Escolha a disciplina</strong><small>Use a busca ou abra um bloco abaixo.</small></div></li>
+            <li><span>2</span><div><strong>Estude o assunto</strong><small>Abra o tópico e marque como estudado.</small></div></li>
+            <li><span>3</span><div><strong>Resolva questões</strong><small>Treine pelo assunto ou pela prova inteira.</small></div></li>
+          </ol>
+          <section className="ed3-exam" role="region" aria-label="Treinar a prova desta edição">
+            <ClipboardCheck aria-hidden="true" />
+            <div>
+              <h3>Resolva a prova desta edição</h3>
+              {catalogLoading ? (
+                <p role="status">Conferindo questões desta prova…</p>
+              ) : catalogError ? (
+                <p>Não foi possível carregar as questões.</p>
+              ) : examQuestions.length ? (
+                <p>
+                  {examCoverage({ contest: edition.contest_name, career: edition.role_name, year: edition.contest_year }, examQuestions.length)}{" "}
+                  Quantidade do acervo revisado; pode ser menor que a prova completa. Os limites diários do seu plano continuam valendo.
+                </p>
+              ) : (
+                <p role="status">Ainda não há questões elegíveis desta prova no acervo. Estude pelos assuntos abaixo; questões de outras provas não entram neste treino.</p>
+              )}
+            </div>
+            {catalogError ? (
+              <Button variant="outline" onClick={reloadCatalog}>Tentar de novo</Button>
+            ) : examQuestions.length ? (
+              <Button asChild>
+                <Link to="/dashboard/question-trainer" search={editalPracticeSearch(edition)}>
+                  Resolver {examQuestions.length} questões
+                </Link>
+              </Button>
+            ) : null}
           </section>
-          <Card>
+          <Card className="ed3-syllabus">
             <CardHeader>
-              <div className="edital-progress-panel">
-                <div><strong>{completionPercent}% concluído</strong><span>{completedCount} de {topics.length} assuntos estudados</span></div>
-                <div className="edital-progress-track"><span style={{ width: `${completionPercent}%` }} /></div>
-              </div>
-              <CardTitle>Encontre seu próximo assunto</CardTitle>
+              <CardTitle>Programa por disciplina</CardTitle>
               <CardDescription>
-                As contagens indicam questões elegíveis para treino, não domínio ou conclusão do
-                conteúdo.
+                As contagens indicam questões elegíveis para treino, não domínio do conteúdo.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="mb-5 grid gap-3 sm:grid-cols-[1fr_260px]">
+              <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_260px]">
                 <div>
                   <Label htmlFor="syllabus-search">Buscar assunto</Label>
                   <div className="relative mt-2">
@@ -489,7 +439,7 @@ function EditalPage() {
                     ))}
                   </select>
                 </div>
-                <div className="edital-filter-tabs" role="group" aria-label="Filtrar progresso">
+                <div className="edital-filter-tabs sm:col-span-2" role="group" aria-label="Filtrar progresso">
                   {([["all", "Todos"], ["pending", "Pendentes"], ["done", "Estudados"]] as const).map(([value, label]) => (
                     <button key={value} type="button" className={progressFilter === value ? "is-active" : ""} onClick={() => setProgressFilter(value)}>{label}</button>
                   ))}
@@ -507,13 +457,17 @@ function EditalPage() {
                 <p role="status">Carregando assuntos…</p>
               ) : filtered.length ? (
                 <Accordion type="multiple" defaultValue={disciplines.slice(0, 1)}>
-                  {[...groups].map(([name, items]) => (
-                    <AccordionItem key={name} value={name}>
+                  {[...groups].map(([name, items], index) => {
+                    const done = items.filter((item) => completed[item.id]).length;
+                    return (
+                    <AccordionItem key={name} value={name} className="ed3-disc" style={{ "--ed3-tone": ED3_TONES[index % ED3_TONES.length] } as React.CSSProperties}>
                       <AccordionTrigger className="text-left">
-                        {name}
-                        <Badge variant="outline" className="ml-2">
-                          {items.length} assuntos
-                        </Badge>
+                        <span className="ed3-disc__icon"><FileText aria-hidden="true" /></span>
+                        <span className="ed3-disc__name">{name}</span>
+                        <span className="ed3-disc__meta">
+                          <span>{done}/{items.length} estudados</span>
+                          <span className="ed3-disc__bar" aria-hidden="true"><i style={{ width: `${items.length ? Math.round((done / items.length) * 100) : 0}%` }} /></span>
+                        </span>
                       </AccordionTrigger>
                       <AccordionContent>
                         <ul className="space-y-2">
@@ -544,7 +498,8 @@ function EditalPage() {
                         </ul>
                       </AccordionContent>
                     </AccordionItem>
-                  ))}
+                    );
+                  })}
                 </Accordion>
               ) : (
                 <p className="py-5 text-sm text-muted-foreground">
