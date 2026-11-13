@@ -32,6 +32,10 @@ interface RailItem {
   label: string;
   group: string;
   subjects: string[];
+  /** Matérias que o edital espera para esta disciplina, mesmo quando nenhuma tem vídeo
+   * cadastrado ainda — usadas só para reconhecer um pedido vindo de fora (initialSubject),
+   * nunca para montar a lista de conteúdos. */
+  rawSubjects: string[];
   count: number;
   written: ReturnType<typeof findPcAcStudyResource>;
 }
@@ -96,12 +100,14 @@ export function VideoWorkspace({
         block.disciplines
           .filter((discipline) => !seen.has(discipline.name) && seen.add(discipline.name))
           .map((discipline) => {
-            const subjects = [...new Set((pcAcDisciplineLink(discipline.id)?.subjects ?? []).map(resolveSubject).filter(Boolean) as string[])];
+            const rawSubjects = pcAcDisciplineLink(discipline.id)?.subjects ?? [];
+            const subjects = [...new Set(rawSubjects.map(resolveSubject).filter(Boolean) as string[])];
             return {
               key: discipline.id,
               label: discipline.name.replace(/\s*\(.*\)\s*$/, ""),
               group: block.title,
               subjects,
+              rawSubjects,
               count: subjects.reduce((n, s) => n + countOf(s), 0),
               written: findPcAcStudyResource(discipline.name),
             };
@@ -114,6 +120,7 @@ export function VideoWorkspace({
         label: label(subject),
         group: mode === "playlists" ? "Cursos completos" : mode === "enem" ? "Disciplinas do ENEM" : "Matérias com videoaulas",
         subjects: [subject],
+        rawSubjects: [subject],
         count: countOf(subject),
         written: findPcAcStudyResource(subject),
       }))
@@ -123,8 +130,20 @@ export function VideoWorkspace({
   }, [catalog, mode, scope, cargo, catalogSubjects]);
 
   const requested = initialSubject ? canonicalSubject(initialSubject) : "";
-  const fromRequest = requested ? items.find((item) => item.subjects.some((s) => canonicalSubject(s) === requested)) : undefined;
-  const selected = items.find((item) => item.key === pickedKey) ?? fromRequest ?? items.find((item) => item.count > 0) ?? items[0];
+  // Procura também em rawSubjects: a disciplina pedida pode ainda não ter nenhum vídeo
+  // cadastrado (subjects fica vazio), mas o pedido precisa cair na "ainda sem videoaulas"
+  // dessa disciplina — nunca em outra matéria qualquer que tenha vídeo.
+  const fromRequest = requested
+    ? items.find(
+        (item) =>
+          item.subjects.some((s) => canonicalSubject(s) === requested) ||
+          item.rawSubjects.some((s) => canonicalSubject(s) === requested),
+      )
+    : undefined;
+  const selected =
+    items.find((item) => item.key === pickedKey) ??
+    fromRequest ??
+    (requested ? undefined : items.find((item) => item.count > 0) ?? items[0]);
   const tone = (item: RailItem | undefined) => TONES[Math.max(0, items.indexOf(item as RailItem)) % TONES.length]!;
 
   const entries: LessonSource[] = useMemo(() => {

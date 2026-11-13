@@ -559,6 +559,13 @@
 .pcac-material-shortcut__icon { width: 12px; height: 12px; }
 .pcac-material-shortcut__external { width: 9px; height: 9px; opacity: .65; }
 .pcac-material-shortcut--secondary { color: hsl(var(--muted-foreground)); border-style: dashed; }
+.pcac-material-shortcut--unavailable {
+  color: hsl(var(--muted-foreground));
+  border-style: dashed;
+  border-color: color-mix(in srgb, hsl(var(--muted-foreground)) 35%, transparent);
+  cursor: help;
+  opacity: 0.75;
+}
 @media (max-width: 720px) {
   .pcac-material-shortcuts { display: flex; margin: 3px 0 0; }
 }
@@ -575,6 +582,10 @@
 .pcac-today-badge-link:focus-visible {
   outline: 2px solid hsl(var(--primary));
   outline-offset: 2px;
+}
+.pcac-today-badge-link--unavailable {
+  cursor: help;
+  opacity: 0.7;
 }
 
 /* Tema claro: o texto secundário e os selos neutros (Rotina/Pausa) do card "Hoje" ficavam com

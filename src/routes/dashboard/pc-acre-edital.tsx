@@ -197,32 +197,39 @@ function DisciplineStudyLinks({
     <div className="pcac-discipline-actions space-y-2">
       <div className="flex flex-wrap gap-1.5">
         {courseChip}
-        {link?.subjects?.map((subject) => (
-          <React.Fragment key={subject}>
-            <Link
-              to="/dashboard/library"
-              search={{ collection: "subjects", discipline: subject, back }}
-              className={linkClass}
-            >
-              <BookOpen className="h-3 w-3" aria-hidden="true" />
-              Teoria{link.subjects!.length > 1 ? `: ${subject}` : ""}
-            </Link>
-            <Link to="/dashboard/question-trainer" search={{ subject, back }} className={linkClass}>
-              <BrainCircuit className="h-3 w-3" aria-hidden="true" />
-              Questões{link.subjects!.length > 1 ? `: ${subject}` : ""}
-            </Link>
-            {videos.length === 0 && (
+        {link?.subjects?.map((subject) => {
+          // Só a matéria certa: se ninguém pegou vídeo dela em nenhum dos dois levantamentos
+          // acima, não há conteúdo nenhum aqui — nunca mandar pra um vídeo de outra matéria.
+          const subjectHasVideo =
+            videos.some((video) => video.subject === subject) ||
+            topicVideos.some((video) => video.subject === subject);
+          return (
+            <React.Fragment key={subject}>
               <Link
-                to="/dashboard/media"
-                search={{ subject, tab: "videos" }}
-                className="pcac-video-link inline-flex items-center gap-1 rounded-md border border-rose-500/30 bg-rose-500/5 px-2.5 py-1 text-[11px] font-semibold text-rose-600 transition-colors hover:bg-rose-500/10"
+                to="/dashboard/library"
+                search={{ collection: "subjects", discipline: subject, back }}
+                className={linkClass}
               >
-                <PlayCircle className="h-3 w-3" aria-hidden="true" />
-                Vídeos{link.subjects!.length > 1 ? `: ${subject}` : ""}
+                <BookOpen className="h-3 w-3" aria-hidden="true" />
+                Teoria{link.subjects!.length > 1 ? `: ${subject}` : ""}
               </Link>
-            )}
-          </React.Fragment>
-        ))}
+              <Link to="/dashboard/question-trainer" search={{ subject, back }} className={linkClass}>
+                <BrainCircuit className="h-3 w-3" aria-hidden="true" />
+                Questões{link.subjects!.length > 1 ? `: ${subject}` : ""}
+              </Link>
+              {subjectHasVideo ? null : (
+                <span
+                  className="pcac-video-link pcac-video-link--empty inline-flex items-center gap-1 rounded-md border border-dashed border-muted-foreground/30 bg-muted/10 px-2.5 py-1 text-[11px] font-semibold text-muted-foreground"
+                  title={`Ainda não há videoaula cadastrada para ${subject}`}
+                  aria-label={`Vídeo indisponível para ${subject}`}
+                >
+                  <PlayCircle className="h-3 w-3" aria-hidden="true" />
+                  Vídeo{link.subjects!.length > 1 ? `: ${subject}` : ""} · indisponível
+                </span>
+              )}
+            </React.Fragment>
+          );
+        })}
         {videos.map((video) => (
           <button
             key={video.id}
