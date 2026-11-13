@@ -81,8 +81,8 @@ export function PushNotificationSettings() {
         applicationServerKey: decodeBase64Url(VAPID_PUBLIC_KEY) as BufferSource,
       });
       const json = subscription.toJSON();
-      const p256dh = json.keys?.p256dh;
-      const auth = json.keys?.auth;
+      const p256dh = json.keys?.["p256dh"];
+      const auth = json.keys?.["auth"];
       if (!p256dh || !auth) throw new Error("O navegador não forneceu as chaves da assinatura.");
       const { error } = await supabase.from("push_subscriptions").upsert({
         user_id: userId,
