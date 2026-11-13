@@ -40,9 +40,9 @@ import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
+import { canonicalSubject } from "@/lib/subjects";
 import "@/styles/study-area-compact.css";
 import "@/styles/student-area-kit.css";
-import { disciplineTheme } from "@/lib/disciplineTheme";
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -101,6 +101,13 @@ const OTHER_RESOURCES: {
     text: "Estude seguindo o que será cobrado.",
   },
 ];
+
+const SUBJECT_GUIDES: { id: string; name: string; text: string; icon: LucideIcon }[] = [
+  { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", icon: Archive },
+  { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", icon: ClipboardList },
+  { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", icon: Building2 },
+];
+const GUIDE_NAMES = new Set(SUBJECT_GUIDES.map((guide) => canonicalSubject(guide.name)));
 
 const summary = (card: DisciplineCard) =>
   [
@@ -243,7 +250,9 @@ function MaterialHub() {
   const items = data ?? [];
   const laws = hubLaws(items);
   const subjects = disciplineCards(items, TRACKS, PLAYLISTS);
-  const availableSubjects = subjects.filter((entry) => entry.hasContent);
+  const availableSubjects = subjects.filter(
+    (entry) => entry.hasContent && !GUIDE_NAMES.has(entry.name),
+  );
   const lawTotal = laws.reduce((sum, entry) => sum + entry.count, 0);
   const subjectTotal = availableSubjects.length;
 
@@ -299,12 +308,7 @@ function MaterialHub() {
         ) : (
           <ul className="ak-tiles">
             <li>
-              <Link
-                to="/dashboard/disciplinas"
-                search={{ d: "Realidade do Acre" }}
-                className="ak-tile"
-                style={{ "--ak-tone": "oklch(0.8 0.16 140)" } as React.CSSProperties}
-              >
+              <Link to="/dashboard/disciplinas" search={{ d: "Realidade do Acre" }} className="ak-tile">
                 <span className="ak-tile__icon">
                   <Landmark aria-hidden="true" />
                 </span>
@@ -312,18 +316,13 @@ function MaterialHub() {
                 <span>História, geografia, economia e atualidades</span>
               </Link>
             </li>
-            {[
-              { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", tone: "oklch(0.78 0.13 110)", icon: Archive },
-              { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", tone: "oklch(0.8 0.14 82)", icon: ClipboardList },
-              { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", tone: "oklch(0.74 0.14 200)", icon: Building2 },
-            ].map((guide) => (
+            {SUBJECT_GUIDES.map((guide) => (
               <li key={guide.id}>
                 <Link
                   to="/dashboard/library"
                   search={{ collection: "subjects", guia: guide.id } as never}
                   hash="materiais-atualizados-pcac"
                   className="ak-tile"
-                  style={{ "--ak-tone": guide.tone } as React.CSSProperties}
                 >
                   <span className="ak-tile__icon">
                     <guide.icon aria-hidden="true" />
@@ -335,15 +334,9 @@ function MaterialHub() {
             ))}
             {availableSubjects.map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
-              const theme = disciplineTheme(entry.name);
               return (
                 <li key={entry.name}>
-                  <Link
-                    to="/dashboard/disciplinas"
-                    search={{ d: entry.name }}
-                    className="ak-tile"
-                    style={{ "--ak-tone": theme.tone } as React.CSSProperties}
-                  >
+                  <Link to="/dashboard/disciplinas" search={{ d: entry.name }} className="ak-tile">
                     <span className="ak-tile__icon">
                       <Icon aria-hidden="true" />
                     </span>

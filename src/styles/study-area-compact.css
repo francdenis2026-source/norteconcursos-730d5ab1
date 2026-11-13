@@ -67,10 +67,11 @@
   line-height: 1.35;
 }
 
-/* Disciplinas do hub: cartão compacto por ícone + cor, sem foto de fundo (evita repetir a mesma
-   imagem genérica entre disciplinas diferentes). */
+/* Disciplinas do hub: cartão compacto, sóbrio (sem foto de fundo nem cor diferente por
+   disciplina — só um acento neutro, igual em todos os cartões, pra não ficar "cada um de uma
+   cor"). Ícone monocromático (mesma cor em todos), só muda o desenho por disciplina. */
 .material-hub .ak-tiles {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
   gap: 0.5rem;
 }
 
@@ -78,19 +79,21 @@
   justify-content: flex-start;
   gap: 0.375rem;
   height: auto;
-  min-height: 6.75rem;
+  min-height: 7.25rem;
   padding: 0.75rem;
-  border-bottom-width: 1px;
-  border-left: 0.25rem solid var(--ak-tone);
+  border: 1px solid hsl(var(--border));
   background: hsl(var(--card));
+  box-shadow: none;
 }
 
 .material-hub .ak-tile::after {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--ak-tone) 16%, transparent) 0%, transparent 65%);
+  content: none;
 }
 
 .material-hub .ak-tile:hover {
-  background: color-mix(in srgb, var(--ak-tone) 10%, hsl(var(--card)));
+  border-color: hsl(var(--primary) / 0.5);
+  background: hsl(var(--muted) / 0.4);
+  box-shadow: none;
 }
 
 .material-hub .ak-tile__icon {
@@ -99,12 +102,17 @@
   width: 2.125rem;
   height: 2.125rem;
   margin-bottom: 0.125rem;
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
 }
 
 .material-hub .ak-tile strong {
+  display: -webkit-box;
+  overflow: hidden;
   font-size: 0.8125rem;
-  -webkit-line-clamp: 1;
   color: hsl(var(--foreground));
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .material-hub .ak-tile span:last-child {
@@ -123,7 +131,7 @@
   }
 
   .material-hub .ak-tile {
-    min-height: 6rem;
+    min-height: 6.75rem;
     padding: 0.625rem;
   }
 }
