@@ -35,7 +35,7 @@ export function PushNotificationSettings() {
 
   const load = useCallback(async () => {
     const { data: authData } = await supabase.auth.getUser();
-    const id = authData.user?.id ?? null;
+    const id = authData.user && !authData.user.is_anonymous ? authData.user.id : null;
     setUserId(id);
     const canPush = typeof window !== "undefined" &&
       "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
