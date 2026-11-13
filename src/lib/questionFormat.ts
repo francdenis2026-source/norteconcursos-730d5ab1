@@ -270,6 +270,17 @@ export const answerLabel = (answer: Answer, board: string) =>
   /CEBRASPE|CESPE/i.test(board) ? (answer === "C" ? "Certo" : "Errado") : `Alternativa ${answer}`;
 export const examKey = (question: Question) =>
   [question.contest, question.career, question.board, question.year].join("::");
+// Algumas questões (ex.: "substitua o termo sublinhado", "a expressão em negrito", "a palavra em
+// itálico") só fazem sentido com a marcação visual preservada no texto. Quando a transcrição da
+// prova perdeu essa marcação, a questão referencia algo que não existe mais no texto — sinalizamos
+// em vez de adivinhar qual trecho era. Não cobre toda questão incompleta (ex.: texto de apoio
+// truncado sem nenhuma pista textual), só este padrão específico e verificável.
+const MARKUP_REFERENCE =
+  /\b(termo|trecho|palavra|express[aã]o|vocábulo)\s+(sublinhado|grifado|destacado|em\s+negrito|em\s+it[aá]lico)/i;
+const HAS_MARKUP_TAG = /<u>|<b>|<strong>|<i>|<em>|\*\*[^*]+\*\*/i;
+export const isLikelyIncompleteQuestion = (text: string) =>
+  MARKUP_REFERENCE.test(text) && !HAS_MARKUP_TAG.test(text);
+
 export function shuffled<T>(items: T[]) {
   const result = [...items];
   for (let index = result.length - 1; index > 0; index -= 1) {

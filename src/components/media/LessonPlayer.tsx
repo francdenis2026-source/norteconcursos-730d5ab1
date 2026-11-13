@@ -235,9 +235,10 @@ export function LessonPlayer({
       setNote("O navegador não permitiu tela cheia.");
     }
   };
-  const onKeyDown = (event: React.KeyboardEvent) => {
-    const tag = (event.target as HTMLElement).tagName;
+  const onKeyDown = (event: KeyboardEvent) => {
+    const tag = (event.target as HTMLElement | null)?.tagName;
     if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA" || event.ctrlKey || event.metaKey || event.altKey) return;
+    if (!shell.current?.isConnected) return;
     if (!ready && event.key !== " " && event.key.toLowerCase() !== "k") return;
     const key = event.key.toLowerCase();
     const run = (fn: () => void) => {
@@ -254,6 +255,18 @@ export function LessonPlayer({
     else if (key === "m") run(changeMute);
     else if (key === "f") run(() => void full());
   };
+  // Ouvinte no document (não no onKeyDown do React): o botão "Assistir aula" some do DOM assim
+  // que a aula começa, levando o foco de volta ao <body> — depois disso um onKeyDown preso à
+  // div nunca mais recebia a tecla, porque não havia mais foco dentro dela. Um ouvinte vivo
+  // enquanto o player está montado funciona não importa onde o foco esteja na página (exceto
+  // dentro do iframe do YouTube em si, que tem documento próprio e nunca propaga pra cá).
+  const onKeyDownRef = useRef(onKeyDown);
+  onKeyDownRef.current = onKeyDown;
+  useEffect(() => {
+    const handler = (event: KeyboardEvent) => onKeyDownRef.current(event);
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, []);
 
   const unavailable = source.embeddable === false;
   const blocked = unavailable || status === "error";
@@ -263,7 +276,7 @@ export function LessonPlayer({
   const playing = status === "playing";
 
   return (
-    <div className="vp2" ref={shell} data-status={status} data-native={native || undefined} onKeyDown={onKeyDown}>
+    <div className="vp2" ref={shell} data-status={status} data-native={native || undefined}>
       <div className="vp2__stage">
         <div ref={mount} className="vp2__embed" />
         {native && !unavailable && (
