@@ -8,6 +8,7 @@ import { pcAcCoreStudyCourses } from "@/data/pcAcCoreStudyCourses";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import {
   Archive,
+  BarChart3,
   Building2,
   Calculator,
   CheckCircle2,
@@ -76,6 +77,7 @@ const COURSE_ICONS: Record<string, LucideIcon> = {
   "contabilidade-analise-financeira": Calculator,
   estatistica: Sigma,
   "ti-seguranca": Cpu,
+  "analise-dados-informacoes": BarChart3,
 };
 
 export function UpdatedStudyCollections({initialCourseId,storageScope="public",materials=[]}: {initialCourseId?: string;storageScope?: string;materials?: StudyMaterialSummary[]}) {
