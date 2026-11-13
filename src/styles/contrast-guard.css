@@ -1,0 +1,71 @@
+/*
+ * Guarda de contraste (WCAG AA) para áreas do aluno nos dois temas.
+ *
+ * Causa raiz: as regras globais do modo claro (`:root:not(.dark) … #dashboard-content#dashboard-content :is(h1, h2, h3, h4, strong)`)
+ * fixam texto escuro e vencem, por especificidade, as cores claras de componentes com imagem ou fundo escuro.
+ * Aqui os componentes de superfície escura declaram texto claro em um único lugar. Ficam em !important de propósito:
+ * o fundo desses blocos é sempre escuro nos dois temas, então o texto claro nunca depende do tema.
+ */
+:root {
+  --on-dark-ink: #ffffff;
+  --on-dark-ink-soft: rgb(237 241 244 / 92%);
+  --on-dark-accent: #f0cf86;
+}
+
+/* Faixas, atalhos e cartões com imagem: texto claro sobre o escurecimento da imagem. */
+html body .app-shell[data-area] #dashboard-content#dashboard-content :is(
+  .sh2-hero,
+  .sh2-shortcuts a,
+  .ak-tile,
+  .ak-axis__head,
+  .ak-hero,
+  .student-pcac-spotlight__copy
+) :is(h1, h2, h3, h4, strong, b, time) {
+  color: var(--on-dark-ink) !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content :is(
+  .sh2-hero,
+  .sh2-shortcuts a,
+  .ak-tile,
+  .ak-axis__head,
+  .ak-hero,
+  .student-pcac-spotlight__copy
+) :is(p, small, span, li):not(.sh2-link, .hero-chip, .sh2-hero__date svg) {
+  color: var(--on-dark-ink-soft) !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.sh2-hero, .student-pcac-spotlight__copy) :is(.sh2-link, a) {
+  color: var(--on-dark-accent) !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.page-hero, .workspace-banner, .study-assistant-hero, .edital-modern-hero) :is(.hero-chip, .edital-eyebrow, .study-assistant-hero__eyebrow) {
+  color: var(--on-dark-accent) !important;
+}
+
+/* Rodapé de assinatura e marca lateral: legíveis sobre qualquer fundo. */
+.dev-strip { color: color-mix(in srgb, var(--foreground) 88%, transparent) !important; }
+.dev-strip strong { color: var(--foreground) !important; }
+.dev-strip__dot { opacity: .9 !important; }
+.platform-signature, .platform-signature__mark, .platform-signature__origin, .platform-signature span {
+  color: color-mix(in srgb, var(--foreground) 82%, transparent) !important;
+}
+
+/* Gráfico de ritmo: o SVG crescia além da área de 178px e as bolinhas cobriam os dias da semana. */
+.app-shell[data-area="student"] .student-home__rhythm-plot { grid-template-rows: minmax(0, 1fr); }
+.app-shell[data-area="student"] .student-home__rhythm-plot svg { min-height: 0; max-height: 100%; }
+
+/* Cartões com cabeçalho de foto: o cabeçalho é sempre escuro, nos dois temas. */
+html body .app-shell[data-area] #dashboard-content#dashboard-content .sh2-card--photo .sh2-card__head :is(h2, h3, button, p, small) {
+  color: var(--on-dark-ink) !important;
+}
+
+/* Aba selecionada do painel de acertos: verde escuro no claro, verde claro no escuro. */
+:root:not(.dark) .student-home.sh2 .sh2-insights__tabs button[aria-selected="true"] { color: #ffffff !important; }
+:root.dark .student-home.sh2 .sh2-insights__tabs button[aria-selected="true"] { color: #07170c !important; }
+
+/* Etiqueta de pendências: tom mais forte para chegar a 4,5:1. */
+:root:not(.dark) .student-home.sh2 .sh2-tag { color: color-mix(in srgb, var(--sh2-tone) 70%, #000) !important; }
+:root.dark .student-home.sh2 .sh2-tag { color: color-mix(in srgb, var(--sh2-tone) 62%, #fff) !important; }
+
+/* Resumo do concurso em foco: os botões de ação têm fundo próprio e mantêm a cor do componente. */
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-pcac-spotlight__action-group a :is(span, small, strong) {
+  color: inherit !important;
+}
