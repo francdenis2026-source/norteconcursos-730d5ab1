@@ -184,10 +184,13 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
 
         const state = performanceSourceResults(results.slice(0, 6));
         const materialResult = results[6];
-        const materialRows = materialResult?.status === "fulfilled"
+        const materialAvailable =
+          materialResult?.status === "fulfilled" &&
+          !(materialResult.value as { error?: unknown } | null)?.error;
+        const materialRows = materialAvailable
           ? (materialResult.value as MaterialPracticeActivity[])
           : [];
-        if (materialResult?.status !== "fulfilled" || (materialResult.value as { error?: unknown } | null)?.error) {
+        if (!materialAvailable) {
           state.warnings.push("Exercícios da Biblioteca: histórico indisponível nesta atualização.");
         }
         const responsesRes = [
