@@ -31,14 +31,20 @@
 .student-home.sh2 .sh2-shortcuts img {
   object-position: center 26%;
 }
-.student-home.sh2 .sh2-shortcuts img[src*="careers-team"] {
-  object-position: 72% 24%;
+.student-home.sh2 .sh2-shortcuts img[src*="ranking-celebracao"] {
+  object-position: 55% 40%;
 }
 .student-home.sh2 .sh2-shortcuts img[src*="pcpr-investigacao"] {
-  object-position: 58% 22%;
+  object-position: 80% 18%;
 }
 .student-home.sh2 .sh2-shortcuts img[src*="pcac-capa"] {
   object-position: center 30%;
+}
+.student-home.sh2 .sh2-shortcuts img[src*="treinar-questoes-foco"] {
+  object-position: 72% 24%;
+}
+.student-home.sh2 .sh2-shortcuts img[src*="plano-plus-carreira"] {
+  object-position: 56% 30%;
 }
 .student-home.sh2 .sh2-shortcuts a::after {
   background: linear-gradient(
