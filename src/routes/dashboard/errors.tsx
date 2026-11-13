@@ -63,7 +63,6 @@ import {
 import { cn } from "@/lib/utils";
 import { canonicalSubject } from "@/lib/subjects";
 import { type StudyMaterialSummary, useStudyMaterialList } from "@/lib/studyMaterials";
-import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
@@ -178,15 +177,16 @@ function ErrorArsenal({
             Reforçar com "{relatedMaterial.title}" na Biblioteca
             <ExternalLink className="h-3 w-3" />
           </Link>
-          <details>
-            <summary className="cursor-pointer text-xs font-semibold text-muted-foreground hover:text-primary">
-              Ver exemplos, ilustrações e vídeo-aulas aqui mesmo
-            </summary>
-            <div className="mt-3 space-y-3">
-              <WorkedExamples slug={relatedMaterial.slug} enabled />
-              {videos.length > 0 && <LibraryVideos videos={videos} />}
-            </div>
-          </details>
+          {videos.length > 0 && (
+            <details>
+              <summary className="cursor-pointer text-xs font-semibold text-muted-foreground hover:text-primary">
+                Ver vídeo-aulas aqui mesmo
+              </summary>
+              <div className="mt-3 space-y-3">
+                <LibraryVideos videos={videos} />
+              </div>
+            </details>
+          )}
         </div>
       )}
       <Button asChild className="w-full gap-2">

@@ -25,7 +25,6 @@ import { Markdown } from "@/components/library/Markdown";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
-import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
@@ -309,13 +308,6 @@ function MaterialPage() {
                 <p className="mt-2 leading-7">{material.summary}</p>
               </section>
             )}
-            <WorkedExamples
-              key={`${user?.id}:${material.slug}`}
-              slug={material.slug}
-              languageStudy={material.discipline === "Língua Portuguesa"}
-              enabled={signedIn}
-            />
-
             <LibraryVideos
               videos={videos}
               {...(materialLawSlug(material)
