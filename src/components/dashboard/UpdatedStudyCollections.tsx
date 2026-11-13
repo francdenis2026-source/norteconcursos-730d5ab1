@@ -8,7 +8,6 @@ import { pcAcCoreStudyCourses } from "@/data/pcAcCoreStudyCourses";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import {
   Archive,
-  BookOpen,
   Building2,
   Calculator,
   CheckCircle2,
