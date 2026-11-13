@@ -14,7 +14,27 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Notify subscribed devices after successful main validation
+      - name: Wait for the production version to be published
+        id: deployed
+        env:
+          COMMIT_AT: ${{ github.event.workflow_run.head_commit.timestamp }}
+          VERSION_URL: https://norteconcursos.xyz/version.json
+        run: |
+          for attempt in $(seq 1 20); do
+            VERSION_JSON=$(curl --fail --silent --show-error "$VERSION_URL?check=$(date +%s)" || true)
+            BUILT_AT=$(printf '%s' "$VERSION_JSON" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("builtAt", ""))' 2>/dev/null || true)
+            if [ -n "$BUILT_AT" ] && [ "$BUILT_AT" \> "$COMMIT_AT" ]; then
+              echo "Production version detected: $BUILT_AT"
+              echo "ready=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Production deployment not visible yet (attempt $attempt/20)."
+            sleep 30
+          done
+          echo "ready=false" >> "$GITHUB_OUTPUT"
+          echo "No matching production build appeared within 10 minutes; no push will be sent."
+      - name: Notify subscribed devices after successful production deployment
+        if: ${{ steps.deployed.outputs.ready == 'true' }}
         env:
           RELEASE_SECRET: ${{ secrets.PUSH_RELEASE_WEBHOOK_SECRET }}
           FUNCTION_URL: https://gkwphadbveiyjcwiiizw.supabase.co/functions/v1/send-push-notification
