@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ExternalLink, Info, Layers, MapPin, Network } from "lucide-react";
+import { ExternalLink, Info, Map, MapPin, Network, ZoomIn } from "lucide-react";
 import {
   ACRE_CURRENT_IBGE_REGIONS,
   ACRE_EDITAL_REGIONS,
@@ -11,62 +11,140 @@ import "@/styles/acre-geography-study.css";
 
 const REGION_COLORS = ["#9B83E8", "#39A6D8", "#70C58A", "#E6A64A", "#D8799D"];
 
-function AcreSchematicMap() {
+const ACRE_MAPS = [
+  {
+    id: "municipios",
+    label: "Municípios",
+    detail: "22 municípios",
+    title: "Mapa político dos 22 municípios",
+    description: "Veja os limites municipais e a localização de cada município acreano.",
+    src: "/media/acre/acre-municipios.webp",
+    width: 715,
+    height: 450,
+    alt: "Mapa político do Acre com os limites e nomes dos 22 municípios.",
+    legend: [{ color: "#718096", label: "Limites municipais e identificação dos 22 municípios" }],
+    note: "Use este mapa para localizar os municípios e relacionar cada nome à sua posição no território estadual.",
+  },
+  {
+    id: "mesorregioes",
+    label: "Mesorregiões",
+    detail: "2 áreas históricas",
+    title: "As duas mesorregiões tradicionais",
+    description: "O mapa numera as duas grandes áreas do recorte histórico do IBGE.",
+    src: "/media/acre/acre-mesorregioes.webp",
+    width: 850,
+    height: 477,
+    alt: "Mapa do Acre com duas mesorregiões históricas: Vale do Acre em azul, identificado pelo número 1, e Vale do Juruá em vermelho, identificado pelo número 2.",
+    legend: [
+      { color: "#079FE2", label: "1 · Vale do Acre — 14 municípios" },
+      { color: "#F01824", label: "2 · Vale do Juruá — 8 municípios" },
+    ],
+    note: "A numeração segue a imagem: 1 corresponde ao Vale do Acre (porção sudeste) e 2 ao Vale do Juruá (porção noroeste). É a divisão histórica em mesorregiões, não a nomenclatura regional vigente do IBGE.",
+  },
+  {
+    id: "agrupamentos",
+    label: "Regionais",
+    detail: "3 grandes grupos",
+    title: "Agrupamentos regionais do Acre",
+    description: "Esta representação reúne as regionais em três grandes conjuntos territoriais.",
+    src: "/media/acre/acre-regionais-amplas.webp",
+    width: 850,
+    height: 479,
+    alt: "Mapa regional do Acre: Juruá/Tarauacá-Envira em azul, Baixo Acre e Purus em laranja, e Alto Acre em verde.",
+    legend: [
+      { color: "#36A9DE", label: "Juruá / Tarauacá-Envira" },
+      { color: "#F29B4B", label: "Baixo Acre e Purus" },
+      { color: "#36A653", label: "Alto Acre" },
+    ],
+    note: "Atenção: este mapa agrupa as áreas em três conjuntos. O quadro do edital apresentado abaixo detalha cinco regionais de desenvolvimento; não confunda os dois recortes.",
+  },
+] as const;
+
+type AcreMapId = (typeof ACRE_MAPS)[number]["id"];
+
+function AcreMapGallery() {
+  const [activeMapId, setActiveMapId] = React.useState<AcreMapId>("municipios");
+  const [imageError, setImageError] = React.useState(false);
+  const activeMap = ACRE_MAPS.find((mapItem) => mapItem.id === activeMapId) ?? ACRE_MAPS[0];
+
+  const selectMap = (mapId: AcreMapId) => {
+    setActiveMapId(mapId);
+    setImageError(false);
+  };
+
   return (
-    <figure className="acre-geo-map">
-      <svg
-        viewBox="0 0 620 350"
-        role="img"
-        aria-labelledby="acre-map-title acre-map-description"
-        className="acre-geo-map__svg"
-      >
-        <title id="acre-map-title">Esquema de localização das cinco microrregiões históricas do Acre</title>
-        <desc id="acre-map-description">
-          Ilustração esquemática do estado do Acre com marcadores aproximados para Cruzeiro do Sul,
-          Tarauacá, Sena Madureira, Rio Branco e Brasiléia. Não representa limites municipais.
-        </desc>
-        <defs>
-          <linearGradient id="acre-map-fill" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#173E42" />
-            <stop offset="100%" stopColor="#102A35" />
-          </linearGradient>
-          <filter id="acre-map-shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#000" floodOpacity=".25" />
-          </filter>
-        </defs>
-        <path
-          d="M42 102 L78 67 L137 72 L164 52 L221 64 L267 81 L301 102 L338 106 L369 128 L410 141 L454 155 L502 177 L540 205 L518 235 L485 246 L462 275 L425 290 L397 311 L360 300 L331 319 L296 304 L267 282 L228 278 L197 259 L168 245 L144 218 L115 208 L93 179 L66 154 L49 126 Z"
-          fill="url(#acre-map-fill)"
-          stroke="#C6D5D8"
-          strokeWidth="3"
-          strokeLinejoin="round"
-          filter="url(#acre-map-shadow)"
-        />
-        <path d="M83 121 C180 130 240 164 330 175 S455 200 495 224" fill="none" stroke="#72B9C3" strokeWidth="2" strokeDasharray="6 7" opacity=".55" />
-        {[
-          { x: 145, y: 135, label: "Cruzeiro do Sul", color: REGION_COLORS[0], tx: 76, ty: 111 },
-          { x: 268, y: 165, label: "Tarauacá", color: REGION_COLORS[1], tx: 230, ty: 140 },
-          { x: 367, y: 196, label: "Sena Madureira", color: REGION_COLORS[2], tx: 328, ty: 171 },
-          { x: 478, y: 220, label: "Rio Branco", color: REGION_COLORS[3], tx: 455, ty: 194 },
-          { x: 408, y: 282, label: "Brasiléia", color: REGION_COLORS[4], tx: 378, ty: 260 },
-        ].map((point) => (
-          <g key={point.label}>
-            <circle cx={point.x} cy={point.y} r="13" fill={point.color} stroke="#fff" strokeWidth="3" />
-            <circle cx={point.x} cy={point.y} r="4" fill="#101820" />
-            <text x={point.tx} y={point.ty} fill="#fff" fontSize="13" fontWeight="700">
-              {point.label}
-            </text>
-          </g>
+    <section className="acre-geo__map-gallery" aria-labelledby="acre-geo-map-title">
+      <div className="acre-geo__section-title">
+        <Map size={17} aria-hidden="true" />
+        <div>
+          <h3 id="acre-geo-map-title">Mapas para estudar a divisão territorial</h3>
+          <p>Alterne entre o mapa municipal, a divisão histórica e os agrupamentos regionais.</p>
+        </div>
+      </div>
+
+      <div className="acre-geo__map-tabs" role="group" aria-label="Selecionar mapa do Acre">
+        {ACRE_MAPS.map((mapItem) => (
+          <button
+            key={mapItem.id}
+            type="button"
+            className={`acre-geo__map-tab${activeMapId === mapItem.id ? " is-active" : ""}`}
+            aria-pressed={activeMapId === mapItem.id}
+            onClick={() => selectMap(mapItem.id)}
+          >
+            <span>{mapItem.label}</span>
+            <small>{mapItem.detail}</small>
+          </button>
         ))}
-        <text x="42" y="337" fill="currentColor" fontSize="10" opacity=".65">
-          Esquema ilustrativo · marcadores aproximados · sem limites municipais
-        </text>
-      </svg>
-      <figcaption>
-        O desenho ajuda a memorizar a distribuição geral das microrregiões. Para limites e
-        cartografia oficial, consulte o mapa do IBGE nas fontes ao final.
-      </figcaption>
-    </figure>
+      </div>
+
+      <div className="acre-geo__map-viewer" aria-live="polite">
+        <div className="acre-geo__map-viewer-head">
+          <div>
+            <h4>{activeMap.title}</h4>
+            <p>{activeMap.description}</p>
+          </div>
+          <a
+            className="acre-geo__map-open"
+            href={activeMap.src}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Abrir ${activeMap.title} em tamanho original`}
+          >
+            <ZoomIn size={15} aria-hidden="true" />
+            Ampliar mapa
+          </a>
+        </div>
+
+        {imageError ? (
+          <div className="acre-geo__map-error" role="alert">
+            Não foi possível carregar esta imagem. Atualize a página ou abra o mapa em tamanho original.
+          </div>
+        ) : (
+          <figure className="acre-geo__map-figure">
+            <img
+              key={activeMap.src}
+              src={activeMap.src}
+              width={activeMap.width}
+              height={activeMap.height}
+              alt={activeMap.alt}
+              loading="lazy"
+              decoding="async"
+              onError={() => setImageError(true)}
+            />
+            <figcaption>{activeMap.note}</figcaption>
+          </figure>
+        )}
+
+        <div className="acre-geo__map-legend" aria-label="Legenda do mapa">
+          {activeMap.legend.map((item) => (
+            <span className="acre-geo__map-legend-item" key={item.label}>
+              <i style={{ backgroundColor: item.color }} aria-hidden="true" />
+              {item.label}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -89,34 +167,7 @@ export function AcreGeographyStudy() {
         </div>
       </header>
 
-      <div className="acre-geo__map-layout">
-        <div className="acre-geo__map-panel">
-          <div className="acre-geo__section-title">
-            <Layers size={17} />
-            <h3>Distribuição espacial</h3>
-          </div>
-          <AcreSchematicMap />
-        </div>
-        <div className="acre-geo__meso-panel">
-          <div className="acre-geo__section-title">
-            <Network size={17} />
-            <h3>As duas mesorregiões</h3>
-          </div>
-          {ACRE_MESOREGIONS.map((meso, index) => (
-            <article className="acre-geo__meso-card" key={meso.id} style={{ "--acre-region": index === 0 ? "#D8799D" : "#9B83E8" } as React.CSSProperties}>
-              <div className="acre-geo__meso-heading">
-                <strong>{meso.name}</strong>
-                <span>{meso.microregions.length} microrregiões · {meso.municipalityCount} municípios</span>
-              </div>
-              <p>{meso.microregions.join(" · ")}</p>
-            </article>
-          ))}
-          <p className="acre-geo__micro-note">
-            <Info size={15} /> Vale do Acre reúne Brasiléia, Rio Branco e Sena Madureira. Vale do
-            Juruá reúne Cruzeiro do Sul e Tarauacá.
-          </p>
-        </div>
-      </div>
+      <AcreMapGallery />
 
       <div className="acre-geo__section-title">
         <MapPin size={17} />

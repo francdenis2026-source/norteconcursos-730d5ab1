@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { existsSync, readFileSync } from "node:fs";
 import { splitPcAcTopic, pcAcVerticalTopicGroups } from "../src/lib/pcAcreTopicStructure.ts";
 import { ACRE_CURRENT_IBGE_REGIONS, ACRE_EDITAL_REGIONS, ACRE_MESOREGIONS, ACRE_MICROREGIONS } from "../src/data/acreGeography.ts";
 
@@ -128,4 +129,22 @@ test("PC-AC edital regional groups cover all municipalities and place Capixaba i
   assert.equal(municipalities.length, 22);
   assert.equal(new Set(municipalities).size, 22);
   assert.ok(ACRE_EDITAL_REGIONS.find((region) => region.name === "Baixo Acre")?.municipalities.includes("Capixaba"));
+});
+
+
+test("Acre geography renders the three supplied detailed maps as responsive image assets", () => {
+  const assets = [
+    "public/media/acre/acre-municipios.webp",
+    "public/media/acre/acre-mesorregioes.webp",
+    "public/media/acre/acre-regionais-amplas.webp",
+  ];
+  for (const asset of assets) {
+    assert.equal(existsSync(new URL(`../${asset}`, import.meta.url)), true, `missing map asset: ${asset}`);
+  }
+  const component = readFileSync(new URL("../src/components/dashboard/AcreGeographyStudy.tsx", import.meta.url), "utf8");
+  assert.match(component, /Mapa político dos 22 municípios/);
+  assert.match(component, /Vale do Acre — 14 municípios/);
+  assert.match(component, /Vale do Juruá — 8 municípios/);
+  assert.match(component, /Juruá \/ Tarauacá-Envira/);
+  assert.doesNotMatch(component, /function AcreSchematicMap/);
 });
