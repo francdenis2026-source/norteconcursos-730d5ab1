@@ -2,7 +2,8 @@
  * Reservas extrativistas (Resex) federais do Acre.
  * Fonte: Cadastro Nacional de Unidades de Conservação (CNUC/MMA), relatórios exportados em 12/11/2026.
  * "area" = área calculada por geoprocessamento; "legalArea" = área do ato de criação.
- * A Resex do Alto Juruá não teve relatório utilizável no CNUC: aparece sem área e sem municípios.
+ * A Resex do Alto Juruá não teve relatório utilizável no CNUC: usa a área do decreto de criação
+ * (Decreto nº 98.863/1990, 506.186 ha) e o município indicado em estudo acadêmico; confirme no ICMBio.
  */
 export interface AcreResex {
   id: string;
@@ -62,10 +63,11 @@ export const ACRE_RESEX: AcreResex[] = [
     id: "alto-jurua",
     name: "Alto Juruá",
     created: "23/01/1990",
-    act: "Decreto de 23/1/1990",
-    municipalities: [],
+    act: "Decreto nº 98.863/1990",
+    legalArea: 506186,
+    municipalities: ["Marechal Thaumaturgo"],
     color: "#D9657F",
-    note: "Sem relatório utilizável no CNUC: a data vem de fonte secundária e a área e os municípios não foram confirmados.",
+    note: "Primeira reserva extrativista criada no país (Decreto nº 98.863, de 23/1/1990), com área aproximada de 506.186 ha no ato. O CNUC não trouxe relatório utilizável: a área é a do decreto e o município vem de estudo acadêmico; confira no ICMBio.",
   },
 ];
 

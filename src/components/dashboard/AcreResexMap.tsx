@@ -11,8 +11,9 @@ export function AcreResexMap() {
   const [selected, setSelected] = React.useState<string>("all");
   const mapped = ACRE_RESEX.filter((resex) => resex.municipalities.length);
   const chosen = ACRE_RESEX.find((resex) => resex.id === selected);
-  const maxArea = Math.max(...ACRE_RESEX.map((resex) => resex.area ?? 0));
-  const totalArea = ACRE_RESEX.reduce((sum, resex) => sum + (resex.area ?? 0), 0);
+  const sizeOf = (resex: (typeof ACRE_RESEX)[number]) => resex.area ?? resex.legalArea ?? 0;
+  const maxArea = Math.max(...ACRE_RESEX.map(sizeOf));
+  const totalArea = ACRE_RESEX.reduce((sum, resex) => sum + sizeOf(resex), 0);
 
   const coverage = (municipality: string) => mapped.filter((resex) => resex.municipalities.includes(municipality));
   const fillOf = (municipality: string) => {
@@ -72,12 +73,12 @@ export function AcreResexMap() {
             {chosen ? (
               <dl>
                 <div><dt>Criação</dt><dd>{chosen.created} · {chosen.act}</dd></div>
-                {chosen.area ? <div><dt>Área</dt><dd>{fmt(chosen.area)} ha (geoprocessamento){chosen.legalArea ? `; ${fmt(chosen.legalArea)} ha no ato legal` : ""}</dd></div> : null}
+                {sizeOf(chosen) ? <div><dt>Área</dt><dd>{chosen.area ? `${fmt(chosen.area)} ha (geoprocessamento)${chosen.legalArea ? `; ${fmt(chosen.legalArea)} ha no ato legal` : ""}` : `${fmt(sizeOf(chosen))} ha (ato legal)`}</dd></div> : null}
                 <div><dt>Municípios</dt><dd>{chosen.municipalities.length ? chosen.municipalities.join(", ") : "sem dado oficial no CNUC"}</dd></div>
               </dl>
             ) : (
               <p>
-                Quatro reservas com dados no CNUC somam cerca de <strong>{fmt(totalArea)} ha</strong>, perto de{" "}
+                As cinco reservas somam cerca de <strong>{fmt(totalArea)} ha</strong>, perto de{" "}
                 <strong>{((totalArea / ACRE_TOTAL_HECTARES) * 100).toFixed(0)}% do território</strong> do Estado. Alcançam{" "}
                 {coveredMunicipalities.length} municípios.
               </p>
@@ -90,16 +91,16 @@ export function AcreResexMap() {
       <div className="ari__chart" role="group" aria-label="Área das reservas extrativistas em hectares">
         <h3><BarChart3 size={15} aria-hidden="true" /> Tamanho das reservas (hectares)</h3>
         <ul>
-          {[...ACRE_RESEX].sort((a, b) => (b.area ?? 0) - (a.area ?? 0)).map((resex) => (
+          {[...ACRE_RESEX].sort((a, b) => sizeOf(b) - sizeOf(a)).map((resex) => (
             <li key={resex.id} style={{ "--c": resex.color } as React.CSSProperties}>
               <span>{resex.name}</span>
-              <div className="ari__bar" aria-hidden="true"><i style={{ width: `${resex.area ? (resex.area / maxArea) * 100 : 0}%` }} /></div>
-              <strong>{resex.area ? fmt(resex.area) : "sem dado"}</strong>
+              <div className="ari__bar" aria-hidden="true"><i style={{ width: `${(sizeOf(resex) / maxArea) * 100}%` }} /></div>
+              <strong>{fmt(sizeOf(resex))}{resex.area ? "" : "*"}</strong>
             </li>
           ))}
         </ul>
       </div>
-      <p className="ari__note">Fonte: CNUC/MMA (relatórios de 12/11/2026). Áreas por geoprocessamento; o ato legal pode trazer valor diferente.</p>
+      <p className="ari__note">Fonte: CNUC/MMA (relatórios de 12/11/2026), áreas por geoprocessamento. * Alto Juruá: área do decreto de criação (sem relatório no CNUC).</p>
     </section>
   );
 }
