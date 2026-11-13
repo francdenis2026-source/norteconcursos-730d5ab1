@@ -213,6 +213,7 @@ function DisciplineIndex({
             {id:"contabilidade-analise-financeira",label:"Contabilidade e Análise Financeira"},
             {id:"estatistica",label:"Estatística"},
             {id:"ti-seguranca",label:"TI e Segurança da Informação"},
+            {id:"lingua-portuguesa",label:"Língua Portuguesa"},
             {id:"analise-dados-informacoes",label:"Análise de Dados e Informações"},
             {id:"arquivologia",label:"Arquivologia · Investigador e Papiloscopista"},
             {id:"administracao-geral",label:"Noções de Administração · Investigador"},
