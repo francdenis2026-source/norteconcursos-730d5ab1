@@ -1,0 +1,55 @@
+/* Treinador de questões: montagem da sessão no celular.
+   Cabeçalho compacto, atalhos em grade (sem rolagem lateral cortando botões),
+   filtros legíveis e sem texto truncado, barra de início sempre à vista. */
+@media (max-width: 767px) {
+  html body .app-shell[data-area] #dashboard-content .trainer-setup.qt2 { --qt-gap: 10px; padding-bottom: 12px; }
+  html body .app-shell[data-area] #dashboard-content .trainer-setup.qt2 > div { min-height: 0 !important; height: auto !important; }
+
+  /* Cabeçalho */
+  html body .app-shell[data-area] #dashboard-content .qt2-hero {
+    display: grid !important; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 14px !important;
+    min-height: 0 !important; height: auto !important; border-radius: 14px;
+  }
+  html body .app-shell[data-area] #dashboard-content .qt2-hero > img { opacity: 0.35; object-position: 80% 20%; }
+  html body .app-shell[data-area] #dashboard-content .qt2-hero__copy { display: grid; gap: 4px; min-width: 0; }
+  html body .app-shell[data-area] #dashboard-content .qt2-hero__copy small { font-size: 10.5px; letter-spacing: 0.1em; }
+  html body .app-shell[data-area] #dashboard-content .qt2-hero__copy h1 { font-size: 1.2rem !important; line-height: 1.2 !important; margin: 0; }
+  html body .app-shell[data-area] #dashboard-content .qt2-hero__copy p { font-size: 12.5px; margin: 0; }
+
+  /* Atalhos: linhas que quebram por botão inteiro, sem rolagem lateral nem texto partido */
+  html body .app-shell[data-area] #dashboard-content .qt2-quick.qt2-quick.qt2-quick {
+    display: flex !important; flex-wrap: wrap; gap: 6px; overflow: visible !important;
+  }
+  html body .app-shell[data-area] #dashboard-content .qt2-quick.qt2-quick > a {
+    display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+    flex: 1 1 auto; width: auto; min-height: 36px; padding: 0 12px; font-size: 12.5px; font-weight: 700; white-space: nowrap;
+  }
+  html body .app-shell[data-area] #dashboard-content .qt2-quick > a svg { width: 14px; height: 14px; flex: none; }
+  /* O cabeçalho é sempre escuro: texto claro também no tema claro */
+  html body .app-shell[data-area] #dashboard-content .qt2-hero__copy :is(small, h1, p, strong) { color: #f4f6f9 !important; }
+  html body .app-shell[data-area] #dashboard-content .qt2-hero__copy small { color: #e8c776 !important; }
+
+  /* Filtros */
+  html body .app-shell[data-area] #dashboard-content .qt2-filters { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px 10px !important; margin-top: 12px; }
+  html body .app-shell[data-area] #dashboard-content .qt2-filters > :nth-child(3) { grid-column: 1 / -1; }
+  html body .app-shell[data-area] #dashboard-content .qt2-filters label,
+  html body .app-shell[data-area] #dashboard-content .qt2-filters [class*="label"] {
+    font-size: 11px !important; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px;
+  }
+  html body .app-shell[data-area] #dashboard-content .qt2-filters :is(select, button[role="combobox"], [data-slot="select-trigger"]) {
+    min-height: 44px !important; height: 44px; font-size: 14px !important; padding-inline: 12px !important;
+    text-overflow: ellipsis; overflow: hidden; white-space: nowrap; border-radius: 10px;
+  }
+  html body .app-shell[data-area] #dashboard-content .qt2-filters button[role="combobox"] > span { font-size: 14px !important; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; }
+  html body .app-shell[data-area] #dashboard-content .qt2-filters > :nth-child(6) { grid-column: 1 / -1; }
+
+  /* Mais filtros e barra de início */
+  html body .app-shell[data-area] #dashboard-content .trainer-more { margin-top: 10px !important; }
+  html body .app-shell[data-area] #dashboard-content .trainer-start-bar {
+    position: sticky; bottom: 76px; z-index: 5; margin-top: 12px !important; padding: 8px !important;
+    background: var(--card);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  }
+  html body .app-shell[data-area] #dashboard-content .trainer-start-bar__actions { width: 100%; }
+  html body .app-shell[data-area] #dashboard-content .trainer-start-bar__actions > :last-child { flex: 1 1 auto; min-height: 46px; font-size: 15px; font-weight: 800; }
+}

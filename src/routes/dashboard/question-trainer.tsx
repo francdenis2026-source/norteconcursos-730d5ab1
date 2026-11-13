@@ -117,6 +117,7 @@ import "@/styles/student-assessment-workspaces.css";
 import "@/styles/question-trainer-professional-refinement.css";
 import "@/styles/question-trainer-wide.css";
 import "@/styles/question-trainer-viewport.css";
+import "@/styles/trainer-mobile-refine.css";
 import { Hint } from "@/components/ui/hint";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
