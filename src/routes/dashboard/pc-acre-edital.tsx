@@ -33,6 +33,7 @@ import {
 } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { usePerformanceOverview } from "@/hooks/usePerformanceOverview";
 import { supabase } from "@/integrations/supabase/client";
 import {
   pcAcVerticalCargos,
@@ -272,6 +273,7 @@ function DisciplineAccordionItem({
   cargoId,
   progress,
   onToggleTopic,
+  subjectStats,
 }: {
   block: string;
   discipline: PcAcVerticalDiscipline;
@@ -283,11 +285,28 @@ function DisciplineAccordionItem({
     subtopicIndex?: number,
     forcedStatus?: PcAcVerticalStatus | null,
   ) => void;
+  subjectStats?: Map<string, { correct: number; total: number }>;
 }) {
   const counts = pcAcVerticalDisciplineCounts(block, discipline, progress);
   const groups = pcAcVerticalTopicGroups(discipline);
   const hasTopics = groups.length > 0;
   const value = `${block}::${discipline.id}`;
+  const link = pcAcDisciplineLink(discipline.id);
+  // Revisões (quantas vezes o aluno já respondeu questões) e acertos desta disciplina, somados
+  // a partir do desempenho real no treinador — não é contagem manual como no checklist em papel.
+  const questionStats = React.useMemo(() => {
+    if (!link?.subjects?.length || !subjectStats) return null;
+    let correct = 0;
+    let total = 0;
+    for (const subject of link.subjects) {
+      const stat = subjectStats.get(subject);
+      if (stat) {
+        correct += stat.correct;
+        total += stat.total;
+      }
+    }
+    return total > 0 ? { correct, total, accuracy: Math.round((correct / total) * 100) } : null;
+  }, [link, subjectStats]);
 
   const header = (
     <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 text-left">
@@ -303,6 +322,15 @@ function DisciplineAccordionItem({
       >
         {counts.estudado}/{counts.total}
       </Badge>
+      {questionStats && (
+        <Badge
+          variant="outline"
+          className="shrink-0 border-primary/30 text-[10px] text-primary"
+          title="Questões respondidas e % de acertos nesta matéria, pelo treinador de questões"
+        >
+          {questionStats.total} questões · {questionStats.accuracy}% acertos
+        </Badge>
+      )}
     </div>
   );
 
@@ -473,6 +501,16 @@ function PcAcreEditalVerticalizadoPage() {
     if (typeof window === "undefined") return;
     setProgress(readPcAcVerticalProgress(window.localStorage, userId, cargo.id));
   }, [userId, cargo.id]);
+
+  // Só busca o desempenho real quando a aba de conteúdo está visível, que é onde os
+  // selos de "questões · % acertos" por disciplina aparecem.
+  const { data: performance } = usePerformanceOverview(user?.id, !!user?.id && editalTab === "conteudo");
+  const subjectStats = React.useMemo(() => {
+    const map = new Map<string, { correct: number; total: number }>();
+    for (const item of performance?.trainer.bySubject ?? [])
+      map.set(item.subject, { correct: item.correct, total: item.total });
+    return map;
+  }, [performance]);
 
   const toggle = (
     block: string,
@@ -709,7 +747,8 @@ function PcAcreEditalVerticalizadoPage() {
               </CardTitle>
               <CardDescription>
                 Toque em "Pendente" para alternar entre Pendente → A estudar → Estudado. O progresso
-                fica salvo neste navegador.
+                fica salvo neste navegador. O selo "questões · % acertos" em cada disciplina vem do
+                seu desempenho real no treinador de questões.
               </CardDescription>
             </div>
             <Badge variant="outline" className="text-sm">
@@ -732,6 +771,7 @@ function PcAcreEditalVerticalizadoPage() {
                         discipline={discipline}
                         cargoId={cargo.id}
                         progress={progress}
+                        subjectStats={subjectStats}
                         onToggleTopic={(disciplineId, topicIndex, subtopicIndex, forcedStatus) =>
                           toggle(block.title, disciplineId, topicIndex, subtopicIndex, forcedStatus)
                         }
