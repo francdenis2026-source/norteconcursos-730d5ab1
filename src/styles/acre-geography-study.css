@@ -153,3 +153,36 @@
 .acre-imap__strategy h4 { display: flex; align-items: center; gap: .4rem; margin: 0 0 .4rem; font-size: .88rem; font-weight: 850; }
 .acre-imap__strategy ul { display: grid; gap: .35rem; margin: 0; padding-left: 1.1rem; }
 .acre-imap__strategy li { font-size: .78rem; line-height: 1.5; }
+
+/* Divisão regional do IBGE explicada */
+.acre-ibge { display: grid; gap: .7rem; min-width: 0; padding: .9rem; border: 1px solid color-mix(in srgb, #2f8fbf 40%, var(--border)); border-radius: 1rem; background: color-mix(in srgb, #2f8fbf 4%, var(--card)); }
+.acre-ibge__head { display: flex; align-items: center; gap: .65rem; }
+.acre-ibge__head > svg { flex: none; color: #2f8fbf; }
+.acre-ibge__head h3 { margin: 0; font-size: 1rem; font-weight: 850; }
+.acre-ibge__head p { margin: .1rem 0 0; color: var(--muted-foreground); font-size: .75rem; }
+.acre-ibge__lead p { margin: 0; font-size: .82rem; line-height: 1.6; }
+.acre-ibge__steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.acre-ibge__steps li { position: relative; display: grid; gap: .25rem; align-content: start; padding: .6rem .7rem; border: 1px solid var(--border); border-top: 4px solid #2f8fbf; border-radius: .7rem; background: var(--card); }
+.acre-ibge__steps li:nth-child(2) { border-top-color: #e6a64a; }
+.acre-ibge__steps li:nth-child(3) { border-top-color: #70c58a; }
+.acre-ibge__steps li:nth-child(4) { border-top-color: #9b83e8; }
+.acre-ibge__steps b { font-size: .82rem; }
+.acre-ibge__steps span { color: var(--muted-foreground); font-size: .72rem; line-height: 1.45; }
+.acre-ibge__arrow { display: none; margin-inline: auto; color: var(--muted-foreground); }
+.acre-ibge__table { display: grid; border: 1px solid var(--border); border-radius: .8rem; overflow: hidden; background: var(--card); }
+.acre-ibge__row { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr) 5.5rem; gap: .5rem; align-items: center; padding: .5rem .75rem; font-size: .8rem; font-weight: 700; }
+.acre-ibge__row + .acre-ibge__row { border-top: 1px solid var(--border); }
+.acre-ibge__row small { display: block; color: var(--muted-foreground); font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.acre-ibge__row--head { background: color-mix(in srgb, #2f8fbf 14%, var(--card)); font-size: .68rem; font-weight: 850; text-transform: uppercase; letter-spacing: .04em; }
+.acre-ibge__row--main { background: color-mix(in srgb, #e6a64a 12%, var(--card)); font-weight: 850; }
+.acre-ibge__row span:last-child { text-align: right; }
+.acre-ibge__points { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.acre-ibge__points li { display: flex; gap: .5rem; padding: .5rem .65rem; border-radius: .65rem; background: color-mix(in srgb, #e6a64a 12%, transparent); font-size: .78rem; line-height: 1.5; }
+.acre-ibge__points svg { flex: none; margin-top: .2rem; color: #b7771a; }
+.acre-ibge__note { margin: 0; color: var(--muted-foreground); font-size: .68rem; }
+@media (max-width: 760px) {
+  .acre-ibge { padding: .7rem; }
+  .acre-ibge__steps { grid-template-columns: minmax(0, 1fr); }
+  .acre-ibge__arrow { display: block; }
+  .acre-ibge__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 3rem; padding: .45rem .55rem; }
+}

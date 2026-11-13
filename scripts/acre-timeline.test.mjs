@@ -62,3 +62,12 @@ test("Resex map and indigenous study use only municipalities that exist on the m
   assert.match(read("src/components/dashboard/AcreRealityArea.tsx"), /AcreResexMap/);
   assert.match(read("src/components/dashboard/AcreRealityArea.tsx"), /AcreIndigenousStudy/);
 });
+
+test("IBGE regional division is explained and 2026 updates are recorded", () => {
+  const ibge = read("src/components/dashboard/AcreIbgeDivision.tsx");
+  for (const text of ["Região Imediata", "Região Intermediária", "1989/1990", "2017", "133 e 510", "regionais do edital"])
+    assert.ok(ibge.includes(text), `missing: ${text}`);
+  assert.match(read("src/components/dashboard/AcreGeographyStudy.tsx"), /<AcreIbgeDivision \/>/);
+  const content = read("src/data/acreStudyContent.ts");
+  for (const text of ["887.794", "14,7%", "Marcio Bittar"]) assert.ok(content.includes(text), `missing: ${text}`);
+});
