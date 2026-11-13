@@ -21,6 +21,7 @@ import {
   PRELIMINARY_KEY_MARK,
 } from "@/lib/questionFormat";
 import { fetchAllRows, isMissingQuestionTable, isMissingQuestionSupport } from "@/lib/catalog";
+import { clearCatalogCache, readCatalogCache, writeCatalogCache } from "@/lib/catalogCache";
 
 /** Junta o texto de apoio ligado ao item (se houver) ao enunciado, no formato lido por parseQuestion. */
 function withSupportText(support: unknown, text: string): string {
@@ -370,9 +371,18 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
     staleTime: 15 * 60_000,
     retry: CATALOG_RETRY,
     retryDelay: CATALOG_RETRY_DELAY,
-    queryFn: () => loadQuestionCatalog(queryClient, userId),
+    queryFn: async () => {
+      if (userId) {
+        const cached = await readCatalogCache<Awaited<ReturnType<typeof loadQuestionCatalog>>>(userId);
+        if (cached) return cached;
+      }
+      const fresh = await loadQuestionCatalog(queryClient, userId);
+      if (userId) void writeCatalogCache(userId, fresh);
+      return fresh;
+    },
   });
   const reload = () => {
+    void clearCatalogCache();
     queryClient.removeQueries({ queryKey: ["question-catalog", userId] });
     return queryClient.resetQueries({ queryKey: ["question-catalog-view", userId], exact: true });
   };

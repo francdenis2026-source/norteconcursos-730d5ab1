@@ -124,6 +124,7 @@ import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { clearCatalogCache } from "@/lib/catalogCache";
 
 type MenuItem = NavigationItem;
 
@@ -607,6 +608,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const reallySignOut = async () => {
     await flushStudyClock();
     stopStudyClock();
+    void clearCatalogCache();
     await supabase.auth.signOut({ scope: "local" });
     await navigate({ to: "/", replace: true });
   };
