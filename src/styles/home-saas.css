@@ -948,16 +948,6 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
     gap: 300px;
   }
 }
-.home.hr-canvas .sx-band__face circle {
-  fill: rgb(227 177 75 / 0.04);
-  stroke: rgb(227 177 75 / 0.22);
-  stroke-width: 2;
-}
-.home.hr-canvas .sx-band__face-tick {
-  stroke: rgb(227 177 75 / 0.3);
-  stroke-width: 2;
-  stroke-linecap: round;
-}
 .home.hr-canvas .sx-band__hands {
   filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.65));
 }

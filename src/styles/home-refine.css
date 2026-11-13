@@ -85,3 +85,54 @@
     padding-top: 14px !important;
   }
 }
+
+/* ---------- Largura única (desktop): as seções acompanham as bordas do cabeçalho ----------
+   Antes cada bloco tinha sua largura (1111 a 1164 px na maioria, ranking de ponta a ponta,
+   planos e chamada final mais largos), o que deixava faixas vazias dos lados em telas grandes. */
+@media (min-width: 1024px) {
+  html body .home.hr-canvas {
+    --hr-page-w: min(1776px, calc(100% - 2 * clamp(24px, 3.5vw, 66px)));
+  }
+  html body .home.hr-canvas > .desktop-homepage .sx-band > .sx-hero,
+  html body .home.hr-canvas > .desktop-homepage > .sx-banner-wrap,
+  html body .home.hr-canvas > .desktop-homepage > .sx-features,
+  html body .home.hr-canvas > .desktop-homepage > .hd > .hd__inner,
+  html body .home.hr-canvas > .desktop-homepage > #concursos.sx-section > *,
+  html body .home.hr-canvas > .desktop-homepage > .hp-promo > .hp-promo__inner,
+  html body .home.hr-canvas > .desktop-homepage > #ranking-destaque > .home-container,
+  html body .home.hr-canvas > .desktop-homepage > #planos > .home-container,
+  html body .home.hr-canvas > .hr-footer-cta,
+  html body .home.hr-canvas > .nc-footer > .home-container {
+    width: var(--hr-page-w) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+    box-sizing: border-box;
+  }
+  /* A faixa do hero era uma grade de coluna fixa (~1240 px) que prendia o conteúdo. */
+  html body .home.hr-canvas > .desktop-homepage > .sx-band {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  html body .home.hr-canvas > .desktop-homepage > .sx-banner-wrap > .sx-banner {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  /* O ranking deixa de encostar nas bordas da tela e vira um painel como os demais. */
+  html body .home.hr-canvas > .desktop-homepage > #ranking-destaque .home-ranking__shell {
+    border: 1px solid rgb(255 255 255 / 0.1) !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+  }
+}
+
+/* Abaixo de 1280 px a arte do hero não tinha véu: escurece por trás do texto para manter a leitura. */
+@media (max-width: 1279px) {
+  .home.hr-canvas .sx-band { position: relative; isolation: isolate; overflow: hidden; }
+  .home.hr-canvas .sx-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgb(13 16 21 / 0.86) 0%, rgb(13 16 21 / 0.74) 55%, rgb(13 16 21 / 0.92) 100%);
+  }
+}
