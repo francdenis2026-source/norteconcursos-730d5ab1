@@ -56,6 +56,23 @@ import {
 } from "@/lib/studyTimer";
 import { cn } from "@/lib/utils";
 import { Hint } from "@/components/ui/hint";
+import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
+import { useStudyContext } from "@/components/study/useStudyContext";
+import { StudySubjectPicker } from "@/components/study/StudySubjectPicker";
+import { FocusSession } from "@/components/study/FocusSession";
+import { readFocusDay, recordFocusCycle, type FocusDay } from "@/lib/studyFocusDay";
+import { resolveStudySelection, STUDY_PICK_KEY, type StudySelection } from "@/lib/studySelection";
+import { topicsFor } from "@/data/studyTopics";
+import "@/styles/study-room-focus.css";
+
+function readSavedPick(): StudySelection | null {
+  try {
+    const v = JSON.parse(localStorage.getItem(STUDY_PICK_KEY) ?? "null") as StudySelection | null;
+    return v && typeof v.subject === "string" ? v : null;
+  } catch {
+    return null;
+  }
+}
 
 type Search = {
   edital?: string | undefined;
@@ -337,8 +354,24 @@ function StudyRoomPage() {
   }, []);
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
-  const subject = sp.subject ?? "";
-  const topic = sp.topic ?? "";
+  // Disciplina e assunto: link do cronograma > última escolha neste aparelho > matéria prioritária do plano.
+  const ctx = useStudyContext();
+  const fullscreen = useWorkspaceFullscreen(true);
+  const [saved] = React.useState<StudySelection | null>(() => readSavedPick());
+  const [picked, setPicked] = React.useState<StudySelection | null>(null);
+  const chosen = picked ?? resolveStudySelection({ subjects: ctx.subjects, suggested: ctx.suggested, urlSubject: sp.subject, urlTopic: sp.topic, saved });
+  const subject = chosen.subject;
+  const subjectTopics = React.useMemo(() => topicsFor(subject), [subject]);
+  const topic = subjectTopics.includes(chosen.topic) ? chosen.topic : (subjectTopics[0] ?? "");
+  const choose = (next: StudySelection) => {
+    setPicked(next);
+    try {
+      localStorage.setItem(STUDY_PICK_KEY, JSON.stringify(next));
+    } catch {
+      /* armazenamento indisponível */
+    }
+  };
+  const [day, setDay] = React.useState<FocusDay>(() => readFocusDay());
   const planned = Math.max(5, Math.min(240, Number(sp.minutes) || 30));
   const segments = React.useMemo(() => makeSegments(planned), [planned]);
   const storageKey = `norte_room_${sp.key ?? `${subject}|${topic}`}_${planned}_${sp.week ?? ""}`;
@@ -444,10 +477,7 @@ function StudyRoomPage() {
   if (!subject) {
     return (
       <div className="mx-auto max-w-xl space-y-4 py-10 text-center">
-        <p className="text-lg font-bold">Escolha um assunto no seu cronograma.</p>
-        <Button asChild>
-          <Link to="/dashboard/study-coach">Abrir a Estratégia de estudos</Link>
-        </Button>
+        <p className="text-lg font-bold">{ctx.loading ? "Carregando suas disciplinas…" : "Ainda não há disciplinas para estudar."}</p>
       </div>
     );
   }
@@ -457,7 +487,15 @@ function StudyRoomPage() {
     : { area: subject, go: "1", ...(topic ? { topic } : {}) };
 
   return (
-    <div className="mx-auto max-w-6xl space-y-5">
+    <div className="study-room-page mx-auto max-w-6xl space-y-5" data-focus-session={fullscreen.active ? "true" : undefined}>
+      <StudySubjectPicker
+        subjects={ctx.subjects}
+        suggested={ctx.suggested}
+        subject={subject}
+        topic={topic}
+        topics={subjectTopics}
+        onChange={choose}
+      />
       <div className="workspace-banner workspace-banner--study-room">
         <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
           {sp.edital ? (
@@ -523,6 +561,16 @@ function StudyRoomPage() {
           ))}
         </ul>
       </div>
+
+      <FocusSession
+        subject={subject}
+        topic={topic}
+        day={day}
+        focusMode={fullscreen.active}
+        onEnterFocus={fullscreen.enter}
+        onExitFocus={fullscreen.exit}
+        onFocusDone={(minutes) => setDay(recordFocusCycle(minutes))}
+      />
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
         <div className="order-2 space-y-5 lg:order-1">

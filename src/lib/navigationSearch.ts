@@ -20,7 +20,7 @@ const DETAILS: Record<string, { description: string; terms: string }> = {
   '/dashboard/mock-exams': { description: 'Treine com tempo e ritmo de prova.', terms: 'simulado simulados simulacao simular prova provas' },
   '/dashboard/student-exams': { description: 'Registre provas de concursos realizados e consulte o diagnóstico.', terms: 'minhas provas e diagnostico gabarito resultado concursos realizados' },
   '/dashboard/performance': { description: 'Entenda seus resultados e sua evolução.', terms: 'estatistica estatisticas desempenho evolucao acertos progresso' },
-  '/dashboard/study-tools': { description: 'Organize sessões de foco e revisão.', terms: 'pomodoro timer foco revisar revisao ferramentas' },
+  '/dashboard/study-room': { description: 'Escolha o assunto, estude o conteúdo e acompanhe o cronômetro de foco.', terms: 'estudar sala estudos pomodoro timer foco revisar revisao ferramentas central' },
   '/dashboard/notebooks': { description: 'Organize manualmente suas questões em cadernos e coleções.', terms: 'meus cadernos favoritas favoritos colecoes' },
   '/dashboard/question-bank': { description: 'Explore o acervo e abra o Treinador com filtros.', terms: 'acervo banco catalogo explorar questoes' },
   '/dashboard/ctb': { description: 'Consulte o Código de Trânsito Brasileiro e as resoluções.', terms: 'ferramentas painel transito ctb multas pontos' },

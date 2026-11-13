@@ -4,9 +4,9 @@ type StudentTarget = NavigationTarget & { group: string; soon?: boolean; adminOn
 const SECTION_DESTINATIONS: Record<string, string> = {
   'Minha Preparação': '/dashboard/my-contest',
   Planejamento: '/dashboard/study-coach',
-  'Central de Estudos': '/dashboard/study-tools',
+  'Central de Estudos': '/dashboard/study-room',
   'Material didático': '/dashboard/material',
-  Ferramentas: '/dashboard/study-tools',
+  Ferramentas: '/dashboard/study-room',
   Questões: '/dashboard/question-trainer',
   Provas: '/dashboard/mock-exams',
   ENEM: '/dashboard/enem',

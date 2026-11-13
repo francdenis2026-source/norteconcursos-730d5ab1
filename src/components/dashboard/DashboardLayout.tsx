@@ -136,7 +136,7 @@ const MOBILE_HUE: Record<string, Hue> = {
   "/dashboard/profile": "gold",
   "/dashboard/study-coach": "gold",
   "/dashboard/cronograma": "gold",
-  "/dashboard/study-tools": "gold",
+  "/dashboard/study-room": "gold",
   "/dashboard/admin-students": "gold",
   "/dashboard/admin-finance": "gold",
   "/dashboard/admin-metrics": "gold",
@@ -270,9 +270,9 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Central de Estudos",
-    label: "Central de Estudos",
+    label: "Sala de estudo",
     icon: BookOpenCheck,
-    href: "/dashboard/study-tools",
+    href: "/dashboard/study-room",
   },
   {
     group: "Central de Estudos",
@@ -346,7 +346,7 @@ const ADMIN_MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
 const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Painel", href: "/dashboard", icon: LayoutDashboard },
   { label: "Treinar", href: "/dashboard/question-trainer", icon: BrainCircuit },
-  { label: "Estudos", href: "/dashboard/study-tools", icon: BookOpenCheck },
+  { label: "Estudos", href: "/dashboard/study-room", icon: BookOpenCheck },
   { label: "Agenda", href: "/dashboard/cronograma", icon: CalendarClock },
 ];
 
@@ -373,7 +373,7 @@ const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
   "/dashboard/cronograma": "blue",
   "/dashboard/study-plan": "blue",
   "/dashboard/trilhas": "blue",
-  "/dashboard/study-tools": "blue",
+  "/dashboard/study-room": "blue",
   "/dashboard/timer": "blue",
   "/dashboard/profile": "blue",
   "/dashboard/edital-radar": "blue",
@@ -416,7 +416,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       "/dashboard/medals",
       "/dashboard/enem",
       "/dashboard/library",
-      "/dashboard/study-tools",
+      "/dashboard/study-room",
       "/dashboard/questions",
       "/dashboard/student-exams",
       "/dashboard/profile",

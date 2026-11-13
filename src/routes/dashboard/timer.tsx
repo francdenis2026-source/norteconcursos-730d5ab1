@@ -3,7 +3,7 @@ import { createFileRoute, Navigate } from "@tanstack/react-router";
 /**
  * Compatibilidade para favoritos e links antigos.
  *
- * O cronômetro integrado fica em /dashboard/study-tools, onde a sessão recebe
+ * O cronômetro integrado fica na Sala de estudo (/dashboard/study-room), onde a sessão recebe
  * disciplina, assunto e registro de estudo. Manter uma segunda implementação
  * aqui faria o aluno alternar entre dois relógios com históricos diferentes.
  */
@@ -12,5 +12,5 @@ export const Route = createFileRoute("/dashboard/timer")({
 });
 
 function LegacyTimerRedirect() {
-  return <Navigate to="/dashboard/study-tools" replace />;
+  return <Navigate to="/dashboard/study-room" replace />;
 }
