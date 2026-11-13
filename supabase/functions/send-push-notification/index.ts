@@ -55,7 +55,7 @@ Deno.serve(async (request: Request) => {
   }
 
   try {
-    webpush.setVapidDetails(Deno.env.get("VAPID_SUBJECT") ?? "mailto:suporte@norteconcursos.xyz", vapidPublicKey, vapidPrivateKey);
+    webpush.setVapidDetails(Deno.env.get("VAPID_SUBJECT") ?? "mailto:francdenisbr@gmail.com", vapidPublicKey, vapidPrivateKey);
   } catch {
     return json({ error: "Chaves VAPID inválidas. Revise os segredos da função." }, 503);
   }
