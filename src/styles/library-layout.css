@@ -1,0 +1,21 @@
+/* Biblioteca de estudo e tela cheia: aproveita a janela, sem cortes no topo e com rolagem visível. */
+.app-shell.navigation-v2[data-focus-mode="true"] .app-topbar { flex: none; min-height: 3.25rem; overflow: visible; padding-top: env(safe-area-inset-top, 0px); }
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content { scroll-padding-top: 1rem; scrollbar-width: thin; scrollbar-color: var(--scroll-thumb, #64748b) transparent; }
+@media (min-width: 768px) {
+  .app-shell.navigation-v2[data-focus-mode="true"] .app-content::-webkit-scrollbar { display: block; width: 12px; height: 12px; }
+}
+/* Telas largas usam mais da janela. */
+@media (min-width: 1500px) {
+  .app-shell[data-area] .app-content__inner { max-width: min(1760px, 100%); }
+  .app-shell[data-area="student"] .nc-learning-workspace.material-library { max-width: min(1760px, 100%); }
+}
+/* Contadores do cabeçalho: um par de selos legíveis, sem estourar a imagem. */
+html body .app-shell[data-area] .nc-learning-workspace.material-library .library-focus__counts { display: flex; flex-wrap: nowrap; align-items: center; gap: .5rem; margin-left: auto; }
+html body .app-shell[data-area] .nc-learning-workspace.material-library .library-focus__counts > * { display: inline-flex; align-items: baseline; gap: .4rem; padding: .35rem .8rem; border: 1px solid var(--border); border-radius: 999px; background: color-mix(in srgb, var(--background) 88%, transparent); color: var(--foreground); font-size: .8rem; font-weight: 700; white-space: nowrap; }
+html body .app-shell[data-area] .nc-learning-workspace.material-library .library-focus__counts strong { display: inline; font-size: 1.05rem; line-height: 1; color: var(--foreground); }
+/* Roteiro + materiais: sem coluna vazia quando ainda não há materiais publicados. */
+.library-split--solo { grid-template-columns: minmax(0, 1fr); }
+.library-split--solo > div:last-child > [class*="Empty"], .library-split--solo > div:last-child > div { padding-block: .75rem; }
+@media (min-width: 1024px) {
+  .library-split--solo { grid-template-columns: minmax(0, 3fr) minmax(16rem, 1fr); }
+}
