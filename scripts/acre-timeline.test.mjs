@@ -48,3 +48,17 @@ test("videos open in the platform player window with a back button and other top
   assert.match(player, /onClick=\{onClose\}/);
   assert.match(read("src/styles/video-player-window.css"), /92dvh/);
 });
+
+test("Resex map and indigenous study use only municipalities that exist on the map", () => {
+  const shapes = read("src/data/acreMapShapes.ts");
+  const names = new Set([...shapes.matchAll(/name: "([^"]+)"/g)].map((m) => m[1]));
+  for (const file of ["src/data/acreResex.ts", "src/data/acreIndigenous.ts"]) {
+    const text = read(file);
+    for (const m of text.matchAll(/"([A-ZÁÂÃÉÊÍÓÔÕÚÇ][^"]{3,30})": \d/g)) assert.ok(names.has(m[1]), `${file}: ${m[1]}`);
+  }
+  const resex = read("src/data/acreResex.ts");
+  for (const m of resex.matchAll(/municipalities: \[([^\]]*)\]/g))
+    for (const n of m[1].split(",").map((x) => x.trim().replace(/"/g, "")).filter(Boolean)) assert.ok(names.has(n), `Resex: ${n}`);
+  assert.match(read("src/components/dashboard/AcreRealityArea.tsx"), /AcreResexMap/);
+  assert.match(read("src/components/dashboard/AcreRealityArea.tsx"), /AcreIndigenousStudy/);
+});
