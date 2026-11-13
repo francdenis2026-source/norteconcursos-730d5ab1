@@ -38,3 +38,13 @@ test("Acre strategic facts name the people and sources banks ask about", () => {
   assert.equal(questions, sources);
   assert.match(read("src/components/dashboard/AcreRealityArea.tsx"), /AcreStrategicFacts/);
 });
+
+test("videos open in the platform player window with a back button and other topics", () => {
+  const panel = read("src/components/dashboard/AcreVideoPanel.tsx");
+  assert.match(panel, /VideoWatchDialog/);
+  assert.doesNotMatch(panel, /youtubeWatchUrl/);
+  const player = read("src/components/media/VideoWatchDialog.tsx");
+  assert.match(player, /Outros tópicos do edital/);
+  assert.match(player, /onClick=\{onClose\}/);
+  assert.match(read("src/styles/video-player-window.css"), /92dvh/);
+});

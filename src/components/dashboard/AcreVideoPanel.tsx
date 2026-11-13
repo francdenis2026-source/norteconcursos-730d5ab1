@@ -1,16 +1,18 @@
+import * as React from "react";
 import { Link } from "@tanstack/react-router";
+import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
 import { ExternalLink, PlayCircle, Search, Tv } from "lucide-react";
 import {
   ACRE_VIDEO_GUIDE,
   acreVideoLibraryTopic,
   acreVideosFor,
   youtubeSearchUrl,
-  youtubeWatchUrl,
 } from "@/data/acreVideoGuide";
 
 /** Vídeos de uma área de Realidade do Acre: aulas já cadastradas, buscas prontas e fontes oficiais. */
 export function AcreVideoPanel({ axisId, title = "Vídeos desta área" }: { axisId: string; title?: string }) {
   const guide = ACRE_VIDEO_GUIDE[axisId];
+  const [watching, setWatching] = React.useState<WatchableVideo | null>(null);
   if (!guide) return null;
   const all = acreVideosFor(axisId);
   const videos = all.slice(0, 6);
@@ -37,11 +39,11 @@ export function AcreVideoPanel({ axisId, title = "Vídeos desta área" }: { axis
         <ul className="ak-video__list">
           {videos.map((video) => (
             <li key={video.id}>
-              <a href={youtubeWatchUrl(video.id)} target="_blank" rel="noopener noreferrer">
+              <button type="button" onClick={() => setWatching({ ...video, subject: "Realidade do Acre", topic: topic ?? "*" })}>
                 <PlayCircle aria-hidden="true" size={15} />
                 <span>{video.title}</span>
                 {video.channel && <small>{video.channel}</small>}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -66,6 +68,7 @@ export function AcreVideoPanel({ axisId, title = "Vídeos desta área" }: { axis
           <Tv aria-hidden="true" size={14} /> {item.label} <ExternalLink aria-hidden="true" size={11} />
         </a>
       ))}
+      <VideoWatchDialog video={watching} onClose={() => setWatching(null)} subject="Realidade do Acre" backLabel="Voltar à área" />
     </section>
   );
 }
