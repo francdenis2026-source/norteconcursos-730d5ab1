@@ -82,6 +82,17 @@ export interface TrainingActivity {
   official_answer: string;
   created_at: string;
 }
+export interface MaterialPracticeActivity {
+  id: string;
+  material_id: string;
+  item_index: number;
+  subject: string;
+  is_correct: boolean;
+  response_seconds: number;
+  selected_answer: string;
+  official_answer: string;
+  created_at: string;
+}
 export interface SimulatorActivity {
   id: string;
   title: string;
@@ -159,11 +170,44 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
             .eq("user_id", userId)
             .maybeSingle(),
           supabase.rpc("my_difficulty_analysis"),
+          fetchAllRows<MaterialPracticeActivity>((from, to) =>
+            supabase
+              .from("material_practice_responses")
+              .select("id,material_id,item_index,subject,is_correct,response_seconds,selected_answer,official_answer,created_at")
+              .eq("user_id", userId)
+              .order("created_at")
+              .order("id")
+              .range(from, to),
+          ),
         ]);
         if (!active) return;
 
-        const state = performanceSourceResults(results);
-        const responsesRes = state.values[0] as TrainingActivity[];
+        const state = performanceSourceResults(results.slice(0, 6));
+        const materialResult = results[6];
+        const materialAvailable =
+          materialResult?.status === "fulfilled" &&
+          !(materialResult.value as { error?: unknown } | null)?.error;
+        const materialRows = materialAvailable
+          ? (materialResult.value as MaterialPracticeActivity[])
+          : [];
+        if (!materialAvailable) {
+          state.warnings.push("Exercícios da Biblioteca: histórico indisponível nesta atualização.");
+        }
+        state.available.training = state.available.training || materialAvailable;
+        const responsesRes = [
+          ...(state.values[0] as TrainingActivity[]),
+          ...materialRows.map((row): TrainingActivity => ({
+            id: row.id,
+            question_id: `${row.material_id}:${row.item_index}`,
+            question_source: "material",
+            subject: row.subject,
+            is_correct: row.is_correct,
+            response_seconds: row.response_seconds,
+            selected_answer: row.selected_answer,
+            official_answer: row.official_answer,
+            created_at: row.created_at,
+          })),
+        ].sort((a, b) => a.created_at.localeCompare(b.created_at) || a.id.localeCompare(b.id));
         const attemptsRes = state.values[1] as SimulatorActivity[];
         const reviewsRes = state.values[2] as {
           question_id: string;

@@ -1,6 +1,7 @@
 import { DidacticSourceNotice } from "@/components/dashboard/DidacticSourceNotice";
 import { isPracticeOfficialSource } from "@/lib/materialPracticeReview";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { Link } from "@tanstack/react-router";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,7 @@ import {
 
 export function MaterialPractice({
   userId,
+  materialId,
   scope,
   label,
   authoredQuiz = [],
@@ -25,6 +27,7 @@ export function MaterialPractice({
   authoredReview,
 }: {
   userId: string;
+  materialId: string;
   scope: MaterialPracticeScope;
   label: string;
   authoredQuiz?: { q: string; a: boolean; why: string }[] | undefined;
@@ -103,17 +106,23 @@ export function MaterialPractice({
         </>
       )}
       <p className="text-xs text-muted-foreground">
-        Fixação nesta visita. Para salvar tentativas no histórico, use o treinador completo.
+        As respostas dos exercícios autorais deste material são salvas automaticamente no seu
+        histórico e desempenho. Para registrar questões do acervo geral, use o treinador completo.
       </p>
-      {session && <PracticeSession key={session.id} questions={session.questions} />}
+      {session && <PracticeSession key={session.id} questions={session.questions} userId={userId} materialId={materialId} authoredKey={authoredKey} />}
     </section>
   );
 }
-function PracticeSession({ questions }: { questions: Question[] }) {
+function PracticeSession({ questions, userId, materialId, authoredKey }: { questions: Question[]; userId: string; materialId: string; authoredKey: string }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const correct = questions.filter((q, i) => answers[i] === q.answer).length;
   const [finished, setFinished] = useState(false);
+  const startedAt = useRef(Date.now());
+  const [savedAnswers, setSavedAnswers] = useState(0);
+  const [saveErrors, setSaveErrors] = useState(0);
+  const [pendingSaves, setPendingSaves] = useState(0);
+  useEffect(() => { startedAt.current = Date.now(); }, [index]);
   if (finished)
     return (
       <div role="status" className="rounded-xl border bg-muted/40 p-4">
@@ -121,8 +130,10 @@ function PracticeSession({ questions }: { questions: Question[] }) {
           Resultado: {correct} de {questions.length}
         </h4>
         <p className="mt-2 text-sm">
-          Exercício de fixação desta visita. Para registrar tentativas no histórico da plataforma,
-          use o treinador completo.
+          {savedAnswers > 0
+            ? `${savedAnswers} resposta(s) dos exercícios do material registrada(s) no seu histórico e desempenho.`
+            : "As respostas desta bateria não foram registradas no histórico."}
+          {saveErrors > 0 && ` ${saveErrors} resposta(s) não puderam ser salvas; confira sua conexão e tente novamente no próximo treino.`}
         </p>
         <Button
           className="mt-3"
@@ -167,7 +178,24 @@ function PracticeSession({ questions }: { questions: Question[] }) {
             type="button"
             key={o.letter}
             disabled={!!picked}
-            onClick={() => setAnswers((a) => ({ ...a, [index]: o.letter }))}
+            onClick={() => {
+              if (picked) return;
+              setAnswers((a) => ({ ...a, [index]: o.letter }));
+              if (userId !== "demo-user" && q.id.startsWith(`material:${authoredKey}:`)) {
+                const itemIndex = Number(q.id.slice(q.id.lastIndexOf(":") + 1));
+                setPendingSaves((n) => n + 1);
+                void supabase.rpc("record_material_practice_answer", {
+                  p_attempt_id: crypto.randomUUID(),
+                  p_material_id: materialId,
+                  p_item_index: itemIndex,
+                  p_selected_answer: o.letter === "C" ? "C" : "E",
+                  p_response_seconds: Math.min(900, Math.max(0, Math.floor((Date.now() - startedAt.current) / 1000))),
+                }).then(({ error }) => {
+                  if (error) setSaveErrors((n) => n + 1);
+                  else setSavedAnswers((n) => n + 1);
+                }).catch(() => setSaveErrors((n) => n + 1)).finally(() => setPendingSaves((n) => Math.max(0, n - 1)));
+              }
+            }}
             className={`flex min-h-11 w-full gap-3 rounded-xl border p-3 text-left text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${picked && o.letter === q.answer ? "border-emerald-500 bg-emerald-500/10" : picked === o.letter ? "border-rose-500 bg-rose-500/10" : "hover:bg-muted"}`}
           >
             <strong>{o.letter}</strong>
@@ -197,11 +225,12 @@ function PracticeSession({ questions }: { questions: Question[] }) {
               </a>
             ))}
           <Button
+            disabled={pendingSaves > 0}
             onClick={() =>
               index + 1 === questions.length ? setFinished(true) : setIndex(index + 1)
             }
           >
-            {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+            {pendingSaves > 0 ? "Salvando resposta…" : index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
           </Button>
         </div>
       )}

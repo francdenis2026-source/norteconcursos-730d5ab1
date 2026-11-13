@@ -48,7 +48,8 @@ export function PlatformActivityHistory({
           id: `q-${r.id}`,
           kind: "question",
           subject: canonicalSubject(r.subject),
-          title: canonicalSubject(r.subject),
+          title: r.question_source === "material" ? `${canonicalSubject(r.subject)} · Biblioteca` : canonicalSubject(r.subject),
+          source: r.question_source,
           result: r.is_correct ? "Acerto" : "Erro",
           seconds: r.response_seconds,
           at: r.created_at,
@@ -62,6 +63,7 @@ export function PlatformActivityHistory({
           kind: "simulator",
           subject: "",
           title: a.title,
+          source: "simulator",
           result: `${a.accuracy}% de acerto`,
           seconds: a.duration_seconds,
           at: a.finished_at,
@@ -119,7 +121,7 @@ export function PlatformActivityHistory({
               }}
             >
               <option value="all">Todas as atividades</option>
-              <option value="question">Questões do treinador</option>
+              <option value="question">Questões do treinador e Biblioteca</option>
               <option value="simulator">Simulados</option>
             </select>
           </label>
@@ -154,7 +156,7 @@ export function PlatformActivityHistory({
                 <div className="min-w-0 flex-1">
                   <p className="break-words font-semibold">{r.title}</p>
                   <p className="text-sm text-muted-foreground">
-                    {r.kind === "question" ? "Questão" : "Simulado"} · {date.format(new Date(r.at))}
+                    {r.kind === "question" ? (r.source === "material" ? "Exercício da Biblioteca" : "Questão do treinador") : "Simulado"} · {date.format(new Date(r.at))}
                   </p>
                   {r.question && (
                     <details className="mt-2 text-sm">
