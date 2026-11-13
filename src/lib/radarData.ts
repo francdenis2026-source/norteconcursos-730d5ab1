@@ -12,8 +12,32 @@ export interface RadarData {
   editions: RadarEdition[];
 }
 
+type RadarGroupRow = {
+  contest_name: string;
+  career_name: string;
+  exam_board: string;
+  exam_year: number;
+  subject: string;
+  syllabus_topic_id: string | null;
+  n: number;
+};
+
 export async function loadRadarData(): Promise<RadarData> {
   const questions: RadarQuestion[] = [];
+  // Caminho leve: o banco devolve um grupo por prova/disciplina/tópico, com a quantidade de questões.
+  const grouped = await supabase.rpc("get_radar_question_groups" as never);
+  if (!grouped.error && Array.isArray(grouped.data)) {
+    for (const row of grouped.data as RadarGroupRow[])
+      questions.push({
+        contest: row.contest_name,
+        career: row.career_name,
+        board: row.exam_board,
+        year: row.exam_year,
+        subject: row.subject,
+        topicId: row.syllabus_topic_id,
+        count: Number(row.n),
+      });
+  } else {
   for (let from = 0; ; from += PAGE) {
     const { data, error } = await supabase
       .from("official_exam_questions")
@@ -32,6 +56,7 @@ export async function loadRadarData(): Promise<RadarData> {
         topicId: row.syllabus_topic_id,
       });
     if ((data ?? []).length < PAGE) break;
+  }
   }
   const editionsResult = await supabase
     .from("syllabus_editions")
