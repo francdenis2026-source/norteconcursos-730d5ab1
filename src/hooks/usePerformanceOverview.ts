@@ -193,6 +193,7 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
         if (!materialAvailable) {
           state.warnings.push("Exercícios da Biblioteca: histórico indisponível nesta atualização.");
         }
+        state.available.training = state.available.training || materialAvailable;
         const responsesRes = [
           ...(state.values[0] as TrainingActivity[]),
           ...materialRows.map((row): TrainingActivity => ({
