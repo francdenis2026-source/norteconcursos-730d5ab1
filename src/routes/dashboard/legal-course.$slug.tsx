@@ -19,7 +19,6 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
-import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { SafeBoundary } from "@/components/library/SafeBoundary";
@@ -953,7 +952,6 @@ function UnitLesson({
                   <UnitTrueFalse key={unit.id} unit={unit} userId={userId} />
                 </SafeBoundary>
               )}
-              <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
               <MaterialPractice
                 key={`${law}:${unit.unit_key}`}
                 userId={userId}
