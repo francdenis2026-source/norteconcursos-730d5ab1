@@ -11,6 +11,8 @@ export interface RadarQuestion {
   year: number;
   subject: string;
   topicId: string | null;
+  /** Quantas questões este grupo representa (o banco agrupa iguais). Padrão: 1. */
+  count?: number;
 }
 
 export interface RadarTopic {
@@ -157,13 +159,14 @@ export function analyzeEditals(
       subjects: new Map(),
       byTopic: new Map(),
     };
-    exam.total += 1;
+    const weight = q.count ?? 1;
+    exam.total += weight;
     const subject = canonicalSubject(q.subject);
-    exam.subjects.set(subject, (exam.subjects.get(subject) ?? 0) + 1);
+    exam.subjects.set(subject, (exam.subjects.get(subject) ?? 0) + weight);
     const topic = q.topicId ? topicById.get(q.topicId) : undefined;
     if (topic) {
       const tk = topicKey(topic.discipline, topic.text);
-      exam.byTopic.set(tk, (exam.byTopic.get(tk) ?? 0) + 1);
+      exam.byTopic.set(tk, (exam.byTopic.get(tk) ?? 0) + weight);
     }
     exams.set(key, exam);
   }
