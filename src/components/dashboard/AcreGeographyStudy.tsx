@@ -1,6 +1,5 @@
 import * as React from "react";
-import { ExternalLink, Info, MapPin } from "lucide-react";
-import { AcreInteractiveMap } from "@/components/dashboard/AcreInteractiveMap";
+import { ExternalLink, Info, Map, MapPin, Network, ZoomIn } from "lucide-react";
 import {
   ACRE_CURRENT_IBGE_REGIONS,
   ACRE_EDITAL_REGIONS,
@@ -8,9 +7,147 @@ import {
   ACRE_MESOREGIONS,
   ACRE_MICROREGIONS,
 } from "@/data/acreGeography";
+import { AcreInteractiveMap } from "@/components/dashboard/AcreInteractiveMap";
 import "@/styles/acre-geography-study.css";
 
 const REGION_COLORS = ["#9B83E8", "#39A6D8", "#70C58A", "#E6A64A", "#D8799D"];
+
+const ACRE_MAPS = [
+  {
+    id: "municipios",
+    label: "Municípios",
+    detail: "22 municípios",
+    title: "Mapa político dos 22 municípios",
+    description: "Veja os limites municipais e a localização de cada município acreano.",
+    src: "/media/acre/acre-municipios.webp",
+    width: 640,
+    height: 403,
+    alt: "Mapa político do Acre com os limites e nomes dos 22 municípios.",
+    legend: [{ color: "#718096", label: "Limites municipais e identificação dos 22 municípios" }],
+    note: "Use este mapa para localizar os municípios e relacionar cada nome à sua posição no território estadual.",
+  },
+  {
+    id: "mesorregioes",
+    label: "Mesorregiões",
+    detail: "2 áreas históricas",
+    title: "As duas mesorregiões tradicionais",
+    description: "O mapa numera as duas grandes áreas do recorte histórico do IBGE.",
+    src: "/media/acre/acre-mesorregioes.webp",
+    width: 650,
+    height: 365,
+    alt: "Mapa do Acre com duas mesorregiões históricas: Vale do Acre em azul, identificado pelo número 1, e Vale do Juruá em vermelho, identificado pelo número 2.",
+    legend: [
+      { color: "#079FE2", label: "1 · Vale do Acre — 14 municípios" },
+      { color: "#F01824", label: "2 · Vale do Juruá — 8 municípios" },
+    ],
+    note: "A numeração segue a imagem: 1 corresponde ao Vale do Acre (porção sudeste) e 2 ao Vale do Juruá (porção noroeste). É a divisão histórica em mesorregiões, não a nomenclatura regional vigente do IBGE.",
+  },
+  {
+    id: "agrupamentos",
+    label: "Regionais",
+    detail: "3 grandes grupos",
+    title: "Agrupamentos regionais do Acre",
+    description: "Esta representação reúne as regionais em três grandes conjuntos territoriais.",
+    src: "/media/acre/acre-regionais-amplas.webp",
+    width: 640,
+    height: 361,
+    alt: "Mapa regional do Acre: Juruá/Tarauacá-Envira em azul, Baixo Acre e Purus em laranja, e Alto Acre em verde.",
+    legend: [
+      { color: "#36A9DE", label: "Juruá / Tarauacá-Envira" },
+      { color: "#F29B4B", label: "Baixo Acre e Purus" },
+      { color: "#36A653", label: "Alto Acre" },
+    ],
+    note: "Atenção: este mapa agrupa as áreas em três conjuntos. O quadro do edital apresentado abaixo detalha cinco regionais de desenvolvimento; não confunda os dois recortes.",
+  },
+] as const;
+
+type AcreMapId = (typeof ACRE_MAPS)[number]["id"];
+
+function AcreMapGallery() {
+  const [activeMapId, setActiveMapId] = React.useState<AcreMapId>("municipios");
+  const [imageError, setImageError] = React.useState(false);
+  const activeMap = ACRE_MAPS.find((mapItem) => mapItem.id === activeMapId) ?? ACRE_MAPS[0];
+
+  const selectMap = (mapId: AcreMapId) => {
+    setActiveMapId(mapId);
+    setImageError(false);
+  };
+
+  return (
+    <section className="acre-geo__map-gallery" aria-labelledby="acre-geo-map-title">
+      <div className="acre-geo__section-title">
+        <Map size={17} aria-hidden="true" />
+        <div>
+          <h3 id="acre-geo-map-title">Mapas para estudar a divisão territorial</h3>
+          <p>Alterne entre o mapa municipal, a divisão histórica e os agrupamentos regionais.</p>
+        </div>
+      </div>
+
+      <div className="acre-geo__map-tabs" role="group" aria-label="Selecionar mapa do Acre">
+        {ACRE_MAPS.map((mapItem) => (
+          <button
+            key={mapItem.id}
+            type="button"
+            className={`acre-geo__map-tab${activeMapId === mapItem.id ? " is-active" : ""}`}
+            aria-pressed={activeMapId === mapItem.id}
+            onClick={() => selectMap(mapItem.id)}
+          >
+            <span>{mapItem.label}</span>
+            <small>{mapItem.detail}</small>
+          </button>
+        ))}
+      </div>
+
+      <div className="acre-geo__map-viewer" aria-live="polite">
+        <div className="acre-geo__map-viewer-head">
+          <div>
+            <h4>{activeMap.title}</h4>
+            <p>{activeMap.description}</p>
+          </div>
+          <a
+            className="acre-geo__map-open"
+            href={activeMap.src}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Abrir ${activeMap.title} em tamanho original`}
+          >
+            <ZoomIn size={15} aria-hidden="true" />
+            Ampliar mapa
+          </a>
+        </div>
+
+        {imageError ? (
+          <div className="acre-geo__map-error" role="alert">
+            Não foi possível carregar esta imagem. Atualize a página ou abra o mapa em tamanho original.
+          </div>
+        ) : (
+          <figure className="acre-geo__map-figure">
+            <img
+              key={activeMap.src}
+              src={activeMap.src}
+              width={activeMap.width}
+              height={activeMap.height}
+              alt={activeMap.alt}
+              loading="lazy"
+              decoding="async"
+              onError={() => setImageError(true)}
+            />
+            <figcaption>{activeMap.note}</figcaption>
+          </figure>
+        )}
+
+        <div className="acre-geo__map-legend" aria-label="Legenda do mapa">
+          {activeMap.legend.map((item) => (
+            <span className="acre-geo__map-legend-item" key={item.label}>
+              <i style={{ backgroundColor: item.color }} aria-hidden="true" />
+              {item.label}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function AcreGeographyStudy() {
   return (
@@ -32,6 +169,7 @@ export function AcreGeographyStudy() {
       </header>
 
       <AcreInteractiveMap />
+      <AcreMapGallery />
 
       <div className="acre-geo__section-title">
         <MapPin size={17} />

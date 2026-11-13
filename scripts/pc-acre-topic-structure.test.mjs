@@ -132,8 +132,24 @@ test("PC-AC edital regional groups cover all municipalities and place Capixaba i
 });
 
 
+test("Acre geography renders the three supplied detailed maps as responsive image assets", () => {
+  const assets = [
+    "public/media/acre/acre-municipios.webp",
+    "public/media/acre/acre-mesorregioes.webp",
+    "public/media/acre/acre-regionais-amplas.webp",
+  ];
+  for (const asset of assets) {
+    assert.equal(existsSync(new URL(`../${asset}`, import.meta.url)), true, `missing map asset: ${asset}`);
+  }
+  const component = readFileSync(new URL("../src/components/dashboard/AcreGeographyStudy.tsx", import.meta.url), "utf8");
+  assert.match(component, /Mapa político dos 22 municípios/);
+  assert.match(component, /Vale do Acre — 14 municípios/);
+  assert.match(component, /Vale do Juruá — 8 municípios/);
+  assert.match(component, /Juruá \/ Tarauacá-Envira/);
+  assert.doesNotMatch(component, /function AcreSchematicMap/);
+});
+
 test("Acre geography uses a vector interactive map built from IBGE municipal shapes", async () => {
-  assert.equal(existsSync(new URL("../public/media/acre/acre-municipios.webp", import.meta.url)), false);
   const component = readFileSync(new URL("../src/components/dashboard/AcreGeographyStudy.tsx", import.meta.url), "utf8");
   assert.match(component, /<AcreInteractiveMap \/>/);
   const map = readFileSync(new URL("../src/components/dashboard/AcreInteractiveMap.tsx", import.meta.url), "utf8");
