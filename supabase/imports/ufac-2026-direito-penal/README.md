@@ -4,15 +4,16 @@
 
 - Material: `study_materials.ufac-2026-direito-penal-i-aulas-9-14`
 - ID: `850c316d-0878-43d2-b75d-ebbd75c2b005`
-- Texto extraído da apostila: 76.310 caracteres / 29 páginas.
+- Texto original da apostila: 76.310 caracteres / 29 páginas.
+- Conteúdo preservado integralmente em `body_md`.
+- Resumo do módulo atualizado.
+- Flashcards autorais derivados da apostila: **31** (`f` / `b`).
+- Itens rápidos de fixação Certo/Errado: **12** (`q` / `a` / `why`).
 - Situação: `under_review` — não aparece ainda na área do aluno.
-- Banco: `board_exam_questions`
-- Prova N1: 9 questões transcritas (itens 1–7, 11 e 12).
-- Prova N2: 12 questões transcritas (itens 1–12).
-- Total inserido no banco: 21 itens.
-- Gabarito: alternativas extraídas da folha de respostas e das marcas manuscritas de correção no próprio PDF. Não dependem de gabarito separado.
-- Todos os itens permanecem `under_review` até conferência jurídica e docente.
-- Auditoria: 21 registros `needs_review`.
+- A aplicação já consome `flashcards` e `quiz` em `/dashboard/study-room` e `/dashboard/library/$slug`; a consulta do aluno filtra materiais por `content_status='active'`.
+- A biblioteca permite salvar flashcards do material no baralho pessoal.
+- Os exercícios autorais da biblioteca exigem `practice_review` válido para integrar a bateria pontuada; esse selo não foi criado, pois ainda falta validação jurídica/docente.
+- Provas: `board_exam_questions`, 21 itens (N1: 9; N2: 12), todos `under_review`, com alternativas indicadas pelas marcações nos PDFs.
 
 ## Gabaritos indicados pelas marcas no documento
 
@@ -30,9 +31,11 @@
 ## Pendências antes da publicação
 
 1. Conferir a vigência das leis, súmulas e jurisprudência da apostila em fontes oficiais.
-2. N1, questão 6: a marcação manuscrita indica C, mas o enunciado menciona Ministro das Relações Exteriores e Senador, enquanto a alternativa C trata de crime contra o Presidente da República. A referência ao perdão no exterior também exige revisão do art. 7º do CP. Item mantido sob revisão.
-3. N1, questões 8–10: não constam no PDF recebido; a digitalização salta da questão 7 para a 11. Não foram inventadas.
-4. Confirmar as respostas marcadas com a docente e revisar as explicações antes de alterar o status para `active`.
+2. Validar juridicamente e com a docente os 12 itens de fixação e suas explicações; depois gerar `practice_review` no formato esperado pela aplicação.
+3. N1, questão 6: a marcação manuscrita indica C, mas o enunciado menciona Ministro das Relações Exteriores e Senador, enquanto a alternativa C trata de crime contra o Presidente da República. A referência ao perdão no exterior também exige revisão do art. 7º do CP.
+4. N1, questões 8–10: não constam no PDF recebido; a digitalização salta da questão 7 para a 11. Não foram inventadas.
+5. Validar gabaritos com a docente e explicações antes de alterar o status para `active`.
+6. Depois da aprovação, ativar o material e os itens elegíveis para que apareçam na Biblioteca, Sala de Estudos e Treinador, e confirmar que as respostas pontuadas sejam registradas no histórico.
 
 ## Observação de classificação
 
