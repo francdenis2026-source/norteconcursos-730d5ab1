@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FlaskConical, X } from "lucide-react";
+import { X } from "lucide-react";
 import "@/styles/beta-notice.css";
 
 const SEEN_KEY = "nc-beta-notice-seen:2026-11";
@@ -29,16 +29,13 @@ export function BetaNotice() {
     <aside className="beta-notice" data-open={open} aria-label="Aviso de versão beta">
       {open ? (
         <div className="beta-notice__card" role="status">
-          <span className="beta-notice__icon" aria-hidden="true">
-            <FlaskConical />
-          </span>
           <div className="beta-notice__text">
             <p className="beta-notice__title">
-              Plataforma em fase beta <span className="beta-notice__tag">Protótipo</span>
+              Versão beta <span className="beta-notice__tag">Protótipo</span>
             </p>
             <p>
-              Este é um protótipo construído e mantido por uma única pessoa. Alguma função pode
-              falhar ou aparecer desajustada enquanto evoluímos. Obrigado pela paciência.
+              Projeto independente desenvolvido por <strong>Franc D’nis</strong>, de Feijó (AC).
+              Algumas funções podem falhar enquanto a plataforma evolui.
             </p>
           </div>
           <button type="button" className="beta-notice__close" onClick={close} aria-label="Recolher aviso">
