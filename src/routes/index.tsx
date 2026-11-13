@@ -2,6 +2,7 @@ import { useHomeSection } from "@/hooks/useHomeSection";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
 import { StudyPresence } from "@/components/landing/StudyPresence";
+import { SignupPulseBadge } from "@/components/landing/SignupPulseBadge";
 import { PublicAchievementSignal } from "@/components/landing/PublicAchievementSignal";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
@@ -182,6 +183,7 @@ function Index() {
               <NorteBrand />
             </Link>
             <StudyPresence />
+            <SignupPulseBadge />
           </div>
           <nav className="home-nav hr-nav" aria-label="Navegação principal">
             <a href="#inicio" aria-current={activeSection === "inicio" ? "location" : undefined}>
