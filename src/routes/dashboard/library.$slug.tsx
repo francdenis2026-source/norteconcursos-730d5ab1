@@ -326,6 +326,7 @@ function MaterialPage() {
             <MaterialPractice
               key={material.slug}
               userId={user!.id}
+              materialId={material.id}
               authoredQuiz={material.quiz ?? []}
               authoredReview={material.practice_review}
               authoredKey={material.slug}
