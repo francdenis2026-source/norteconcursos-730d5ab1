@@ -1,12 +1,14 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import { installCleanAddressBar, prepareCleanAddressBar } from "./lib/cleanAddressBar";
 
 export const getRouter = () => {
   // gcTime maior: voltar ao treinador/simulador na mesma sessão reaproveita o acervo já baixado
   // (a atualização em segundo plano continua regida pelo staleTime de cada consulta).
   const queryClient = new QueryClient({ defaultOptions: { queries: { gcTime: 30 * 60_000 } } });
 
+  prepareCleanAddressBar();
   const router = createRouter({
     routeTree,
     context: { queryClient },
@@ -20,5 +22,6 @@ export const getRouter = () => {
     defaultPreloadDelay: 50,
   });
 
+  installCleanAddressBar(router);
   return router;
 };
