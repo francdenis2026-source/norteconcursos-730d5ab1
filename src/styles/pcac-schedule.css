@@ -563,6 +563,32 @@
   .pcac-material-shortcuts { display: flex; margin: 3px 0 0; }
 }
 
+/* Selo de atividade do resumo "Hoje" (Videoaula, Teoria, Questões, Simulado, Redação) quando
+   leva para a área correspondente: mantém a aparência do badge, só ganha affordance de clique. */
+.pcac-today-badge-link {
+  display: inline-flex;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pcac-today-badge-link:hover { filter: brightness(0.96); }
+.pcac-today-badge-link:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Tema claro: o texto secundário e os selos neutros (Rotina/Pausa) do card "Hoje" ficavam com
+   contraste baixo sobre o fundo verde-água (Card variant="teal" da Astryx usa um texto cinza
+   pensado para fundos neutros). Escurecido só dentro deste cartão, sem mexer no tema global. */
+:root:not(.dark) .pcac-schedule__today {
+  --color-text-secondary: #1f3b33;
+}
+:root:not(.dark) .pcac-schedule__today .astryx-badge[data-variant="neutral"] {
+  background-color: #ffffff;
+  color: #1b1b1b;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 14%);
+}
+
 /* Navegação por semanas: cada semana recebe um acento próprio (ciclo de 5 tons). */
 .pcac-schedule .pcac-week--1 { --pcac-week-accent: #c79a45; }
 .pcac-schedule .pcac-week--2 { --pcac-week-accent: #3f9a72; }
