@@ -401,7 +401,7 @@ function LibraryIndex() {
         </nav>
       )}
 
-      {!lawsOnly && signedIn && <UpdatedStudyCollections {...(guia ? { initialCourseId: guia } : {})} storageScope={user?.id ?? "anonymous"} />}
+      {!lawsOnly && signedIn && <UpdatedStudyCollections {...(guia ? { initialCourseId: guia } : {})} storageScope={user?.id ?? "anonymous"} materials={items} />}
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
