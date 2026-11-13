@@ -1,4 +1,3 @@
-import { EditalFocusNotice } from "@/components/dashboard/EditalFocusNotice";
 import { platformDate } from "@/lib/platformClock";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -661,21 +660,11 @@ function StudyCoachPage() {
   if (hasActiveEdital(activeContest)) {
     return (
       <div className="nc-student-workspace plan-workspace-window mx-auto w-full max-w-none space-y-4">
-        <EditalFocusNotice
-          title="Meu plano segue o edital ativo"
-          description="O planejamento personalizado fica pausado para sua rotina não misturar disciplinas de outro concurso ou cargo."
-          edital={activeEditalLabel(activeContest!)}
-          actions={[
-            { label: "Abrir meu edital", to: "/dashboard/edital", primary: true },
-            { label: "Gerenciar concurso e cargo", to: "/dashboard/my-contest" },
-          ]}
-        />
+        <p className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-card px-4 py-3 text-sm">
+          <span>Seu estudo segue o edital <strong>{activeEditalLabel(activeContest!)}</strong>.</span>
+          <Link className="font-semibold text-primary underline-offset-4 hover:underline" to="/dashboard/edital">Abrir meu edital →</Link>
+        </p>
         <section aria-label="Continue estudando" className="nc-plan-shortcuts">
-          <Link to="/dashboard/cronograma">
-            <CalendarDays aria-hidden="true" />
-            <span>Cronograma da semana<small>Organize seus horários de estudo por dia</small></span>
-            <ArrowRight aria-hidden="true" />
-          </Link>
           <Link to="/dashboard/question-trainer">
             <Target aria-hidden="true" />
             <span>Treinador de questões<small>Pratique com correção imediata</small></span>

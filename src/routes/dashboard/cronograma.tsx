@@ -3,7 +3,7 @@ import { platformDate } from "@/lib/platformClock";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import {
   ArrowLeft, BookOpen, Play, CalendarClock, Layers, Loader2, Lock, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
 } from "lucide-react";
@@ -120,6 +120,11 @@ function CronogramaPage() {
     return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
   if (!real)
     return <LockedState image="journey" title={<>Agenda <em>por edital</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
+
+  // Com edital ativo não há planejamento separado: sem plano salvo, a agenda é o próprio edital.
+  // Planos já criados continuam disponíveis para consulta.
+  if (hasActiveEdital(activeContest) && plans!.length === 0)
+    return <Navigate to="/dashboard/edital" replace />;
 
   const open = plans!.find((p) => p.id === openId);
   return (
