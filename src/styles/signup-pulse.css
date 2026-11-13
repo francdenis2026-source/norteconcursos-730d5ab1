@@ -1,0 +1,70 @@
+/* Selo público "N cadastrados" + chip "+1 novo cadastro" ao vivo, no mesmo estilo
+   de pílula do selo de visitantes online (.home-presence em home.css). */
+.home-signups {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 112px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  background: var(--home-bg);
+  color: var(--home-text);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.home-signups[data-available="false"] {
+  opacity: .8;
+}
+.home-signups strong {
+  color: var(--home-text);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.home-signups__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--home-muted);
+  flex: none;
+}
+.home-signups[data-available="true"] .home-signups__dot {
+  background: #2fb277;
+  box-shadow: 0 0 0 3px rgb(47 178 119 / 18%);
+}
+.home-signups__toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(4px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #1f9d63;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  animation: home-signups-toast 3.2s ease-out forwards;
+}
+@keyframes home-signups-toast {
+  0% { opacity: 0; transform: translateX(-50%) translateY(4px) scale(.94); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  82% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-4px) scale(.98); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-signups__toast {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Abaixo de 1100px o selo some (regra em home-responsive.css, junto com
+   .home-presence) — o menu do cabeçalho vira o botão hambúrguer ali. */

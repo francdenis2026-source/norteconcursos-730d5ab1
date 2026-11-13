@@ -42,7 +42,7 @@
   .home.home .home-header__actions { gap: 8px; }
   .home.home .home-header__actions > button,
   .home.home .home-menu-trigger { min-width: 44px; min-height: 44px; }
-  .home.home .home-brand-lockup .home-presence { display: none; }
+  .home.home .home-brand-lockup :is(.home-presence, .home-signups) { display: none; }
   .home.home .home-hero__content { min-height: 0; }
   .home.home .home-trust { flex-wrap: wrap; gap: 10px 18px; }
   .home.home .home-trust li { font-size: 11px; line-height: 1.5; }
