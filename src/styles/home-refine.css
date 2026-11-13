@@ -253,8 +253,17 @@ html body .home.hr-canvas > .desktop-homepage .home-plan--featured {
   html body .home.hr-canvas .hp-promo__inner:hover .hp-promo__art { transform: none !important; }
 }
 
-/* Banner do edital com foto real de perícia: enquadra o investigador à direita. */
-html body .home.hr-canvas .desktop-homepage .sx-banner > img.sx-banner__art { object-position: 55% 60% !important; }
+/* Banner do edital: arte oficial da PC-AC ancorada à direita, com o rosto e o brasão sempre visíveis. */
+@media (min-width: 1024px) {
+  html body .home.hr-canvas .desktop-homepage .sx-banner { min-height: clamp(320px, 24vw, 420px) !important; }
+  html body .home.hr-canvas .desktop-homepage .sx-banner > img.sx-banner__art {
+    object-fit: cover !important;
+    object-position: right 4% !important;
+  }
+  html body .home.hr-canvas .desktop-homepage .sx-banner::after {
+    background: linear-gradient(90deg, #0b1018 0%, rgb(11 16 24 / 0.94) 34%, rgb(11 16 24 / 0.25) 58%, transparent 72%) !important;
+  }
+}
 
 /* ---------- Desafio diário: cartão limpo, sem foto, cores da marca e sem brilho ---------- */
 @media (min-width: 1024px) {
