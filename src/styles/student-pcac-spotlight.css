@@ -1,0 +1,84 @@
+/*
+ * Resumo do PC-AC 2026 na Área do aluno: layout próprio, em grade.
+ * Substitui as camadas antigas (flex + grid-areas) que se sobrepunham e deixavam
+ * "Inteligência IDECAN" por baixo do botão vizinho. Os botões quebram o texto em vez de vazar.
+ */
+html body .student-home.sh2 article.student-pcac-spotlight {
+  display: grid;
+  grid-template: none;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .85rem 1rem;
+  padding: 1rem 1.1rem;
+  overflow: hidden;
+}
+html body .student-home.sh2 article.student-pcac-spotlight > * { grid-area: auto; min-width: 0; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__cover { grid-column: 1; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__copy { grid-column: 2; flex: none; overflow-wrap: anywhere; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__flag { grid-column: 3; position: static; margin: 0; width: 3.5rem; height: auto; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  align-items: start;
+  gap: .9rem 1.2rem;
+  margin: 0;
+}
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__action-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+  align-items: stretch;
+  gap: .5rem;
+  min-width: 0;
+}
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__action-label {
+  grid-column: 1 / -1;
+  flex: none;
+  padding-bottom: .1rem;
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+  color: rgb(237 241 244 / 86%);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+}
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a {
+  --t: oklch(0.82 0.14 82);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .55rem;
+  width: 100%;
+  min-height: 2.9rem;
+  padding: .45rem .8rem;
+  border: 1px solid color-mix(in srgb, var(--t) 70%, transparent);
+  border-radius: .8rem;
+  background: color-mix(in srgb, var(--t) 22%, oklch(0.14 0.03 265 / 0.9));
+  color: #fff;
+  font-size: .84rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: normal;
+  text-align: left;
+  transition: background-color .15s, transform .15s;
+}
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a > span { flex: 1 1 auto; min-width: 0; overflow-wrap: normal; word-break: normal; hyphens: auto; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a svg { flex: none; width: 1.1rem; height: 1.1rem; color: var(--t); }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a:hover { background: color-mix(in srgb, var(--t) 34%, oklch(0.14 0.03 265 / 0.9)); transform: translateY(-1px); }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="gold"] { --t: oklch(0.82 0.14 82); background: oklch(0.82 0.14 82); border-color: oklch(0.82 0.14 82); color: #1c1403; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="gold"] svg { color: currentColor; }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="gold"]:hover { background: oklch(0.88 0.14 82); }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="green"] { --t: oklch(0.78 0.16 150); }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="blue"] { --t: oklch(0.76 0.14 255); }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="teal"] { --t: oklch(0.8 0.12 195); }
+html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a[data-tone="rose"] { --t: oklch(0.76 0.17 15); }
+@media (max-width: 560px) {
+  html body .student-home.sh2 article.student-pcac-spotlight { grid-template-columns: auto minmax(0, 1fr); padding: .85rem; }
+  html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__flag { display: none; }
+  html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__action-group { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .student-home.sh2 article.student-pcac-spotlight .student-pcac-spotlight__actions a { transition: none; }
+}

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, CalendarDays, FileText, ListChecks, ScanSearch } from "lucide-react";
+import "@/styles/student-pcac-spotlight.css";
 
 export function PcAcreEditalSpotlight() {
   return (
