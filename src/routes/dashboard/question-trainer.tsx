@@ -1286,12 +1286,12 @@ function QuestionTrainer() {
                   {parsed.baseLabel}
                   <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
                 </summary>
-                <div className="max-h-52 overflow-y-auto whitespace-pre-line px-3 pb-3 text-sm leading-6 text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
+                <div className="max-h-52 overflow-y-auto whitespace-pre-line break-words px-3 pb-3 text-sm leading-6 text-justify [hyphens:auto] [text-align-last:left] [text-wrap:pretty] [overflow-wrap:anywhere] text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
                   {parsed.base}
                 </div>
               </details>
             )}
-            <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
+            <p className="whitespace-pre-line break-words text-justify [hyphens:auto] [text-align-last:left] [text-wrap:pretty] [overflow-wrap:anywhere] text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
               {parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}
             </p>
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
