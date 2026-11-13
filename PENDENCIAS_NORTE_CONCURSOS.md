@@ -18,7 +18,7 @@ Baseado em `AUDITORIA_COMPLETA_NORTE_CONCURSOS.md`. Nada abaixo foi implementado
 - [ ] **P2-4 Validar com conta real** (acompanhado): Dashboard, Study Coach, Cronograma, Flashcards, Redação, Área do aluno, Administração.
 - [ ] **P2-5 Dividir componentes grandes:** `mock-exams.tsx` (2.758 linhas), `question-trainer.tsx` (2.255), `student-exams.tsx` (1.480), `calculadora-penal.tsx` (1.375).
 - [ ] **P2-6 CSS:** `src/styles.css` com 17.301 linhas, 167 arquivos de estilo, ~4.930 `!important`. Consolidar tokens e remover camadas mortas, com captura visual antes/depois.
-- [ ] **P2-7 Edital PC-AC:** conferir manualmente os 8 itens não localizados no PDF (Delegado 2, Investigador 2, Papiloscopista 1, Perito Criminal 1, Auxiliar de Necropsia 1, Perito Médico-Legista 1) e as disciplinas de perícia com 1 item; checar no outro sentido (itens do edital ausentes na plataforma).
+- [x] **P2-7 Edital PC-AC — conferido (13/11/2026):** os 8 itens "não localizados" existem no PDF; o texto foi apenas quebrado por página ou linha (ex.: "Peritos e intérpretes (arts. 275 a 281 do CPP)", "Atribuições do delegado (Lei 12.830/2013)", "Crimes contra o SFN (Lei 7.492/1986)", "Gestão documental"). Não há item ausente nessa comparação. Pendente: a checagem no sentido edital → plataforma, não feita.
 - [ ] **P2-8 Questões de disciplinas obrigatórias:** Realidade do Acre tem 11 questões (mais 24 em "História e Geografia do Acre"); Economia e Legislação Específica do DF têm 0 ativas.
 - [ ] **P2-9 Responsividade:** inspecionar em aparelho real `/dashboard/material`, `/dashboard/media`, `/dashboard/question-trainer` e `/dashboard/study-plan` (elementos além da largura em 390/768 px).
 - [ ] **P2-10 Acessibilidade na área logada** (axe/Lighthouse, teclado, leitor de tela).
