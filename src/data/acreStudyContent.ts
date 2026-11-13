@@ -46,7 +46,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       ],
       source: { label: "Museu Histórico Nacional — A Questão do Acre", url: "https://atom-mhn.museus.gov.br/downloads/questao-acreana.pdf" },
       alternatives: [{ label: "Wikipédia — Tratado de Petrópolis", url: "https://pt.wikipedia.org/wiki/Tratado_de_Petr%C3%B3polis" }],
-      caution: "As fontes divergem quanto à data de assinatura (17 de novembro de 1903 é a mais citada); o Congresso aprovou o tratado por lei de 25 de fevereiro de 1904.",
+      caution: "As fontes divergem quanto à data de assinatura (17 de novembro de 1903 é a mais citada); o Congresso o aprovou em 1904 (confira a norma antes de citar o número).",
     },
     {
       title: "De Território Federal a Estado",
@@ -92,7 +92,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       points: [
         "Os serviços, puxados pela administração pública, defesa, educação, saúde e seguridade social, são o principal setor da economia acreana.",
         "A agropecuária aparece em seguida entre as maiores contribuições ao PIB estadual.",
-        "Em anos anteriores (2016 e 2017), os serviços já respondiam por cerca de 80% do valor adicionado.",
+        "Esse peso dos serviços, com destaque para a administração pública, é uma característica de longa data da economia do Estado.",
       ],
       source: { label: "IBGE — PIB cresce em todos os 27 estados em 2023", url: "https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/45142-pib-cresce-em-todos-os-27-estados-do-pais-em-2023.html?lang=pt-BR" },
       alternatives: [{ label: "Agência Gov — PIB cresce em todos os 27 estados em 2023", url: "https://agenciagov.ebc.com.br/noticias/202511/pib-cresce-em-todos-os-27-estados-do-pais-em-2023" }],
@@ -118,7 +118,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       reference: "2016–2026",
       points: [
         "A Comissão Pró-Indígenas do Acre confirma quatro grupos distintos de indígenas isolados no Estado; três deles são de etnias ainda não identificadas pela Funai.",
-        "A Funai protege a região da bacia do rio Chandless, com acesso restrito à Terra Indígena Mashco do Rio Chandless (municípios de Manoel Urbano, Santa Rosa do Purus e Sena Madureira).",
+        "A Funai mantém ações de proteção na região da bacia do rio Chandless, com restrição de acesso, nos municípios de Manoel Urbano, Santa Rosa do Purus e Sena Madureira.",
         "Em outubro de 2026, a Funai enviou uma equipe a Jordão, após imagens de possíveis isolados em uma residência, em área de ocupação tradicional da Referência nº 115 (Isolados/Cabeludos do Humaitá).",
       ],
       source: { label: "Comissão Pró-Indígenas do Acre — Povos isolados", url: "https://cpiacre.org.br/povos-indigenas-isolados-2/" },
@@ -139,16 +139,16 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
   politica: [
     {
       title: "Constituição do Estado do Acre",
-      reference: "Promulgada em 5 de outubro de 1989",
+      reference: "Promulgada em 3 de outubro de 1989",
       points: [
         "São Poderes do Estado, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.",
         "Rio Branco é a capital; o governador pode transferir temporariamente a sede para outra cidade do Estado.",
-        "O Art. 8º traz os símbolos estaduais: a bandeira, o hino e as armas adotados pelo Estado Independente do Acre, com modificações, além de outros que a lei estabelecer.",
-        "As sessões da Assembleia Legislativa são públicas (Art. 74).",
+        "Os símbolos estaduais são a bandeira, o hino e as armas adotados pelo Estado Independente do Acre, com modificações, além de outros que a lei estabelecer.",
+        "As sessões da Assembleia Legislativa são públicas.",
       ],
       source: { label: "Portal LEGIS — Constituição do Estado do Acre", url: "https://legis.ac.gov.br/detalhar_constituicao" },
       alternatives: [{ label: "Assembleia Legislativa — texto em PDF", url: "https://www.al.ac.leg.br/wp-content/uploads/2014/10/constitui%C3%A7%C3%A3o_atualizada.pdf" }, { label: "TJAC — texto em PDF", url: "https://www.tjac.jus.br/wp-content/uploads/2014/07/Constituicao_Estadual_Acre.pdf" }, { label: "DHnet — texto em PDF", url: "https://www.dhnet.org.br/dados/lex/a_pdf/constituicao_ac.pdf" }],
-      caution: "O texto consultado pode não incluir emendas posteriores. Número de deputados e duração dos mandatos: confirme no site da Assembleia Legislativa antes de estudar.",
+      caution: "A data de 3/10/1989 é a da promulgação (a publicação no Diário Oficial foi em 5/10/1989). O texto consultado pode não incluir emendas posteriores; os números dos artigos não foram conferidos aqui. Número de deputados e duração dos mandatos: confirme no site da Assembleia Legislativa antes de estudar.",
     },
   ],
   seguranca: [

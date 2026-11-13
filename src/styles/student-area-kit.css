@@ -375,3 +375,29 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Realidade do Acre: navegação interna, cartões que cabem na janela e melhor uso do espaço */
+.ak-jump { display: flex; flex-wrap: wrap; gap: .4rem; }
+.ak-jump a { display: inline-flex; align-items: center; min-height: 2.25rem; padding: 0 .85rem; border: 1px solid color-mix(in srgb, var(--ak-tone, #f59e0b) 45%, var(--border)); border-radius: 999px; background: color-mix(in srgb, var(--ak-tone, #f59e0b) 8%, var(--card)); color: var(--foreground); font-size: .78rem; font-weight: 800; text-decoration: none; }
+.ak-jump a:hover, .ak-jump a:focus-visible { background: color-mix(in srgb, var(--ak-tone, #f59e0b) 22%, var(--card)); }
+.ak-fresh, .ak-axis-detail__workspace { scroll-margin-top: 5rem; }
+.ak-fresh { padding: .9rem; border-radius: 1rem; }
+.ak-fresh__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: start; gap: .7rem; }
+.ak-fresh__card { gap: .55rem; padding: .85rem .95rem; overflow-wrap: anywhere; }
+.ak-fresh__card h3 { font-size: .98rem; line-height: 1.25; }
+.ak-fresh__card ul { gap: .4rem; font-size: .84rem; line-height: 1.5; }
+.ak-fresh__caution { font-size: .76rem; }
+.ak-fresh__card > a { margin-top: .1rem; }
+.ak-fresh__alt { display: block; padding-top: .45rem; }
+.ak-fresh__alt > summary { min-height: 1.75rem; color: var(--muted-foreground); font-size: .75rem; font-weight: 750; cursor: pointer; }
+.ak-fresh__alt > p { display: grid; gap: .3rem; margin: .35rem 0 0; }
+.ak-axis-detail__groups { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); align-items: start; }
+.ak-axis-detail__group, .ak-axis-detail__group > ul li { overflow-wrap: anywhere; }
+.ak-axis-detail__group > ul li { font-size: .8rem; }
+.ak-fresh__news > li { grid-template-columns: 5rem minmax(0, 1fr) auto; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .ak-fresh { padding: .75rem; }
+  .ak-axis-detail__workspace { padding: .75rem; }
+  .ak-jump a { flex: 1 1 auto; justify-content: center; }
+  .ak-fresh__news > li { grid-template-columns: minmax(0, 1fr); }
+}
