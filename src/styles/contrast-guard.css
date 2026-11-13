@@ -38,6 +38,16 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content :is(
 html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.sh2-hero, .student-pcac-spotlight__copy) :is(.sh2-link, a) {
   color: var(--on-dark-accent) !important;
 }
+
+/* Exceção: os cartões de disciplina do Material didático (.material-hub) trocaram a foto de
+   fundo por um cartão plano (fundo claro no modo claro), então o texto segue o tema, não branco
+   fixo como os demais .ak-tile com foto. */
+html body .app-shell[data-area] #dashboard-content#dashboard-content .material-hub .ak-tile :is(h1, h2, h3, h4, strong, b, time) {
+  color: hsl(var(--foreground)) !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content .material-hub .ak-tile :is(p, small, span, li) {
+  color: hsl(var(--muted-foreground)) !important;
+}
 html body .app-shell[data-area] #dashboard-content#dashboard-content :is(.page-hero, .workspace-banner, .study-assistant-hero, .edital-modern-hero) :is(.hero-chip, .edital-eyebrow, .study-assistant-hero__eyebrow) {
   color: var(--on-dark-accent) !important;
 }
