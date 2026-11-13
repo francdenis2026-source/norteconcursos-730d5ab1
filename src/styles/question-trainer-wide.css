@@ -330,3 +330,67 @@ html .app-shell[data-area="student"] .question-workspace.trainer-reading-workspa
   .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar { position: static; margin-top: 0.625rem !important; padding: 0.625rem 0.875rem !important; box-shadow: none; }
   .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2 .trainer-start-bar button { height: 2.5rem !important; min-height: 2.5rem !important; padding-inline: 1.25rem; font-size: 0.875rem; }
 }
+
+
+/* Mobile trainer: match the real student shell regardless of focus-mode.
+   The earlier viewport override only matched data-focus-mode=true, leaving
+   regular mobile navigation with a short card and a large empty gap. */
+@media (max-width: 767px) {
+  html .app-shell[data-area="student"]:has(.trainer-setup.qt2) #dashboard-content {
+    width: 100%;
+    max-width: none;
+    min-height: calc(100dvh - var(--trainer-dock-bottom, 6rem) - 5.5rem);
+  }
+  html .app-shell[data-area="student"]:has(.trainer-setup.qt2) .app-content__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none !important;
+    min-height: inherit;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 {
+    display: flex !important;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: calc(100dvh - var(--trainer-dock-bottom, 6rem) - 6rem) !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 > .trainer-setup__unified,
+  html .app-shell[data-area="student"] .trainer-setup.qt2 > .trainer-setup__unified > [data-slot="card-content"] {
+    display: flex !important;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 .qt2-hero {
+    flex: 1 0 auto;
+    min-height: clamp(11rem, 24dvh, 18rem) !important;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 .qt2-filters {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.65rem !important;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 .qt2-filters > * {
+    min-width: 0;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 .trainer-start-bar {
+    margin-top: auto !important;
+  }
+}
+@media (min-width: 540px) and (max-width: 767px) {
+  html .app-shell[data-area="student"] .trainer-setup.qt2 .qt2-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 767px) and (max-height: 700px) {
+  html .app-shell[data-area="student"] .trainer-setup.qt2 {
+    min-height: 0 !important;
+  }
+  html .app-shell[data-area="student"] .trainer-setup.qt2 .qt2-hero {
+    flex: 0 0 auto;
+    min-height: 10rem !important;
+  }
+}
