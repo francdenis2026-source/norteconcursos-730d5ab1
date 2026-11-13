@@ -254,3 +254,145 @@ export const EXTRAVAGANTE_MAP: LegalMapData = {
     },
   ],
 };
+
+const proc = (
+  id: string, title: string, ref: string, rule: string, example: string,
+  priority: Priority, careers: Career[] = both, watch?: string, changed?: string,
+): LegalNode => ({ id, title, ref, rule, example, priority, careers, ...(watch ? { watch } : {}), ...(changed ? { changed } : {}) });
+
+export const PROCESSUAL_MAP: LegalMapData = {
+  id: "processual",
+  subject: "Direito Processual Penal",
+  title: "Mapa do Processo Penal: o que a Polícia Civil faz do flagrante à denúncia",
+  intro:
+    "Siga a linha do tempo da persecução: inquérito, prisão em flagrante, audiência de custódia, prisões cautelares e provas. Cada cartão traz o artigo, a regra e um exemplo.",
+  chart: null,
+  sources: [SRC.cpp],
+  checkedOn: "2026-11-13",
+  branches: [
+    {
+      id: "inquerito",
+      title: "Inquérito policial",
+      color: "#2563EB",
+      summary: "A investigação da polícia judiciária: quem instaura, prazos e o que a autoridade pode ou não fazer.",
+      nodes: [
+        proc("c4", "Polícia judiciária", "CPP, art. 4º", "A polícia judiciária exercida pelas autoridades policiais tem por fim a apuração das infrações penais e da sua autoria.", "A Delegacia de Homicídios investiga a morte de uma pessoa e reúne provas para identificar o autor.", 3),
+        proc("c5", "Como o inquérito começa", "CPP, art. 5º", "Nos crimes de ação pública, o inquérito começa de ofício, por requisição da autoridade judiciária ou do Ministério Público, ou a requerimento do ofendido ou de quem o represente.", "O delegado toma conhecimento de um roubo pela imprensa e instaura o inquérito de ofício.", 3, del, "A autoridade policial pode instaurar de ofício, mas nos crimes de ação penal pública condicionada depende de representação."),
+        proc("c10", "Prazo do inquérito", "CPP, art. 10", "O inquérito terminará no prazo de 10 dias se o indiciado estiver preso, contado do dia da prisão, e no de 30 dias quando estiver solto.", "Preso em flagrante por roubo, o investigado tem inquérito concluído em até 10 dias.", 3, both, "Prazo de preso é improrrogável pelo CPP; para solto, a prorrogação é pedida ao juiz."),
+        proc("c13", "O que incumbe à autoridade policial", "CPP, art. 13", "Fornecer informações, realizar diligências requisitadas, cumprir mandados de prisão e representar, se necessário, pela prisão preventiva.", "O delegado representa ao juiz pela prisão preventiva de um suspeito que ameaça testemunhas.", 2, del),
+        proc("c17", "Arquivamento é com o juiz e o MP", "CPP, art. 17", "A autoridade policial não poderá mandar arquivar autos de inquérito.", "Sem provas suficientes, o delegado relata o inquérito e o remete ao Judiciário; só o MP pede o arquivamento.", 3, del),
+        proc("c24", "Quem propõe a ação penal", "CPP, art. 24", "Nos crimes de ação pública, a ação penal será promovida por denúncia do Ministério Público.", "Após receber o relatório do inquérito, o promotor oferece denúncia por furto.", 2),
+        proc("c46", "Prazo da denúncia", "CPP, art. 46", "O prazo para oferecer a denúncia, estando o réu preso, será de 5 dias, e de 15 dias se o réu estiver solto ou afiançado.", "Réu preso por tráfico: o MP tem 5 dias para denunciar após receber o inquérito.", 2, both),
+      ],
+    },
+    {
+      id: "flagrante",
+      title: "Prisão em flagrante e custódia",
+      color: "#DC2626",
+      summary: "O ato que mais move o plantão da delegacia: hipóteses de flagrante, formalidades e a audiência de custódia.",
+      nodes: [
+        proc("c301", "Quem pode prender em flagrante", "CPP, art. 301", "Qualquer do povo poderá e as autoridades policiais e seus agentes deverão prender quem quer que seja encontrado em flagrante delito.", "Um cidadão detém o ladrão que acabou de furtar e o entrega à polícia.", 3, both, "Flagrante facultativo para qualquer do povo; obrigatório para a polícia."),
+        proc("c302", "Hipóteses de flagrante", "CPP, art. 302", "Está em flagrante quem: I – está cometendo a infração; II – acaba de cometê-la; III – é perseguido logo após; IV – é encontrado logo depois com instrumentos ou objetos que façam presumir ser autor.", "Suspeito é perseguido pela viatura logo após assaltar uma loja e é encontrado com a arma e o dinheiro.", 3),
+        proc("c304", "Auto de prisão em flagrante", "CPP, art. 304", "Apresentado o preso à autoridade competente, ouvirá esta o condutor e colherá sua assinatura, a das testemunhas e do acusado, lavrando-se o auto.", "No plantão, o delegado ouve o condutor, as testemunhas e o preso e lavra o auto.", 3, del),
+        proc("c306", "Comunicação imediata", "CPP, art. 306", "A prisão e o local onde se encontre o preso serão comunicados imediatamente ao juiz, ao Ministério Público e à família ou pessoa indicada; em até 24 horas, o auto é encaminhado ao juiz.", "Após lavrar o auto às 22h, a delegacia comunica o juiz e envia cópia à Defensoria se o preso não tiver advogado.", 3, both),
+        proc("c310", "Audiência de custódia", "CPP, art. 310", "Em até 24 horas após o recebimento do auto, o juiz realizará audiência de custódia, podendo ser por videoconferência, e decidirá se relaxa a prisão, converte em preventiva ou concede liberdade provisória.", "O preso é levado ao juiz no dia seguinte, que decide se mantém a prisão como preventiva.", 3, both, "Verifique a redação vigente: houve alteração recente (Lei 15.358/2026) sobre o uso de videoconferência.", "Lei 15.358/2026"),
+      ],
+    },
+    {
+      id: "cautelares",
+      title: "Prisão preventiva e cautelares",
+      color: "#D97706",
+      summary: "Quando a prisão antes da sentença é possível e quais medidas substituem a prisão.",
+      nodes: [
+        proc("c311", "Quem decreta a preventiva", "CPP, art. 311", "A prisão preventiva pode ser decretada pelo juiz, a requerimento do MP, do querelante ou do assistente, ou por representação da autoridade policial.", "O delegado representa pela preventiva de um líder de organização criminosa que ameaça testemunhas.", 3, both, "O juiz não pode decretá-la de ofício."),
+        proc("c312", "Requisitos da preventiva", "CPP, art. 312", "Garantia da ordem pública ou econômica, conveniência da instrução criminal ou garantia da aplicação da lei penal, com prova da existência do crime e indício suficiente de autoria.", "Reincidente em roubos, com risco concreto de continuar delinquindo, tem a preventiva decretada.", 3),
+        proc("c313", "Quando cabe", "CPP, art. 313", "Cabe nos crimes dolosos punidos com pena privativa de liberdade máxima superior a 4 anos, entre outras hipóteses.", "Homicídio doloso admite preventiva; contravenção simples, não.", 3),
+        proc("c319", "Medidas cautelares diversas", "CPP, art. 319", "Comparecimento periódico, proibição de frequentar lugares, proibição de contato, monitoração eletrônica e outras alternativas à prisão.", "Em vez de prender, o juiz proíbe o agressor de se aproximar da vítima e determina tornozeleira.", 2, both),
+      ],
+    },
+    {
+      id: "provas",
+      title: "Provas",
+      color: "#059669",
+      summary: "Valor das provas do inquérito e a cadeia de custódia, tema recorrente das provas de polícia.",
+      nodes: [
+        proc("c155", "Livre apreciação da prova", "CPP, art. 155", "O juiz formará sua convicção pela livre apreciação da prova produzida em contraditório judicial, não podendo fundamentar a decisão exclusivamente nos elementos do inquérito.", "A condenação não pode se basear só no depoimento colhido na delegacia, sem repetição em juízo.", 3, both, "Exceção: provas cautelares, não repetíveis e antecipadas."),
+        proc("c158a", "Cadeia de custódia", "CPP, art. 158-A", "Conjunto de procedimentos para documentar a história cronológica do vestígio, do reconhecimento até o descarte.", "Perito recolhe uma arma no local do crime, registra e lacra; a quebra da cadeia pode invalidar a prova.", 3, both),
+      ],
+    },
+  ],
+};
+
+const cf = (
+  id: string, title: string, ref: string, rule: string, example: string,
+  priority: Priority, careers: Career[] = both, watch?: string,
+): LegalNode => ({ id, title, ref, rule, example, priority, careers, ...(watch ? { watch } : {}) });
+
+export const CONSTITUCIONAL_MAP: LegalMapData = {
+  id: "constitucional",
+  subject: "Direito Constitucional",
+  title: "Mapa da Constituição: segurança pública e garantias que mais caem em prova policial",
+  intro:
+    "Dois blocos que mais aparecem nos concursos policiais: o art. 144 (quem faz o quê) e os direitos e garantias do art. 5º ligados à prisão e ao processo.",
+  chart: null,
+  sources: [SRC.cf],
+  checkedOn: "2026-11-13",
+  branches: [
+    {
+      id: "seguranca",
+      title: "Segurança pública (art. 144)",
+      color: "#2563EB",
+      summary: "Os órgãos, suas atribuições e quem dirige a polícia civil.",
+      nodes: [
+        cf("f144", "Órgãos da segurança pública", "CF, art. 144", "A segurança pública é dever do Estado, direito e responsabilidade de todos, exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio, por meio dos órgãos que o artigo enumera, entre eles as polícias civis.", "A banca pergunta quais órgãos integram o sistema: polícias federal, rodoviária federal, ferroviária federal, civis, militares, corpos de bombeiros e polícias penais.", 3),
+        cf("f144p4", "Polícia civil", "CF, art. 144, § 4º", "Às polícias civis, dirigidas por delegados de polícia de carreira, incumbem, ressalvada a competência da União, as funções de polícia judiciária e a apuração de infrações penais, exceto as militares.", "Crime comum de roubo é apurado pela polícia civil; crime militar, não.", 3, both, "É o dispositivo central do seu cargo: polícia judiciária e apuração de infrações."),
+        cf("f144p1", "Polícia Federal", "CF, art. 144, § 1º", "Destina-se, entre outras funções, a exercer, com exclusividade, as funções de polícia judiciária da União.", "Crime contra a União é investigado pela PF, não pela polícia civil.", 2, del, "Exclusividade é da polícia judiciária da União, não da apuração de infrações em geral."),
+        cf("f144p5a", "Polícias penais", "CF, art. 144, § 5º-A", "Vinculadas ao órgão administrador do sistema penal da unidade federativa, cabe-lhes a segurança dos estabelecimentos penais.", "A segurança interna do presídio estadual é das polícias penais.", 1, both),
+      ],
+    },
+    {
+      id: "garantias",
+      title: "Direitos e garantias (art. 5º)",
+      color: "#DC2626",
+      summary: "Prisão, devido processo, provas e os remédios constitucionais.",
+      nodes: [
+        cf("f5x", "Intimidade e vida privada", "CF, art. 5º, X", "São invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral.", "Vazar foto íntima de um investigado em redes sociais fere esse direito.", 2),
+        cf("f5xi", "Inviolabilidade do domicílio", "CF, art. 5º, XI", "A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.", "A polícia só entra de madrugada sem mandado se houver flagrante, desastre ou socorro.", 3, both, "Ordem judicial só durante o dia."),
+        cf("f5xii", "Sigilo de comunicações", "CF, art. 5º, XII", "É inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e telefônicas, salvo, no último caso, por ordem judicial, nas hipóteses e na forma que a lei estabelecer para fins de investigação criminal ou instrução processual penal.", "A interceptação telefônica exige ordem judicial.", 3),
+        cf("f5xliii", "Crimes inafiançáveis", "CF, art. 5º, XLIII", "A lei considerará crimes inafiançáveis e insuscetíveis de graça ou anistia a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins, o terrorismo e os definidos como crimes hediondos.", "Tráfico de drogas e tortura: sem fiança e sem anistia.", 3),
+        cf("f5liv", "Devido processo legal", "CF, art. 5º, LIV", "Ninguém será privado da liberdade ou de seus bens sem o devido processo legal.", "Prisão sem ordem escrita e fundamentada e fora das hipóteses constitucionais viola o devido processo legal.", 3),
+        cf("f5lv", "Contraditório e ampla defesa", "CF, art. 5º, LV", "Aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e ampla defesa, com os meios e recursos a ela inerentes.", "O acusado tem direito de ser ouvido e produzir provas antes de ser condenado.", 3),
+        cf("f5lvi", "Provas ilícitas", "CF, art. 5º, LVI", "São inadmissíveis, no processo, as provas obtidas por meios ilícitos.", "Confissão obtida sob tortura não pode ser usada como prova.", 3),
+        cf("f5lvii", "Presunção de inocência", "CF, art. 5º, LVII", "Ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória.", "Um preso preventivo continua sendo presumido inocente até a condenação definitiva.", 3),
+        cf("f5lxi", "Prisão só por flagrante ou ordem escrita", "CF, art. 5º, LXI", "Ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente, salvo nos casos de transgressão militar ou crime propriamente militar.", "A polícia civil não pode prender alguém por mera suspeita, sem flagrante nem mandado.", 3, both, "Prisão por ordem escrita é da autoridade judiciária."),
+        cf("f5lxii", "Comunicação da prisão", "CF, art. 5º, LXII", "A prisão de qualquer pessoa e o local onde se encontre serão comunicados imediatamente ao juiz competente e à família do preso ou à pessoa por ele indicada.", "Preso em flagrante tem a família avisada logo.", 3),
+        cf("f5lxiii", "Direito ao silêncio e assistência", "CF, art. 5º, LXIII", "O preso será informado de seus direitos, entre os quais o de permanecer calado, sendo-lhe assegurada a assistência da família e de advogado.", "O delegado informa ao preso do direito de ficar em silêncio.", 3),
+        cf("f5lxiv", "Identificação dos responsáveis", "CF, art. 5º, LXIV", "O preso tem direito à identificação dos responsáveis por sua prisão ou por seu interrogatório policial.", "O preso pode saber o nome do policial que o interrogou.", 2),
+        cf("f5lxv", "Relaxamento da prisão ilegal", "CF, art. 5º, LXV", "A prisão ilegal será imediatamente relaxada pela autoridade judiciária.", "Flagrante forjado ou fora das hipóteses legais deve ser relaxado.", 3),
+        cf("f5lxvii", "Prisão civil", "CF, art. 5º, LXVII", "Não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento voluntário e inescusável de obrigação alimentícia.", "Devedor de pensão alimentícia pode ser preso; devedor de cartão, não.", 2),
+        cf("f5lxviii", "Habeas corpus", "CF, art. 5º, LXVIII", "Conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder.", "Advogado impetra HC contra prisão ilegal.", 3),
+        cf("f5lxix", "Mandado de segurança", "CF, art. 5º, LXIX", "Protege direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública.", "Candidato impetra mandado de segurança contra ato ilegal em concurso.", 2),
+        cf("f5lxxii", "Habeas data", "CF, art. 5º, LXXII", "Conceder-se-á habeas data para assegurar o conhecimento de informações relativas à pessoa do impetrante constantes de registros ou bancos de dados de entidades governamentais ou de caráter público, ou para retificação de dados.", "Cidadão pede acesso a dados seus em registro de órgão público.", 2),
+        cf("f5lxxviii", "Duração razoável do processo", "CF, art. 5º, LXXVIII", "A todos, no âmbito judicial e administrativo, são assegurados a razoável duração do processo e os meios que garantam a celeridade de sua tramitação.", "Processo que se arrasta sem justificativa viola a garantia.", 2),
+      ],
+    },
+    {
+      id: "mp",
+      title: "Ministério Público (art. 129)",
+      color: "#059669",
+      summary: "A titularidade da ação penal e o controle externo da atividade policial.",
+      nodes: [
+        cf("f129i", "Ação penal pública", "CF, art. 129, I", "É função institucional do MP promover, privativamente, a ação penal pública, na forma da lei.", "O promotor, e não o delegado, oferece a denúncia.", 3),
+        cf("f129vii", "Controle externo da polícia", "CF, art. 129, VII", "Exercer o controle externo da atividade policial, na forma da lei complementar.", "O MP fiscaliza a atividade da polícia civil.", 3, both),
+        cf("f129viii", "Requisição de diligências", "CF, art. 129, VIII", "Requisitar diligências investigatórias e a instauração de inquérito policial, indicados os fundamentos jurídicos de suas manifestações processuais.", "O promotor requisita ao delegado a instauração de inquérito sobre um crime noticiado.", 3, both),
+      ],
+    },
+  ],
+};
+
+export const LEGAL_MAPS: LegalMapData[] = [PENAL_MAP, PROCESSUAL_MAP, EXTRAVAGANTE_MAP, CONSTITUCIONAL_MAP];
+
+/** Mapa interativo da disciplina (nome canônico), ou undefined. */
+export function legalMapFor(subject: string): LegalMapData | undefined {
+  return LEGAL_MAPS.find((map) => map.subject === subject);
+}

@@ -49,6 +49,8 @@ import "@/styles/study-area-compact.css";
 import { disciplineTheme } from "@/lib/disciplineTheme";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
+import { LegalMapExplorer } from "@/components/dashboard/LegalMapExplorer";
+import { legalMapFor } from "@/data/legalMaps";
 
 export const Route = createFileRoute("/dashboard/disciplinas")({
   component: DisciplinesPage,
@@ -442,6 +444,11 @@ function DisciplineDetail({
         completed={completedTopics}
         onToggle={toggleSyllabusTopic}
       />
+
+      {(() => {
+        const legalMap = legalMapFor(canonicalSubject(card.name));
+        return legalMap ? <LegalMapExplorer key={legalMap.id} map={legalMap} /> : null;
+      })()}
 
       <MaterialStudyTabs
         key={card.name}
