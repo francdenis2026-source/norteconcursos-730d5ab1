@@ -79,6 +79,7 @@ export function HomeDailyChallenge() {
           </div>
         </div>
         <div className="hd__media">
+          <img src="/media/hero/exam-simulator.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="hd__clock" aria-label={`Novas questões em ${countdown}`}>
             <Clock3 aria-hidden="true" />
             <span>
