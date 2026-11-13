@@ -365,3 +365,51 @@ html body .home.hr-canvas > .desktop-homepage .home-plan--featured {
   html body .home.hr-canvas .hd__clock span { justify-items: start; gap: 2px; }
   html body .home.hr-canvas .hd__clock strong { font-size: 22px !important; }
 }
+
+/* Desafio diário: a arte da caveira com pistola preenche o cartão inteiro.
+   O emblema fica à direita; à esquerda um degradê escuro segura a leitura do texto. */
+@media (min-width: 1024px) {
+  html body .home.hr-canvas .hd__inner {
+    position: relative !important;
+    isolation: isolate;
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: 420px !important;
+    background: #0d1015 !important;
+    border-color: rgb(227 177 75 / 0.28) !important;
+  }
+  html body .home.hr-canvas .hd__media {
+    position: absolute !important;
+    inset: 0;
+    z-index: -1;
+    min-height: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+  }
+  html body .home.hr-canvas .hd__media > img {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 28% !important;
+    right: 0 !important;
+    width: 72% !important;
+    height: 100% !important;
+    max-width: none;
+    object-fit: cover;
+    object-position: 50% 52%;
+    transform: none !important;
+  }
+  html body .home.hr-canvas .hd__media::after {
+    background:
+      linear-gradient(90deg, #0d1015 0%, #0d1015 34%, rgb(13 16 21 / 0.82) 48%, rgb(13 16 21 / 0.15) 66%, rgb(13 16 21 / 0.35) 100%) !important;
+  }
+  html body .home.hr-canvas .hd__copy { position: relative; z-index: 1; }
+  html body .home.hr-canvas .hd__copy > * { max-width: 560px; }
+  html body .home.hr-canvas .hd__clock {
+    left: auto !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    background: rgb(13 16 21 / 0.92) !important;
+    border-color: rgb(227 177 75 / 0.35) !important;
+  }
+}
+@media (min-width: 1024px) { html body .home.hr-canvas .hd__copy > h2 { max-width: 680px !important; } }
