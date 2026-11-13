@@ -7,10 +7,17 @@
 - Texto extraído da apostila: 76.310 caracteres / 29 páginas.
 - Situação: `under_review` — não aparece ainda na área do aluno.
 - Banco: `board_exam_questions`
-- Prova N1: 8 questões transcritas (itens 1–5, 7, 11 e 12).
+- Prova N1: 9 questões transcritas (itens 1–7, 11 e 12).
 - Prova N2: 12 questões transcritas (itens 1–12).
-- Total inserido no banco: 20 itens, todos `under_review`, com `official_answer = X` para não atribuir gabarito oficial inexistente.
-- Auditoria: 21 registros `needs_review`, incluindo a N1 questão 6 marcada para análise.
+- Total inserido no banco: 21 itens.
+- Gabarito: alternativas extraídas da folha de respostas e das marcas manuscritas de correção no próprio PDF. Não dependem de gabarito separado.
+- Todos os itens permanecem `under_review` até conferência jurídica e docente.
+- Auditoria: 21 registros `needs_review`.
+
+## Gabaritos indicados pelas marcas no documento
+
+- N1: 1-B, 2-A, 3-B, 4-B, 5-C, 6-C, 7-B, 11-D, 12-C.
+- N2: 1-A, 2-B, 3-C, 4-D, 5-A, 6-B, 7-C, 8-D, 9-A, 10-B, 11-C, 12-D.
 
 ## Arquivos de origem fornecidos
 
@@ -20,13 +27,12 @@
 | `penal prova 1.pdf` | `1322775167581fee7fc0cb123dc2fbd84bda90a051dde6634b6c862b82cfd453` | Avaliação N1 |
 | `Prova da Shelinha direito .pdf` | `cc0b74f7b38774b68d5e5ac6751524784af022e654282266ac73308fc69c69ab` | Avaliação N2 |
 
-## Pendências obrigatórias antes da publicação
+## Pendências antes da publicação
 
 1. Conferir a vigência das leis, súmulas e jurisprudência da apostila em fontes oficiais.
-2. Validar com o gabarito oficial/docente as respostas sugeridas registradas em `review_note`.
-3. N1, questão 6: não foi cadastrada no banco porque o enunciado menciona Ministro e Senador, mas as alternativas fazem referência ao Presidente da República; além disso, o perdão no exterior interfere na análise do art. 7º do CP.
-4. N1, questões 8–10: não constam no PDF recebido; a digitalização salta da página impressa 3 para a 5. Não foram inventadas.
-5. Após revisão, preencher as respostas finais, explicações, fontes legais e datas de conferência; só então alterar o status para `active`.
+2. N1, questão 6: a marcação manuscrita indica C, mas o enunciado menciona Ministro das Relações Exteriores e Senador, enquanto a alternativa C trata de crime contra o Presidente da República. A referência ao perdão no exterior também exige revisão do art. 7º do CP. Item mantido sob revisão.
+3. N1, questões 8–10: não constam no PDF recebido; a digitalização salta da questão 7 para a 11. Não foram inventadas.
+4. Confirmar as respostas marcadas com a docente e revisar as explicações antes de alterar o status para `active`.
 
 ## Observação de classificação
 
