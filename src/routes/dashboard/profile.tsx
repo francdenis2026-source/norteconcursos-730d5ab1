@@ -14,6 +14,7 @@ import { normalizeUppercase } from "@/lib/utils";
 import { ShieldCheck, CheckCircle2 } from "lucide-react";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { clearCatalogCache } from "@/lib/catalogCache";
+import { PushNotificationSettings } from "@/components/notifications/PushNotificationSettings";
 
 export const Route = createFileRoute("/dashboard/profile")({
   component: ProfilePage,
@@ -207,6 +208,7 @@ function ProfilePage() {
           </Button>
         </CardContent>
       </Card>
+      <PushNotificationSettings />
     </div>
   );
 }
