@@ -294,7 +294,7 @@
   background: var(--student-canvas) !important;
 }
 :root.dark .app-shell[data-area="student"] #dashboard-content > * {
-  width: min(100%, 1180px);
+  width: min(100%, 1760px);
   margin-inline: auto;
 }
 :root.dark .app-shell[data-area="student"] #dashboard-content [data-slot="card"] {

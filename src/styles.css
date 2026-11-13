@@ -15216,11 +15216,9 @@ html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow:
   padding-top: 14px;
   margin-top: 14px;
 }
+/* Tela cheia mantém a barra de rolagem visível (só some no celular, ver regra mobile acima). */
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content {
-  scrollbar-width: none;
-}
-.app-shell.navigation-v2[data-focus-mode="true"] .app-content::-webkit-scrollbar {
-  display: none;
+  scrollbar-gutter: stable;
 }
 @media (max-width: 767px) {
   .app-shell.navigation-v2[data-focus-mode="true"] .trainer-session-shell {

@@ -1,3 +1,4 @@
+import "@/styles/library-layout.css";
 import "@/styles/student-library-media-workspaces.css";
 import { TRACKS } from "@/data/tracks";
 import "@/styles/learning-workspace-refinement.css";
@@ -448,7 +449,7 @@ function LibraryIndex() {
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
-      <div className={!lawsOnly && focused && matchedCourse ? "grid items-start gap-6 lg:grid-cols-2" : undefined}>
+      <div className={!lawsOnly && focused && matchedCourse ? `grid items-start gap-4 lg:gap-6 ${!isPending && items.length === 0 ? "library-split library-split--solo" : "library-split lg:grid-cols-2"}` : undefined}>
       {!lawsOnly && focused && matchedCourse && (
         <UpdatedStudyCollections onlyCourseId={matchedCourse.id} storageScope={user?.id ?? "anonymous"} />
       )}
