@@ -16,7 +16,7 @@ test("video library lists every edital discipline and offers an all-subjects mod
 
 test("lesson player keeps keyboard shortcuts and colored controls", () => {
   const player = read("src/components/media/LessonPlayer.tsx");
-  for (const text of ["vp2__btn--play", "vp2__btn--red", "vp2__btn--violet", "seekBy(-10)", "Atalhos: K pausa"]) assert.ok(player.includes(text), text);
+  for (const text of ["vp2__btn--play", "vp2__btn--red", "vp2__btn--violet", "seekBy(-10)", "vp2__hotkeys", "<kbd>K</kbd>"]) assert.ok(player.includes(text), text);
   const css = read("src/components/media/video-library.css");
   assert.match(css, /aspect-ratio: 16 \/ 9/);
   assert.match(css, /@media \(max-width: 760px\)/);

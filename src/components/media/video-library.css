@@ -15,6 +15,12 @@
 
 /* Janela única de três colunas */
 .vl__body { display: grid; grid-template-columns: minmax(12rem, 14rem) minmax(0, 1fr) minmax(15rem, 19rem); gap: .7rem; height: clamp(27rem, calc(100dvh - 14.5rem), 58rem); min-height: 0; }
+/* Acima de 1101px a assinatura do dev vira uma faixa fixa de ~32px na base da janela (dev-strip.css);
+   sem esse desconto aqui, o fim da coluna do player (título + botões abaixo do vídeo) ficava por trás dela
+   em janela normal (não maximizada/tela cheia). */
+@media (min-width: 1101px) {
+  .vl__body { height: clamp(27rem, calc(100dvh - 14.5rem - 2.25rem), 58rem); }
+}
 .vl__rail, .vl__stage, .vl__queue { min-width: 0; min-height: 0; overflow: auto; border: 1px solid var(--border); border-radius: 1rem; background: var(--card); overscroll-behavior: contain; scrollbar-width: thin; }
 .vl__stage { display: grid; align-content: start; gap: .6rem; padding: .65rem; }
 
@@ -89,6 +95,24 @@
 .vp2[data-status="error"] .vp2__status i { background: #ef4444; }
 .vp2__status span { margin-left: auto; font-weight: 600; }
 .vp2__status em { font-style: normal; color: #b91c1c; }
+.vp2__hotkeys { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .3rem; }
+.vp2__hotkeys kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.3rem;
+  height: 1.3rem;
+  padding: 0 .3rem;
+  border: 1px solid color-mix(in srgb, var(--foreground) 22%, var(--border));
+  border-bottom-width: 2px;
+  border-radius: .35rem;
+  background: var(--card);
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: .68rem;
+  font-weight: 850;
+  line-height: 1;
+}
+.vp2:fullscreen .vp2__hotkeys kbd { border-color: rgb(255 255 255 / 28%); background: rgb(255 255 255 / 10%); color: #fff; }
 
 /* Informações da aula */
 .vl__info { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: .7rem; padding: .85rem .95rem; border: 1px solid color-mix(in srgb, var(--vl-tone) 38%, var(--border)); border-radius: .9rem; background: color-mix(in srgb, var(--vl-tone) 7%, var(--card)); }
@@ -113,7 +137,9 @@
 .vl__queue-head h3 { display: inline-flex; align-items: center; gap: .4rem; margin: 0; font-size: .9rem; font-weight: 850; }
 .vl__queue-head small { color: var(--muted-foreground); font-size: .72rem; font-weight: 700; }
 .vl__search { display: flex; align-items: center; gap: .5rem; min-height: 2.5rem; padding: 0 .7rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--background); color: var(--muted-foreground); }
-.vl__search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--foreground); font-size: .82rem; }
+/* Maior especificidade que a regra geral de inputs da página (que dá fundo/borda própria a todo
+   input/select/textarea): sem isto o campo ganhava uma segunda "caixa" interna desalinhada. */
+.vl__queue .vl__search input { flex: 1; min-width: 0; padding: 0; border: 0 !important; border-radius: 0 !important; outline: 0; background: transparent !important; color: var(--foreground); font-size: .82rem; }
 .vl__search:focus-within { border-color: var(--vl-tone); }
 .vl__topics { display: flex; gap: .35rem; padding-bottom: .25rem; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: thin; }
 .vl__topics button { flex: none; max-width: 14rem; min-height: 1.9rem; padding: 0 .65rem; overflow: hidden; border: 1px solid var(--border); border-radius: 999px; background: var(--background); color: var(--foreground); font-size: .7rem; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }

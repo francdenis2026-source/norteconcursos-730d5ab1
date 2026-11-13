@@ -245,7 +245,9 @@ export function LessonPlayer({
       fn();
     };
     if (key === " " || key === "k") {
-      if (tag === "BUTTON") return;
+      // Só o espaço é ignorado com foco em botão (o próprio <button> já ativa no espaço);
+      // "k" nunca ativa um botão nativo, então deve sempre pausar/retomar.
+      if (key === " " && tag === "BUTTON") return;
       run(toggle);
     } else if (key === "j" || key === "arrowleft") run(() => seekBy(-10));
     else if (key === "l" || key === "arrowright") run(() => seekBy(10));
@@ -373,7 +375,13 @@ export function LessonPlayer({
         </div>
         <p className="vp2__status" role="status">
           <i aria-hidden="true" /> {native ? "Controles no vídeo" : unavailable ? "Abrir no YouTube" : STATUS_LABEL[status]}
-          <span>Atalhos: K pausa · J/L ±10 s · M som · F tela cheia</span>
+          <span className="vp2__hotkeys">
+            Atalhos
+            <kbd>K</kbd> pausa
+            <kbd>J</kbd><kbd>L</kbd> ±10 s
+            <kbd>M</kbd> som
+            <kbd>F</kbd> tela cheia
+          </span>
           {note && <em>{note}</em>}
         </p>
         {native && (

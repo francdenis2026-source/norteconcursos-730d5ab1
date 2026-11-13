@@ -45,6 +45,23 @@
 }
 .nc-focus-notice__actions svg { width: 18px; height: 18px; }
 .nc-empty-hint { margin: 0; padding: 14px; border: 1px dashed var(--border); border-radius: 16px; font-size: .9rem; color: var(--muted-foreground); }
+
+/* Atalhos abaixo do aviso de "plano segue o edital" (Meu plano): sem isto, a tela ficava com um
+   único cartão curto e uma área vazia enorme até o rodapé/menu — parecia inacabada. */
+.nc-plan-shortcuts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.nc-plan-shortcuts a {
+  display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 12px 14px;
+  border: 1px solid var(--border); border-radius: 16px; background: var(--card);
+  color: var(--foreground); text-decoration: none;
+}
+.nc-plan-shortcuts a:hover { border-color: var(--brass, #d4a85a); }
+.nc-plan-shortcuts a > svg:first-child { flex: none; width: 20px; height: 20px; color: var(--brass, #d4a85a); }
+.nc-plan-shortcuts a > svg:last-child { flex: none; width: 16px; height: 16px; opacity: .5; }
+.nc-plan-shortcuts span { display: grid; gap: 2px; min-width: 0; flex: 1; font-size: .88rem; font-weight: 800; }
+.nc-plan-shortcuts span small { font-size: .72rem; font-weight: 500; color: var(--muted-foreground); line-height: 1.3; overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .nc-plan-shortcuts { grid-template-columns: 1fr; }
+}
 @media (min-width: 640px) {
   .nc-focus-notice__actions { grid-template-columns: repeat(2, max-content); }
 }

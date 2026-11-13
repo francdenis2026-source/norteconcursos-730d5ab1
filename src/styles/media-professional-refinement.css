@@ -1,6 +1,6 @@
 /* Media center: compact learning library with clear media modes. */
 .app-shell[data-area="student"] .video-study-page {
-  width: 100%; max-width: 1480px; margin-inline: auto; gap: 14px;
+  width: 100%; max-width: 1760px; margin-inline: auto; gap: 14px;
   --media-cyan: #5edbe5; --media-blue: #82aaff; --media-amber: #e4b461; --media-violet: #b99aef; --media-green: #54d1a5;
   --media-line: color-mix(in srgb, var(--border) 88%, transparent);
 }
