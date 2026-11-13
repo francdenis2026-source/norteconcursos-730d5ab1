@@ -242,7 +242,7 @@ function EditalPage() {
         <div>
           <span className="edital-eyebrow">MEU CONCURSO</span>
           <h1>Estudar pelo edital</h1>
-          <p>Selecione uma edição para consultar disciplinas e tópicos. A edição aberta aparece abaixo; seu concurso em foco continua disponível em Meu objetivo.</p>
+          <p>Abra o programa do seu concurso em foco ou escolha outro concurso para consultar disciplinas e tópicos. Os demais concursos ficam separados, agrupados por nome.</p>
           <div className="page-hero__stats">
             {edition ? (
               <>
@@ -257,7 +257,7 @@ function EditalPage() {
         <BookOpenText aria-hidden className="edital-heading-icon" />
       </header>
       {!edition ? (
-        <EditalEditionCatalog editions={editions} failed={!!error} />
+        <EditalEditionCatalog editions={editions} failed={!!error} activeEditionId={activeEditionId} />
       ) : (
         <section className={`edital-selected ${edition.contest_name.toLowerCase().includes("acre") ? "edital-selected--pcac" : ""}`}>
           <div className="flex flex-wrap items-center justify-between gap-3">
