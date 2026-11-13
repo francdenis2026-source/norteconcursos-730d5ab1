@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Info, Layers, MapPin, Star } from "lucide-react";
+import { Info, Layers, MapPin, Star, Target, Lightbulb } from "lucide-react";
 import { ACRE_MAP_SHAPES, ACRE_MAP_VIEWBOX } from "@/data/acreMapShapes";
 import { ACRE_MICROREGIONS } from "@/data/acreGeography";
+import { ACRE_MUNICIPALITY_NOTES, ACRE_MUNICIPALITY_STRATEGY } from "@/data/acreMunicipalityNotes";
 
 type LayerId = "meso" | "micro" | "dev";
 
@@ -198,6 +199,14 @@ export function AcreInteractiveMap() {
                 <div><dt>Regional do edital</dt><dd>{shown.dev}</dd></div>
                 <div><dt>Código IBGE</dt><dd>{selectedShape?.ibgeId}</dd></div>
               </dl>
+              {ACRE_MUNICIPALITY_NOTES[selected] ? (
+                <div className="acre-imap__notes">
+                  <p><MapPin size={13} aria-hidden="true" /> {ACRE_MUNICIPALITY_NOTES[selected]!.highlight}</p>
+                  <p><Target size={13} aria-hidden="true" /> <strong>Na prova:</strong> {ACRE_MUNICIPALITY_NOTES[selected]!.exam}</p>
+                </div>
+              ) : (
+                <p className="acre-imap__plain">Sem destaque específico no edital. Saiba apenas a posição na divisão regional acima.</p>
+              )}
               {focused && (
                 <p className="acre-imap__group">
                   <strong>{focused.name}</strong> reúne {focused.members.length} municípios:
@@ -251,6 +260,14 @@ export function AcreInteractiveMap() {
             </article>
           )}
         </div>
+      </div>
+      <div className="acre-imap__strategy">
+        <h4><Lightbulb size={15} aria-hidden="true" /> Estratégia para memorizar</h4>
+        <ul>
+          {ACRE_MUNICIPALITY_STRATEGY.map((item) => (
+            <li key={item.title}><strong>{item.title}.</strong> {item.text}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

@@ -144,3 +144,12 @@
   .acre-imap__body { grid-template-columns: minmax(0,1fr); }
   .acre-imap__label { font-size: 15px; }
 }
+
+.acre-imap__notes { display: grid; gap: .35rem; }
+.acre-imap__notes p, .acre-imap__plain { display: flex; gap: .4rem; margin: 0; font-size: .76rem; line-height: 1.5; }
+.acre-imap__notes svg { flex: none; margin-top: .2rem; color: var(--acre-gold); }
+.acre-imap__plain { color: var(--muted-foreground); }
+.acre-imap__strategy { padding: .8rem .9rem; border: 1px dashed color-mix(in srgb, var(--acre-gold) 55%, var(--border)); border-radius: .85rem; background: color-mix(in srgb, var(--acre-gold) 6%, transparent); }
+.acre-imap__strategy h4 { display: flex; align-items: center; gap: .4rem; margin: 0 0 .4rem; font-size: .88rem; font-weight: 850; }
+.acre-imap__strategy ul { display: grid; gap: .35rem; margin: 0; padding-left: 1.1rem; }
+.acre-imap__strategy li { font-size: .78rem; line-height: 1.5; }
