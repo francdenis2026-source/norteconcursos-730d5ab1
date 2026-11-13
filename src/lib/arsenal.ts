@@ -87,6 +87,18 @@ async function questionCountBySubject(qc: QueryClient): Promise<Map<string, numb
     staleTime: 10 * 60_000,
     queryFn: async () => {
       const counts = new Map<string, number>();
+      // Caminho leve: o banco devolve uma linha por disciplina (poucas centenas), em vez de todas as questões.
+      const { data: grouped, error: groupedError } = await supabase.rpc(
+        "get_question_subject_counts" as never,
+      );
+      if (!groupedError && Array.isArray(grouped)) {
+        for (const r of grouped as { subject: string | null; total: number }[]) {
+          const s = canonicalSubject(String(r.subject ?? ""));
+          counts.set(s, (counts.get(s) ?? 0) + Number(r.total));
+        }
+        return counts;
+      }
+      // Antes de a função existir no banco: mantém a contagem linha a linha.
       const add = (rows: { subject: string | null }[]) => {
         for (const r of rows) {
           const s = canonicalSubject(String(r.subject ?? ""));
