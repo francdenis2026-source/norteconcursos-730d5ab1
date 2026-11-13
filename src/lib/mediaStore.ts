@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { PLAYLISTS, PODCASTS, type Podcast, type VideoPlaylist } from "@/data/mediaCatalog";
 import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
 import { PCAC_VIDEOS, PCAC_VIDEOS_EXTRA } from "@/data/pcAcVideos";
+import { PCAC_EDITAL_VIDEOS } from "@/data/pcAcEditalVideos";
 import { ENEM_VIDEOS } from "@/data/enemVideos";
 
 export interface MediaCatalog {
@@ -89,7 +90,7 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
       playlists.push({ id: v.youtube_id, title: v.title, discipline: subject });
   }
   return {
-    topicVideos: mergeTopicVideos(topicVideos, PCAC_VIDEOS),
+    topicVideos: mergeTopicVideos(mergeTopicVideos(topicVideos, PCAC_VIDEOS), PCAC_EDITAL_VIDEOS),
     playlists,
     podcasts: podcasts.map((p) => ({
       id: p.id,
@@ -103,7 +104,10 @@ export function buildCatalog(videos: VideoRow[], podcasts: PodcastRow[]): MediaC
 }
 
 export const STATIC_CATALOG: MediaCatalog = {
-  topicVideos: mergeTopicVideos(mergeTopicVideos({ ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, PCAC_VIDEOS), PCAC_VIDEOS_EXTRA),
+  topicVideos: mergeTopicVideos(
+    mergeTopicVideos(mergeTopicVideos({ ...TOPIC_VIDEOS, ...ENEM_VIDEOS }, PCAC_VIDEOS), PCAC_VIDEOS_EXTRA),
+    PCAC_EDITAL_VIDEOS,
+  ),
   playlists: PLAYLISTS,
   podcasts: PODCASTS,
   fromDb: false,
