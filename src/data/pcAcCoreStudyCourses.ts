@@ -13,7 +13,7 @@ type PcAcStudyCourse = {
   lessons: SupplementalStudyLesson[];
 };
 
-const EDITAL = "https://agencia.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf";
+const EDITAL = "https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf";
 const CF = "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm";
 const CP = "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm";
 const CPP = "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm";
