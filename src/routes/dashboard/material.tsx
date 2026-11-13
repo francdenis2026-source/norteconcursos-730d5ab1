@@ -2,15 +2,19 @@ import "@/styles/student-library-media-workspaces.css";
 import * as React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
+  Archive,
   Atom,
   BarChart3,
   BookA,
   BookMarked,
   BookOpen,
+  Building2,
   Calculator,
   ClipboardCheck,
+  ClipboardList,
   Cpu,
   FlaskConical,
+  Landmark,
   Languages,
   Library,
   MapPin,
@@ -301,15 +305,17 @@ function MaterialHub() {
                 className="ak-tile"
                 style={{ "--ak-tone": "oklch(0.8 0.16 140)" } as React.CSSProperties}
               >
-                <img src="/media/hero/landing-pcac.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                <span className="ak-tile__icon">
+                  <Landmark aria-hidden="true" />
+                </span>
                 <strong>Realidade do Acre</strong>
                 <span>História, geografia, economia e atualidades</span>
               </Link>
             </li>
             {[
-              { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", tone: "oklch(0.78 0.13 110)", image: "trainer-study" },
-              { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", tone: "oklch(0.8 0.14 82)", image: "study-assistant" },
-              { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", tone: "oklch(0.74 0.14 200)", image: "exam-hall" },
+              { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", tone: "oklch(0.78 0.13 110)", icon: Archive },
+              { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", tone: "oklch(0.8 0.14 82)", icon: ClipboardList },
+              { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", tone: "oklch(0.74 0.14 200)", icon: Building2 },
             ].map((guide) => (
               <li key={guide.id}>
                 <Link
@@ -317,9 +323,11 @@ function MaterialHub() {
                   search={{ collection: "subjects", guia: guide.id } as never}
                   hash="materiais-atualizados-pcac"
                   className="ak-tile"
-                  style={{ "--ak-tone": guide.tone, height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
+                  style={{ "--ak-tone": guide.tone } as React.CSSProperties}
                 >
-                  <img src={`/media/hero/${guide.image}.webp`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                  <span className="ak-tile__icon">
+                    <guide.icon aria-hidden="true" />
+                  </span>
                   <strong>{guide.name}</strong>
                   <span>{guide.text}</span>
                 </Link>
@@ -336,13 +344,6 @@ function MaterialHub() {
                     className="ak-tile"
                     style={{ "--ak-tone": theme.tone } as React.CSSProperties}
                   >
-                    <img
-                      src={theme.image}
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      decoding="async"
-                    />
                     <span className="ak-tile__icon">
                       <Icon aria-hidden="true" />
                     </span>
