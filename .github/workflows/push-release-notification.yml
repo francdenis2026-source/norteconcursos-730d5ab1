@@ -1,0 +1,30 @@
+name: Push release notification
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify subscribed devices after successful main validation
+        env:
+          RELEASE_SECRET: ${{ secrets.PUSH_RELEASE_WEBHOOK_SECRET }}
+          FUNCTION_URL: https://gkwphadbveiyjcwiiizw.supabase.co/functions/v1/send-push-notification
+        run: |
+          if [ -z "$RELEASE_SECRET" ]; then
+            echo "PUSH_RELEASE_WEBHOOK_SECRET is not configured; push notification skipped."
+            exit 0
+          fi
+          curl --fail-with-body --silent --show-error --retry 2 --retry-delay 3 \
+            -X POST "$FUNCTION_URL" \
+            -H "Content-Type: application/json" \
+            -H "x-release-secret: $RELEASE_SECRET" \
+            -d '{"type":"update","title":"Plataforma atualizada","body":"Publicamos melhorias e ajustes no Norte Concursos. Toque para conferir a versão mais recente.","url":"/dashboard"}'
