@@ -52,6 +52,11 @@ import {
 } from "@/lib/pcAcreVerticalizado";
 import { pcAcVerticalTopicGroups } from "@/lib/pcAcreTopicStructure";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
+import { useEditalIncidence } from "@/hooks/useEditalIncidence";
+import { IncidenceSeal } from "@/components/edital/IncidenceSeal";
+import { incidenceBasis, type Incidence, type IncidenceItem } from "@/lib/topicIncidence";
+import { TIER_STYLE } from "@/lib/editalRadar";
+import { cn } from "@/lib/utils";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
@@ -281,7 +286,11 @@ function DisciplineAccordionItem({
   progress,
   onToggleTopic,
   subjectStats,
+  incidence,
+  incidenceLabel,
 }: {
+  incidence?: Map<string, Incidence> | null;
+  incidenceLabel?: string | undefined;
   block: string;
   discipline: PcAcVerticalDiscipline;
   cargoId: PcAcVerticalCargoId;
@@ -297,6 +306,27 @@ function DisciplineAccordionItem({
   const counts = pcAcVerticalDisciplineCounts(block, discipline, progress);
   const groups = pcAcVerticalTopicGroups(discipline);
   const hasTopics = groups.length > 0;
+  // Chance de cair (provas da IDECAN): só existe quando o aluno ativou o edital.
+  const incidenceOf = (index: number) => incidence?.get(`${discipline.id}:${index}`);
+  const classified = groups.some((_, i) => {
+    const tier = incidenceOf(i)?.tier;
+    return !!tier && tier !== "amostra";
+  });
+  const highCount = groups.filter((_, i) => incidenceOf(i)?.tier === "alta").length;
+  const [onlyHigh, setOnlyHigh] = React.useState(false);
+  const [openBasis, setOpenBasis] = React.useState<Set<number>>(() => new Set());
+  const toggleBasis = (index: number) =>
+    setOpenBasis((current) => {
+      const next = new Set(current);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  const segmentClass = (on: boolean) =>
+    cn(
+      "rounded-full border px-3 py-1 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50",
+      on ? "border-primary bg-primary text-primary-foreground" : "hover:border-primary/50",
+    );
   const value = `${block}::${discipline.id}`;
   const link = pcAcDisciplineLink(discipline.id);
   // Revisões (quantas vezes o aluno já respondeu questões) e acertos desta disciplina, somados
@@ -329,6 +359,14 @@ function DisciplineAccordionItem({
       >
         {counts.estudado}/{counts.total}
       </Badge>
+      {highCount > 0 && (
+        <span
+          className={cn("shrink-0 rounded-full px-2 py-0.5 text-[10px] font-bold", TIER_STYLE.alta)}
+          title="Assuntos desta matéria com alta chance de cair, pelas provas da IDECAN"
+        >
+          {highCount} de alta chance
+        </span>
+      )}
       {questionStats && (
         <Badge
           variant="outline"
@@ -375,8 +413,27 @@ function DisciplineAccordionItem({
           <AccordionTrigger onClick={(event) => event.stopPropagation()} className="px-3 py-2.5 hover:no-underline">{header}</AccordionTrigger>
           <AccordionContent className="px-3 pb-3">
             {extras}
+            {classified && (
+              <div role="group" aria-label="Assuntos exibidos" className="mt-2 flex flex-wrap items-center gap-2">
+                <button type="button" aria-pressed={!onlyHigh} onClick={() => setOnlyHigh(false)} className={segmentClass(!onlyHigh)}>
+                  Todos os assuntos
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={onlyHigh}
+                  disabled={highCount === 0}
+                  title={highCount === 0 ? "Nenhum assunto desta matéria está classificado como alta chance" : undefined}
+                  onClick={() => setOnlyHigh(true)}
+                  className={segmentClass(onlyHigh)}
+                >
+                  Alta chance ({highCount})
+                </button>
+              </div>
+            )}
             <ul className="mt-2 space-y-1.5">
               {groups.map((group, i) => {
+                const inc = incidenceOf(i);
+                if (onlyHigh && inc?.tier !== "alta") return null;
                 const units = group.subtopics.length ? group.subtopics : [group.title];
                 const statuses = units.map((_, j) =>
                   pcAcVerticalTopicStatus(
@@ -404,7 +461,14 @@ function DisciplineAccordionItem({
                           onClick={() => units.forEach((_, j) => onToggleTopic(discipline.id, i, group.subtopics.length ? j : undefined, nextGroupStatus ?? null))}
                         />
                       </span>
-                      <span className="min-w-0 flex-1 break-words text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block break-words text-xs font-semibold leading-relaxed text-foreground/90">{group.title}</span>
+                        {inc && inc.tier !== "amostra" && (
+                          <span className="mt-1 flex">
+                            <IncidenceSeal incidence={inc} expanded={openBasis.has(i)} onToggle={() => toggleBasis(i)} {...(incidenceLabel ? { edital: incidenceLabel } : {})} />
+                          </span>
+                        )}
+                      </span>
                       {group.subtopics.length > 0 && (
                         <span className="shrink-0 rounded-md border border-primary/20 px-2 py-1 text-[10px] font-bold text-primary group-open/topic:bg-primary/10">
                           <span className="group-open/topic:hidden">Ver subitens</span>
@@ -427,6 +491,9 @@ function DisciplineAccordionItem({
                       </ul>
                     )}
                     </details>
+                    {inc && openBasis.has(i) && (
+                      <p className="mt-1.5 rounded-md bg-muted/50 px-2 py-1.5 text-[11px] leading-relaxed text-muted-foreground">{incidenceBasis(inc)}</p>
+                    )}
                   </li>
                 );
               })}
@@ -524,6 +591,24 @@ function PcAcreEditalVerticalizadoPage() {
       map.set(item.subject, { correct: item.correct, total: item.total });
     return map;
   }, [performance]);
+
+  // Assuntos do edital que podem receber a indicação (só matérias com correspondência na plataforma).
+  const incidenceItems = React.useMemo<IncidenceItem[]>(
+    () =>
+      cargo.blocks.flatMap((block) =>
+        block.disciplines.flatMap((discipline) => {
+          const subjects = pcAcDisciplineLink(discipline.id)?.subjects;
+          if (!subjects?.length) return [];
+          return pcAcVerticalTopicGroups(discipline).map((group, index) => ({
+            id: `${discipline.id}:${index}`,
+            subjects,
+            text: [group.title, ...group.subtopics].join(" "),
+          }));
+        }),
+      ),
+    [cargo],
+  );
+  const chance = useEditalIncidence(user?.id, incidenceItems, editalTab === "conteudo");
 
   const toggle = (
     block: string,
@@ -750,6 +835,15 @@ function PcAcreEditalVerticalizadoPage() {
 
         </TabsContent>
         <TabsContent value="conteudo" className="space-y-5">
+          {user?.id && !chance.checking && !chance.edital && (
+            <p className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-sm">
+              <span>Ative o edital da PC-AC para ver, em cada assunto, a chance de cair na prova pelas provas da IDECAN.</span>
+              <Link to="/dashboard/my-contest" className="font-semibold text-primary underline-offset-4 hover:underline">Ativar em Meu concurso →</Link>
+            </p>
+          )}
+          {chance.error && (
+            <p className="rounded-xl border px-4 py-3 text-sm text-muted-foreground">Não foi possível carregar a análise das provas agora. O edital continua disponível.</p>
+          )}
 
       <Card className="pcac-edital-card pcac-edital-content">
         <CardHeader>
@@ -785,6 +879,8 @@ function PcAcreEditalVerticalizadoPage() {
                         cargoId={cargo.id}
                         progress={progress}
                         subjectStats={subjectStats}
+                        incidence={chance.incidence}
+                        incidenceLabel={chance.edital?.label}
                         onToggleTopic={(disciplineId, topicIndex, subtopicIndex, forcedStatus) =>
                           toggle(block.title, disciplineId, topicIndex, subtopicIndex, forcedStatus)
                         }

@@ -17318,3 +17318,6 @@ input[type="datetime-local"]::-webkit-date-and-time-value {
   text-align: left;
   min-height: 1.2em;
 }
+
+/* Selo de chance de cair na prova: discreto (a regra global de 44 px vale para botões de ação). */
+.incidence-seal { min-height: 28px; }
