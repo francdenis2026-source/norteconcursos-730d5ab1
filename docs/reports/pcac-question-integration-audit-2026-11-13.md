@@ -66,3 +66,21 @@ A próxima implementação deve:
 - Nenhuma alteração foi enviada à `main`.
 - A branch isolada foi criada para continuar a implementação após esta auditoria.
 
+
+## 6. Implementação da fase seguinte — branch de trabalho
+
+Após a auditoria, foi implementado um primeiro fluxo de persistência para exercícios autorais elegíveis da Biblioteca:
+
+- Nova migration `20261113020000_material_practice_attempts.sql`: cria `material_practice_responses`, com RLS por aluno e RPC de correção server-side.
+- A RPC recebe somente a resposta selecionada e busca o gabarito diretamente do JSON do material ativo. O navegador não envia nem determina `is_correct`.
+- `MaterialPractice` grava cada resposta dos exercícios autorais elegíveis, aguarda a confirmação antes de avançar e informa falhas de gravação.
+- `usePerformanceOverview` incorpora as tentativas da Biblioteca à primeira resposta de cada identidade de exercício, às métricas por disciplina e ao histórico.
+- `PlatformActivityHistory` identifica esses registros como “Exercício da Biblioteca”.
+
+### Limites e validação pendente
+
+- Questões do acervo geral que aparecem na bateria inline continuam encaminhadas ao Treinador completo; esta implementação persiste somente exercícios autorais locais do material.
+- A integração não concede pontos de ranking e não altera o banco de questões público.
+- A migration está versionada na branch, mas **não foi aplicada** ao Supabase de produção.
+- Não foi possível executar build, testes automatizados nem validar a RPC em banco de desenvolvimento nesta sessão. A revisão de CI e a validação em branch Supabase são obrigatórias antes do merge.
+- Os 223 quizzes ainda exigem revisão editorial individual antes de qualquer importação para o catálogo público.
