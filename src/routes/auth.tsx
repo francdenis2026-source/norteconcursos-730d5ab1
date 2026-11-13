@@ -73,6 +73,7 @@ function AuthPage() {
   const [pin, setPin] = useState("");
   const [name, setName] = useState("");
   const [cpf, setCpf] = useState("");
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [login, setLogin] = useState("");
   const [showPin, setShowPin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -177,13 +178,22 @@ function AuthPage() {
     setIsLoading(true);
     try {
       if (mode === "register") {
+        // Cadastro completo: todos os dados são obrigatórios para criar a conta.
+        const fullName = name.trim().replace(/\s+/g, " ");
+        if (fullName.split(" ").filter((part) => part.length >= 2).length < 2)
+          throw new Error("Informe seu nome completo (nome e sobrenome).");
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim()))
+          throw new Error("Informe um e-mail válido.");
         const cpfDigits = normalizeCpf(cpf);
         if (!validateCPF(cpfDigits)) throw new Error("CPF inválido. Confira os números.");
+        if (pin.length < 8) throw new Error("A senha precisa ter pelo menos 8 caracteres.");
+        if (!acceptedTerms)
+          throw new Error("Aceite os termos de uso e a política de privacidade para continuar.");
         const { data, error } = await supabase.auth.signUp({
           email: email.trim().toLowerCase(),
           password: pin,
           options: {
-            data: { full_name: normalizeUppercase(name.trim()), cpf: cpfDigits },
+            data: { full_name: normalizeUppercase(fullName), cpf: cpfDigits },
             emailRedirectTo: `${window.location.origin}/auth`,
           },
         });
@@ -419,7 +429,8 @@ function AuthPage() {
                         autoComplete="name"
                         autoCapitalize="characters"
                         className="uppercase placeholder:normal-case"
-                        placeholder="Como podemos chamar você?"
+                        placeholder="Nome e sobrenome"
+                        minLength={5}
                         value={name}
                         onChange={(e) => setName(normalizeUppercase(e.target.value))}
                         required
@@ -491,7 +502,8 @@ function AuthPage() {
                         {...(formError
                           ? { "aria-invalid": true, "aria-describedby": "auth-error" }
                           : {})}
-                        placeholder="Digite sua senha"
+                        placeholder={mode === "register" ? "Mínimo de 8 caracteres" : "Digite sua senha"}
+                        minLength={mode === "register" ? 8 : undefined}
                         value={pin}
                         onChange={(e) => setPin(e.target.value)}
                         required
@@ -509,7 +521,12 @@ function AuthPage() {
                 </div>
                 {mode === "register" && (
                   <label className="auth-terms">
-                    <Checkbox required className="mt-0.5" />
+                    <Checkbox
+                      required
+                      className="mt-0.5"
+                      checked={acceptedTerms}
+                      onCheckedChange={(value) => setAcceptedTerms(value === true)}
+                    />
                     <span>
                       Aceito os <Link to="/terms">termos de uso</Link> e a{" "}
                       <Link to="/privacy">política de privacidade</Link>.

@@ -136,3 +136,101 @@
     background: linear-gradient(180deg, rgb(13 16 21 / 0.86) 0%, rgb(13 16 21 / 0.74) 55%, rgb(13 16 21 / 0.92) 100%);
   }
 }
+
+/* ---------- Sem luz que acompanha o mouse, sem inclinação e sem vidro borrado nos cartões ---------- */
+.home.hr-canvas > .hfx-spotlight { display: none !important; }
+html body .home.hr-canvas .desktop-homepage :is(.sx-card, .sx-exam, .home-ranking__card, .home-plan, .hp-promo__card) {
+  transform: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+html body .home.hr-canvas .desktop-homepage :is(.sx-card, .sx-exam, .home-ranking__card, .hp-promo__card)::after { content: none !important; }
+
+/* ---------- Blocos em escala profissional e superfícies sólidas (sem aspecto de fumaça) ---------- */
+@media (min-width: 1024px) {
+  /* Desafio diário: faixa baixa, painel sólido, foto nítida sem véu azulado. */
+  html body .home.hr-canvas .hd__inner {
+    min-height: 0 !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+    border-radius: 20px !important;
+    border-color: rgb(255 255 255 / 0.1) !important;
+    background: #111a2b !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: 0 18px 40px -28px rgb(0 0 0 / 0.7) !important;
+  }
+  html body .home.hr-canvas .hd__media { min-height: 340px; }
+  html body .home.hr-canvas .hd__media::after {
+    background: linear-gradient(90deg, transparent 70%, #111a2b 100%) !important;
+  }
+  html body .home.hr-canvas .hd__inner:hover .hd__media > img { transform: none; }
+  html body .home.hr-canvas .hd__copy { gap: 12px; padding: clamp(24px, 2.6vw, 40px) !important; }
+  html body .home.hr-canvas .hd h2 { font-size: clamp(26px, 2.4vw, 36px) !important; }
+  html body .home.hr-canvas .hd__clock {
+    background: #0e1626 !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    padding: 8px 12px !important;
+  }
+  html body .home.hr-canvas .hd__clock strong { font-size: 20px; }
+
+  /* Banner do edital: mais baixo, degradê só do lado do texto. */
+  html body .home.hr-canvas .desktop-homepage .sx-banner {
+    min-height: 0 !important;
+    padding: 28px 40px !important;
+    border-radius: 18px !important;
+  }
+  html body .home.hr-canvas .desktop-homepage .sx-banner::after {
+    background: linear-gradient(90deg, #0b1018 0%, rgb(11 16 24 / 0.96) 40%, rgb(11 16 24 / 0.2) 70%, transparent 100%) !important;
+  }
+  html body .home.hr-canvas .desktop-homepage .sx-banner__crest { width: 88px !important; }
+  html body .home.hr-canvas .desktop-homepage .sx-banner h2 { font-size: clamp(26px, 2.3vw, 34px) !important; }
+  html body .home.hr-canvas .desktop-homepage .sx-banner__facts dd { font-size: 22px !important; }
+
+  /* Provas recentes: capas mais baixas. */
+  html body .home.hr-canvas .sx-exam img { height: 168px !important; aspect-ratio: auto !important; object-fit: cover; }
+
+  /* "Treino com cara de prova": foto de apoio, painel mais baixo, sem névoa. */
+  html body .home.hr-canvas .hp-promo__inner {
+    padding: clamp(24px, 2.6vw, 36px) !important;
+    border-radius: 20px !important;
+    border-color: rgb(255 255 255 / 0.1) !important;
+    background: #111a2b !important;
+    box-shadow: 0 18px 40px -28px rgb(0 0 0 / 0.7) !important;
+  }
+  html body .home.hr-canvas .hp-promo__inner::before {
+    background: linear-gradient(90deg, #111a2b 0%, rgb(17 26 43 / 0.94) 45%, rgb(17 26 43 / 0.55) 100%) !important;
+  }
+  html body .home.hr-canvas .hp-promo__inner:hover .hp-promo__art { transform: scale(1.04); }
+  html body .home.hr-canvas .hp-promo__copy h2 { font-size: clamp(26px, 2.4vw, 36px) !important; }
+  html body .home.hr-canvas .hp-promo__cards { gap: 8px !important; }
+
+  /* Ranking e planos: painéis sólidos. */
+  html body .home.hr-canvas .desktop-homepage .home-ranking__shell {
+    background: #111a2b !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border-radius: 20px !important;
+  }
+}
+@media (min-width: 1024px) {
+  /* A foto turva atrás do bloco "Treino com cara de prova" saiu: painel limpo, filete dourado no topo. */
+  html body .home.hr-canvas .hp-promo__art,
+  html body .home.hr-canvas .hp-promo__inner::before { display: none !important; }
+  html body .home.hr-canvas .hp-promo__inner { border-top: 2px solid rgb(227 177 75 / 0.55) !important; }
+  html body .home.hr-canvas .hd__copy > * { max-width: 560px; }
+}
+
+/* ---------- Fundo contínuo: planos, chamada final e rodapé usam o mesmo tom da página ---------- */
+html body .home.hr-canvas > .desktop-homepage > #planos { background: transparent !important; }
+html.dark body .home.hr-canvas > .hr-footer-cta {
+  background: #111a2b !important;
+  border-color: rgb(255 255 255 / 0.1) !important;
+  box-shadow: none !important;
+}
+html.dark body .home.hr-canvas > .nc-footer { background: #0c141d !important; }
+html body .home.hr-canvas > .desktop-homepage .home-plan { box-shadow: none !important; }
+html body .home.hr-canvas > .desktop-homepage .home-plan--featured {
+  animation: none !important;
+  box-shadow: 0 0 0 1px rgb(227 177 75 / 0.55) !important;
+}
