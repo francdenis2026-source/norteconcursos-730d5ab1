@@ -16,6 +16,8 @@ export interface AcreStudyCard {
   reference: string;
   points: string[];
   source: AcreSource;
+  /** Outras fontes públicas sobre o mesmo assunto, para quando a principal não abrir. */
+  alternatives?: AcreSource[];
   /** Cuidado de leitura: divergência entre fontes, dado a conferir ou natureza da fonte. */
   caution?: string;
 }
@@ -31,6 +33,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "O desfecho foi diplomático: o Tratado de Petrópolis incorporou o território ao Brasil.",
       ],
       source: { label: "Museu Histórico Nacional — A Questão do Acre", url: "https://atom-mhn.museus.gov.br/downloads/questao-acreana.pdf" },
+      alternatives: [{ label: "FGV CPDOC — Plácido de Castro", url: "https://cpdoc.fgv.br/sites/default/files/verbetes/primeira-republica/CASTRO,%20Pl%C3%A1cido%20de.pdf" }, { label: "Wikipédia — Revolução Acriana", url: "https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_Acriana" }],
       caution: "As fontes divergem quanto à data de término dos combates e às áreas envolvidas; para a prova, memorize o início (1902) e o tratado (1903).",
     },
     {
@@ -42,6 +45,8 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "Um acordo preliminar havia sido assinado em 21 de março de 1903.",
       ],
       source: { label: "Museu Histórico Nacional — A Questão do Acre", url: "https://atom-mhn.museus.gov.br/downloads/questao-acreana.pdf" },
+      alternatives: [{ label: "Wikipédia — Tratado de Petrópolis", url: "https://pt.wikipedia.org/wiki/Tratado_de_Petr%C3%B3polis" }],
+      caution: "As fontes divergem quanto à data de assinatura (17 de novembro de 1903 é a mais citada); o Congresso aprovou o tratado por lei de 25 de fevereiro de 1904.",
     },
     {
       title: "De Território Federal a Estado",
@@ -52,6 +57,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "Rio Branco é a capital do Estado.",
       ],
       source: { label: "Planalto — Lei nº 4.070/1962", url: "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l4070.htm" },
+      alternatives: [{ label: "Senado — Lei nº 4.070/1962", url: "https://legis.senado.leg.br/norma/545906" }, { label: "Câmara — Lei nº 4.070/1962 (publicação original)", url: "https://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-4070-15-junho-1962-353816-publicacaooriginal-1-pl.html" }],
     },
     {
       title: "Chico Mendes e as reservas extrativistas",
@@ -62,6 +68,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "A reserva é uma unidade de conservação federal, administrada pelo ICMBio.",
       ],
       source: { label: "Planalto — Decreto nº 99.144/1990", url: "https://planalto.gov.br/ccivil_03/decreto/1990-1994/D99144.htm" },
+      alternatives: [{ label: "ICMBio — Guia da gestão participativa da Resex Chico Mendes", url: "https://d3nehc6yl9qzo4.cloudfront.net/downloads/guia_resex_chicomendes.pdf" }, { label: "ISA — Resex Chico Mendes", url: "https://uc.socioambiental.org/arp/626" }],
       caution: "A área atual pode diferir da do decreto; confira o valor vigente no cadastro do ICMBio/CNUC antes de citar números.",
     },
   ],
@@ -76,6 +83,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "Mais de 66% da população se declarou parda.",
       ],
       source: { label: "IBGE — Cidades e Estados: Acre", url: "https://www.ibge.gov.br/cidades-e-estados/ac" },
+      alternatives: [{ label: "IBGE — Censo 2022: população por idade e sexo, Acre", url: "https://biblioteca.ibge.gov.br/visualizacao/periodicos/3102/cd_2022_populacao_idade_sexo_ac.pdf" }, { label: "A Gazeta do Acre — cor ou raça no Censo", url: "https://agazetadoacre.com/2023/12/noticias/geral/no-acre-levantamento-do-censo-revela-que-mais-de-66-da-populacao-se-autodeclara-parda" }],
       caution: "O percentual de pessoas pardas vem de reportagem sobre o Censo (A Gazeta do Acre); confirme na tabela de cor ou raça do Censo 2022 no SIDRA.",
     },
     {
@@ -87,6 +95,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "Em anos anteriores (2016 e 2017), os serviços já respondiam por cerca de 80% do valor adicionado.",
       ],
       source: { label: "IBGE — PIB cresce em todos os 27 estados em 2023", url: "https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/45142-pib-cresce-em-todos-os-27-estados-do-pais-em-2023.html?lang=pt-BR" },
+      alternatives: [{ label: "Agência Gov — PIB cresce em todos os 27 estados em 2023", url: "https://agenciagov.ebc.com.br/noticias/202511/pib-cresce-em-todos-os-27-estados-do-pais-em-2023" }],
       caution: "Percentuais por setor mudam a cada divulgação das Contas Regionais; use-os com o ano de referência.",
     },
   ],
@@ -101,7 +110,20 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "Em 15 dos 22 municípios houve queda da população indígena rural.",
       ],
       source: { label: "Portal Amazônia — dados do IBGE sobre etnias no Acre", url: "https://portalamazonia.com/cultura/acre-crescimento-etnias-ibge/" },
+      alternatives: [{ label: "IBGE — Cidades e Estados: Acre", url: "https://www.ibge.gov.br/cidades-e-estados/ac" }],
       caution: "Fonte jornalística que reproduz dados do IBGE. A mudança de método do Censo 2022 (autodeclaração fora das terras indígenas) afeta a comparação com 2010.",
+    },
+    {
+      title: "Povos indígenas isolados",
+      reference: "2016–2026",
+      points: [
+        "A Comissão Pró-Indígenas do Acre confirma quatro grupos distintos de indígenas isolados no Estado; três deles são de etnias ainda não identificadas pela Funai.",
+        "A Funai protege a região da bacia do rio Chandless, com acesso restrito à Terra Indígena Mashco do Rio Chandless (municípios de Manoel Urbano, Santa Rosa do Purus e Sena Madureira).",
+        "Em outubro de 2026, a Funai enviou uma equipe a Jordão, após imagens de possíveis isolados em uma residência, em área de ocupação tradicional da Referência nº 115 (Isolados/Cabeludos do Humaitá).",
+      ],
+      source: { label: "Comissão Pró-Indígenas do Acre — Povos isolados", url: "https://cpiacre.org.br/povos-indigenas-isolados-2/" },
+      alternatives: [{ label: "Instituto Socioambiental — portaria da Funai sobre os Mashco", url: "https://www.socioambiental.org/noticias-socioambientais/funai-assina-portaria-para-protecao-dos-indigenas-isolados-do-povo-mashco" }, { label: "AC24horas — aproximação de isolados em Jordão", url: "https://ac24horas.com/2026/10/21/aproximacao-de-indigenas-isolados-preocupa-funai-no-ac-comunidade-recebe-orientacoes/" }],
+      caution: "Fontes de organização indigenista e de imprensa; para dados oficiais, consulte a Funai (gov.br/funai). A situação dos isolados muda com frequência.",
     },
     {
       title: "Como estudar povos e cultura",
@@ -124,7 +146,8 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "O Art. 8º traz os símbolos estaduais: a bandeira, o hino e as armas adotados pelo Estado Independente do Acre, com modificações, além de outros que a lei estabelecer.",
         "As sessões da Assembleia Legislativa são públicas (Art. 74).",
       ],
-      source: { label: "Constituição do Estado do Acre (texto)", url: "https://www.dhnet.org.br/dados/lex/a_pdf/constituicao_ac.pdf" },
+      source: { label: "Portal LEGIS — Constituição do Estado do Acre", url: "https://legis.ac.gov.br/detalhar_constituicao" },
+      alternatives: [{ label: "Assembleia Legislativa — texto em PDF", url: "https://www.al.ac.leg.br/wp-content/uploads/2014/10/constitui%C3%A7%C3%A3o_atualizada.pdf" }, { label: "TJAC — texto em PDF", url: "https://www.tjac.jus.br/wp-content/uploads/2014/07/Constituicao_Estadual_Acre.pdf" }, { label: "DHnet — texto em PDF", url: "https://www.dhnet.org.br/dados/lex/a_pdf/constituicao_ac.pdf" }],
       caution: "O texto consultado pode não incluir emendas posteriores. Número de deputados e duração dos mandatos: confirme no site da Assembleia Legislativa antes de estudar.",
     },
   ],
@@ -134,12 +157,26 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       reference: "2024–2026",
       points: [
         "O Acre faz fronteira com Peru e Bolívia, países produtores de cocaína; as rotas do tráfico pela fronteira são alvo de operações.",
-        "O Gefron (Grupo Especial de Operações de Fronteira) fez 335 operações entre janeiro e outubro de 2026, contra crimes transfronteiriços.",
+        "O Gefron (Grupo Especial de Operações de Fronteira) fez 335 operações entre janeiro e outubro de 2026 e apreendeu mais de 6,3 toneladas de drogas.",
         "Em agosto de 2026, a Polícia Federal, pelo CCPI-Amazônia, coordenou com a Sejusp a Operação Atalaia do Juruá, na fronteira com o Peru.",
         "Em 2024, uma operação do Ministério da Justiça com a Sejusp apreendeu 101 kg de drogas no interior do Estado.",
       ],
-      source: { label: "Correio da Manhã — Acre registra 335 operações nas áreas de fronteira", url: "https://www.correiodamanha.com.br/nacional/norte/2026/11/332526-acre-registra-335-operacoes-nas-areas-de-fronteira.html" },
+      source: { label: "A Gazeta do Acre — 335 operações nas fronteiras em 2026", url: "https://agazetadoacre.com/2026/11/noticias/policia/mais-de-63-toneladas-de-drogas-sao-apreendidas-em-335-operacoes-nas-fronteiras-do-acre-em-2026/" },
+      alternatives: [{ label: "Acre Agora", url: "https://acreagora.com/2026/11/04/gefron-apreende-63-toneladas-de-drogas-e-realiza-335-operacoes-nas-fronteiras-do-acre-em-dez-meses/" }, { label: "Correio da Manhã", url: "https://www.correiodamanha.com.br/nacional/norte/2026/11/332526-acre-registra-335-operacoes-nas-areas-de-fronteira.html" }],
       caution: "Notícias servem de atualidade, não de conteúdo fixo. Para a estrutura da Polícia Civil e as competências, use a lei orgânica e o edital.",
+    },
+    {
+      title: "Gefron: sete anos de atuação",
+      reference: "Balanço de 29 de outubro de 2026",
+      points: [
+        "O Gefron completou sete anos em 6 de outubro de 2026, ligado à Secretaria de Justiça e Segurança Pública (Sejusp).",
+        "No período, apreendeu mais de 11,6 toneladas de drogas e 221 armas, com 1.086 prisões e conduções.",
+        "Das ocorrências registradas, 257 foram de tráfico de drogas e 224 de descaminho.",
+        "As ações integram a Operação Protetor das Fronteiras, coordenada pelo Ministério da Justiça e Segurança Pública em parceria com a Sejusp.",
+      ],
+      source: { label: "Portal Acre — Segurança destaca resultados dos sete anos do Gefron", url: "https://portalacre.com.br/2026/10/seguranca-destaca-resultados-dos-sete-anos-do-gefron-no-acre/" },
+      alternatives: [{ label: "AC24horas", url: "https://ac24horas.com/2026/10/29/gefron-apreendeu-mais-de-11-toneladas-de-drogas-e-221-armas-em-sete-anos-de-atuacao-no-acre/" }, { label: "O Alto Acre", url: "https://oaltoacre.com/gefron-completa-sete-anos-de-atuacao-no-acre-com-mais-de-116-toneladas-de-drogas-apreendidas/" }],
+      caution: "Números divulgados pela Sejusp e reproduzidos pela imprensa; não foram verificados de forma independente.",
     },
     {
       title: "Operação integrada no Vale do Juruá",
@@ -149,6 +186,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
         "Coordenada pela Polícia Federal, por meio do CCPI-Amazônia, em conjunto com a Sejusp.",
       ],
       source: { label: "Gov.br — Forças de segurança realizam operação integrada no Vale do Juruá", url: "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/08/forcas-de-seguranca-realizam-operacao-integrada-no-vale-do-jurua" },
+      alternatives: [{ label: "Agência Gov", url: "https://agenciagov.ebc.com.br/noticias/202608/forcas-de-seguranca-realizam-operacao-integrada-no-vale-do-jurua" }],
     },
   ],
 };

@@ -140,6 +140,16 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
                   <a href={card.source.url} target="_blank" rel="noopener noreferrer">
                     Fonte: {card.source.label} <ExternalLink aria-hidden="true" size={12} />
                   </a>
+                  {card.alternatives?.length ? (
+                    <p className="ak-fresh__alt">
+                      <span>Se não abrir, tente:</span>
+                      {card.alternatives.map((alt) => (
+                        <a key={alt.url} href={alt.url} target="_blank" rel="noopener noreferrer">
+                          {alt.label} <ExternalLink aria-hidden="true" size={11} />
+                        </a>
+                      ))}
+                    </p>
+                  ) : null}
                 </article>
               ))}
             </div>

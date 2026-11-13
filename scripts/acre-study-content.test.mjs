@@ -14,6 +14,8 @@ test("todo bloco traz pontos, referência e fonte pública", () => {
       assert.ok(card.points.length >= 2, card.title);
       assert.ok(card.reference.trim(), card.title);
       assert.match(card.source.url, /^https:\/\//, card.title);
+      for (const alt of card.alternatives ?? []) assert.match(alt.url, /^https:\/\//, card.title);
+      assert.equal(new Set([card.source.url, ...(card.alternatives ?? []).map((alt) => alt.url)]).size, 1 + (card.alternatives?.length ?? 0), `${card.title}: link repetido`);
     }
 });
 
