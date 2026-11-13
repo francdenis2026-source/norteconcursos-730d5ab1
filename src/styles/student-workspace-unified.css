@@ -268,3 +268,102 @@
     radial-gradient(ellipse at 92% 4%, rgb(181 138 67 / 17%), transparent 34%),
     linear-gradient(112deg, #202832 0%, #2a343e 62%, #35404a 100%) !important;
 }
+
+/* Catálogo de editais: o concurso do aluno em destaque e os demais agrupados por concurso */
+.edital-mine {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  border: 1px solid rgb(245 184 75 / 45%);
+  border-left: 4px solid #f59e0b;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgb(245 184 75 / 14%), transparent 70%);
+}
+.edital-mine__tag {
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #1c1403;
+  background: linear-gradient(90deg, #fde68a, #f59e0b);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.edital-mine h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.edital-mine p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+.edital-mine__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0 20px;
+  border-radius: 12px;
+  color: #1c1403;
+  background: linear-gradient(92deg, #fcd34d, #f59e0b);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.edital-groups {
+  display: grid;
+  gap: 8px;
+}
+.edital-group {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+}
+.edital-group > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 4px 12px;
+  min-height: 52px;
+  padding: 10px 16px;
+  list-style: none;
+  cursor: pointer;
+}
+.edital-group > summary::-webkit-details-marker {
+  display: none;
+}
+.edital-group > summary strong {
+  font-size: 15px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.edital-group > summary > span {
+  color: var(--muted-foreground);
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.edital-group__chevron {
+  transition: rotate 0.2s;
+}
+.edital-group[open] .edital-group__chevron {
+  rotate: 90deg;
+}
+.edital-group > .edital-editions {
+  padding: 0 12px 12px;
+}
+@media (max-width: 640px) {
+  .edital-group > summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .edital-group > summary > span {
+    grid-column: 1;
+    white-space: normal;
+  }
+}
