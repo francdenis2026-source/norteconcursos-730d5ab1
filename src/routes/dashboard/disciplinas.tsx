@@ -750,6 +750,7 @@ function DisciplinePracticePanel({
   return (
     <MaterialPractice
       userId={userId}
+      materialId={material.data?.id}
       label={topic || subject}
       scope={{ subject, ...(topic ? { topic: materialTopic(subject, topic) } : {}) }}
       authoredKey={selected?.slug ?? subject}
