@@ -27,7 +27,7 @@ export function MaterialPractice({
   authoredReview,
 }: {
   userId: string;
-  materialId: string;
+  materialId?: string | undefined;
   scope: MaterialPracticeScope;
   label: string;
   authoredQuiz?: { q: string; a: boolean; why: string }[] | undefined;
@@ -106,14 +106,15 @@ export function MaterialPractice({
         </>
       )}
       <p className="text-xs text-muted-foreground">
-        As respostas dos exercícios autorais deste material são salvas automaticamente no seu
-        histórico e desempenho. Para registrar questões do acervo geral, use o treinador completo.
+        {materialId
+          ? "As respostas dos exercícios autorais deste material são salvas automaticamente no seu histórico e desempenho. Para registrar questões do acervo geral, use o treinador completo."
+          : "Este teste rápido é complementar. Para registrar suas respostas no histórico e desempenho, use o treinador completo."}
       </p>
       {session && <PracticeSession key={session.id} questions={session.questions} userId={userId} materialId={materialId} authoredKey={authoredKey} />}
     </section>
   );
 }
-function PracticeSession({ questions, userId, materialId, authoredKey }: { questions: Question[]; userId: string; materialId: string; authoredKey: string }) {
+function PracticeSession({ questions, userId, materialId, authoredKey }: { questions: Question[]; userId: string; materialId?: string | undefined; authoredKey: string }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const correct = questions.filter((q, i) => answers[i] === q.answer).length;
@@ -181,19 +182,27 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
             onClick={() => {
               if (picked) return;
               setAnswers((a) => ({ ...a, [index]: o.letter }));
-              if (userId !== "demo-user" && q.id.startsWith(`material:${authoredKey}:`)) {
+              if (materialId && userId !== "demo-user" && q.id.startsWith(`material:${authoredKey}:`)) {
                 const itemIndex = Number(q.id.slice(q.id.lastIndexOf(":") + 1));
                 setPendingSaves((n) => n + 1);
-                void supabase.rpc("record_material_practice_answer", {
-                  p_attempt_id: crypto.randomUUID(),
-                  p_material_id: materialId,
-                  p_item_index: itemIndex,
-                  p_selected_answer: o.letter === "C" ? "C" : "E",
-                  p_response_seconds: Math.min(900, Math.max(0, Math.floor((Date.now() - startedAt.current) / 1000))),
-                }).then(({ error }) => {
-                  if (error) setSaveErrors((n) => n + 1);
-                  else setSavedAnswers((n) => n + 1);
-                }).catch(() => setSaveErrors((n) => n + 1)).finally(() => setPendingSaves((n) => Math.max(0, n - 1)));
+                void Promise.resolve(
+                  supabase.rpc("record_material_practice_answer", {
+                    p_attempt_id: crypto.randomUUID(),
+                    p_material_id: materialId,
+                    p_item_index: itemIndex,
+                    p_selected_answer: o.letter === "C" ? "C" : "E",
+                    p_response_seconds: Math.min(
+                      900,
+                      Math.max(0, Math.floor((Date.now() - startedAt.current) / 1000)),
+                    ),
+                  }),
+                )
+                  .then(({ error }) => {
+                    if (error) setSaveErrors((n) => n + 1);
+                    else setSavedAnswers((n) => n + 1);
+                  })
+                  .catch(() => setSaveErrors((n) => n + 1))
+                  .finally(() => setPendingSaves((n) => Math.max(0, n - 1)));
               }
             }}
             className={`flex min-h-11 w-full gap-3 rounded-xl border p-3 text-left text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${picked && o.letter === q.answer ? "border-emerald-500 bg-emerald-500/10" : picked === o.letter ? "border-rose-500 bg-rose-500/10" : "hover:bg-muted"}`}
