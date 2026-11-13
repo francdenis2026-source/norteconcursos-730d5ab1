@@ -35,9 +35,11 @@ export function MaterialPractice({
   authoredKey?: string | undefined;
   authoredReview?: unknown;
 }) {
+  // O acervo só é baixado quando o aluno pede a bateria: abrir a aba não transfere dados.
+  const [requested, setRequested] = useState(false);
   const { catalog, loading, error, reload } = useQuestionCatalog(
     userId,
-    !!userId && userId !== "demo-user",
+    requested && !!userId && userId !== "demo-user",
   );
   const catalogPool = useMemo(() => materialPracticePool(catalog, scope), [catalog, scope]);
   const authored = useMemo(
@@ -58,7 +60,17 @@ export function MaterialPractice({
           Bateria de até 20 questões do assunto, sem repetir itens para completar a quantidade.
         </p>
       </header>
-      {loading && !authored.length ? (
+      {!requested ? (
+        <div className="space-y-2">
+          <p className="text-sm" role="status">
+            {authored.length > 0 ? `${authored.length} exercícios autorais deste material. ` : ""}
+            As questões do acervo são carregadas só quando você decide praticar.
+          </p>
+          <Button variant="outline" onClick={() => setRequested(true)}>
+            Preparar bateria de questões
+          </Button>
+        </div>
+      ) : loading && !authored.length ? (
         <p role="status">Conferindo questões disponíveis…</p>
       ) : error && !authored.length ? (
         <div role="alert">
