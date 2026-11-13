@@ -147,7 +147,10 @@
 .student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) strong { overflow: hidden; font-size: 0.8125rem; line-height: 1.25; color: var(--sh2-ink); text-overflow: ellipsis; white-space: nowrap; }
 .student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) small { overflow: hidden; font-size: 0.6875rem; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
 .student-home.sh2 .sh2-blocks time { display: grid; flex: none; font-size: 0.8125rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--sh2-tone); }
-.student-home.sh2 .sh2-signals a { flex: none; padding: 0.125rem 0.5rem; border: 1px solid color-mix(in srgb, var(--sh2-tone) 50%, transparent); border-radius: 999px; color: var(--sh2-tone); font-size: 0.75rem; font-weight: 700; text-decoration: none; }
+.student-home.sh2 .sh2-signals li { flex-wrap: wrap; row-gap: 0.5rem; padding: 0.5rem 0.625rem; }
+.student-home.sh2 .sh2-signals li > div { flex-basis: 100%; }
+.student-home.sh2 .sh2-signals li > div strong { overflow: visible; white-space: normal; }
+.student-home.sh2 .sh2-signals a { display: inline-flex; align-items: center; justify-content: center; flex: none; min-height: 1.75rem; margin-left: auto; padding: 0.3rem 0.875rem; border: 1px solid color-mix(in srgb, var(--sh2-tone) 50%, transparent); border-radius: 0.5rem; color: var(--sh2-tone); font-size: 0.75rem; font-weight: 700; text-decoration: none; }
 .student-home.sh2 .sh2-signals a:hover { background: color-mix(in srgb, var(--sh2-tone) 16%, transparent); }
 .student-home.sh2 .sh2-row-link { display: flex; align-items: center; gap: 0.5rem; min-width: 0; color: var(--sh2-tone); text-decoration: none; }
 .student-home.sh2 .sh2-row-link div { display: grid; flex: 1; min-width: 0; }
