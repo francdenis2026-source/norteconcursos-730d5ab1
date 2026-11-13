@@ -352,3 +352,26 @@
     gap: 4px;
   }
 }
+
+.ak-fresh__alt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 12px;
+}
+.ak-fresh__alt > span {
+  color: var(--muted-foreground);
+}
+.ak-fresh__alt a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ak-tone, #b45309);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
