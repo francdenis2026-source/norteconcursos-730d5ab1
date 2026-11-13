@@ -868,6 +868,92 @@
   gap: 8px;
   width: 100%;
 }
+
+/* Corpo da janela do dia: painel lateral com os totais por tipo + a cronologia, lado a lado em
+ * telas largas, para a janela usar a largura disponível de um jeito didático (não só esticar a
+ * coluna única de cards). Em telas estreitas os dois empilham, painel primeiro. */
+.pcac-schedule .pcac-day-window {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.pcac-schedule .pcac-day-timeline .pcac-day-timeline__content { max-width: 760px; }
+@media (min-width: 760px) {
+  .pcac-schedule .pcac-day-window { grid-template-columns: 240px minmax(0, 1fr); align-items: start; }
+  .pcac-schedule .pcac-day-sidebar {
+    position: sticky;
+    top: 0;
+    padding-inline-end: 16px;
+    border-inline-end: 1px solid var(--pcac-line);
+  }
+}
+.pcac-schedule .pcac-day-sidebar { padding: 2px 18px 14px; }
+.pcac-schedule .pcac-day-sidebar__title {
+  margin: 0 0 8px;
+  color: var(--pcac-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.pcac-schedule .pcac-day-sidebar__types {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pcac-schedule .pcac-day-sidebar__type {
+  --kind: #3b8fe0;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  column-gap: 8px;
+  align-items: center;
+  padding: 7px 9px;
+  border: 1px solid var(--pcac-line);
+  border-inline-start: 3px solid var(--kind);
+  border-radius: 9px;
+  background: var(--pcac-panel);
+}
+.pcac-schedule .pcac-day-sidebar__type[data-type="video"] { --kind: #8b6cf0; }
+.pcac-schedule .pcac-day-sidebar__type[data-type="questoes"] { --kind: #e08a1e; }
+.pcac-schedule .pcac-day-sidebar__type[data-type="redacao"] { --kind: #d9558a; }
+.pcac-schedule .pcac-day-sidebar__type[data-type="revisao"] { --kind: #22a873; }
+.pcac-schedule .pcac-day-sidebar__type[data-type="simulado"] { --kind: #d99a1c; }
+.pcac-schedule .pcac-day-sidebar__type[data-type="exercicio"] { --kind: #e2607a; }
+.pcac-schedule .pcac-day-sidebar__type[data-type="compromisso"] { --kind: #6b7f95; }
+.pcac-schedule .pcac-day-sidebar__type:is([data-type="pausa"], [data-type="rotina"], [data-type="descanso"]) { --kind: #8a97a6; }
+.pcac-schedule .pcac-day-sidebar__type-icon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: var(--kind);
+}
+.pcac-schedule .pcac-day-sidebar__type-icon svg { width: 14px; height: 14px; }
+.pcac-schedule .pcac-day-sidebar__type-label {
+  grid-column: 2;
+  color: var(--pcac-ink);
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.pcac-schedule .pcac-day-sidebar__type-meta {
+  grid-column: 2;
+  color: var(--pcac-muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 759px) {
+  .pcac-schedule .pcac-day-sidebar {
+    padding: 2px 18px 10px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--pcac-line);
+  }
+  .pcac-schedule .pcac-day-sidebar__types { flex-direction: row; flex-wrap: wrap; }
+  .pcac-schedule .pcac-day-sidebar__type { flex: 1 1 150px; }
+}
+
 @media (max-width: 560px) {
   .pcac-schedule .pcac-week { padding: 10px; }
   .pcac-schedule .pcac-week__nav { flex-wrap: wrap; }
@@ -878,6 +964,8 @@
   .pcac-schedule .pcac-day-timeline__item { grid-template-columns: 42px 26px minmax(0, 1fr); gap: 7px; }
   .pcac-schedule .pcac-day-timeline__item:not(:last-child)::before { inset-inline-start: 61px; }
   .pcac-schedule .pcac-day-timeline__dot { width: 26px; height: 26px; }
+  .pcac-schedule .pcac-day-sidebar__types { flex-direction: column; }
+  .pcac-schedule .pcac-day-sidebar__type { flex: 1 1 auto; }
 }
 
 
