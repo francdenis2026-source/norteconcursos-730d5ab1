@@ -5,6 +5,7 @@ import { clearPersistedAuthSession, supabase } from "@/integrations/supabase/cli
 import { createIdleSession, endIdleSession } from "@/lib/sessionIdle";
 import { endFocus } from "@/lib/focusSession";
 import { flushStudyClock, stopStudyClock } from "@/lib/studyClock";
+import { clearCatalogCache } from "@/lib/catalogCache";
 
 /** Mounted once for every authenticated session, including outside the dashboard. */
 export function SessionIdleGuard({ sessionKey }: { sessionKey: string }) {
@@ -23,7 +24,7 @@ export function SessionIdleGuard({ sessionKey }: { sessionKey: string }) {
         void endIdleSession({
           save: flushStudyClock,
           stop: () => { endFocus(); stopStudyClock(); },
-          signOut: () => supabase.auth.signOut({ scope: "local" }),
+          signOut: () => { void clearCatalogCache(); return supabase.auth.signOut({ scope: "local" }); },
           clear: clearPersistedAuthSession,
           redirect: () => window.location.replace("/auth?reason=inactive"),
         });

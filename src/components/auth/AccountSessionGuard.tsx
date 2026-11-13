@@ -7,6 +7,7 @@ import { endIdleSession } from '@/lib/sessionIdle';
 import { endFocus } from '@/lib/focusSession';
 import { stopStudyClock } from '@/lib/studyClock';
 import { SessionVerificationScreen } from './SessionVerificationScreen';
+import { clearCatalogCache } from "@/lib/catalogCache";
 
 export type AccountAccess = { userId: string; sessionKey: string; claim: boolean; accessToken: string };
 
@@ -34,7 +35,7 @@ export function AccountSessionGuard({ access, children }: { access: AccountAcces
           // Never write progress under a session that has lost ownership.
           save: async () => {},
           stop: () => { endFocus(); stopStudyClock(); },
-          signOut: () => supabase.auth.signOut({ scope: 'local' }),
+          signOut: () => { void clearCatalogCache(); return supabase.auth.signOut({ scope: 'local' }); },
           clear: clearPersistedAuthSession,
           redirect: () => window.location.replace('/auth?reason=another-device'),
         });

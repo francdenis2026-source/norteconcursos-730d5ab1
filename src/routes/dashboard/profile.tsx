@@ -13,6 +13,7 @@ import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
 import { normalizeUppercase } from "@/lib/utils";
 import { ShieldCheck, CheckCircle2 } from "lucide-react";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
+import { clearCatalogCache } from "@/lib/catalogCache";
 
 export const Route = createFileRoute("/dashboard/profile")({
   component: ProfilePage,
@@ -90,6 +91,7 @@ function ProfilePage() {
   };
 
   const handleLogout = async () => {
+    void clearCatalogCache();
     await supabase.auth.signOut({ scope: "local" });
     await navigate({ to: "/", replace: true });
   };

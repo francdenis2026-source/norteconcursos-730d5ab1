@@ -1,12 +1,14 @@
 import * as React from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { clearCatalogCache } from "@/lib/catalogCache";
 
 const WATCHED_TABLES = [
   "official_exam_questions",
   "board_exam_questions",
   "curated_question_catalog",
   "question_support_texts",
+  "question_bank",
 ] as const;
 
 /**
@@ -21,6 +23,7 @@ export function useQuestionCatalogRealtime(enabled: boolean) {
   React.useEffect(() => {
     if (!enabled) return;
     const invalidate = () => {
+      void clearCatalogCache();
       void queryClient.invalidateQueries({ queryKey: ["question-catalog-view"] });
       void queryClient.invalidateQueries({ queryKey: ["question-catalog-metadata"] });
       void queryClient.invalidateQueries({ queryKey: ["question-catalog"] });
