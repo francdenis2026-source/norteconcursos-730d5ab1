@@ -17,7 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
+import { LockedState } from "@/components/dashboard/PageHero";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import {
   Accordion,
@@ -28,6 +28,7 @@ import {
 
 import "@/styles/student-internal-workspace-system.css";
 import "@/styles/edital-pdf-refinement.css";
+import "@/styles/edital-compact.css";
 
 export const Route = createFileRoute("/dashboard/edital/")({
   component: EditalPage,
@@ -238,23 +239,22 @@ function EditalPage() {
     );
   return (
     <div className="nc-student-workspace edital-workspace space-y-5 pb-8">
-      <header className="edital-modern-hero">
-        <div>
-          <span className="edital-eyebrow">MEU CONCURSO</span>
+      <header className="ed2-strip">
+        <BookOpenText aria-hidden className="ed2-strip__icon" />
+        <div className="ed2-strip__text">
+          <span>Meu concurso</span>
           <h1>Estudar pelo edital</h1>
-          <p>Abra o programa do seu concurso em foco ou escolha outro concurso para consultar disciplinas e tópicos. Os demais concursos ficam separados, agrupados por nome.</p>
-          <div className="page-hero__stats">
-            {edition ? (
-              <>
-                <HeroStat icon={BookOpenText} label="Disciplinas" value={disciplines.length} />
-                <HeroStat icon={Search} label="Tópicos" value={topics.length} />
-              </>
-            ) : (
-              <HeroStat icon={BookOpenText} label="Editais disponíveis" value={editions.length} />
-            )}
-          </div>
         </div>
-        <BookOpenText aria-hidden className="edital-heading-icon" />
+        <dl className="ed2-strip__stats">
+          {edition ? (
+            <>
+              <div><dt>Disciplinas</dt><dd>{disciplines.length}</dd></div>
+              <div><dt>Tópicos</dt><dd>{topics.length}</dd></div>
+            </>
+          ) : (
+            <div><dt>Editais</dt><dd>{editions.length}</dd></div>
+          )}
+        </dl>
       </header>
       {!edition ? (
         <EditalEditionCatalog editions={editions} failed={!!error} activeEditionId={activeEditionId} />
