@@ -63,11 +63,29 @@ export function OfflineConnectionGuard() {
     // focus/visibilitychange) continuam disparando a verificação na hora, sem depender do intervalo.
     const timer = window.setInterval(visible, 20000);
     if (!navigator.onLine) monitor.offline();
-    void check();
+    // A sondagem inicial espera a página terminar de carregar (ou 4s, o que vier primeiro)
+    // em vez de disparar no mount: nessa hora o navegador ainda está ocupado baixando o bundle,
+    // CSS e imagens do hero, e numa conexão móvel mais fraca a requisição HEAD pode ficar na
+    // fila da própria aba e expirar sem que a internet do usuário tenha caído — mostrando
+    // "sem conexão" logo ao abrir o site mesmo com a rede normal.
+    let initialTimer: number | undefined;
+    const runInitialCheck = () => {
+      if (initialTimer) window.clearTimeout(initialTimer);
+      window.removeEventListener("load", runInitialCheck);
+      void check();
+    };
+    if (document.readyState === "complete") {
+      void check();
+    } else {
+      window.addEventListener("load", runInitialCheck, { once: true });
+      initialTimer = window.setTimeout(runInitialCheck, 4000);
+    }
     return () => {
       active = false;
       monitor.dispose();
       window.clearInterval(timer);
+      if (initialTimer) window.clearTimeout(initialTimer);
+      window.removeEventListener("load", runInitialCheck);
       window.removeEventListener("offline", lost);
       window.removeEventListener("online", resumed);
       window.removeEventListener("focus", resumed);
