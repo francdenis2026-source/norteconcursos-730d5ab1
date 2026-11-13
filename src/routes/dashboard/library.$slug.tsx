@@ -8,7 +8,7 @@ import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { useEffect, useMemo } from "react";
-import { createFileRoute, useNavigate, Link, useParams } from "@tanstack/react-router";
+import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -64,9 +64,15 @@ function MaterialPageGated() {
 
 function MaterialPage() {
   const fm = useFocusMode();
-  const navigate = useNavigate();
+  const navigate = Route.useNavigate();
   const { slug } = useParams({ from: "/dashboard/library/$slug" });
   const { back: backToPlan, tema, edital } = Route.useSearch();
+  // Os parâmetros iniciais (vindos de um link de outra tela) são lidos uma
+  // vez e removidos da barra de endereço; não devem continuar visíveis.
+  useEffect(() => {
+    if (backToPlan || tema || edital) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);

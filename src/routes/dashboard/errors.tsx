@@ -338,10 +338,17 @@ function ErrorsPage() {
     [allErrors],
   );
   const plannedSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
   useEffect(
     () => setFilterSubject(plannedSearch.subject ? canonicalSubject(plannedSearch.subject) : "all"),
     [plannedSearch.subject],
   );
+  // Os parâmetros iniciais (vindos de um link) são lidos uma vez e removidos
+  // da barra de endereço; não devem continuar visíveis enquanto o aluno navega.
+  useEffect(() => {
+    if (plannedSearch.subject || plannedSearch.topic) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const plannedTopic = plannedSearch.topic
     ? materialTopic(plannedSearch.subject ?? filterSubject, plannedSearch.topic)
     : undefined;

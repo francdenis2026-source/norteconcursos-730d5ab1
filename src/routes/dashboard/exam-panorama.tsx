@@ -93,8 +93,15 @@ function Pills<T extends string>({
 }
 
 function ExamPanoramaPage() {
-  const search = Route.useSearch();
+  const initialSearch = Route.useSearch();
   const navigate = Route.useNavigate();
+  const [pcCargo, setPcCargo] = React.useState(initialSearch.pcCargo);
+  // O cargo escolhido não deve escrever na URL ao trocar; o parâmetro inicial
+  // (vindo de um link) é lido uma vez e removido da barra de endereço.
+  React.useEffect(() => {
+    if (initialSearch.pcCargo) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const { user, isLoading: authLoading } = useAuthStatus();
   const [rows, setRows] = React.useState<Row[] | null>(null);
   const [error, setError] = React.useState(false);
@@ -246,10 +253,8 @@ function ExamPanoramaPage() {
       </PageHero>
 
       <PcAcreStudyOutlook
-        role={pcAcreRole(search.pcCargo)}
-        onRoleChange={(pcCargo) => {
-          void navigate({ search: { pcCargo }, replace: true });
-        }}
+        role={pcAcreRole(pcCargo)}
+        onRoleChange={(nextRole) => setPcCargo(nextRole)}
       />
 
       <div id="panorama-geral" className="scroll-mt-24">

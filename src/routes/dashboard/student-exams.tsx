@@ -209,6 +209,13 @@ function computeSubjectReport(
 
 function StudentExamIntelligence() {
   const { career } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // O parâmetro inicial (vindo de um link) é lido uma vez e removido da
+  // barra de endereço; não deve continuar visível enquanto o aluno navega.
+  React.useEffect(() => {
+    if (career) void navigate({ search: { career: undefined }, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const { user } = useAuthStatus();
   const canAdd =
     !!user && user.id !== "demo-user" && canRegisterExams(user.subscription_tier, user.role);

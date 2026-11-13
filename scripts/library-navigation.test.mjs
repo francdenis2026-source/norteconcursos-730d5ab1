@@ -317,7 +317,7 @@ function renderGlobalLibrary(filters={}, search={q:"estupro"}) {
  const fakeSearch={useContentSearch:(query,user,allowed)=>{if(user)calls.push(allowed);return {data:rawHits.filter(hit=>!allowed||allowed.includes(hit.slug)),isFetching:false,isError:false,refetch:none};}};
  const chronology=load('src/lib/legalChronology.ts');
  const match=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary});
- const router={createFileRoute:()=>options=>({...options,useSearch:()=>search}),Link:({to,params,search,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params?.slug??'')+(search?'?'+new URLSearchParams(search):'')},children)};
+ const router={createFileRoute:()=>options=>({...options,useSearch:()=>search,useNavigate:()=>()=>{}}),Link:({to,params,search,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params?.slug??'')+(search?'?'+new URLSearchParams(search):'')},children)};
  const courses=laws.LEGAL_LIBRARY.map(c=>({...c,id:c.slug,overview:{current_units:1,chapters:[]}}));
  const catalog=load('src/components/library/LegalPathCatalog.tsx',{'@/lib/legalCourses':{useLegalCourses:()=>({data:courses})},'@/lib/legalLibrary':laws,'@/lib/legalChronology':chronology,'@/lib/libraryOrganization':organization,'@/lib/librarySearch':courseSearchLibrary,'./LibrarySearchMatch':match,'@tanstack/react-router':router});
  const results=load('src/components/library/ContentSearchResults.tsx',{'@/lib/contentSearch':fakeSearch,'@/lib/glossary':{searchGlossary:()=>[]},'@/lib/librarySearch':courseSearchLibrary,'@/lib/legalCourseSearch':courseSearch,'@/lib/legalChronology':chronology,'./LibrarySearchMatch':match,'@tanstack/react-router':router});

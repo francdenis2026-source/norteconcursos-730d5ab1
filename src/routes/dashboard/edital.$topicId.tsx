@@ -68,6 +68,13 @@ interface StudyCard {
 
 function TopicPage() {
   const { back: backToPlan, tema } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // Os parâmetros iniciais (vindos de um link) são lidos uma vez e removidos
+  // da barra de endereço; não devem continuar visíveis enquanto o aluno navega.
+  React.useEffect(() => {
+    if (backToPlan || tema) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const { topicId } = useParams({ from: "/dashboard/edital/$topicId" });
   const { user, isLoading: authLoading } = useAuthStatus();
   const [topic, setTopic] = React.useState<TopicRow | null>(null);

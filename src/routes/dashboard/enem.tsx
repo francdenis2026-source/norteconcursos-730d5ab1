@@ -98,11 +98,15 @@ function useEnemQuestionCount() {
 }
 
 function EnemPage() {
-  const { tab = "visao" } = Route.useSearch();
+  const { tab: initialTab = "visao" } = Route.useSearch();
   const navigate = Route.useNavigate();
-  const setTab = (value: string) => {
-    void navigate({ search: { tab: value }, replace: true });
-  };
+  const [tab, setTab] = React.useState(initialTab);
+  // A aba ativa não deve escrever na URL ao navegar; o parâmetro inicial
+  // (vindo de um link) é lido uma vez e removido da barra de endereço.
+  React.useEffect(() => {
+    if (initialTab !== "visao") void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const [subject, setSubject] = React.useState("Matemática");
   const { catalog } = useMediaCatalog();
   const checks = useChecks();

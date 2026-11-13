@@ -86,7 +86,15 @@ function CronogramaPage() {
   const [activeContest, setActiveContest] = React.useState<Awaited<ReturnType<typeof MockService.getFocusedContest>>>();
   const [plans, setPlans] = React.useState<Plan[] | null>(null);
   const [openId, setOpenId] = React.useState<string | "new" | null>(null);
-  const { plano, painel } = Route.useSearch();
+  const liveSearch = Route.useSearch();
+  const navigate = Route.useNavigate();
+  // Os parâmetros iniciais (vindos de um link) são lidos uma vez (a cópia
+  // local nunca muda) e removidos da barra de endereço.
+  const { plano, painel } = React.useState(liveSearch)[0];
+  React.useEffect(() => {
+    if (liveSearch.plano || liveSearch.painel) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const consumed = React.useRef(false);
 
   const load = React.useCallback(async () => {

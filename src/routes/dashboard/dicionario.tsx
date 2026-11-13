@@ -17,9 +17,16 @@ export const Route = createFileRoute("/dashboard/dicionario")({
 const AREAS = ["Direito", "Português", "Contabilidade", "Informática", "Estatística", "Raciocínio lógico"];
 
 function DictionaryPage() {
-  const { q = "" } = Route.useSearch();
+  const { q: initialQ = "" } = Route.useSearch();
   const navigate = useNavigate({ from: "/dashboard/dicionario" });
+  const [q, setQ] = React.useState(initialQ);
   const [area, setArea] = React.useState<string>("");
+  // A busca não deve escrever na URL enquanto o aluno digita; o parâmetro
+  // inicial (vindo de um link) é lido uma vez e removido da barra de endereço.
+  React.useEffect(() => {
+    if (initialQ) void navigate({ search: {}, replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
+  }, []);
   const items = React.useMemo(() => searchGlossary(q, area || undefined), [q, area]);
   const letters = React.useMemo(() => [...new Set(items.map((e) => normalize(e.term)[0]!.toUpperCase()))], [items]);
   return (
@@ -33,7 +40,7 @@ function DictionaryPage() {
       <div className="flex flex-col gap-2 sm:flex-row">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input value={q} onChange={(e) => void navigate({ search: { q: e.target.value || undefined }, replace: true })} placeholder="Buscar termo, sinônimo ou parte do significado" className="pl-9" aria-label="Buscar no dicionário" />
+          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Buscar termo, sinônimo ou parte do significado" className="pl-9" aria-label="Buscar no dicionário" />
         </div>
         <select value={area} onChange={(e) => setArea(e.target.value)} className="rounded-md border bg-background px-3 py-2 text-sm" aria-label="Filtrar por área">
           <option value="">Todas as áreas</option>
