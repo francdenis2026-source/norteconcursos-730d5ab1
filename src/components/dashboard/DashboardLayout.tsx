@@ -34,6 +34,7 @@ import { StudentTopNavigation } from "./StudentTopNavigation";
 import "@/styles/student-top-navigation.css";
 import "@/styles/student-top-navigation-astrix.css";
 import "@/styles/student-workspace-refresh.css";
+import "@/styles/workspace-width.css";
 import "@/styles/student-saas-dashboard.css";
 import "@/styles/student-home-premium.css";
 import "@/styles/student-edital-premium.css";

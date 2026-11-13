@@ -1,0 +1,9 @@
+/* Áreas do aluno aproveitam a largura da janela (antes presas em 1280/1480px). */
+@media (min-width: 1100px) {
+  html body .app-shell[data-area="student"] #dashboard-content :is(
+    .material-hub, .ranking-workspace, .history-workspace, .law-finder, .dictionary-workspace,
+    .ctb-workspace, .study-plan-page, .enem-page, .question-workspace.question-errors,
+    .nc-learning-workspace.simulator-workspace
+  ) { width: 100%; max-width: min(1760px, 100%); margin-inline: auto; }
+}
+@media (min-width: 1500px) { .app-shell[data-area] .app-footer { max-width: min(1760px, 100%); } }
