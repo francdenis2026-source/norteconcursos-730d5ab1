@@ -353,13 +353,13 @@
 }
 
 .edital-summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-top: 1.15rem; }
-.edital-summary-card { display: flex; min-height: 7.2rem; flex-direction: column; justify-content: center; gap: .18rem; border: 1px solid hsl(var(--border)); border-radius: .9rem; padding: .85rem 1rem; background: hsl(var(--background) / .5); }
-.edital-summary-card span { color: hsl(var(--muted-foreground)); font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-.edital-summary-card strong { color: hsl(var(--foreground)); font-size: 1.55rem; line-height: 1.1; }
-.edital-summary-card small { color: hsl(var(--muted-foreground)); font-size: .72rem; }
-.edital-summary-card--progress { border-color: hsl(var(--primary) / .35); background: linear-gradient(145deg, hsl(var(--primary) / .12), hsl(var(--background) / .45)); }
-.edital-progress-track { height: .35rem; margin-top: .4rem; overflow: hidden; border-radius: 999px; background: hsl(var(--muted)); }
-.edital-progress-track span { display: block; height: 100%; border-radius: inherit; background: hsl(var(--primary)); transition: width .3s ease; }
-.edital-selected--pcac { border-color: hsl(var(--primary) / .4); box-shadow: 0 18px 45px hsl(var(--primary) / .08); }
+.edital-summary-card { display: flex; min-height: 7.2rem; flex-direction: column; justify-content: center; gap: .18rem; border: 1px solid var(--border); border-radius: .9rem; padding: .85rem 1rem; background: color-mix(in oklab, var(--background) 50%, transparent); }
+.edital-summary-card span { color: var(--muted-foreground); font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.edital-summary-card strong { color: var(--foreground); font-size: 1.55rem; line-height: 1.1; }
+.edital-summary-card small { color: var(--muted-foreground); font-size: .72rem; }
+.edital-summary-card--progress { border-color: color-mix(in oklab, var(--primary) 35%, transparent); background: linear-gradient(145deg, color-mix(in oklab, var(--primary) 12%, transparent), color-mix(in oklab, var(--background) 45%, transparent)); }
+.edital-progress-track { height: .35rem; margin-top: .4rem; overflow: hidden; border-radius: 999px; background: var(--muted); }
+.edital-progress-track span { display: block; height: 100%; border-radius: inherit; background: var(--primary); transition: width .3s ease; }
+.edital-selected--pcac { border-color: color-mix(in oklab, var(--primary) 40%, transparent); box-shadow: 0 18px 45px color-mix(in oklab, var(--primary) 8%, transparent); }
 @media (max-width: 900px) { .edital-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .edital-summary-grid { grid-template-columns: 1fr; } }

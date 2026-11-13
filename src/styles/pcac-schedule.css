@@ -542,7 +542,7 @@
   padding: 2px 5px;
   border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
   border-radius: 5px;
-  color: hsl(var(--primary));
+  color: var(--primary);
   font-size: 10px;
   font-weight: 700;
   line-height: 1;
@@ -552,17 +552,17 @@
 }
 .pcac-material-shortcut:hover,
 .pcac-material-shortcut:focus-visible {
-  border-color: hsl(var(--primary));
-  background: color-mix(in srgb, hsl(var(--primary)) 12%, transparent);
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
   outline: none;
 }
 .pcac-material-shortcut__icon { width: 12px; height: 12px; }
 .pcac-material-shortcut__external { width: 9px; height: 9px; opacity: .65; }
-.pcac-material-shortcut--secondary { color: hsl(var(--muted-foreground)); border-style: dashed; }
+.pcac-material-shortcut--secondary { color: var(--muted-foreground); border-style: dashed; }
 .pcac-material-shortcut--unavailable {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   border-style: dashed;
-  border-color: color-mix(in srgb, hsl(var(--muted-foreground)) 35%, transparent);
+  border-color: color-mix(in srgb, var(--muted-foreground) 35%, transparent);
   cursor: help;
   opacity: 0.75;
 }
@@ -580,7 +580,7 @@
 }
 .pcac-today-badge-link:hover { filter: brightness(0.96); }
 .pcac-today-badge-link:focus-visible {
-  outline: 2px solid hsl(var(--primary));
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 .pcac-today-badge-link--unavailable {
@@ -1035,17 +1035,17 @@
   width: 100%;
   height: 36px;
   padding: 0 8px;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background: var(--background);
+  color: var(--foreground);
   font-size: 13px;
 }
 .pcac-schedule .pcac-commitments__error {
   margin: 8px 0 0;
   font-size: 12px;
   font-weight: 600;
-  color: hsl(var(--destructive));
+  color: var(--destructive);
 }
 .pcac-schedule .pcac-commitments__hint {
   margin: 10px 0 0;
@@ -1081,7 +1081,7 @@
 .pcac-schedule__save-feedback--error { color: #d98b72; }
 .pcac-commitments__lock { width: 14px; height: 14px; color: #75d0a8; margin-left: auto; }
 .pcac-commitments__item .pcac-commitments__lock + button { margin-left: 4px; }
-.pcac-commitments__calculated { display: block; margin-top: 3px; color: hsl(var(--muted-foreground)); font-size: 10px; }
+.pcac-commitments__calculated { display: block; margin-top: 3px; color: var(--muted-foreground); font-size: 10px; }
 .pcac-delete-dialog__body { padding: 18px; }
 .pcac-delete-dialog__body p { margin: 0; }
 .pcac-delete-dialog__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
@@ -1090,21 +1090,21 @@
 .pcac-delete-dialog__illustration svg { width: 21px; height: 21px; }
 .pcac-delete-dialog__body { padding: 12px 18px 16px; }
 .pcac-delete-dialog__item { font-size: 14px; font-weight: 750; }
-.pcac-delete-dialog__meta { margin-top: 3px !important; font-size: 12px; color: hsl(var(--muted-foreground)); }
+.pcac-delete-dialog__meta { margin-top: 3px !important; font-size: 12px; color: var(--muted-foreground); }
 .pcac-delete-dialog__actions { margin-top: 16px; }
 .pcac-delete-dialog__summary { display: flex; align-items: center; gap: 11px; }
 .pcac-delete-dialog__illustration { flex: 0 0 auto; width: 40px; height: 40px; margin: 0; border-radius: 11px; }
-.pcac-delete-dialog { overflow: hidden; background: color-mix(in srgb, hsl(var(--background)) 96%, #23443d); }
-.pcac-delete-dialog__header { display: flex; align-items: center; justify-content: space-between; min-height: 42px; padding: 8px 10px 8px 18px; border-bottom: 1px solid color-mix(in srgb, hsl(var(--border)) 72%, transparent); }
-.pcac-delete-dialog__eyebrow { color: hsl(var(--muted-foreground)); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.pcac-delete-dialog { overflow: hidden; background: color-mix(in srgb, var(--background) 96%, #23443d); }
+.pcac-delete-dialog__header { display: flex; align-items: center; justify-content: space-between; min-height: 42px; padding: 8px 10px 8px 18px; border-bottom: 1px solid color-mix(in srgb, var(--border) 72%, transparent); }
+.pcac-delete-dialog__eyebrow { color: var(--muted-foreground); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .pcac-delete-dialog__content { padding: 18px 20px 20px; }
 .pcac-delete-dialog__hero { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 12px; border: 1px solid color-mix(in srgb, #e89a83 55%, transparent); border-radius: 15px; color: #f0a18c; background: linear-gradient(145deg, color-mix(in srgb, #e89a83 22%, transparent), color-mix(in srgb, #e89a83 7%, transparent)); box-shadow: 0 8px 20px color-mix(in srgb, #e89a83 12%, transparent); }
 .pcac-delete-dialog__hero svg { width: 23px; height: 23px; }
-.pcac-delete-dialog__content h2 { margin: 0; color: hsl(var(--foreground)); font-size: 18px; font-weight: 800; letter-spacing: -.02em; }
-.pcac-delete-dialog__description { max-width: 310px; margin: 5px 0 14px; color: hsl(var(--muted-foreground)); font-size: 12px; line-height: 1.45; }
-.pcac-delete-dialog__record { display: grid; gap: 3px; padding: 10px 12px; border: 1px solid color-mix(in srgb, hsl(var(--primary)) 25%, transparent); border-radius: 10px; background: color-mix(in srgb, hsl(var(--primary)) 8%, transparent); }
-.pcac-delete-dialog__record strong { color: hsl(var(--foreground)); font-size: 13px; }
-.pcac-delete-dialog__record span { color: hsl(var(--muted-foreground)); font-size: 11px; }
+.pcac-delete-dialog__content h2 { margin: 0; color: var(--foreground); font-size: 18px; font-weight: 800; letter-spacing: -.02em; }
+.pcac-delete-dialog__description { max-width: 310px; margin: 5px 0 14px; color: var(--muted-foreground); font-size: 12px; line-height: 1.45; }
+.pcac-delete-dialog__record { display: grid; gap: 3px; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent); border-radius: 10px; background: color-mix(in srgb, var(--primary) 8%, transparent); }
+.pcac-delete-dialog__record strong { color: var(--foreground); font-size: 13px; }
+.pcac-delete-dialog__record span { color: var(--muted-foreground); font-size: 11px; }
 .pcac-delete-dialog__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
 @media (max-width: 480px) { .pcac-delete-dialog__actions { flex-direction: column-reverse; } .pcac-delete-dialog__actions button { width: 100%; } }
 
