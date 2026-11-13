@@ -129,6 +129,10 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public",m
       <p className="updated-study-collections__eyebrow">Biblioteca temática · Alinhamento ao edital PC-AC 2026</p>
       <h2 id="pcac-new-study-title">Aulas atualizadas por matéria</h2>
       <p className="updated-study-collections__lede">Escolha uma matéria para abrir suas aulas, exemplos e perguntas de verificação.</p>
+      <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.length} disciplinas integradas</span>
+        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.reduce((total, item) => total + item.lessons.length, 0)} aulas autorais disponíveis</span>
+      </p>
     </header>
 
     <section className="rounded-2xl border border-emerald-500/30 bg-emerald-500/[0.045] p-4" aria-label="Materiais publicados no banco de estudos PC-AC 2026">
@@ -140,7 +144,7 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public",m
         <span className="rounded-full border px-3 py-1 text-xs font-bold">{publishedCount} aulas · {publishedGroups.length} disciplinas</span>
       </header>
       {publishedCount === 0 ? (
-        <p className="text-sm text-muted-foreground">Os materiais deste edital ainda não foram carregados nesta consulta. Atualize a página para buscar novamente.</p>
+        <p className="text-sm text-muted-foreground">Nenhuma aula adicional foi retornada pelo banco nesta consulta. Os módulos autorais alinhados ao edital permanecem disponíveis logo abaixo, organizados por disciplina.</p>
       ) : (
         <div className="space-y-4">
           {publishedGroups.map(([discipline, rows]) => (
