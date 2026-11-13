@@ -106,7 +106,8 @@ export function MaterialPractice({
         </>
       )}
       <p className="text-xs text-muted-foreground">
-        Fixação nesta visita. Para salvar tentativas no histórico, use o treinador completo.
+        As respostas dos exercícios autorais deste material são salvas automaticamente no seu
+        histórico e desempenho. Para registrar questões do acervo geral, use o treinador completo.
       </p>
       {session && <PracticeSession key={session.id} questions={session.questions} userId={userId} materialId={materialId} authoredKey={authoredKey} />}
     </section>
