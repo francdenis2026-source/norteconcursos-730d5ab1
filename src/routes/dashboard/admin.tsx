@@ -15,6 +15,7 @@ import {
   History as HistoryIcon,
   FileText,
   Lock,
+  BellRing,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -51,6 +52,7 @@ import { Download } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { confirmDialog } from "@/lib/confirm";
 import { DatePicker } from "@/components/ui/date-picker";
+import { AdminPushComposer } from "@/components/notifications/AdminPushComposer";
 
 interface AdminExamUploadRow {
   id: string;
@@ -378,6 +380,9 @@ function AdminPanel() {
           </TabsTrigger>
           <TabsTrigger value="audit" className="gap-1.5">
             <HistoryIcon className="h-4 w-4" /> Histórico
+          </TabsTrigger>
+          <TabsTrigger value="notifications" className="gap-1.5">
+            <BellRing className="h-4 w-4" /> Comunicados
           </TabsTrigger>
         </TabsList>
 
@@ -976,6 +981,9 @@ function AdminPanel() {
               </div>
             </CardContent>
           </Card>
+        </TabsContent>
+        <TabsContent value="notifications" className="mt-6 space-y-4">
+          <AdminPushComposer />
         </TabsContent>
       </Tabs>
 
