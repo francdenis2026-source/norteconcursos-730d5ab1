@@ -89,7 +89,10 @@
   --sp-surface: #112028;
   --sp-soft: #152934;
   --sp-line: #1f3b4b;
-  --sp-ink: #eef1f5;
+  /* Texto quase branco puro sobre fundo bem escuro passa de 14:1 de contraste — acima do
+     necessário e cansa a vista (brilho/halo). Um branco levemente acinzentado mantém a
+     leitura confortável e ainda folgado da faixa mínima AA (4,5:1). */
+  --sp-ink: #c9d1da;
   --sp-muted: #a7b0bd;
   --sp-gold: #e3b14b;
   --sp-gold-soft: #2e2817;
