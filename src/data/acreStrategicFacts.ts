@@ -49,6 +49,12 @@ export const ACRE_FACT_GROUPS: AcreFactGroup[] = [
         sources: [SRC.brasil61],
       },
       {
+        question: "Quem são os senadores eleitos em 2026?",
+        answer: "Marcio Bittar (PL) e Mara Rocha (Republicanos), eleitos em 4 de outubro de 2026 para mandato de oito anos; a posse é prevista para 1º de fevereiro de 2027.",
+        care: "Até a posse, seguem em exercício os senadores atuais; não encontrei o resultado dos deputados estaduais.",
+        sources: [{ label: "Congresso em Foco — senadores eleitos pelo Acre", url: "https://www.congressoemfoco.com.br/noticia/122717/marcio-bittar-e-mara-rocha-sao-eleitos-senadores-pelo-acre" }],
+      },
+      {
         question: "Quem foi o primeiro governador eleito do Estado?",
         answer: "José Augusto de Araújo (PTB), eleito em 1962, tomou posse em 1º de março de 1963 e deixou o cargo em 8 de maio de 1964, depois do golpe militar.",
         care: "Fonte secundária; confirme datas em fonte oficial.",

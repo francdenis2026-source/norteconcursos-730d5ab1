@@ -79,7 +79,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       points: [
         "O Acre tinha 830.018 habitantes: 414.686 mulheres (50,0%) e 415.332 homens (50,0%).",
         "A densidade demográfica foi de 5,06 habitantes por km².",
-        "A estimativa do IBGE para 2025 é de 884.372 pessoas.",
+        "A estimativa do IBGE para 2025 foi de 884.372 pessoas; para 1º de julho de 2026, de 887.794 (divulgada em agosto de 2026, segundo a imprensa).",
         "Mais de 66% da população se declarou parda.",
       ],
       source: { label: "IBGE — Cidades e Estados: Acre", url: "https://www.ibge.gov.br/cidades-e-estados/ac" },
@@ -92,11 +92,12 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       points: [
         "Os serviços, puxados pela administração pública, defesa, educação, saúde e seguridade social, são o principal setor da economia acreana.",
         "A agropecuária aparece em seguida entre as maiores contribuições ao PIB estadual.",
+        "Em 2023, o PIB do Acre cresceu 14,7%, a maior alta do país, puxado pela agropecuária (com destaque para a soja) e pela administração pública; o Estado responde por cerca de 0,2% do PIB nacional.",
         "Esse peso dos serviços, com destaque para a administração pública, é uma característica de longa data da economia do Estado.",
       ],
       source: { label: "IBGE — PIB cresce em todos os 27 estados em 2023", url: "https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/45142-pib-cresce-em-todos-os-27-estados-do-pais-em-2023.html?lang=pt-BR" },
       alternatives: [{ label: "Agência Gov — PIB cresce em todos os 27 estados em 2023", url: "https://agenciagov.ebc.com.br/noticias/202511/pib-cresce-em-todos-os-27-estados-do-pais-em-2023" }],
-      caution: "Percentuais por setor mudam a cada divulgação das Contas Regionais; use-os com o ano de referência.",
+      caution: "O dado oficial mais recente que encontrei é o de 2023 (divulgado em novembro de 2025); as Contas Regionais de 2024 ainda não apareceram. Use os percentuais com o ano de referência.",
     },
     {
       title: "Agricultura: o que o Acre produz",
@@ -267,6 +268,13 @@ export const ACRE_CURRENT_AFFAIRS: { date: string; axis: string; title: string; 
   {
     date: "2026-10",
     axis: "politica",
+    title: "Marcio Bittar e Mara Rocha eleitos senadores",
+    summary: "Eleitos em 4 de outubro de 2026 para mandato de oito anos; a posse está prevista para 1º de fevereiro de 2027.",
+    source: { label: "Congresso em Foco", url: "https://www.congressoemfoco.com.br/noticia/122717/marcio-bittar-e-mara-rocha-sao-eleitos-senadores-pelo-acre" },
+  },
+  {
+    date: "2026-10",
+    axis: "politica",
     title: "Mailza Assis reeleita governadora",
     summary: "Governadora desde abril de 2026 (após a renúncia de Gladson Cameli), reeleita no 2º turno com 66,21% dos votos válidos; vice eleita: Jéssica Alves.",
     source: { label: "Correio da Manhã", url: "https://www.correiodamanha.com.br/nacional/norte/2026/10/amp/329820-mailza-assis-e-reeleita-governadora-do-acre-no-2-turno.html" },
@@ -286,17 +294,17 @@ export const ACRE_CURRENT_AFFAIRS: { date: string; axis: string; title: string; 
     source: { label: "Gov.br — Polícia Federal", url: "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/08/forcas-de-seguranca-realizam-operacao-integrada-no-vale-do-jurua" },
   },
   {
-    date: "2025",
+    date: "2026-08",
     axis: "economia",
-    title: "Estimativa de 884.372 habitantes",
-    summary: "Projeção do IBGE para a população do Acre em 2025, acima dos 830.018 do Censo 2022.",
-    source: { label: "IBGE — Cidades e Estados", url: "https://www.ibge.gov.br/cidades-e-estados/ac" },
+    title: "Estimativa de 887.794 habitantes em 2026",
+    summary: "O IBGE divulgou em agosto de 2026 as estimativas de população; o valor do Acre vem da imprensa (confirme no IBGE) e supera os 884.372 de 2025 e os 830.018 do Censo 2022. O Acre segue entre os três estados menos populosos.",
+    source: { label: "JB — população do Brasil em 2026 (IBGE)", url: "https://www.jb.com.br/brasil/2026/08/1060732-populacao-do-brasil-chega-a-2142-milhoes-aponta-ibge.html" },
   },
   {
     date: "2023",
     axis: "economia",
-    title: "Contas Regionais: serviços lideram a economia",
-    summary: "Administração pública e agropecuária são as atividades de maior contribuição ao PIB do Acre.",
+    title: "Contas Regionais 2023: PIB do Acre cresce 14,7%",
+    summary: "A maior alta do país em 2023, puxada pela agropecuária (soja) e pela administração pública; divulgada pelo IBGE em novembro de 2025.",
     source: { label: "IBGE — Agência de Notícias", url: "https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/45142-pib-cresce-em-todos-os-27-estados-do-pais-em-2023.html?lang=pt-BR" },
   },
 ];

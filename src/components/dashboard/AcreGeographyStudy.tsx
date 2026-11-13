@@ -8,6 +8,7 @@ import {
   ACRE_MICROREGIONS,
 } from "@/data/acreGeography";
 import { AcreInteractiveMap } from "@/components/dashboard/AcreInteractiveMap";
+import { AcreIbgeDivision } from "@/components/dashboard/AcreIbgeDivision";
 import "@/styles/acre-geography-study.css";
 
 const REGION_COLORS = ["#9B83E8", "#39A6D8", "#70C58A", "#E6A64A", "#D8799D"];
@@ -233,6 +234,7 @@ export function AcreGeographyStudy() {
           <ExternalLink size={14} /> Abrir mapa oficial do Acre no IBGE
         </a>
       </section>
+      <AcreIbgeDivision />
 
       <details className="acre-geo__edital">
         <summary>Ver as regionais de desenvolvimento usadas no edital PC-AC 2026</summary>
