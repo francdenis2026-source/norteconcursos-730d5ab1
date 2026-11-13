@@ -94,6 +94,7 @@ import "@/styles/home-codex-refinement.css";
 import "@/styles/home-mobile-color.css";
 import "@/styles/home-desktop-premium.css";
 import "@/styles/home-pcac-banner-desktop.css";
+import "@/styles/home-refine.css";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -112,6 +113,10 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    // A arte do hero é o maior elemento da primeira tela: começa a baixar junto com o HTML.
+    links: [
+      { rel: "preload", as: "image", href: "/media/hero/carreiras-background.webp", fetchPriority: "high" },
     ],
   }),
 });

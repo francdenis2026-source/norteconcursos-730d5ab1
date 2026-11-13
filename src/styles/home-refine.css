@@ -1,0 +1,53 @@
+/* Refino da homepage (desktop): ritmo entre seções, largura única, selos compactos,
+   cartões sem enfeite e microinterações discretas. Carregado por último. */
+@media (min-width: 768px) {
+  /* Seções: altura pelo conteúdo, não pela janela (acaba com os vazios entre blocos). */
+  html body .home.hr-canvas > .desktop-homepage > :is(.sx-features, .hd, .sx-section, .hp-promo) {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-block: clamp(36px, 4.5vw, 64px) !important;
+  }
+  /* Uma só largura de leitura para todas as seções. */
+  html body .home.hr-canvas > .desktop-homepage > #concursos.sx-section > * {
+    width: min(1145px, calc(100% - 48px)) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+  }
+  /* Selos de seção: do tamanho do texto, não da linha. */
+  html body .home.hr-canvas :is(.sx-eyebrow, .home-ranking__eyebrow) {
+    width: fit-content;
+    max-width: 100%;
+    justify-self: start;
+  }
+  /* Cartões de recursos: sem numeral gigante nem borda lateral colorida. */
+  html body .home.hr-canvas .desktop-homepage .sx-features .sx-card::before { content: none !important; }
+  html body .home.hr-canvas .desktop-homepage .sx-features .sx-card {
+    border: 1px solid rgb(255 255 255 / 0.1) !important;
+    border-left-width: 1px !important;
+    border-radius: 16px !important;
+    transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+  }
+  html body .home.hr-canvas .desktop-homepage .sx-features .sx-card:hover {
+    transform: translateY(-2px);
+    border-color: rgb(227 177 75 / 0.55) !important;
+  }
+}
+/* Microinterações comuns a botões e menu. */
+.home.hr-canvas :is(.sx-btn, .sx-daily__cta) {
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+.home.hr-canvas :is(.sx-btn, .sx-daily__cta):hover { transform: translateY(-1px); filter: brightness(1.06); }
+.home.hr-canvas :is(.sx-btn, .sx-daily__cta):active { transform: translateY(0) scale(0.98); }
+.home.hr-canvas :is(a, button):focus-visible { outline: 2px solid #e3b14b; outline-offset: 3px; border-radius: 8px; }
+.home.hr-canvas .home-header nav a { transition: color 0.16s ease, background-color 0.16s ease; }
+.home.hr-canvas .sx-banner, .home.hr-canvas .sx-exams > li {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.home.hr-canvas .sx-exams > li:hover { transform: translateY(-3px); }
+/* Rodapé: respiro e hierarquia. */
+.home.hr-canvas .nc-footer { border-top: 1px solid rgb(227 177 75 / 0.22); }
+.home.hr-canvas .nc-footer a { transition: color 0.16s ease; }
+.home.hr-canvas .nc-footer a:hover { color: #e3b14b; }
+@media (prefers-reduced-motion: reduce) {
+  .home.hr-canvas :is(.sx-btn, .sx-daily__cta, .sx-card, .sx-exams > li, .sx-banner) { transition: none !important; transform: none !important; }
+}
