@@ -98,6 +98,57 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       alternatives: [{ label: "Agência Gov — PIB cresce em todos os 27 estados em 2023", url: "https://agenciagov.ebc.com.br/noticias/202511/pib-cresce-em-todos-os-27-estados-do-pais-em-2023" }],
       caution: "Percentuais por setor mudam a cada divulgação das Contas Regionais; use-os com o ano de referência.",
     },
+    {
+      title: "Agricultura: o que o Acre produz",
+      reference: "Seagri, 2024",
+      points: [
+        "No ranking da produção do Estado em 2024, a pecuária vem em 1º; depois mandioca, milho, café, banana e soja.",
+        "O valor bruto da produção agropecuária chegou a cerca de R$ 3,24 bilhões em 2024, contra R$ 2,87 bilhões em 2023.",
+        "A mandioca lidera a lavoura: o boletim de safra de novembro de 2024 indicou 495.940 toneladas, à frente de milho e banana.",
+        "A castanha-do-brasil é produto extrativista e figura entre os principais itens de exportação.",
+      ],
+      source: { label: "A Gazeta do Acre — safra no Acre (nov./2024)", url: "https://agazetadoacre.com/2025/01/noticias/geral/com-mais-de-64-mil-hectares-de-area-plantada-safra-no-acre-em-novembro-fechou-em-187-509-toneladas" },
+      alternatives: [{ label: "Agrolink — mandioca no Acre", url: "https://www.agrolink.com.br/culturas/mandioca/estatistica/ac" }],
+      caution: "O ranking é do governo estadual (Seagri) e a safra de novembro é um boletim mensal; para totais anuais use a PAM/SIDRA do IBGE.",
+    },
+    {
+      title: "Pecuária bovina",
+      reference: "IBGE, PPM 2023",
+      points: [
+        "O rebanho bovino do Acre cresceu 4,9% e chegou a 4,9 milhões de cabeças.",
+        "Cerca de 53% do rebanho está no Baixo Acre; Rio Branco é o principal produtor, seguido de Sena Madureira e Senador Guiomard.",
+        "O Estado é reconhecido como área livre de febre aftosa, o que sustenta a venda de carne.",
+      ],
+      source: { label: "A Gazeta do Acre — pecuária e aquicultura em 2023", url: "https://agazetadoacre.com/2024/09/noticias/geral/producao-da-pecuaria-e-aquicultura-no-acre-cresce-124-e-alcanca-r-156-milhoes-em-2023" },
+      alternatives: [{ label: "Notícias Agrícolas — Acre livre de aftosa", url: "https://www.noticiasagricolas.com.br/noticia/267512" }],
+      caution: "Não encontrei o número do rebanho em 2024; confirme na tabela da PPM no SIDRA antes de citar.",
+    },
+    {
+      title: "Exportações e comércio com Peru e Bolívia",
+      reference: "2019–2026",
+      points: [
+        "Entre janeiro e maio de 2026, a soja liderou as exportações (US$ 15,86 milhões, 29,3%), seguida da carne bovina (US$ 14,23 milhões) e da castanha (US$ 12,50 milhões).",
+        "No 1º semestre de 2026, o Acre exportou 3.155,66 toneladas de carne bovina (cerca de US$ 16,1 milhões), alta de 34,9% em volume e 56,3% em valor sobre 2025.",
+        "De 2019 a 2025, Peru e Bolívia responderam por 99,12% do comércio do Acre com países andinos: Peru 79,98% e Bolívia 19,15%; castanha e carne suína dominam.",
+        "O Acre é o estado brasileiro mais próximo do Porto de Chancay (Peru), na rota bioceânica; o Mapa e a ApexBrasil trabalham a habilitação de frigoríficos do Acre e de Rondônia.",
+      ],
+      source: { label: "Correio da Manhã — alta na venda de carne bovina (2026)", url: "https://www.correiodamanha.com.br/nacional/norte/2026/08/amp/312513-acre-registra-alta-na-venda-de-carne-bovina-ao-exterior.html" },
+      alternatives: [{ label: "Portal Amazônia — mercado andino nas exportações", url: "https://portalamazonia.com/economia/exportacoes-acre-mercado-andino/" }, { label: "Datamar — rota do Pacífico", url: "https://datamarnews.com/noticias/acre-cements-pacific-route-as-new-export-corridor-linking-brazil-to-asia/" }],
+      caution: "Valores de 2026 vêm de boletins e imprensa, não do ComexStat; a pauta é concentrada, e a diversificação é meta declarada do Estado.",
+    },
+    {
+      title: "Acordos e instrumentos: SISA, REDD+ e ZEE",
+      reference: "2007–2024",
+      points: [
+        "A Lei nº 1.904/2007 instituiu o Zoneamento Ecológico-Econômico (ZEE) do Acre, cujas indicações orientam políticas e investimentos públicos e privados no Estado; foi alterada por leis posteriores, como a Lei nº 4.401/2024.",
+        "A Lei nº 2.308/2010 criou o SISA (Sistema de Incentivo a Serviços Ambientais), descrito como o primeiro programa jurisdicional de REDD+ do mundo; o ISA-Carbono foi o primeiro programa criado sob ele.",
+        "O Acre firmou acordos de pagamento por resultados com o banco alemão KfW, no programa REDD Early Movers (2012 e 2013), ligados à redução do desmatamento.",
+        "Em 2025, o governo estadual anunciou mais de R$ 200 milhões em investimentos na indústria de proteína animal.",
+      ],
+      source: { label: "CIFOR — SISA do Acre", url: "https://www2.cifor.org/redd-case-book/case-reports/brazil/acres-state-system-incentives-environmental-services-sisa-brazil/" },
+      alternatives: [{ label: "KfW — REDD Early Movers Acre (ficha)", url: "https://www.kfw-entwicklungsbank.de/PDF/%20Entwicklungsfinanzierung/Themen-NEU/REDD-Early-Movers-Acre-Fact-Sheet.pdf" }, { label: "Legisweb — Lei nº 2.308/2010", url: "https://www.legisweb.com.br/legislacao/?id=116550" }, { label: "Legisweb — Lei nº 1.904/2007 (ZEE)", url: "https://www.legisweb.com.br/legislacao/?id=116435" }, { label: "A Gazeta do Acre — investimentos em proteína animal", url: "https://agazetadoacre.com/2025/04/noticias/geral/governo-do-acre-celebra-mais-de-r-200-milhoes-em-investimentos-na-industria-de-proteina-animal" }],
+      caution: "Fontes de 2012–2015 sobre o SISA e o KfW; o estado atual dos programas e outros acordos (como a Interoceânica) não foram confirmados. A data da Lei nº 2.308 varia entre fontes (22/10 ou 11/11/2010).",
+    },
   ],
   cultura: [
     {
@@ -124,6 +175,19 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       source: { label: "Comissão Pró-Indígenas do Acre — Povos isolados", url: "https://cpiacre.org.br/povos-indigenas-isolados-2/" },
       alternatives: [{ label: "Instituto Socioambiental — portaria da Funai sobre os Mashco", url: "https://www.socioambiental.org/noticias-socioambientais/funai-assina-portaria-para-protecao-dos-indigenas-isolados-do-povo-mashco" }, { label: "AC24horas — aproximação de isolados em Jordão", url: "https://ac24horas.com/2026/10/21/aproximacao-de-indigenas-isolados-preocupa-funai-no-ac-comunidade-recebe-orientacoes/" }],
       caution: "Fontes de organização indigenista e de imprensa; para dados oficiais, consulte a Funai (gov.br/funai). A situação dos isolados muda com frequência.",
+    },
+    {
+      title: "Reservas extrativistas (Resex) federais do Acre",
+      reference: "Decretos de 1990 a 2005",
+      points: [
+        "Resex é uma unidade de conservação de uso sustentável: o território é público e o uso é concedido às populações extrativistas tradicionais (SNUC, Lei nº 9.985/2000).",
+        "O Acre tem cinco Resex federais: Chico Mendes (Decreto nº 99.144, de 12/3/1990), Alto Juruá (criada em 23/1/1990), Alto Tarauacá (2000), Cazumbá-Iracema (decreto de 19/9/2002, em Sena Madureira e Manoel Urbano) e Riozinho da Liberdade (decreto de 17/2/2005).",
+        "A Chico Mendes, com cerca de 970.570 hectares no decreto, é a maior do Acre e abrange Xapuri, Rio Branco, Brasiléia e Assis Brasil.",
+        "A Riozinho da Liberdade abrange Cruzeiro do Sul, Marechal Thaumaturgo, Porto Walter e Tarauacá, no Acre, e Ipixuna, no Amazonas.",
+      ],
+      source: { label: "Planalto — Decreto nº 99.144/1990 (Resex Chico Mendes)", url: "https://planalto.gov.br/ccivil_03/decreto/1990-1994/D99144.htm" },
+      alternatives: [{ label: "Câmara — Decreto de 17/2/2005 (Riozinho da Liberdade)", url: "https://www2.camara.leg.br/legin/fed/decret_sn/2005/decreto-35342-17-fevereiro-2005-535739-publicacaooriginal-25100-pe.html" }, { label: "Planalto — decreto do Cazumbá-Iracema (2002)", url: "https://planalto.gov.br/ccivil_03/DNN/2002/Dnn9663.htm" }, { label: "Wikipédia — Resex do Alto Juruá", url: "https://en.wikipedia.org/wiki/Alto_Juru%C3%A1_Extractive_Reserve" }],
+      caution: "As áreas variam entre fontes (a Chico Mendes aparece com 970.570 e 996.757 ha); datas de Alto Juruá e Alto Tarauacá vêm de fonte secundária. Confira cada unidade no ICMBio/CNUC.",
     },
     {
       title: "Como estudar povos e cultura",
@@ -199,6 +263,20 @@ export const ACRE_CURRENT_AFFAIRS: { date: string; axis: string; title: string; 
     title: "Gefron: 335 operações de fronteira em 2026",
     summary: "Balanço de janeiro a outubro de 2026 contra crimes transfronteiriços.",
     source: { label: "Correio da Manhã", url: "https://www.correiodamanha.com.br/nacional/norte/2026/11/332526-acre-registra-335-operacoes-nas-areas-de-fronteira.html" },
+  },
+  {
+    date: "2026-10",
+    axis: "politica",
+    title: "Mailza Assis reeleita governadora",
+    summary: "Governadora desde abril de 2026 (após a renúncia de Gladson Cameli), reeleita no 2º turno com 66,21% dos votos válidos; vice eleita: Jéssica Alves.",
+    source: { label: "Correio da Manhã", url: "https://www.correiodamanha.com.br/nacional/norte/2026/10/amp/329820-mailza-assis-e-reeleita-governadora-do-acre-no-2-turno.html" },
+  },
+  {
+    date: "2026-08",
+    axis: "economia",
+    title: "Carne bovina acreana em alta no exterior",
+    summary: "No 1º semestre de 2026, 3.155,66 t exportadas, alta de 34,9% em volume sobre o mesmo período de 2025.",
+    source: { label: "Correio da Manhã", url: "https://www.correiodamanha.com.br/nacional/norte/2026/08/amp/312513-acre-registra-alta-na-venda-de-carne-bovina-ao-exterior.html" },
   },
   {
     date: "2026-08",

@@ -42,6 +42,9 @@ export const ACRE_VIDEO_GUIDE: Record<string, AcreVideoGuide> = {
     searches: [
       { label: "Economia do Acre", query: "economia do Acre PIB aula concurso" },
       { label: "Indicadores socioeconômicos do Acre", query: "Acre indicadores socioeconômicos IBGE" },
+      { label: "Agropecuária do Acre", query: "agropecuária do Acre produção pecuária mandioca castanha" },
+      { label: "Resex e extrativismo no Acre", query: "reservas extrativistas Acre Resex Chico Mendes economia" },
+      { label: "Exportações do Acre", query: "exportações do Acre Peru Chancay castanha carne" },
       { label: "Atualidades do Acre", query: "atualidades do Acre concurso" },
     ],
   },
