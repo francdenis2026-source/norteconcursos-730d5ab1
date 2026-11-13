@@ -38,7 +38,13 @@ import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
-import { UpdatedStudyCollections } from "@/components/dashboard/UpdatedStudyCollections";
+import {
+  UpdatedStudyCollections,
+  COURSES,
+  COURSE_ICONS,
+  type Course,
+} from "@/components/dashboard/UpdatedStudyCollections";
+import { canonicalSubject } from "@/lib/subjects";
 import { StartHere } from "@/components/library/StartHere";
 import {
   libraryArea,
@@ -57,6 +63,16 @@ import {
   useLibrarySearchContent,
   type StudyMaterialSummary,
 } from "@/lib/studyMaterials";
+
+const TRILHA_BY_DISCIPLINE = new Map<string, Course>(
+  COURSES.map((course) => [canonicalSubject(course.title), course]),
+);
+
+function guiaDisciplineName(guia?: string): string | undefined {
+  if (!guia) return undefined;
+  const course = COURSES.find((c) => c.id === guia);
+  return course ? canonicalSubject(course.title) : undefined;
+}
 
 export const Route = createFileRoute("/dashboard/library/")({
   component: LibraryIndex,
@@ -92,7 +108,9 @@ function LibraryIndex() {
   const lawsOnly = collection === "laws";
   const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
-  const [discipline, setDiscipline] = useState<string>(initialDiscipline ?? "all");
+  const [discipline, setDiscipline] = useState<string>(
+    initialDiscipline ?? guiaDisciplineName(guia) ?? "all",
+  );
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
   const [law, setLaw] = useState("all");
@@ -121,14 +139,14 @@ function LibraryIndex() {
                 ? saved.area
                 : "all",
         );
-        setDiscipline(initialDiscipline ?? saved.discipline);
+        setDiscipline(initialDiscipline ?? guiaDisciplineName(guia) ?? saved.discipline);
         setContest(saved.contest);
         setTopic(saved.topic);
         setLaw(typeof saved.law === "string" ? saved.law : "all");
       } else {
         setQuery(initialQuery ?? "");
         setArea("all");
-        setDiscipline(initialDiscipline ?? "all");
+        setDiscipline(initialDiscipline ?? guiaDisciplineName(guia) ?? "all");
         setContest("all");
         setTopic("all");
         setLaw("all");
@@ -137,7 +155,7 @@ function LibraryIndex() {
       /* Session storage is optional. */
     }
     restoredFilters.current = true;
-  }, [filterKey, initialQuery, initialDiscipline, lawsOnly]);
+  }, [filterKey, initialQuery, initialDiscipline, lawsOnly, guia]);
   useEffect(() => {
     if (!restoredFilters.current) return;
     try {
@@ -162,6 +180,20 @@ function LibraryIndex() {
     () => (data ?? []).filter((item) => libraryCollection(item) === collection),
     [data, collection],
   );
+  const unifiedSubjects = useMemo(() => {
+    if (lawsOnly) return [];
+    const map = new Map<string, { name: string; materialsCount: number; course?: Course }>();
+    for (const [name, list] of libraryDisciplines(items)) {
+      const course = TRILHA_BY_DISCIPLINE.get(name);
+      map.set(name, course ? { name, materialsCount: list.length, course } : { name, materialsCount: list.length });
+    }
+    for (const course of COURSES) {
+      const name = canonicalSubject(course.title);
+      if (!map.has(name)) map.set(name, { name, materialsCount: 0, course });
+    }
+    return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  }, [items, lawsOnly]);
+  const matchedCourse = !lawsOnly ? TRILHA_BY_DISCIPLINE.get(discipline) : undefined;
   const areaItems = useMemo(
     () => items.filter((item) => area === "all" || libraryArea(item) === area),
     [items, area],
@@ -401,23 +433,26 @@ function LibraryIndex() {
         </nav>
       )}
 
-      {!lawsOnly && signedIn && <UpdatedStudyCollections {...(guia ? { initialCourseId: guia } : {})} storageScope={user?.id ?? "anonymous"} />}
+      {!lawsOnly && !focused && signedIn && !isPending && (
+        <UnifiedSubjectGrid
+          subjects={unifiedSubjects}
+          onSelect={(name) => {
+            setDiscipline(name);
+            setContest("all");
+            setArea("all");
+            setTopic("all");
+            setLaw("all");
+          }}
+        />
+      )}
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
-      {!lawsOnly && !focused && signedIn && !isPending && !isError && items.length > 0 && (
-        <div className="flex items-center gap-3 pb-1 pt-2">
-          <h2 className="shrink-0 text-lg font-bold">Lista completa por disciplina</h2>
-          <span aria-hidden="true" className="h-px flex-1 bg-border" />
-        </div>
+      <div className={!lawsOnly && focused && matchedCourse ? "grid items-start gap-6 lg:grid-cols-2" : undefined}>
+      {!lawsOnly && focused && matchedCourse && (
+        <UpdatedStudyCollections onlyCourseId={matchedCourse.id} storageScope={user?.id ?? "anonymous"} />
       )}
-      {!lawsOnly && !focused && signedIn && !isPending && !isError && items.length > 0 && (
-        <p className="-mt-3 text-sm text-muted-foreground">
-          Todos os {items.length} materiais publicados, por disciplina e assunto. Use a busca ou os filtros abaixo
-          para achar um material específico — diferente da trilha guiada acima, aqui você escolhe livremente.
-        </p>
-      )}
-
+      <div className="space-y-4">
       {isPending && signedIn ? (
         <div className="space-y-3">
           {[0, 1, 2, 3, 4].map((n) => (
@@ -569,7 +604,60 @@ function LibraryIndex() {
           )}
         </>
       )}
+      </div>
+      </div>
     </div>
+  );
+}
+
+function UnifiedSubjectGrid({
+  subjects,
+  onSelect,
+}: {
+  subjects: { name: string; materialsCount: number; course?: Course }[];
+  onSelect: (name: string) => void;
+}) {
+  if (subjects.length === 0) return null;
+  return (
+    <section aria-label="Escolher matéria para estudar" className="space-y-3">
+      <div className="flex items-center gap-3 pb-1 pt-2">
+        <h2 className="shrink-0 text-lg font-bold">Escolha uma matéria</h2>
+        <span aria-hidden="true" className="h-px flex-1 bg-border" />
+      </div>
+      <p className="-mt-2 text-sm text-muted-foreground">
+        Trilha guiada e materiais publicados, reunidos numa só entrada por disciplina.
+      </p>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        {subjects.map(({ name, materialsCount, course }) => {
+          const Icon = (course && COURSE_ICONS[course.id]) || Library;
+          return (
+            <button
+              key={name}
+              type="button"
+              onClick={() => onSelect(name)}
+              className={`library-subject__card library-tone-${libraryTone(name)} flex flex-col items-start gap-2 rounded-xl border bg-card p-4 text-left transition hover:border-primary`}
+            >
+              <span className="metric-tile__icon h-9 w-9 rounded-xl">
+                <Icon className="h-4 w-4" />
+              </span>
+              <strong className="text-sm leading-snug">{name}</strong>
+              <span className="flex flex-wrap gap-1 text-xs text-muted-foreground">
+                {course && (
+                  <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 font-semibold text-emerald-700 dark:text-emerald-300">
+                    Trilha guiada
+                  </span>
+                )}
+                {materialsCount > 0 && (
+                  <span className="rounded-full border px-2 py-0.5">
+                    {materialsCount} {materialsCount === 1 ? "material" : "materiais"}
+                  </span>
+                )}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

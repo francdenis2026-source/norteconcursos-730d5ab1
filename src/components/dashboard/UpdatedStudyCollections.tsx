@@ -60,9 +60,10 @@ const BASE_COURSES: Course[] = [
     {title:"04 · Administração direta, indireta e descentralização",body:["Administração direta abrange órgãos integrantes das pessoas políticas; administração indireta reúne entidades dotadas de personalidade jurídica própria, como autarquias, fundações públicas, empresas públicas e sociedades de economia mista, segundo a legislação aplicável.","Desconcentração distribui competências internamente em uma mesma pessoa jurídica, enquanto descentralização transfere a execução ou titularidade de atividades conforme os modelos legalmente admitidos. Delegar tarefas a unidades internas não cria automaticamente nova pessoa jurídica."],example:"Criar unidades regionais dentro do mesmo órgão exemplifica desconcentração; instituir autarquia por lei integra a administração indireta.",question:"Criar uma unidade interna sem personalidade jurídica é descentralização?",answer:"Em regra, é desconcentração administrativa.",source:OFFICIAL.edital}
   ]}
 ];
-const COURSES: Course[] = [...BASE_COURSES, ...pcAcCoreStudyCourses].map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? []), ...(pcAcProgramGapLessons[course.id] ?? [])]}));
+export const COURSES: Course[] = [...BASE_COURSES, ...pcAcCoreStudyCourses].map(course => ({...course, lessons: [...course.lessons, ...(supplementalPcAcLessons[course.id] ?? []), ...(pcAcProgramGapLessons[course.id] ?? [])]}));
+export type { Course };
 
-const COURSE_ICONS: Record<string, LucideIcon> = {
+export const COURSE_ICONS: Record<string, LucideIcon> = {
   arquivologia: Archive,
   "administracao-geral": ClipboardList,
   "administracao-publica": Landmark,
@@ -80,7 +81,7 @@ const COURSE_ICONS: Record<string, LucideIcon> = {
   "lingua-portuguesa": BookOpen,
 };
 
-export function UpdatedStudyCollections({initialCourseId,storageScope="public"}: {initialCourseId?: string;storageScope?: string}) {
+export function UpdatedStudyCollections({initialCourseId,storageScope="public",onlyCourseId}: {initialCourseId?: string;storageScope?: string;onlyCourseId?: string}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
   const [query,setQuery]=React.useState("");
@@ -99,47 +100,57 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public"}:
   const visibleEntries = entries.filter((entry) => entry.visible);
 
   React.useEffect(() => {
-    if (!normalizedQuery) return;
+    if (onlyCourseId || !normalizedQuery) return;
     if (visibleEntries.some((entry) => entry.course.id === selected)) return;
     if (visibleEntries[0]) setSelected(visibleEntries[0].course.id);
-  }, [normalizedQuery, visibleEntries, selected]);
+  }, [onlyCourseId, normalizedQuery, visibleEntries, selected]);
 
+  const onlyCourse = onlyCourseId ? COURSES.find((c) => c.id === onlyCourseId) : undefined;
   const activeEntry = visibleEntries.find((entry) => entry.course.id === selected) ?? visibleEntries[0];
-  const course = activeEntry?.course;
-  const displayedLessons = course ? (activeEntry!.courseMatches || !normalizedQuery ? course.lessons : course.lessons.filter(lessonMatches)) : [];
+  const course = onlyCourseId ? onlyCourse : activeEntry?.course;
+  const displayedLessons = !course
+    ? []
+    : onlyCourseId
+      ? course.lessons
+      : activeEntry!.courseMatches || !normalizedQuery
+        ? course.lessons
+        : course.lessons.filter(lessonMatches);
   const countCompleted = course ? course.lessons.filter(l=>completed[`${course.id}:${l.title}`]).length : 0;
 
   return <section id="materiais-atualizados-pcac" className="updated-study-collections" aria-labelledby="pcac-new-study-title">
-    <header className="updated-study-collections__header">
-      <p className="updated-study-collections__eyebrow">Aulas guiadas · Alinhadas ao edital PC-AC 2026</p>
-      <h2 id="pcac-new-study-title">Trilha de aulas por matéria</h2>
-      <p className="updated-study-collections__lede">
-        Conteúdo autoral e sequencial: teoria, exemplo prático e uma pergunta de verificação em cada aula. Para
-        buscar um material específico por banca ou assunto, use a lista completa logo abaixo.
-      </p>
-      <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
-        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.length} matérias com trilha</span>
-        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.reduce((total, item) => total + item.lessons.length, 0)} aulas guiadas</span>
-      </p>
-    </header>
+    {!onlyCourseId && (
+      <header className="updated-study-collections__header">
+        <p className="updated-study-collections__eyebrow">Aulas guiadas · Alinhadas ao edital PC-AC 2026</p>
+        <h2 id="pcac-new-study-title">Trilha de aulas por matéria</h2>
+        <p className="updated-study-collections__lede">
+          Conteúdo autoral e sequencial: teoria, exemplo prático e uma pergunta de verificação em cada aula.
+        </p>
+        <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+          <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.length} matérias com trilha</span>
+          <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">{COURSES.reduce((total, item) => total + item.lessons.length, 0)} aulas guiadas</span>
+        </p>
+      </header>
+    )}
 
-    <div className="updated-study-collections__search">
-      <Search aria-hidden="true" size={17} />
-      <input
-        type="search"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="Buscar matéria ou aula, ex.: protocolo, PODC..."
-        aria-label="Buscar nas aulas atualizadas"
-      />
-      {query && (
-        <button type="button" onClick={() => setQuery("")} aria-label="Limpar a busca">
-          <X aria-hidden="true" size={15} />
-        </button>
-      )}
-    </div>
+    {!onlyCourseId && (
+      <div className="updated-study-collections__search">
+        <Search aria-hidden="true" size={17} />
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Buscar matéria ou aula, ex.: protocolo, PODC..."
+          aria-label="Buscar nas aulas atualizadas"
+        />
+        {query && (
+          <button type="button" onClick={() => setQuery("")} aria-label="Limpar a busca">
+            <X aria-hidden="true" size={15} />
+          </button>
+        )}
+      </div>
+    )}
 
-    {visibleEntries.length === 0 ? (
+    {!onlyCourseId && (visibleEntries.length === 0 ? (
       <p className="updated-study-collections__empty">Nenhuma matéria ou aula encontrada para “{query}”.</p>
     ) : (
       <div className="updated-study-collections__grid" role="group" aria-label="Escolher matéria">
@@ -166,7 +177,7 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public"}:
           );
         })}
       </div>
-    )}
+    ))}
 
     {course && (
       <div className="updated-study-collections__panel">
