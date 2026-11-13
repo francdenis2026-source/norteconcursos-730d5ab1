@@ -51,3 +51,37 @@
 @media (prefers-reduced-motion: reduce) {
   .home.hr-canvas :is(.sx-btn, .sx-daily__cta, .sx-card, .sx-exams > li, .sx-banner) { transition: none !important; transform: none !important; }
 }
+
+/* ---------- Perguntas frequentes: título legível acima das perguntas ---------- */
+@media (min-width: 768px) {
+  html body .home.hr-canvas .home-faq { grid-template-columns: minmax(200px, 0.32fr) minmax(0, 1fr) !important; gap: 24px !important; align-items: start; }
+  html body .home.hr-canvas .home-faq__intro { grid-template-columns: minmax(0, 1fr) !important; gap: 10px !important; align-content: start; justify-items: start; }
+  html body .home.hr-canvas .home-faq__intro h3 { font-size: clamp(1.25rem, 1.8vw, 1.6rem) !important; line-height: 1.15 !important; }
+}
+.home.hr-canvas .home-faq__list details { transition: border-color 0.16s ease, background-color 0.16s ease; }
+.home.hr-canvas .home-faq__list details:hover { border-color: rgb(227 177 75 / 0.5); }
+.home.hr-canvas .home-faq__list summary { cursor: pointer; }
+
+/* ---------- Cabeçalho: vidro discreto e realce dos links ---------- */
+:root.dark .home.hr-canvas .home-header {
+  background: rgb(9 12 17 / 0.84);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  backdrop-filter: saturate(140%) blur(12px);
+}
+.home.hr-canvas .home-header nav a { border-radius: 8px; }
+.home.hr-canvas .home-header nav a:hover { background-color: rgb(127 127 127 / 0.12); }
+
+/* ---------- Rodapé: duas linhas limpas no lugar de caixas ---------- */
+@media (min-width: 768px) {
+  html body .home.hr-canvas .nc-footer :is(.nc-footer__main, .nc-footer__bar) {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-inline: 0 !important;
+  }
+  html body .home.hr-canvas .nc-footer .nc-footer__bar {
+    border-top: 1px solid rgb(127 127 127 / 0.2) !important;
+    padding-top: 14px !important;
+  }
+}
