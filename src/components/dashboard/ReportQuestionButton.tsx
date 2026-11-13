@@ -3,7 +3,7 @@ import { questionCode, questionIdentity } from "@/lib/questionIdentity";
 // (enunciado, gabarito, alternativa, digitação) — vai para a fila de revisão
 // em /dashboard/admin-question-reports.
 import * as React from "react";
-import { Flag, Loader2 } from "lucide-react";
+import { AlertTriangle, Flag, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,13 +15,19 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import type { Question } from "@/lib/questionFormat";
+import { isLikelyIncompleteQuestion, type Question } from "@/lib/questionFormat";
 import { toast } from "sonner";
+
+const INCOMPLETE_HINT =
+  "O enunciado parece estar faltando um trecho (ex.: o termo sublinhado/grifado citado no comando não aparece no texto).";
 
 export function ReportQuestionButton({ question }: { question: Question }) {
   const [open, setOpen] = React.useState(false);
   const [reason, setReason] = React.useState("");
   const [sending, setSending] = React.useState(false);
+  // Questões como "substitua o termo sublinhado" só fazem sentido com a marcação preservada;
+  // quando a transcrição perdeu essa marcação, sinalizamos em vez de adivinhar o trecho.
+  const incomplete = isLikelyIncompleteQuestion(question.text);
 
   // Sem a tabela física de origem não há como o admin corrigir na fonte.
   if (!question.table) return null;
@@ -64,12 +70,23 @@ export function ReportQuestionButton({ question }: { question: Question }) {
   };
 
   return (
-    <>
+    <div className="inline-flex items-center gap-2">
+      {incomplete && (
+        <span
+          className="inline-flex items-center gap-1 rounded-full border border-amber-400/50 bg-amber-400/10 px-2 py-0.5 text-[11px] font-semibold text-amber-700 dark:text-amber-300"
+          title={INCOMPLETE_HINT}
+        >
+          <AlertTriangle className="h-3 w-3" aria-hidden="true" /> Enunciado incompleto
+        </span>
+      )}
       <Button
         variant="ghost"
         size="sm"
-        className="text-muted-foreground hover:text-destructive"
-        onClick={() => setOpen(true)}
+        className={incomplete ? "text-amber-700 hover:text-amber-800 dark:text-amber-300" : "text-muted-foreground hover:text-destructive"}
+        onClick={() => {
+          if (incomplete) setReason((current) => current || INCOMPLETE_HINT);
+          setOpen(true);
+        }}
       >
         <Flag className="mr-1.5 h-3.5 w-3.5" /> Reportar questão
       </Button>
@@ -102,6 +119,6 @@ export function ReportQuestionButton({ question }: { question: Question }) {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-    </>
+    </div>
   );
 }
