@@ -10,10 +10,7 @@ import {
   FileText,
   Headphones,
   Layers,
-  Library,
   Loader2,
-  MapPin,
-  Minus,
   Pause,
   Play,
   PlayCircle,
@@ -512,54 +509,6 @@ function StudyRoomPage() {
         )}
         <h1 className="mt-2 text-2xl font-black leading-tight md:text-3xl">{topic || subject}</h1>
         <p className="text-sm text-muted-foreground">{subject}</p>
-        <ul
-          className="mt-3 flex flex-wrap gap-2 text-xs"
-          aria-label="Recursos disponíveis para este assunto"
-        >
-          {(
-            [
-              [
-                "Material",
-                (arsenal?.topicMaterials.length ?? 0) || (arsenal?.subjectMaterials.length ?? 0),
-                arsenal
-                  ? (arsenal.topicMaterials.length ?? 0) > 0
-                    ? "do assunto"
-                    : "da matéria"
-                  : "",
-              ],
-              [
-                "Videoaulas",
-                topicVideos.length || playlists.length,
-                topicVideos.length
-                  ? arsenal?.videosAreTopic
-                    ? "do assunto"
-                    : "da matéria"
-                  : "playlists",
-              ],
-              ["Podcasts", podcasts.length, ""],
-              ["Flashcards", arsenal?.cards ?? 0, "seus"],
-              ["Questões", arsenal?.questions ?? 0, "na matéria"],
-            ] as [string, number, string][]
-          )
-            .filter(([, n]) => n > 0)
-            .map(([label, n, hint]) => (
-            <li
-              key={label}
-              className={cn(
-                "flex items-center gap-1.5 rounded-full border px-3 py-1 font-semibold",
-                n > 0 ? "border-emerald-500/40 bg-emerald-500/10" : "text-muted-foreground",
-              )}
-            >
-              {n > 0 ? (
-                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
-              ) : (
-                <Minus className="h-3.5 w-3.5" />
-              )}
-              {label}
-              {n > 0 ? ` · ${n}${hint ? ` ${hint}` : ""}` : " · indisponível"}
-            </li>
-          ))}
-        </ul>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
@@ -636,8 +585,8 @@ function StudyRoomPage() {
               )}
               {!isPending && ranked.length === 0 && (
                 <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
-                  Use o edital e as videoaulas ao lado para estudar este assunto, e registre o que
-                  aprendeu nas anotações.
+                  Ainda não há material escrito deste assunto. Use as videoaulas, resolva questões e
+                  registre o que aprendeu nas anotações.
                 </div>
               )}
             </CardContent>
@@ -778,7 +727,8 @@ function StudyRoomPage() {
             </CardContent>
           </Card>
 
-          {/* Podcasts */}
+          {/* Podcasts: só aparece quando há episódios */}
+          {activePodcast && (
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
@@ -820,6 +770,7 @@ function StudyRoomPage() {
               </CardContent>
             )}
           </Card>
+          )}
 
           {/* Anotações */}
           <Card>
@@ -857,7 +808,7 @@ function StudyRoomPage() {
 
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-base">Mais recursos do assunto</CardTitle>
+              <CardTitle className="text-base">Praticar este assunto</CardTitle>
             </CardHeader>
             <CardContent className="space-y-1.5 text-sm">
               <Link
@@ -874,18 +825,6 @@ function StudyRoomPage() {
                 className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
               >
                 <Layers className="h-4 w-4 text-cyan-600 dark:text-cyan-400" /> Flashcards do assunto
-              </Link>
-              <Link
-                to="/dashboard/edital"
-                className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
-              >
-                <MapPin className="h-4 w-4 text-sky-600" /> Ver no edital
-              </Link>
-              <Link
-                to="/dashboard/library"
-                className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
-              >
-                <Library className="h-4 w-4 text-amber-600 dark:text-amber-400" /> Biblioteca completa
               </Link>
             </CardContent>
           </Card>
