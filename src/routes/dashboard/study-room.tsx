@@ -56,14 +56,10 @@ import {
 } from "@/lib/studyTimer";
 import { cn } from "@/lib/utils";
 import { Hint } from "@/components/ui/hint";
-import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 import { useStudyContext } from "@/components/study/useStudyContext";
 import { StudySubjectPicker } from "@/components/study/StudySubjectPicker";
-import { FocusSession } from "@/components/study/FocusSession";
-import { readFocusDay, recordFocusCycle, type FocusDay } from "@/lib/studyFocusDay";
 import { resolveStudySelection, STUDY_PICK_KEY, type StudySelection } from "@/lib/studySelection";
 import { topicsFor } from "@/data/studyTopics";
-import "@/styles/study-room-focus.css";
 
 function readSavedPick(): StudySelection | null {
   try {
@@ -356,7 +352,6 @@ function StudyRoomPage() {
   const real = !!user && user.id !== "demo-user";
   // Disciplina e assunto: link do cronograma > última escolha neste aparelho > matéria prioritária do plano.
   const ctx = useStudyContext();
-  const fullscreen = useWorkspaceFullscreen(true);
   const [saved] = React.useState<StudySelection | null>(() => readSavedPick());
   const [picked, setPicked] = React.useState<StudySelection | null>(null);
   const chosen = picked ?? resolveStudySelection({ subjects: ctx.subjects, suggested: ctx.suggested, urlSubject: sp.subject, urlTopic: sp.topic, saved });
@@ -371,7 +366,6 @@ function StudyRoomPage() {
       /* armazenamento indisponível */
     }
   };
-  const [day, setDay] = React.useState<FocusDay>(() => readFocusDay());
   const planned = Math.max(5, Math.min(240, Number(sp.minutes) || 30));
   const segments = React.useMemo(() => makeSegments(planned), [planned]);
   const storageKey = `norte_room_${sp.key ?? `${subject}|${topic}`}_${planned}_${sp.week ?? ""}`;
@@ -487,7 +481,7 @@ function StudyRoomPage() {
     : { area: subject, go: "1", ...(topic ? { topic } : {}) };
 
   return (
-    <div className="study-room-page mx-auto max-w-6xl space-y-5" data-focus-session={fullscreen.active ? "true" : undefined}>
+    <div className="mx-auto max-w-6xl space-y-5">
       <StudySubjectPicker
         subjects={ctx.subjects}
         suggested={ctx.suggested}
@@ -497,21 +491,25 @@ function StudyRoomPage() {
         onChange={choose}
       />
       <div className="workspace-banner workspace-banner--study-room">
-        <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
-          {sp.edital ? (
-            <Link to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>
-              <ArrowLeft className="h-4 w-4" /> Voltar ao assunto do edital
-            </Link>
-          ) : (
-            <Link to="/dashboard/study-coach">
-              <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
-            </Link>
-          )}
-        </Button>
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="outline">{sp.kind ?? "Estudo"}</Badge>
-          <Badge variant="secondary">{planned} min</Badge>
-        </div>
+        {(sp.edital || sp.plan) && (
+          <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
+            {sp.edital ? (
+              <Link to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>
+                <ArrowLeft className="h-4 w-4" /> Voltar ao assunto do edital
+              </Link>
+            ) : (
+              <Link to="/dashboard/study-coach">
+                <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
+              </Link>
+            )}
+          </Button>
+        )}
+        {sp.kind && (
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="outline">{sp.kind}</Badge>
+            <Badge variant="secondary">{planned} min</Badge>
+          </div>
+        )}
         <h1 className="mt-2 text-2xl font-black leading-tight md:text-3xl">{topic || subject}</h1>
         <p className="text-sm text-muted-foreground">{subject}</p>
         <ul
@@ -542,7 +540,9 @@ function StudyRoomPage() {
               ["Flashcards", arsenal?.cards ?? 0, "seus"],
               ["Questões", arsenal?.questions ?? 0, "na matéria"],
             ] as [string, number, string][]
-          ).map(([label, n, hint]) => (
+          )
+            .filter(([, n]) => n > 0)
+            .map(([label, n, hint]) => (
             <li
               key={label}
               className={cn(
@@ -561,16 +561,6 @@ function StudyRoomPage() {
           ))}
         </ul>
       </div>
-
-      <FocusSession
-        subject={subject}
-        topic={topic}
-        day={day}
-        focusMode={fullscreen.active}
-        onEnterFocus={fullscreen.enter}
-        onExitFocus={fullscreen.exit}
-        onFocusDone={(minutes) => setDay(recordFocusCycle(minutes))}
-      />
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
         <div className="order-2 space-y-5 lg:order-1">
@@ -853,15 +843,17 @@ function StudyRoomPage() {
         </div>
 
         <aside className="order-1 space-y-5 lg:order-2 lg:sticky lg:top-4 lg:self-start">
-          <TimerPanel
-            segments={segments}
-            storageKey={storageKey}
-            planned={planned}
-            canRegister={canRegister}
-            registering={registering}
-            registered={registered}
-            onFinish={(s) => void register(s)}
-          />
+          {canRegister && (
+            <TimerPanel
+              segments={segments}
+              storageKey={storageKey}
+              planned={planned}
+              canRegister={canRegister}
+              registering={registering}
+              registered={registered}
+              onFinish={(s) => void register(s)}
+            />
+          )}
 
           <Card>
             <CardHeader className="pb-2">

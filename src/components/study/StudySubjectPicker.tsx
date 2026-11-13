@@ -1,5 +1,3 @@
-import { SubjectIcon } from "@/components/ui/subject-icon";
-
 const selectCls = "h-10 w-full rounded-lg border border-input bg-background px-3 text-sm font-medium";
 
 /** Seletor único de disciplina e assunto da Sala de estudo (usado também pelo cronômetro e pelos atalhos). */
@@ -40,13 +38,6 @@ export function StudySubjectPicker({
           ))}
         </select>
       </label>
-      {subject && (
-        <p className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground md:col-span-2">
-          <SubjectIcon subject={subject} />
-          <span className="font-medium text-foreground">{subject}</span>
-          {topic && <><span aria-hidden="true">·</span><span>{topic}</span></>}
-        </p>
-      )}
     </section>
   );
 }
