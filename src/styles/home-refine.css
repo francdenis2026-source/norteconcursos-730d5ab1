@@ -252,3 +252,6 @@ html body .home.hr-canvas > .desktop-homepage .home-plan--featured {
   }
   html body .home.hr-canvas .hp-promo__inner:hover .hp-promo__art { transform: none !important; }
 }
+
+/* Banner do edital com foto real de perícia: enquadra o investigador à direita. */
+html body .home.hr-canvas .desktop-homepage .sx-banner > img.sx-banner__art { object-position: 55% 60% !important; }

@@ -15,10 +15,10 @@ export function PcacBanner({ mobile = false }: { mobile?: boolean }) {
       <article className="sx-banner" aria-labelledby={"sx-pcac-title" + suffix}>
         <img
           className="sx-banner__art"
-          src={mobile ? "/media/hero/pcac-capa.webp" : "/media/hero/landing-pcac.webp"}
+          src="/media/photos/pcac-pericia.webp"
           alt=""
-          width={mobile ? 1672 : 1915}
-          height={mobile ? 941 : 821}
+          width={1800}
+          height={1200}
           loading="lazy"
           decoding="async"
         />
