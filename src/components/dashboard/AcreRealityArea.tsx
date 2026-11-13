@@ -119,6 +119,10 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
         <AcreGeographyStudy />
       ) : (
         <>
+        <nav className="ak-jump" aria-label="Seções desta área">
+          {ACRE_STUDY_CONTENT[axis.id]?.length ? <a href="#acre-fresh-title">Fatos e dados</a> : null}
+          <a href="#acre-axis-content-title">Conteúdo programático</a>
+        </nav>
         {ACRE_STUDY_CONTENT[axis.id]?.length ? (
           <section className="ak-fresh" aria-labelledby="acre-fresh-title">
             <header className="ak-fresh__head">
@@ -141,14 +145,16 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
                     Fonte: {card.source.label} <ExternalLink aria-hidden="true" size={12} />
                   </a>
                   {card.alternatives?.length ? (
-                    <p className="ak-fresh__alt">
-                      <span>Se não abrir, tente:</span>
-                      {card.alternatives.map((alt) => (
-                        <a key={alt.url} href={alt.url} target="_blank" rel="noopener noreferrer">
-                          {alt.label} <ExternalLink aria-hidden="true" size={11} />
-                        </a>
-                      ))}
-                    </p>
+                    <details className="ak-fresh__alt">
+                      <summary>Outras fontes ({card.alternatives.length})</summary>
+                      <p>
+                        {card.alternatives.map((alt) => (
+                          <a key={alt.url} href={alt.url} target="_blank" rel="noopener noreferrer">
+                            {alt.label} <ExternalLink aria-hidden="true" size={11} />
+                          </a>
+                        ))}
+                      </p>
+                    </details>
                   ) : null}
                 </article>
               ))}
