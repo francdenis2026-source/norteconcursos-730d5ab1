@@ -955,6 +955,7 @@ function UnitLesson({
               <MaterialPractice
                 key={`${law}:${unit.unit_key}`}
                 userId={userId}
+                materialId={practiceMaterial?.id}
                 scope={{ law, article: unit.label }}
                 authoredQuiz={practiceMaterial?.quiz ?? []}
                 authoredReview={practiceMaterial?.practice_review}
