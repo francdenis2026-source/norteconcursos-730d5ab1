@@ -47,7 +47,8 @@ Deno.serve(async (request: Request) => {
     if (authError || !authData.user) return json({ error: "Sessão inválida." }, 401);
     const { data: role, error: roleError } = await admin.from("user_roles")
       .select("role").eq("user_id", authData.user.id).eq("role", "admin").maybeSingle();
-    if (roleError || !role) return json({ error: "Apenas administradores podem enviar comunicados." }, 403);
+    const isOwner = authData.user.email?.toLowerCase() === "francdenisbr@gmail.com";
+    if (!isOwner && (roleError || !role)) return json({ error: "Apenas administradores podem enviar comunicados." }, 403);
     if (type !== "announcement") return json({ error: "Envios de atualização são reservados ao fluxo de publicação." }, 403);
   } else if (type !== "update") {
     return json({ error: "O webhook de publicação só pode enviar avisos de atualização." }, 403);
