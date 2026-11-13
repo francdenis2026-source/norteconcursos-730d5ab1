@@ -18,6 +18,7 @@ import {
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { AcreGeographyStudy } from "@/components/dashboard/AcreGeographyStudy";
 import { pcAcVerticalTopicGroups, type PcAcTopicGroup } from "@/lib/pcAcreTopicStructure";
+import { ACRE_CONTENT_CHECKED_ON, ACRE_CURRENT_AFFAIRS, ACRE_STUDY_CONTENT } from "@/data/acreStudyContent";
 import "@/styles/student-area-kit.css";
 
 export const ACRE_DISCIPLINE = "Realidade do Acre";
@@ -117,6 +118,33 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
       {axis.id === "geografia" ? (
         <AcreGeographyStudy />
       ) : (
+        <>
+        {ACRE_STUDY_CONTENT[axis.id]?.length ? (
+          <section className="ak-fresh" aria-labelledby="acre-fresh-title">
+            <header className="ak-fresh__head">
+              <div>
+                <span>Conteúdo para estudar</span>
+                <h2 id="acre-fresh-title">Fatos e dados atualizados</h2>
+                <p>Cada bloco traz a fonte e o ano de referência. Conferido em {fmtChecked(ACRE_CONTENT_CHECKED_ON)}.</p>
+              </div>
+            </header>
+            <div className="ak-fresh__grid">
+              {ACRE_STUDY_CONTENT[axis.id]!.map((card) => (
+                <article className="ak-fresh__card" key={card.title}>
+                  <header>
+                    <h3>{card.title}</h3>
+                    <span>{card.reference}</span>
+                  </header>
+                  <ul>{card.points.map((point) => <li key={point}>{point}</li>)}</ul>
+                  {card.caution && <p className="ak-fresh__caution">{card.caution}</p>}
+                  <a href={card.source.url} target="_blank" rel="noopener noreferrer">
+                    Fonte: {card.source.label} <ExternalLink aria-hidden="true" size={12} />
+                  </a>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
         <section className="ak-axis-detail__workspace" aria-labelledby="acre-axis-content-title">
           <header className="ak-axis-detail__section-head">
             <div>
@@ -158,10 +186,16 @@ function AcreAxisDetail({ axis, groups }: { axis: AcreAxis; groups: PcAcTopicGro
             </Link>
           </div>
         </section>
+        </>
       )}
     </div>
   );
 }
+
+const fmtChecked = (iso: string) => {
+  const [y, m, d] = iso.split("-");
+  return `${d}/${m}/${y}`;
+};
 
 export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
   const topics = React.useMemo(() => {
@@ -243,12 +277,36 @@ export function AcreRealityArea({ axisId }: { axisId?: string | undefined }) {
         </ul>
       </section>
 
-      <section id="acre-atualidades" className="ak-note">
-        <h2><Newspaper aria-hidden="true" size={18} /> Atualidades do Acre</h2>
-        <p>
-          Acompanhe os temas do estado por fontes oficiais e observe sempre a data de referência.
-          Este espaço será ampliado com notícias, indicadores e acontecimentos relevantes para a prova.
-        </p>
+      <section id="acre-atualidades" className="ak-fresh" aria-labelledby="acre-atualidades-title">
+        <header className="ak-fresh__head">
+          <div>
+            <span>Atualidades</span>
+            <h2 id="acre-atualidades-title"><Newspaper aria-hidden="true" size={18} /> Atualidades do Acre</h2>
+            <p>Acontecimentos e dados recentes ligados aos temas do edital. Sempre observe a data de referência. Conferido em {fmtChecked(ACRE_CONTENT_CHECKED_ON)}.</p>
+          </div>
+        </header>
+        <ul className="ak-fresh__news">
+          {ACRE_CURRENT_AFFAIRS.map((item) => {
+            const axis = AXES.find((candidate) => candidate.id === item.axis);
+            return (
+              <li key={item.title} style={{ "--ak-tone": axis?.tone } as React.CSSProperties}>
+                <time>{item.date}</time>
+                <div>
+                  <strong>{item.title}</strong>
+                  <p>{item.summary}</p>
+                  <a href={item.source.url} target="_blank" rel="noopener noreferrer">
+                    {item.source.label} <ExternalLink aria-hidden="true" size={12} />
+                  </a>
+                </div>
+                {axis && (
+                  <Link to="/dashboard/disciplinas" search={{ d: ACRE_DISCIPLINE, eixo: axis.id }} className="ak-fresh__axis">
+                    {axis.title}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </div>
   );
