@@ -114,3 +114,15 @@ Consulta direta ao Supabase após as migrações PC-AC:
 - Os nove materiais de Penal/Processual Penal possuem agora fontes estruturadas; a revisão jurídica formal continua pendente.
 
 A contagem de materiais e itens de revisão não substitui a validação pedagógica. Permanecem obrigatórias as revisões de correspondência linha a linha com o Anexo III, a conferência jurídica artigo por artigo e a revisão dos gabaritos e explicações.
+
+
+### Correção de fundamentos constitucionais — 14/11/2026
+
+A conferência da fonte oficial identificou quatro questões autorais do lote 02 com fundamento genérico/incorreto em CF art. 37, caput, apesar de o enunciado tratar de habeas corpus, mandado de segurança, segurança pública e Constituição do Acre. Foram corrigidos os fundamentos no Supabase e versionada a migração idempotente `20261114235000_correct_pcac_constitution_question_sources.sql`:
+
+- `NC-PCAC-CONST-002`: CF, art. 5º, LXVIII (habeas corpus).
+- `NC-PCAC-CONST-003`: CF, art. 5º, LXIX (mandado de segurança individual).
+- `NC-PCAC-CONST-004`: CF, art. 144, caput (segurança pública).
+- `NC-PCAC-CONST-005`: Constituição do Estado do Acre, art. 131, redação da EC estadual nº 63/2022.
+
+Os enunciados, gabaritos e status foram preservados. A alteração foi conferida contra o texto oficial da Constituição Federal e o portal de legislação do Estado do Acre. Fontes: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm ; https://legis.ac.gov.br/detalhar_constituicao ; https://legis.ac.gov.br/detalhar_emendas/64.
