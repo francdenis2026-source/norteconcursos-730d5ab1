@@ -1,3 +1,4 @@
+import "@/styles/admin-lean.css";
 import { STUDENT_GROUP_TONES as GROUP_HUE } from "@/lib/studentPalette";
 import "@/styles/student-control-colors.css";
 import "@/styles/study-experience.css";
