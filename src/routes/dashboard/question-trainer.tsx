@@ -1489,7 +1489,7 @@ function QuestionTrainer() {
                 className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
               >
                 {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 text-slate-900" aria-hidden="true" />
               </Button>
             )}
           </div>
@@ -1759,6 +1759,8 @@ function QuestionTrainer() {
               {modal === "help" ? (
                 <TrainerLearningMaterials
                   key={question.source + question.id}
+                  subject={question.subject}
+                  topic={question.subtopic ?? ""}
                   materials={relatedMaterials}
                   loading={library.isLoading}
                   error={library.isError}

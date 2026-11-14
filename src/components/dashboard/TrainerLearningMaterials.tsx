@@ -1,14 +1,19 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
+import { libraryCollection } from "@/lib/libraryOrganization";
 import { BookOpenCheck, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStudyMaterial, type StudyMaterialSummary } from "@/lib/studyMaterials";
 
 export function TrainerLearningMaterials({
+  subject,
+  topic,
   materials,
   loading,
   error,
 }: {
+  subject: string;
+  topic: string;
   materials: StudyMaterialSummary[];
   loading: boolean;
   error: boolean;
@@ -33,10 +38,21 @@ export function TrainerLearningMaterials({
           Não foi possível consultar a biblioteca. Feche e abra a revisão para tentar novamente.
         </p>
       ) : !chosen ? (
-        <p className="text-sm text-muted-foreground">
-          Ainda não encontramos um material diretamente relacionado a este assunto. Use o comentário
-          e as fontes da questão para revisar.
-        </p>
+        <div className="space-y-2">
+          <p className="text-sm text-muted-foreground">
+            Ainda não há uma explicação pronta para este assunto. Leia o conteúdo na Biblioteca e volte
+            para continuar a prova; o cronômetro retoma de onde parou.
+          </p>
+          {subject && (
+            <Link
+              to="/dashboard/library"
+              search={{ q: topic || subject, collection: libraryCollection({ slug: "", discipline: subject }) === "subjects" ? "subjects" : "laws", back: undefined }}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline underline-offset-4"
+            >
+              Ler sobre {topic || subject} <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          )}
+        </div>
       ) : (
         <>
           <div className="flex flex-wrap gap-2">
