@@ -26,6 +26,23 @@ const LAW_PATTERN =
   /direito|legisla|constitucional|administrativo|penal|processual|humanos|tr[âa]nsito|criminal|medicina legal|lei org[âa]nica|uso da for[çc]a|carreiras|pf\b/i;
 export const isLawDiscipline = (name: string) => LAW_PATTERN.test(canonicalSubject(name));
 
+/**
+ * Disciplinas que o banco grava em várias grafias ou recortes, mas que o aluno estuda como uma só.
+ * Aqui é só a apresentação (um cartão): as questões e a classificação oficial continuam separadas.
+ */
+const DISCIPLINE_GROUPS: { label: string; pattern: RegExp; parts: string[] }[] = [
+  { label: "Contabilidade", pattern: /contab|cont[áa]bil/i, parts: ["Geral", "de Custos", "Pública", "Análise Financeira", "Perícia"] },
+  { label: "Realidade do Acre", pattern: /realidade do (estado do )?acre/i, parts: [] },
+  { label: "Estatística", pattern: /estat[ií]stic|an[áa]lise de dados/i, parts: ["Análise de Dados"] },
+];
+/** Nome do cartão em que a disciplina aparece (o próprio nome quando não pertence a um grupo). */
+export function disciplineGroup(raw: string): string {
+  const name = canonicalSubject(raw);
+  return DISCIPLINE_GROUPS.find((g) => g.pattern.test(name))?.label ?? name;
+}
+/** Duas disciplinas contam como a mesma quando caem no mesmo cartão. */
+export const sameDiscipline = (a: string, b: string) => disciplineGroup(a) === disciplineGroup(b);
+
 export interface DisciplineCard {
   name: string;
   icon: SubjectIcon;
@@ -43,7 +60,7 @@ export function disciplineCards(
 ): DisciplineCard[] {
   const map = new Map<string, DisciplineCard>();
   const card = (raw: string) => {
-    const name = canonicalSubject(raw);
+    const name = disciplineGroup(raw);
     let entry = map.get(name);
     if (!entry) {
       entry = {
@@ -73,7 +90,7 @@ export function disciplineCards(
     if (isLawDiscipline(list.discipline)) continue;
     card(list.discipline).videos += 1;
   }
-  const expected = EXPECTED_SUBJECTS.map((s) => canonicalSubject(s.name));
+  const expected = [...new Set(EXPECTED_SUBJECTS.map((s) => disciplineGroup(s.name)))];
   const cards = [...map.values()].map((c) => ({
     ...c,
     hasContent: c.materials + c.lessons + c.videos > 0,
@@ -86,10 +103,10 @@ export function disciplineCards(
 }
 
 export const tracksOf = <T extends DisciplineTrack>(name: string, tracks: T[]) =>
-  tracks.filter((t) => canonicalSubject(t.title) === canonicalSubject(name));
+  tracks.filter((t) => sameDiscipline(t.title, name));
 export const playlistsOf = <T extends DisciplinePlaylist>(name: string, playlists: T[]) =>
-  playlists.filter((p) => canonicalSubject(p.discipline) === canonicalSubject(name));
+  playlists.filter((p) => sameDiscipline(p.discipline, name));
 export const materialsOf = <T extends DisciplineMaterial>(name: string, materials: T[]) =>
   materials.filter(
-    (m) => libraryCollection(m) === "subjects" && libraryDiscipline(m) === canonicalSubject(name),
+    (m) => libraryCollection(m) === "subjects" && sameDiscipline(libraryDiscipline(m), name),
   );

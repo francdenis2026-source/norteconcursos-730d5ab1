@@ -36,6 +36,8 @@ import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS, youtubePlaylistUrl } from "@/data/mediaCatalog";
 import {
   disciplineCards,
+  disciplineGroup,
+  sameDiscipline,
   materialsOf,
   playlistsOf,
   tracksOf,
@@ -161,7 +163,7 @@ function DisciplinesPage() {
   // parâmetro "d" chegue com variação de acento, maiúscula ou nome alternativo da mesma matéria.
   const current = d
     ? (cards.find((card) => card.name === d) ??
-      cards.find((card) => card.name === canonicalSubject(d)))
+      cards.find((card) => card.name === disciplineGroup(d)))
     : undefined;
   if (d === ACRE_DISCIPLINE)
     return (
@@ -421,7 +423,7 @@ function DisciplineDetail({
       ),
   });
   const syllabusTopics = (syllabusQuery.data ?? []).filter(
-    (topic) => canonicalSubject(topic.discipline) === canonicalSubject(card.name),
+    (topic) => sameDiscipline(topic.discipline, card.name),
   );
   React.useEffect(() => {
     if (!activeEditionId) {

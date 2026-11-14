@@ -1,3 +1,4 @@
+import "@/styles/material-hub-tones.css";
 import "@/styles/student-library-media-workspaces.css";
 import * as React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";

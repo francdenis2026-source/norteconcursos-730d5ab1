@@ -1,0 +1,17 @@
+/* Material didático › Disciplinas: um tom discreto por cartão (ícone e filete superior), em vez de
+   todos no mesmo azul-acinzentado. O fundo e as superfícies do tema continuam os mesmos. */
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li:nth-child(6n + 1) { --tile-tone: oklch(0.78 0.13 80); }
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li:nth-child(6n + 2) { --tile-tone: oklch(0.76 0.13 200); }
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li:nth-child(6n + 3) { --tile-tone: oklch(0.74 0.14 150); }
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li:nth-child(6n + 4) { --tile-tone: oklch(0.74 0.14 300); }
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li:nth-child(6n + 5) { --tile-tone: oklch(0.76 0.14 25); }
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li:nth-child(6n + 6) { --tile-tone: oklch(0.74 0.13 250); }
+:root:not(.dark) .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li { --tile-light: 0.52; }
+html:root body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile {
+  border-top: 3px solid var(--tile-tone, var(--border));
+  background: color-mix(in oklab, var(--tile-tone, transparent) 6%, var(--card));
+}
+html:root body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile__icon { color: var(--tile-tone); background: color-mix(in oklab, var(--tile-tone) 16%, transparent); }
+html:root body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile > span:not(.ak-tile__icon) { color: var(--muted-foreground); text-align: left; hyphens: manual; }
+:root:not(.dark) .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li { filter: none; }
+:root:not(.dark) body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile__icon { color: color-mix(in oklab, var(--tile-tone) 55%, #000); }

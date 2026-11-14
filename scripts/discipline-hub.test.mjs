@@ -40,3 +40,20 @@ test("selectors return only the discipline's own content", () => {
   assert.ok(playlistsOf("Raciocínio Lógico", PLAYLISTS).length >= 2);
   assert.deepEqual(materialsOf("Química", [mat("a", "Português"), mat("b", "Química")]).map((m) => m.slug), ["b"]);
 });
+
+test("variações de Contabilidade, Realidade do Acre e Estatística viram um cartão só, somando o conteúdo", () => {
+  const cards = disciplineCards(
+    [mat("a", "Contabilidade Geral"), mat("b", "Contabilidade de Custos"), mat("c", "Contabilidade Pública"), mat("d", "Contabilidade Geral e Análise Financeira"), mat("e", "Perícia Contábil e Financeira"), mat("f", "Realidade do Acre"), mat("g", "Realidade do Estado do Acre"), mat("h", "Análise de Dados e Informações"), mat("i", "Estatística")],
+    [], [],
+  );
+  const names = cards.map((c) => c.name);
+  assert.equal(names.filter((n) => /contab/i.test(n)).length, 1);
+  assert.equal(cards.find((c) => c.name === "Contabilidade").materials, 5);
+  assert.equal(cards.find((c) => c.name === "Realidade do Acre").materials, 2);
+  assert.equal(cards.find((c) => c.name === "Estatística").materials, 2);
+  // Estatística não se mistura com Matemática e RLM
+  assert.equal(cards.find((c) => c.name === "Matemática e Raciocínio Lógico").materials, 0);
+  // o conteúdo do cartão reúne os materiais de todas as variações
+  const all = [mat("a", "Contabilidade Geral"), mat("b", "Contabilidade Pública"), mat("x", "Química")];
+  assert.deepEqual(materialsOf("Contabilidade", all).map((m) => m.slug), ["a", "b"]);
+});
