@@ -1,3 +1,4 @@
+import "@/styles/library-focus-tabs.css";
 import "@/styles/library-layout.css";
 import { AreaHint } from "@/components/ui/area-hint";
 import { subjectDescription } from "@/lib/areaDescriptions";
@@ -289,6 +290,8 @@ function LibraryIndex() {
     [visible, showLawIndex],
   );
   const focused = discipline !== "all";
+  const [focusTab, setFocusTab] = useState<"trilha" | "materiais">("trilha");
+  useEffect(() => setFocusTab("trilha"), [discipline]);
   const subjectItems = items.filter((item) => !focused || libraryDiscipline(item) === discipline);
   const searching =
     focused ||
@@ -497,11 +500,36 @@ function LibraryIndex() {
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
-      <div className={!lawsOnly && focused && matchedCourse ? `grid items-start gap-4 lg:gap-6 ${!isPending && items.length === 0 ? "library-split library-split--solo" : "library-split library-split--pair"}` : undefined}>
       {!lawsOnly && focused && matchedCourse && (
+        <div className="library-tabs" role="tablist" aria-label="Como estudar esta disciplina">
+          {([
+            ["trilha", "Aulas da trilha"],
+            ["materiais", `Materiais publicados${items.length ? ` (${subjectItems.length})` : ""}`],
+          ] as const).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              id={`library-tab-${id}`}
+              aria-selected={focusTab === id}
+              aria-controls="library-tabpanel"
+              className={focusTab === id ? "is-active" : ""}
+              onClick={() => setFocusTab(id)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+      <div
+        id="library-tabpanel"
+        role={!lawsOnly && focused && matchedCourse ? "tabpanel" : undefined}
+        className="library-tabpanel"
+      >
+      {!lawsOnly && focused && matchedCourse && focusTab === "trilha" && (
         <UpdatedStudyCollections onlyCourseId={matchedCourse.id} storageScope={user?.id ?? "anonymous"} />
       )}
-      <div className="space-y-4">
+      <div className="space-y-4" hidden={!lawsOnly && focused && !!matchedCourse && focusTab === "trilha"}>
       {isPending && signedIn ? (
         <div className="space-y-3">
           {[0, 1, 2, 3, 4].map((n) => (
