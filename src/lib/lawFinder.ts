@@ -224,58 +224,112 @@ const KIND_WORDS: Record<string, LawKind> = {
   dl: "Decreto-Lei",
   codigo: "Código",
 };
-const FILLER = new Set(["de", "da", "do", "das", "dos", "n", "no", "numero", "num", "e", "a", "o"]);
+// Palavras de frase natural ("quero a lei sobre armas") que não ajudam a achar a lei.
+const FILLER = new Set([
+  "de", "da", "do", "das", "dos", "n", "no", "numero", "num", "e", "a", "o", "as", "os", "em",
+  "na", "nas", "nos", "para", "por", "com", "sobre", "que", "qual", "quais", "como", "quero",
+  "preciso", "uma", "um", "ao", "pela", "pelo", "artigo", "art", "tema", "assunto",
+]);
+
+/** Um erro de digitação: letra a mais, a menos, trocada ou duas letras invertidas. */
+function withinOneEdit(a: string, b: string): boolean {
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i = 0;
+  while (i < a.length && i < b.length && a[i] === b[i]) i++;
+  if (i === a.length && i === b.length) return true;
+  const rest = (x: string, y: string) => x.slice(i) === y.slice(i);
+  return (
+    a.slice(i + 1) === b.slice(i + 1) || // troca
+    a.slice(i + 1) === b.slice(i) || // sobra em a
+    a.slice(i) === b.slice(i + 1) || // sobra em b
+    (a.length === b.length &&
+      (rest(a, b) || // letra trocada por outra
+        (a[i] === b[i + 1] && a[i + 1] === b[i] && a.slice(i + 2) === b.slice(i + 2)))) // duas letras invertidas
+  );
+}
+
+/** Palavra digitada casa com uma palavra do texto: igual, plural/singular, parte dela ou com um erro de digitação. */
+function wordMatches(token: string, words: string[], haystack: string): boolean {
+  if (token.length <= 3) return words.includes(token);
+  if (haystack.includes(token)) return true;
+  if (token.length < 5) return false;
+  return words.some((w) => {
+    if (w.length < 4) return false;
+    let k = 0;
+    while (k < token.length && k < w.length && token[k] === w[k]) k++;
+    // mesma raiz (arma/armas, droga/drogas) ou um erro de digitação (drgoas ≈ drogas)
+    return k >= Math.max(4, Math.min(token.length, w.length) - 1) || (w.length >= 5 && withinOneEdit(token, w));
+  });
+}
 
 export interface LawHit {
   row: LawRow;
   score: number;
   /** Por que apareceu: "número", "nome" ou "tema". */
   reason: "número" | "nome" | "tema";
+  /** Só parte das palavras digitadas casou: mostrado como resultado aproximado. */
+  approx?: boolean;
 }
 
 /**
- * Procura por número (com ou sem pontos, com ou sem ano), nome, sigla ou tema. Todos os termos
- * precisam casar; o número exato vem primeiro, depois o nome, depois o tema. Consulta vazia = nada.
+ * Procura por número (com ou sem pontos, com ou sem ano), nome, sigla ou tema. Primeiro exige todos os
+ * termos; se nada casar, aceita metade ou mais das palavras (resultado aproximado). O número exato vem
+ * primeiro, depois o nome, depois o tema. Entende plural/singular e um erro de digitação. Vazio = nada.
  */
 export function searchLaws(query: string, rows: LawRow[] = LAW_ROWS): LawHit[] {
-  const tokens = normalizeLibrarySearch(query).split(" ").filter(Boolean);
-  if (!tokens.length) return [];
-  const hits: LawHit[] = [];
-  for (const row of rows) {
-    let score = 0;
-    let numeric = false;
-    let ok = true;
-    const words = row.haystack.split(" ");
-    const nick = normalizeLibrarySearch(row.nickname);
-    for (const token of tokens) {
-      if (FILLER.has(token) && tokens.length > 1) continue;
-      if (/^\d+$/.test(token)) {
-        const isYear = token.length === 4 && Number(token) >= 1900 && Number(token) <= 2100;
-        if (row.number && token === row.number) {
-          score += 100;
-          numeric = true;
-        } else if (isYear && row.year === Number(token)) {
-          score += 40;
-        } else if (row.number && token.length >= 3 && row.number.startsWith(token)) {
-          score += 55;
-          numeric = true;
-        } else if (words.includes(token)) score += 15;
-        else ok = false;
-      } else if (token in KIND_WORDS) {
-        if (row.kind === KIND_WORDS[token]) score += 10;
-        else if (!row.haystack.includes(token)) ok = false;
-      } else if (token.length <= 3 ? words.includes(token) : row.haystack.includes(token)) {
-        score += nick.includes(token) ? 30 : 18;
-      } else ok = false;
-      if (!ok) break;
+  const all = normalizeLibrarySearch(query).split(" ").filter(Boolean);
+  if (!all.length) return [];
+  const tokens = all.filter((token) => !(FILLER.has(token) && all.length > 1));
+  const run = (partial: boolean): LawHit[] => {
+    const hits: LawHit[] = [];
+    for (const row of rows) {
+      let score = 0;
+      let numeric = false;
+      let matched = 0;
+      let numberMissed = false;
+      const words = row.haystack.split(" ");
+      const nick = normalizeLibrarySearch(row.nickname);
+      for (const token of tokens) {
+        let found = true;
+        if (/^\d+$/.test(token)) {
+          const isYear = token.length === 4 && Number(token) >= 1900 && Number(token) <= 2100;
+          if (row.number && token === row.number) {
+            score += 100;
+            numeric = true;
+          } else if (isYear && row.year === Number(token)) {
+            score += 40;
+          } else if (row.number && token.length >= 3 && row.number.startsWith(token)) {
+            score += 55;
+            numeric = true;
+          } else if (words.includes(token)) score += 15;
+          else {
+            found = false;
+            numberMissed = true;
+          }
+        } else if (token in KIND_WORDS) {
+          if (row.kind === KIND_WORDS[token]) score += 10;
+          else if (!row.haystack.includes(token)) found = false;
+        } else if (wordMatches(token, words, row.haystack)) {
+          score += nick.includes(token) ? 30 : 18;
+        } else found = false;
+        if (found) matched++;
+        else if (!partial) break;
+      }
+      const ok = partial
+        ? tokens.length >= 2 && !numberMissed && matched / tokens.length >= 0.5
+        : matched === tokens.length;
+      if (ok && score > 0)
+        hits.push({
+          row,
+          score: partial ? score / 2 : score,
+          reason: numeric ? "número" : tokens.some((t) => nick.includes(t)) ? "nome" : "tema",
+          ...(partial ? { approx: true } : {}),
+        });
     }
-    if (ok && score > 0)
-      hits.push({
-        row,
-        score,
-        reason: numeric ? "número" : tokens.some((t) => nick.includes(t)) ? "nome" : "tema",
-      });
-  }
+    return hits;
+  };
+  let hits = run(false);
+  if (!hits.length) hits = run(true);
   return hits.sort(
     (a, b) =>
       b.score - a.score ||

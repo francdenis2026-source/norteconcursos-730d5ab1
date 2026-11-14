@@ -267,6 +267,9 @@ function LawFinderPage() {
           <strong>{sorted.length}</strong>{" "}
           {sorted.length === 1 ? "lei encontrada" : "leis encontradas"}
           {searching ? ` para “${query.trim()}”` : ""}
+          {searching && hits.length > 0 && hits.every((hit) => hit.approx) && (
+            <span className="law-finder__approx"> · resultados aproximados</span>
+          )}
         </p>
         <label>
           Ordenar
@@ -308,10 +311,11 @@ function LawFinderPage() {
       ) : (
         <div className="law-finder__empty" role="status">
           <SearchX aria-hidden="true" size={30} />
-          <h2>Nenhuma lei encontrada</h2>
+          <h2>Nada encontrado para {searching ? `“${query.trim()}”` : "esta seleção"}</h2>
           <p>
-            Confira o número ou tente o nome popular (por exemplo, “drogas” ou “Maria da Penha”). A
-            lei pode ainda não estar publicada na biblioteca.
+            Não localizamos esse assunto entre as leis. Tente o número, o nome popular ou um tema
+            mais simples (por exemplo, “drogas” ou “Maria da Penha”), ou procure nos textos e nas
+            disciplinas.
           </p>
           <div className="law-finder__empty-actions">
             <Button variant="outline" onClick={reset}>
@@ -322,6 +326,13 @@ function LawFinderPage() {
                 <Link to="/dashboard/library" search={{ collection: "laws", q: query.trim() }}>
                   <Library className="mr-2 h-4 w-4" aria-hidden="true" /> Pesquisar nos textos das
                   leis
+                </Link>
+              </Button>
+            )}
+            {searching && (
+              <Button asChild variant="outline">
+                <Link to="/dashboard/library" search={{ collection: "subjects", q: query.trim() }}>
+                  Pesquisar nas disciplinas
                 </Link>
               </Button>
             )}

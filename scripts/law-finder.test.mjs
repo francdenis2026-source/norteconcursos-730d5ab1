@@ -58,3 +58,13 @@ test("theme filter and sorting", () => {
   const az = sortLaws(LAW_ROWS, "az").map((r) => r.nickname);
   assert.deepEqual(az, [...az].sort((a, b) => a.localeCompare(b, "pt-BR")));
 });
+
+test("plural/singular, one typo and natural phrases still find the law; partial matches are marked approximate", () => {
+  assert.ok(searchLaws("arma").some((h) => h.row.slug === "armas"));
+  assert.ok(searchLaws("drgoas").some((h) => h.row.slug === "drogas"));
+  assert.ok(searchLaws("quero a lei sobre drogas").some((h) => h.row.slug === "drogas"));
+  const loose = searchLaws("drogas e culinária");
+  assert.ok(loose.length > 0 && loose.every((h) => h.approx));
+  assert.deepEqual(searchLaws("zzzxxyy qqqwww"), []);
+  assert.ok(!searchLaws("drogas")[0].approx);
+});
