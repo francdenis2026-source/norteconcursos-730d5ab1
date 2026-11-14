@@ -273,6 +273,102 @@ from jsonb_to_recordset($acre_seed$
     "content_status": "active",
     "syllabus_topic_order": 3,
     "law_version_checked_at": "2026-11-14T20:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "A Constituição do Acre estabelece os Poderes Legislativo, Executivo e Judiciário como independentes e harmônicos.",
+        "why": "É o art. 6º da Constituição Estadual."
+      },
+      {
+        "a": false,
+        "q": "A capital do Estado do Acre é Cruzeiro do Sul.",
+        "why": "A capital é Rio Branco, conforme art. 7º."
+      },
+      {
+        "a": true,
+        "q": "O art. 2º da Constituição Estadual menciona os Tratados de Petrópolis de 1903 e do Rio de Janeiro de 1909.",
+        "why": "São referências expressas aos limites estaduais."
+      },
+      {
+        "a": true,
+        "q": "O Acre possui 22 municípios.",
+        "why": "Informação constante do IBGE Cidades e Estados."
+      },
+      {
+        "a": false,
+        "q": "A população censitária de 2022 e a estimativa de 2026 são indicadores intercambiáveis.",
+        "why": "Censo e estimativa são medidas diferentes e têm anos de referência próprios."
+      },
+      {
+        "a": true,
+        "q": "A FUNAI informou em novembro de 2026 que a FPE Envira acompanhava oito registros, seis confirmados e dois em estudo.",
+        "why": "É o recorte informado na notícia oficial de 05/11/2026."
+      },
+      {
+        "a": false,
+        "q": "Povos de recente contato são necessariamente povos sem qualquer relação com a sociedade nacional.",
+        "why": "A FUNAI os caracteriza por relações permanentes ou intermitentes com a sociedade nacional, mantendo autonomia."
+      },
+      {
+        "a": true,
+        "q": "A proteção dos povos isolados respeita a decisão de permanecer em isolamento e evita promover contato forçado.",
+        "why": "É princípio da política de proteção da FUNAI."
+      }
+    ],
+    "slug": "pcac-2026-realidade-acre-constituicao-indigenas-indicadores",
+    "title": "Acre: Constituição Estadual, povos indígenas e indicadores sociais",
+    "body_md": "# Acre: Constituição Estadual, povos indígenas e indicadores sociais\n\n## 1. Constituição do Estado do Acre\nO art. 1º define o Acre como parte integrante da República Federativa do Brasil, com autonomia e organização regidas pela Constituição Estadual e pelas leis que adotar. O art. 2º remete aos limites definidos pelo Tratado de Petrópolis (1903), pelo Tratado do Rio de Janeiro (1909) e pelo art. 12, § 5º, do ADCT da Constituição Federal.\n\nO art. 6º estabelece três Poderes estaduais — Legislativo, Executivo e Judiciário — independentes e harmônicos entre si. Em regra, é vedada a delegação de atribuições entre Poderes e quem exerce função de um Poder não pode exercer a de outro. O art. 7º estabelece Rio Branco como capital, admitindo transferência temporária nas condições constitucionais.\n\nO art. 45 trata de matérias sobre as quais a Assembleia Legislativa legisla com sanção do Governador, incluindo matérias de competência estadual, criação de cargos, tributos, orçamento e efetivos das forças de segurança, nos termos da redação vigente.\n\n## 2. Povos indígenas e proteção de grupos isolados\nO Acre abriga povos indígenas com diferentes histórias de contato, línguas, formas de organização e territórios tradicionais. A Fundação Nacional dos Povos Indígenas (FUNAI) atua no monitoramento e proteção territorial de povos isolados e de recente contato.\n\nA Frente de Proteção Etnoambiental Envira realiza ações de monitoramento no Acre, por meios terrestres, aéreos e sensoriamento remoto. Em notícia publicada em 05/11/2026, a FUNAI informou que a FPE Envira acompanhava oito registros: seis referências confirmadas e duas em estudo.\n\nA política de proteção respeita a decisão de permanecer em isolamento e evita promover contato forçado. Povos de recente contato são categoria distinta: mantêm relações permanentes ou intermitentes com a sociedade nacional, mas preservam formas próprias de organização e autonomia.\n\n## 3. Indicadores demográficos e sociais\nSegundo o IBGE Cidades e Estados, o Acre possui 22 municípios e área territorial de 164.064,761 km² (referência de 2025). No Censo 2022, registrou 830.018 habitantes e densidade demográfica de 5,06 hab./km². A estimativa populacional para 2026 é de 887.794 habitantes. O IDH informado na página estadual é 0,71 (2021).\n\n**Atenção à data:** população censitária, estimativa, área, renda e IDH são indicadores com anos de referência distintos. Sempre identifique o ano ao memorizar um número; não trate estimativa como resultado censitário.\n\n## 4. Pegadinhas\n- Os Poderes estaduais são Legislativo, Executivo e Judiciário; independentes e harmônicos.\n- Rio Branco é a capital do Acre.\n- Os limites estaduais remetem a Petrópolis (1903) e ao Tratado do Rio de Janeiro (1909).\n- Povos isolados e povos de recente contato não são categorias equivalentes.\n- A contagem de registros monitorados pela FUNAI é dinâmica; os oito registros da FPE Envira são o recorte publicado em novembro de 2026.\n- A população do Censo 2022 (830.018) não é a mesma coisa que a estimativa do IBGE para 2026 (887.794).\n",
+    "summary": "Organização dos Poderes estaduais, povos isolados e de recente contato, indicadores demográficos e sociais com ano de referência.",
+    "discipline": "Realidade do Estado do Acre",
+    "flashcards": [
+      {
+        "b": "Legislativo, Executivo e Judiciário, independentes e harmônicos entre si.",
+        "f": "Quais são os três Poderes do Estado do Acre segundo o art. 6º da Constituição Estadual?"
+      },
+      {
+        "b": "Rio Branco, conforme art. 7º da Constituição Estadual.",
+        "f": "Qual é a capital do Estado do Acre?"
+      },
+      {
+        "b": "Tratado de Petrópolis de 1903 e Tratado do Rio de Janeiro de 1909, além do art. 12, § 5º, do ADCT da Constituição Federal.",
+        "f": "Quais tratados são mencionados no art. 2º como referência dos limites do Acre?"
+      },
+      {
+        "b": "22 municípios.",
+        "f": "Quantos municípios possui o Acre?"
+      },
+      {
+        "b": "830.018 habitantes; densidade de 5,06 hab./km².",
+        "f": "Qual foi a população do Acre no Censo 2022?"
+      },
+      {
+        "b": "887.794 habitantes, conforme IBGE Cidades e Estados consultado em 14/11/2026.",
+        "f": "Qual estimativa populacional do IBGE para o Acre em 2026?"
+      },
+      {
+        "b": "Oito registros: seis referências confirmadas e duas em estudo.",
+        "f": "O que a FUNAI informou em novembro de 2026 sobre registros monitorados pela FPE Envira?"
+      },
+      {
+        "b": "Isolados mantêm decisão de não estabelecer contato; os de recente contato mantêm relações permanentes ou intermitentes, preservando autonomia e formas próprias de organização.",
+        "f": "Qual a diferença entre povos isolados e povos de recente contato?"
+      }
+    ],
+    "sort_order": 6,
+    "legal_basis": [
+      "Constituição do Estado do Acre",
+      "Lei Complementar nº 126/2003",
+      "Lei Federal nº 12.876/2013"
+    ],
+    "source_note": "LEGIS — Constituição do Estado do Acre, texto compilado; FUNAI, notícia de monitoramento de povos isolados (05/11/2026); IBGE Cidades e Estados — Acre, consulta em 14/11/2026.",
+    "topic_label": "Constituição estadual, povos indígenas e indicadores sociais",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 3,
+    "law_version_checked_at": "2026-11-14T20:10:00+00:00"
   }
 ]
 $acre_seed$::jsonb) as seed(
