@@ -242,7 +242,7 @@ E) a nomenclatura do cargo não possui relevância para o enquadramento do concu
 ## Questão 15 — Data de corte legislativa do edital
 **Dificuldade:** média | **Assunto:** edital, subitens 11.5.4 e 11.5.5
 
-Uma alteração legislativa entrou em vigor depois da publicação do Edital nº 001 SEAD/PCAC, de 05/11/2026. Segundo a regra expressa do edital, essa alteração:
+Uma alteração legislativa entrou em vigor depois da publicação do Edital nº 001 SEAD/PCAC, datado de 05/11/2026 e publicado em 06/11/2026. Segundo a regra expressa do edital, essa alteração:
 
 A) será sempre cobrada, ainda que posterior à publicação.  
 B) não será objeto de avaliação, conforme o subitem 11.5.5.  
@@ -251,5 +251,5 @@ D) será cobrada somente se o candidato solicitar.
 E) substitui o texto legal vigente na data da inscrição.
 
 **Gabarito:** B.  
-**Explicação:** O edital prevê que alterações legislativas em vigor antes da publicação podem ser cobradas, mesmo sem menção expressa no Anexo III; por outro lado, alterações posteriores à publicação não serão objeto de avaliação. A data de corte é a publicação do edital, em 05/11/2026.  
+**Explicação:** O edital prevê que alterações legislativas em vigor antes da publicação podem ser cobradas, mesmo sem menção expressa no Anexo III; por outro lado, alterações posteriores à publicação não serão objeto de avaliação. Embora o documento esteja datado de 05/11/2026, o próprio cronograma registra a publicação para 06/11/2026, confirmada no Diário Oficial do Estado do Acre nº 14.388. Assim, a data de corte do subitem 11.5.5 é 06/11/2026.  
 **Fundamento:** Edital nº 001 SEAD/PCAC, subitens 11.5.4 e 11.5.5.
