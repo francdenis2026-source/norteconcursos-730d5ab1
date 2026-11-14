@@ -10,7 +10,7 @@ Data da auditoria: 14/11/2026. Base primária: Edital nº 001 SEAD/PCAC, de 05/1
 
 ## Estado do banco verificado
 Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11/2026:
-- 21 materiais de Legislação Institucional, todos active; 127 flashcards e 146 questões.
+- 21 materiais de Legislação Institucional, todos active; 134 flashcards e 154 questões.
 - Contabilidade: 7 materiais, 35 flashcards e 35 questões.
 - Estatística: 10 materiais, 50 flashcards e 50 questões.
 - Língua Portuguesa: 13 materiais, 65 flashcards e 65 questões.
@@ -41,7 +41,7 @@ Os totais são inventário de registros, não validação pedagógica nem prova 
 10. Computação em nuvem, compartilhamento, coautoria e gestão de permissões.
 11. Sistemas de informação, autenticação, autorização, auditoria, transparência e proteção de dados.
 
-Os onze registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`.
+Os onze registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
 ## Gaps e validações obrigatórias
 
