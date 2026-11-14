@@ -37,12 +37,10 @@ export type SubjectIcon =
 /** Disciplinas que o aluno procura primeiro, na ordem em que aparecem (mesmo sem material ainda). */
 export const EXPECTED_SUBJECTS: { name: string; icon: SubjectIcon }[] = [
   { name: "Língua Portuguesa", icon: "portugues" },
-  { name: "Matemática", icon: "matematica" },
-  { name: "Raciocínio Lógico", icon: "logica" },
+  { name: "Matemática e Raciocínio Lógico", icon: "matematica" },
   { name: "Informática", icon: "informatica" },
   { name: "Química", icon: "quimica" },
   { name: "Física", icon: "fisica" },
-  { name: "Estatística", icon: "estatistica" },
   { name: "Contabilidade Geral", icon: "contabilidade" },
   { name: "Língua Inglesa", icon: "ingles" },
 ];
