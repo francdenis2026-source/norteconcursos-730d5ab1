@@ -31,6 +31,18 @@ Fontes oficiais cadastradas em `public.content_sources` (11 registros, incluindo
 
 Cada questão recebeu em `didactic_provenance` a referência às fontes aplicáveis, o commit de origem, o arquivo editorial, a indicação de questão autoral e os marcadores `first_pass_sources_checked_pending_final_legal_review` e `activation_blocked`. O campo `legal_basis` foi normalizado para objetos com `title`, `lei`, `artigo` e `url`, no formato consumido pelo Treinador; `law_version_checked_at` foi preenchido com a data da primeira conferência das fontes, sem significar aprovação jurídica final.
 
+## Lote 4 — 12 novas questões autorais
+
+Foi criado `docs/question-batches/pcac-2026-lote4-penal-processo-legislacao-disciplinar-draft.md` e inseridas 12 questões autorais no catálogo do Supabase:
+
+- Direito Penal (4): conceito penal de funcionário público/equiparação, peculato culposo e reparação do dano, excesso de exação e corrupção ativa.
+- Processo Penal (4): prova ilícita por derivação, desaparecimento de vestígios e suprimento testemunhal, perícia na falta de perito oficial e valoração judicial do laudo.
+- Legislação Institucional (4): afastamento preventivo, prazo de sindicância, prescrição disciplinar especial e composição da comissão de PAD.
+
+Cada item foi associado a um material PC-AC 2026 já existente. Todos permanecem `draft`, `is_original=true`, com fundamento legal estruturado, tópico de edital, data de conferência inicial e `activation_blocked=true`. Não foram criados materiais duplicados nem houve liberação ao aluno.
+
+Fontes e materiais de referência: Código Penal, CPP e LC Estadual nº 129/2004, com conferência inicial contra os materiais existentes. A revisão jurídica independente e a checagem consolidada das alterações estaduais de 2025–2026 ainda são obrigatórias antes de ativar.
+
 ## Lote 3 — 22 novas questões autorais
 
 Foi criado o arquivo `docs/question-batches/pcac-2026-lote3-penal-processo-penal-institucional-draft.md` com 22 questões autorais em cinco alternativas, uma correta, explicação didática e fundamento legal.
