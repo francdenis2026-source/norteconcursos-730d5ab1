@@ -16,6 +16,20 @@ export function BetaNotice() {
     }
   }, []);
 
+  // Aviso discreto: recolhe sozinho para a etiqueta "Beta" depois de alguns segundos.
+  useEffect(() => {
+    if (!open) return;
+    const timer = window.setTimeout(() => {
+      setOpen(false);
+      try {
+        window.localStorage.setItem(SEEN_KEY, "true");
+      } catch {
+        /* localStorage indisponível */
+      }
+    }, 7000);
+    return () => window.clearTimeout(timer);
+  }, [open]);
+
   const close = () => {
     setOpen(false);
     try {

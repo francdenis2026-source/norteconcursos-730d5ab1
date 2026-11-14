@@ -16,6 +16,7 @@ import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 import "@/styles/home-saas.css";
+import "@/styles/home-refine.css";
 
 const FEATURES: { icon: LucideIcon; title: string; text: string }[] = [
   {
@@ -102,13 +103,6 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
                 <dd>{GUEST_DAILY_LIMIT}</dd>
               </div>
             </dl>
-            <ul className="sx-hero__chips" aria-label="O que você encontra">
-              {FEATURES.slice(0, 4).map(({ icon: Icon, title }) => (
-                <li key={title}>
-                  <Icon aria-hidden="true" /> {title}
-                </li>
-              ))}
-            </ul>
           </div>
           <div className="sx-hero__panel">
             <DailyChallengeBadge />
