@@ -379,7 +379,7 @@ export function subjectAreas(subject: string): AreaKey[] {
   else if (/legislacao|lei de abuso/.test(n)) add("legislacao");
   if (/direitos humanos/.test(n)) add("humanos");
   if (/etica/.test(n)) add("etica");
-  if (/^informatica$|^tecnologia da informacao$/.test(n)) add("informatica");
+  if (/^informatica( e tecnologia)?$|^tecnologia da informacao$/.test(n)) add("informatica");
   if (/transito/.test(n)) {
     out.delete("legislacao");
     add("transito");
@@ -389,7 +389,7 @@ export function subjectAreas(subject: string): AreaKey[] {
   else if (/contabilidade de custos/.test(n)) add("custos");
   else if (/contabilidade|contabil/.test(n)) add("contabilidade");
   if (/atualidades/.test(n)) add("atualidades");
-  if (/^medicina legal$|^criminalistica$|^pericia criminal$/.test(n)) add("medicina");
+  if (/^medicina legal( e criminalistica)?$|^criminalistica$|^pericia criminal$/.test(n)) add("medicina");
   return [...out];
 }
 
@@ -412,6 +412,18 @@ export function subjectInArea(plannedArea: string, questionSubject: string): boo
     return true;
   const wanted = subjectAreas(plannedArea);
   return subjectAreas(questionSubject).some((area) => wanted.includes(area));
+}
+
+/**
+ * Pertencimento estrito: a matéria candidata precisa estar INTEIRAMENTE dentro da escolhida.
+ * "Raciocínio Lógico" não recebe o que é de "Estatística e Raciocínio Lógico"; já uma escolha
+ * composta ("Direito Penal e Processual Penal") recebe o de cada parte.
+ */
+export function subjectWithinArea(selected: string, candidate: string): boolean {
+  if (strip(canonicalSubject(selected)) === strip(canonicalSubject(candidate))) return true;
+  const wanted = subjectAreas(selected);
+  const areas = subjectAreas(candidate);
+  return areas.length > 0 && areas.every((area) => wanted.includes(area));
 }
 
 /** Verificação rápida: node --experimental-strip-types src/lib/questionTopics.ts */

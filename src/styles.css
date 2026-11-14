@@ -17321,3 +17321,11 @@ input[type="datetime-local"]::-webkit-date-and-time-value {
 
 /* Selo de chance de cair na prova: discreto (a regra global de 44 px vale para botões de ação). */
 .incidence-seal { min-height: 28px; }
+
+/* Tabelas de estudo no celular: cabem na tela quando têm poucas colunas; só as largas (5+) rolam. */
+@media (max-width: 640px) {
+  .study-table table { min-width: 0; font-size: 0.85rem; }
+  .study-table table:has(th:nth-child(5)) { min-width: 520px; }
+  .study-table :is(th, td) { padding: 8px 10px; overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto; }
+  .study-table th { letter-spacing: 0.04em; }
+}

@@ -264,6 +264,7 @@ export function topicsFor(subject: string): string[] {
     if (area in T) add(T[area as keyof typeof T]);
   }
   if (/ingles/.test(n)) add(T.idiomas.filter((topic) => !topic.startsWith("Geopolítica")));
+  else if (/geopolitica|lingua estrangeira|idioma/.test(n)) add(T.idiomas);
   return out.length
     ? [...new Set(out)]
     : ["Conceitos fundamentais", "Pontos mais cobrados em provas", "Questões comentadas da banca"];

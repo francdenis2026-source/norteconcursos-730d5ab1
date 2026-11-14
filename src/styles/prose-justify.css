@@ -99,3 +99,52 @@ html body :is(.answer-feedback__comment, .legal-reading-surface .study-prose.is-
   scrollbar-width: thin;
 }
 @media (prefers-reduced-motion: reduce) { .scroll-text-box { animation: none; } }
+
+/* 4) Telas estreitas: justificar com ~35 caracteres por linha abre vazios enormes entre as palavras.
+   No celular e no tablet em pé o texto fica alinhado à esquerda e hifenizado (regular e legível);
+   a justificação continua em telas largas. Mesma lista e especificidade da regra 1, mais adiante. */
+@media (max-width: 767px) {
+  html body :is(
+    p,
+    .q-text,
+    .q-text[data-layout="prose"],
+    .q-text[data-layout="short"],
+    .q-option-text,
+    .question-readable,
+    .question-prose-block,
+    .institutional-prose p,
+    .study-prose p,
+    .legal-reading-paragraph,
+    .answer-feedback__comment
+  ):not(h1, h2, h3, h4, h5, h6, button, a, label, li > span, th, td, small, figcaption) {
+    text-align: left;
+    text-align-last: auto;
+    text-justify: auto;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 5 2 2;
+  }
+  html body :is(.study-prose, .institutional-prose) {
+    text-align: left;
+    text-justify: auto;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
+/* 5) Texto nunca passa da caixa: palavras longas, links e códigos quebram dentro dela. */
+html body :is(.study-prose, .library-body, .institutional-prose, .legal-reading-prose, .q-text, .q-option-text, .question-prose-block, .answer-feedback__comment) {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+html body :is(.study-prose, .library-body, .institutional-prose, .legal-reading-prose) :is(pre, code) {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+html body :is(.study-prose, .library-body, .institutional-prose, .legal-reading-prose) :is(img, video, iframe, svg) {
+  max-width: 100%;
+  height: auto;
+}
+html body :is(h1, h2, h3, h4) { overflow-wrap: break-word; }

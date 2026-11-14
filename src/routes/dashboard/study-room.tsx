@@ -31,13 +31,7 @@ import { StudyPractice } from "@/components/library/StudyPractice";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { youtubeEmbedUrl, youtubePlaylistUrl, youtubeSearchUrl } from "@/data/mediaCatalog";
 import { readingMinutes, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
-import {
-  isPlaylistId,
-  loadArsenal,
-  mediaDisciplineOf,
-  rankMaterials,
-  type Arsenal,
-} from "@/lib/arsenal";
+import { isPlaylistId, loadArsenal, mentionsTopic, rankMaterials, type Arsenal } from "@/lib/arsenal";
 import { AudioPlayer } from "@/components/media/AudioPlayer";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
@@ -57,6 +51,7 @@ import { useStudyContext } from "@/components/study/useStudyContext";
 import { StudySubjectPicker } from "@/components/study/StudySubjectPicker";
 import { resolveStudySelection, STUDY_PICK_KEY, type StudySelection } from "@/lib/studySelection";
 import { topicsFor } from "@/data/studyTopics";
+import { libraryCollection } from "@/lib/libraryOrganization";
 
 function readSavedPick(): StudySelection | null {
   try {
@@ -372,13 +367,15 @@ function StudyRoomPage() {
     () => rankMaterials(list ?? [], subject, topic),
     [list, subject, topic],
   );
+  // Só materiais que tratam do assunto escolhido; sem isso, nada de outro assunto aparece.
+  const exact = React.useMemo(() => ranked.filter((r) => r.score > 0), [ranked]);
   const [slug, setSlug] = React.useState<string | null>(null);
-  const currentSlug = slug ?? ranked[0]?.m.slug ?? "";
+  // O material aberto vale só enquanto pertence ao assunto atual (trocar de matéria não o mantém).
+  const currentSlug = slug && exact.some((r) => r.m.slug === slug) ? slug : (exact[0]?.m.slug ?? "");
   const { data: material, isPending: loadingMaterial } = useStudyMaterial(
     currentSlug,
     real && !!currentSlug,
   );
-  const exact = ranked.filter((r) => r.score > 0);
 
   const qc = useQueryClient();
   const { data: arsenal } = useQuery<Arsenal>({
@@ -387,15 +384,11 @@ function StudyRoomPage() {
     staleTime: 5 * 60_000,
     queryFn: () => loadArsenal(qc, user!.id, subject, topic),
   });
-  const discipline = mediaDisciplineOf(subject);
-  const playlists = arsenal?.playlists ?? [];
-  // Videoaulas catalogadas por assunto; sem elas, as gerais da matéria e, por fim, as playlists da disciplina.
-  const topicVideos = arsenal?.videos ?? [];
+  // Só videoaulas catalogadas para o assunto escolhido (sem as "gerais da matéria").
+  const topicVideos = arsenal?.videosAreTopic ? arsenal.videos : [];
   const [videoId, setVideoId] = React.useState<string | null>(null);
   const activeVideo = topicVideos.find((v) => v.id === videoId) ?? topicVideos[0];
-  const podcasts = arsenal?.podcasts ?? [];
-  const [playlistId, setPlaylistId] = React.useState<string | null>(null);
-  const activePlaylist = playlists.find((p) => p.id === playlistId) ?? playlists[0];
+  const podcasts = (arsenal?.podcasts ?? []).filter((p) => mentionsTopic(topic, p.title));
   const [podcastId, setPodcastId] = React.useState<string | null>(null);
   const activePodcast = podcasts.find((p) => p.id === podcastId) ?? podcasts[0];
 
@@ -524,15 +517,13 @@ function StudyRoomPage() {
                   ? "Buscando na Biblioteca…"
                   : exact.length
                     ? `${exact.length} ${exact.length === 1 ? "material encontrado" : "materiais encontrados"} para este assunto.`
-                    : ranked.length
-                      ? "Ainda não há material específico deste assunto. Abaixo, os materiais da matéria."
-                      : "A Biblioteca ainda não tem material desta matéria."}
+                    : "Ainda não há material escrito deste assunto."}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {ranked.length > 1 && (
+              {exact.length > 1 && (
                 <div className="flex flex-wrap gap-2" role="tablist" aria-label="Materiais">
-                  {ranked.slice(0, 8).map(({ m, score }) => (
+                  {exact.slice(0, 8).map(({ m, score }) => (
                     <button
                       key={m.slug}
                       type="button"
@@ -583,10 +574,19 @@ function StudyRoomPage() {
                   />
                 </article>
               )}
-              {!isPending && ranked.length === 0 && (
-                <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
-                  Ainda não há material escrito deste assunto. Use as videoaulas, resolva questões e
-                  registre o que aprendeu nas anotações.
+              {!isPending && exact.length === 0 && (
+                <div className="space-y-2 rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+                  <p>
+                    Nenhum material cadastrado para "{topic || subject}". Resolva questões deste
+                    assunto e registre o que aprendeu nas anotações.
+                  </p>
+                  <Link
+                    to="/dashboard/library"
+                    search={{ q: subject, back: undefined, collection: libraryCollection({ slug: "", discipline: subject }) === "subjects" ? "subjects" : "laws" }}
+                    className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                  >
+                    Ver os materiais de {subject} na Biblioteca <ExternalLink className="h-3.5 w-3.5" />
+                  </Link>
                 </div>
               )}
             </CardContent>
@@ -600,12 +600,8 @@ function StudyRoomPage() {
               </CardTitle>
               <CardDescription>
                 {activeVideo
-                  ? arsenal?.videosAreTopic
-                    ? `Selecionadas para "${topic}". Todas gratuitas, do YouTube.`
-                    : "Videoaulas gerais da matéria. Ainda não catalogamos vídeos específicos deste assunto."
-                  : activePlaylist
-                    ? `Playlists de ${discipline} (por matéria, não por assunto). Procure o tema "${topic || subject}" na lista do vídeo.`
-                    : "Ainda não há videoaulas cadastradas para esta matéria."}
+                  ? `Selecionadas para "${topic}". Todas gratuitas, do YouTube.`
+                  : "Ainda não há videoaulas catalogadas para este assunto."}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
@@ -664,48 +660,6 @@ function StudyRoomPage() {
                         ? youtubePlaylistUrl(activeVideo.id)
                         : `https://www.youtube.com/watch?v=${activeVideo.id}`
                     }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
-                  >
-                    Abrir no YouTube <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
-                </>
-              ) : activePlaylist ? (
-                <>
-                  <div className="overflow-hidden rounded-xl border bg-black">
-                    <div className="aspect-video w-full">
-                      <iframe
-                        key={activePlaylist.id}
-                        src={youtubeEmbedUrl(activePlaylist.id)}
-                        title={activePlaylist.title}
-                        className="h-full w-full"
-                        loading="lazy"
-                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                        allowFullScreen
-                        referrerPolicy="strict-origin-when-cross-origin"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {playlists.map((p) => (
-                      <button
-                        key={p.id}
-                        type="button"
-                        onClick={() => setPlaylistId(p.id)}
-                        className={cn(
-                          "rounded-full border px-3 py-1 text-xs font-semibold",
-                          p.id === activePlaylist.id
-                            ? "border-primary bg-primary text-primary-foreground"
-                            : "hover:border-primary/50",
-                        )}
-                      >
-                        {p.title}
-                      </button>
-                    ))}
-                  </div>
-                  <a
-                    href={youtubePlaylistUrl(activePlaylist.id)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"

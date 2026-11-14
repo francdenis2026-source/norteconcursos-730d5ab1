@@ -9,8 +9,11 @@ import { fetchAllRows } from "@/lib/catalog";
 import { canonicalSubject } from "@/lib/subjects";
 import type { Podcast, VideoPlaylist } from "@/data/mediaCatalog";
 import { fetchStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
-import { areaOfSubject, subjectInArea } from "@/lib/questionTopics";
-import { TOPIC_VIDEOS, type TopicVideo } from "@/data/topicVideos";
+import { areaOfSubject, subjectWithinArea } from "@/lib/questionTopics";
+import type { TopicVideo } from "@/data/topicVideos";
+import { mentionsTopic, rankMaterials, topicVideosFor } from "@/lib/arsenalRanking";
+
+export { mentionsTopic, rankMaterials, topicVideosFor };
 import { MEDIA_KEY, fetchMediaCatalog } from "@/lib/mediaStore";
 
 const strip = (v: string) => v.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -32,35 +35,6 @@ const DISCIPLINE_OF_AREA: Record<string, string> = {
 export function mediaDisciplineOf(subject: string): string | undefined {
   const area = areaOfSubject(subject);
   return area ? DISCIPLINE_OF_AREA[area] : undefined;
-}
-
-/** Materiais da matéria, com os do assunto primeiro (mais palavras em comum com o título/resumo). */
-export function rankMaterials(list: StudyMaterialSummary[], subject: string, topic: string) {
-  const want = new Set(tokens(topic));
-  return list
-    .filter((m) => subjectInArea(subject, m.discipline))
-    .map((m) => ({
-      m,
-      score: tokens(`${m.topic_label} ${m.title} ${m.summary ?? ""}`).filter((t) => want.has(t))
-        .length,
-    }))
-    .sort((a, b) => b.score - a.score || a.m.sort_order - b.m.sort_order);
-}
-
-/** Videoaulas catalogadas por assunto ("exact") e as gerais da matéria. IDs com "PL" são playlists. */
-export function topicVideosFor(
-  subject: string,
-  topic: string,
-  source: Record<string, Record<string, TopicVideo[]>> = TOPIC_VIDEOS,
-): { exact: TopicVideo[]; general: TopicVideo[] } {
-  const exact: TopicVideo[] = [];
-  const general: TopicVideo[] = [];
-  for (const [key, topics] of Object.entries(source)) {
-    if (key.startsWith("ENEM") || !subjectInArea(subject, key)) continue; // videoaulas de ENEM ficam na área ENEM
-    if (topic) exact.push(...(topics[topic] ?? []));
-    general.push(...(topics["*"] ?? []));
-  }
-  return { exact, general };
 }
 
 export const isPlaylistId = (id: string) => id.startsWith("PL") && id.length > 12;
@@ -160,7 +134,7 @@ export async function loadArsenal(
   const ranked = rankMaterials(list, subject, topic);
   const discipline = mediaDisciplineOf(subject);
   let questions = 0;
-  for (const [s, n] of counts) if (subjectInArea(subject, s)) questions += n;
+  for (const [s, n] of counts) if (subjectWithinArea(subject, s)) questions += n;
 
   const tv = topicVideosFor(subject, topic, media.topicVideos);
   return {
@@ -170,7 +144,7 @@ export async function loadArsenal(
     subjectMaterials: ranked.map((r) => r.m),
     playlists: discipline ? media.playlists.filter((p) => p.discipline === discipline) : [],
     podcasts: media.podcasts.filter((p) =>
-      discipline ? p.discipline === discipline : strip(p.discipline).includes(strip(subject)),
+      discipline ? p.discipline === discipline : subjectWithinArea(subject, p.discipline),
     ),
     cards,
     questions,
