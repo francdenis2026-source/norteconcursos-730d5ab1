@@ -86,3 +86,21 @@ test("ranking integrity: rejects duplicate candidates and inconsistent ordering"
   assert.equal(readRankingPage({ ...base, entries: [row("a", 1), row("b", 1)] }).entries[1].rank_position, 1);
   assert.throws(() => readRankingPage({ ...base, entries: [row("a", 1), row("a", 2)] }));
 });
+
+import { hasScore, levelProgress, RANKING_LEVELS } from "../src/lib/rankingPage.ts";
+
+test("quem não pontuou fica fora da classificação visual", () => {
+  assert.equal(hasScore({ points: 0 }), false);
+  assert.equal(hasScore({ points: 1 }), true);
+});
+
+test("nível e progresso seguem os mesmos cortes do banco", () => {
+  assert.deepEqual(RANKING_LEVELS.map((l) => l.min), [0, 250, 750, 1500, 3000]);
+  assert.deepEqual(levelProgress(0), { name: "Aspirante", stars: 1, next: { name: "Competidor", min: 250 }, missing: 250, percent: 0 });
+  assert.equal(levelProgress(176).missing, 74);
+  assert.equal(levelProgress(176).percent, 70);
+  assert.equal(levelProgress(250).name, "Competidor");
+  assert.equal(levelProgress(1499).name, "Avançado");
+  assert.deepEqual(levelProgress(3200), { name: "Elite", stars: 5, next: null, missing: 0, percent: 100 });
+  assert.equal(levelProgress(-10).name, "Aspirante");
+});

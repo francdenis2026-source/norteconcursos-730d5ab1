@@ -128,3 +128,32 @@ export function partialRankingPage(
     partial: true,
   };
 }
+
+/** Níveis do ranking (mesmos cortes de public.level_of no banco). */
+export const RANKING_LEVELS = [
+  { name: "Aspirante", min: 0, stars: 1 },
+  { name: "Competidor", min: 250, stars: 2 },
+  { name: "Avançado", min: 750, stars: 3 },
+  { name: "Especialista", min: 1500, stars: 4 },
+  { name: "Elite", min: 3000, stars: 5 },
+] as const;
+
+/** Quem ainda não pontuou não ocupa posição nem recebe estrelas na tela. */
+export const hasScore = (row: { points: number }) => row.points > 0;
+
+/** Nível atual e quanto falta para o próximo, a partir dos pontos gerais. */
+export function levelProgress(points: number) {
+  const safe = Math.max(0, Math.floor(Number.isFinite(points) ? points : 0));
+  let index = 0;
+  for (let i = 0; i < RANKING_LEVELS.length; i++) if (safe >= RANKING_LEVELS[i]!.min) index = i;
+  const level = RANKING_LEVELS[index]!;
+  const next = RANKING_LEVELS[index + 1] ?? null;
+  const span = next ? next.min - level.min : 0;
+  return {
+    name: level.name,
+    stars: level.stars,
+    next: next ? { name: next.name, min: next.min } : null,
+    missing: next ? next.min - safe : 0,
+    percent: next ? Math.min(100, Math.round((100 * (safe - level.min)) / span)) : 100,
+  };
+}

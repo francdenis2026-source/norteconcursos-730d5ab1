@@ -1,60 +1,157 @@
-/* Ranking: full-width competitive dashboard with restrained podium color. */
+/* Ranking: controles no tom da área Desempenho, dourado só para pontos, medalhas na convenção ouro/prata/bronze e
+   quem ainda não pontuou em tom neutro, sem posição nem estrelas. Contraste nos modos claro e escuro. */
 .app-shell[data-area="student"] .ranking-workspace {
   width: 100%;
   max-width: 1480px;
   margin-inline: auto;
-  --rank-cyan: #58d7e4;
-  --rank-blue: #7eaaff;
-  --rank-gold: #e3b45d;
-  --rank-green: #4dcc9f;
-  --rank-violet: #b99aef;
+  --rank-accent: var(--control-accent, #087d79);
+  --rank-accent-ink: #ffffff;
+  --rank-accent-fill: var(--control-accent, #087d79);
+  --rank-gold: #8a5d0a;
+  --rank-silver: #5f6b7d;
+  --rank-bronze: #9a5a24;
   --rank-line: color-mix(in srgb, var(--border) 88%, transparent);
 }
 .dark .app-shell[data-area="student"] .ranking-workspace {
-  --rank-cyan: #72e8ef;
-  --rank-blue: #93bcff;
-  --rank-gold: #f0c979;
-  --rank-green: #5ee0af;
-  --rank-violet: #c8aaf6;
+  --rank-accent: var(--control-accent, #61cfc8);
+  --rank-accent-ink: #062321;
+  --rank-accent-fill: var(--control-accent, #61cfc8);
+  --rank-gold: #f2c96b;
+  --rank-silver: #cfd6e2;
+  --rank-bronze: #e0a46e;
 }
 .app-shell[data-area="student"] .ranking-workspace > .page-hero,
 .app-shell[data-area="student"] .ranking-workspace > header {
   min-height: 0;
-  border-top: 2px solid var(--rank-cyan);
+  border-top: 2px solid var(--rank-accent-fill);
 }
 .app-shell[data-area="student"] .ranking-workspace > [data-slot="card"] {
   border-color: var(--rank-line);
   border-radius: 16px;
-  background: linear-gradient(145deg, color-mix(in srgb, var(--rank-blue) 5%, var(--card)), var(--card) 65%);
+  background: var(--card);
 }
-.app-shell[data-area="student"] .ranking-workspace [role="tablist"] {
-  gap: 4px;
-  padding: 5px;
-  border: 1px solid color-mix(in srgb, var(--rank-cyan) 34%, var(--border));
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--rank-cyan) 7%, var(--card));
+
+/* Controles: Classificação e Período, com rótulo e o mesmo estilo de seleção */
+.ranking-controls { display: flex; flex-wrap: wrap; gap: 10px 16px; }
+.ranking-seg {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px;
+  padding: 4px; border: 1px solid var(--rank-line); border-radius: 12px;
+  background: color-mix(in srgb, var(--muted) 55%, transparent);
 }
-.app-shell[data-area="student"] .ranking-workspace [role="tab"] { min-height: 42px; border-radius: 9px; }
-.app-shell[data-area="student"] .ranking-workspace [role="tab"][data-state="active"] { background: var(--rank-cyan); color: #10222b; box-shadow: 0 5px 14px -10px var(--rank-cyan); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-rules { border-color: color-mix(in srgb, var(--rank-violet) 38%, var(--border)); background: color-mix(in srgb, var(--rank-violet) 6%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-mepos { border-color: color-mix(in srgb, var(--rank-gold) 58%, var(--border)); background: linear-gradient(110deg, color-mix(in srgb, var(--rank-gold) 14%, var(--card)), color-mix(in srgb, var(--rank-cyan) 7%, var(--card))); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-mepos__value { color: var(--rank-gold); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-mepos__actions button:first-child { border-color: color-mix(in srgb, var(--rank-gold) 60%, var(--border)); background: color-mix(in srgb, var(--rank-gold) 13%, var(--card)); }
+.ranking-seg__label {
+  padding: 0 6px 0 8px; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--muted-foreground);
+}
+.ranking-seg__btn {
+  min-height: 34px; padding: 0 12px; border-radius: 9px; font-size: 12.5px; font-weight: 650;
+  color: var(--muted-foreground); background: transparent;
+  transition: background-color .16s ease, color .16s ease;
+}
+.ranking-seg__btn:hover { color: var(--foreground); background: color-mix(in srgb, var(--rank-accent-fill) 12%, transparent); }
+.ranking-seg__btn[aria-pressed="true"] { background: var(--rank-accent-fill); color: var(--rank-accent-ink); box-shadow: 0 4px 12px -8px var(--rank-accent-fill); }
+.ranking-seg__btn:focus-visible { outline: 2px solid var(--rank-accent); outline-offset: 2px; }
+
+.app-shell[data-area="student"] .ranking-workspace .ranking-rules { border-color: var(--rank-line); background: color-mix(in srgb, var(--muted) 40%, var(--card)); }
+.ranking-levels { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.ranking-levels li {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
+  border: 1px solid var(--rank-line); border-radius: 999px; background: var(--card); font-size: 11px;
+}
+
+/* Sua posição */
+.app-shell[data-area="student"] .ranking-workspace .ranking-mepos {
+  border-color: color-mix(in srgb, var(--rank-accent-fill) 55%, var(--border));
+  background: linear-gradient(110deg, color-mix(in srgb, var(--rank-accent-fill) 14%, var(--card)), var(--card));
+}
+.app-shell[data-area="student"] .ranking-workspace .ranking-mepos__value { color: var(--rank-accent); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-mepos__value--none { color: var(--foreground); font-size: 1.15rem; }
+.app-shell[data-area="student"] .ranking-workspace .ranking-mepos__actions button:first-child {
+  border-color: color-mix(in srgb, var(--rank-accent-fill) 60%, var(--border));
+  background: color-mix(in srgb, var(--rank-accent-fill) 13%, var(--card));
+}
+.ranking-mepos__level { display: grid; gap: 4px; margin-top: 6px; max-width: 360px; font-size: 12px; color: var(--muted-foreground); }
+.ranking-mepos__level p { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.ranking-mepos__level b { color: var(--foreground); }
+.ranking-mepos__cta {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 6px 12px;
+  border-radius: 9px; background: var(--rank-accent-fill); color: var(--rank-accent-ink);
+  font-size: 12.5px; font-weight: 700;
+}
+.ranking-mepos__cta:hover { filter: brightness(1.05); }
+.ranking-mepos__cta:focus-visible { outline: 2px solid var(--rank-accent); outline-offset: 2px; }
+
+/* Medalhas */
+.rank-badge {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 999px; background: var(--muted);
+  color: var(--muted-foreground); font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums;
+}
+.rank-badge--gold, .rank-badge--silver, .rank-badge--bronze { box-shadow: inset 0 0 0 2px currentColor; }
+.rank-badge--gold { color: var(--rank-gold); background: color-mix(in srgb, var(--rank-gold) 14%, var(--card)); }
+.rank-badge--silver { color: var(--rank-silver); background: color-mix(in srgb, var(--rank-silver) 14%, var(--card)); }
+.rank-badge--bronze { color: var(--rank-bronze); background: color-mix(in srgb, var(--rank-bronze) 14%, var(--card)); }
+.rank-badge__pos {
+  position: absolute; right: -4px; bottom: -4px; min-width: 18px; padding: 0 4px; border-radius: 999px;
+  background: var(--background); color: var(--foreground); font-size: 10px; line-height: 16px;
+  box-shadow: 0 0 0 1px var(--border);
+}
+.rank-badge--none { background: transparent; border: 1px dashed var(--border); }
+
+.rank-chip { display: inline-flex; align-items: center; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 650; }
+.rank-chip--none { border: 1px dashed var(--border); color: var(--muted-foreground); background: transparent; }
+
+/* Pódio */
+.ranking-podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+.ranking-podium li[data-place="1"] { order: 2; }
+.ranking-podium li[data-place="2"] { order: 1; }
+.ranking-podium li[data-place="3"] { order: 3; }
+.ranking-podium__card {
+  display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; gap: 6px;
+  padding: 14px 10px; border: 1px solid var(--rank-line); border-radius: 14px; background: var(--card);
+  text-align: center; transition: border-color .16s ease, transform .16s ease;
+}
+.ranking-podium li[data-place="1"] .ranking-podium__card { padding-top: 20px; border-color: color-mix(in srgb, var(--rank-gold) 55%, var(--border)); background: linear-gradient(180deg, color-mix(in srgb, var(--rank-gold) 12%, var(--card)), var(--card)); }
+.ranking-podium li[data-place="2"] .ranking-podium__card { margin-top: 12px; border-color: color-mix(in srgb, var(--rank-silver) 50%, var(--border)); }
+.ranking-podium li[data-place="3"] .ranking-podium__card { margin-top: 18px; border-color: color-mix(in srgb, var(--rank-bronze) 50%, var(--border)); }
+.ranking-podium__card:hover { transform: translateY(-2px); }
+.ranking-podium__card:focus-visible { outline: 2px solid var(--rank-accent); outline-offset: 2px; }
+.ranking-podium__name { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 700; }
+.ranking-podium__points { color: var(--rank-gold); font-size: 1.05rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.ranking-podium__points small { font-size: 10px; font-weight: 700; color: var(--muted-foreground); }
+
+/* Linhas */
 .app-shell[data-area="student"] .ranking-workspace .ranking-row {
-  min-height: 70px;
+  min-height: 64px;
   border-color: var(--rank-line);
-  background: color-mix(in srgb, var(--rank-blue) 5%, var(--card));
+  background: var(--card);
   transition: transform .16s ease, border-color .16s ease, background-color .16s ease;
 }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row:hover { transform: translateX(2px); border-color: var(--rank-cyan); background: color-mix(in srgb, var(--rank-cyan) 8%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(1) { border-left: 1px solid var(--rank-blue); background: color-mix(in srgb, var(--rank-blue) 10%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(2) { border-left: 1px solid var(--rank-gold); background: color-mix(in srgb, var(--rank-gold) 10%, var(--card)); }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row--podium:nth-child(3) { border-left: 1px solid var(--rank-violet); background: color-mix(in srgb, var(--rank-violet) 9%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row:hover { transform: translateX(2px); border-color: color-mix(in srgb, var(--rank-accent-fill) 70%, var(--border)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row[data-podium="1"] { background: color-mix(in srgb, var(--rank-gold) 9%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row[data-podium="2"] { background: color-mix(in srgb, var(--rank-silver) 9%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row[data-podium="3"] { background: color-mix(in srgb, var(--rank-bronze) 9%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row--me { border-color: color-mix(in srgb, var(--rank-accent-fill) 75%, var(--border)); box-shadow: inset 3px 0 0 var(--rank-accent-fill); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row[data-unranked] { background: transparent; border-style: dashed; }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row[data-unranked] .ranking-row__name { color: var(--muted-foreground); font-weight: 600; }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row[data-unranked] .ranking-row__points { color: var(--muted-foreground); }
 .app-shell[data-area="student"] .ranking-workspace .ranking-row__points { color: var(--rank-gold); font-size: 1rem; }
-.app-shell[data-area="student"] .ranking-workspace .ranking-row__avatar { border-color: color-mix(in srgb, var(--rank-cyan) 50%, var(--border)); background: color-mix(in srgb, var(--rank-cyan) 12%, var(--card)); }
+.app-shell[data-area="student"] .ranking-workspace .ranking-row__avatar { border-color: var(--rank-line); background: var(--muted); }
+.ranking-divider {
+  display: flex; align-items: center; gap: 10px; padding: 10px 2px 2px;
+  font-size: 11.5px; font-weight: 650; color: var(--muted-foreground);
+}
+.ranking-divider::after { content: ""; flex: 1; height: 1px; background: var(--rank-line); }
+
 .app-shell[data-area="student"] .ranking-workspace input:focus,
-.app-shell[data-area="student"] .ranking-workspace select:focus { border-color: var(--rank-cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--rank-cyan) 15%, transparent); }
+.app-shell[data-area="student"] .ranking-workspace select:focus { border-color: var(--rank-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--rank-accent-fill) 18%, transparent); }
 .app-shell[data-area="student"] .ranking-workspace nav[aria-label="Páginas do ranking"] { border-top: 1px solid var(--rank-line); padding-top: 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .ranking-workspace .ranking-row,
+  .ranking-podium__card { transition: none; }
+  .app-shell[data-area="student"] .ranking-workspace .ranking-row:hover,
+  .ranking-podium__card:hover { transform: none; }
+}
 @media (max-width: 700px) {
   .app-shell[data-area="student"] .ranking-workspace { gap: 14px; }
   .app-shell[data-area="student"] .ranking-workspace .ranking-mepos { align-items: stretch; flex-direction: column; }
@@ -62,8 +159,27 @@
   .app-shell[data-area="student"] .ranking-workspace .ranking-mepos__actions > * { flex: 1 1 0; justify-content: center; }
   .app-shell[data-area="student"] .ranking-workspace .ranking-row { grid-template-columns: 38px minmax(0, 1fr) auto; padding: 10px; }
   .app-shell[data-area="student"] .ranking-workspace .ranking-row__meta { font-size: 11px; }
+  .ranking-seg { width: 100%; }
+  .ranking-seg__label { width: 100%; padding: 2px 6px 0; }
+  .ranking-seg__btn { flex: 1 1 0; }
+  .ranking-podium { gap: 6px; }
+  .ranking-podium__card { padding: 10px 6px; }
 }
 @media (max-width: 420px) {
   .app-shell[data-area="student"] .ranking-workspace .ranking-mepos__actions { flex-direction: column; }
   .app-shell[data-area="student"] .ranking-workspace .ranking-row__points { font-size: .9rem; }
+}
+
+/* Regras globais da área do aluno pintam ícones de botões; nas medalhas, o ícone segue a cor da medalha. */
+.app-shell[data-area="student"] .ranking-workspace .rank-badge > svg { color: inherit !important; stroke: currentColor; }
+
+/* Cabeçalho no mesmo tom da página (premiação, dourado), em vez do tom do grupo Desempenho. */
+:root .app-shell #dashboard-content .ranking-workspace .ranking-glass-header h1 span { color: var(--rank-gold) !important; }
+:root .app-shell #dashboard-content .ranking-workspace .ranking-glass-header .ranking-glass-header__kicker,
+:root .app-shell #dashboard-content .ranking-workspace .ranking-glass-header .ranking-glass-header__kicker svg { color: var(--rank-gold) !important; }
+:root .app-shell #dashboard-content .ranking-workspace > .ranking-glass-header { border-top-color: var(--rank-gold); }
+.app-shell[data-area="student"] #dashboard-content .ranking-workspace .ranking-glass-header {
+  --workspace-banner-accent: var(--rank-gold);
+  --panel-accent: var(--rank-gold);
+  --brass-deep: var(--rank-gold);
 }

@@ -3,10 +3,9 @@ import "@/styles/ranking-professional-refinement.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Award,
   Flame,
-  Gem,
   Loader2,
+  Target,
   Medal,
   Star,
   Trophy,
@@ -41,6 +40,9 @@ import {
   type RankingEntry as Row,
   type RankingPageData,
   type RankingPeriod,
+  hasScore,
+  levelProgress,
+  RANKING_LEVELS,
 } from "@/lib/rankingPage";
 
 export const Route = createFileRoute("/dashboard/ranking")({
@@ -49,17 +51,17 @@ export const Route = createFileRoute("/dashboard/ranking")({
 });
 
 const TABS = [
-  ["questions", "Questões", "Pontos das questões do Treinador, conferidos com o gabarito oficial."],
-  ["simulators", "Simulados", "Pontos dos simulados concluídos, com bônus de precisão."],
   [
     "general",
     "Geral",
     "Pontos de questões, simulados, flashcards e redação. Horas de estudo são uma métrica de dedicação.",
   ],
+  ["questions", "Questões", "Pontos das questões do Treinador, conferidos com o gabarito oficial."],
+  ["simulators", "Simulados", "Pontos dos simulados concluídos, com bônus de precisão."],
 ] as const;
 
 const PERIODS = [
-  ["all", "Geral"],
+  ["all", "Todo o período"],
   ["month", "Este mês"],
 ] as const;
 
@@ -86,35 +88,21 @@ interface Profile {
   medals: string[];
 }
 
-/** 1º = diamante, 2º = ouro, 3º = prata, 4º–10º = bronze; depois, só o número. */
-function PositionBadge({ pos }: { pos: number }) {
-  const tier =
-    pos === 1
-      ? { Icon: Gem, cls: "bg-sky-100 text-sky-600 ring-sky-300 dark:bg-sky-500/15 dark:text-sky-300 dark:ring-sky-400/40" }
-      : pos === 2
-        ? { Icon: Medal, cls: "bg-yellow-100 text-yellow-600 ring-yellow-300 dark:bg-yellow-500/15 dark:text-yellow-300 dark:ring-yellow-400/40" }
-        : pos === 3
-          ? { Icon: Medal, cls: "bg-slate-100 text-slate-500 ring-slate-300 dark:bg-slate-400/15 dark:text-slate-300 dark:ring-slate-400/40" }
-          : pos <= 10
-            ? { Icon: Award, cls: "bg-amber-100 text-amber-700 ring-amber-300 dark:bg-amber-500/15 dark:text-amber-300 dark:ring-amber-400/40" }
-            : null;
-  if (!tier)
+/** 1º ouro, 2º prata, 3º bronze; depois, só o número. Sem pontuação: sem posição. */
+function PositionBadge({ pos, scored }: { pos: number; scored: boolean }) {
+  if (!scored)
     return (
-      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-xs font-black text-muted-foreground">
-        {pos}
+      <span className="rank-badge rank-badge--none" aria-label="Sem posição: ainda sem pontuação">
+        —
       </span>
     );
+  const tier = pos === 1 ? "gold" : pos === 2 ? "silver" : pos === 3 ? "bronze" : null;
+  if (!tier) return <span className="rank-badge">{pos}</span>;
+  const Icon = pos === 1 ? Trophy : Medal;
   return (
-    <span
-      className={cn(
-        "relative flex h-9 w-9 items-center justify-center rounded-full ring-2",
-        tier.cls,
-      )}
-    >
-      <tier.Icon className="h-5 w-5" />
-      <span className="absolute -bottom-1 -right-1 rounded-full bg-background px-1 text-[10px] font-black text-foreground ring-1 ring-border">
-        {pos}
-      </span>
+    <span className={cn("rank-badge", `rank-badge--${tier}`)} aria-label={`${pos}º lugar`}>
+      <Icon className="h-5 w-5" aria-hidden="true" />
+      <span className="rank-badge__pos">{pos}</span>
     </span>
   );
 }
@@ -189,8 +177,14 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                   </DialogTitle>
                   <DialogDescription asChild>
                     <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/80">
-                      <Stars n={p.stars} />
-                      <span>Nível {p.level_name}</span>
+                      {p.general_points > 0 ? (
+                        <>
+                          <Stars n={p.stars} />
+                          <span>Nível {p.level_name}</span>
+                        </>
+                      ) : (
+                        <span className="rank-chip rank-chip--none">Sem pontuação ainda</span>
+                      )}
                     </div>
                   </DialogDescription>
                 </div>
@@ -415,8 +409,9 @@ function RankingPage() {
       </Link>
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
-          <div className="flex flex-wrap items-center gap-3">
-            <div className="flex gap-1.5" role="group" aria-label="Seção do ranking">
+          <div className="ranking-controls">
+            <div className="ranking-seg" role="group" aria-label="Classificação">
+              <span className="ranking-seg__label">Classificação</span>
               {TABS.map(([id, label]) => (
                 <button
                   key={id}
@@ -426,18 +421,14 @@ function RankingPage() {
                     setQuery("");
                     void navigate({ search: { ...search, section: id, page: 1, q: "" } });
                   }}
-                  className={cn(
-                    "rounded-full px-3 py-1 text-xs font-semibold transition-colors",
-                    kind === id
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-muted-foreground hover:text-foreground",
-                  )}
+                  className="ranking-seg__btn"
                 >
                   {label}
                 </button>
               ))}
             </div>
-            <div className="flex gap-1.5" role="group" aria-label="Período do ranking">
+            <div className="ranking-seg" role="group" aria-label="Período">
+              <span className="ranking-seg__label">Período</span>
               {PERIODS.map(([id, label]) => (
                 <button
                   key={id}
@@ -449,12 +440,7 @@ function RankingPage() {
                       search: { ...search, period: id as RankingPeriod, page: 1, q: "" },
                     });
                   }}
-                  className={cn(
-                    "rounded-full border px-3 py-1 text-xs font-semibold transition-colors",
-                    period === id
-                      ? "border-primary bg-primary/10 text-primary"
-                      : "border-transparent bg-muted text-muted-foreground hover:text-foreground",
-                  )}
+                  className="ranking-seg__btn"
                 >
                   {label}
                 </button>
@@ -489,8 +475,18 @@ function RankingPage() {
                 assinatura, tempo conectado ou ordem de cadastro — e administradores ficam fora.
               </li>
               <li>
-                Níveis: Competidor 250, Avançado 750, Especialista 1.500, Elite 3.000 pontos.
+                <b>Sem pontuação:</b> quem ainda não somou pontos aparece no fim, sem posição e sem
+                estrelas, até a primeira resposta pontuada.
               </li>
+            </ul>
+            <ul className="ranking-levels" aria-label="Níveis e estrelas">
+              {RANKING_LEVELS.map((level) => (
+                <li key={level.name}>
+                  <Stars n={level.stars} />
+                  <span className="font-semibold text-foreground">{level.name}</span>
+                  <span>{level.min.toLocaleString("pt-BR")}+ pts</span>
+                </li>
+              ))}
             </ul>
           </details>
         </CardHeader>
@@ -500,7 +496,7 @@ function RankingPage() {
               <div className="ranking-mepos mb-4" role="status">
                 <div className="ranking-mepos__me">
                   <span className="ranking-mepos__label">Sua posição</span>
-                  {me ? (
+                  {me && hasScore(me) ? (
                     <>
                       <p className="ranking-mepos__value">
                         {me.rank_position ? `${me.rank_position}º` : "—"}
@@ -509,6 +505,30 @@ function RankingPage() {
                       <p className="ranking-mepos__meta">
                         {me.questions} questões · {me.accuracy}%
                       </p>
+                      {(() => {
+                        const lv = levelProgress(me.points);
+                        return (
+                          <div className="ranking-mepos__level">
+                            <p>
+                              <Stars n={lv.stars} /> Nível <b>{lv.name}</b>
+                              {lv.next
+                                ? ` · faltam ${lv.missing.toLocaleString("pt-BR")} pts para ${lv.next.name}`
+                                : " · nível máximo"}
+                            </p>
+                            <Progress value={lv.percent} className="h-1.5" aria-label="Progresso até o próximo nível" />
+                          </div>
+                        );
+                      })()}
+                    </>
+                  ) : me ? (
+                    <>
+                      <p className="ranking-mepos__value ranking-mepos__value--none">Sem pontuação</p>
+                      <p className="ranking-mepos__meta">
+                        Responda questões no Treinador para entrar na classificação.
+                      </p>
+                      <Link to="/dashboard/question-trainer" className="ranking-mepos__cta">
+                        <Target className="h-4 w-4" aria-hidden="true" /> Começar a pontuar
+                      </Link>
                     </>
                   ) : (
                     <p className="ranking-mepos__meta ranking-mepos__meta--empty">
@@ -521,7 +541,7 @@ function RankingPage() {
                   )}
                 </div>
                 <div className="ranking-mepos__actions">
-                  {me?.rank_position && !pageData.partial && (
+                  {me?.rank_position && hasScore(me) && !pageData.partial && (
                     <Button
                       size="sm"
                       variant="outline"
@@ -636,55 +656,107 @@ function RankingPage() {
               />
             </div>
           ) : rows.length ? (
-            <ol
-              className="space-y-2"
-              start={(pageData!.page - 1) * pageData!.page_size + 1}
-              aria-label="Classificação dos candidatos"
-            >
-              {rows.map((r) => {
-                const pos = Number(r.rank_position);
-                const initial = (r.display_name ?? "?").trim().charAt(0).toUpperCase() || "?";
-                return (
-                  <li key={r.user_id}>
-                    <button
-                      id={`ranking-${r.user_id}`}
-                      type="button"
-                      onClick={() => setViewing(r.user_id)}
-                      aria-label={`Ver perfil de ${r.display_name}`}
-                      className={cn(
-                        "ranking-row grid w-full grid-cols-[42px_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border p-3 text-left transition hover:border-primary",
-                        pos <= 3 && "ranking-row--podium",
-                        r.is_me && "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/20",
-                      )}
-                    >
-                      <PositionBadge pos={pos} />
-                      <div className="min-w-0">
-                        <p className="ranking-row__name truncate text-sm font-bold">
-                          <span className="ranking-row__avatar" aria-hidden="true">
-                            {initial}
-                          </span>
-                          <span className="truncate">
-                            {r.display_name}
-                            {r.is_me && " (você)"}
-                          </span>
-                        </p>
-                        <p className="ranking-row__meta flex flex-wrap items-center gap-x-1.5 text-xs text-muted-foreground">
-                          <Stars n={r.stars} />
-                          <span className="ranking-row__level">{r.level_name}</span>
-                          <span className="ranking-row__stats">
-                            {r.questions}q ({r.accuracy}%) · {r.simulators} sim
-                          </span>
-                        </p>
-                      </div>
-                      <span className="ranking-row__points text-sm font-black tabular-nums">
-                        {r.points}
-                        <small>pts</small>
-                      </span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ol>
+            (() => {
+              // Pódio só na primeira página, sem busca e com os três primeiros pontuados.
+              const podium =
+                pageData!.page === 1 && !search.q
+                  ? rows.filter((r) => hasScore(r) && Number(r.rank_position) <= 3).slice(0, 3)
+                  : [];
+              const showPodium = podium.length === 3;
+              const listRows = showPodium ? rows.filter((r) => !podium.includes(r)) : rows;
+              const firstUnranked = listRows.findIndex((r) => !hasScore(r));
+              return (
+                <>
+                  {showPodium && (
+                    <ol className="ranking-podium" aria-label="Pódio">
+                      {podium.map((r) => {
+                        const pos = Number(r.rank_position);
+                        return (
+                          <li key={r.user_id} data-place={pos}>
+                            <button
+                              type="button"
+                              onClick={() => setViewing(r.user_id)}
+                              aria-label={`${pos}º lugar: ${r.display_name}, ${r.points} pontos. Ver perfil`}
+                              className="ranking-podium__card"
+                            >
+                              <PositionBadge pos={pos} scored />
+                              <span className="ranking-podium__name">
+                                {r.display_name}
+                                {r.is_me && " (você)"}
+                              </span>
+                              <Stars n={r.stars} />
+                              <span className="ranking-podium__points">
+                                {r.points.toLocaleString("pt-BR")} <small>pts</small>
+                              </span>
+                            </button>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  )}
+                  <ol className="space-y-2" aria-label="Classificação dos candidatos">
+                    {listRows.map((r, index) => {
+                      const pos = Number(r.rank_position);
+                      const scored = hasScore(r);
+                      const initial = (r.display_name ?? "?").trim().charAt(0).toUpperCase() || "?";
+                      return (
+                        <React.Fragment key={r.user_id}>
+                          {index === firstUnranked && (
+                            <li className="ranking-divider" aria-label="Candidatos ainda sem pontuação">
+                              Ainda sem pontuação · entram na classificação na primeira resposta pontuada
+                            </li>
+                          )}
+                          <li>
+                            <button
+                              id={`ranking-${r.user_id}`}
+                              type="button"
+                              onClick={() => setViewing(r.user_id)}
+                              aria-label={`Ver perfil de ${r.display_name}`}
+                              data-podium={scored && pos <= 3 ? pos : undefined}
+                              data-unranked={scored ? undefined : "true"}
+                              className={cn(
+                                "ranking-row grid w-full grid-cols-[42px_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border p-3 text-left transition",
+                                r.is_me && "ranking-row--me",
+                              )}
+                            >
+                              <PositionBadge pos={pos} scored={scored} />
+                              <div className="min-w-0">
+                                <p className="ranking-row__name truncate text-sm font-bold">
+                                  <span className="ranking-row__avatar" aria-hidden="true">
+                                    {initial}
+                                  </span>
+                                  <span className="truncate">
+                                    {r.display_name}
+                                    {r.is_me && " (você)"}
+                                  </span>
+                                </p>
+                                <p className="ranking-row__meta flex flex-wrap items-center gap-x-1.5 text-xs text-muted-foreground">
+                                  {scored ? (
+                                    <>
+                                      <Stars n={r.stars} />
+                                      <span className="ranking-row__level">{r.level_name}</span>
+                                      <span className="ranking-row__stats">
+                                        {r.questions}q ({r.accuracy}%) · {r.simulators} sim
+                                      </span>
+                                    </>
+                                  ) : (
+                                    <span className="rank-chip rank-chip--none">Sem pontuação</span>
+                                  )}
+                                </p>
+                              </div>
+                              <span className="ranking-row__points text-sm font-black tabular-nums">
+                                {scored ? r.points.toLocaleString("pt-BR") : "—"}
+                                <small>pts</small>
+                              </span>
+                            </button>
+                          </li>
+                        </React.Fragment>
+                      );
+                    })}
+                  </ol>
+                </>
+              );
+            })()
           ) : (
             <p className="py-6 text-center text-sm text-muted-foreground">
               {search.q
