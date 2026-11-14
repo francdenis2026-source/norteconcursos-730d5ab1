@@ -90,7 +90,7 @@ test('student overview uses the first scored answer, source identity and latest 
 test('student review signals require at least five answers and never infer mastery from one item',()=>{
  const rows=Array.from({length:5},(_,i)=>({id:`a${i}`,question_id:`q${i}`,question_source:'official',subject:'Matemática',is_correct:i===0,created_at:'2026-10-15T09:00:00Z'}));
  assert.equal(home.summarizeTraining(rows.slice(0,4),[],'2026-10-15').signals.length,0);
- assert.equal(home.summarizeTraining(rows,[],'2026-10-15').signals[0].subject,'Matemática');
+ assert.equal(home.summarizeTraining(rows,[],'2026-10-15').signals[0].subject,'Matemática e Raciocínio Lógico');
  assert.equal(home.summarizeTraining([],[],'2026-10-15').accuracy,null);
 });
 test('active time sums separate sessions and does not add the live clock twice',()=>{
