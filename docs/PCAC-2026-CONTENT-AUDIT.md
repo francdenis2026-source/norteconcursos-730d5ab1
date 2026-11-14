@@ -18,7 +18,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Noções de Informática: 10 materiais, 50 flashcards e 50 questões.
 - Realidade do Estado do Acre: 6 materiais, 40 flashcards e 39 questões.
 - Noções de Direito Administrativo: 8 materiais, 43 flashcards e 44 questões.
-- Noções de Direito Constitucional: 3 materiais, 15 flashcards e 15 questões.
+- Noções de Direito Constitucional: 3 materiais, 18 flashcards e 18 questões.
 - Noções de Direito Penal e Processual Penal: 9 materiais, 45 flashcards e 45 questões.
 - Arquivologia: 16 materiais, 80 flashcards e 80 questões.
 - Análise de Dados e Informações: 11 materiais, 55 flashcards e 55 questões.
@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 166 materiais ativos, 881 flashcards e 903 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 166 materiais ativos, 884 flashcards e 906 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -61,7 +61,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 30. Geografia do Acre: fuso UTC−5, bacias, relevo, clima, vegetação, unidades de conservação e transportes.
 31. Constituição Estadual, povos indígenas isolados e de recente contato, e indicadores demográficos/sociais.
 
-Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois registros preexistentes foram atualizados: a aula de ingresso/formação da LC nº 129/2004 e a aula de improbidade administrativa após a Lei nº 14.230/2021. Os dois seeds versionados contêm 31 registros no total (29 inclusões e duas atualizações específicas). O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
+Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois registros preexistentes foram atualizados: a aula de ingresso/formação da LC nº 129/2004 e a aula de improbidade administrativa após a Lei nº 14.230/2021. Os dois seeds versionados contêm 33 registros no total (29 inclusões e quatro atualizações específicas: LC nº 129/2004, improbidade, regionalização municipal e Constituição estadual). Os seeds idempotentes estão versionados em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql` e `supabase/migrations/20261114170000_pcac_2026_acre_geography_content.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
 ## Gaps e validações obrigatórias
 
@@ -86,7 +86,7 @@ Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois re
 - Noções de Administração: 6 grupos no edital e 15 materiais. Os materiais abrangem funções administrativas, estrutura, processos, informação/conhecimento, recursos materiais e qualidade no atendimento.
 
 ### Conhecimentos jurídicos e específicos
-- Direito Constitucional: mapear princípios fundamentais, direitos/deveres individuais e coletivos, remédios, arts. 37–41, art. 144 e Constituição do Acre.
+- Direito Constitucional: os três materiais cobrem princípios fundamentais, direitos/deveres individuais e coletivos, remédios, arts. 37–41, art. 144 e Constituição do Acre; o material estadual foi detalhado nos arts. 1º, 2º, 6º, 7º, 131, 133 e 134, com a EC estadual nº 63/2022.
 - Direito Administrativo: mapear princípios, organização, poderes, poder de polícia, atos, agentes, responsabilidade civil e improbidade após Lei 14.230/2021.
 - Penal/Processual Penal: conferir todos os artigos e leis expressamente listados no Anexo III, inclusive CPP 4º–23, 155–184, 275–281, Lei 12.037/2009, prisões e cautelares.
 - Contabilidade: 7 blocos expressos no edital; verificar cada subitem e aprofundar operações financeiras, conciliação, análise de movimentações e fluxos.
