@@ -1613,12 +1613,12 @@ function QuestionTrainer() {
           <div className="trainer-exit-dialog__body">
             <DialogHeader className="space-y-2 text-center sm:text-center">
               <DialogTitle className="text-xl font-bold tracking-tight text-slate-50">
-                Sair do treino?
+                Encerrar o treino?
               </DialogTitle>
               <DialogDescription className="mx-auto max-w-[330px] text-sm leading-6 text-slate-300">
                 {blocker.status === "blocked"
                   ? "O cronômetro está pausado. As respostas já registradas continuam no seu histórico."
-                  : "As respostas já registradas continuam no seu histórico. Deseja encerrar esta sessão?"}
+                  : "As respostas já registradas continuam no seu histórico. Ao encerrar, esta sessão não será retomada automaticamente."}
               </DialogDescription>
             </DialogHeader>
             <DialogFooter className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:space-x-0">
@@ -1652,7 +1652,7 @@ function QuestionTrainer() {
                   else setStarted(false);
                 }}
               >
-                <ArrowRight className="mr-2 h-4 w-4" /> Sair do treino
+                <ArrowRight className="mr-2 h-4 w-4" /> Encerrar treino
               </Button>
             </DialogFooter>
           </div>

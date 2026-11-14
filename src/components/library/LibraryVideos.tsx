@@ -16,7 +16,8 @@ export function LibraryVideos({ videos, law }: { videos: RelatedVideo[]; law?: {
   return (
     <section className="surface-card library-videos no-print" aria-label="Vídeo-aulas relacionadas">
       <h2>Vídeo-aulas relacionadas</h2>
-      <div className="mt-3 grid gap-4 lg:grid-cols-[1fr_280px]">
+      {/* Com um vídeo só não há lista lateral: o player ocupa a largura toda, centralizado. */}
+      <div className={cn("mt-3 grid min-w-0 gap-4", videos.length > 1 && "lg:grid-cols-[minmax(0,1fr)_280px]")}>
         <div className="space-y-2">
           <div className="overflow-hidden rounded-2xl border bg-black shadow-lg">
             <div className="aspect-video w-full">

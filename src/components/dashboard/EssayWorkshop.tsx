@@ -200,7 +200,7 @@ function EssayNotebook({ userId }: { userId: string }) {
     if (
       !(await confirmDialog({
         title: "Excluir redação?",
-        message: `"${e.title}" será apagada. Essa ação não pode ser desfeita.`,
+        message: `"${e.title}" será excluída. Esta ação não pode ser desfeita.`,
         confirmLabel: "Excluir",
       }))
     )

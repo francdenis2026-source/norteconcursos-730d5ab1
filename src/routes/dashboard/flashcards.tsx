@@ -384,7 +384,7 @@ function FlashcardsPage() {
     if (
       !(await confirmDialog({
         title: "Excluir cartão?",
-        message: `"${c.front.slice(0, 80)}" será apagado do seu baralho.`,
+        message: `"${c.front.slice(0, 80)}" será excluído do seu baralho. Esta ação não pode ser desfeita.`,
         confirmLabel: "Excluir cartão",
       }))
     )

@@ -430,7 +430,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
   const setDisc = (id: string, p: Partial<CronoDisc>) => setCfg({ discs: cfg.discs.map((d) => (d.id === id ? { ...d, ...p } : d)) });
 
   const remove = async () => {
-    if (!(await confirmDialog({ title: "Excluir cronograma?", message: "O cronograma e todo o progresso dele serão apagados.", confirmLabel: "Excluir" }))) return;
+    if (!(await confirmDialog({ title: "Excluir cronograma?", message: "O cronograma e todo o seu progresso serão excluídos. Esta ação não pode ser desfeita.", confirmLabel: "Excluir" }))) return;
     const { error } = await supabase.from("cronograma_plans").delete().eq("id", plan.id);
     if (error) {
       toast.error("Não foi possível excluir.");

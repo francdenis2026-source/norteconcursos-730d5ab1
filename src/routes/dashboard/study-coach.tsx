@@ -621,8 +621,8 @@ function StudyCoachPage() {
     const label = p.name || CAREERS.find((c) => c.id === p.career)?.name || "este plano";
     if (
       !(await confirmDialog({
-        title: "Excluir plano?",
-        message: `"${label}": o cronograma e os ajustes serão apagados. Seu histórico de questões e seu registro de estudos não são afetados.`,
+        title: "Excluir plano de estudo?",
+        message: `"${label}" e seus ajustes serão excluídos. Seu histórico de questões e seus registros de estudo não são afetados.`,
         confirmLabel: "Excluir plano",
       }))
     )

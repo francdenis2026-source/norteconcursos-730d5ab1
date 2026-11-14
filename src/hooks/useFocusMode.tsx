@@ -100,9 +100,9 @@ export function useFocusMode() {
     exiting.current = true;
     try {
       const ok = await confirmDialog({
-        title: "Encerrar a leitura cronometrada?",
-        message: `O tempo de estudo desta sessão (${hms(getFocusSession()?.elapsed ?? 0)}) será encerrado.`,
-        confirmLabel: "Encerrar",
+        title: "Encerrar a sessão de estudo?",
+        message: `O tempo desta sessão (${hms(getFocusSession()?.elapsed ?? 0)}) será contabilizado e a sessão terminará.`,
+        confirmLabel: "Encerrar sessão",
         cancelLabel: "Continuar estudando",
         tone: "default",
       });
@@ -178,9 +178,9 @@ export function useFocusMode() {
       const pause = PAUSE_DESTINATIONS.find((d) => next.pathname.startsWith(d.path));
       if (pause) {
         const ok = await confirmDialog({
-          title: "Pausar o relógio de estudo?",
-          message: `Você vai para ${pause.name}. O relógio de estudo ficará parado e continuará de onde parou quando você voltar à área de estudo. O horário exibido segue o real. Um botão no topo leva você de volta.`,
-          confirmLabel: "Ir e pausar o relógio",
+          title: "Pausar o cronômetro ao sair?",
+          message: `Você vai para ${pause.name}. O cronômetro ficará pausado e retomará de onde parou ao voltar à área de estudo. Um atalho no topo da página leva você de volta.`,
+          confirmLabel: "Ir e pausar",
           cancelLabel: "Continuar estudando",
           tone: "default",
         });
@@ -192,7 +192,7 @@ export function useFocusMode() {
       }
       const ok = await confirmDialog({
         title: "Sair da área de estudo?",
-        message: `Seu tempo de estudo (${hms(getFocusSession()?.elapsed ?? 0)}) está sendo contabilizado. Se sair, a sessão de foco será encerrada.`,
+        message: `O tempo desta sessão (${hms(getFocusSession()?.elapsed ?? 0)}) está sendo contabilizado. Ao sair, a sessão de foco será encerrada.`,
         confirmLabel: "Sair e encerrar",
         cancelLabel: "Continuar estudando",
         tone: "default",
