@@ -128,7 +128,7 @@ export function MaterialPractice({
     </section>
   );
 }
-function PracticeSession({ questions, userId, materialId, authoredKey }: { questions: Question[]; userId: string; materialId?: string | undefined; authoredKey: string }) {
+export function PracticeSession({ questions, userId, materialId, authoredKey, materialIdForQuestion }: { questions: Question[]; userId: string; materialIdForQuestion?: ((q: Question) => string | undefined) | undefined; materialId?: string | undefined; authoredKey: string }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const correct = questions.filter((q, i) => answers[i] === q.answer).length;
@@ -199,13 +199,18 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
             onClick={() => {
               if (picked) return;
               setAnswers((a) => ({ ...a, [index]: o.letter }));
-              if (materialId && userId !== "demo-user" && q.id.startsWith(`material:${authoredKey}:`)) {
+              const recordId = materialIdForQuestion
+                ? materialIdForQuestion(q)
+                : materialId && q.id.startsWith(`material:${authoredKey}:`)
+                  ? materialId
+                  : undefined;
+              if (recordId && userId !== "demo-user") {
                 const itemIndex = Number(q.id.slice(q.id.lastIndexOf(":") + 1));
                 setPendingSaves((n) => n + 1);
                 void Promise.resolve(
                   supabase.rpc("record_material_practice_answer", {
                     p_attempt_id: crypto.randomUUID(),
-                    p_material_id: materialId,
+                    p_material_id: recordId,
                     p_item_index: itemIndex,
                     p_selected_answer: o.letter === "C" ? "C" : "E",
                     p_response_seconds: Math.min(

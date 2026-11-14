@@ -318,6 +318,9 @@ function MaterialHub() {
           <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} style={{ "--ak-tone": "oklch(0.82 0.14 82)" } as React.CSSProperties}>
             <Library aria-hidden="true" /> Edital PC-AC
           </Link>
+          <Link to="/dashboard/exercicios" style={{ "--ak-tone": "oklch(0.78 0.14 195)" } as React.CSSProperties}>
+            <ClipboardCheck aria-hidden="true" /> Exercícios dos materiais
+          </Link>
           <Link to="/dashboard/question-trainer" style={{ "--ak-tone": "oklch(0.72 0.15 255)" } as React.CSSProperties}>
             <ClipboardCheck aria-hidden="true" /> Treinar questões
           </Link>

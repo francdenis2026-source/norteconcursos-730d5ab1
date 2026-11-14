@@ -46,6 +46,7 @@ import { Route as DashboardEnemRouteImport } from './routes/dashboard/enem'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
 import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/exam-panorama'
+import { Route as DashboardExerciciosRouteImport } from './routes/dashboard/exercicios'
 import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
 import { Route as DashboardInteligenciaIdecanRouteImport } from './routes/dashboard/inteligencia-idecan'
@@ -269,6 +270,11 @@ const DashboardExamPanoramaRoute = DashboardExamPanoramaRouteImport.update({
   path: '/exam-panorama',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardExerciciosRoute = DashboardExerciciosRouteImport.update({
+  id: '/exercicios',
+  path: '/exercicios',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardFlashcardsRoute = DashboardFlashcardsRouteImport.update({
   id: '/flashcards',
   path: '/flashcards',
@@ -486,6 +492,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
+  '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
@@ -558,6 +565,7 @@ export interface FileRoutesByTo {
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
+  '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
@@ -632,6 +640,7 @@ export interface FileRoutesById {
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
+  '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
@@ -708,6 +717,7 @@ export interface FileRouteTypes {
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/exam-panorama'
+    | '/dashboard/exercicios'
     | '/dashboard/flashcards'
     | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
@@ -780,6 +790,7 @@ export interface FileRouteTypes {
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/exam-panorama'
+    | '/dashboard/exercicios'
     | '/dashboard/flashcards'
     | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
@@ -853,6 +864,7 @@ export interface FileRouteTypes {
     | '/dashboard/errors'
     | '/dashboard/essays'
     | '/dashboard/exam-panorama'
+    | '/dashboard/exercicios'
     | '/dashboard/flashcards'
     | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
@@ -1169,6 +1181,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardExamPanoramaRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/exercicios': {
+      id: '/dashboard/exercicios'
+      path: '/exercicios'
+      fullPath: '/dashboard/exercicios'
+      preLoaderRoute: typeof DashboardExerciciosRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/flashcards': {
       id: '/dashboard/flashcards'
       path: '/flashcards'
@@ -1468,6 +1487,7 @@ interface DashboardRouteChildren {
   DashboardErrorsRoute: typeof DashboardErrorsRoute
   DashboardEssaysRoute: typeof DashboardEssaysRoute
   DashboardExamPanoramaRoute: typeof DashboardExamPanoramaRoute
+  DashboardExerciciosRoute: typeof DashboardExerciciosRoute
   DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardInteligenciaIdecanRoute: typeof DashboardInteligenciaIdecanRoute
@@ -1525,6 +1545,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardErrorsRoute: DashboardErrorsRoute,
   DashboardEssaysRoute: DashboardEssaysRoute,
   DashboardExamPanoramaRoute: DashboardExamPanoramaRoute,
+  DashboardExerciciosRoute: DashboardExerciciosRoute,
   DashboardFlashcardsRoute: DashboardFlashcardsRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardInteligenciaIdecanRoute: DashboardInteligenciaIdecanRoute,
