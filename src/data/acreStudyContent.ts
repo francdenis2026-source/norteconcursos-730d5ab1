@@ -25,6 +25,18 @@ export interface AcreStudyCard {
 export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
   historia: [
     {
+      title: "Tratado de Ayacucho",
+      reference: "27 de março de 1867",
+      points: [
+        "O Tratado de Amizade, Limites, Navegação, Comércio e Extradição foi celebrado entre Brasil e Bolívia em La Paz de Ayacucho.",
+        "O art. 2º adotou o princípio do uti possidetis como base para a determinação da fronteira entre os dois países.",
+        "Na delimitação de 1867, o atual Acre ficou do lado boliviano; a incorporação ao Brasil somente ocorreu após a Revolução Acreana e o Tratado de Petrópolis, em 1903.",
+      ],
+      source: { label: "Câmara dos Deputados — Decreto nº 4.280/1868 e texto do Tratado", url: "https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-4280-28-novembro-1868-553624-publicacaooriginal-71754-pe.html" },
+      alternatives: [{ label: "SEPLAN Acre — Rota de Integração, Tratado de Ayacucho", url: "https://seplan.ac.gov.br/rota-de-integracao/1867-o-tratado-de-ayacucho/" }],
+      caution: "Distinguir a data de assinatura do tratado (27/03/1867) da promulgação no Brasil pelo Decreto nº 4.280, de 28/11/1868.",
+    },
+    {
       title: "Revolução Acreana e a Questão do Acre",
       reference: "1902–1903",
       points: [
@@ -151,6 +163,19 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       caution: "Fontes de 2012–2015 sobre o SISA e o KfW; o estado atual dos programas e outros acordos (como a Interoceânica) não foram confirmados. A data da Lei nº 2.308 varia entre fontes (22/10 ou 11/11/2010).",
     },
   ],
+    {
+      title: "Infraestrutura de transportes e integração regional",
+      reference: "Diagnóstico socioeconômico — SEPLAN/CEDEPLAR (2024); AGEAC (2026)",
+      points: [
+        "A BR-364 é o principal eixo terrestre de integração longitudinal do Acre, conectando Rio Branco ao Vale do Juruá e a Cruzeiro do Sul.",
+        "A BR-317, conhecida como Estrada do Pacífico/Interoceânica, conecta a região de Rio Branco a Assis Brasil e à fronteira com o Peru, articulando rotas internacionais.",
+        "O transporte fluvial continua essencial para localidades ribeirinhas e municípios com acesso rodoviário limitado; o modal aéreo complementa a ligação com áreas mais isoladas.",
+        "A AGEAC regula e fiscaliza o transporte intermunicipal rodoviário e fluvial, incluindo linhas regulares, transporte alternativo e fretamento.",
+      ],
+      source: { label: "SEPLAN/AC — Diagnóstico socioeconômico, infraestrutura de transportes", url: "https://seplan.ac.gov.br/wp-content/uploads/2024/02/CEDEPLAR-Diagnostico-Socieconomico-Acre-Livro1-1.pdf" },
+      alternatives: [{ label: "AGEAC — Transporte intermunicipal", url: "https://ageac.ac.gov.br/transporte-ditrans/" }, { label: "AGEAC — BR-364 e transporte intermunicipal", url: "https://ageac.ac.gov.br/ageac-reforca-articulacao-com-bancada-federal-para-impulsionar-melhorias-na-br-364-e-fortalecer-o-transporte-intermunicipal/" }],
+      caution: "Extensão, pavimentação e tempo de viagem variam por trecho e ano; para prova, priorize a função dos corredores e os modais, não números sem referência temporal.",
+    },
   cultura: [
     {
       title: "Povos indígenas do Acre",
