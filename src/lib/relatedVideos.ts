@@ -1,5 +1,6 @@
 import type { MediaCatalog } from "@/lib/mediaStore";
 import type { TopicVideo } from "@/data/topicVideos";
+import { sameDiscipline } from "@/lib/disciplineHub";
 
 const normalize = (text: string) =>
   text
@@ -37,7 +38,7 @@ export function relatedVideos(
     const isEnem = /^enem\s*[—–-]/i.test(subject.trim());
     if (isEnem !== (context === "enem")) return false;
     const scopedSubject = isEnem ? subject.replace(/^enem\s*[—–-]\s*/i, "") : subject;
-    return correlates(scopedSubject, discipline);
+    return correlates(scopedSubject, discipline) || sameDiscipline(scopedSubject, discipline);
   });
   if (matchingSubjects.length === 0) return [];
 

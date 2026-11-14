@@ -6,11 +6,18 @@ import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import "@/styles/student-workspace-unified.css";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeftRight, BookOpenText, Check, ChevronRight, ClipboardCheck, ExternalLink, FileText, Layers, ListChecks, Loader2, Search, Share2, Download, Star, Target } from "lucide-react";
+import { ArrowLeftRight, BookOpenText, PlayCircle, Check, ChevronRight, ClipboardCheck, ExternalLink, FileText, Layers, ListChecks, Loader2, Search, Share2, Download, Star, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { canonicalSubject } from "@/lib/subjects";
+import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
+import { disciplineMaterials, editalMaterials } from "@/lib/editalCatalog";
+import { buildTheoryIndex } from "@/lib/cronogramaTeoria";
+import { libraryCollection } from "@/lib/libraryOrganization";
+import { isEnemContest } from "@/lib/trainerFilters";
 import { fetchAllRows } from "@/lib/catalog";
 import { readActiveStudyEdition, saveActiveStudyEdition } from "@/lib/activeStudyEdition";
 import { needsMissingSupportText } from "@/lib/questionText";
@@ -201,6 +208,25 @@ function EditalPage() {
       active = false;
     };
   }, [editionId, revision]);
+  const library = useStudyMaterialList(real);
+  const { catalog: mediaCatalog } = useMediaCatalog();
+  const enemEdition = !!edition && isEnemContest(edition.contest_name);
+  // O que a plataforma tem sobre cada assunto (texto e vídeo), para sinalizar na lista.
+  const contentFlags = React.useMemo(() => {
+    const flags = new Map<string, { text: boolean; video: boolean }>();
+    const pool = (library.data ?? []).filter((m) => (libraryCollection(m) === "enem") === enemEdition);
+    const index = buildTheoryIndex(pool, []);
+    for (const t of topics) {
+      const text =
+        editalMaterials(pool, t.discipline, t.topic_text, 1, index).length > 0 ||
+        disciplineMaterials(pool, t.discipline, 1).length > 0;
+      const video =
+        relatedVideos(mediaCatalog, t.discipline, t.topic_text, 1, enemEdition ? "enem" : "general")
+          .length > 0;
+      flags.set(t.id, { text, video });
+    }
+    return flags;
+  }, [topics, library.data, mediaCatalog, enemEdition]);
   const counts = React.useMemo(() => {
     const map = new Map<string, number>();
     for (const q of catalog)
@@ -484,6 +510,10 @@ function EditalPage() {
                                   <span className="flex items-start gap-2"><BookOpenText className="mt-0.5 h-4 w-4 shrink-0" /><span>{t.topic_text}</span></span>
                                 </span>
                                 <span className="flex shrink-0 items-center gap-2">
+                                  <span className="edital-topic-flags" aria-label="Conteúdo na plataforma">
+                                    {contentFlags.get(t.id)?.text && <span title="Material em texto"><FileText aria-hidden="true" /><span className="sr-only">Material em texto</span></span>}
+                                    {contentFlags.get(t.id)?.video && <span title="Videoaula"><PlayCircle aria-hidden="true" /><span className="sr-only">Videoaula</span></span>}
+                                  </span>
                                   <Badge variant="outline">
                                     {catalogLoading || catalogError
                                       ? "Consultando"

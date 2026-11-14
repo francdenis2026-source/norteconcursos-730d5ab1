@@ -6,12 +6,22 @@ import { syllabusQuestions, isEnemContest } from "@/lib/trainerFilters";
 import { needsMissingSupportText } from "@/lib/questionText";
 import { hasReviewedExplanation } from "@/lib/questionFormat";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
-import { editalMaterials, editalSourceUrl } from "@/lib/editalCatalog";
+import { disciplineMaterials, editalMaterials, editalSourceUrl } from "@/lib/editalCatalog";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
-import { ArrowLeft, BookOpenCheck, GraduationCap, Layers3, Loader2, Scale } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpenCheck,
+  ClipboardCheck,
+  FileText,
+  GraduationCap,
+  HelpCircle,
+  Loader2,
+  PlayCircle,
+  Scale,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
@@ -116,19 +126,21 @@ function TopicPage() {
       })),
     [linkedQuestions],
   );
-  const materials = React.useMemo(
-    () =>
-      topic && edition
-        ? editalMaterials(
-            (library.data ?? []).filter(
-              (m) => (libraryCollection(m) === "enem") === isEnemContest(edition.contest_name),
-            ),
-            topic.discipline,
-            topic.topic_text,
-          )
-        : [],
-    [library.data, topic, edition],
-  );
+  const { materials, materialsBroad } = React.useMemo(() => {
+    if (!topic || !edition) return { materials: [], materialsBroad: false };
+    const pool = (library.data ?? []).filter(
+      (m) => (libraryCollection(m) === "enem") === isEnemContest(edition.contest_name),
+    );
+    const exact = editalMaterials(pool, topic.discipline, topic.topic_text);
+    if (exact.length) return { materials: exact, materialsBroad: false };
+    const broad = disciplineMaterials(pool, topic.discipline).map((m) => ({
+      kind: "material" as const,
+      id: m.slug,
+      label: m.title,
+      score: 0,
+    }));
+    return { materials: broad, materialsBroad: broad.length > 0 };
+  }, [library.data, topic, edition]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const { catalog: mediaCatalog } = useMediaCatalog();
@@ -273,6 +285,24 @@ function TopicPage() {
           <span>PROGRAMA DO ASSUNTO</span>
           <p>{topic.topic_text}</p>
         </div>
+        <nav className="edital-content-map" aria-label="O que a plataforma tem sobre este assunto">
+          {[
+            { href: "#edital-materials", icon: FileText, label: "Texto", n: materials.length },
+            { href: "#edital-videos", icon: PlayCircle, label: "Vídeo", n: videos.length },
+            { href: "#edital-lessons", icon: GraduationCap, label: "Aulas", n: learning.lessons.length },
+            { href: "#edital-practice", icon: HelpCircle, label: "Questões", n: linkedQuestions.length },
+          ].map(({ href, icon: Icon, label, n }) => (
+            <a key={label} href={href} className={n ? "is-on" : "is-off"} aria-disabled={!n}>
+              <Icon aria-hidden="true" />
+              <span>{label}</span>
+              <b>{n || "—"}</b>
+            </a>
+          ))}
+          <Link to="/dashboard/mock-exams" className="is-on">
+            <ClipboardCheck aria-hidden="true" />
+            <span>Simulados</span>
+          </Link>
+        </nav>
         {edition?.status === "archived" && (
           <p className="edital-note">
             Edição arquivada: consulte o programa histórico. Os materiais sugeridos usam conteúdo
@@ -344,7 +374,7 @@ function TopicPage() {
             </Button>
           )}
         {learning.lessons.length > 0 && (
-          <Card>
+          <Card id="edital-lessons" className="scroll-mt-24">
             <CardHeader>
               <CardTitle className="text-lg">Aulas relacionadas ao assunto</CardTitle>
             </CardHeader>
@@ -432,11 +462,13 @@ function TopicPage() {
           </p>
         )}
         {materials.length > 0 && (
-          <Card>
+          <Card id="edital-materials" className="scroll-mt-24">
             <CardHeader>
               <CardTitle className="text-lg">Materiais relacionados</CardTitle>
               <CardDescription>
-                Sugestões por disciplina e assunto; confira o recorte do edital ao estudar.
+                {materialsBroad
+                  ? "Nenhum material trata exatamente deste texto; estes são da mesma disciplina."
+                  : "Sugestões por disciplina e assunto; confira o recorte do edital ao estudar."}
               </CardDescription>
             </CardHeader>
             <CardContent className="grid gap-2 sm:grid-cols-2">
@@ -455,7 +487,7 @@ function TopicPage() {
           </Card>
         )}
         {videos.length > 0 && (
-          <details className="edital-comments">
+          <details id="edital-videos" className="edital-comments scroll-mt-24" open>
             <summary className="cursor-pointer text-sm font-semibold">
               Videoaulas relacionadas ({videos.length})
             </summary>
@@ -477,7 +509,14 @@ function TopicPage() {
               a fonte do edital e busque materiais na biblioteca.
             </p>
           )}
-        <div className="flex flex-wrap gap-2">
+        <div id="edital-practice" className="flex flex-wrap gap-2">
+          {linkedQuestions.length > 0 && (
+            <Button size="sm" asChild>
+              <Link to="/dashboard/question-trainer" search={practiceSearch}>
+                Praticar {linkedQuestions.length} questões
+              </Link>
+            </Button>
+          )}
           <Button variant="outline" size="sm" asChild>
             {edition && isEnemContest(edition.contest_name) ? (
               <Link to="/dashboard/enem" search={{ tab: "materiais" }}>

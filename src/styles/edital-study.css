@@ -56,3 +56,16 @@
   .ed3-identity__actions > * { flex: 1 1 auto; }
   .ed3-disc__meta { display: none; }
 }
+
+/* Mapa do conteúdo do assunto: o que a plataforma tem (texto, vídeo, aulas, questões, simulados). */
+.edital-content-map { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+.edital-content-map a { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.25rem; padding: .3rem .7rem; border: 1px solid var(--border); border-radius: 999px; font-size: .8rem; font-weight: 600; color: var(--foreground); text-decoration: none; }
+.edital-content-map a svg { width: 1rem; height: 1rem; flex: none; }
+.edital-content-map a b { font-variant-numeric: tabular-nums; }
+.edital-content-map a.is-on { border-color: color-mix(in oklab, var(--primary) 55%, var(--border)); background: color-mix(in oklab, var(--primary) 12%, transparent); }
+.edital-content-map a.is-on svg { color: var(--primary); }
+.edital-content-map a.is-off { opacity: .55; pointer-events: none; }
+
+/* Indicadores por assunto na lista do edital. */
+.edital-topic-flags { display: inline-flex; align-items: center; gap: .35rem; }
+.edital-topic-flags svg { width: 1rem; height: 1rem; color: var(--primary); }

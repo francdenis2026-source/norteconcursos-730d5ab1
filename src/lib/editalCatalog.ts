@@ -1,3 +1,4 @@
+import { sameDiscipline } from "@/lib/disciplineHub";
 import {
   buildTheoryIndex,
   findTheory,
@@ -71,15 +72,16 @@ export function editalMaterials(
   discipline: string,
   topic: string,
   limit = 8,
+  prebuilt?: ReturnType<typeof buildTheoryIndex>,
 ): TheoryHit[] {
   const disciplines = [discipline];
   if (editalFold(discipline) === "direito penal e processual penal")
     disciplines.push("Direito Penal", "Direito Processual Penal");
-  const index = buildTheoryIndex(materials, []);
+  const index = prebuilt ?? buildTheoryIndex(materials, []);
   const clauses = [
     topic,
     ...topic
-      .split(/;|\.(?:\s|$)/)
+      .split(/;|,|\.(?:\s|$)/)
       .map((s) => s.trim())
       .filter((s) => s.length >= 8),
   ];
@@ -90,4 +92,13 @@ export function editalMaterials(
         if ((hits.get(hit.id)?.score ?? 0) < hit.score) hits.set(hit.id, hit);
       }
   return [...hits.values()].sort((a, b) => b.score - a.score).slice(0, limit);
+}
+
+/** Materiais da mesma disciplina quando nenhum casa com o texto do assunto (programas muito amplos). */
+export function disciplineMaterials<T extends { discipline: string }>(
+  materials: T[],
+  discipline: string,
+  limit = 6,
+): T[] {
+  return materials.filter((m) => sameDiscipline(m.discipline, discipline)).slice(0, limit);
 }
