@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 154 materiais ativos, 805 flashcards e 827 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -40,6 +40,13 @@ Os totais são inventário de registros, não validação pedagógica nem prova 
 9. Correio eletrônico: SMTP, POP3, IMAP, phishing e proteção de dados.
 10. Computação em nuvem, compartilhamento, coautoria e gestão de permissões.
 11. Sistemas de informação, autenticação, autorização, auditoria, transparência e proteção de dados.
+12. LC nº 39/1993: deveres, proibições e responsabilidades civis, penais e administrativas.
+13. Regência verbal e nominal.
+14. Colocação pronominal.
+15. Crase: casos obrigatórios, proibidos e facultativos.
+16. Variação linguística e adequação de registro.
+17. Figuras de linguagem.
+18. Linguagem digital e gêneros tecnológicos.
 
 Os dezoito registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
