@@ -1,0 +1,81 @@
+/* Painel do aluno enxuto: rótulos de seção discretos, atalhos em fileira e indicadores compactos. */
+html:root body .student-home.sh2 .sh2-label--compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 6px;
+  min-height: 0;
+}
+html:root body .student-home.sh2 .sh2-label--compact::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, color-mix(in oklab, var(--border) 90%, transparent), transparent);
+}
+html:root body .student-home.sh2 .sh2-label--compact .sh2-label__title {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--muted-foreground);
+}
+
+/* Atalhos: fileira de botões sem foto. */
+html:root body .student-home.sh2 .sh2-shortcuts--chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  min-height: 40px;
+  height: auto;
+  padding: 0 10px;
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--border) 80%, var(--foreground) 12%);
+  background: var(--card);
+  box-shadow: none;
+  overflow: visible;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a:hover {
+  border-color: var(--control-accent, var(--primary));
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a > span {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: none;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--foreground);
+  text-shadow: none;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips strong svg { width: 16px; height: 16px; }
+html:root body .student-home.sh2 .sh2-shortcuts--chips small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-shadow: none;
+}
+
+/* Indicadores mais baixos. */
+html:root body .student-home.sh2 .sh2-kpis { gap: 8px; }
+html:root body .student-home.sh2 .sh2-kpis > * { min-height: 0; padding-block: 10px; }

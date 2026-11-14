@@ -1,3 +1,4 @@
+import "@/styles/student-home-lean.css";
 import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
 import { AnswerInsights } from "@/components/dashboard/AnswerInsights";
@@ -397,7 +398,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         </section>
       </header>
 
-      <SectionLabel step={1} title="Seu progresso em números" text="Toque em um indicador para ver o detalhe e a explicação de como ele é calculado." />
+      <SectionLabel step={1} title="Seu progresso" />
       <section className="sh2-kpis" aria-label="Seu progresso">
         <Metric
           icon={BrainCircuit}
@@ -445,8 +446,8 @@ function StudentHome({ user }: { user: UserProfile }) {
         />
       </section>
 
-      <SectionLabel step={2} title="Para onde ir agora" text="Atalhos para as áreas de estudo. Comece pelo plano do dia e siga para as questões." />
-      <nav className="sh2-shortcuts" aria-label="Atalhos de estudo">
+      <SectionLabel step={2} title="Atalhos" />
+      <nav className="sh2-shortcuts sh2-shortcuts--chips" aria-label="Atalhos de estudo">
         {destinations.map(({ to, title, text, image, icon: Icon }, i) => (
           <Link
             key={to}
@@ -458,46 +459,29 @@ function StudentHome({ user }: { user: UserProfile }) {
                 }
               : {})}
           >
-            <img src={image} alt="" aria-hidden="true" loading="lazy" decoding="async" />
             <span>
               <strong>
                 <Icon aria-hidden="true" />
                 {title}
               </strong>
-              <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
+              {to === "/dashboard/ranking" && rankText ? <small>{rankText}</small> : null}
             </span>
           </Link>
         ))}
         <Link to="/dashboard/performance" data-tone="blue">
-          <img
-            src="/media/hero/pcpr-investigacao.webp"
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-          />
           <span>
             <strong>
               <TrendingUp aria-hidden="true" />
               Desempenho
             </strong>
-            <small>Evolução e pontos fracos</small>
           </span>
         </Link>
         <Link to="/dashboard/student-exams" search={{ career: undefined }} data-tone="rose">
-          <img
-            src="/media/hero/plano-plus-carreira.webp"
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-          />
           <span>
             <strong>
               <FileText aria-hidden="true" />
               Minhas provas
             </strong>
-            <small>Provas e diagnóstico</small>
           </span>
         </Link>
       </nav>
@@ -528,7 +512,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         returnFocus={metricTrigger.current}
       />
 
-      <SectionLabel step={3} title="Seu plano de hoje" text="O que estudar agora, o que revisar e de onde você parou." />
+      <SectionLabel step={3} title="Hoje" />
       <div className="sh2-board" role="region" aria-label="Seu estudo de hoje e prioridades">
         <section className="sh2-card" data-tone="gold" aria-labelledby="dashboard-schedule-title">
           <SectionTitle
@@ -825,7 +809,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         </div>
       </div>
 
-      <SectionLabel step={4} title="Ritmo e respostas" text="Como você tem estudado nos últimos dias e o resultado das suas respostas." />
+      <SectionLabel step={4} title="Ritmo e respostas" />
       <div className="sh2-pair">
       <section
         className="sh2-card sh2-card--wide sh2-card--photo"
@@ -887,7 +871,7 @@ function StudentHome({ user }: { user: UserProfile }) {
       </div>
 
       <section className="sh2-resources" aria-labelledby="dashboard-resources-title">
-        <SectionLabel step={5} id="dashboard-resources-title" title="Editais e acervo" text="Concursos em andamento e o tamanho do banco de questões da plataforma." />
+        <SectionLabel step={5} id="dashboard-resources-title" title="Editais e acervo" />
         <PcAcreEditalSpotlight />
         <PcprExamSpotlight compact />
         <PlatformQuestionCounts compact />
@@ -910,14 +894,10 @@ function StudentHome({ user }: { user: UserProfile }) {
 
 const tones = ["gold", "blue", "green", "violet", "amber", "rose"] as const;
 
-function SectionLabel({ step, title, text, id }: { step: number; title: string; text: string; id?: string }) {
+function SectionLabel({ title, id }: { step?: number; title: string; text?: string; id?: string }) {
   return (
-    <div className="sh2-label">
-      <b aria-hidden="true">{step}</b>
-      <div>
-        <p className="sh2-label__title" id={id}>{title}</p>
-        <p>{text}</p>
-      </div>
+    <div className="sh2-label sh2-label--compact">
+      <p className="sh2-label__title" id={id}>{title}</p>
     </div>
   );
 }
