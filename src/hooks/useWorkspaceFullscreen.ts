@@ -2,7 +2,7 @@ import { READING_WORKSPACE_EVENT, READING_FULLSCREEN_EXIT } from "@/lib/readingW
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { MOBILE_APP_QUERY } from "@/lib/appScroll";
 
-/** Modo imersivo da área de estudo (dentro da página, sem a tela cheia nativa e o aviso do navegador). */
+/** Native fullscreen where allowed; the same workspace layout works without it. */
 export function useWorkspaceFullscreen(observerOnly = false) {
   const [active, setActive] = useState(false);
   const activeRef = useRef(false);
@@ -45,8 +45,28 @@ export function useWorkspaceFullscreen(observerOnly = false) {
     beginTransition();
     activeRef.current = true;
     setActive(true);
-    // Sem a tela cheia nativa do navegador: ela sempre exibe o aviso "pressione Esc para sair".
-    // O modo imersivo ocupa a janela inteira dentro da própria página, e o Esc continua saindo.
+    // Tela cheia real do navegador (esconde abas e barra de endereço). O aviso de "Esc para sair"
+    // é do próprio navegador e some sozinho em poucos segundos; sem suporte, o layout imersivo basta.
+    if (
+      !document.fullscreenElement &&
+      document.fullscreenEnabled &&
+      document.documentElement.requestFullscreen
+    ) {
+      pending.current = true;
+      void document.documentElement
+        .requestFullscreen()
+        .then(() => {
+          pending.current = false;
+          native.current = document.fullscreenElement === document.documentElement;
+          if ((!mounted.current || !activeRef.current) && native.current) {
+            native.current = false;
+            void document.exitFullscreen().catch(() => {});
+          }
+        })
+        .catch(() => {
+          pending.current = false;
+        });
+    }
   }, [beginTransition, observerOnly]);
   const exit = useCallback(() => {
     if (observerOnly) { document.dispatchEvent(new Event("norte:workspace-exit")); return; }
