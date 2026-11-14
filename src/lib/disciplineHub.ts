@@ -33,6 +33,7 @@ export const isLawDiscipline = (name: string) => LAW_PATTERN.test(canonicalSubje
 const DISCIPLINE_GROUPS: { label: string; pattern: RegExp; parts: string[] }[] = [
   { label: "Contabilidade", pattern: /contab|cont[áa]bil/i, parts: ["Geral", "de Custos", "Pública", "Análise Financeira", "Perícia"] },
   { label: "Realidade do Acre", pattern: /realidade do (estado do )?acre/i, parts: [] },
+  { label: "Administração Pública", pattern: /administra[cç][aã]o p[uú]blica|auditoria e administra|administra[cç][aã]o financeira/i, parts: ["Auditoria e Administração Financeira e Orçamentária"] },
   { label: "Estatística", pattern: /estat[ií]stic|an[áa]lise de dados/i, parts: ["Análise de Dados"] },
 ];
 /** Nome do cartão em que a disciplina aparece (o próprio nome quando não pertence a um grupo). */

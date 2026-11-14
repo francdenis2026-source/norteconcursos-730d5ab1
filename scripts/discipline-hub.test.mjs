@@ -57,3 +57,13 @@ test("variações de Contabilidade, Realidade do Acre e Estatística viram um ca
   const all = [mat("a", "Contabilidade Geral"), mat("b", "Contabilidade Pública"), mat("x", "Química")];
   assert.deepEqual(materialsOf("Contabilidade", all).map((m) => m.slug), ["a", "b"]);
 });
+
+test("Auditoria e Administração Financeira entra no cartão de Administração Pública, sem tocar Noções de Administração", () => {
+  const cards = disciplineCards(
+    [mat("a", "Administração Pública"), mat("b", "Auditoria e Administração Financeira e Orçamentária"), mat("c", "Noções de Administração")],
+    [],
+    [],
+  );
+  assert.equal(cards.find((c) => c.name === "Administração Pública").materials, 2);
+  assert.ok(!cards.some((c) => c.name.startsWith("Auditoria")));
+});

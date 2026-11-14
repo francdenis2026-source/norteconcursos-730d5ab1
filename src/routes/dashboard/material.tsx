@@ -128,7 +128,12 @@ const SUBJECT_GUIDES: { id: string; name: string; text: string; icon: LucideIcon
   { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", icon: ClipboardList },
   { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", icon: Building2 },
 ];
-const GUIDE_NAMES = new Set(SUBJECT_GUIDES.map((guide) => canonicalSubject(guide.name)));
+// Administração Pública tem materiais próprios: o cartão com contagem substitui o atalho do guia.
+const GUIDE_NAMES = new Set(
+  SUBJECT_GUIDES.filter((guide) => guide.id !== "administracao-publica").map((guide) =>
+    canonicalSubject(guide.name),
+  ),
+);
 
 const summary = (card: DisciplineCard) =>
   [
@@ -336,7 +341,7 @@ function MaterialHub() {
                 <span>História, geografia, economia e atualidades</span>
               </Link>
             </li>
-            {SUBJECT_GUIDES.map((guide) => (
+            {SUBJECT_GUIDES.filter((guide) => guide.id !== "administracao-publica" || !availableSubjects.some((entry) => entry.name === "Administração Pública")).map((guide) => (
               <li key={guide.id}>
                 <Link
                   to="/dashboard/library"
