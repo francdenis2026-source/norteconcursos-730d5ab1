@@ -42,6 +42,7 @@ export function AreaHint({
   align = "center",
   children,
 }: {
+  /** Mantido por compatibilidade: o nome já aparece no próprio menu, então só a descrição é exibida. */
   title?: React.ReactNode;
   description?: React.ReactNode;
   side?: "top" | "bottom" | "left" | "right";
@@ -133,7 +134,6 @@ export function AreaHint({
             collisionPadding={12}
             className="area-hint"
           >
-            {title && <strong className="area-hint__title">{title}</strong>}
             <span className="area-hint__text">{description}</span>
           </TooltipPrimitive.Content>
         </TooltipPrimitive.Portal>

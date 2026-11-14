@@ -31,8 +31,8 @@
   color: var(--area-hint-accent);
 }
 .area-hint__text {
-  font-weight: 500;
-  color: color-mix(in oklab, var(--foreground) 72%, var(--background));
+  font-weight: 600;
+  color: var(--foreground);
 }
 @keyframes area-hint-in {
   from { opacity: 0; transform: translateY(-2px); }
