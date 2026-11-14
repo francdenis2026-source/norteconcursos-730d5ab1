@@ -1,5 +1,4 @@
 import { ENEM_AREAS, ENEM_VIDEO_SUBJECTS } from "@/data/enem";
-import { canonicalSubject } from "./subjects";
 import type { SimulatorFilters } from "./simulatorFilters";
 import type { TopicVideo } from "@/data/topicVideos";
 
@@ -27,7 +26,7 @@ for (const [name, area] of [
   subjects.set(fold(name!), area!);
 
 export function enemQuestionArea(subject: string) {
-  return subjects.get(fold(canonicalSubject(subject))) ?? null;
+  return subjects.get(fold(subject)) ?? null;
 }
 export function enemSimulatorCatalog<T extends { contest: string; subject: string }>(
   catalog: T[],
@@ -36,7 +35,7 @@ export function enemSimulatorCatalog<T extends { contest: string; subject: strin
   return catalog.filter(
     (q) =>
       fold(q.contest) === "enem" &&
-      enemQuestionArea(q.subject) !== null &&
+      subjects.has(fold(q.subject)) &&
       (area === "all" || enemQuestionArea(q.subject) === area),
   );
 }
