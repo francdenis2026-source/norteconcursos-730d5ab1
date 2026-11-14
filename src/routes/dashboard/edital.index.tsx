@@ -15,6 +15,9 @@ import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import { disciplineMaterials, editalMaterials } from "@/lib/editalCatalog";
+import { disciplineCards, disciplineGroup } from "@/lib/disciplineHub";
+import { TRACKS } from "@/data/tracks";
+import { PLAYLISTS } from "@/data/mediaCatalog";
 import { buildTheoryIndex } from "@/lib/cronogramaTeoria";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import { isEnemContest } from "@/lib/trainerFilters";
@@ -227,6 +230,10 @@ function EditalPage() {
     }
     return flags;
   }, [topics, library.data, mediaCatalog, enemEdition]);
+  const disciplineCardByName = React.useMemo(
+    () => new Map(disciplineCards(library.data ?? [], TRACKS, PLAYLISTS).map((c) => [c.name, c])),
+    [library.data],
+  );
   const counts = React.useMemo(() => {
     const map = new Map<string, number>();
     for (const q of catalog)
@@ -495,6 +502,24 @@ function EditalPage() {
                         </span>
                       </AccordionTrigger>
                       <AccordionContent>
+                        {!enemEdition && (() => {
+                          const card = disciplineCardByName.get(disciplineGroup(name));
+                          return (
+                            <p className="edital-discipline-content">
+                              {card?.hasContent ? (
+                                <>
+                                  <span>Na plataforma:</span>
+                                  {card.materials > 0 && <b><FileText aria-hidden="true" /> {card.materials} {card.materials === 1 ? "material" : "materiais"}</b>}
+                                  {card.lessons > 0 && <b>{card.lessons} {card.lessons === 1 ? "aula" : "aulas"}</b>}
+                                  {card.videos > 0 && <b><PlayCircle aria-hidden="true" /> {card.videos} {card.videos === 1 ? "videoaula" : "videoaulas"}</b>}
+                                  <Link to="/dashboard/disciplinas" search={{ d: card.name }}>Abrir a disciplina →</Link>
+                                </>
+                              ) : (
+                                <Link to="/dashboard/library" search={{ collection: "laws", q: name }}>Buscar materiais de {name} na biblioteca →</Link>
+                              )}
+                            </p>
+                          );
+                        })()}
                         <ul className="space-y-2">
                           {items.map((t) => (
                             <li key={t.id}>

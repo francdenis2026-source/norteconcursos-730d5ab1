@@ -8,6 +8,7 @@ import { hasReviewedExplanation } from "@/lib/questionFormat";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { disciplineMaterials, editalMaterials, editalSourceUrl } from "@/lib/editalCatalog";
 import { libraryCollection } from "@/lib/libraryOrganization";
+import { sameDiscipline } from "@/lib/disciplineHub";
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
@@ -57,6 +58,7 @@ interface TopicRow {
   id: string;
   discipline: string;
   topic_text: string;
+  topic_order: number | null;
   edition_id: string;
 }
 interface EditionRow {
@@ -131,7 +133,17 @@ function TopicPage() {
     const pool = (library.data ?? []).filter(
       (m) => (libraryCollection(m) === "enem") === isEnemContest(edition.contest_name),
     );
-    const exact = editalMaterials(pool, topic.discipline, topic.topic_text);
+    // Material que o admin ligou a este assunto (ordem no edital) vem sempre primeiro.
+    const pinned = (topic.topic_order == null
+      ? []
+      : pool.filter(
+          (m) =>
+            m.syllabus_topic_order === topic.topic_order &&
+            sameDiscipline(m.discipline, topic.discipline),
+        )
+    ).map((m) => ({ kind: "material" as const, id: m.slug, label: m.title, score: 9 }));
+    const found = editalMaterials(pool, topic.discipline, topic.topic_text);
+    const exact = [...pinned, ...found.filter((h) => !pinned.some((p) => p.id === h.id))];
     if (exact.length) return { materials: exact, materialsBroad: false };
     const broad = disciplineMaterials(pool, topic.discipline).map((m) => ({
       kind: "material" as const,
@@ -172,7 +184,7 @@ function TopicPage() {
     void (async () => {
       const topicResult = await supabase
         .from("syllabus_topics")
-        .select("id,discipline,topic_text,edition_id")
+        .select("id,discipline,topic_text,topic_order,edition_id")
         .eq("id", topicId)
         .eq("content_status", "current")
         .maybeSingle();

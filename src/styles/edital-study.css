@@ -69,3 +69,10 @@
 /* Indicadores por assunto na lista do edital. */
 .edital-topic-flags { display: inline-flex; align-items: center; gap: .35rem; }
 .edital-topic-flags svg { width: 1rem; height: 1rem; color: var(--primary); }
+
+/* Resumo do que a plataforma tem por disciplina, no topo de cada grupo do edital. */
+.edital-discipline-content { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin: 0 0 .75rem; font-size: .8rem; color: var(--muted-foreground); }
+.edital-discipline-content b { display: inline-flex; align-items: center; gap: .3rem; font-weight: 700; color: var(--foreground); }
+.edital-discipline-content svg { width: .95rem; height: .95rem; color: var(--primary); }
+.edital-discipline-content a { margin-left: auto; font-weight: 700; color: var(--primary); text-decoration: none; }
+.edital-discipline-content a:hover { text-decoration: underline; }
