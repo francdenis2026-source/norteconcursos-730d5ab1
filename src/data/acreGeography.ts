@@ -217,6 +217,7 @@ export const ACRE_GEOGRAPHY_FACTS = [
       "A Serra do Divisor concentra as maiores altitudes do estado e integra área de proteção ambiental federal.",
     ],
     source: { label: "SEMA — Zoneamento Ecológico-Econômico, Fase II", url: "https://sema.ac.gov.br/wp-content/uploads/2022/02/ZEE-II.pdf" },
+    alternatives: [],
     caution: "Publicações apresentam cotas máximas diferentes para a Serra do Divisor; memorize o posicionamento geográfico e confira a cota quando o enunciado indicar uma fonte.",
   },
   {
