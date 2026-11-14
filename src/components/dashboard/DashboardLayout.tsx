@@ -211,7 +211,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Administração",
-    label: "Central de mídia (admin)",
+    label: "Central de mídia",
     icon: PlayCircle,
     href: "/dashboard/admin-media",
     adminOnly: true,
