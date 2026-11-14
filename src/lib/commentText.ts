@@ -10,7 +10,7 @@ const SYMBOLS: [RegExp, string][] = [
   [/\\approx/g, "≈"],
   [/\\%/g, "%"],
   [/\\\$/g, "$"],
-  [/\\,|\;|\\!|\\quad/g, " "],
+  [/\\[,;!]|\\quad/g, " "],
 ];
 
 export function readableComment(raw: string): string {
