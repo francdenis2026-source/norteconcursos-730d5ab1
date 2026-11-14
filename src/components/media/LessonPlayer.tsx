@@ -204,8 +204,13 @@ export function LessonPlayer({
   };
   const toggle = () => {
     if (!ready) start();
-    else if (status === "playing") player.current?.pauseVideo();
-    else player.current?.playVideo();
+    else {
+      // Pergunta o estado real ao player: durante o carregamento ("buffering") a aula já está
+      // rodando, e um clique deve pausar — não mandar "reproduzir" de novo.
+      const state = player.current?.getPlayerState?.();
+      if (state === 1 || state === 3 || (state === undefined && status === "playing")) player.current?.pauseVideo();
+      else player.current?.playVideo();
+    }
   };
   const seekBy = (delta: number) => {
     const p = player.current;

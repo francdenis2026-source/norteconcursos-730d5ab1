@@ -45,6 +45,7 @@
 .vp2:fullscreen .vp2__stage { flex: 1 1 0; width: 100%; min-height: 0; aspect-ratio: auto; margin: 0; border-radius: 0; box-shadow: none; }
 .vp2__embed, .vp2__embed iframe, .vp2__native { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .vp2__tap { position: absolute; inset: 0; z-index: 2; border: 0; background: transparent; cursor: pointer; }
+.vp2__embed iframe { pointer-events: none; }
 .vp2__poster { position: absolute; inset: 0; z-index: 3; display: grid; place-items: end start; overflow: hidden; background: linear-gradient(135deg, #0b1220, #172554); }
 .vp2__poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; }
 .vp2__poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgb(5 7 13 / 94%) 0%, rgb(5 7 13 / 55%) 45%, rgb(5 7 13 / 25%) 100%); }
@@ -230,7 +231,7 @@ html:root body .app-shell[data-focus-mode="true"] .video-study-page {
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  height: calc(100dvh - 76px - 34px - 26px);
+  height: calc(100dvh - 76px - 34px - 62px);
   min-height: 0;
 }
 html:root body .app-shell[data-focus-mode="true"] .video-study-page > [data-orientation] {
@@ -272,15 +273,15 @@ html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage {
   overflow: hidden;
 }
 html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage > * { flex: none; }
-html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage > .vp2 {
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage > .vp2:not(:fullscreen) {
   flex: 1 1 0;
   min-height: 0;
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
-html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2 > * { flex: none; }
-html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2 > .vp2__stage {
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2:not(:fullscreen) > * { flex: none; }
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2:not(:fullscreen) > .vp2__stage {
   flex: 1 1 0;
   min-height: 8rem;
   width: auto;
@@ -298,4 +299,23 @@ html:root body .app-shell[data-focus-mode="true"] .video-study-page .video-study
   html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2__start { min-height: 2.25rem; padding-block: 0; }
 }
 
+}
+
+/* Tela cheia da página: menos linhas auxiliares sob o player, para o vídeo ocupar mais da janela. */
+@media (min-width: 768px) {
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2:not(:fullscreen) .vp2__hotkeys { display: none; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__info { padding: .5rem .7rem; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__info-text p { display: none; }
+}
+
+@media (min-width: 768px) {
+  /* Barra do player enxuta: sem linha de status, espaçamentos menores. */
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2:not(:fullscreen) .vp2__status { display: none; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2:not(:fullscreen) .vp2__bar { gap: .3rem; padding: .35rem .6rem .45rem; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__attribution { display: none; }
+  /* Informações da aula numa linha: assunto some, título e botões lado a lado. */
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__info { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .4rem .7rem; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__crumb { display: none; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__info h2 { margin: 0; font-size: .95rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__info-actions { flex: none; }
 }
