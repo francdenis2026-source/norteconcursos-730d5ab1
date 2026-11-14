@@ -691,6 +691,7 @@ function PcAcreEditalVerticalizadoPage() {
           </select>
         </label>
         <div className="pcac-command-bar__actions">
+          <Button variant="outline" asChild><Link to="/dashboard/edital"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Estudar por assunto</Link></Button>
           <Button variant="outline" asChild><Link to="/dashboard/inteligencia-idecan"><ScanSearch aria-hidden="true" className="h-4 w-4" /> Inteligência IDECAN</Link></Button>
           <Button variant="secondary" onClick={() => void exportPdf()}><Download aria-hidden="true" className="h-4 w-4" /> Exportar checklist</Button>
         </div>

@@ -322,6 +322,13 @@ function EditalPage() {
                 <Star className="mr-2 h-4 w-4" aria-hidden="true" />
                 {activeEditionId === edition.id ? "Edital principal" : "Usar como principal"}
               </Button>
+              {/polic.a civil do acre/.test(fold(edition.contest_name)) && (
+                <Button asChild variant="outline" size="sm">
+                  <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }}>
+                    <Layers className="mr-2 h-4 w-4" aria-hidden="true" /> Visão por cargo
+                  </Link>
+                </Button>
+              )}
               <Button variant="outline" size="sm" onClick={() => chooseEdition()}>
                 <ArrowLeftRight className="mr-2 h-4 w-4" aria-hidden="true" /> Trocar edição
               </Button>

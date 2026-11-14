@@ -226,7 +226,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Planejamento",
-    label: "Edital digital PC-AC",
+    label: "Edital PC-AC por cargo",
     icon: BookOpenCheck,
     href: "/dashboard/pc-acre-edital",
   },
