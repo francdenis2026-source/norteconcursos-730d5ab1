@@ -80,7 +80,7 @@ test('student overview uses the first scored answer, source identity and latest 
  const rows=[
  {id:'b',question_id:'q1',question_source:'official',subject:'Português',is_correct:true,created_at:'2026-10-15T08:00:00Z'},
  {id:'a',question_id:'q1',question_source:'official',subject:'Português',is_correct:false,created_at:'2026-10-15T02:00:00Z'},
- {id:'c',question_id:'q1',question_source:'personal',subject:'Matemática',is_correct:false,created_at:'2026-10-15T09:00:00Z'},
+ {id:'c',question_id:'q1',question_source:'personal',subject:'Matemática e Raciocínio Lógico',is_correct:false,created_at:'2026-10-15T09:00:00Z'},
  {id:'d',question_id:'q2',question_source:'official',subject:'Português',is_correct:true,created_at:'2026-10-15T09:00:00Z'}];
  const attempts=[{...rows[0],id:'review',is_correct:true,created_at:'2026-10-15T10:00:00Z'}];
  const result=home.summarizeTraining(rows,attempts,'2026-10-15');assert.equal(result.total,3);assert.equal(result.correct,1);assert.equal(result.wrong,2);assert.equal(result.today,2);assert.equal(result.pending,1);assert.equal(result.accuracy,33);
