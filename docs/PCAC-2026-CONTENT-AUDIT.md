@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 157 materiais ativos, 823 flashcards e 845 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 157 materiais ativos, 826 flashcards e 849 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -51,7 +51,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 20. Probabilidade: união, condicional e independência.
 21. Médias simples e ponderadas; leitura de gráficos e tabelas.
 
-Os vinte e um registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
+Os vinte e um registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
 ## Gaps e validações obrigatórias
 
