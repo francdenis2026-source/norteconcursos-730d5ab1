@@ -1,0 +1,31 @@
+/* Foco na prova: faixa compacta de escolha acima dos filtros. */
+.qt2-focus {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in oklab, var(--control-accent, var(--primary)) 45%, var(--border));
+  border-left-width: 3px;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--control-accent, var(--primary)) 7%, var(--card));
+}
+.qt2-focus > header { display: flex; align-items: center; gap: 10px; }
+.qt2-focus > header > svg { width: 22px; height: 22px; flex: none; color: var(--control-accent, var(--primary)); }
+.qt2-focus > header strong { display: block; font-size: 0.92rem; font-weight: 800; }
+.qt2-focus > header span { display: block; font-size: 0.78rem; color: var(--muted-foreground); line-height: 1.4; }
+.qt2-focus__options { display: flex; flex-wrap: wrap; gap: 8px; }
+.qt2-focus__options button {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 38px; padding: 0 14px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--background); color: var(--foreground);
+  font-size: 0.84rem; font-weight: 700;
+}
+.qt2-focus__options button small { font-size: 0.74rem; font-weight: 700; color: var(--muted-foreground); }
+.qt2-focus__options button:disabled { opacity: 0.5; cursor: not-allowed; }
+.qt2-focus__options button[data-active="true"] {
+  border-color: var(--control-accent, var(--primary));
+  background: color-mix(in oklab, var(--control-accent, var(--primary)) 20%, var(--background));
+}
+.qt2-focus__options button:focus-visible { outline: 2px solid var(--control-accent, var(--primary)); outline-offset: 2px; }
+html:root body .qt2-focus > p { margin: 0; font-size: 0.78rem !important; line-height: 1.4 !important; color: var(--muted-foreground); text-align: left; }

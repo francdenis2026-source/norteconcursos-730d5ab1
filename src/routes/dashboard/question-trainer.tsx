@@ -120,6 +120,17 @@ import "@/styles/question-trainer-wide.css";
 import "@/styles/question-trainer-viewport.css";
 import "@/styles/trainer-mobile-refine.css";
 import "@/styles/trainer-paused.css";
+import "@/styles/trainer-exam-focus.css";
+import { useEditalIncidence } from "@/hooks/useEditalIncidence";
+import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
+import {
+  EXAM_FOCUS_LABEL,
+  countByExamFocus,
+  examPotential,
+  matchesExamFocus,
+  prioritizeByPotential,
+  type ExamFocus,
+} from "@/lib/examPotential";
 import { Hint } from "@/components/ui/hint";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
@@ -319,6 +330,7 @@ function QuestionTrainer() {
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState("20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
+  const [examFocus, setExamFocus] = React.useState<ExamFocus>("off");
   const [includeAnswered, setIncludeAnswered] = React.useState(false);
   const loading = catalogLoading || lockedLoading;
   const [index, setIndex] = React.useState(0);
@@ -613,7 +625,7 @@ function QuestionTrainer() {
       setAppliedExam("all");
       setter(value);
     };
-  const pool = React.useMemo(
+  const basePool = React.useMemo(
     () =>
       filterTrainerQuestions(
         trainingCatalog,
@@ -652,6 +664,27 @@ function QuestionTrainer() {
       category,
     ],
   );
+  // Foco na prova: só existe quando o aluno ativou um edital com indicação de chance (PC-AC).
+  const chance = useEditalIncidence(userId, PCAC_INCIDENCE_ITEMS, true);
+  const potential = React.useMemo(
+    () =>
+      chance.incidence
+        ? examPotential(trainingCatalog, PCAC_INCIDENCE_ITEMS, chance.incidence, topicOf)
+        : null,
+    [chance.incidence, trainingCatalog, topicOf],
+  );
+  const focusCounts = React.useMemo(
+    () => (potential ? countByExamFocus(basePool, potential) : null),
+    [potential, basePool],
+  );
+  const activeFocus: ExamFocus = potential ? examFocus : "off";
+  const pool = React.useMemo(
+    () =>
+      activeFocus === "off" || !potential
+        ? basePool
+        : basePool.filter((q) => matchesExamFocus(activeFocus, potential.get(q.id))),
+    [basePool, activeFocus, potential],
+  );
   const normalizedLimit = normalizeTrainerQuestionQuantity(limit, pool.length);
   React.useEffect(() => {
     if (loading || started || restoredSelection.current) return;
@@ -660,7 +693,9 @@ function QuestionTrainer() {
 
   const startTraining = () => {
     responseIdRef.current = crypto.randomUUID();
-    const ordered = orderMode === "random" ? shuffled(pool) : [...pool];
+    const arranged = orderMode === "random" ? shuffled(pool) : [...pool];
+    // Com foco na prova, as mais prováveis vêm primeiro (e, no mesmo grau, a ordem escolhida).
+    const ordered = activeFocus !== "off" && potential ? prioritizeByPotential(arranged, potential) : arranged;
     const requestedCount =
       normalizedLimit === "all"
         ? pool.length
@@ -981,6 +1016,13 @@ function QuestionTrainer() {
             orderMode,
             includeAnswered,
           }}
+          focus={
+            potential && focusCounts
+              ? { mode: activeFocus, setMode: setExamFocus, counts: focusCounts, label: chance.edital?.label ?? "" }
+              : chance.edital && (chance.loading || chance.checking)
+                ? { mode: "off", setMode: setExamFocus, counts: null, label: chance.edital.label }
+                : null
+          }
           setters={{
             setContest: manual(setContest),
             setBoard: manual(setBoard),
@@ -1848,6 +1890,54 @@ type SetupSetters = {
   setIncludeAnswered: (value: boolean) => void;
 };
 
+type ExamFocusProps = {
+  mode: ExamFocus;
+  setMode: (value: ExamFocus) => void;
+  counts: Record<ExamFocus, number> | null;
+  label: string;
+};
+
+/** Escolha de foco: começa pelas questões com maior potencial de cair na prova do edital ativo. */
+function ExamFocusPicker({ mode, setMode, counts, label }: ExamFocusProps) {
+  const modes: ExamFocus[] = ["off", "alta", "alta-media", "recentes"];
+  return (
+    <section className="qt2-focus" aria-label={`Foco na prova ${label}`}>
+      <header>
+        <Target aria-hidden="true" />
+        <div>
+          <strong>Foco na prova · {label}</strong>
+          <span>Comece pelo que mais tem chance de cair. Baseado nas provas da banca já cobradas.</span>
+        </div>
+      </header>
+      <div className="qt2-focus__options" role="radiogroup" aria-label="Escolher o foco">
+        {modes.map((id) => {
+          const count = counts?.[id];
+          const empty = counts !== null && id !== "off" && !count;
+          return (
+            <button
+              key={id}
+              type="button"
+              role="radio"
+              aria-checked={mode === id}
+              disabled={!counts || empty}
+              onClick={() => setMode(id)}
+              data-active={mode === id}
+            >
+              {EXAM_FOCUS_LABEL[id]}
+              <small>{counts ? count?.toLocaleString("pt-BR") : "…"}</small>
+            </button>
+          );
+        })}
+      </div>
+      {mode !== "off" && (
+        <p>
+          As questões mais prováveis vêm primeiro. É uma tendência estatística, não uma garantia de prova.
+        </p>
+      )}
+    </section>
+  );
+}
+
 function TrainerSetup({
   total,
   available,
@@ -1855,8 +1945,10 @@ function TrainerSetup({
   facets,
   values,
   setters,
+  focus,
   start,
 }: {
+  focus: ExamFocusProps | null;
   total: number;
   available: number;
   facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
@@ -1943,6 +2035,7 @@ function TrainerSetup({
               </button>
             </p>
           )}
+          {focus && <ExamFocusPicker {...focus} />}
           <div className="qt2-filters grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
             <TrainerFilter
               counts={facets.counts["board"]}

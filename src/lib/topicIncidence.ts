@@ -84,17 +84,49 @@ export const isPoliceExam = (contest: string, career: string) =>
 
 const recency = (year: number, maxYear: number) => Math.pow(0.5, (maxYear - year) / 3);
 
+export interface PreparedItem {
+  item: IncidenceItem;
+  subjects: Set<string>;
+  stems: Set<string>;
+}
+
+export function prepareItems(items: IncidenceItem[]): PreparedItem[] {
+  return items.map((item) => ({
+    item,
+    subjects: new Set(item.subjects.map((s) => normalize(canonicalSubject(s)))),
+    stems: new Set(topicStems(item.text)),
+  }));
+}
+
+/** Assunto do edital que melhor descreve um assunto cobrado (mesma regra do selo de chance). */
+export function bestItemFor(subjectKey: string, topicText: string, prepared: PreparedItem[]): string | null {
+  const qStems = topicStems(topicText);
+  let best: { id: string; coverage: number; shared: number; size: number } | null = null;
+  for (const p of prepared) {
+    if (!p.subjects.has(subjectKey)) continue;
+    const { shared, coverage } = overlap(qStems, p.stems);
+    if (shared < Math.min(2, qStems.length) || coverage < 0.5) continue;
+    const candidate = { id: p.item.id, coverage, shared, size: p.stems.size };
+    if (
+      !best ||
+      candidate.coverage > best.coverage ||
+      (candidate.coverage === best.coverage && candidate.shared > best.shared) ||
+      (candidate.coverage === best.coverage && candidate.shared === best.shared && candidate.size < best.size)
+    )
+      best = candidate;
+  }
+  return best?.id ?? null;
+}
+
+export const normalizeSubjectKey = (subject: string) => normalize(canonicalSubject(subject));
+
 export function computeIncidence(groups: IdecanGroup[], items: IncidenceItem[]): Map<string, Incidence> {
   const result = new Map<string, Incidence>();
   if (!items.length) return result;
 
   const maxYear = groups.reduce((m, g) => Math.max(m, g.year), 0);
   const subjectOf = (g: IdecanGroup) => normalize(canonicalSubject(g.subject));
-  const prepared = items.map((item) => ({
-    item,
-    subjects: new Set(item.subjects.map((s) => normalize(canonicalSubject(s)))),
-    stems: new Set(topicStems(item.text)),
-  }));
+  const prepared = prepareItems(items);
 
   // Provas por matéria (com o peso de cada uma) e questões com assunto informado.
   const examsBySubject = new Map<string, Map<string, number>>();
@@ -118,28 +150,13 @@ export function computeIncidence(groups: IdecanGroup[], items: IncidenceItem[]):
   const asked = new Map<string, { exams: Set<string>; questions: number; last: number }>();
   for (const g of groups) {
     if (g.n <= 0 || !g.topic) continue;
-    const subject = subjectOf(g);
-    const qStems = topicStems(g.topic);
-    let best: { id: string; coverage: number; shared: number; size: number } | null = null;
-    for (const p of prepared) {
-      if (!p.subjects.has(subject)) continue;
-      const { shared, coverage } = overlap(qStems, p.stems);
-      if (shared < Math.min(2, qStems.length) || coverage < 0.5) continue;
-      const candidate = { id: p.item.id, coverage, shared, size: p.stems.size };
-      if (
-        !best ||
-        candidate.coverage > best.coverage ||
-        (candidate.coverage === best.coverage && candidate.shared > best.shared) ||
-        (candidate.coverage === best.coverage && candidate.shared === best.shared && candidate.size < best.size)
-      )
-        best = candidate;
-    }
-    if (!best) continue;
-    const entry = asked.get(best.id) ?? { exams: new Set<string>(), questions: 0, last: 0 };
+    const bestId = bestItemFor(subjectOf(g), g.topic, prepared);
+    if (!bestId) continue;
+    const entry = asked.get(bestId) ?? { exams: new Set<string>(), questions: 0, last: 0 };
     entry.exams.add(examKey(g));
     entry.questions += g.n;
     entry.last = Math.max(entry.last, g.year);
-    asked.set(best.id, entry);
+    asked.set(bestId, entry);
   }
 
   for (const p of prepared) {
