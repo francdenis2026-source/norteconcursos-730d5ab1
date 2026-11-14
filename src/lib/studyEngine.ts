@@ -49,7 +49,7 @@ export const CAREERS: CareerDef[] = [
     subjects: [
       { name: "Legislação de Trânsito", weight: 24, aliases: ["transito"] },
       { name: "Língua Portuguesa", weight: 13, aliases: ["portugues", "portuguesa"] },
-      { name: "Raciocínio Lógico-Matemático", weight: 10, aliases: ["raciocinio", "matematica"] },
+      { name: "Matemática e Raciocínio Lógico", weight: 10, aliases: ["raciocinio", "matematica", "estatistica", "probabilidade"] },
       { name: "Informática", weight: 8, aliases: ["informatica"] },
       { name: "Física", weight: 10, aliases: ["fisica"] },
       {
@@ -78,7 +78,7 @@ export const CAREERS: CareerDef[] = [
       { name: "Direito Administrativo", weight: 9, aliases: ["administrativo"] },
       { name: "Língua Portuguesa", weight: 13, aliases: ["portugues", "portuguesa"] },
       { name: "Informática", weight: 8, aliases: ["informatica"] },
-      { name: "Raciocínio Lógico", weight: 7, aliases: ["raciocinio"] },
+      { name: "Matemática e Raciocínio Lógico", weight: 7, aliases: ["raciocinio", "matematica", "estatistica", "probabilidade"] },
       {
         name: "Medicina Legal e Criminalística",
         weight: 8,
@@ -92,7 +92,7 @@ export const CAREERS: CareerDef[] = [
     difficulty: 0.9,
     subjects: [
       { name: "Língua Portuguesa", weight: 22, aliases: ["portugues", "portuguesa"] },
-      { name: "Raciocínio Lógico-Matemático", weight: 14, aliases: ["raciocinio", "matematica"] },
+      { name: "Matemática e Raciocínio Lógico", weight: 14, aliases: ["raciocinio", "matematica", "estatistica", "probabilidade"] },
       { name: "Direito Constitucional", weight: 16, aliases: ["constitucional"] },
       { name: "Direito Administrativo", weight: 12, aliases: ["administrativo"] },
       { name: "Direito Penal e Processual Penal", weight: 16, aliases: ["penal"] },
