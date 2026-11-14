@@ -1,0 +1,37 @@
+/* Realidade do Acre: cartões das áreas e radar de provas compactos, legíveis e sem vazios. */
+html:root body .ak-axis__body p,
+html:root body .ak-axis__body span,
+html:root body .acre-radar p,
+html:root body .acre-radar li,
+html:root body .acre-radar summary,
+html:root body .ak-fresh p,
+html:root body .ak-fresh li {
+  text-align: left !important;
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+/* Título do cartão sobre a foto: sombra forte e fundo escurecido para contraste nos dois temas. */
+html:root body .ak-axis__head :is(h3, strong) {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 85%), 0 0 14px rgb(0 0 0 / 75%);
+}
+html:root body .ak-axis__body { padding-block: 10px 12px; }
+html:root body .ak-axis__body p { font-size: 0.84rem; line-height: 1.45; }
+html:root body .ak-axes { gap: 10px; }
+
+/* Radar: colunas que se encaixam (sem buracos quando os grupos têm alturas diferentes). */
+html:root body .acre-radar__groups {
+  display: block !important;
+  column-count: 1;
+  column-gap: 10px;
+}
+@media (min-width: 760px) { html:root body .acre-radar__groups { column-count: 2; } }
+@media (min-width: 1180px) { html:root body .acre-radar__groups { column-count: 3; } }
+html:root body .acre-radar__group {
+  break-inside: avoid;
+  margin: 0 0 10px;
+  display: block;
+}
