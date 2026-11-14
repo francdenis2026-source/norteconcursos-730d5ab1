@@ -34,7 +34,7 @@ Fonte programática: Edital nº 001 SEAD/PCAC, de 05/11/2026, Anexo III, p. 48.
 1. Associar todas as questões ao tópico PC-AC 2026 correto: `e5ccace6-4479-4921-adf0-4ed63aa607a8`.
 2. Associar fonte normativa oficial e data de conferência.
 3. Verificar unicidade dos gabaritos e ausência de duplicidade por enunciado/conceito.
-4. Verificar o fluxo de publicação no catálogo: a coluna `source_id` do catálogo é UUID, enquanto `question_corpus_sources.id` observado no banco é texto; a integração deve usar o modelo correto de fonte, sem coerção improvisada.
+4. Usar a tabela `content_sources` para preencher `source_id` (UUID), pois a chave estrangeira do catálogo aponta para `content_sources.id`. `question_corpus_sources` é um acervo distinto e não deve ser usado como origem direta do catálogo.
 5. Não ativar enquanto a incompatibilidade de origem não estiver resolvida e testada.
 
 ## Regra de publicação
