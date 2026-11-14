@@ -63,3 +63,55 @@ html:root:not(.dark) body .trainer-setup .trainer-start-bar {
   border-color: var(--border) !important;
 }
 html:root:not(.dark) body .trainer-setup .trainer-start-bar__count { color: var(--foreground) !important; }
+
+/* Celular (iPhone/Android, tela estreita ou baixa): a barra de ações cabe numa única linha
+   (ícones + botão principal) e o conteúdo tem folga para as alternativas rolarem acima dela. */
+@media (max-width: 767px) {
+  html:root body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell {
+    padding-bottom: calc(var(--trainer-dock-bottom, var(--student-nav-h, 68px)) + 96px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  html:root body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-session-shell .trainer-reading-actions.trainer-action-dock {
+    flex-direction: row !important;
+    bottom: var(--student-nav-h, 68px) !important;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px 8px !important;
+    border-radius: 14px 14px 0 0;
+  }
+  html:root body .trainer-action-dock .trainer-action-dock__secondary {
+    display: flex !important;
+    flex: none;
+    gap: 6px;
+  }
+  html:root body .trainer-action-dock .trainer-action-dock__btn {
+    flex: none;
+    width: 40px;
+    min-width: 40px;
+    min-height: 44px !important;
+    padding: 0 !important;
+  }
+  /* O texto continua para leitores de tela; visualmente só o ícone. */
+  html:root body .trainer-action-dock .trainer-action-dock__btn > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  html:root body .trainer-action-dock .trainer-action-dock__primary {
+    flex: 1 1 auto;
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 44px !important;
+    height: 44px;
+    padding-inline: 8px !important;
+    font-size: 13px !important;
+    line-height: 1.1;
+    white-space: normal;
+    text-align: center;
+  }
+  html:root body .trainer-action-dock .trainer-action-dock__primary svg { display: none; }
+  /* Faixa superior com fundo sólido: o conteúdo não passa por trás dos botões ao rolar. */
+  html:root body .app-shell[data-area="student"] header.app-topbar { background-color: var(--background); }
+}
