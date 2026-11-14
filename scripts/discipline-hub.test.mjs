@@ -9,7 +9,7 @@ const mat = (slug, discipline) => ({ slug, discipline, law_course_slug: null });
 test("law and Direito disciplines never appear among the disciplines", () => {
   for (const n of ["Direito Penal", "Direito Constitucional", "Direito Administrativo", "Direitos Humanos", "Legislação Penal Extravagante", "Direito Processual Penal", "Carreiras (PRF, PF, PC)", "Legislação de Trânsito"])
     assert.ok(isLawDiscipline(n), n);
-  for (const n of ["Língua Portuguesa", "Matemática", "Raciocínio Lógico", "Química", "Física", "Estatística", "Contabilidade Geral", "Informática"])
+  for (const n of ["Língua Portuguesa", "Matemática e Raciocínio Lógico", "Matemática", "Raciocínio Lógico", "Química", "Física", "Estatística", "Contabilidade Geral", "Informática"])
     assert.ok(!isLawDiscipline(n), n);
   const names = disciplineCards([], TRACKS, PLAYLISTS).map((c) => c.name);
   assert.ok(!names.some((n) => /direito|legisla|penal|constitucional|administrativo|humanos|carreiras/i.test(n)), names.join(","));
@@ -31,7 +31,7 @@ test("each card gathers materials, track lessons and videos of the same discipli
 
 test("expected disciplines come first, in order, extras after", () => {
   const cards = disciplineCards([mat("g", "Geografia")], [], []);
-  assert.deepEqual(cards.slice(0, 3).map((c) => c.name), ["Língua Portuguesa", "Matemática", "Raciocínio Lógico"]);
+  assert.deepEqual(cards.slice(0, 3).map((c) => c.name), ["Língua Portuguesa", "Matemática e Raciocínio Lógico"]);
   assert.equal(cards.at(-1).name, "Geografia");
 });
 
