@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 166 materiais ativos, 884 flashcards e 906 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual (consulta direta ao banco em 14/11/2026):** 166 materiais ativos, 886 flashcards e 907 questões embutidas nos materiais. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem. A diferença em relação à contagem anterior (893/915) foi identificada na recontagem direta dos arrays JSONB ativos; usar os valores desta consulta como referência operacional.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -88,7 +88,7 @@ Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois re
 ### Conhecimentos jurídicos e específicos
 - Direito Constitucional: os três materiais cobrem princípios fundamentais, direitos/deveres individuais e coletivos, remédios, arts. 37–41, art. 144 e Constituição do Acre; o material estadual foi detalhado nos arts. 1º, 2º, 6º, 7º, 131, 133 e 134, com a EC estadual nº 63/2022.
 - Direito Administrativo: mapear princípios, organização, poderes, poder de polícia, atos, agentes, responsabilidade civil e improbidade após Lei 14.230/2021.
-- Penal/Processual Penal: conferir todos os artigos e leis expressamente listados no Anexo III, inclusive CPP 4º–23, 155–184, 275–281, Lei 12.037/2009, prisões e cautelares.
+- Penal/Processual Penal: os nove módulos correspondem aos grupos do Anexo III. As três aulas processuais apresentam sínteses por blocos: inquérito (CPP 4º–23, inclusive 13-A/13-B e ressalva do art. 21), prova e cadeia de custódia (155–184), peritos/intérpretes (275–281), identificação criminal (Lei 12.037/2009), flagrante, preventiva, temporária e cautelares (CPP 282, 301–319 e Lei 7.960/1989). A conferência artigo por artigo ainda precisa ser executada; não considerar a revisão jurídica formal concluída. As nove aulas receberam fontes estruturadas oficiais na migração 20261114202815, e os três timestamps futuros incorretos foram limpos; `legal_review` permanece pendente.
 - Contabilidade: 7 blocos expressos no edital; verificar cada subitem e aprofundar operações financeiras, conciliação, análise de movimentações e fluxos.
 - Estatística: mapear 9 blocos, incluindo quartis/decis/percentis e regressão/correlação; confirmar exercícios.
 - TI/Segurança: agora há 8 módulos para os 8 tópicos do Anexo III, com aulas específicas de sistema operacional, planilhas, bancos de dados, redes, metadados e tratamento de informação; revisar exemplos e questões em conjunto com os dois módulos-base.
@@ -102,3 +102,15 @@ Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois re
 5. Rodar os testes direcionados e a bateria integral do package.json: typecheck, lint, test e build.
 6. Verificar checks do GitHub Actions na branch de trabalho e só então abrir/mesclar PR para main.
 7. Após merge, verificar commit na main e estado real da publicação; não inferir deploy a partir do merge.
+
+
+## Recontagem e verificação operacional — 14/11/2026
+
+Consulta direta ao Supabase após as migrações PC-AC:
+- 166 materiais ativos distribuídos nas 15 disciplinas do cargo de Oficial Investigador.
+- 886 flashcards e 907 questões de revisão embutidos nos materiais ativos.
+- Todos os 166 materiais possuem fonte identificada, corpo com pelo menos 800 caracteres e ao menos dois flashcards e duas questões.
+- Banco de questões autorais do PC-AC 2026: 195 itens ativos para Oficial Investigador, todos com enunciado, explicação e vínculo a tópico do edital.
+- Os nove materiais de Penal/Processual Penal possuem agora fontes estruturadas; a revisão jurídica formal continua pendente.
+
+A contagem de materiais e itens de revisão não substitui a validação pedagógica. Permanecem obrigatórias as revisões de correspondência linha a linha com o Anexo III, a conferência jurídica artigo por artigo e a revisão dos gabaritos e explicações.
