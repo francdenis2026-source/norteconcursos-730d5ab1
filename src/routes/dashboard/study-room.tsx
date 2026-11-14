@@ -53,6 +53,7 @@ import { StudySubjectPicker } from "@/components/study/StudySubjectPicker";
 import { resolveStudySelection, STUDY_PICK_KEY, type StudySelection } from "@/lib/studySelection";
 import { topicsFor } from "@/data/studyTopics";
 import { libraryCollection } from "@/lib/libraryOrganization";
+import { disciplineMaterials, editalMaterials } from "@/lib/editalCatalog";
 
 function readSavedPick(): StudySelection | null {
   try {
@@ -372,7 +373,22 @@ function StudyRoomPage() {
     [list, subject, topic],
   );
   // Só materiais que tratam do assunto escolhido; sem isso, nada de outro assunto aparece.
-  const exact = React.useMemo(() => ranked.filter((r) => r.score > 0), [ranked]);
+  // Mesma lógica do edital e do hub: ranking da sala + casamento do edital; se nada trata do assunto, os da disciplina.
+  const exact = React.useMemo(() => {
+    const base = ranked.filter((r) => r.score > 0);
+    const pool = (list ?? []).filter((m) => libraryCollection(m) !== "enem");
+    const seen = new Set(base.map((r) => r.m.slug));
+    const extra = editalMaterials(pool, subject, topic)
+      .filter((hit) => !seen.has(hit.id))
+      .flatMap((hit) => {
+        const m = pool.find((item) => item.slug === hit.id);
+        return m ? [{ m, score: hit.score }] : [];
+      });
+    const merged = [...base, ...extra];
+    if (merged.length) return merged;
+    return disciplineMaterials(pool, subject).map((m) => ({ m, score: 0 }));
+  }, [ranked, list, subject, topic]);
+  const broadMaterials = exact.length > 0 && exact.every((r) => r.score === 0);
   const [slug, setSlug] = React.useState<string | null>(null);
   // O material aberto vale só enquanto pertence ao assunto atual (trocar de matéria não o mantém).
   const currentSlug = slug && exact.some((r) => r.m.slug === slug) ? slug : (exact[0]?.m.slug ?? "");
@@ -539,7 +555,7 @@ function StudyRoomPage() {
                 {isPending
                   ? "Buscando na Biblioteca…"
                   : exact.length
-                    ? `${exact.length} ${exact.length === 1 ? "material encontrado" : "materiais encontrados"} para este assunto.`
+                    ? `${exact.length} ${exact.length === 1 ? "material encontrado" : "materiais encontrados"} ${broadMaterials ? "na disciplina (nenhum trata exatamente deste assunto)" : "para este assunto"}.`
                     : "Ainda não há material escrito deste assunto."}
               </CardDescription>
             </CardHeader>
@@ -587,6 +603,13 @@ function StudyRoomPage() {
                     className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
                   >
                     Abrir na Biblioteca <ExternalLink className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link
+                    to="/dashboard/disciplinas"
+                    search={{ d: subject } as never}
+                    className="ml-4 mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+                  >
+                    Ver a disciplina completa
                   </Link>
                   <StudyPractice
                     flashcards={material.flashcards ?? []}
