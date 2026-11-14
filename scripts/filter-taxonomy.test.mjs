@@ -25,7 +25,8 @@ test("aliases unify only equivalent disciplines and are idempotent", () => {
     ["  Noções de Direito Penal ", "Direito Penal"],
     ["PROCESSUAL PENAL", "Direito Processual Penal"],
     ["Contabilidade", "Contabilidade Geral"],
-    ["Estatística e Probabilidade", "Matemática e Raciocínio Lógico"],
+    ["Estatística e Probabilidade", "Estatística"],
+    ["Noções de Estatística", "Estatística"],
     ["Direito Humanos", "Direitos Humanos"],
     ["Raciocínio Lógico-Matemático", "Matemática e Raciocínio Lógico"],
     ["Lingua Estrangeira - Ingles", "Língua Inglesa"],
@@ -91,10 +92,19 @@ test("stored reviewed topic prevails over approximate text classification", () =
       scopedTopic("Estatística", "Probabilidade"),
       scopedTopic("RLM", "Probabilidade"),
     ]).length,
-    1,
+    // Estatística e Matemática/RLM são disciplinas distintas: o mesmo nome de assunto em cada uma fica separado.
+    2,
   );
   assert.equal(
     matchesTopicFilter("RLM", "Probabilidade", scopedTopic("Estatística", "Probabilidade")),
+    false,
+  );
+  assert.equal(
+    matchesTopicFilter("Estatística e Probabilidade", "Probabilidade", scopedTopic("Estatística", "Probabilidade")),
+    true,
+  );
+  assert.equal(
+    matchesTopicFilter("RLM", "Probabilidade", scopedTopic("Raciocínio Lógico", "Probabilidade")),
     true,
   );
   assert.equal(matchesTopicFilter("Português", "crase", "Crase"), true); // existing plan links

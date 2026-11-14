@@ -5,8 +5,14 @@ import { rankMaterials, topicVideosFor, mentionsTopic } from "../src/lib/arsenal
 import { topicsFor } from "../src/data/studyTopics.ts";
 
 test("a matéria escolhida só recebe o que é inteiramente dela", () => {
-  assert.equal(subjectWithinArea("Raciocínio Lógico", "Estatística e Raciocínio Lógico"), true);
-  assert.equal(subjectWithinArea("Estatística", "Estatística e Raciocínio Lógico"), true);
+  // Estatística e Matemática/RLM são disciplinas separadas: uma matéria composta que mistura as duas
+  // não pertence inteiramente a nenhuma delas, e nenhuma recebe o conteúdo da outra.
+  assert.equal(subjectWithinArea("Raciocínio Lógico", "Estatística e Raciocínio Lógico"), false);
+  assert.equal(subjectWithinArea("Estatística", "Estatística e Raciocínio Lógico"), false);
+  assert.equal(subjectWithinArea("Raciocínio Lógico", "Estatística"), false);
+  assert.equal(subjectWithinArea("Estatística", "Raciocínio Lógico"), false);
+  assert.equal(subjectWithinArea("Estatística", "Estatística e Probabilidade"), true);
+  assert.equal(subjectWithinArea("Raciocínio Lógico", "Matemática Financeira"), true);
   assert.equal(subjectWithinArea("Direito Penal", "Direito Processual Penal"), false);
   assert.equal(subjectWithinArea("Direito Penal", "Direito Penal e Processual Penal"), false);
   assert.equal(subjectWithinArea("Direitos Humanos", "Ética e Direitos Humanos"), false);
@@ -14,6 +20,7 @@ test("a matéria escolhida só recebe o que é inteiramente dela", () => {
 });
 
 test("uma escolha composta recebe cada parte, e variações de grafia continuam valendo", () => {
+  assert.equal(subjectWithinArea("Estatística e Raciocínio Lógico", "Estatística"), true);
   assert.equal(subjectWithinArea("Direito Penal e Processual Penal", "Direito Penal"), true);
   assert.equal(subjectWithinArea("Direito Penal e Processual Penal", "Direito Processual Penal"), true);
   assert.equal(subjectWithinArea("Direito Penal", "direito penal"), true);
@@ -72,4 +79,13 @@ test("cada matéria simples lista só os assuntos da sua própria área", () => 
   assert.ok(!topicsFor("Direito Processual Penal").some((t) => /teoria do crime|culpabilidade/i.test(t)));
   assert.ok(!topicsFor("Língua Portuguesa").some((t) => /porcentagem|probabilidade/i.test(t)));
   assert.ok(!topicsFor("Direito Constitucional").some((t) => /licitações|atos administrativos/i.test(t)));
+});
+
+test("Estatística e Matemática/RLM não trocam materiais nem assuntos", () => {
+  const stat = { slug: "est-pos", discipline: "Estatística", topic_label: "Medidas de posição", title: "Medidas de posição", summary: "", sort_order: 1 };
+  const rlm = { slug: "rlm-tab", discipline: "Raciocínio Lógico", topic_label: "Tabela-verdade", title: "Tabela-verdade", summary: "", sort_order: 1 };
+  assert.deepEqual(rankMaterials([stat, rlm], "Raciocínio Lógico", "Tabela-verdade").map((r) => r.m.slug), ["rlm-tab"]);
+  assert.deepEqual(rankMaterials([stat, rlm], "Estatística", "Medidas de posição").map((r) => r.m.slug), ["est-pos"]);
+  assert.ok(!topicsFor("Estatística").includes("Tabela-verdade e equivalências"));
+  assert.ok(!topicsFor("Raciocínio Lógico").includes("Medidas de posição"));
 });

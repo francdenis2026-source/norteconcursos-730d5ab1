@@ -367,7 +367,7 @@ export function subjectAreas(subject: string): AreaKey[] {
   if (unifiedMath) {
     add("raciocinio");
     add("matematica");
-    add("estatistica");
+    // Estatística é disciplina própria: não entra na área de Matemática e RLM.
     add("financeira");
   } else {
     if (/estatistica/.test(n)) add("estatistica");
