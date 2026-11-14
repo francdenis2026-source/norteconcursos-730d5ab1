@@ -1,3 +1,4 @@
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import "@/styles/simulator-polish.css";
 import { matchesPlannedStudy, plannedSubjects, plannedAvailability } from "@/lib/plannedStudy";
 import { materialTopic } from "@/lib/materialPractice";
@@ -1221,9 +1222,9 @@ function ProfessionalSimulator() {
             />
           </div>
           {isEnemMode && (
-            <Link to="/dashboard/enem" className="mt-3 inline-block text-sm underline">
+            <SmartBackLink to="/dashboard/enem" className="mt-3 inline-block text-sm underline">
               Voltar à área ENEM
-            </Link>
+            </SmartBackLink>
           )}
         </div>
       </section>

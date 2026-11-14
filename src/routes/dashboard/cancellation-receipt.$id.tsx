@@ -1,3 +1,4 @@
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import * as React from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { ArrowLeft, Printer } from "lucide-react";
@@ -34,9 +35,9 @@ function CancellationReceipt() {
     return (
       <div className="mx-auto max-w-xl p-8 text-sm">
         Recibo não encontrado ou sem permissão para vê-lo.{" "}
-        <Link to="/dashboard/subscriptions" className="font-bold underline">
+        <SmartBackLink to="/dashboard/subscriptions" className="font-bold underline">
           Voltar à assinatura
-        </Link>
+        </SmartBackLink>
       </div>
     );
   const lines: [string, string][] = [
@@ -53,9 +54,9 @@ function CancellationReceipt() {
     <div className="mx-auto max-w-2xl space-y-4 p-4 md:p-8">
       <div className="no-print flex flex-wrap items-center justify-between gap-2">
         <Button asChild variant="ghost" size="sm">
-          <Link to="/dashboard/subscriptions">
+          <SmartBackLink to="/dashboard/subscriptions">
             <ArrowLeft className="mr-1 h-4 w-4" /> Voltar
-          </Link>
+          </SmartBackLink>
         </Button>
         <Button size="sm" onClick={() => window.print()}>
           <Printer className="mr-2 h-4 w-4" /> Imprimir / salvar em PDF

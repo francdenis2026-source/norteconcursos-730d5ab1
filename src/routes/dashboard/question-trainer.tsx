@@ -1,3 +1,4 @@
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import { examOriginLabel } from "@/lib/examLabel";
 import * as React from "react";
 import {
@@ -983,7 +984,7 @@ function QuestionTrainer() {
         <div className="flex flex-col gap-2 sm:flex-row">
           <Button onClick={() => void reloadCatalog()}>Tentar novamente</Button>
           <Button asChild variant="outline">
-            <Link to="/dashboard/question-bank">Voltar ao banco</Link>
+            <SmartBackLink to="/dashboard/question-bank">Voltar ao banco</SmartBackLink>
           </Button>
         </div>
       </Center>
