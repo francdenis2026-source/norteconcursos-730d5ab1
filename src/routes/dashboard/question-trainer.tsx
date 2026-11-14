@@ -414,18 +414,17 @@ function QuestionTrainer() {
           },
         }
       : null;
-  React.useEffect(
-    () => () => {
-      const saved = bookmarkRef.current;
-      if (!saved) return;
-      try {
-        sessionStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
-      } catch {
-        /* Storage can be unavailable; navigation must still work. */
-      }
-    },
-    [],
-  );
+  // A sessão em andamento fica guardada a cada alteração (resposta, pulo, marcação, posição), para
+  // sobreviver a recarregar a página. Só sai do aparelho quando o aluno confirma "Sair do treino".
+  React.useEffect(() => {
+    const saved = bookmarkRef.current;
+    if (!saved) return;
+    try {
+      localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+    } catch {
+      /* Armazenamento indisponível: a prova segue, só não é retomada após recarregar. */
+    }
+  });
   React.useEffect(() => {
     // A new law link must never reuse a session or filters belonging to the previous law.
     setStarted(false);
@@ -471,11 +470,10 @@ function QuestionTrainer() {
     pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
-      const raw = sessionStorage.getItem(storageKey);
+      const raw = localStorage.getItem(storageKey) ?? sessionStorage.getItem(storageKey);
       if (!raw) return;
       const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, catalog);
       if (!restored) return;
-      sessionStorage.removeItem(storageKey);
       const b = restored.bookmark;
       setQuestions(restored.questions);
       setIndex(b.index);
@@ -1641,6 +1639,14 @@ function QuestionTrainer() {
                 className="w-full bg-rose-600 text-white hover:bg-rose-500"
                 onClick={() => {
                   setConfirmExit(false);
+                  if (userId) {
+                    try {
+                      localStorage.removeItem(`trainer-bookmark:${userId}`);
+                      sessionStorage.removeItem(`trainer-bookmark:${userId}`);
+                    } catch {
+                      /* ignora */
+                    }
+                  }
                   if (blocker.status === "blocked") blocker.proceed?.();
                   else setStarted(false);
                 }}
