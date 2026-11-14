@@ -198,9 +198,10 @@ export const isOfficialUrl = (url?: string) => {
         !parsed.port &&
         !parsed.search &&
         !parsed.hash &&
-        parsed.pathname ===
+        [
           "/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
-          "/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html"
+          "/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html",
+        ].includes(parsed.pathname)
       );
     }
     const approvedAcrePaths = acreOfficialPaths[parsed.hostname];
