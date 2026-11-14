@@ -408,7 +408,10 @@ export function areaOfSubject(subject: string): AreaKey | null {
 }
 
 export function classifyTopic(subject: string, text: string): string | null {
-  const areas = subjectAreas(subject);
+  const canonical = strip(canonicalSubject(subject));
+  const areas = canonical === "matematica e raciocinio logico"
+    ? subjectAreas(subject)
+    : [areaOfSubject(subject)].filter((area): area is AreaKey => area !== null);
   if (!areas.length) return null;
   const t = strip(text);
   for (const area of areas) {
