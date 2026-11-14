@@ -8,122 +8,197 @@ from jsonb_to_recordset($pcac_seed$
   {
     "quiz": [
       {
+        "a": false,
+        "q": "A primeira lotação do Oficial Investigador é definida pela classificação final do concurso público.",
+        "why": "A classificação do curso específico de formação define a primeira lotação (art. 67, § 13, e art. 79-C, § 1º)."
+      },
+      {
         "a": true,
-        "q": "O estágio probatório previsto no art. 73 dura três anos.",
-        "why": "A LC 526/2026 deu nova redação ao dispositivo e manteve o período de três anos."
+        "q": "A regra de lotação inicial está no art. 67, § 13, da LC nº 129/2004, com redação da LC nº 526/2026.",
+        "why": "O art. 67, § 13, determina que a lotação inicial observe exclusivamente a classificação obtida no curso."
+      },
+      {
+        "a": true,
+        "q": "O servidor deve permanecer cinco anos no município de lotação inicial, contados da entrada em exercício na unidade.",
+        "why": "É a regra do art. 67, § 14."
       },
       {
         "a": false,
-        "q": "A posse deve ocorrer até 30 dias contados da publicação, em qualquer dia útil escolhido pelo candidato.",
-        "why": "O art. 77 fixa o 30º dia subsequente como data de posse."
+        "q": "Durante o quinquênio, não existe qualquer hipótese de remoção.",
+        "why": "O art. 67, § 17, admite remoção excepcional para outro município da mesma regional, nas condições legais."
       },
       {
         "a": true,
-        "q": "Se o 30º dia coincidir com dia sem expediente ordinário, a posse é prorrogada para o primeiro dia útil seguinte.",
-        "why": "É a regra do art. 77, § 1º."
+        "q": "Após o quinquênio, cessão ou disposição pode durar até dois anos, prorrogáveis uma única vez por mais um ano.",
+        "why": "É a regra do art. 67, § 15."
       },
       {
         "a": true,
-        "q": "O prazo de posse pode ser suspenso por até 120 dias por exigência médica.",
-        "why": "É a previsão do art. 78."
+        "q": "O estágio probatório dura três anos e o inciso II do art. 73 passou a prever produtividade.",
+        "why": "A LC 526/2026 deu nova redação ao art. 73, II."
+      },
+      {
+        "a": true,
+        "q": "A conduta no estágio probatório é apurada pela comissão específica prevista no art. 73, § 1º.",
+        "why": "A comissão inclui representantes da Corregedoria, gestão de pessoas e Departamento da Capital e Interior."
       },
       {
         "a": false,
-        "q": "A primeira lotação é definida pela classificação do concurso público.",
-        "why": "O art. 65, § 13, e o art. 79-C adotam a classificação final do curso de formação."
+        "q": "O recurso contra proposta de exoneração no estágio probatório deve ser apresentado em 15 dias.",
+        "why": "O art. 73, § 7º, prevê cinco dias."
       },
       {
         "a": true,
-        "q": "O curso específico de formação policial ocorre em regime de internato.",
+        "q": "A posse ocorre no 30º dia subsequente à publicação do ato de provimento.",
+        "why": "É a regra do art. 77."
+      },
+      {
+        "a": true,
+        "q": "A exigência médica pode suspender o prazo de posse por até 120 dias.",
+        "why": "É a previsão do art. 78, a critério do órgão ou junta médica."
+      },
+      {
+        "a": false,
+        "q": "O efetivo exercício começa somente após a apresentação na primeira unidade de lotação.",
+        "why": "Começa no início obrigatório do curso de formação (art. 79)."
+      },
+      {
+        "a": true,
+        "q": "O curso específico de formação policial é realizado em regime de internato.",
         "why": "É a regra do art. 79-A, § 3º."
       },
       {
+        "a": true,
+        "q": "Mais de 25% de faltas injustificadas em qualquer disciplina pode ensejar exoneração durante o curso.",
+        "why": "É hipótese do art. 79-B, I, b."
+      },
+      {
+        "a": true,
+        "q": "O Termo de Ocorrência Escolar prevê defesa prévia de dois dias úteis.",
+        "why": "É o art. 79-B, § 1º, III."
+      },
+      {
         "a": false,
-        "q": "O período do curso de formação conta para o interstício de promoção.",
-        "why": "O art. 79-E exclui esse interstício até o exercício na primeira lotação."
+        "q": "O período do curso de formação conta para o interstício necessário à promoção.",
+        "why": "O art. 79-E exclui o interstício; ele começa no exercício na unidade de primeira lotação."
       },
       {
         "a": true,
-        "q": "O servidor deve permanecer pelo menos cinco anos no município de lotação inicial.",
-        "why": "É a regra incluída no art. 65, § 14."
+        "q": "O pedido de exoneração antes de completar três anos pode gerar ressarcimento proporcional das despesas diretas e individualizadas de formação.",
+        "why": "É a regra do art. 79-B, §§ 4º e 5º, com exceção de saúde incapacitante comprovada."
       },
       {
         "a": true,
-        "q": "Depois do quinquênio, a cessão pode durar até dois anos e ser prorrogada uma vez por mais um ano.",
-        "why": "É a regra do art. 65, § 15, com exceções expressas."
+        "q": "O art. 84-A prevê que remoção de ofício entre municípios tem prazo de apresentação contado do recebimento da ajuda de custo.",
+        "why": "É o art. 84-A, I, a."
       }
     ],
     "slug": "pcac-2026-lc129-atualizacao-lc526-2026-ingresso-formacao-lotacao",
     "title": "LC nº 129/2004 após LC nº 526/2026: concurso, posse, formação e lotação",
-    "body_md": "\n# LC nº 129/2004 após LC nº 526/2026 — ingresso, formação e lotação\n\n> **Atualização legislativa crítica:** a LC nº 526, de 23 de julho de 2026, alterou profundamente os procedimentos de ingresso, estágio probatório, posse, exercício e curso de formação da Polícia Civil do Acre. Resumos antigos desses artigos não devem ser usados sem esta atualização.\n\n## 1. Ingresso — arts. 64 e 65\nO ingresso ocorre na classe inicial de cada cargo, mediante concurso público de provas ou de provas e títulos, sob regime estatutário, com início do estágio probatório a partir da investidura (art. 64).\n\nOs concursos são estruturados em fases eliminatórias e classificatórias definidas em edital. O art. 65 prevê obrigatoriamente provas objetivas, subjetivas e de títulos, acrescidas de prova oral para Delegado. Também prevê prova de aptidão física, exames médico e toxicológico, exame psicotécnico e investigação criminal e social.\n\n## 2. Nomeação, posse e curso — arts. 73, 75 a 79\nO estágio probatório tem duração de três anos a partir do exercício, com avaliação de aptidão e capacidade segundo os fatores do art. 73. A redação de 2026 alterou os fatores e a tramitação da avaliação. A avaliação é submetida à homologação do Delegado-Geral quatro meses antes do fim do estágio; o servidor considerado apto é confirmado automaticamente. O não aprovado será exonerado de ofício, assegurada recondução ao cargo de origem se já for estável no serviço público estadual, nos termos da LC nº 39/1993.\n\nA posse ocorre no 30º dia subsequente à publicação do ato de provimento (art. 77). Se coincidir com sábado, domingo, feriado ou dia sem expediente ordinário, fica prorrogada para o primeiro dia útil. O início das atividades do curso pode ser postergado por ato fundamentado do Delegado-Geral por até cinco dias. O prazo pode ser suspenso até 120 dias por exigência de inspeção médica.\n\nO exercício começa na data do início obrigatório das atividades do curso específico de formação policial (art. 79). Publicado o ato de lotação inicial após o curso, o servidor tem até três dias úteis para se apresentar à unidade do município de destino.\n\n## 3. Curso específico de formação — arts. 79-A a 79-E\nO empossado inicia imediatamente o curso específico na Escola Superior da Polícia Civil. Desde esse marco recebe vencimentos e vantagens da classe inicial. O curso é considerado efetivo exercício para todos os efeitos legais, observada a exceção do interstício de promoção, que só começa na entrada em exercício na unidade de primeira lotação.\n\nO curso ocorre em regime de internato. Durante as aulas e nas dependências administrativas da Escola, é vedado portar ou conduzir arma de fogo, exceto nas atividades práticas de armamento e tiro, limitadas ao espaço e tempo necessários.\n\nConcluído o curso, a classificação final obtida nas avaliações define a primeira lotação. A Escola acompanha a conduta social do policial durante o curso e o relatório integra a avaliação do estágio probatório.\n\n## 4. Lotação inicial e permanência — art. 65, § 13, e art. 65, §§ 14 a 16\nA lotação inicial observa exclusivamente a classificação obtida no curso de formação, e não a classificação do concurso. A lei determina preferência por municípios do interior, observada opção prévia por vaga regionalizada e, na ausência dela, critérios de oportunidade e conveniência administrativa.\n\nO servidor deve permanecer no município da lotação inicial por pelo menos cinco anos de efetivo exercício. Durante esse período são vedadas remoção, permuta, cessão, disposição, requisição ou outra movimentação que implique afastamento territorial ou desvinculação das unidades da Polícia Civil naquele município.\n\nDepois do período de cinco anos, cessões ou disposições podem ser deferidas por até dois anos, prorrogáveis uma única vez por mais um ano, ressalvadas as funções estratégicas ou de confiança indicadas na lei. Novas movimentações da mesma natureza seguem o ciclo quinquenal previsto nos §§ 15 e 16.\n\n## 5. Pegadinhas IDECAN\n- Estágio probatório: três anos.\n- Posse: 30º dia subsequente à publicação, com prorrogação automática se não houver expediente.\n- Suspensão do prazo de posse por exigência médica: até 120 dias.\n- Curso de formação: internato; conta como efetivo exercício, mas não para interstício de promoção.\n- Primeira lotação: classificação no curso de formação, não no concurso.\n- Permanência mínima no município inicial: cinco anos.\n- Cessão após o quinquênio: até dois anos, prorrogável uma vez por mais um ano, ressalvadas as exceções legais.\n\n## 6. Cuidado com textos antigos\nA redação anterior dos arts. 64 a 79 foi alterada pela LC nº 526/2026. Questões que usem prazo, forma de posse, começo do exercício, critérios de avaliação ou regras de lotação anteriores devem ser atualizadas. Esta aula deve ser lida em conjunto com o texto integral consolidado da LC nº 129/2004.\n",
+    "body_md": "# LC nº 129/2004 após LC nº 526/2026 — ingresso, formação, estágio e lotação\n\n> **Texto de referência:** LC nº 129/2004 consolidada, lida em conjunto com a LC nº 526, de 23 de julho de 2026 (publicada em 29/07/2026).\n\n## 1. Ingresso e fases do concurso — arts. 64 a 67\nO ingresso ocorre na classe inicial de cada cargo, mediante concurso público de provas ou de provas e títulos, sob regime estatutário. O estágio probatório inicia-se com a investidura (art. 64).\n\nO art. 65 determina que o concurso seja estruturado em fases eliminatórias e classificatórias definidas em edital. São obrigatórias provas objetivas, subjetivas e de títulos; a prova oral é acrescida para Delegado. Também estão previstas prova de aptidão física, exames médico e toxicológico, exame psicotécnico e investigação criminal e social.\n\nO art. 67 prevê requisitos para investidura, incluindo idade mínima de 18 anos na data da posse, capacidade física e mental, ausência de antecedentes criminais, direitos políticos, quitação militar, escolaridade superior conforme o cargo e CNH até a posse. Para Oficial Investigador, exige-se graduação de nível superior em qualquer área, reconhecida pelo MEC. A CNH mínima é categoria AB para a carreira policial civil, exceto Delegado, para quem a exigência é categoria B.\n\n## 2. Classificação do concurso e lotação inicial — art. 67, §§ 13 a 17, e art. 79-C\nA classificação final do concurso destina-se à convocação, nomeação e posse (art. 71). **A primeira lotação não segue a classificação do concurso:** observa exclusivamente a ordem de classificação final obtida no curso específico de formação (art. 67, § 13, e art. 79-C, § 1º).\n\nA lotação deve ocorrer preferencialmente em municípios do interior, observada a opção prévia por vaga regionalizada e, na ausência dela, os critérios de oportunidade e conveniência administrativa.\n\nO servidor deve permanecer no município de sua lotação inicial por pelo menos cinco anos de efetivo exercício, contados da entrada em exercício na unidade. Nesse período, são vedadas remoção, permuta, cessão, disposição, requisição ou outra movimentação que implique afastamento territorial do município ou desvinculação das unidades policiais ali situadas (art. 67, § 14).\n\nDepois do quinquênio, cessões ou disposições podem ser deferidas por até dois anos, prorrogáveis uma única vez por mais um ano, ressalvadas as funções estratégicas ou de confiança expressamente indicadas no § 15. O § 16 prevê novo ciclo de cinco anos de efetivo exercício após o retorno para movimentações da mesma natureza.\n\n**Exceção:** o § 17 permite remoção durante o quinquênio para outro município da mesma regional administrativa, desde que haja vacância no destino capaz de comprometer a continuidade ou eficiência do serviço, mediante decisão fundamentada do Delegado-Geral.\n\n## 3. Estágio probatório e estabilidade — arts. 73 e 74\nO estágio probatório dura três anos. Após a LC nº 526/2026, os fatores de avaliação do art. 73 são:\n- I — conduta na vida pública e privada;\n- II — produtividade;\n- III — disciplina;\n- IV — assiduidade;\n- V — interesse e dedicação ao serviço;\n- VI — eficiência.\n\nA conduta é apurada por comissão específica com representantes da Corregedoria-Geral, da gestão de pessoas e do Departamento de Polícia da Capital e do Interior. Os demais fatores são apurados por relatórios circunstanciados das atividades, inclusive durante o curso de formação. O Departamento de Inteligência fornece subsídios e investigações relativos à conduta.\n\nQuatro meses antes do término do probatório, a avaliação é submetida à homologação do Delegado-Geral. Quem for considerado apto é confirmado automaticamente. Quem não for aprovado pode ser exonerado de ofício, com direito a recurso administrativo em cinco dias. O órgão técnico tem 30 dias para parecer; o Delegado-Geral tem 30 dias para julgar o recurso, recebido nos efeitos suspensivo e devolutivo. Mantida a exoneração, os autos seguem ao Governador para edição do decreto.\n\nA estabilidade é adquirida após três anos de efetivo exercício, com avaliação especial de desempenho por comissão, considerando os relatórios ordinários do probatório e o aproveitamento no curso de formação (art. 74).\n\n## 4. Posse, curso e exercício — arts. 75 a 79-A\nA posse ocorre no 30º dia subsequente à publicação do ato de provimento (art. 77). Se a data coincidir com sábado, domingo, feriado ou dia sem expediente ordinário, posse e início do curso são automaticamente prorrogados para o primeiro dia útil. O Delegado-Geral pode, por ato fundamentado, postergar o início das atividades do curso por até cinco dias, sem alterar a data da posse.\n\nO prazo de posse pode ser suspenso por até 120 dias, a critério do órgão ou junta médica, quando houver exigência para expedição do certificado de sanidade (art. 78). Se o candidato deixar de cumprir a exigência sem motivo justificado, o prazo recomeça a fluir.\n\nO exercício começa na data do início obrigatório das atividades do curso de formação (art. 79). Publicado o ato de lotação inicial, o servidor tem até três dias úteis, contados do primeiro dia útil subsequente, para se apresentar à unidade de destino.\n\nO curso é realizado na Escola Superior da Polícia Civil, em regime de internato. O servidor recebe, desde esse marco, vencimentos e vantagens da classe inicial. O curso conta como efetivo exercício para todos os efeitos legais, ressalvada a contagem do interstício para promoção (arts. 79-A e 79-E).\n\nDurante as aulas e nas dependências administrativas da Escola, é vedado portar ou conduzir arma de fogo, salvo nas atividades práticas de armamento e tiro, limitadas ao espaço e ao tempo necessários. A autorização funcional individual e definitiva para porte somente é concedida após conclusão regular e aprovação no curso.\n\n## 5. Reprovação, disciplina e ressarcimento — art. 79-B\nA reprovação em qualquer disciplina, mais de 25% de faltas injustificadas em qualquer disciplina ou penalidades que totalizem inaptidão disciplinar podem levar à exoneração por não preenchimento de requisito do estágio probatório. A Direção da Escola instrui o procedimento com boletim de avaliação ou registro de frequência, assegurando manifestação em cinco dias.\n\nInfrações sujeitas a demissão ou cassação de aposentadoria e omissão de fato impeditivo no momento da nomeação ou posse seguem a via de demissão, mediante devido processo administrativo disciplinar.\n\nInfrações às normas escolares no âmbito letivo são apuradas por Termo de Ocorrência Escolar (TOE), com defesa prévia em dois dias úteis e recurso ao Conselho Superior, recebido somente no efeito devolutivo.\n\nO policial que pedir exoneração antes de completar três anos de efetivo exercício deverá ressarcir, proporcionalmente ao tempo restante, as despesas diretas e individualizadas de custeio da formação. Não entram na base de cálculo parcelas remuneratórias ou vencimentos. A exceção é motivo de saúde incapacitante comprovado por junta médica oficial.\n\n## 6. Práticas durante o curso e movimentação — arts. 79-B, 79-C e 84-A\nDurante a formação, podem ser designadas atividades práticas em delegacias, unidades técnico-científicas e outras atividades típicas da Polícia Civil, respeitadas a pertinência temática e as atribuições do cargo, sob supervisão da Escola. O resultado integra a avaliação do estágio probatório.\n\nA Escola acompanha a conduta social durante o curso; o relatório integra obrigatoriamente a avaliação probatória (art. 79-C, § 2º).\n\nO art. 84-A disciplina a movimentação do policial já integrado à carreira. Na remoção entre municípios, o prazo de apresentação é de até 30 dias: na remoção de ofício, conta-se do recebimento da ajuda de custo; a pedido ou por permuta, da publicação do ato, sem ajuda de custo. Entre a publicação da remoção de ofício e o recebimento da ajuda, o servidor continua desempenhando as atribuições na unidade de origem.\n\n## 7. Pegadinhas IDECAN\n- Concurso: classificação final serve para convocação, nomeação e posse; lotação inicial segue a classificação do curso de formação.\n- A regra de lotação inicial está no art. 67, § 13, e no art. 79-C, § 1º — não no art. 65.\n- Permanência mínima: cinco anos no município inicial, com exceção restrita do art. 67, § 17.\n- Cessão/disposição após o quinquênio: até dois anos, prorrogável uma vez por mais um ano.\n- Probatório: três anos; fatores incluem produtividade (art. 73, II).\n- Recurso contra proposta de exoneração no probatório: cinco dias; análise técnica e julgamento: 30 dias cada.\n- Posse: 30º dia subsequente; suspensão médica: até 120 dias.\n- Curso: internato; reprovação em disciplina ou mais de 25% de faltas injustificadas por disciplina pode gerar exoneração.\n- TOE: defesa prévia em dois dias úteis; recurso apenas devolutivo.\n- Curso conta como efetivo exercício, mas o interstício promocional só começa na primeira unidade de lotação.\n- Remoção entre municípios após integração: art. 84-A, com regras distintas para remoção de ofício, a pedido e por permuta.\n",
     "summary": "Atualização legislativa indispensável de 2026: arts. 64 a 79-E, avaliação probatória, posse unificada, curso em internato e permanência territorial.",
     "discipline": "Legislação Institucional",
     "flashcards": [
       {
-        "b": "Três anos, a partir do exercício, nos termos do art. 73.",
-        "f": "Qual é o prazo do estágio probatório após a LC 526/2026?"
+        "b": "Art. 67, §§ 13 a 17, em conjunto com o art. 79-C.",
+        "f": "Qual artigo regula a lotação inicial e a permanência mínima de cinco anos?"
       },
       {
-        "b": "No 30º dia subsequente à publicação do ato de provimento, com prorrogação para o primeiro dia útil se não houver expediente.",
-        "f": "Quando ocorre a posse segundo o art. 77?"
+        "b": "A ordem de classificação final obtida no curso específico de formação, não a classificação do concurso.",
+        "f": "Qual critério define a primeira lotação?"
       },
       {
-        "b": "Até 120 dias, a critério do órgão ou junta médica responsável.",
-        "f": "Por quanto tempo o prazo de posse pode ser suspenso por exigência médica?"
+        "b": "Cinco anos de efetivo exercício no município, contados da entrada em exercício na unidade.",
+        "f": "Qual é a regra geral de permanência na lotação inicial?"
       },
       {
-        "b": "A classificação final obtida no curso específico de formação policial.",
-        "f": "Qual classificação define a primeira lotação?"
+        "b": "Remoção para município da mesma regional, com vacância capaz de comprometer continuidade ou eficiência do serviço e decisão fundamentada do Delegado-Geral.",
+        "f": "Qual exceção permite remoção antes do quinquênio?"
       },
       {
-        "b": "Regime de internato.",
-        "f": "Qual o regime do curso específico de formação?"
+        "b": "Conduta na vida pública e privada; produtividade; disciplina; assiduidade; interesse e dedicação ao serviço; eficiência.",
+        "f": "Quais são os fatores de avaliação do art. 73 após a LC 526/2026?"
       },
       {
-        "b": "Não. Conta como efetivo exercício para os demais fins, mas o interstício começa na entrada em exercício na primeira unidade de lotação.",
-        "f": "O curso de formação conta para interstício de promoção?"
+        "b": "Três anos.",
+        "f": "Qual é a duração do estágio probatório?"
       },
       {
-        "b": "Cinco anos de efetivo exercício.",
-        "f": "Qual a permanência mínima no município da lotação inicial?"
+        "b": "Cinco dias.",
+        "f": "Qual prazo para recorrer da proposta de exoneração no estágio probatório?"
+      },
+      {
+        "b": "30º dia subsequente à publicação; suspensão médica por até 120 dias, nas condições do art. 78.",
+        "f": "Qual o prazo para posse e quando pode ser suspenso por exigência médica?"
+      },
+      {
+        "b": "Na data do início obrigatório das atividades do curso específico de formação policial.",
+        "f": "Quando começa o efetivo exercício do policial civil após a LC 526/2026?"
+      },
+      {
+        "b": "Internato; é vedado portar ou conduzir arma nas salas de aula e dependências administrativas, ressalvadas práticas de tiro no espaço e tempo necessários.",
+        "f": "Qual o regime do curso e qual a regra sobre armas?"
+      },
+      {
+        "b": "Reprovação em disciplina, mais de 25% de faltas injustificadas em qualquer disciplina ou inaptidão disciplinar nos termos do regulamento.",
+        "f": "O que pode levar à exoneração durante o curso de formação?"
+      },
+      {
+        "b": "Não. O interstício começa na entrada em exercício na unidade da primeira lotação.",
+        "f": "O curso conta para interstício de promoção?"
+      },
+      {
+        "b": "Até três dias úteis, contados do primeiro dia útil subsequente à publicação.",
+        "f": "Qual prazo de apresentação após a publicação do ato de lotação inicial?"
       },
       {
         "b": "Até dois anos, prorrogável uma única vez por mais um ano, ressalvadas as hipóteses legais.",
-        "f": "Após o quinquênio, qual o prazo máximo de cessão e sua prorrogação?"
+        "f": "Como funciona a cessão após o quinquênio?"
+      },
+      {
+        "b": "Art. 84-A: até 30 dias; de ofício conta do recebimento da ajuda de custo, e a pedido/permuta da publicação do ato.",
+        "f": "Qual regra se aplica à remoção entre municípios após integração à carreira?"
       }
     ],
     "sort_order": 17,
     "legal_basis": [
-      "LC Estadual do Acre nº 129/2004",
-      "LC Estadual do Acre nº 496/2025",
-      "LC Estadual do Acre nº 526/2026",
-      "LC Estadual do Acre nº 39/1993"
+      "LC Estadual nº 129/2004",
+      "LC Estadual nº 496/2025",
+      "LC Estadual nº 526/2026",
+      "LC Estadual nº 39/1993"
     ],
-    "source_note": "LC nº 526/2026, publicada no DOE de 29/07/2026, que alterou a LC nº 129/2004; texto oficial do Portal LEGIS do Acre.",
+    "source_note": "Assembleia Legislativa do Acre: LC nº 526/2026 (PDF-texto, arts. 64–79-E, 84-A e art. 102, LV) e LC nº 129/2004 consolidada, consulta em 14/11/2026.",
     "topic_label": "LC nº 129/2004 — atualização LC nº 526/2026: ingresso, probatório e formação",
     "contest_name": "PC-AC 2026",
     "legal_review": {
-      "source": "Portal LEGIS do Acre, LC 526/2026 e texto consolidado da LC 129/2004. Conferir redação integral dos parágrafos dos arts. 65 e 73 antes de questões de literalidade.",
-      "status": "reviewed_against_official_amending_act",
+      "source": "Assembleia Legislativa do Estado do Acre, LC 526/2026 PDF-texto e LC 129/2004 consolidada. Artigo 67 §§13-17 confirmado; fator II do art.73 é produtividade; art.77, art.79, internato e exceções conferidos.",
+      "status": "reviewed_against_official_consolidated_text_and_amending_act",
       "articles": [
         64,
         65,
+        67,
+        70,
+        71,
         73,
+        74,
         75,
         76,
         77,
         78,
         79,
         "79-A",
+        "79-B",
         "79-C",
         "79-D",
-        "79-E"
+        "79-E",
+        "84-A",
+        102
       ],
       "review_date": "2026-11-14"
     },
     "content_status": "active",
     "syllabus_topic_order": 1,
-    "law_version_checked_at": "2026-11-14T17:25:00+00:00"
+    "law_version_checked_at": "2026-11-14T18:48:00+00:00"
   },
   {
     "quiz": [
