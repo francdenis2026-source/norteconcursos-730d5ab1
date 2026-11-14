@@ -12,7 +12,7 @@ import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxono
 import { useEffect, useMemo, useRef, useState } from "react";
 import "@/styles/student-area-kit.css";
 import { disciplineTheme, themeStyle } from "@/lib/disciplineTheme";
-import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookMarked,
@@ -110,7 +110,6 @@ function LibraryIndex() {
     discipline: initialDiscipline,
   } = Route.useSearch();
   const navigate = Route.useNavigate();
-  const router = useRouter();
   // Matéria aberta por um link (ex.: um cartão da área Material): "voltar" retorna àquela tela.
   // Matéria escolhida aqui mesmo: "voltar" retorna à lista de matérias desta página.
   const enteredFocused = useRef(!!(initialDiscipline || guia));
@@ -315,12 +314,15 @@ function LibraryIndex() {
     setDiscipline("all");
     if (enteredFocused.current) {
       enteredFocused.current = false;
-      if (router.history.canGoBack()) router.history.back();
-      else void router.navigate({ to: "/dashboard/material" });
-      return;
+      // Índice da entrada no histórico do roteador: maior que zero = há uma tela anterior no app.
+      const index = (window.history.state as { __TSR_index?: number } | null)?.__TSR_index ?? 0;
+      if (index <= 0) return false; // sem tela anterior no app: o link segue para Material
+      window.history.back();
+      return true;
     }
     document.getElementById("dashboard-content")?.scrollTo({ top: 0 });
     window.scrollTo({ top: 0 });
+    return true;
   };
   const readCount = subjectItems.filter((item) => read.has(item.slug)).length;
 
@@ -355,9 +357,21 @@ function LibraryIndex() {
       <BackToEdital back={back} />
       {focused ? (
         <header className={`library-focus ak-themed-head library-tone-${libraryTone(discipline)}`}>
-          <button type="button" className="library-focus__back" onClick={leaveSubject}>
-            ← {enteredFocused.current ? "Voltar" : "Todas as matérias"}
-          </button>
+          {enteredFocused.current ? (
+            <Link
+              to="/dashboard/material"
+              className="library-focus__back"
+              onClick={(event) => {
+                if (leaveSubject()) event.preventDefault();
+              }}
+            >
+              ← Voltar
+            </Link>
+          ) : (
+            <button type="button" className="library-focus__back" onClick={() => leaveSubject()}>
+              ← Todas as matérias
+            </button>
+          )}
           <div className="library-focus__identity">
             <div>
               <p className="library-eyebrow">Biblioteca de estudo</p>
