@@ -31,6 +31,20 @@ Fontes oficiais cadastradas em `public.content_sources` (11 registros, incluindo
 
 Cada questão recebeu em `didactic_provenance` a referência às fontes aplicáveis, o commit de origem, o arquivo editorial, a indicação de questão autoral e os marcadores `first_pass_sources_checked_pending_final_legal_review` e `activation_blocked`. O campo `legal_basis` foi normalizado para objetos com `title`, `lei`, `artigo` e `url`, no formato consumido pelo Treinador; `law_version_checked_at` foi preenchido com a data da primeira conferência das fontes, sem significar aprovação jurídica final.
 
+## Lote 3 — 22 novas questões autorais
+
+Foi criado o arquivo `docs/question-batches/pcac-2026-lote3-penal-processo-penal-institucional-draft.md` com 22 questões autorais em cinco alternativas, uma correta, explicação didática e fundamento legal.
+
+- Direito Penal: 8 itens — lesão corporal, estupro, estupro de vulnerável, vilipêndio a cadáver, falsidade ideológica, uso de documento falso, tortura após a Lei nº 15.410/2026 e abuso de autoridade.
+- Processo Penal: 8 itens — início e etapas da cadeia de custódia, identificação criminal, flagrante presumido, providências após flagrante, prisão preventiva, medidas cautelares diversas e prisão temporária.
+- Legislação Institucional: 6 itens — deveres funcionais, sindicância, hipótese de PAD obrigatório, autoridade competente para instaurar PAD, responsabilidades e unificação dos cargos de agente/escrivão em Oficial Investigador.
+
+Os 22 itens foram inseridos em `public.curated_question_catalog` com `content_status = 'draft'`, `is_original = true`, referências estruturadas, data de conferência inicial e `activation_blocked = true`. Cada item foi associado ao tópico correto do edital: 16 ao tópico de Direito Penal e Processual Penal e 6 ao tópico de Legislação Institucional. Todos os 22 foram ligados a materiais existentes na biblioteca PC-AC 2026; não foi criada duplicação de material.
+
+Foram cadastradas/atualizadas 11 fontes oficiais para o lote, incluindo CPP, CP, Lei nº 12.037/2009, Lei nº 7.960/1989, Lei nº 9.455/1997, Lei nº 13.869/2019, Lei nº 15.410/2026 e normas institucionais do Acre. A URL exata da publicação oficial da Lei nº 15.410/2026 foi adicionada à allowlist do validador e a um teste automatizado específico.
+
+**Validação inicial no banco:** 22/22 com cinco alternativas, gabarito A–E, fundamento estruturado e sem URL/artigo vazio; 22/22 permanecem rascunhos. Os 22 estão vinculados a materiais existentes. A revisão jurídica independente ainda é obrigatória.
+
 ## Correção da data de corte do edital
 
 O edital está datado de 05/11/2026, mas o cronograma do próprio documento registra a publicação em 06/11/2026; a edição nº 14.388 do Diário Oficial do Estado também é de 06/11/2026. Como o subitem 11.5.5 se refere à data de publicação, a data de corte correta é **06/11/2026**, não 05/11/2026. A questão 15 do lote de Legislação Institucional e o campo `published_on` da fonte foram corrigidos.
