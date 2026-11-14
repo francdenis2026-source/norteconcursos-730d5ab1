@@ -1,0 +1,52 @@
+/* Páginas 404 e de erro: ocupam a janela inteira, centralizadas, com texto legível sobre a foto. */
+html:root body main.status-screen {
+  position: relative;
+  display: grid !important;
+  place-items: center;
+  width: 100%;
+  min-height: 100svh !important;
+  height: auto !important;
+  padding: 24px 20px !important;
+  text-align: center !important;
+  isolation: isolate;
+}
+html:root body main.status-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(60% 55% at 50% 50%, rgb(6 10 14 / 82%), rgb(6 10 14 / 45%) 70%, transparent);
+}
+html:root body main.status-screen .status-screen__box {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 34rem);
+  margin: 0 auto;
+  text-align: center !important;
+}
+html:root body main.status-screen .status-screen__box > * { margin-inline: auto; text-align: center !important; }
+html:root body main.status-screen h1 { margin: 6px 0 0 !important; text-align: center !important; }
+html:root body main.status-screen .page-hero__desc {
+  max-width: 28rem;
+  text-align: center !important;
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  text-wrap: balance;
+}
+/* Painel translúcido atrás do texto: legível sobre qualquer parte da foto. */
+html:root body main.status-screen .status-screen__box {
+  padding: 22px 26px 26px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 20px;
+  background: rgb(8 12 17 / 72%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+html:root body main.status-screen .page-hero__desc { color: rgb(235 240 245 / 92%) !important; }
+html:root body main.status-screen .page-hero__desc {
+  width: 100%;
+  margin: 12px auto 0 !important;
+  text-indent: 0 !important;
+  text-align-last: center !important;
+  padding: 0 !important;
+}

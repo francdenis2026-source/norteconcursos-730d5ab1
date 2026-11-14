@@ -1,3 +1,4 @@
+import "@/styles/study-enem-fit.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -471,7 +472,7 @@ function StudyRoomPage() {
     : { area: subject, go: "1", ...(topic ? { topic } : {}) };
 
   return (
-    <div className="mx-auto max-w-6xl space-y-5">
+    <div className="study-room mx-auto max-w-6xl space-y-5">
       <StudySubjectPicker
         subjects={ctx.subjects}
         suggested={ctx.suggested}

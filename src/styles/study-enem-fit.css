@@ -1,0 +1,29 @@
+/* Sala de estudo e ENEM: sem palavras cortadas no meio nem texto justificado em avisos. */
+html:root body .app-shell[data-area="student"] :is(.enem-page, .study-room, [data-page="study-room"]) :is(p, span, li, small, h2, h3) {
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  word-break: normal !important;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+/* Contadores da faixa: rótulo em até duas linhas, nunca quebrado no meio da palavra. */
+html:root body .app-shell[data-area="student"] .enem-page .hero-stat,
+html:root body .app-shell[data-area="student"] .enem-page .hero-stat * {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: manual !important;
+}
+html:root body .app-shell[data-area="student"] .enem-page .page-hero__stats {
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+}
+@media (max-width: 480px) {
+  html:root body .app-shell[data-area="student"] .enem-page .page-hero__stats { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  html:root body .app-shell[data-area="student"] .enem-page .page-hero .page-hero__stats {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 6px;
+  }
+  html:root body .app-shell[data-area="student"] .enem-page .page-hero__stats > * { min-width: 0 !important; width: 100% !important; }
+}

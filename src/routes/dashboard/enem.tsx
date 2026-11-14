@@ -1,3 +1,4 @@
+import "@/styles/study-enem-fit.css";
 import * as React from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import {

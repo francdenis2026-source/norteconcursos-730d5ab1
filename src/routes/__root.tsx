@@ -1,3 +1,4 @@
+import "@/styles/status-screen.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_ART, INITIAL_LOADING_CSS, INITIAL_LOADING_WATCHDOG, finishInitialLoading } from "@/components/PlatformLoadingScreen";
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
@@ -46,10 +47,10 @@ function StatusScreen({
 }) {
   return (
     <main
-      className="page-hero flex min-h-svh items-center justify-center !rounded-none !border-0 px-6 text-center"
+      className="page-hero status-screen flex min-h-svh items-center justify-center !rounded-none !border-0 px-6 text-center"
       data-hero="journey"
     >
-      <div className="max-w-lg">
+      <div className="status-screen__box max-w-lg">
         <span className="hero-chip">Norte Concurso</span>
         <p className="font-display mt-6 text-8xl font-extrabold leading-none text-brass md:text-9xl">
           {code}
