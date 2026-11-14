@@ -1197,13 +1197,26 @@ function QuestionTrainer() {
           <div className="qt2-paused" role="dialog" aria-modal="false" aria-label="Treino pausado">
             <Pause aria-hidden="true" />
             <strong>Treino pausado</strong>
-            <p>Cronômetro parado. A questão fica oculta até você retomar.</p>
+            <p>Cronômetro parado. Toque em uma alternativa ou em Retomar para continuar.</p>
             <Button onClick={resumeUserPause} className="qt2-paused__resume">
               <Play className="mr-2 h-4 w-4" /> Retomar treino
             </Button>
           </div>
         )}
-        <CardContent className="trainer-reading-content p-3.5 sm:p-5 md:p-7">
+        <CardContent
+          className={`trainer-reading-content p-3.5 sm:p-5 md:p-7${userPaused ? " qt2-content-paused" : ""}`}
+          // Treino pausado: tocar na questão (ou em uma alternativa) retoma o cronômetro. O primeiro
+          // toque só retoma; a questão estava borrada, então nenhuma alternativa é marcada às cegas.
+          onClickCapture={
+            userPaused
+              ? (event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  resumeUserPause();
+                }
+              : undefined
+          }
+        >
           <div className="trainer-reading-meta mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
             <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
               {question.subject}

@@ -1,5 +1,13 @@
 /* Treino pausado: painel compacto com imagem, no lugar da questão oculta. */
-html:root body .trainer-session-shell.qt2-session .qt2-paused ~ .trainer-reading-content { display: none; }
+html:root body .trainer-session-shell.qt2-session .qt2-content-paused {
+  filter: blur(7px);
+  opacity: 0.55;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  transition: filter 160ms ease, opacity 160ms ease;
+}
+html:root body .trainer-session-shell.qt2-session .qt2-content-paused * { cursor: pointer; }
 html:root body .trainer-session-shell.qt2-session .qt2-paused {
   position: relative;
   inset: auto;
