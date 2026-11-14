@@ -20,6 +20,7 @@ import {
   PlayCircle,
   Sigma,
   Target,
+  Timer,
   Wallet,
   type LucideIcon,
 } from "lucide-react";
@@ -303,6 +304,9 @@ function DisciplineDetail({
         }
       >
         <div className="discipline-hero-meta" aria-label="Conteúdo disponível nesta disciplina">
+          <Link to="/dashboard/study-room" search={{ subject: card.name } as never}>
+            <Timer aria-hidden="true" /> Estudar com cronômetro
+          </Link>
           {card.materials > 0 && <span><BookOpen aria-hidden="true" /> {plural(card.materials, "material", "materiais")}</span>}
           {card.lessons > 0 && <span><GraduationCap aria-hidden="true" /> {plural(card.lessons, "aula na trilha", "aulas na trilha")}</span>}
           {card.videos > 0 && <span><PlayCircle aria-hidden="true" /> {plural(card.videos, "videoaula", "videoaulas")}</span>}

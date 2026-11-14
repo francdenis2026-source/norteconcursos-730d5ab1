@@ -351,6 +351,9 @@ function StudyRoomPage() {
   const subject = chosen.subject;
   const subjectTopics = React.useMemo(() => topicsFor(subject), [subject]);
   const topic = subjectTopics.includes(chosen.topic) ? chosen.topic : (subjectTopics[0] ?? "");
+  // Vindo do hub, do edital ou do cronograma, o assunto já está definido: o seletor só abre se o aluno pedir.
+  const fromContext = !!(sp.subject || sp.edital || sp.plan);
+  const [changing, setChanging] = React.useState(false);
   const choose = (next: StudySelection) => {
     setPicked(next);
     try {
@@ -473,14 +476,19 @@ function StudyRoomPage() {
 
   return (
     <div className="study-room mx-auto max-w-6xl space-y-5">
-      <StudySubjectPicker
-        subjects={ctx.subjects}
-        suggested={ctx.suggested}
-        subject={subject}
-        topic={topic}
-        topics={subjectTopics}
-        onChange={choose}
-      />
+      {(!fromContext || changing) && (
+        <StudySubjectPicker
+          subjects={ctx.subjects}
+          suggested={ctx.suggested}
+          subject={subject}
+          topic={topic}
+          topics={subjectTopics}
+          onChange={(next) => {
+            choose(next);
+            setChanging(false);
+          }}
+        />
+      )}
       <div className="workspace-banner workspace-banner--study-room">
         {(sp.edital || sp.plan) && (
           <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
@@ -502,7 +510,21 @@ function StudyRoomPage() {
           </div>
         )}
         <h1 className="mt-2 text-2xl font-black leading-tight md:text-3xl">{topic || subject}</h1>
-        <p className="text-sm text-muted-foreground">{subject}</p>
+        <p className="text-sm text-muted-foreground">
+          {subject}
+          {fromContext && !changing && (
+            <>
+              {" · "}
+              <button
+                type="button"
+                onClick={() => setChanging(true)}
+                className="font-semibold text-primary hover:underline"
+              >
+                Trocar assunto
+              </button>
+            </>
+          )}
+        </p>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
