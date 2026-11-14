@@ -174,6 +174,19 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       alternatives: [{ label: "AGEAC — Transporte intermunicipal", url: "https://ageac.ac.gov.br/transporte-ditrans/" }, { label: "AGEAC — BR-364 e transporte intermunicipal", url: "https://ageac.ac.gov.br/ageac-reforca-articulacao-com-bancada-federal-para-impulsionar-melhorias-na-br-364-e-fortalecer-o-transporte-intermunicipal/" }],
       caution: "Extensão, pavimentação e tempo de viagem variam por trecho e ano; para prova, priorize a função dos corredores e os modais, não números sem referência temporal.",
     },
+    {
+      title: "Indicadores demográficos e sociais do Acre",
+      reference: "IBGE Cidades e Estados — consulta em 14/11/2026",
+      points: [
+        "O Acre possui 22 municípios e área territorial de 164.064,761 km² (referência territorial de 2025).",
+        "No Censo 2022, o estado registrou 830.018 habitantes e densidade demográfica de 5,06 hab./km².",
+        "A estimativa populacional do IBGE para 2026 é de 887.794 habitantes; o IDH informado na página estadual é 0,71 (2021).",
+        "Indicadores devem ser memorizados com o respectivo ano de referência: censo, estimativa, área, renda e IDH não correspondem necessariamente ao mesmo período.",
+      ],
+      source: { label: "IBGE — Cidades e Estados: Acre", url: "https://www.ibge.gov.br/cidades-e-estados/ac.html" },
+      alternatives: [{ label: "IBGE — Censo Demográfico 2022, indicadores selecionados", url: "https://biblioteca.ibge.gov.br/visualizacao/periodicos/3102/cd_2022_populacao_idade_sexo_ac.pdf" }],
+      caution: "A população estimada e outros indicadores são atualizados periodicamente. Confira o ano indicado pelo IBGE antes de responder questões numéricas.",
+    },
   ],
   cultura: [
     {
@@ -224,6 +237,19 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       ],
       source: { label: "IBGE — Censo 2022: povos e comunidades tradicionais", url: "https://www.ibge.gov.br/cidades-e-estados/ac" },
     },
+    {
+      title: "Povos indígenas e povos isolados no Acre",
+      reference: "FUNAI — monitoramento publicado em 05/11/2026",
+      points: [
+        "O Acre abriga povos indígenas com diferentes histórias de contato, línguas, formas de organização e territórios tradicionais.",
+        "A Frente de Proteção Etnoambiental Envira realiza ações de monitoramento de referências de povos indígenas isolados em áreas do Acre, com atividades terrestres, aéreas e por sensoriamento remoto.",
+        "Em notícia de 05/11/2026, a FUNAI informou que a FPE Envira acompanhava oito registros: seis referências confirmadas e duas em estudo.",
+        "A política de proteção respeita a decisão de permanecer em isolamento e evita promover contato forçado; povos de recente contato são categoria distinta.",
+      ],
+      source: { label: "FUNAI — monitoramento de povos isolados (05/11/2026)", url: "https://www.gov.br/funai/pt-br/assuntos/noticias/2026/funai-realiza-monitoramento-de-povos-isolados" },
+      alternatives: [{ label: "FUNAI — povos isolados e de recente contato", url: "https://www.gov.br/funai/pt-br/atuacao/povos-indigenas/povos-indigenas-isolados-e-de-recente-contato-2/povos-de-recente-contato-1" }],
+      caution: "A quantidade e a classificação dos registros mudam conforme o monitoramento. Os oito registros são o recorte divulgado pela FPE Envira em novembro de 2026, não o total nacional.",
+    },
   ],
   politica: [
     {
@@ -238,6 +264,18 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       source: { label: "Portal LEGIS — Constituição do Estado do Acre", url: "https://legis.ac.gov.br/detalhar_constituicao" },
       alternatives: [{ label: "Assembleia Legislativa — texto em PDF", url: "https://www.al.ac.leg.br/wp-content/uploads/2014/10/constitui%C3%A7%C3%A3o_atualizada.pdf" }, { label: "TJAC — texto em PDF", url: "https://www.tjac.jus.br/wp-content/uploads/2014/07/Constituicao_Estadual_Acre.pdf" }, { label: "DHnet — texto em PDF", url: "https://www.dhnet.org.br/dados/lex/a_pdf/constituicao_ac.pdf" }],
       caution: "A data de 3/10/1989 é a da promulgação (a publicação no Diário Oficial foi em 5/10/1989). O texto consultado pode não incluir emendas posteriores; os números dos artigos não foram conferidos aqui. Número de deputados e duração dos mandatos: confirme no site da Assembleia Legislativa antes de estudar.",
+    },
+    {
+      title: "Constituição do Estado do Acre: autonomia e organização dos Poderes",
+      reference: "Constituição do Estado do Acre, arts. 1º a 7º e 45",
+      points: [
+        "O art. 1º define o Acre como parte integrante da República Federativa do Brasil, com autonomia e organização regidas pela Constituição Estadual e pelas leis que adotar.",
+        "O art. 2º remete aos limites definidos pelo Tratado de Petrópolis (1903), pelo Tratado do Rio de Janeiro (1909) e pelo art. 12, § 5º, do ADCT da Constituição Federal.",
+        "O art. 6º estabelece três Poderes estaduais — Legislativo, Executivo e Judiciário — independentes e harmônicos entre si; em regra, é vedada a delegação de atribuições e a acumulação de funções de Poderes distintos.",
+        "O art. 7º estabelece Rio Branco como capital do Estado, ressalvada a possibilidade constitucional de transferência temporária pelo Governador.",
+      ],
+      source: { label: "LEGIS — Constituição do Estado do Acre, texto compilado", url: "https://legis.ac.gov.br/detalhar_constituicao" },
+      caution: "A Constituição Estadual é atualizada por emendas; use sempre o texto compilado do Portal LEGIS, e não uma cópia histórica em PDF.",
     },
   ],
   seguranca: [
