@@ -7,7 +7,8 @@ const item = (slug, discipline, extra = {}) => ({ slug, discipline, law_course_s
 test("expected disciplines always appear, with or without material", () => {
   const subjects = hubSubjects([item("a", "Português"), item("b", "Língua Portuguesa"), item("c", "Química")]);
   const names = subjects.map((s) => s.name);
-  for (const { name } of EXPECTED_SUBJECTS) assert.ok(names.includes(name === "Matemática" ? "Matemática" : name), name);
+  for (const { name } of EXPECTED_SUBJECTS) assert.ok(names.includes(name), name);
+  assert.equal(names.filter((name) => /matemática|raciocínio lógico|estatística/i.test(name)).length, 1);
   assert.equal(subjects.find((s) => s.name === "Língua Portuguesa").count, 2, "aliases are merged");
   assert.equal(subjects.find((s) => s.name === "Química").count, 1);
   assert.equal(subjects.find((s) => s.name === "Física").count, 0);
