@@ -22,11 +22,11 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Noções de Direito Penal e Processual Penal: 9 materiais, 45 flashcards e 45 questões.
 - Arquivologia: 16 materiais, 80 flashcards e 80 questões.
 - Análise de Dados e Informações: 11 materiais, 55 flashcards e 55 questões.
-- Tecnologia da Informação e Segurança da Informação: 2 materiais, 10 flashcards e 10 questões.
+- Tecnologia da Informação e Segurança da Informação: 8 materiais, 40 flashcards e 40 questões.
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 157 materiais ativos, 826 flashcards e 849 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 163 materiais ativos, 856 flashcards e 879 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -51,8 +51,14 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 20. Probabilidade: união, condicional e independência.
 21. Médias simples e ponderadas; leitura de gráficos e tabelas.
 22. Atualização da aula de improbidade administrativa: dolo, tipicidade, categorias, sanções e indisponibilidade de bens.
+23. Sistemas operacionais: arquivos, permissões e compactação.
+24. Planilhas aplicadas à análise de dados: limpeza, filtros e tabelas dinâmicas.
+25. Bancos de dados: tabelas, chaves, relacionamentos e consultas.
+26. Redes de computadores: LAN, IP, protocolos e serviços.
+27. Metadados: propriedades e rastreabilidade de arquivos digitais.
+28. Organização e tratamento de informações digitais: padronização e cruzamento.
 
-Os 20 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois registros preexistentes foram atualizados: a aula de ingresso/formação da LC nº 129/2004 e a aula de improbidade administrativa após a Lei nº 14.230/2021. O seed versionado contém 22 registros no total. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
+Os 26 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois registros preexistentes foram atualizados: a aula de ingresso/formação da LC nº 129/2004 e a aula de improbidade administrativa após a Lei nº 14.230/2021. O seed versionado contém 28 registros no total. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
 ## Gaps e validações obrigatórias
 
@@ -74,7 +80,8 @@ Os 20 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois re
 - Penal/Processual Penal: conferir todos os artigos e leis expressamente listados no Anexo III, inclusive CPP 4º–23, 155–184, 275–281, Lei 12.037/2009, prisões e cautelares.
 - Contabilidade: 7 blocos expressos no edital; verificar cada subitem e aprofundar operações financeiras, conciliação, análise de movimentações e fluxos.
 - Estatística: mapear 9 blocos, incluindo quartis/decis/percentis e regressão/correlação; confirmar exercícios.
-- Arquivologia, TI/Segurança e Análise de Dados: fazer correspondência linha a linha com os itens 1–9 do Anexo III e checar se os módulos existentes cobrem exatamente os subitens.
+- TI/Segurança: agora há 8 módulos para os 8 tópicos do Anexo III, com aulas específicas de sistema operacional, planilhas, bancos de dados, redes, metadados e tratamento de informação; revisar exemplos e questões em conjunto com os dois módulos-base.
+- Arquivologia e Análise de Dados: fazer correspondência linha a linha com os itens do Anexo III e checar se os módulos existentes cobrem exatamente os subitens.
 
 ## Regras para concluir
 1. Fonte primária do edital e texto oficial consolidado da lei.
