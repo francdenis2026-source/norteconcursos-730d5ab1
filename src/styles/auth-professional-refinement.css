@@ -49,3 +49,10 @@ li[data-sonner-toast].auth-session-toast {
 .dark :is(.auth-session-notice, .auth-session-toast) svg {
   color: var(--brass);
 }
+
+/* Tela de acesso: no celular a foto decorativa repete o cabeçalho e empurra o formulário; sai. */
+@media (max-width: 767px) {
+  html:root body .auth-card .auth-tactical { display: none; }
+}
+/* Abas com respiro em relação à borda do cartão. */
+html:root body .auth-card .auth-tabs { margin-top: 10px; }

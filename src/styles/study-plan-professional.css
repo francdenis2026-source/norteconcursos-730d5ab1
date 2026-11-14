@@ -74,3 +74,8 @@
   .study-plan-page > .page-hero .hero-stat p { font-size: .9rem; }
   .study-plan__objective .grid-cols-1 button { padding-inline: 6px; }
 }
+
+/* Celular: a faixa de título acompanha a largura dos cartões (sem sangrar para fora da tela). */
+@media (max-width: 640px) {
+  html:root body .study-plan-page > .page-hero { margin-inline: 0 !important; width: auto; }
+}
