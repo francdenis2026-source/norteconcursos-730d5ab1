@@ -1,3 +1,4 @@
+import "@/styles/student-pcac-lean.css";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, CalendarDays, FileText, ListChecks, ScanSearch } from "lucide-react";
 import "@/styles/student-pcac-spotlight.css";

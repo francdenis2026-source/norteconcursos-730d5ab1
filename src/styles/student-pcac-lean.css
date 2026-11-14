@@ -1,0 +1,21 @@
+/* Card do concurso na área do aluno: ações numa só fileira, sem rótulos de grupo. */
+html:root body .student-pcac-spotlight__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+html:root body .student-pcac-spotlight__action-group {
+  display: contents;
+}
+html:root body .student-pcac-spotlight__action-label {
+  display: none;
+}
+html:root body .student-pcac-spotlight__actions a,
+html:root body .student-pcac-spotlight__actions button {
+  flex: 1 1 auto;
+  min-height: 40px;
+  padding-block: 6px;
+  white-space: nowrap;
+  justify-content: center;
+}
