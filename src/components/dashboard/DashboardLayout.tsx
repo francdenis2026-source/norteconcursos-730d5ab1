@@ -794,14 +794,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                       <button
                         type="button"
                         className="workspace-focus-entry"
-                        aria-label="Expandir área de estudo em tela cheia"
+                        aria-label={fullscreen.active ? "Restaurar visualização" : "Expandir área de estudo em tela cheia"}
                         onClick={() => {
                           setMobileOpen(false);
-                          fullscreen.enter();
+                          if (fullscreen.active) fullscreen.exit();
+                          else fullscreen.enter();
                         }}
                       >
-                        <Maximize aria-hidden="true" />
-                        <span>Tela cheia</span>
+                        {fullscreen.active ? <Minimize aria-hidden="true" /> : <Maximize aria-hidden="true" />}
+                        <span>{fullscreen.active ? "Restaurar visualização" : "Tela cheia"}</span>
                       </button>
                     )}
                   </div>
@@ -860,14 +861,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="app-topbar__actions">
               {!isAdmin && <PanelTextScale />}
               {!isAdmin && (
-                <Hint content="Tela cheia">
+                <Hint content={fullscreen.active ? "Restaurar visualização (Esc)" : "Tela cheia"}>
                   <button
                     type="button"
                     className="workspace-fullscreen-trigger"
-                    onClick={fullscreen.enter}
-                    aria-label="Expandir área de estudo em tela cheia"
+                    onClick={fullscreen.active ? fullscreen.exit : fullscreen.enter}
+                    aria-pressed={fullscreen.active}
+                    aria-label={fullscreen.active ? "Restaurar visualização" : "Expandir área de estudo em tela cheia"}
                   >
-                    <Maximize aria-hidden="true" />
+                    {fullscreen.active ? <Minimize aria-hidden="true" /> : <Maximize aria-hidden="true" />}
                   </button>
                 </Hint>
               )}

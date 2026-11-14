@@ -30,7 +30,9 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
 .app-shell.navigation-v2[data-focus-mode="true"] :is(.workspace-section-nav, .app-bottom-nav, .app-footer, .app-focus-return) { display: none; }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content {
   position: relative; flex: 1 1 0%; min-height: 0; width: 100%; overflow-y: auto;
-  overscroll-behavior-y: contain; padding-bottom: max(88px, calc(56px + env(safe-area-inset-bottom)));
+  /* Reserva no fim: faixa de acabamento (58 px) + assinatura do rodapé ou barra de estudo (até 34 px)
+     + respiro, para o último conteúdo nunca ficar atrás delas. */
+  overscroll-behavior-y: contain; padding-bottom: calc(58px + 34px + 20px + env(safe-area-inset-bottom, 0px));
 }
 /* A faixa cria um acabamento visual no rodapé do modo foco. Ela fica fora do
    fluxo e não captura o mouse, então a página pode continuar rolando sob o
@@ -135,3 +137,11 @@ html[data-reading-focus="true"] .focus-study-bar { top: 0; }
   z-index: 30;
 }
 .app-shell.navigation-v2[data-focus-mode="true"] .workspace-focus-controls { display: none !important; }
+
+/* Tela cheia: a área rolável tem de caber entre a barra superior e a base da tela. Regras do painel
+   (ex.: tema escuro com min-height: 100vh e padding-bottom: 30px !important) faziam a área passar
+   76 px da tela e o fim da página ficava escondido atrás da assinatura do rodapé. */
+html:root .app-shell.navigation-v2[data-focus-mode="true"] #dashboard-content {
+  min-height: 0 !important;
+  padding-bottom: calc(58px + 34px + 20px + env(safe-area-inset-bottom, 0px)) !important;
+}
