@@ -57,7 +57,7 @@
     "@astryxdesign/cli": "0.7.11",
     "@electric-sql/pglite": "0.5.10",
     "@eslint/js": "^9.32.0",
-    "@lovable.dev/vite-tanstack-config": "2.26.5",
+    "@lovable.dev/vite-tanstack-config": "2.27.1",
     "@types/node": "^22.16.5",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
