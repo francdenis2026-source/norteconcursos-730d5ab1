@@ -1518,6 +1518,228 @@ from jsonb_to_recordset($pcac_seed$
     "content_status": "active",
     "syllabus_topic_order": 15,
     "law_version_checked_at": "2026-11-14T19:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "A média simples divide a soma dos valores pela quantidade.",
+        "why": "É a fórmula da média aritmética simples."
+      },
+      {
+        "a": false,
+        "q": "Na média ponderada, os pesos são ignorados.",
+        "why": "Cada valor é multiplicado pelo peso correspondente."
+      },
+      {
+        "a": true,
+        "q": "Frequência relativa é a frequência absoluta dividida pelo total.",
+        "why": "É a proporção em relação ao conjunto."
+      },
+      {
+        "a": true,
+        "q": "Gráfico de linhas é frequentemente usado para representar evolução temporal.",
+        "why": "A linha evidencia tendências ao longo do tempo."
+      },
+      {
+        "a": false,
+        "q": "A leitura de gráfico pode ignorar a unidade e a escala do eixo.",
+        "why": "Unidade e escala são essenciais para interpretação."
+      },
+      {
+        "a": true,
+        "q": "Um eixo vertical truncado pode exagerar diferenças visuais.",
+        "why": "A origem não mostrada pode distorcer a percepção."
+      }
+    ],
+    "slug": "pcac-2026-rlm-medias-graficos-tabelas-interpretacao",
+    "title": "Médias simples e ponderadas; leitura de gráficos e tabelas",
+    "body_md": "# Médias aritméticas e interpretação de gráficos e tabelas\n\n## 1. Média aritmética simples\nÉ a soma dos valores dividida pela quantidade:\n\\[\n\\bar{x}=\\frac{x_1+x_2+\\cdots+x_n}{n}.\n\\]\nÉ sensível a valores extremos. Um único valor muito alto ou muito baixo pode alterar significativamente a média.\n\n## 2. Média ponderada\nQuando os valores têm pesos ou frequências diferentes:\n\\[\n\\bar{x}_p=\\frac{\\sum x_iw_i}{\\sum w_i}.\n\\]\nO peso pode ser a frequência, a carga horária ou a importância atribuída. Não se deve dividir pela quantidade de categorias quando os pesos são diferentes.\n\nExemplo: notas 6 e 8 com pesos 2 e 3: ((6\\cdot2+8\\cdot3)/(2+3)=7,2).\n\n## 3. Frequências\nFrequência absoluta é a contagem; relativa é a proporção em relação ao total; acumulada soma frequências até determinada classe ou categoria. Percentual = frequência relativa × 100.\n\n## 4. Leitura de tabelas\nConfira título, período, fonte, unidade, universo, cabeçalhos e notas. Compare grandezas na mesma unidade e período. Em tabela de dupla entrada, identifique linha e coluna antes de extrair o valor.\n\n## 5. Leitura de gráficos\n- Barras/colunas: comparação entre categorias.\n- Linhas: evolução temporal ou sequência ordenada.\n- Setores: participação de partes no total.\n- Histograma: distribuição de variável quantitativa por intervalos.\n\nObserve escala, origem do eixo, intervalos, legenda e rótulos. Eixo truncado pode exagerar diferenças visuais; gráfico não substitui leitura dos números.\n\n## 6. Estratégia de prova\nLeia a pergunta antes de olhar os dados; localize a linha ou série correta; confira unidade e escala; faça a operação necessária; compare o resultado com o gráfico. Não confunda média com mediana nem porcentagem com pontos percentuais.",
+    "summary": "Cálculo de média simples e ponderada, frequência, escala, unidades, comparações e leitura crítica de gráficos.",
+    "discipline": "Raciocínio Lógico",
+    "flashcards": [
+      {
+        "b": "Somar todos os valores e dividir pela quantidade.",
+        "f": "Como calcular média simples?"
+      },
+      {
+        "b": "Somar cada valor multiplicado pelo peso e dividir pela soma dos pesos.",
+        "f": "Como calcular média ponderada?"
+      },
+      {
+        "b": "Proporção da frequência absoluta em relação ao total.",
+        "f": "O que é frequência relativa?"
+      },
+      {
+        "b": "Gráfico de linhas.",
+        "f": "Qual gráfico é adequado para evolução ao longo do tempo?"
+      },
+      {
+        "b": "Unidade, período, escala, fonte, universo e legenda.",
+        "f": "O que deve ser conferido antes de comparar dados?"
+      },
+      {
+        "b": "Eixo truncado, intervalos desiguais ou escala não indicada.",
+        "f": "O que pode causar distorção visual em um gráfico?"
+      }
+    ],
+    "sort_order": 15,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Raciocínio Lógico, itens 15 e conexos.",
+    "topic_label": "13 e 15. Médias e interpretação de gráficos e tabelas",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 15,
+    "law_version_checked_at": "2026-11-14T19:20:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "A fórmula geral da união subtrai a interseção para evitar dupla contagem.",
+        "why": "P(A∪B)=P(A)+P(B)−P(A∩B)."
+      },
+      {
+        "a": true,
+        "q": "Se A e B são mutuamente exclusivos, P(A∩B)=0.",
+        "why": "Não há resultados comuns."
+      },
+      {
+        "a": true,
+        "q": "A probabilidade condicional P(A|B) divide P(A∩B) por P(B).",
+        "why": "A condição B exige P(B)>0."
+      },
+      {
+        "a": false,
+        "q": "Eventos independentes satisfazem P(A∩B)=P(A)+P(B).",
+        "why": "A regra é o produto das probabilidades."
+      },
+      {
+        "a": false,
+        "q": "Eventos mutuamente exclusivos com probabilidades positivas são independentes.",
+        "why": "A ocorrência de um impede o outro; há dependência."
+      },
+      {
+        "a": true,
+        "q": "A probabilidade do complementar é 1−P(A).",
+        "why": "A e seu complementar cobrem todo o espaço amostral."
+      }
+    ],
+    "slug": "pcac-2026-rlm-probabilidade-uniao-condicional-independencia",
+    "title": "Probabilidade: união de eventos, condição e independência",
+    "body_md": "# Probabilidade: união, condicional e independência\n\n## 1. Conceitos fundamentais\nO espaço amostral Ω reúne todos os resultados possíveis de um experimento. Evento é um subconjunto de Ω. Em espaço equiprovável finito, (P(A)=\\frac{n(A)}{n(\\Omega)}).\n\nA probabilidade varia de 0 a 1. Evento impossível tem probabilidade 0; evento certo tem probabilidade 1. O complementar satisfaz (P(A^c)=1-P(A)).\n\n## 2. União de eventos\nA união (A\\cup B) ocorre quando A ou B ocorre, inclusive ambos. A fórmula geral é:\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\nSubtrai-se a interseção para não contar os resultados comuns duas vezes. Se A e B forem mutuamente exclusivos, (P(A\\cap B)=0), então (P(A\\cup B)=P(A)+P(B)).\n\n## 3. Probabilidade condicional\nA probabilidade de A sabendo que B ocorreu é:\n\\[\nP(A\\mid B)=\\frac{P(A\\cap B)}{P(B)},\\quad P(B)>0.\n\\]\nO espaço de referência passa a ser B. A condição altera o conjunto de resultados considerados.\n\n## 4. Independência\nA e B são independentes quando a ocorrência de um não altera a probabilidade do outro. Equivalente a:\n\\[\nP(A\\cap B)=P(A)P(B).\n\\]\nNão confunda independência com exclusão mútua. Eventos mutuamente exclusivos com probabilidades positivas não são independentes.\n\n## 5. Como resolver\n1. Identifique os eventos e o espaço amostral.\n2. Traduza “A ou B” como união; “A e B” como interseção.\n3. Verifique se existe condição (“sabendo que”).\n4. Só use multiplicação direta se houver independência ou regra condicional.\n5. Confira se a soma das probabilidades e o resultado estão entre 0 e 1.",
+    "summary": "Espaço amostral, eventos, complemento, união, interseção, probabilidade condicional e independência.",
+    "discipline": "Raciocínio Lógico",
+    "flashcards": [
+      {
+        "b": "P(A∪B)=P(A)+P(B)−P(A∩B).",
+        "f": "Qual é a fórmula da união de dois eventos?"
+      },
+      {
+        "b": "Eventos cuja interseção é vazia; não ocorrem simultaneamente.",
+        "f": "O que são eventos mutuamente exclusivos?"
+      },
+      {
+        "b": "P(A|B)=P(A∩B)/P(B), com P(B)>0.",
+        "f": "Qual é a fórmula da probabilidade condicional?"
+      },
+      {
+        "b": "P(A∩B)=P(A)P(B), ou a ocorrência de um não altera a probabilidade do outro.",
+        "f": "Como caracterizar independência?"
+      },
+      {
+        "b": "P(Aᶜ)=1−P(A).",
+        "f": "Qual a probabilidade do complementar?"
+      },
+      {
+        "b": "Não, se ambos têm probabilidade positiva, não são independentes.",
+        "f": "Eventos mutuamente exclusivos são sempre independentes?"
+      }
+    ],
+    "sort_order": 14,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Raciocínio Lógico, itens 12 e conexos.",
+    "topic_label": "12. Probabilidade: união, condicional e independência",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 12,
+    "law_version_checked_at": "2026-11-14T19:20:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Em uma PA, a diferença entre termos consecutivos é constante.",
+        "why": "É a definição de PA."
+      },
+      {
+        "a": false,
+        "q": "O termo geral da PA é a_n=a_1+n r.",
+        "why": "A fórmula correta usa n−1: a_n=a_1+(n−1)r."
+      },
+      {
+        "a": true,
+        "q": "A sequência 2, 6, 18, 54 é uma PG de razão 3.",
+        "why": "Cada termo é o anterior multiplicado por 3."
+      },
+      {
+        "a": true,
+        "q": "Uma PG de razão 1 tem soma dos n primeiros termos igual a n vezes o primeiro termo.",
+        "why": "Todos os termos são iguais a a_1."
+      },
+      {
+        "a": false,
+        "q": "PA é caracterizada por quociente constante entre termos.",
+        "why": "Isso caracteriza PG; PA tem diferença constante."
+      },
+      {
+        "a": true,
+        "q": "A soma de PA pode ser calculada por n(a_1+a_n)/2.",
+        "why": "A fórmula usa quantidade e extremos."
+      }
+    ],
+    "slug": "pcac-2026-rlm-progressao-aritmetica-geometrica",
+    "title": "Progressões aritméticas e geométricas: termo geral e soma",
+    "body_md": "# Progressões aritméticas e geométricas\n\n## 1. Progressão aritmética (PA)\nPA é uma sequência em que a diferença entre termos consecutivos é constante. Essa diferença é a razão (r).\n- (r>0): PA crescente.\n- (r<0): PA decrescente.\n- (r=0): PA constante.\n\nO termo geral é (a_n=a_1+(n-1)r). A soma dos primeiros (n) termos é (S_n=\\frac{n(a_1+a_n)}{2}).\n\nExemplo: 4, 7, 10, 13,... tem razão 3. O 10º termo é (4+9\\cdot3=31).\n\n## 2. Progressão geométrica (PG)\nPG é sequência em que o quociente entre termos consecutivos não nulos é constante. A razão é (q=a_n/a_{n-1}).\nO termo geral é (a_n=a_1q^{n-1}). Para (q>1) e termo inicial positivo, a sequência cresce; para (0<q<1), decresce. Se (q<0), os sinais alternam.\n\nA soma finita, para (q\\ne1), é (S_n=a_1\\frac{q^n-1}{q-1}). Se (q=1), (S_n=na_1).\n\n## 3. Identificação da progressão\nCalcule diferenças sucessivas: se forem constantes, há PA. Calcule quocientes sucessivos: se forem constantes, há PG. Não confunda crescimento com tipo de progressão.\n\n## 4. Aplicações\nPA aparece em acréscimos ou reduções fixas por etapa. PG aparece em multiplicação por fator constante, juros compostos e duplicações. Leia o enunciado para identificar se o acréscimo é aditivo ou multiplicativo.\n\n## 5. Estratégia\n1. Identifique (a_1), (n) e a razão.\n2. Verifique se a sequência é aditiva (PA) ou multiplicativa (PG).\n3. Escolha termo geral ou soma.\n4. Confira se o índice começa em 1 e se a quantidade de intervalos é (n-1).",
+    "summary": "Razão, termo geral, soma finita, classificação crescente/decrescente e aplicações de PA e PG.",
+    "discipline": "Raciocínio Lógico",
+    "flashcards": [
+      {
+        "b": "A diferença entre termos consecutivos é constante.",
+        "f": "Como identificar uma PA?"
+      },
+      {
+        "b": "a_n = a_1 + (n−1)r.",
+        "f": "Qual é o termo geral da PA?"
+      },
+      {
+        "b": "S_n = n(a_1+a_n)/2.",
+        "f": "Qual é a soma dos n primeiros termos da PA?"
+      },
+      {
+        "b": "O quociente entre termos consecutivos é constante.",
+        "f": "Como identificar uma PG?"
+      },
+      {
+        "b": "a_n = a_1 q^(n−1).",
+        "f": "Qual é o termo geral da PG?"
+      },
+      {
+        "b": "S_n = a_1(q^n−1)/(q−1).",
+        "f": "Qual é a soma finita de uma PG com q diferente de 1?"
+      }
+    ],
+    "sort_order": 13,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Raciocínio Lógico, itens 8 e conexos.",
+    "topic_label": "8. Progressões aritmética e geométrica",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 8,
+    "law_version_checked_at": "2026-11-14T19:20:00+00:00"
   }
 ]
 $pcac_seed$::jsonb) as seed(
