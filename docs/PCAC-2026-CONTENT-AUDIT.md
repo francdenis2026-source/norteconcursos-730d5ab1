@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 166 materiais ativos, 884 flashcards e 906 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 166 materiais ativos, 893 flashcards e 915 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -88,7 +88,7 @@ Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois re
 ### Conhecimentos jurídicos e específicos
 - Direito Constitucional: os três materiais cobrem princípios fundamentais, direitos/deveres individuais e coletivos, remédios, arts. 37–41, art. 144 e Constituição do Acre; o material estadual foi detalhado nos arts. 1º, 2º, 6º, 7º, 131, 133 e 134, com a EC estadual nº 63/2022.
 - Direito Administrativo: mapear princípios, organização, poderes, poder de polícia, atos, agentes, responsabilidade civil e improbidade após Lei 14.230/2021.
-- Penal/Processual Penal: conferir todos os artigos e leis expressamente listados no Anexo III, inclusive CPP 4º–23, 155–184, 275–281, Lei 12.037/2009, prisões e cautelares.
+- Penal/Processual Penal: os nove módulos correspondem aos grupos do Anexo III. As três aulas processuais foram aprofundadas artigo a artigo: inquérito (CPP 4º–23, inclusive 13-A/13-B e ressalva do art. 21), prova e cadeia de custódia (155–184), peritos/intérpretes (275–281), identificação criminal (Lei 12.037/2009), flagrante, preventiva, temporária e cautelares (CPP 282, 301–319 e Lei 7.960/1989). O material mantém alertas para exceções e redação vigente.
 - Contabilidade: 7 blocos expressos no edital; verificar cada subitem e aprofundar operações financeiras, conciliação, análise de movimentações e fluxos.
 - Estatística: mapear 9 blocos, incluindo quartis/decis/percentis e regressão/correlação; confirmar exercícios.
 - TI/Segurança: agora há 8 módulos para os 8 tópicos do Anexo III, com aulas específicas de sistema operacional, planilhas, bancos de dados, redes, metadados e tratamento de informação; revisar exemplos e questões em conjunto com os dois módulos-base.
