@@ -1,0 +1,104 @@
+/* Biblioteca por matéria: usa a largura da janela, cartões que se ajustam ao espaço,
+   texto alinhado à esquerda (sem vazios de justificação em colunas estreitas) e estrutura
+   da aula realçada: número, rótulos com ícone e títulos marcados. */
+
+/* Largura: em telas largas a matéria ocupa a janela inteira. */
+/* Vence as travas antigas de 1440 px (uma delas com !important no contêiner externo). */
+@media (min-width: 1500px) {
+  .app-shell[data-area="student"] .app-content__inner:has(.nc-learning-workspace.material-library) { max-width: 100% !important; }
+  .app-shell[data-area="student"] .app-content .nc-learning-workspace.material-library { max-width: 100%; }
+}
+
+/* Aulas guiadas + materiais: duas colunas equilibradas no desktop. */
+@media (min-width: 1024px) {
+  .library-split--pair { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+}
+
+/* Materiais de cada tópico: um material ocupa a linha; vários se distribuem pela largura. */
+.library-topic-list {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
+/* Alinhamento: nada justificado em cartões e aulas (a regra global justifica todo parágrafo). */
+html body .nc-learning-workspace.material-library :is(.updated-study-collections, .library-subject, .library-material-row) :is(p, li, label, summary, span),
+html body .updated-study-collections .updated-study-collections__panel :is(p, label, summary),
+html body .updated-study-collections .updated-study-collections__lesson .updated-study-collections__lesson-body :is(p, label) {
+  text-align: left;
+  text-align-last: auto;
+  text-justify: auto;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Aula guiada: título com número em destaque */
+.updated-study-collections__lesson summary {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  line-height: 1.4;
+}
+.usc-num {
+  display: inline-flex;
+  flex: none;
+  min-width: 1.9rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .45rem;
+  background: color-mix(in oklab, var(--ak-tone, var(--primary)) 16%, transparent);
+  color: color-mix(in oklab, var(--ak-tone, var(--primary)) 75%, var(--foreground));
+  font-size: .72rem;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+.usc-title { min-width: 0; overflow-wrap: anywhere; }
+.updated-study-collections__lesson[open] summary .usc-num {
+  background: var(--ak-tone, var(--primary));
+  color: var(--background);
+}
+
+/* Corpo da aula: leitura confortável e rótulos de seção com ícone discreto */
+.updated-study-collections__lesson-body { font-size: .92rem; line-height: 1.65; }
+.usc-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 750;
+  color: color-mix(in oklab, var(--ak-tone, var(--primary)) 70%, var(--foreground));
+}
+.usc-label svg { width: 1rem; height: 1rem; flex: none; }
+.usc-label--example { color: hsl(32 88% 30%); }
+.dark .usc-label--example { color: hsl(38 92% 64%); }
+.usc-label--check { color: color-mix(in oklab, hsl(199 89% 40%) 80%, var(--foreground)); }
+.dark .usc-label--check { color: hsl(199 89% 70%); }
+.updated-study-collections__example { display: grid; gap: .3rem; }
+.updated-study-collections__example > p { margin: 0; }
+
+/* Material escrito: títulos e subtítulos marcados para localizar os tópicos */
+.study-prose h2::before {
+  content: "";
+  display: inline-block;
+  width: .45em;
+  height: .45em;
+  margin-right: .5em;
+  vertical-align: .14em;
+  border-radius: 2px;
+  background: var(--ak-tone, var(--primary));
+  transform: rotate(45deg);
+}
+.study-prose h3 {
+  color: color-mix(in oklab, var(--ak-tone, var(--primary)) 55%, var(--foreground));
+}
+
+/* Selos do cabeçalho da matéria: a imagem do cabeçalho é escura nos dois modos, então o selo
+   também é escuro (antes, no modo claro, ficava texto branco sobre fundo claro). */
+html:root body .app-shell[data-area] .nc-learning-workspace.material-library .library-focus__counts > * {
+  border-color: rgb(255 255 255 / .2);
+  background: rgb(10 18 24 / .72);
+  color: #e5e7eb;
+}
+html:root body .app-shell[data-area] .nc-learning-workspace.material-library .library-focus__counts strong { color: #ffffff; }

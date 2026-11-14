@@ -22,8 +22,11 @@ import {
   Sigma,
   ShieldAlert,
   X,
+  Lightbulb,
+  CircleHelp,
   type LucideIcon,
 } from "lucide-react";
+import "@/styles/library-discipline-fit.css";
 
 type Lesson = { title: string; body: string[]; example: string; question: string; answer: string; source: string };
 type Course = { id: string; title: string; subtitle: string; applicability: string; origin: string; updated: string; lessons: Lesson[] };
@@ -200,16 +203,36 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public",o
           )}
           {displayedLessons.map((l) => (
             <details key={l.title} className="updated-study-collections__lesson group">
-              <summary>{l.title}</summary>
+              <summary>
+                {(() => {
+                  // "03 · Título" → número em destaque + título
+                  const m = /^(\d{1,3})\s*·\s*(.+)$/.exec(l.title);
+                  return m ? (
+                    <>
+                      <span className="usc-num" aria-hidden="true">{m[1]}</span>
+                      <span className="usc-title">
+                        <span className="sr-only">Aula {m[1]}: </span>
+                        {m[2]}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="usc-title">{l.title}</span>
+                  );
+                })()}
+              </summary>
               <div className="updated-study-collections__lesson-body">
                 <label className="updated-study-collections__done">
                   <input type="checkbox" checked={!!completed[`${course.id}:${l.title}`]} onChange={() => void toggleCompleted(course.id, l.title)} disabled={syncState === "loading"} />
                   Marcar aula como concluída
                 </label>
+                <p className="usc-label"><BookOpen aria-hidden="true" /> Teoria</p>
                 {l.body.map((p, j) => <p key={j}>{p}</p>)}
-                <p className="updated-study-collections__example"><strong>Aplicação prática:</strong> {l.example}</p>
+                <div className="updated-study-collections__example">
+                  <p className="usc-label usc-label--example"><Lightbulb aria-hidden="true" /> Aplicação prática</p>
+                  <p>{l.example}</p>
+                </div>
                 <div className="updated-study-collections__check">
-                  <p className="updated-study-collections__check-label">Verifique o aprendizado</p>
+                  <p className="updated-study-collections__check-label usc-label usc-label--check"><CircleHelp aria-hidden="true" /> Verifique o aprendizado</p>
                   <p>{l.question}</p>
                   <button type="button" onClick={() => setRevealed((prev) => ({ ...prev, [l.title]: !prev[l.title] }))}>
                     {revealed[l.title] ? "Ocultar resposta" : "Ver resposta comentada"}

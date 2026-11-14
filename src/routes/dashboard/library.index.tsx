@@ -1,4 +1,5 @@
 import "@/styles/library-layout.css";
+import "@/styles/library-discipline-fit.css";
 import "@/styles/student-library-media-workspaces.css";
 import { TRACKS } from "@/data/tracks";
 import "@/styles/learning-workspace-refinement.css";
@@ -459,7 +460,7 @@ function LibraryIndex() {
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
-      <div className={!lawsOnly && focused && matchedCourse ? `grid items-start gap-4 lg:gap-6 ${!isPending && items.length === 0 ? "library-split library-split--solo" : "library-split lg:grid-cols-2"}` : undefined}>
+      <div className={!lawsOnly && focused && matchedCourse ? `grid items-start gap-4 lg:gap-6 ${!isPending && items.length === 0 ? "library-split library-split--solo" : "library-split library-split--pair"}` : undefined}>
       {!lawsOnly && focused && matchedCourse && (
         <UpdatedStudyCollections onlyCourseId={matchedCourse.id} storageScope={user?.id ?? "anonymous"} />
       )}
@@ -752,7 +753,7 @@ function DisciplineSection({
                 {group.items.length} {group.items.length === 1 ? "material" : "materiais"}
               </span>
             </h3>
-            <ol className="grid gap-2 lg:grid-cols-2">
+            <ol className="library-topic-list">
               {group.items.map((item) => (
                 <MaterialRow
                   key={item.id}
