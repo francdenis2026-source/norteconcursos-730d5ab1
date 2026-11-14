@@ -145,3 +145,24 @@ html:root .app-shell.navigation-v2[data-focus-mode="true"] #dashboard-content {
   min-height: 0 !important;
   padding-bottom: calc(58px + 34px + 20px + env(safe-area-inset-bottom, 0px)) !important;
 }
+
+/* Sinal visual discreto ao entrar no modo imersivo: uma moldura que se expande e some. */
+html[data-workspace-focus="true"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  border: 2px solid var(--control-accent, oklch(0.78 0.13 80));
+  border-radius: 16px;
+  pointer-events: none;
+  opacity: 0;
+  animation: workspace-immersive-frame 950ms cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+@keyframes workspace-immersive-frame {
+  0% { opacity: 0; transform: scale(0.97); }
+  30% { opacity: 0.85; transform: scale(0.992); }
+  100% { opacity: 0; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-workspace-focus="true"] body::after { animation: none; }
+}

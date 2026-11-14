@@ -1,0 +1,128 @@
+/* Busca dentro de uma matéria: uma linha, sem filtros de outras áreas. */
+.subject-finder {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--control-accent, var(--primary));
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--card-foreground);
+}
+.subject-finder__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+html:root body .subject-finder__head h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: left;
+}
+.subject-finder__head span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+.subject-finder__row {
+  display: grid;
+  gap: 8px;
+}
+@media (min-width: 720px) {
+  .subject-finder__row { grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem); }
+  .subject-finder__row:has(> :nth-child(3)) { grid-template-columns: minmax(0, 1fr) minmax(11rem, 15rem) minmax(11rem, 15rem); }
+}
+.subject-finder__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  height: 44px;
+  padding: 0 10px 0 12px;
+  gap: 8px;
+  border: 1px solid var(--input, var(--border));
+  border-radius: 10px;
+  background: var(--background);
+  color: var(--muted-foreground);
+}
+.subject-finder__search:focus-within {
+  border-color: var(--control-accent, var(--ring));
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--control-accent, var(--ring)) 22%, transparent);
+}
+.subject-finder__search input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 0.92rem;
+}
+.subject-finder__search input::placeholder { color: var(--muted-foreground); }
+.subject-finder__search button {
+  display: inline-grid;
+  place-items: center;
+  min-height: 28px !important;
+  width: 28px;
+  border-radius: 8px;
+  color: var(--muted-foreground);
+}
+.subject-finder__search button:hover { background: var(--muted); color: var(--foreground); }
+.subject-finder__select { display: block; min-width: 0; }
+.subject-finder__select select {
+  width: 100%;
+  height: 44px;
+  padding: 0 34px 0 12px;
+  border: 1px solid var(--input, var(--border));
+  border-radius: 10px;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+.subject-finder__select select:focus-visible {
+  outline: none;
+  border-color: var(--control-accent, var(--ring));
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--control-accent, var(--ring)) 22%, transparent);
+}
+.subject-finder__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+html:root body .subject-finder__foot p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted-foreground);
+  text-align: left;
+}
+.subject-finder__foot strong { color: var(--foreground); }
+.subject-finder__foot button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px !important;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--control-accent, var(--primary));
+}
+.subject-finder__foot button:hover { background: var(--muted); }
+html:root body .subject-finder .subject-finder__search input {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+}

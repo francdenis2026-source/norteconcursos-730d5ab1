@@ -1,4 +1,5 @@
 import { topicFilterLabel } from "@/lib/filterTaxonomy";
+import "@/styles/library-subject-finder.css";
 import { BookOpen, Scale, Shapes, ShieldCheck, Search, SlidersHorizontal, X } from "lucide-react";
 import { LIBRARY_AREAS, libraryArea, type LibraryArea } from "@/lib/libraryOrganization";
 import type { StudyMaterialSummary } from "@/lib/studyMaterials";
@@ -36,6 +37,14 @@ export function LibraryNavigation(p: Props) {
     p.topic !== "all" ||
     (p.law ?? "all") !== "all" ||
     p.contest !== "all";
+  // Dentro de uma matéria, a busca fica restrita a ela: sem disciplina, área ou concurso.
+  if (p.focused)
+    return (
+      <SubjectFinder
+        {...p}
+        filtered={p.query.trim() !== "" || p.topic !== "all" || (p.law ?? "all") !== "all"}
+      />
+    );
   return (
     <section className="library-navigator" aria-label="Pesquisar e organizar a biblioteca">
       <header className="library-navigator__heading">
@@ -180,6 +189,83 @@ export function LibraryNavigation(p: Props) {
           <span>Busca por nome ou número, com ou sem acentos</span>
         )}
       </footer>
+    </section>
+  );
+}
+
+function SubjectFinder(p: Props & { filtered: boolean }) {
+  const showLaw = !!p.onLaw && ((p.laws?.length ?? 0) > 1 || (p.law ?? "all") !== "all");
+  const showTopic = p.topics.length > 1 || p.topic !== "all";
+  return (
+    <section className="subject-finder" aria-label={`Buscar em ${p.discipline}`}>
+      <header className="subject-finder__head">
+        <h2>Encontre um assunto nesta matéria</h2>
+        <span>
+          {p.discipline} · {p.items.length} {p.items.length === 1 ? "material" : "materiais"}
+        </span>
+      </header>
+      <div className="subject-finder__row">
+        <div className="subject-finder__search">
+          <Search aria-hidden="true" size={18} />
+          <label className="sr-only" htmlFor="library-search">
+            Buscar em {p.discipline}
+          </label>
+          <input
+            id="library-search"
+            type="search"
+            value={p.query}
+            onChange={(e) => p.onQuery(e.target.value)}
+            placeholder="Buscar nesta matéria…"
+          />
+          {p.query && (
+            <button type="button" onClick={() => p.onQuery("")} aria-label="Limpar busca">
+              <X aria-hidden="true" size={16} />
+            </button>
+          )}
+        </div>
+        {showTopic && (
+          <label className="subject-finder__select">
+            <span className="sr-only">Assunto</span>
+            <select value={p.topic} onChange={(e) => p.onTopic(e.target.value)} aria-label="Assunto">
+              <option value="all">Todos os assuntos ({p.topics.length})</option>
+              {p.topics.map((name) => {
+                const label = topicFilterLabel(name);
+                const prefix = `${p.discipline} · `;
+                return (
+                  <option key={name} value={name}>
+                    {label.startsWith(prefix) ? label.slice(prefix.length) : label}
+                  </option>
+                );
+              })}
+            </select>
+          </label>
+        )}
+        {showLaw && (
+          <label className="subject-finder__select">
+            <span className="sr-only">Lei</span>
+            <select value={p.law ?? "all"} onChange={(e) => p.onLaw?.(e.target.value)} aria-label="Lei">
+              <option value="all">Todas as leis</option>
+              {(p.laws ?? []).map((law) => (
+                <option key={law.slug} value={law.slug}>
+                  {law.title}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+      </div>
+      {p.filtered && (
+        <footer className="subject-finder__foot">
+          <p role="status" aria-live="polite">
+            <strong>{p.count}</strong> {p.count === 1 ? "material encontrado" : "materiais encontrados"}
+            {p.searchingContent ? " · pesquisando também nos textos…" : ""}
+          </p>
+          <button type="button" onClick={p.onReset}>
+            <X aria-hidden="true" size={14} />
+            Limpar
+          </button>
+        </footer>
+      )}
     </section>
   );
 }

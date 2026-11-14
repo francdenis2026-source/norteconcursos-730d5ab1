@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
 import * as React from "react";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import {
@@ -76,6 +76,28 @@ const sections: {
   },
 ];
 
+/**
+ * Navega sem um <a href>: o navegador não mostra o endereço no canto inferior ao apontar o menu.
+ * Teclado e leitores de tela seguem funcionando (botão com nome acessível; Enter/Espaço ativam).
+ */
+const NavButton = React.forwardRef<
+  HTMLButtonElement,
+  { to: string; search?: Record<string, unknown> } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type">
+>(function NavButton({ to, search, onClick, ...rest }, ref) {
+  const navigate = useNavigate();
+  return (
+    <button
+      ref={ref}
+      type="button"
+      {...rest}
+      onClick={(event) => {
+        onClick?.(event);
+        if (!event.defaultPrevented) void navigate({ to, search: search ?? {} } as never);
+      }}
+    />
+  );
+});
+
 const describe = (item: NavigationItem) => navigationDetails(item).description;
 const listLabels = (labels: string[]) =>
   new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(labels);
@@ -128,7 +150,7 @@ export function StudentTopNavigation({
       className="student-top-navigation no-print"
       aria-label={isHome ? "Áreas da plataforma" : "Submenus da área atual"}
     >
-      <Link
+      <NavButton
         to="/dashboard"
         className="student-top-navigation__brand"
         aria-label="Voltar à área principal do aluno"
@@ -145,14 +167,14 @@ export function StudentTopNavigation({
         <span className="student-top-navigation__brand-word">
           NORTE <strong>CONCURSOS</strong>
         </span>
-      </Link>
+      </NavButton>
       <div className="student-top-navigation__links" data-contextual={!isHome}>
         {studyEdition && (
           <AreaHint
             title="Edital ativo"
             description={studyEdition.contestName + " · " + studyEdition.roleName + ". Abre o programa com as disciplinas e os assuntos deste edital."}
           >
-          <Link
+          <NavButton
             to="/dashboard/edital"
             search={{ edition: studyEdition.id }}
             className="student-top-navigation__active-edition"
@@ -163,12 +185,12 @@ export function StudentTopNavigation({
               <span>Edital ativo</span>
               <strong>{studyEdition.contestName} · {studyEdition.roleName}</strong>
             </span>
-          </Link>
+          </NavButton>
           </AreaHint>
         )}
         {!isHome && (
           <AreaHint title="Área principal" description="Volte ao painel com suas prioridades e o resumo da preparação.">
-          <Link
+          <NavButton
             to="/dashboard"
             className="student-top-navigation__trigger student-top-navigation__home"
             data-tone="gold"
@@ -178,7 +200,7 @@ export function StudentTopNavigation({
               <House size={18} />
             </span>
             <span className="student-top-navigation__label">Área principal</span>
-          </Link>
+          </NavButton>
           </AreaHint>
         )}
         {isHome && (
@@ -197,7 +219,7 @@ export function StudentTopNavigation({
               </button>
             ) : (
               <AreaHint title="Meu plano" description="Defina sua disponibilidade e receba a distribuição da semana.">
-              <Link
+              <NavButton
                 to="/dashboard/study-coach"
                 className="student-top-navigation__trigger"
                 data-tone="gold"
@@ -206,11 +228,11 @@ export function StudentTopNavigation({
               >
                 <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Sparkles size={18} /></span>
                 <span className="student-top-navigation__label">Meu plano</span>
-              </Link>
+              </NavButton>
               </AreaHint>
             )}
             <AreaHint title="Agenda de estudos" description="Distribua o conteúdo do edital nos dias e horários da sua rotina.">
-            <Link
+            <NavButton
               to="/dashboard/cronograma"
               className="student-top-navigation__trigger"
               data-tone="gold"
@@ -221,7 +243,7 @@ export function StudentTopNavigation({
                 <CalendarClock size={18} />
               </span>
               <span className="student-top-navigation__label">Agenda de estudos</span>
-            </Link>
+            </NavButton>
             </AreaHint>
           </>
         )}
@@ -270,10 +292,10 @@ export function StudentTopNavigation({
                     {groupEntries.map((item) => (
                       <AreaHint key={navigationKey(item)} side="right" align="start" description={describe(item)}>
                         <DropdownMenuItem asChild>
-                          <Link to={item.href} search={item.search ?? {}}>
+                          <NavButton to={item.href} search={item.search ?? {}} className="w-full text-left">
                             <item.icon size={17} aria-hidden="true" />
                             <span>{item.label}</span>
-                          </Link>
+                          </NavButton>
                         </DropdownMenuItem>
                       </AreaHint>
                     ))}
@@ -290,7 +312,7 @@ export function StudentTopNavigation({
                 const selected = navigationKey(current!) === navigationKey(item);
                 return (
                   <AreaHint key={group} title={item.label} description={describe(item)}>
-                  <Link
+                  <NavButton
                     to={item.href}
                     search={item.search ?? {}}
                     className="student-top-navigation__trigger student-top-navigation__submenu"
@@ -302,7 +324,7 @@ export function StudentTopNavigation({
                       <item.icon size={17} strokeWidth={2.1} />
                     </span>
                     <span className="student-top-navigation__label">{item.label}</span>
-                  </Link>
+                  </NavButton>
                   </AreaHint>
                 );
               }
@@ -349,14 +371,15 @@ export function StudentTopNavigation({
                       return (
                         <AreaHint key={navigationKey(item)} side="right" align="start" description={describe(item)}>
                           <DropdownMenuItem asChild data-current={selected}>
-                            <Link
+                            <NavButton
                               to={item.href}
                               search={item.search ?? {}}
+                              className="w-full text-left"
                               aria-current={selected ? "page" : undefined}
                             >
                               <item.icon size={17} aria-hidden="true" />
                               <span>{item.label}</span>
-                            </Link>
+                            </NavButton>
                           </DropdownMenuItem>
                         </AreaHint>
                       );
