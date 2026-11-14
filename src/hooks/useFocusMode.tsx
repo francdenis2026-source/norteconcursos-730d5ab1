@@ -172,7 +172,7 @@ export function useFocusMode() {
   // Avisa ao tentar sair da área (fechar a aba, recarregar ou navegar para outra tela).
   useBlocker({
     disabled: !focus,
-    enableBeforeUnload: () => focus,
+    enableBeforeUnload: false,
     shouldBlockFn: async ({ current, next }) => {
       if (next.routeId === current.routeId) return false; // trocar de aula, artigo ou material não sai da área
       const pause = PAUSE_DESTINATIONS.find((d) => next.pathname.startsWith(d.path));

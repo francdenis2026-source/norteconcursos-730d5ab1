@@ -356,7 +356,8 @@ function QuestionTrainer() {
   // confirmação está na tela e volta a contar de onde parou se o aluno decidir continuar.
   const blocker = useBlocker({
     shouldBlockFn: ({ current, next }) => started && current.routeId !== next.routeId,
-    enableBeforeUnload: started,
+    // Sem aviso nativo do navegador ao recarregar: a sessão é guardada e retomada automaticamente.
+    enableBeforeUnload: false,
     withResolver: true,
   });
   React.useEffect(() => {

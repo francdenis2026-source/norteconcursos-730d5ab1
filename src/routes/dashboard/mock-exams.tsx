@@ -569,16 +569,6 @@ function ProfessionalSimulator() {
       void finishSimulator(true); /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [timeLeft, stage, startedAt]);
 
-  React.useEffect(() => {
-    if (stage !== "active") return;
-    const warnBeforeLeaving = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = "";
-    };
-    window.addEventListener("beforeunload", warnBeforeLeaving);
-    return () => window.removeEventListener("beforeunload", warnBeforeLeaving);
-  }, [stage]);
-
   const scopedCatalog = React.useMemo(
     () =>
       isEnemMode
