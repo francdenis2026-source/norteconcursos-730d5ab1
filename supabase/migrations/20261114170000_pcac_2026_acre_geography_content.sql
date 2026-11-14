@@ -273,6 +273,97 @@ from jsonb_to_recordset($acre_seed$
     "content_status": "active",
     "syllabus_topic_order": 3,
     "law_version_checked_at": "2026-11-14T20:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "O Edital PC-AC 2026 define cinco regionais de desenvolvimento para fins de sua organização territorial.",
+        "why": "O subitem 1.2.3 enumera Baixo Acre, Purus, Alto Acre, Envira e Juruá."
+      },
+      {
+        "a": false,
+        "q": "A regional do Baixo Acre possui cinco municípios.",
+        "why": "São sete municípios."
+      },
+      {
+        "a": true,
+        "q": "Sena Madureira, Manoel Urbano e Santa Rosa do Purus integram a regional do Purus.",
+        "why": "Essa é a composição expressa no subitem 1.2.3."
+      },
+      {
+        "a": false,
+        "q": "A regional do Juruá inclui Feijó e Jordão.",
+        "why": "Feijó e Jordão pertencem à regional Envira; o Juruá inclui Cruzeiro do Sul, Rodrigues Alves, Mâncio Lima, Marechal Thaumaturgo e Porto Walter."
+      },
+      {
+        "a": false,
+        "q": "A divisão do edital em cinco regionais é idêntica às duas regiões intermediárias do IBGE.",
+        "why": "São recortes diferentes: o edital lista cinco regionais; o IBGE 2017, duas intermediárias."
+      },
+      {
+        "a": true,
+        "q": "A BR-317 integra o corredor do Pacífico e alcança Assis Brasil, na fronteira com o Peru.",
+        "why": "É a função da BR-317 no eixo de integração internacional."
+      },
+      {
+        "a": true,
+        "q": "O Acre possui 22 municípios distribuídos pelas cinco regionais do edital.",
+        "why": "A soma das quantidades regionais é 7 + 3 + 4 + 3 + 5 = 22."
+      }
+    ],
+    "slug": "pcac-2026-acre-municipios-fronteiras-integracao-regional",
+    "title": "Acre: municípios, fronteiras e integração regional",
+    "body_md": "# Acre: municípios, regionais, fronteiras e integração territorial\n\n## 1. Localização e limites\nO Acre está no extremo sudoeste da Região Norte, na Amazônia brasileira. Faz fronteira internacional com Peru e Bolívia e divisa estadual com Amazonas e Rondônia. A capital é Rio Branco. O estado possui 22 municípios.\n\nDiferencie:\n- **Fronteira internacional:** limite entre países, no caso Acre–Peru e Acre–Bolívia.\n- **Divisa estadual:** limite entre unidades da Federação, no caso Acre–Amazonas e Acre–Rondônia.\n- **Limite municipal:** separa territórios dos municípios acreanos.\n\n## 2. Regionais de desenvolvimento utilizadas no edital PC-AC 2026\nO subitem 1.2.3 do Edital nº 001 SEAD/PCAC, de 05/11/2026, define cinco regionais e seus municípios. Para questões sobre a regionalização do concurso, use esta divisão expressa no edital:\n\n| Regional | Municípios |\n|---|---|\n| **Baixo Acre** | Rio Branco, Plácido de Castro, Acrelândia, Senador Guiomard, Capixaba, Porto Acre e Bujari |\n| **Purus** | Sena Madureira, Manoel Urbano e Santa Rosa do Purus |\n| **Alto Acre** | Brasiléia, Epitaciolândia, Assis Brasil e Xapuri |\n| **Envira** | Tarauacá, Feijó e Jordão |\n| **Juruá** | Cruzeiro do Sul, Rodrigues Alves, Mâncio Lima, Marechal Thaumaturgo e Porto Walter |\n\nA distribuição totaliza 22 municípios: 7 + 3 + 4 + 3 + 5. O edital esclarece que, para vagas ofertadas por regional, a lotação poderá ocorrer em qualquer município integrante da respectiva regional.\n\n## 3. Não confunda regional do edital com divisão do IBGE\nHá diferentes recortes territoriais, com finalidades próprias:\n- **Regionais de desenvolvimento do edital:** cinco grupos (Baixo Acre, Purus, Alto Acre, Envira e Juruá), usados no contexto do concurso.\n- **Divisão regional vigente do IBGE (2017):** regiões geográficas intermediárias e imediatas. No Acre, as intermediárias são Rio Branco e Cruzeiro do Sul.\n- **Mesorregiões e microrregiões do IBGE (1989/1990):** divisão histórica, substituída pela regionalização de 2017.\n\nEm prova, identifique qual divisão o enunciado solicita. Não misture os nomes ou a quantidade de regiões de sistemas diferentes.\n\n## 4. Centros regionais e integração\nRio Branco concentra funções político-administrativas e serviços. Cruzeiro do Sul é polo importante do Vale do Juruá. A integração depende de rodovias, rios, aeroportos e redes de comunicação. Cheias, estiagens e condições sazonais podem alterar deslocamentos, custos logísticos e atendimento de comunidades isoladas.\n\nA BR-364 é o principal eixo rodoviário longitudinal, conectando Rio Branco ao Vale do Juruá. A BR-317, Estrada do Pacífico/Interoceânica, conecta a região de Rio Branco a Assis Brasil e à fronteira com o Peru. O transporte fluvial é essencial para localidades ribeirinhas e o transporte aéreo complementa a integração de áreas mais isoladas.\n\n## 5. Diversidade, economia e sustentabilidade\nO Acre abriga povos indígenas, populações tradicionais, seringueiros, ribeirinhos e habitantes urbanos. Evite generalizações. Terras indígenas e unidades de conservação são categorias territoriais distintas, ainda que ambas componham áreas protegidas.\n\nA economia articula extrativismo, produção agropecuária, comércio, serviços e administração pública. Desafios incluem logística, queimadas, desmatamento, regularização fundiária, conflitos pelo uso da terra e eventos climáticos extremos. Desenvolvimento sustentável procura compatibilizar atividade econômica, inclusão social e conservação ambiental.\n\n## 6. Pegadinhas de prova\n- O edital lista **cinco regionais** e seus **22 municípios**.\n- Baixo Acre tem 7 municípios; Purus, 3; Alto Acre, 4; Envira, 3; Juruá, 5.\n- A regionalização do edital não é a mesma coisa que as regiões intermediárias do IBGE (2017).\n- Rio Branco e Cruzeiro do Sul são as duas regiões intermediárias do IBGE no estado, não as cinco regionais do edital.\n- A BR-364 e a BR-317 têm funções de integração diferentes.\n- Fronteira internacional não é sinônimo de divisa estadual.\n",
+    "summary": "Composição das cinco regionais do edital, 22 municípios, diferenças entre regionalizações do IBGE e integração fronteiriça.",
+    "discipline": "Realidade do Estado do Acre",
+    "flashcards": [
+      {
+        "b": "Cinco: Baixo Acre, Purus, Alto Acre, Envira e Juruá.",
+        "f": "Quantas regionais de desenvolvimento o edital PC-AC 2026 define para o Acre?"
+      },
+      {
+        "b": "Rio Branco, Plácido de Castro, Acrelândia, Senador Guiomard, Capixaba, Porto Acre e Bujari.",
+        "f": "Quais municípios integram o Baixo Acre?"
+      },
+      {
+        "b": "Sena Madureira, Manoel Urbano e Santa Rosa do Purus.",
+        "f": "Quais municípios integram a regional do Purus?"
+      },
+      {
+        "b": "Alto Acre: Brasiléia, Epitaciolândia, Assis Brasil e Xapuri. Envira: Tarauacá, Feijó e Jordão.",
+        "f": "Quais municípios integram Alto Acre e Envira?"
+      },
+      {
+        "b": "Cruzeiro do Sul, Rodrigues Alves, Mâncio Lima, Marechal Thaumaturgo e Porto Walter.",
+        "f": "Quais municípios integram a regional do Juruá?"
+      },
+      {
+        "b": "22 municípios: Baixo Acre 7, Purus 3, Alto Acre 4, Envira 3 e Juruá 5.",
+        "f": "Quantos municípios existem no Acre e como se distribuem pelas regionais do edital?"
+      },
+      {
+        "b": "Rio Branco e Cruzeiro do Sul.",
+        "f": "Quais são as regiões geográficas intermediárias do IBGE no Acre desde 2017?"
+      },
+      {
+        "b": "BR-364 conecta Rio Branco ao Vale do Juruá; BR-317 integra o corredor do Pacífico até Assis Brasil e a fronteira peruana.",
+        "f": "Qual rodovia conecta Rio Branco ao Vale do Juruá e qual integra o corredor do Pacífico?"
+      }
+    ],
+    "sort_order": 2,
+    "legal_basis": [
+      "IBGE — Cidades e Estados: Acre",
+      "Governo do Estado do Acre — dados territoriais e regionais",
+      "Constituição Federal, arts. 231 e 232"
+    ],
+    "source_note": "Edital nº 001 SEAD/PCAC, de 05/11/2026, subitem 1.2.3; IBGE, Divisão Regional do Brasil 2017; SEPLAN/AC, Diagnóstico socioeconômico.",
+    "topic_label": "Municípios, fronteiras, infraestrutura e integração regional",
+    "contest_name": "PC-AC 2026",
+    "legal_review": null,
+    "content_status": "active",
+    "syllabus_topic_order": 1,
+    "law_version_checked_at": null
   }
 ]
 $acre_seed$::jsonb) as seed(
@@ -280,4 +371,5 @@ $acre_seed$::jsonb) as seed(
  contest_name text, syllabus_topic_order integer, source_note text, legal_basis jsonb, law_version_checked_at timestamptz,
  legal_review jsonb, content_status text, flashcards jsonb, quiz jsonb
 )
-on conflict (slug) do nothing;
+on conflict (slug) do update set body_md=excluded.body_md, summary=excluded.summary, source_note=excluded.source_note, flashcards=excluded.flashcards, quiz=excluded.quiz
+where public.study_materials.slug='pcac-2026-acre-municipios-fronteiras-integracao-regional';
