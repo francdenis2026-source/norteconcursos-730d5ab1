@@ -1747,4 +1747,12 @@ $pcac_seed$::jsonb) as seed(
  contest_name text, syllabus_topic_order integer, source_note text, legal_basis jsonb, law_version_checked_at timestamptz,
  legal_review jsonb, content_status text, flashcards jsonb, quiz jsonb
 )
-on conflict (slug) do nothing;
+on conflict (slug) do update set
+ body_md = excluded.body_md,
+ source_note = excluded.source_note,
+ legal_basis = excluded.legal_basis,
+ law_version_checked_at = excluded.law_version_checked_at,
+ legal_review = excluded.legal_review,
+ flashcards = excluded.flashcards,
+ quiz = excluded.quiz
+where public.study_materials.slug = 'pcac-2026-lc129-atualizacao-lc526-2026-ingresso-formacao-lotacao';
