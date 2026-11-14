@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Refinar os cartões de planos e a comparação/dúvidas da homepage; leitura e interação conferidas em 1280px e 827px nos dois temas (a homepage de celular usa outra apresentação, preservada).
+
 - [x] Corrigir o enquadramento das artes PC PI e PC PR em todas as apresentações existentes; cards públicos conferidos em celular e computador, faixa do painel ajustada (verificação autenticada indisponível).
 
 - [x] Auditar a experiência do aluno e da administração.

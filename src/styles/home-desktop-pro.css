@@ -608,3 +608,230 @@
   outline: 2px solid rgb(240 199 101 / 72%) !important;
   outline-offset: -4px;
 }
+
+/* Pricing and FAQ: readable content takes priority over viewport-fit compression.
+   Scoped to these two areas; prices, feature disclosure and launch rules stay intact. */
+html body .home.home #planos .home-plans__grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: start !important;
+  overflow: visible !important;
+}
+html body .home.home #planos .home-plan[data-plan] {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 420px !important;
+  padding: 20px !important;
+  gap: 10px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  background: var(--card) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+html body .home.home #planos .home-plan[data-plan].home-plan--featured {
+  border-color: var(--primary) !important;
+}
+html body .home.home #planos .home-plan[data-plan] .home-plan__media {
+  order: -2;
+  width: calc(100% + 40px) !important;
+  height: 100px !important;
+  aspect-ratio: auto !important;
+  margin: -20px -20px 4px !important;
+  border-radius: 7px 7px 0 0 !important;
+  flex-shrink: 0;
+}
+html body .home.home #planos .home-plan .hr-plan-icon {
+  position: static !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin: 0 !important;
+  background: var(--muted) !important;
+  color: var(--primary) !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+}
+html body .home.home #planos .home-plan__top {
+  min-height: 28px !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+html body .home.home #planos .home-plan h3 {
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+  color: var(--foreground) !important;
+}
+html body .home.home #planos .home-plan .home-tag {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  padding: 4px 8px !important;
+  color: var(--primary) !important;
+  background: var(--accent) !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+}
+html body .home.home #planos .home-plan__description {
+  min-height: 42px !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  color: var(--muted-foreground) !important;
+}
+html body .home.home #planos .home-plan__price {
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  margin: 4px 0 0 !important;
+  color: var(--foreground) !important;
+}
+html body .home.home #planos .home-plan__price :is(span, small) {
+  font-size: 13px !important;
+  color: var(--muted-foreground) !important;
+}
+html body .home.home #planos :is(.home-plan__annual, .home-plan__availability) {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  min-height: 18px;
+  margin: 0 !important;
+  color: var(--muted-foreground) !important;
+}
+html body .home.home #planos .home-plan__features {
+  margin-top: auto !important;
+  color: var(--foreground) !important;
+  border-color: var(--border) !important;
+}
+html body .home.home #planos .home-plan__features summary {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  color: var(--foreground) !important;
+}
+html body .home.home #planos .home-plan__features :is(li, li small) {
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+html body .home.home #planos .home-plan .home-button {
+  min-height: 44px !important;
+  padding: 10px 12px !important;
+  font-size: 13px !important;
+  border-radius: 6px !important;
+}
+html body .home.home #planos .home-plan-comparison {
+  margin-top: 20px !important;
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+html body .home.home #planos .home-plan-comparison > summary {
+  min-height: 64px !important;
+  padding: 14px 20px !important;
+  font-size: 16px !important;
+  color: var(--foreground) !important;
+}
+html body .home.home #planos .home-plan-comparison > summary > span > span {
+  margin-top: 3px;
+  font-size: 13px !important;
+  color: var(--muted-foreground) !important;
+}
+html body .home.home #planos .home-compare table { font-size: 13px !important; }
+html body .home.home #planos .home-plans__notice {
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: var(--muted-foreground) !important;
+}
+html body .home.home #planos .home-plans__notice svg { flex-shrink: 0; margin-top: 2px; }
+html body .home.home #planos .home-faq {
+  display: grid !important;
+  grid-template-columns: minmax(180px, .65fr) minmax(0, 2fr) !important;
+  align-items: start !important;
+  gap: 32px !important;
+  margin-top: 28px !important;
+  padding: 28px 0 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html body .home.home #planos .home-faq__intro {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  min-height: 0 !important;
+}
+html body .home.home #planos .home-faq__intro .home-eyebrow {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  font-size: 11px !important;
+  letter-spacing: 0 !important;
+  color: var(--primary) !important;
+}
+html body .home.home #planos .home-faq__intro h3 {
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+  margin-top: 10px !important;
+  color: var(--foreground) !important;
+}
+html body .home.home #planos .home-faq__scene { display: none !important; }
+html body .home.home #planos .home-faq__list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0 24px !important;
+  align-items: start !important;
+}
+html body .home.home #planos .home-faq__list details {
+  min-width: 0;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html body .home.home #planos .home-faq__list summary {
+  min-height: 64px !important;
+  padding: 14px 0 !important;
+  gap: 16px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: var(--foreground) !important;
+}
+html body .home.home #planos .home-faq__list summary svg {
+  flex: 0 0 18px;
+  width: 18px !important;
+  height: 18px !important;
+  color: var(--primary) !important;
+}
+html body .home.home #planos .home-faq__list details > p {
+  margin: 0 !important;
+  padding: 0 28px 18px 0 !important;
+  border: 0 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  color: var(--muted-foreground) !important;
+}
+html body .home.home #planos summary:focus-visible {
+  outline: 2px solid var(--ring) !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+@media (max-width: 1100px) {
+  html body .home.home #planos .home-plans__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 760px) {
+  html body .home.home #planos .home-plans__grid { grid-template-columns: minmax(0, 1fr) !important; }
+  html body .home.home #planos .home-plan[data-plan] { min-height: 0 !important; }
+  html body .home.home #planos .home-plan__description { min-height: 0 !important; }
+  html body .home.home #planos .home-faq { grid-template-columns: minmax(0, 1fr) !important; gap: 16px !important; }
+  html body .home.home #planos .home-faq__list { grid-template-columns: minmax(0, 1fr) !important; }
+}
