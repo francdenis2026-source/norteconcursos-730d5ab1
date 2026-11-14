@@ -45,4 +45,7 @@ test("geografia do Acre cobre fuso, hidrografia, relevo, clima, UCs e transporte
 test("história inclui Tratado de Ayacucho e economia inclui infraestrutura de transportes", () => {
   assert.ok(ACRE_STUDY_CONTENT.historia.some((card) => /Ayacucho/.test(card.title)));
   assert.ok(ACRE_STUDY_CONTENT.economia.some((card) => /transportes/i.test(card.title)));
+  assert.ok(ACRE_STUDY_CONTENT.economia.some((card) => /indicadores demográficos/i.test(card.title)));
+  assert.ok(ACRE_STUDY_CONTENT.cultura.some((card) => /povos indígenas/i.test(card.title)));
+  assert.ok(ACRE_STUDY_CONTENT.politica.some((card) => /Constituição do Estado do Acre/i.test(card.title)));
 });
