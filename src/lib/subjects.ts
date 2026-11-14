@@ -32,10 +32,8 @@ const families: Record<string, string[]> = {
     "RLM - Raciocínio Lógico Matemático",
     "Matemática e Raciocínio Lógico",
     "Raciocínio Lógico e Matemático",
-    "Estatística",
-    "Estatística e Probabilidade",
-    "Noções de Estatística",
   ],
+  Estatística: ["Estatística", "Estatística e Probabilidade", "Noções de Estatística"],
   Informática: [
     "Informática",
     "Noções de Informática",
