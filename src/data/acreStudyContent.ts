@@ -3,7 +3,7 @@
  * Cada item foi conferido em fonte pública em CHECKED_ON. Dados que mudam (população, notícias,
  * operações) trazem o ano de referência e devem ser revistos a cada nova divulgação oficial.
  */
-export const ACRE_CONTENT_CHECKED_ON = "2026-11-13";
+export const ACRE_CONTENT_CHECKED_ON = "2026-11-14";
 
 export interface AcreSource {
   label: string;
