@@ -1854,6 +1854,396 @@ from jsonb_to_recordset($pcac_seed$
     "content_status": "active",
     "syllabus_topic_order": 1,
     "law_version_checked_at": "2026-11-14T19:30:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Uma chave primária deve identificar unicamente o registro.",
+        "why": "Essa é sua finalidade."
+      },
+      {
+        "a": true,
+        "q": "Chave estrangeira referencia campo de outra tabela.",
+        "why": "Ela implementa relações e integridade referencial."
+      },
+      {
+        "a": true,
+        "q": "JOIN combina dados de tabelas relacionadas.",
+        "why": "É a operação de junção."
+      },
+      {
+        "a": false,
+        "q": "Relacionamento muitos para muitos normalmente dispensa tabela associativa.",
+        "why": "Em modelo relacional, normalmente usa tabela intermediária."
+      },
+      {
+        "a": false,
+        "q": "WHERE é usado para ordenar os resultados.",
+        "why": "WHERE filtra; ORDER BY ordena."
+      }
+    ],
+    "slug": "pcac-2026-ti-bancos-dados-tabelas-chaves-consultas",
+    "title": "Bancos de dados: tabelas, chaves, relacionamentos e consultas",
+    "body_md": "# Bancos de dados\n\n## 1. Conceitos\nBanco de dados é coleção organizada de dados. Em modelo relacional, tabelas representam entidades ou relações; colunas/campos representam atributos; linhas/registros representam ocorrências.\n\n## 2. Chaves\nChave primária identifica unicamente cada registro e não deve ser nula. Chave estrangeira referencia chave de outra tabela, permitindo relacionamento e integridade referencial. Chaves compostas usam mais de um campo.\n\n## 3. Relacionamentos\n- Um para um: um registro se relaciona com, no máximo, um de outra tabela.\n- Um para muitos: um registro de uma tabela se relaciona com vários da outra.\n- Muitos para muitos: normalmente exige tabela associativa.\n\n## 4. Consultas\nConsultas selecionam, filtram, ordenam, agrupam e relacionam dados. Em SQL, SELECT projeta colunas; FROM indica tabelas; WHERE filtra linhas; JOIN combina registros relacionados; GROUP BY agrupa; ORDER BY ordena. COUNT, SUM e AVG são funções agregadoras comuns.\n\n## 5. Integração de bases\nAo combinar bases, identifique campos correspondentes, tipos, chaves e critérios de correspondência. Diferentes formatos de CPF, datas ou nomes podem causar falsos não pareamentos. Documente origem, transformação e limitações.\n\n## 6. Qualidade e segurança\nEvite expor dados pessoais sem necessidade. Controle permissões, registre acessos e preserve integridade. Uma chave repetida ou relação inconsistente pode gerar duplicidade ou perda de informação em consultas.",
+    "summary": "Conceitos relacionais, campos, registros, chaves primárias e estrangeiras, relacionamentos, consultas e integração de bases.",
+    "discipline": "Tecnologia da Informação e Segurança da Informação",
+    "flashcards": [
+      {
+        "b": "Campo ou conjunto de campos que identifica unicamente cada registro.",
+        "f": "O que é uma chave primária?"
+      },
+      {
+        "b": "Campo que referencia uma chave de outra tabela e estabelece relacionamento.",
+        "f": "O que é uma chave estrangeira?"
+      },
+      {
+        "b": "Combinar registros de tabelas relacionadas.",
+        "f": "Qual a função do JOIN em SQL?"
+      },
+      {
+        "b": "Relação em que vários registros de uma tabela se associam a vários de outra, geralmente via tabela associativa.",
+        "f": "O que é um relacionamento muitos para muitos?"
+      },
+      {
+        "b": "Agrupa registros para aplicar agregações por categoria.",
+        "f": "O que faz GROUP BY?"
+      }
+    ],
+    "sort_order": 5,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 4.",
+    "topic_label": "4. Bancos de dados",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 4,
+    "law_version_checked_at": "2026-11-14T19:45:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Metadados podem descrever autoria, origem, formato e histórico de um arquivo.",
+        "why": "Eles contextualizam e permitem gerenciar dados."
+      },
+      {
+        "a": false,
+        "q": "Um hash comprova a autoria do documento.",
+        "why": "Hash verifica integridade relativa, não autoria."
+      },
+      {
+        "a": false,
+        "q": "Data de criação e data de modificação são necessariamente iguais.",
+        "why": "São eventos diferentes."
+      },
+      {
+        "a": true,
+        "q": "Metadados podem conter dados pessoais e informações de localização.",
+        "why": "Propriedades podem revelar informações sensíveis."
+      },
+      {
+        "a": true,
+        "q": "Preservar o original e documentar transformações melhora a rastreabilidade.",
+        "why": "Permite reconstruir operações realizadas."
+      }
+    ],
+    "slug": "pcac-2026-ti-metadados-propriedades-arquivos-rastreabilidade",
+    "title": "Metadados: propriedades e rastreabilidade de arquivos digitais",
+    "body_md": "# Metadados e propriedades de arquivos digitais\n\n## 1. Conceito\nMetadados são dados que descrevem, contextualizam, estruturam ou permitem gerenciar outros dados. Podem informar conteúdo, autoria, origem, formato, datas, direitos, localização, relações e histórico.\n\n## 2. Categorias\n- Descritivos: título, assunto, autor e palavras-chave.\n- Estruturais: relação entre partes, páginas, anexos ou componentes.\n- Administrativos: direitos, acesso, retenção e gestão.\n- Técnicos: formato, tamanho, resolução, software e parâmetros.\n- De preservação: eventos, migrações, verificações e histórico de integridade.\n\n## 3. Datas e propriedades\nData de criação, modificação, acesso e captura podem ter significados distintos. Relógio incorreto, fuso, cópia, sincronização ou exportação podem alterar metadados. A data exibida no sistema não comprova sozinha quando o conteúdo foi produzido.\n\n## 4. Rastreabilidade\nRegistre origem, responsável, operação, data/hora, versão e hash quando apropriado. Hash permite verificar se o conteúdo mudou, mas não prova autoria ou veracidade. Preserve o original e documente transformações.\n\n## 5. Privacidade\nMetadados podem revelar localização, autor, dispositivo ou histórico. Antes de publicar arquivos, verifique propriedades e remova informações pessoais ou sensíveis quando necessário e autorizado.",
+    "summary": "Metadados descritivos, estruturais, administrativos e técnicos; datas, autoria, formato, versões e cadeia de custódia digital.",
+    "discipline": "Tecnologia da Informação e Segurança da Informação",
+    "flashcards": [
+      {
+        "b": "Dados como título, assunto, autor e palavras-chave.",
+        "f": "O que são metadados descritivos?"
+      },
+      {
+        "b": "Informações como formato, tamanho, resolução, software e parâmetros.",
+        "f": "O que são metadados técnicos?"
+      },
+      {
+        "b": "Se o conteúdo mudou em relação a uma referência; não comprova autoria ou veracidade.",
+        "f": "O que um hash permite verificar?"
+      },
+      {
+        "b": "Não. Cópia, sincronização e alterações podem modificar datas.",
+        "f": "Data de modificação comprova quando o conteúdo foi criado?"
+      },
+      {
+        "b": "Podem revelar localização, autor, dispositivo ou histórico sensível.",
+        "f": "Por que revisar metadados antes de publicar?"
+      }
+    ],
+    "sort_order": 7,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 7.",
+    "topic_label": "7. Metadados",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 7,
+    "law_version_checked_at": "2026-11-14T19:45:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": false,
+        "q": "Padronizar dados significa apagar todas as diferenças entre registros.",
+        "why": "Padronização preserva diferenças legítimas."
+      },
+      {
+        "a": true,
+        "q": "O cruzamento deve documentar origem e transformações dos dados.",
+        "why": "Isso assegura rastreabilidade."
+      },
+      {
+        "a": true,
+        "q": "Correspondência aproximada pode gerar falsos pareamentos.",
+        "why": "Deve ser validada por contexto e outros atributos."
+      },
+      {
+        "a": true,
+        "q": "Um relatório deve distinguir fatos observados, inferências e hipóteses.",
+        "why": "Isso evita apresentar suposição como fato."
+      },
+      {
+        "a": false,
+        "q": "Compartilhar toda a base sem controle de acesso é boa prática.",
+        "why": "Aplique menor privilégio e proteção de dados."
+      }
+    ],
+    "slug": "pcac-2026-ti-organizacao-tratamento-dados-digitais",
+    "title": "Organização e tratamento de informações digitais: padronização e cruzamento",
+    "body_md": "# Organização e tratamento de informações digitais\n\n## 1. Padronização\nDefina padrão para nomes, datas, identificadores, categorias, unidades e campos. Use formato consistente e mantenha dicionário de dados. Padronizar não significa apagar diferenças legítimas entre registros.\n\n## 2. Classificação\nClassifique por finalidade, assunto, tipo, origem ou sensibilidade. Categorias devem ser claras, mutuamente compreensíveis e aplicadas de modo consistente. Registre regras e exceções.\n\n## 3. Duplicidades e inconsistências\nProcure duplicidades por identificadores e combinações de campos. Analise divergências de grafia, datas, campos vazios e valores impossíveis. Não una registros só porque nomes são iguais; verifique outros atributos e contexto.\n\n## 4. Cruzamento\nAo cruzar planilhas, defina chave e tipo de correspondência (exata ou aproximada), preserve identificadores originais e confira registros sem correspondência e múltiplas correspondências. Documente a origem e as transformações.\n\n## 5. Apresentação\nUse tabelas para valores detalhados, gráficos para padrões e diagramas para relações. Informe fonte, período, unidade, critérios de inclusão e limitações. Diferencie fato observado, inferência e hipótese.\n\n## 6. Proteção\nAplique controle de acesso e compartilhe apenas o necessário. Evite expor dados pessoais em relatórios e mantenha rastreabilidade de versões e operações.",
+    "summary": "Padronização, classificação, duplicidades, cruzamento em planilhas, tabelas, gráficos e apresentação objetiva.",
+    "discipline": "Tecnologia da Informação e Segurança da Informação",
+    "flashcards": [
+      {
+        "b": "Definir formatos e regras consistentes para nomes, datas, identificadores, categorias e unidades.",
+        "f": "O que é padronização de dados?"
+      },
+      {
+        "b": "Pessoas diferentes podem ter nomes iguais; é necessário validar outros atributos.",
+        "f": "Por que não unir registros apenas pelo nome?"
+      },
+      {
+        "b": "Chave, tipo de correspondência, registros sem correspondência e múltiplas correspondências.",
+        "f": "O que conferir ao cruzar planilhas?"
+      },
+      {
+        "b": "Fato é observado; inferência é conclusão baseada em evidências; hipótese é explicação a testar.",
+        "f": "Qual a diferença entre fato, inferência e hipótese?"
+      },
+      {
+        "b": "Fonte, período, unidade, critérios, limitações e métodos.",
+        "f": "O que deve acompanhar um relatório analítico?"
+      }
+    ],
+    "sort_order": 8,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 8.",
+    "topic_label": "8. Organização e tratamento de informações digitais",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 8,
+    "law_version_checked_at": "2026-11-14T19:45:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Cada coluna de uma base tabular deve representar uma variável.",
+        "why": "Essa estrutura facilita filtragem e análise."
+      },
+      {
+        "a": false,
+        "q": "CSV preserva fórmulas, formatação e múltiplas abas do arquivo original.",
+        "why": "CSV é texto tabular e não preserva esses recursos."
+      },
+      {
+        "a": true,
+        "q": "Classificação ordena registros e filtros exibem subconjuntos por critério.",
+        "why": "São funções distintas de organização."
+      },
+      {
+        "a": false,
+        "q": "Todo registro parecido deve ser excluído como duplicado.",
+        "why": "É necessário validar chave, contexto e possibilidade de eventos distintos."
+      },
+      {
+        "a": true,
+        "q": "Tabelas dinâmicas podem agrupar e agregar dados.",
+        "why": "São usadas para resumir bases tabulares."
+      }
+    ],
+    "slug": "pcac-2026-ti-planilhas-analise-dados-importacao-deduplicacao",
+    "title": "Planilhas aplicadas à análise de dados: limpeza, filtros e tabelas dinâmicas",
+    "body_md": "# Planilhas eletrônicas aplicadas à análise de dados\n\n## 1. Preparação e tipos\nPlanilhas armazenam dados em células organizadas em linhas e colunas. Cada coluna deve representar uma variável e cada linha, um registro. Cabeçalhos claros, tipos consistentes e uma linha por observação facilitam análise e integração.\n\n## 2. Fórmulas e funções\nFórmulas iniciam com =. Referências relativas mudam ao copiar; absolutas ($A$1) permanecem fixas. Funções matemáticas, estatísticas, lógicas, texto, data/hora e pesquisa permitem calcular, classificar e cruzar informações. Confira separadores, idioma, tipo de dado e referências.\n\n## 3. Classificação, filtros e agrupamentos\nClassificação ordena registros; filtros exibem subconjuntos que atendem critérios. Agrupar resume ou organiza categorias. Preserve os cabeçalhos e expanda a seleção para evitar desassociar dados de suas linhas.\n\n## 4. Tabelas dinâmicas e gráficos\nTabelas dinâmicas resumem e agregam dados por campos, categorias e medidas. Gráficos apoiam comparação e identificação de padrões; rótulos, escala, unidade e fonte devem permanecer visíveis.\n\n## 5. Importação e exportação\nCSV é formato textual tabular, mas pode variar em delimitador, codificação e separador decimal. Na importação, confira acentos, datas, zeros à esquerda, separadores e tipos. Exportar para CSV pode perder fórmulas, formatação, múltiplas abas e recursos específicos do arquivo original.\n\n## 6. Duplicidades e inconsistências\nIdentifique registros repetidos por chave ou combinação de campos. Não exclua automaticamente: dois registros semelhantes podem representar eventos distintos. Padronize espaços, caixa, datas e identificadores; trate ausências sem inventar valores. Registre critérios e mantenha cópia da base original.",
+    "summary": "Fórmulas, funções, importação/exportação, classificação, filtros, agrupamentos, duplicidades e inconsistências.",
+    "discipline": "Tecnologia da Informação e Segurança da Informação",
+    "flashcards": [
+      {
+        "b": "Uma variável por coluna e um registro por linha, com cabeçalhos claros.",
+        "f": "Como deve ser organizada uma tabela de dados para análise?"
+      },
+      {
+        "b": "Fórmulas, formatação, múltiplas abas e recursos específicos do arquivo.",
+        "f": "O que pode se perder ao exportar uma planilha para CSV?"
+      },
+      {
+        "b": "Registros semelhantes podem representar eventos diferentes; é preciso validar a chave e o contexto.",
+        "f": "Por que não excluir duplicidades automaticamente?"
+      },
+      {
+        "b": "Resumir e agregar dados por campos e categorias.",
+        "f": "Para que servem tabelas dinâmicas?"
+      },
+      {
+        "b": "Delimitador, codificação, separador decimal, datas e zeros à esquerda.",
+        "f": "O que verificar ao importar CSV?"
+      }
+    ],
+    "sort_order": 4,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 3.",
+    "topic_label": "3. Planilhas eletrônicas aplicadas à análise de dados",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 3,
+    "law_version_checked_at": "2026-11-14T19:45:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "IPv4 usa 32 bits e IPv6 usa 128 bits.",
+        "why": "São os comprimentos dos endereços."
+      },
+      {
+        "a": false,
+        "q": "DNS distribui automaticamente endereços IP aos clientes.",
+        "why": "DHCP distribui configuração; DNS resolve nomes."
+      },
+      {
+        "a": true,
+        "q": "TCP oferece entrega confiável e ordenada.",
+        "why": "É orientado à conexão e controle de entrega."
+      },
+      {
+        "a": false,
+        "q": "UDP garante a entrega de todos os pacotes.",
+        "why": "UDP não garante entrega ou ordenação."
+      },
+      {
+        "a": true,
+        "q": "O gateway padrão encaminha tráfego para outras redes.",
+        "why": "É o próximo salto para destinos fora da rede local."
+      }
+    ],
+    "slug": "pcac-2026-ti-redes-ip-protocolos-servicos",
+    "title": "Redes de computadores: LAN, IP, protocolos e serviços",
+    "body_md": "# Redes de computadores\n\n## 1. Tipos de rede\nLAN conecta dispositivos em área local; WAN interliga redes em grandes distâncias; WLAN é rede local sem fio. A internet é uma rede global de redes; intranet é ambiente privado.\n\n## 2. Endereçamento IP\nO endereço IP identifica interface em uma rede. IPv4 usa 32 bits e é representado em quatro octetos decimais; IPv6 usa 128 bits e representação hexadecimal. Máscara/prefixo identifica a parte de rede. Gateway padrão encaminha tráfego para outras redes.\n\n## 3. Protocolos\nTCP oferece conexão e entrega ordenada/confiável; UDP é orientado a datagramas e não garante entrega ou ordem. IP trata endereçamento e encaminhamento. DNS traduz nomes de domínio em endereços IP. DHCP distribui configurações de rede automaticamente.\n\n## 4. Serviços e portas usuais\nHTTP/HTTPS acessam recursos web; SMTP envia e-mail; IMAP/POP3 acessam mensagens; SSH permite acesso remoto seguro; FTP transfere arquivos sem criptografia por padrão. Portas conhecidas ajudam a identificar serviços, mas podem ser configuradas de modo diferente.\n\n## 5. Segurança\nFirewall controla tráfego conforme regras; VPN cria túnel protegido sobre rede não confiável; Wi-Fi deve usar criptografia moderna e credenciais fortes. Não confunda conexão à rede com autorização para acessar sistemas e dados.",
+    "summary": "Redes locais e internet, endereçamento IPv4/IPv6, DNS, DHCP, HTTP(S), TCP/UDP e serviços básicos.",
+    "discipline": "Tecnologia da Informação e Segurança da Informação",
+    "flashcards": [
+      {
+        "b": "32 bits.",
+        "f": "Quantos bits possui um endereço IPv4?"
+      },
+      {
+        "b": "128 bits.",
+        "f": "Quantos bits possui um endereço IPv6?"
+      },
+      {
+        "b": "Traduzir nomes de domínio em endereços IP.",
+        "f": "Qual a função do DNS?"
+      },
+      {
+        "b": "TCP oferece conexão e entrega ordenada/confiável; UDP não garante entrega ou ordem.",
+        "f": "Qual a diferença central entre TCP e UDP?"
+      },
+      {
+        "b": "Encaminhar tráfego para outras redes.",
+        "f": "Qual a função do gateway padrão?"
+      }
+    ],
+    "sort_order": 6,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 5.",
+    "topic_label": "5. Redes de computadores",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 5,
+    "law_version_checked_at": "2026-11-14T19:45:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "No Linux, as permissões tradicionais distinguem proprietário, grupo e outros.",
+        "why": "É o modelo clássico de permissões."
+      },
+      {
+        "a": true,
+        "q": "O comando chmod altera permissões de arquivo.",
+        "why": "chmod modifica bits/permissões."
+      },
+      {
+        "a": false,
+        "q": "Alterar .txt para .pdf converte o arquivo em PDF.",
+        "why": "Renomear extensão não converte conteúdo."
+      },
+      {
+        "a": false,
+        "q": "Um ponto de restauração do sistema equivale a backup completo dos arquivos do usuário.",
+        "why": "Ponto de restauração e backup têm finalidades distintas."
+      },
+      {
+        "a": false,
+        "q": "Arquivos compactados são sempre seguros para extração.",
+        "why": "Podem conter malware e devem ser verificados."
+      }
+    ],
+    "slug": "pcac-2026-ti-sistemas-operacionais-arquivos-permissoes",
+    "title": "Sistemas operacionais: arquivos, permissões e compactação",
+    "body_md": "# Sistemas operacionais, arquivos e permissões\n\n## 1. Arquivos, pastas e extensões\nWindows 11 e Ubuntu organizam dados em arquivos e diretórios. Extensão costuma indicar formato e aplicativo associado, mas não garante que o conteúdo corresponda à extensão. Alterar o nome/extensão não converte o formato.\n\nNo Windows, caminhos usam letras de unidade e barras invertidas; no Linux, a estrutura parte da raiz / e usa barras normais. O Linux diferencia maiúsculas de minúsculas em nomes de arquivos, em regra; o Windows normalmente não.\n\n## 2. Contas e permissões\nContas e grupos definem identidade e privilégios. No Windows, permissões NTFS controlam leitura, gravação, modificação e controle total. No Ubuntu/Linux, permissões tradicionais separam proprietário, grupo e outros, com leitura (r), gravação (w) e execução (x); o comando chmod altera permissões e chown altera proprietário.\n\nPrincípio do menor privilégio: conceder apenas os acessos necessários. Evite trabalhar continuamente como administrador/root.\n\n## 3. Recuperação e versões\nLixeira, histórico de versões, pontos de restauração e backups têm funções distintas. Histórico de versões pode recuperar versões anteriores de um arquivo; ponto de restauração trata configurações do sistema; backup protege dados e deve ter cópia separada.\n\n## 4. Atualizações e segurança\nAtualizações corrigem falhas e mantêm compatibilidade. Instale software de fontes confiáveis, mantenha proteção ativa e evite anexos e executáveis não verificados.\n\n## 5. Compactação\nZIP e formatos equivalentes agrupam e podem comprimir arquivos. Compactação sem perda permite recuperar os dados originais; compressão com perda elimina informação. Arquivo compactado não é automaticamente seguro: pode conter malware e exigir verificação antes da extração.",
+    "summary": "Windows 11 e Ubuntu: arquivos, pastas, extensões, perfis, permissões, atualizações, recuperação e compactação.",
+    "discipline": "Tecnologia da Informação e Segurança da Informação",
+    "flashcards": [
+      {
+        "b": "Proprietário, grupo e outros; leitura (r), gravação (w) e execução (x).",
+        "f": "No Linux, como se dividem as permissões tradicionais?"
+      },
+      {
+        "b": "chmod.",
+        "f": "Qual comando altera permissões no Linux?"
+      },
+      {
+        "b": "chown.",
+        "f": "Qual comando altera o proprietário de arquivo?"
+      },
+      {
+        "b": "Não. Apenas altera o nome; não converte o conteúdo.",
+        "f": "Renomear a extensão converte o formato do arquivo?"
+      },
+      {
+        "b": "Histórico recupera versões; backup mantém cópia independente para recuperação.",
+        "f": "Qual a diferença entre histórico de versões e backup?"
+      }
+    ],
+    "sort_order": 3,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 2.",
+    "topic_label": "2. Sistemas operacionais e aplicativos",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 2,
+    "law_version_checked_at": "2026-11-14T19:45:00+00:00"
   }
 ]
 $pcac_seed$::jsonb) as seed(
