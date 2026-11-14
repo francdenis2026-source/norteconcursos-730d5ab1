@@ -52,18 +52,23 @@ test("subject groups unify Math and RLM aliases without mutating question proven
   const unified = groups.find((group) => group.name === "Matemática e Raciocínio Lógico");
   assert.ok(unified);
   assert.deepEqual(unified.questions.map((item) => item.id).sort(), ["finance", "math", "rlm"]);
-  assert.equal(groups.some((group) => group.name === "Estatística"), false);
+  const stats = groups.find((group) => group.name === "Estatística");
+  assert.ok(stats);
+  assert.deepEqual(stats.questions.map((item) => item.id), ["stats"]);
   assert.equal(groups.find((group) => group.name === "Informática").questions.length, 1);
   assert.equal(unified.questions.find((item) => item.id === "math").subject, "Matemática");
 });
 
 test("group details preserve the exact counted metadata and official exam identity", () => {
   const contests = availableQuestionBank(rows, "contests");
-  const math = catalogGroups(contests, "subject").find((g) => g.name === "Matemática");
+  const math = catalogGroups(contests, "subject").find(
+    (g) => g.name === "Matemática e Raciocínio Lógico",
+  );
+  assert.ok(math);
   assert.equal(math.questions.length, 2);
   assert.equal(
     questionBankSearch("contests", "all", "", { subject: math.name }).subject,
-    "Matemática",
+    "Matemática e Raciocínio Lógico",
   );
   assert.equal(questionBankSearch("enem", "all", "", {}).contest, "ENEM");
   const exams = questionBankExams(contests);
