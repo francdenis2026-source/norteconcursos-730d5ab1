@@ -13,3 +13,13 @@
 .library-tabpanel .updated-study-collections__lesson-body > p,
 .library-tabpanel .updated-study-collections__lesson-body > div > p { max-width: 80ch; }
 .library-tabpanel .updated-study-collections__lessons { display: grid; gap: .5rem; }
+
+/* Disciplina aberta: roteiro de aulas e materiais numa única sequência. */
+.library-section-head { margin: 0 0 .5rem; }
+.library-section-head h2 { margin: 0; font-size: 1.15rem; font-weight: 800; }
+.library-section-head p { margin: .15rem 0 0; font-size: .85rem; color: var(--muted-foreground); }
+.library-roteiro { margin-bottom: 1.5rem; }
+.updated-study-collections__related { margin-top: .75rem; padding: .6rem .75rem; border: 1px solid var(--border); border-radius: .75rem; }
+.updated-study-collections__related ul { margin: .35rem 0 0; padding: 0; list-style: none; display: grid; gap: .25rem; }
+.updated-study-collections__related a { font-size: .85rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+.updated-study-collections__related a:hover { text-decoration: underline; }

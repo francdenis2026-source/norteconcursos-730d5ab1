@@ -1,4 +1,5 @@
 import "@/styles/library-focus-tabs.css";
+import { looseMatch } from "@/lib/tolerantWords";
 import "@/styles/library-layout.css";
 import { AreaHint } from "@/components/ui/area-hint";
 import { subjectDescription } from "@/lib/areaDescriptions";
@@ -290,9 +291,18 @@ function LibraryIndex() {
     [visible, showLawIndex],
   );
   const focused = discipline !== "all";
-  const [focusTab, setFocusTab] = useState<"trilha" | "materiais">("trilha");
-  useEffect(() => setFocusTab("trilha"), [discipline]);
   const subjectItems = items.filter((item) => !focused || libraryDiscipline(item) === discipline);
+  // Materiais publicados que tratam do mesmo assunto de uma aula: aparecem dentro da própria aula.
+  const relatedMaterialsFor = useMemo(
+    () => (lessonTitle: string) => {
+      const subject = lessonTitle.replace(/^\d+\s*[·.-]\s*/, "");
+      return subjectItems
+        .filter((m) => looseMatch(`${m.title} ${m.topic_label} ${m.summary ?? ""}`, subject))
+        .slice(0, 4)
+        .map((m) => ({ slug: m.slug, title: m.title }));
+    },
+    [subjectItems],
+  );
   const searching =
     focused ||
     area !== "all" ||
@@ -500,36 +510,27 @@ function LibraryIndex() {
 
       {lawsOnly && signedIn && !searching && user && <StartHere userId={user.id} />}
 
+      <div id="library-tabpanel" className="library-tabpanel">
       {!lawsOnly && focused && matchedCourse && (
-        <div className="library-tabs" role="tablist" aria-label="Como estudar esta disciplina">
-          {([
-            ["trilha", "Aulas da trilha"],
-            ["materiais", `Materiais publicados${items.length ? ` (${subjectItems.length})` : ""}`],
-          ] as const).map(([id, label]) => (
-            <button
-              key={id}
-              type="button"
-              role="tab"
-              id={`library-tab-${id}`}
-              aria-selected={focusTab === id}
-              aria-controls="library-tabpanel"
-              className={focusTab === id ? "is-active" : ""}
-              onClick={() => setFocusTab(id)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+        <section aria-labelledby="library-roteiro" className="library-roteiro">
+          <header className="library-section-head">
+            <h2 id="library-roteiro">Roteiro de aulas</h2>
+            <p>Estude em ordem: cada aula traz teoria, aplicação e verificação, com os materiais relacionados ao final.</p>
+          </header>
+          <UpdatedStudyCollections
+            onlyCourseId={matchedCourse.id}
+            storageScope={user?.id ?? "anonymous"}
+            relatedMaterials={relatedMaterialsFor}
+          />
+        </section>
       )}
-      <div
-        id="library-tabpanel"
-        role={!lawsOnly && focused && matchedCourse ? "tabpanel" : undefined}
-        className="library-tabpanel"
-      >
-      {!lawsOnly && focused && matchedCourse && focusTab === "trilha" && (
-        <UpdatedStudyCollections onlyCourseId={matchedCourse.id} storageScope={user?.id ?? "anonymous"} />
+      <div className="space-y-4">
+      {!lawsOnly && focused && matchedCourse && !isPending && items.length > 0 && (
+        <header className="library-section-head">
+          <h2 id="library-materiais">Todos os materiais da disciplina</h2>
+          <p>Guias, resumos e leituras publicados. Use a busca para ir direto a um assunto.</p>
+        </header>
       )}
-      <div className="space-y-4" hidden={!lawsOnly && focused && !!matchedCourse && focusTab === "trilha"}>
       {isPending && signedIn ? (
         <div className="space-y-3">
           {[0, 1, 2, 3, 4].map((n) => (

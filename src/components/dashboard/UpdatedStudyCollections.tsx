@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "@tanstack/react-router";
 import { useStudyGuideProgress } from "@/lib/useStudyGuideProgress";
 import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
 import { pcAcProgramGapLessons } from "@/data/pcAcProgramGapLessons";
@@ -84,7 +85,8 @@ export const COURSE_ICONS: Record<string, LucideIcon> = {
   "lingua-portuguesa": BookOpen,
 };
 
-export function UpdatedStudyCollections({initialCourseId,storageScope="public",onlyCourseId}: {initialCourseId?: string;storageScope?: string;onlyCourseId?: string}) {
+export type RelatedMaterial = { slug: string; title: string };
+export function UpdatedStudyCollections({initialCourseId,storageScope="public",onlyCourseId,relatedMaterials}: {initialCourseId?: string;storageScope?: string;onlyCourseId?: string;relatedMaterials?: (lessonTitle: string) => RelatedMaterial[]}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
   const [query,setQuery]=React.useState("");
@@ -241,6 +243,19 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public",o
                     <p className="updated-study-collections__answer"><CheckCircle2 aria-hidden="true" />{l.answer}</p>
                   )}
                 </div>
+                {(() => {
+                  const related = relatedMaterials?.(l.title) ?? [];
+                  return related.length > 0 && (
+                    <div className="updated-study-collections__related">
+                      <p className="usc-label"><BookOpen aria-hidden="true" /> Leia também</p>
+                      <ul>
+                        {related.map((m) => (
+                          <li key={m.slug}><Link to="/dashboard/library/$slug" params={{ slug: m.slug }}>{m.title}</Link></li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })()}
                 <a href={l.source} target="_blank" rel="noopener noreferrer" className="updated-study-collections__source">
                   Conferir fonte institucional <ExternalLink aria-hidden="true" />
                 </a>
