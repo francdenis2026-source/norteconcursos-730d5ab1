@@ -45,9 +45,12 @@ As questões serão autorais, em lotes revisáveis, vinculadas a tópicos confir
 
 ## Estado atual — recontagem direta em 14/11/2026
 
-- Banco PC-AC 2026 (`curated_question_catalog`): **195 questões autorais ativas**, todas com enunciado, explicação e vínculo a tópico do Anexo III, distribuídas pelas 14 disciplinas oficiais.
-- Distribuição atual: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 9.
-- A meta consolidada do roteiro é 1.080 questões; 195 ativas representam aproximadamente 18,1% da meta. A expansão deve priorizar Penal, Processo Penal e Legislação Institucional, sem ativar itens sem revisão.
+- Banco PC-AC 2026 (`curated_question_catalog`): **201 questões autorais ativas**, todas com enunciado, explicação e vínculo a tópico do Anexo III, distribuídas pelas 14 disciplinas oficiais. O recorte contém ainda 73 questões em rascunho.
+- Distribuição atual: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
+- A meta consolidada do roteiro é 1.080 questões; 201 ativas representam aproximadamente 18,6% da meta. A expansão deve priorizar Penal, Processo Penal e Legislação Institucional, sem ativar itens sem revisão.
+- Proveniência: as 201 ativas incluem 160 questões autorais vinculadas à fonte oficial do edital e classificadas no banco como IDECAN, 10 autorais de outra fonte e 31 questões de treino autoral separadas. Nenhuma deve ser apresentada como questão oficial aplicada pela banca.
+
+- Lote de TI e Segurança da Informação (14/11/2026): criada aula própria para o item 6 do Anexo III (CID, controle de acesso, criptografia, backups e proteção de informações sensíveis), com 6 flashcards e 6 exercícios comentados; inseridas 6 questões autorais ativas no catálogo, com gabarito e explicações revisados.
 - Lote autoral 01 (14/11/2026): 30 questões novas inseridas e vinculadas ao Anexo III — 10 de Noções de Direito Administrativo, 10 de Língua Portuguesa e 10 de Raciocínio Lógico.
 - A taxonomia foi alinhada ao edital: Contabilidade + Análise Financeira estão agrupadas em **Contabilidade Geral e Análise Financeira**; itens genéricos de Administração estão em **Noções de Administração**. Estatística permanece no bloco de conhecimentos específicos, conforme o Anexo III; Matemática básica está integrada ao conteúdo de Raciocínio Lógico.
 - Questões autorais são identificadas como is_original=true e vinculadas ao edital oficial como base de conteúdo; não são apresentadas como itens oficiais aplicados pela IDECAN.
