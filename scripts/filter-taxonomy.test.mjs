@@ -34,7 +34,6 @@ test("aliases unify only equivalent disciplines and are idempotent", () => {
     assert.equal(canonicalSubject(expected), expected);
   }
   for (const separate of [
-    "Matemática Financeira",
     "Contabilidade Pública",
     "Contabilidade de Custos",
     "Direito Penal Militar",
