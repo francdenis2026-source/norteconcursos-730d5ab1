@@ -39,9 +39,9 @@ const FOOTER_Y = PAGE_H - 44;
 const TOP_SAFE = 56;
 
 const WEEKDAY_NAMES = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-/** Ordem segunda→domingo, como no cronograma em papel que serviu de modelo (colunas S T Q Q S S D). */
+/** Ordem segunda→domingo, como no cronograma em papel que serviu de modelo (colunas com o dia por extenso abreviado). */
 const GRID_DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
-const GRID_DAY_LETTER = ["D", "S", "T", "Q", "Q", "S", "S"]; // índice = weekday (0 domingo)
+const GRID_DAY_LETTER = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]; // índice = weekday (0 domingo)
 const fmtDate = (iso: string) => iso.split("-").reverse().join("/");
 
 function drawWatermark(doc: jsPDF, logo: string | null) {

@@ -56,7 +56,7 @@ function footer(doc: jsPDF, page: number, pages: number, qr: string | null) {
   doc.setDrawColor(...line); doc.line(M, H - 35, W - M, H - 35);
   doc.setFont("helvetica", "normal"); doc.setFontSize(8); doc.setTextColor(...muted);
   doc.text("Norte Concursos · norteconcursos.xyz · Desenvolvido por Franc Denis", M, H - 20);
-  doc.text(`página ${page}/${pages}`, W - M, H - 20, { align: "right" });
+  doc.text(`página ${page}/${pages}`, W - M - (qr ? 36 : 0), H - 20, { align: "right" });
   if (qr) doc.addImage(qr, "PNG", W - M - 28, H - 31, 24, 24);
 }
 
