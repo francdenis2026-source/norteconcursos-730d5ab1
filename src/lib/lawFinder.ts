@@ -3,6 +3,7 @@
 // Só organiza o que a biblioteca já publica (LEGAL_LIBRARY); não cria nem altera conteúdo jurídico.
 import { LEGAL_LIBRARY, officialLawIdentity } from "./legalLibrary";
 import { normalizeLibrarySearch, libraryLawResultTitle } from "./librarySearch";
+import { SEARCH_FILLER as FILLER, wordMatches } from "./tolerantWords";
 
 export type LawKind = "Lei" | "Decreto" | "Decreto-Lei" | "Código" | "Outro";
 export interface LawTheme {
@@ -224,44 +225,6 @@ const KIND_WORDS: Record<string, LawKind> = {
   dl: "Decreto-Lei",
   codigo: "Código",
 };
-// Palavras de frase natural ("quero a lei sobre armas") que não ajudam a achar a lei.
-const FILLER = new Set([
-  "de", "da", "do", "das", "dos", "n", "no", "numero", "num", "e", "a", "o", "as", "os", "em",
-  "na", "nas", "nos", "para", "por", "com", "sobre", "que", "qual", "quais", "como", "quero",
-  "preciso", "uma", "um", "ao", "pela", "pelo", "artigo", "art", "tema", "assunto",
-]);
-
-/** Um erro de digitação: letra a mais, a menos, trocada ou duas letras invertidas. */
-function withinOneEdit(a: string, b: string): boolean {
-  if (Math.abs(a.length - b.length) > 1) return false;
-  let i = 0;
-  while (i < a.length && i < b.length && a[i] === b[i]) i++;
-  if (i === a.length && i === b.length) return true;
-  const rest = (x: string, y: string) => x.slice(i) === y.slice(i);
-  return (
-    a.slice(i + 1) === b.slice(i + 1) || // troca
-    a.slice(i + 1) === b.slice(i) || // sobra em a
-    a.slice(i) === b.slice(i + 1) || // sobra em b
-    (a.length === b.length &&
-      (rest(a, b) || // letra trocada por outra
-        (a[i] === b[i + 1] && a[i + 1] === b[i] && a.slice(i + 2) === b.slice(i + 2)))) // duas letras invertidas
-  );
-}
-
-/** Palavra digitada casa com uma palavra do texto: igual, plural/singular, parte dela ou com um erro de digitação. */
-function wordMatches(token: string, words: string[], haystack: string): boolean {
-  if (token.length <= 3) return words.includes(token);
-  if (haystack.includes(token)) return true;
-  if (token.length < 5) return false;
-  return words.some((w) => {
-    if (w.length < 4) return false;
-    let k = 0;
-    while (k < token.length && k < w.length && token[k] === w[k]) k++;
-    // mesma raiz (arma/armas, droga/drogas) ou um erro de digitação (drgoas ≈ drogas)
-    return k >= Math.max(4, Math.min(token.length, w.length) - 1) || (w.length >= 5 && withinOneEdit(token, w));
-  });
-}
-
 export interface LawHit {
   row: LawRow;
   score: number;

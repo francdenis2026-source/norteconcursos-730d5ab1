@@ -41,6 +41,7 @@ import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
+import { looseMatch } from "@/lib/tolerantWords";
 import { canonicalSubject } from "@/lib/subjects";
 import { AreaHint } from "@/components/ui/area-hint";
 import { subjectDescription } from "@/lib/areaDescriptions";
@@ -157,7 +158,10 @@ function HubSearch({ subjects }: { subjects: DisciplineCard[] }) {
     const normalized = normalizeLibrarySearch(text);
     const list: Suggestion[] = [];
     for (const subject of subjects) {
-      if (!normalizeLibrarySearch(subject.name).includes(normalized) || !subject.hasContent)
+      if (
+        !(normalizeLibrarySearch(subject.name).includes(normalized) || looseMatch(subject.name, text)) ||
+        !subject.hasContent
+      )
         continue;
       list.push({
         key: `d:${subject.name}`,

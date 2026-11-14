@@ -68,3 +68,11 @@ test("plural/singular, one typo and natural phrases still find the law; partial 
   assert.deepEqual(searchLaws("zzzxxyy qqqwww"), []);
   assert.ok(!searchLaws("drogas")[0].approx);
 });
+
+import { looseMatch } from "../src/lib/tolerantWords.ts";
+test("looseMatch tolerates plural, one typo and natural phrases, but not unrelated words", () => {
+  assert.ok(looseMatch("Estatística descritiva e probabilidade", "estatisticas"));
+  assert.ok(looseMatch("Concordância verbal e nominal", "concordancia vebral"));
+  assert.ok(looseMatch("Regência e crase", "quero estudar crase"));
+  assert.ok(!looseMatch("Regência e crase", "geometria"));
+});

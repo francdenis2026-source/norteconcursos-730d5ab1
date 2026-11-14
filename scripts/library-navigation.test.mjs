@@ -207,7 +207,7 @@ test('The course screen explicitly reports no matches without leaving the previo
 });
 
 const searchScope=load('src/lib/librarySearchScope.ts',{
- './libraryOrganization':organization,'./legalLibrary':laws,'./filterTaxonomy':sharedTaxonomy,'./librarySearch':courseSearchLibrary,
+ './libraryOrganization':organization,'./legalLibrary':laws,'./filterTaxonomy':sharedTaxonomy,'./librarySearch':courseSearchLibrary,'./tolerantWords':load('src/lib/tolerantWords.ts'),
 });
 const contentModule = overrides => load('src/lib/contentSearch.ts',{
  '@/integrations/supabase/client':{supabase:{}},'./legalCourseSearch':courseSearch,'./librarySearch':courseSearchLibrary,...overrides,

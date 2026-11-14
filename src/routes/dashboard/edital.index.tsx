@@ -11,6 +11,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { canonicalSubject } from "@/lib/subjects";
+import { looseMatch } from "@/lib/tolerantWords";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
@@ -248,7 +249,7 @@ function EditalPage() {
     (t) =>
       (discipline === "all" || canonicalSubject(t.discipline) === discipline) &&
       (progressFilter === "all" || (progressFilter === "done" ? completed[t.id] : !completed[t.id])) &&
-      (!search || fold(`${t.discipline} ${t.topic_text}`).includes(fold(search))),
+      (!search || fold(`${t.discipline} ${t.topic_text}`).includes(fold(search)) || looseMatch(`${t.discipline} ${t.topic_text}`, search)),
   );
   const completedCount = topics.filter((topic) => completed[topic.id]).length;
   const completionPercent = topics.length ? Math.round((completedCount / topics.length) * 100) : 0;
