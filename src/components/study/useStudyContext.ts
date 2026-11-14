@@ -11,9 +11,10 @@ import {
   type SubjectStat,
 } from "@/lib/studyEngine";
 import { topicsFor } from "@/data/studyTopics";
+import { canonicalSubject } from "@/lib/subjects";
 
 export const ALL_SUBJECTS = [
-  "Língua Portuguesa", "Raciocínio Lógico", "Matemática", "Estatística", "Informática",
+  "Língua Portuguesa", "Matemática e Raciocínio Lógico", "Informática",
   "Direito Constitucional", "Direito Administrativo", "Direito Penal", "Direito Processual Penal",
   "Legislação Especial", "Legislação de Trânsito", "Direitos Humanos", "Contabilidade",
   "Atualidades", "Ética", "Medicina Legal",
@@ -100,9 +101,14 @@ export function useStudyContext() {
   );
   // Disciplinas do plano primeiro; as demais da plataforma ficam disponíveis para estudo livre.
   const subjects = React.useMemo(() => {
-    const own = plan ? plan.subjects.map((s) => s.name) : career.subjects.map((s) => s.name);
-    const seen = new Set(own.map(norm));
-    return [...own, ...ALL_SUBJECTS.filter((n) => !seen.has(norm(n)) && topicsFor(n).length)];
+    const own = (plan ? plan.subjects.map((s) => s.name) : career.subjects.map((s) => s.name))
+      .map(canonicalSubject);
+    const normalizedOwn = [...new Set(own)];
+    const seen = new Set(normalizedOwn.map(norm));
+    return [...normalizedOwn, ...ALL_SUBJECTS
+      .map(canonicalSubject)
+      .filter((n) => !seen.has(norm(n)) && topicsFor(n).length)
+      .filter((n, index, all) => all.indexOf(n) === index)];
   }, [plan, career]);
   // Matéria mais urgente: pior aproveitamento (com amostra mínima); sem dados, a de maior peso no tempo.
   const suggested = React.useMemo(() => {
