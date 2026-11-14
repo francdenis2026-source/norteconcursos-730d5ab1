@@ -34,3 +34,31 @@ test('CFC approval accepts only the reviewed primary accounting PDFs',()=>{
 test('LC68 URL approval is restricted to the checked public SAPL compilation',()=>{
  const u='https://sapl.al.ro.leg.br/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx';assert.equal(isOfficialUrl(u),true);for(const bad of[u+'?old=1',u.replace('https:','http:'),u.replace('sapl.al.ro.leg.br','sapl.al.ro.leg.br.evil.test'),'https://sapl.al.ro.leg.br/norma/3785'])assert.equal(isOfficialUrl(bad),false);
 });
+
+test('Acre legal references accept only reviewed official legislation and the PC-AC notice', () => {
+  const approved = [
+    'https://legis.ac.gov.br/detalhar/674-1',
+    'https://legis.ac.gov.br/detalhar/6874',
+    'https://legis.ac.gov.br/detalhar/417-0',
+    'https://legis.ac.gov.br/detalhar/6864-1',
+    'https://legis.ac.gov.br/detalhar/110',
+    'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9836',
+    'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9611',
+    'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/5556',
+    'https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
+    'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html',
+    'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html',
+  ];
+  for (const url of approved) assert.equal(isOfficialUrl(url), true, url);
+  const rejected = [
+    'http://legis.ac.gov.br/detalhar/674-1',
+    'https://legis.ac.gov.br/detalhar/674-1?next=evil',
+    'https://legis.ac.gov.br/detalhar/9999',
+    'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html?x=1',
+    'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html?x=1',
+    'https://legis.ac.gov.br.evil.test/detalhar/674-1',
+    'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9999',
+    'https://sead.ac.gov.br/other.pdf',
+  ];
+  for (const url of rejected) assert.equal(isOfficialUrl(url), false, url);
+});

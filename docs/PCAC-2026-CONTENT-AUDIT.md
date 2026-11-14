@@ -114,3 +114,20 @@ Consulta direta ao Supabase após as migrações PC-AC:
 - Os nove materiais de Penal/Processual Penal possuem agora fontes estruturadas; a revisão jurídica formal continua pendente.
 
 A contagem de materiais e itens de revisão não substitui a validação pedagógica. Permanecem obrigatórias as revisões de correspondência linha a linha com o Anexo III, a conferência jurídica artigo por artigo e a revisão dos gabaritos e explicações.
+
+
+### Correção de fundamentos constitucionais e institucionais — 14/11/2026
+
+A conferência das fontes oficiais identificou nove questões autorais do lote 02 com fundamentos genéricos ou incorretos. Foram corrigidos no Supabase os registros e versionada a migração idempotente `20261114235000_correct_pcac_constitution_question_sources.sql`:
+
+- `NC-PCAC-CONST-002`: CF, art. 5º, LXVIII (habeas corpus).
+- `NC-PCAC-CONST-003`: CF, art. 5º, LXIX (mandado de segurança individual).
+- `NC-PCAC-CONST-004`: CF, art. 144, caput (segurança pública).
+- `NC-PCAC-CONST-005`: Constituição do Estado do Acre, art. 131, redação da EC estadual nº 63/2022.
+- `NC-PCAC-LEG-001`: Lei nº 14.735/2023 (Lei Orgânica Nacional das Polícias Civis).
+- `NC-PCAC-LEG-002`: LC estadual nº 129/2004 e alteração da LC nº 526/2026.
+- `NC-PCAC-LEG-003`: LC estadual nº 496/2025, art. 1º.
+- `NC-PCAC-LEG-004`: LC estadual nº 526/2026, art. 1º, que dá nova redação ao art. 64 da LC nº 129/2004.
+- `NC-PCAC-LEG-005`: Lei estadual nº 2.250/2009, art. 1º, e LC estadual nº 39/1993.
+
+Os enunciados, gabaritos e status foram preservados. A conferência foi feita contra o Planalto e o portal oficial de legislação do Estado do Acre. Fontes: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm ; https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm ; https://legis.ac.gov.br/detalhar_constituicao ; https://legis.ac.gov.br/detalhar_emendas/64 ; https://legis.ac.gov.br/detalhar/674 ; https://legis.ac.gov.br/detalhar/6874 ; https://legis.ac.gov.br/detalhar_imprimir/6527 ; https://legis.ac.gov.br/detalhar/417 ; https://legis.ac.gov.br/detalhar/110.
