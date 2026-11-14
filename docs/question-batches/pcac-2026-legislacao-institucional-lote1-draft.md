@@ -208,3 +208,48 @@ E) extinguiu o regime estatutário dos servidores estaduais.
 - Questão 12 limitada ao comando expresso da LC nº 525/2026.
 - A LC nº 129/2004 e a LC nº 526/2026 foram identificadas como normas centrais do edital, mas seus dispositivos específicos devem ser transcritos e confrontados com a consolidação estadual antes de criar itens mais detalhados. O edital confirma, entre outros pontos, que a lotação inicial observa a classificação no curso de formação, com preferência por municípios do interior, nos termos do art. 67, § 13.
 - Antes de ativar: revisar a LC nº 129/2004 consolidada após LC nº 496/2025 e LC nº 526/2026; revisar LC nº 39/1993 após LC nº 525/2026; conferir alterações do PCCR; associar a versão normativa e a proveniência.
+
+## Questão 13 — Lotação inicial e classificação no curso de formação
+**Dificuldade:** média | **Assunto:** LC Estadual nº 129/2004, art. 67, § 13, conforme edital
+
+Segundo o subitem 1.2.2 do Edital nº 001 SEAD/PCAC, de 05/11/2026, a lotação inicial do Oficial Investigador observará:
+
+A) exclusivamente a escolha pessoal do candidato, independentemente da classificação.  
+B) a ordem de classificação no curso específico de formação policial, com preferência por municípios do interior do Estado.  
+C) sorteio público entre todos os aprovados, sem relação com o curso de formação.  
+D) somente o tempo de serviço público anterior.  
+E) indicação obrigatória do município pela banca examinadora.
+
+**Gabarito:** B.  
+**Explicação:** O edital explicita que a lotação inicial observa exclusivamente a ordem de classificação no curso específico de formação policial, com preferência por municípios do interior, nos termos do art. 67, § 13, da LC nº 129/2004.  
+**Fundamento:** Edital nº 001 SEAD/PCAC, subitem 1.2.2; LC Estadual nº 129/2004, art. 67, § 13, com redação vigente na publicação do edital.
+
+## Questão 14 — Nomenclatura dos cargos
+**Dificuldade:** média | **Assunto:** LC Estadual nº 129/2004, art. 43, com alteração da LC nº 496/2025
+
+O edital PC-AC 2026 informa que a nomenclatura dos cargos segue o art. 43 da LC Estadual nº 129/2004, com redação dada pela LC nº 496/2025. Essa informação significa que:
+
+A) a nomenclatura do cargo deve ser extraída de editais antigos, mesmo quando divergente da lei atual.  
+B) a nomenclatura aplicável é a prevista na redação legal vigente indicada pelo edital.  
+C) a banca pode criar livremente novas denominações sem previsão legal.  
+D) os cargos são definidos exclusivamente pelo plano de cargos federal.  
+E) a nomenclatura do cargo não possui relevância para o enquadramento do concurso.
+
+**Gabarito:** B.  
+**Explicação:** O subitem 1.2.5 remete expressamente ao art. 43 da LC nº 129/2004, com redação da LC nº 496/2025. O estudo deve acompanhar a versão normativa que o edital expressamente adota, e não denominações históricas de concursos anteriores.  
+**Fundamento:** Edital nº 001 SEAD/PCAC, subitem 1.2.5; LC Estadual nº 129/2004, art. 43; LC Estadual nº 496/2025.
+
+## Questão 15 — Data de corte legislativa do edital
+**Dificuldade:** média | **Assunto:** edital, subitens 11.5.4 e 11.5.5
+
+Uma alteração legislativa entrou em vigor depois da publicação do Edital nº 001 SEAD/PCAC, de 05/11/2026. Segundo a regra expressa do edital, essa alteração:
+
+A) será sempre cobrada, ainda que posterior à publicação.  
+B) não será objeto de avaliação, conforme o subitem 11.5.5.  
+C) revoga automaticamente o conteúdo programático.  
+D) será cobrada somente se o candidato solicitar.  
+E) substitui o texto legal vigente na data da inscrição.
+
+**Gabarito:** B.  
+**Explicação:** O edital prevê que alterações legislativas em vigor antes da publicação podem ser cobradas, mesmo sem menção expressa no Anexo III; por outro lado, alterações posteriores à publicação não serão objeto de avaliação. A data de corte é a publicação do edital, em 05/11/2026.  
+**Fundamento:** Edital nº 001 SEAD/PCAC, subitens 11.5.4 e 11.5.5.
