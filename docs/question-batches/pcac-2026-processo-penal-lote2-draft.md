@@ -1,6 +1,6 @@
 # PC-AC 2026 — Processo Penal — Lote autoral 2 (rascunho)
 
-**Status:** rascunho para revisão didática/jurídica; não inserido nem ativado no banco.  
+**Status:** revisado em primeira rodada; aguardando validação jurídica final e integração; não inserido nem ativado no banco.  
 **Cargo:** Oficial Investigador de Polícia.  
 **Disciplina:** Noções de Direito Penal e Processual Penal.  
 **Formato:** múltipla escolha, cinco alternativas e uma correta.  
@@ -111,7 +111,7 @@ E) permitida após comunicação à vítima.
 **Subassunto:** notícia de novas provas — art. 18  
 **Dificuldade:** média
 
-Após o arquivamento judicial do inquérito por falta de base para a denúncia, a polícia recebe notícia concreta de outras provas relacionadas ao fato. Nos termos do art. 18 do CPP, a autoridade policial:
+Depois de determinado o arquivamento do inquérito por falta de base para a persecução penal, surge notícia concreta de outras provas relacionadas ao fato. Nos termos do art. 18 do CPP, a autoridade policial:
 
 A) fica definitivamente impedida de realizar qualquer nova diligência.  
 B) poderá proceder a novas pesquisas se tiver notícia de outras provas.  
@@ -120,7 +120,7 @@ D) poderá reabrir o inquérito sem qualquer notícia de prova nova.
 E) somente poderá agir mediante autorização da vítima, em todos os crimes.
 
 **Gabarito:** B  
-**Explicação:** O art. 18 admite novas pesquisas pela autoridade policial quando, após o arquivamento judicial por falta de base para a denúncia, houver notícia de outras provas.  
+**Explicação:** O art. 18 admite novas pesquisas pela autoridade policial quando houver notícia de outras provas após o arquivamento. A questão não pressupõe que o arquivamento seja necessariamente ordenado pelo juiz: o procedimento de arquivamento deve observar o art. 28 do CPP e a interpretação vinculante do STF.  
 **Fundamento:** CPP, art. 18.
 
 ## Questão 7 — Prova judicial e elementos informativos
@@ -183,7 +183,7 @@ E) começa somente quando o vestígio é apresentado em juízo.
 **Subassunto:** nomeação — art. 276  
 **Dificuldade:** fácil
 
-Durante a produção de prova pericial, a defesa pretende escolher diretamente o perito oficial que realizará o exame. Segundo o art. 276 do CPP:
+Durante a produção de prova pericial, a defesa pretende escolher diretamente o perito oficial nomeado para realizar o exame. Segundo o art. 276 do CPP:
 
 A) as partes escolhem o perito por consenso.  
 B) somente a defesa pode indicar o perito.  
@@ -192,7 +192,7 @@ D) o investigado deve nomear um perito para validar o laudo.
 E) a nomeação cabe exclusivamente à vítima.
 
 **Gabarito:** C  
-**Explicação:** O art. 276 dispõe que as partes não intervirão na nomeação do perito. Isso não elimina as faculdades processuais de acompanhamento técnico previstas em outros dispositivos.  
+**Explicação:** O art. 276 dispõe que as partes não intervirão na nomeação do perito. A regra não deve ser confundida com a possibilidade de indicação de assistente técnico, nos termos do art. 159, §§ 3º e seguintes, do CPP.  
 **Fundamento:** CPP, art. 276.
 
 ## Questão 11 — Aceitação do encargo pericial
