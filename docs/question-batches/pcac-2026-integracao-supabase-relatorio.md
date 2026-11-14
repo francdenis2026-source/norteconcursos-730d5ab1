@@ -32,6 +32,24 @@ Foi corrigido o vínculo de escopo dos 72 registros, sem alterar o enunciado, ga
 
 A tabela tinha 44 registros com `legal_review_required=true`; a verificação de `legal_audit_completed` e `law_version_checked_at` confirmou 44/44 com auditoria concluída e data normativa. Portanto, esse sinalizador, isoladamente, não significa revisão pendente.
 
+### Auditoria aprofundada do banco de questões — atualização de 14/11/2026
+
+A recontagem direta do `curated_question_catalog` encontrou 405 registros, com 405 chaves externas distintas e nenhuma chave nula:
+
+- **195 ativos do ciclo 2026:** 154 itens de treino associados ao perfil IDECAN, 31 do treino autoral Norte Concursos e 10 autorais adicionais.
+- **73 em rascunho:** 39 do treino autoral Norte Concursos e 34 do lote IDECAN. Permanecem sem publicação.
+- **120 questões históricas IBADE 2017:** preservadas como acervo do concurso anterior.
+- **17 questões autorais movidas para `under_review`:** estavam incorretamente cadastradas como se fossem do concurso PC-AC 2017, embora a fonte associada fosse a Lei Federal nº 8.112/1990 e a banca estivesse identificada como AUTORAL. Foram retiradas da área ativa, sem exclusão dos registros, para corrigir a atribuição e avaliar aderência à legislação estadual do Acre.
+
+#### Correções de qualidade executadas
+
+1. **104 questões IDECAN ativas** estavam sem `subtopic` e/ou `tested_topic`. Foram completados os 39 casos com subassunto explícito no enunciado e classificados individualmente os outros 65, preservando o vínculo de disciplina.
+2. **23 explicações curtas** foram ampliadas para justificativas didáticas, cobrindo Arquivologia (8), Estatística (1), Noções de Administração (10) e Raciocínio Lógico (4). As explicações atualizadas ficaram entre 208 e 331 caracteres.
+3. Verificação posterior dos registros do ciclo 2026: **zero** sem subassunto, zero sem tópico testado, zero sem gabarito válido, zero sem vínculo de edital e zero com explicação abaixo de 60 caracteres.
+4. A verificação das 405 chaves externas não encontrou chaves duplicadas. Isso não substitui uma futura análise de duplicidade semântica dos enunciados.
+
+A quantidade de **195 questões ativas do ciclo 2026** permanece igual à contagem anterior do roteiro de 1.000 questões; os 120 itens IBADE de 2017 são acervo histórico e não entram nessa meta.
+
 ### Questões autorais e banco de questões
 
 - `curated_question_catalog`: 73 questões autorais, todas `draft`, com gabarito A–E, explicação, tópico do edital e fundamento estruturado. Nenhuma liberada ao aluno.
