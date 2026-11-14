@@ -4,6 +4,7 @@ import {
   ACRE_CURRENT_IBGE_REGIONS,
   ACRE_EDITAL_REGIONS,
   ACRE_GEOGRAPHY_SOURCES,
+  ACRE_GEOGRAPHY_FACTS,
   ACRE_MESOREGIONS,
   ACRE_MICROREGIONS,
 } from "@/data/acreGeography";
@@ -235,6 +236,33 @@ export function AcreGeographyStudy() {
         </a>
       </section>
       <AcreIbgeDivision />
+
+      <section className="acre-geo__current" aria-labelledby="acre-geo-facts-title">
+        <div className="acre-geo__section-title">
+          <Info size={17} />
+          <h3 id="acre-geo-facts-title">Geografia física, fuso horário, áreas protegidas e transportes</h3>
+        </div>
+        <div className="acre-geo__current-grid">
+          {ACRE_GEOGRAPHY_FACTS.map((fact) => (
+            <article key={fact.id}>
+              <span>{fact.reference}</span>
+              <h4>{fact.title}</h4>
+              <ul>
+                {fact.points.map((point) => <li key={point}>{point}</li>)}
+              </ul>
+              {fact.caution ? <p className="acre-geo__fact-caution"><strong>Atenção:</strong> {fact.caution}</p> : null}
+              <a href={fact.source.url} target="_blank" rel="noreferrer">
+                {fact.source.label} <ExternalLink size={12} />
+              </a>
+              {fact.alternatives?.map((source) => (
+                <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
+                  {source.label} <ExternalLink size={12} />
+                </a>
+              ))}
+            </article>
+          ))}
+        </div>
+      </section>
 
       <details className="acre-geo__edital">
         <summary>Ver as regionais de desenvolvimento usadas no edital PC-AC 2026</summary>
