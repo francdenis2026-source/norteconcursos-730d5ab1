@@ -1,4 +1,6 @@
 import "@/styles/library-layout.css";
+import { AreaHint } from "@/components/ui/area-hint";
+import { subjectDescription } from "@/lib/areaDescriptions";
 import "@/styles/library-discipline-fit.css";
 import "@/styles/student-library-media-workspaces.css";
 import { TRACKS } from "@/data/tracks";
@@ -643,8 +645,8 @@ function UnifiedSubjectGrid({
         {subjects.map(({ name, materialsCount, course }) => {
           const Icon = (course && COURSE_ICONS[course.id]) || Library;
           return (
+            <AreaHint key={name} title={name} description={subjectDescription(name)}>
             <button
-              key={name}
               type="button"
               onClick={() => onSelect(name)}
               className={`library-subject__card library-tone-${libraryTone(name)} flex flex-col items-start gap-2 rounded-xl border bg-card p-4 text-left transition hover:border-primary`}
@@ -666,6 +668,7 @@ function UnifiedSubjectGrid({
                 )}
               </span>
             </button>
+            </AreaHint>
           );
         })}
       </div>
@@ -716,7 +719,9 @@ function DisciplineSection({
     >
       <summary className="library-subject__heading">
         <div className="min-w-0 flex-1">
-          <h2 className="library-discipline-title">{name}</h2>
+          <AreaHint side="top" align="start" description={subjectDescription(name)}>
+            <h2 className="library-discipline-title">{name}</h2>
+          </AreaHint>
           <p className="text-xs text-muted-foreground">
             {ordered.length} {ordered.length === 1 ? "material" : "materiais"} · {done} lido
             {done === 1 ? "" : "s"}
@@ -748,7 +753,14 @@ function DisciplineSection({
         {groups.map((group) => (
           <div key={group.label} className="space-y-2">
             <h3 className="library-topic-heading">
-              <span>{group.label}</span>
+              <AreaHint
+                side="top"
+                align="start"
+                title={group.label}
+                description={`Começa por “${group.items[0]!.title}”. ${group.items.filter((item) => read.has(item.slug)).length} de ${group.items.length} lidos.`}
+              >
+                <span>{group.label}</span>
+              </AreaHint>
               <span>
                 {group.items.length} {group.items.length === 1 ? "material" : "materiais"}
               </span>

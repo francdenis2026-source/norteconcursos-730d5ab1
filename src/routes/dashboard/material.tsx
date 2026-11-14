@@ -41,6 +41,8 @@ import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { canonicalSubject } from "@/lib/subjects";
+import { AreaHint } from "@/components/ui/area-hint";
+import { subjectDescription } from "@/lib/areaDescriptions";
 import "@/styles/study-area-compact.css";
 import "@/styles/student-area-kit.css";
 
@@ -336,6 +338,7 @@ function MaterialHub() {
               const Icon = SUBJECT_ICONS[entry.icon];
               return (
                 <li key={entry.name}>
+                  <AreaHint title={entry.name} description={subjectDescription(entry.name)}>
                   <Link to="/dashboard/disciplinas" search={{ d: entry.name }} className="ak-tile">
                     <span className="ak-tile__icon">
                       <Icon aria-hidden="true" />
@@ -343,6 +346,7 @@ function MaterialHub() {
                     <strong>{entry.name}</strong>
                     <span>{summary(entry)}</span>
                   </Link>
+                  </AreaHint>
                 </li>
               );
             })}

@@ -49,6 +49,8 @@ import "@/styles/study-area-compact.css";
 import { disciplineTheme } from "@/lib/disciplineTheme";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
+import { AreaHint } from "@/components/ui/area-hint";
+import { subjectDescription } from "@/lib/areaDescriptions";
 import { LegalMapExplorer } from "@/components/dashboard/LegalMapExplorer";
 import { legalMapFor } from "@/data/legalMaps";
 
@@ -345,6 +347,10 @@ function DisciplineIndex({
             );
             return (
               <li key={card.name}>
+                <AreaHint
+                  title={card.name}
+                  description={subjectDescription(card.name) ?? disciplinePresentation(card.name).description}
+                >
                 {card.hasContent ? (
                   <button
                     type="button"
@@ -359,6 +365,7 @@ function DisciplineIndex({
                     {body}
                   </div>
                 )}
+                </AreaHint>
               </li>
             );
           })}
@@ -729,6 +736,7 @@ function DisciplineSyllabusPanel({
                 />
                 <span>{topic.topic_text}</span>
               </label>
+              <AreaHint side="left" description="Abrir este assunto do edital.">
               <Link
                 to="/dashboard/edital/$topicId"
                 params={{ topicId: topic.id }}
@@ -736,6 +744,7 @@ function DisciplineSyllabusPanel({
               >
                 <ChevronRight aria-hidden="true" size={17} />
               </Link>
+              </AreaHint>
             </li>
           ))}
         </ul>

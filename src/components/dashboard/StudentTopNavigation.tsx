@@ -24,6 +24,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import type { NavigationItem } from "./DashboardNavigation";
 import { MockService } from "@/services/mockService";
+import { AreaHint } from "@/components/ui/area-hint";
+import { navigationDetails } from "@/lib/navigationSearch";
 import { hasActiveEdital } from "@/lib/cronogramaGuard";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { ACTIVE_STUDY_EDITION_EVENT, readActiveStudyEdition, type ActiveStudyEdition } from "@/lib/activeStudyEdition";
@@ -41,38 +43,42 @@ const sections: {
     groups: ["Central de Estudos", "Material didático"],
     label: "Estudos",
     icon: BookOpenText,
-    description: "Ferramentas, biblioteca, leis e conteúdos",
+    description: "Disciplinas, leis, videoaulas, sala de estudo e ferramentas de apoio.",
     tone: "sky",
   },
   {
     groups: ["Questões", "Provas"],
     label: "Treinos",
     icon: ClipboardList,
-    description: "Questões, simulados, flashcards e provas",
+    description: "Treino de questões, revisão de erros, flashcards, simulados e provas.",
     tone: "emerald",
   },
   {
     groups: ["Desempenho"],
     label: "Desempenho",
     icon: ChartNoAxesCombined,
-    description: "Evolução, análises, histórico e conquistas",
+    description: "Sua evolução, histórico de estudos, ranking e medalhas.",
     tone: "teal",
   },
   {
     groups: ["ENEM"],
     label: "ENEM",
     icon: GraduationCap,
-    description: "Preparação para o ENEM",
+    description: "Questões e simulados organizados para o ENEM.",
     tone: "indigo",
   },
   {
     groups: ["Conta"],
     label: "Conta",
     icon: SlidersHorizontal,
-    description: "Perfil e assinatura",
+    description: "Seus dados, preferências e plano de assinatura.",
     tone: "slate",
   },
 ];
+
+const describe = (item: NavigationItem) => navigationDetails(item).description;
+const listLabels = (labels: string[]) =>
+  new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(labels);
 
 export function StudentTopNavigation({
   items,
@@ -142,12 +148,15 @@ export function StudentTopNavigation({
       </Link>
       <div className="student-top-navigation__links" data-contextual={!isHome}>
         {studyEdition && (
+          <AreaHint
+            title="Edital ativo"
+            description={studyEdition.contestName + " · " + studyEdition.roleName + ". Abre o programa com as disciplinas e os assuntos deste edital."}
+          >
           <Link
             to="/dashboard/edital"
             search={{ edition: studyEdition.id }}
             className="student-top-navigation__active-edition"
             aria-label={"Edital ativo: " + studyEdition.contestName + ", " + studyEdition.roleName + ". Abrir programa."}
-            title={studyEdition.contestName + " · " + studyEdition.roleName}
           >
             <span className="student-top-navigation__active-edition-dot" aria-hidden="true" />
             <span className="student-top-navigation__active-edition-copy">
@@ -155,8 +164,10 @@ export function StudentTopNavigation({
               <strong>{studyEdition.contestName} · {studyEdition.roleName}</strong>
             </span>
           </Link>
+          </AreaHint>
         )}
         {!isHome && (
+          <AreaHint title="Área principal" description="Volte ao painel com suas prioridades e o resumo da preparação.">
           <Link
             to="/dashboard"
             className="student-top-navigation__trigger student-top-navigation__home"
@@ -168,6 +179,7 @@ export function StudentTopNavigation({
             </span>
             <span className="student-top-navigation__label">Área principal</span>
           </Link>
+          </AreaHint>
         )}
         {isHome && (
           <>
@@ -184,6 +196,7 @@ export function StudentTopNavigation({
                 <span className="student-top-navigation__label">Meu plano</span>
               </button>
             ) : (
+              <AreaHint title="Meu plano" description="Defina sua disponibilidade e receba a distribuição da semana.">
               <Link
                 to="/dashboard/study-coach"
                 className="student-top-navigation__trigger"
@@ -194,7 +207,9 @@ export function StudentTopNavigation({
                 <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Sparkles size={18} /></span>
                 <span className="student-top-navigation__label">Meu plano</span>
               </Link>
+              </AreaHint>
             )}
+            <AreaHint title="Agenda de estudos" description="Distribua o conteúdo do edital nos dias e horários da sua rotina.">
             <Link
               to="/dashboard/cronograma"
               className="student-top-navigation__trigger"
@@ -207,6 +222,7 @@ export function StudentTopNavigation({
               </span>
               <span className="student-top-navigation__label">Agenda de estudos</span>
             </Link>
+            </AreaHint>
           </>
         )}
         {isHome || (!section && !isPlanningPage)
@@ -218,6 +234,7 @@ export function StudentTopNavigation({
               const Icon = candidate.icon;
               return (
                 <DropdownMenu key={candidate.label}>
+                  <AreaHint title={candidate.label} description={candidate.description}>
                   <DropdownMenuTrigger asChild>
                     <button
                       type="button"
@@ -237,6 +254,7 @@ export function StudentTopNavigation({
                       />
                     </button>
                   </DropdownMenuTrigger>
+                  </AreaHint>
                   <DropdownMenuContent
                     align="start"
                     sideOffset={10}
@@ -250,12 +268,14 @@ export function StudentTopNavigation({
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     {groupEntries.map((item) => (
-                      <DropdownMenuItem key={navigationKey(item)} asChild>
-                        <Link to={item.href} search={item.search ?? {}}>
-                          <item.icon size={17} aria-hidden="true" />
-                          <span>{item.label}</span>
-                        </Link>
-                      </DropdownMenuItem>
+                      <AreaHint key={navigationKey(item)} side="right" align="start" description={describe(item)}>
+                        <DropdownMenuItem asChild>
+                          <Link to={item.href} search={item.search ?? {}}>
+                            <item.icon size={17} aria-hidden="true" />
+                            <span>{item.label}</span>
+                          </Link>
+                        </DropdownMenuItem>
+                      </AreaHint>
                     ))}
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -269,21 +289,21 @@ export function StudentTopNavigation({
                 if (!item) return null;
                 const selected = navigationKey(current!) === navigationKey(item);
                 return (
+                  <AreaHint key={group} title={item.label} description={describe(item)}>
                   <Link
-                    key={group}
                     to={item.href}
                     search={item.search ?? {}}
                     className="student-top-navigation__trigger student-top-navigation__submenu"
                     data-tone={section?.tone}
                     data-active={selected}
                     aria-current={selected ? "page" : undefined}
-                    title={item.label}
                   >
                     <span className="student-top-navigation__icon-wrap" aria-hidden="true">
                       <item.icon size={17} strokeWidth={2.1} />
                     </span>
                     <span className="student-top-navigation__label">{item.label}</span>
                   </Link>
+                  </AreaHint>
                 );
               }
               const groupActive = groupEntries.some(
@@ -293,6 +313,7 @@ export function StudentTopNavigation({
               if (!GroupIcon) return null;
               return (
                 <DropdownMenu key={group}>
+                  <AreaHint title={group} description={listLabels(groupEntries.map((item) => item.label)) + "."}>
                   <DropdownMenuTrigger asChild>
                     <button
                       type="button"
@@ -313,6 +334,7 @@ export function StudentTopNavigation({
                       />
                     </button>
                   </DropdownMenuTrigger>
+                  </AreaHint>
                   <DropdownMenuContent
                     align="start"
                     sideOffset={10}
@@ -325,16 +347,18 @@ export function StudentTopNavigation({
                     {groupEntries.map((item) => {
                       const selected = navigationKey(current!) === navigationKey(item);
                       return (
-                        <DropdownMenuItem key={navigationKey(item)} asChild data-current={selected}>
-                          <Link
-                            to={item.href}
-                            search={item.search ?? {}}
-                            aria-current={selected ? "page" : undefined}
-                          >
-                            <item.icon size={17} aria-hidden="true" />
-                            <span>{item.label}</span>
-                          </Link>
-                        </DropdownMenuItem>
+                        <AreaHint key={navigationKey(item)} side="right" align="start" description={describe(item)}>
+                          <DropdownMenuItem asChild data-current={selected}>
+                            <Link
+                              to={item.href}
+                              search={item.search ?? {}}
+                              aria-current={selected ? "page" : undefined}
+                            >
+                              <item.icon size={17} aria-hidden="true" />
+                              <span>{item.label}</span>
+                            </Link>
+                          </DropdownMenuItem>
+                        </AreaHint>
                       );
                     })}
                   </DropdownMenuContent>
