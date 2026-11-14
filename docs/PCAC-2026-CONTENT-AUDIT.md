@@ -15,7 +15,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Estatística: 10 materiais, 50 flashcards e 50 questões.
 - Língua Portuguesa: 13 materiais, 65 flashcards e 65 questões.
 - Raciocínio Lógico: 12 materiais, 60 flashcards e 60 questões.
-- Noções de Informática: 3 materiais, 15 flashcards e 15 questões.
+- Noções de Informática: 10 materiais, 50 flashcards e 50 questões.
 - Realidade do Estado do Acre: 3 materiais, 15 flashcards e 15 questões.
 - Noções de Direito Administrativo: 8 materiais, 40 flashcards e 40 questões.
 - Noções de Direito Constitucional: 3 materiais, 15 flashcards e 15 questões.
@@ -33,8 +33,15 @@ Os totais são inventário de registros, não validação pedagógica nem prova 
 2. LC nº 39/1993: disposições preliminares, provimento, jornada e vacância.
 3. LC nº 39/1993: acumulação, penalidades, prescrição, sindicância, afastamento cautelar e PAD.
 4. LC nº 39/1993: licença-prêmio, impedimentos e requerimento.
+5. Word/Writer: estilos, documentos extensos, revisão e proteção.
+6. Excel/Calc: fórmulas, referências, filtros, validação, tabelas dinâmicas e gráficos.
+7. PowerPoint/Impress: slide mestre, animações, transições e integração.
+8. Internet, intranet, HTTPS, navegadores e avaliação de fontes.
+9. Correio eletrônico: SMTP, POP3, IMAP, phishing e proteção de dados.
+10. Computação em nuvem, compartilhamento, coautoria e gestão de permissões.
+11. Sistemas de informação, autenticação, autorização, auditoria, transparência e proteção de dados.
 
-Os quatro registros usam slugs idempotentes e foram gravados como active, cada um com resumo, flashcards e quiz. Devem ser incluídos em uma migração/seed versionada para que o conteúdo possa ser reproduzido em outro ambiente; a gravação direta no banco não substitui versionamento.
+Os onze registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`.
 
 ## Gaps e validações obrigatórias
 
@@ -47,7 +54,7 @@ Os quatro registros usam slugs idempotentes e foram gravados como active, cada u
 ### Conhecimentos básicos
 - Português: 13 materiais para 17 itens do Anexo III; mapear explicitamente cada um dos 17 itens e criar aulas para qualquer item sem cobertura.
 - Raciocínio Lógico: 12 materiais para 15 itens; verificar se cada item tem aula e exercícios próprios, especialmente relações de ordem/equivalência, PA/PG, probabilidades e interpretação de gráficos.
-- Informática: 3 materiais para 10 blocos; dividir e conferir Windows 11/Ubuntu, Word/Writer, Excel/Calc, PowerPoint/Impress, navegadores, e-mail, nuvem/colaboração, fundamentos de SI e transparência/proteção de dados.
+- Informática: agora há 10 materiais para 10 blocos; conferir item a item a profundidade e a correspondência dos três materiais iniciais e dos sete complementares, especialmente funções de planilhas, protocolos, navegadores, e segurança da informação.
 - Realidade do Acre: 3 materiais; verificar todos os tópicos do edital (história, Tratado de Ayacucho, geografia, fuso, municípios/regionais, bacias, relevo, clima, vegetação, unidades de conservação, povos indígenas inclusive isolados, Constituição estadual, Poderes, indicadores, economia, transportes, fronteira e segurança pública). O arquivo src/data/acreStudyContent.ts tem conteúdo por eixos e requer auditoria de todos os itens e das datas das fontes.
 
 ### Conhecimentos jurídicos e específicos
