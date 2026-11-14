@@ -162,7 +162,6 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       alternatives: [{ label: "KfW — REDD Early Movers Acre (ficha)", url: "https://www.kfw-entwicklungsbank.de/PDF/%20Entwicklungsfinanzierung/Themen-NEU/REDD-Early-Movers-Acre-Fact-Sheet.pdf" }, { label: "Legisweb — Lei nº 2.308/2010", url: "https://www.legisweb.com.br/legislacao/?id=116550" }, { label: "Legisweb — Lei nº 1.904/2007 (ZEE)", url: "https://www.legisweb.com.br/legislacao/?id=116435" }, { label: "A Gazeta do Acre — investimentos em proteína animal", url: "https://agazetadoacre.com/2025/04/noticias/geral/governo-do-acre-celebra-mais-de-r-200-milhoes-em-investimentos-na-industria-de-proteina-animal" }],
       caution: "Fontes de 2012–2015 sobre o SISA e o KfW; o estado atual dos programas e outros acordos (como a Interoceânica) não foram confirmados. A data da Lei nº 2.308 varia entre fontes (22/10 ou 11/11/2010).",
     },
-  ],
     {
       title: "Infraestrutura de transportes e integração regional",
       reference: "Diagnóstico socioeconômico — SEPLAN/CEDEPLAR (2024); AGEAC (2026)",
@@ -176,6 +175,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       alternatives: [{ label: "AGEAC — Transporte intermunicipal", url: "https://ageac.ac.gov.br/transporte-ditrans/" }, { label: "AGEAC — BR-364 e transporte intermunicipal", url: "https://ageac.ac.gov.br/ageac-reforca-articulacao-com-bancada-federal-para-impulsionar-melhorias-na-br-364-e-fortalecer-o-transporte-intermunicipal/" }],
       caution: "Extensão, pavimentação e tempo de viagem variam por trecho e ano; para prova, priorize a função dos corredores e os modais, não números sem referência temporal.",
     },
+  ],
   cultura: [
     {
       title: "Povos indígenas do Acre",
