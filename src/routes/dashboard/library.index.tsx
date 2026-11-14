@@ -1,5 +1,8 @@
 import "@/styles/library-focus-tabs.css";
 import { looseMatch } from "@/lib/tolerantWords";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
+import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import "@/styles/library-layout.css";
 import { AreaHint } from "@/components/ui/area-hint";
 import { subjectDescription } from "@/lib/areaDescriptions";
@@ -292,16 +295,21 @@ function LibraryIndex() {
   );
   const focused = discipline !== "all";
   const subjectItems = items.filter((item) => !focused || libraryDiscipline(item) === discipline);
-  // Materiais publicados que tratam do mesmo assunto de uma aula: aparecem dentro da própria aula.
-  const relatedMaterialsFor = useMemo(
+  const { catalog: mediaCatalog } = useMediaCatalog();
+  // Para cada aula: materiais, videoaulas e prática do mesmo assunto, dentro da própria aula.
+  const lessonExtras = useMemo(
     () => (lessonTitle: string) => {
       const subject = lessonTitle.replace(/^\d+\s*[·.-]\s*/, "");
-      return subjectItems
-        .filter((m) => looseMatch(`${m.title} ${m.topic_label} ${m.summary ?? ""}`, subject))
-        .slice(0, 4)
-        .map((m) => ({ slug: m.slug, title: m.title }));
+      return {
+        materials: subjectItems
+          .filter((m) => looseMatch(`${m.title} ${m.topic_label} ${m.summary ?? ""}`, subject))
+          .slice(0, 4)
+          .map((m) => ({ slug: m.slug, title: m.title })),
+        videos: relatedVideos(mediaCatalog, discipline, subject, 3),
+        practice: disciplinePracticeSearch(discipline) as Record<string, unknown>,
+      };
     },
-    [subjectItems],
+    [subjectItems, mediaCatalog, discipline],
   );
   const searching =
     focused ||
@@ -515,12 +523,12 @@ function LibraryIndex() {
         <section aria-labelledby="library-roteiro" className="library-roteiro">
           <header className="library-section-head">
             <h2 id="library-roteiro">Roteiro de aulas</h2>
-            <p>Estude em ordem: cada aula traz teoria, aplicação e verificação, com os materiais relacionados ao final.</p>
+            <p>Estude em ordem: cada aula traz teoria, aplicação e verificação, com materiais, videoaulas e questões do assunto ao final.</p>
           </header>
           <UpdatedStudyCollections
             onlyCourseId={matchedCourse.id}
             storageScope={user?.id ?? "anonymous"}
-            relatedMaterials={relatedMaterialsFor}
+            lessonExtras={lessonExtras}
           />
         </section>
       )}

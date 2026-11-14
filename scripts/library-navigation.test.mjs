@@ -325,7 +325,7 @@ function renderGlobalLibrary(filters={}, search={q:"estupro"}) {
   react:{...React,useState:initial=>{const pair=React.useState(initial);const name=['query','area','discipline','contest','topic','law'][stateCall++];return name&&filters[name]!==undefined?[filters[name],pair[1]]:pair;}},
   '@tanstack/react-router':router,'@/lib/filterTaxonomy':sharedTaxonomy,'@/lib/librarySearch':courseSearchLibrary,'@/lib/librarySearchScope':searchScope,'@/lib/contentSearch':fakeSearch,
   '@/lib/legalLibrary':laws,'@/lib/libraryOrganization':organization,'@/lib/legalChronology':chronology,
-  '@/data/tracks':{TRACKS},'@/lib/disciplineHub':{tracksOf},
+  '@/data/tracks':{TRACKS},'@/lib/disciplineHub':{tracksOf},'@/lib/mediaStore':{useMediaCatalog:()=>({catalog:{topicVideos:{}}})},'@/lib/relatedVideos':{relatedVideos:()=>[]},'@/lib/practiceLink':{disciplinePracticeSearch:()=>({})},'@/lib/tolerantWords':load('src/lib/tolerantWords.ts'),
   '@/hooks/useDashboard':{useAuthStatus:()=>({user:{id:'test'},isLoading:false})},'@/lib/studyMaterials':{useStudyMaterialList:()=>({data:fixture,isPending:false,isError:false}),useLibrarySearchContent:()=>({data:[],isPending:false,isError:false}),readSlugs:()=>[]},
   '@/components/library/StartHere':{StartHere:()=>React.createElement('div',null,'GENERAL_RECOMMENDATIONS')},
   '@/components/library/LegalPathCatalog':catalog,'@/components/library/ContentSearchResults':results,'@/components/library/LibrarySearchMatch':match,

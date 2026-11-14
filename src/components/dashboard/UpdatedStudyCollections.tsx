@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
+import { LibraryVideos } from "@/components/library/LibraryVideos";
+import type { RelatedVideo } from "@/lib/relatedVideos";
 import { useStudyGuideProgress } from "@/lib/useStudyGuideProgress";
 import { supplementalPcAcLessons } from "@/data/pcAcSupplementalStudyLessons";
 import { pcAcProgramGapLessons } from "@/data/pcAcProgramGapLessons";
@@ -86,7 +88,8 @@ export const COURSE_ICONS: Record<string, LucideIcon> = {
 };
 
 export type RelatedMaterial = { slug: string; title: string };
-export function UpdatedStudyCollections({initialCourseId,storageScope="public",onlyCourseId,relatedMaterials}: {initialCourseId?: string;storageScope?: string;onlyCourseId?: string;relatedMaterials?: (lessonTitle: string) => RelatedMaterial[]}) {
+export type LessonExtras = { materials: RelatedMaterial[]; videos: RelatedVideo[]; practice?: Record<string, unknown> };
+export function UpdatedStudyCollections({initialCourseId,storageScope="public",onlyCourseId,lessonExtras}: {initialCourseId?: string;storageScope?: string;onlyCourseId?: string;lessonExtras?: (lessonTitle: string) => LessonExtras}) {
   const [selected,setSelected]=React.useState(() => COURSES.some(c=>c.id===initialCourseId) ? initialCourseId! : COURSES[0]!.id);
   const [revealed,setRevealed]=React.useState<Record<string,boolean>>({});
   const [query,setQuery]=React.useState("");
@@ -244,15 +247,29 @@ export function UpdatedStudyCollections({initialCourseId,storageScope="public",o
                   )}
                 </div>
                 {(() => {
-                  const related = relatedMaterials?.(l.title) ?? [];
-                  return related.length > 0 && (
+                  const extras = lessonExtras?.(l.title);
+                  if (!extras) return null;
+                  const { materials, videos, practice } = extras;
+                  if (!materials.length && !videos.length && !practice) return null;
+                  return (
                     <div className="updated-study-collections__related">
-                      <p className="usc-label"><BookOpen aria-hidden="true" /> Leia também</p>
-                      <ul>
-                        {related.map((m) => (
-                          <li key={m.slug}><Link to="/dashboard/library/$slug" params={{ slug: m.slug }}>{m.title}</Link></li>
-                        ))}
-                      </ul>
+                      <p className="usc-label"><BookOpen aria-hidden="true" /> Continue estudando este assunto</p>
+                      {materials.length > 0 && (
+                        <ul>
+                          {materials.map((m) => (
+                            <li key={m.slug}><Link to="/dashboard/library/$slug" params={{ slug: m.slug }}>Ler: {m.title}</Link></li>
+                          ))}
+                        </ul>
+                      )}
+                      {videos.length > 0 && (
+                        <details className="updated-study-collections__videos">
+                          <summary>Assistir videoaulas ({videos.length})</summary>
+                          <LibraryVideos videos={videos} />
+                        </details>
+                      )}
+                      {practice && (
+                        <Link to="/dashboard/question-trainer" search={practice as never} className="updated-study-collections__practice">Praticar questões da disciplina</Link>
+                      )}
                     </div>
                   );
                 })()}
