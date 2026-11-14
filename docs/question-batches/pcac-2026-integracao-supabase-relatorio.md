@@ -19,7 +19,7 @@ Todos os 39 registros estão com `content_status = 'draft'`, `is_original = true
 
 ## Rastreabilidade
 
-Fontes oficiais cadastradas em `public.content_sources`:
+Fontes oficiais cadastradas em `public.content_sources` (11 registros, incluindo LC nº 496/2025):
 - Código Penal — Planalto.
 - Código de Processo Penal — Planalto.
 - Lei nº 14.735/2023 — Planalto.
@@ -29,24 +29,26 @@ Fontes oficiais cadastradas em `public.content_sources`:
 - Edital nº 001/2026 SEAD/PCAC — Oficial Investigador.
 - Constituição Federal — texto compilado.
 
-Cada questão recebeu em `didactic_provenance` a referência às fontes aplicáveis, o commit de origem, o arquivo editorial, a indicação de questão autoral e os marcadores `pending_final_legal_review` e `activation_blocked`.
+Cada questão recebeu em `didactic_provenance` a referência às fontes aplicáveis, o commit de origem, o arquivo editorial, a indicação de questão autoral e os marcadores `first_pass_sources_checked_pending_final_legal_review` e `activation_blocked`. O campo `legal_basis` foi normalizado para objetos com `title`, `lei`, `artigo` e `url`, no formato consumido pelo Treinador; `law_version_checked_at` foi preenchido com a data da primeira conferência das fontes, sem significar aprovação jurídica final.
 
 ## Validações técnicas realizadas
 
 - 39 registros inseridos.
 - 39 registros com tópico de edital associado.
 - 39 registros com gabarito entre A e E, explicação e fundamento legal preenchidos.
+- 39 registros com `legal_basis` estruturado em objetos e URLs oficiais aceitas pelo validador de vigência do Treinador.
+- Lista de domínios estaduais oficiais do Acre e página exata da Lei nº 14.735/2023 adicionadas ao validador, com allowlist restrita a caminhos específicos e testes negativos para URLs manipuladas.
 - 39 registros sem duplicidade de `external_item_key` nesta fonte.
 - 39 registros mantidos como rascunho.
 - `law_version_checked_at` permanece nulo intencionalmente: não declarar versão normativa conferida antes da revisão final.
 
 ## Pendências antes da ativação
 
-1. Revisão jurídica final de cada enunciado, gabarito, distrator e fundamento.
+1. Revisão jurídica final de cada enunciado, gabarito, distrator e fundamento; a conferência de primeira rodada das fontes não substitui a aprovação final.
 2. Conferir as questões de Legislação Institucional 13 e 14 à luz da LC nº 526/2026 e da redação consolidada da LC nº 129/2004.
 3. Validar a data de corte do edital e a redação legal efetivamente exigível em 05/11/2026.
 4. Executar verificação de duplicidade contra todo o catálogo, não apenas contra esta fonte.
-5. Política RLS conferida: usuários autenticados só podem ler registros com `content_status = 'active'`; administração permanece restrita a usuários com papel admin. Essa política impede a leitura direta dos 39 rascunhos por usuários autenticados comuns. Ainda é necessário validar as telas e endpoints de simulados que possam usar outra fonte ou credencial privilegiada.
+5. Política RLS conferida: usuários autenticados só podem ler registros com `content_status = 'active'`; administração permanece restrita a usuários com papel admin. Essa política impede a leitura direta dos 39 rascunhos por usuários autenticados comuns. O hook `useQuestionCatalog` também filtra `content_status = 'active'` na consulta à tabela autoral. Ainda é necessário validar telas e endpoints de simulados que possam usar outra fonte ou credencial privilegiada.
 6. Aguardar CI do commit de integração documental (testes, TypeScript, lint e build).
 7. Somente após aprovação formal, preencher `law_version_checked_at` e alterar os itens aprovados para `active`.
 
