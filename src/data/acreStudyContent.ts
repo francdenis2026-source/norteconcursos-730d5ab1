@@ -253,7 +253,7 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
   ],
   politica: [
     {
-      title: "Constituição do Estado do Acre",
+      title: "Poderes, capital e símbolos do Estado do Acre",
       reference: "Promulgada em 3 de outubro de 1989",
       points: [
         "São Poderes do Estado, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.",
