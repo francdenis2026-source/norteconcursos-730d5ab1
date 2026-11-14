@@ -25,9 +25,9 @@ test("aliases unify only equivalent disciplines and are idempotent", () => {
     ["  Noções de Direito Penal ", "Direito Penal"],
     ["PROCESSUAL PENAL", "Direito Processual Penal"],
     ["Contabilidade", "Contabilidade Geral"],
-    ["Estatística e Probabilidade", "Estatística"],
+    ["Estatística e Probabilidade", "Matemática e Raciocínio Lógico"],
     ["Direito Humanos", "Direitos Humanos"],
-    ["Raciocínio Lógico-Matemático", "Raciocínio Lógico"],
+    ["Raciocínio Lógico-Matemático", "Matemática e Raciocínio Lógico"],
     ["Lingua Estrangeira - Ingles", "Língua Inglesa"],
   ]) {
     assert.equal(canonicalSubject(raw), expected);
@@ -55,7 +55,7 @@ test("areas and scheduled topics separate ethics, human rights and special laws"
   assert.equal(subjectInArea("Ética no Serviço Público", "Direitos Humanos"), false);
   assert.equal(subjectInArea("Direito Penal", "Direito Processual Penal"), false);
   assert.equal(subjectInArea("Direito Penal", "Direito Penal Militar"), false);
-  assert.equal(subjectInArea("Raciocínio Lógico", "Matemática Financeira"), false);
+  assert.equal(subjectInArea("Raciocínio Lógico", "Matemática Financeira"), true);
   assert.equal(subjectInArea("Contabilidade Geral", "Contabilidade Pública"), false);
   assert.equal(subjectInArea("Direito Penal e Processual Penal", "Noções de Processo Penal"), true);
   assert.equal(
@@ -65,7 +65,7 @@ test("areas and scheduled topics separate ethics, human rights and special laws"
   assert.equal(classifyTopic("Direito Penal e Processual Penal", "prisão preventiva"), null);
   assert.ok(!topicsFor("Direitos Humanos").some((topic) => topic.includes("Drogas")));
   assert.ok(topicsFor("Legislação Especial").some((topic) => topic.includes("Drogas")));
-  assert.ok(!topicsFor("Estatística").includes("Negação de proposições"));
+  assert.ok(topicsFor("Matemática e Raciocínio Lógico").includes("Negação de proposições"));
 });
 
 test("stored reviewed topic prevails over approximate text classification", () => {
@@ -92,11 +92,11 @@ test("stored reviewed topic prevails over approximate text classification", () =
       scopedTopic("Estatística", "Probabilidade"),
       scopedTopic("RLM", "Probabilidade"),
     ]).length,
-    2,
+    1,
   );
   assert.equal(
     matchesTopicFilter("RLM", "Probabilidade", scopedTopic("Estatística", "Probabilidade")),
-    false,
+    true,
   );
   assert.equal(matchesTopicFilter("Português", "crase", "Crase"), true); // existing plan links
   assert.equal(topicLabels(["CPP::Art. 25", "CPP::Art. 26"]).length, 2);
