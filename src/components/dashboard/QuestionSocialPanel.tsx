@@ -7,6 +7,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { readableComment } from "@/lib/commentText";
+import "@/styles/question-community.css";
 
 const COMMENTS_PAGE_SIZE = 5;
 
@@ -109,7 +111,8 @@ export function QuestionSocialPanel({
   };
 
   return (
-    <div className="mt-4 space-y-3 rounded-xl border bg-muted/30 p-4">
+    <div className="qcm mt-4 space-y-3 rounded-xl border bg-muted/30 p-4">
+      <div className="qcm__stats">
       <div className="flex items-center gap-2">
         <BarChart3 className="h-4 w-4 text-primary" />
         <p className="text-xs font-black uppercase tracking-wider text-muted-foreground">
@@ -137,7 +140,9 @@ export function QuestionSocialPanel({
           </div>
         </div>
       )}
+      </div>
 
+      <div className="qcm__discussion">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -166,7 +171,7 @@ export function QuestionSocialPanel({
         </p>
       )}
       {open && comments.length > 0 && (
-        <div className="space-y-2">
+        <div className="qcm__list">
           {shownComments.map((comment) => (
             <div
               key={comment.id}
@@ -180,7 +185,7 @@ export function QuestionSocialPanel({
                 {comment.display_name}
                 {comment.is_me ? " (você)" : ""}
               </p>
-              <p className="whitespace-pre-line leading-5">{comment.body}</p>
+              <p className="qcm__body">{readableComment(comment.body)}</p>
             </div>
           ))}
           {visibleCount < newestFirst.length && (
@@ -211,6 +216,7 @@ export function QuestionSocialPanel({
         >
           {sending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
         </Button>
+      </div>
       </div>
     </div>
   );

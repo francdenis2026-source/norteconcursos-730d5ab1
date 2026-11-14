@@ -1,0 +1,32 @@
+/* Desempenho e comentários: usam a largura da página e mantêm o texto legível. */
+html:root body .trainer-reading-workspace .trainer-review-community[open],
+html:root body .app-shell[data-area="student"] .trainer-reading-workspace .trainer-review-community[open] {
+  width: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.qcm { display: grid; gap: 14px; padding: 14px 16px; }
+@media (min-width: 900px) {
+  .qcm { grid-template-columns: minmax(15rem, 20rem) minmax(0, 1fr); align-items: start; gap: 20px; }
+  .qcm > * { margin: 0 !important; }
+}
+.qcm__stats, .qcm__discussion { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.qcm__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: 10px;
+}
+html:root body .qcm .qcm__body {
+  margin: 0;
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: pre-line;
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+/* Títulos das caixas: sem quebrar em várias linhas à toa. */
+html:root body .qcm p.text-xs { text-align: left; letter-spacing: 0.06em; }
