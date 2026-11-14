@@ -16,7 +16,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Língua Portuguesa: 19 materiais, 96 flashcards e 96 questões.
 - Raciocínio Lógico: 15 materiais, 78 flashcards e 78 questões.
 - Noções de Informática: 10 materiais, 50 flashcards e 50 questões.
-- Realidade do Estado do Acre: 6 materiais, 37 flashcards e 37 questões.
+- Realidade do Estado do Acre: 6 materiais, 40 flashcards e 39 questões.
 - Noções de Direito Administrativo: 8 materiais, 43 flashcards e 44 questões.
 - Noções de Direito Constitucional: 3 materiais, 15 flashcards e 15 questões.
 - Noções de Direito Penal e Processual Penal: 9 materiais, 45 flashcards e 45 questões.
@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 166 materiais ativos, 878 flashcards e 901 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 166 materiais ativos, 881 flashcards e 903 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
