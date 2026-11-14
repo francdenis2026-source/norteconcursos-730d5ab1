@@ -1,10 +1,11 @@
 import type { Question } from "./questionFormat";
+import { canonicalSubject } from "./subjects";
 
 /** Aggregate only the caller's scope; unknown metadata is not a real board/year. */
 export function catalogGroups(items: Question[], field: "subject" | "board" | "year") {
   const groups = new Map<string, Question[]>();
   for (const item of items) {
-    const name = item[field];
+    const name = field === "subject" ? canonicalSubject(item.subject) : item[field];
     if (!name || (field === "board" && ["Não informada", "Meu caderno"].includes(name))) continue;
     if (field === "year" && !/^\d{4}$/.test(name)) continue;
     const group = groups.get(name) ?? [];
