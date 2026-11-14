@@ -736,7 +736,7 @@ function DisciplineSyllabusPanel({
                 />
                 <span>{topic.topic_text}</span>
               </label>
-              <AreaHint side="left" description="Abrir este assunto do edital.">
+              <AreaHint side="left" description="Abrir o assunto.">
               <Link
                 to="/dashboard/edital/$topicId"
                 params={{ topicId: topic.id }}

@@ -43,35 +43,35 @@ const sections: {
     groups: ["Central de Estudos", "Material didático"],
     label: "Estudos",
     icon: BookOpenText,
-    description: "Disciplinas, leis, videoaulas, sala de estudo e ferramentas de apoio.",
+    description: "Disciplinas, leis, videoaulas e ferramentas de estudo.",
     tone: "sky",
   },
   {
     groups: ["Questões", "Provas"],
     label: "Treinos",
     icon: ClipboardList,
-    description: "Treino de questões, revisão de erros, flashcards, simulados e provas.",
+    description: "Questões, flashcards, simulados e provas.",
     tone: "emerald",
   },
   {
     groups: ["Desempenho"],
     label: "Desempenho",
     icon: ChartNoAxesCombined,
-    description: "Sua evolução, histórico de estudos, ranking e medalhas.",
+    description: "Evolução, histórico, ranking e medalhas.",
     tone: "teal",
   },
   {
     groups: ["ENEM"],
     label: "ENEM",
     icon: GraduationCap,
-    description: "Questões e simulados organizados para o ENEM.",
+    description: "Questões e simulados do ENEM.",
     tone: "indigo",
   },
   {
     groups: ["Conta"],
     label: "Conta",
     icon: SlidersHorizontal,
-    description: "Seus dados, preferências e plano de assinatura.",
+    description: "Perfil, preferências e assinatura.",
     tone: "slate",
   },
 ];
@@ -172,7 +172,7 @@ export function StudentTopNavigation({
         {studyEdition && (
           <AreaHint
             title="Edital ativo"
-            description={studyEdition.contestName + " · " + studyEdition.roleName + ". Abre o programa com as disciplinas e os assuntos deste edital."}
+            description={studyEdition.contestName + " · " + studyEdition.roleName + ". Abrir o programa."}
           >
           <NavButton
             to="/dashboard/edital"
@@ -189,7 +189,7 @@ export function StudentTopNavigation({
           </AreaHint>
         )}
         {!isHome && (
-          <AreaHint title="Área principal" description="Volte ao painel com suas prioridades e o resumo da preparação.">
+          <AreaHint title="Área principal" description="Painel com o resumo da preparação.">
           <NavButton
             to="/dashboard"
             className="student-top-navigation__trigger student-top-navigation__home"
@@ -218,7 +218,7 @@ export function StudentTopNavigation({
                 <span className="student-top-navigation__label">Meu plano</span>
               </button>
             ) : (
-              <AreaHint title="Meu plano" description="Defina sua disponibilidade e receba a distribuição da semana.">
+              <AreaHint title="Meu plano" description="Disponibilidade e distribuição da semana.">
               <NavButton
                 to="/dashboard/study-coach"
                 className="student-top-navigation__trigger"
@@ -231,7 +231,7 @@ export function StudentTopNavigation({
               </NavButton>
               </AreaHint>
             )}
-            <AreaHint title="Agenda de estudos" description="Distribua o conteúdo do edital nos dias e horários da sua rotina.">
+            <AreaHint title="Agenda de estudos" description="Conteúdo do edital distribuído na sua rotina.">
             <NavButton
               to="/dashboard/cronograma"
               className="student-top-navigation__trigger"

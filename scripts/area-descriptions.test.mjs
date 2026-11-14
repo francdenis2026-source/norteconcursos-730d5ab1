@@ -3,10 +3,10 @@ import assert from "node:assert/strict";
 import { subjectDescription } from "../src/lib/areaDescriptions.ts";
 
 test("descreve disciplinas pelo nome, sem confundir penal e processual penal", () => {
-  assert.match(subjectDescription("Direito Processual Penal"), /processo criminal/);
-  assert.match(subjectDescription("Noções de Direito Penal"), /Teoria do crime/);
-  assert.match(subjectDescription("Legislação Penal Extravagante"), /fora do Código/);
-  assert.match(subjectDescription("RLM - Raciocínio Lógico"), /tabelas-verdade/);
+  assert.match(subjectDescription("Direito Processual Penal"), /ação penal/);
+  assert.match(subjectDescription("Noções de Direito Penal"), /penas e crimes/);
+  assert.match(subjectDescription("Legislação Penal Extravagante"), /fora do Código Penal/);
+  assert.match(subjectDescription("RLM - Raciocínio Lógico"), /argumentação/);
   assert.match(subjectDescription("Língua Portuguesa"), /Interpretação/);
 });
 

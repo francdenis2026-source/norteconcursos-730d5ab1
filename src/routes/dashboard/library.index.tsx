@@ -792,7 +792,7 @@ function DisciplineSection({
                 side="top"
                 align="start"
                 title={group.label}
-                description={`Começa por “${group.items[0]!.title}”. ${group.items.filter((item) => read.has(item.slug)).length} de ${group.items.length} lidos.`}
+                description={`${group.items.filter((item) => read.has(item.slug)).length} de ${group.items.length} lidos.`}
               >
                 <span>{group.label}</span>
               </AreaHint>
