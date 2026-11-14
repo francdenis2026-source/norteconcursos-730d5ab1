@@ -65,7 +65,7 @@ test('PC-AC revised study collection has 37 original lessons, links into the lib
   const supplement = readFileSync('src/data/pcAcSupplementalStudyLessons.ts', 'utf8');
   const gaps = readFileSync('src/data/pcAcProgramGapLessons.ts', 'utf8');
   const library = readFileSync('src/routes/dashboard/library.index.tsx', 'utf8');
-  const disciplines = readFileSync('src/routes/dashboard/disciplinas.tsx', 'utf8');
+  const disciplines = readFileSync('src/routes/dashboard/material.tsx', 'utf8');
   const progress = readFileSync('src/lib/useStudyGuideProgress.ts', 'utf8');
   const numberOfLessons = (base.match(/\{title:"\d{2} ·/g) || []).length
     + (supplement.match(/\{title:"\d{2} ·/g) || []).length
@@ -74,7 +74,7 @@ test('PC-AC revised study collection has 37 original lessons, links into the lib
   assert.match(base, /useStudyGuideProgress\(storageScope\)/);
   assert.match(library, /UpdatedStudyCollections/);
   assert.match(library, /guiaDisciplineName\(guia\)/);
-  assert.match(disciplines, /guia:item\.id/);
+  assert.match(disciplines, /guia: item\.id/);
   assert.match(progress, /study_guide_progress/);
   assert.match(progress, /onConflict:"user_id,guide_id,lesson_key"/);
 });

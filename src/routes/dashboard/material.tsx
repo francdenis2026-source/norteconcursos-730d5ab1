@@ -34,7 +34,7 @@ import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
-import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
+import { disciplineCards, disciplineGroup, type DisciplineCard } from "@/lib/disciplineHub";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
@@ -46,6 +46,24 @@ import { AreaHint } from "@/components/ui/area-hint";
 import { subjectDescription } from "@/lib/areaDescriptions";
 import "@/styles/study-area-compact.css";
 import "@/styles/student-area-kit.css";
+
+const PCAC_GUIDES = [
+  { id: "raciocinio-logico", label: "Raciocínio Lógico" },
+  { id: "informatica", label: "Noções de Informática" },
+  { id: "realidade-acre", label: "Realidade do Acre" },
+  { id: "direito-constitucional", label: "Direito Constitucional" },
+  { id: "direito-penal-processual", label: "Direito Penal e Processual Penal" },
+  { id: "direito-administrativo", label: "Direito Administrativo" },
+  { id: "legislacao-institucional", label: "Legislação Institucional" },
+  { id: "contabilidade-analise-financeira", label: "Contabilidade e Análise Financeira" },
+  { id: "estatistica", label: "Estatística" },
+  { id: "ti-seguranca", label: "TI e Segurança da Informação" },
+  { id: "lingua-portuguesa", label: "Língua Portuguesa" },
+  { id: "analise-dados-informacoes", label: "Análise de Dados e Informações" },
+  { id: "arquivologia", label: "Arquivologia" },
+  { id: "administracao-geral", label: "Noções de Administração" },
+  { id: "administracao-publica", label: "Evolução da Administração Pública" },
+];
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -285,7 +303,7 @@ function MaterialHub() {
           <Link to="/dashboard/material" hash="hub-laws" style={{ "--ak-tone": "oklch(0.76 0.16 150)" } as React.CSSProperties}>
             <Scale aria-hidden="true" /> Leis <strong>{isPending ? "—" : lawTotal}</strong>
           </Link>
-          <Link to="/dashboard/disciplinas" style={{ "--ak-tone": "oklch(0.74 0.16 300)" } as React.CSSProperties}>
+          <Link to="/dashboard/material" hash="hub-subjects" style={{ "--ak-tone": "oklch(0.74 0.16 300)" } as React.CSSProperties}>
             <BookOpen aria-hidden="true" /> Disciplinas <strong>{isPending ? "—" : subjectTotal}</strong>
           </Link>
           <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} style={{ "--ak-tone": "oklch(0.82 0.14 82)" } as React.CSSProperties}>
@@ -300,7 +318,6 @@ function MaterialHub() {
       <section className="ak-strip" aria-labelledby="hub-subjects">
         <header>
           <h2 id="hub-subjects">Disciplinas</h2>
-          <Link to="/dashboard/disciplinas">Abrir todas as disciplinas →</Link>
         </header>
         {isPending && signedIn ? (
           <div className="ak-tiles">
@@ -335,7 +352,7 @@ function MaterialHub() {
                 </Link>
               </li>
             ))}
-            {availableSubjects.map((entry) => {
+            {availableSubjects.filter((entry) => disciplineGroup(entry.name) !== "Realidade do Acre").map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
               return (
                 <li key={entry.name}>
@@ -353,6 +370,21 @@ function MaterialHub() {
             })}
           </ul>
         )}
+      </section>
+
+      <section className="ak-strip ak-guides" aria-labelledby="hub-guides">
+        <header>
+          <h2 id="hub-guides">Aulas por disciplina · PC-AC 2026</h2>
+        </header>
+        <ul className="ak-guides__list">
+          {PCAC_GUIDES.map((item) => (
+            <li key={item.id}>
+              <Link to="/dashboard/library" search={{ collection: "subjects", guia: item.id } as never} hash="materiais-atualizados-pcac">
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="pcac-material-focus" aria-labelledby="pcac-material-focus-title">

@@ -18,14 +18,12 @@ import {
   Languages,
   PenLine,
   PlayCircle,
-  Search,
   Sigma,
   Target,
   Wallet,
-  X,
   type LucideIcon,
 } from "lucide-react";
-import { PageHero, HeroStat, LockedState, type HeroImage } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, type HeroImage } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
@@ -44,7 +42,6 @@ import {
   type DisciplineCard,
 } from "@/lib/disciplineHub";
 import { disciplinePracticeSearch } from "@/lib/practiceLink";
-import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
@@ -52,7 +49,6 @@ import { disciplineTheme } from "@/lib/disciplineTheme";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
 import { AreaHint } from "@/components/ui/area-hint";
-import { subjectDescription } from "@/lib/areaDescriptions";
 import { LegalMapExplorer } from "@/components/dashboard/LegalMapExplorer";
 import { legalMapFor } from "@/data/legalMaps";
 
@@ -144,6 +140,10 @@ function DisciplinesPage() {
     if (initialSearch.d || initialSearch.eixo) void navigate({ search: {}, replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
   }, []);
+  const toHub = React.useCallback(
+    () => void navigate({ to: "/dashboard/material", hash: "hub-subjects", replace: true }),
+    [navigate],
+  );
   const { data, isPending } = useStudyMaterialList(signedIn);
   const materials = data ?? [];
   const cards = React.useMemo(() => disciplineCards(materials, TRACKS, PLAYLISTS), [materials]);
@@ -170,8 +170,8 @@ function DisciplinesPage() {
       <AcreRealityArea
         axisId={eixo}
         onExit={() => {
-          setD(undefined);
           setEixo(undefined);
+          toHub();
         }}
         onAxisChange={setEixo}
       />
@@ -181,198 +181,21 @@ function DisciplinesPage() {
       key={current.name}
       card={current}
       materials={materials}
-      onBack={() => setD(undefined)}
+      onBack={toHub}
     />
   ) : (
-    <DisciplineIndex cards={cards} loading={isPending && signedIn} unknown={d} onPick={setD} />
+    <HubRedirect loading={isPending && signedIn} go={toHub} />
   );
 }
 
-function DisciplineIndex({
-  cards,
-  loading,
-  unknown,
-  onPick,
-}: {
-  cards: DisciplineCard[];
-  loading: boolean;
-  unknown: string | undefined;
-  onPick: (name: string) => void;
-}) {
-  const [query, setQuery] = React.useState("");
-  const normalized = normalizeLibrarySearch(query);
-  const available = cards.filter((card) => card.hasContent);
-  const shown = normalized
-    ? available.filter((c) => normalizeLibrarySearch(c.name).includes(normalized))
-    : available;
+/** A lista de disciplinas é única: fica no hub de Materiais. Esta rota só abre uma disciplina específica. */
+function HubRedirect({ loading, go }: { loading: boolean; go: () => void }) {
+  React.useEffect(() => {
+    if (!loading) go();
+  }, [loading, go]);
   return (
-    <div className="discipline-workspace space-y-4 pb-8" data-view="index">
-      <PageHero
-        image="study-desk"
-        size="md"
-        kicker="Material didático"
-        icon={GraduationCap}
-        title={
-          <>
-            <em>Disciplinas</em> para concursos
-          </>
-        }
-        description="Português, Matemática, Raciocínio Lógico, Química, Física, Estatística, Contabilidade e mais. Cada disciplina reúne seus materiais, a trilha de aulas e as videoaulas num só lugar. Legislação e leis ficam na área de leis."
-      >
-        <div className="page-hero__stats">
-          <HeroStat icon={GraduationCap} label="Disciplinas" value={cards.length} />
-          <HeroStat
-            icon={PlayCircle}
-            label="Videoaulas"
-            value={cards.reduce((sum, c) => sum + c.videos, 0)}
-          />
-        </div>
-      </PageHero>
-      <section className="rounded-xl border border-emerald-600/30 bg-emerald-600/5 p-4" aria-labelledby="study-guides-title">
-        <h2 id="study-guides-title" className="text-sm font-extrabold text-foreground">Aulas por disciplina · PC-AC 2026</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Abra diretamente os módulos autorais, exemplos e perguntas de revisão. Os conteúdos complementares estão identificados; confira sempre a aderência ao cargo.</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {[
-            {id:"raciocinio-logico",label:"Raciocínio Lógico"},
-            {id:"informatica",label:"Noções de Informática"},
-            {id:"realidade-acre",label:"Realidade do Acre"},
-            {id:"direito-constitucional",label:"Direito Constitucional"},
-            {id:"direito-penal-processual",label:"Direito Penal e Processual Penal"},
-            {id:"direito-administrativo",label:"Direito Administrativo"},
-            {id:"legislacao-institucional",label:"Legislação Institucional"},
-            {id:"contabilidade-analise-financeira",label:"Contabilidade e Análise Financeira"},
-            {id:"estatistica",label:"Estatística"},
-            {id:"ti-seguranca",label:"TI e Segurança da Informação"},
-            {id:"lingua-portuguesa",label:"Língua Portuguesa"},
-            {id:"analise-dados-informacoes",label:"Análise de Dados e Informações"},
-            {id:"arquivologia",label:"Arquivologia · Investigador e Papiloscopista"},
-            {id:"administracao-geral",label:"Noções de Administração · Investigador"},
-            {id:"administracao-publica",label:"Evolução da Administração Pública · Complementar"},
-          ].map(item=><Link key={item.id} to="/dashboard/library" search={{collection:"subjects",guia:item.id}} hash="materiais-atualizados-pcac" className="rounded-lg border border-emerald-600/35 bg-card px-3 py-2 text-xs font-semibold text-foreground transition hover:border-emerald-500 hover:bg-emerald-600/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">{item.label} →</Link>)}
-        </div>
-      </section>
-      {unknown && (
-        <p role="status" className="rounded-xl border p-3 text-sm">
-          Não encontramos a disciplina “{unknown}”. Escolha uma abaixo.
-        </p>
-      )}
-      <div className="discipline-search">
-        <Search aria-hidden="true" size={20} />
-        <label className="sr-only" htmlFor="discipline-search">
-          Buscar disciplina
-        </label>
-        <input
-          id="discipline-search"
-          type="search"
-          autoComplete="off"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Buscar disciplina: português, química, estatística…"
-        />
-        {query && (
-          <button type="button" onClick={() => setQuery("")} aria-label="Limpar a busca">
-            <X aria-hidden="true" size={16} />
-          </button>
-        )}
-      </div>
-      {loading ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {[0, 1, 2, 3, 4, 5].map((n) => (
-            <Skeleton key={n} className="h-36 rounded-2xl" />
-          ))}
-        </div>
-      ) : shown.length === 0 ? (
-        <p className="rounded-xl border border-dashed p-6 text-center text-sm text-muted-foreground">
-          Nenhuma disciplina com “{query}”.
-        </p>
-      ) : (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {!normalized && (
-            <li>
-              <button
-                type="button"
-                onClick={() => onPick(ACRE_DISCIPLINE)}
-                className="ak-tile w-full text-left"
-                style={{ "--ak-tone": "oklch(0.8 0.16 140)", height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
-              >
-                <img src="/media/hero/landing-pcac.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                <strong>Realidade do Acre</strong>
-                <span>História, geografia, economia e atualidades</span>
-              </button>
-            </li>
-          )}
-          {!normalized && (
-            <>
-            {[
-              { id: "arquivologia", name: "Arquivologia", text: "Gestão de documentos e arquivos", tone: "oklch(0.78 0.13 110)", image: "trainer-study" },
-              { id: "administracao-geral", name: "Noções de Administração", text: "Planejamento, organização e controle", tone: "oklch(0.8 0.14 82)", image: "study-assistant" },
-              { id: "administracao-publica", name: "Administração Pública", text: "Evolução e modelos de gestão", tone: "oklch(0.74 0.14 200)", image: "exam-hall" },
-            ].map((guide) => (
-              <li key={guide.id}>
-                <Link
-                  to="/dashboard/library"
-                  search={{ collection: "subjects", guia: guide.id } as never}
-                  hash="materiais-atualizados-pcac"
-                  className="ak-tile"
-                  style={{ "--ak-tone": guide.tone, height: "100%", minHeight: "7.5rem" } as React.CSSProperties}
-                >
-                  <img src={`/media/hero/${guide.image}.webp`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                  <strong>{guide.name}</strong>
-                  <span>{guide.text}</span>
-                </Link>
-              </li>
-            ))}
-            </>
-          )}
-          {shown.map((card) => {
-            const Icon = ICONS[card.icon];
-            const body = (
-              <>
-                <span className="discipline-card__icon" data-subject={subjectKey(card.name)}>
-                  <Icon aria-hidden="true" />
-                </span>
-                <strong>{card.name}</strong>
-                {card.hasContent ? (
-                  <ul className="discipline-card__stats">
-                    {card.materials > 0 && (
-                      <li>{plural(card.materials, "material", "materiais")}</li>
-                    )}
-                    {card.lessons > 0 && (
-                      <li>{plural(card.lessons, "aula na trilha", "aulas na trilha")}</li>
-                    )}
-                    {card.videos > 0 && <li>{plural(card.videos, "videoaula", "videoaulas")}</li>}
-                  </ul>
-                ) : (
-                  <span className="discipline-card__soon">Em preparação</span>
-                )}
-              </>
-            );
-            return (
-              <li key={card.name}>
-                <AreaHint
-                  title={card.name}
-                  description={subjectDescription(card.name) ?? disciplinePresentation(card.name).description}
-                >
-                {card.hasContent ? (
-                  <button
-                    type="button"
-                    onClick={() => onPick(card.name)}
-                    className="discipline-card w-full text-left"
-                    data-subject={subjectKey(card.name)}
-                  >
-                    {body}
-                  </button>
-                ) : (
-                  <div className="discipline-card" data-subject={subjectKey(card.name)} data-empty="true" aria-disabled="true">
-                    {body}
-                  </div>
-                )}
-                </AreaHint>
-              </li>
-            );
-          })}
-        </ul>
-      )}
+    <div className="flex h-64 items-center justify-center">
+      <Skeleton className="h-24 w-full max-w-md rounded-2xl" />
     </div>
   );
 }

@@ -15,3 +15,8 @@ html:root body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile__ico
 html:root body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile > span:not(.ak-tile__icon) { color: var(--muted-foreground); text-align: left; hyphens: manual; }
 :root:not(.dark) .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles > li { filter: none; }
 :root:not(.dark) body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile__icon { color: color-mix(in oklab, var(--tile-tone) 55%, #000); }
+
+/* Aulas por disciplina (PC-AC): lista compacta de atalhos. */
+.ak-guides__list { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.ak-guides__list a { display: inline-flex; align-items: center; min-height: 2.25rem; padding: .3rem .75rem; border: 1px solid var(--border); border-radius: 999px; font-size: .8rem; font-weight: 600; color: var(--foreground); text-decoration: none; }
+.ak-guides__list a:hover, .ak-guides__list a:focus-visible { border-color: var(--primary); background: color-mix(in oklab, var(--primary) 12%, transparent); }
