@@ -14,6 +14,8 @@ const subjects = new Map(
   ),
 );
 for (const [name, area] of [
+  ["Português", "linguagens"],
+  ["Inglês", "linguagens"],
   ["Língua Inglesa", "linguagens"],
   ["Espanhol", "linguagens"],
   ["Língua Espanhola", "linguagens"],
