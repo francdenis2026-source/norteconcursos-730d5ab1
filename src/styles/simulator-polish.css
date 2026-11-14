@@ -1,0 +1,29 @@
+/* Simulado em andamento: texto sem hifenização, marcadores circulares e diálogo legível. */
+html:root body .sim-stem,
+html:root body .sim-stem * {
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  text-align: left !important;
+  text-wrap: pretty;
+}
+html:root body .sim-option .q-option-text,
+html:root body .sim-option .q-option-text * {
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  text-align: left !important;
+}
+/* O marcador da alternativa é um círculo, não um oval esticado pela altura do cartão. */
+html:root body .sim-option [role="radio"] {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  align-self: center;
+  border-radius: 999px;
+}
+html:root body .sim-commit,
+html:root body .sim-commit * {
+  text-align: left !important;
+  hyphens: manual !important;
+}

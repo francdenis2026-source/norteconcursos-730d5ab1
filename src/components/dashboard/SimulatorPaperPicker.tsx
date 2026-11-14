@@ -51,7 +51,7 @@ export function SimulatorPaperPicker({
             </span>
             <span className="text-xs text-muted-foreground">
               {p.questions.length} questões disponíveis ·{" "}
-              {new Set(p.questions.map((q) => q.subject)).size} disciplinas
+              {(() => { const n = new Set(p.questions.map((q) => q.subject)).size; return `${n} ${n === 1 ? "disciplina" : "disciplinas"}`; })()}
             </span>
             {examCoverage(p.question, p.questions.length) && (
               <span className="block text-xs font-medium">

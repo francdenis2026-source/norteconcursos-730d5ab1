@@ -1,3 +1,4 @@
+import "@/styles/simulator-polish.css";
 import { matchesPlannedStudy, plannedSubjects, plannedAvailability } from "@/lib/plannedStudy";
 import { materialTopic } from "@/lib/materialPractice";
 import { classifyTopic } from "@/lib/questionTopics";
@@ -1203,7 +1204,7 @@ function ProfessionalSimulator() {
           </p>
           <span className="exam-simulator-hero__catalog">
             {scopedCatalog.length.toLocaleString("pt-BR")} questões disponíveis •{" "}
-            {new Set(scopedCatalog.map((q) => q.subject)).size} disciplinas
+            {(() => { const n = new Set(scopedCatalog.map((q) => q.subject)).size; return `${n} ${n === 1 ? "disciplina" : "disciplinas"}`; })()}
           </span>
           <div className="page-hero__stats">
             <HeroStat icon={History} label="Últimos simulados" value={history.length} />
@@ -1737,7 +1738,7 @@ function ProfessionalSimulator() {
         </Link>
       </div>
       <Dialog open={startWarningOpen} onOpenChange={setStartWarningOpen}>
-        <DialogContent className="sm:max-w-lg">
+        <DialogContent className="sim-commit sm:max-w-lg">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-xl">
               <ShieldCheck className="h-5 w-5 text-emerald-600" /> Compromisso de prova
@@ -2009,7 +2010,7 @@ function ActiveSimulator(p: {
             <ReadingSizeInline className="justify-end" />
             <QuestionProse
               text={parseQuestion(current.text).stem}
-              className="mx-auto max-w-5xl text-base font-medium md:text-lg"
+              className="sim-stem mx-auto max-w-5xl text-base font-medium md:text-lg"
             />
             <QuestionFigures
               urls={current.figures}
@@ -2588,7 +2589,7 @@ function AnswerOption({
   return (
     <label
       className={cn(
-        "flex cursor-pointer items-center gap-3 rounded-xl border-2 p-4 transition",
+        "sim-option flex cursor-pointer items-center gap-3 rounded-xl border-2 p-4 transition",
         selected ? "border-primary bg-primary/5" : "hover:border-primary/40 hover:bg-muted/40",
       )}
     >
