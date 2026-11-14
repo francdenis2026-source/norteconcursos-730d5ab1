@@ -1,3 +1,4 @@
+import "@/styles/edital-catalog-tidy.css";
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
@@ -92,12 +93,15 @@ export function EditalEditionCatalog({
         <div>
           <h2>{showMine ? "Outros concursos" : "Escolha o concurso e o cargo"}</h2>
           <p>
-            {orderedGroups.length} {orderedGroups.length === 1 ? "concurso" : "concursos"} · separados do seu
+            {orderedGroups.length} {orderedGroups.length === 1 ? "concurso" : "concursos"}
+            {active ? " além do seu" : " disponíveis"}
           </p>
         </div>
-        <Badge variant="outline">
-          {editions.filter((e) => e.status === "archived").length} arquivadas
-        </Badge>
+        {editions.some((e) => e.status === "archived") && (
+          <Badge variant="outline">
+            {editions.filter((e) => e.status === "archived").length} arquivadas
+          </Badge>
+        )}
       </div>
       <div className="ed2-pick" role="group" aria-label="Escolher edital">
       <div className="ed2-picker">
@@ -162,9 +166,18 @@ export function EditalEditionCatalog({
               Abrir programa <ChevronRight aria-hidden className="h-4 w-4" />
             </Link>
           ) : (
-            <span className="ed2-open__btn" aria-disabled="true">
+            <span className="ed2-open__btn" aria-disabled="true" title="Escolha o concurso, o cargo e a edição">
               Abrir programa <ChevronRight aria-hidden className="h-4 w-4" />
             </span>
+          )}
+          {!selectedEdition && (
+            <p className="ed2-open__hint">
+              {!selectedContest
+                ? "Escolha o concurso para continuar."
+                : !selectedRole
+                  ? "Agora escolha o cargo."
+                  : "Escolha o ano da edição para abrir o programa."}
+            </p>
           )}
         </div>
       </div>

@@ -50,14 +50,18 @@ function EditalPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const navigate = Route.useNavigate();
-  const { edition: initialEdition } = Route.useSearch();
-  const [selected, setSelected] = React.useState(initialEdition);
-  // Trocar de edição não deve escrever na URL; o parâmetro inicial (vindo de
-  // um link de outra tela) é lido uma vez e removido da barra de endereço.
+  const { edition: requestedEdition } = Route.useSearch();
+  const [selected, setSelected] = React.useState(requestedEdition);
+  // Todo link "Abrir programa" (inclusive os desta própria página) pede a edição pela URL.
+  // A página abre essa edição, volta ao topo e limpa a barra de endereço. Antes, o pedido só
+  // era lido ao montar a página, e os links do catálogo não abriam nada.
   React.useEffect(() => {
-    if (initialEdition) void navigate({ search: {}, replace: true });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
-  }, []);
+    if (!requestedEdition) return;
+    setSelected(requestedEdition);
+    void navigate({ search: {}, replace: true });
+    document.querySelector(".app-content")?.scrollTo?.({ top: 0 });
+    window.scrollTo({ top: 0 });
+  }, [requestedEdition, navigate]);
   const [editions, setEditions] = React.useState<Edition[]>([]),
     [topics, setTopics] = React.useState<Topic[]>([]);
   const [loading, setLoading] = React.useState(true),

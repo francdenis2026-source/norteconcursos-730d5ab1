@@ -1,0 +1,55 @@
+/* Catálogo de editais: seleção em uma linha com o botão de abrir, orientação do próximo passo,
+   cartões compactos com um único tom de destaque e grade que se ajusta à largura. */
+
+/* Seletor: Concurso · Cargo · Edição + Abrir programa na mesma linha no desktop */
+@media (min-width: 900px) {
+  .app-shell[data-area="student"] .edital-catalog .ed2-pick {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: .9rem;
+  }
+}
+.app-shell[data-area="student"] .edital-catalog .ed2-open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .3rem;
+}
+.ed2-open__hint { margin: 0; color: var(--muted-foreground); font-size: .75rem; text-align: right; }
+@media (max-width: 899px) {
+  .app-shell[data-area="student"] .edital-catalog .ed2-open { align-items: stretch; }
+  .ed2-open__hint { text-align: left; }
+}
+
+/* Cartões de edição: compactos, sem vazio no meio, um só tom de destaque */
+.app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-editions {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: 10px;
+}
+.app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-edition,
+.app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-edition:nth-child(n) {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: .45rem;
+  padding: .8rem .9rem;
+  border-top: 2px solid color-mix(in srgb, var(--edital-amber, #e3b45d) 70%, var(--border));
+}
+.app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-edition > p {
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-align: left;
+}
+.app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-edition-foot {
+  margin-top: auto;
+  padding-top: .5rem;
+}
+.app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-edition:focus-visible {
+  outline: 2px solid var(--edital-amber, #e3b45d);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area="student"] .edital-workspace .edital-catalog .edital-edition:hover { transform: none; }
+}
