@@ -14,7 +14,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Contabilidade: 7 materiais, 35 flashcards e 35 questões.
 - Estatística: 10 materiais, 50 flashcards e 50 questões.
 - Língua Portuguesa: 19 materiais, 96 flashcards e 96 questões.
-- Raciocínio Lógico: 12 materiais, 60 flashcards e 60 questões.
+- Raciocínio Lógico: 15 materiais, 78 flashcards e 78 questões.
 - Noções de Informática: 10 materiais, 50 flashcards e 50 questões.
 - Realidade do Estado do Acre: 3 materiais, 15 flashcards e 15 questões.
 - Noções de Direito Administrativo: 8 materiais, 40 flashcards e 40 questões.
@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual:** 154 materiais ativos, 805 flashcards e 827 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
+**Total atual:** 157 materiais ativos, 823 flashcards e 845 questões. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -47,8 +47,11 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 16. Variação linguística e adequação de registro.
 17. Figuras de linguagem.
 18. Linguagem digital e gêneros tecnológicos.
+19. Progressões aritméticas e geométricas.
+20. Probabilidade: união, condicional e independência.
+21. Médias simples e ponderadas; leitura de gráficos e tabelas.
 
-Os dezoito registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
+Os vinte e um registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
 ## Gaps e validações obrigatórias
 
@@ -60,7 +63,7 @@ Os dezoito registros estão ativos e possuem resumo, flashcards e quiz. O seed i
 
 ### Conhecimentos básicos
 - Português: agora há 19 materiais, com aulas específicas para regência, colocação pronominal, crase, variação linguística, figuras de linguagem e linguagem digital; ainda é necessária revisão pedagógica e conferência de questões.
-- Raciocínio Lógico: 12 materiais para 15 itens; verificar se cada item tem aula e exercícios próprios, especialmente relações de ordem/equivalência, PA/PG, probabilidades e interpretação de gráficos.
+- Raciocínio Lógico: agora há 15 materiais para 15 itens, com aprofundamentos separados de PA/PG, probabilidade e médias/gráficos; ainda é necessária revisão pedagógica e de exercícios.
 - Informática: agora há 10 materiais para 10 blocos; conferir item a item a profundidade e a correspondência dos três materiais iniciais e dos sete complementares, especialmente funções de planilhas, protocolos, navegadores, e segurança da informação.
 - Realidade do Acre: 3 materiais; verificar todos os tópicos do edital (história, Tratado de Ayacucho, geografia, fuso, municípios/regionais, bacias, relevo, clima, vegetação, unidades de conservação, povos indígenas inclusive isolados, Constituição estadual, Poderes, indicadores, economia, transportes, fronteira e segurança pública). O arquivo src/data/acreStudyContent.ts tem conteúdo por eixos e requer auditoria de todos os itens e das datas das fontes.
 
