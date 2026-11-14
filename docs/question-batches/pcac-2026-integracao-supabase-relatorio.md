@@ -53,10 +53,25 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 - Separação de proveniência: 160 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
 - Qualidade automatizada após inserção: zero questões ativas de 2026 sem subassunto, zero sem explicação de pelo menos 60 caracteres, zero sem gabarito A–E e zero sem vínculo de tópico.
 
+### Revisão artigo por artigo do CPP — concluída para os intervalos do edital
+
+Em 14/11/2026, as aulas de Processo Penal foram confrontadas com o texto atualizado oficial da Câmara dos Deputados:
+
+- Aula de inquérito: CPP arts. 4º a 23. A revisão incluiu o art. 14-A (defensor para agentes investigados por fatos relacionados ao uso de força letal no exercício profissional), diferenciou as requisições dos arts. 13-A e 13-B e qualificou a leitura constitucional do art. 21.
+- Aula de provas e perícias: CPP arts. 155 a 184 e 275 a 281. Foram detalhados os arts. 160 a 184 e os arts. 275 a 281, corrigida a descrição equivocada do art. 280 (suspeição dos juízes aplicável aos peritos) e explicitada a equiparação dos intérpretes no art. 281.
+- As duas aulas continuam ativas e agora têm 10 e 12 flashcards, respectivamente, e 10 e 12 questões de fixação. Ambas receberam metadados de revisão e data de conferência normativa.
+- Fonte primária: texto atualizado do CPP na Câmara dos Deputados: https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-3689-3-outubro-1941-322206-normaatualizada-pe.html
+
+A revisão desses intervalos específicos está concluída; isso não equivale à auditoria integral de todas as demais leis e tópicos de Penal/Processo Penal.
+
+**Migrations versionadas e aplicadas no Supabase:**
+- `20261114235210_pcac_security_information_lesson_questions.sql`
+- `20261114235505_pcac_cpp_articles_review_update.sql`
+
 ### Pontos de cobertura ainda a revisar manualmente
 
 1. Confirmar, no texto integral de cada aula, todos os subitens específicos de Estatística (amostragem, variáveis, distribuições, decis/percentis) e de Arquivologia (SIGAD, classificação, temporalidade e gestão da informação).
-2. Revisar o conteúdo de Direito Penal/Processual Penal, em especial os arts. 275 a 281 do CPP (peritos e intérpretes), e conferir a cobertura literal de todos os intervalos indicados no edital.
+2. Continuar a revisão das demais leis e tópicos de Direito Penal/Processual Penal; os intervalos do CPP arts. 4º a 23, 155 a 184 e 275 a 281 já foram conferidos e ampliados.
 3. Fazer conferência normativa de cada material institucional pela redação vigente em 06/11/2026; alterações posteriores à publicação do edital não devem ser apresentadas como conteúdo cobrável, conforme item 11.5.5.
 4. Separar e rotular de forma inequívoca os materiais complementares de Administração Pública, sem tratá-los como disciplina autônoma do Anexo III.
 
