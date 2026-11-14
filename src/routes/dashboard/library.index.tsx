@@ -12,7 +12,7 @@ import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxono
 import { useEffect, useMemo, useRef, useState } from "react";
 import "@/styles/student-area-kit.css";
 import { disciplineTheme, themeStyle } from "@/lib/disciplineTheme";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookMarked,
@@ -110,6 +110,10 @@ function LibraryIndex() {
     discipline: initialDiscipline,
   } = Route.useSearch();
   const navigate = Route.useNavigate();
+  const router = useRouter();
+  // Matéria aberta por um link (ex.: um cartão da área Material): "voltar" retorna àquela tela.
+  // Matéria escolhida aqui mesmo: "voltar" retorna à lista de matérias desta página.
+  const enteredFocused = useRef(!!(initialDiscipline || guia));
   const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
   const [discipline, setDiscipline] = useState<string>(
@@ -301,6 +305,23 @@ function LibraryIndex() {
     setTopic("all");
     setLaw("all");
   };
+  const leaveSubject = () => {
+    try {
+      sessionStorage.removeItem(filterKey);
+    } catch {
+      /* Session storage is optional. */
+    }
+    resetFilters();
+    setDiscipline("all");
+    if (enteredFocused.current) {
+      enteredFocused.current = false;
+      if (router.history.canGoBack()) router.history.back();
+      else void router.navigate({ to: "/dashboard/material" });
+      return;
+    }
+    document.getElementById("dashboard-content")?.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0 });
+  };
   const readCount = subjectItems.filter((item) => read.has(item.slug)).length;
 
   if (!authLoading && !signedIn) {
@@ -334,9 +355,9 @@ function LibraryIndex() {
       <BackToEdital back={back} />
       {focused ? (
         <header className={`library-focus ak-themed-head library-tone-${libraryTone(discipline)}`}>
-          <Link to="/dashboard/material" className="library-focus__back">
-            ← Todas as matérias
-          </Link>
+          <button type="button" className="library-focus__back" onClick={leaveSubject}>
+            ← {enteredFocused.current ? "Voltar" : "Todas as matérias"}
+          </button>
           <div className="library-focus__identity">
             <div>
               <p className="library-eyebrow">Biblioteca de estudo</p>
