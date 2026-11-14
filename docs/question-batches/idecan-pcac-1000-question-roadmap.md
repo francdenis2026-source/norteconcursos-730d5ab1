@@ -43,9 +43,11 @@ As questões serão autorais, em lotes revisáveis, vinculadas a tópicos confir
 - Fato ainda sujeito a mudança será marcado como atualização, não como regra permanente.
 - Notícia sem confirmação oficial não será transformada em questão ativa.
 
-## Estado atual
+## Estado atual — recontagem direta em 14/11/2026
 
-- Banco PC-AC 2026 (curated_question_catalog): 144 questões ativas autorais, distribuídas por 14 disciplinas oficiais do Oficial Investigador.
+- Banco PC-AC 2026 (`curated_question_catalog`): **195 questões autorais ativas**, todas com enunciado, explicação e vínculo a tópico do Anexo III, distribuídas pelas 14 disciplinas oficiais.
+- Distribuição atual: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 9.
+- A meta consolidada do roteiro é 1.080 questões; 195 ativas representam aproximadamente 18,1% da meta. A expansão deve priorizar Penal, Processo Penal e Legislação Institucional, sem ativar itens sem revisão.
 - Lote autoral 01 (14/11/2026): 30 questões novas inseridas e vinculadas ao Anexo III — 10 de Noções de Direito Administrativo, 10 de Língua Portuguesa e 10 de Raciocínio Lógico.
 - A taxonomia foi alinhada ao edital: Contabilidade + Análise Financeira estão agrupadas em **Contabilidade Geral e Análise Financeira**; itens genéricos de Administração estão em **Noções de Administração**. Estatística permanece no bloco de conhecimentos específicos, conforme o Anexo III; Matemática básica está integrada ao conteúdo de Raciocínio Lógico.
 - Questões autorais são identificadas como is_original=true e vinculadas ao edital oficial como base de conteúdo; não são apresentadas como itens oficiais aplicados pela IDECAN.
@@ -57,3 +59,8 @@ As questões serão autorais, em lotes revisáveis, vinculadas a tópicos confir
 - Lote 1: 9 questões autorais de alta prioridade em `idecan-pcac-fase2-batch1-draft.md`.
 - Banco de dados: nenhuma questão nova inserida.
 - Próximo lote: disciplinas específicas e áreas de menor incidência, começando por Arquivologia, Contabilidade/Análise Financeira, Estatística, História/Geografia do Acre e Administração.
+
+
+## Observação de escopo
+
+O banco de materiais também contém 7 aulas complementares de Administração Pública, além das 14 disciplinas oficiais do Anexo III. Essas aulas não devem ser contadas como uma 15ª disciplina oficial nem misturadas às metas de questões do edital.
