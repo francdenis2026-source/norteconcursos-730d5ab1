@@ -30,7 +30,7 @@ html:root body .student-home.sh2 .sh2-shortcuts--chips {
   margin: 0;
 }
 html:root body .student-home.sh2 .sh2-shortcuts--chips > a {
-  position: static;
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -84,10 +84,23 @@ html:root body .student-home.sh2 .sh2-kpis > * { min-height: 0; padding-block: 1
 @media (min-width: 1100px) {
   html:root body .student-home.sh2 .sh2-pair {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: stretch;
+    align-items: start;
     gap: 10px;
   }
   html:root body .student-home.sh2 .sh2-pair .student-home__rhythm {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+/* Números que mudam ao vivo (tempo, contagem regressiva) não deslocam o texto ao redor. */
+html:root body .student-home.sh2 :is(.sh2-kpis, .sh2-hero__exam, .sh2-card) :is(strong, dd, time, b) {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Os efeitos decorativos herdados dos cartões antigos (véu em ::before/::after) saem dos botões:
+   sem foto, eles só escureciam a página. */
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a::before,
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a::after {
+  content: none !important;
+  display: none !important;
 }

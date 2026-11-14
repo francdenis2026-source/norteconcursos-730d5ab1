@@ -1,0 +1,5 @@
+/* Depois que a abertura termina, nenhuma animação da tela de carregamento continua rodando escondida. */
+html[data-norte-boot="ready"] [class*="norte-boot"],
+html[data-norte-boot="ready"] [class*="norte-boot"] * {
+  animation: none !important;
+}

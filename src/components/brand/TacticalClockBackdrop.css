@@ -1,5 +1,6 @@
 /* Decorative artwork, with no hit targets, layout space or per-frame React updates. */
 svg.tactical-clock-backdrop {
+  contain: strict;
   display: block;
   position: absolute;
   inset: 0;
@@ -13,7 +14,6 @@ svg.tactical-clock-backdrop {
 }
 .tactical-clock-backdrop__mechanism {
   opacity: 0.8;
-  filter: drop-shadow(0 1px 1px #0008);
 }
 .tactical-clock-backdrop__scale {
   pointer-events: none;
@@ -35,11 +35,15 @@ svg.tactical-clock-backdrop {
   stroke-width: 0.5;
   stroke-linejoin: round;
 }
+/* Ponteiros de hora e minuto avançam em passos (720 e 60): o desenho só é refeito quando muda,
+   em vez de redesenhar a tela inteira a cada quadro por um giro imperceptível. */
 .tactical-clock-backdrop__hour {
   --hand-period: 43200s;
+  animation-timing-function: steps(720, end);
 }
 .tactical-clock-backdrop__minute {
   --hand-period: 3600s;
+  animation-timing-function: steps(60, end);
 }
 .tactical-clock-backdrop__second {
   --hand-period: 60s;
