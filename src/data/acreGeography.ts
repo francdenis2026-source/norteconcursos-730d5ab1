@@ -191,6 +191,7 @@ export const ACRE_GEOGRAPHY_FACTS = [
       "A Lei nº 12.876/2013 restabeleceu o fuso do Acre e revogou a alteração de 2008.",
     ],
     source: { label: "Presidência — Lei nº 12.876/2013", url: "https://www.presidencia.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12876.htm" },
+    alternatives: [],
     caution: "Não confunda o horário vigente UTC−5 com o período entre 2008 e 2013, quando houve alteração legal.",
   },
   {
@@ -203,6 +204,7 @@ export const ACRE_GEOGRAPHY_FACTS = [
       "Juruá, Purus, Acre, Iaco, Tarauacá e Envira estão entre os rios relevantes para povoamento, abastecimento, pesca e transporte.",
     ],
     source: { label: "SEMA — Zoneamento Ecológico-Econômico, Fase II", url: "https://sema.ac.gov.br/wp-content/uploads/2022/02/ZEE-II.pdf" },
+    alternatives: [],
     caution: "A navegabilidade varia por trecho e estação; não trate todos os rios como igualmente navegáveis durante todo o ano.",
   },
   {
@@ -227,6 +229,8 @@ export const ACRE_GEOGRAPHY_FACTS = [
       "A cobertura vegetal pertence ao domínio amazônico, com formações de Floresta Tropical Aberta e Floresta Tropical Densa.",
     ],
     source: { label: "SEMA — Zoneamento Ecológico-Econômico, Fase II", url: "https://sema.ac.gov.br/wp-content/uploads/2022/02/ZEE-II.pdf" },
+    alternatives: [],
+    caution: "O período chuvoso e o mais seco variam regionalmente; não fixe meses exatos sem referência climatológica.",
   },
   {
     id: "unidades-conservacao",
@@ -238,6 +242,7 @@ export const ACRE_GEOGRAPHY_FACTS = [
       "Exemplos de Uso Sustentável: Resex Chico Mendes, Alto Juruá, Cazumbá-Iracema, Alto Tarauacá e Riozinho da Liberdade, além de florestas e APAs.",
     ],
     source: { label: "SEMA Acre — Unidades de Conservação", url: "https://sema.ac.gov.br/departamentos-e-divisoes/divisao-de-areas-naturais-protegidas-e-biodiversidade/" },
+    alternatives: [],
     caution: "Unidades de conservação e terras indígenas são categorias distintas; não some ou compare áreas sem verificar a metodologia e a data do cadastro.",
   },
   {
