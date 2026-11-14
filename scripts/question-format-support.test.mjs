@@ -41,16 +41,19 @@ test('Acre legal references accept only reviewed official legislation and the PC
     'https://legis.ac.gov.br/detalhar/6874',
     'https://legis.ac.gov.br/detalhar/417-0',
     'https://legis.ac.gov.br/detalhar/6864-1',
+    'https://legis.ac.gov.br/detalhar/110',
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9836',
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9611',
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/5556',
     'https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
+    'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html',
   ];
   for (const url of approved) assert.equal(isOfficialUrl(url), true, url);
   const rejected = [
     'http://legis.ac.gov.br/detalhar/674-1',
     'https://legis.ac.gov.br/detalhar/674-1?next=evil',
     'https://legis.ac.gov.br/detalhar/9999',
+    'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html?x=1',
     'https://legis.ac.gov.br.evil.test/detalhar/674-1',
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9999',
     'https://sead.ac.gov.br/other.pdf',
