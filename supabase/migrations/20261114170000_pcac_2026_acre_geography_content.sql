@@ -364,6 +364,103 @@ from jsonb_to_recordset($acre_seed$
     "content_status": "active",
     "syllabus_topic_order": 1,
     "law_version_checked_at": null
+  },
+  {
+    "quiz": [
+      {
+        "a": false,
+        "q": "O Estado do Acre possui soberania própria, distinta da República Federativa do Brasil.",
+        "why": "O Acre possui autonomia federativa, não soberania."
+      },
+      {
+        "a": true,
+        "q": "A EC estadual nº 63/2022 atualizou a redação do art. 131 da Constituição do Acre.",
+        "why": "A emenda alterou a lista dos órgãos de segurança pública."
+      },
+      {
+        "a": true,
+        "q": "Na redação atual do art. 131, o Instituto Socioeducativo do Estado do Acre integra a lista de órgãos de segurança pública.",
+        "why": "O inciso IV foi incluído pela EC nº 63/2022."
+      },
+      {
+        "a": false,
+        "q": "A Polícia Civil do Acre exerce, como regra constitucional, a apuração de infrações penais militares.",
+        "why": "O art. 133 exclui as infrações militares e ressalva a competência da União."
+      },
+      {
+        "a": true,
+        "q": "O art. 134 prevê promoções na Polícia Civil pelo critério alternado de antiguidade e merecimento.",
+        "why": "É a regra expressa do caput do art. 134."
+      },
+      {
+        "a": true,
+        "q": "O ingresso na classe inicial das carreiras policiais civis ocorre por concurso público de provas e títulos, com participação da OAB nas fases.",
+        "why": "Regra prevista no art. 134, § 1º."
+      },
+      {
+        "a": false,
+        "q": "Qualquer pessoa aprovada em concurso pode exercer cargos policiais civis, mesmo sem integrar a respectiva carreira.",
+        "why": "O art. 134, § 2º, reserva o exercício aos integrantes das respectivas carreiras."
+      },
+      {
+        "a": false,
+        "q": "A Constituição Estadual e a Lei Orgânica da Polícia Civil têm a mesma função normativa.",
+        "why": "A Constituição estabelece normas constitucionais; a lei orgânica detalha estrutura e funcionamento institucional."
+      }
+    ],
+    "slug": "pcac-2026-constitucional-constituicao-acre-policia-civil",
+    "title": "Constituição do Estado do Acre: organização estadual e segurança pública",
+    "body_md": "# Constituição do Estado do Acre: organização e segurança pública\n\n## 1. Autonomia e organização estadual\nO art. 1º estabelece que o Estado do Acre, com seus municípios, integra a República Federativa do Brasil e exerce os poderes decorrentes de sua autonomia. Autonomia não é soberania: o Estado deve respeitar a Constituição Federal e a repartição constitucional de competências.\n\nO art. 2º remete aos limites definidos pelo Tratado de Petrópolis (1903), pelo Tratado do Rio de Janeiro (1909) e pelo art. 12, § 5º, do ADCT da Constituição Federal.\n\nO art. 6º estabelece Legislativo, Executivo e Judiciário como Poderes estaduais independentes e harmônicos. O art. 7º define Rio Branco como capital do Estado.\n\n## 2. Segurança pública — art. 131\nA redação dada pela Emenda Constitucional estadual nº 63, de 22 de junho de 2022, dispõe que a segurança pública, voltada à preservação da ordem pública e da incolumidade das pessoas e do patrimônio, é exercida pelos seguintes órgãos:\n- Polícia Civil;\n- Polícia Militar e Corpo de Bombeiros Militar do Estado;\n- Polícia Penal;\n- Instituto Socioeducativo do Estado do Acre.\n\nAtenção à atualização: a EC nº 63/2022 alterou a lista do art. 131. Não reproduza como vigente a redação anterior que incluía agentes de trânsito ou apresentava o ISE em outro inciso.\n\n## 3. Polícia Civil — arts. 133 e 134\nO art. 133 caracteriza a Polícia Civil como instituição permanente do Poder Público, dirigida por Delegado de Polícia de carreira e organizada segundo hierarquia e disciplina. Ressalvada a competência da União, atribui-lhe as funções de polícia judiciária e a apuração das infrações penais em todo o território estadual, exceto as militares.\n\nO art. 134 estabelece estruturação em carreira e promoções pelo critério alternado de antiguidade e merecimento. O § 1º prevê ingresso na classe inicial mediante concurso público de provas e títulos, com participação da OAB em todas as fases; o § 2º reserva o exercício dos cargos policiais civis aos integrantes das respectivas carreiras. O § 3º disciplina o provimento dos cargos da carreira de Delegado, com os requisitos constitucionais ali indicados.\n\n## 4. Constituição Federal e legislação complementar\nO art. 144 da Constituição Federal é a referência nacional para a organização da segurança pública. A Constituição estadual deve ser lida em harmonia com esse dispositivo e com a Lei Federal nº 14.735/2023 (Lei Orgânica Nacional das Polícias Civis).\n\nNão confunda:\n- **Constituição Estadual:** organiza o Estado e fixa normas constitucionais estaduais.\n- **Lei Orgânica da Polícia Civil do Acre:** disciplina a estrutura, as funções institucionais e o regime jurídico da instituição, dentro dos limites constitucionais.\n- **Lei Orgânica Nacional das Polícias Civis:** estabelece normas gerais nacionais para as Polícias Civis.\n\n## 5. Pegadinhas\n- O Estado tem autonomia, não soberania.\n- O art. 131 foi atualizado pela EC estadual nº 63/2022.\n- O ISE integra a lista do art. 131 na redação atual.\n- A Polícia Civil não apura infrações penais militares como regra de sua competência constitucional.\n- Promoção na carreira da Polícia Civil: alternância entre antiguidade e merecimento.\n- Ingresso e exercício de cargos policiais civis devem observar as regras constitucionais e legais específicas.\n\n**Fonte de literalidade:** consulte o texto consolidado no Portal LEGIS do Acre e a Emenda Constitucional nº 63/2022. O portal é consultivo; para uso jurídico, prevalece a publicação oficial do ato.\n",
+    "summary": "Texto atualizado dos arts. 1º, 2º, 6º, 7º, 131, 133 e 134 da Constituição do Acre, com destaque para a EC nº 63/2022 e a Polícia Civil.",
+    "discipline": "Noções de Direito Constitucional",
+    "flashcards": [
+      {
+        "b": "Não. Possui autonomia dentro da República Federativa do Brasil; a soberania pertence à República.",
+        "f": "O Estado do Acre possui soberania?"
+      },
+      {
+        "b": "Polícia Civil; Polícia Militar e Corpo de Bombeiros Militar; Polícia Penal; Instituto Socioeducativo do Estado do Acre.",
+        "f": "Quais órgãos aparecem no art. 131 da Constituição do Acre após a EC nº 63/2022?"
+      },
+      {
+        "b": "Emenda Constitucional estadual nº 63, de 22 de junho de 2022.",
+        "f": "Qual emenda atualizou a lista de órgãos do art. 131?"
+      },
+      {
+        "b": "Instituição permanente, dirigida por Delegado de Polícia de carreira; exerce polícia judiciária e apura infrações penais, exceto as militares, ressalvada a competência da União.",
+        "f": "Como o art. 133 define a Polícia Civil do Acre e quais são suas funções?"
+      },
+      {
+        "b": "Alternância entre antiguidade e merecimento.",
+        "f": "Qual critério de promoção está previsto no art. 134?"
+      },
+      {
+        "b": "Concurso público de provas e títulos, com participação da OAB em todas as fases.",
+        "f": "Como ocorre o ingresso na classe inicial das carreiras policiais civis, segundo o art. 134, § 1º?"
+      },
+      {
+        "b": "Os integrantes das respectivas carreiras.",
+        "f": "Quem pode exercer cargos policiais civis, segundo o art. 134, § 2º?"
+      },
+      {
+        "b": "A Constituição fixa normas constitucionais estaduais; a Lei Orgânica disciplina a estrutura, funções e regime da Polícia Civil dentro dos limites constitucionais.",
+        "f": "Qual a diferença entre Constituição Estadual e Lei Orgânica da Polícia Civil?"
+      }
+    ],
+    "sort_order": 3,
+    "legal_basis": [
+      "Constituição do Estado do Acre, arts. 1º, 2º, 6º, 7º, 131, 133 e 134",
+      "Emenda Constitucional estadual nº 63/2022",
+      "Constituição Federal, art. 144",
+      "Lei Federal nº 14.735/2023"
+    ],
+    "source_note": "Constituição do Estado do Acre, texto consolidado no Portal LEGIS; Emenda Constitucional estadual nº 63/2022; Constituição Federal, art. 144; Lei Federal nº 14.735/2023.",
+    "topic_label": "Constituição do Estado do Acre e organização da Polícia Civil",
+    "contest_name": "PC-AC 2026",
+    "legal_review": null,
+    "content_status": "active",
+    "syllabus_topic_order": 1,
+    "law_version_checked_at": "2026-11-14T23:30:00+00:00"
   }
 ]
 $acre_seed$::jsonb) as seed(
@@ -371,5 +468,5 @@ $acre_seed$::jsonb) as seed(
  contest_name text, syllabus_topic_order integer, source_note text, legal_basis jsonb, law_version_checked_at timestamptz,
  legal_review jsonb, content_status text, flashcards jsonb, quiz jsonb
 )
-on conflict (slug) do update set body_md=excluded.body_md, summary=excluded.summary, source_note=excluded.source_note, flashcards=excluded.flashcards, quiz=excluded.quiz
-where public.study_materials.slug='pcac-2026-acre-municipios-fronteiras-integracao-regional';
+on conflict (slug) do update set body_md=excluded.body_md, summary=excluded.summary, source_note=excluded.source_note, legal_basis=excluded.legal_basis, law_version_checked_at=excluded.law_version_checked_at, flashcards=excluded.flashcards, quiz=excluded.quiz
+where public.study_materials.slug in ('pcac-2026-acre-municipios-fronteiras-integracao-regional','pcac-2026-constitucional-constituicao-acre-policia-civil');
