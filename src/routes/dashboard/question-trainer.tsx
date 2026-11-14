@@ -119,6 +119,7 @@ import "@/styles/question-trainer-professional-refinement.css";
 import "@/styles/question-trainer-wide.css";
 import "@/styles/question-trainer-viewport.css";
 import "@/styles/trainer-mobile-refine.css";
+import "@/styles/trainer-paused.css";
 import { Hint } from "@/components/ui/hint";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
@@ -1196,7 +1197,7 @@ function QuestionTrainer() {
           <div className="qt2-paused" role="dialog" aria-modal="false" aria-label="Treino pausado">
             <Pause aria-hidden="true" />
             <strong>Treino pausado</strong>
-            <p>O cronômetro está parado e a questão fica oculta até você retomar.</p>
+            <p>Cronômetro parado. A questão fica oculta até você retomar.</p>
             <Button onClick={resumeUserPause} className="qt2-paused__resume">
               <Play className="mr-2 h-4 w-4" /> Retomar treino
             </Button>

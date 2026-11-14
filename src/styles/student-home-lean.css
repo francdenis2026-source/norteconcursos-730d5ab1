@@ -79,3 +79,15 @@ html:root body .student-home.sh2 .sh2-shortcuts--chips small {
 /* Indicadores mais baixos. */
 html:root body .student-home.sh2 .sh2-kpis { gap: 8px; }
 html:root body .student-home.sh2 .sh2-kpis > * { min-height: 0; padding-block: 10px; }
+
+/* Ritmo e respostas lado a lado em telas médias e grandes, num só bloco visual. */
+@media (min-width: 1100px) {
+  html:root body .student-home.sh2 .sh2-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 10px;
+  }
+  html:root body .student-home.sh2 .sh2-pair .student-home__rhythm {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
