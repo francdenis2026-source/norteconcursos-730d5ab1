@@ -50,8 +50,9 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 19. Progressões aritméticas e geométricas.
 20. Probabilidade: união, condicional e independência.
 21. Médias simples e ponderadas; leitura de gráficos e tabelas.
+22. Atualização da aula de improbidade administrativa: dolo, tipicidade, categorias, sanções e indisponibilidade de bens.
 
-Os vinte e um registros estão ativos e possuem resumo, flashcards e quiz. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
+Os 20 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois registros preexistentes foram atualizados: a aula de ingresso/formação da LC nº 129/2004 e a aula de improbidade administrativa após a Lei nº 14.230/2021. O seed versionado contém 22 registros no total. O seed idempotente correspondente foi versionado em `supabase/migrations/20261114160000_pcac_2026_content_additions.sql`. A aula de improbidade foi ampliada com os requisitos atuais de dolo, tipicidade, categorias dos arts. 9º–11, sanções e indisponibilidade de bens; o seed atualiza esse registro existente. A aula da LC 526/2026 foi ampliada após conferência da íntegra do ato: corrigida a referência da lotação para art. 67, § 13 (não art. 65), incluídos fatores do probatório, recurso, exceção territorial do § 17, consequências do curso, TOE, ressarcimento e art. 84-A; agora tem 15 flashcards e 17 questões.
 
 ## Gaps e validações obrigatórias
 
