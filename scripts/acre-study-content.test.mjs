@@ -47,7 +47,11 @@ test("história inclui Tratado de Ayacucho e economia inclui infraestrutura de t
   assert.ok(ACRE_STUDY_CONTENT.economia.some((card) => /transportes/i.test(card.title)));
   assert.ok(ACRE_STUDY_CONTENT.economia.some((card) => /indicadores demográficos/i.test(card.title)));
   assert.ok(ACRE_STUDY_CONTENT.cultura.some((card) => /povos indígenas/i.test(card.title)));
-  assert.ok(ACRE_STUDY_CONTENT.politica.some((card) => /Constituição do Estado do Acre/i.test(card.title)));
+  const stateConstitution = ACRE_STUDY_CONTENT.politica.find((card) => /Constituição do Estado do Acre/i.test(card.title));
+  assert.ok(stateConstitution);
+  assert.match(stateConstitution.points.join(" "), /Emenda Constitucional estadual nº 63\/2022/);
+  assert.match(stateConstitution.points.join(" "), /polícia judiciária/);
+  assert.match(stateConstitution.points.join(" "), /antiguidade e merecimento/);
 });
 
 test("regionalização do edital distribui os 22 municípios sem duplicidade", () => {
