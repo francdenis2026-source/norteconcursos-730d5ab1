@@ -1,3 +1,4 @@
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import "@/styles/study-enem-fit.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -509,13 +510,13 @@ function StudyRoomPage() {
         {(sp.edital || sp.plan) && (
           <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
             {sp.edital ? (
-              <Link to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>
+              <SmartBackLink to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>
                 <ArrowLeft className="h-4 w-4" /> Voltar ao assunto do edital
-              </Link>
+              </SmartBackLink>
             ) : (
-              <Link to="/dashboard/study-coach">
+              <SmartBackLink to="/dashboard/study-coach">
                 <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
-              </Link>
+              </SmartBackLink>
             )}
           </Button>
         )}

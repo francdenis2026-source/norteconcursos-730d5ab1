@@ -1,3 +1,4 @@
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
@@ -392,7 +393,7 @@ function TracksPage() {
         ),
       })}
       {!fm.focus && (
-        <Link
+        <SmartBackLink
           to={LAW_TRACKS.has(track.slug) ? "/dashboard/library" : "/dashboard/disciplinas"}
           search={
             (LAW_TRACKS.has(track.slug)
@@ -405,7 +406,7 @@ function TracksPage() {
           className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-primary"
         >
           <ChevronLeft className="h-4 w-4" /> Voltar aos materiais da disciplina
-        </Link>
+        </SmartBackLink>
       )}
       {!fm.focus && (
         <div className="ak-themed" style={themeStyle(disciplineTheme(track.title))}>

@@ -1,3 +1,4 @@
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import { platformDate } from "@/lib/platformClock";
 import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
@@ -258,9 +259,9 @@ function StudentDetailPage() {
   return (
     <div className="mx-auto max-w-6xl space-y-6">
       <Button asChild variant="ghost" size="sm" className="gap-2">
-        <Link to="/dashboard/admin-students">
+        <SmartBackLink to="/dashboard/admin-students">
           <ArrowLeft className="h-4 w-4" /> Voltar para alunos
-        </Link>
+        </SmartBackLink>
       </Button>
       <PageHero
         image="study-desk"

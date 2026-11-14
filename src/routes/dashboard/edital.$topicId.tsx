@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import { Badge } from "@/components/ui/badge";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
@@ -259,9 +260,9 @@ function TopicPage() {
           Tentar novamente
         </Button>
         <Button asChild variant="outline">
-          <Link to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
+          <SmartBackLink to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar ao edital
-          </Link>
+          </SmartBackLink>
         </Button>
       </div>
     );
@@ -292,9 +293,9 @@ function TopicPage() {
     <div className="nc-student-workspace edital-workspace space-y-5 pb-8">
       <BackToPlan back={backToPlan} topic={tema} />
       <Button asChild variant="ghost" size="sm" className="gap-2">
-        <Link to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
+        <SmartBackLink to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
           <ArrowLeft className="h-4 w-4" /> Voltar ao edital eletrônico
-        </Link>
+        </SmartBackLink>
       </Button>
 
       <header className="edital-topic-heading workspace-banner">

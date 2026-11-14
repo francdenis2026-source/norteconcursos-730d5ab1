@@ -1,7 +1,7 @@
 import { Link, useLocation, useRouter } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
-import { dashboardHref } from "@/lib/internalNavigation";
+import { previousDashboardHref, recordVisit } from "@/lib/navHistory";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Hint } from "@/components/ui/hint";
 
@@ -9,12 +9,11 @@ import { Hint } from "@/components/ui/hint";
 export function PlatformBack() {
   const location = useLocation();
   const router = useRouter();
-  const visited = useRef(new Map<number, string>());
   const [previous, setPrevious] = useState<string | null>(null);
   const index = location.state.__TSR_index;
   useEffect(() => {
-    visited.current.set(index, location.href);
-    setPrevious(dashboardHref(visited.current.get(index - 1) ?? ""));
+    recordVisit(index, location.href);
+    setPrevious(previousDashboardHref(index));
   }, [index, location.href]);
   if (!previous || previous === location.href) return (
     <Hint content={location.pathname === '/dashboard' ? 'Página inicial' : 'Área do aluno'} side="bottom">
@@ -27,7 +26,7 @@ export function PlatformBack() {
         <button
           type="button"
           onClick={() => {
-            if (dashboardHref(visited.current.get(index - 1) ?? "")) router.history.back();
+            if (previousDashboardHref(index)) router.history.back();
           }}
           className="app-top-btn platform-back no-print cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           aria-label="Voltar à seção anterior da plataforma"

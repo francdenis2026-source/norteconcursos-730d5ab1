@@ -11,6 +11,7 @@ import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { useEffect, useMemo } from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
+import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import {
   ArrowLeft,
   ArrowRight,
@@ -128,15 +129,15 @@ function MaterialPage() {
   }
 
   const back = edital ? (
-    <Link to="/dashboard/edital/$topicId" params={{ topicId: edital }} className="library-back">
+    <SmartBackLink to="/dashboard/edital/$topicId" params={{ topicId: edital }} className="library-back">
       <ArrowLeft /> Voltar ao assunto do edital
-    </Link>
+    </SmartBackLink>
   ) : material && libraryCollection(material) === "enem" ? (
-    <Link to="/dashboard/enem" search={{ tab: "materiais" }} className="library-back">
+    <SmartBackLink to="/dashboard/enem" search={{ tab: "materiais" }} className="library-back">
       <ArrowLeft /> Materiais do ENEM
-    </Link>
+    </SmartBackLink>
   ) : (
-    <Link
+    <SmartBackLink
       to="/dashboard/library"
       search={{
         collection: material && libraryCollection(material) === "subjects" ? "subjects" : "laws",
@@ -147,7 +148,7 @@ function MaterialPage() {
       {material && libraryCollection(material) === "subjects"
         ? `Materiais · ${material?.discipline ?? "disciplina"}`
         : `Legislação · ${material?.discipline ?? "biblioteca"}`}
-    </Link>
+    </SmartBackLink>
   );
 
   if (isPending && signedIn) {

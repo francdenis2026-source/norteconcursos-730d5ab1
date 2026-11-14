@@ -47,6 +47,7 @@ import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
 import { disciplineTheme } from "@/lib/disciplineTheme";
+import { useSmartBack } from "@/components/dashboard/SmartBackLink";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
 import { AreaHint } from "@/components/ui/area-hint";
@@ -141,10 +142,11 @@ function DisciplinesPage() {
     if (initialSearch.d || initialSearch.eixo) void navigate({ search: {}, replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
   }, []);
-  const toHub = React.useCallback(
-    () => void navigate({ to: "/dashboard/material", hash: "hub-subjects", replace: true }),
-    [navigate],
-  );
+  const smartBack = useSmartBack();
+  // Voltar de verdade (tela de onde o aluno veio); sem histórico, abre o hub de materiais.
+  const toHub = React.useCallback(() => {
+    if (!smartBack()) void navigate({ to: "/dashboard/material", hash: "hub-subjects", replace: true });
+  }, [navigate, smartBack]);
   const { data, isPending } = useStudyMaterialList(signedIn);
   const materials = data ?? [];
   const cards = React.useMemo(() => disciplineCards(materials, TRACKS, PLAYLISTS), [materials]);
