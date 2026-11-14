@@ -10,7 +10,7 @@ Data da auditoria: 14/11/2026. Base primária: Edital nº 001 SEAD/PCAC, de 05/1
 
 ## Estado do banco verificado
 Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11/2026:
-- 21 materiais de Legislação Institucional, todos active; 134 flashcards e 154 questões.
+- 22 materiais de Legislação Institucional, todos active; 144 flashcards e 166 questões.
 - Contabilidade: 7 materiais, 35 flashcards e 35 questões.
 - Estatística: 10 materiais, 50 flashcards e 50 questões.
 - Língua Portuguesa: 13 materiais, 65 flashcards e 65 questões.
