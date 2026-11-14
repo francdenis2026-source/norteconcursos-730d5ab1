@@ -1,3 +1,4 @@
+import { examOriginLabel } from "@/lib/examLabel";
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, BookOpenCheck, LibraryBig, Search } from "lucide-react";
@@ -270,7 +271,7 @@ function DetailBody({
                         </small>
                         <strong>{q.subject}</strong>
                         <small>
-                          {q.contest} · {q.board} · {q.year}
+                          {examOriginLabel(q)}
                         </small>
                       </span>
                       <ArrowUpRight aria-hidden="true" />

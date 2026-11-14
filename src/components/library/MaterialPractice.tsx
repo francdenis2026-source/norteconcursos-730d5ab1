@@ -1,3 +1,4 @@
+import { examOriginLabel } from "@/lib/examLabel";
 import { DidacticSourceNotice } from "@/components/dashboard/DidacticSourceNotice";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { isPracticeOfficialSource } from "@/lib/materialPracticeReview";
@@ -177,8 +178,7 @@ function PracticeSession({ questions, userId, materialId, authoredKey }: { quest
   return (
     <div className="min-w-0 space-y-4 border-t pt-4">
       <p className="text-xs text-muted-foreground">
-        Questão {index + 1} de {questions.length} · {q.board}
-        {q.year ? ` · ${q.year}` : ""}
+        Questão {index + 1} de {questions.length} · {examOriginLabel(q)}
       </p>
       <DidacticSourceNotice provenance={q.didacticProvenance} />
       {parsed.base && (

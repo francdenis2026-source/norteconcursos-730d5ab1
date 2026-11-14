@@ -1,3 +1,4 @@
+import { examOriginLabel } from "@/lib/examLabel";
 // Painel que abre ao tocar em Acertos, Erros, Respondidas ou Puladas: lista as questões por trás do número
 // e, ao tocar numa delas, mostra a questão com a sua resposta, o gabarito, o tempo e o comentário.
 import * as React from "react";
@@ -244,7 +245,7 @@ function QuestionDetail({
           <Badge variant="outline">{subjectOf(item, question)}</Badge>
           {question && (
             <>
-              <Badge variant="outline">{question.board}</Badge>
+              <Badge variant="outline">{examOriginLabel(question)}</Badge>
               <Badge variant="outline">
                 {question.contest} · {question.year}
               </Badge>

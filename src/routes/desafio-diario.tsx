@@ -1,3 +1,4 @@
+import { examOriginLabel } from "@/lib/examLabel";
 import { ReadingSizeInline } from "@/components/accessibility/ReadingSizeInline";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -526,7 +527,7 @@ function QuestionPlayer({
               </div>
             </div>
             <div className="daily-question-meta">
-              <Badge>{question.board}</Badge>
+              <Badge>{examOriginLabel(question)}</Badge>
               <Badge variant="outline">Certo ou errado</Badge>
               <Badge variant="outline">{question.subject}</Badge>
               <Badge variant="outline">

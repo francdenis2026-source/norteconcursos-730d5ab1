@@ -1,3 +1,4 @@
+import { examOriginLabel } from "@/lib/examLabel";
 import * as React from "react";
 import {
   trainerRouteKey,
@@ -1206,7 +1207,7 @@ function QuestionTrainer() {
             <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
               {question.subject}
             </span>
-            <Badge variant="outline">{question.board}</Badge>
+            <Badge variant="outline">{examOriginLabel(question)}</Badge>
             <Badge variant="outline">
               {question.contest} · {question.year}
             </Badge>

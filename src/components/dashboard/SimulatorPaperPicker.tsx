@@ -47,7 +47,7 @@ export function SimulatorPaperPicker({
           >
             <strong className="block">{p.question.contest}</strong>
             <span className="block text-sm">
-              {p.question.career} · {p.question.board} · {p.question.year}
+              {p.question.career} · {p.question.year}
             </span>
             <span className="text-xs text-muted-foreground">
               {p.questions.length} questões disponíveis ·{" "}
