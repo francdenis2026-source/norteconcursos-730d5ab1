@@ -3,7 +3,7 @@
  * Cada item foi conferido em fonte pública em CHECKED_ON. Dados que mudam (população, notícias,
  * operações) trazem o ano de referência e devem ser revistos a cada nova divulgação oficial.
  */
-export const ACRE_CONTENT_CHECKED_ON = "2026-11-13";
+export const ACRE_CONTENT_CHECKED_ON = "2026-11-14";
 
 export interface AcreSource {
   label: string;
@@ -24,6 +24,18 @@ export interface AcreStudyCard {
 
 export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
   historia: [
+    {
+      title: "Tratado de Ayacucho",
+      reference: "27 de março de 1867",
+      points: [
+        "O Tratado de Amizade, Limites, Navegação, Comércio e Extradição foi celebrado entre Brasil e Bolívia em La Paz de Ayacucho.",
+        "O art. 2º adotou o princípio do uti possidetis como base para a determinação da fronteira entre os dois países.",
+        "Na delimitação de 1867, o atual Acre ficou do lado boliviano; a incorporação ao Brasil somente ocorreu após a Revolução Acreana e o Tratado de Petrópolis, em 1903.",
+      ],
+      source: { label: "Câmara dos Deputados — Decreto nº 4.280/1868 e texto do Tratado", url: "https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-4280-28-novembro-1868-553624-publicacaooriginal-71754-pe.html" },
+      alternatives: [{ label: "SEPLAN Acre — Rota de Integração, Tratado de Ayacucho", url: "https://seplan.ac.gov.br/rota-de-integracao/1867-o-tratado-de-ayacucho/" }],
+      caution: "Distinguir a data de assinatura do tratado (27/03/1867) da promulgação no Brasil pelo Decreto nº 4.280, de 28/11/1868.",
+    },
     {
       title: "Revolução Acreana e a Questão do Acre",
       reference: "1902–1903",
@@ -150,6 +162,32 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       alternatives: [{ label: "KfW — REDD Early Movers Acre (ficha)", url: "https://www.kfw-entwicklungsbank.de/PDF/%20Entwicklungsfinanzierung/Themen-NEU/REDD-Early-Movers-Acre-Fact-Sheet.pdf" }, { label: "Legisweb — Lei nº 2.308/2010", url: "https://www.legisweb.com.br/legislacao/?id=116550" }, { label: "Legisweb — Lei nº 1.904/2007 (ZEE)", url: "https://www.legisweb.com.br/legislacao/?id=116435" }, { label: "A Gazeta do Acre — investimentos em proteína animal", url: "https://agazetadoacre.com/2025/04/noticias/geral/governo-do-acre-celebra-mais-de-r-200-milhoes-em-investimentos-na-industria-de-proteina-animal" }],
       caution: "Fontes de 2012–2015 sobre o SISA e o KfW; o estado atual dos programas e outros acordos (como a Interoceânica) não foram confirmados. A data da Lei nº 2.308 varia entre fontes (22/10 ou 11/11/2010).",
     },
+    {
+      title: "Infraestrutura de transportes e integração regional",
+      reference: "Diagnóstico socioeconômico — SEPLAN/CEDEPLAR (2024); AGEAC (2026)",
+      points: [
+        "A BR-364 é o principal eixo terrestre de integração longitudinal do Acre, conectando Rio Branco ao Vale do Juruá e a Cruzeiro do Sul.",
+        "A BR-317, conhecida como Estrada do Pacífico/Interoceânica, conecta a região de Rio Branco a Assis Brasil e à fronteira com o Peru, articulando rotas internacionais.",
+        "O transporte fluvial continua essencial para localidades ribeirinhas e municípios com acesso rodoviário limitado; o modal aéreo complementa a ligação com áreas mais isoladas.",
+        "A AGEAC regula e fiscaliza o transporte intermunicipal rodoviário e fluvial, incluindo linhas regulares, transporte alternativo e fretamento.",
+      ],
+      source: { label: "SEPLAN/AC — Diagnóstico socioeconômico, infraestrutura de transportes", url: "https://seplan.ac.gov.br/wp-content/uploads/2024/02/CEDEPLAR-Diagnostico-Socieconomico-Acre-Livro1-1.pdf" },
+      alternatives: [{ label: "AGEAC — Transporte intermunicipal", url: "https://ageac.ac.gov.br/transporte-ditrans/" }, { label: "AGEAC — BR-364 e transporte intermunicipal", url: "https://ageac.ac.gov.br/ageac-reforca-articulacao-com-bancada-federal-para-impulsionar-melhorias-na-br-364-e-fortalecer-o-transporte-intermunicipal/" }],
+      caution: "Extensão, pavimentação e tempo de viagem variam por trecho e ano; para prova, priorize a função dos corredores e os modais, não números sem referência temporal.",
+    },
+    {
+      title: "Indicadores demográficos e sociais do Acre",
+      reference: "IBGE Cidades e Estados — consulta em 14/11/2026",
+      points: [
+        "O Acre possui 22 municípios e área territorial de 164.064,761 km² (referência territorial de 2025).",
+        "No Censo 2022, o estado registrou 830.018 habitantes e densidade demográfica de 5,06 hab./km².",
+        "A estimativa populacional do IBGE para 2026 é de 887.794 habitantes; o IDH informado na página estadual é 0,71 (2021).",
+        "Indicadores devem ser memorizados com o respectivo ano de referência: censo, estimativa, área, renda e IDH não correspondem necessariamente ao mesmo período.",
+      ],
+      source: { label: "IBGE — Cidades e Estados: Acre", url: "https://www.ibge.gov.br/cidades-e-estados/ac.html" },
+      alternatives: [{ label: "IBGE — Censo Demográfico 2022, indicadores selecionados", url: "https://biblioteca.ibge.gov.br/visualizacao/periodicos/3102/cd_2022_populacao_idade_sexo_ac.pdf" }],
+      caution: "A população estimada e outros indicadores são atualizados periodicamente. Confira o ano indicado pelo IBGE antes de responder questões numéricas.",
+    },
   ],
   cultura: [
     {
@@ -200,10 +238,23 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       ],
       source: { label: "IBGE — Censo 2022: povos e comunidades tradicionais", url: "https://www.ibge.gov.br/cidades-e-estados/ac" },
     },
+    {
+      title: "Povos indígenas e povos isolados no Acre",
+      reference: "FUNAI — monitoramento publicado em 05/11/2026",
+      points: [
+        "O Acre abriga povos indígenas com diferentes histórias de contato, línguas, formas de organização e territórios tradicionais.",
+        "A Frente de Proteção Etnoambiental Envira realiza ações de monitoramento de referências de povos indígenas isolados em áreas do Acre, com atividades terrestres, aéreas e por sensoriamento remoto.",
+        "Em notícia de 05/11/2026, a FUNAI informou que a FPE Envira acompanhava oito registros: seis referências confirmadas e duas em estudo.",
+        "A política de proteção respeita a decisão de permanecer em isolamento e evita promover contato forçado; povos de recente contato são categoria distinta.",
+      ],
+      source: { label: "FUNAI — monitoramento de povos isolados (05/11/2026)", url: "https://www.gov.br/funai/pt-br/assuntos/noticias/2026/funai-realiza-monitoramento-de-povos-isolados" },
+      alternatives: [{ label: "FUNAI — povos isolados e de recente contato", url: "https://www.gov.br/funai/pt-br/atuacao/povos-indigenas/povos-indigenas-isolados-e-de-recente-contato-2/povos-de-recente-contato-1" }],
+      caution: "A quantidade e a classificação dos registros mudam conforme o monitoramento. Os oito registros são o recorte divulgado pela FPE Envira em novembro de 2026, não o total nacional.",
+    },
   ],
   politica: [
     {
-      title: "Constituição do Estado do Acre",
+      title: "Poderes, capital e símbolos do Estado do Acre",
       reference: "Promulgada em 3 de outubro de 1989",
       points: [
         "São Poderes do Estado, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.",
@@ -214,6 +265,18 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       source: { label: "Portal LEGIS — Constituição do Estado do Acre", url: "https://legis.ac.gov.br/detalhar_constituicao" },
       alternatives: [{ label: "Assembleia Legislativa — texto em PDF", url: "https://www.al.ac.leg.br/wp-content/uploads/2014/10/constitui%C3%A7%C3%A3o_atualizada.pdf" }, { label: "TJAC — texto em PDF", url: "https://www.tjac.jus.br/wp-content/uploads/2014/07/Constituicao_Estadual_Acre.pdf" }, { label: "DHnet — texto em PDF", url: "https://www.dhnet.org.br/dados/lex/a_pdf/constituicao_ac.pdf" }],
       caution: "A data de 3/10/1989 é a da promulgação (a publicação no Diário Oficial foi em 5/10/1989). O texto consultado pode não incluir emendas posteriores; os números dos artigos não foram conferidos aqui. Número de deputados e duração dos mandatos: confirme no site da Assembleia Legislativa antes de estudar.",
+    },
+    {
+      title: "Constituição do Estado do Acre: autonomia e organização dos Poderes",
+      reference: "Constituição do Estado do Acre, arts. 1º a 7º e 45",
+      points: [
+        "O art. 1º define o Acre como parte integrante da República Federativa do Brasil, com autonomia e organização regidas pela Constituição Estadual e pelas leis que adotar.",
+        "O art. 2º remete aos limites definidos pelo Tratado de Petrópolis (1903), pelo Tratado do Rio de Janeiro (1909) e pelo art. 12, § 5º, do ADCT da Constituição Federal.",
+        "O art. 6º estabelece três Poderes estaduais — Legislativo, Executivo e Judiciário — independentes e harmônicos entre si; em regra, é vedada a delegação de atribuições e a acumulação de funções de Poderes distintos.",
+        "O art. 7º estabelece Rio Branco como capital do Estado, ressalvada a possibilidade constitucional de transferência temporária pelo Governador.",
+      ],
+      source: { label: "LEGIS — Constituição do Estado do Acre, texto compilado", url: "https://legis.ac.gov.br/detalhar_constituicao" },
+      caution: "A Constituição Estadual é atualizada por emendas; use sempre o texto compilado do Portal LEGIS, e não uma cópia histórica em PDF.",
     },
   ],
   seguranca: [
