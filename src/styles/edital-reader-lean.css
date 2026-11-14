@@ -1,0 +1,10 @@
+/* Leitor do edital: aviso da prova em uma faixa baixa. */
+html:root body .app-shell[data-area="student"] .ed3-exam {
+  padding: 10px 14px;
+  gap: 12px;
+  min-height: 0;
+  align-items: center;
+}
+html:root body .app-shell[data-area="student"] .ed3-exam h3 { font-size: 0.95rem; margin: 0; }
+html:root body .app-shell[data-area="student"] .ed3-exam p { margin: 2px 0 0; font-size: 0.82rem; line-height: 1.4; }
+html:root body .app-shell[data-area="student"] .ed3-exam > svg { width: 30px; height: 30px; padding: 6px; }

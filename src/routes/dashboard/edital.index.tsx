@@ -1,3 +1,4 @@
+import "@/styles/edital-reader-lean.css";
 import { editalExamQuestions, editalPracticeSearch } from "@/lib/editalPractice";
 import { examCoverage } from "@/lib/examCoverage";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
@@ -259,14 +260,7 @@ function EditalPage() {
           <h1>Estudar pelo edital</h1>
         </div>
         <dl className="ed2-strip__stats">
-          {edition ? (
-            <>
-              <div><dt>Disciplinas</dt><dd>{disciplines.length}</dd></div>
-              <div><dt>Tópicos</dt><dd>{topics.length}</dd></div>
-            </>
-          ) : (
-            <div><dt>Editais</dt><dd>{editions.length}</dd></div>
-          )}
+          {edition ? null : <div><dt>Editais</dt><dd>{editions.length}</dd></div>}
         </dl>
       </header>
       {!edition ? (
@@ -378,11 +372,6 @@ function EditalPage() {
       )}
       {edition && (
         <>
-          <ol className="ed3-trail" aria-label="Como estudar por este edital">
-            <li><span>1</span><div><strong>Escolha a disciplina</strong><small>Use a busca ou abra um bloco abaixo.</small></div></li>
-            <li><span>2</span><div><strong>Estude o assunto</strong><small>Abra o tópico e marque como estudado.</small></div></li>
-            <li><span>3</span><div><strong>Resolva questões</strong><small>Treine pelo assunto ou pela prova inteira.</small></div></li>
-          </ol>
           <section className="ed3-exam" role="region" aria-label="Treinar a prova desta edição">
             <ClipboardCheck aria-hidden="true" />
             <div>
@@ -397,7 +386,7 @@ function EditalPage() {
                   Quantidade do acervo revisado; pode ser menor que a prova completa. Os limites diários do seu plano continuam valendo.
                 </p>
               ) : (
-                <p role="status">Ainda não há questões elegíveis desta prova no acervo. Estude pelos assuntos abaixo; questões de outras provas não entram neste treino.</p>
+                <p role="status">Ainda não há questões elegíveis desta prova no acervo. Estude pelos assuntos abaixo.</p>
               )}
             </div>
             {catalogError ? (
