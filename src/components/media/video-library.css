@@ -223,3 +223,79 @@ html:root body .vl .vl__note { text-align: left !important; hyphens: manual; }
 html:root body .vl .vl__queue { display: flex; flex-direction: column; gap: .55rem; }
 html:root body .vl .vl__queue > * { flex: none; }
 html:root body .vl .vl__queue > .vl__list { flex: 1 1 0; min-height: 0; }
+
+/* Tela cheia (tablet e computador; no celular a página rola normalmente). */
+@media (min-width: 768px) {
+html:root body .app-shell[data-focus-mode="true"] .video-study-page {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  height: calc(100dvh - 76px - 34px - 26px);
+  min-height: 0;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page > [data-orientation] {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: .5rem;
+  min-height: 0;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page [role="tabpanel"][data-state="active"] {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-height: 0;
+  margin: 0;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl {
+  flex: 1 1 0;
+  grid-template-rows: none;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl > * { flex: none; }
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl > .vl__body {
+  flex: 1 1 0;
+  height: auto;
+  min-height: 0;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__attribution { margin: 0; font-size: .7rem; }
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .video-study-page__tabs { min-height: 0; }
+
+/* O player ocupa o espaço que sobra e os controles ficam sempre visíveis, sem rolagem interna. */
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  overflow: hidden;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage > * { flex: none; }
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vl__stage > .vp2 {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2 > * { flex: none; }
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2 > .vp2__stage {
+  flex: 1 1 0;
+  min-height: 8rem;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+  aspect-ratio: 16 / 9;
+}
+html:root body .app-shell[data-focus-mode="true"] .video-study-page .video-study-page__tabs { padding-block: 2px; }
+
+/* Janelas baixas em tela cheia: a faixa de abas recolhe para dar espaço ao player. */
+@media (max-height: 900px) {
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page > [data-orientation] > [role="tablist"] { display: none; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2__poster-copy :is(h2, h3, strong) { font-size: clamp(.95rem, 2.4vh, 1.5rem); line-height: 1.2; }
+  html:root body .app-shell[data-focus-mode="true"] .video-study-page .vp2__start { min-height: 2.25rem; padding-block: 0; }
+}
+
+}
