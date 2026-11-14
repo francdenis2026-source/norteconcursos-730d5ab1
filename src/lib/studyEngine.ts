@@ -26,9 +26,9 @@ export const CAREERS: CareerDef[] = [
       { name: "Informática e Tecnologia", weight: 16, aliases: ["informatica", "tecnologia"] },
       { name: "Contabilidade", weight: 12, aliases: ["contabilidade"] },
       {
-        name: "Estatística e Raciocínio Lógico",
+        name: "Matemática e Raciocínio Lógico",
         weight: 15,
-        aliases: ["estatistica", "raciocinio"],
+        aliases: ["estatistica", "raciocinio", "matematica", "probabilidade"],
       },
       { name: "Língua Portuguesa", weight: 15, aliases: ["portugues", "portuguesa"] },
       { name: "Direito Administrativo", weight: 9, aliases: ["administrativo"] },
