@@ -26,7 +26,7 @@ Tabela public.study_materials, contest_name = 'PC-AC 2026'. Na consulta de 14/11
 - Administração Pública: 7 materiais, 35 flashcards e 35 questões.
 - Noções de Administração: 15 materiais, 75 flashcards e 75 questões.
 
-**Total atual (consulta direta ao banco em 14/11/2026):** 166 materiais ativos, 886 flashcards e 907 questões embutidas nos materiais. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem. A diferença em relação à contagem anterior (893/915) foi identificada na recontagem direta dos arrays JSONB ativos; usar os valores desta consulta como referência operacional.
+**Total atual (consulta direta ao banco em 14/11/2026):** 166 materiais ativos no conjunto PC-AC: 159 em 14 disciplinas oficiais do Anexo III e 7 em Administração Pública como conteúdo complementar; 886 flashcards e 907 questões embutidas no conjunto. Os totais são inventário de registros, não validação pedagógica nem prova de cobertura de cada subitem. A diferença em relação à contagem anterior (893/915) foi identificada na recontagem direta dos arrays JSONB ativos; usar os valores desta consulta como referência operacional.
 
 ## Conteúdos adicionados diretamente ao banco nesta sessão
 1. LC nº 129/2004 após LC nº 526/2026: ingresso, estágio probatório, posse, curso de formação, primeira lotação e permanência territorial.
@@ -107,10 +107,10 @@ Os 29 novos materiais estão ativos e possuem resumo, flashcards e quiz. Dois re
 ## Recontagem e verificação operacional — 14/11/2026
 
 Consulta direta ao Supabase após as migrações PC-AC:
-- 166 materiais ativos distribuídos nas 15 disciplinas do cargo de Oficial Investigador.
+- 159 materiais ativos nas 14 disciplinas oficiais do Anexo III e 7 materiais complementares de Administração Pública.
 - 886 flashcards e 907 questões de revisão embutidos nos materiais ativos.
 - Todos os 166 materiais possuem fonte identificada, corpo com pelo menos 800 caracteres e ao menos dois flashcards e duas questões.
-- Banco de questões autorais do PC-AC 2026: 195 itens ativos para Oficial Investigador, todos com enunciado, explicação e vínculo a tópico do edital.
+- Banco de questões autorais do PC-AC 2026: 195 itens ativos para Oficial Investigador, distribuídos pelas 14 disciplinas oficiais; todos possuem enunciado, explicação e vínculo a tópico do edital.
 - Os nove materiais de Penal/Processual Penal possuem agora fontes estruturadas; a revisão jurídica formal continua pendente.
 
 A contagem de materiais e itens de revisão não substitui a validação pedagógica. Permanecem obrigatórias as revisões de correspondência linha a linha com o Anexo III, a conferência jurídica artigo por artigo e a revisão dos gabaritos e explicações.
