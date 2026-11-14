@@ -29,3 +29,27 @@
 }
 .qt2-focus__options button:focus-visible { outline: 2px solid var(--control-accent, var(--primary)); outline-offset: 2px; }
 html:root body .qt2-focus > p { margin: 0; font-size: 0.78rem !important; line-height: 1.4 !important; color: var(--muted-foreground); text-align: left; }
+
+/* Janela normal: a área do montador termina acima da faixa fixa do desenvolvedor (34 px),
+   então nada do cartão (botões "Limpar" e "Iniciar treinamento") fica por baixo dela. */
+@media (min-width: 768px) {
+  html:root:not(:fullscreen) body .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup) .app-content {
+    height: calc(100dvh - 76px - 34px - env(safe-area-inset-top, 0px)) !important;
+    max-height: calc(100dvh - 76px - 34px - env(safe-area-inset-top, 0px)) !important;
+    min-height: 0 !important;
+  }
+  html:root:not(:fullscreen) body .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup) .trainer-setup__unified {
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+  }
+  /* Em janelas baixas o cartão rola por dentro e a barra "Iniciar treinamento" fica sempre à vista. */
+  html:root:not(:fullscreen) body .app-shell.navigation-v2[data-area="student"]:has(.trainer-setup) .trainer-setup .trainer-start-bar {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 5;
+    margin-bottom: 0;
+    backdrop-filter: blur(6px);
+    background: color-mix(in oklab, var(--card) 92%, var(--muted));
+  }
+}
