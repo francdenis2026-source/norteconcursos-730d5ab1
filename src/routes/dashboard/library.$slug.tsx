@@ -1,3 +1,4 @@
+import "@/styles/study-reader-polish.css";
 import "@/styles/student-library-media-workspaces.css";
 import "@/styles/library-discipline-fit.css";
 import "@/styles/student-area-kit.css";

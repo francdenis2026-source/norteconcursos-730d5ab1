@@ -1,0 +1,18 @@
+/* Leitor de material: cabeçalho de tabela sem hifenização e citações com espaçamento normal. */
+html:root body .study-prose table th {
+  hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+html:root body .study-prose blockquote p {
+  line-height: 1.6 !important;
+  margin-block: 0 !important;
+}
+html:root body .study-prose blockquote { padding-block: 12px; }
+html:root body .study-prose blockquote,
+html:root body .study-prose blockquote * { line-height: 1.6 !important; }
+html:root body .study-prose table td,
+html:root body .study-prose table td * { hyphens: manual !important; -webkit-hyphens: manual !important; }
+html:root body .study-prose table td, html:root body .study-prose table td * { text-align: left !important; }
