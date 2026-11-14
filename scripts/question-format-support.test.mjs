@@ -55,6 +55,7 @@ test('Acre legal references accept only reviewed official legislation and the PC
     'https://legis.ac.gov.br/detalhar/674-1?next=evil',
     'https://legis.ac.gov.br/detalhar/9999',
     'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html?x=1',
+    'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html?x=1',
     'https://legis.ac.gov.br.evil.test/detalhar/674-1',
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9999',
     'https://sead.ac.gov.br/other.pdf',
