@@ -5,6 +5,48 @@
 **Commit de conteúdo:** `2ca26728937b1892dc860cc4bee12573ed376fbd`  
 **Status editorial:** integrado ao banco como rascunho; não liberado ao aluno.
 
+## Auditoria global do edital e correção de vínculos — 14/11/2026
+
+### Materiais didáticos
+
+- O edital ativo da PC-AC 2026 contém 14 disciplinas.
+- Foram encontrados 159 materiais ativos distribuídos nessas 14 disciplinas; todas têm corpo didático acima de 700 caracteres, flashcards e quiz não vazios.
+- Há outros 7 materiais ativos em uma 15ª categoria, `Administração Pública`, que não aparece como disciplina autônoma no Anexo III. Seis tratam de patrimonialismo, burocracia, reformas e administração gerencial; um repete funções/processos/recursos. Manter no acervo, mas avaliar segregação como conteúdo complementar para não confundir a trilha principal.
+- A tabela contém 166 materiais ativos no total. Todos têm `source_note`, mas a amostra mostra que várias notas apenas apontam para o edital, não para bibliografia didática específica. Somente 23 materiais têm metadados em `legal_review`; 52 têm `law_version_checked_at`; 10 têm `reviewed_at`. A revisão editorial integral e a bibliografia de referência continuam pendentes em boa parte do acervo.
+- Contabilidade (7), Estatística (10), Português (19), Informática (10) e Raciocínio Lógico (15) têm material e quiz; a falta de `legal_basis` nessas matérias não deve ser tratada automaticamente como erro jurídico, mas as fontes pedagógicas precisam ser documentadas com referências adequadas.
+
+### Questões oficiais do PC-AC 2017 — correção efetivada
+
+A fonte e o gabarito foram confirmados como documentos oficiais IBADE do concurso PC-AC 2017 (caderno S01 Agente, versão V, 80 itens; questão 26 anulada). A auditoria encontrou 72 registros que estavam ativos, mas seus vínculos `current_syllabus_topic_id` apontavam para tópicos de editais da Polícia Federal 2025 e da PCDF 2026, não para a edição PC-AC 2026.
+
+Foi corrigido o vínculo de escopo dos 72 registros, sem alterar o enunciado, gabarito, fonte histórica ou `syllabus_topic_id` original:
+
+- **40 itens mantidos ativos** e remapeados para os tópicos da edição PC-AC 2026, somente quando o conteúdo se enquadra no Anexo III.
+- **32 itens movidos para `under_review`**, com vínculo atual removido, por não constarem expressamente do programa ou exigirem decisão específica de aderência. Nesse grupo estão os 9 itens de Medicina Legal, disciplina que não aparece como matéria autônoma no edital atual.
+- Nenhum item foi apagado; os documentos originais e o gabarito continuam associados.
+- Verificação posterior: 40/40 ativos vinculados à edição correta; zero ativo com vínculo a outro concurso.
+
+**Distribuição dos 40 mantidos:** Português 10; Informática 4; Raciocínio Lógico 5; Direito Administrativo 4; Constitucional 2; Penal 8; Processo Penal 5; legislação especial ligada a inquérito/tortura 2.
+
+**Distribuição dos 32 sob revisão de escopo:** Direito Administrativo 4; Constitucional 6; Penal 1; Processo Penal 5; legislação especial 7; Medicina Legal 9.
+
+A tabela tinha 44 registros com `legal_review_required=true`; a verificação de `legal_audit_completed` e `law_version_checked_at` confirmou 44/44 com auditoria concluída e data normativa. Portanto, esse sinalizador, isoladamente, não significa revisão pendente.
+
+### Questões autorais e banco de questões
+
+- `curated_question_catalog`: 73 questões autorais, todas `draft`, com gabarito A–E, explicação, tópico do edital e fundamento estruturado. Nenhuma liberada ao aluno.
+- `board_exam_questions`: 5 questões autorais adicionais em `under_review`; nenhuma ativa.
+- Não foi feita ativação em massa nem alteração de políticas de acesso.
+
+### Pendências prioritárias identificadas
+
+1. Revisar individualmente os 32 itens PC-AC 2017 em `under_review`; decidir quais cabem no edital atual, quais ficam apenas no arquivo histórico e quais devem ser arquivados definitivamente.
+2. Revisar juridicamente e pedagogicamente as 73 questões autorais antes de qualquer ativação.
+3. Completar a bibliografia didática de Contabilidade, Estatística, Português, Informática e Raciocínio Lógico; distinguir fonte do edital de fonte conceitual.
+4. Segregar os 7 materiais da categoria `Administração Pública` que não compõem disciplina autônoma do edital.
+5. Fazer revisão editorial integral dos materiais que ainda não têm evidência de revisão, priorizando Direito Penal/Processual Penal e matérias de legislação.
+6. Conferir na interface da área do aluno se a listagem respeita `content_status`, o vínculo à edição PC-AC 2026 e a separação entre conteúdo principal, complementar e histórico.
+
 ## Resultado da integração
 
 Foram inseridas 39 questões autorais em `public.curated_question_catalog`, vinculadas à fonte editorial `43712f0d-aad2-48b5-a685-6937551f2d74`.
