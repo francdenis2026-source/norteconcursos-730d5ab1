@@ -171,6 +171,36 @@ export const isOfficialUrl = (url?: string) => {
         !parsed.search
       );
     }
+    // Fontes primárias do Estado do Acre: aceitar apenas páginas específicas
+    // da legislação consolidada e do edital PC-AC 2026 efetivamente conferidos.
+    const acreOfficialPaths: Record<string, string[]> = {
+      "legis.ac.gov.br": [
+        "/detalhar/674-1",
+        "/detalhar/6874",
+        "/detalhar/417-0",
+        "/detalhar/6864-1",
+      ],
+      "app.al.ac.leg.br": [
+        "/legisla-e/legislacao/visualizar/9836",
+        "/legisla-e/legislacao/visualizar/9611",
+        "/legisla-e/legislacao/visualizar/5556",
+      ],
+      "sead.ac.gov.br": [
+        "/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf",
+      ],
+    };
+    const approvedAcrePaths = acreOfficialPaths[parsed.hostname];
+    if (approvedAcrePaths) {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        !parsed.hash &&
+        approvedAcrePaths.includes(parsed.pathname)
+      );
+    }
     if (parsed.hostname === "www.al.ro.leg.br") {
       return (
         parsed.protocol === "https:" &&
