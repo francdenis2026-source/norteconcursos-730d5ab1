@@ -15,13 +15,13 @@ export function StudyCompletionNotice({ kind }: StudyCompletionNoticeProps) {
       ? {
           title: "Parabéns por concluir o simulado.",
           description:
-            "Seu próximo passo é transformar o resultado em aprendizado. Confira o resumo abaixo e identifique o que vale revisar.",
+            "Confira o resumo e identifique o que vale revisar.",
           label: "Simulado concluído",
         }
       : {
           title: "Boa dedicação: treino concluído.",
           description:
-            "Cada sessão ajuda a construir consistência. Confira seu aproveitamento e escolha o melhor próximo passo para continuar.",
+            "Confira seu aproveitamento e escolha o próximo passo.",
           label: "Treinamento concluído",
         };
 
@@ -30,22 +30,20 @@ export function StudyCompletionNotice({ kind }: StudyCompletionNoticeProps) {
       role="status"
       aria-live="polite"
       aria-label={copy.label}
-      className="mb-5 flex items-start gap-3 rounded-xl border border-emerald-200/80 bg-emerald-50/70 p-4 dark:border-emerald-900/60 dark:bg-emerald-950/20"
+      className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-emerald-200/80 bg-emerald-50/70 px-3 py-2 dark:border-emerald-900/60 dark:bg-emerald-950/20"
     >
-      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/60 dark:text-emerald-300">
-        <CheckCircle2 className="h-5 w-5" aria-hidden="true" />
-      </span>
-      <div className="min-w-0">
-        <p className="text-sm font-semibold leading-5 text-foreground">{copy.title}</p>
-        <p className="mt-1 text-sm leading-5 text-muted-foreground">{copy.description}</p>
-        <Link
-          to={kind === "simulado" ? "/dashboard/mock-exams" : "/dashboard/question-trainer"}
-          className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300"
-        >
-          {kind === "simulado" ? "Voltar aos simulados" : "Voltar às questões"}
-          <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </Link>
-      </div>
+      <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-700 dark:text-emerald-300" aria-hidden="true" />
+      <p className="min-w-0 flex-1 text-sm leading-5 text-foreground">
+        <strong className="font-semibold">{copy.title}</strong>{" "}
+        <span className="text-muted-foreground">{copy.description}</span>
+      </p>
+      <Link
+        to={kind === "simulado" ? "/dashboard/mock-exams" : "/dashboard/question-trainer"}
+        className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300"
+      >
+        {kind === "simulado" ? "Voltar aos simulados" : "Voltar às questões"}
+        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+      </Link>
     </section>
   );
 }

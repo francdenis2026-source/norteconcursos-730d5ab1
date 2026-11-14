@@ -27,3 +27,9 @@ html:root body .sim-commit * {
   text-align: left !important;
   hyphens: manual !important;
 }
+
+/* Resultado: textos do cartão de regra alinhados à esquerda e sem justificar. */
+html:root body .sim-rule p { text-align: left !important; hyphens: manual !important; }
+html:root body .sim-rule { align-items: start; }
+html:root body section[aria-label="Simulado concluído"] p,
+html:root body section[aria-label="Treinamento concluído"] p { text-align: left !important; hyphens: manual !important; }

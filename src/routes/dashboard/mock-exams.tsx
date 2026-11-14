@@ -2348,7 +2348,7 @@ function ResultView({
         <ResultMetric icon={TimerReset} label="Tempo" value={formatTime(elapsed)} tone="slate" />
       </div>
       <Card aria-label="Regra de correção e ranking">
-        <CardContent className="grid gap-4 p-5 sm:grid-cols-2">
+        <CardContent className="sim-rule grid gap-4 p-5 sm:grid-cols-2">
           <div>
             <p className="text-sm text-muted-foreground">Regra de correção aplicada</p>
             <p className="mt-1 font-bold">{rule.label}</p>
