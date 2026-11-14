@@ -84,3 +84,16 @@ Após a auditoria, foi implementado um primeiro fluxo de persistência para exer
 - A migration está versionada na branch, mas **não foi aplicada** ao Supabase de produção.
 - Não foi possível executar build, testes automatizados nem validar a RPC em banco de desenvolvimento nesta sessão. A revisão de CI e a validação em branch Supabase são obrigatórias antes do merge.
 - Os 223 quizzes ainda exigem revisão editorial individual antes de qualquer importação para o catálogo público.
+
+
+## 7. Atualização — 14/11/2026
+
+Consulta atual ao catálogo curado para Polícia Civil do Acre, 2026, Oficial Investigador de Polícia:
+
+- **164 questões autorais ativas**, todas vinculadas a um tópico do Anexo III.
+- **0 questões em revisão** para esse recorte após a publicação do Lote 02.
+- Lote autoral 02: 20 questões novas, cinco por disciplina — Noções de Administração, Noções de Direito Constitucional, Noções de Informática e Legislação Institucional.
+- As questões estão identificadas por prefixos NC-PCAC-ADMGER, NC-PCAC-CONST, NC-PCAC-INF e NC-PCAC-LEG; todas têm cinco alternativas, gabarito único, explicação e proveniência autoral.
+- As questões foram vinculadas aos IDs de tópico do edital para cada disciplina; a checagem de integridade retornou zero questões ativas sem tópico e zero chaves duplicadas.
+- Seed idempotente: `supabase/migrations/20261114190000_pcac_question_bank_batch02.sql`.
+- Os quizzes embutidos em `study_materials` continuam exercícios locais de fixação; não foram importados em massa para o catálogo curado.
