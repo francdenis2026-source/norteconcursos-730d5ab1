@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { ACRE_STUDY_CONTENT, ACRE_CURRENT_AFFAIRS, ACRE_CONTENT_CHECKED_ON } from "../src/data/acreStudyContent.ts";
-import { ACRE_GEOGRAPHY_FACTS } from "../src/data/acreGeography.ts";
+import { ACRE_GEOGRAPHY_FACTS, ACRE_EDITAL_REGIONS, ACRE_CURRENT_IBGE_REGIONS } from "../src/data/acreGeography.ts";
 
 const AXES = ["historia", "economia", "cultura", "politica", "seguranca"];
 
@@ -48,4 +48,18 @@ test("história inclui Tratado de Ayacucho e economia inclui infraestrutura de t
   assert.ok(ACRE_STUDY_CONTENT.economia.some((card) => /indicadores demográficos/i.test(card.title)));
   assert.ok(ACRE_STUDY_CONTENT.cultura.some((card) => /povos indígenas/i.test(card.title)));
   assert.ok(ACRE_STUDY_CONTENT.politica.some((card) => /Constituição do Estado do Acre/i.test(card.title)));
+});
+
+test("regionalização do edital distribui os 22 municípios sem duplicidade", () => {
+  const municipalities = ACRE_EDITAL_REGIONS.flatMap((region) => region.municipalities);
+  assert.equal(ACRE_EDITAL_REGIONS.length, 5);
+  assert.equal(municipalities.length, 22);
+  assert.equal(new Set(municipalities).size, 22);
+  assert.deepEqual(ACRE_EDITAL_REGIONS.map((region) => region.name), ["Alto Acre", "Baixo Acre", "Purus", "Envira", "Juruá"]);
+});
+
+test("regionalização IBGE vigente soma os 22 municípios em duas regiões intermediárias", () => {
+  assert.equal(ACRE_CURRENT_IBGE_REGIONS.length, 2);
+  assert.equal(ACRE_CURRENT_IBGE_REGIONS.reduce((sum, region) => sum + region.municipalityCount, 0), 22);
+  assert.deepEqual(ACRE_CURRENT_IBGE_REGIONS.map((region) => region.name), ["Rio Branco", "Cruzeiro do Sul"]);
 });
