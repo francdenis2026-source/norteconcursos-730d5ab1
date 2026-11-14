@@ -40,6 +40,23 @@ test("unknown metadata does not inflate board or year indicators; missing subjec
   assert.equal(catalogGroups(items, "subject").length, 2);
   assert.equal(catalogGroups(items, "board")[0].questions.length, 2);
 });
+test("subject groups unify Math and RLM aliases without mutating question provenance", () => {
+  const items = [
+    question("math", { subject: "Matemática" }),
+    question("rlm", { subject: "Raciocínio Lógico" }),
+    question("finance", { subject: "Matemática Financeira" }),
+    question("stats", { subject: "Estatística" }),
+    question("other", { subject: "Informática" }),
+  ];
+  const groups = catalogGroups(items, "subject");
+  const unified = groups.find((group) => group.name === "Matemática e Raciocínio Lógico");
+  assert.ok(unified);
+  assert.deepEqual(unified.questions.map((item) => item.id).sort(), ["finance", "math", "rlm"]);
+  assert.equal(groups.some((group) => group.name === "Estatística"), false);
+  assert.equal(groups.find((group) => group.name === "Informática").questions.length, 1);
+  assert.equal(unified.questions.find((item) => item.id === "math").subject, "Matemática");
+});
+
 test("group details preserve the exact counted metadata and official exam identity", () => {
   const contests = availableQuestionBank(rows, "contests");
   const math = catalogGroups(contests, "subject").find((g) => g.name === "Matemática");
