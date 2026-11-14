@@ -53,6 +53,9 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 - Separação de proveniência: 160 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
 - Qualidade automatizada após inserção: zero questões ativas de 2026 sem subassunto, zero sem explicação de pelo menos 60 caracteres, zero sem gabarito A–E e zero sem vínculo de tópico.
 
+- As 22 aulas de Legislação Institucional já tinham `legal_review.review_date` e `law_version_checked_at`; foi sincronizado o campo `reviewed_at` com a data de revisão declarada. Verificação: 22/22 com revisão registrada e versão normativa conferida. Isso registra a revisão de fonte declarada, não significa que todas as 22 aulas tenham passado por auditoria integral de cada artigo.
+- Migration correspondente: `20261114235749_pcac_sync_legal_review_timestamps.sql`.
+
 ### Revisão artigo por artigo do CPP — concluída para os intervalos do edital
 
 Em 14/11/2026, as aulas de Processo Penal foram confrontadas com o texto atualizado oficial da Câmara dos Deputados:
