@@ -78,6 +78,17 @@ interface StudyCard {
   difficulty: string;
 }
 
+function StepHead({ n, icon: Icon, title, hint }: { n: number; icon: React.ElementType; title: string; hint: string }) {
+  return (
+    <div className="edital-step-head">
+      <span className="edital-step-head__n" aria-hidden="true">{n}</span>
+      <Icon aria-hidden="true" />
+      <h3>{title}</h3>
+      <p>{hint}</p>
+    </div>
+  );
+}
+
 function TopicPage() {
   const { back: backToPlan, tema } = Route.useSearch();
   const navigate = Route.useNavigate();
@@ -385,6 +396,9 @@ function TopicPage() {
               </Link>
             </Button>
           )}
+        {(learning.lessons.length > 0 || lawCourses.length > 0) && (
+          <StepHead n={1} icon={GraduationCap} title="Aprender" hint="Aulas e legislação com explicação, exemplos e revisão." />
+        )}
         {learning.lessons.length > 0 && (
           <Card id="edital-lessons" className="scroll-mt-24">
             <CardHeader>
@@ -474,6 +488,9 @@ function TopicPage() {
           </p>
         )}
         {materials.length > 0 && (
+          <StepHead n={2} icon={FileText} title="Ler" hint="Materiais de estudo em texto sobre o assunto." />
+        )}
+        {materials.length > 0 && (
           <Card id="edital-materials" className="scroll-mt-24">
             <CardHeader>
               <CardTitle className="text-lg">Materiais relacionados</CardTitle>
@@ -499,6 +516,9 @@ function TopicPage() {
           </Card>
         )}
         {videos.length > 0 && (
+          <StepHead n={3} icon={PlayCircle} title="Assistir" hint="Videoaulas do catálogo para este assunto." />
+        )}
+        {videos.length > 0 && (
           <details id="edital-videos" className="edital-comments scroll-mt-24" open>
             <summary className="cursor-pointer text-sm font-semibold">
               Videoaulas relacionadas ({videos.length})
@@ -521,6 +541,7 @@ function TopicPage() {
               a fonte do edital e busque materiais na biblioteca.
             </p>
           )}
+        <StepHead n={4} icon={HelpCircle} title="Praticar" hint={linkedQuestions.length > 0 ? `${linkedQuestions.length} questões ligadas a este assunto e simulados.` : "Ainda sem questões ligadas a este assunto; os simulados cobrem a disciplina."} />
         <div id="edital-practice" className="flex flex-wrap gap-2">
           {linkedQuestions.length > 0 && (
             <Button size="sm" asChild>
@@ -552,6 +573,9 @@ function TopicPage() {
                 Buscar na biblioteca
               </Link>
             )}
+          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/dashboard/mock-exams">Fazer simulado</Link>
           </Button>
           <Button variant="outline" size="sm" asChild>
             <Link to="/dashboard/cronograma">Organizar no cronograma</Link>
