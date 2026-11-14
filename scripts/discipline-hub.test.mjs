@@ -31,7 +31,7 @@ test("each card gathers materials, track lessons and videos of the same discipli
 
 test("expected disciplines come first, in order, extras after", () => {
   const cards = disciplineCards([mat("g", "Geografia")], [], []);
-  assert.deepEqual(cards.slice(0, 3).map((c) => c.name), ["Língua Portuguesa", "Matemática e Raciocínio Lógico"]);
+  assert.deepEqual(cards.slice(0, 3).map((c) => c.name), ["Língua Portuguesa", "Matemática e Raciocínio Lógico", "Informática"]);
   assert.equal(cards.at(-1).name, "Geografia");
 });
 
