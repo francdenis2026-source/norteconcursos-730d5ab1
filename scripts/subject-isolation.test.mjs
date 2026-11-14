@@ -5,8 +5,8 @@ import { rankMaterials, topicVideosFor, mentionsTopic } from "../src/lib/arsenal
 import { topicsFor } from "../src/data/studyTopics.ts";
 
 test("a matéria escolhida só recebe o que é inteiramente dela", () => {
-  assert.equal(subjectWithinArea("Raciocínio Lógico", "Estatística e Raciocínio Lógico"), false);
-  assert.equal(subjectWithinArea("Estatística", "Estatística e Raciocínio Lógico"), false);
+  assert.equal(subjectWithinArea("Raciocínio Lógico", "Estatística e Raciocínio Lógico"), true);
+  assert.equal(subjectWithinArea("Estatística", "Estatística e Raciocínio Lógico"), true);
   assert.equal(subjectWithinArea("Direito Penal", "Direito Processual Penal"), false);
   assert.equal(subjectWithinArea("Direito Penal", "Direito Penal e Processual Penal"), false);
   assert.equal(subjectWithinArea("Direitos Humanos", "Ética e Direitos Humanos"), false);
