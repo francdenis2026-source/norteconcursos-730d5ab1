@@ -186,3 +186,11 @@
   .acre-ibge__arrow { display: block; }
   .acre-ibge__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 3rem; padding: .45rem .55rem; }
 }
+
+/* Fatos de geografia física, proteção ambiental e integração */
+.acre-geo__current-grid article > a { display: flex; align-items: flex-start; gap: .35rem; width: fit-content; margin-top: .55rem; color: var(--acre-gold); font-size: .7rem; font-weight: 750; line-height: 1.45; text-decoration: none; }
+.acre-geo__current-grid article > a:hover { text-decoration: underline; }
+.acre-geo__fact-caution { margin: .55rem 0 0; padding: .5rem .6rem; border-left: 3px solid var(--acre-gold); border-radius: .4rem; background: color-mix(in srgb, var(--acre-gold) 8%, transparent); font-size: .7rem; line-height: 1.5; }
+@media (max-width: 760px) {
+  .acre-geo__current-grid { grid-template-columns: minmax(0,1fr); }
+}
