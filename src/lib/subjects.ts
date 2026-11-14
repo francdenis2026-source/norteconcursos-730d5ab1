@@ -14,7 +14,10 @@ export const SUBJECT_ALIASES: Record<string, string> = {};
 const families: Record<string, string[]> = {
   "Língua Portuguesa": ["Português", "Língua Portuguesa"],
   "Língua Inglesa": ["Inglês", "Língua Inglesa", "Língua Estrangeira - Inglês"],
-  "Raciocínio Lógico": [
+  "Matemática e Raciocínio Lógico": [
+    "Matemática",
+    "Matemática Básica",
+    "Matemática Financeira",
     "RLM",
     "Raciocínio Lógico",
     "Raciocínio Lógico-Matemático",
@@ -29,6 +32,9 @@ const families: Record<string, string[]> = {
     "RLM - Raciocínio Lógico Matemático",
     "Matemática e Raciocínio Lógico",
     "Raciocínio Lógico e Matemático",
+    "Estatística",
+    "Estatística e Probabilidade",
+    "Noções de Estatística",
   ],
   Informática: [
     "Informática",
@@ -49,7 +55,6 @@ const families: Record<string, string[]> = {
   "Direito Constitucional": ["Direito Constitucional", "Noções de Direito Constitucional"],
   "Direito Administrativo": ["Direito Administrativo", "Noções de Direito Administrativo"],
   "Contabilidade Geral": ["Contabilidade", "Contabilidade Geral", "Noções de Contabilidade"],
-  Estatística: ["Estatística", "Estatística e Probabilidade", "Noções de Estatística"],
   "Direitos Humanos": ["Direitos Humanos", "Direito Humanos", "Noções de Direitos Humanos"],
   "Medicina Legal": ["Medicina Legal", "Noções de Medicina Legal"],
   Criminalística: ["Criminalística", "Noções de Criminalística"],
