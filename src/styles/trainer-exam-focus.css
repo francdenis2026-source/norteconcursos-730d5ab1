@@ -53,3 +53,13 @@ html:root body .qt2-focus > p { margin: 0; font-size: 0.78rem !important; line-h
     background: color-mix(in oklab, var(--card) 92%, var(--muted));
   }
 }
+
+/* Tema claro: o banner do montador tem foto escura, então seus textos ficam sempre claros;
+   a barra de início usa as cores do tema (antes ficava escura com texto escuro). */
+html:root:not(.dark) body .trainer-setup .qt2-hero :is(small, h1, p, strong, span) { color: #f4f6f8 !important; text-shadow: 0 1px 6px rgb(0 0 0 / 55%); }
+html:root:not(.dark) body .trainer-setup .qt2-hero small { color: #e5c98a !important; }
+html:root:not(.dark) body .trainer-setup .trainer-start-bar {
+  background: color-mix(in oklab, var(--card) 92%, var(--muted)) !important;
+  border-color: var(--border) !important;
+}
+html:root:not(.dark) body .trainer-setup .trainer-start-bar__count { color: var(--foreground) !important; }
