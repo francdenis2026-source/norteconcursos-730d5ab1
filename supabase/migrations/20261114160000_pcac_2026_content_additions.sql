@@ -1,5 +1,4 @@
--- Reproducible, idempotent seed for PC-AC 2026 additions (14/11/2026).
--- Source content is versioned from the same rows inserted in Supabase.
+-- Reproducible, idempotent seed for PC-AC 2026 additions and reviewed updates (14/11/2026).
 insert into public.study_materials
 (slug,discipline,topic_label,sort_order,title,summary,body_md,contest_name,syllabus_topic_order,source_note,legal_basis,law_version_checked_at,legal_review,content_status,flashcards,quiz)
 select slug,discipline,topic_label,sort_order,title,summary,body_md,contest_name,syllabus_topic_order,source_note,legal_basis,law_version_checked_at,legal_review,content_status,flashcards,quiz
@@ -1740,6 +1739,121 @@ from jsonb_to_recordset($pcac_seed$
     "content_status": "active",
     "syllabus_topic_order": 8,
     "law_version_checked_at": "2026-11-14T19:20:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": false,
+        "q": "A mera voluntariedade do agente basta para caracterizar dolo na Lei de Improbidade após a Lei nº 14.230/2021.",
+        "why": "O art. 1º, § 2º, exige vontade livre e consciente de alcançar o resultado ilícito tipificado."
+      },
+      {
+        "a": false,
+        "q": "O exercício regular de competência pública, sem ato doloso com fim ilícito, configura improbidade por si só.",
+        "why": "O art. 1º, § 3º, afasta essa responsabilização."
+      },
+      {
+        "a": true,
+        "q": "O art. 9º trata de enriquecimento ilícito.",
+        "why": "É a categoria de vantagem patrimonial indevida."
+      },
+      {
+        "a": true,
+        "q": "O art. 10 exige perda patrimonial efetiva e comprovada.",
+        "why": "O dano efetivo ao erário é requisito do tipo."
+      },
+      {
+        "a": false,
+        "q": "Qualquer violação genérica a princípio administrativo configura automaticamente o art. 11.",
+        "why": "É necessário enquadramento em conduta dolosa expressamente tipificada."
+      },
+      {
+        "a": true,
+        "q": "A suspensão dos direitos políticos no art. 9º pode chegar a 14 anos.",
+        "why": "É o limite previsto no art. 12, I."
+      },
+      {
+        "a": true,
+        "q": "No art. 11, a multa civil pode chegar a 24 vezes a remuneração percebida pelo agente.",
+        "why": "É a sanção prevista no art. 12, III."
+      },
+      {
+        "a": false,
+        "q": "A indisponibilidade de bens é uma sanção definitiva aplicada antes do julgamento.",
+        "why": "É medida cautelar, com requisitos legais próprios."
+      },
+      {
+        "a": false,
+        "q": "A improbidade administrativa é sinônimo de toda ilegalidade administrativa.",
+        "why": "A lei exige tipicidade e dolo, além dos requisitos específicos de cada artigo."
+      }
+    ],
+    "slug": "pcac-2026-direito-administrativo-08-improbidade-administrativa",
+    "title": "Improbidade administrativa: Lei nº 8.429/1992 atualizada",
+    "body_md": "# Improbidade administrativa — Lei nº 8.429/1992 após a Lei nº 14.230/2021\n\n## 1. Finalidade e elemento subjetivo — art. 1º\nA Lei nº 8.429/1992 tutela a probidade na organização do Estado e no exercício das funções públicas, protegendo a integridade do patrimônio público e social.\n\nA redação dada pela Lei nº 14.230/2021 define como atos de improbidade as **condutas dolosas tipificadas** nos arts. 9º, 10 e 11, ressalvados tipos previstos em leis especiais. Dolo é a vontade livre e consciente de alcançar o resultado ilícito tipificado; a mera voluntariedade não basta. O simples exercício da função ou desempenho de competência pública, sem comprovação de ato doloso com fim ilícito, afasta a responsabilização pela lei geral.\n\nA lei também determina a aplicação dos princípios constitucionais do direito administrativo sancionador.\n\n## 2. Três categorias de atos de improbidade\n### Art. 9º — enriquecimento ilícito\nAuferir, mediante ato doloso, vantagem patrimonial indevida em razão do exercício de cargo, mandato, função, emprego ou atividade nas entidades protegidas. Exemplo típico: receber vantagem econômica de interessado que possa ser atingido por ação ou omissão funcional. A lei exige demonstração do fim de obter proveito ou benefício indevido.\n\n### Art. 10 — lesão ao erário\nAção ou omissão dolosa que cause, efetiva e comprovadamente, perda patrimonial, desvio, apropriação, malbaratamento ou dilapidação dos bens ou haveres das entidades protegidas. A perda deve ser efetiva e demonstrada; mera irregularidade ou perda presumida não substitui o requisito legal.\n\n### Art. 11 — atentado contra princípios\nAção ou omissão dolosa que viole deveres de honestidade, imparcialidade e legalidade, caracterizada por uma das condutas expressamente tipificadas no artigo. Após a reforma, não basta invocar genericamente violação a princípio: é necessário enquadramento em conduta legalmente descrita e demonstração do elemento subjetivo exigido.\n\n## 3. Sanções — art. 12\nAs sanções variam conforme o tipo e a gravidade, podendo ser aplicadas isolada ou cumulativamente, conforme a lei:\n- **Art. 9º:** perda dos bens ou valores acrescidos ilicitamente; perda da função pública; suspensão dos direitos políticos até 14 anos; multa civil equivalente ao acréscimo patrimonial; proibição de contratar com o poder público ou receber benefícios/incentivos por até 14 anos.\n- **Art. 10:** perda dos bens ou valores acrescidos ilicitamente, se concorrer essa circunstância; perda da função pública; suspensão dos direitos políticos até 12 anos; multa civil equivalente ao dano; proibição de contratar ou receber benefícios por até 12 anos.\n- **Art. 11:** multa civil de até 24 vezes a remuneração percebida pelo agente; proibição de contratar ou receber benefícios por até 4 anos.\n\nO ressarcimento integral do dano, quando efetivo, não se confunde com as sanções do art. 12. A lei prevê também perda de bens ou valores acrescidos ilicitamente, quando cabível.\n\n## 4. Indisponibilidade de bens — art. 16\nA indisponibilidade é medida destinada a garantir a recomposição integral do erário ou do acréscimo patrimonial decorrente do enriquecimento ilícito. Depende de demonstração concreta de perigo de dano irreparável ou risco ao resultado útil do processo e de probabilidade da prática do ato, observadas as condições legais e a oitiva do réu, salvo exceções legalmente admitidas. Não é punição antecipada.\n\n## 5. Independência das esferas\nA responsabilização por improbidade não se confunde automaticamente com ilícito penal, infração disciplinar ou responsabilidade civil. Os fatos podem produzir consequências em mais de uma esfera, observadas as regras legais e os efeitos de decisões judiciais previstos na própria Lei de Improbidade.\n\n## 6. Pegadinhas de prova\n- Após a Lei nº 14.230/2021, a lei geral exige dolo para os tipos dos arts. 9º, 10 e 11; culpa e mera voluntariedade não bastam.\n- Art. 9º: enriquecimento ilícito; art. 10: lesão efetiva ao erário; art. 11: conduta dolosa tipificada contra princípios.\n- Irregularidade administrativa não equivale automaticamente a improbidade.\n- Art. 10 exige perda patrimonial efetiva e comprovada.\n- Art. 11 não admite enquadramento genérico sem conduta tipificada.\n- Indisponibilidade de bens é medida cautelar para assegurar resultado útil, não sanção antecipada.\n- A sanção depende do tipo legal e da gravidade; não se deve misturar os limites dos arts. 9º, 10 e 11.\n\n## 7. Base oficial\nLei nº 8.429/1992, texto compilado no Portal da Legislação da Presidência da República, com alterações da Lei nº 14.230/2021. Em questões que envolvam controvérsia jurisprudencial, conferir também os julgamentos do STF sobre a reforma da LIA.\n",
+    "summary": "Aula 8 — requisitos após a Lei nº 14.230/2021 e categorias legais.",
+    "discipline": "Noções de Direito Administrativo",
+    "flashcards": [
+      {
+        "b": "Dolo: vontade livre e consciente de alcançar o resultado ilícito tipificado; mera voluntariedade não basta.",
+        "f": "A Lei nº 14.230/2021 exige qual elemento subjetivo para os tipos dos arts. 9º, 10 e 11?"
+      },
+      {
+        "b": "Auferir vantagem patrimonial indevida em razão do exercício de cargo, mandato, função, emprego ou atividade pública.",
+        "f": "Qual é o núcleo do art. 9º da Lei de Improbidade?"
+      },
+      {
+        "b": "Perda patrimonial efetiva e comprovada, por ação ou omissão dolosa.",
+        "f": "Qual é o requisito central do art. 10?"
+      },
+      {
+        "b": "Conduta dolosa que viola deveres de honestidade, imparcialidade e legalidade, enquadrada em uma das condutas expressamente tipificadas.",
+        "f": "Como se caracteriza o art. 11 após a reforma?"
+      },
+      {
+        "b": "Até 14 anos.",
+        "f": "Qual é o limite de suspensão dos direitos políticos para o art. 9º?"
+      },
+      {
+        "b": "Até 12 anos.",
+        "f": "Qual é o limite de suspensão dos direitos políticos para o art. 10?"
+      },
+      {
+        "b": "Multa civil de até 24 vezes a remuneração e proibição de contratar/receber benefícios por até 4 anos.",
+        "f": "Quais são as sanções previstas para o art. 11?"
+      },
+      {
+        "b": "Não. É medida cautelar para garantir recomposição do erário ou do acréscimo ilícito, sujeita aos requisitos legais.",
+        "f": "A indisponibilidade de bens é sanção antecipada?"
+      }
+    ],
+    "sort_order": 8,
+    "legal_basis": [
+      "Lei Federal nº 8.429/1992",
+      "Lei Federal nº 14.230/2021"
+    ],
+    "source_note": "Edital PC-AC 2026, Anexo III — Noções de Direito Administrativo; Lei nº 8.429/1992, texto compilado no Planalto; Lei nº 14.230/2021. Consulta em 14/11/2026.",
+    "topic_label": "7. Improbidade administrativa",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {
+      "source": "Planalto, Lei nº 8.429/1992, texto compilado, e Lei nº 14.230/2021. Questões limitadas aos dispositivos expressos no material e com atenção à jurisprudência do STF.",
+      "status": "reviewed_against_official_compiled_statute",
+      "articles": [
+        1,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17,
+        20,
+        23
+      ],
+      "review_date": "2026-11-14"
+    },
+    "content_status": "active",
+    "syllabus_topic_order": 1,
+    "law_version_checked_at": "2026-11-14T19:30:00+00:00"
   }
 ]
 $pcac_seed$::jsonb) as seed(
@@ -1755,4 +1869,4 @@ on conflict (slug) do update set
  legal_review = excluded.legal_review,
  flashcards = excluded.flashcards,
  quiz = excluded.quiz
-where public.study_materials.slug = 'pcac-2026-lc129-atualizacao-lc526-2026-ingresso-formacao-lotacao';
+where public.study_materials.slug in ('pcac-2026-lc129-atualizacao-lc526-2026-ingresso-formacao-lotacao','pcac-2026-direito-administrativo-08-improbidade-administrativa');
