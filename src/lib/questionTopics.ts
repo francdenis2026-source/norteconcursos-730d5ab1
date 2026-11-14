@@ -363,10 +363,18 @@ export function subjectAreas(subject: string): AreaKey[] {
   const out = new Set<AreaKey>();
   const add = (area: AreaKey) => out.add(area);
   if (/portugues/.test(n)) add("portugues");
-  if (/estatistica/.test(n)) add("estatistica");
-  if (/raciocinio|logico/.test(n)) add("raciocinio");
-  if (/matematica financeira/.test(n)) add("financeira");
-  else if (/^matematica$/.test(n)) add("matematica");
+  const unifiedMath = n === "matematica e raciocinio logico";
+  if (unifiedMath) {
+    add("raciocinio");
+    add("matematica");
+    add("estatistica");
+    add("financeira");
+  } else {
+    if (/estatistica/.test(n)) add("estatistica");
+    if (/raciocinio|logico/.test(n)) add("raciocinio");
+    if (/matematica financeira/.test(n)) add("financeira");
+    else if (/^matematica$/.test(n)) add("matematica");
+  }
   if (/constitucional/.test(n)) add("constitucional");
   if (/administrativo/.test(n)) add("administrativo");
   const processual = /processual penal|processo penal/.test(n);
@@ -400,10 +408,12 @@ export function areaOfSubject(subject: string): AreaKey | null {
 }
 
 export function classifyTopic(subject: string, text: string): string | null {
-  const area = areaOfSubject(subject);
-  if (!area) return null;
+  const areas = subjectAreas(subject);
+  if (!areas.length) return null;
   const t = strip(text);
-  for (const [topic, re] of RULES[area]) if (re.test(t)) return topic;
+  for (const area of areas) {
+    for (const [topic, re] of RULES[area]) if (re.test(t)) return topic;
+  }
   return null;
 }
 
