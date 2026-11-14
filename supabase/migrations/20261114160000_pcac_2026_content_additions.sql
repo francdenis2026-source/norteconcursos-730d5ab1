@@ -1119,6 +1119,405 @@ from jsonb_to_recordset($pcac_seed$
     "content_status": "active",
     "syllabus_topic_order": 1,
     "law_version_checked_at": "2026-11-14T19:00:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Em “Não se esqueça”, ocorre próclise por atração da palavra negativa.",
+        "why": "Não é fator de atração."
+      },
+      {
+        "a": true,
+        "q": "“Apresente-se” exemplifica ênclise com imperativo afirmativo.",
+        "why": "O pronome vem depois do verbo."
+      },
+      {
+        "a": false,
+        "q": "A mesóclise é usada normalmente no presente do indicativo.",
+        "why": "Ocorre com futuro, sem atrator."
+      },
+      {
+        "a": false,
+        "q": "Em “Nunca dir-lhe-ei”, a colocação está adequada.",
+        "why": "Nunca atrai: “Nunca lhe direi”."
+      },
+      {
+        "a": true,
+        "q": "Em “Quem te contou?”, o pronome interrogativo favorece próclise.",
+        "why": "Pronomes interrogativos atraem."
+      }
+    ],
+    "slug": "pcac-2026-portugues-colocacao-pronominal",
+    "title": "Colocação pronominal: próclise, ênclise e mesóclise",
+    "body_md": "# Colocação pronominal\n\n## 1. As três posições\n- **Próclise:** pronome antes do verbo — “Não **se** esqueça”.\n- **Ênclise:** pronome depois do verbo, ligado por hífen — “Apresente-**se**”.\n- **Mesóclise:** pronome no interior do verbo — “Apresentar-**se**-á”.\n\n## 2. Fatores que atraem a próclise\nA próclise é exigida ou favorecida por elementos atrativos:\n- palavras negativas: não, nunca, jamais, ninguém;\n- pronomes relativos: que, quem, cujo, onde;\n- pronomes indefinidos e demonstrativos, conforme o contexto;\n- conjunções subordinativas: quando, porque, embora, se;\n- advérbios sem pausa: aqui se trabalha; talvez me chamem;\n- frases interrogativas, exclamativas e optativas: Quem te contou? Como se enganou!\n\n## 3. Ênclise\nNa norma-padrão tradicional, não se inicia oração com pronome átono: “Informaram-me o resultado”, e não “Me informaram o resultado” em início de frase formal. A ênclise também aparece quando não há fator de atração e o verbo inicia a oração. Com imperativo afirmativo: “Apresente-se”.\n\n## 4. Mesóclise\nÉ possível com verbo no futuro do presente ou futuro do pretérito, quando não houver palavra atrativa: “Dar-lhe-ei resposta”; “Convidar-me-iam”. Havendo fator de próclise, ele prevalece: “Não lhe darei resposta”.\n\n## 5. Locuções verbais\nEm locuções, a posição do pronome pode variar conforme a estrutura e a presença de atratores. Exemplos: “Quero-lhe apresentar o relatório” e “Quero apresentar-lhe o relatório”. Com fator atrativo: “Não lhe quero apresentar o relatório” / “Não quero apresentar-lhe o relatório”, conforme a construção admitida e o foco sintático. Em prova, observe a norma cobrada e a posição do pronome em relação ao auxiliar e ao verbo principal.\n\n## 6. Pegadinhas\n- “Não me disseram” — próclise por palavra negativa.\n- “Quem te avisou?” — próclise por pronome interrogativo.\n- “Avisaram-me” — ênclise em início de oração formal.\n- “Dir-lhe-ei” — mesóclise no futuro sem atrator.\n- “Nunca dir-lhe-ei” — inadequado: a palavra negativa atrai o pronome (“Nunca lhe direi”).",
+    "summary": "Posição dos pronomes átonos, fatores de atração, início de oração, locuções verbais e futuro do presente/pretérito.",
+    "discipline": "Língua Portuguesa",
+    "flashcards": [
+      {
+        "b": "Pronome átono antes do verbo.",
+        "f": "O que é próclise?"
+      },
+      {
+        "b": "A palavra negativa nunca.",
+        "f": "Qual elemento atrai em “Nunca me avisaram”?"
+      },
+      {
+        "b": "Ênclise: “Informaram-me”.",
+        "f": "Qual colocação é tradicionalmente usada no início de oração formal sem atrator?"
+      },
+      {
+        "b": "Com futuro do presente ou do pretérito, sem atrator: dir-lhe-ei.",
+        "f": "Quando ocorre mesóclise?"
+      },
+      {
+        "b": "A próclise prevalece: não lhe direi.",
+        "f": "O que ocorre diante de palavra negativa?"
+      }
+    ],
+    "sort_order": 15,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Língua Portuguesa, item 13. Conteúdo gramatical revisado em 14/11/2026.",
+    "topic_label": "13. Colocação pronominal",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 13,
+    "law_version_checked_at": "2026-11-14T19:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Em “obedecer à norma”, a crase resulta de preposição e artigo.",
+        "why": "Obedecer rege a e norma admite artigo."
+      },
+      {
+        "a": false,
+        "q": "Há crase obrigatória antes de qualquer palavra feminina.",
+        "why": "É preciso verificar regência e artigo."
+      },
+      {
+        "a": false,
+        "q": "A forma “começou à estudar” está correta.",
+        "why": "Não há crase antes de verbo."
+      },
+      {
+        "a": true,
+        "q": "A indicação “às 8 horas” normalmente recebe crase.",
+        "why": "É hora determinada."
+      },
+      {
+        "a": false,
+        "q": "A crase antes de possessivo feminino singular é sempre obrigatória.",
+        "why": "Pode ser facultativa."
+      }
+    ],
+    "slug": "pcac-2026-portugues-crase-emprego-casos",
+    "title": "Crase: regra geral, casos obrigatórios, proibidos e facultativos",
+    "body_md": "# Crase\n\n## 1. Conceito\nCrase é a fusão da preposição **a** com outro **a** (artigo feminino, pronome demonstrativo iniciado por a ou a inicial de aquele/aquela/aquilo). O acento grave marca essa fusão: à, às, àquele, àquela, àquilo.\n\n## 2. Regra geral\nHá crase quando:\n1. o termo anterior exige a preposição *a*; e\n2. o termo seguinte admite artigo feminino *a/as*.\n\nExemplo: “O servidor obedeceu **à** norma.” Obedecer exige *a*; “a norma” admite artigo. Teste: substituir o termo feminino por masculino; se aparecer “ao”, normalmente há crase no feminino: obedeceu **ao** regulamento / **à** norma.\n\n## 3. Casos obrigatórios\n- Locuções femininas: à noite, às pressas, à medida que, à procura de.\n- Indicação de horas determinadas: às 8h; mas “daqui a duas horas” não recebe crase.\n- Antes de aquele(s), aquela(s), aquilo, quando o termo anterior exige preposição: referiu-se àquele fato.\n- Em expressões como “à moda de”, mesmo com nome masculino subentendido: bife à Oswaldo Aranha.\n\n## 4. Casos proibidos\n- Antes de palavra masculina, em regra: a prazo, a pé.\n- Antes de verbo: começou a estudar.\n- Antes de artigo indefinido ou pronome pessoal: a uma pessoa, a ela.\n- Antes de pronomes de tratamento que não admitem artigo, em regra: a Vossa Excelência.\n- Entre palavras repetidas: cara a cara, frente a frente.\n- Antes de nome de cidade que não admite artigo: vou a Brasília; compare “vou à Bahia”.\n\n## 5. Casos facultativos\nPode ser facultativa:\n- antes de pronome possessivo feminino singular: entreguei a/à minha colega;\n- antes de nome próprio feminino, conforme o uso do artigo: referi-me a/à Ana;\n- depois da preposição *até*: fui até a/à escola.\n\n## 6. Crase e sentido\n“À medida que” é locução conjuntiva; “na medida em que” pode ter sentido causal ou proporcional conforme o contexto. Não confunda “a princípio” (inicialmente) com “em princípio” (em tese).\n\n## 7. Método de resolução\nLocalize o termo que rege a preposição; verifique se o nome seguinte admite artigo; aplique o teste do masculino; confira se não há proibição especial. Não coloque crase apenas porque a palavra seguinte é feminina.",
+    "summary": "Fusão de preposição a com artigo ou pronomes demonstrativos, testes práticos e casos especiais.",
+    "discipline": "Língua Portuguesa",
+    "flashcards": [
+      {
+        "b": "Preposição a exigida pelo termo anterior + artigo feminino ou demonstrativo iniciado por a.",
+        "f": "Qual é a condição básica para ocorrer crase?"
+      },
+      {
+        "b": "Substituir por masculino: se surgir ao, normalmente haverá à no feminino.",
+        "f": "Qual teste ajuda a verificar crase antes de substantivo feminino?"
+      },
+      {
+        "b": "Não: começou a estudar.",
+        "f": "Há crase antes de verbo?"
+      },
+      {
+        "b": "Às 8h; daqui a duas horas não tem crase.",
+        "f": "Como se escreve a indicação de hora determinada?"
+      },
+      {
+        "b": "Não. Pode ser facultativa.",
+        "f": "A crase antes de possessivo feminino singular é obrigatória?"
+      }
+    ],
+    "sort_order": 16,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Língua Portuguesa, item 14. Conteúdo gramatical revisado em 14/11/2026.",
+    "topic_label": "14. Crase",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 14,
+    "law_version_checked_at": "2026-11-14T19:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "“A cidade acordou cedo” pode ser personificação.",
+        "why": "A cidade recebe ação de ser animado."
+      },
+      {
+        "a": true,
+        "q": "“Li Machado de Assis” pode ser metonímia.",
+        "why": "Autor no lugar da obra."
+      },
+      {
+        "a": false,
+        "q": "Antítese e paradoxo são sinônimos perfeitos.",
+        "why": "Antítese aproxima opostos; paradoxo apresenta contradição aparente."
+      },
+      {
+        "a": true,
+        "q": "“Esperei uma eternidade” é hipérbole.",
+        "why": "Há exagero intencional."
+      },
+      {
+        "a": true,
+        "q": "A anáfora é repetição no início de segmentos.",
+        "why": "É figura de repetição."
+      }
+    ],
+    "slug": "pcac-2026-portugues-figuras-linguagem",
+    "title": "Figuras de linguagem: sentido figurado e efeitos expressivos",
+    "body_md": "# Figuras de linguagem\n\n## 1. Figuras de palavra ou sentido\n- **Metáfora:** aproximação implícita entre termos: “A investigação é um labirinto”.\n- **Comparação:** aproximação explícita, geralmente com como, tal qual, semelhante a.\n- **Metonímia:** substituição por relação de proximidade: “Leu Machado de Assis” (a obra do autor).\n- **Catacrese:** emprego figurado já incorporado ao uso: pé da mesa.\n- **Sinestesia:** mistura de sensações: voz doce.\n\n## 2. Figuras de pensamento\n- **Personificação/prosopopeia:** atribui ação humana a ser inanimado: “A cidade acordou”.\n- **Hipérbole:** exagero intencional: “Esperei uma eternidade”.\n- **Eufemismo:** suaviza expressão: “Faltou com a verdade”.\n- **Ironia:** afirmação cujo sentido pretendido diverge do literal, conforme o contexto.\n- **Antítese:** aproxima ideias opostas: claro/escuro.\n- **Paradoxo:** associação aparentemente contraditória: “silêncio ensurdecedor”.\n- **Gradação:** sequência crescente ou decrescente de intensidade.\n\n## 3. Figuras de construção\n- **Elipse:** omissão de termo recuperável pelo contexto.\n- **Zeugma:** omissão de termo já mencionado.\n- **Anáfora:** repetição no início de segmentos.\n- **Hipérbato:** inversão da ordem direta.\n- **Pleonasmo:** repetição expressiva ou redundância.\n- **Assíndeto:** ausência de conectivos entre termos ou orações.\n- **Polissíndeto:** repetição de conectivos.\n\n## 4. Figuras sonoras\nAliteração repete sons consonantais; assonância repete sons vocálicos; onomatopeia representa sons por meio de palavras.\n\n## 5. Estratégia\nA figura deve ser identificada pelo efeito no contexto, não apenas por uma palavra isolada. Pergunte se há comparação, substituição, exagero, oposição, contradição, repetição, omissão ou inversão.",
+    "summary": "Metáfora, comparação, metonímia, personificação, hipérbole, eufemismo, ironia, antítese, paradoxo e gradação.",
+    "discipline": "Língua Portuguesa",
+    "flashcards": [
+      {
+        "b": "Associação implícita entre termos por semelhança.",
+        "f": "O que é metáfora?"
+      },
+      {
+        "b": "A comparação explicita a aproximação; a metáfora a faz implicitamente.",
+        "f": "Qual a diferença entre metáfora e comparação?"
+      },
+      {
+        "b": "Substituição por relação de proximidade, como autor pela obra.",
+        "f": "O que é metonímia?"
+      },
+      {
+        "b": "Atribuição de ação ou característica humana a ser não humano.",
+        "f": "O que é personificação?"
+      },
+      {
+        "b": "Antítese aproxima opostos; paradoxo combina ideias aparentemente contraditórias.",
+        "f": "Qual a diferença entre antítese e paradoxo?"
+      }
+    ],
+    "sort_order": 18,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Língua Portuguesa, item 16. Conteúdo gramatical revisado em 14/11/2026.",
+    "topic_label": "16. Figuras de linguagem",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 16,
+    "law_version_checked_at": "2026-11-14T19:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Hipertexto permite percursos não lineares por links.",
+        "why": "Links conectam blocos de informação."
+      },
+      {
+        "a": true,
+        "q": "Multimodalidade combina diferentes modos de expressão.",
+        "why": "Pode combinar texto, imagem, áudio e vídeo."
+      },
+      {
+        "a": false,
+        "q": "A presença de link comprova a veracidade do conteúdo.",
+        "why": "É necessário avaliar fonte, autoria e evidências."
+      },
+      {
+        "a": true,
+        "q": "Emojis podem influenciar o tom de uma mensagem.",
+        "why": "Podem sinalizar emoção, ironia ou ênfase."
+      },
+      {
+        "a": false,
+        "q": "A linguagem de mensagem instantânea deve ser idêntica à de um ofício.",
+        "why": "A adequação depende do gênero e contexto."
+      }
+    ],
+    "slug": "pcac-2026-portugues-linguagem-digital-tecnologia",
+    "title": "Linguagem, comunicação digital e gêneros tecnológicos",
+    "body_md": "# Linguagem e tecnologia\n\n## 1. Comunicação digital\nA comunicação em ambientes digitais pode combinar texto, imagem, áudio, vídeo, hiperlinks, ícones e recursos interativos. Essa combinação é chamada de multimodalidade. O sentido resulta da interação entre os diferentes modos semióticos.\n\n## 2. Hipertexto\nHipertexto é uma organização não linear de informações, conectadas por links e referências. O leitor pode percorrer diferentes caminhos. Um link pode ampliar, exemplificar ou contextualizar o conteúdo, mas sua presença não garante confiabilidade.\n\n## 3. Gêneros digitais\nE-mail, mensagem instantânea, fórum, postagem, comentário, blog, formulário eletrônico e videoconferência possuem propósitos, interlocutores e graus de formalidade distintos. A linguagem deve ser adequada ao gênero e ao contexto institucional.\n\n## 4. Marcas da escrita digital\nEm contextos informais podem aparecer abreviações, emojis, hashtags, memes, repetição de letras, pontuação expressiva e oralidade escrita. Esses recursos podem indicar emoção, ironia, ênfase, pertencimento ou organização temática. Não são automaticamente apropriados em documento oficial.\n\n## 5. Segurança comunicativa e leitura crítica\nAvalie autoria, data, contexto, domínio, finalidade e evidências. Diferencie link, endereço eletrônico e hipertexto. Desconfie de títulos sensacionalistas, mensagens encaminhadas sem fonte e conteúdos fora de contexto.\n\n## 6. Pegadinhas\n- Hipertexto não é necessariamente linear.\n- Multimodalidade combina diferentes modos de expressão.\n- Emoji pode alterar o tom pragmático da mensagem.\n- Linguagem informal não é adequada a toda situação.\n- Um conteúdo digital pode ser multimodal e ainda assim ser falso ou enganoso.",
+    "summary": "Hipertexto, multimodalidade, links, emojis, abreviações, gêneros digitais e adequação em ambientes eletrônicos.",
+    "discipline": "Língua Portuguesa",
+    "flashcards": [
+      {
+        "b": "Combinação de texto, imagem, áudio, vídeo e outros modos.",
+        "f": "O que é multimodalidade?"
+      },
+      {
+        "b": "Organização não linear de informações conectadas por links.",
+        "f": "O que é hipertexto?"
+      },
+      {
+        "b": "Não. A fonte e as evidências precisam ser avaliadas.",
+        "f": "Um link garante a confiabilidade da informação?"
+      },
+      {
+        "b": "Tom, emoção, ironia, ênfase ou organização temática.",
+        "f": "O que pode indicar o uso de emojis?"
+      },
+      {
+        "b": "Autoria, data, contexto, domínio, finalidade e evidências.",
+        "f": "O que avaliar em conteúdo digital?"
+      }
+    ],
+    "sort_order": 19,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Língua Portuguesa, item 17. Conteúdo gramatical revisado em 14/11/2026.",
+    "topic_label": "17. Linguagem e tecnologia",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 17,
+    "law_version_checked_at": "2026-11-14T19:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "No sentido de presenciar, assistir rege a preposição a.",
+        "why": "Ex.: assistir ao filme."
+      },
+      {
+        "a": false,
+        "q": "No sentido de prestar assistência, assistir é transitivo indireto.",
+        "why": "Nesse sentido, é transitivo direto: assistir o paciente."
+      },
+      {
+        "a": true,
+        "q": "Na norma-padrão, prefere-se “prefiro café a chá”.",
+        "why": "Preferir estabelece relação entre dois termos com a preposição a."
+      },
+      {
+        "a": false,
+        "q": "No sentido de acarretar, implicar exige a preposição em.",
+        "why": "É transitivo direto: implica mudanças."
+      },
+      {
+        "a": true,
+        "q": "“Favorável à proposta” pode apresentar crase pela regência nominal.",
+        "why": "Favorável rege a; proposta admite artigo feminino."
+      },
+      {
+        "a": false,
+        "q": "A regência deve ser analisada sem considerar o sentido do verbo.",
+        "why": "O mesmo verbo pode apresentar regências distintas conforme o sentido."
+      }
+    ],
+    "slug": "pcac-2026-portugues-regencia-verbal-nominal",
+    "title": "Regência verbal e nominal: relações de dependência e preposição",
+    "body_md": "# Regência verbal e nominal\n\n## 1. Conceito\nRegência é a relação de dependência entre um termo regente e seu complemento. O termo regente pode exigir preposição (regência indireta) ou ligar-se diretamente ao complemento (regência direta). A preposição pode alterar o sentido do verbo.\n\n## 2. Regência verbal: casos recorrentes\n- **Assistir:** no sentido de ver/presenciar, rege a preposição *a* (assistir ao filme); no sentido de prestar assistência, é transitivo direto (assistir o paciente).\n- **Aspirar:** no sentido de desejar, rege *a* (aspirar ao cargo); no sentido de sorver, é transitivo direto (aspirar o ar).\n- **Visar:** no sentido de almejar, rege *a* (visar ao cargo); no sentido de pôr visto ou mirar, é transitivo direto (visar o documento/alvo).\n- **Obedecer/desobedecer:** regem *a* (obedecer à norma).\n- **Preferir:** construção padrão: preferir uma coisa **a** outra; evite “preferir mais” e “do que”.\n- **Implicar:** no sentido de acarretar, é transitivo direto (a medida implica mudanças); no sentido de antipatizar, rege *com*.\n- **Informar/avisar:** admitem construções como informar alguém de algo ou informar algo a alguém.\n\n## 3. Regência nominal\nSubstantivos, adjetivos e advérbios podem exigir preposição:\n- acesso **a**; obediência **a**; respeito **a/por**;\n- favorável **a**; contrário **a**; apto **a/para**;\n- compatível **com**; responsável **por**;\n- necessidade **de**; preferência **por**.\n\nA regência deve ser examinada no contexto e conforme o sentido do termo.\n\n## 4. Regência e sentido\nNão memorize apenas listas. Compare as frases e pergunte qual sentido o verbo assume. A troca de preposição pode modificar o significado ou tornar a construção inadequada à norma-padrão.\n\n## 5. Regência e crase\nA crase pode surgir quando o termo regente exige a preposição *a* e o termo seguinte admite artigo feminino *a*. Exemplo: obedecer **à** regra (obedecer a + a regra). Se não houver preposição exigida, não há crase por essa razão.\n\n## 6. Estratégia de prova\n1. Identifique o termo regente.\n2. Determine o sentido empregado.\n3. Verifique se o complemento é direto ou preposicionado.\n4. Confira a preposição exigida.\n5. Só então analise eventual crase ou substituição do complemento por pronome.",
+    "summary": "Regência de verbos e nomes, preposições exigidas, sentidos diferentes e casos frequentes em provas.",
+    "discipline": "Língua Portuguesa",
+    "flashcards": [
+      {
+        "b": "Assistir a algo: assistir ao filme.",
+        "f": "No sentido de ver, qual a regência de assistir?"
+      },
+      {
+        "b": "Aspirar a = desejar; aspirar algo = sorver.",
+        "f": "Qual a diferença entre aspirar a e aspirar?"
+      },
+      {
+        "b": "Preferir uma coisa a outra; não usar “preferir mais ... do que”.",
+        "f": "Qual a construção padrão de preferir?"
+      },
+      {
+        "b": "Não. É transitivo direto: implica mudanças.",
+        "f": "No sentido de acarretar, implicar exige preposição?"
+      },
+      {
+        "b": "Obedecer exige preposição a; norma admite artigo a.",
+        "f": "Por que ocorre crase em obedecer à norma?"
+      },
+      {
+        "b": "Acesso a; favorável a; compatível com; responsável por; necessidade de.",
+        "f": "Cite regências nominais comuns."
+      }
+    ],
+    "sort_order": 14,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Língua Portuguesa, item 12. Conteúdo gramatical revisado em 14/11/2026.",
+    "topic_label": "12. Regência verbal e nominal",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 12,
+    "law_version_checked_at": "2026-11-14T19:10:00+00:00"
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "Diferenças regionais são exemplo de variação diatópica.",
+        "why": "Diatópica é a variação geográfica."
+      },
+      {
+        "a": true,
+        "q": "Variação histórica é chamada de diacrônica.",
+        "why": "Refere-se a mudanças ao longo do tempo."
+      },
+      {
+        "a": false,
+        "q": "A norma-padrão representa todas as formas usadas pelos falantes.",
+        "why": "É referência convencional, não a totalidade dos usos."
+      },
+      {
+        "a": true,
+        "q": "Uma gíria pode ser adequada em conversa informal e inadequada em ofício.",
+        "why": "A adequação depende da situação."
+      },
+      {
+        "a": false,
+        "q": "Toda variação linguística constitui erro gramatical.",
+        "why": "A variação é fenômeno natural."
+      }
+    ],
+    "slug": "pcac-2026-portugues-variacao-linguistica-registros",
+    "title": "Variação linguística, norma-padrão e adequação de registro",
+    "body_md": "# Variação linguística e adequação\n\n## 1. Língua e variação\nA língua é um sistema social e histórico em uso. Varia naturalmente conforme região, grupo social, época, situação comunicativa e modalidade. Variação não significa, por si só, erro ou deficiência linguística.\n\n## 2. Tipos de variação\n- **Geográfica/diatópica:** diferenças regionais de pronúncia, vocabulário e construções.\n- **Social/diastrática:** diferenças associadas a grupos, escolaridade, profissão, idade ou redes sociais.\n- **Histórica/diacrônica:** mudanças ao longo do tempo.\n- **Situacional/diafásica:** adequação ao contexto, interlocutor, finalidade e grau de formalidade.\n- **Modalidade:** diferenças entre fala e escrita, inclusive recursos de entonação, gestos, pontuação e planejamento.\n\n## 3. Norma-padrão e variedades\nA norma-padrão é uma referência convencional para usos formais e institucionais. Não é sinônimo de toda a língua nem apaga as variedades reais. Em concursos, a questão pode exigir a norma-padrão em textos oficiais, mas a análise linguística deve reconhecer a adequação ao contexto.\n\n## 4. Adequação e preconceito\nUma forma linguística deve ser analisada em relação à situação de comunicação. O uso coloquial pode ser adequado em conversa informal e inadequado em documento oficial. Ridicularizar uma variedade ou seus falantes por sua origem ou condição social caracteriza preconceito linguístico.\n\n## 5. Como cai em prova\n- Identificar marcas de oralidade e informalidade.\n- Reconhecer regionalismos e gírias.\n- Distinguir linguagem formal, técnica, coloquial e literária.\n- Avaliar se a escolha linguística é adequada ao gênero e ao interlocutor.\n- Não classificar automaticamente uma variante como erro em qualquer contexto.",
+    "summary": "Variação regional, social, histórica e situacional; preconceito linguístico; oralidade, escrita e adequação.",
+    "discipline": "Língua Portuguesa",
+    "flashcards": [
+      {
+        "b": "Variação geográfica ou regional.",
+        "f": "O que é variação diatópica?"
+      },
+      {
+        "b": "Variação associada a grupos sociais, profissão, escolaridade, idade ou redes.",
+        "f": "O que é variação diastrática?"
+      },
+      {
+        "b": "Variação situacional conforme contexto, interlocutor e formalidade.",
+        "f": "O que é variação diafásica?"
+      },
+      {
+        "b": "Não. É referência convencional para determinados usos formais.",
+        "f": "Norma-padrão é sinônimo de toda a língua?"
+      },
+      {
+        "b": "Desqualificar variedades e seus falantes por origem ou condição social.",
+        "f": "O que é preconceito linguístico?"
+      }
+    ],
+    "sort_order": 17,
+    "legal_basis": [],
+    "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Língua Portuguesa, item 15. Conteúdo gramatical revisado em 14/11/2026.",
+    "topic_label": "15. Variação linguística",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {},
+    "content_status": "active",
+    "syllabus_topic_order": 15,
+    "law_version_checked_at": "2026-11-14T19:10:00+00:00"
   }
 ]
 $pcac_seed$::jsonb) as seed(
