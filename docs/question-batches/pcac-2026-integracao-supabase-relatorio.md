@@ -32,6 +32,34 @@ Foi corrigido o vínculo de escopo dos 72 registros, sem alterar o enunciado, ga
 
 A tabela tinha 44 registros com `legal_review_required=true`; a verificação de `legal_audit_completed` e `law_version_checked_at` confirmou 44/44 com auditoria concluída e data normativa. Portanto, esse sinalizador, isoladamente, não significa revisão pendente.
 
+### Cobertura do Anexo III e expansão de TI — atualização de 14/11/2026
+
+O PDF oficial do Edital nº 001 SEAD/PCAC, publicado em 06/11/2026, foi consultado diretamente no portal da SEAD. O item 6 de Tecnologia da Informação e Segurança da Informação exige: confidencialidade, integridade e disponibilidade; controle de acesso e autenticação; criptografia; cópias de segurança; proteção de informações sensíveis.
+
+A revisão da biblioteca encontrou que os pilares CID, autenticação, criptografia e backups apareciam parcialmente em duas aulas gerais de TI, mas o item 6 não tinha uma aula própria. Foi criado e ativado o material:
+
+- `pcac-2026-ti-seguranca-informacao-controle-acesso-backup`
+- 6.694 caracteres, 6 flashcards e 6 exercícios comentados.
+- `syllabus_topic_order=6`, vinculado ao item 6 do Anexo III.
+- Conteúdo: CID, autenticação versus autorização, menor privilégio, MFA, criptografia simétrica/assimétrica, hash, TLS, backups completos/incrementais/diferenciais, regra 3-2-1, resposta a incidentes e preservação de evidências.
+
+Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-AC, vinculadas ao tópico oficial de TI e Segurança. Cobrem confidencialidade/necessidade de conhecer, integridade/hash, criptografia simétrica e assimétrica, tipos de backup, HTTPS/TLS e resposta a incidentes. As questões têm gabarito único e explicações; estão marcadas como autorais, não como questões oficiais aplicadas pelo IDECAN.
+
+### Recontagem após a expansão — 14/11/2026
+
+- `study_materials`: **167 materiais ativos** associados a PC-AC 2026 — 160 nas 14 disciplinas oficiais (incluída a nova aula de TI) e 7 complementares de Administração Pública. Todos os 167 têm ao menos 5 flashcards e 5 itens de quiz.
+- `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **274 no total**, sendo **201 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
+- Os 201 ativos estão distribuídos por 14 disciplinas: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
+- Separação de proveniência: 160 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
+- Qualidade automatizada após inserção: zero questões ativas de 2026 sem subassunto, zero sem explicação de pelo menos 60 caracteres, zero sem gabarito A–E e zero sem vínculo de tópico.
+
+### Pontos de cobertura ainda a revisar manualmente
+
+1. Confirmar, no texto integral de cada aula, todos os subitens específicos de Estatística (amostragem, variáveis, distribuições, decis/percentis) e de Arquivologia (SIGAD, classificação, temporalidade e gestão da informação).
+2. Revisar o conteúdo de Direito Penal/Processual Penal, em especial os arts. 275 a 281 do CPP (peritos e intérpretes), e conferir a cobertura literal de todos os intervalos indicados no edital.
+3. Fazer conferência normativa de cada material institucional pela redação vigente em 06/11/2026; alterações posteriores à publicação do edital não devem ser apresentadas como conteúdo cobrável, conforme item 11.5.5.
+4. Separar e rotular de forma inequívoca os materiais complementares de Administração Pública, sem tratá-los como disciplina autônoma do Anexo III.
+
 ### Auditoria aprofundada do banco de questões — atualização de 14/11/2026
 
 A recontagem direta do `curated_question_catalog` encontrou 405 registros, com 405 chaves externas distintas e nenhuma chave nula:
