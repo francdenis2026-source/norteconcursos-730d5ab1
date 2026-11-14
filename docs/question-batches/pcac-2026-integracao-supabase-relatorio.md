@@ -46,8 +46,9 @@ Cada questão recebeu em `didactic_provenance` a referência às fontes aplicáv
 2. Conferir as questões de Legislação Institucional 13 e 14 à luz da LC nº 526/2026 e da redação consolidada da LC nº 129/2004.
 3. Validar a data de corte do edital e a redação legal efetivamente exigível em 05/11/2026.
 4. Executar verificação de duplicidade contra todo o catálogo, não apenas contra esta fonte.
-5. Confirmar que o fluxo de publicação do produto exige `content_status = 'active'` e não expõe rascunhos em nenhuma tela, API ou simulado.
-6. Somente após aprovação formal, preencher `law_version_checked_at` e alterar os itens aprovados para `active`.
+5. Política RLS conferida: usuários autenticados só podem ler registros com `content_status = 'active'`; administração permanece restrita a usuários com papel admin. Essa política impede a leitura direta dos 39 rascunhos por usuários autenticados comuns. Ainda é necessário validar as telas e endpoints de simulados que possam usar outra fonte ou credencial privilegiada.
+6. Aguardar CI do commit de integração documental (testes, TypeScript, lint e build).
+7. Somente após aprovação formal, preencher `law_version_checked_at` e alterar os itens aprovados para `active`.
 
 ## Regra de segurança editorial
 
