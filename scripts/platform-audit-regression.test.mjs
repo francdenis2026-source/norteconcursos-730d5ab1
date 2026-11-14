@@ -34,7 +34,7 @@ test("CESPE variants group into CEBRASPE while other boards remain distinct", ()
 
 test("subject names normalize aliases without merging unrelated subjects", () => {
   const { canonicalSubject } = load("lib/subjects.ts");
-  assert.equal(canonicalSubject("Raciocínio Lógico-Matemático"), "Raciocínio Lógico");
+  assert.equal(canonicalSubject("Raciocínio Lógico-Matemático"), "Matemática e Raciocínio Lógico");
   assert.equal(canonicalSubject("Noções de Informática"), "Informática");
   assert.equal(canonicalSubject("Direito Penal"), "Direito Penal");
 });
