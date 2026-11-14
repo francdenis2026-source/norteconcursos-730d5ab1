@@ -47,6 +47,7 @@ test('Acre legal references accept only reviewed official legislation and the PC
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/5556',
     'https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
     'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html',
+    'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html',
   ];
   for (const url of approved) assert.equal(isOfficialUrl(url), true, url);
   const rejected = [
