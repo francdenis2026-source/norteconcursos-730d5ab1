@@ -222,6 +222,7 @@ test("ENEM areas include the actual subject labels and empty areas stay empty", 
     ["História", "Sociologia", "Filosofia"],
   );
   assert.equal(enemSimulatorCatalog(catalog, "linguagens").length, 3);
+  assert.equal(enemQuestionArea("Matemática"), "matematica");
   assert.equal(enemQuestionArea("Informática"), null);
   assert.equal(enemSimulatorCatalog(catalog, "unknown").length, 0);
 });
