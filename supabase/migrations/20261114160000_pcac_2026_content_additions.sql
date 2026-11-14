@@ -974,6 +974,151 @@ from jsonb_to_recordset($pcac_seed$
     "content_status": "active",
     "syllabus_topic_order": 10,
     "law_version_checked_at": null
+  },
+  {
+    "quiz": [
+      {
+        "a": true,
+        "q": "O servidor deve cumprir ordens superiores, exceto quando manifestamente ilegais.",
+        "why": "É a exceção expressa do art. 166, IV."
+      },
+      {
+        "a": true,
+        "q": "Guardar sigilo sobre assunto da repartição é dever funcional.",
+        "why": "É o art. 166, VIII."
+      },
+      {
+        "a": false,
+        "q": "A representação contra ilegalidade deve ser apresentada diretamente ao Judiciário, sem via hierárquica.",
+        "why": "O art. 166, parágrafo único, determina encaminhamento pela via hierárquica."
+      },
+      {
+        "a": true,
+        "q": "O art. 167 proíbe receber propina, comissão, presente ou vantagem em razão das atribuições.",
+        "why": "É o inciso XII."
+      },
+      {
+        "a": false,
+        "q": "O servidor pode usar pessoal e materiais da repartição em atividade particular se não houver dano financeiro.",
+        "why": "O art. 167, XVI, veda o uso de pessoal ou recursos materiais em atividades particulares."
+      },
+      {
+        "a": true,
+        "q": "A LC nº 39 proíbe a prática de assédio moral e a imputação falsa de assédio moral a terceiro.",
+        "why": "São os incisos XX e XXI do art. 167, incluídos pela LC 377/2020."
+      },
+      {
+        "a": false,
+        "q": "A responsabilidade civil decorre apenas de ato doloso.",
+        "why": "O art. 172 inclui ato omissivo ou comissivo, doloso ou culposo."
+      },
+      {
+        "a": true,
+        "q": "As responsabilidades civil, penal e administrativa são independentes e podem cumular-se.",
+        "why": "É o art. 175."
+      },
+      {
+        "a": false,
+        "q": "Qualquer absolvição criminal afasta automaticamente a responsabilidade civil-administrativa.",
+        "why": "O art. 176 exige que a absolvição negue a existência do fato ou a autoria."
+      },
+      {
+        "a": false,
+        "q": "A suspensão prevista no art. 180 pode exceder 90 dias.",
+        "why": "O limite máximo é 90 dias."
+      },
+      {
+        "a": true,
+        "q": "A advertência escrita do art. 179 abrange as proibições dos incisos I a VIII e XIX do art. 167.",
+        "why": "Essa é a redação atualizada pela LC 350/2018."
+      },
+      {
+        "a": false,
+        "q": "A LC nº 39 substitui integralmente a disciplina especial da LC nº 129/2004 para policiais civis.",
+        "why": "A LC 129 é a norma especial; a LC 39 é aplicada nos dispositivos gerais/subsidiários pertinentes."
+      }
+    ],
+    "slug": "pcac-2026-lc39-deveres-proibicoes-responsabilidades-servidor",
+    "title": "LC nº 39/1993: deveres, proibições e responsabilidades do servidor",
+    "body_md": "# LC nº 39/1993 — deveres, proibições e responsabilidades do servidor\n\n> **Recorte do edital PC-AC 2026:** a LC nº 39/1993 deve ser estudada nos dispositivos aplicáveis ao Oficial Investigador, especialmente direitos, deveres e regime disciplinar. A LC nº 129/2004 contém disciplina especial da Polícia Civil; aplique a norma especial quando houver regra específica e a LC nº 39 nos pontos gerais/subsidiários pertinentes.\n\n## 1. Deveres funcionais — art. 166\nSão deveres do servidor: exercer com zelo e dedicação as atribuições; ser leal às instituições; observar normas legais e regulamentares; cumprir ordens superiores, exceto quando manifestamente ilegais; atender com presteza ao público, às certidões e às requisições da Fazenda Pública; comunicar irregularidades à autoridade superior; zelar pelo material e patrimônio público; guardar sigilo; manter conduta compatível com a moralidade; ser assíduo e pontual, inclusive em horário extraordinário quando convocado; tratar as pessoas com urbanidade; e representar contra ilegalidade, omissão ou abuso de poder.\n\nA representação segue a via hierárquica e é apreciada pela autoridade superior àquela contra a qual foi formulada, assegurada ampla defesa ao representado (parágrafo único).\n\n## 2. Proibições — art. 167\nO servidor não pode, entre outras condutas:\n- ausentar-se do serviço sem autorização, retirar documentos/objetos sem anuência ou criar resistência injustificada ao andamento de processos;\n- recusar fé a documentos públicos ou promover manifestações de apreço/desapreço no recinto da repartição;\n- transferir atribuições a pessoas estranhas ou coagir subordinados a filiação sindical/partidária;\n- manter cônjuge, companheiro ou parente até segundo grau sob chefia imediata em função de confiança;\n- usar o cargo para proveito próprio ou alheio, gerir empresa privada ou exercer comércio fora das exceções legais;\n- atuar como procurador/intermediário junto à repartição onde está lotado, fora das exceções legais;\n- receber propina, comissão, presente ou vantagem em razão das atribuições;\n- praticar usura, desídia, usar recursos públicos em atividade particular ou delegar atribuições estranhas ao cargo fora de emergência transitória;\n- exercer atividades incompatíveis com o cargo ou horário;\n- violar prerrogativas e direitos dos advogados;\n- praticar assédio moral ou imputar falsamente a terceiro a prática de assédio moral.\n\nA lista deve ser estudada na redação consolidada, inclusive com as inclusões das LCs nº 350/2018 e nº 377/2020.\n\n## 3. Responsabilidades — arts. 171 a 176\nO servidor responde civil, penal e administrativamente pelo exercício irregular das atribuições (art. 171). A responsabilidade civil decorre de ato omissivo ou comissivo, doloso ou culposo, que cause prejuízo ao erário ou a terceiros (art. 172). Quando o dano é causado a terceiro, o servidor responde perante a Fazenda Pública em ação regressiva.\n\nAs sanções civis, penais e administrativas podem cumular-se e são independentes entre si (art. 175). A responsabilidade civil-administrativa é afastada quando a absolvição criminal nega a existência do fato ou sua autoria (art. 176).\n\n## 4. Relação com penalidades — arts. 177 a 182\nO art. 177 lista advertência, suspensão, demissão, cassação de aposentadoria/disponibilidade, destituição de cargo em comissão e destituição de função gratificada. Na dosimetria, o art. 178 considera natureza e gravidade, danos ao serviço, agravantes, atenuantes e antecedentes funcionais.\n\nA advertência é escrita nos casos do art. 179: violações dos incisos I a VIII e XIX do art. 167 e inobservância de dever funcional que não justifique sanção mais grave. A suspensão decorre de reincidência punida com advertência e de violação das demais proibições que não configurem infração sujeita à demissão, até o limite de 90 dias (art. 180). A demissão abrange, entre outras hipóteses, crime contra a Administração, abandono, inassiduidade habitual, improbidade, corrupção, acumulação ilegal e transgressões especificadas no art. 182.\n\n## 5. Atenção à especialidade policial\nA LC nº 129/2004 prevê deveres, transgressões, penalidades, prescrição, sindicância e PAD próprios da Polícia Civil. Não se deve substituir automaticamente os tipos, prazos e procedimentos especiais da LC nº 129 pelos da LC nº 39. Para questão sobre o policial civil, identificar primeiro se o dispositivo cobrado está disciplinado especificamente na LC nº 129; usar a LC nº 39 nos pontos gerais e subsidiários pertinentes.\n\n## 6. Pegadinhas\n- Cumprir ordem superior não inclui cumprir ordem manifestamente ilegal.\n- Sigilo funcional, urbanidade, assiduidade e comunicação de irregularidades são deveres expressos.\n- A proibição de receber vantagem em razão das atribuições não depende de efetivo prejuízo ao erário.\n- Responsabilidades civil, penal e administrativa podem cumular-se.\n- Absolvição criminal só afasta a responsabilidade civil-administrativa na hipótese do art. 176: negativa da existência do fato ou da autoria.\n- A suspensão geral da LC nº 39 não pode exceder 90 dias.\n- O art. 179 remete aos incisos I a VIII e XIX do art. 167 para advertência escrita; não memorize a redação anterior sem o inciso XIX.\n",
+    "summary": "Deveres do art. 166, proibições do art. 167, responsabilidades dos arts. 171 a 176 e relação com penalidades. Recorte subsidiário aplicável ao Oficial Investigador. ",
+    "discipline": "Legislação Institucional",
+    "flashcards": [
+      [
+        "Quais deveres constam do art. 166?",
+        "Zelo, lealdade, legalidade, cumprimento de ordens não manifestamente ilegais, presteza, comunicação de irregularidades, conservação do patrimônio, sigilo, moralidade, assiduidade, pontualidade, urbanidade e representação contra ilegalidade/omissão/abuso."
+      ],
+      [
+        "Como deve ser encaminhada a representação contra ilegalidade, omissão ou abuso de poder?",
+        "Pela via hierárquica, para apreciação da autoridade superior àquela contra a qual é formulada, assegurada ampla defesa."
+      ],
+      [
+        "O servidor deve cumprir ordem manifestamente ilegal?",
+        "Não. O art. 166, IV, excepciona ordens manifestamente ilegais."
+      ],
+      [
+        "Cite proibições do art. 167 relacionadas ao uso do cargo.",
+        "Usar o cargo para proveito próprio ou alheio, receber vantagem em razão das atribuições e usar recursos da repartição em atividade particular."
+      ],
+      [
+        "Qual a regra sobre assédio moral no art. 167?",
+        "É proibido praticar assédio moral e também imputar falsamente a terceiro a prática de assédio moral."
+      ],
+      [
+        "Quais são as três esferas de responsabilidade do servidor?",
+        "Civil, penal e administrativa."
+      ],
+      [
+        "Quando surge responsabilidade civil conforme art. 172?",
+        "Por ato omissivo ou comissivo, doloso ou culposo, que cause prejuízo ao erário ou a terceiros."
+      ],
+      [
+        "As sanções civis, penais e administrativas podem ser cumuladas?",
+        "Sim. O art. 175 prevê cumulação e independência entre as instâncias."
+      ],
+      [
+        "Quando a absolvição criminal afasta a responsabilidade civil-administrativa?",
+        "Quando nega a existência do fato ou a autoria, conforme art. 176."
+      ],
+      [
+        "Qual o limite máximo da suspensão na LC nº 39/1993?",
+        "90 dias, conforme art. 180."
+      ]
+    ],
+    "sort_order": 22,
+    "legal_basis": [
+      "LC Estadual nº 39/1993",
+      "LC Estadual nº 350/2018",
+      "LC Estadual nº 377/2020",
+      "LC Estadual nº 129/2004"
+    ],
+    "source_note": "Assembleia Legislativa do Acre, LC nº 39/1993 consolidada, arts. 166–182; LC 350/2018 e LC 377/2020; Edital PC-AC 2026, Anexo III.",
+    "topic_label": "LC nº 39/1993 — deveres, proibições e responsabilidades",
+    "contest_name": "PC-AC 2026",
+    "legal_review": {
+      "source": "Assembleia Legislativa do Estado do Acre, LC 39/1993 consolidada; alterações LC 350/2018 e LC 377/2020; edital PC-AC 2026, Anexo III.",
+      "status": "reviewed_against_official_legis_consolidated_text",
+      "articles": [
+        166,
+        167,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182
+      ],
+      "review_date": "2026-11-14"
+    },
+    "content_status": "active",
+    "syllabus_topic_order": 1,
+    "law_version_checked_at": "2026-11-14T19:00:00+00:00"
   }
 ]
 $pcac_seed$::jsonb) as seed(
