@@ -104,3 +104,34 @@ html:root body .student-home.sh2 .sh2-shortcuts--chips > a::after {
   content: none !important;
   display: none !important;
 }
+
+/* Atalhos: rótulo sempre legível (no tema claro ele ficava branco sobre branco). */
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a strong,
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a strong * {
+  color: var(--foreground) !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a small { color: var(--muted-foreground) !important; }
+
+/* "Hoje": as três colunas têm a mesma altura e o cartão da direita preenche o espaço, sem vazio. */
+html:root body .student-home.sh2 .sh2-board { align-items: stretch; }
+html:root body .student-home.sh2 .sh2-board > * { min-width: 0; }
+html:root body .student-home.sh2 .sh2-board > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+html:root body .student-home.sh2 .sh2-board > div:last-child > .sh2-card { flex: 1 1 auto; }
+html:root body .student-home.sh2 .sh2-board > div:last-child > .sh2-card .sh2-card__body {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+html:root body .student-home.sh2 .sh2-board > div:last-child > .sh2-card .sh2-row-link { width: 100%; }
+html:root body .student-home.sh2 .sh2-board > .sh2-card .sh2-card__body { flex: 1 1 auto; }
+
+/* Cartão de revisão: o texto e a ação ocupam o corpo; o rodapé encosta embaixo sem sobrar vazio. */
+html:root body .student-home.sh2 .sh2-board > .sh2-card .sh2-card__body { display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; }
+html:root body .student-home.sh2 .sh2-board > .sh2-card .sh2-card__foot { margin-top: auto; }
+/* Cartão da leitura: título no topo do corpo, não solto no meio. */
+html:root body .student-home.sh2 .sh2-board > div:last-child > .sh2-card .sh2-card__body { align-items: flex-start; justify-content: flex-start; }
