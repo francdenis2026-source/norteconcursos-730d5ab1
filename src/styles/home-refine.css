@@ -24,3 +24,7 @@ html body .home .sx-hero__copy p {
     background: linear-gradient(180deg, rgb(8 12 16 / 82%), rgb(8 12 16 / 66%));
   }
 }
+/* Nenhum texto da homepage é hifenizado automaticamente. */
+html body .home p,
+html body .home li,
+html body .home span { hyphens: manual !important; -webkit-hyphens: manual !important; }
