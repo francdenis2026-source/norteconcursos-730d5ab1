@@ -1,3 +1,4 @@
+import "@/styles/essay-tabs.css";
 import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { toast } from "sonner";
@@ -332,7 +333,7 @@ function EssayAiAssistant() {
 export function EssayTabs({ userId, imported }: { userId: string; imported: React.ReactNode }) {
   return (
     <Tabs defaultValue="caderno" className="space-y-4">
-      <TabsList className="flex-wrap h-auto">
+      <TabsList className="essay-tabs h-auto">
         <TabsTrigger value="caderno">Caderno (30 linhas)</TabsTrigger>
         <TabsTrigger value="guia">Guia e esqueleto</TabsTrigger>
         <TabsTrigger value="modelos">Modelos</TabsTrigger>

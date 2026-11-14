@@ -1,0 +1,10 @@
+/* Abas da redação: uma só linha; no celular rolam na horizontal dentro da própria faixa. */
+html:root body .essay-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+html:root body .essay-tabs::-webkit-scrollbar { display: none; }
+html:root body .essay-tabs > * { flex: none; white-space: nowrap; }
