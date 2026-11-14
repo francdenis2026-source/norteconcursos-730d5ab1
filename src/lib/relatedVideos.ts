@@ -12,7 +12,7 @@ const normalize = (text: string) =>
     .trim();
 
 /** Duas matérias/assuntos "correlacionam" quando, normalizados, um contém o outro. */
-const correlates = (a: string, b: string) => {
+export const correlates = (a: string, b: string) => {
   const na = normalize(a);
   const nb = normalize(b);
   if (!na || !nb) return false;

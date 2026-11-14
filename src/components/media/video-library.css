@@ -201,3 +201,25 @@
   .vp2__btn svg { width: 1rem; height: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .vp2__btn { transition: none; } }
+
+.vl__note {
+  margin: 0 0 8px;
+  padding: 6px 10px;
+  border-left: 3px solid var(--vl-tone, var(--primary));
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--vl-tone, var(--primary)) 10%, transparent);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  text-align: left;
+  color: var(--foreground);
+}
+
+/* Chips de assunto: altura própria (não encolhem na coluna) e texto sempre alinhado à esquerda. */
+html:root body .vl__queue .vl__topics { flex: none; min-height: 2.4rem; align-items: center; overflow-y: hidden; }
+html:root body .vl__queue .vl__topics button { min-height: 1.9rem; }
+html:root body .vl .vl__note { text-align: left !important; hyphens: manual; }
+
+/* A coluna de conteúdos varia (com ou sem aviso e chips): coluna flexível em vez de linhas fixas. */
+html:root body .vl .vl__queue { display: flex; flex-direction: column; gap: .55rem; }
+html:root body .vl .vl__queue > * { flex: none; }
+html:root body .vl .vl__queue > .vl__list { flex: 1 1 0; min-height: 0; }

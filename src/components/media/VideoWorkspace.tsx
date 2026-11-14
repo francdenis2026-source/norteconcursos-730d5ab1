@@ -19,6 +19,10 @@ import { isPlaylistId } from "@/lib/arsenal";
 import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { correlates } from "@/lib/relatedVideos";
+import { GENERAL_TOPIC, bestTopicMatch } from "@/lib/videoTopicMatch";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { readActiveStudyEdition } from "@/lib/activeStudyEdition";
 import { LessonPlayer, type LessonSource } from "./LessonPlayer";
 import "./video-library.css";
 
@@ -60,8 +64,33 @@ export function VideoWorkspace({
   initialTopic?: string | undefined;
 }) {
   const { catalog } = useMediaCatalog();
-  const [scope, setScope] = useState<Scope>("edital");
-  const [cargoId, setCargoId] = useState(pcAcVerticalCargos.find((c) => c.id === "investigador")?.id ?? pcAcVerticalCargos[0]!.id);
+  const { user } = useAuthStatus();
+  const requestedKey = initialSubject ? canonicalSubject(initialSubject) : "";
+  // O pedido pode vir com o nome inteiro da disciplina do edital (ex.: "Contabilidade Geral e
+  // Análise Financeira"): vale igualdade canônica ou o nome conter/estar contido na matéria.
+  const isRequested = (name: string) =>
+    !!initialSubject && (canonicalSubject(name) === requestedKey || correlates(name, initialSubject));
+  // O cargo começa pelo edital que o aluno ativou; sem ele, o de Investigador.
+  const [cargoId, setCargoId] = useState(() => {
+    const role = readActiveStudyEdition(user?.id)?.roleName ?? "";
+    const folded = role.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+    const byRole = pcAcVerticalCargos.find((c) =>
+      folded && c.label.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().split(/\s+/).some((w) => w.length > 5 && folded.includes(w.slice(0, 7))),
+    );
+    // Um pedido de fora (ex.: o cronograma) vence: usa o primeiro cargo que realmente tem a matéria.
+    const byRequest = requestedKey
+      ? pcAcVerticalCargos.find((c) => c.blocks.some((b) => b.disciplines.some((d) => (pcAcDisciplineLink(d.id)?.subjects ?? []).some(isRequested))))
+      : undefined;
+    const preferred = byRole ?? pcAcVerticalCargos.find((c) => c.id === "investigador");
+    const chosen = requestedKey && preferred && !preferred.blocks.some((b) => b.disciplines.some((d) => (pcAcDisciplineLink(d.id)?.subjects ?? []).some(isRequested))) ? byRequest ?? preferred : preferred;
+    return (chosen ?? pcAcVerticalCargos[0]!).id;
+  });
+  const [scope, setScope] = useState<Scope>(() =>
+    requestedKey &&
+    !pcAcVerticalCargos.some((c) => c.blocks.some((b) => b.disciplines.some((d) => (pcAcDisciplineLink(d.id)?.subjects ?? []).some(isRequested))))
+      ? "all"
+      : "edital",
+  );
   const [pickedKey, setPickedKey] = useState("");
   const [topic, setTopic] = useState(initialTopic ?? "all");
   const [search, setSearch] = useState("");
@@ -100,7 +129,10 @@ export function VideoWorkspace({
         block.disciplines
           .filter((discipline) => !seen.has(discipline.name) && seen.add(discipline.name))
           .map((discipline) => {
-            const rawSubjects = pcAcDisciplineLink(discipline.id)?.subjects ?? [];
+            const linked = pcAcDisciplineLink(discipline.id)?.subjects;
+            const plainName = discipline.name.replace(/\s*\(.*\)\s*$/, "").replace(/^no[çc][õo]es de\s+/i, "");
+            // Disciplina sem vínculo cadastrado: procura no catálogo uma matéria de mesmo nome.
+            const rawSubjects = linked?.length ? linked : catalogSubjects.filter((s) => correlates(s, plainName));
             const subjects = [...new Set(rawSubjects.map(resolveSubject).filter(Boolean) as string[])];
             return {
               key: discipline.id,
@@ -136,8 +168,7 @@ export function VideoWorkspace({
   const fromRequest = requested
     ? items.find(
         (item) =>
-          item.subjects.some((s) => canonicalSubject(s) === requested) ||
-          item.rawSubjects.some((s) => canonicalSubject(s) === requested),
+          item.subjects.some(isRequested) || item.rawSubjects.some(isRequested),
       )
     : undefined;
   const selected =
@@ -157,13 +188,22 @@ export function VideoWorkspace({
     );
   }, [catalog, mode, selected]);
   const topics = [...new Set(entries.map((entry) => entry.topic || "Conteúdos"))];
-  const topicFilter = topic !== "all" && topics.includes(topic) ? topic : "all";
+  // Assunto vindo de fora (cronograma): leva à aula daquele assunto; sem correspondência real, às aulas gerais.
+  const wantedTopic = initialTopic && topic === initialTopic ? initialTopic : "";
+  const match = wantedTopic ? bestTopicMatch(wantedTopic, entries) : null;
+  const fallbackTopic = wantedTopic && !match && topics.includes(GENERAL_TOPIC) ? GENERAL_TOPIC : null;
+  const topicFilter = wantedTopic
+    ? (match?.topic ?? fallbackTopic ?? "all")
+    : topic !== "all" && topics.includes(topic)
+      ? topic
+      : "all";
   const visible = entries.filter(
     (entry) =>
       (topicFilter === "all" || entry.topic === topicFilter) &&
       fold(`${entry.title} ${entry.topic ?? ""} ${entry.channel ?? ""}`).includes(fold(search)),
   );
-  const current = visible.find((entry) => `${entry.topic}:${entry.id}` === picked) ?? visible[0];
+  const matchedEntry = match && visible.find((entry) => entry.id === match.entry.id && entry.topic === match.entry.topic);
+  const current = visible.find((entry) => `${entry.topic}:${entry.id}` === picked) ?? matchedEntry ?? visible[0];
   const index = current ? visible.indexOf(current) : -1;
   const groups = [...new Set(visible.map((entry) => entry.topic || "Conteúdos"))];
   const select = (entry: LessonSource) => setPicked(`${entry.topic}:${entry.id}`);
@@ -175,7 +215,8 @@ export function VideoWorkspace({
   };
   const watchedIn = (item: RailItem) =>
     item.subjects.reduce((n, subject) => n + (mode === "playlists" ? 0 : Object.values(catalog.topicVideos[subject] ?? {}).flat().filter((v) => watched.has(v.id)).length), 0);
-  const totalVideos = items.reduce((n, item) => n + item.count, 0);
+  // Várias disciplinas do edital compartilham a mesma matéria (ex.: Criminalística): contar uma vez.
+  const totalVideos = [...new Set(items.flatMap((item) => item.subjects))].reduce((n, subject) => n + countOf(subject), 0);
   const railGroups = [...new Set(items.map((item) => item.group))];
   const color = tone(selected);
 
@@ -306,6 +347,15 @@ export function VideoWorkspace({
             <Search size={15} aria-hidden="true" />
             <input type="search" placeholder="Buscar nesta disciplina" aria-label="Buscar na disciplina" value={search} onChange={(event) => setSearch(event.target.value)} />
           </label>
+          {wantedTopic && (
+            <p className="vl__note" role="status">
+              {match
+                ? `Aula do assunto pedido: ${match.topic}.`
+                : fallbackTopic
+                  ? "Não há aula específica deste assunto. Mostrando as revisões gerais da matéria."
+                  : "Não há aula específica deste assunto. Mostrando as aulas da matéria."}
+            </p>
+          )}
           {topics.length > 1 && (
             <div className="vl__topics" role="group" aria-label="Filtrar por assunto">
               <button type="button" aria-pressed={topicFilter === "all"} onClick={() => setTopic("all")}>Todos</button>
