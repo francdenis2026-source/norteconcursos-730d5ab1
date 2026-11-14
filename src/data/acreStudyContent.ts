@@ -83,7 +83,6 @@ export const ACRE_STUDY_CONTENT: Record<string, AcreStudyCard[]> = {
       alternatives: [{ label: "ICMBio — Guia da gestão participativa da Resex Chico Mendes", url: "https://d3nehc6yl9qzo4.cloudfront.net/downloads/guia_resex_chicomendes.pdf" }, { label: "ISA — Resex Chico Mendes", url: "https://uc.socioambiental.org/arp/626" }],
       caution: "A área atual pode diferir da do decreto; confira o valor vigente no cadastro do ICMBio/CNUC antes de citar números.",
     },
-  ],
   economia: [
     {
       title: "População do Acre",
