@@ -179,6 +179,7 @@ export const isOfficialUrl = (url?: string) => {
         "/detalhar/6874",
         "/detalhar/417-0",
         "/detalhar/6864-1",
+        "/detalhar/110",
       ],
       "app.al.ac.leg.br": [
         "/legisla-e/legislacao/visualizar/9836",
@@ -189,6 +190,18 @@ export const isOfficialUrl = (url?: string) => {
         "/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf",
       ],
     };
+    if (parsed.hostname === "www2.camara.leg.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        !parsed.hash &&
+        parsed.pathname ===
+          "/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html"
+      );
+    }
     const approvedAcrePaths = acreOfficialPaths[parsed.hostname];
     if (approvedAcrePaths) {
       return (
