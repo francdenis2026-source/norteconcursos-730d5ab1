@@ -186,3 +186,76 @@ body .app-shell[data-area="student"] #dashboard-content
   .student-hub__hero-copy .student-hub__hero-subtitle {
   color: #aeb9c2 !important;
 }
+
+
+/* Gráficos do dashboard: informação legível, sem competir com os dados. */
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-metric > span,
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-chart-head span,
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-insights small,
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-days small {
+  font-size: 12px;
+  line-height: 1.45;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-metric > strong {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-gridline {
+  stroke: color-mix(in srgb, var(--border) 78%, transparent);
+  stroke-width: 1;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-average {
+  stroke: var(--muted-foreground);
+  stroke-dasharray: 4 5;
+  opacity: .65;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-average-label {
+  fill: var(--muted-foreground);
+  font-size: 10px;
+  letter-spacing: .04em;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-point-halo {
+  fill: var(--rhythm-accent);
+  opacity: .12;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-point {
+  fill: var(--card);
+  stroke: var(--rhythm-accent);
+  stroke-width: 2.5;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-day {
+  min-height: 64px;
+  border-radius: 9px;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-day:focus-visible,
+.app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs button:focus-visible {
+  outline: 2px solid var(--sp-gold, #b58a36);
+  outline-offset: 2px;
+}
+.app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs button {
+  min-height: 38px;
+  padding-inline: 12px;
+  font-size: 12px;
+  font-weight: 650;
+}
+.app-shell[data-area="student"] #dashboard-content .sh2-insights__kpis small {
+  font-size: 12px;
+  line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-metric > span,
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-chart-head span,
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-insights small,
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-days small {
+    font-size: 11.5px;
+  }
+  .app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs button {
+    flex: 0 0 auto;
+  }
+}
