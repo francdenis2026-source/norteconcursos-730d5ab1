@@ -182,7 +182,13 @@ const LEGAL_SUBJECTS = new Set(
 /** No edital PC-AC 2026, básicos/jurídicos valem 1 e os demais tópicos específicos valem 2. */
 export function pcacWeightForSubject(subject: string): number {
   const normalized = fold(subject);
-  return BASIC_SUBJECTS.has(normalized) || LEGAL_SUBJECTS.has(normalized) ? 1 : 2;
+  return (
+    BASIC_SUBJECTS.has(normalized) ||
+    LEGAL_SUBJECTS.has(normalized) ||
+    (normalized.startsWith("realidade") && normalized.includes("acre"))
+  )
+    ? 1
+    : 2;
 }
 
 type PcacSubjectGroup =
@@ -204,8 +210,7 @@ function pcacSubjectGroup(subject: string): PcacSubjectGroup {
   if (["nocoes de informatica", "informatica"].includes(normalized)) return "basic_it";
   if (
     normalized === fold("Realidade do Estado do Acre") ||
-    normalized ===
-      fold("Realidade étnica, social, geográfica, cultural, política e econômica do Estado do Acre")
+    (normalized.startsWith("realidade") && normalized.includes("acre"))
   )
     return "basic_acre";
   if (["nocoes de direito constitucional", "direito constitucional"].includes(normalized))
