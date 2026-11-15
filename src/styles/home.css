@@ -4843,3 +4843,82 @@ html:fullscreen:has(> body .home) .home {
     overflow-x: hidden !important;
   }
 }
+
+
+/* Concursos recentes: cards e identificação de seção mais proporcionais. */
+.home.home #concursos {
+  padding-block: 28px;
+}
+.home.home #concursos > .home-container > .home-heading {
+  margin-bottom: 16px;
+}
+.home.home #concursos .home-heading h2 {
+  font-size: clamp(24px, 2.15vw, 30px);
+  line-height: 1.14;
+  letter-spacing: -.03em;
+}
+.home.home #concursos .home-heading .home-eyebrow,
+.home.home #concursos .home-section-top .home-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  max-width: max-content;
+  min-height: 24px;
+  padding: 3px 9px;
+  margin: 0 0 9px;
+  border-radius: 999px;
+  font-size: 9px;
+  line-height: 1.25;
+  letter-spacing: .09em;
+  background: color-mix(in srgb, var(--section-color, var(--home-blue)) 7%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--section-color, var(--home-blue)) 22%, transparent);
+}
+.home.home #concursos .home-section-top {
+  display: block;
+  margin-bottom: 16px;
+}
+.home.home #concursos .home-rail__track.home-opportunities {
+  grid-auto-columns: calc((100% - 32px) / 3);
+  gap: 16px;
+}
+.home.home #concursos .home-opportunity {
+  border-radius: 11px;
+}
+.home.home #concursos .home-opportunity .home-opportunity__image {
+  aspect-ratio: 16 / 8.5;
+}
+.home.home #concursos .home-opportunity .home-opportunity__intro {
+  padding: 10px 11px 4px;
+}
+.home.home #concursos .home-opportunity h3 {
+  font-size: 15px;
+  line-height: 1.25;
+}
+.home.home #concursos .home-opportunity .home-opportunity__intro > p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+.home.home #concursos .home-opportunity .home-opportunity__body {
+  padding: 0 11px 10px;
+}
+.home.home #concursos .home-opportunity .home-text-link {
+  min-height: 32px;
+  font-size: 11px;
+}
+@media (max-width: 959px) {
+  .home.home #concursos .home-rail__track.home-opportunities {
+    grid-auto-columns: calc((100% - 14px) / 2);
+    gap: 14px;
+  }
+}
+@media (max-width: 699px) {
+  .home.home #concursos {
+    padding-block: 22px;
+  }
+  .home.home #concursos .home-rail__track.home-opportunities {
+    grid-auto-columns: 86%;
+  }
+  .home.home #concursos .home-opportunity .home-opportunity__image {
+    aspect-ratio: 16 / 9;
+  }
+}
