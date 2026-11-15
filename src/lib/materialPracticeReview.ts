@@ -31,3 +31,49 @@ export function matchesPracticeReview(quiz: QuizItem[], value: unknown, material
   if (!Array.isArray(r.items) || r.items.length !== quiz.length || !quiz.length) return false;
   return quiz.every((q,i) => { const item = r.items[i]; return item && item.q === q.q && item.a === q.a && item.why === q.why && typeof q.a === 'boolean' && r.sources.some(s => s.url === item.source_url); });
 }
+
+
+/**
+ * Didactic approval for non-statutory accounting practice built from the
+ * course's cited teaching files. This is deliberately separate from the
+ * official-source review required for legal/normative materials.
+ */
+export type MaterialDidacticReview = {
+  version: 1;
+  review_type: "didactic";
+  status: "reviewed";
+  material_slug: string;
+  subject: string;
+  topic_label: string;
+  checked_at: string;
+  method: string;
+  source_note: string;
+  items: { q: string; a: boolean; why: string }[];
+};
+
+export function matchesDidacticReview(
+  quiz: QuizItem[],
+  value: unknown,
+  materialSlug: string,
+): value is MaterialDidacticReview {
+  if (!value || typeof value !== "object") return false;
+  const r = value as MaterialDidacticReview;
+  if (
+    r.version !== 1 ||
+    r.review_type !== "didactic" ||
+    r.status !== "reviewed" ||
+    r.material_slug !== materialSlug ||
+    r.subject !== "Contabilidade Geral e Análise Financeira" ||
+    !r.topic_label ||
+    !r.method ||
+    !r.source_note ||
+    !Number.isFinite(Date.parse(r.checked_at)) ||
+    !Array.isArray(r.items) ||
+    r.items.length !== quiz.length ||
+    !quiz.length
+  ) return false;
+  return quiz.every((q, i) => {
+    const item = r.items[i];
+    return !!item && item.q === q.q && item.a === q.a && item.why === q.why;
+  });
+}
