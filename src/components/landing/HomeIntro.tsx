@@ -78,6 +78,11 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
         )}
         <div className="sx sx-hero">
           <div className="sx-hero__copy">
+            {mobile && (
+              <div className="hc-corner hc-corner--m">
+                <NorteCube size={0.17} />
+              </div>
+            )}
             <span className="sx-eyebrow">
               <ShieldCheck aria-hidden="true" /> Preparação para carreiras policiais
             </span>

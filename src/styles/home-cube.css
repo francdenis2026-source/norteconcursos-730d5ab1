@@ -25,3 +25,33 @@
     pointer-events: auto;
   }
 }
+
+/* Celular: cubo mínimo sobre o canto superior direito do cartão do hero, sem ocupar espaço. */
+@media (max-width: 999px) {
+  .sx-hero__copy {
+    position: relative;
+  }
+  html body .hc-corner--m {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    top: 38px;
+    right: 16px;
+    left: auto !important;
+    margin: 0 !important;
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .hc-corner--m .ncube {
+    margin: 0;
+    pointer-events: auto;
+  }
+}
+
+/* Em telas muito estreitas o título ocupa a linha toda: o cubo some, para não cobrir texto. */
+@media (max-width: 374px) {
+  html body .hc-corner--m {
+    display: none;
+  }
+}
