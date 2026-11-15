@@ -106,17 +106,14 @@ export function resolveScoringRule(
     const directMatch = names.has(rowName);
     const fullContestAndCareerMatch =
       Boolean(contest && career) && rowName.includes(contest) && rowName.includes(career);
-    const pcacAliasMatch =
-      pcacAuthorialAlias &&
-      rowName.includes("policia civil do acre") &&
-      rowName.includes("oficial investigador");
+    const pcacAliasMatch = pcacAuthorialAlias && rowName.includes("policia civil do acre");
     const contestMatches = directMatch || fullContestAndCareerMatch || pcacAliasMatch;
     const boardMatches =
       !row.exam_board ||
       !board ||
       board === "all" ||
       fold(row.exam_board) === board ||
-      (pcacAliasMatch && board === "autoral" && fold(row.exam_board) === "idecan");
+      (pcacAuthorialAlias && board === "autoral" && fold(row.exam_board) === "idecan");
     return contestMatches && boardMatches;
   });
   // Registros divergentes para a mesma edição: não escolhe um por conta própria.
