@@ -1,71 +1,48 @@
-/* Animated Norte cube in the plans band: reuse the exact hero component. */
-@media (min-width: 1101px) {
-  .home.home .home-plans__intro {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1.15fr) minmax(104px, 0.28fr) minmax(360px, 0.92fr);
-    align-items: center !important;
-    gap: clamp(12px, 1.6vw, 26px) !important;
-  }
-  .home.home .home-plans__intro > .home-heading {
-    min-width: 0;
-    max-width: 600px;
-  }
+/* Cubo decorativo sobre o espaço livre da faixa; não participa do fluxo do layout. */
+.home.home .home-plans__intro {
+  position: relative;
+}
+.home.home .home-plans__cube {
+  position: absolute;
+  z-index: 1;
+  left: 61%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.home.home .home-plans__cube .ncube {
+  --ncube-scale: 0.62;
+  flex: none;
+  width: 108px;
+  height: 108px;
+  margin: 0;
+}
+.home.home .home-plans__intro > .home-heading,
+.home.home .home-plans__intro > .home-plans__signal {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1100px) {
   .home.home .home-plans__cube {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    min-width: 0;
-    min-height: 148px;
-    overflow: visible;
+    left: 59%;
+    width: 88px;
+    height: 88px;
   }
   .home.home .home-plans__cube .ncube {
-    --ncube-scale: 0.68;
-    width: 118px;
-    height: 132px;
-    margin: 0;
-    transform: translateY(2px);
-  }
-  .home.home .home-plans__signal {
-    width: 100%;
-    min-width: 0;
-    align-self: center;
+    --ncube-scale: 0.48;
+    width: 86px;
+    height: 86px;
   }
 }
-@media (min-width: 901px) and (max-width: 1100px) {
-  .home.home .home-plans__intro {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 94px minmax(300px, 0.95fr);
-    align-items: center !important;
-    gap: 12px !important;
-  }
-  .home.home .home-plans__cube {
-    display: grid;
-    place-items: center;
-    min-width: 0;
-    min-height: 116px;
-  }
-  .home.home .home-plans__cube .ncube {
-    --ncube-scale: 0.52;
-    width: 90px;
-    height: 100px;
-    margin: 0;
-  }
-  .home.home .home-plans__signal {
-    width: 100%;
-    min-width: 0;
-  }
-}
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .home.home .home-plans__cube {
     display: none;
   }
-}
-
-/* Keep the cube centered in the available middle rail without forcing overflow. */
-.home.home .home-plans__cube,
-.home.home .home-plans__cube .ncube {
-  box-sizing: border-box;
-}
-.home.home .home-plans__cube .ncube {
-  flex: 0 0 auto;
 }
