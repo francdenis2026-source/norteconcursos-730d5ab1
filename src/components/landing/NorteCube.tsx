@@ -84,8 +84,6 @@ export function NorteCube({ size = 1 }: { size?: number }) {
     let dragging = false;
     let last = { x: 0, y: 0 };
     let raf = 0;
-    let timer = 0;
-    let animating = false;
 
     const io = new IntersectionObserver(([e]) => {
       visible = !!e?.isIntersecting;
@@ -103,36 +101,68 @@ export function NorteCube({ size = 1 }: { size?: number }) {
     raf = requestAnimationFrame(idle);
 
     const ease = (p: number) => (p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2);
-    const turn = () => {
-      if (!visible || document.hidden || animating) return;
-      animating = true;
-      const axis = Math.floor(Math.random() * 3) as 0 | 1 | 2;
-      const dir = Math.random() < 0.5 ? 1 : -1;
-      // Duas fatias opostas (as da ponta) giram juntas.
-      const sel = cubies.current.filter((c) => Math.abs(Math.round(c.m[12 + axis]! / STEP)) === 1);
-      const start = performance.now();
-      const dur = 900;
-      const step = (now: number) => {
-        const p = Math.min(1, (now - start) / dur);
-        const r = rot(axis, 90 * dir * ease(p));
-        for (const c of sel) if (c.el) c.el.style.transform = `matrix3d(${mul(r, c.m).join(",")})`;
-        if (p < 1) requestAnimationFrame(step);
-        else {
-          const done = rot(axis, 90 * dir);
-          for (const c of sel) {
-            const next = mul(done, c.m).map((v, i) =>
-              i < 12 ? Math.round(v) : Math.round(v / STEP) * STEP,
-            );
-            next[15] = 1;
-            c.m = next;
-            if (c.el) c.el.style.transform = `matrix3d(${next.join(",")})`;
-          }
-          animating = false;
-        }
-      };
-      requestAnimationFrame(step);
+    let alive = true;
+    const wait = (ms: number) => new Promise<void>((r) => window.setTimeout(r, ms));
+    const whenVisible = async () => {
+      while (alive && (!visible || document.hidden || dragging)) await wait(400);
     };
-    timer = window.setInterval(turn, 2000);
+    const runMove = (axis: 0 | 1 | 2, dir: 1 | -1) =>
+      new Promise<void>((resolve) => {
+        // Duas fatias opostas (as da ponta) giram juntas.
+        const sel = cubies.current.filter(
+          (c) => Math.abs(Math.round(c.m[12 + axis]! / STEP)) === 1,
+        );
+        const start = performance.now();
+        const dur = 800;
+        const step = (now: number) => {
+          const p = Math.min(1, (now - start) / dur);
+          const r = rot(axis, 90 * dir * ease(p));
+          for (const c of sel)
+            if (c.el) c.el.style.transform = `matrix3d(${mul(r, c.m).join(",")})`;
+          if (p < 1) requestAnimationFrame(step);
+          else {
+            const done = rot(axis, 90 * dir);
+            for (const c of sel) {
+              const next = mul(done, c.m).map((v, i) =>
+                i < 12 ? Math.round(v) : Math.round(v / STEP) * STEP,
+              );
+              next[15] = 1;
+              c.m = next;
+              if (c.el) c.el.style.transform = `matrix3d(${next.join(",")})`;
+            }
+            resolve();
+          }
+        };
+        requestAnimationFrame(step);
+      });
+    // Ciclo: parado e montado (cada face mostra o emblema inteiro) → embaralha 3 giros → desfaz na ordem inversa.
+    const cycle = async () => {
+      await wait(1800);
+      while (alive) {
+        await whenVisible();
+        if (!alive) return;
+        const done: { axis: 0 | 1 | 2; dir: 1 | -1 }[] = [];
+        for (let i = 0; i < 3 && alive; i++) {
+          await whenVisible();
+          const m = {
+            axis: Math.floor(Math.random() * 3) as 0 | 1 | 2,
+            dir: (Math.random() < 0.5 ? 1 : -1) as 1 | -1,
+          };
+          done.push(m);
+          await runMove(m.axis, m.dir);
+          await wait(260);
+        }
+        await wait(500);
+        for (const m of done.reverse()) {
+          await whenVisible();
+          if (!alive) return;
+          await runMove(m.axis, (m.dir * -1) as 1 | -1);
+          await wait(260);
+        }
+        await wait(3200); // montado: a imagem aparece inteira nas faces
+      }
+    };
+    void cycle();
 
     const down = (e: PointerEvent) => {
       dragging = true;
@@ -154,8 +184,8 @@ export function NorteCube({ size = 1 }: { size?: number }) {
     host.addEventListener("pointerup", up);
     host.addEventListener("pointercancel", up);
     return () => {
+      alive = false;
       cancelAnimationFrame(raf);
-      window.clearInterval(timer);
       io.disconnect();
       host.removeEventListener("pointerdown", down);
       host.removeEventListener("pointermove", moveP);
@@ -183,25 +213,39 @@ export function NorteCube({ size = 1 }: { size?: number }) {
             className="ncube__cubie"
           >
             {FACES.map((f) => {
+              // A face "py" fica no alto (eixo y negativo no CSS); "ny", embaixo.
               const outer =
                 (f.key === "px" && x === 1) ||
                 (f.key === "nx" && x === -1) ||
-                (f.key === "py" && y === 1) ||
-                (f.key === "ny" && y === -1) ||
+                (f.key === "py" && y === -1) ||
+                (f.key === "ny" && y === 1) ||
                 (f.key === "pz" && z === 1) ||
                 (f.key === "nz" && z === -1);
+              // Posição do pedaço da imagem (coluna/linha 0..2), conforme a orientação de cada face.
+              const [col, row] =
+                f.key === "pz"
+                  ? [x + 1, y + 1]
+                  : f.key === "nz"
+                    ? [1 - x, y + 1]
+                    : f.key === "px"
+                      ? [1 - z, y + 1]
+                      : f.key === "nx"
+                        ? [z + 1, y + 1]
+                        : f.key === "py"
+                          ? [x + 1, z + 1]
+                          : [x + 1, 1 - z];
               return (
                 <i
                   key={f.key}
                   className="ncube__face"
                   style={{
                     transform: f.transform,
+                    ...(outer
+                      ? { ["--px" as string]: `${col * 50}%`, ["--py" as string]: `${row * 50}%` }
+                      : null),
                   }}
                   data-sticker={outer ? "true" : undefined}
                   data-face={f.key}
-                  data-logo={
-                    outer && Math.abs(x) + Math.abs(y) + Math.abs(z) === 1 ? "true" : undefined
-                  }
                 />
               );
             })}

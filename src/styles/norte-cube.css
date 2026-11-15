@@ -85,9 +85,10 @@
   --sticker: #8fa3c7;
 }
 
-/* Centro de cada face: emblema da marca (escudo com caveira), sobre fundo escuro. */
-.ncube__face[data-logo="true"] {
+/* Cada adesivo mostra 1/9 do emblema da marca: com o cubo montado, as 6 faces exibem o escudo inteiro. */
+.ncube__face[data-sticker="true"] {
   background:
-    url("/media/brand/norte-identity/emblema.png") center / 82% no-repeat,
-    linear-gradient(145deg, color-mix(in srgb, var(--sticker) 14%, #151a21), #0b0e12 80%);
+    url("/media/brand/norte-identity/emblema.png") var(--px, 50%) var(--py, 50%) / 300% 300%
+      no-repeat,
+    linear-gradient(145deg, color-mix(in srgb, var(--sticker) 16%, #151a21), #0b0e12 80%);
 }
