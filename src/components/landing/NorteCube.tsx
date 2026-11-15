@@ -36,15 +36,6 @@ const move = (x: number, y: number, z: number): Mat => {
 const SIZE = 56;
 const GAP = 2;
 const STEP = SIZE + GAP;
-// Adesivos nas faces externas (tons do Norte); o corpo é preto fosco.
-const STICKER: Record<string, string> = {
-  px: "#d3ad68",
-  nx: "#3f8f86",
-  py: "#5b7fb8",
-  ny: "#8a6fb0",
-  pz: "#b8686f",
-  nz: "#6f9b6a",
-};
 const FACES: { key: string; transform: string }[] = [
   { key: "pz", transform: `translateZ(${SIZE / 2}px)` },
   { key: "nz", transform: `rotateY(180deg) translateZ(${SIZE / 2}px)` },
@@ -205,9 +196,9 @@ export function NorteCube({ size = 1 }: { size?: number }) {
                   className="ncube__face"
                   style={{
                     transform: f.transform,
-                    ...(outer ? { ["--sticker" as string]: STICKER[f.key]! } : null),
                   }}
                   data-sticker={outer ? "true" : undefined}
+                  data-face={f.key}
                 />
               );
             })}

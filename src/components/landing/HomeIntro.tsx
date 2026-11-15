@@ -12,11 +12,13 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { HeroBackdropClock } from "@/components/landing/HeroBackdropClock";
 import { PcacBanner } from "@/components/landing/PcacBanner";
+import { NorteCube } from "@/components/landing/NorteCube";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 import "@/styles/home-saas.css";
 import "@/styles/home-refine.css";
+import "@/styles/home-cube.css";
 
 const FEATURES: { icon: LucideIcon; title: string; text: string }[] = [
   {
@@ -133,6 +135,35 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
         </div>
       </section>
       <PcacBanner mobile={mobile} />
+
+      <section className="sx hc-band" aria-labelledby={`${ids.title}-cube`}>
+        <div className="hc-copy">
+          <span className="sx-eyebrow">
+            <MapIcon aria-hidden="true" /> Mapa da prova
+          </span>
+          <h2 id={`${ids.title}-cube`}>
+            Seu edital em <em>seis faces</em>
+          </h2>
+          <p>
+            Veja quantas questões a banca IDECAN cobra em cada disciplina da PC-AC e quais assuntos
+            têm mais chance de cair. Gire o cubo e escolha por onde começar.
+          </p>
+          <ul className="hc-legend" aria-label="Disciplinas em destaque">
+            <li data-c="gold">Língua Portuguesa</li>
+            <li data-c="blue">Direito Penal</li>
+            <li data-c="green">Raciocínio Lógico</li>
+            <li data-c="orange">Informática</li>
+            <li data-c="ivory">Processo Penal</li>
+            <li data-c="steel">Realidade do Acre</li>
+          </ul>
+          <Link to="/dashboard/mapa-idecan" className="sx-btn sx-btn--primary">
+            Abrir o mapa da prova <ArrowRight aria-hidden="true" />
+          </Link>
+        </div>
+        <div className="hc-stage">
+          <NorteCube />
+        </div>
+      </section>
 
       <section
         id={ids.platform}

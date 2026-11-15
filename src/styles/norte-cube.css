@@ -64,3 +64,23 @@
     --ncube-scale: 0.72;
   }
 }
+
+/* Cores do site: dourado da marca e os tons dos indicadores da homepage (azul, verde, laranja). */
+.ncube__face[data-face="px"] {
+  --sticker: var(--brass, #e3b14b);
+}
+.ncube__face[data-face="nx"] {
+  --sticker: #38bdf8;
+}
+.ncube__face[data-face="py"] {
+  --sticker: #34d399;
+}
+.ncube__face[data-face="ny"] {
+  --sticker: #f97316;
+}
+.ncube__face[data-face="pz"] {
+  --sticker: #e8e2d0;
+}
+.ncube__face[data-face="nz"] {
+  --sticker: #8fa3c7;
+}
