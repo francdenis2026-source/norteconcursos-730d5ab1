@@ -184,6 +184,8 @@ export const isOfficialUrl = (url?: string) => {
         "/detalhar/417-0",
         "/detalhar/6864-1",
         "/detalhar/110",
+        "/detalhar_constituicao",
+        "/detalhar_emendas/64",
       ],
       "app.al.ac.leg.br": [
         "/legisla-e/legislacao/visualizar/9836",
