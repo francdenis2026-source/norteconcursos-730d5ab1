@@ -131,7 +131,9 @@ export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today:
       })
       .map((row) => ({ ...row, day: acreDateKey(new Date(row.time)) }));
   }, [rows]);
-  // Respostas com data futura ou relógio incorreto não entram nos períodos do relatório.\n  const eligible = React.useMemo(() => first.filter((row) => row.day <= today), [first, today]);\n  const data = React.useMemo(() => build(eligible, period, today), [eligible, period, today]);
+  // Respostas com data futura ou relógio incorreto não entram nos períodos do relatório.
+  const eligible = React.useMemo(() => first.filter((row) => row.day <= today), [first, today]);
+  const data = React.useMemo(() => build(eligible, period, today), [eligible, period, today]);
   const rate = data.total ? Math.round((data.acertos / data.total) * 100) : null;
   const periodLabel = (PERIODS.find(([id]) => id === period)?.[1] ?? "").toLowerCase();
 
