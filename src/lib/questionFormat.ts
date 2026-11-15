@@ -32,6 +32,10 @@ export type Question = {
   text: string;
   answer: Answer;
   explanation: string;
+  /** Didactic support shown after answering a course-authored exercise. */
+  studyTip?: string | undefined;
+  resolutionSteps?: string[] | undefined;
+  wrongFeedback?: string | undefined;
   legalBasis: LegalBasis[];
   checkedAt: string | null;
   difficulty: Difficulty;
