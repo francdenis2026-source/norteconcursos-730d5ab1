@@ -69,6 +69,3 @@
 .home.home .home-plans__cube .ncube {
   flex: 0 0 auto;
 }
-@media (prefers-reduced-motion: reduce) {
-  .home.home .home-plans__cube { visibility: hidden; }
-}
