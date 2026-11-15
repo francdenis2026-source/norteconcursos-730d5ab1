@@ -198,3 +198,23 @@ where slug in ('pcac-2026-legislacao-institucional-policia-civil-acre','pcac-202
 
 -- Evita repetição literal no banco de questões do PCCR.
 update public.study_materials set quiz=jsonb_set(quiz,'{0}',jsonb_build_object('q','O quantitativo de vagas do cargo de Oficial Investigador resulta da soma das vagas anteriormente destinadas aos cargos de agente e escrivão.','a',true,'why','É a regra do art. 4º da LC estadual nº 496/2025, que unificou os cargos e somou seus quantitativos.'),false),updated_at=now() where slug='pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025';
+
+-- IDECAN: matriz de pontuação específica do edital PC-AC 001/2026.
+insert into public.exam_board_scoring_rules
+(exam_board,net_score_formula,blank_counts_as_wrong,wrong_cancels_correct,annulled_awards_point,description,source_note)
+select
+ 'IDECAN',
+ 'pontuação objetiva = soma dos acertos ponderados por disciplina; básico/jurídico peso 1; específico peso 2',
+ false,
+ false,
+ true,
+ 'PC-AC 001/2026 — Oficial Investigador: 100 questões de múltipla escolha, cinco alternativas e uma correta. Básicos: 24 questões, peso 1; jurídicos: 16 questões, peso 1; específicos: 60 questões, peso 2; total máximo 160 pontos. O edital não prevê cancelamento de acertos por erro ou branco. Questões anuladas atribuem pontos a todos os candidatos (item 18.5).',
+ 'Edital PC-AC 001/2026, itens 10.2 a 10.5, quadro do item 10.4 e item 18.5, páginas 21–22 e 40. https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf'
+where not exists (select 1 from public.exam_board_scoring_rules where exam_board='IDECAN');
+
+-- Corrige o endereço do edital oficial nos registros dos cargos do PC-AC 2026.
+update public.contests
+set official_edital_url='https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
+    source_url='https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
+    updated_at=now()
+where name like 'PC-AC 001/2026%';
