@@ -98,7 +98,7 @@ export function resolveScoringRule(
   const board = fold(paper.board);
   const pcacAuthorialAlias =
     String(paper.year) === "2026" &&
-    /pc-?ac|policia civil do acre/i.test(paper.contest) &&
+    /pc-?ac|policia civil do acre/.test(contest) &&
     /oficial investigador/.test(career);
   const matches = registry.filter((row) => {
     if (String(row.contest_year) !== String(paper.year)) return false;
