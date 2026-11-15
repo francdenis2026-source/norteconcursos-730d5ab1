@@ -9,6 +9,7 @@
 // é aplicado quando a edição tem essa regra registrada em contest_reference_info.
 // Qualquer outra situação usa pontuação simples e diz isso ao aluno.
 import { questionCareerLabel, questionContestLabel } from "./questionFilterIdentity";
+import { parseQuestion } from "./questionFormat";
 
 export type ScoringRuleId = "net_one_to_one" | "simple" | "pcac_2026_weighted";
 
@@ -242,12 +243,14 @@ function pcacSubjectGroup(subject: string): PcacSubjectGroup {
   return "specific";
 }
 
-export function selectPcacOfficialDistribution<T extends { subject: string }>(
+export function selectPcacOfficialDistribution<T extends { subject: string; text: string }>(
   pool: readonly T[],
   random: () => number = Math.random,
 ): T[] | null {
   const buckets = new Map<PcacSubjectGroup, T[]>();
-  for (const item of pool) {
+  // The edital requires five alternatives (A–E); true/false training items remain
+  // available in ordinary practice but cannot enter a full official-format mock.
+  for (const item of pool.filter((candidate) => parseQuestion(candidate.text).options.length === 5)) {
     const group = pcacSubjectGroup(item.subject);
     const bucket = buckets.get(group) ?? [];
     bucket.push(item);
