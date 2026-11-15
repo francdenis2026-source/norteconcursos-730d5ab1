@@ -1,0 +1,83 @@
+/* Área do aluno: conforto visual. Menos brilho (superfícies, texto, sombras luminosas e cores saturadas),
+   mantendo contraste AA nos dois temas. Carregada por último; especificidade acima das camadas anteriores. */
+
+/* Claro: fundo e cartões em tons suaves, em vez de branco puro; tinta 11:1 sobre o cartão.
+   A paleta única da área vive nas variáveis --sp-* (student-pro.css): é ali que se ajusta. */
+:root:not(.dark) .app-shell[data-area="student"]:not(#_):not(#_):not(#_),
+:root:not(.dark) .app-shell[data-area="student"]:not(#_):not(#_):not(#_) * {
+  --sp-canvas: #e8e7e2;
+  --sp-surface: #f5f4f0;
+  --sp-soft: #ecebe6;
+  --sp-line: #cbc9c0;
+  --sp-ink: #23272e;
+  --sp-muted: #4d545d;
+}
+
+/* Escuro: fundos um pouco mais fundos; texto e secundário seguem acima de AA. */
+:root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_),
+:root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_) * {
+  --sp-canvas: #0b141a;
+  --sp-surface: #101d25;
+  --sp-soft: #14262f;
+  --sp-ink: #c4ccd5;
+  --sp-muted: #a1abb8;
+}
+
+/* Sem brilho em texto, ícones e sombras luminosas. */
+:root body .app-shell[data-area="student"] *,
+:root body .app-shell[data-area="student"] *::before,
+:root body .app-shell[data-area="student"] *::after {
+  text-shadow: none !important;
+}
+:root body .app-shell[data-area="student"] svg,
+:root body .app-shell[data-area="student"] .rk-emblem,
+:root body .app-shell[data-area="student"] img {
+  filter: none;
+}
+:root body .app-shell[data-area="student"] .rk-emblem {
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.25));
+}
+
+/* Imagens de capa e faixas: um pouco mais escuras e menos saturadas, para o texto por cima ler melhor. */
+:root.dark
+  body
+  .app-shell[data-area="student"]
+  #dashboard-content
+  img:not(.rk-emblem):not([src*="brasao"]):not([src*="flag"]) {
+  filter: brightness(0.86) saturate(0.9);
+}
+:root:not(.dark)
+  body
+  .app-shell[data-area="student"]
+  #dashboard-content
+  img:not(.rk-emblem):not([src*="brasao"]):not([src*="flag"]) {
+  filter: saturate(0.92);
+}
+
+/* Cartões e faixas coloridos (métricas, atalhos, resumos): tinta mais fraca, borda em vez de luz. */
+:root.dark
+  body
+  .app-shell[data-area="student"]
+  #dashboard-content
+  :is([class*="tile"], [class*="metric"], [class*="shortcut"], [class*="quick"]) {
+  box-shadow: none;
+}
+:root body .app-shell[data-area="student"] #dashboard-content :is(.rk-hero, .idx-band) {
+  filter: none;
+}
+
+/* Pontos e anéis luminosos viram contorno simples. */
+:root body .app-shell[data-area="student"] [style*="box-shadow: 0 0 1"],
+:root
+  body
+  .app-shell[data-area="student"]
+  .ranking-podium
+  li[data-place="1"]
+  .ranking-podium__card {
+  box-shadow: none;
+}
+
+/* Cabeçalhos e números grandes: peso menor, para não "estourar" sobre o fundo. */
+:root.dark body .app-shell[data-area="student"] #dashboard-content :is(h1, h2, h3) {
+  color: color-mix(in srgb, var(--student-ink) 94%, var(--student-canvas));
+}
