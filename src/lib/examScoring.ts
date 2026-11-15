@@ -258,7 +258,9 @@ export function selectPcacOfficialDistribution<T extends { subject: string }>(
     const copy = [...items];
     for (let index = copy.length - 1; index > 0; index -= 1) {
       const target = Math.floor(random() * (index + 1));
-      [copy[index], copy[target]] = [copy[target], copy[index]];
+      const current = copy[index] as U;
+      copy[index] = copy[target] as U;
+      copy[target] = current;
     }
     return copy;
   };
