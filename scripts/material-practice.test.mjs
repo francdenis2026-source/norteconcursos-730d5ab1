@@ -171,6 +171,41 @@ test("authored material exercises keep their own origin, scope and CE key withou
     assert.equal(authoredMaterialPractice(items, scope, "material", "tema").length, 0);
 });
 
+test("reviewed accounting exercises carry difficulty, step-by-step correction and exam tips", async () => {
+  const { authoredMaterialPractice } = await import("../src/lib/materialPractice.ts");
+  const quiz = [{
+    q: "Se o ativo é R$ 20.000 e o passivo é R$ 12.000, o PL é R$ 32.000.",
+    a: false,
+    why: "PL = Ativo − Passivo = R$ 8.000.",
+    difficulty: "média",
+    tip: "Use PL = Ativo − Passivo.",
+    resolution_steps: ["Separe Ativo e Passivo.", "Subtraia 20.000 − 12.000.", "O PL é R$ 8.000."],
+    wrong_feedback: "O erro está na soma; PL é a diferença."
+  }];
+  const review = {
+    version: 1, review_type: "didactic", status: "reviewed",
+    material_slug: "pcac-2026-contabilidade-01-fundamentos-patrimonio-ativo-passivo",
+    subject: "Contabilidade Geral e Análise Financeira",
+    topic_label: "1. Conceitos fundamentais de contabilidade",
+    checked_at: "2026-11-14T23:00:00-03:00",
+    method: "Revisão didática individual.",
+    source_note: "Edital PC-AC e material de apoio fornecido.",
+    items: quiz.map(({q,a,why}) => ({q,a,why}))
+  };
+  const result = authoredMaterialPractice(
+    quiz,
+    {subject: "Contabilidade Geral e Análise Financeira"},
+    review.material_slug,
+    "Conceitos fundamentais",
+    review
+  );
+  assert.equal(result.length, 1);
+  assert.equal(result[0].difficulty, "média");
+  assert.equal(result[0].studyTip, quiz[0].tip);
+  assert.deepEqual(result[0].resolutionSteps, quiz[0].resolution_steps);
+  assert.equal(result[0].wrongFeedback, quiz[0].wrong_feedback);
+});
+
 test("four new foundational tracks have actual syllabus bindings and twenty exercises per lesson", async () => {
   const { TRACKS } = await import("../src/data/tracks/index.ts");
   for (const slug of ["matematica", "fisica", "quimica", "ingles"]) {
