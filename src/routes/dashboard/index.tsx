@@ -57,7 +57,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { PcAcreEditalSpotlight } from "@/components/dashboard/PcAcreEditalSpotlight";
-import { PcAcExamMap } from "@/components/dashboard/PcAcExamMap";
 import type { UserProfile } from "@/types";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -877,7 +876,6 @@ function StudentHome({ user }: { user: UserProfile }) {
       <section className="sh2-resources" aria-labelledby="dashboard-resources-title">
         <SectionLabel step={5} id="dashboard-resources-title" title="Editais e acervo" />
         <PcAcreEditalSpotlight />
-        <PcAcExamMap />
         <PcprExamSpotlight compact />
         <PlatformQuestionCounts compact />
       </section>
