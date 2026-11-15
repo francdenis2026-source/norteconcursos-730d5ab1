@@ -272,3 +272,23 @@ Fontes oficiais de referência utilizadas na revisão: LC nº 129/2004 consolida
 ### Próxima prioridade de produção
 
 O maior saldo de questões não liberadas está em Direito Penal e Processual Penal: 90 cadastradas, 42 ativas e 48 em rascunho. A próxima etapa é revisar essas 48 questões uma a uma contra os dispositivos do edital e as redações legais vigentes até 06/11/2026, sem ativar itens que não passem na revisão.
+
+
+## Auditoria final de Penal e Processo Penal — 15/11/2026
+
+A revisão dos 48 itens que estavam em rascunho foi concluída:
+
+- **35 questões ativadas** após conferência de enunciado, alternativa correta, explicação, fundamento legal, aderência ao Anexo III e vigência normativa até 06/11/2026.
+- **13 questões arquivadas** por duplicidade temática com questões que já estavam ativas. Os registros foram preservados, com indicação da questão ativa de referência; não houve exclusão de dados.
+- **0 rascunhos restantes** em Noções de Direito Penal e Processual Penal.
+- As 77 questões ativas da disciplina têm gabarito A–E, explicação e vínculo a tópico do edital. A verificação de texto idêntico não encontrou duplicatas entre as ativas.
+
+A revisão incluiu atualizações específicas: Lei nº 15.353/2026 no estupro de vulnerável; Lei nº 15.410/2026 na nova modalidade de tortura; Lei nº 15.358/2026 na audiência de custódia; Lei nº 15.272/2025 nos critérios de prisão preventiva; e STF, ADIs nº 3.360 e 4.109, nos requisitos cumulativos da prisão temporária.
+
+**Contagem global atual no Supabase:** 306 registros, sendo 292 ativos, 13 arquivados e 1 em revisão editorial; não há questões em rascunho. Distribuição ativa por disciplina: Análise de Dados 6; Arquivologia 24; Contabilidade Geral e Análise Financeira 15; Estatística 13; Legislação Institucional 46; Língua Portuguesa 16; Noções de Administração 22; Noções de Direito Administrativo 12; Noções de Direito Constitucional 7; Noções de Direito Penal e Processual Penal 77; Noções de Informática 7; Raciocínio Lógico 16; Realidade do Estado do Acre 16; Tecnologia da Informação e Segurança da Informação 15.
+
+A única questão em revisão editorial continua sendo a regra geral de data de corte do edital, mantida fora do conteúdo disciplinar. Os 13 itens arquivados são duplicidades temáticas, não questões consideradas juridicamente incorretas.
+
+**Materiais didáticos:** 181/181 materiais PC-AC ativos possuem flashcards e quiz; 38 possuem metadados de revisão formal. A revisão editorial/bibliográfica dos materiais que ainda não têm esses metadados permanece uma frente distinta da auditoria de questões.
+
+**Migration versionada:** `20261115005800_pcac_penal_processo_questoes_revisao_final.sql`. CI da migration e dos commits documentais deve ser confirmada antes de considerar encerrada a validação técnica.
