@@ -21,7 +21,8 @@ flashcards=flashcards||'[{"f":"Qual foi o total rateado ao Departamento de Servi
 quiz=quiz||'[{"q":"Na questão Consulplan/CFC 2020.1, quanto dos gastos comuns é alocado ao Departamento de Serviços?","a":true,"why":"Energia: R$ 10.000; água/telefone/alimentação: R$ 20.000; depreciação: R$ 2.400. Total: R$ 32.400, alternativa B."},{"q":"No rateio da questão, a energia elétrica é distribuída conforme o número de empregados.","a":false,"why":"A energia é rateada pela área ocupada. Número de empregados é a base para água, telefone e alimentação."},{"q":"Na questão de rateio, a parcela da depreciação do Departamento de Serviços é R$ 2.400.","a":true,"why":"O departamento tem 2 de 10 máquinas: 2/10 × R$ 12.000 = R$ 2.400."}]'::jsonb,
 updated_at=now()
 where slug='pcac-2026-contabilidade-08-custos-materia-prima-rateio-departamentalizacao'
-and content_status='active';
+and content_status='active'
+and body_md not like '%Questão original — Consulplan/CFC 2020.1, questão 25%';
 
 update public.study_materials
 set body_md=body_md||'
@@ -45,4 +46,5 @@ flashcards=flashcards||'[{"f":"Qual o custo pleno unitário na questão Consulpl
 quiz=quiz||'[{"q":"No exercício RKW da Consulplan/CFC 2020.2, o custo pleno unitário é R$ 160.","a":true,"why":"Materiais R$ 10.000 + mão de obra R$ 15.000 + CIF R$ 25.000 + despesas R$ 30.000 = R$ 80.000. Dividido por 500 unidades = R$ 160."},{"q":"No exercício RKW, as despesas de R$ 30.000 devem ser excluídas do cálculo do custo pleno.","a":false,"why":"O RKW é custeio pleno: o exercício inclui as despesas apresentadas."},{"q":"No exercício RKW, o custo de fabricação sem as despesas é R$ 50.000.","a":true,"why":"10.000 + 15.000 + 25.000 = R$ 50.000; mas o custo pleno inclui também as despesas de R$ 30.000."}]'::jsonb,
 updated_at=now()
 where slug='pcac-2026-contabilidade-13-custeio-rkw-variavel-ponto-equilibrio'
-and content_status='active';
+and content_status='active'
+and body_md not like '%Questão original — Consulplan/CFC 2020.2: custeio pleno%';
