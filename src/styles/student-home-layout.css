@@ -1,0 +1,155 @@
+/* Área do aluno · painel inicial: composição final. Sem vazios; cada bloco ocupa a largura da janela.
+   Ordem didática: onde estou (progresso) → o que fazer agora (hoje) → como estou indo (ritmo e respostas) → o que estudar (editais). */
+@media (min-width: 1100px) {
+  html:root body .app-shell[data-area="student"] .student-home.sh2 {
+    gap: 10px;
+  }
+
+  /* Ritmo e respostas: ritmo (largo) + respostas, mesma altura, sem sobra. */
+  html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-pair {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+  html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-pair > .sh2-card {
+    display: flex;
+    flex-direction: column;
+  }
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    .sh2-pair
+    > .sh2-card
+    > .sh2-card__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  /* Gráfico baixo; o texto de leitura da semana fica ao lado, em vez de empilhado abaixo. */
+  html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-pair .student-home__rhythm {
+    grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
+    gap: 10px;
+    align-items: stretch;
+  }
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    .sh2-pair
+    .student-home__rhythm-plot {
+    height: 150px !important;
+    min-height: 0 !important;
+  }
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    .sh2-pair
+    .student-home__rhythm-insights {
+    align-self: stretch;
+  }
+}
+
+/* Estreito: tudo em coluna, com o gráfico baixo. */
+@media (max-width: 1099px) {
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    .sh2-pair
+    .student-home__rhythm-plot {
+    height: 150px !important;
+    min-height: 0 !important;
+  }
+}
+
+/* Editais e acervo: cada bloco usa a linha inteira; o guia do PC-AC distribui os atalhos em colunas. */
+html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-resources {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 900px) {
+  html:root body .app-shell[data-area="student"] .student-home.sh2 article.student-pcac-spotlight {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    article.student-pcac-spotlight
+    .student-pcac-spotlight__actions {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 10px;
+  }
+}
+
+/* Respostas: os quatro indicadores numa linha só quando há largura. */
+@media (min-width: 1100px) {
+  html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-insights__kpis {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Faixa de hoje: conteúdo centralizado nos cartões curtos, rodapé sempre na base. */
+html:root
+  body
+  .app-shell[data-area="student"]
+  .student-home.sh2
+  .sh2-board
+  > .sh2-card
+  .sh2-card__body {
+  justify-content: center;
+}
+
+/* Ritmo mais baixo; respostas distribuem tabs, indicadores e nota pela altura do cartão. */
+@media (min-width: 1100px) {
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    .sh2-pair
+    .student-home__rhythm-plot {
+    height: 118px !important;
+  }
+  html:root
+    body
+    .app-shell[data-area="student"]
+    .student-home.sh2
+    .sh2-pair
+    > .sh2-card
+    > .sh2-card__body
+    > .sh2-insights {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-insights__kpis > * {
+    min-height: 76px;
+  }
+  html:root body .app-shell[data-area="student"] .student-home.sh2 .sh2-insights__empty {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--student-surface-soft, var(--muted)) 70%, transparent);
+  }
+}
+
+/* Nota de método: uma linha, abre só se pedida. */
+html:root body .app-shell[data-area="student"] .student-home.sh2 details.student-home__data-note {
+  padding: 8px 14px;
+  min-height: 0;
+}
+html:root
+  body
+  .app-shell[data-area="student"]
+  .student-home.sh2
+  details.student-home__data-note
+  summary {
+  min-height: 28px;
+}

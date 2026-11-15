@@ -46,6 +46,7 @@ import "@/styles/student-pro.css";
 import "@/styles/student-astryx-interactions.css";
 import "@/styles/student-areas-polish.css";
 import "@/styles/student-windows-polish.css";
+import "@/styles/student-home-layout.css";
 import "@/styles/student-calm.css";
 import {
   DashboardNavigation,
