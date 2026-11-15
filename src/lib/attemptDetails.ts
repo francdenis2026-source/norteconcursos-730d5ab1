@@ -1,7 +1,7 @@
 // Parte pura do histórico de tentativas (sem acesso ao banco), testável em Node.
 // Três coisas diferentes, nunca misturadas: nota da tentativa (regra da edição), aproveitamento
 // (acertos sobre o total / respondidas) e pontos de ranking (servidor, só 1ª resposta).
-import { scoreAttempt, SIMPLE_RULE, NET_RULE, type ScoringRule } from "./examScoring";
+import { scoreAttempt, SIMPLE_RULE, scoringRuleFromId, type ScoringRule } from "./examScoring";
 
 export interface AttemptRow {
   id: string;
@@ -60,9 +60,7 @@ export function attemptDetails(
   ranking: RankingRow | undefined,
 ): AttemptDetails {
   const rule = result
-    ? result.scoring_rule === "net_one_to_one"
-      ? { ...NET_RULE, verified: !!result.rule_verified }
-      : SIMPLE_RULE
+    ? { ...scoringRuleFromId(result.scoring_rule), verified: !!result.rule_verified }
     : SIMPLE_RULE;
   const fallback = scoreAttempt(
     {
