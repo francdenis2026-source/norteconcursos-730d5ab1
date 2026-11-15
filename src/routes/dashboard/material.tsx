@@ -274,6 +274,7 @@ function HubSearch({ subjects }: { subjects: DisciplineCard[] }) {
 }
 
 function MaterialHub() {
+  const navigate = useNavigate();
   const { user, isLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending } = useStudyMaterialList(signedIn);
@@ -340,20 +341,19 @@ function MaterialHub() {
         ) : (
           <ul className="ak-tiles">
             <li>
-              <Link to="/dashboard/disciplinas" search={{ d: "Realidade do Acre" }} className="ak-tile">
+              <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: "Realidade do Acre" } })} className="ak-tile">
                 <span className="ak-tile__icon">
                   <Landmark aria-hidden="true" />
                 </span>
                 <strong>Realidade do Acre</strong>
                 <span>História, geografia, economia e atualidades</span>
-              </Link>
+              </button>
             </li>
             {SUBJECT_GUIDES.filter((guide) => guide.id !== "administracao-publica" || !availableSubjects.some((entry) => entry.name === "Administração Pública")).map((guide) => (
               <li key={guide.id}>
-                <Link
-                  to="/dashboard/library"
-                  search={{ collection: "subjects", guia: guide.id } as never}
-                  hash="materiais-atualizados-pcac"
+                <button
+                  type="button"
+                  onClick={() => void navigate({ to: "/dashboard/library", search: { collection: "subjects", guia: guide.id } as never, hash: "materiais-atualizados-pcac" })}
                   className="ak-tile"
                 >
                   <span className="ak-tile__icon">
@@ -361,7 +361,7 @@ function MaterialHub() {
                   </span>
                   <strong>{guide.name}</strong>
                   <span>{guide.text}</span>
-                </Link>
+                </button>
               </li>
             ))}
             {availableSubjects.filter((entry) => disciplineGroup(entry.name) !== "Realidade do Acre").map((entry) => {
@@ -369,13 +369,13 @@ function MaterialHub() {
               return (
                 <li key={entry.name}>
                   <AreaHint title={entry.name} description={subjectDescription(entry.name)}>
-                  <Link to="/dashboard/disciplinas" search={{ d: entry.name }} className="ak-tile">
+                  <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: entry.name } })} className="ak-tile">
                     <span className="ak-tile__icon">
                       <Icon aria-hidden="true" />
                     </span>
                     <strong>{entry.name}</strong>
                     <span>{summary(entry)}</span>
-                  </Link>
+                  </button>
                   </AreaHint>
                 </li>
               );

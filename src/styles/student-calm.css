@@ -81,3 +81,181 @@
 :root.dark body .app-shell[data-area="student"] #dashboard-content :is(h1, h2, h3) {
   color: color-mix(in srgb, var(--student-ink) 94%, var(--student-canvas));
 }
+
+
+/* Leitura confortável — tokens finais do dashboard (modo claro e escuro). */
+:root:not(.dark) .app-shell[data-area="student"]:not(#_):not(#_):not(#_) {
+  --sp-canvas: #e9e8e3;
+  --sp-surface: #f4f3ef;
+  --sp-soft: #eeede8;
+  --sp-line: #cbc9c1;
+  --sp-ink: #292d33;
+  --sp-muted: #555b63;
+}
+:root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_) {
+  --sp-canvas: #0d171d;
+  --sp-surface: #13212a;
+  --sp-soft: #192a34;
+  --sp-line: #2a3b46;
+  --sp-ink: #bac4ce;
+  --sp-muted: #9ba8b5;
+}
+
+/* Reduz o aspecto de texto luminoso sem sacrificar contraste ou legibilidade. */
+:root.dark body .app-shell[data-area="student"] #dashboard-content {
+  color: #bac4ce;
+  -webkit-font-smoothing: antialiased;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  :is(h1, h2, h3, h4, [data-slot="card-title"], strong, b) {
+  color: #c4cdd6 !important;
+  text-shadow: none !important;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  :is(p, li, small, label, figcaption, .text-muted-foreground, [data-slot="card-description"]) {
+  color: #9ba8b5;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content
+  :is(h1, h2, h3, h4, [data-slot="card-title"], strong, b) {
+  color: #292d33;
+  text-shadow: none !important;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content
+  :is(p, li, small, label, figcaption, .text-muted-foreground, [data-slot="card-description"]) {
+  color: #555b63;
+}
+
+/* Superfícies neutras: destaque reservado a ações, estados e dados importantes. */
+body .app-shell[data-area="student"] #dashboard-content
+  :is(.student-home__card, .student-desk__panel, .student-desk__next, .student-hub__results) {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08) !important;
+}
+body .app-shell[data-area="student"] #dashboard-content
+  :is(button, a, [role="button"]):focus-visible {
+  outline: 2px solid var(--sp-gold, #b58a36);
+  outline-offset: 3px;
+}
+
+
+/* Dashboard: reduzir o branco puro e o dourado saturado no destaque da prova. */
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary {
+  border-color: #46504b;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.14);
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary::after {
+  text-shadow: none !important;
+  color: #c77b82;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary .student-hub__summary-label {
+  color: #c9b98d;
+  font-weight: 700;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-heading h2 {
+  color: #c4cdd6;
+  font-weight: 700;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary .student-hub__summary-meta {
+  color: #aeb9c2;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary-date :is(time, strong) {
+  color: #ddd3b7;
+  font-weight: 720;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-icon {
+  color: #c9b98d;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-link {
+  border-color: #596354;
+  color: #c4cdd6;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-link:hover {
+  border-color: #b9a77e;
+  background: #b9a77e;
+  color: #202a2e;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__hero-copy .student-hub__hero-subtitle {
+  color: #aeb9c2 !important;
+}
+
+
+/* Gráficos do dashboard: informação legível, sem competir com os dados. */
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-metric > span,
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-chart-head span,
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-insights small,
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-days small {
+  font-size: 12px;
+  line-height: 1.45;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-metric > strong {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-gridline {
+  stroke: color-mix(in srgb, var(--border) 78%, transparent);
+  stroke-width: 1;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-average {
+  stroke: var(--muted-foreground);
+  stroke-dasharray: 4 5;
+  opacity: .65;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-average-label {
+  fill: var(--muted-foreground);
+  font-size: 10px;
+  letter-spacing: .04em;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-point-halo {
+  fill: var(--rhythm-accent);
+  opacity: .12;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-point {
+  fill: var(--card);
+  stroke: var(--rhythm-accent);
+  stroke-width: 2.5;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-day {
+  min-height: 64px;
+  border-radius: 9px;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+.app-shell[data-area="student"] #dashboard-content .student-home__rhythm-day:focus-visible,
+.app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs button:focus-visible {
+  outline: 2px solid var(--sp-gold, #b58a36);
+  outline-offset: 2px;
+}
+.app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs button {
+  min-height: 38px;
+  padding-inline: 12px;
+  font-size: 12px;
+  font-weight: 650;
+}
+.app-shell[data-area="student"] #dashboard-content .sh2-insights__kpis small {
+  font-size: 12px;
+  line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-metric > span,
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-chart-head span,
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-insights small,
+  .app-shell[data-area="student"] #dashboard-content .student-home__rhythm-days small {
+    font-size: 11.5px;
+  }
+  .app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .app-shell[data-area="student"] #dashboard-content .sh2-insights__tabs button {
+    flex: 0 0 auto;
+  }
+}

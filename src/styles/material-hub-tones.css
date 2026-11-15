@@ -20,3 +20,25 @@ html:root body .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles .ak-tile > sp
 .ak-guides__list { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
 .ak-guides__list a { display: inline-flex; align-items: center; min-height: 2.25rem; padding: .3rem .75rem; border: 1px solid var(--border); border-radius: 999px; font-size: .8rem; font-weight: 600; color: var(--foreground); text-decoration: none; }
 .ak-guides__list a:hover, .ak-guides__list a:focus-visible { border-color: var(--primary); background: color-mix(in oklab, var(--primary) 12%, transparent); }
+
+
+/* Tiles interativos usam button para não expor URLs na barra do navegador. */
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles button.ak-tile {
+  appearance: none;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ak-strip[aria-labelledby="hub-subjects"] .ak-tiles button.ak-tile:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  .ak-strip[aria-labelledby="hub-subjects"] .ak-tiles button.ak-tile:hover {
+    transform: translateY(-2px);
+  }
+}

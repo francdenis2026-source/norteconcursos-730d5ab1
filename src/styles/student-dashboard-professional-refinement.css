@@ -11,7 +11,7 @@
   --dash-rose: #e090b0;
   --dash-line: color-mix(in srgb, var(--border) 88%, transparent);
 }
-.dark .app-shell[data-area="student"] .student-home { --dash-blue: #96bdff; --dash-cyan: #79e9ef; --dash-green: #64dfb2; --dash-amber: #f0c879; --dash-violet: #c8aaf6; --dash-rose: #efa6c2; }
+.dark .app-shell[data-area="student"] .student-home { --dash-blue: #a7b9d0; --dash-cyan: #a0c5c9; --dash-green: #a1c7b5; --dash-amber: #cdbb91; --dash-violet: #b7a9ca; --dash-rose: #cdaab8; }
 .app-shell[data-area="student"] .student-hub__masthead { border-top: 2px solid var(--dash-cyan); background: linear-gradient(135deg, color-mix(in srgb, var(--dash-cyan) 10%, var(--card)), var(--card) 68%); }
 .app-shell[data-area="student"] .student-hub__exam-spotlight { border-color: color-mix(in srgb, var(--dash-amber) 58%, var(--border)); background: color-mix(in srgb, var(--dash-amber) 9%, var(--card)); }
 .app-shell[data-area="student"] .student-desk__next { border-left: 1px solid var(--dash-amber); background: color-mix(in srgb, var(--dash-amber) 7%, var(--card)); }
@@ -51,16 +51,16 @@
   border-radius: 10px;
   background: color-mix(in srgb, var(--dash-blue) 8%, var(--card));
 }
-.app-shell[data-area="student"] .student-hub__active-objective strong { color: var(--dash-blue); font-size: 12px; }
-.app-shell[data-area="student"] .student-hub__active-objective span { color: var(--muted-foreground); font-size: 10px; }
+.app-shell[data-area="student"] .student-hub__active-objective strong { color: var(--dash-blue); font-size: 12.5px; font-weight: 700; }
+.app-shell[data-area="student"] .student-hub__active-objective span { color: var(--muted-foreground); font-size: 12px; line-height: 1.45; }
 .app-shell[data-area="student"] .student-hub__contest-action {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   margin-top: 9px;
   color: var(--dash-cyan);
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 12.5px;
+  font-weight: 700;
   text-decoration: none;
 }
 .app-shell[data-area="student"] .student-hub__contest-action:hover { text-decoration: underline; }
