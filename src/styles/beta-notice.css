@@ -102,7 +102,8 @@
   to { opacity: 1; transform: none; }
 }
 @media (max-width: 767px) {
-  .beta-notice { left: 10px; bottom: calc(76px + env(safe-area-inset-bottom, 0px)); max-width: min(272px, calc(100vw - 20px)); }
+  /* Só existe na home, sem barra inferior: canto direito, rente à faixa do rodapé, fora dos botões alinhados à esquerda. */
+  .beta-notice { left: auto; right: 10px; bottom: calc(44px + env(safe-area-inset-bottom, 0px)); max-width: min(272px, calc(100vw - 20px)); }
 }
 @media (prefers-reduced-motion: reduce) { .beta-notice__card { animation: none; } }
 @media (prefers-reduced-transparency: reduce) {

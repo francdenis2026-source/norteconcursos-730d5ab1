@@ -439,7 +439,8 @@
   .home.hr-canvas .hd__clock {
     position: absolute;
     bottom: 22px;
-    left: 22px;
+    /* Canto inferior direito: o emblema, no centro da arte, fica livre. */
+    right: 22px;
     z-index: 1;
     display: flex;
     align-items: center;
