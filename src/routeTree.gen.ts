@@ -52,6 +52,7 @@ import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history
 import { Route as DashboardInteligenciaIdecanRouteImport } from './routes/dashboard/inteligencia-idecan'
 import { Route as DashboardLeisRouteImport } from './routes/dashboard/leis'
 import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
+import { Route as DashboardMapaIdecanRouteImport } from './routes/dashboard/mapa-idecan'
 import { Route as DashboardMaterialRouteImport } from './routes/dashboard/material'
 import { Route as DashboardMedalsRouteImport } from './routes/dashboard/medals'
 import { Route as DashboardMediaRouteImport } from './routes/dashboard/media'
@@ -301,6 +302,11 @@ const DashboardLibraryRoute = DashboardLibraryRouteImport.update({
   path: '/library',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardMapaIdecanRoute = DashboardMapaIdecanRouteImport.update({
+  id: '/mapa-idecan',
+  path: '/mapa-idecan',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardMaterialRoute = DashboardMaterialRouteImport.update({
   id: '/material',
   path: '/material',
@@ -498,6 +504,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/mapa-idecan': typeof DashboardMapaIdecanRoute
   '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
@@ -570,6 +577,7 @@ export interface FileRoutesByTo {
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
+  '/dashboard/mapa-idecan': typeof DashboardMapaIdecanRoute
   '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
@@ -646,6 +654,7 @@ export interface FileRoutesById {
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/mapa-idecan': typeof DashboardMapaIdecanRoute
   '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
@@ -723,6 +732,7 @@ export interface FileRouteTypes {
     | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/library'
+    | '/dashboard/mapa-idecan'
     | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
@@ -795,6 +805,7 @@ export interface FileRouteTypes {
     | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
+    | '/dashboard/mapa-idecan'
     | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
@@ -870,6 +881,7 @@ export interface FileRouteTypes {
     | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/library'
+    | '/dashboard/mapa-idecan'
     | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
@@ -1223,6 +1235,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardLibraryRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/mapa-idecan': {
+      id: '/dashboard/mapa-idecan'
+      path: '/mapa-idecan'
+      fullPath: '/dashboard/mapa-idecan'
+      preLoaderRoute: typeof DashboardMapaIdecanRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/material': {
       id: '/dashboard/material'
       path: '/material'
@@ -1493,6 +1512,7 @@ interface DashboardRouteChildren {
   DashboardInteligenciaIdecanRoute: typeof DashboardInteligenciaIdecanRoute
   DashboardLeisRoute: typeof DashboardLeisRoute
   DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
+  DashboardMapaIdecanRoute: typeof DashboardMapaIdecanRoute
   DashboardMaterialRoute: typeof DashboardMaterialRoute
   DashboardMedalsRoute: typeof DashboardMedalsRoute
   DashboardMediaRoute: typeof DashboardMediaRoute
@@ -1551,6 +1571,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardInteligenciaIdecanRoute: DashboardInteligenciaIdecanRoute,
   DashboardLeisRoute: DashboardLeisRoute,
   DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
+  DashboardMapaIdecanRoute: DashboardMapaIdecanRoute,
   DashboardMaterialRoute: DashboardMaterialRoute,
   DashboardMedalsRoute: DashboardMedalsRoute,
   DashboardMediaRoute: DashboardMediaRoute,

@@ -57,6 +57,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { PcAcreEditalSpotlight } from "@/components/dashboard/PcAcreEditalSpotlight";
+import { PcAcExamMap } from "@/components/dashboard/PcAcExamMap";
 import type { UserProfile } from "@/types";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -811,68 +812,72 @@ function StudentHome({ user }: { user: UserProfile }) {
 
       <SectionLabel step={4} title="Ritmo e respostas" />
       <div className="sh2-pair">
-      <section
-        className="sh2-card sh2-card--wide sh2-card--photo"
-        style={{ "--sh2-photo": "url(/media/hero/painel-aluno-direcao-estudos.webp)" } as React.CSSProperties}
-        data-tone="blue"
-        aria-labelledby="dashboard-rhythm-title"
-      >
-        <SectionTitle
-          icon={TrendingUp}
-          title="Seu ritmo na semana"
-          id="dashboard-rhythm-title"
-          onOpen={(event) => openMetric("week", event.currentTarget)}
-        />
-        <div className="sh2-card__body">
-          {q.activity.isError ? (
-            <QueryError
-              text="Não foi possível consultar o tempo de estudo."
-              retry={() => q.activity.refetch()}
-            />
-          ) : !time ? (
-            <PanelLoading />
-          ) : (
-            <WeeklyRhythmChart
-              days={time.days}
-              formatDuration={duration}
-              onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
-              onOpenHistory={(trigger) => openMetric("week", trigger)}
-            />
-          )}
-        </div>
-      </section>
+        <section
+          className="sh2-card sh2-card--wide sh2-card--photo"
+          style={
+            {
+              "--sh2-photo": "url(/media/hero/painel-aluno-direcao-estudos.webp)",
+            } as React.CSSProperties
+          }
+          data-tone="blue"
+          aria-labelledby="dashboard-rhythm-title"
+        >
+          <SectionTitle
+            icon={TrendingUp}
+            title="Seu ritmo na semana"
+            id="dashboard-rhythm-title"
+            onOpen={(event) => openMetric("week", event.currentTarget)}
+          />
+          <div className="sh2-card__body">
+            {q.activity.isError ? (
+              <QueryError
+                text="Não foi possível consultar o tempo de estudo."
+                retry={() => q.activity.refetch()}
+              />
+            ) : !time ? (
+              <PanelLoading />
+            ) : (
+              <WeeklyRhythmChart
+                days={time.days}
+                formatDuration={duration}
+                onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
+                onOpenHistory={(trigger) => openMetric("week", trigger)}
+              />
+            )}
+          </div>
+        </section>
 
-      <section
-        className="sh2-card sh2-card--wide sh2-card--photo"
-        data-tone="green"
-        aria-labelledby="dashboard-answers-title"
-        style={{ "--sh2-photo": "url(/media/hero/dashboard.webp)" } as React.CSSProperties}
-      >
-        <SectionTitle
-          icon={CheckCircle2}
-          title="Acertos e erros"
-          id="dashboard-answers-title"
-          onOpen={(event) => openMetric("accuracy", event.currentTarget)}
-        />
-        <div className="sh2-card__body">
-          {q.training.isError ? (
-            <QueryError
-              text="Não conseguimos consultar suas respostas."
-              retry={() => q.training.refetch()}
-            />
-          ) : !q.training.data ? (
-            <PanelLoading />
-          ) : (
-            <AnswerInsights rows={q.training.data} today={today} />
-          )}
-        </div>
-      </section>
-
+        <section
+          className="sh2-card sh2-card--wide sh2-card--photo"
+          data-tone="green"
+          aria-labelledby="dashboard-answers-title"
+          style={{ "--sh2-photo": "url(/media/hero/dashboard.webp)" } as React.CSSProperties}
+        >
+          <SectionTitle
+            icon={CheckCircle2}
+            title="Acertos e erros"
+            id="dashboard-answers-title"
+            onOpen={(event) => openMetric("accuracy", event.currentTarget)}
+          />
+          <div className="sh2-card__body">
+            {q.training.isError ? (
+              <QueryError
+                text="Não conseguimos consultar suas respostas."
+                retry={() => q.training.refetch()}
+              />
+            ) : !q.training.data ? (
+              <PanelLoading />
+            ) : (
+              <AnswerInsights rows={q.training.data} today={today} />
+            )}
+          </div>
+        </section>
       </div>
 
       <section className="sh2-resources" aria-labelledby="dashboard-resources-title">
         <SectionLabel step={5} id="dashboard-resources-title" title="Editais e acervo" />
         <PcAcreEditalSpotlight />
+        <PcAcExamMap />
         <PcprExamSpotlight compact />
         <PlatformQuestionCounts compact />
       </section>
@@ -897,7 +902,9 @@ const tones = ["gold", "blue", "green", "violet", "amber", "rose"] as const;
 function SectionLabel({ title, id }: { step?: number; title: string; text?: string; id?: string }) {
   return (
     <div className="sh2-label sh2-label--compact">
-      <p className="sh2-label__title" id={id}>{title}</p>
+      <p className="sh2-label__title" id={id}>
+        {title}
+      </p>
     </div>
   );
 }

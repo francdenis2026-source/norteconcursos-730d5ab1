@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, FileText, Target } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 
@@ -61,6 +61,9 @@ export function PcacBanner({ mobile = false }: { mobile?: boolean }) {
                 Estudar para a PC-AC <ArrowRight aria-hidden="true" />
               </Link>
             )}
+            <Link to="/dashboard/mapa-idecan" className="sx-btn sx-btn--onimage">
+              <Target aria-hidden="true" /> Mapa da prova
+            </Link>
             <a
               href={PCAC_EDITAL}
               target="_blank"

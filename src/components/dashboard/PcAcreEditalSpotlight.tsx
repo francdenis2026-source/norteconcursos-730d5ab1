@@ -1,11 +1,22 @@
 import "@/styles/student-pcac-lean.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, CalendarDays, FileText, ListChecks, ScanSearch } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  CalendarDays,
+  FileText,
+  ListChecks,
+  ScanSearch,
+  Target,
+} from "lucide-react";
 import "@/styles/student-pcac-spotlight.css";
 
 export function PcAcreEditalSpotlight() {
   return (
-    <article className="student-pcac-spotlight no-print" aria-labelledby="student-pcac-spotlight-title">
+    <article
+      className="student-pcac-spotlight no-print"
+      aria-labelledby="student-pcac-spotlight-title"
+    >
       <img
         className="student-pcac-spotlight__cover"
         src="/media/editais/edital-pcac-001-2026-capa.jpg"
@@ -17,7 +28,10 @@ export function PcAcreEditalSpotlight() {
       />
       <div className="student-pcac-spotlight__copy">
         <h3 id="student-pcac-spotlight-title">PC-AC 2026 · Preparação por cargo</h3>
-        <p>139 vagas · 6 cargos · IDECAN · prova objetiva em 24/01/2027. Acompanhe seu checklist e exporte o progresso em PDF.</p>
+        <p>
+          139 vagas · 6 cargos · IDECAN · prova objetiva em 24/01/2027. Acompanhe seu checklist e
+          exporte o progresso em PDF.
+        </p>
       </div>
       <svg
         className="student-pcac-spotlight__flag"
@@ -32,7 +46,10 @@ export function PcAcreEditalSpotlight() {
         <path fill="#ce1126" d="m83 40 9 26h27L97 82l8 26-22-16-22 16 8-26-22-16h27z" />
       </svg>
       <nav className="student-pcac-spotlight__actions" aria-label="Acessos do concurso PC-AC 2026">
-        <div className="student-pcac-spotlight__action-group" aria-label="Ferramentas de preparação">
+        <div
+          className="student-pcac-spotlight__action-group"
+          aria-label="Ferramentas de preparação"
+        >
           <span className="student-pcac-spotlight__action-label">ESTUDAR</span>
           <Link to="/dashboard/pc-acre-edital" data-tone="gold">
             <ListChecks aria-hidden="true" />
@@ -43,12 +60,19 @@ export function PcAcreEditalSpotlight() {
             <CalendarDays aria-hidden="true" />
             <span>Cronograma pessoal</span>
           </Link>
+          <Link to="/dashboard/mapa-idecan" data-tone="rose">
+            <Target aria-hidden="true" />
+            <span>Mapa da prova</span>
+          </Link>
           <Link to="/dashboard/inteligencia-idecan" data-tone="blue">
             <ScanSearch aria-hidden="true" />
             <span>Inteligência IDECAN</span>
           </Link>
         </div>
-        <div className="student-pcac-spotlight__action-group student-pcac-spotlight__action-group--documents" aria-label="Documentos de consulta">
+        <div
+          className="student-pcac-spotlight__action-group student-pcac-spotlight__action-group--documents"
+          aria-label="Documentos de consulta"
+        >
           <span className="student-pcac-spotlight__action-label">CONSULTAR</span>
           <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" }} data-tone="teal">
             <BookOpen aria-hidden="true" />
