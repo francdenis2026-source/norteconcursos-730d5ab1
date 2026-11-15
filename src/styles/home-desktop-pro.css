@@ -835,3 +835,18 @@ html body .home.home #planos summary:focus-visible {
   html body .home.home #planos .home-faq { grid-template-columns: minmax(0, 1fr) !important; gap: 16px !important; }
   html body .home.home #planos .home-faq__list { grid-template-columns: minmax(0, 1fr) !important; }
 }
+
+
+/* Shift the right-hand hero feature panel inward without changing hero dimensions. */
+@media (min-width: 901px) {
+  .home.hr-canvas #inicio .sx-hero__panel {
+    transform: translateX(clamp(12px, 1.8vw, 24px));
+    margin-right: clamp(12px, 1.8vw, 24px);
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .home.hr-canvas #inicio .sx-hero__panel {
+    transform: translateX(10px);
+    margin-right: 10px;
+  }
+}
