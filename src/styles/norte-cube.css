@@ -84,3 +84,10 @@
 .ncube__face[data-face="nz"] {
   --sticker: #8fa3c7;
 }
+
+/* Centro de cada face: emblema da marca (escudo com caveira), sobre fundo escuro. */
+.ncube__face[data-logo="true"] {
+  background:
+    url("/media/brand/norte-identity/emblema.png") center / 82% no-repeat,
+    linear-gradient(145deg, color-mix(in srgb, var(--sticker) 14%, #151a21), #0b0e12 80%);
+}

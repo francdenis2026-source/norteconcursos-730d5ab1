@@ -199,6 +199,9 @@ export function NorteCube({ size = 1 }: { size?: number }) {
                   }}
                   data-sticker={outer ? "true" : undefined}
                   data-face={f.key}
+                  data-logo={
+                    outer && Math.abs(x) + Math.abs(y) + Math.abs(z) === 1 ? "true" : undefined
+                  }
                 />
               );
             })}
