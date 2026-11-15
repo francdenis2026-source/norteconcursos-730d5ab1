@@ -40,8 +40,7 @@ import {
   resolveScoringRule,
   scoreAttempt,
   formatScore,
-  SIMPLE_RULE,
-  NET_RULE,
+  scoringRuleFromId,
   type ReferenceRuleRow,
   type ScoringRule,
 } from "@/lib/examScoring";
@@ -276,6 +275,7 @@ function ProfessionalSimulator() {
   const [historyUnavailable, setHistoryUnavailable] = React.useState(false);
   const [history, setHistory] = React.useState<AttemptWithDetails[]>([]);
   const [rulesRegistry, setRulesRegistry] = React.useState<ReferenceRuleRow[]>([]);
+  const [rulesLoading, setRulesLoading] = React.useState(true);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
   const [contest, setContest] = React.useState(
@@ -355,6 +355,7 @@ function ProfessionalSimulator() {
     }
     const generation = ++loadGeneration.current;
     setLoading(true);
+    setRulesLoading(true);
     setLoadError(null);
     try {
       const query = async (
@@ -412,9 +413,13 @@ function ProfessionalSimulator() {
         if (generation !== loadGeneration.current) return;
         setHistoryUnavailable(!!historyResult.error);
         setRulesRegistry(rules);
+        setRulesLoading(false);
         setHistory(historyResult.data.filter((item) => !isEnemMode || /ENEM/i.test(item.title)));
       }).catch(() => {
-        if (generation === loadGeneration.current) setHistoryUnavailable(true);
+        if (generation === loadGeneration.current) {
+          setHistoryUnavailable(true);
+          setRulesLoading(false);
+        }
       });
       const [officialResult, curatedResult, boardResult] = await Promise.all([
         query(
@@ -680,6 +685,10 @@ function ProfessionalSimulator() {
   const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
 
   function startSimulator() {
+    if (rulesLoading) {
+      toast.error("Aguarde a validação da regra de correção desta prova.");
+      return;
+    }
     if (historyLoading || historyError) {
       toast.error("Aguarde a conferência do histórico antes de iniciar.");
       void reloadAnswerHistory();
@@ -719,18 +728,23 @@ function ProfessionalSimulator() {
         : `${isEnemMode ? "ENEM — " : ""}${customTitle.trim() || "Meu simulado"}`,
       contestFilter: paperMode ? chosenPaper!.question.contest : contest === "all" ? null : contest,
       subjectFilter: paperMode || subject === "all" ? null : subject,
-      // Só uma prova específica pode ter regra de correção registrada; montagem livre usa pontuação simples.
-      rule: paperMode
-        ? resolveScoringRule(
-            {
+      // Montagem livre também aplica a regra oficial quando concurso, cargo, banca/estilo e ano identificam uma edição sem ambiguidade.
+      rule: resolveScoringRule(
+        paperMode
+          ? {
               contest: chosenPaper!.question.contest,
               career: chosenPaper!.question.career,
               board: chosenPaper!.question.board,
               year: chosenPaper!.question.year,
+            }
+          : {
+              contest: contest === "all" ? "" : contest,
+              career: career === "all" ? "" : career,
+              board: board === "all" ? "" : board,
+              year: year === "all" ? "" : year,
             },
-            rulesRegistry,
-          )
-        : SIMPLE_RULE,
+        rulesRegistry,
+      ),
     });
     setEndedAt(null);
     setSaveStatus("idle");
@@ -755,6 +769,7 @@ function ProfessionalSimulator() {
     if (
       routeSearch.planned !== "1" ||
       loading ||
+      rulesLoading ||
       authLoading ||
       loadError ||
       historyLoading ||
@@ -785,6 +800,7 @@ function ProfessionalSimulator() {
     routeSearch.subject,
     routeSearch.materialTopic,
     loading,
+    rulesLoading,
     authLoading,
     loadError,
     historyLoading,
@@ -841,7 +857,7 @@ function ProfessionalSimulator() {
       title: d.title,
       contestFilter: d.contestFilter,
       subjectFilter: d.subjectFilter,
-      rule: d.rule === "net_one_to_one" ? { ...NET_RULE } : SIMPLE_RULE,
+      rule: scoringRuleFromId(d.rule),
     });
     setQuestions(items);
     setAnswers(d.answers);
@@ -928,6 +944,10 @@ function ProfessionalSimulator() {
         correct: computed.correct,
         wrong: computed.wrong,
         blank: computed.blank,
+        items: questions.map((q) => ({
+          subject: q.subject,
+          correct: answers[q.id] === q.answer,
+        })),
       },
       sessionConfig.rule,
     );
@@ -2290,7 +2310,16 @@ function ResultView({
 }) {
   const [open, setOpen] = React.useState<string | null>(null);
   const scored = scoreAttempt(
-    { total: questions.length, correct: result.correct, wrong: result.wrong, blank: result.blank },
+    {
+      total: questions.length,
+      correct: result.correct,
+      wrong: result.wrong,
+      blank: result.blank,
+      items: questions.map((q) => ({
+        subject: q.subject,
+        correct: answers[q.id] === q.answer,
+      })),
+    },
     rule,
   );
   const repeated = ranking ? ranking.repeated : repeatedLocal;
