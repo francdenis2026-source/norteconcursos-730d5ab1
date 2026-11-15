@@ -107,13 +107,25 @@ function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
+  // Os parâmetros do link são lidos e depois apagados da barra de endereço. Sem guardar o que chegou,
+  // a limpeza da URL reiniciava os filtros e a matéria aberta por um link (ex.: do Mapa IDECAN) sumia.
+  const linkSearch = Route.useSearch();
+  const seed = useRef(linkSearch);
+  if (
+    linkSearch.collection === "subjects" ||
+    linkSearch.q ||
+    linkSearch.back ||
+    linkSearch.guia ||
+    linkSearch.discipline
+  )
+    seed.current = linkSearch;
   const {
     q: initialQuery,
     back,
     collection: initialCollection = "laws",
     guia,
     discipline: initialDiscipline,
-  } = Route.useSearch();
+  } = seed.current;
   const navigate = Route.useNavigate();
   // Matéria aberta por um link (ex.: um cartão da área Material): "voltar" retorna àquela tela.
   // Matéria escolhida aqui mesmo: "voltar" retorna à lista de matérias desta página.
