@@ -3,13 +3,17 @@
 -- kept out of the active simulator until their direct legal basis/editorial scope is reviewed.
 update public.curated_question_catalog
 set legal_basis = case
-  when external_item_key in ('pcac26-autoria-draft-1','pcac26-autoria-draft-2','pcac26-autoria-draft-50','pcac26-autoria-draft-51','pcac26-autoria-draft-52','pcac26-autoria-draft-53','pcac26-autoria-draft-54','pcac26-autoria-draft-55','pcac26-autoria-draft-56') then jsonb_build_array(
+  when external_item_key in ('pcac26-autoria-draft-1','pcac26-autoria-draft-2','pcac26-autoria-draft-50','pcac26-autoria-draft-51','pcac26-autoria-draft-52','pcac26-autoria-draft-53','pcac26-autoria-draft-54','pcac26-autoria-draft-55','pcac26-autoria-draft-56','pcac26-autoria-draft-57','pcac26-autoria-draft-58','pcac26-autoria-draft-59') then jsonb_build_array(
     jsonb_build_object('title','Código Penal — texto compilado','lei','Decreto-Lei nº 2.848/1940','artigo',case
       when external_item_key in ('pcac26-autoria-draft-1','pcac26-autoria-draft-56') then '14, II'
       when external_item_key in ('pcac26-autoria-draft-2','pcac26-autoria-draft-55') then '29 e 30'
       when external_item_key='pcac26-autoria-draft-50' then '18, I'
       when external_item_key='pcac26-autoria-draft-51' then '20'
       when external_item_key in ('pcac26-autoria-draft-52','pcac26-autoria-draft-53') then '15'
+      when external_item_key='pcac26-autoria-draft-54' then '17'
+      when external_item_key='pcac26-autoria-draft-57' then '155'
+      when external_item_key='pcac26-autoria-draft-58' then '157'
+      when external_item_key='pcac26-autoria-draft-59' then '312'
       else '17' end,
       'url','https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm')
   )
