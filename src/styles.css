@@ -326,6 +326,23 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: 88px;
+    /* Item focado por teclado nunca fica sob a faixa fixa do rodapé nem sob a barra inferior do celular. */
+    scroll-padding-bottom: 3.5rem;
+  }
+  @media (max-width: 767px) {
+    html {
+      scroll-padding-bottom: 6rem;
+    }
+  }
+  /* O navegador só rola o item focado se ele estiver fora da área visível; a margem de rolagem
+     do próprio item faz a faixa fixa do rodapé / barra inferior contar como "fora". */
+  :focus-visible {
+    scroll-margin-bottom: 3.5rem;
+  }
+  @media (max-width: 767px) {
+    :focus-visible {
+      scroll-margin-bottom: 6rem;
+    }
   }
 
   body {

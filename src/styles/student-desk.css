@@ -875,7 +875,8 @@
 .student-overview .platform-question-counts--compact > header { display: grid; gap: 2px; }
 .student-overview .platform-question-counts--compact > header h2 { font: 700 11px/1 var(--font-mono, ui-monospace, monospace); letter-spacing: .14em; text-transform: uppercase; color: var(--ov-gold); }
 .student-overview .platform-question-counts--compact > header span { font-size: 11px; color: var(--muted-foreground); }
-.student-overview .platform-question-counts--compact > header button { position: absolute; width: 0; height: 0; opacity: 0; pointer-events: none; }
+/* Os totais já se atualizam sozinhos a cada minuto: o botão manual sai do painel (fora do foco e da leitura de tela). */
+.student-overview .platform-question-counts--compact > header button { display: none; }
 .student-overview .platform-question-counts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
 .student-overview .platform-question-counts__grid > * {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label value" "hint value";
