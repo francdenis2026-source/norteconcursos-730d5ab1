@@ -218,3 +218,16 @@ set official_edital_url='https://sead.ac.gov.br/wp-content/uploads/2026/11/Edita
     source_url='https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
     updated_at=now()
 where name like 'PC-AC 001/2026%';
+
+-- Registra referência de pontuação do concurso, sem inventar nota de corte antes da prova.
+insert into public.contest_reference_info
+(contest_name,contest_year,exam_board,cutoff_score,scoring_rule,source_url,notes)
+select
+ 'Polícia Civil do Acre — Oficial Investigador de Polícia',
+ '2026',
+ 'IDECAN',
+ null,
+ 'PC-AC 001/2026: 100 questões; conhecimentos básicos 24×peso 1; conhecimentos jurídicos 16×peso 1; conhecimentos específicos 60×peso 2; máximo 160 pontos. Questão anulada: pontuação atribuída a todos os candidatos (item 18.5).',
+ 'https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
+ 'Prova prevista para 24/01/2027. Nota de corte ainda indisponível antes da realização da prova; não estimar nem preencher com nota de outro concurso.'
+where not exists(select 1 from public.contest_reference_info where contest_name='Polícia Civil do Acre — Oficial Investigador de Polícia' and contest_year='2026' and exam_board='IDECAN');
