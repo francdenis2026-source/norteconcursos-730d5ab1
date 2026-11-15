@@ -285,3 +285,5 @@ set practice_review=jsonb_build_object('status','reviewed','review_date','2026-1
     reviewed_at='2026-11-14 23:59:00-03'::timestamptz,
     updated_at=now()
 where slug='pcac-2026-administracao-publica-funcoes-processos-equipes-recursos';
+
+-- CI revalidation marker after final syllabus alignment and database verification.
