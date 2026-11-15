@@ -1,0 +1,268 @@
+/* Ranking "Arena": cabeçalho com troféu, pódio em palco e emblemas metálicos. Tokens do tema. */
+.rk-emblem {
+  display: block;
+  flex: none;
+  filter: drop-shadow(0 3px 4px rgb(0 0 0 / 0.28));
+}
+
+.rk-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 16px 22px;
+  border-radius: 18px;
+  color: #f4efe3;
+  border: 1px solid rgb(242 201 107 / 0.35);
+  background:
+    radial-gradient(520px 220px at 12% 0%, rgb(242 183 5 / 0.3), transparent 70%),
+    radial-gradient(420px 260px at 100% 100%, rgb(124 92 240 / 0.3), transparent 70%),
+    linear-gradient(135deg, #10172a, #1b2440 60%, #131a30);
+}
+.rk-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.35;
+  background: conic-gradient(
+    from 200deg at 12% 40%,
+    transparent 0 20deg,
+    rgb(255 226 140 / 0.5) 25deg,
+    transparent 32deg 70deg,
+    rgb(255 226 140 / 0.35) 76deg,
+    transparent 84deg 360deg
+  );
+  mask-image: radial-gradient(circle at 12% 40%, #000, transparent 65%);
+}
+.rk-hero__trophy {
+  flex: none;
+  animation: rk-float 5s ease-in-out infinite;
+}
+.rk-hero__trophy .rk-emblem {
+  filter: drop-shadow(0 8px 14px rgb(242 183 5 / 0.45));
+}
+.rk-hero__copy {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.rk-hero__kicker {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f2c96b;
+}
+.rk-hero h1 {
+  margin: 2px 0 0;
+  font: 800 clamp(1.5rem, 3.4vw, 2.1rem)/1.1 var(--font-sans, system-ui) !important;
+  color: #fff !important;
+}
+.rk-hero h1 span {
+  background: linear-gradient(90deg, #fff1a8, #f2b705);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.rk-hero__desc {
+  margin: 6px 0 0;
+  max-width: 56ch;
+  font-size: 0.875rem;
+  color: #d9d4c6;
+}
+.rk-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+}
+.rk-hero__facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.1);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  color: #f4efe3;
+}
+.rk-hero__facts svg {
+  width: 14px;
+  height: 14px;
+  color: #f2c96b;
+}
+.rk-hero__facts strong {
+  font-size: 0.95rem;
+  color: #fff1a8;
+  font-variant-numeric: tabular-nums;
+}
+@keyframes rk-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Pódio em palco */
+.ranking-podium {
+  align-items: end;
+  gap: 12px;
+  margin: 4px 0 18px;
+  padding: 18px 12px 0;
+  border-radius: 16px;
+  background: radial-gradient(
+    60% 90% at 50% 0%,
+    color-mix(in srgb, #f2b705 16%, transparent),
+    transparent 70%
+  );
+}
+.ranking-podium__card {
+  position: relative;
+  gap: 4px;
+  padding: 14px 8px 12px;
+  border-radius: 14px 14px 0 0;
+  border-bottom: 0;
+}
+.ranking-podium li[data-place="1"] .ranking-podium__card {
+  padding-top: 18px;
+  min-height: 230px;
+  margin-top: 0;
+  box-shadow: 0 -10px 30px -14px #f2b705;
+}
+.ranking-podium li[data-place="2"] .ranking-podium__card {
+  min-height: 196px;
+  margin-top: 0;
+}
+.ranking-podium li[data-place="3"] .ranking-podium__card {
+  min-height: 170px;
+  margin-top: 0;
+}
+.ranking-podium li[data-place="1"] .rk-podium__medal {
+  animation: rk-float 4s ease-in-out infinite;
+}
+.ranking-podium__card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 4px;
+  background: var(--tier);
+}
+.ranking-podium li[data-place="1"] {
+  --tier: #f2b705;
+}
+.ranking-podium li[data-place="2"] {
+  --tier: #aab4c3;
+}
+.ranking-podium li[data-place="3"] {
+  --tier: #cd7f45;
+}
+.ranking-podium__name {
+  font-size: 0.8125rem;
+}
+.ranking-podium__points {
+  font-size: 1.25rem;
+}
+.ranking-podium li[data-place="1"] .ranking-podium__points {
+  font-size: 1.5rem;
+}
+
+/* Linhas */
+.rank-badge {
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  box-shadow: none !important;
+}
+.rank-badge--gold,
+.rank-badge--silver,
+.rank-badge--bronze {
+  background: transparent !important;
+}
+.rank-badge:not(.rank-badge--gold):not(.rank-badge--silver):not(.rank-badge--bronze):not(
+    .rank-badge--none
+  ) {
+  width: 36px;
+  height: 36px;
+  margin-inline: auto;
+  border: 1px solid var(--border);
+  background: var(--muted);
+  font-size: 13px;
+  color: var(--foreground);
+}
+.app-shell[data-area="student"] .ranking-workspace .ranking-row {
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+}
+.ranking-row__meta .rk-emblem {
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.3));
+}
+.ranking-mepos__level p {
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .rk-hero {
+    padding: 12px 14px;
+  }
+  .rk-hero__trophy .rk-emblem {
+    width: 56px;
+    height: 56px;
+  }
+  .ranking-podium {
+    gap: 6px;
+    padding-inline: 0;
+  }
+  .ranking-podium li[data-place="1"] .ranking-podium__card {
+    min-height: 200px;
+  }
+  .ranking-podium li[data-place="2"] .ranking-podium__card {
+    min-height: 172px;
+  }
+  .ranking-podium li[data-place="3"] .ranking-podium__card {
+    min-height: 150px;
+  }
+  .rk-podium__medal .rk-emblem {
+    width: 52px;
+    height: 52px;
+  }
+  .ranking-podium li[data-place="1"] .rk-podium__medal .rk-emblem {
+    width: 64px;
+    height: 64px;
+  }
+  .app-shell[data-area="student"] .ranking-workspace .ranking-row {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rk-hero__trophy,
+  .ranking-podium li[data-place="1"] .rk-podium__medal {
+    animation: none;
+  }
+}
+
+/* O cabeçalho é escuro nos dois temas: o texto fixa as próprias cores contra regras globais do modo claro. */
+.rk-hero .rk-hero__kicker {
+  color: #f2c96b !important;
+}
+.rk-hero .rk-hero__desc {
+  color: #e6e1d2 !important;
+}
+.rk-hero .rk-hero__facts li {
+  color: #f4efe3 !important;
+  background: rgb(255 255 255 / 0.12) !important;
+}
+.rk-hero .rk-hero__facts strong {
+  color: #fff1a8 !important;
+}
+.rk-hero h1 {
+  color: #fff !important;
+}

@@ -1,5 +1,6 @@
 import "@/styles/exam-performance-workspaces.css";
 import "@/styles/ranking-professional-refinement.css";
+import "@/styles/ranking-arena.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -8,7 +9,6 @@ import {
   Target,
   Medal,
   Star,
-  Trophy,
   Search,
   ChevronLeft,
   ChevronRight,
@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import { RankingHeader } from "@/components/dashboard/RankingHeader";
+import { LevelEmblem, MedalEmblem } from "@/components/dashboard/RankEmblems";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -98,11 +99,9 @@ function PositionBadge({ pos, scored }: { pos: number; scored: boolean }) {
     );
   const tier = pos === 1 ? "gold" : pos === 2 ? "silver" : pos === 3 ? "bronze" : null;
   if (!tier) return <span className="rank-badge">{pos}</span>;
-  const Icon = pos === 1 ? Trophy : Medal;
   return (
     <span className={cn("rank-badge", `rank-badge--${tier}`)} aria-label={`${pos}º lugar`}>
-      <Icon className="h-5 w-5" aria-hidden="true" />
-      <span className="rank-badge__pos">{pos}</span>
+      <MedalEmblem tier={tier} label={pos} size={44} />
     </span>
   );
 }
@@ -267,9 +266,9 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                 </dl>
                 <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
                   Pontos não são a quantidade de questões: contam só a primeira resposta de cada uma
-                  (acerto soma, erro desconta) e dependem do aproveitamento do dia. Constância
-                  ({p.consistency_points} pts) e horas de estudo são métricas de dedicação e não entram
-                  nesse total.
+                  (acerto soma, erro desconta) e dependem do aproveitamento do dia. Constância (
+                  {p.consistency_points} pts) e horas de estudo são métricas de dedicação e não
+                  entram nesse total.
                 </p>
               </section>
               <section aria-label="Medalhas">
@@ -396,14 +395,15 @@ function RankingPage() {
 
   return (
     <div className="ranking-workspace space-y-6">
-      <RankingHeader />
+      <RankingHeader participants={pageData?.partial ? undefined : pageData?.participants} />
       <Link
         to="/dashboard/performance"
         className="ranking-evolution-link flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm shadow-sm transition-colors hover:border-primary/50 hover:bg-primary/5"
       >
         <span className="flex items-center gap-2 font-semibold">
           <TrendingUp className="h-4 w-4 text-primary" aria-hidden="true" />
-          Veja seu gráfico de evolução (dia, semana, mês e ano) e saiba se está avançando ou cometendo muitos erros
+          Veja seu gráfico de evolução (dia, semana, mês e ano) e saiba se está avançando ou
+          cometendo muitos erros
         </span>
         <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
       </Link>
@@ -459,20 +459,21 @@ function RankingPage() {
               <li>
                 <b>Questões:</b> certo sem ajuda +3, com ajuda +1, errado -2, conferido no servidor
                 pelo gabarito oficial. Só vale por inteiro com 70%+ de acertos no dia (50% ou menos
-                não pontua) — até 100 por dia, cada questão conta uma vez só (Treinador + Simulados).
+                não pontua) — até 100 por dia, cada questão conta uma vez só (Treinador +
+                Simulados).
               </li>
               <li>
                 <b>Simulados:</b> mesma conta das questões, tentativa de 10s+ por questão. Bônus de
                 precisão (+25/+50/+100 com 70/80/90%) a partir de 20 questões inéditas.
               </li>
               <li>
-                <b>Flashcards:</b> +1 por cartão (até 50/dia). <b>Redação:</b> +20 por texto de
-                150+ palavras (1/dia). Horas de estudo são só métrica de dedicação, sem pontos.
+                <b>Flashcards:</b> +1 por cartão (até 50/dia). <b>Redação:</b> +20 por texto de 150+
+                palavras (1/dia). Horas de estudo são só métrica de dedicação, sem pontos.
               </li>
               <li>
-                <b>Desempate:</b> pontos, % de acertos, acertos e questões válidas (critérios
-                variam por seção). Empate total compartilha a mesma posição. Sem bônus por
-                assinatura, tempo conectado ou ordem de cadastro — e administradores ficam fora.
+                <b>Desempate:</b> pontos, % de acertos, acertos e questões válidas (critérios variam
+                por seção). Empate total compartilha a mesma posição. Sem bônus por assinatura,
+                tempo conectado ou ordem de cadastro — e administradores ficam fora.
               </li>
               <li>
                 <b>Sem pontuação:</b> quem ainda não somou pontos aparece no fim, sem posição e sem
@@ -510,19 +511,26 @@ function RankingPage() {
                         return (
                           <div className="ranking-mepos__level">
                             <p>
+                              <LevelEmblem stars={lv.stars} size={34} />
                               <Stars n={lv.stars} /> Nível <b>{lv.name}</b>
                               {lv.next
                                 ? ` · faltam ${lv.missing.toLocaleString("pt-BR")} pts para ${lv.next.name}`
                                 : " · nível máximo"}
                             </p>
-                            <Progress value={lv.percent} className="h-1.5" aria-label="Progresso até o próximo nível" />
+                            <Progress
+                              value={lv.percent}
+                              className="h-1.5"
+                              aria-label="Progresso até o próximo nível"
+                            />
                           </div>
                         );
                       })()}
                     </>
                   ) : me ? (
                     <>
-                      <p className="ranking-mepos__value ranking-mepos__value--none">Sem pontuação</p>
+                      <p className="ranking-mepos__value ranking-mepos__value--none">
+                        Sem pontuação
+                      </p>
                       <p className="ranking-mepos__meta">
                         Responda questões no Treinador para entrar na classificação.
                       </p>
@@ -679,7 +687,13 @@ function RankingPage() {
                               aria-label={`${pos}º lugar: ${r.display_name}, ${r.points} pontos. Ver perfil`}
                               className="ranking-podium__card"
                             >
-                              <PositionBadge pos={pos} scored />
+                              <span className="rk-podium__medal">
+                                <MedalEmblem
+                                  tier={pos === 1 ? "gold" : pos === 2 ? "silver" : "bronze"}
+                                  label={pos}
+                                  size={pos === 1 ? 84 : 68}
+                                />
+                              </span>
                               <span className="ranking-podium__name">
                                 {r.display_name}
                                 {r.is_me && " (você)"}
@@ -702,8 +716,12 @@ function RankingPage() {
                       return (
                         <React.Fragment key={r.user_id}>
                           {index === firstUnranked && (
-                            <li className="ranking-divider" aria-label="Candidatos ainda sem pontuação">
-                              Ainda sem pontuação · entram na classificação na primeira resposta pontuada
+                            <li
+                              className="ranking-divider"
+                              aria-label="Candidatos ainda sem pontuação"
+                            >
+                              Ainda sem pontuação · entram na classificação na primeira resposta
+                              pontuada
                             </li>
                           )}
                           <li>
@@ -733,6 +751,7 @@ function RankingPage() {
                                 <p className="ranking-row__meta flex flex-wrap items-center gap-x-1.5 text-xs text-muted-foreground">
                                   {scored ? (
                                     <>
+                                      <LevelEmblem stars={r.stars} size={22} />
                                       <Stars n={r.stars} />
                                       <span className="ranking-row__level">{r.level_name}</span>
                                       <span className="ranking-row__stats">
