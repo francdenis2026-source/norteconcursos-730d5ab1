@@ -10,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { confirmDialog } from "@/lib/confirm";
@@ -308,6 +307,7 @@ function AdminContestsPage() {
         </CardHeader>
         <CardContent className="flex flex-col gap-2 sm:flex-row">
           <Input
+            aria-label="Endereço do edital (PDF ou página)"
             placeholder="https://www.gov.br/.../edital-...pdf-ou-pagina"
             value={fetchUrl}
             onChange={(e) => setFetchUrl(e.target.value)}
@@ -556,9 +556,10 @@ function Field({
   full?: boolean;
 }) {
   return (
-    <div className={full ? "md:col-span-2" : undefined}>
-      <Label className="text-xs text-muted-foreground">{label}</Label>
-      <div className="mt-1">{children}</div>
-    </div>
+    // O <label> envolve o controle: o rótulo fica associado ao campo para leitores de tela e para o clique.
+    <label className={full ? "block md:col-span-2" : "block"}>
+      <span className="text-xs font-medium leading-none text-muted-foreground">{label}</span>
+      <span className="mt-1 block">{children}</span>
+    </label>
   );
 }
