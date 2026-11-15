@@ -82,7 +82,6 @@ export function ruleFromRegistry(text: string | null | undefined): ScoringRule |
     ? NET_RULE
     : null;
 }
-}
 
 /**
  * Regra de uma prova específica. Só devolve desconto quando a edição (concurso/cargo + ano + banca)
