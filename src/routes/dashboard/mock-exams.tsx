@@ -729,13 +729,13 @@ function ProfessionalSimulator() {
           year: year === "all" ? "" : year,
         };
     const scoringRule = resolveScoringRule(scoringIdentity, rulesRegistry);
-    let selectedQuestions = paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit);
-    if (
+    const pcacBalanced =
       !paperMode &&
       scoringRule.id === "pcac_2026_weighted" &&
       limit === 100 &&
-      subject === "all"
-    ) {
+      subject === "all";
+    let selectedQuestions = paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit);
+    if (pcacBalanced) {
       const balanced = selectPcacOfficialDistribution(sessionPool);
       if (!balanced) {
         toast.error(
@@ -756,7 +756,10 @@ function ProfessionalSimulator() {
       attemptId: crypto.randomUUID(),
       title: paperMode
         ? `Prova — ${chosenPaper!.title}`
-        : `${isEnemMode ? "ENEM — " : ""}${customTitle.trim() || "Meu simulado"}`,
+        : customTitle.trim() ||
+          (pcacBalanced
+            ? "PC-AC 2026 — Simulado completo (questões autorais)"
+            : `${isEnemMode ? "ENEM — " : ""}Meu simulado`),
       contestFilter: paperMode ? chosenPaper!.question.contest : contest === "all" ? null : contest,
       subjectFilter: paperMode || subject === "all" ? null : subject,
       // Montagem livre também aplica a regra oficial quando concurso, cargo, banca/estilo e ano identificam uma edição sem ambiguidade.
