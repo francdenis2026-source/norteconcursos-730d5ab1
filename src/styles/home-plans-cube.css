@@ -15,7 +15,10 @@
   padding: 0;
   overflow: visible;
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
 }
 .home.home .home-plans__cube .ncube {
   --ncube-scale: 0.62;
@@ -46,3 +49,6 @@
     display: none;
   }
 }
+
+.home.home .home-plans__cube:active { cursor: grabbing; }
+.home.home .home-plans__cube .ncube { pointer-events: auto; }
