@@ -135,3 +135,54 @@ body .app-shell[data-area="student"] #dashboard-content
   outline: 2px solid var(--sp-gold, #b58a36);
   outline-offset: 3px;
 }
+
+
+/* Dashboard: reduzir o branco puro e o dourado saturado no destaque da prova. */
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary {
+  border-color: #46504b;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.14);
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary::after {
+  text-shadow: none !important;
+  color: #c77b82;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary .student-hub__summary-label {
+  color: #c9b98d;
+  font-weight: 700;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-heading h2 {
+  color: #c4cdd6;
+  font-weight: 700;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary .student-hub__summary-meta {
+  color: #aeb9c2;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__exam-summary-date :is(time, strong) {
+  color: #ddd3b7;
+  font-weight: 720;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-icon {
+  color: #c9b98d;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-link {
+  border-color: #596354;
+  color: #c4cdd6;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__contest-link:hover {
+  border-color: #b9a77e;
+  background: #b9a77e;
+  color: #202a2e;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  .student-hub__hero-copy .student-hub__hero-subtitle {
+  color: #aeb9c2 !important;
+}
