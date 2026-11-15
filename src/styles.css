@@ -339,9 +339,10 @@
   :focus-visible {
     scroll-margin-bottom: 3.5rem;
   }
-  @media (max-width: 767px) {
+  /* Em telas pequenas, também cobre o botão flutuante "Tamanho do texto" (termina a ~130 px do fundo). */
+  @media (max-width: 1023px) {
     :focus-visible {
-      scroll-margin-bottom: 6rem;
+      scroll-margin-bottom: 9rem;
     }
   }
 
