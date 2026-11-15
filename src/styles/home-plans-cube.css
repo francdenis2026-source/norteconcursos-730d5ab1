@@ -60,3 +60,15 @@
     display: none;
   }
 }
+
+/* Keep the cube centered in the available middle rail without forcing overflow. */
+.home.home .home-plans__cube,
+.home.home .home-plans__cube .ncube {
+  box-sizing: border-box;
+}
+.home.home .home-plans__cube .ncube {
+  flex: 0 0 auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home .home-plans__cube { visibility: hidden; }
+}
