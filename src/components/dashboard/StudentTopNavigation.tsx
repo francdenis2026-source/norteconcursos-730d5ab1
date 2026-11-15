@@ -12,6 +12,7 @@ import {
   Sparkles,
   CalendarClock,
   Lock,
+  Target,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -28,7 +29,11 @@ import { AreaHint } from "@/components/ui/area-hint";
 import { navigationDetails } from "@/lib/navigationSearch";
 import { hasActiveEdital } from "@/lib/cronogramaGuard";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { ACTIVE_STUDY_EDITION_EVENT, readActiveStudyEdition, type ActiveStudyEdition } from "@/lib/activeStudyEdition";
+import {
+  ACTIVE_STUDY_EDITION_EVENT,
+  readActiveStudyEdition,
+  type ActiveStudyEdition,
+} from "@/lib/activeStudyEdition";
 import "@/styles/active-study-edition.css";
 import "@/styles/student-home-navigation-refinement.css";
 
@@ -39,6 +44,13 @@ const sections: {
   description: string;
   tone: string;
 }[] = [
+  {
+    groups: ["Mapa IDECAN"],
+    label: "Mapa IDECAN",
+    icon: Target,
+    description: "Mapa da prova, edital por cargo e estatísticas da banca.",
+    tone: "orange",
+  },
   {
     groups: ["Central de Estudos", "Material didático"],
     label: "Estudos",
@@ -82,7 +94,10 @@ const sections: {
  */
 const NavButton = React.forwardRef<
   HTMLButtonElement,
-  { to: string; search?: Record<string, unknown> } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type">
+  { to: string; search?: Record<string, unknown> } & Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    "type"
+  >
 >(function NavButton({ to, search, onClick, ...rest }, ref) {
   const navigate = useNavigate();
   return (
@@ -134,9 +149,15 @@ export function StudentTopNavigation({
   React.useEffect(() => {
     let mounted = true;
     void MockService.getFocusedContest()
-      .then((contest) => { if (mounted) setActiveEdital(hasActiveEdital(contest)); })
-      .catch(() => { if (mounted) setActiveEdital(false); });
-    return () => { mounted = false; };
+      .then((contest) => {
+        if (mounted) setActiveEdital(hasActiveEdital(contest));
+      })
+      .catch(() => {
+        if (mounted) setActiveEdital(false);
+      });
+    return () => {
+      mounted = false;
+    };
   }, []);
   // Na home, as categorias abrem os seus submenus. Dentro das páginas, apenas
   // os links do grupo atual permanecem visíveis, sem misturar outras áreas.
@@ -172,35 +193,45 @@ export function StudentTopNavigation({
         {studyEdition && (
           <AreaHint
             title="Edital ativo"
-            description={studyEdition.contestName + " · " + studyEdition.roleName + ". Abrir o programa."}
+            description={
+              studyEdition.contestName + " · " + studyEdition.roleName + ". Abrir o programa."
+            }
           >
-          <NavButton
-            to="/dashboard/edital"
-            search={{ edition: studyEdition.id }}
-            className="student-top-navigation__active-edition"
-            aria-label={"Edital ativo: " + studyEdition.contestName + ", " + studyEdition.roleName + ". Abrir programa."}
-          >
-            <span className="student-top-navigation__active-edition-dot" aria-hidden="true" />
-            <span className="student-top-navigation__active-edition-copy">
-              <span>Edital ativo</span>
-              <strong>{studyEdition.contestName} · {studyEdition.roleName}</strong>
-            </span>
-          </NavButton>
+            <NavButton
+              to="/dashboard/edital"
+              search={{ edition: studyEdition.id }}
+              className="student-top-navigation__active-edition"
+              aria-label={
+                "Edital ativo: " +
+                studyEdition.contestName +
+                ", " +
+                studyEdition.roleName +
+                ". Abrir programa."
+              }
+            >
+              <span className="student-top-navigation__active-edition-dot" aria-hidden="true" />
+              <span className="student-top-navigation__active-edition-copy">
+                <span>Edital ativo</span>
+                <strong>
+                  {studyEdition.contestName} · {studyEdition.roleName}
+                </strong>
+              </span>
+            </NavButton>
           </AreaHint>
         )}
         {!isHome && (
           <AreaHint title="Área principal" description="Painel com o resumo da preparação.">
-          <NavButton
-            to="/dashboard"
-            className="student-top-navigation__trigger student-top-navigation__home"
-            data-tone="gold"
-            aria-label="Voltar à área principal"
-          >
-            <span className="student-top-navigation__icon-wrap" aria-hidden="true">
-              <House size={18} />
-            </span>
-            <span className="student-top-navigation__label">Área principal</span>
-          </NavButton>
+            <NavButton
+              to="/dashboard"
+              className="student-top-navigation__trigger student-top-navigation__home"
+              data-tone="gold"
+              aria-label="Voltar à área principal"
+            >
+              <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                <House size={18} />
+              </span>
+              <span className="student-top-navigation__label">Área principal</span>
+            </NavButton>
           </AreaHint>
         )}
         {isHome && (
@@ -214,36 +245,43 @@ export function StudentTopNavigation({
                 aria-label="Meu plano bloqueado enquanto há um edital ativo"
                 title="O Meu plano fica bloqueado enquanto um edital ativo estiver em foco."
               >
-                <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Lock size={16} /></span>
+                <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                  <Lock size={16} />
+                </span>
                 <span className="student-top-navigation__label">Meu plano</span>
               </button>
             ) : (
               <AreaHint title="Meu plano" description="Disponibilidade e distribuição da semana.">
-              <NavButton
-                to="/dashboard/study-coach"
-                className="student-top-navigation__trigger"
-                data-tone="gold"
-                data-active={isCoachActive}
-                aria-current={isCoachActive ? "page" : undefined}
-              >
-                <span className="student-top-navigation__icon-wrap" aria-hidden="true"><Sparkles size={18} /></span>
-                <span className="student-top-navigation__label">Meu plano</span>
-              </NavButton>
+                <NavButton
+                  to="/dashboard/study-coach"
+                  className="student-top-navigation__trigger"
+                  data-tone="gold"
+                  data-active={isCoachActive}
+                  aria-current={isCoachActive ? "page" : undefined}
+                >
+                  <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                    <Sparkles size={18} />
+                  </span>
+                  <span className="student-top-navigation__label">Meu plano</span>
+                </NavButton>
               </AreaHint>
             )}
-            <AreaHint title="Agenda de estudos" description="Conteúdo do edital distribuído na sua rotina.">
-            <NavButton
-              to="/dashboard/cronograma"
-              className="student-top-navigation__trigger"
-              data-tone="gold"
-              data-active={isScheduleActive}
-              aria-current={isScheduleActive ? "page" : undefined}
+            <AreaHint
+              title="Agenda de estudos"
+              description="Conteúdo do edital distribuído na sua rotina."
             >
-              <span className="student-top-navigation__icon-wrap" aria-hidden="true">
-                <CalendarClock size={18} />
-              </span>
-              <span className="student-top-navigation__label">Agenda de estudos</span>
-            </NavButton>
+              <NavButton
+                to="/dashboard/cronograma"
+                className="student-top-navigation__trigger"
+                data-tone="gold"
+                data-active={isScheduleActive}
+                aria-current={isScheduleActive ? "page" : undefined}
+              >
+                <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                  <CalendarClock size={18} />
+                </span>
+                <span className="student-top-navigation__label">Agenda de estudos</span>
+              </NavButton>
             </AreaHint>
           </>
         )}
@@ -257,25 +295,25 @@ export function StudentTopNavigation({
               return (
                 <DropdownMenu key={candidate.label}>
                   <AreaHint title={candidate.label} description={candidate.description}>
-                  <DropdownMenuTrigger asChild>
-                    <button
-                      type="button"
-                      className="student-top-navigation__trigger"
-                      data-tone={candidate.tone}
-                      aria-label={candidate.label}
-                    >
-                      <span className="student-top-navigation__icon-wrap" aria-hidden="true">
-                        <Icon size={18} strokeWidth={2.15} absoluteStrokeWidth />
-                      </span>
-                      <span className="student-top-navigation__label">{candidate.label}</span>
-                      <ChevronDown
-                        size={14}
-                        strokeWidth={2.2}
-                        aria-hidden="true"
-                        className="student-top-navigation__chevron"
-                      />
-                    </button>
-                  </DropdownMenuTrigger>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        type="button"
+                        className="student-top-navigation__trigger"
+                        data-tone={candidate.tone}
+                        aria-label={candidate.label}
+                      >
+                        <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                          <Icon size={18} strokeWidth={2.15} absoluteStrokeWidth />
+                        </span>
+                        <span className="student-top-navigation__label">{candidate.label}</span>
+                        <ChevronDown
+                          size={14}
+                          strokeWidth={2.2}
+                          aria-hidden="true"
+                          className="student-top-navigation__chevron"
+                        />
+                      </button>
+                    </DropdownMenuTrigger>
                   </AreaHint>
                   <DropdownMenuContent
                     align="start"
@@ -290,9 +328,18 @@ export function StudentTopNavigation({
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     {groupEntries.map((item) => (
-                      <AreaHint key={navigationKey(item)} side="right" align="start" description={describe(item)}>
+                      <AreaHint
+                        key={navigationKey(item)}
+                        side="right"
+                        align="start"
+                        description={describe(item)}
+                      >
                         <DropdownMenuItem asChild>
-                          <NavButton to={item.href} search={item.search ?? {}} className="w-full text-left">
+                          <NavButton
+                            to={item.href}
+                            search={item.search ?? {}}
+                            className="w-full text-left"
+                          >
                             <item.icon size={17} aria-hidden="true" />
                             <span>{item.label}</span>
                           </NavButton>
@@ -312,19 +359,19 @@ export function StudentTopNavigation({
                 const selected = navigationKey(current!) === navigationKey(item);
                 return (
                   <AreaHint key={group} title={item.label} description={describe(item)}>
-                  <NavButton
-                    to={item.href}
-                    search={item.search ?? {}}
-                    className="student-top-navigation__trigger student-top-navigation__submenu"
-                    data-tone={section?.tone}
-                    data-active={selected}
-                    aria-current={selected ? "page" : undefined}
-                  >
-                    <span className="student-top-navigation__icon-wrap" aria-hidden="true">
-                      <item.icon size={17} strokeWidth={2.1} />
-                    </span>
-                    <span className="student-top-navigation__label">{item.label}</span>
-                  </NavButton>
+                    <NavButton
+                      to={item.href}
+                      search={item.search ?? {}}
+                      className="student-top-navigation__trigger student-top-navigation__submenu"
+                      data-tone={section?.tone}
+                      data-active={selected}
+                      aria-current={selected ? "page" : undefined}
+                    >
+                      <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                        <item.icon size={17} strokeWidth={2.1} />
+                      </span>
+                      <span className="student-top-navigation__label">{item.label}</span>
+                    </NavButton>
                   </AreaHint>
                 );
               }
@@ -335,27 +382,30 @@ export function StudentTopNavigation({
               if (!GroupIcon) return null;
               return (
                 <DropdownMenu key={group}>
-                  <AreaHint title={group} description={listLabels(groupEntries.map((item) => item.label)) + "."}>
-                  <DropdownMenuTrigger asChild>
-                    <button
-                      type="button"
-                      className="student-top-navigation__trigger student-top-navigation__submenu"
-                      data-tone={section?.tone}
-                      data-active={groupActive}
-                      aria-label={group}
-                    >
-                      <span className="student-top-navigation__icon-wrap" aria-hidden="true">
-                        <GroupIcon size={17} strokeWidth={2.1} />
-                      </span>
-                      <span className="student-top-navigation__label">{group}</span>
-                      <ChevronDown
-                        size={14}
-                        strokeWidth={2.2}
-                        aria-hidden="true"
-                        className="student-top-navigation__chevron"
-                      />
-                    </button>
-                  </DropdownMenuTrigger>
+                  <AreaHint
+                    title={group}
+                    description={listLabels(groupEntries.map((item) => item.label)) + "."}
+                  >
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        type="button"
+                        className="student-top-navigation__trigger student-top-navigation__submenu"
+                        data-tone={section?.tone}
+                        data-active={groupActive}
+                        aria-label={group}
+                      >
+                        <span className="student-top-navigation__icon-wrap" aria-hidden="true">
+                          <GroupIcon size={17} strokeWidth={2.1} />
+                        </span>
+                        <span className="student-top-navigation__label">{group}</span>
+                        <ChevronDown
+                          size={14}
+                          strokeWidth={2.2}
+                          aria-hidden="true"
+                          className="student-top-navigation__chevron"
+                        />
+                      </button>
+                    </DropdownMenuTrigger>
                   </AreaHint>
                   <DropdownMenuContent
                     align="start"
@@ -369,7 +419,12 @@ export function StudentTopNavigation({
                     {groupEntries.map((item) => {
                       const selected = navigationKey(current!) === navigationKey(item);
                       return (
-                        <AreaHint key={navigationKey(item)} side="right" align="start" description={describe(item)}>
+                        <AreaHint
+                          key={navigationKey(item)}
+                          side="right"
+                          align="start"
+                          description={describe(item)}
+                        >
                           <DropdownMenuItem asChild data-current={selected}>
                             <NavButton
                               to={item.href}

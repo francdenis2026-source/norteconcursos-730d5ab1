@@ -347,3 +347,58 @@
     transform: none;
   }
 }
+
+/* Ícones por assunto: material, videoaula e questões. */
+.pcmap__topics {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.pcmap__topics li {
+  align-items: center;
+}
+.pcmap__topic-text {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  align-items: baseline;
+}
+.pcmap__topic-actions {
+  flex: none;
+  display: inline-flex;
+  gap: 2px;
+}
+.pcmap__topic-actions a,
+.pcmap__topic-actions button,
+.pcmap__none {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: var(--primary);
+  background: transparent;
+}
+.pcmap__topic-actions a:hover,
+.pcmap__topic-actions button:hover {
+  background: color-mix(in srgb, var(--primary) 14%, transparent);
+}
+.pcmap__topic-actions button[data-exact="true"] {
+  color: #be123c;
+}
+:root[data-theme="dark"] .pcmap__topic-actions button[data-exact="true"] {
+  color: #fb7185;
+}
+.pcmap__topic-actions svg {
+  width: 17px;
+  height: 17px;
+}
+.pcmap__none {
+  color: var(--muted-foreground);
+  opacity: 0.45;
+  cursor: help;
+}
+.pcmap__topic-actions :focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}

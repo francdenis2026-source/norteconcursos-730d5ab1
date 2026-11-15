@@ -7,6 +7,7 @@
  */
 export const STUDENT_GROUP_TONES: Record<string, string> = {
   Planejamento: "violet",
+  "Mapa IDECAN": "orange",
   "Meu concurso": "gold",
   "Material didático": "sky",
   Ferramentas: "orange",

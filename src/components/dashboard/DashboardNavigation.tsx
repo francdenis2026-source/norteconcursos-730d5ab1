@@ -39,6 +39,7 @@ export type NavigationItem = {
 const groupIcons: Record<string, LucideIcon> = {
   "Minha Preparação": Target,
   Planejamento: BookOpen,
+  "Mapa IDECAN": Target,
   "Central de Estudos": BookOpen,
   "Material didático": ScrollText,
   Ferramentas: Cpu,
@@ -52,6 +53,7 @@ const groupIcons: Record<string, LucideIcon> = {
 const groupDetails: Record<string, string> = {
   "Minha Preparação": "Objetivo, cargo e edital",
   Planejamento: "Plano personalizado e agenda de estudos",
+  "Mapa IDECAN": "Mapa da prova, edital e estatísticas da banca",
   "Central de Estudos": "Notas, guias, quiz e redação",
   "Material didático": "Legislação, disciplinas, vídeos e redação",
   Ferramentas: "Foco, calculadora e painéis",
@@ -66,6 +68,7 @@ const groupDetails: Record<string, string> = {
 const collapsedLabels: Record<string, string> = {
   "Minha Preparação": "Concurso",
   Planejamento: "Meu plano",
+  "Mapa IDECAN": "IDECAN",
   "Central de Estudos": "Estudar",
   "Material didático": "Materiais",
   Ferramentas: "Recursos",
@@ -88,7 +91,18 @@ type NavigationProps = {
   appearance?: "default" | "student";
 };
 
-const STUDENT_SECTION_ORDER = ["Minha Preparação", "Planejamento", "Central de Estudos", "Material didático", "Questões", "Provas", "Desempenho", "ENEM", "Conta"];
+const STUDENT_SECTION_ORDER = [
+  "Minha Preparação",
+  "Planejamento",
+  "Mapa IDECAN",
+  "Central de Estudos",
+  "Material didático",
+  "Questões",
+  "Provas",
+  "Desempenho",
+  "ENEM",
+  "Conta",
+];
 function orderedStudentSections<T extends { group: string }>(sections: T[]) {
   const rank = (group: string) => {
     const index = STUDENT_SECTION_ORDER.indexOf(group);
@@ -104,91 +118,178 @@ function studentSectionHeading(group: string) {
 }
 
 export function DashboardNavigation(props: NavigationProps) {
-  return props.appearance === "student" ? <StudentDashboardNavigation {...props} /> : <GroupedDashboardNavigation {...props} />;
+  return props.appearance === "student" ? (
+    <StudentDashboardNavigation {...props} />
+  ) : (
+    <GroupedDashboardNavigation {...props} />
+  );
 }
 
-function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, hues, onNavigate }: NavigationProps) {
-  const available = items.filter(item => !item.soon && !item.adminOnly);
+function StudentDashboardNavigation({
+  items,
+  pathname,
+  search = {},
+  collapsed,
+  hues,
+  onNavigate,
+}: NavigationProps) {
+  const available = items.filter((item) => !item.soon && !item.adminOnly);
   const current = activeNavigation(available, pathname, search);
-  const home = available.find(item => item.href === "/dashboard");
+  const home = available.find((item) => item.href === "/dashboard");
   const centralActive = current?.group === "Central de Estudos";
   const [centralOpen, setCentralOpen] = useState(centralActive);
   useEffect(() => {
     if (centralActive) setCentralOpen(true);
   }, [centralActive]);
   return (
-    <nav className="app-nav scroll-dark navigation-workspace student-direct-navigation" aria-label="Menu principal">
-      {home && (() => {
-        const homeLink = (
-          <Link to={home.href} search={home.search ?? {}} className="app-nav__link" data-hue="navy" aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
-            <span className="app-ico" data-hue="navy"><home.icon aria-hidden="true" /></span>
-            <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>{collapsed ? "Painel" : home.label}</span>
-          </Link>
-        );
-        return (
-          <div className="nav-primary" aria-label="Área do aluno">
-            {!collapsed && <p className="nav-primary__label">Meu painel</p>}
-            {/* The short "Painel" label only appears collapsed; the hint restores the full name instead of a native title tooltip. */}
-            {collapsed ? <Hint content={home.label} side="right">{homeLink}</Hint> : homeLink}
-          </div>
-        );
-      })()}
-      {orderedStudentSections(studentSections(available)).map(({ group, entry, entries }, index, sections) => {
-        const Icon = groupIcons[group] ?? BookOpen;
-        const active = current?.href !== "/dashboard" && current?.group === group;
-        const heading = studentSectionHeading(group);
-        const showHeading = !collapsed && heading !== studentSectionHeading(sections[index - 1]?.group ?? "");
-        const sectionLink = (
-          <Link to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? studentGroupLabel(group) : undefined} onClick={onNavigate}>
-            <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
-            {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
-              <span className="app-nav__label"><strong>{studentGroupLabel(group)}</strong><small>{groupDetails[group]}</small></span>
-              <ChevronRight className="nav-section-link__arrow" aria-hidden="true" />
-            </>}
-          </Link>
-        );
-        let row = sectionLink;
-        if (collapsed) {
-          row = <Hint content={<>{studentGroupLabel(group)} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>;
-        } else if (group === "Central de Estudos" && entries.some((item) => !(item.href === entry.href && !item.search))) {
-          const childItems = entries.filter((item) => !(item.href === entry.href && !item.search));
-          row = (
-            <div className="student-central-nav">
-              <div className="student-central-nav__header">
-                <div className="student-central-nav__link">{sectionLink}</div>
-                <button
-                  type="button"
-                  className="student-central-nav__toggle"
-                  aria-label={centralOpen ? "Recolher menu da Central de Estudos" : "Expandir menu da Central de Estudos"}
-                  aria-expanded={centralOpen}
-                  aria-controls="student-central-nav-entries"
-                  onClick={() => setCentralOpen((open) => !open)}
-                >
-                  <ChevronDown aria-hidden="true" data-open={centralOpen} />
-                </button>
-              </div>
-              <div id="student-central-nav-entries" hidden={!centralOpen} className="student-central-nav__entries">
-                {childItems.map((item) => {
-                  const selected = !!current && navigationKey(current) === navigationKey(item);
-                  const ChildIcon = item.icon;
-                  return (
-                    <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} className="student-central-nav__entry" data-active={selected} aria-current={selected ? "page" : undefined} onClick={onNavigate}>
-                      <ChildIcon aria-hidden="true" />
-                      <span>{item.label}</span>
-                    </Link>
-                  );
-                })}
-              </div>
+    <nav
+      className="app-nav scroll-dark navigation-workspace student-direct-navigation"
+      aria-label="Menu principal"
+    >
+      {home &&
+        (() => {
+          const homeLink = (
+            <Link
+              to={home.href}
+              search={home.search ?? {}}
+              className="app-nav__link"
+              data-hue="navy"
+              aria-label={collapsed ? home.label : undefined}
+              data-active={current?.href === home.href}
+              aria-current={current?.href === home.href ? "page" : undefined}
+              onClick={onNavigate}
+            >
+              <span className="app-ico" data-hue="navy">
+                <home.icon aria-hidden="true" />
+              </span>
+              <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>
+                {collapsed ? "Painel" : home.label}
+              </span>
+            </Link>
+          );
+          return (
+            <div className="nav-primary" aria-label="Área do aluno">
+              {!collapsed && <p className="nav-primary__label">Meu painel</p>}
+              {/* The short "Painel" label only appears collapsed; the hint restores the full name instead of a native title tooltip. */}
+              {collapsed ? (
+                <Hint content={home.label} side="right">
+                  {homeLink}
+                </Hint>
+              ) : (
+                homeLink
+              )}
             </div>
           );
-        }
-        return (
-          <Fragment key={group}>
-            {showHeading && <p className="nav-section-label">{heading}</p>}
-            {row}
-          </Fragment>
-        );
-      })}
+        })()}
+      {orderedStudentSections(studentSections(available)).map(
+        ({ group, entry, entries }, index, sections) => {
+          const Icon = groupIcons[group] ?? BookOpen;
+          const active = current?.href !== "/dashboard" && current?.group === group;
+          const heading = studentSectionHeading(group);
+          const showHeading =
+            !collapsed && heading !== studentSectionHeading(sections[index - 1]?.group ?? "");
+          const sectionLink = (
+            <Link
+              to={entry.href}
+              search={entry.search ?? {}}
+              className="app-nav__link nav-section-link"
+              data-hue={hues[group] ?? "gold"}
+              data-active={active}
+              aria-current={active ? "location" : undefined}
+              aria-label={collapsed ? studentGroupLabel(group) : undefined}
+              onClick={onNavigate}
+            >
+              <span className="app-ico" data-hue={hues[group] ?? "gold"}>
+                <Icon aria-hidden="true" />
+              </span>
+              {collapsed ? (
+                <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span>
+              ) : (
+                <>
+                  <span className="app-nav__label">
+                    <strong>{studentGroupLabel(group)}</strong>
+                    <small>{groupDetails[group]}</small>
+                  </span>
+                  <ChevronRight className="nav-section-link__arrow" aria-hidden="true" />
+                </>
+              )}
+            </Link>
+          );
+          let row = sectionLink;
+          if (collapsed) {
+            row = (
+              <Hint
+                content={
+                  <>
+                    {studentGroupLabel(group)} — {groupDetails[group] ?? "Abrir área"}
+                  </>
+                }
+                side="right"
+              >
+                {sectionLink}
+              </Hint>
+            );
+          } else if (
+            group === "Central de Estudos" &&
+            entries.some((item) => !(item.href === entry.href && !item.search))
+          ) {
+            const childItems = entries.filter(
+              (item) => !(item.href === entry.href && !item.search),
+            );
+            row = (
+              <div className="student-central-nav">
+                <div className="student-central-nav__header">
+                  <div className="student-central-nav__link">{sectionLink}</div>
+                  <button
+                    type="button"
+                    className="student-central-nav__toggle"
+                    aria-label={
+                      centralOpen
+                        ? "Recolher menu da Central de Estudos"
+                        : "Expandir menu da Central de Estudos"
+                    }
+                    aria-expanded={centralOpen}
+                    aria-controls="student-central-nav-entries"
+                    onClick={() => setCentralOpen((open) => !open)}
+                  >
+                    <ChevronDown aria-hidden="true" data-open={centralOpen} />
+                  </button>
+                </div>
+                <div
+                  id="student-central-nav-entries"
+                  hidden={!centralOpen}
+                  className="student-central-nav__entries"
+                >
+                  {childItems.map((item) => {
+                    const selected = !!current && navigationKey(current) === navigationKey(item);
+                    const ChildIcon = item.icon;
+                    return (
+                      <Link
+                        key={navigationKey(item)}
+                        to={item.href}
+                        search={item.search ?? {}}
+                        className="student-central-nav__entry"
+                        data-active={selected}
+                        aria-current={selected ? "page" : undefined}
+                        onClick={onNavigate}
+                      >
+                        <ChildIcon aria-hidden="true" />
+                        <span>{item.label}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          }
+          return (
+            <Fragment key={group}>
+              {showHeading && <p className="nav-section-label">{heading}</p>}
+              {row}
+            </Fragment>
+          );
+        },
+      )}
     </nav>
   );
 }
@@ -238,7 +339,11 @@ function GroupedDashboardNavigation({
       <Link
         key={navigationKey(item)}
         to={item.href}
-        preload={item.href === "/dashboard/question-trainer" || item.href === "/dashboard" ? "viewport" : "intent"}
+        preload={
+          item.href === "/dashboard/question-trainer" || item.href === "/dashboard"
+            ? "viewport"
+            : "intent"
+        }
         activeOptions={{ exact: true, includeSearch: true }}
         search={item.search ?? {}}
         className="app-nav__link"
@@ -257,13 +362,21 @@ function GroupedDashboardNavigation({
       </Link>
     );
     // The compact rail abbreviates the label; the hint restores the full name.
-    return compact ? <Hint key={navigationKey(item)} content={item.label} side="right">{element}</Hint> : element;
+    return compact ? (
+      <Hint key={navigationKey(item)} content={item.label} side="right">
+        {element}
+      </Hint>
+    ) : (
+      element
+    );
   }
   return (
     <nav className="app-nav scroll-dark navigation-workspace" aria-label="Menu principal">
       {primary.length > 0 && (
         <div className="nav-primary" aria-label="Acessos principais">
-          {appearance === "student" && !collapsed && <p className="nav-primary__label">Acessos rápidos</p>}
+          {appearance === "student" && !collapsed && (
+            <p className="nav-primary__label">Acessos rápidos</p>
+          )}
           {primary.map((item) => link(item, collapsed))}
         </div>
       )}
@@ -271,7 +384,9 @@ function GroupedDashboardNavigation({
         <p className="nav-section-label">
           {available.some((item) => item.adminOnly)
             ? "Gestão da plataforma"
-            : appearance === "student" ? "Sua jornada" : "Explore sua preparação"}
+            : appearance === "student"
+              ? "Sua jornada"
+              : "Explore sua preparação"}
         </p>
       )}
       {groups.map((group, i) => {
@@ -291,9 +406,7 @@ function GroupedDashboardNavigation({
                   aria-label={`Abrir ${group}`}
                 >
                   <Icon aria-hidden="true" />
-                  <span>
-                    {collapsedLabels[group] ?? group}
-                  </span>
+                  <span>{collapsedLabels[group] ?? group}</span>
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent

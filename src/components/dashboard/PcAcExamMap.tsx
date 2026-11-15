@@ -1,6 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Flame, Info, Target } from "lucide-react";
+import { ArrowRight, BookOpen, BrainCircuit, Flame, Info, PlayCircle, Target } from "lucide-react";
+import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { relatedVideos } from "@/lib/relatedVideos";
 import { pcAcVerticalCargos, type PcAcVerticalCargoId } from "@/data/pcAcreVerticalizado";
 import { buildPcAcExamMap, type MapDiscipline } from "@/lib/pcAcExamMap";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
@@ -13,9 +16,13 @@ type Metric = "questions" | "points";
 /** Mapa interativo da prova IDECAN da PC-AC 2026: quantas questões e quais assuntos por bloco. */
 export function PcAcExamMap({
   initialCargo = "investigador",
+  hideTitle = false,
 }: {
   initialCargo?: PcAcVerticalCargoId;
+  hideTitle?: boolean;
 }) {
+  const { catalog } = useMediaCatalog();
+  const [watching, setWatching] = useState<WatchableVideo | null>(null);
   const [cargoId, setCargoId] = useState<PcAcVerticalCargoId>(initialCargo);
   const [metric, setMetric] = useState<Metric>("questions");
   const [onlyHot, setOnlyHot] = useState(false);
@@ -33,15 +40,32 @@ export function PcAcExamMap({
     metric === "questions" ? n.questions : n.points;
 
   const topics = active ? (onlyHot ? active.topics.filter((t) => t.hot) : active.topics) : [];
-  const subject = active ? pcAcDisciplineLink(active.id)?.subjects?.[0] : undefined;
+  const subjects = active ? (pcAcDisciplineLink(active.id)?.subjects ?? []) : [];
+  const subject = subjects[0];
+  // Vídeo exatamente do assunto; sem ele, a videoteca geral da matéria (nunca de outra matéria).
+  const videoFor = (title: string) => {
+    for (const sub of subjects) {
+      const found = relatedVideos(catalog, sub, title, 3);
+      const exact = found.find((v) => v.topic !== "*");
+      if (exact) return { video: exact, exact: true };
+      if (found[0]) return { video: found[0], exact: false };
+    }
+    return null;
+  };
 
   return (
     <section className="pcmap" aria-labelledby="pcmap-title">
       <header className="pcmap__head">
         <div>
-          <h2 id="pcmap-title" className="pcmap__title">
-            <Target aria-hidden="true" /> Mapa da prova IDECAN · PC-AC 2026
-          </h2>
+          {hideTitle ? (
+            <h2 id="pcmap-title" className="sr-only">
+              Mapa da prova IDECAN · PC-AC 2026
+            </h2>
+          ) : (
+            <h2 id="pcmap-title" className="pcmap__title">
+              <Target aria-hidden="true" /> Mapa da prova IDECAN · PC-AC 2026
+            </h2>
+          )}
           <p className="pcmap__sub">
             Edital nº 001 SEAD/PCAC · {totalQ} questões · {fmt(totalP)} pontos ·{" "}
             {pcAcDiscursiveBrief(cargo)}
@@ -148,8 +172,62 @@ export function PcAcExamMap({
           <ul className="pcmap__topics">
             {topics.map((t, i) => (
               <li key={`${t.title}-${i}`} data-hot={t.hot}>
-                <span>{t.title}</span>
-                {t.hot && <em>provável</em>}
+                <span className="pcmap__topic-text">
+                  {t.title}
+                  {t.hot && <em>provável</em>}
+                </span>
+                <span className="pcmap__topic-actions">
+                  {subject && (
+                    <Link
+                      to="/dashboard/library"
+                      search={{
+                        collection: "subjects",
+                        discipline: subject,
+                        q: t.title.slice(0, 80),
+                      }}
+                      title="Abrir o material didático deste assunto"
+                      aria-label={`Material didático: ${t.title}`}
+                    >
+                      <BookOpen aria-hidden="true" />
+                    </Link>
+                  )}
+                  {(() => {
+                    const hit = videoFor(t.title);
+                    return hit ? (
+                      <button
+                        type="button"
+                        data-exact={hit.exact}
+                        title={
+                          hit.exact
+                            ? "Assistir videoaula deste assunto"
+                            : "Assistir videoaula da matéria"
+                        }
+                        aria-label={`Videoaula: ${t.title}`}
+                        onClick={() => setWatching(hit.video)}
+                      >
+                        <PlayCircle aria-hidden="true" />
+                      </button>
+                    ) : (
+                      <span
+                        className="pcmap__none"
+                        title="Ainda não há videoaula cadastrada"
+                        aria-label="Sem videoaula cadastrada"
+                      >
+                        <PlayCircle aria-hidden="true" />
+                      </span>
+                    );
+                  })()}
+                  {subject && (
+                    <Link
+                      to="/dashboard/question-trainer"
+                      search={{ subject }}
+                      title="Treinar questões da matéria"
+                      aria-label={`Questões de ${active.name}`}
+                    >
+                      <BrainCircuit aria-hidden="true" />
+                    </Link>
+                  )}
+                </span>
               </li>
             ))}
             {topics.length === 0 && (
@@ -169,6 +247,7 @@ export function PcAcExamMap({
         </article>
       )}
 
+      <VideoWatchDialog video={watching} onClose={() => setWatching(null)} />
       <p className="pcmap__note">
         <Info aria-hidden="true" />
         <span>

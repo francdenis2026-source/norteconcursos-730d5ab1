@@ -1,3 +1,4 @@
+import { IdecanTabs } from "@/components/dashboard/IdecanTabs";
 import "@/styles/admin-lean.css";
 import { STUDENT_GROUP_TONES as GROUP_HUE } from "@/lib/studentPalette";
 import "@/styles/student-control-colors.css";
@@ -218,16 +219,41 @@ const MENU: MenuItem[] = [
     href: "/dashboard/cronograma",
   },
   {
-    group: "Planejamento",
-    label: "Edital PC-AC por cargo",
+    group: "Mapa IDECAN",
+    label: "Mapa da prova",
+    icon: Target,
+    href: "/dashboard/mapa-idecan",
+    primary: true,
+  },
+  {
+    group: "Mapa IDECAN",
+    label: "Edital por cargo",
     icon: BookOpenCheck,
     href: "/dashboard/pc-acre-edital",
   },
   {
-    group: "Planejamento",
-    label: "Mapa da prova IDECAN",
-    icon: Target,
-    href: "/dashboard/mapa-idecan",
+    group: "Mapa IDECAN",
+    label: "Estatísticas da banca",
+    icon: BarChart3,
+    href: "/dashboard/inteligencia-idecan",
+  },
+  {
+    group: "Mapa IDECAN",
+    label: "Radar do edital",
+    icon: Radar,
+    href: "/dashboard/edital-radar",
+  },
+  {
+    group: "Mapa IDECAN",
+    label: "Panorama das provas",
+    icon: Layers,
+    href: "/dashboard/exam-panorama",
+  },
+  {
+    group: "Mapa IDECAN",
+    label: "Perfil das bancas",
+    icon: Scale,
+    href: "/dashboard/perfil-bancas",
   },
   {
     group: "Desempenho",
@@ -384,6 +410,14 @@ const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
   "/dashboard/medals": "gold",
   "/dashboard/ranking": "gold",
 };
+
+const IDECAN_TAB_PATHS = new Set([
+  "/dashboard/pc-acre-edital",
+  "/dashboard/inteligencia-idecan",
+  "/dashboard/edital-radar",
+  "/dashboard/exam-panorama",
+  "/dashboard/perfil-bancas",
+]);
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   useMobileAppShell();
@@ -964,7 +998,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             className="app-content"
             data-hue={GROUP_HUE[current?.group ?? "Planejamento"] ?? "gold"}
           >
-            <div className="app-content__inner">{children}</div>
+            <div className="app-content__inner">
+              {IDECAN_TAB_PATHS.has(location.pathname.replace(/\/$/, "")) && (
+                <div className="idx-tabs-slot">
+                  <IdecanTabs />
+                </div>
+              )}
+              {children}
+            </div>
             {showsReadingControl(location.pathname) && <ReadingSizeControl />}
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
