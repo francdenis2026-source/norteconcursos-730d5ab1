@@ -1,4 +1,5 @@
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
+import { NorteCube } from "@/components/landing/NorteCube";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
@@ -15,6 +16,7 @@ import {
 } from "@/lib/launch.config";
 import { Hint } from "@/components/ui/hint";
 import { Crown, Gem, Gift, Target as TargetIcon } from "lucide-react";
+import "@/styles/home-plans-cube.css";
 
 const PLAN_ICON: Record<string, typeof Crown> = {
   free: Gift,
@@ -65,6 +67,9 @@ export function PlansSection() {
                 ? `Licenças pagas revogadas: por ${TESTING_LABEL}, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
                 : "Escolha o plano que acompanha o seu ritmo de estudo."}
             </p>
+          </div>
+          <div className="home-plans__cube" aria-hidden="true">
+            <NorteCube size={0.68} />
           </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
             <PoliceInsignia
