@@ -94,11 +94,14 @@ function AdminStudentsPage() {
   const [rows, setRows] = useState<StudentRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [sort, setSort] = useState<StudentSort>("activity");
+  const [sort, setSort] = useState<StudentSort | "created">("activity");
   const [period, setPeriod] = useState<ActivityPeriod>("today");
   const [filter, setFilter] = useState("");
   const [planFilter, setPlanFilter] = useState("all");
   const [page, setPage] = useState(0);
+  const [pageSize, setPageSize] = useState(20);
+  const [status, setStatus] = useState("all");
+  const [byCreated, setByCreated] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
   const [exams, setExams] = useState<ExamRow[]>([]);
   const [editId, setEditId] = useState<string | null>(null);
@@ -215,15 +218,17 @@ function AdminStudentsPage() {
 
   const visible = useMemo(() => {
     const q = filter.toLowerCase().trim();
-    const byPlan =
-      planFilter === "all" ? rows : rows.filter((r) => r.subscription_tier === planFilter);
-    return sortStudents(
-      q ? byPlan.filter((r) => `${r.full_name} ${r.email}`.toLowerCase().includes(q)) : byPlan,
-      sort,
-      period,
-    );
-  }, [rows, filter, sort, period, planFilter]);
-  const PAGE_SIZE = 20;
+    let list = planFilter === "all" ? rows : rows.filter((r) => r.subscription_tier === planFilter);
+    if (status === "online") list = list.filter((r) => r.online);
+    else if (status === "admin") list = list.filter((r) => r.isAdmin);
+    else if (status === "never") list = list.filter((r) => !r.lastAccess);
+    else if (status === "ai") list = list.filter((r) => r.aiTotal > 0);
+    if (q) list = list.filter((r) => `${r.full_name} ${r.email}`.toLowerCase().includes(q));
+    if (sort === "created")
+      return [...list].sort((a, b) => (b.created_at ?? "").localeCompare(a.created_at ?? ""));
+    return sortStudents(list, sort, period);
+  }, [rows, filter, sort, period, planFilter, status]);
+  const PAGE_SIZE = pageSize;
   const pageCount = Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
   const pageRows = visible.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
   const leaders = useMemo(
@@ -447,12 +452,31 @@ function AdminStudentsPage() {
               ))}
             </select>
             <select
+              aria-label="Filtrar por situação"
+              value={status}
+              onChange={(e) => {
+                setStatus(e.target.value);
+                setPage(0);
+              }}
+              className="h-9 rounded-md border bg-background px-2 text-sm"
+            >
+              <option value="all">Todas as situações</option>
+              <option value="online">Online agora</option>
+              <option value="admin">Administradores</option>
+              <option value="ai">Já usaram IA</option>
+              <option value="never">Nunca acessaram</option>
+            </select>
+            <select
               aria-label="Ordenar alunos"
               value={sort}
-              onChange={(e) => setSort(e.target.value as StudentSort)}
+              onChange={(e) => {
+                setSort(e.target.value as StudentSort | "created");
+                setPage(0);
+              }}
               className="h-9 rounded-md border bg-background px-2 text-sm"
             >
               <option value="activity">Mais ativos</option>
+              <option value="created">Cadastro mais recente</option>
               <option value="access">Último acesso</option>
               <option value="name">Nome A–Z</option>
             </select>
@@ -465,7 +489,27 @@ function AdminStudentsPage() {
               <option value="today">Hoje</option>
               <option value="total">Total</option>
             </select>
+            <select
+              aria-label="Alunos por página"
+              value={pageSize}
+              onChange={(e) => {
+                setPageSize(Number(e.target.value));
+                setPage(0);
+              }}
+              className="h-9 rounded-md border bg-background px-2 text-sm"
+            >
+              {[20, 50, 100].map((n) => (
+                <option key={n} value={n}>
+                  {n} por página
+                </option>
+              ))}
+            </select>
           </div>
+          <p className="m-0 text-sm text-muted-foreground" role="status">
+            Mostrando <strong className="text-foreground">{pageRows.length}</strong> de{" "}
+            <strong className="text-foreground">{visible.length}</strong>
+            {visible.length !== rows.length && ` (filtrado de ${rows.length} cadastrados)`}
+          </p>
           {error && (
             <p className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
               {error}
@@ -483,7 +527,7 @@ function AdminStudentsPage() {
               Nenhum aluno encontrado.
             </p>
           ) : (
-            pageRows.map((s) => (
+            pageRows.map((s, idx) => (
               <div key={s.id} className="rounded-lg border border-border bg-card px-3 py-2">
                 <div className="flex flex-wrap items-start gap-3">
                   <div className="min-w-0 flex-1 basis-56">
@@ -516,6 +560,9 @@ function AdminStudentsPage() {
                       </form>
                     ) : (
                       <p className="truncate font-medium text-foreground" title={s.full_name ?? ""}>
+                        <span className="mr-2 inline-block min-w-8 rounded bg-muted px-1.5 text-center text-xs font-bold tabular-nums">
+                          {page * PAGE_SIZE + idx + 1}
+                        </span>
                         {s.full_name || "Sem nome"}
                       </p>
                     )}

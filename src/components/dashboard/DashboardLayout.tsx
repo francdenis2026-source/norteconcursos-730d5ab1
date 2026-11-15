@@ -224,6 +224,12 @@ const MENU: MenuItem[] = [
     href: "/dashboard/pc-acre-edital",
   },
   {
+    group: "Planejamento",
+    label: "Mapa da prova IDECAN",
+    icon: Target,
+    href: "/dashboard/mapa-idecan",
+  },
+  {
     group: "Desempenho",
     label: "Minha evolução",
     icon: ClipboardList,
@@ -788,14 +794,22 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                       <button
                         type="button"
                         className="workspace-focus-entry"
-                        aria-label={fullscreen.active ? "Restaurar visualização" : "Expandir área de estudo em tela cheia"}
+                        aria-label={
+                          fullscreen.active
+                            ? "Restaurar visualização"
+                            : "Expandir área de estudo em tela cheia"
+                        }
                         onClick={() => {
                           setMobileOpen(false);
                           if (fullscreen.active) fullscreen.exit();
                           else fullscreen.enter();
                         }}
                       >
-                        {fullscreen.active ? <Minimize aria-hidden="true" /> : <Maximize aria-hidden="true" />}
+                        {fullscreen.active ? (
+                          <Minimize aria-hidden="true" />
+                        ) : (
+                          <Maximize aria-hidden="true" />
+                        )}
                         <span>{fullscreen.active ? "Restaurar visualização" : "Tela cheia"}</span>
                       </button>
                     )}
@@ -861,9 +875,17 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                     className="workspace-fullscreen-trigger"
                     onClick={fullscreen.active ? fullscreen.exit : fullscreen.enter}
                     aria-pressed={fullscreen.active}
-                    aria-label={fullscreen.active ? "Restaurar visualização" : "Expandir área de estudo em tela cheia"}
+                    aria-label={
+                      fullscreen.active
+                        ? "Restaurar visualização"
+                        : "Expandir área de estudo em tela cheia"
+                    }
                   >
-                    {fullscreen.active ? <Minimize aria-hidden="true" /> : <Maximize aria-hidden="true" />}
+                    {fullscreen.active ? (
+                      <Minimize aria-hidden="true" />
+                    ) : (
+                      <Maximize aria-hidden="true" />
+                    )}
                   </button>
                 </Hint>
               )}
