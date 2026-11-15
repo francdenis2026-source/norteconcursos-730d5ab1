@@ -410,7 +410,7 @@ function AdminPanel() {
               <div className="flex items-center gap-2 mb-4">
                 <div className="relative flex-1 max-w-sm">
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Buscar concurso..." className="pl-9" />
+                  <Input placeholder="Buscar concurso..." aria-label="Buscar concurso" className="pl-9" />
                 </div>
               </div>
 
@@ -462,6 +462,7 @@ function AdminPanel() {
                                 variant="ghost"
                                 size="icon"
                                 className="h-8 w-8"
+                                aria-label="Editar concurso"
                                 onClick={() => handleEditContest(contest)}
                               >
                                 <Pencil className="h-4 w-4" />
@@ -470,6 +471,7 @@ function AdminPanel() {
                                 variant="ghost"
                                 size="icon"
                                 className="h-8 w-8 text-destructive"
+                                aria-label="Excluir concurso"
                                 onClick={() => handleDeleteContest(contest.id)}
                               >
                                 <Trash2 className="h-4 w-4" />
@@ -561,13 +563,14 @@ function AdminPanel() {
                           </TableCell>
                           <TableCell className="text-right">
                             <div className="flex justify-end gap-2">
-                              <Button variant="ghost" size="icon" className="h-8 w-8">
+                              <Button variant="ghost" size="icon" className="h-8 w-8" aria-label="Editar questão">
                                 <Pencil className="h-4 w-4" />
                               </Button>
                               <Button
                                 variant="ghost"
                                 size="icon"
                                 className="h-8 w-8 text-destructive"
+                                aria-label="Excluir questão"
                                 onClick={() => handleDeleteQuestion(question.id)}
                               >
                                 <Trash2 className="h-4 w-4" />
