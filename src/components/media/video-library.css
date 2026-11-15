@@ -224,6 +224,12 @@ html:root body .vl .vl__note { text-align: left !important; hyphens: manual; }
 html:root body .vl .vl__queue { display: flex; flex-direction: column; gap: .55rem; }
 html:root body .vl .vl__queue > * { flex: none; }
 html:root body .vl .vl__queue > .vl__list { flex: 1 1 0; min-height: 0; }
+/* Celular: a coluna não tem altura definida, então a lista (base 0) sumia. Ela passa a ter base automática,
+   altura mínima de 12rem e rolagem própria dentro do limite do painel. */
+@media (max-width: 760px) {
+  html:root body .vl .vl__queue { max-height: 36rem; }
+  html:root body .vl .vl__queue > .vl__list { flex: 1 1 auto; min-height: 12rem; }
+}
 
 /* Tela cheia (tablet e computador; no celular a página rola normalmente). */
 @media (min-width: 768px) {
