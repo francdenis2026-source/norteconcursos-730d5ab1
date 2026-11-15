@@ -119,9 +119,27 @@ test("PC-AC subject weights follow the edital: basics/legal 1 point and specific
   assert.equal(score.maxScore, 160);
   assert.equal(score.approval?.evaluated, true);
   assert.equal(score.approval?.approved, true);
-  const balanced = selectPcacOfficialDistribution(fullExam, () => 0.5);
+  const fiveOptionText = [
+    "Enunciado da questão.",
+    "(A) Alternativa A.",
+    "(B) Alternativa B.",
+    "(C) Alternativa C.",
+    "(D) Alternativa D.",
+    "(E) Alternativa E.",
+  ].join("\n");
+  const fiveOptionPool = fullExam.map((item) => ({ ...item, text: fiveOptionText }));
+  const balanced = selectPcacOfficialDistribution(fiveOptionPool, () => 0.5);
   assert.equal(balanced?.length, 100);
-  const oneLessInformatics = fullExam.filter(
+  const mixedPool = [
+    ...fiveOptionPool,
+    {
+      subject: "Noções de Informática",
+      correct: true,
+      text: ["Julgue o item.", "(A) Certo", "(B) Errado"].join("\\n"),
+    },
+  ];
+  assert.equal(selectPcacOfficialDistribution(mixedPool, () => 0.5)?.length, 100);
+  const oneLessInformatics = fiveOptionPool.filter(
     (item, index) => !(index === 12 && item.subject === "Noções de Informática"),
   );
   assert.equal(selectPcacOfficialDistribution(oneLessInformatics, () => 0.5), null);
