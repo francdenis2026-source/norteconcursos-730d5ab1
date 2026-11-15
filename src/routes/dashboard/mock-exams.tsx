@@ -2383,6 +2383,36 @@ function ResultView({
             <p className="text-sm text-muted-foreground">Regra de correção aplicada</p>
             <p className="mt-1 font-bold">{rule.label}</p>
             <p className="mt-1 text-xs text-muted-foreground">{rule.description}</p>
+            {rule.id === "pcac_2026_weighted" && (
+              <div className="mt-3 rounded-xl border border-border/60 p-3">
+                {scored.approval?.evaluated ? (
+                  <>
+                    <p
+                      className={
+                        scored.approval.approved
+                          ? "font-semibold text-emerald-600 dark:text-emerald-400"
+                          : "font-semibold text-amber-600 dark:text-amber-400"
+                      }
+                    >
+                      {scored.approval.approved
+                        ? "Atingiu os critérios mínimos do edital"
+                        : "Não atingiu todos os critérios mínimos do edital"}
+                    </p>
+                    {scored.approval.reasons.length > 0 && (
+                      <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-muted-foreground">
+                        {scored.approval.reasons.map((reason) => (
+                          <li key={reason}>{reason}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <p className="text-xs text-muted-foreground">
+                    Critérios mínimos de aprovação não avaliados: esta amostra não reproduz a distribuição oficial de 100 questões.
+                  </p>
+                )}
+              </div>
+            )}
             {rule.id === "net_one_to_one" && (
               <p className="mt-1 text-xs text-muted-foreground">
                 {result.correct} acertos − {result.wrong} erros = {formatScore(scored.score)};{" "}
