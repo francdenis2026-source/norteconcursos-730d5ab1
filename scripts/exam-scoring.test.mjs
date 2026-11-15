@@ -126,7 +126,7 @@ test("PC-AC subject weights follow the edital: basics/legal 1 point and specific
     "(C) Alternativa C.",
     "(D) Alternativa D.",
     "(E) Alternativa E.",
-  ].join("\\n");
+  ].join("\n");
   const fiveOptionPool = fullExam.map((item) => ({ ...item, text: fiveOptionText }));
   const balanced = selectPcacOfficialDistribution(fiveOptionPool, () => 0.5);
   assert.equal(balanced?.length, 100);
