@@ -96,7 +96,11 @@ Três unidades registraram 10, 20 e 30 ocorrências. A média simples é (10 + 2
 **Como acertar:** confira se as observações têm o mesmo peso. Em gráfico, leia título, unidade, período, legenda e escala antes de comparar valores.
 
 **Pegadinha:** gráfico de setores representa partes de um total; gráfico de linhas costuma mostrar evolução temporal; histograma representa distribuição de variável quantitativa por intervalos.$$ else body_md end
-when 'pcac-2026-direito-administrativo-06-agentes-publicos' then replace(body_md,'A Constituição proíbe acumulação remunerada, ressalvadas hipóteses constitucionais com compatibilidade de horários, como dois cargos de professor; um de professor com outro técnico ou científico; e dois cargos ou empregos privativos de profissionais de saúde com profissões regulamentadas.','A Constituição proíbe a acumulação remunerada, mas prevê exceções com compatibilidade de horários e observância do teto. São permitidos: dois cargos de professor; um cargo de professor com outro de qualquer natureza; e dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas.\n\n**Atualização essencial — EC nº 138/2025:** desde 22/12/2025, a alínea “b” do art. 37, XVI, permite professor + outro cargo de qualquer natureza. Não é mais necessário que o segundo cargo seja técnico ou científico.\n\n**Exemplo simples:** professor + cargo administrativo pode ser acumulável, desde que haja compatibilidade de horários e sejam respeitadas as demais regras constitucionais. A expressão “qualquer natureza” não elimina esses requisitos.')
+when 'pcac-2026-direito-administrativo-06-agentes-publicos' then replace(body_md,'A Constituição proíbe acumulação remunerada, ressalvadas hipóteses constitucionais com compatibilidade de horários, como dois cargos de professor; um de professor com outro técnico ou científico; e dois cargos ou empregos privativos de profissionais de saúde com profissões regulamentadas.','A Constituição proíbe a acumulação remunerada, mas prevê exceções com compatibilidade de horários e observância do teto. São permitidos: dois cargos de professor; um cargo de professor com outro de qualquer natureza; e dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas.
+
+**Atualização essencial — EC nº 138/2025:** desde 22/12/2025, a alínea “b” do art. 37, XVI, permite professor + outro cargo de qualquer natureza. Não é mais necessário que o segundo cargo seja técnico ou científico.
+
+**Exemplo simples:** professor + cargo administrativo pode ser acumulável, desde que haja compatibilidade de horários e sejam respeitadas as demais regras constitucionais. A expressão “qualquer natureza” não elimina esses requisitos.')
 when 'pcac-2026-direito-penal-04-crimes-sexuais-mortos-fe-publica' then case when body_md not like '%Atualização legislativa — Lei nº 15.353/2026%' then body_md || $$
 
 ## 5. Atualização legislativa — Lei nº 15.353/2026
@@ -163,3 +167,30 @@ set practice_review=jsonb_build_object('status','reviewed','review_date','2026-1
  reviewed_at='2026-11-14 23:59:00-03'::timestamptz,
  updated_at=now()
 where slug like 'pcac-2026-%' and discipline in ('Língua Portuguesa','Raciocínio Lógico','Noções de Informática','Realidade do Estado do Acre','Noções de Direito Constitucional','Noções de Direito Administrativo','Noções de Direito Penal e Processual Penal','Legislação Institucional','Contabilidade Geral','Contabilidade Geral e Análise Financeira','Estatística','Arquivologia','Tecnologia da Informação e Segurança da Informação','Análise de Dados e Informações','Noções de Administração');
+
+
+
+-- Registra revisão jurídica e fontes oficiais para o bloco de Legislação Institucional.
+update public.study_materials
+set legal_review=jsonb_build_object(
+ 'status','reviewed_against_official_updated_text',
+ 'review_date','2026-11-14',
+ 'scope','Revisão da legislação institucional do edital PC-AC 001/2026 para Oficial Investigador, considerando os textos oficiais consolidados e alterações publicadas até 05/11/2026.',
+ 'sources',jsonb_build_array(
+  jsonb_build_object('title','Lei nº 14.735/2023 — Lei Orgânica Nacional das Polícias Civis','url','https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm'),
+  jsonb_build_object('title','LC nº 129/2004 — Lei Orgânica e Estatuto da PCAC, texto consolidado','url','https://legis.ac.gov.br/detalhar/674'),
+  jsonb_build_object('title','LC nº 496/2025 — unificação dos cargos de agente e escrivão','url','https://legis.ac.gov.br/detalhar/6527'),
+  jsonb_build_object('title','LC nº 525/2026 — alteração da LC 39/1993','url','https://legis.ac.gov.br/detalhar/6864-1'),
+  jsonb_build_object('title','LC nº 526/2026 — alteração da LC 129/2004','url','https://legis.ac.gov.br/detalhar/6874'),
+  jsonb_build_object('title','Lei nº 2.250/2009 — PCCR da Polícia Civil do Acre','url','https://legis.ac.gov.br/detalhar/417'),
+  jsonb_build_object('title','LC nº 39/1993 — Estatuto dos Servidores do Acre','url','https://legis.ac.gov.br/detalhar/110'),
+  jsonb_build_object('title','Lei nº 12.830/2013 — investigação criminal conduzida pelo delegado','url','https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm'),
+  jsonb_build_object('title','Lei nº 13.675/2018 — Susp e PNSPDS','url','https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13675.htm'),
+  jsonb_build_object('title','Constituição Federal — texto atualizado','url','https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm'),
+  jsonb_build_object('title','Edital PC-AC 001/2026 — Anexo III','url','https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf')
+ )
+),
+law_version_checked_at='2026-11-14 23:59:00-03'::timestamptz,
+reviewed_at='2026-11-14 23:59:00-03'::timestamptz,
+updated_at=now()
+where slug in ('pcac-2026-legislacao-institucional-policia-civil-acre','pcac-2026-legislacao-carreira-deveres-disciplina','pcac-2026-legislacao-lei-organica-nacional-14735','pcac-2026-legislacao-lc129-atualizacoes-496-526','pcac-2026-legislacao-lei-2250-pccr','pcac-2026-legislacao-lc39-regime-servidor','pcac-2026-lc129-deveres-investigacao-e-processo-disciplinar','pcac-2026-lc129-transgressoes-penalidades-responsabilidades','pcac-2026-lc129-sindicancia-prazos-prescricao-extincao','pcac-2026-lc129-afastamento-preventivo-direitos-tempo-servico','pcac-2026-lc129-pad-instrucao-defesa-relatorio-recursos','pcac-2026-lc129-direitos-funcionais-carteira-porte-bolsa','pcac-2026-lei14735-principios-competencias-estrutura','pcac-2026-lei14735-cargos-concurso-atribuicoes','pcac-2026-lei14735-direitos-deveres-disposicoes-finais','pcac-2026-lei2250-estrutura-ingresso-progressao-promocao','pcac-2026-lc129-atualizacao-lc526-2026-ingresso-formacao-lotacao','pcac-2026-lc39-regime-geral-provimento-vacancia-direitos','pcac-2026-lc39-deveres-acumulacao-penalidades-prescricao-pad','pcac-2026-lc39-licenca-premio-regras-aquisicao-concessao','pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025','pcac-2026-lc39-deveres-proibicoes-responsabilidades-servidor','pcac-2026-lei12830-investigacao-delegado-adi5043','pcac-2026-lei13675-susp-politica-seguranca','pcac-2026-constituicao-seguranca-publica-art144-acre');
