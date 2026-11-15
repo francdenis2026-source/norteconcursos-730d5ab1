@@ -2,42 +2,22 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import "@/styles/beta-notice.css";
 
-const SEEN_KEY = "nc-beta-notice-seen:2026-11";
-
-/** Selo "Beta" de vidro na home: abre sozinho na primeira visita e depois fica recolhido. */
+/**
+ * Selo "Beta" na home. Começa sempre recolhido (só a etiqueta): o aviso não abre sozinho,
+ * para não cobrir o título e os botões de entrada. Quem quiser lê ao clicar; ele recolhe
+ * sozinho depois de alguns segundos.
+ */
 export function BetaNotice() {
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    try {
-      if (window.localStorage.getItem(SEEN_KEY) !== "true") setOpen(true);
-    } catch {
-      setOpen(true);
-    }
-  }, []);
 
   // Aviso discreto: recolhe sozinho para a etiqueta "Beta" depois de alguns segundos.
   useEffect(() => {
     if (!open) return;
-    const timer = window.setTimeout(() => {
-      setOpen(false);
-      try {
-        window.localStorage.setItem(SEEN_KEY, "true");
-      } catch {
-        /* localStorage indisponível */
-      }
-    }, 7000);
+    const timer = window.setTimeout(() => setOpen(false), 7000);
     return () => window.clearTimeout(timer);
   }, [open]);
 
-  const close = () => {
-    setOpen(false);
-    try {
-      window.localStorage.setItem(SEEN_KEY, "true");
-    } catch {
-      /* localStorage indisponível — recolhe só nesta visita */
-    }
-  };
+  const close = () => setOpen(false);
 
   return (
     <aside className="beta-notice" data-open={open} aria-label="Aviso de versão beta">

@@ -44,6 +44,8 @@
   html.hfx {
     scroll-snap-type: y proximity;
     scroll-padding-top: var(--home-header-height, 68px);
+    /* Foco por teclado nunca para sob a faixa fixa do rodapé nem sob a etiqueta Beta. */
+    scroll-padding-bottom: 5rem;
   }
   .home.hr-canvas > .desktop-homepage > :is(section, .sx-band, .sx-features),
   .home.hr-canvas > .desktop-homepage > .sx-section {
