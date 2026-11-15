@@ -248,3 +248,27 @@ Esses temas devem compor lotes posteriores, sempre respeitando o conteúdo do An
 ## Regra de segurança editorial
 
 A integração ao banco não equivale à publicação. Este lote deve permanecer oculto aos alunos até que as pendências acima sejam encerradas e os testes de exposição de rascunhos sejam aprovados.
+
+
+## Atualização conclusiva — revisão final de Legislação Institucional (15/11/2026)
+
+A auditoria jurídica das 25 questões institucionais anteriormente em rascunho foi concluída contra fontes primárias atualizadas:
+
+- **24 questões ativadas** após revisão de enunciado, alternativa correta, distratores, fundamento e aderência ao Anexo III.
+- **1 questão mantida em `under_review`**: regra geral de data de corte legislativa dos subitens 11.5.4/11.5.5 do edital. É orientação geral do certame, não conteúdo autônomo do Anexo III; permanece fora da trilha disciplinar.
+- Nenhuma questão foi apagada. A comparação textual de todas as questões ativas de Legislação Institucional não encontrou duplicidade exata.
+- As 24 questões liberadas têm gabarito A–E, explicação, tópico de edital e metadados de revisão normativa. Todas são autorais, não itens oficiais aplicados pela IDECAN.
+
+Fontes oficiais de referência utilizadas na revisão: LC nº 129/2004 consolidada (incluindo LCs nº 496/2025 e nº 526/2026); LC nº 39/1993 consolidada e LC nº 525/2026; Lei nº 2.250/2009; Lei nº 14.735/2023 em texto atualizado; e edital oficial PC-AC 2026, publicado em 06/11/2026.
+
+**Contagem atual do catálogo PC-AC 2026, reconsultada no Supabase:** 306 questões no total; 257 ativas; 48 em rascunho e 1 em revisão editorial. Legislação Institucional passou a 46 questões ativas, de 47 cadastradas. As 48 questões em rascunho restantes estão em Direito Penal e Processual Penal.
+
+**Materiais didáticos:** 175/175 materiais PC-AC ativos têm flashcards e quiz (mínimo de cinco itens em cada). 38 têm metadados de revisão formal; a revisão bibliográfica/editorial dos demais materiais segue como tarefa separada e não deve ser confundida com a ativação de questões.
+
+**Migration versionada:** `20261115005200_pcac_legislacao_questoes_revisao_final.sql`. A alteração direta no banco foi registrada também nessa migration para permitir rastreabilidade e reexecução controlada.
+
+**CI:** execução associada ao commit da migration em andamento no momento desta atualização. A ativação no Supabase foi verificada por consulta direta; a conclusão de CI será registrada após todos os passos automatizados.
+
+### Próxima prioridade de produção
+
+O maior saldo de questões não liberadas está em Direito Penal e Processual Penal: 90 cadastradas, 42 ativas e 48 em rascunho. A próxima etapa é revisar essas 48 questões uma a uma contra os dispositivos do edital e as redações legais vigentes até 06/11/2026, sem ativar itens que não passem na revisão.
