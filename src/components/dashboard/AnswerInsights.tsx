@@ -137,13 +137,12 @@ export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today:
 
   return (
     <div className="sh2-insights">
-      <div className="sh2-insights__tabs" role="tablist" aria-label="Período">
+      <div className="sh2-insights__tabs" role="group" aria-label="Filtrar desempenho por período">
         {PERIODS.map(([id, label]) => (
           <button
             key={id}
             type="button"
-            role="tab"
-            aria-selected={period === id}
+            aria-pressed={period === id}
             onClick={() => setPeriod(id)}
           >
             {label}
