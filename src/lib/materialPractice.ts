@@ -121,11 +121,16 @@ export function authoredMaterialPractice(
 ): Question[] {
   const normative = !!(scope.law || scope.article || /direito|legisla|contabilidade|reda[çc][ãa]o oficial/i.test(`${scope.subject ?? ""} ${label}`));
   const approved = matchesPracticeReview(quiz, review, key) ? review : null;
-  if (normative && !approved) return [];
+  const didacticApproved = canonicalSubject(scope.subject ?? "") === canonicalSubject("Contabilidade Geral e Análise Financeira") && matchesDidacticReview(quiz, review, key) ? review : null;
+  if (normative && !approved && !didacticApproved) return [];
   if (approved) {
     if (scope.subject && canonicalSubject(approved.subject) !== canonicalSubject(scope.subject)) return [];
     if (scope.law && approved.law !== scope.law) return [];
     if (scope.topic && normalize(materialTopic(approved.subject, canonicalTopic(approved.topic_label) ?? approved.topic_label)) !== normalize(scope.topic)) return [];
+  }
+  if (didacticApproved) {
+    if (scope.subject && canonicalSubject(didacticApproved.subject) !== canonicalSubject(scope.subject)) return [];
+    if (scope.topic && normalize(materialTopic(didacticApproved.subject, canonicalTopic(didacticApproved.topic_label) ?? didacticApproved.topic_label)) !== normalize(scope.topic)) return [];
   }
   const seen = new Set<string>();
   return quiz.flatMap((item, index) => {
@@ -148,6 +153,9 @@ export function authoredMaterialPractice(
         text: item.q,
         answer: item.a ? ("C" as const) : ("E" as const),
         explanation: item.why,
+        studyTip: item.tip,
+        resolutionSteps: item.resolution_steps,
+        wrongFeedback: item.wrong_feedback,
         legalBasis: evidence ? [{ url: evidence.source_url, ...(evidence.article ? { artigo: evidence.article } : {}) }] : [],
         checkedAt: approved?.checked_at ?? null,
         difficulty: normalizeDifficulty(item.difficulty),
