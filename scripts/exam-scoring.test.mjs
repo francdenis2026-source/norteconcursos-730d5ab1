@@ -5,6 +5,7 @@ import {
   PCAC_WEIGHTED_RULE,
   SIMPLE_RULE,
   pcacWeightForSubject,
+  selectPcacOfficialDistribution,
   formatScore,
   resolveScoringRule,
   ruleFromRegistry,
