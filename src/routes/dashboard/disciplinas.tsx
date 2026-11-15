@@ -47,7 +47,6 @@ import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
 import { disciplineTheme } from "@/lib/disciplineTheme";
-import { userStorageKey } from "@/lib/userStorage";
 import { useSmartBack } from "@/components/dashboard/SmartBackLink";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
@@ -254,14 +253,14 @@ function DisciplineDetail({
       return;
     }
     try {
-      setCompletedTopics(JSON.parse(localStorage.getItem(userStorageKey("norte-edital-progress:" + activeEditionId)) ?? "{}"));
+      setCompletedTopics(JSON.parse(localStorage.getItem(`norte-edital-progress:${user?.id ?? "guest"}:${activeEditionId}`) ?? "{}"));
     } catch {
       setCompletedTopics({});
     }
-  }, [activeEditionId]);
+  }, [activeEditionId, user?.id]);
   React.useEffect(() => {
     if (!activeEditionId) return;
-    const key = userStorageKey("norte-edital-progress:" + activeEditionId);
+    const key = `norte-edital-progress:${user?.id ?? "guest"}:${activeEditionId}`;
     const syncFromOtherTab = (event: StorageEvent) => {
       if (event.key !== key && event.key !== null) return;
       try {
@@ -275,13 +274,13 @@ function DisciplineDetail({
     };
     window.addEventListener("storage", syncFromOtherTab);
     return () => window.removeEventListener("storage", syncFromOtherTab);
-  }, [activeEditionId]);
+  }, [activeEditionId, user?.id]);
   const toggleSyllabusTopic = (topicId: string) => {
     setCompletedTopics((current) => {
       const next = { ...current, [topicId]: !current[topicId] };
       if (activeEditionId) {
         try {
-          localStorage.setItem(userStorageKey("norte-edital-progress:" + activeEditionId), JSON.stringify(next));
+          localStorage.setItem(`norte-edital-progress:${user?.id ?? "guest"}:${activeEditionId}`, JSON.stringify(next));
         } catch {
           // O progresso continua atualizado nesta sessão se o armazenamento estiver indisponível.
         }
