@@ -41,7 +41,7 @@ export const PCAC_WEIGHTED_RULE: ScoringRule = {
   verified: true,
   label: "Pontuação ponderada — PC-AC 2026",
   description:
-    "Regra do edital: conhecimentos básicos e jurídicos valem 1 ponto por acerto; conhecimentos específicos valem 2 pontos. A prova completa soma até 160 pontos. Não há desconto por erro; questão anulada recebe pontuação para todos os candidatos.",
+    "Regra do edital: conhecimentos básicos e jurídicos valem 1 ponto por acerto; conhecimentos específicos valem 2 pontos. A prova integral soma até 160 pontos, sem desconto por erro. Em montagem personalizada, o máximo acompanha os pesos das questões escolhidas; a composição pode não reproduzir a distribuição oficial nem declarar aprovação.",
 };
 
 export function scoringRuleFromId(id: unknown): ScoringRule {
@@ -67,7 +67,7 @@ export interface PaperIdentity {
 const fold = (value: string) =>
   value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
 
-/** Só reconhece a regra de desconto 1 para 1 escrita no registro; o resto fica como não verificado. */
+/** Só reconhece regras de correção explicitamente registradas para a edição; o resto fica não verificado. */
 export function ruleFromRegistry(text: string | null | undefined): ScoringRule | null {
   if (!text) return null;
   const normalized = fold(text);
@@ -84,7 +84,7 @@ export function ruleFromRegistry(text: string | null | undefined): ScoringRule |
 }
 
 /**
- * Regra de uma prova específica. Só devolve desconto quando a edição (concurso/cargo + ano + banca)
+ * Regra de uma prova específica. Só aplica pontuação especial quando a edição (concurso/cargo + ano + banca/estilo)
  * consta no registro; qualquer dúvida cai na pontuação simples.
  */
 export function resolveScoringRule(
