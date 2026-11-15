@@ -177,9 +177,12 @@ export function PracticeSession({ questions, userId, materialId, authoredKey, ma
   const isCorrect = picked === q.answer;
   return (
     <div className="min-w-0 space-y-4 border-t pt-4">
-      <p className="text-xs text-muted-foreground">
-        Questão {index + 1} de {questions.length} · {examOriginLabel(q)}
-      </p>
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+        <p>Questão {index + 1} de {questions.length} · {examOriginLabel(q)}</p>
+        <span className="rounded-full border px-2.5 py-1 font-semibold" aria-label={`Dificuldade ${q.difficulty}`}>
+          Dificuldade: {q.difficulty}
+        </span>
+      </div>
       <DidacticSourceNotice provenance={q.didacticProvenance} />
       {parsed.base && (
         <aside className="max-h-80 overflow-auto whitespace-pre-wrap rounded-xl border bg-muted/40 p-3 text-sm">
@@ -244,7 +247,32 @@ export function PracticeSession({ questions, userId, materialId, authoredKey, ma
             correct={isCorrect}
             sourceLabel="Gabarito"
           >
-            <QuestionText text={q.explanation} />
+            <div className="space-y-3">
+              <section>
+                <h3 className="mb-1 text-sm font-bold">Entenda a resposta</h3>
+                <QuestionText text={q.explanation} />
+              </section>
+              {!isCorrect && q.wrongFeedback && (
+                <section className="rounded-lg border border-rose-500/30 bg-rose-500/5 p-3">
+                  <h3 className="mb-1 text-sm font-bold">Onde estava o erro</h3>
+                  <QuestionText text={q.wrongFeedback} />
+                </section>
+              )}
+              {q.resolutionSteps && q.resolutionSteps.length > 0 && (
+                <section>
+                  <h3 className="mb-1 text-sm font-bold">Como resolver</h3>
+                  <ol className="list-decimal space-y-1 pl-5 text-sm">
+                    {q.resolutionSteps.map((step, stepIndex) => <li key={stepIndex}><QuestionText text={step} /></li>)}
+                  </ol>
+                </section>
+              )}
+              {q.studyTip && (
+                <section className="rounded-lg border bg-muted/40 p-3">
+                  <h3 className="mb-1 text-sm font-bold">Dica de prova</h3>
+                  <QuestionText text={q.studyTip} />
+                </section>
+              )}
+            </div>
           </AnswerFeedback>
           {q.legalBasis
             .filter((b) => b.url && isPracticeOfficialSource(b.url))
