@@ -1,4 +1,5 @@
-import { matchesDidacticReview, matchesPracticeReview } from "./materialPracticeReview";\nimport { normalizeDifficulty } from "./questionFormat";
+import { matchesDidacticReview, matchesPracticeReview } from "./materialPracticeReview";
+import { normalizeDifficulty } from "./questionFormat";
 import type { Question } from "./questionFormat";
 import { parseQuestion, questionAnswers } from "./questionFormat";
 import { canonicalSubject, canonicalTopic } from "./subjects";
