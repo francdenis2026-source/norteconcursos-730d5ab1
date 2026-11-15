@@ -47,20 +47,41 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 
 ### Recontagem após a expansão — 14/11/2026
 
-- `study_materials`: **167 materiais ativos** associados a PC-AC 2026 — 160 nas 14 disciplinas oficiais (incluída a nova aula de TI) e 7 complementares de Administração Pública. Todos os 167 têm ao menos 5 flashcards e 5 itens de quiz.
-- `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **284 no total**, sendo **211 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
+- `study_materials`: **169 materiais ativos** associados a PC-AC 2026 — 162 nas 14 disciplinas oficiais e 7 complementares de Administração Pública. Todos os 169 têm ao menos 5 flashcards e 5 itens de quiz.
+- `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **294 no total**, sendo **221 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
 - Os 201 ativos estão distribuídos por 14 disciplinas: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
-- Separação de proveniência: 170 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
+- Separação de proveniência: 180 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
 - Qualidade automatizada após inserção: zero questões ativas de 2026 sem subassunto, zero sem explicação de pelo menos 60 caracteres, zero sem gabarito A–E e zero sem vínculo de tópico.
 
 - As 22 aulas de Legislação Institucional já tinham `legal_review.review_date` e `law_version_checked_at`; foi sincronizado o campo `reviewed_at` com a data de revisão declarada. Verificação: 22/22 com revisão registrada e versão normativa conferida. Isso registra a revisão de fonte declarada, não significa que todas as 22 aulas tenham passado por auditoria integral de cada artigo.
 - Migration correspondente: `20261114235749_pcac_sync_legal_review_timestamps.sql`.
+
+### Atualização normativa de identificação criminal e prisões — 14/11/2026
+
+A aula `pcac-2026-processo-penal-09-identificacao-criminal-prisoes-medidas-cautelares` foi reescrita e conferida com o texto atualizado oficial, considerando apenas normas vigentes até 06/11/2026, data de publicação do edital.
+
+Atualizações incluídas:
+- Lei nº 15.295/2025: novas hipóteses de identificação criminal na Lei nº 12.037/2009 e coleta de material biológico para perfil genético.
+- Lei nº 15.272/2025: art. 310, §§ 5º e 6º; art. 310-A; art. 312, §§ 3º e 4º.
+- Lei nº 15.358/2026: audiência de custódia por videoconferência no art. 310 e hipótese do art. 313, V.
+- Lei nº 15.487/2026: hipótese do art. 313, VI, para crimes sexuais contra crianças/adolescentes e crimes específicos do ECA.
+- STF, ADIs 3.360 e 4.109: cinco requisitos cumulativos para prisão temporária.
+- Prazo geral e prazo especial de prisão temporária, revisão de preventiva a cada 90 dias e distinção entre identificação datiloscópica e coleta de perfil genético.
+
+A aula agora tem 12 flashcards e 12 questões comentadas, com fontes primárias e metadados de revisão normativa.
+
+Foram adicionadas 10 questões autorais ao banco, sobre essas atualizações e os critérios de prisão temporária. O total de Processo Penal subiu de 32 para 42 questões ativas.
+
+Migration: `20261115000903_pcac_prisons_identification_legal_update_question_batch.sql`.
 
 ### Lote 2 de questões de Processo Penal — 14/11/2026
 
 Foram adicionadas 10 questões autorais ativas, cada uma com gabarito, explicação didática, subassunto e vínculo à disciplina e ao tópico do edital. O lote cobre os arts. 13-A, 13-B e 14-A (requisição de dados, localização e defesa do agente investigado), 155, 158 e 167, cadeia de custódia (158-A a 158-C), 159, 180, 184, 280 e 281 do CPP. Os enunciados foram conferidos contra o texto atualizado oficial da Câmara dos Deputados e não são apresentados como questões oficiais aplicadas pela banca.
 
 Migration: `20261115000013_pcac_cpp_question_batch02.sql`.
+
+
+- Auditoria estrutural final do catálogo: 221 questões ativas, todas com subassunto, tópico, gabarito A–E válido, explicação com pelo menos 60 caracteres e vínculo de edital; nenhuma questão ativa de 2026 ficou sem esses campos. Dos 169 materiais, 35 têm revisão registrada; os demais ainda exigem leitura editorial e validação de conteúdo, apesar de já terem quiz e flashcards.
 
 ### Revisão artigo por artigo do CPP — concluída para os intervalos do edital
 
