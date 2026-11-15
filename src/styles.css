@@ -15112,7 +15112,12 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 
 /* Performance cleanup: remove duplicated title chrome and let evidence lead. */
 .app-shell[data-area="student"] .performance-page::before { display:none; }
-.app-shell[data-area="student"] .performance-page > .page-hero { display:none !important; }
+/* O título aparece na navegação superior: a faixa não é mostrada, mas o <h1> continua para leitores de tela. */
+.app-shell[data-area="student"] .performance-page > .page-hero {
+  display: block !important; position: absolute !important; width: 1px !important; height: 1px !important;
+  min-height: 0 !important; margin: -1px !important; padding: 0 !important; border: 0 !important;
+  overflow: hidden !important; clip-path: inset(50%) !important; white-space: nowrap !important;
+}
 .app-shell[data-area="student"] .performance-page .performance-overview > :is(h2,.performance-overview__heading) { display:none; }
 .app-shell[data-area="student"] .performance-page { font-family: var(--font-sans); }
 .app-shell[data-area="student"] .performance-page :is(h1,h2,h3,h4) { letter-spacing:-.02em; line-height:1.2; }

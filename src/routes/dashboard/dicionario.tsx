@@ -49,7 +49,7 @@ function DictionaryPage() {
       </div>
       <p className="text-sm text-muted-foreground">{items.length} de {GLOSSARY.length} verbetes</p>
       <div className="flex flex-wrap gap-1.5" aria-label="Ir para a letra">
-        {letters.map((l) => <a key={l} href={`#letra-${l}`} className="rounded-md border px-2 py-1 text-xs font-semibold hover:bg-muted">{l}</a>)}
+        {letters.map((l) => <a key={l} href={`#letra-${l}`} className="inline-block min-w-8 rounded-md border px-2 py-1 text-center text-xs font-semibold hover:bg-muted">{l}</a>)}
       </div>
       <div className="space-y-2">
         {items.map((e, i) => {

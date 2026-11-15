@@ -167,7 +167,7 @@ function ProfilePage() {
                 <Label>E-mail Atual</Label>
                 <div className="relative opacity-60">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input value={formData.email} readOnly disabled className="pl-9 bg-muted" />
+                  <Input value={formData.email} readOnly disabled aria-label="E-mail atual" className="pl-9 bg-muted" />
                 </div>
               </div>
               <div className="space-y-2">

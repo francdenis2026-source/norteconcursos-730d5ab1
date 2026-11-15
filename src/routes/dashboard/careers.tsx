@@ -105,7 +105,7 @@ function CareersPage() {
                   )}
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm">{c.fullName}</h3>
+                  <h3 aria-level={2} className="font-bold text-sm">{c.fullName}</h3>
                   <p className="text-xs text-muted-foreground">{c.agency}</p>
                 </div>
                 <div className="flex items-center gap-4 pt-2 border-t text-xs text-muted-foreground">
