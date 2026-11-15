@@ -231,3 +231,50 @@ select
  'https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
  'Prova prevista para 24/01/2027. Nota de corte ainda indisponível antes da realização da prova; não estimar nem preencher com nota de outro concurso.'
 where not exists(select 1 from public.contest_reference_info where contest_name='Polícia Civil do Acre — Oficial Investigador de Polícia' and contest_year='2026' and exam_board='IDECAN');
+
+-- Retira do núcleo obrigatório os materiais ativos que não constam do Anexo III.
+-- Os registros são preservados como arquivados; nenhum conteúdo é apagado.
+update public.study_materials
+set content_status='archived',
+    contest_name='Complementar — fora do Anexo III do PC-AC 2026',
+    updated_at=now()
+where slug in (
+ 'pcac-2026-guia-administracao-publica-01-patrimonialismo-e-separacao-publico-privado',
+ 'pcac-2026-guia-administracao-publica-02-burocracia-e-reforma-de-1930-1938',
+ 'pcac-2026-guia-administracao-publica-03-administracao-gerencial',
+ 'pcac-2026-guia-administracao-publica-04-administracao-direta-indireta-e-descentralizacao',
+ 'pcac-2026-guia-administracao-publica-05-decreto-lei-n-200-1967-e-organizacao-federal',
+ 'pcac-2026-guia-administracao-publica-06-reforma-gerencial-e-controles-institucionais',
+ 'pcac-2026-contabilidade-08-custos-materia-prima-rateio-departamentalizacao',
+ 'pcac-2026-contabilidade-09-investimentos-dividendos-mep-metodo-custo',
+ 'pcac-2026-contabilidade-10-impairment-goodwill-reducao-valor-recuperavel',
+ 'pcac-2026-contabilidade-11-estoques-mensuracao-avp-inventarios',
+ 'pcac-2026-contabilidade-12-moeda-estrangeira-cpc02-moeda-funcional',
+ 'pcac-2026-contabilidade-13-custeio-rkw-variavel-ponto-equilibrio',
+ 'pcac-2026-contabilidade-14-imobilizado-depreciacao-provisoes-contingencias',
+ 'pcac-2026-contabilidade-15-dfc-dva-fluxos-caixa-demonstracoes',
+ 'pcac-2026-contabilidade-16-patrimonio-liquido-reservas-dividendos',
+ 'pcac-2026-contabilidade-18-folha-pagamento-encargos-inss-fgts'
+);
+-- Reclassifica a aula integradora de Administração para a disciplina prevista no edital.
+update public.study_materials
+set discipline='Noções de Administração',
+    title='Revisão integradora de Administração',
+    topic_label='Revisão integradora: funções administrativas, processos, equipes e recursos',
+    contest_name='PC-AC 2026',
+    content_status='active',
+    syllabus_topic_order=1,
+    sort_order=16,
+    updated_at=now()
+where slug='pcac-2026-administracao-publica-funcoes-processos-equipes-recursos';
+-- A conciliação bancária integra o tópico de análise de movimentações financeiras do edital.
+update public.study_materials
+set discipline='Contabilidade Geral e Análise Financeira',
+    title='Conciliação bancária: extrato e razão',
+    topic_label='7.2 Conciliação de movimentações financeiras',
+    contest_name='PC-AC 2026',
+    content_status='active',
+    syllabus_topic_order=7,
+    sort_order=8,
+    updated_at=now()
+where slug='pcac-2026-contabilidade-17-sistema-bancario-conciliacao-extrato-razao';
