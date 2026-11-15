@@ -98,15 +98,15 @@ update public.study_materials set body_md=body_md||'
 
 A DRE informa receita bruta de vendas de R$ 328.000, ICMS/faturamento de R$ 59.040, CMV de R$ 146.600, salários e encargos de R$ 12.200, depreciação de R$ 8.000, aluguéis de R$ 14.000 e receita financeira de R$ 16.500.
 
-**1. Valor adicionado bruto:** receita bruta de R$ 328.000 menos insumos adquiridos de terceiros (CMV de R$ 146.600 e aluguéis de R$ 14.000) = R$ 167.400.
+**1. Valor adicionado bruto:** receita bruta de R$ 328.000 menos o custo das mercadorias vendidas de R$ 146.600 = R$ 181.400. O aluguel não é deduzido nessa etapa: é distribuição do valor adicionado aos capitais de terceiros.
 
-**2. Valor adicionado líquido produzido:** 167.400 − depreciação de 8.000 = R$ 159.400.
+**2. Valor adicionado líquido produzido:** 181.400 − depreciação de 8.000 = R$ 173.400.
 
 **3. Valor adicionado recebido em transferência:** receita financeira de R$ 16.500.
 
-Valor adicionado a distribuir = 159.400 + 16.500 = **R$ 175.900**.
+Valor adicionado a distribuir = 173.400 + 16.500 = **R$ 189.900 — alternativa D**.
 
-**Atenção: conferência necessária.** O cálculo acima não coincide com as alternativas do PDF (R$ 130.860; R$ 173.400; R$ 183.500; R$ 189.900). O enunciado/DRE precisa de conferência visual dos valores e da classificação antes de cadastrar um gabarito. Não marque uma alternativa por aproximação.
+**Pegadinha:** aluguel e salários são parcelas de distribuição do valor adicionado, não devem ser subtraídos como se fossem insumos adquiridos de terceiros no cálculo acima. A receita financeira entra como valor adicionado recebido em transferência.
 
 
 ## Questão Consulplan/CFC 2020.1, questão 32 — classificação dos fluxos na DFC
@@ -121,7 +121,7 @@ O enunciado traz aumento de capital (+R$ 15.000), aumento de clientes (−R$ 18.
 
 **Resposta: alternativa A — atividades de investimento e operacionais consumiram caixa.**
 
-**Macete:** compra/venda de imobilizado = investimento; capital e empréstimos = financiamento; clientes, estoques, fornecedores e salários a pagar = operação. A depreciação é adicionada de volta no método indireto, pois não representa saída de caixa.',quiz=quiz||'[{"q":"Na questão CFC 2020.1, a receita financeira de R$ 16.500 é valor adicionado recebido em transferência.","a":true,"why":"Receitas financeiras são valores adicionados recebidos em transferência e somam-se ao valor adicionado líquido produzido."},{"q":"O gabarito da questão 30 pode ser definido com segurança a partir dos valores transcritos e do cálculo apresentado.","a":false,"why":"A transcrição/cálculo não coincide com nenhuma alternativa; é necessário conferir a tabela original antes de registrar a resposta."},{"q":"Na questão CFC 2020.1, as atividades operacionais e de investimento consomem caixa.","a":true,"why":"CFO calculado: −R$ 13.300; CFI: −R$ 19.500. Financiamento recebe entradas."}]'::jsonb,flashcards=flashcards||'[{"f":"Onde entram receitas financeiras na DVA?","b":"Como valor adicionado recebido em transferência."},{"f":"No método indireto da DFC, como tratar depreciação?","b":"Adicionar de volta ao lucro líquido, pois é despesa sem saída de caixa."},{"f":"Qual a classificação de compra/venda de imobilizado na DFC?","b":"Atividades de investimento."},{"f":"Qual a classificação de aumento de capital e empréstimos na DFC?","b":"Atividades de financiamento."}]'::jsonb,updated_at=now() where slug='pcac-2026-contabilidade-15-dfc-dva-fluxos-caixa-demonstracoes' and content_status='active' and body_md not like '%## Questão Consulplan/CFC 2020.1, questão 30 — DVA: valor adicionado a distribuir (alternativa D: R$ 189.900)%';
+**Macete:** compra/venda de imobilizado = investimento; capital e empréstimos = financiamento; clientes, estoques, fornecedores e salários a pagar = operação. A depreciação é adicionada de volta no método indireto, pois não representa saída de caixa.',quiz=quiz||'[{"q":"Na questão CFC 2020.1, a receita financeira de R$ 16.500 é valor adicionado recebido em transferência.","a":true,"why":"Receitas financeiras são valores adicionados recebidos em transferência e somam-se ao valor adicionado líquido produzido."},{"q":"Na questão 30, o aluguel deve ser subtraído junto com o CMV para calcular o valor adicionado bruto.","a":false,"why":"O aluguel é distribuição do valor adicionado aos capitais de terceiros; não é deduzido como insumo nessa etapa."},{"q":"Na questão CFC 2020.1, as atividades operacionais e de investimento consomem caixa.","a":true,"why":"CFO calculado: −R$ 13.300; CFI: −R$ 19.500. Financiamento recebe entradas."}]'::jsonb,flashcards=flashcards||'[{"f":"Onde entram receitas financeiras na DVA?","b":"Como valor adicionado recebido em transferência."},{"f":"No método indireto da DFC, como tratar depreciação?","b":"Adicionar de volta ao lucro líquido, pois é despesa sem saída de caixa."},{"f":"Qual a classificação de compra/venda de imobilizado na DFC?","b":"Atividades de investimento."},{"f":"Qual a classificação de aumento de capital e empréstimos na DFC?","b":"Atividades de financiamento."}]'::jsonb,updated_at=now() where slug='pcac-2026-contabilidade-15-dfc-dva-fluxos-caixa-demonstracoes' and content_status='active' and body_md not like '%## Questão Consulplan/CFC 2020.1, questão 30 — DVA: valor adicionado a distribuir (alternativa D: R$ 189.900)%';
 update public.study_materials set body_md=body_md||'
 
 ## Questão Consulplan/CFC 2020.1, questão 31 — reserva legal e dividendos (alternativa D)
@@ -137,3 +137,20 @@ Capital social: R$ 250.000; reserva legal existente: R$ 46.250; reserva estatut�
 Resposta: **alternativa D — reserva legal de R$ 3.750 e dividendos de R$ 45.250**.
 
 **Pegadinha:** os 5% não podem ultrapassar o teto de 20% do capital social. Primeiro verifique quanto falta para o limite; só depois destine o saldo do lucro.',quiz=quiz||'[{"q":"Na questão CFC 2020.1, a reserva legal a constituir é R$ 3.750.","a":true,"why":"O teto é 20% de R$ 250.000 = R$ 50.000. Já existem R$ 46.250; só cabem R$ 3.750."},{"q":"Na questão CFC 2020.1, os dividendos a pagar são R$ 45.250.","a":true,"why":"140.000 − 3.750 de reserva legal − 56.000 de reserva estatutária − 35.000 de contingências = R$ 45.250."}]'::jsonb,flashcards=flashcards||'[{"f":"Qual o limite da reserva legal?","b":"20% do capital social; a constituição do exercício fica limitada ao espaço restante até esse teto."},{"f":"Como calcular dividendos residuais após destinações do lucro?","b":"Lucro do exercício menos reserva legal, reserva estatutária e reserva para contingências aprovadas."}]'::jsonb,updated_at=now() where slug='pcac-2026-contabilidade-16-patrimonio-liquido-reservas-dividendos' and content_status='active' and body_md not like '%## Questão Consulplan/CFC 2020.1, questão 31 — reserva legal e dividendos (alternativa D)%';
+
+-- Questão CFC 2020.2: encargos de financiamento de matéria-prima quando o produto não é ativo qualificável.
+update public.study_materials set body_md=body_md||'
+
+## Questão Consulplan/CFC 2020.2 — encargos financeiros na aquisição de matéria-prima (alternativa D)
+
+A Indústria Beta compra matéria-prima por $ 50.000 e paga $ 2.500 de encargos de financiamento. O enunciado informa expressamente que o produto final não é ativo qualificável.
+
+A matéria-prima é registrada por **$ 50.000**. Como o produto não é ativo qualificável, os encargos de financiamento não são incorporados ao estoque: são reconhecidos como **despesa financeira de $ 2.500**.
+
+Resposta: **alternativa D**.
+
+**Jeito fácil:** só se capitalizam encargos de empréstimos quando atendem aos critérios de ativo qualificável. Se o enunciado diz que não é ativo qualificável, não some os juros ao custo do estoque.
+
+**Pegadinha:** não confunda custo da matéria-prima com custo financeiro de obter recursos para comprá-la.',quiz=quiz||'[{"q":"Na questão da Indústria Beta, os encargos de financiamento de $ 2.500 integram o custo da matéria-prima, embora o produto final não seja ativo qualificável.","a":false,"why":"Os encargos são despesa financeira, pois o enunciado informa que o produto final não é ativo qualificável."},{"q":"Na questão CFC 2020.2, a matéria-prima é registrada por $ 50.000 e os $ 2.500 como despesa financeira.","a":true,"why":"Alternativa D: custo da matéria-prima $ 50.000 e despesa financeira $ 2.500."}]'::jsonb,flashcards=flashcards||'[{"f":"Como registrar encargos de financiamento quando o produto não é ativo qualificável?","b":"Como despesa financeira, sem incorporá-los ao custo do estoque."},{"f":"Qual o lançamento econômico indicado na questão da Indústria Beta?","b":"Matéria-prima por $ 50.000 e despesa financeira por $ 2.500."}]'::jsonb,updated_at=now() where slug='pcac-2026-contabilidade-11-estoques-mensuracao-avp-inventarios' and content_status='active' and body_md not like '%Questão Consulplan/CFC 2020.2 — encargos financeiros na aquisição de matéria-prima%';
+
+-- Questão CFC 2020.2: efeitos no ativo circulante, já incluída no módulo 14 na parte explicativa acima.
