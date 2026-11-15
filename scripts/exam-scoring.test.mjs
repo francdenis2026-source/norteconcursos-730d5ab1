@@ -118,6 +118,12 @@ test("PC-AC subject weights follow the edital: basics/legal 1 point and specific
   assert.equal(score.maxScore, 160);
   assert.equal(score.approval?.evaluated, true);
   assert.equal(score.approval?.approved, true);
+  const balanced = selectPcacOfficialDistribution(fullExam, () => 0.5);
+  assert.equal(balanced?.length, 100);
+  const oneLessInformatics = fullExam.filter(
+    (item, index) => !(index === 12 && item.subject === "Noções de Informática"),
+  );
+  assert.equal(selectPcacOfficialDistribution(oneLessInformatics, () => 0.5), null);
 
   const noConstitutionalPoints = fullExam.map((item, index) =>
     index >= 24 && index <= 26 ? { ...item, correct: false } : item,
