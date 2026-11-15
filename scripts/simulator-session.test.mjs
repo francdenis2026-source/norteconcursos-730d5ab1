@@ -43,6 +43,25 @@ test("CEBRASPE multiple-choice retains alternatives, and genuine true/false stay
   assert.deepEqual(simulatorAnswers(q), ["A", "B", "C"]);
   assert.deepEqual(simulatorAnswers({ ...q, text: "Julgue o item.", answer: "C" }), ["C", "E"]);
 });
+
+test("curated PC-AC questions support A/B certo-errado and implicit C/E formats", () => {
+  const explicit = {
+    ...q,
+    sourceKind: "curated",
+    board: "AUTORAL",
+    text: "Julgue o item.\\n(A) Certo\\n(B) Errado",
+    answer: "B",
+  };
+  const implicit = {
+    ...q,
+    sourceKind: "curated",
+    board: "AUTORAL",
+    text: "Julgue a afirmação apresentada.",
+    answer: "E",
+  };
+  assert.deepEqual(simulatorAnswers(explicit), ["A", "B"]);
+  assert.deepEqual(simulatorAnswers(implicit), ["C", "E"]);
+});
 test("custom draw is without replacement and never fills shortages with unrelated items", () => {
   const selected = randomSimulator(catalog.slice(0, 2), 20, () => 0);
   assert.equal(selected.length, 2);
@@ -73,6 +92,18 @@ test("draft preserves answers/flags even past deadline without granting extra ti
   assert.equal(restored.draft.startedAt, now - 3_600_000);
   assert.equal(restored.draft.answers[q.id], "B");
   assert.deepEqual(restored.draft.flagged, [q.id]);
+});
+
+test("draft safely restores the PC-AC weighted scoring rule", () => {
+  const restored = restoreSimulatorDraft(
+    { ...draft(), rule: "pcac_2026_weighted" },
+    "alice",
+    "contests",
+    [q],
+    now,
+  );
+  assert.ok(restored);
+  assert.equal(restored.draft.rule, "pcac_2026_weighted");
 });
 test("draft cannot cross accounts, ENEM scope, changed or withdrawn content", () => {
   const d = draft();
