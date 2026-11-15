@@ -423,7 +423,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 68% 50%;
+    /* O emblema fica no centro da arte original: 52% o mantém inteiro dentro da caixa. */
+    object-position: 52% 50%;
     transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
   .home.hr-canvas .hd__inner:hover .hd__media > img {
@@ -433,7 +434,7 @@
     position: absolute;
     inset: 0;
     content: "";
-    background: linear-gradient(90deg, transparent 55%, #0b1220 100%), linear-gradient(0deg, rgb(11 18 32 / 70%), transparent 45%);
+    background: linear-gradient(90deg, transparent 80%, #0b1220 100%), linear-gradient(0deg, rgb(11 18 32 / 70%), transparent 45%);
   }
   .home.hr-canvas .hd__clock {
     position: absolute;
@@ -759,7 +760,7 @@
     backdrop-filter: blur(10px);
   }
   .home.hr-canvas .hd__media::after {
-    background: linear-gradient(90deg, transparent 60%, rgb(22 32 51 / 95%) 100%), linear-gradient(0deg, rgb(11 18 32 / 45%), transparent 40%);
+    background: linear-gradient(90deg, transparent 82%, rgb(22 32 51 / 95%) 100%), linear-gradient(0deg, rgb(11 18 32 / 45%), transparent 40%);
   }
   .home.hr-canvas .hp-promo__inner::before {
     background:
