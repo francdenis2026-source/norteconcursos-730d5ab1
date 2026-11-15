@@ -47,7 +47,7 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 
 ### Recontagem após a expansão — 14/11/2026
 
-- `study_materials`: **167 materiais ativos** associados a PC-AC 2026 — 160 nas 14 disciplinas oficiais (incluída a nova aula de TI) e 7 complementares de Administração Pública. Todos os 167 têm ao menos 5 flashcards e 5 itens de quiz.
+- `study_materials`: **169 materiais ativos** associados a PC-AC 2026 — 162 nas 14 disciplinas oficiais e 7 complementares de Administração Pública. Todos os 169 têm ao menos 5 flashcards e 5 itens de quiz.
 - `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **294 no total**, sendo **221 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
 - Os 201 ativos estão distribuídos por 14 disciplinas: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
 - Separação de proveniência: 180 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
@@ -79,6 +79,9 @@ Migration: `20261115000903_pcac_prisons_identification_legal_update_question_bat
 Foram adicionadas 10 questões autorais ativas, cada uma com gabarito, explicação didática, subassunto e vínculo à disciplina e ao tópico do edital. O lote cobre os arts. 13-A, 13-B e 14-A (requisição de dados, localização e defesa do agente investigado), 155, 158 e 167, cadeia de custódia (158-A a 158-C), 159, 180, 184, 280 e 281 do CPP. Os enunciados foram conferidos contra o texto atualizado oficial da Câmara dos Deputados e não são apresentados como questões oficiais aplicadas pela banca.
 
 Migration: `20261115000013_pcac_cpp_question_batch02.sql`.
+
+
+- Auditoria estrutural final do catálogo: 221 questões ativas, todas com subassunto, tópico, gabarito A–E válido, explicação com pelo menos 60 caracteres e vínculo de edital; nenhuma questão ativa de 2026 ficou sem esses campos. Dos 169 materiais, 35 têm revisão registrada; os demais ainda exigem leitura editorial e validação de conteúdo, apesar de já terem quiz e flashcards.
 
 ### Revisão artigo por artigo do CPP — concluída para os intervalos do edital
 
