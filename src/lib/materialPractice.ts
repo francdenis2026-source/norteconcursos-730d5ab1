@@ -1,4 +1,4 @@
-import { matchesPracticeReview } from "./materialPracticeReview";
+import { matchesDidacticReview, matchesPracticeReview } from "./materialPracticeReview";\nimport { normalizeDifficulty } from "./questionFormat";
 import type { Question } from "./questionFormat";
 import { parseQuestion, questionAnswers } from "./questionFormat";
 import { canonicalSubject, canonicalTopic } from "./subjects";
@@ -113,7 +113,7 @@ export function materialPracticeSearch(scope: MaterialPracticeScope) {
 
 /** Local, unscored exercises of the opened material; never inserted into the public catalog. */
 export function authoredMaterialPractice(
-  quiz: { q: string; a: boolean; why: string }[],
+  quiz: { q: string; a: boolean; why: string; difficulty?: "fácil" | "média" | "difícil"; tip?: string; resolution_steps?: string[]; wrong_feedback?: string }[],
   scope: MaterialPracticeScope,
   key: string,
   label: string,
@@ -150,7 +150,7 @@ export function authoredMaterialPractice(
         explanation: item.why,
         legalBasis: evidence ? [{ url: evidence.source_url, ...(evidence.article ? { artigo: evidence.article } : {}) }] : [],
         checkedAt: approved?.checked_at ?? null,
-        difficulty: "média" as const,
+        difficulty: normalizeDifficulty(item.difficulty),
         state: "",
         category: "",
         kind: "true_false" as const,
