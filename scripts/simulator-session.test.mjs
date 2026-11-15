@@ -49,7 +49,7 @@ test("curated PC-AC questions support A/B certo-errado and implicit C/E formats"
     ...q,
     sourceKind: "curated",
     board: "AUTORAL",
-    text: "Julgue o item.\\n(A) Certo\\n(B) Errado",
+    text: ["Julgue o item.", "(A) Certo", "(B) Errado"].join("\\n"),
     answer: "B",
   };
   const implicit = {
