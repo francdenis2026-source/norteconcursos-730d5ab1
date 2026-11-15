@@ -48,15 +48,39 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 ### Recontagem após a expansão — 14/11/2026
 
 - `study_materials`: **167 materiais ativos** associados a PC-AC 2026 — 160 nas 14 disciplinas oficiais (incluída a nova aula de TI) e 7 complementares de Administração Pública. Todos os 167 têm ao menos 5 flashcards e 5 itens de quiz.
-- `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **274 no total**, sendo **201 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
+- `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **284 no total**, sendo **211 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
 - Os 201 ativos estão distribuídos por 14 disciplinas: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
-- Separação de proveniência: 160 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
+- Separação de proveniência: 170 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
 - Qualidade automatizada após inserção: zero questões ativas de 2026 sem subassunto, zero sem explicação de pelo menos 60 caracteres, zero sem gabarito A–E e zero sem vínculo de tópico.
+
+- As 22 aulas de Legislação Institucional já tinham `legal_review.review_date` e `law_version_checked_at`; foi sincronizado o campo `reviewed_at` com a data de revisão declarada. Verificação: 22/22 com revisão registrada e versão normativa conferida. Isso registra a revisão de fonte declarada, não significa que todas as 22 aulas tenham passado por auditoria integral de cada artigo.
+- Migration correspondente: `20261114235749_pcac_sync_legal_review_timestamps.sql`.
+
+### Lote 2 de questões de Processo Penal — 14/11/2026
+
+Foram adicionadas 10 questões autorais ativas, cada uma com gabarito, explicação didática, subassunto e vínculo à disciplina e ao tópico do edital. O lote cobre os arts. 13-A, 13-B e 14-A (requisição de dados, localização e defesa do agente investigado), 155, 158 e 167, cadeia de custódia (158-A a 158-C), 159, 180, 184, 280 e 281 do CPP. Os enunciados foram conferidos contra o texto atualizado oficial da Câmara dos Deputados e não são apresentados como questões oficiais aplicadas pela banca.
+
+Migration: `20261115000013_pcac_cpp_question_batch02.sql`.
+
+### Revisão artigo por artigo do CPP — concluída para os intervalos do edital
+
+Em 14/11/2026, as aulas de Processo Penal foram confrontadas com o texto atualizado oficial da Câmara dos Deputados:
+
+- Aula de inquérito: CPP arts. 4º a 23. A revisão incluiu o art. 14-A (defensor para agentes investigados por fatos relacionados ao uso de força letal no exercício profissional), diferenciou as requisições dos arts. 13-A e 13-B e qualificou a leitura constitucional do art. 21.
+- Aula de provas e perícias: CPP arts. 155 a 184 e 275 a 281. Foram detalhados os arts. 160 a 184 e os arts. 275 a 281, corrigida a descrição equivocada do art. 280 (suspeição dos juízes aplicável aos peritos) e explicitada a equiparação dos intérpretes no art. 281.
+- As duas aulas continuam ativas e agora têm 10 e 12 flashcards, respectivamente, e 10 e 12 questões de fixação. Ambas receberam metadados de revisão e data de conferência normativa.
+- Fonte primária: texto atualizado do CPP na Câmara dos Deputados: https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-3689-3-outubro-1941-322206-normaatualizada-pe.html
+
+A revisão desses intervalos específicos está concluída; isso não equivale à auditoria integral de todas as demais leis e tópicos de Penal/Processo Penal.
+
+**Migrations versionadas e aplicadas no Supabase:**
+- `20261114235210_pcac_security_information_lesson_questions.sql`
+- `20261114235505_pcac_cpp_articles_review_update.sql`
 
 ### Pontos de cobertura ainda a revisar manualmente
 
 1. Confirmar, no texto integral de cada aula, todos os subitens específicos de Estatística (amostragem, variáveis, distribuições, decis/percentis) e de Arquivologia (SIGAD, classificação, temporalidade e gestão da informação).
-2. Revisar o conteúdo de Direito Penal/Processual Penal, em especial os arts. 275 a 281 do CPP (peritos e intérpretes), e conferir a cobertura literal de todos os intervalos indicados no edital.
+2. Continuar a revisão das demais leis e tópicos de Direito Penal/Processual Penal; os intervalos do CPP arts. 4º a 23, 155 a 184 e 275 a 281 já foram conferidos e ampliados.
 3. Fazer conferência normativa de cada material institucional pela redação vigente em 06/11/2026; alterações posteriores à publicação do edital não devem ser apresentadas como conteúdo cobrável, conforme item 11.5.5.
 4. Separar e rotular de forma inequívoca os materiais complementares de Administração Pública, sem tratá-los como disciplina autônoma do Anexo III.
 
