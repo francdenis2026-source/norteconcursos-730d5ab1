@@ -91,6 +91,12 @@ test("PC-AC subject weights follow the edital: basics/legal 1 point and specific
   assert.equal(pcacWeightForSubject("Língua Portuguesa"), 1);
   assert.equal(pcacWeightForSubject("Noções de Direito Penal e Processual Penal"), 1);
   assert.equal(pcacWeightForSubject("Legislação Institucional"), 1);
+  assert.equal(
+    pcacWeightForSubject(
+      "Realidade étnica, social, geográfica, cultural, política e econômica do Estado do Acre (art. 20 da LC estadual nº 345/2018)",
+    ),
+    1,
+  );
   assert.equal(pcacWeightForSubject("Contabilidade Geral e Análise Financeira"), 2);
   assert.equal(pcacWeightForSubject("Noções de Administração"), 2);
   const fullExam = [
