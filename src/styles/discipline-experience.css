@@ -433,3 +433,53 @@
 .dark .discipline-workspace--detail .discipline-edital-panel__topics label {
   color: #c0c9d2;
 }
+
+
+/* Edital dentro da disciplina: textos auxiliares legíveis e controles confortáveis. */
+.discipline-workspace--detail .discipline-edital-panel__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+}
+.discipline-workspace--detail .discipline-edital-panel__identity > span:last-child,
+.discipline-workspace--detail .discipline-edital-panel__score span,
+.discipline-workspace--detail .discipline-edital-panel__footer > span {
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+.discipline-workspace--detail .discipline-edital-panel__topics label {
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+.discipline-workspace--detail .discipline-edital-panel__topics li {
+  min-height: 2.8rem;
+}
+.discipline-workspace--detail .discipline-edital-panel__topics input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.discipline-workspace--detail .discipline-edital-panel__footer a,
+.discipline-workspace--detail .discipline-edital-panel__action {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.discipline-workspace--detail :is(a, button, input, label):focus-visible {
+  outline: 2px solid var(--discipline-accent, var(--primary));
+  outline-offset: 3px;
+}
+@media (max-width: 680px) {
+  .discipline-workspace--detail .discipline-edital-panel {
+    padding: 0.9rem;
+  }
+  .discipline-workspace--detail .discipline-edital-panel__topics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .discipline-workspace--detail .discipline-edital-panel__topics li {
+    min-height: 3rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .discipline-workspace--detail .discipline-edital-panel__progress span {
+    transition: none;
+  }
+}
