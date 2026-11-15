@@ -1,101 +1,27 @@
-/* Faixa do cubo na homepage: painel escuro nos dois temas, para o cubo preto aparecer bem. */
-html body .sx.hc-band {
-  display: grid !important;
-  min-height: 0 !important;
-  height: auto !important;
-  padding-block: clamp(18px, 3vw, 32px) !important;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-  margin-block: 20px;
-  padding: clamp(18px, 3vw, 36px);
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid rgb(227 177 75 / 0.3);
-  color: #f4efe3;
-  background:
-    radial-gradient(520px 260px at 90% 50%, rgb(56 189 248 / 0.12), transparent 70%),
-    radial-gradient(420px 220px at 0 0, rgb(227 177 75 / 0.16), transparent 70%),
-    linear-gradient(135deg, #0d1422, #151d30);
+/* Cubo no canto superior do hero (só desktop): posicionado por cima, sem ocupar espaço nem mover o layout. */
+.hc-corner {
+  display: none;
 }
-.hc-copy {
-  display: grid;
-  gap: 12px;
-  justify-items: start;
-  min-width: 0;
-}
-.hc-band h2 {
-  margin: 0;
-  color: #fff !important;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  line-height: 1.15;
-}
-.hc-band h2 em {
-  font-style: normal;
-  color: #f2c96b;
-}
-.hc-band p {
-  margin: 0;
-  max-width: 52ch;
-  color: #d6d9df !important;
-}
-.hc-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.hc-legend li {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.8125rem;
-  color: #e8e6df;
-  background: rgb(255 255 255 / 0.08);
-  border: 1px solid rgb(255 255 255 / 0.14);
-}
-.hc-legend li::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 3px;
-  background: var(--dot);
-}
-.hc-legend [data-c="gold"] {
-  --dot: #e3b14b;
-}
-.hc-legend [data-c="blue"] {
-  --dot: #38bdf8;
-}
-.hc-legend [data-c="green"] {
-  --dot: #34d399;
-}
-.hc-legend [data-c="orange"] {
-  --dot: #f97316;
-}
-.hc-legend [data-c="ivory"] {
-  --dot: #e8e2d0;
-}
-.hc-legend [data-c="steel"] {
-  --dot: #8fa3c7;
-}
-.hc-stage {
-  height: 300px;
-  display: grid;
-  place-items: center;
-  min-width: 0;
-  min-height: 280px;
-}
-@media (max-width: 860px) {
-  html body .sx.hc-band {
-    grid-template-columns: minmax(0, 1fr);
+@media (min-width: 1000px) {
+  .sx-band {
+    position: relative;
   }
-  .hc-stage {
-    order: -1;
-    min-height: 240px;
+  html body .hc-corner {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    top: 52px;
+    right: calc((100% - min(100%, 1180px)) / 2 + 46px);
+    width: 84px !important;
+    height: 84px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+  .hc-corner .ncube {
+    margin: 0;
+    pointer-events: auto;
   }
 }

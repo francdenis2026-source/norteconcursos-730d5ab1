@@ -18,7 +18,6 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as TesteCuboRouteImport } from './routes/teste-cubo'
 import { Route as ApiCancellationEmailRouteImport } from './routes/api/cancellation-email'
 import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
 import { Route as ApiVoiceSpeechRouteImport } from './routes/api/voice-speech'
@@ -128,11 +127,6 @@ const SuporteRoute = SuporteRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TesteCuboRoute = TesteCuboRouteImport.update({
-  id: '/teste-cubo',
-  path: '/teste-cubo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiCancellationEmailRoute = ApiCancellationEmailRouteImport.update({
@@ -477,7 +471,6 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
-  '/teste-cubo': typeof TesteCuboRoute
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/api/voice-speech': typeof ApiVoiceSpeechRoute
@@ -553,7 +546,6 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
-  '/teste-cubo': typeof TesteCuboRoute
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/api/voice-speech': typeof ApiVoiceSpeechRoute
@@ -629,7 +621,6 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
-  '/teste-cubo': typeof TesteCuboRoute
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/api/voice-speech': typeof ApiVoiceSpeechRoute
@@ -708,7 +699,6 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
-    | '/teste-cubo'
     | '/api/cancellation-email'
     | '/api/solve-question'
     | '/api/voice-speech'
@@ -784,7 +774,6 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
-    | '/teste-cubo'
     | '/api/cancellation-email'
     | '/api/solve-question'
     | '/api/voice-speech'
@@ -859,7 +848,6 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
-    | '/teste-cubo'
     | '/api/cancellation-email'
     | '/api/solve-question'
     | '/api/voice-speech'
@@ -937,7 +925,6 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
-  TesteCuboRoute: typeof TesteCuboRoute
   ApiCancellationEmailRoute: typeof ApiCancellationEmailRoute
   ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
   ApiVoiceSpeechRoute: typeof ApiVoiceSpeechRoute
@@ -1008,13 +995,6 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/teste-cubo': {
-      id: '/teste-cubo'
-      path: '/teste-cubo'
-      fullPath: '/teste-cubo'
-      preLoaderRoute: typeof TesteCuboRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/cancellation-email': {
@@ -1634,7 +1614,6 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
-  TesteCuboRoute: TesteCuboRoute,
   ApiCancellationEmailRoute: ApiCancellationEmailRoute,
   ApiSolveQuestionRoute: ApiSolveQuestionRoute,
   ApiVoiceSpeechRoute: ApiVoiceSpeechRoute,
