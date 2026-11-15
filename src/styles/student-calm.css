@@ -81,3 +81,57 @@
 :root.dark body .app-shell[data-area="student"] #dashboard-content :is(h1, h2, h3) {
   color: color-mix(in srgb, var(--student-ink) 94%, var(--student-canvas));
 }
+
+
+/* Leitura confortável — tokens finais do dashboard (modo claro e escuro). */
+:root:not(.dark) .app-shell[data-area="student"]:not(#_):not(#_):not(#_) {
+  --sp-canvas: #e9e8e3;
+  --sp-surface: #f4f3ef;
+  --sp-soft: #eeede8;
+  --sp-line: #cbc9c1;
+  --sp-ink: #292d33;
+  --sp-muted: #555b63;
+}
+:root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_) {
+  --sp-canvas: #0d171d;
+  --sp-surface: #13212a;
+  --sp-soft: #192a34;
+  --sp-line: #2a3b46;
+  --sp-ink: #bac4ce;
+  --sp-muted: #9ba8b5;
+}
+
+/* Reduz o aspecto de texto luminoso sem sacrificar contraste ou legibilidade. */
+:root.dark body .app-shell[data-area="student"] #dashboard-content {
+  color: #bac4ce;
+  -webkit-font-smoothing: antialiased;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  :is(h1, h2, h3, h4, [data-slot="card-title"], strong, b) {
+  color: #c4cdd6 !important;
+  text-shadow: none !important;
+}
+:root.dark body .app-shell[data-area="student"] #dashboard-content
+  :is(p, li, small, label, figcaption, .text-muted-foreground, [data-slot="card-description"]) {
+  color: #9ba8b5;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content
+  :is(h1, h2, h3, h4, [data-slot="card-title"], strong, b) {
+  color: #292d33;
+  text-shadow: none !important;
+}
+:root:not(.dark) body .app-shell[data-area="student"] #dashboard-content
+  :is(p, li, small, label, figcaption, .text-muted-foreground, [data-slot="card-description"]) {
+  color: #555b63;
+}
+
+/* Superfícies neutras: destaque reservado a ações, estados e dados importantes. */
+body .app-shell[data-area="student"] #dashboard-content
+  :is(.student-home__card, .student-desk__panel, .student-desk__next, .student-hub__results) {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08) !important;
+}
+body .app-shell[data-area="student"] #dashboard-content
+  :is(button, a, [role="button"]):focus-visible {
+  outline: 2px solid var(--sp-gold, #b58a36);
+  outline-offset: 3px;
+}
