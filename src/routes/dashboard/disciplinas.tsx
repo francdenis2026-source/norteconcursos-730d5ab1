@@ -136,12 +136,7 @@ function DisciplinesPage() {
   const navigate = Route.useNavigate();
   const [d, setD] = React.useState(initialSearch.d);
   const [eixo, setEixo] = React.useState(initialSearch.eixo);
-  // Navegar entre disciplinas e áreas não deve escrever na URL; o parâmetro
-  // inicial (vindo de um link) é lido uma vez e removido da barra de endereço.
-  React.useEffect(() => {
-    if (initialSearch.d || initialSearch.eixo) void navigate({ search: {}, replace: true });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
-  }, []);
+  // Mantém disciplina/eixo na URL para permitir recarregar, compartilhar e recuperar a área aberta.
   const smartBack = useSmartBack();
   // Voltar de verdade (tela de onde o aluno veio); sem histórico, abre o hub de materiais.
   const toHub = React.useCallback(() => {
@@ -261,6 +256,23 @@ function DisciplineDetail({
     } catch {
       setCompletedTopics({});
     }
+  }, [activeEditionId]);
+  React.useEffect(() => {
+    if (!activeEditionId) return;
+    const key = "norte-edital-progress:" + activeEditionId;
+    const syncFromOtherTab = (event: StorageEvent) => {
+      if (event.key !== key && event.key !== null) return;
+      try {
+        const value: unknown = JSON.parse(localStorage.getItem(key) ?? "{}");
+        setCompletedTopics(value && typeof value === "object" && !Array.isArray(value)
+          ? value as Record<string, boolean>
+          : {});
+      } catch {
+        setCompletedTopics({});
+      }
+    };
+    window.addEventListener("storage", syncFromOtherTab);
+    return () => window.removeEventListener("storage", syncFromOtherTab);
   }, [activeEditionId]);
   const toggleSyllabusTopic = (topicId: string) => {
     setCompletedTopics((current) => {
