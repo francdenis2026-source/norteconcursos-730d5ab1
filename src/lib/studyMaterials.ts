@@ -1,4 +1,4 @@
-import type { MaterialPracticeReview } from "./materialPracticeReview";
+import type { MaterialDidacticReview, MaterialPracticeReview } from "./materialPracticeReview";
 import { canonicalSubject, canonicalTopic } from "@/lib/subjects";
 import { userStorageKey } from "@/lib/userStorage";
 import { useQuery } from "@tanstack/react-query";
@@ -28,10 +28,10 @@ export type StudyMaterialSummary = {
 };
 
 export type Flashcard = { f: string; b: string };
-export type QuizItem = { q: string; a: boolean; why: string };
+export type QuizItem = { q: string; a: boolean; why: string; difficulty?: 'fácil' | 'média' | 'difícil'; tip?: string; resolution_steps?: string[]; wrong_feedback?: string };
 
 export type StudyMaterial = StudyMaterialSummary & {
-  practice_review?: MaterialPracticeReview | null;
+  practice_review?: MaterialPracticeReview | MaterialDidacticReview | null;
   legal_review?: LegalReview | null;
   flashcards: Flashcard[] | null;
   quiz: QuizItem[] | null;
