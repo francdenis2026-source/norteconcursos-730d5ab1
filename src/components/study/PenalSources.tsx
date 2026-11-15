@@ -161,7 +161,7 @@ export function PenalSources({ tab, crimeId }: { tab: keyof typeof CONTEXT; crim
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             {notes.map((note) => (
               <article key={note.title} className="text-sm">
-                <h4 className="font-semibold">{note.title}</h4>
+                <h4 aria-level={3} className="font-semibold">{note.title}</h4>
                 <p className="mt-1 leading-6 text-muted-foreground">{note.explanation}</p>
                 {isStudySourceUrl(note.source) && (
                   <a

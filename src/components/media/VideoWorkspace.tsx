@@ -254,7 +254,7 @@ export function VideoWorkspace({
         <nav className="vl__rail" aria-label="Disciplinas">
           {railGroups.map((group) => (
             <div key={group} className="vl__rail-group">
-              <h3>{group}</h3>
+              <h3 aria-level={2}>{group}</h3>
               <ul>
                 {items.filter((item) => item.group === group).map((item) => {
                   const itemTone = TONES[items.indexOf(item) % TONES.length]!;

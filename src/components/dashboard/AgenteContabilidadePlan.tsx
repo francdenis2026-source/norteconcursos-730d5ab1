@@ -28,7 +28,7 @@ export function AgenteContabilidadePlan() {
       </CardHeader>
       <CardContent className="space-y-8">
         <section className="space-y-3">
-          <h3 className="text-sm font-black">Prioridades</h3>
+          <h3 aria-level={2} className="text-sm font-black">Prioridades</h3>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] text-left text-xs">
               <thead className="text-muted-foreground">
