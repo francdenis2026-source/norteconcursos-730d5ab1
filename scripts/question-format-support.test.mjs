@@ -50,6 +50,9 @@ test('Acre legal references accept only reviewed official legislation and the PC
     'https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf',
     'https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html',
     'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html',
+    'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15358-24-marco-2026-798846-norma-pl.html',
+    'https://legis.senado.leg.br/norma/41759201',
+    'https://legis.senado.leg.br/norma/42878591/publicacao/42881818',
   ];
   for (const url of approved) assert.equal(isOfficialUrl(url), true, url);
   const rejected = [
@@ -62,6 +65,9 @@ test('Acre legal references accept only reviewed official legislation and the PC
     'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html?x=1',
     'https://legis.ac.gov.br.evil.test/detalhar/674-1',
     'https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9999',
+    'https://legis.senado.leg.br/norma/41759201?next=evil',
+    'https://legis.senado.leg.br/norma/99999999',
+    'https://www2.camara.leg.br/legin/fed/lei/2026/lei-15358-24-marco-2026-798846-norma-pl.html?x=1',
     'https://sead.ac.gov.br/other.pdf',
   ];
   for (const url of rejected) assert.equal(isOfficialUrl(url), false, url);
