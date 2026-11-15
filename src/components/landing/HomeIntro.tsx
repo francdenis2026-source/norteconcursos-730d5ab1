@@ -73,7 +73,7 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
         <HeroBackdropClock />
         {!mobile && (
           <div className="hc-corner">
-            <NorteCube size={0.44} />
+            <NorteCube size={0.37} />
           </div>
         )}
         <div className="sx sx-hero">
