@@ -95,7 +95,7 @@ export interface SimulatorDraft {
   answers: Record<string, Answer>;
   flagged: string[];
   /** Regra de correção da tentativa ("net_one_to_one" só quando registrada para a edição). */
-  rule?: "simple" | "net_one_to_one";
+  rule?: "simple" | "net_one_to_one" | "pcac_2026_weighted";
   /** Questões que o aluno pulou ou deixou em branco de propósito; nunca contam como resposta. */
   skipped?: string[];
   currentIndex: number;
@@ -179,7 +179,7 @@ export function restoreSimulatorDraft(
     typeof d.answers !== "object" ||
     !Array.isArray(d.flagged) ||
     !(d.skipped === undefined || Array.isArray(d.skipped)) ||
-    !(d.rule === undefined || d.rule === "simple" || d.rule === "net_one_to_one") ||
+    !(d.rule === undefined || d.rule === "simple" || d.rule === "net_one_to_one" || d.rule === "pcac_2026_weighted") ||
     !(d.contestFilter === null || typeof d.contestFilter === "string") ||
     !(d.subjectFilter === null || typeof d.subjectFilter === "string") ||
     (d.phase === "active" && d.endedAt !== null) ||
