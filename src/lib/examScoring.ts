@@ -202,6 +202,18 @@ type PcacSubjectGroup =
   | "legal_institutional"
   | "specific";
 
+const PCAC_OFFICIAL_DISTRIBUTION: Record<PcacSubjectGroup, number> = {
+  basic_portuguese: 6,
+  basic_logic: 6,
+  basic_it: 8,
+  basic_acre: 4,
+  legal_constitutional: 3,
+  legal_administrative: 3,
+  legal_penal: 6,
+  legal_institutional: 4,
+  specific: 60,
+};
+
 function pcacSubjectGroup(subject: string): PcacSubjectGroup {
   const normalized = fold(subject);
   if (normalized === fold("Língua Portuguesa")) return "basic_portuguese";
@@ -230,21 +242,42 @@ function pcacSubjectGroup(subject: string): PcacSubjectGroup {
   return "specific";
 }
 
+export function selectPcacOfficialDistribution<T extends { subject: string }>(
+  pool: readonly T[],
+  random: () => number = Math.random,
+): T[] | null {
+  const buckets = new Map<PcacSubjectGroup, T[]>();
+  for (const item of pool) {
+    const group = pcacSubjectGroup(item.subject);
+    const bucket = buckets.get(group) ?? [];
+    bucket.push(item);
+    buckets.set(group, bucket);
+  }
+  const selected: T[] = [];
+  const shuffle = <U,>(items: U[]): U[] => {
+    const copy = [...items];
+    for (let index = copy.length - 1; index > 0; index -= 1) {
+      const target = Math.floor(random() * (index + 1));
+      [copy[index], copy[target]] = [copy[target], copy[index]];
+    }
+    return copy;
+  };
+  for (const [group, required] of Object.entries(PCAC_OFFICIAL_DISTRIBUTION) as [
+    PcacSubjectGroup,
+    number,
+  ][]) {
+    const bucket = buckets.get(group) ?? [];
+    if (bucket.length < required) return null;
+    selected.push(...shuffle(bucket).slice(0, required));
+  }
+  return shuffle(selected);
+}
+
 function evaluatePcacApproval(
   items: { subject: string; correct: boolean }[],
   score: number,
 ): ApprovalCheck {
-  const expected: Record<PcacSubjectGroup, number> = {
-    basic_portuguese: 6,
-    basic_logic: 6,
-    basic_it: 8,
-    basic_acre: 4,
-    legal_constitutional: 3,
-    legal_administrative: 3,
-    legal_penal: 6,
-    legal_institutional: 4,
-    specific: 60,
-  };
+  const expected = PCAC_OFFICIAL_DISTRIBUTION;
   const counts = new Map<PcacSubjectGroup, { total: number; correct: number }>();
   for (const item of items) {
     const group = pcacSubjectGroup(item.subject);
