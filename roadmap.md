@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Verificar sintaxe de 881 arquivos (incluindo 75 rotas e 3 funções legadas); corrigir resolução das dependências das notificações; 15 testes aprovados, validação Deno e compilação automática aprovadas.
+
 - [x] Refinar os cartões de planos e a comparação/dúvidas da homepage; leitura e interação conferidas em 1280px e 827px nos dois temas (a homepage de celular usa outra apresentação, preservada).
 
 - [x] Corrigir o enquadramento das artes PC PI e PC PR em todas as apresentações existentes; cards públicos conferidos em celular e computador, faixa do painel ajustada (verificação autenticada indisponível).

@@ -48,6 +48,8 @@ Orientação do usuário: trabalhar uma área por vez, com apresentação profis
 Homepage, área do aluno e totais administrativos usam `usePlatformQuestionSummary` (RPC `get_public_question_summary` e cache `public-question-summary`) para **Total cadastrado** e **Disponíveis para treinar**. Não substituir esses totais por `catalog.length` ou por uma seleção de Concursos/ENEM. Contagens por área, busca, origem, disciplina ou banca devem ser identificadas como **seleção de estudo**. Questões pessoais ficam fora do total global. **Revisadas com exemplo** é um indicador distinto: usar `reviewedQuestionBank`, com a mesma exigência de revisão didática e elegibilidade em todas as telas.
 
 - A pre-enforced resolver in `vite.config.ts` maps bare `jspdf` to its ES build, because the package lacks Worker export conditions and synced code may import it directly.
+- Keep the source syntax regression test on Vite's production transformer to catch malformed edits across screens, shared modules, scripts and background functions.
+- Legacy push function dependencies use Deno automatic node-module resolution so deployment does not depend on packages installed for the frontend.
 
 <!-- ASTRYX:START -->
 Astryx v0.7.11 · 174 components
