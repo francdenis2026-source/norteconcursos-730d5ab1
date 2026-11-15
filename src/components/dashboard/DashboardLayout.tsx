@@ -162,13 +162,6 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Administração",
-    label: "Cadastros por dia",
-    icon: User,
-    href: "/dashboard/admin-signups",
-    adminOnly: true,
-  },
-  {
-    group: "Administração",
     label: "Atendimento",
     icon: FileStack,
     href: "/dashboard/admin-support",

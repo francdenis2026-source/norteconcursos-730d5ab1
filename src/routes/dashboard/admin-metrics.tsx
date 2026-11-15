@@ -1,6 +1,6 @@
 import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import {
   Activity,
   FileStack,
@@ -98,6 +98,53 @@ function timeAgo(iso: string): string {
   const h = Math.floor(min / 60);
   if (h < 24) return `há ${h} h`;
   return `há ${Math.floor(h / 24)} d`;
+}
+
+/** Gráfico de barras simples (SVG), uma ou duas séries por dia, com texto equivalente para leitores de tela. */
+function MiniBars({
+  series,
+  labels,
+  label,
+}: {
+  series: { name: string; tone: string; values: number[] }[];
+  labels: string[];
+  label: string;
+}) {
+  const n = labels.length;
+  const max = Math.max(1, ...series.flatMap((s) => s.values));
+  const W = 300;
+  const H = 72;
+  const slot = W / n;
+  const bar = Math.max(1.5, (slot - 2) / series.length);
+  return (
+    <figure>
+      <svg viewBox={`0 0 ${W} ${H + 14}`} role="img" aria-label={label} className="w-full">
+        <line x1="0" x2={W} y1={H} y2={H} className="stroke-border" strokeWidth="1" />
+        {labels.map((_, i) =>
+          series.map((s, k) => {
+            const v = s.values[i] ?? 0;
+            const h = (v / max) * (H - 4);
+            return (
+              <rect
+                key={`${i}-${s.name}`}
+                x={i * slot + 1 + k * bar}
+                y={H - h}
+                width={bar - 0.5}
+                height={Math.max(v ? 1.5 : 0, h)}
+                rx="1"
+                className={`fill-current ${s.tone}`}
+              >
+                <title>{`${labels[i]} · ${s.name}: ${v}`}</title>
+              </rect>
+            );
+          }),
+        )}
+        <text x="0" y={H + 11} className="fill-muted-foreground" fontSize="8">{labels[0]}</text>
+        <text x={W} y={H + 11} textAnchor="end" className="fill-muted-foreground" fontSize="8">{labels[n - 1]}</text>
+      </svg>
+      <figcaption className="sr-only">{label}</figcaption>
+    </figure>
+  );
 }
 
 function AdminMetricsPage() {
@@ -237,41 +284,61 @@ function AdminMetricsPage() {
         ...raw.results.filter((r) => acreDateKey(new Date(r.created_at)) >= since).map((r) => r.user_id),
       ].filter((id) => kind.get(id) === "student"),
     ).size;
-    return { byPlan, byDay, active, totals, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };
+    const days30 = lastDays(30).map((day) => ({
+      day,
+      n: raw.profiles.filter((p) => acreDateKey(new Date(p.created_at)) === day).length,
+    }));
+    const students = raw.profiles.filter((p) => kind.get(p.id) === "student");
+    const paid = students.filter((p) => (p.subscription_tier ?? "free") !== "free").length;
+    const sum = (list: { n: number }[]) => list.reduce((n, d) => n + d.n, 0);
+    const signups = {
+      today: days30[days30.length - 1]?.n ?? 0,
+      d7: sum(days30.slice(-7)),
+      d30: sum(days30),
+    };
+    return {
+      byPlan,
+      byDay,
+      active,
+      totals,
+      paid,
+      signups,
+      days30,
+      accounts: raw.profiles.length,
+      maxAi: Math.max(1, ...byDay.map((d) => d.ai)),
+    };
   }, [raw]);
+
+  const recentSignups = useMemo(
+    () =>
+      raw
+        ? [...raw.profiles].sort((x, y) => y.created_at.localeCompare(x.created_at)).slice(0, 6)
+        : [],
+    [raw],
+  );
 
   if (!isAdmin)
     return <p className="p-6 text-muted-foreground">Acesso restrito ao administrador.</p>;
 
+  const recentExams = activity.filter((ev) => ev.key.startsWith("exam-")).slice(0, 6);
+  const planTotal = Math.max(1, stats?.totals.students ?? 1);
+
   return (
-    <div className="mx-auto max-w-6xl space-y-6">
-      <PageHero
-        image="command-room"
-        size="sm"
-        kicker="Administração · ao vivo"
-        icon={Radar}
-        title={
-          <>
-            Central de <em>controle</em>
-          </>
-        }
-        description="Visão ao vivo de cadastros, atividade e desempenho dos alunos na plataforma. Atualiza sozinha a cada 20 segundos."
-        actions={
-          <Button className="hero-btn-ghost gap-2" onClick={() => void load()} disabled={loading}>
+    <div className="mx-auto max-w-6xl space-y-3">
+      <header className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border bg-card px-4 py-3">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Administração · ao vivo
+          </p>
+          <h1 className="text-xl font-black leading-tight m-0 font-sans!">Central de controle</h1>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="hidden text-xs text-muted-foreground sm:inline">Atualiza a cada 20 s</span>
+          <Button size="sm" variant="outline" className="gap-2" onClick={() => void load()} disabled={loading}>
             <RefreshCw className="h-4 w-4" aria-hidden /> Atualizar
           </Button>
-        }
-      >
-        <div className="page-hero__stats">
-          <HeroStat icon={Users} label="Alunos cadastrados" value={stats?.totals.students ?? 0} />
-          <HeroStat icon={ShieldCheck} label="Administradores" value={stats?.totals.admins ?? 0} />
-          <HeroStat icon={Activity} label="Ativos (7 dias)" value={stats?.active ?? 0} />
-          <HeroStat icon={Trophy} label="Provas resolvidas" value={raw?.results.length ?? 0} />
-          <HeroStat icon={Trophy} label="Simulados feitos" value={raw?.simulados ?? 0} />
-          <HeroStat icon={FileStack} label="Provas enviadas" value={raw?.docs ?? 0} />
-          <HeroStat icon={Sparkles} label="Uso de IA total" value={raw?.usage.length ?? 0} />
         </div>
-      </PageHero>
+      </header>
 
       {error && (
         <p className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
@@ -279,116 +346,131 @@ function AdminMetricsPage() {
         </p>
       )}
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-            </span>
-            Atividade ao vivo
-          </CardTitle>
-          <CardDescription>Últimos cadastros e simulados concluídos na plataforma.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          {activity.length ? (
-            <ul className="space-y-2.5 text-sm">
-              {activity.map((ev) => (
-                <li key={ev.key} className="flex items-center gap-3">
-                  <ev.icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
-                  <span className="flex-1 text-foreground">{ev.label}</span>
-                  <span className="shrink-0 text-right text-xs text-muted-foreground">
-                    <span className="block font-semibold text-foreground/80">{acreDateTime(ev.at)}</span>
-                    {timeAgo(ev.at)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm text-muted-foreground">Nenhuma atividade registrada ainda.</p>
-          )}
-        </CardContent>
-      </Card>
-
       {loading || !stats ? (
         <div className="flex justify-center py-10">
           <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" />
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Por plano</CardTitle>
-              <CardDescription>
-                Contas por tipo (aluno, administrador, outros) e resoluções com IA dos alunos em
-                cada plano.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-left text-muted-foreground">
-                    <th className="py-2">Plano</th>
-                    <th>Alunos</th>
-                    <th>Admins</th>
-                    <th>Outros</th>
-                    <th>Uso de IA</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {stats.byPlan.map((row) => (
-                    <tr key={row.name} className="border-t border-border">
-                      <td className="py-2 font-medium text-foreground">{row.name}</td>
-                      <td>{row.students}</td>
-                      <td>{row.admins}</td>
-                      <td>{row.others}</td>
-                      <td>{row.ai}</td>
-                    </tr>
-                  ))}
-                  <tr className="border-t-2 border-border font-semibold text-foreground">
-                    <td className="py-2">Total</td>
-                    <td>{stats.totals.students}</td>
-                    <td>{stats.totals.admins}</td>
-                    <td>{stats.totals.others}</td>
-                    <td>{stats.byPlan.reduce((n, r) => n + r.ai, 0)}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Outros = moderadores. Administradores não entram na contagem de alunos nem no uso de
-                IA.
+        <>
+          <section aria-label="Indicadores" className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+            {[
+              { icon: Users, label: "Contas", value: stats.accounts, sub: `${stats.totals.students} alunos · ${stats.totals.admins + stats.totals.others} equipe` },
+              { icon: UserPlus, label: "Novos (7 dias)", value: stats.signups.d7, sub: `hoje ${stats.signups.today} · 30 dias ${stats.signups.d30}` },
+              { icon: Activity, label: "Ativos (7 dias)", value: stats.active, sub: `${Math.round((stats.active / planTotal) * 100)}% dos alunos` },
+              { icon: ShieldCheck, label: "Planos pagos", value: stats.paid, sub: `${Math.round((stats.paid / planTotal) * 100)}% dos alunos` },
+              { icon: Trophy, label: "Simulados", value: raw?.simulados ?? 0, sub: `${raw?.results.length ?? 0} provas resolvidas` },
+              { icon: Sparkles, label: "Uso de IA", value: raw?.usage.length ?? 0, sub: `hoje ${stats.byDay[stats.byDay.length - 1]?.ai ?? 0}` },
+            ].map(({ icon: Icon, label, value, sub }) => (
+              <div key={label} className="rounded-xl border border-border bg-card px-3 py-2.5">
+                <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+                  <Icon className="h-3.5 w-3.5" aria-hidden /> {label}
+                </p>
+                <p className="text-2xl font-black tabular-nums leading-tight text-foreground">{value.toLocaleString("pt-BR")}</p>
+                <p className="truncate text-[11px] text-muted-foreground">{sub}</p>
+              </div>
+            ))}
+          </section>
+
+          <section aria-label="Gráficos" className="grid grid-cols-1 gap-3 lg:grid-cols-3">
+            <div className="rounded-xl border border-border bg-card p-3">
+              <h2 className="text-sm font-bold m-0 font-sans!">Cadastros por dia</h2>
+              <p className="mb-2 text-[11px] text-muted-foreground">{stats.signups.d30} nos últimos 30 dias · pico de {Math.max(0, ...stats.days30.map((d) => d.n))} em um dia</p>
+              <MiniBars
+                label={`Cadastros por dia nos últimos 30 dias: ${stats.signups.d30} no total`}
+                series={[{ name: "Cadastros", tone: "text-primary", values: stats.days30.map((d) => d.n) }]}
+                labels={stats.days30.map((d) => `${d.day.slice(8, 10)}/${d.day.slice(5, 7)}`)}
+              />
+            </div>
+            <div className="rounded-xl border border-border bg-card p-3">
+              <h2 className="text-sm font-bold m-0 font-sans!">Alunos por plano</h2>
+              <p className="mb-2 text-[11px] text-muted-foreground">{stats.totals.students} alunos · {stats.paid} em planos pagos</p>
+              <ul className="space-y-2">
+                {stats.byPlan.map((row) => (
+                  <li key={row.name} className="text-xs">
+                    <div className="flex justify-between gap-2">
+                      <span className="font-medium text-foreground">{row.name}</span>
+                      <span className="tabular-nums text-muted-foreground">
+                        {row.students} · {Math.round((row.students / planTotal) * 100)}%
+                      </span>
+                    </div>
+                    <div className="mt-1 h-2 overflow-hidden rounded bg-muted">
+                      <div className="h-2 rounded bg-primary" style={{ width: `${(row.students / planTotal) * 100}%` }} />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-3">
+              <h2 className="text-sm font-bold m-0 font-sans!">Atividade · 14 dias</h2>
+              <p className="mb-2 flex gap-3 text-[11px] text-muted-foreground">
+                <span><span className="text-primary">■</span> IA</span>
+                <span><span className="text-amber-500">■</span> Provas</span>
+                <span>pico de {Math.max(0, ...stats.byDay.map((d) => Math.max(d.ai, d.exams)))} por dia</span>
               </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Últimos 14 dias</CardTitle>
-              <CardDescription>
-                Uso de IA por dia (barras), provas resolvidas e novos cadastros.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-1.5">
-              {stats.byDay.map((d) => (
-                <div key={d.day} className="flex items-center gap-3 text-xs">
-                  <span className="w-12 shrink-0 text-muted-foreground">
-                    {d.day.slice(8, 10)}/{d.day.slice(5, 7)}
-                  </span>
-                  <div className="h-3 flex-1 rounded bg-muted">
-                    <div
-                      className="h-3 rounded bg-primary"
-                      style={{ width: `${(d.ai / stats.maxAi) * 100}%` }}
-                    />
-                  </div>
-                  <span className="w-36 shrink-0 text-right text-foreground">
-                    {d.ai} IA · {d.exams} provas · {d.signups} cad.
-                  </span>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
+              <MiniBars
+                label="Uso de IA e provas resolvidas por dia nos últimos 14 dias"
+                series={[
+                  { name: "IA", tone: "text-primary", values: stats.byDay.map((d) => d.ai) },
+                  { name: "Provas", tone: "text-amber-500", values: stats.byDay.map((d) => d.exams) },
+                ]}
+                labels={stats.byDay.map((d) => `${d.day.slice(8, 10)}/${d.day.slice(5, 7)}`)}
+              />
+            </div>
+          </section>
+
+          <section aria-label="Atividade recente" className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+            <div className="rounded-xl border border-border bg-card p-3">
+              <div className="mb-2 flex items-center justify-between">
+                <h2 className="text-sm font-bold m-0 font-sans!">Últimos cadastros</h2>
+                <Link to="/dashboard/admin-students" className="text-xs font-semibold text-primary hover:underline">
+                  Ver todos os alunos →
+                </Link>
+              </div>
+              {recentSignups.length ? (
+                <ul className="divide-y divide-border text-sm">
+                  {recentSignups.map((p) => (
+                    <li key={p.id} className="flex items-center gap-3 py-1.5">
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate font-medium text-foreground">{p.full_name || p.email || "Cadastro sem nome"}</span>
+                        <span className="block truncate text-[11px] text-muted-foreground">{p.email}</span>
+                      </span>
+                      <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-[11px] text-muted-foreground">
+                        {SUBSCRIPTION_PLANS.find((pl) => pl.id === (p.subscription_tier ?? "free"))?.name ?? "Gratuito"}
+                      </span>
+                      <span className="w-20 shrink-0 whitespace-nowrap text-right text-[11px] text-muted-foreground">{timeAgo(p.created_at)}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-muted-foreground">Nenhum cadastro ainda.</p>
+              )}
+            </div>
+            <div className="rounded-xl border border-border bg-card p-3">
+              <h2 className="mb-2 text-sm font-bold m-0 font-sans!">Últimos simulados concluídos</h2>
+              {recentExams.length ? (
+                <ul className="divide-y divide-border text-sm">
+                  {recentExams.map((ev) => (
+                    <li key={ev.key} className="flex items-center gap-3 py-1.5">
+                      <ev.icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                      <span className="min-w-0 flex-1 truncate text-foreground">{ev.label.replace(" concluiu um simulado", "")}</span>
+                      <span className="w-20 shrink-0 whitespace-nowrap text-right text-[11px] text-muted-foreground">{timeAgo(ev.at)}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-muted-foreground">Nenhum simulado concluído ainda.</p>
+              )}
+            </div>
+          </section>
+        </>
       )}
 
+      <details className="rounded-xl border border-border bg-card">
+        <summary className="cursor-pointer px-4 py-3 text-sm font-bold">
+          Acervo de questões e provas enviadas
+          <span className="ml-2 text-xs font-normal text-muted-foreground">conteúdo da plataforma (recolhido)</span>
+        </summary>
+        <div className="space-y-6 p-3">
       <QuestionTotals enabled={isAdmin} userId={user?.id} />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card>
@@ -523,6 +605,8 @@ function AdminMetricsPage() {
           </Card>
         </div>
       </div>
+        </div>
+      </details>
     </div>
   );
 }
