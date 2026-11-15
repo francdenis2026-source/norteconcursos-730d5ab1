@@ -368,3 +368,68 @@
   }
   .discipline-card[data-subject]:hover { transform: none; }
 }
+
+
+/* Disciplina: acento como orientação, não como fonte de brilho. */
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="portugues"] { --discipline-accent: oklch(0.70 0.09 20); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="matematica"] { --discipline-accent: oklch(0.72 0.08 238); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="logica"] { --discipline-accent: oklch(0.72 0.08 292); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="informatica"] { --discipline-accent: oklch(0.72 0.08 268); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="quimica"] { --discipline-accent: oklch(0.70 0.07 158); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="fisica"] { --discipline-accent: oklch(0.72 0.08 76); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="estatistica"] { --discipline-accent: oklch(0.70 0.07 205); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="contabilidade"] { --discipline-accent: oklch(0.72 0.08 48); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="ingles"] { --discipline-accent: oklch(0.70 0.08 326); }
+.dark :is(.discipline-workspace--detail, .discipline-card)[data-subject="geral"] { --discipline-accent: oklch(0.72 0.035 245); }
+
+/* Ação principal com contraste estável em todas as cores de disciplina e nos dois temas. */
+.discipline-workspace--detail .discipline-practice {
+  background: #263b49;
+  color: #f2f4f5;
+  border: 1px solid #405765;
+  box-shadow: none;
+  font-weight: 650;
+}
+.discipline-workspace--detail .discipline-practice:hover {
+  background: #304b5b;
+  border-color: #607987;
+  box-shadow: none;
+}
+.dark .discipline-workspace--detail .discipline-practice {
+  background: #d0b477;
+  border-color: #d0b477;
+  color: #202832;
+}
+.dark .discipline-workspace--detail .discipline-practice:hover {
+  background: #ddc38f;
+  border-color: #ddc38f;
+}
+
+/* Tipografia e estados dos cartões: leitura primeiro, cor apenas nos indicadores. */
+.discipline-workspace--detail .discipline-h {
+  font-size: 1rem;
+  font-weight: 680;
+  letter-spacing: -0.01em;
+}
+.discipline-workspace--detail .discipline-edital-panel__eyebrow {
+  letter-spacing: 0.07em;
+}
+.discipline-workspace--detail .discipline-edital-panel__score strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.discipline-workspace--detail .material-card,
+.discipline-card[data-subject] {
+  box-shadow: none;
+}
+.discipline-workspace--detail .material-card:hover,
+.discipline-card[data-subject]:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.07);
+}
+.dark .discipline-workspace--detail .discipline-edital-panel__topics li {
+  background: #15232c;
+  border-color: #30414c;
+}
+.dark .discipline-workspace--detail .discipline-edital-panel__topics label {
+  color: #c0c9d2;
+}
