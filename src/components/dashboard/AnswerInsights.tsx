@@ -116,17 +116,22 @@ export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today:
     const seen = new Set<string>();
     return rows
       .map((row) => ({ ...row, time: Date.parse(row.created_at) }))
-      .filter((row) => Number.isFinite(row.time) && typeof row.is_correct === "boolean")
+      .filter((row) =>
+        Number.isFinite(row.time) &&
+        typeof row.is_correct === "boolean" &&
+        !!row.question_id?.trim() &&
+        !!row.question_source?.trim()
+      )
       .sort((a, b) => a.time - b.time || a.id.localeCompare(b.id))
       .filter((row) => {
-        const key = `${row.question_source}:${row.question_id}`;
+        const key = JSON.stringify([row.question_source, row.question_id]);
         if (seen.has(key)) return false;
         seen.add(key);
         return true;
       })
       .map((row) => ({ ...row, day: acreDateKey(new Date(row.time)) }));
   }, [rows]);
-  const data = React.useMemo(() => build(first, period, today), [first, period, today]);
+  // Respostas com data futura ou relógio incorreto não entram nos períodos do relatório.\n  const eligible = React.useMemo(() => first.filter((row) => row.day <= today), [first, today]);\n  const data = React.useMemo(() => build(eligible, period, today), [eligible, period, today]);
   const rate = data.total ? Math.round((data.acertos / data.total) * 100) : null;
   const periodLabel = (PERIODS.find(([id]) => id === period)?.[1] ?? "").toLowerCase();
 
