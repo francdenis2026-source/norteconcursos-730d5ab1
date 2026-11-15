@@ -278,3 +278,10 @@ set discipline='Contabilidade Geral e Análise Financeira',
     sort_order=8,
     updated_at=now()
 where slug='pcac-2026-contabilidade-17-sistema-bancario-conciliacao-extrato-razao';
+
+-- A aula integradora reclassificada também recebe sua revisão formal.
+update public.study_materials
+set practice_review=jsonb_build_object('status','reviewed','review_date','2026-11-14','items_checked',jsonb_array_length(coalesce(quiz,'[]'::jsonb)),'method','Conferência individual de enunciados, gabaritos e justificativas com funções administrativas, processos, eficiência, eficácia, efetividade, equipes, recursos e atendimento previstos no Anexo III.','result','Aula integradora revisada e reclassificada em Noções de Administração.'),
+    reviewed_at='2026-11-14 23:59:00-03'::timestamptz,
+    updated_at=now()
+where slug='pcac-2026-administracao-publica-funcoes-processos-equipes-recursos';
