@@ -44,6 +44,24 @@ test("CEBRASPE multiple-choice retains alternatives, and genuine true/false stay
   assert.deepEqual(simulatorAnswers({ ...q, text: "Julgue o item.", answer: "C" }), ["C", "E"]);
 });
 
+test("curated IDECAN-style questions with A) through E) are parsed as five alternatives", () => {
+  const fiveOption = {
+    ...q,
+    sourceKind: "curated",
+    board: "AUTORAL",
+    text: [
+      "Assinale a alternativa correta.",
+      "A) Alternativa A.",
+      "B) Alternativa B.",
+      "C) Alternativa C.",
+      "D) Alternativa D.",
+      "E) Alternativa E.",
+    ].join("\n"),
+    answer: "C",
+  };
+  assert.deepEqual(simulatorAnswers(fiveOption), ["A", "B", "C", "D", "E"]);
+});
+
 test("curated PC-AC questions support A/B certo-errado and implicit C/E formats", () => {
   const explicit = {
     ...q,
