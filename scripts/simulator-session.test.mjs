@@ -1,3 +1,4 @@
+import { attemptDetails } from "../src/lib/attemptDetails.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
@@ -212,4 +213,37 @@ test("incomplete detail readback does not report a saved result", async () => {
     }),
     /respostas/,
   );
+});
+
+test("attempt history preserves the PC-AC weighted rule and its saved score", () => {
+  const details = attemptDetails(
+    {
+      id: "pcac-attempt",
+      title: "PC-AC 2026 — Simulado completo",
+      total_questions: 100,
+      correct_answers: 80,
+      wrong_answers: 15,
+      blank_answers: 5,
+      accuracy: 80,
+      duration_seconds: 7200,
+      finished_at: "2026-11-15T12:00:00.000Z",
+    },
+    {
+      attempt_id: "pcac-attempt",
+      scoring_rule: "pcac_2026_weighted",
+      rule_verified: true,
+      score: 124,
+      max_score: 160,
+      skipped_count: 2,
+    },
+    undefined,
+  );
+
+  assert.equal(details.rule.id, "pcac_2026_weighted");
+  assert.equal(details.rule.label, "Pontuação ponderada — PC-AC 2026");
+  assert.equal(details.rule.verified, true);
+  assert.equal(details.score, 124);
+  assert.equal(details.maxScore, 160);
+  assert.equal(details.ruleRecorded, true);
+  assert.equal(details.skipped, 2);
 });
