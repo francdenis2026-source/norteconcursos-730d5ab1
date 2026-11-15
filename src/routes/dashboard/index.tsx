@@ -68,6 +68,10 @@ export const Route = createFileRoute("/dashboard/")({
         content:
           "Seu próximo passo, cronograma e evolução nos estudos, conectados aos registros da plataforma.",
       },
+      { property: "og:title", content: "Área do aluno | Norte Concursos" },
+      { property: "og:description", content: "Seu cronograma, prioridades e evolução nos estudos em um único painel." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: DashboardIndex,
