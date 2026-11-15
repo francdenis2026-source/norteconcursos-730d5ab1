@@ -4,6 +4,15 @@ import { ArrowRight, BookOpen, BrainCircuit, Flame, Info, PlayCircle, Target } f
 import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { useStudyMaterialList } from "@/lib/studyMaterials";
+import {
+  buildTheoryIndex,
+  findTheory,
+  theoryTarget,
+  type TheorySyllabus,
+} from "@/lib/cronogramaTeoria";
 import { pcAcVerticalCargos, type PcAcVerticalCargoId } from "@/data/pcAcreVerticalizado";
 import { buildPcAcExamMap, type MapDiscipline } from "@/lib/pcAcExamMap";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
@@ -22,6 +31,24 @@ export function PcAcExamMap({
   hideTitle?: boolean;
 }) {
   const { catalog } = useMediaCatalog();
+  // Material exato do assunto: guia da Biblioteca ou assunto do edital eletrônico (mesmo critério do cronograma).
+  const materials = useStudyMaterialList(true);
+  const syllabus = useQuery({
+    queryKey: ["cronograma-syllabus"],
+    staleTime: 10 * 60_000,
+    queryFn: async (): Promise<TheorySyllabus[]> => {
+      const { data, error } = await supabase
+        .from("syllabus_topics")
+        .select("id,discipline,topic_text")
+        .limit(1000);
+      if (error) throw error;
+      return (data ?? []) as TheorySyllabus[];
+    },
+  });
+  const theoryIndex = useMemo(
+    () => buildTheoryIndex(materials.data ?? [], syllabus.data ?? []),
+    [materials.data, syllabus.data],
+  );
   const [watching, setWatching] = useState<WatchableVideo | null>(null);
   const [cargoId, setCargoId] = useState<PcAcVerticalCargoId>(initialCargo);
   const [metric, setMetric] = useState<Metric>("questions");
@@ -177,20 +204,34 @@ export function PcAcExamMap({
                   {t.hot && <em>provável</em>}
                 </span>
                 <span className="pcmap__topic-actions">
-                  {subject && (
-                    <Link
-                      to="/dashboard/library"
-                      search={{
-                        collection: "subjects",
-                        discipline: subject,
-                        q: t.title.slice(0, 80),
-                      }}
-                      title="Abrir o material didático deste assunto"
-                      aria-label={`Material didático: ${t.title}`}
-                    >
-                      <BookOpen aria-hidden="true" />
-                    </Link>
-                  )}
+                  {(() => {
+                    const back = "/dashboard/mapa-idecan";
+                    const hit = findTheory(theoryIndex, active.name, t.title, 1)[0];
+                    const target = theoryTarget(hit, t.title, back);
+                    if (target.direct)
+                      return (
+                        <Link
+                          to={target.to as never}
+                          params={target.params as never}
+                          search={target.search as never}
+                          title={`Estudar: ${target.label}`}
+                          aria-label={`Material didático: ${t.title}`}
+                        >
+                          <BookOpen aria-hidden="true" />
+                        </Link>
+                      );
+                    return subject ? (
+                      <Link
+                        to="/dashboard/library"
+                        search={{ collection: "subjects", discipline: subject, back }}
+                        title="Abrir o material da matéria (sem guia específico deste assunto)"
+                        aria-label={`Material da matéria: ${t.title}`}
+                        data-generic="true"
+                      >
+                        <BookOpen aria-hidden="true" />
+                      </Link>
+                    ) : null;
+                  })()}
                   {(() => {
                     const hit = videoFor(t.title);
                     return hit ? (

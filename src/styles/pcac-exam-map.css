@@ -402,3 +402,6 @@
   outline: 2px solid var(--primary);
   outline-offset: 1px;
 }
+.pcmap__topic-actions a[data-generic="true"] {
+  color: var(--muted-foreground);
+}
