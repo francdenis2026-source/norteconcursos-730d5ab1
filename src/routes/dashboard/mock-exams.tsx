@@ -39,6 +39,7 @@ import {
 import {
   resolveScoringRule,
   scoreAttempt,
+  selectPcacOfficialDistribution,
   formatScore,
   scoringRuleFromId,
   type ReferenceRuleRow,
@@ -714,9 +715,39 @@ function ProfessionalSimulator() {
       const message = plannedAvailability(sessionPool.length, limit);
       if (message) toast.info(message);
     }
+    const scoringIdentity = paperMode
+      ? {
+          contest: chosenPaper!.question.contest,
+          career: chosenPaper!.question.career,
+          board: chosenPaper!.question.board,
+          year: chosenPaper!.question.year,
+        }
+      : {
+          contest: contest === "all" ? "" : contest,
+          career: career === "all" ? "" : career,
+          board: board === "all" ? "" : board,
+          year: year === "all" ? "" : year,
+        };
+    const scoringRule = resolveScoringRule(scoringIdentity, rulesRegistry);
+    let selectedQuestions = paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit);
+    if (
+      !paperMode &&
+      scoringRule.id === "pcac_2026_weighted" &&
+      limit === 100 &&
+      subject === "all"
+    ) {
+      const balanced = selectPcacOfficialDistribution(sessionPool);
+      if (!balanced) {
+        toast.error(
+          "Ainda não há questões suficientes em todas as áreas para montar as 100 questões na distribuição oficial do PC-AC 2026. Você pode iniciar um simulado menor enquanto o banco é completado.",
+        );
+        return;
+      }
+      selectedQuestions = balanced;
+    }
     setInvalidDraft(false);
     setRankingSummary(null);
-    setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
+    setQuestions(selectedQuestions);
     setSkipped(new Set());
     setRankingSummary(null);
     setSessionConfig({
@@ -729,22 +760,7 @@ function ProfessionalSimulator() {
       contestFilter: paperMode ? chosenPaper!.question.contest : contest === "all" ? null : contest,
       subjectFilter: paperMode || subject === "all" ? null : subject,
       // Montagem livre também aplica a regra oficial quando concurso, cargo, banca/estilo e ano identificam uma edição sem ambiguidade.
-      rule: resolveScoringRule(
-        paperMode
-          ? {
-              contest: chosenPaper!.question.contest,
-              career: chosenPaper!.question.career,
-              board: chosenPaper!.question.board,
-              year: chosenPaper!.question.year,
-            }
-          : {
-              contest: contest === "all" ? "" : contest,
-              career: career === "all" ? "" : career,
-              board: board === "all" ? "" : board,
-              year: year === "all" ? "" : year,
-            },
-        rulesRegistry,
-      ),
+      rule: scoringRule,
     });
     setEndedAt(null);
     setSaveStatus("idle");
