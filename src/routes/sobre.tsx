@@ -12,7 +12,7 @@ function About() {
       page="/sobre"
       title="Nossa história tem um norte."
       description="De Feijó, no Acre, uma plataforma que une experiência em educação, segurança pública e tecnologia."
-      image="/media/hero/auth-carreiras-composicao.webp"
+      image="/media/hero/carreiras-background.webp"
     >
       <WindowSections
         label="Conheça a Norte Concursos"

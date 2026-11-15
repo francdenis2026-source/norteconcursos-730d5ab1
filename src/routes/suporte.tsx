@@ -118,7 +118,7 @@ function Support() {
       page="/suporte"
       title="Como podemos ajudar?"
       description="Consulte as orientações ou envie um pedido à equipe. Seu relato continua disponível ao trocar de aba."
-      image="/media/hero/auth-carreiras-composicao.webp"
+      image="/media/hero/carreiras-background.webp"
     >
       <WindowSections
         label="Opções de suporte"
