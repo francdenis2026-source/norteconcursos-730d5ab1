@@ -110,6 +110,19 @@ test("PC-AC subject weights follow the edital: basics/legal 1 point and specific
   );
   assert.equal(score.score, 160);
   assert.equal(score.maxScore, 160);
+  assert.equal(score.approval?.evaluated, true);
+  assert.equal(score.approval?.approved, true);
+
+  const noConstitutionalPoints = fullExam.map((item, index) =>
+    index >= 24 && index <= 26 ? { ...item, correct: false } : item,
+  );
+  const failedMinimum = scoreAttempt(
+    { total: 100, correct: 97, wrong: 3, blank: 0, items: noConstitutionalPoints },
+    PCAC_WEIGHTED_RULE,
+  );
+  assert.equal(failedMinimum.score, 157);
+  assert.equal(failedMinimum.approval?.approved, false);
+  assert.match(failedMinimum.approval?.reasons.join(" ") ?? "", /Constitucional/);
 });
 
 test("weighted score uses each answered question's area and falls back if item details are missing", () => {
@@ -126,6 +139,7 @@ test("weighted score uses each answered question's area and falls back if item d
   assert.equal(score.score, 5);
   assert.equal(score.maxScore, 6);
   assert.equal(score.accuracyOfTotal, 75);
+  assert.equal(score.approval?.evaluated, false);
   assert.equal(
     scoreAttempt({ total: 4, correct: 3, wrong: 1, blank: 0 }, PCAC_WEIGHTED_RULE).rule.id,
     "simple",
