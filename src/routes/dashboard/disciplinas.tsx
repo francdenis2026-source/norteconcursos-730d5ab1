@@ -47,6 +47,7 @@ import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 import "@/styles/study-area-compact.css";
 import { disciplineTheme } from "@/lib/disciplineTheme";
+import { userStorageKey } from "@/lib/userStorage";
 import { useSmartBack } from "@/components/dashboard/SmartBackLink";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
@@ -239,7 +240,8 @@ function DisciplineDetail({
           .select("id,discipline,topic_text,topic_order")
           .eq("edition_id", activeEditionId!)
           .eq("content_status", "current")
-          .order("id")
+          .order("topic_order", { ascending: true })
+          .order("id", { ascending: true })
           .range(from, to),
       ),
   });
@@ -252,14 +254,14 @@ function DisciplineDetail({
       return;
     }
     try {
-      setCompletedTopics(JSON.parse(localStorage.getItem("norte-edital-progress:" + activeEditionId) ?? "{}"));
+      setCompletedTopics(JSON.parse(localStorage.getItem(userStorageKey("norte-edital-progress:" + activeEditionId)) ?? "{}"));
     } catch {
       setCompletedTopics({});
     }
   }, [activeEditionId]);
   React.useEffect(() => {
     if (!activeEditionId) return;
-    const key = "norte-edital-progress:" + activeEditionId;
+    const key = userStorageKey("norte-edital-progress:" + activeEditionId);
     const syncFromOtherTab = (event: StorageEvent) => {
       if (event.key !== key && event.key !== null) return;
       try {
@@ -279,7 +281,7 @@ function DisciplineDetail({
       const next = { ...current, [topicId]: !current[topicId] };
       if (activeEditionId) {
         try {
-          localStorage.setItem("norte-edital-progress:" + activeEditionId, JSON.stringify(next));
+          localStorage.setItem(userStorageKey("norte-edital-progress:" + activeEditionId), JSON.stringify(next));
         } catch {
           // O progresso continua atualizado nesta sessão se o armazenamento estiver indisponível.
         }
