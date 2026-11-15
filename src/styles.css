@@ -35,8 +35,22 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Brand activity indicators, independent of the neutral primary theme role. */
-:root { --training-loading-primary: oklch(0.5 0.18 262); }
-.dark { --training-loading-primary: oklch(0.75 0.12 255); }
+:root {
+  --training-loading-primary: oklch(0.5 0.18 262);
+  --student-overview-surface: oklch(0.995 0.001 260);
+  --student-overview-muted: oklch(0.965 0.002 260);
+  --student-overview-border: oklch(0.875 0.004 260);
+  --student-overview-ink: oklch(0.26 0.008 260);
+  --student-overview-dim: oklch(0.47 0.008 260);
+}
+.dark {
+  --training-loading-primary: oklch(0.75 0.12 255);
+  --student-overview-surface: oklch(0.205 0.003 260);
+  --student-overview-muted: oklch(0.25 0.003 260);
+  --student-overview-border: oklch(0.34 0.005 260);
+  --student-overview-ink: oklch(0.94 0.003 260);
+  --student-overview-dim: oklch(0.74 0.005 260);
+}
 
 /* ===================================================================
    NORTE — Design System "Porcelain & Gold"

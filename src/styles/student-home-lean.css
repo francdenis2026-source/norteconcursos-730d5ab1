@@ -135,3 +135,207 @@ html:root body .student-home.sh2 .sh2-board > .sh2-card .sh2-card__body { displa
 html:root body .student-home.sh2 .sh2-board > .sh2-card .sh2-card__foot { margin-top: auto; }
 /* Cartão da leitura: título no topo do corpo, não solto no meio. */
 html:root body .student-home.sh2 .sh2-board > div:last-child > .sh2-card .sh2-card__body { align-items: flex-start; justify-content: flex-start; }
+
+/* Professional refinement: shared theme roles, quiet surfaces and stable study controls.
+   Only the student overview is affected; navigation and study rules remain unchanged. */
+html:root body .student-home.sh2 {
+  --card: var(--student-overview-surface) !important;
+  --muted: var(--student-overview-muted) !important;
+  --border: var(--student-overview-border) !important;
+  --foreground: var(--student-overview-ink) !important;
+  --muted-foreground: var(--student-overview-dim) !important;
+  --sh2-gold: var(--nc-color-action-text);
+  --sh2-blue: var(--nc-color-info);
+  --sh2-green: var(--nc-color-success);
+  --sh2-amber: var(--nc-color-warning);
+  --sh2-violet: var(--nc-color-info);
+  --sh2-rose: var(--nc-color-danger);
+  --sh2-ink: var(--foreground);
+  --sh2-dim: var(--muted-foreground);
+  gap: var(--nc-space-3);
+}
+html:root body .student-home.sh2 :is(h1, h2, h3, strong, small, p, a, time) {
+  letter-spacing: 0;
+}
+html:root body .student-home.sh2 .sh2-label--compact {
+  margin: var(--nc-space-2) 0 0;
+}
+html:root body .student-home.sh2 .sh2-label--compact .sh2-label__title {
+  color: var(--foreground);
+  font-size: var(--nc-font-sm);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+}
+html:root body .student-home.sh2 .sh2-label--compact::after {
+  background: var(--border);
+}
+html:root body .student-home.sh2 .sh2-hero {
+  min-height: 11rem;
+  padding: var(--nc-space-5) var(--nc-space-6);
+  gap: var(--nc-space-4);
+  border-color: var(--on-ink-line);
+  border-radius: var(--nc-radius-sm);
+  background: var(--ink-deep);
+  color: var(--on-ink);
+}
+html:root body .student-home.sh2 .sh2-hero::after {
+  background: linear-gradient(90deg, var(--ink-deep), color-mix(in oklab, var(--ink-deep) 94%, transparent) 42%, color-mix(in oklab, var(--ink-deep) 35%, transparent));
+}
+html:root body .student-home.sh2 .sh2-hero__hello { gap: var(--nc-space-1); }
+html:root body .student-home.sh2 .sh2-hero__hello h1 {
+  color: var(--on-ink);
+  font-size: var(--nc-font-2xl);
+  font-weight: 700;
+  line-height: var(--nc-line-tight);
+}
+html:root body .student-home.sh2 .sh2-hero :is(.sh2-hero__hello p, .sh2-hero__date, .sh2-hero__contest-copy p, .sh2-hero__exam p) {
+  color: var(--on-ink-muted);
+  font-size: var(--nc-font-xs);
+  line-height: var(--nc-line-normal);
+}
+html:root body .student-home.sh2 .sh2-hero__contest {
+  padding: var(--nc-space-3) 0 0;
+  border: 0;
+  border-top: 1px solid var(--on-ink-line);
+  border-radius: 0;
+  background: none;
+  backdrop-filter: none;
+}
+html:root body .student-home.sh2 .sh2-hero :is(h2, time, .sh2-hero__exam strong) { color: var(--on-ink); }
+html:root body .student-home.sh2 .sh2-hero :is(small, .sh2-link, .sh2-hero__icon, .sh2-hero__date svg) { color: var(--brass); }
+html:root body .student-home.sh2 .sh2-hero__exam { border-color: var(--on-ink-line); }
+
+html:root body .student-home.sh2 .sh2-kpis {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--nc-space-3);
+}
+html:root body .student-home.sh2 .sh2-kpi {
+  min-height: 6rem;
+  padding: var(--nc-space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--nc-radius-sm);
+  background: var(--card);
+  box-shadow: var(--shadow-xs);
+  gap: var(--nc-space-3);
+  transition: border-color var(--nc-motion-fast), background-color var(--nc-motion-fast);
+}
+html:root body .student-home.sh2 .sh2-kpi:hover {
+  background: var(--muted);
+  border-color: var(--sh2-tone);
+}
+html:root body .student-home.sh2 .sh2-kpi > svg {
+  box-sizing: content-box;
+  width: var(--nc-space-5);
+  height: var(--nc-space-5);
+  padding: var(--nc-space-2);
+  border-radius: var(--nc-radius-sm);
+  color: var(--sh2-tone);
+  background: color-mix(in oklab, var(--sh2-tone) 10%, var(--card));
+}
+html:root body .student-home.sh2 .sh2-kpis .sh2-kpi > svg {
+  color: var(--sh2-tone) !important;
+}
+html:root body .student-home.sh2 .sh2-kpi small { font-size: var(--nc-font-xs); font-weight: 600; }
+html:root body .student-home.sh2 .sh2-kpi strong {
+  margin-block: var(--nc-space-1);
+  font-size: var(--nc-font-xl);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+html:root body .student-home.sh2 .sh2-kpi em {
+  white-space: normal;
+  font-size: var(--nc-font-xs);
+  line-height: var(--nc-line-normal);
+}
+
+html:root body .student-home.sh2 .sh2-shortcuts--chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--nc-space-2);
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a {
+  min-height: var(--nc-button-min-height);
+  padding: var(--nc-space-2) var(--nc-space-3);
+  border-radius: var(--nc-radius-sm);
+  border-color: var(--border);
+  background: var(--card);
+  justify-content: flex-start;
+  white-space: normal;
+  transform: none;
+  box-shadow: none;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a:hover {
+  border-color: var(--nc-color-action-text);
+  background: var(--nc-color-action-soft);
+  box-shadow: none;
+  transform: none;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips > a > span {
+  display: grid;
+  min-width: 0;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips strong {
+  font-size: var(--nc-font-xs);
+  line-height: var(--nc-line-normal);
+  white-space: normal;
+}
+html:root body .student-home.sh2 .sh2-shortcuts--chips strong svg {
+  box-sizing: content-box;
+  width: var(--nc-space-4);
+  height: var(--nc-space-4);
+  padding: var(--nc-space-1);
+  border-radius: var(--nc-radius-sm);
+  background: var(--muted);
+}
+
+html:root body .student-home.sh2 .sh2-card {
+  border: 1px solid var(--border);
+  border-radius: var(--nc-radius-sm);
+  background: var(--card);
+  box-shadow: var(--shadow-xs);
+}
+html:root body .student-home.sh2 .sh2-card__head {
+  min-height: 3rem;
+  padding: var(--nc-space-3) var(--nc-space-4);
+  gap: var(--nc-space-2);
+  border-bottom: 1px solid var(--border);
+  background: none;
+  flex-wrap: wrap;
+}
+html:root body .student-home.sh2 .sh2-card__head h2 { font-weight: 700; line-height: var(--nc-line-normal); }
+html:root body .student-home.sh2 .sh2-card__body { padding: var(--nc-space-4); gap: var(--nc-space-3); }
+html:root body .student-home.sh2 .sh2-card__foot { padding: var(--nc-space-3) var(--nc-space-4); }
+html:root body .student-home.sh2 .sh2-note { font-size: var(--nc-font-sm); line-height: var(--nc-line-normal); }
+html:root body .student-home.sh2 .sh2-cta {
+  min-height: var(--nc-button-min-height);
+  background: var(--nc-button-bg);
+  color: var(--nc-button-fg);
+  font-weight: 700;
+}
+html:root body .student-home.sh2 .sh2-cta:hover { background: var(--nc-button-bg-hover); filter: none; }
+html:root body .student-home.sh2 .sh2-card--photo .sh2-card__head {
+  min-height: 3rem;
+  background: var(--muted);
+}
+html:root body .student-home.sh2 .sh2-card--photo .sh2-card__head::after {
+  background: linear-gradient(90deg, var(--muted) 50%, color-mix(in oklab, var(--muted) 65%, transparent));
+}
+html:root body .student-home.sh2 .sh2-card--photo .sh2-card__head :is(h2, svg) { color: var(--foreground); }
+html:root body .student-home.sh2 .sh2-board > .sh2-card .sh2-card__body {
+  justify-content: flex-start;
+}
+html:root body .student-home.sh2 :is(a, button, select):focus-visible {
+  outline: var(--nc-focus-width) solid var(--ring);
+  outline-offset: var(--nc-focus-offset);
+}
+@media (min-width: 700px) {
+  html:root body .student-home.sh2 :is(.sh2-kpis, .sh2-shortcuts--chips) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  html:root body .student-home.sh2 .sh2-shortcuts--chips strong { font-size: var(--nc-font-sm); }
+}
+@media (max-width: 480px) {
+  html:root body .student-home.sh2 .sh2-hero { padding: var(--nc-space-4); }
+  html:root body .student-home.sh2 .sh2-kpi { align-items: flex-start; gap: var(--nc-space-2); padding: var(--nc-space-3) var(--nc-space-2); }
+  html:root body .student-home.sh2 .sh2-kpi > svg { width: var(--nc-space-4); height: var(--nc-space-4); padding: var(--nc-space-1); }
+  html:root body .student-home.sh2 .sh2-shortcuts--chips > a { padding-inline: var(--nc-space-2); }
+}
