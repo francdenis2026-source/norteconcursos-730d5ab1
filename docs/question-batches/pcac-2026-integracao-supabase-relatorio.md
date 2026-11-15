@@ -47,7 +47,7 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 
 ### Recontagem após a expansão — 14/11/2026
 
-- `study_materials`: **169 materiais ativos** associados a PC-AC 2026 — 162 nas 14 disciplinas oficiais e 7 complementares de Administração Pública. Todos os 169 têm ao menos 5 flashcards e 5 itens de quiz.
+- `study_materials`: **172 materiais ativos** associados a PC-AC 2026 — 162 nas 14 disciplinas oficiais e 7 complementares de Administração Pública. Todos os 169 têm ao menos 5 flashcards e 5 itens de quiz.
 - `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **294 no total**, sendo **221 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
 - Os 201 ativos estão distribuídos por 14 disciplinas: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
 - Separação de proveniência: 180 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
@@ -55,6 +55,26 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 
 - As 22 aulas de Legislação Institucional já tinham `legal_review.review_date` e `law_version_checked_at`; foi sincronizado o campo `reviewed_at` com a data de revisão declarada. Verificação: 22/22 com revisão registrada e versão normativa conferida. Isso registra a revisão de fonte declarada, não significa que todas as 22 aulas tenham passado por auditoria integral de cada artigo.
 - Migration correspondente: `20261114235749_pcac_sync_legal_review_timestamps.sql`.
+
+### Complementação de Legislação Institucional — 15/11/2026
+
+A conferência do Anexo III identificou três blocos que precisavam de aulas próprias, além das aulas estaduais e da Lei Orgânica Nacional já existentes. Foram adicionados ao Supabase:
+
+1. `pcac-2026-lei12830-investigacao-delegado-adi5043`: Lei nº 12.830/2013, condução da investigação, requisições, avocação/redistribuição, remoção e indiciamento; inclui a interpretação do STF na ADI 5.043 que afasta exclusividade da polícia na investigação criminal.
+2. `pcac-2026-lei13675-susp-politica-seguranca`: Lei nº 13.675/2018, PNSPDS, Susp, integrantes estratégicos e operacionais, integração e limites de competência.
+3. `pcac-2026-constituicao-seguranca-publica-art144-acre`: CF/1988, art. 144, e Constituição do Acre, arts. 129, 131 e 133, com atenção à EC estadual nº 63/2022.
+
+Cada aula contém 8 flashcards e 8 itens de quiz comentados. Todas as três foram marcadas ativas e receberam metadados de revisão normativa. O tópico de edital em `syllabus_topics` foi corrigido para refletir integralmente o conteúdo do Anexo III, que também inclui CF art. 144, Constituição do Acre, Lei nº 12.830/2013 e Lei nº 13.675/2018.
+
+Foram adicionadas 12 questões autorais ativas, quatro por bloco, com subassunto, tópico testado, gabarito único, explicação, base legal e proveniência. A auditoria confirmou 12/12 com vínculo ao tópico do edital, sem subassunto ausente, gabarito inválido ou explicação curta.
+
+**Verificação pós-inserção:**
+- Legislação Institucional: 25/25 materiais ativos, todos revisados, com pelo menos 5 flashcards e 5 itens de quiz.
+- Questões de Legislação Institucional: 47 cadastradas, 22 ativas; as 12 novas estão ativas.
+- Catálogo PC-AC 2026: 306 questões no total, 233 ativas e 73 em rascunho.
+- Migration versionada: `20261115004500_pcac_legislacao_institucional_complementos.sql`.
+
+As questões são autorais e não devem ser anunciadas como questões oficiais já aplicadas pela IDECAN. A validação técnica de CI será registrada após a execução do workflow disparado pelo commit.
 
 ### Atualização normativa de identificação criminal e prisões — 14/11/2026
 
