@@ -43,26 +43,14 @@ As questões serão autorais, em lotes revisáveis, vinculadas a tópicos confir
 - Fato ainda sujeito a mudança será marcado como atualização, não como regra permanente.
 - Notícia sem confirmação oficial não será transformada em questão ativa.
 
-## Estado atual — recontagem direta em 14/11/2026
+## Estado atual — recontagem direta em 15/11/2026
 
-- Banco PC-AC 2026 (`curated_question_catalog`): **221 questões autorais ativas**, todas com enunciado, explicação e vínculo a tópico do Anexo III, distribuídas pelas 14 disciplinas oficiais. O recorte contém ainda 73 questões em rascunho.
-- Distribuição atual: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 42; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
-- A meta consolidada do roteiro é 1.080 questões; 221 ativas representam aproximadamente 20,5% da meta. A expansão deve priorizar Penal, Processo Penal e Legislação Institucional, sem ativar itens sem revisão.
-- Proveniência: as 201 ativas incluem 180 questões autorais vinculadas à fonte oficial do edital e classificadas no banco como IDECAN, 10 autorais de outra fonte e 31 questões de treino autoral separadas. Nenhuma deve ser apresentada como questão oficial aplicada pela banca.
-
-- Lote de TI e Segurança da Informação (14/11/2026): criada aula própria para o item 6 do Anexo III (CID, controle de acesso, criptografia, backups e proteção de informações sensíveis), com 6 flashcards e 6 exercícios comentados; inseridas 6 questões autorais ativas no catálogo, com gabarito e explicações revisados.
-- Lote autoral 01 (14/11/2026): 30 questões novas inseridas e vinculadas ao Anexo III — 10 de Noções de Direito Administrativo, 10 de Língua Portuguesa e 10 de Raciocínio Lógico.
-- A taxonomia foi alinhada ao edital: Contabilidade + Análise Financeira estão agrupadas em **Contabilidade Geral e Análise Financeira**; itens genéricos de Administração estão em **Noções de Administração**. Estatística permanece no bloco de conhecimentos específicos, conforme o Anexo III; Matemática básica está integrada ao conteúdo de Raciocínio Lógico.
-- Questões autorais são identificadas como is_original=true e vinculadas ao edital oficial como base de conteúdo; não são apresentadas como itens oficiais aplicados pela IDECAN.
-- Importação externa separada: 8 itens PC-SE 2021 CEBRASPE em Contabilidade, cadastrados em paráfrase com procedência própria.
-- Provas UFAC Direito Penal I (N1/N2): 21 itens legíveis revisados e publicados; N1 tem lacuna documental de página 4 e itens 8–10 não foram inventados.
-- Próximo lote: ampliar Direito Administrativo, Português e RLM, depois avançar em Penal/Processual Penal e Legislação Institucional, mantendo revisão de fonte, unicidade do gabarito, atualidade e ausência de duplicidade.
-
-
-- Lote 1: 9 questões autorais de alta prioridade em `idecan-pcac-fase2-batch1-draft.md`.
-- Banco de dados: nenhuma questão nova inserida.
-- Próximo lote: disciplinas específicas e áreas de menor incidência, começando por Arquivologia, Contabilidade/Análise Financeira, Estatística, História/Geografia do Acre e Administração.
-
+- Banco PC-AC 2026 (`curated_question_catalog`): **292 questões autorais ativas**, 13 arquivadas por duplicidade temática e 1 em revisão editorial; total de 306 registros e zero rascunhos.
+- Distribuição das questões ativas: Análise de Dados 6; Arquivologia 24; Contabilidade Geral e Análise Financeira 15; Estatística 13; Legislação Institucional 46; Língua Portuguesa 16; Noções de Administração 22; Noções de Direito Administrativo 12; Noções de Direito Constitucional 7; Noções de Direito Penal e Processual Penal 77; Noções de Informática 7; Raciocínio Lógico 16; Realidade do Estado do Acre 16; Tecnologia da Informação e Segurança da Informação 15.
+- A meta consolidada do roteiro é 1.080 questões; 292 ativas representam aproximadamente 27,0% da meta. Não há rascunhos pendentes no catálogo atual; a expansão futura deve priorizar cobertura e variedade sem duplicar tópicos já bem representados.
+- Proveniência: todas as 306 questões do recorte são autorais (is_original=true); 222 ativas estão classificadas com exam_board=IDECAN e 70 com exam_board=AUTORAL. Nenhuma deve ser apresentada como questão oficial aplicada pela banca.
+- A única questão em revisão editorial é uma orientação geral de data de corte do edital, mantida fora do conteúdo disciplinar. As 13 arquivadas foram preservadas por duplicidade temática.
+- Materiais didáticos: 181 materiais PC-AC ativos, todos com flashcards e quiz; 38 possuem metadados de revisão formal. A revisão editorial/bibliográfica dos demais materiais segue como tarefa independente.
 
 ## Observação de escopo
 
@@ -71,3 +59,11 @@ O banco de materiais também contém 7 aulas complementares de Administração P
 - Lote 2 de Processo Penal (14/11/2026): 10 questões autorais adicionais sobre os arts. 13-A, 13-B, 14-A, 155, 158, 167, 158-A a 158-C, 159, 180, 184, 280 e 281 do CPP, com gabarito e explicação conferidos no texto atualizado oficial.
 
 - Lote 3 de Processo Penal (14/11/2026): 10 questões autorais sobre as alterações vigentes até a data de corte do edital nas Leis nº 15.295/2025, 15.272/2025, 15.358/2026 e 15.487/2026, além dos critérios do STF para prisão temporária. A aula de identificação criminal, flagrante e prisões foi atualizada com explicações e fontes oficiais.
+
+- Lote de Legislação Institucional (15/11/2026): 12 questões autorais ativas sobre Lei nº 12.830/2013 e ADI 5.043, Lei nº 13.675/2018 (PNSPDS/Susp), CF art. 144 e Constituição do Acre (arts. 129, 131 e 133). Três aulas novas, cada uma com 8 flashcards e 8 questões de quiz, foram inseridas e revisadas.
+
+
+- Revisão final de Legislação Institucional (15/11/2026): 24 questões autorais adicionais liberadas após conferência de fontes oficiais, incluindo LC nº 129/2004 consolidada, LC nº 496/2025, LC nº 526/2026, LC nº 39/1993/LC nº 525/2026, Lei nº 2.250/2009 e Lei nº 14.735/2023. Uma questão geral de data de corte do edital foi mantida fora da disciplina. A área totaliza 46 questões ativas.
+
+
+- Auditoria final de Penal e Processo Penal (15/11/2026): revisadas 48 questões que estavam em rascunho; 35 ativadas e 13 arquivadas por duplicidade temática. Atualizadas referências legais para as Leis nº 15.353/2026, 15.410/2026, 15.358/2026 e 15.272/2025, além dos critérios do STF para prisão temporária. O catálogo não tem mais rascunhos.

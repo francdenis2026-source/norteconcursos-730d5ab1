@@ -47,7 +47,7 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 
 ### Recontagem após a expansão — 14/11/2026
 
-- `study_materials`: **169 materiais ativos** associados a PC-AC 2026 — 162 nas 14 disciplinas oficiais e 7 complementares de Administração Pública. Todos os 169 têm ao menos 5 flashcards e 5 itens de quiz.
+- `study_materials`: **172 materiais ativos** associados a PC-AC 2026 — 162 nas 14 disciplinas oficiais e 7 complementares de Administração Pública. Todos os 169 têm ao menos 5 flashcards e 5 itens de quiz.
 - `curated_question_catalog`, registros de 2026 relacionados ao PC-AC: **294 no total**, sendo **221 ativos** e **73 em rascunho**. Não há registros em revisão neste recorte após a expansão.
 - Os 201 ativos estão distribuídos por 14 disciplinas: Análise de Dados 6; Arquivologia 24; Contabilidade 15; Estatística 13; Legislação Institucional 10; Língua Portuguesa 16; Noções de Administração 22; Direito Administrativo 12; Direito Constitucional 7; Direito Penal e Processual Penal 22; Informática 7; Raciocínio Lógico 16; Realidade do Acre 16; TI e Segurança da Informação 15.
 - Separação de proveniência: 180 questões IDECAN autorais no cadastro do concurso, 10 questões autorais de outra fonte e 31 questões autorais de treino separadas do cadastro do concurso. O total de 201 não deve ser interpretado como 201 itens oficiais aplicados pela banca.
@@ -55,6 +55,26 @@ Também foram inseridas **6 questões autorais novas e ativas** no catálogo PC-
 
 - As 22 aulas de Legislação Institucional já tinham `legal_review.review_date` e `law_version_checked_at`; foi sincronizado o campo `reviewed_at` com a data de revisão declarada. Verificação: 22/22 com revisão registrada e versão normativa conferida. Isso registra a revisão de fonte declarada, não significa que todas as 22 aulas tenham passado por auditoria integral de cada artigo.
 - Migration correspondente: `20261114235749_pcac_sync_legal_review_timestamps.sql`.
+
+### Complementação de Legislação Institucional — 15/11/2026
+
+A conferência do Anexo III identificou três blocos que precisavam de aulas próprias, além das aulas estaduais e da Lei Orgânica Nacional já existentes. Foram adicionados ao Supabase:
+
+1. `pcac-2026-lei12830-investigacao-delegado-adi5043`: Lei nº 12.830/2013, condução da investigação, requisições, avocação/redistribuição, remoção e indiciamento; inclui a interpretação do STF na ADI 5.043 que afasta exclusividade da polícia na investigação criminal.
+2. `pcac-2026-lei13675-susp-politica-seguranca`: Lei nº 13.675/2018, PNSPDS, Susp, integrantes estratégicos e operacionais, integração e limites de competência.
+3. `pcac-2026-constituicao-seguranca-publica-art144-acre`: CF/1988, art. 144, e Constituição do Acre, arts. 129, 131 e 133, com atenção à EC estadual nº 63/2022.
+
+Cada aula contém 8 flashcards e 8 itens de quiz comentados. Todas as três foram marcadas ativas e receberam metadados de revisão normativa. O tópico de edital em `syllabus_topics` foi corrigido para refletir integralmente o conteúdo do Anexo III, que também inclui CF art. 144, Constituição do Acre, Lei nº 12.830/2013 e Lei nº 13.675/2018.
+
+Foram adicionadas 12 questões autorais ativas, quatro por bloco, com subassunto, tópico testado, gabarito único, explicação, base legal e proveniência. A auditoria confirmou 12/12 com vínculo ao tópico do edital, sem subassunto ausente, gabarito inválido ou explicação curta.
+
+**Verificação pós-inserção:**
+- Legislação Institucional: 25/25 materiais ativos, todos revisados, com pelo menos 5 flashcards e 5 itens de quiz.
+- Questões de Legislação Institucional: 47 cadastradas, 22 ativas; as 12 novas estão ativas.
+- Catálogo PC-AC 2026: 306 questões no total, 233 ativas e 73 em rascunho.
+- Migration versionada: `20261115004500_pcac_legislacao_institucional_complementos.sql`.
+
+As questões são autorais e não devem ser anunciadas como questões oficiais já aplicadas pela IDECAN. A validação técnica de CI será registrada após a execução do workflow disparado pelo commit.
 
 ### Atualização normativa de identificação criminal e prisões — 14/11/2026
 
@@ -228,3 +248,47 @@ Esses temas devem compor lotes posteriores, sempre respeitando o conteúdo do An
 ## Regra de segurança editorial
 
 A integração ao banco não equivale à publicação. Este lote deve permanecer oculto aos alunos até que as pendências acima sejam encerradas e os testes de exposição de rascunhos sejam aprovados.
+
+
+## Atualização conclusiva — revisão final de Legislação Institucional (15/11/2026)
+
+A auditoria jurídica das 25 questões institucionais anteriormente em rascunho foi concluída contra fontes primárias atualizadas:
+
+- **24 questões ativadas** após revisão de enunciado, alternativa correta, distratores, fundamento e aderência ao Anexo III.
+- **1 questão mantida em `under_review`**: regra geral de data de corte legislativa dos subitens 11.5.4/11.5.5 do edital. É orientação geral do certame, não conteúdo autônomo do Anexo III; permanece fora da trilha disciplinar.
+- Nenhuma questão foi apagada. A comparação textual de todas as questões ativas de Legislação Institucional não encontrou duplicidade exata.
+- As 24 questões liberadas têm gabarito A–E, explicação, tópico de edital e metadados de revisão normativa. Todas são autorais, não itens oficiais aplicados pela IDECAN.
+
+Fontes oficiais de referência utilizadas na revisão: LC nº 129/2004 consolidada (incluindo LCs nº 496/2025 e nº 526/2026); LC nº 39/1993 consolidada e LC nº 525/2026; Lei nº 2.250/2009; Lei nº 14.735/2023 em texto atualizado; e edital oficial PC-AC 2026, publicado em 06/11/2026.
+
+**Contagem atual do catálogo PC-AC 2026, reconsultada no Supabase:** 306 questões no total; 257 ativas; 48 em rascunho e 1 em revisão editorial. Legislação Institucional passou a 46 questões ativas, de 47 cadastradas. As 48 questões em rascunho restantes estão em Direito Penal e Processual Penal.
+
+**Materiais didáticos:** 175/175 materiais PC-AC ativos têm flashcards e quiz (mínimo de cinco itens em cada). 38 têm metadados de revisão formal; a revisão bibliográfica/editorial dos demais materiais segue como tarefa separada e não deve ser confundida com a ativação de questões.
+
+**Migration versionada:** `20261115005200_pcac_legislacao_questoes_revisao_final.sql`. A alteração direta no banco foi registrada também nessa migration para permitir rastreabilidade e reexecução controlada.
+
+**CI:** execução associada ao commit da migration em andamento no momento desta atualização. A ativação no Supabase foi verificada por consulta direta; a conclusão de CI será registrada após todos os passos automatizados.
+
+### Próxima prioridade de produção
+
+O maior saldo de questões não liberadas está em Direito Penal e Processual Penal: 90 cadastradas, 42 ativas e 48 em rascunho. A próxima etapa é revisar essas 48 questões uma a uma contra os dispositivos do edital e as redações legais vigentes até 06/11/2026, sem ativar itens que não passem na revisão.
+
+
+## Auditoria final de Penal e Processo Penal — 15/11/2026
+
+A revisão dos 48 itens que estavam em rascunho foi concluída:
+
+- **35 questões ativadas** após conferência de enunciado, alternativa correta, explicação, fundamento legal, aderência ao Anexo III e vigência normativa até 06/11/2026.
+- **13 questões arquivadas** por duplicidade temática com questões que já estavam ativas. Os registros foram preservados, com indicação da questão ativa de referência; não houve exclusão de dados.
+- **0 rascunhos restantes** em Noções de Direito Penal e Processual Penal.
+- As 77 questões ativas da disciplina têm gabarito A–E, explicação e vínculo a tópico do edital. A verificação de texto idêntico não encontrou duplicatas entre as ativas.
+
+A revisão incluiu atualizações específicas: Lei nº 15.353/2026 no estupro de vulnerável; Lei nº 15.410/2026 na nova modalidade de tortura; Lei nº 15.358/2026 na audiência de custódia; Lei nº 15.272/2025 nos critérios de prisão preventiva; e STF, ADIs nº 3.360 e 4.109, nos requisitos cumulativos da prisão temporária.
+
+**Contagem global atual no Supabase:** 306 registros, sendo 292 ativos, 13 arquivados e 1 em revisão editorial; não há questões em rascunho. Distribuição ativa por disciplina: Análise de Dados 6; Arquivologia 24; Contabilidade Geral e Análise Financeira 15; Estatística 13; Legislação Institucional 46; Língua Portuguesa 16; Noções de Administração 22; Noções de Direito Administrativo 12; Noções de Direito Constitucional 7; Noções de Direito Penal e Processual Penal 77; Noções de Informática 7; Raciocínio Lógico 16; Realidade do Estado do Acre 16; Tecnologia da Informação e Segurança da Informação 15.
+
+A única questão em revisão editorial continua sendo a regra geral de data de corte do edital, mantida fora do conteúdo disciplinar. Os 13 itens arquivados são duplicidades temáticas, não questões consideradas juridicamente incorretas.
+
+**Materiais didáticos:** 181/181 materiais PC-AC ativos possuem flashcards e quiz; 38 possuem metadados de revisão formal. A revisão editorial/bibliográfica dos materiais que ainda não têm esses metadados permanece uma frente distinta da auditoria de questões.
+
+**Migration versionada:** `20261115005800_pcac_penal_processo_questoes_revisao_final.sql`. CI da migration e dos commits documentais deve ser confirmada antes de considerar encerrada a validação técnica.
