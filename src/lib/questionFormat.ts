@@ -196,6 +196,20 @@ export const isOfficialUrl = (url?: string) => {
         "/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf",
       ],
     };
+    if (parsed.hostname === "legis.senado.leg.br") {
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        !parsed.hash &&
+        [
+          "/norma/41759201",
+          "/norma/42878591/publicacao/42881818",
+        ].includes(parsed.pathname)
+      );
+    }
     if (parsed.hostname === "www2.camara.leg.br") {
       return (
         parsed.protocol === "https:" &&
@@ -207,6 +221,7 @@ export const isOfficialUrl = (url?: string) => {
         [
           "/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
           "/legin/fed/lei/2026/lei-15410-20-maio-2026-799133-publicacaooriginal-179393-pl.html",
+          "/legin/fed/lei/2026/lei-15358-24-marco-2026-798846-norma-pl.html",
         ].includes(parsed.pathname)
       );
     }
