@@ -148,6 +148,7 @@ function ProfilePage() {
                 <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input
                   id="name"
+                  autoComplete="name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: normalizeUppercase(e.target.value) })
@@ -164,10 +165,10 @@ function ProfilePage() {
           <form onSubmit={handleUpdateEmail} className="space-y-3 pt-4">
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="space-y-2">
-                <Label>E-mail Atual</Label>
+                <Label htmlFor="currentEmail">E-mail Atual</Label>
                 <div className="relative opacity-60">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input value={formData.email} readOnly disabled aria-label="E-mail atual" className="pl-9 bg-muted" />
+                  <Input id="currentEmail" value={formData.email} readOnly disabled autoComplete="email" className="pl-9 bg-muted" />
                 </div>
               </div>
               <div className="space-y-2">
@@ -177,6 +178,7 @@ function ProfilePage() {
                   <Input
                     id="newEmail"
                     type="email"
+                    autoComplete="email"
                     placeholder="Digite o novo e-mail"
                     value={formData.newEmail}
                     onChange={(e) => setFormData({ ...formData, newEmail: e.target.value })}
