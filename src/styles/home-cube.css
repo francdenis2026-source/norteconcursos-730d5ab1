@@ -6,18 +6,19 @@
   .sx-band {
     position: relative;
   }
-  html body .hc-corner {
+  html body .sx-band > div.hc-corner {
     display: block;
     position: absolute;
     z-index: 2;
     pointer-events: none;
-    top: 52px;
-    right: calc((100% - min(100%, 1180px)) / 2 + 46px);
+    top: 44px !important;
+    left: calc((100% - min(100%, 1180px)) / 2 + 40px) !important;
+    right: auto !important;
+    bottom: auto !important;
     width: 84px !important;
     height: 84px !important;
-    left: auto !important;
     inset-inline-start: auto !important;
-    margin: 0 !important;
+    margin: 0 0 0 calc((100% - min(100%, 1180px)) / 2 + 40px) !important;
     max-width: none !important;
   }
   .hc-corner .ncube {
