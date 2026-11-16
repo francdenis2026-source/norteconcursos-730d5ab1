@@ -1,5 +1,5 @@
-Warning: truncated output (original token count: 161519)
-Total output lines: 17371
+Warning: truncated output (original token count: 161721)
+Total output lines: 17378
 
 @layer reset, theme, base, astryx-base, astryx-theme, components, utilities;
 @import "tailwindcss" source(none);
@@ -2438,11 +2438,8 @@ html {
   grid-column: span 2;
 }
 .lp-tile--brass {
-  color: var(--brass-foreground);
-  padding-right: max(4px, env(safe-area-inset-right));
-  box-sizing: border-box;
-}
-@media (max-width: 767px) {
+  color: var(--brass-foreground);…131721 tokens truncated…x(4px, env(safe-area-inset-right)); box-sizing: border-box;
+  }
   html body .home.home .home-header__actions { flex: 0 0 auto !important; margin-right: 2px; gap: 8px; }
   html body .home.home .home-header .home-menu-trigger,
   html body .home.home .home-header .lp-theme-toggle {
