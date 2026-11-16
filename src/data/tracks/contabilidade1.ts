@@ -35,6 +35,33 @@ export const CONTABILIDADE_1: TrackLesson[] = [
     ],
   },
   {
+    id: "circulante-nao-circulante",
+    group: "Patrimônio",
+    title: "Ativo e Passivo: circulante e não circulante",
+    edital: "3 Balanço Patrimonial: ativo circulante, ativo não circulante, passivo circulante e passivo não circulante",
+    simples: "Circulante é o que se movimenta no curto prazo ou dentro do ciclo normal da entidade. Não circulante é o que será realizado, usado ou pago em prazo mais longo. No Balanço Patrimonial, primeiro organizamos o Ativo e depois o Passivo e o Patrimônio Líquido.",
+    pontos: [
+      "Ativo Circulante: Caixa, Bancos, Clientes, Estoques e despesas antecipadas.",
+      "Ativo não circulante: Realizável a longo prazo, Investimentos, Imobilizado e Intangível.",
+      "Passivo Circulante: dívidas que vencem no curto prazo, como Fornecedores e salários a pagar.",
+      "Passivo não circulante: dívidas com vencimento no longo prazo.",
+      "O prazo de 12 meses é uma referência importante, mas o ciclo operacional normal também deve ser considerado.",
+    ],
+    exemplo: "Uma loja possui Caixa de R$ 10.000, Clientes de R$ 8.000, Estoques de R$ 12.000, um veículo de R$ 40.000 e um software de R$ 5.000. O Ativo Circulante é R$ 30.000. O veículo fica no Imobilizado e o software no Intangível, ambos no Ativo não circulante. Se a loja deve R$ 9.000 a fornecedores e R$ 20.000 de financiamento de longo prazo, o primeiro valor fica no Passivo Circulante e o segundo no Passivo não circulante.",
+    atencao: [
+      "Circulante não significa necessariamente dinheiro em caixa. Estoque e Clientes são circulantes, mas ainda não são dinheiro disponível.",
+      "Veículo usado pela empresa é Imobilizado. Mercadoria comprada para revenda é Estoque, no Ativo Circulante.",
+      "Uma dívida longa pode ter parcela circulante. A parcela que vence no próximo período é separada no Passivo Circulante.",
+      "Não confunda Realizável a longo prazo, Investimentos, Imobilizado e Intangível: são grupos diferentes do Ativo não circulante.",
+    ],
+    quiz: [
+      { q: "Caixa, Clientes e Estoques pertencem normalmente ao Ativo Circulante.", a: true, why: "São recursos ou direitos ligados à movimentação de curto prazo da entidade." },
+      { q: "Todo Ativo não circulante é um bem físico.", a: false, why: "O grupo também inclui direitos realizáveis a longo prazo, investimentos e intangíveis, que podem não ter forma física." },
+      { q: "Fornecedores a pagar normalmente pertencem ao Passivo Circulante.", a: true, why: "A compra a prazo costuma gerar obrigação a ser paga no ciclo normal ou no curto prazo." },
+      { q: "Um veículo usado pela empresa e um estoque de mercadorias para venda pertencem ao mesmo grupo do Ativo.", a: false, why: "O veículo usado é Imobilizado, no Ativo não circulante; o estoque para venda é Ativo Circulante." },
+    ],
+  },
+  {
     id: "equacao-fundamental",
     group: "Patrimônio",
     title: "Equação fundamental e situação líquida",
