@@ -47,7 +47,7 @@ type QuestionInfo = ActivityQuestion & {
   available: boolean;
   figures?: string[];
 };
-type StudySession = { active_seconds: number };
+type StudySession = { active_seconds: number; discipline?: string | null; topic?: string | null };
 
 async function questionInfo(row: Response, userId: string): Promise<QuestionInfo> {
   const tables =
@@ -172,7 +172,7 @@ export function DailyStudyActivity({
         fetchAllRows<StudySession>((from, to) =>
           supabase
             .from("study_sessions")
-            .select("active_seconds")
+            .select("active_seconds,discipline,topic")
             .eq("user_id", userId)
             .gte("study_date", range.start.slice(0, 10))
             .lt("study_date", range.end.slice(0, 10))
@@ -228,6 +228,19 @@ export function DailyStudyActivity({
   ].sort((a, b) => b.at.localeCompare(a.at));
   const correct = data.training.filter((r) => r.is_correct).length;
   const activeSeconds = data.sessions.reduce((sum, row) => sum + Math.max(0, Number(row.active_seconds) || 0), 0);
+  const contextSeconds = new Map<string, number>();
+  const contextTopics = new Map<string, Set<string>>();
+  for (const session of data.sessions) {
+    const subject = session.discipline ? canonicalSubject(session.discipline) : "";
+    if (subject) {
+      contextSeconds.set(subject, (contextSeconds.get(subject) ?? 0) + Math.max(0, Number(session.active_seconds) || 0));
+      if (session.topic) {
+        const topics = contextTopics.get(subject) ?? new Set<string>();
+        topics.add(session.topic);
+        contextTopics.set(subject, topics);
+      }
+    }
+  }
   const disciplines = new Map<string, { questions: number; correct: number; seconds: number }>();
   for (const row of [...data.training, ...data.reinforcement]) {
     const subject = canonicalSubject(row.subject) || "Disciplina não identificada";
@@ -235,6 +248,11 @@ export function DailyStudyActivity({
     current.questions += 1;
     if (row.is_correct) current.correct += 1;
     current.seconds += Math.max(0, Number(row.response_seconds) || 0);
+    disciplines.set(subject, current);
+  }
+  for (const [subject, seconds] of contextSeconds) {
+    const current = disciplines.get(subject) ?? { questions: 0, correct: 0, seconds: 0 };
+    current.seconds = Math.max(current.seconds, seconds);
     disciplines.set(subject, current);
   }
   return (
@@ -277,9 +295,9 @@ export function DailyStudyActivity({
         <h4>Atividades por disciplina</h4>
         {disciplines.size ? (
           <ul>
-            {[...disciplines].sort((a, b) => b[1].questions - a[1].questions).map(([subject, value]) => (
+            {[...disciplines].sort((a, b) => b[1].seconds - a[1].seconds || b[1].questions - a[1].questions).map(([subject, value]) => (
               <li key={subject}>
-                <span><strong>{subject}</strong><small>{value.questions} {value.questions === 1 ? "atividade" : "atividades"} · {value.correct}/{value.questions} acertos</small></span>
+                <span><strong>{subject}</strong><small>{value.questions} {value.questions === 1 ? "atividade" : "atividades"} · {value.correct}/{value.questions} acertos{contextTopics.get(subject)?.size ? ` · ${[...contextTopics.get(subject)!].slice(0, 2).join(" · ")}` : ""}</small></span>
                 <b title="Tempo registrado nas respostas e reforços desta disciplina">Questões: {duration(value.seconds)}</b>
               </li>
             ))}
