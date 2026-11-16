@@ -47,6 +47,7 @@ type QuestionInfo = ActivityQuestion & {
   available: boolean;
   figures?: string[];
 };
+type StudySession = { active_seconds: number };
 
 async function questionInfo(row: Response, userId: string): Promise<QuestionInfo> {
   const tables =
@@ -168,11 +169,21 @@ export function DailyStudyActivity({
           if (isMissingQuestionTable(error)) return [];
           throw error;
         }),
+        fetchAllRows<StudySession>((from, to) =>
+          supabase
+            .from("study_sessions")
+            .select("active_seconds")
+            .eq("user_id", userId)
+            .gte("study_date", range.start.slice(0, 10))
+            .lt("study_date", range.end.slice(0, 10))
+            .range(from, to),
+        ),
       ]);
       return {
         training: results[0].status === "fulfilled" ? results[0].value : [],
         attempts: results[1].status === "fulfilled" ? results[1].value : [],
         reinforcement: results[2].status === "fulfilled" ? results[2].value : [],
+        sessions: results[3].status === "fulfilled" ? results[3].value : [],
         errors: results.flatMap((r, i) => (r.status === "rejected" ? [i] : [])),
       };
     },
@@ -216,19 +227,33 @@ export function DailyStudyActivity({
     })),
   ].sort((a, b) => b.at.localeCompare(a.at));
   const correct = data.training.filter((r) => r.is_correct).length;
+  const activeSeconds = data.sessions.reduce((sum, row) => sum + Math.max(0, Number(row.active_seconds) || 0), 0);
+  const disciplines = new Map<string, { questions: number; correct: number; seconds: number }>();
+  for (const row of [...data.training, ...data.reinforcement]) {
+    const subject = canonicalSubject(row.subject) || "Disciplina não identificada";
+    const current = disciplines.get(subject) ?? { questions: 0, correct: 0, seconds: 0 };
+    current.questions += 1;
+    if (row.is_correct) current.correct += 1;
+    current.seconds += Math.max(0, Number(row.response_seconds) || 0);
+    disciplines.set(subject, current);
+  }
   return (
     <section className="daily-study-activity" aria-label="Atividades realizadas">
       <h3>O que você estudou {period !== "day" ? "no período" : "neste dia"}</h3>
       {data.errors.length > 0 && (
         <p role="alert">
           Parte do histórico está indisponível (
-          {data.errors.map((i) => ["questões", "simulados", "reforço"][i]).join(", ")}).{" "}
+            {data.errors.map((i) => ["questões", "simulados", "reforço", "tempo ativo"][i]).join(", ")}).{" "}
           <button type="button" onClick={() => void query.refetch()}>
             Tentar novamente
           </button>
         </p>
       )}
       <dl className="daily-study-activity__summary">
+        <div>
+          <dt>Tempo ativo registrado</dt>
+          <dd>{duration(activeSeconds)}</dd>
+        </div>
         <div>
           <dt>Questões do treinador</dt>
           <dd>{data.errors.includes(0) ? "Indisponível" : data.training.length}</dd>
@@ -248,6 +273,20 @@ export function DailyStudyActivity({
           <dd>{data.errors.includes(1) ? "Indisponível" : data.attempts.length}</dd>
         </div>
       </dl>
+      <section className="daily-study-activity__disciplines" aria-label="Atividades por disciplina">
+        <h4>Atividades por disciplina</h4>
+        {disciplines.size ? (
+          <ul>
+            {[...disciplines].sort((a, b) => b[1].questions - a[1].questions).map(([subject, value]) => (
+              <li key={subject}>
+                <span><strong>{subject}</strong><small>{value.questions} {value.questions === 1 ? "atividade" : "atividades"} · {value.correct}/{value.questions} acertos</small></span>
+                <b title="Tempo registrado nas respostas e reforços desta disciplina">Questões: {duration(value.seconds)}</b>
+              </li>
+            ))}
+          </ul>
+        ) : <p>Nenhuma questão ou reforço com disciplina foi registrado neste período.</p>}
+        {disciplines.size > 0 && <p className="daily-study-activity__note">O tempo de cada disciplina mostra o tempo medido nas respostas e reforços. O tempo de leitura e de outras telas aparece no total de tempo ativo até que a atividade seja registrada com uma disciplina.</p>}
+      </section>
       <p className="daily-study-activity__note">
         Respostas e simulados concluídos no período. O tempo de cada atividade é informativo e não é
         somado ao tempo ativo, pois podem se sobrepor.
