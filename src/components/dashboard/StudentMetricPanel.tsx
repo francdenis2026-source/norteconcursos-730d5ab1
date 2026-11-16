@@ -1,5 +1,5 @@
 import { disciplineSetupSearch } from "@/lib/practiceLink";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   STUDY_PERIODS,
   studyPeriodSummary,
@@ -115,6 +115,17 @@ export function StudentMetricPanel({
                 : ("day" as const),
           day: selectedDate ?? today,
         };
+  useEffect(() => {
+    if (!metric) return;
+    const previousOverflow = document.body.style.overflow;
+    const previousOverscroll = document.body.style.overscrollBehavior;
+    document.body.style.overflow = "hidden";
+    document.body.style.overscrollBehavior = "none";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.body.style.overscrollBehavior = previousOverscroll;
+    };
+  }, [metric]);
   const setPeriod = (period: MetricPeriod) => setSelection({ ...active, period });
   const setDay = (day: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(day) && day <= today) setSelection({ ...active, day });
@@ -152,7 +163,7 @@ export function StudentMetricPanel({
     >
       {definition && (
         <DialogContent
-          className="student-metric-panel"
+          className="student-metric-panel !overflow-hidden"
           onCloseAutoFocus={(event) => {
             event.preventDefault();
             returnFocus?.focus();
