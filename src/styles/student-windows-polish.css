@@ -5,6 +5,8 @@
   width: min(1180px, calc(100vw - 24px));
   max-width: 1180px;
 }
+.student-metric-panel__body[data-metric="week"] { overflow: visible; }
+.student-metric-panel__body[data-metric="week"] .student-metric-panel__days { max-height: none; overflow: visible; }
 .student-metric-panel__header {
   align-items: center;
   background: linear-gradient(90deg, color-mix(in srgb, var(--smp-accent) 14%, transparent), transparent 70%);
