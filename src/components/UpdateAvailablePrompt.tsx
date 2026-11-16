@@ -5,8 +5,9 @@ import { ACRE_TZ } from "@/lib/acreTime";
 import "@/styles/update-prompt.css";
 
 const CHECK_INTERVAL_MS = 60 * 1000;
-/** Depois de "Agora não", o aviso volta a aparecer passado este tempo. */
-const SNOOZE_MS = 30 * 60 * 1000;
+const DISMISSED_UPDATE_KEY = "norte-dismissed-update";
+type ReleaseType = "internal" | "design" | "feature" | "critical";
+const VISIBLE_RELEASES = new Set<ReleaseType>(["design", "feature", "critical"]);
 
 function publishedLabel(builtAt: string | null) {
   if (!builtAt) return null;
@@ -31,10 +32,11 @@ function publishedLabel(builtAt: string | null) {
  */
 export function UpdateAvailablePrompt() {
   const [visible, setVisible] = useState(false);
+  const [availableBuildId, setAvailableBuildId] = useState<string | null>(null);
   const [builtAt, setBuiltAt] = useState<string | null>(null);
+  const [releaseType, setReleaseType] = useState<ReleaseType>("internal");
   const [updating, setUpdating] = useState(false);
   const checkingRef = useRef(false);
-  const snoozedUntil = useRef(0);
 
   useEffect(() => {
     // BUILD_ID "dev" é o placeholder usado fora de um build real (dev local,
@@ -47,10 +49,15 @@ export function UpdateAvailablePrompt() {
       try {
         const res = await fetch(`/version.json?t=${Date.now()}`, { cache: "no-store" });
         if (res.ok) {
-          const data = (await res.json()) as { buildId?: string; builtAt?: string };
+          const data = (await res.json()) as { buildId?: string; builtAt?: string; releaseType?: ReleaseType };
           if (data.buildId && data.buildId !== BUILD_ID) {
+            setAvailableBuildId(data.buildId);
             setBuiltAt(data.builtAt ?? null);
-            if (Date.now() >= snoozedUntil.current) setVisible(true);
+            const kind = data.releaseType ?? "internal";
+            setReleaseType(kind);
+            let dismissed = false;
+            try { dismissed = localStorage.getItem(DISMISSED_UPDATE_KEY) === data.buildId; } catch { /* storage is optional */ }
+            if (VISIBLE_RELEASES.has(kind) && !dismissed) setVisible(true);
           }
         }
       } catch {
@@ -86,7 +93,7 @@ export function UpdateAvailablePrompt() {
     window.location.reload();
   };
   const later = () => {
-    snoozedUntil.current = Date.now() + SNOOZE_MS;
+    try { if (availableBuildId) localStorage.setItem(DISMISSED_UPDATE_KEY, availableBuildId); } catch { /* storage is optional */ }
     setVisible(false);
   };
 
@@ -98,7 +105,7 @@ export function UpdateAvailablePrompt() {
       <div className="update-prompt__copy">
         <strong id="update-prompt-title">Atualização disponível</strong>
         <p>
-          Há melhorias e ajustes nesta versão{published ? ` (${published})` : ""}. Atualize para continuar com tudo em dia.
+          {releaseType === "design" ? "Há uma atualização visual do site" : releaseType === "critical" ? "Há uma correção importante disponível" : "Há uma nova funcionalidade disponível"}{published ? ` (${published})` : ""}. Atualize quando for conveniente.
         </p>
         <small>
           <ShieldCheck aria-hidden="true" /> Você continua conectado e volta para esta mesma tela.
