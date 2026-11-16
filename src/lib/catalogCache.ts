@@ -5,7 +5,7 @@
 
 // A versão no nome força a renovação do acervo quando explicações ou questões
 // são corrigidas, evitando que o treinador continue exibindo conteúdo antigo.
-const DB_NAME = "norte-catalogo-v3";
+const DB_NAME = "norte-catalogo-v4";
 const STORE = "acervo";
 const VERSION = 1;
 export const CATALOG_CACHE_TTL_MS = 6 * 60 * 60_000;
