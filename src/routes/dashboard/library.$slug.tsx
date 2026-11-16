@@ -9,7 +9,7 @@ import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import {
@@ -40,7 +40,9 @@ import { libraryCollection } from "@/lib/libraryOrganization";
 import { relatedVideos } from "@/lib/relatedVideos";
 import {
   markSlugRead,
+  getMaterialStudyState,
   readingMinutes,
+  saveMaterialStudyState,
   useStudyMaterial,
   useStudyMaterialList,
 } from "@/lib/studyMaterials";
@@ -81,13 +83,50 @@ function MaterialPage() {
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);
   const { data: list } = useStudyMaterialList(signedIn);
   const { catalog } = useMediaCatalog();
+  const [studyState, setStudyState] = useState(() => getMaterialStudyState(slug));
+
+  useEffect(() => {
+    setStudyState(getMaterialStudyState(slug));
+  }, [slug]);
 
   useEffect(() => {
     if (material) {
       markSlugRead(material.slug);
+      saveMaterialStudyState(material.slug, { lastReadAt: new Date().toISOString() });
       window.dispatchEvent(new CustomEvent("norte:study-context", { detail: { discipline: material.discipline, topic: material.topic_label ?? material.title } }));
     }
   }, [material]);
+
+  useEffect(() => {
+    if (!material) return;
+    let timer: number | undefined;
+    const update = () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        const total = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+        const next = Math.min(100, Math.round(((window.scrollY + window.innerHeight) / Math.max(total, 1)) * 100));
+        setStudyState((current) => {
+          if (next <= current.progress || current.completed) return current;
+          saveMaterialStudyState(material.slug, { progress: next });
+          return { ...current, progress: next, lastReadAt: new Date().toISOString() };
+        });
+      }, 180);
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.clearTimeout(timer);
+    };
+  }, [material]);
+
+  useEffect(() => {
+    const refresh = (event: Event) => {
+      const detail = (event as CustomEvent<{ slug?: string; state?: typeof studyState }>).detail;
+      if (detail?.slug === slug && detail.state) setStudyState(detail.state);
+    };
+    window.addEventListener("norte:material-progress", refresh);
+    return () => window.removeEventListener("norte:material-progress", refresh);
+  }, [slug]);
 
   const videos = useMemo(() => {
     if (!material) return [];
@@ -255,6 +294,24 @@ function MaterialPage() {
             <Clock3 aria-hidden="true" /> {readingMinutes(material.body_md)} min de leitura
           </li>
         </ul>
+        <div className="lr-study-status" aria-label="Progresso deste material">
+          <div className="flex items-center justify-between gap-3 text-xs font-semibold">
+            <span>{studyState.completed ? "Material concluído" : studyState.progress > 0 ? "Em estudo" : "Ainda não iniciado"}</span>
+            <strong>{studyState.progress}%</strong>
+          </div>
+          <progress value={studyState.progress} max={100} aria-label={`${studyState.progress}% do material lido`} />
+          <button
+            type="button"
+            onClick={() => {
+              const next = { progress: 100, completed: true, lastReadAt: new Date().toISOString() };
+              saveMaterialStudyState(material.slug, next);
+              markSlugRead(material.slug);
+              setStudyState(next);
+            }}
+          >
+            {studyState.completed ? "Estudado · revisar novamente" : "Marcar como estudado"}
+          </button>
+        </div>
       </header>
 
       <LegalUpdateNotice review={material.legal_review} slug={material.slug} />
