@@ -24,3 +24,72 @@
     flex: none;
   }
 }
+
+/* Linha do tempo do teste no vazio ao lado do título: ocupa só o espaço livre da coluna, sem mudar a altura. */
+.home.home .home-plans__path {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .home.home .home-plans__lead {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 2.4vw, 40px);
+  }
+  .home.home .home-plans__lead > .home-heading {
+    flex: 0 0 auto;
+    max-width: 52%;
+  }
+  .home.home .home-plans__path {
+    position: relative;
+    display: grid;
+    flex: 1 1 0;
+    gap: 16px;
+    min-width: 0;
+    max-width: 300px;
+    margin: 0;
+    padding: 0 0 0 26px;
+    list-style: none;
+  }
+  .home.home .home-plans__path::before {
+    position: absolute;
+    top: 7px;
+    bottom: 7px;
+    left: 5px;
+    width: 1px;
+    content: "";
+    background: linear-gradient(180deg, rgb(245 184 75 / 70%), rgb(245 184 75 / 14%));
+  }
+  .home.home .home-plans__path li {
+    position: relative;
+    display: grid;
+    gap: 2px;
+  }
+  .home.home .home-plans__path li::before {
+    position: absolute;
+    top: 3px;
+    left: -26px;
+    width: 11px;
+    height: 11px;
+    box-sizing: border-box;
+    border: 1.5px solid #f5c76a;
+    border-radius: 50%;
+    content: "";
+    background: #f5c76a;
+  }
+  .home.home .home-plans__path li:last-child::before {
+    background: transparent;
+    border-color: rgb(245 184 75 / 55%);
+  }
+  .home.home .home-plans__path b {
+    color: #f5c76a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .home.home .home-plans__path span {
+    color: var(--home-muted, #aab4c4);
+    font-size: 13px;
+    line-height: 1.35;
+  }
+}
