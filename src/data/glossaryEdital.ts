@@ -41,6 +41,7 @@ export const EDITAL_GLOSSARY: GlossaryEntry[] = [
   { term: "frontend", meaning: "Parte do sistema que o usuário vê e usa (interface).", area: "Informática" },
   { term: "backend", meaning: "Parte do sistema que roda no servidor: regras, processamento e acesso aos dados.", area: "Informática" },
   // Contabilidade
+  { term: "azienda", meaning: "Entidade econômico-administrativa, formada por um patrimônio organizado e administrado para alcançar uma finalidade. Pode ter ou não fins lucrativos e pode ser pública ou privada.", synonyms: ["aziendas"], example: "Uma empresa, uma associação ou um órgão público que administra recursos possui uma azienda para fins contábeis.", area: "Contabilidade" },
   { term: "equação fundamental do patrimônio", meaning: "Ativo = Passivo + Patrimônio Líquido.", area: "Contabilidade" },
   { term: "fato permutativo", meaning: "Fato que troca elementos do patrimônio sem alterar o patrimônio líquido.", example: "Comprar um móvel à vista.", area: "Contabilidade" },
   { term: "fato modificativo", meaning: "Fato que altera o patrimônio líquido, para mais ou para menos.", example: "Pagar o aluguel.", area: "Contabilidade" },
