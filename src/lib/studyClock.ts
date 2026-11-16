@@ -11,6 +11,7 @@ const listeners = new Set<() => void>();
 const memory = new Map<string, State>();
 const flushing = new Map<string, Promise<void>>();
 let uid = "", sid = "", sessionDay = "";
+let studyContext: { discipline: string | null; topic: string | null } = { discipline: null, topic: null };
 let timers: number[] = [];
 let snapshot = 0;
 const key = (user = uid) => `norte_clock_v2:${user}`;
@@ -54,7 +55,7 @@ export function flushStudyClock(): Promise<void> {
       if (!batch) break;
       const seconds = Math.min(120, batch.seconds, budget);
       try {
-        const { error } = await supabase.rpc("study_heartbeat", { _id: batch.id, _seconds: seconds });
+        const { error } = await supabase.rpc("study_heartbeat", { _id: batch.id, _seconds: seconds, _discipline: studyContext.discipline, _topic: studyContext.topic });
         if (error) return;
       } catch { return; }
       await withLock(user, async () => {
@@ -72,7 +73,7 @@ function rotateSession() {
   if (day === sessionDay) return;
   sessionDay = day; sid = sessionId(uid, day);
   // Establish the row on its own Acre day, before deferred heartbeats.
-  void supabase.rpc("study_heartbeat", { _id: sid, _seconds: 0 }).then(() => {});
+  void supabase.rpc("study_heartbeat", { _id: sid, _seconds: 0, _discipline: studyContext.discipline, _topic: studyContext.topic }).then(() => {});
   const user = uid;
   void supabase.rpc("study_time_today").then(({ data }) => {
     if (uid !== user || sessionDay !== day || typeof data !== "number") return;
@@ -111,12 +112,26 @@ export function startStudyClock(userId: string) {
   window.addEventListener("storage", onStorage);
   void flushStudyClock();
 }
+
+if (typeof window !== "undefined") {
+  window.addEventListener("norte:study-context", (event: Event) => {
+    const detail = (event as CustomEvent<{ discipline?: string; topic?: string }>).detail;
+    if (!detail?.discipline) return;
+    studyContext = { discipline: detail.discipline, topic: detail.topic ?? null };
+    if (uid) {
+      const day = acreDateKey();
+      sid = sessionId(uid, `${day}:${detail.discipline}:${detail.topic ?? ""}`);
+      sessionDay = day;
+      void supabase.rpc("study_heartbeat", { _id: sid, _seconds: 0, _discipline: studyContext.discipline, _topic: studyContext.topic });
+    }
+  });
+}
 export function stopStudyClock() {
   timers.forEach(timer => window.clearInterval(timer)); timers = [];
   document.removeEventListener("visibilitychange", onVisibility);
   window.removeEventListener("pagehide", onPageHide);
   window.removeEventListener("storage", onStorage);
-  uid = ""; snapshot = 0; listeners.forEach(listener => listener());
+  uid = ""; snapshot = 0; studyContext = { discipline: null, topic: null }; listeners.forEach(listener => listener());
 }
 const onVisibility = () => {
   if (document.visibilityState === "hidden") void flushStudyClock();
