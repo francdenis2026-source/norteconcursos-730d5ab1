@@ -174,6 +174,44 @@ export function groupByEditalTopic(items: StudyMaterialSummary[]) {
 }
 
 const READ_KEY = "norte-library-read";
+const STUDY_STATE_KEY = "norte-library-study-state";
+
+export type MaterialStudyState = {
+  progress: number;
+  completed: boolean;
+  lastReadAt: string | null;
+};
+
+function studyStates(): Record<string, MaterialStudyState> {
+  try {
+    const raw = localStorage.getItem(userStorageKey(STUDY_STATE_KEY));
+    const parsed: unknown = raw ? JSON.parse(raw) : {};
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed as Record<string, MaterialStudyState> : {};
+  } catch {
+    return {};
+  }
+}
+
+export function getMaterialStudyState(slug: string): MaterialStudyState {
+  const state = studyStates()[slug];
+  return state ?? { progress: 0, completed: false, lastReadAt: null };
+}
+
+export function saveMaterialStudyState(slug: string, patch: Partial<MaterialStudyState>) {
+  try {
+    const states = studyStates();
+    states[slug] = {
+      ...getMaterialStudyState(slug),
+      ...patch,
+      progress: Math.max(0, Math.min(100, Math.round(patch.progress ?? getMaterialStudyState(slug).progress))),
+      lastReadAt: patch.lastReadAt ?? new Date().toISOString(),
+    };
+    localStorage.setItem(userStorageKey(STUDY_STATE_KEY), JSON.stringify(states));
+    window.dispatchEvent(new CustomEvent("norte:material-progress", { detail: { slug, state: states[slug] } }));
+  } catch {
+    // O material continua utilizável mesmo quando o armazenamento está bloqueado.
+  }
+}
 
 /** Materiais já abertos neste navegador (conveniência local, não é dado do aluno no servidor). */
 export function readSlugs(): Set<string> {
