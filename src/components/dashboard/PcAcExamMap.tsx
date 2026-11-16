@@ -89,10 +89,14 @@ export function PcAcExamMap({
       all.map((discipline) => {
         const linkedSubjects = pcAcDisciplineLink(discipline.id)?.subjects ?? [];
         const linkedKeys = linkedSubjects.map(canonicalSubject);
-        const items = (materials.data ?? []).filter((material) => linkedKeys.includes(canonicalSubject(material.discipline)));
+        const disciplineKey = canonicalSubject(discipline.name);
+        const items = (materials.data ?? []).filter((material) => {
+          const materialKey = canonicalSubject(material.discipline);
+          return linkedKeys.includes(materialKey) || materialKey === disciplineKey;
+        });
         const completed = items.filter((material) => read.has(material.slug)).length;
-        const studied = items.length ? Math.round((completed / items.length) * 100) : null;
-        return [discipline.id, { studied, remaining: studied === null ? null : 100 - studied, completed, total: items.length }] as const;
+        const studied = items.length ? Math.round((completed / items.length) * 100) : 0;
+        return [discipline.id, { studied, remaining: 100 - studied, completed, total: items.length }] as const;
       }),
     );
   }, [all, materials.data, readVersion]);
@@ -194,8 +198,8 @@ export function PcAcExamMap({
                     </span>
                     {(() => {
                       const progress = materialProgress.get(d.id);
-                      return progress?.studied !== null && progress?.studied !== undefined ? (
-                        <span className="pcmap__material-progress" title={`${progress.completed} de ${progress.total} materiais estudados`}>
+                      return progress ? (
+                        <span className="pcmap__material-progress" title={progress.total ? `${progress.completed} de ${progress.total} materiais estudados` : "Nenhum material didático vinculado a esta disciplina"}>
                           <span><strong>{progress.studied}%</strong> estudado · falta {progress.remaining}%</span>
                           <i aria-hidden="true"><b style={{ width: `${progress.studied}%` }} /></i>
                         </span>
