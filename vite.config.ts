@@ -29,7 +29,7 @@ function writeBuildVersionPlugin(): Plugin {
     buildStart() {
       writeFileSync(
         "public/version.json",
-        JSON.stringify({ buildId, builtAt: new Date().toISOString() }, null, 2) + "\n",
+        JSON.stringify({ buildId, builtAt: new Date().toISOString(), releaseType: process.env.VITE_RELEASE_TYPE ?? "internal" }, null, 2) + "\n",
       );
       writeFileSync(
         "src/build-info.ts",
