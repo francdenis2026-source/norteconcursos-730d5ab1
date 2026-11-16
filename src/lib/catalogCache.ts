@@ -3,7 +3,9 @@
 // muda (realtime), quando o aluno pede recarga e quando sai da conta, para não deixar dados pessoais
 // no aparelho. Falhas de armazenamento nunca impedem o treino: sem cache, carrega-se do banco.
 
-const DB_NAME = "norte-catalogo";
+// A versão no nome força a renovação do acervo quando explicações ou questões
+// são corrigidas, evitando que o treinador continue exibindo conteúdo antigo.
+const DB_NAME = "norte-catalogo-v2";
 const STORE = "acervo";
 const VERSION = 1;
 export const CATALOG_CACHE_TTL_MS = 6 * 60 * 60_000;
