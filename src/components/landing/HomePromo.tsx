@@ -15,7 +15,7 @@ export function HomePromo() {
       <div className="hp-promo__inner">
         <img
           className="hp-promo__art"
-          src="/media/photos/treino-sala.webp"
+          src="/media/hero/preparacao-norte.webp"
           alt=""
           aria-hidden="true"
           loading="lazy"
