@@ -19,11 +19,11 @@
   /* sombra de piso, sem brilho */
   content: "";
   position: absolute;
-  inset: auto 12% -6% 12%;
-  height: 12%;
+  inset: auto 6% -8% 6%;
+  height: 16%;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgb(0 0 0 / 0.45), transparent);
-  filter: blur(6px);
+  background: radial-gradient(closest-side, rgb(0 0 0 / 0.62), rgb(0 0 0 / 0.18) 70%, transparent);
+  filter: blur(7px);
 }
 .ncube__scene {
   position: relative;
@@ -47,7 +47,18 @@
   border-radius: 7px;
   backface-visibility: hidden;
   background: linear-gradient(145deg, #1c2128, #0b0e12 70%);
-  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.06);
+  box-shadow:
+    inset 0 0 0 1px rgb(245 184 75 / 0.16),
+    inset 0 1px 0 rgb(245 184 75 / 0.22);
+}
+/* Reflexo discreto no topo de cada face: dá volume sem clarear o preto. */
+.ncube__face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(165deg, rgb(245 184 75 / 0.09), transparent 42%);
+  pointer-events: none;
 }
 .ncube__face[data-sticker="true"] {
   background: linear-gradient(
@@ -79,6 +90,7 @@
 }
 .ncube__face[data-sticker="true"] {
   box-shadow:
-    inset 0 0 0 1.5px rgb(255 255 255 / 0.14),
-    inset 0 0 12px rgb(0 0 0 / 0.45);
+    inset 0 0 0 1.5px rgb(245 184 75 / 0.34),
+    inset 0 1px 0 rgb(245 184 75 / 0.4),
+    inset 0 0 12px rgb(0 0 0 / 0.5);
 }
