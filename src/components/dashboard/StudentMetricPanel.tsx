@@ -11,6 +11,7 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   CheckCircle2,
+  ChevronLeft,
   ChevronRight,
   Clock,
   ListChecks,
@@ -51,13 +52,19 @@ const definitions = {
   },
   week: {
     title: "Estudo nesta semana",
-    description: "Seu tempo ativo nos últimos sete dias, incluindo hoje.",
+    description: "Seu tempo ativo na semana atual, de segunda a domingo.",
     icon: TrendingUp,
   },
 };
 const duration = (n: number) => (n > 0 ? fmtHuman(n) : "0 min");
 const count = (n: number) => n.toLocaleString("pt-BR");
 const dateLabel = (date: string) => `${date.slice(8, 10)}/${date.slice(5, 7)}`;
+const weekdayLabel = (date: string) => new Intl.DateTimeFormat("pt-BR", { weekday: "long" }).format(new Date(`${date}T12:00:00Z`));
+const shiftDate = (date: string, days: number) => {
+  const value = new Date(`${date}T12:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+};
 
 export function StudentMetricPanel({
   metric,
@@ -104,7 +111,7 @@ export function StudentMetricPanel({
             metric === "questions" || metric === "accuracy"
               ? ("all" as const)
               : metric === "week"
-                ? ("7d" as const)
+                ? ("week" as const)
                 : ("day" as const),
           day: selectedDate ?? today,
         };
@@ -470,7 +477,7 @@ export function StudentMetricDetails({
               <span>
                 {period === "day"
                   ? `${isToday ? "Hoje, " : ""}${fullDate(day)} · Acre`
-                  : `${fullDate(time.days[0]?.date ?? day)} a ${fullDate(day)} · Acre`}
+                  : `${fullDate(time.days[0]?.date ?? day)} a ${fullDate(period === "week" ? time.days[time.days.length - 1]?.date ?? day : day)} · Acre`}
               </span>
               <strong>{duration(time.total)}</strong>
               <p>Tempo ativo de estudo</p>
@@ -531,7 +538,7 @@ export function StudentMetricDetails({
                     <span>
                       {time.monthly
                         ? `${d.date.slice(5, 7)}/${d.date.slice(2, 4)}`
-                        : `${dateLabel(d.date)}${d.date === today ? " · Hoje" : ""}`}
+                        : `${weekdayLabel(d.date)} · ${dateLabel(d.date)}${d.date === today ? " · Hoje" : ""}`}
                     </span>
                     <progress
                       aria-label={`Tempo em ${d.date}: ${duration(d.seconds)}`}
@@ -606,16 +613,28 @@ function StudyPeriodControls({
         ))}
       </div>
       {period !== "all" && (
-        <label>
-          {period === "day" ? "Data" : "Até a data"}
-          <input
-            aria-label="Data final do histórico"
-            type="date"
-            value={day}
-            max={today}
-            onChange={(event) => onDayChange(event.target.value)}
-          />
-        </label>
+        <div className="study-period-controls__date">
+          {period === "week" && (
+            <button type="button" onClick={() => onDayChange(shiftDate(day, -7))} aria-label="Semana anterior">
+              <ChevronLeft aria-hidden="true" /> Semana anterior
+            </button>
+          )}
+          <label>
+            {period === "day" ? "Data" : period === "week" ? "Semana de referência" : "Até a data"}
+            <input
+              aria-label="Data final do histórico"
+              type="date"
+              value={day}
+              max={today}
+              onChange={(event) => onDayChange(event.target.value)}
+            />
+          </label>
+          {period === "week" && shiftDate(day, 7) <= today && (
+            <button type="button" onClick={() => onDayChange(shiftDate(day, 7))} aria-label="Próxima semana">
+              Próxima semana <ChevronRight aria-hidden="true" />
+            </button>
+          )}
+        </div>
       )}
     </div>
   );
