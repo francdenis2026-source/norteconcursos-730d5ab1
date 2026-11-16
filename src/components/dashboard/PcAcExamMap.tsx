@@ -17,6 +17,7 @@ import { pcAcVerticalCargos, type PcAcVerticalCargoId } from "@/data/pcAcreVerti
 import { buildPcAcExamMap, type MapDiscipline } from "@/lib/pcAcExamMap";
 import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
 import { pcAcDiscursiveBrief } from "@/lib/pcAcreExamWeights";
+import { canonicalSubject } from "@/lib/subjects";
 import "@/styles/pcac-exam-map.css";
 
 const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1).replace(".", ","));
@@ -87,7 +88,8 @@ export function PcAcExamMap({
     return new Map(
       all.map((discipline) => {
         const linkedSubjects = pcAcDisciplineLink(discipline.id)?.subjects ?? [];
-        const items = (materials.data ?? []).filter((material) => linkedSubjects.includes(material.discipline));
+        const linkedKeys = linkedSubjects.map(canonicalSubject);
+        const items = (materials.data ?? []).filter((material) => linkedKeys.includes(canonicalSubject(material.discipline)));
         const completed = items.filter((material) => read.has(material.slug)).length;
         const studied = items.length ? Math.round((completed / items.length) * 100) : null;
         return [discipline.id, { studied, remaining: studied === null ? null : 100 - studied, completed, total: items.length }] as const;
