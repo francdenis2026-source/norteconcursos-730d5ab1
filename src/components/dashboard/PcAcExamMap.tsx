@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, BrainCircuit, Flame, Info, PlayCircle, Target } from "lucide-react";
 import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
@@ -6,7 +6,7 @@ import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { readSlugs, useStudyMaterialList } from "@/lib/studyMaterials";
 import {
   buildTheoryIndex,
   findTheory,
@@ -54,6 +54,19 @@ export function PcAcExamMap({
   const [metric, setMetric] = useState<Metric>("questions");
   const [onlyHot, setOnlyHot] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+  const [readVersion, setReadVersion] = useState(0);
+
+  useEffect(() => {
+    const refresh = () => setReadVersion((version) => version + 1);
+    window.addEventListener("focus", refresh);
+    window.addEventListener("storage", refresh);
+    window.addEventListener("norte:study-context", refresh);
+    return () => {
+      window.removeEventListener("focus", refresh);
+      window.removeEventListener("storage", refresh);
+      window.removeEventListener("norte:study-context", refresh);
+    };
+  }, []);
 
   const cargo = pcAcVerticalCargos.find((c) => c.id === cargoId) ?? pcAcVerticalCargos[0]!;
   const blocks = useMemo(() => buildPcAcExamMap(cargo), [cargo]);
@@ -69,6 +82,18 @@ export function PcAcExamMap({
   const topics = active ? (onlyHot ? active.topics.filter((t) => t.hot) : active.topics) : [];
   const subjects = active ? (pcAcDisciplineLink(active.id)?.subjects ?? []) : [];
   const subject = subjects[0];
+  const materialProgress = useMemo(() => {
+    const read = readSlugs();
+    return new Map(
+      all.map((discipline) => {
+        const linkedSubjects = pcAcDisciplineLink(discipline.id)?.subjects ?? [];
+        const items = (materials.data ?? []).filter((material) => linkedSubjects.includes(material.discipline));
+        const completed = items.filter((material) => read.has(material.slug)).length;
+        const studied = items.length ? Math.round((completed / items.length) * 100) : null;
+        return [discipline.id, { studied, remaining: studied === null ? null : 100 - studied, completed, total: items.length }] as const;
+      }),
+    );
+  }, [all, materials.data, readVersion]);
   // Vídeo exatamente do assunto; sem ele, a videoteca geral da matéria (nunca de outra matéria).
   const videoFor = (title: string) => {
     for (const sub of subjects) {
@@ -165,6 +190,15 @@ export function PcAcExamMap({
                     <span className="pcmap__bar" aria-hidden="true">
                       <i style={{ width: `${Math.round(d.share * 100)}%` }} />
                     </span>
+                    {(() => {
+                      const progress = materialProgress.get(d.id);
+                      return progress?.studied !== null && progress?.studied !== undefined ? (
+                        <span className="pcmap__material-progress" title={`${progress.completed} de ${progress.total} materiais estudados`}>
+                          <span><strong>{progress.studied}%</strong> estudado · falta {progress.remaining}%</span>
+                          <i aria-hidden="true"><b style={{ width: `${progress.studied}%` }} /></i>
+                        </span>
+                      ) : null;
+                    })()}
                   </button>
                 </li>
               ))}
