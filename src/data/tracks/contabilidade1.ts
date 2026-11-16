@@ -48,6 +48,32 @@ export const CONTABILIDADE_1: TrackLesson[] = [
     ],
   },
   {
+    id: "natureza-contas-patrimoniais",
+    group: "Contas",
+    title: "Natureza das contas: ativo, passivo e patrimônio líquido",
+    edital: "4 Contas: natureza devedora e credora; funcionamento das contas",
+    simples: "A natureza de uma conta indica o lado em que ela normalmente aumenta e onde costuma apresentar saldo. Ativo tem natureza devedora: aumenta por débito e diminui por crédito. Passivo e patrimônio líquido têm natureza credora: aumentam por crédito e diminuem por débito. Isso é uma regra de funcionamento, não quer dizer que débito seja algo ruim ou crédito seja algo bom.",
+    pontos: [
+      "Ativo: natureza devedora; exemplos: caixa, bancos, clientes e veículos.",
+      "Passivo: natureza credora; exemplos: fornecedores, empréstimos e salários a pagar.",
+      "Patrimônio líquido: natureza credora; exemplos: capital social e reservas de lucros.",
+      "Despesas têm natureza devedora e receitas têm natureza credora.",
+      "Contas retificadoras possuem natureza contrária à conta que reduzem: depreciação acumulada, por exemplo, é retificadora do ativo e tem saldo credor.",
+    ],
+    exemplo: "Quando a empresa recebe R$ 2.000 de um cliente, o Caixa (ativo) é debitado porque aumenta e Clientes (ativo) é creditado porque diminui. Quando a empresa contrai um empréstimo de R$ 10.000, o Caixa é debitado e Empréstimos a pagar (passivo) é creditado.",
+    atencao: [
+      "Natureza devedora não significa que a conta sempre terá saldo devedor em qualquer situação; significa que esse é o seu saldo normal.",
+      "O patrimônio líquido é normalmente credor, mas pode ficar com saldo devedor quando há prejuízos acumulados que superam os demais componentes.",
+      "Para resolver a questão, primeiro identifique a classe da conta e depois aplique a regra de aumento ou redução.",
+    ],
+    quiz: [
+      { q: "As contas do ativo têm natureza devedora e aumentam por débito.", a: true, why: "Caixa, clientes e veículos são ativos. Quando aumentam, recebem lançamento a débito." },
+      { q: "Fornecedores e capital social aumentam por débito porque representam valores da entidade.", a: false, why: "Fornecedores é passivo e capital social é patrimônio líquido. Ambos têm natureza credora e aumentam por crédito." },
+      { q: "Depreciação acumulada é retificadora do ativo e normalmente tem saldo credor.", a: true, why: "Ela reduz o valor contábil do ativo imobilizado, por isso funciona com natureza contrária à do ativo." },
+      { q: "Receita de serviços tem natureza devedora.", a: false, why: "Receitas aumentam o patrimônio líquido e, por isso, têm natureza credora." },
+    ],
+  },
+  {
     id: "atos-fatos",
     group: "Atos e fatos administrativos",
     title: "Atos e fatos administrativos",
