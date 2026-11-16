@@ -1,4 +1,4 @@
-import { acreDateKey, acreDaysAgoKey } from "./acreTime";
+import { acreDateKey } from "./acreTime";
 import { canonicalSubject } from "./subjects";
 import {
   buildWeek,
@@ -80,13 +80,19 @@ export function summarizeStudyTime(rows: ActivityRecord[], live: number, now: Da
     if (/^\d{4}-\d{2}-\d{2}$/.test(row.study_date) && Number.isFinite(row.active_seconds))
       byDay.set(row.study_date, (byDay.get(row.study_date) ?? 0) + Math.max(0, row.active_seconds));
   byDay.set(today, Math.max(byDay.get(today) ?? 0, Number.isFinite(live) ? Math.max(0, live) : 0));
+  const current = new Date(`${today}T12:00:00Z`);
+  const weekday = current.getUTCDay();
+  const mondayOffset = weekday === 0 ? 6 : weekday - 1;
+  current.setUTCDate(current.getUTCDate() - mondayOffset);
   const days = Array.from({ length: 7 }, (_, i) => {
-    const date = acreDaysAgoKey(6 - i, now);
-    return { date, seconds: byDay.get(date) ?? 0 };
+    const date = new Date(current);
+    date.setUTCDate(current.getUTCDate() + i);
+    const key = date.toISOString().slice(0, 10);
+    return { date: key, seconds: byDay.get(key) ?? 0 };
   });
   return {
     today: byDay.get(today) ?? 0,
-    total: [...byDay.values()].reduce((a, b) => a + b, 0),
+    total: days.reduce((sum, d) => sum + d.seconds, 0),
     week: days.reduce((sum, d) => sum + d.seconds, 0),
     days,
   };
