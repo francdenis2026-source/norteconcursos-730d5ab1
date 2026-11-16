@@ -54,7 +54,7 @@ html[data-norte-startup-stage=intro] #norte-initial-loading>:is(.norte-boot-copy
 `;
 
 // If hydration fails entirely, reveal SSR/error content instead of trapping the visitor.
-export const INITIAL_LOADING_WATCHDOG = `(()=>{const t=setTimeout(()=>{document.documentElement.dataset.norteBoot='ready'},10000);window.addEventListener('norte:boot-ready',()=>clearTimeout(t),{once:true})})();`;
+export const INITIAL_LOADING_WATCHDOG = `(()=>{const t=setTimeout(()=>{document.documentElement.dataset.norteBoot='ready'},6000);window.addEventListener('norte:boot-ready',()=>clearTimeout(t),{once:true})})();`;
 
 export function InitialLoadingScreen() {
   return (
