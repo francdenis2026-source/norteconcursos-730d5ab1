@@ -130,7 +130,7 @@ export function StudentMetricPanel({
               : `Tempo ativo em ${active.day.split("-").reverse().join("/")}`,
           description: "Seu tempo e suas atividades na data selecionada, no horário do Acre.",
         }
-      : active.period === "7d" && active.day === today
+      : active.period === "week" && active.day === today
         ? definitions.week
         : {
             ...definitions.week,
