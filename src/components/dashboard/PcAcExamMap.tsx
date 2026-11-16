@@ -186,7 +186,7 @@ export function PcAcExamMap({
                     <span className="pcmap__tile-num">
                       {fmt(value(d))}
                       <small>
-                        {metric === "questions" ? (d.estimated ? "q (est.)" : "q") : "pts"}
+                        {metric === "questions" ? (d.estimated ? "questões estimadas" : "questões") : "pontos"}
                       </small>
                     </span>
                     <span className="pcmap__bar" aria-hidden="true">
@@ -330,7 +330,7 @@ export function PcAcExamMap({
         <span>
           Questões e pesos: Anexo II do edital.
           {hasEstimate &&
-            " “est.” = total do bloco específico dividido entre as disciplinas, pois o edital não abre por disciplina."}{" "}
+            " “Questões estimadas” indica que o edital informa apenas o total do bloco específico, sem dividir oficialmente por disciplina."}{" "}
           “Provável” é uma estimativa da plataforma com base no padrão da IDECAN em provas
           policiais; não é garantia.
         </span>
