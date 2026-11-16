@@ -3,9 +3,10 @@ import { canonicalSubject } from "./subjects";
 import { classifyTopic } from "./questionTopics";
 import type { Question } from "./questionFormat";
 
-export type StudyPeriod = "day" | "7d" | "15d" | "30d" | "6m" | "1y";
+export type StudyPeriod = "day" | "week" | "7d" | "15d" | "30d" | "6m" | "1y";
 export const STUDY_PERIODS: { value: StudyPeriod; label: string }[] = [
   { value: "day", label: "Dia" },
+  { value: "week", label: "Esta semana" },
   { value: "7d", label: "7 dias" },
   { value: "15d", label: "15 dias" },
   { value: "30d", label: "30 dias" },
@@ -14,7 +15,7 @@ export const STUDY_PERIODS: { value: StudyPeriod; label: string }[] = [
 ];
 export function activityDateRange(day: string, period: StudyPeriod | boolean = "day") {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) throw Error("Invalid study date");
-  const end = new Date(`${day}T05:00:00Z`);
+  let end = new Date(`${day}T05:00:00Z`);
   if (!Number.isFinite(end.getTime()) || end.toISOString().slice(0, 10) !== day)
     throw Error("Invalid study date");
   end.setUTCDate(end.getUTCDate() + 1);
@@ -28,6 +29,14 @@ export function activityDateRange(day: string, period: StudyPeriod | boolean = "
       Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 0),
     ).getUTCDate();
     start.setUTCDate(Math.min(date, last));
+  } else if (value === "week") {
+    const original = new Date(start);
+    original.setUTCDate(original.getUTCDate() - 1);
+    const weekday = original.getUTCDay();
+    const mondayOffset = weekday === 0 ? 6 : weekday - 1;
+    start.setUTCDate(start.getUTCDate() - 1 - mondayOffset);
+    end = new Date(start);
+    end.setUTCDate(start.getUTCDate() + 7);
   } else start.setUTCDate(start.getUTCDate() - { day: 1, "7d": 7, "15d": 15, "30d": 30 }[value]);
   return { start: start.toISOString(), end: end.toISOString() };
 }
