@@ -55,18 +55,36 @@ export function PlansSection() {
     >
       <div className="home-container">
         <div className="home-plans__intro">
-          <div className="home-heading">
-            <span className="home-eyebrow home-signal">Planos</span>
-            <h2 id="planos-title">
-              Comece grátis.
-              <br />
-              <em>Evolua quando fizer sentido.</em>
-            </h2>
-            <p>
-              {TESTING_PHASE
-                ? `Licenças pagas revogadas: por ${TESTING_LABEL}, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
-                : "Escolha o plano que acompanha o seu ritmo de estudo."}
-            </p>
+          <div className="home-plans__lead">
+            <div className="home-heading">
+              <span className="home-eyebrow home-signal">Planos</span>
+              <h2 id="planos-title">
+                Comece grátis.
+                <br />
+                <em>Evolua quando fizer sentido.</em>
+              </h2>
+              <p>
+                {TESTING_PHASE
+                  ? `Licenças pagas revogadas: por ${TESTING_LABEL}, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
+                  : "Escolha o plano que acompanha o seu ritmo de estudo."}
+              </p>
+            </div>
+            {TESTING_PHASE && (
+              <ol className="home-plans__path" aria-label="Como funciona o teste gratuito">
+                <li>
+                  <b>Hoje</b>
+                  <span>Crie a conta, sem cartão</span>
+                </li>
+                <li>
+                  <b>{TESTING_LABEL}</b>
+                  <span>Tudo do plano Plus liberado</span>
+                </li>
+                <li>
+                  <b>Depois</b>
+                  <span>A conta segue no plano Gratuito</span>
+                </li>
+              </ol>
+            )}
           </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
             <div className="home-plans__cube" aria-hidden="true">
