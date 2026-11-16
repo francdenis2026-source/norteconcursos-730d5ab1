@@ -68,10 +68,10 @@ export function PlansSection() {
                 : "Escolha o plano que acompanha o seu ritmo de estudo."}
             </p>
           </div>
-          <div className="home-plans__cube" aria-hidden="true">
-            <NorteCube size={0.68} />
-          </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
+            <div className="home-plans__cube" aria-hidden="true">
+              <NorteCube size={0.42} />
+            </div>
             <PoliceInsignia
               className="home-plans__insignia"
               alt=""
