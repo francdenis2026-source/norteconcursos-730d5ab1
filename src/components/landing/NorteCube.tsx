@@ -82,6 +82,7 @@ export function NorteCube({ size = 1 }: { size?: number }) {
 
     let visible = true;
     let dragging = false;
+    let hovering = false;
     let last = { x: 0, y: 0 };
     let raf = 0;
 
@@ -91,7 +92,7 @@ export function NorteCube({ size = 1 }: { size?: number }) {
     io.observe(host);
 
     const idle = (t: number) => {
-      if (visible && !document.hidden && !dragging) {
+      if (visible && !document.hidden && !dragging && !hovering) {
         ry += 0.12;
         applyView();
       }
@@ -104,7 +105,7 @@ export function NorteCube({ size = 1 }: { size?: number }) {
     let alive = true;
     const wait = (ms: number) => new Promise<void>((r) => window.setTimeout(r, ms));
     const whenVisible = async () => {
-      while (alive && (!visible || document.hidden || dragging)) await wait(400);
+      while (alive && (!visible || document.hidden || dragging || hovering)) await wait(400);
     };
     const runMove = (axis: 0 | 1 | 2, dir: 1 | -1) =>
       new Promise<void>((resolve) => {
@@ -113,7 +114,7 @@ export function NorteCube({ size = 1 }: { size?: number }) {
           (c) => Math.abs(Math.round(c.m[12 + axis]! / STEP)) === 1,
         );
         const start = performance.now();
-        const dur = 800;
+        const dur = 1100;
         const step = (now: number) => {
           const p = Math.min(1, (now - start) / dur);
           const r = rot(axis, 90 * dir * ease(p));
@@ -150,16 +151,16 @@ export function NorteCube({ size = 1 }: { size?: number }) {
           };
           done.push(m);
           await runMove(m.axis, m.dir);
-          await wait(260);
+          await wait(380);
         }
         await wait(500);
         for (const m of done.reverse()) {
           await whenVisible();
           if (!alive) return;
           await runMove(m.axis, (m.dir * -1) as 1 | -1);
-          await wait(260);
+          await wait(380);
         }
-        await wait(3200); // montado: a imagem aparece inteira nas faces
+        await wait(4500); // montado: a imagem aparece inteira nas faces
       }
     };
     void cycle();
@@ -179,6 +180,14 @@ export function NorteCube({ size = 1 }: { size?: number }) {
     const up = () => {
       dragging = false;
     };
+    const enter = (e: PointerEvent) => {
+      if (e.pointerType === "mouse") hovering = true;
+    };
+    const leave = () => {
+      hovering = false;
+    };
+    host.addEventListener("pointerenter", enter);
+    host.addEventListener("pointerleave", leave);
     host.addEventListener("pointerdown", down);
     host.addEventListener("pointermove", moveP);
     host.addEventListener("pointerup", up);
@@ -187,6 +196,8 @@ export function NorteCube({ size = 1 }: { size?: number }) {
       alive = false;
       cancelAnimationFrame(raf);
       io.disconnect();
+      host.removeEventListener("pointerenter", enter);
+      host.removeEventListener("pointerleave", leave);
       host.removeEventListener("pointerdown", down);
       host.removeEventListener("pointermove", moveP);
       host.removeEventListener("pointerup", up);
