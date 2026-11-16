@@ -1,12 +1,17 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { annotate, type GlossaryEntry } from "@/lib/glossary";
+import { annotate, normalize, type GlossaryEntry } from "@/lib/glossary";
 import { SafeBoundary } from "./SafeBoundary";
 import { StudyText } from "./StudyText";
 
 function Term({ entry, children }: { entry: GlossaryEntry; children: string }) {
   const [open, setOpen] = useState(false);
+  const shownSynonyms = (entry.synonyms ?? []).filter((synonym, index, all) => {
+    const key = normalize(synonym).replace(/s(?=\b)/g, "");
+    const currentKey = normalize(children).replace(/s(?=\b)/g, "");
+    return key !== currentKey && all.findIndex((item) => normalize(item).replace(/s(?=\b)/g, "") === key) === index;
+  });
   return (
     <Tooltip open={open} onOpenChange={setOpen} delayDuration={150}>
       <TooltipTrigger asChild>
@@ -17,7 +22,7 @@ function Term({ entry, children }: { entry: GlossaryEntry; children: string }) {
       <TooltipContent side="top" className="max-w-xs space-y-1.5 border bg-popover p-3 text-left text-popover-foreground shadow-lg">
         <p className="text-sm font-semibold">{entry.term}{entry.area ? <span className="ml-2 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">{entry.area}</span> : null}</p>
         <p className="text-xs leading-5">{entry.meaning}</p>
-        {entry.synonyms?.length ? <p className="text-xs"><span className="font-semibold">Também: </span>{entry.synonyms.join(", ")}</p> : null}
+        {shownSynonyms.length ? <p className="text-xs"><span className="font-semibold">Também: </span>{shownSynonyms.join(", ")}</p> : null}
         {entry.example ? <p className="text-xs italic text-muted-foreground">Ex.: {entry.example}</p> : null}
         <Link to="/dashboard/dicionario" search={{ q: entry.term } as never} className="inline-block text-xs font-medium text-primary underline">Abrir no dicionário</Link>
       </TooltipContent>
