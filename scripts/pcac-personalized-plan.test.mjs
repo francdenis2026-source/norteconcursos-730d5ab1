@@ -180,3 +180,23 @@ test("PC-AC: plantão que passa da meia-noite é aceito e não quebra o dia", ()
     assert.ok(timed[i - 1].end <= timed[i].start, "estudo marcado sobre o plantão");
   }
 });
+
+test("PC-AC: horário de início à noite que avança para depois da meia-noite mantém a ordem real do dia", () => {
+  const cargo = pcAcVerticalCargos.find((item) => item.id === "investigador");
+  const nightConfig = { ...config, weeklyHours: 21, days: [0, 1, 2, 3, 4, 5, 6], startTime: "22:30" };
+  const weeks = buildPcAcMasterPlan(nightConfig.days, PCAC_EXAM_DATE, nightConfig, cargo);
+  const day = weeks[0].days[0];
+  // Antes da correção, os blocos de estudo depois da meia-noite (ex.: "00:11") eram ordenados por
+  // texto e apareciam ANTES do café da manhã e do início real do estudo às 22:30 do dia anterior.
+  const order = day.activities.map((item) => item.start);
+  const studyStart = order.indexOf("22:30");
+  assert.ok(studyStart >= 0, "o estudo deveria começar no horário configurado (22:30)");
+  const afterMidnight = order.findIndex((start, i) => i > studyStart && start < "06:00");
+  assert.ok(afterMidnight > studyStart, "o bloco depois da meia-noite deveria vir depois do início às 22:30, não antes");
+  for (let i = 1; i < order.length; i += 1) {
+    const prevIsNight = order[i - 1] >= "20:00";
+    const curIsEarly = order[i] < "06:00";
+    // A única "queda" aceitável na ordem exibida é a travessia da meia-noite em si (ex.: 23:55 → 00:11).
+    if (order[i] < order[i - 1]) assert.ok(prevIsNight && curIsEarly, `ordem quebrada em ${order[i - 1]} -> ${order[i]}`);
+  }
+});

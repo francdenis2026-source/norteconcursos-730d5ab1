@@ -338,7 +338,12 @@ function placeStudyTasks(
   breakEvery: number,
   breakDuration: number,
 ): PcAcPlanActivity[] {
-  const placed: PcAcPlanActivity[] = [];
+  // `start`/`end` já saem formatados com `fmtMin`, que enrola a hora em 24 (ex.: 1450 min → "00:10").
+  // Quando o horário de início escolhido empurra o estudo para depois da meia-noite, essa string
+  // enrolada não serve para ordenar o dia: "00:10" viria antes de "22:00" por comparação de texto,
+  // e o fim da sessão noturna pularia para o topo da lista. Por isso guardamos aqui o minuto cru
+  // (sem enrolar) de cada bloco só para ordenar; o enrolamento afeta apenas o texto exibido.
+  const placed: (PcAcPlanActivity & { rawStart: number })[] = [];
   let cursor = toMin(startTime);
   let studySinceBreak = 0;
   let breakCount = 0;
@@ -373,6 +378,7 @@ function placeStudyTasks(
       start: fmtMin(cursor),
       end: fmtMin(cursor + duration),
       minutes: duration,
+      rawStart: cursor,
     });
     cursor += duration;
     studySinceBreak = 0;
@@ -405,6 +411,7 @@ function placeStudyTasks(
         start: fmtMin(cursor),
         end: fmtMin(cursor + available),
         minutes: available,
+        rawStart: cursor,
       });
       cursor += available;
       remaining -= available;
@@ -412,7 +419,10 @@ function placeStudyTasks(
     }
   }
 
-  return [...placed, ...fixed].sort((a, b) => (a.start ?? "").localeCompare(b.start ?? ""));
+  const fixedWithRaw = fixed.map((event) => ({ ...event, rawStart: toMin(event.start) }));
+  return [...placed, ...fixedWithRaw]
+    .sort((a, b) => a.rawStart - b.rawStart)
+    .map(({ rawStart: _rawStart, ...activity }) => activity);
 }
 
 /** Treino de prova no fim de cada semana: simulado cronometrado e produção de texto, com
