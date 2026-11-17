@@ -30,6 +30,17 @@ function withSupportText(support: unknown, text: string): string {
   return `Texto-base${s.label ? ` [${s.label}]` : ""}:\n${s.body}\n\n[[/texto-base]]\n${text}`;
 }
 
+/** Converte as alternativas JSON do caderno em texto para o parser do treinador. */
+function withQuestionBankOptions(row: Record<string, unknown>): string {
+  const text = String(row["question_text"] ?? "");
+  const options = row["options"] as Record<string, unknown> | null | undefined;
+  if (!options || typeof options !== "object") return text;
+  const lines = Object.entries(options)
+    .filter(([, value]) => typeof value === "string" && value.trim())
+    .map(([letter, value]) => `(${letter}) ${String(value).trim()}`);
+  return lines.length ? `${text}\n\n${lines.join("\n")}` : text;
+}
+
 const EMPTY_CATALOG: Question[] = [];
 
 // Conexões móveis instáveis derrubam uma única requisição sem o acervo estar de
@@ -314,7 +325,9 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
     ),
     ...((personalResult.data || []) as Array<Record<string, unknown>>)
       .filter(isEligibleQuestion)
-      .map((row) => ({
+      .map((row) => {
+        const text = withQuestionBankOptions(row);
+        return ({
         id: String(row["id"]),
         source: "personal" as const,
         table: "question_bank" as const,
@@ -322,12 +335,12 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
         year: String(row["contest_year"]),
         career: "Meu caderno",
         board: "Meu caderno",
-        kind: parseQuestion(String(row["question_text"])).options.length
+        kind: parseQuestion(text).options.length
           ? ("multiple_choice" as const)
           : ("true_false" as const),
         subject: canonicalSubject(String(row["subject"])),
         subtopic: canonicalTopic(row["subtopic"] ? String(row["subtopic"]) : null),
-        text: String(row["question_text"]),
+        text,
         answer: String(row["official_answer"]) as Answer,
         explanation: String(row["explanation"] || "Explicação pedagógica em revisão."),
         legalBasis: parseBasis(row["legal_basis"]),
@@ -336,7 +349,8 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
         state: String(row["state"] || ""),
         category: String(row["career_category"] || ""),
         itemNumber: Number(row["item_number"]) || undefined,
-      })),
+        });
+      }),
   ];
   // Etiquetas do filtro "Atual" (question_currency). Tabela ainda não criada ou sem permissão: segue sem elas.
   try {
