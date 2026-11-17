@@ -446,7 +446,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           tone="violet"
           onOpen={(event) => openMetric("week", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
-          detail={time ? `${duration(time.total)} nesta semana` : "Semana atual"}
+          detail={time ? `${duration(time.total)} no total` : "Semana atual"}
         />
       </section>
 
