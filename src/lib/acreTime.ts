@@ -28,10 +28,20 @@ export function acreDateKey(now: Date = platformDate()): string {
   return dateFmt.format(now);
 }
 
+/** Segundos desde a meia-noite do Acre (0…86399). */
+export function acreSecondsOfDay(now: Date = platformDate()): number {
+  const [h = 0, m = 0, s = 0] = timeFmt.format(now).split(":").map(Number);
+  return ((h % 24) * 60 + m) * 60 + s;
+}
+
+/** Minutos desde a meia-noite do Acre (0…1439) — para comparar com horários "HH:MM" do cronograma. */
+export function acreMinuteOfDay(now: Date = platformDate()): number {
+  return Math.floor(acreSecondsOfDay(now) / 60);
+}
+
 /** Segundos que faltam para a próxima meia-noite do Acre (1…86400). */
 export function secondsUntilAcreMidnight(now: Date = platformDate()): number {
-  const [h = 0, m = 0, s = 0] = timeFmt.format(now).split(":").map(Number);
-  return 86400 - (((h % 24) * 60 + m) * 60 + s);
+  return 86400 - acreSecondsOfDay(now);
 }
 
 /** Instante UTC (ISO) em que começou o dia de hoje no Acre — para filtrar "desde hoje" no banco. */
