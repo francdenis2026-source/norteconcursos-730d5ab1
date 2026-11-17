@@ -40,6 +40,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers } from "@/hooks/useLockedAnswers";
+import { useReinforcement } from "@/hooks/useReinforcement";
 import {
   enqueuePendingAnswer,
   flushPendingAnswers,
@@ -263,6 +264,8 @@ function QuestionTrainer() {
   );
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
+  const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
+  const practiceMode = routeFilters.mode === "reforco";
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const pendingRowRef = React.useRef<TrainerAnswerRow | null>(null);
@@ -556,12 +559,12 @@ function QuestionTrainer() {
   );
   const trainingCatalog = React.useMemo(
     () =>
-      routeFilters.mode === "reforco"
-        ? trainerPracticeQuestions(catalog, "wrong", locked, new Map())
+      practiceMode
+        ? trainerPracticeQuestions(catalog, "wrong", locked, reinforced)
         : includeAnswered
           ? catalog
-          : trainerPracticeQuestions(catalog, "new", locked, new Map()),
-    [catalog, includeAnswered, locked, routeFilters.mode],
+          : trainerPracticeQuestions(catalog, "new", locked, reinforced),
+    [catalog, includeAnswered, locked, reinforced, practiceMode],
   );
   const facets = React.useMemo(
     () =>
@@ -781,7 +784,9 @@ function QuestionTrainer() {
     // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
     // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
     if (lockedLoading) return;
-    const past = locked.get(questionIdentity(question));
+    // No reforço, a fila já é só de questões erradas (e ainda não reforçadas com
+    // sucesso): mostrar a resposta antiga aqui impediria qualquer nova tentativa.
+    const past = practiceMode ? undefined : locked.get(questionIdentity(question));
     if (past) {
       setSelected(past.selected);
       setAnswered(true);
@@ -811,13 +816,18 @@ function QuestionTrainer() {
       setPausedAt(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
-  }, [index, question?.id, question?.source, lockedLoading]);
+  }, [index, question?.id, question?.source, lockedLoading, practiceMode]);
   const finishAnswer = (elapsedSeconds: number, isCorrect: boolean, answer: Answer) => {
     if (!question) return;
     setResponseSeconds(elapsedSeconds);
     setAnswered(true);
-    setDailyUsed((n) => n + 1);
-    markLocked(question, { selected: answer, isCorrect });
+    // Reforço nunca conta para o limite diário, o ranking nem as medalhas — só a 1ª resposta oficial.
+    if (practiceMode) {
+      markReinforced(question.source, question.id, isCorrect);
+    } else {
+      setDailyUsed((n) => n + 1);
+      markLocked(question, { selected: answer, isCorrect });
+    }
     setResults((prev) => {
       const copy = [...prev];
       copy[index] = isCorrect ? "ok" : "err";
@@ -843,7 +853,7 @@ function QuestionTrainer() {
       answered ||
       !user ||
       savingRef.current ||
-      reachedDailyLimit ||
+      (reachedDailyLimit && !practiceMode) ||
       lockedLoading
     )
       return;
@@ -851,6 +861,33 @@ function QuestionTrainer() {
     setSaving(true);
     const isCorrect = selected === question.answer;
     const elapsedSeconds = Math.max(0, Math.round((Date.now() - startedAt) / 1000));
+    if (practiceMode) {
+      // Tentativa de reforço: guarda em tabela própria, nunca na resposta oficial
+      // (question_training_responses), que é imutável e já tem a 1ª resposta.
+      try {
+        const { error } = await supabase.from("question_reinforcement_attempts").insert({
+          user_id: user.id,
+          question_id: question.id,
+          question_source: question.source,
+          contest_name: question.contest,
+          board: question.board,
+          subject: question.subject,
+          selected_answer: selected,
+          official_answer: question.answer,
+          is_correct: isCorrect,
+          response_seconds: elapsedSeconds,
+        });
+        if (error) throw error;
+      } catch (error) {
+        console.error("Falha ao gravar tentativa de reforço", error);
+        toast.warning("Não foi possível salvar esta tentativa de reforço agora.");
+      } finally {
+        finishAnswer(elapsedSeconds, isCorrect, selected);
+        savingRef.current = false;
+        setSaving(false);
+      }
+      return;
+    }
     try {
       const row: TrainerAnswerRow = {
         id: responseIdRef.current,
@@ -1155,7 +1192,7 @@ function QuestionTrainer() {
           </div>
         </div>
       )}
-      {reachedDailyLimit && (
+      {reachedDailyLimit && !practiceMode && (
         <div
           role="status"
           className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
@@ -1532,7 +1569,7 @@ function QuestionTrainer() {
             {!answered ? (
               <Button
                 size="lg"
-                disabled={!selected || saving || reachedDailyLimit}
+                disabled={!selected || saving || (reachedDailyLimit && !practiceMode)}
                 onClick={submit}
                 className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
               >
