@@ -213,7 +213,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
       ? Promise.resolve({ data: [], error: null, gated: true })
       : query(
           "question_bank",
-          "id,contest_name,contest_year,item_number,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+          "id,contest_name,contest_year,item_number,subject,subtopic,question_text,options,official_answer,explanation,legal_basis,difficulty,state,career_category",
           "law_version_checked_at",
           (builder) => builder.eq("user_id", userId).eq("content_status", "active"),
         ),
