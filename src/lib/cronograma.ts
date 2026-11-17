@@ -67,7 +67,12 @@ export function discStats(d: CronoDisc, progress: Record<string, TopicProgress>)
   return { done, total: d.topicos.length, qtde, acertos };
 }
 
-export interface WeekBlock { discId: string; nome: string; topic: string; topicId: string; minutes: number; start: string; end: string; first: boolean }
+export interface WeekBlock {
+  discId: string; nome: string; topic: string; topicId: string; minutes: number;
+  start: string; end: string; first: boolean;
+  /** Minutos desde 00:00 sem enrolar em 24h — para ordenar/comparar sem o bug de "00:10" < "22:30". */
+  rawStart: number; rawEnd: number;
+}
 export const MIN_BLOCK = 30;
 export const MAX_BLOCK = 120; // PDF: peso 2, primeira vez que vai estudar = 2 horas
 const GAP = 10;
@@ -125,7 +130,10 @@ export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgre
   for (const day of days) {
     let t = (h ?? 19) * 60 + (m ?? 0);
     for (const b of perDay[day]!.sort((a, b2) => b2.minutes - a.minutes || a.d.nome.localeCompare(b2.d.nome))) {
-      out[day]!.push({ discId: b.d.id, nome: b.d.nome, topic: b.topic, topicId: b.topicId, minutes: b.minutes, start: hhmm(t), end: hhmm(t + b.minutes), first: b.first });
+      out[day]!.push({
+        discId: b.d.id, nome: b.d.nome, topic: b.topic, topicId: b.topicId, minutes: b.minutes,
+        start: hhmm(t), end: hhmm(t + b.minutes), first: b.first, rawStart: t, rawEnd: t + b.minutes,
+      });
       t += b.minutes + GAP;
     }
   }

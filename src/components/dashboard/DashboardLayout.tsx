@@ -33,6 +33,7 @@ import { PanelTextScale } from "./PanelTextScale";
 import { showsReadingControl } from "@/lib/readingScale";
 import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-router";
 import { StudentTopNavigation } from "./StudentTopNavigation";
+import { FloatingScheduleWidget } from "./FloatingScheduleWidget";
 import "@/styles/student-top-navigation.css";
 import "@/styles/student-top-navigation-astrix.css";
 import "@/styles/student-workspace-refresh.css";
@@ -1045,6 +1046,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               <span>Menu</span>
             </button>
           </nav>
+
+          <FloatingScheduleWidget hidden={fullscreen.active} />
         </div>
 
         <FarewellDialog
