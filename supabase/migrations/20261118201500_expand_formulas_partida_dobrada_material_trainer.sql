@@ -144,7 +144,6 @@ MACETE:
 
 Não confunda quantidade de parcelas com quantidade de contas debitadas ou creditadas. Conte as contas de cada lado. E confira sempre: total dos débitos = total dos créditos.
 $explanation$,
-    tested_topic='Escrituração: fórmulas de lançamento da partida dobrada',
-    updated_at=now()
+    tested_topic='Escrituração: fórmulas de lançamento da partida dobrada'
   where id='96699a38-357d-4781-b696-c29f388f1e7f';
 end $$;
