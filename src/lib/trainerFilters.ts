@@ -26,9 +26,9 @@ import {
  * correspondência temática explícita para não incluir normas avançadas fora do programa.
  */
 export function matchesPcacOipSyllabus(question: Question) {
-  const subject = canonicalSubject(question.subject).normalize("NFD").replace(/[\u0300-\\u036f]/g, "").toLowerCase();
-  const topic = `${question.testedTopic ?? ""} ${question.subtopic ?? ""}`.normalize("NFD").replace(/[\u0300-\\u036f]/g, "").toLowerCase();
-  const text = question.text.normalize("NFD").replace(/[\u0300-\\u036f]/g, "").toLowerCase();
+  const subject = canonicalSubject(question.subject).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const topic = `${question.testedTopic ?? ""} ${question.subtopic ?? ""}`.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const text = question.text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   if (/contabil/.test(subject)) {
     const detail = `${topic} ${text}`;
     if (/goodwill|impairment|valor recuperavel|nbc tsp|vida util|valor residual|mudanca de estimativa|passivo atuarial|equivalencia patrimonial|dva\\b|avp\\b|contabilidade publica|custos atuariais/.test(detail)) return false;
