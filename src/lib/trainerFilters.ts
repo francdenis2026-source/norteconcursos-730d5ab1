@@ -61,10 +61,9 @@ export type TrainerFilters = Record<
   | "reviewed"
   | "difficulty"
   | "state"
-  | "category"
-  | "relevance",
+  | "category",
   string
-> & { currency?: string };
+> & { currency?: string; relevance?: string };
 
 // An empty combination stays empty: selecting a board must never fall back to another.
 export function filterTrainerQuestions(
@@ -77,7 +76,7 @@ export function filterTrainerQuestions(
     (q) =>
       (f.area === "all" || subjectInArea(f.area, q.subject)) &&
       matchesTopicFilter(q.subject, topics.get(q.id), f.topic) &&
-      (f.relevance === "all" || (f.relevance === "pcac-oip" && matchesPcacOipSyllabus(q))) &&
+      (!f.relevance || f.relevance === "all" || (f.relevance === "pcac-oip" && matchesPcacOipSyllabus(q))) &&
       matchesQuestionContest(q.contest, f.contest) &&
       (f.board === "all" || canonicalBoard(q.board) === trainerBoard(f.board)) &&
       matchesQuestionCareer(q.career, q.contest, q.year, f.career, f.contest, f.year) &&
@@ -114,7 +113,6 @@ export const TRAINER_FACET_KEYS = [
   "reviewed",
   "difficulty",
   "currency",
-  "relevance",
 ] as const;
 export function trainerFilterFacets(
   catalog: Question[],
