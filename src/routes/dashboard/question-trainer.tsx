@@ -177,7 +177,8 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "studySubject"
       | "materialTopic"
       | "studyArticle"
-      | "back",
+      | "back"
+      | "relevance",
       string | undefined
     >
   > => ({
@@ -203,6 +204,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       typeof search["materialTopic"] === "string" ? search["materialTopic"] : undefined,
     studyArticle: typeof search["studyArticle"] === "string" ? search["studyArticle"] : undefined,
     back: typeof search["back"] === "string" ? search["back"] : undefined,
+    relevance: typeof search["relevance"] === "string" ? search["relevance"] : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -235,6 +237,23 @@ function QuestionTrainer() {
     if (isGuest) navigate({ to: "/desafio-diario", replace: true });
   }, [isGuest, navigate]);
   const canLoad = !authLoading && !isGuest && !!userId && userId !== "demo-user";
+  const [relevance, setRelevance] = React.useState(routeFilters.relevance || "all");
+  const [pcacTopicIds, setPcacTopicIds] = React.useState<string[]>([]);
+  const [pcacTopicsReady, setPcacTopicsReady] = React.useState(false);
+  React.useEffect(() => {
+    if (!canLoad) return;
+    let alive = true;
+    void supabase.from("syllabus_topics").select("id")
+      .eq("edition_id", "d936c29e-89fd-4242-8041-0842eed5ca2c")
+      .eq("content_status", "active")
+      .then(({ data, error }) => {
+        if (!alive) return;
+        if (error) { setPcacTopicIds([]); setPcacTopicsReady(false); return; }
+        setPcacTopicIds((data ?? []).map((row) => row.id));
+        setPcacTopicsReady(true);
+      });
+    return () => { alive = false; };
+  }, [canLoad]);
   const {
     catalog: fullCatalog,
     loading: catalogLoading,
@@ -258,9 +277,17 @@ function QuestionTrainer() {
   const hasMaterialScope = Boolean(
     routeFilters.studySubject || routeFilters.materialTopic || routeFilters.studyArticle,
   );
-  const catalog = React.useMemo(
+  const materialCatalog = React.useMemo(
     () => (hasMaterialScope ? materialPracticePool(scoped, materialScope) : scoped),
     [scoped, materialScope, hasMaterialScope],
+  );
+  // PC-AC OIP: somente questões vinculadas a tópicos do edital ativo do cargo.
+  // Itens sem vínculo verificável permanecem no acervo geral, mas não entram neste recorte.
+  const catalog = React.useMemo(
+    () => relevance === "pcac-oip"
+      ? materialCatalog.filter((question) => !!question.syllabusTopicId && pcacTopicIds.includes(question.syllabusTopicId))
+      : materialCatalog,
+    [materialCatalog, relevance, pcacTopicIds],
   );
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
@@ -1053,6 +1080,8 @@ function QuestionTrainer() {
             limit: normalizedLimit,
             orderMode,
             includeAnswered,
+            relevance,
+            relevanceReady: pcacTopicsReady,
           }}
           focus={
             potential && focusCounts
@@ -1085,6 +1114,7 @@ function QuestionTrainer() {
             setLimit,
             setOrderMode,
             setIncludeAnswered,
+            setRelevance,
           }}
           start={startTraining}
         />
@@ -1908,6 +1938,8 @@ type SetupValues = {
   limit: string;
   orderMode: OrderMode;
   includeAnswered: boolean;
+  relevance: string;
+  relevanceReady: boolean;
 };
 type SetupSetters = {
   setContest: (value: string) => void;
@@ -1926,6 +1958,7 @@ type SetupSetters = {
   setLimit: (value: string) => void;
   setOrderMode: (value: OrderMode) => void;
   setIncludeAnswered: (value: boolean) => void;
+  setRelevance: (value: string) => void;
 };
 
 type ExamFocusProps = {
@@ -2020,6 +2053,7 @@ function TrainerSetup({
     setters.setCategory("all");
     setters.setArea("all");
     setters.setTopic("all");
+    setters.setRelevance("all");
     setters.setIncludeAnswered(false);
   };
   return (
@@ -2075,6 +2109,16 @@ function TrainerSetup({
           )}
           {focus && <ExamFocusPicker {...focus} />}
           <div className="qt2-filters grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
+            <TrainerFilter
+              label="Aderência ao edital"
+              value={values.relevance}
+              setValue={setters.setRelevance}
+              options={["pcac-oip"]}
+              labels={{ "pcac-oip": "PC-AC 2026 · Oficial Investigador" }}
+              allLabel="Todas as questões"
+              disabled={!values.relevanceReady}
+              placeholder={values.relevanceReady ? "Selecione o edital" : "Carregando edital…"}
+            />
             <TrainerFilter
               counts={facets.counts["board"]}
               allCount={facets.totals["board"]}
