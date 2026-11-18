@@ -238,22 +238,6 @@ function QuestionTrainer() {
   }, [isGuest, navigate]);
   const canLoad = !authLoading && !isGuest && !!userId && userId !== "demo-user";
   const [relevance, setRelevance] = React.useState(routeFilters.relevance || "all");
-  const [pcacTopicIds, setPcacTopicIds] = React.useState<string[]>([]);
-  const [pcacTopicsReady, setPcacTopicsReady] = React.useState(false);
-  React.useEffect(() => {
-    if (!canLoad) return;
-    let alive = true;
-    void supabase.from("syllabus_topics").select("id")
-      .eq("edition_id", "d936c29e-89fd-4242-8041-0842eed5ca2c")
-      .eq("content_status", "active")
-      .then(({ data, error }) => {
-        if (!alive) return;
-        if (error) { setPcacTopicIds([]); setPcacTopicsReady(false); return; }
-        setPcacTopicIds((data ?? []).map((row) => row.id));
-        setPcacTopicsReady(true);
-      });
-    return () => { alive = false; };
-  }, [canLoad]);
   const {
     catalog: fullCatalog,
     loading: catalogLoading,
@@ -283,12 +267,7 @@ function QuestionTrainer() {
   );
   // PC-AC OIP: somente questões vinculadas a tópicos do edital ativo do cargo.
   // Itens sem vínculo verificável permanecem no acervo geral, mas não entram neste recorte.
-  const catalog = React.useMemo(
-    () => relevance === "pcac-oip"
-      ? materialCatalog.filter((question) => !!question.syllabusTopicId && pcacTopicIds.includes(question.syllabusTopicId))
-      : materialCatalog,
-    [materialCatalog, relevance, pcacTopicIds],
-  );
+  const catalog = materialCatalog;
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad, catalog);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
@@ -611,6 +590,7 @@ function QuestionTrainer() {
           difficulty,
           state,
           category,
+          relevance,
         },
         topicOf,
       ),
@@ -629,6 +609,7 @@ function QuestionTrainer() {
       difficulty,
       state,
       category,
+      relevance,
       topicOf,
       trainingCatalog,
     ],
@@ -674,6 +655,7 @@ function QuestionTrainer() {
           difficulty,
           state,
           category,
+          relevance,
         },
         topicOf,
       ),
@@ -693,6 +675,7 @@ function QuestionTrainer() {
       difficulty,
       state,
       category,
+      relevance,
     ],
   );
   // Foco na prova: só existe quando o aluno ativou um edital com indicação de chance (PC-AC).
@@ -1081,7 +1064,7 @@ function QuestionTrainer() {
             orderMode,
             includeAnswered,
             relevance,
-            relevanceReady: pcacTopicsReady,
+            relevanceReady: true,
           }}
           focus={
             potential && focusCounts
@@ -2116,8 +2099,6 @@ function TrainerSetup({
               options={["pcac-oip"]}
               labels={{ "pcac-oip": "PC-AC 2026 · Oficial Investigador" }}
               allLabel="Todas as questões"
-              disabled={!values.relevanceReady}
-              placeholder={values.relevanceReady ? "Selecione o edital" : "Carregando edital…"}
             />
             <TrainerFilter
               counts={facets.counts["board"]}
