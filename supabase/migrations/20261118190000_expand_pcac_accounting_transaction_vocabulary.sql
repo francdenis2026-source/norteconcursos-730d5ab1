@@ -99,14 +99,14 @@ begin
     flashcards = (
       select coalesce(jsonb_agg(card), '[]'::jsonb)
       from (
-        select existing as card
-        from jsonb_array_elements(coalesce(study_materials.flashcards,'[]'::jsonb)) existing
+        select old_cards.card
+        from jsonb_array_elements(coalesce(study_materials.flashcards,'[]'::jsonb)) as old_cards(card)
         union all
-        select new_card
-        from jsonb_array_elements(new_cards) new_card
+        select new_items.card
+        from jsonb_array_elements(new_cards) as new_items(card)
         where not exists (
-          select 1 from jsonb_array_elements(coalesce(study_materials.flashcards,'[]'::jsonb)) old_card
-          where old_card->>'f' = new_card->>'f'
+          select 1 from jsonb_array_elements(coalesce(study_materials.flashcards,'[]'::jsonb)) as old_items(card)
+          where old_items.card->>'f' = new_items.card->>'f'
         )
       ) cards
     ),
