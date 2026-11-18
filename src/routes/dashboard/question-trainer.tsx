@@ -590,7 +590,9 @@ function QuestionTrainer() {
           difficulty,
           state,
           category,
-          relevance,
+          // Aderência ao edital limita as questões do treino, mas não deve ocultar
+          // bancas, disciplinas ou demais opções do acervo geral nos seletores.
+          relevance: "all",
         },
         topicOf,
       ),
@@ -609,7 +611,6 @@ function QuestionTrainer() {
       difficulty,
       state,
       category,
-      relevance,
       topicOf,
       trainingCatalog,
     ],
