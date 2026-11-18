@@ -1394,12 +1394,12 @@ function QuestionTrainer() {
                   {parsed.baseLabel}
                   <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
                 </summary>
-                <div className="max-h-52 overflow-y-auto whitespace-pre-line break-words px-3 pb-3 text-sm leading-6 text-justify [hyphens:auto] [text-align-last:left] [text-wrap:pretty] [overflow-wrap:anywhere] text-foreground sm:max-h-80 sm:px-4 sm:pb-4 sm:leading-7">
+                <div className="max-h-52 overflow-y-auto whitespace-pre-line break-words px-3 pb-3 text-base leading-7 text-left [overflow-wrap:anywhere] text-foreground sm:max-h-80 sm:px-4 sm:pb-4">
                   {parsed.base}
                 </div>
               </details>
             )}
-            <p className="whitespace-pre-line break-words text-justify [hyphens:auto] [text-align-last:left] [text-wrap:pretty] [overflow-wrap:anywhere] text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
+            <p className="whitespace-pre-line break-words text-left [overflow-wrap:anywhere] text-base font-medium leading-7 text-foreground">
               {parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}
             </p>
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
@@ -1627,10 +1627,10 @@ function QuestionTrainer() {
                   relacionados.
                 </p>
               ) : (
-                <p className="whitespace-pre-line text-sm leading-6">{explanation.main}</p>
+                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">{explanation.main}</p>
               )}
               {explanation.example && (
-                <p className="text-sm leading-6">
+                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">
                   <strong>Exemplo:</strong> {explanation.example}
                 </p>
               )}
