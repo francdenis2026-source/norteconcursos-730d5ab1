@@ -148,7 +148,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
     ) => ReturnType<ReturnType<typeof supabase.from>["select"]>,
   ) => ({
     data: await queryClient.fetchQuery({
-      queryKey: ["question-catalog", userId, table, base, extra],
+      queryKey: ["question-catalog-v2", userId, table, base, extra],
       // Acervo pesado (dezenas de milhares de linhas): cache mais longo é seguro porque
       // useQuestionCatalogRealtime invalida esta chave assim que uma questão muda no banco —
       // não depende de expirar rápido por conta própria pra ficar correto.
@@ -380,7 +380,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
 export function useQuestionCatalog(userId: string | undefined, enabled: boolean) {
   const queryClient = useQueryClient();
   const result = useQuery({
-    queryKey: ["question-catalog-view", userId],
+    queryKey: ["question-catalog-view-v2", userId],
     enabled,
     staleTime: 15 * 60_000,
     retry: CATALOG_RETRY,
@@ -397,8 +397,8 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
   });
   const reload = () => {
     void clearCatalogCache();
-    queryClient.removeQueries({ queryKey: ["question-catalog", userId] });
-    return queryClient.resetQueries({ queryKey: ["question-catalog-view", userId], exact: true });
+    queryClient.removeQueries({ queryKey: ["question-catalog-v2", userId] });
+    return queryClient.resetQueries({ queryKey: ["question-catalog-view-v2", userId], exact: true });
   };
   return {
     catalog: result.data?.catalog ?? EMPTY_CATALOG,
