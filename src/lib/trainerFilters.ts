@@ -19,6 +19,24 @@ import {
   filterTopicIdentity,
 } from "./filterTaxonomy";
 
+
+/**
+ * Aderência conservadora ao edital PC-AC 2026 — Oficial Investigador.
+ * Usa a disciplina e o assunto efetivamente testado; em Contabilidade exige
+ * correspondência temática explícita para não incluir normas avançadas fora do programa.
+ */
+export function matchesPcacOipSyllabus(question: Question) {
+  const subject = canonicalSubject(question.subject).normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+  const topic = `${question.testedTopic ?? ""} ${question.subtopic ?? ""}`.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+  const text = question.text.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+  if (/contabil/.test(subject)) {
+    const detail = `${topic} ${text}`;
+    if (/goodwill|impairment|valor recuperavel|nbc tsp|vida util|valor residual|mudanca de estimativa|passivo atuarial|equivalencia patrimonial|dva\\b|avp\\b|contabilidade publica|custos atuariais/.test(detail)) return false;
+    return /patrimonio|ativo|passivo|contas contabeis|receita|despesa|custos|resultado|fatos contabeis|partidas dobradas|lancamentos contabeis|escrituracao|livros contabeis|balancete|balanco patrimonial|demonstracao do resultado|\\bdre\\b|regime de caixa|regime de competencia|interpretacao de demonstracoes|juros simples|juros compostos|taxas de juros|descontos|atualizacao de valores|calculos percentuais|sistema bancario|extratos bancarios|creditos|debitos|depositos|saques|pagamentos|transferencias|\\bpix\\b|\\bted\\b|conciliacao|movimentacoes financeiras|origem e destino|fluxos financeiros|transacoes atipicas|fracionadas/.test(topic || detail);
+  }
+  return /lingua portuguesa|portugues|raciocinio logico|estatistica|noções de informatica|nocoes de informatica|informatica|realidade do estado do acre|realidade do acre|noções de direito|nocoes de direito|direito penal|direito processual penal|direito administrativo|direito constitucional|legislacao institucional|noções de administracao|nocoes de administracao|analise de dados e informacoes|arquivologia|tecnologia da informacao|seguranca da informacao/.test(subject);
+}
+
 export function trainerBoard(value?: string) {
   return !value || value.trim().toLowerCase() === "all" ? "all" : canonicalBoard(value);
 }
@@ -43,7 +61,8 @@ export type TrainerFilters = Record<
   | "reviewed"
   | "difficulty"
   | "state"
-  | "category",
+  | "category"
+  | "relevance",
   string
 > & { currency?: string };
 
@@ -58,6 +77,7 @@ export function filterTrainerQuestions(
     (q) =>
       (f.area === "all" || subjectInArea(f.area, q.subject)) &&
       matchesTopicFilter(q.subject, topics.get(q.id), f.topic) &&
+      (f.relevance === "all" || (f.relevance === "pcac-oip" && matchesPcacOipSyllabus(q))) &&
       matchesQuestionContest(q.contest, f.contest) &&
       (f.board === "all" || canonicalBoard(q.board) === trainerBoard(f.board)) &&
       matchesQuestionCareer(q.career, q.contest, q.year, f.career, f.contest, f.year) &&
@@ -94,6 +114,7 @@ export const TRAINER_FACET_KEYS = [
   "reviewed",
   "difficulty",
   "currency",
+  "relevance",
 ] as const;
 export function trainerFilterFacets(
   catalog: Question[],
