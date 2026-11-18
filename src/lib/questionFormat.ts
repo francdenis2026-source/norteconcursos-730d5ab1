@@ -390,6 +390,15 @@ function parseQuestionContent(raw: string): ParsedQuestion {
   }
   text = text.replace(/^Item:\s*/, "");
 
+  // Itens de Certo/Errado antigos podem trazer "(C) Certo" e "(E) Errado"
+  // no mesmo campo do enunciado. O treinador já renderiza essas respostas
+  // como controles próprios; remova somente esse sufixo terminal para não
+  // duplicar as alternativas dentro do texto apresentado ao aluno.
+  text = text
+    .replace(/(?:\n|\s)+\(C\)\s*Certo\s*(?:\n|\s)+\(E\)\s*Errado\s*$/i, "")
+    .replace(/\s+\(C\)\s*Certo\s+\(E\)\s*Errado\s*$/i, "")
+    .trim();
+
   const lines = text.split("\n");
   const firstOption = lines.findIndex((line) => /^\s*\(A\)\s?/.test(line));
   if (firstOption >= 0 && !/\([B-E]\)/.test(lines[firstOption] ?? "")) {
