@@ -1064,7 +1064,6 @@ function QuestionTrainer() {
             orderMode,
             includeAnswered,
             relevance,
-            relevanceReady: true,
           }}
           focus={
             potential && focusCounts
@@ -1922,7 +1921,6 @@ type SetupValues = {
   orderMode: OrderMode;
   includeAnswered: boolean;
   relevance: string;
-  relevanceReady: boolean;
 };
 type SetupSetters = {
   setContest: (value: string) => void;
