@@ -271,7 +271,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-ac
 }
 
 /* ================= Computador: tudo cabe na tela ================= */
-@media (min-width: 1024px) and (min-height: 600px) {
+@media (min-width: 1024px) {
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) #dashboard-content:has(.qt4) {
     padding-top: 0.5rem !important;
     padding-bottom: 0 !important;
@@ -289,7 +289,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-ac
     display: flex !important;
     flex-direction: column;
     height: var(--qt4-h, calc(100dvh - 140px)) !important;
-    min-height: 520px;
+    min-height: 320px;
     overflow: hidden !important;
     margin-top: 0 !important;
   }
@@ -608,7 +608,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-re
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option { font-size: 1rem !important; line-height: 1.55 !important; }
 
-@media (min-width: 1024px) and (min-height: 600px) {
+@media (min-width: 1024px) {
   /* Coluna esquerda: enunciado alinhado ao topo; a explicação (quando existe) logo abaixo */
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem { max-height: none; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content { grid-template-rows: auto auto auto auto minmax(0, 1fr) auto auto !important; }
