@@ -131,14 +131,21 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions {
   box-shadow: inset 0 1px 0 color-mix(in oklab, white 6%, transparent);
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) {
+  flex: 0 0 2.25rem !important;
+  width: 2.25rem !important;
   height: 2.25rem !important;
   min-width: 2.25rem !important;
+  min-height: 2.25rem !important;
   border: 0 !important;
   border-radius: 999px !important;
   color: var(--tb-dim) !important;
   background: transparent !important;
   box-shadow: none !important;
   transition: color 160ms var(--tb-ease), background-color 160ms var(--tb-ease), transform 160ms var(--tb-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) svg {
+  width: 1.0625rem !important;
+  height: 1.0625rem !important;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, button):hover {
   color: var(--tb-ink) !important;
@@ -240,33 +247,31 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips >
   gap: 0.35rem !important;
   height: 2.25rem !important;
   min-width: 0 !important;
-  padding: 0 0.9rem 0 0.75rem !important;
-  border: 1px solid color-mix(in oklab, #f97316 35%, transparent) !important;
+  padding: 0 0.75rem !important;
+  border: 1px solid var(--tb-line) !important;
   border-radius: 999px !important;
-  background: linear-gradient(135deg, color-mix(in oklab, #f97316 20%, transparent), color-mix(in oklab, #facc15 8%, transparent)) !important;
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 8%), 0 0 14px -6px #f97316 !important;
-  color: var(--foreground) !important;
+  background: var(--tb-soft) !important;
+  box-shadow: none !important;
+  color: var(--tb-ink) !important;
   font-size: 0.8125rem !important;
   font-weight: 700 !important;
   font-variant-numeric: tabular-nums;
-  transition: box-shadow 220ms cubic-bezier(0.32, 0.72, 0, 1), border-color 220ms cubic-bezier(0.32, 0.72, 0, 1) !important;
+  transition: border-color 160ms var(--tb-ease), background-color 160ms var(--tb-ease) !important;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak:hover {
-  border-color: color-mix(in oklab, #f97316 65%, transparent) !important;
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%), 0 0 20px -4px #f97316 !important;
+  border-color: color-mix(in oklab, var(--tb-gold) 40%, var(--tb-line)) !important;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg {
-  width: 1rem !important;
-  height: 1rem !important;
-  color: #fb923c !important;
-  stroke: #fb923c !important;
-  fill: color-mix(in oklab, #f97316 35%, transparent) !important;
-  filter: drop-shadow(0 0 4px rgb(249 115 22 / 70%));
-  transform-origin: 50% 90%;
-  animation: tb-flame 1.8s ease-in-out infinite !important;
+  width: 0.9375rem !important;
+  height: 0.9375rem !important;
+  color: oklch(0.72 0.17 50) !important;
+  stroke: oklch(0.72 0.17 50) !important;
+  fill: none !important;
+  filter: none !important;
+  animation: none !important;
 }
-html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak .tabular { color: var(--foreground) !important; }
-:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg { color: #ea580c !important; stroke: #ea580c !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak .tabular { color: var(--tb-ink) !important; }
+:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg { color: #c2410c !important; stroke: #c2410c !important; }
 @keyframes tb-flame {
   0%, 100% { transform: scale(1) rotate(0deg); }
   30% { transform: scale(1.08, 1.12) rotate(-3deg); }
