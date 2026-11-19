@@ -126,3 +126,51 @@ html body .app-shell[data-area] .student-home.sh2 .sh2-hero::before {
     transform: translateY(-1px) !important;
   }
 }
+
+/* ---------------------------------------------------------------------
+   7) Botões: cada cartão usava uma escala diferente (.sh2-cta tinha
+      2rem de altura; o botão "Continuar" do resume-session, 40px; o
+      "Resolver questões" do PcprExamSpotlight não tinha nenhuma regra
+      própria, então herdava o estilo cru do navegador). Uma escala
+      única para os botões de ação principal e outra para os links de
+      texto secundários, nos cartões desta página.
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-cta, .pcpr-spot__cta, .ecc-bank__cta) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.375rem !important;
+  min-height: 2.5rem !important;
+  padding: 0.5rem 1rem !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: var(--brass, #d9a441) !important;
+  color: oklch(0.2 0.03 70) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-cta, .pcpr-spot__cta, .ecc-bank__cta) svg {
+  width: 0.875rem !important;
+  height: 0.875rem !important;
+}
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-link, .pcpr-spot__link, .ncx-link) {
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: var(--brass, #d9a441) !important;
+}
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-link, .pcpr-spot__link, .ncx-link) svg {
+  width: 0.875rem !important;
+  height: 0.875rem !important;
+}
+
+/* "Continuar"/"Fechar" do Treino em andamento: evita o botão dourado
+   sobrepor o X de fechar em cartões estreitos — quebra linha em vez
+   de encavalar. */
+html body .app-shell[data-area] .student-home.sh2 .resume-session__actions {
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+  row-gap: 6px !important;
+}
