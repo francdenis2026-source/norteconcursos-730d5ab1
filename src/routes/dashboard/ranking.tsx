@@ -23,6 +23,8 @@ import {
   PenLine,
   Scale,
   ArrowRight,
+  Clock3,
+  Sparkles,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -147,13 +149,10 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
   const missing = p?.next_level_at ? Math.max(0, p.next_level_at - p.general_points) : 0;
   return (
     <Dialog open={!!userId} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="ranking-profile max-h-[92dvh] max-w-md grid-rows-[auto_minmax(0,1fr)] gap-0 overflow-hidden p-0">
+      <DialogContent className="ranking-profile rkp">
         {p === undefined ? (
-          <div className="flex justify-center py-14">
-            <Loader2
-              className="h-5 w-5 animate-spin text-muted-foreground"
-              aria-label="Carregando"
-            />
+          <div className="rkp-loading">
+            <Loader2 className="h-5 w-5 animate-spin" aria-label="Carregando" />
             <DialogTitle className="sr-only">Carregando perfil</DialogTitle>
           </div>
         ) : p === null ? (
@@ -162,143 +161,134 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
             <DialogDescription>Não foi possível carregar este candidato.</DialogDescription>
           </DialogHeader>
         ) : (
-          <>
-            <header className="ranking-profile__hero">
-              <img
-                src="/media/hero/norte-atmosphere.webp"
-                alt=""
-                aria-hidden="true"
-                width={1942}
-                height={809}
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="ranking-profile__identity">
-                <span className="ranking-profile__avatar" aria-hidden="true">
-                  {initial}
-                </span>
-                <div className="min-w-0">
-                  <DialogTitle className="truncate text-lg font-bold text-white">
-                    {p.display_name}
-                  </DialogTitle>
+          (() => {
+            const pct = p.next_level_at ? Math.min(100, Math.round((100 * p.general_points) / p.next_level_at)) : 100;
+            const parts = [
+              ["Questões", p.question_points, "q", CheckCircle2],
+              ["Simulados", p.simulator_points, "s", Layers],
+              ["Flashcards", p.flashcard_points, "f", Sparkles],
+              ["Redação", p.essay_points, "r", PenLine],
+            ] as const;
+            const sum = Math.max(1, parts.reduce((t, [, v]) => t + Math.max(0, Number(v) || 0), 0));
+            const podium = p.general_position >= 1 && p.general_position <= 3 && p.general_points > 0;
+            return (
+              <div className="rkp-grid">
+                <header className="rkp-hero">
+                  <img src="/media/hero/norte-atmosphere.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                  <div
+                    className="rkp-avatar"
+                    style={{ "--p": pct } as React.CSSProperties}
+                    role="img"
+                    aria-label={`Progresso de nível: ${pct}%`}
+                  >
+                    <span>{initial}</span>
+                  </div>
+                  <DialogTitle className="rkp-name">{p.display_name}</DialogTitle>
                   <DialogDescription asChild>
-                    <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/80">
+                    <div className="rkp-level">
                       {p.general_points > 0 ? (
                         <>
-                          <Stars n={p.stars} />
+                          <LevelEmblem stars={p.stars} size={20} />
                           <span>Nível {p.level_name}</span>
+                          <Stars n={p.stars} />
                         </>
                       ) : (
-                        <span className="rank-chip rank-chip--none">Sem pontuação ainda</span>
+                        <span>Sem pontuação ainda</span>
                       )}
                     </div>
                   </DialogDescription>
-                </div>
-                <div
-                  className="ranking-profile__position"
-                  aria-label={`${p.general_position}º lugar entre ${p.participants}`}
-                >
-                  <strong>{p.general_position}º</strong>
-                  <small>de {p.participants}</small>
+                  <div className="rkp-pos" data-podium={podium ? p.general_position : undefined} aria-label={`${p.general_position}º lugar entre ${p.participants}`}>
+                    <Trophy aria-hidden="true" />
+                    <strong>{p.general_position}º</strong>
+                    <small>de {p.participants}</small>
+                  </div>
+                  <div className="rkp-points">
+                    <p>
+                      <b>{p.general_points.toLocaleString("pt-BR")}</b> pontos
+                    </p>
+                    <div className="rkp-bar" aria-hidden="true">
+                      <i style={{ width: `${pct}%` }} />
+                    </div>
+                    <small>
+                      {p.next_level_at
+                        ? `Faltam ${missing.toLocaleString("pt-BR")} pts para ${p.next_level_at.toLocaleString("pt-BR")} pts`
+                        : "Nível máximo alcançado"}
+                    </small>
+                  </div>
+                </header>
+
+                <div className="rkp-body">
+                  <dl className="rkp-tiles">
+                    <div data-tone="green">
+                      <span><CheckCircle2 aria-hidden="true" /></span>
+                      <dt>Questões resolvidas</dt>
+                      <dd>{p.questions.toLocaleString("pt-BR")}</dd>
+                      <small>{p.questions ? `${p.accuracy}% de acertos` : "Ainda sem respostas"}</small>
+                    </div>
+                    <div data-tone="blue">
+                      <span><Layers aria-hidden="true" /></span>
+                      <dt>Simulados</dt>
+                      <dd>{p.simulators}</dd>
+                      <small>{p.simulators ? `melhor ${Math.round(Number(p.best_accuracy))}%` : "Nenhum concluído"}</small>
+                    </div>
+                    <div data-tone="violet">
+                      <span><Clock3 aria-hidden="true" /></span>
+                      <dt>Horas de estudo</dt>
+                      <dd>{p.study_hours} h</dd>
+                      <small>dedicação total</small>
+                    </div>
+                    <div data-tone="orange">
+                      <span><Flame aria-hidden="true" /></span>
+                      <dt>Maior sequência</dt>
+                      <dd>{p.streak}</dd>
+                      <small>{p.streak === 1 ? "dia seguido" : "dias seguidos"}</small>
+                    </div>
+                  </dl>
+
+                  <section className="rkp-section" aria-labelledby="rkp-points-title">
+                    <h3 id="rkp-points-title">De onde vêm os pontos</h3>
+                    <div className="rkp-stack" aria-hidden="true">
+                      {parts.map(([label, v, key]) =>
+                        Number(v) > 0 ? <i key={label} data-k={key} style={{ width: `${(Number(v) / sum) * 100}%` }} /> : null,
+                      )}
+                    </div>
+                    <dl className="rkp-parts">
+                      {parts.map(([label, v, key, Icon]) => (
+                        <div key={label} data-k={key}>
+                          <dt>
+                            <Icon aria-hidden="true" /> {label}
+                          </dt>
+                          <dd>{Number(v).toLocaleString("pt-BR")}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <p className="rkp-note">
+                      Conta só a primeira resposta de cada questão (acerto soma, erro desconta), conforme o aproveitamento do dia.
+                      Constância ({p.consistency_points} pts) e horas de estudo medem dedicação e não entram no total.
+                    </p>
+                  </section>
+
+                  <section className="rkp-section" aria-labelledby="rkp-medals-title">
+                    <h3 id="rkp-medals-title">
+                      <Medal aria-hidden="true" /> Medalhas <span>{p.medals.length}</span>
+                    </h3>
+                    {p.medals.length ? (
+                      <ul className="rkp-medals">
+                        {p.medals.map((m, i) => (
+                          <li key={m} style={{ "--i": Math.min(i, 12) } as React.CSSProperties}>
+                            <Medal aria-hidden="true" />
+                            {m}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="rkp-note">Ainda sem medalhas.</p>
+                    )}
+                  </section>
                 </div>
               </div>
-            </header>
-            <div className="min-h-0 space-y-4 overflow-y-auto overscroll-contain p-4">
-              <section aria-label="Progresso de nível" className="space-y-2">
-                <div className="flex items-baseline justify-between gap-3">
-                  <p className="text-2xl font-black tabular-nums">
-                    {p.general_points}
-                    <span className="ml-1 text-xs font-semibold text-muted-foreground">pontos</span>
-                  </p>
-                  <p className="text-right text-xs text-muted-foreground">
-                    {p.next_level_at
-                      ? `faltam ${missing} pts para ${p.next_level_at} pts`
-                      : "nível máximo"}
-                  </p>
-                </div>
-                <Progress
-                  value={
-                    p.next_level_at
-                      ? Math.min(100, (100 * p.general_points) / p.next_level_at)
-                      : 100
-                  }
-                  className="h-2"
-                />
-              </section>
-              <dl className="grid grid-cols-2 gap-2">
-                <Tile
-                  label="Questões resolvidas"
-                  value={p.questions}
-                  note={p.questions ? `${p.accuracy}% de acertos` : "Ainda sem respostas"}
-                />
-                <Tile
-                  label="Simulados"
-                  value={p.simulators}
-                  note={
-                    p.simulators
-                      ? `melhor ${Math.round(Number(p.best_accuracy))}%`
-                      : "Nenhum concluído"
-                  }
-                />
-                <Tile label="Horas de estudo" value={`${p.study_hours} h`} note="dedicação total" />
-                <Tile
-                  label="Maior sequência"
-                  value={
-                    <span className="inline-flex items-center gap-1.5">
-                      <Flame className="h-5 w-5 text-orange-500" aria-hidden="true" />
-                      {p.streak}
-                    </span>
-                  }
-                  note={p.streak === 1 ? "dia seguido" : "dias seguidos"}
-                />
-              </dl>
-              <section aria-label="Composição dos pontos">
-                <h3 className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  De onde vêm os pontos
-                </h3>
-                <dl className="grid grid-cols-2 divide-x rounded-xl border text-center sm:grid-cols-4">
-                  {(
-                    [
-                      ["Questões", p.question_points],
-                      ["Simulados", p.simulator_points],
-                      ["Flashcards", p.flashcard_points],
-                      ["Redação", p.essay_points],
-                    ] as const
-                  ).map(([label, points]) => (
-                    <div key={label} className="min-w-0 px-1 py-2">
-                      <dt className="truncate text-[10px] text-muted-foreground">{label}</dt>
-                      <dd className="text-base font-black tabular-nums">{points}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
-                  Pontos não são a quantidade de questões: contam só a primeira resposta de cada uma
-                  (acerto soma, erro desconta) e dependem do aproveitamento do dia. Constância (
-                  {p.consistency_points} pts) e horas de estudo são métricas de dedicação e não
-                  entram nesse total.
-                </p>
-              </section>
-              <section aria-label="Medalhas">
-                <h3 className="mb-1.5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  <Medal className="h-3.5 w-3.5" aria-hidden="true" /> Medalhas ({p.medals.length})
-                </h3>
-                {p.medals.length ? (
-                  <ul className="flex max-h-24 flex-wrap gap-1.5 overflow-y-auto pr-1">
-                    {p.medals.map((m) => (
-                      <li
-                        key={m}
-                        className="rounded-full border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold"
-                      >
-                        {m}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-xs text-muted-foreground">Ainda sem medalhas.</p>
-                )}
-              </section>
-            </div>
-          </>
+            );
+          })()
         )}
       </DialogContent>
     </Dialog>
