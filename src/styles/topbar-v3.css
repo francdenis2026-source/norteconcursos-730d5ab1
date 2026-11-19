@@ -1,0 +1,225 @@
+/*
+  Barra superior v3 — vidro escuro, indicador dourado, ícones em traço fino, ações agrupadas.
+  Mesmo conteúdo e destinos; só apresentação e microinterações.
+*/
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar {
+  --tb-gold: var(--brass, oklch(0.78 0.13 79));
+  --tb-ink: var(--foreground);
+  --tb-dim: var(--muted-foreground);
+  --tb-line: color-mix(in oklab, var(--foreground) 10%, transparent);
+  --tb-soft: color-mix(in oklab, var(--foreground) 6%, transparent);
+  --tb-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  border-bottom: 1px solid var(--tb-line) !important;
+  background: color-mix(in oklab, var(--background) 78%, transparent) !important;
+  backdrop-filter: blur(16px) saturate(1.3) !important;
+  box-shadow: 0 10px 30px -24px rgb(0 0 0 / 60%) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--tb-gold) 70%, transparent) 30%, color-mix(in oklab, var(--tb-gold) 70%, transparent) 70%, transparent);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Links: rolam por dentro com esmaecimento nas bordas, sem cortar rótulos */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__links {
+  gap: 0.25rem !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 2rem), transparent);
+  mask-image: linear-gradient(90deg, #000 calc(100% - 2rem), transparent);
+  padding-right: 1.5rem;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__links::-webkit-scrollbar { display: none; }
+
+/* Botões do menu */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger {
+  position: relative;
+  flex: none;
+  gap: 0.5rem !important;
+  height: 2.5rem !important;
+  min-height: 2.5rem !important;
+  padding: 0 0.875rem 0 0.625rem !important;
+  border: 1px solid transparent !important;
+  border-radius: 999px !important;
+  color: var(--tb-dim) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  transition: color 160ms var(--tb-ease), background-color 160ms var(--tb-ease), border-color 160ms var(--tb-ease), transform 160ms var(--tb-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__icon-wrap {
+  display: grid !important;
+  place-items: center !important;
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: inherit !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: background-color 160ms var(--tb-ease), color 160ms var(--tb-ease), transform 200ms var(--tb-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__icon-wrap svg {
+  width: 1.0625rem !important;
+  height: 1.0625rem !important;
+  stroke-width: 1.75 !important;
+  color: inherit !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__chevron {
+  opacity: 0.6;
+  transition: transform 200ms var(--tb-ease), opacity 160ms var(--tb-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:hover {
+  color: var(--tb-ink) !important;
+  background: var(--tb-soft) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:hover .student-top-navigation__icon-wrap {
+  color: var(--tb-gold) !important;
+  transform: translateY(-1px) scale(1.06);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger[data-state="open"] {
+  color: var(--tb-ink) !important;
+  background: var(--tb-soft) !important;
+  border-color: var(--tb-line) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger[data-state="open"] .student-top-navigation__chevron { transform: rotate(180deg); opacity: 1; }
+
+/* Item ativo: pílula dourada suave e ponto indicador */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"]) {
+  color: var(--tb-ink) !important;
+  border-color: color-mix(in oklab, var(--tb-gold) 45%, transparent) !important;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--tb-gold) 18%, transparent), color-mix(in oklab, var(--tb-gold) 8%, transparent)) !important;
+  box-shadow: inset 0 1px 0 color-mix(in oklab, white 12%, transparent), 0 6px 18px -12px var(--tb-gold) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"]) .student-top-navigation__icon-wrap {
+  color: oklch(0.22 0.04 70) !important;
+  background: var(--tb-gold) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"])::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--tb-gold);
+  box-shadow: 0 0 8px var(--tb-gold);
+  transform: translateX(-50%);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger--locked { opacity: 0.55; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:focus-visible { outline: 2px solid var(--ring) !important; outline-offset: 2px !important; }
+
+/* Marca */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand-emblem { transition: transform 300ms var(--tb-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand:hover .student-top-navigation__brand-emblem { transform: rotate(-6deg) scale(1.05); }
+
+/* Ações à direita: um grupo único em pílula */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions {
+  gap: 2px !important;
+  padding: 3px !important;
+  border: 1px solid var(--tb-line) !important;
+  border-radius: 999px !important;
+  background: color-mix(in oklab, var(--card) 70%, transparent) !important;
+  box-shadow: inset 0 1px 0 color-mix(in oklab, white 6%, transparent);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) {
+  height: 2.25rem !important;
+  min-width: 2.25rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: var(--tb-dim) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: color 160ms var(--tb-ease), background-color 160ms var(--tb-ease), transform 160ms var(--tb-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, button):hover {
+  color: var(--tb-ink) !important;
+  background: var(--tb-soft) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, button) svg { stroke-width: 1.75; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, button):hover svg { transform: scale(1.08); transition: transform 160ms var(--tb-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-theme-toggle:hover svg { transform: rotate(25deg) scale(1.08); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-logout-btn:hover { color: oklch(0.68 0.19 25) !important; background: color-mix(in oklab, oklch(0.68 0.19 25) 12%, transparent) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-weight: 700;
+  color: var(--tb-ink) !important;
+  background: linear-gradient(135deg, color-mix(in oklab, oklch(0.72 0.17 50) 22%, transparent), color-mix(in oklab, var(--tb-gold) 12%, transparent)) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-streak svg { color: oklch(0.72 0.17 50) !important; animation: tb-flicker 2.4s ease-in-out infinite; }
+@keyframes tb-flicker { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12) rotate(-4deg); } }
+
+/* Menus suspensos */
+html body .student-top-navigation__menu {
+  padding: 0.375rem !important;
+  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent) !important;
+  border-radius: 1rem !important;
+  background: color-mix(in oklab, var(--popover, var(--card)) 92%, transparent) !important;
+  backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: 0 24px 60px -24px rgb(0 0 0 / 60%) !important;
+  animation: tb-menu 180ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+html body .student-top-navigation__menu [role="menuitem"] {
+  gap: 0.625rem !important;
+  min-height: 2.5rem;
+  border-radius: 0.625rem !important;
+  font-weight: 550;
+  transition: background-color 140ms ease, color 140ms ease, transform 140ms ease;
+}
+html body .student-top-navigation__menu [role="menuitem"] svg { color: var(--brass, oklch(0.78 0.13 79)); stroke-width: 1.75; transition: transform 160ms ease; }
+html body .student-top-navigation__menu [role="menuitem"]:is(:hover, [data-highlighted]) {
+  background: color-mix(in oklab, var(--brass, oklch(0.78 0.13 79)) 14%, transparent) !important;
+  transform: translateX(2px);
+}
+html body .student-top-navigation__menu [role="menuitem"]:is(:hover, [data-highlighted]) svg { transform: scale(1.1); }
+html body .student-top-navigation__menu-title { font-weight: 750; }
+@keyframes tb-menu { from { opacity: 0; transform: translateY(-4px) scale(0.98); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar *,
+  html body .student-top-navigation__menu,
+  html body .student-top-navigation__menu * { animation: none !important; transition: none !important; }
+}
+
+/* Reforço contra camadas antigas (ícones com quadrados coloridos) */
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger .student-top-navigation__icon-wrap {
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+  flex-basis: 1.75rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: inherit !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger .student-top-navigation__icon-wrap svg {
+  width: 1.0625rem !important;
+  height: 1.0625rem !important;
+  color: inherit !important;
+  stroke-width: 1.75 !important;
+}
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger:hover .student-top-navigation__icon-wrap { color: var(--tb-gold) !important; }
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"]) .student-top-navigation__icon-wrap {
+  color: oklch(0.22 0.04 70) !important;
+  background: var(--tb-gold) !important;
+  box-shadow: 0 0 12px -2px var(--tb-gold) !important;
+}
+html body .student-top-navigation__menu,
+html body .student-top-navigation__menu [role="menuitem"],
+html body .student-top-navigation__menu [role="menuitem"] span { color: var(--popover-foreground, var(--foreground)) !important; }
+html body .student-top-navigation__menu .student-top-navigation__menu-description { color: var(--muted-foreground) !important; }
+html body .student-top-navigation__menu { background: var(--popover, var(--card)) !important; }
