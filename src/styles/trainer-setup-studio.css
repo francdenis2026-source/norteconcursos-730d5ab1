@@ -340,7 +340,9 @@ html body .app-shell[data-area="student"] #dashboard-content:has(.trainer-setup.
   box-shadow: 0 12px 26px -14px var(--q-gold);
   transition: transform 160ms var(--q-ease), box-shadow 160ms var(--q-ease), filter 160ms var(--q-ease);
 }
-.qt3 .qt3-start svg { width: 1rem; height: 1rem; margin-right: 0.4rem; }
+/* O ícone herdava um dourado próximo ao fundo do botão e sumia; força tinta escura legível. */
+html body .qt3 .qt3-start svg { width: 1.0625rem; height: 1.0625rem; margin-right: 0.4rem; color: var(--q-gold-ink, #2a1d00) !important; stroke: currentColor !important; fill: none; opacity: 1 !important; filter: none !important; }
+html body .qt3 .qt3-start:disabled svg { opacity: 0.55 !important; }
 .qt3 .qt3-start:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 16px 30px -14px var(--q-gold); filter: saturate(1.1); }
 .qt3 .qt3-start:not(:disabled):active { transform: translateY(1px); }
 .qt3 .qt3-reset { height: 2.25rem; border-radius: 0.75rem; font-size: 0.8125rem; color: var(--muted-foreground); }
