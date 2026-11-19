@@ -8,10 +8,7 @@
   max-width: none !important;
   margin-inline: auto !important;
 }
-.home-ranking-arena .rka-hero__trophy svg { width: 56px !important; height: 56px !important; }
-.home-ranking-arena .rka-podium__medal svg { width: 60px !important; height: 60px !important; }
-.home-ranking-arena .rka-podium li[data-place="1"] .rka-podium__medal svg { width: 76px !important; height: 76px !important; }
-.home-ranking-arena .rka-podium { max-width: 920px; width: 100%; margin-inline: auto; }
+
 .home-ranking-arena .hra { width: 100%; }
 .home-ranking-arena .hra a { text-decoration: none !important; }
 
@@ -148,4 +145,66 @@
 @media (prefers-reduced-motion: reduce) {
   .home-ranking-arena .hra-live i { animation: none; }
   .home-ranking-arena .hra-cta, .home-ranking-arena .hra-cta svg { transition: none; }
+}
+
+/* ===== Versão compacta ===== */
+.home-ranking-arena { padding-block: clamp(1rem, 2.5vw, 2rem) !important; }
+.home-ranking-arena .hra { gap: 0.625rem; }
+.home-ranking-arena .rka-hero { padding: 0.875rem 1.25rem !important; gap: 0.75rem; }
+.home-ranking-arena .rka-hero__copy { grid-template-columns: auto 1fr; align-items: center; column-gap: 0.875rem; row-gap: 0; }
+.home-ranking-arena .rka-hero__trophy { grid-row: 1 / span 3; }
+.home-ranking-arena .rka-hero__trophy svg { width: 44px !important; height: 44px !important; }
+.home-ranking-arena .rka-hero .hra-title { font-size: clamp(1.25rem, 2vw, 1.75rem) !important; }
+.home-ranking-arena .rka-hero .rka-hero__desc { font-size: 0.8125rem; }
+.home-ranking-arena .hra-live { display: none; }
+.home-ranking-arena .hra-hero-cta { padding: 0.625rem 0.875rem; gap: 0.5rem; }
+.home-ranking-arena .hra-hero-cta p { font-size: 0.75rem; }
+.home-ranking-arena .hra-cta { min-height: 2.25rem; font-size: 0.8125rem; }
+.home-ranking-arena .rka-board { padding: 0.75rem !important; gap: 0.5rem !important; }
+
+/* Pódio: 3 cartões baixos lado a lado */
+.home-ranking-arena .rka-podium { align-items: stretch; gap: 0.5rem; max-width: none; padding: 0; }
+.home-ranking-arena .rka-podium li[data-place] { order: initial; }
+.home-ranking-arena .rka-podium li[data-place="1"] { order: 1; }
+.home-ranking-arena .rka-podium li[data-place="2"] { order: 2; }
+.home-ranking-arena .rka-podium li[data-place="3"] { order: 3; }
+.home-ranking-arena .rka-podium__card {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: "medal name step" "medal stars pts" "medal stats pts";
+  justify-items: start;
+  align-items: center;
+  column-gap: 0.75rem;
+  row-gap: 0.1rem;
+  padding: 0.625rem 0.875rem !important;
+  text-align: left;
+}
+.home-ranking-arena .rka-podium__glow { top: -60%; left: 12%; width: 8rem; height: 8rem; }
+.home-ranking-arena .rka-podium__medal { grid-area: medal; }
+.home-ranking-arena .rka-podium__medal svg,
+.home-ranking-arena .rka-podium li[data-place="1"] .rka-podium__medal svg { width: 44px !important; height: 44px !important; }
+.home-ranking-arena .rka-podium__name { grid-area: name; font-size: 0.875rem; }
+.home-ranking-arena .rka-podium__card > .hra-stars { grid-area: stars; }
+.home-ranking-arena .rka-podium__points { grid-area: pts; font-size: 1.25rem; align-self: center; justify-self: end; }
+.home-ranking-arena .rka-podium__stats { grid-area: stats; font-size: 0.6875rem; }
+.home-ranking-arena .rka-podium__step {
+  grid-area: step;
+  position: static;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  background: color-mix(in oklab, var(--tone) 22%, transparent);
+  color: var(--tone);
+}
+.home-ranking-arena .rka-podium li .rka-podium__step { height: auto !important; }
+.home-ranking-arena .rka-row { min-height: 2.75rem; padding-block: 0.25rem; }
+.home-ranking-arena .rka-avatar { width: 2rem; height: 2rem; }
+.home-ranking-arena .hra-pos { width: 2rem; height: 2rem; }
+.home-ranking-arena .hra-details summary { font-size: 0.75rem; }
+@media (max-width: 860px) {
+  .home-ranking-arena .rka-podium { grid-template-columns: minmax(0, 1fr); }
+  .home-ranking-arena .rka-hero__copy { grid-template-columns: 1fr; }
+  .home-ranking-arena .rka-hero__trophy { grid-row: auto; }
+  .home-ranking-arena .rka-hero .rka-kicker { display: none; }
 }
