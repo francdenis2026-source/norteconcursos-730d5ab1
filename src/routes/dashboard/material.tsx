@@ -47,6 +47,7 @@ import { AreaHint } from "@/components/ui/area-hint";
 import { subjectDescription } from "@/lib/areaDescriptions";
 import "@/styles/study-area-compact.css";
 import "@/styles/student-area-kit.css";
+import "@/styles/material-hub-v2.css";
 
 const PCAC_GUIDES = [
   { id: "raciocinio-logico", label: "Raciocínio Lógico" },
@@ -273,6 +274,8 @@ function HubSearch({ subjects }: { subjects: DisciplineCard[] }) {
   );
 }
 
+const TILE_TONES = ["gold", "teal", "green", "violet", "rose", "blue", "amber"] as const;
+
 function MaterialHub() {
   const navigate = useNavigate();
   const { user, isLoading } = useAuthStatus();
@@ -285,6 +288,8 @@ function MaterialHub() {
     (entry) => entry.hasContent && !GUIDE_NAMES.has(entry.name),
   );
   const lawTotal = laws.reduce((sum, entry) => sum + entry.count, 0);
+  let tone = 0;
+  const nextTone = () => tone++ % TILE_TONES.length;
   const subjectTotal = availableSubjects.length;
 
   if (!isLoading && !signedIn)
@@ -301,13 +306,14 @@ function MaterialHub() {
     );
 
   return (
-    <div className="nc-learning-workspace material-hub space-y-4 pb-8">
+    <div className="nc-learning-workspace material-hub mh2 space-y-4 pb-8">
       <header className="ak-hero">
         <img src="/media/hero/painel-aluno-estudo.webp" alt="" aria-hidden="true" decoding="async" />
         <div className="ak-hero__copy">
           <small>Material didático</small>
           <h1>Materiais de estudo</h1>
           <p>Estude por legislação, disciplina ou formato.</p>
+          <HubSearch subjects={subjects} />
         </div>
         <nav className="ak-quick" aria-label="Acesso rápido">
           <Link to="/dashboard/material" hash="hub-laws" style={{ "--ak-tone": "oklch(0.76 0.16 150)" } as React.CSSProperties}>
@@ -341,7 +347,7 @@ function MaterialHub() {
         ) : (
           <ul className="ak-tiles">
             <li>
-              <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: "Realidade do Acre" } })} className="ak-tile">
+              <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: "Realidade do Acre" } })} className="ak-tile" data-tone={TILE_TONES[nextTone()]}>
                 <span className="ak-tile__icon">
                   <Landmark aria-hidden="true" />
                 </span>
@@ -354,7 +360,7 @@ function MaterialHub() {
                 <button
                   type="button"
                   onClick={() => void navigate({ to: "/dashboard/library", search: { collection: "subjects", guia: guide.id } as never, hash: "materiais-atualizados-pcac" })}
-                  className="ak-tile"
+                  className="ak-tile" data-tone={TILE_TONES[nextTone()]}
                 >
                   <span className="ak-tile__icon">
                     <guide.icon aria-hidden="true" />
@@ -369,7 +375,7 @@ function MaterialHub() {
               return (
                 <li key={entry.name}>
                   <AreaHint title={entry.name} description={subjectDescription(entry.name)}>
-                  <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: entry.name } })} className="ak-tile">
+                  <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: entry.name } })} className="ak-tile" data-tone={TILE_TONES[nextTone()]}>
                     <span className="ak-tile__icon">
                       <Icon aria-hidden="true" />
                     </span>
@@ -426,8 +432,6 @@ function MaterialHub() {
           })}
         </div>
       </section>
-
-      <HubSearch subjects={subjects} />
 
       <section aria-labelledby="hub-laws" className="space-y-3">
         <header className="flex flex-wrap items-end justify-between gap-2">

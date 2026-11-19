@@ -1,0 +1,269 @@
+/* Material didático v2 — abertura com busca, disciplinas coloridas, cartões com microinterações. */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .material-hub.mh2 {
+  --m-gold: var(--brass, oklch(0.78 0.13 79));
+  --m-line: var(--border);
+  --m-soft: color-mix(in oklab, var(--foreground) 4%, transparent);
+  --m-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Abertura */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0.875rem !important;
+  min-height: 0 !important;
+  padding: 1.25rem 1.5rem !important;
+  overflow: visible !important;
+  isolation: isolate;
+  border: 1px solid color-mix(in oklab, var(--m-gold) 40%, transparent) !important;
+  border-radius: 1.125rem !important;
+  background: oklch(0.15 0.02 260) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero > img {
+  position: absolute !important;
+  inset: 0 0 0 auto !important;
+  z-index: -2 !important;
+  width: 62% !important;
+  height: 100% !important;
+  border-radius: 0 1.125rem 1.125rem 0;
+  object-fit: cover !important;
+  object-position: center 30% !important;
+  opacity: 1 !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, oklch(0.15 0.02 260) 35%, oklch(0.15 0.02 260 / 70%) 60%, oklch(0.15 0.02 260 / 25%)),
+    radial-gradient(50% 120% at 0% 0%, color-mix(in oklab, var(--m-gold) 20%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero__copy { display: grid; gap: 0.35rem; max-width: 40rem; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero__copy small { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m-gold) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero__copy h1 { margin: 0; font-size: clamp(1.625rem, 2.6vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; color: #fff !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero__copy > p { margin: 0 0 0.25rem; font-size: 0.9375rem; color: rgb(243 245 247 / 78%) !important; }
+
+/* Busca dentro da abertura */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search { position: relative; z-index: 5; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  padding: 0 1rem;
+  border: 1px solid rgb(255 255 255 / 18%) !important;
+  border-radius: 999px !important;
+  background: rgb(10 14 22 / 60%) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px -18px rgb(0 0 0 / 80%);
+  transition: border-color 180ms var(--m-ease), box-shadow 180ms var(--m-ease);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__box:focus-within { border-color: var(--m-gold) !important; box-shadow: 0 0 0 4px color-mix(in oklab, var(--m-gold) 22%, transparent); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__box :is(input) { height: 100%; border: 0 !important; color: #fff !important; background: transparent !important; box-shadow: none !important; font-size: 0.9375rem; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__box :is(input)::placeholder { color: rgb(243 245 247 / 55%); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__box svg { color: var(--m-gold) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero .hub-search__list { border-radius: 1rem; box-shadow: 0 24px 50px -20px rgb(0 0 0 / 60%); }
+
+/* Atalhos em pílula de vidro */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-quick { display: flex !important; flex-wrap: wrap; gap: 0.5rem !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-quick a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.375rem;
+  padding: 0 0.95rem !important;
+  border: 1px solid color-mix(in oklab, var(--ak-tone, var(--m-gold)) 45%, transparent) !important;
+  border-radius: 999px !important;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: #fff !important;
+  background: color-mix(in oklab, var(--ak-tone, var(--m-gold)) 14%, rgb(10 14 22 / 60%)) !important;
+  backdrop-filter: blur(10px);
+  transition: transform 160ms var(--m-ease), box-shadow 160ms var(--m-ease), background-color 160ms var(--m-ease);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-quick a svg { width: 1rem; height: 1rem; color: var(--ak-tone, var(--m-gold)) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-quick a strong { padding: 0 0.4rem; border-radius: 999px; font-size: 0.75rem; color: #fff !important; background: rgb(255 255 255 / 14%); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-quick a:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -12px var(--ak-tone, var(--m-gold)); }
+
+/* Seções */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-strip {
+  padding: 1rem !important;
+  border: 1px solid var(--m-line) !important;
+  border-radius: 1.125rem !important;
+  background: var(--card) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-strip > header h2,
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 section > header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.0625rem !important;
+  font-weight: 750 !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 :is(.ak-strip, section) > header h2::before {
+  content: "";
+  width: 4px;
+  height: 1.05rem;
+  border-radius: 3px;
+  background: var(--m-gold);
+}
+
+/* Disciplinas: cartões com cor própria, ícone grande ao fundo */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tiles { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)) !important; gap: 0.625rem !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile {
+  --t: var(--m-gold);
+  position: relative;
+  display: grid !important;
+  align-content: start;
+  gap: 0.35rem;
+  width: 100%;
+  min-height: 7.75rem;
+  padding: 0.875rem !important;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid color-mix(in oklab, var(--t) 28%, var(--m-line)) !important;
+  border-top: 1px solid color-mix(in oklab, var(--t) 28%, var(--m-line)) !important;
+  border-radius: 1rem !important;
+  text-align: left;
+  background: linear-gradient(160deg, color-mix(in oklab, var(--t) 13%, var(--card)), var(--card) 65%) !important;
+  box-shadow: none !important;
+  transition: transform 200ms var(--m-ease), border-color 200ms var(--m-ease), box-shadow 200ms var(--m-ease) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile[data-tone="teal"] { --t: oklch(0.72 0.12 190); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile[data-tone="green"] { --t: oklch(0.72 0.15 150); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile[data-tone="violet"] { --t: oklch(0.68 0.16 295); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile[data-tone="rose"] { --t: oklch(0.68 0.17 15); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile[data-tone="blue"] { --t: oklch(0.68 0.15 250); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile[data-tone="amber"] { --t: oklch(0.78 0.15 70); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--t), transparent);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile__icon {
+  display: grid !important;
+  place-items: center;
+  width: 2.375rem !important;
+  height: 2.375rem !important;
+  border: 1px solid color-mix(in oklab, var(--t) 45%, transparent) !important;
+  border-radius: 0.75rem !important;
+  color: var(--t) !important;
+  background: color-mix(in oklab, var(--t) 14%, var(--card)) !important;
+  transition: transform 220ms var(--m-ease), background-color 220ms var(--m-ease), color 220ms var(--m-ease);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile__icon svg { width: 1.15rem !important; height: 1.15rem !important; stroke-width: 1.75; color: inherit !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile strong { margin-top: 0.25rem; font-size: 0.9375rem !important; font-weight: 700 !important; line-height: 1.25; color: var(--foreground) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile > span:last-child { font-size: 0.75rem !important; line-height: 1.4; color: var(--muted-foreground) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--t) 65%, var(--m-line)) !important;
+  box-shadow: 0 16px 30px -22px var(--t) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile:hover .ak-tile__icon { color: oklch(0.2 0.02 260) !important; background: var(--t) !important; transform: rotate(-6deg) scale(1.06); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+/* Guias em pílulas */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-guides__list { display: flex !important; flex-wrap: wrap; gap: 0.4rem !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-guides__list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.125rem;
+  padding: 0 0.875rem !important;
+  border: 1px solid var(--m-line) !important;
+  border-radius: 999px !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--foreground) !important;
+  background: var(--card) !important;
+  text-decoration: none;
+  transition: border-color 160ms var(--m-ease), transform 160ms var(--m-ease), background-color 160ms var(--m-ease);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-guides__list a:hover { border-color: var(--m-gold) !important; background: color-mix(in oklab, var(--m-gold) 10%, var(--card)) !important; transform: translateY(-1px); }
+
+/* Faixa PC-AC com foto */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .pcac-material-focus {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 1.125rem !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .pcac-material-focus::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: -1;
+  width: 55%;
+  background: url("/media/hero/landing-pcac.webp") center 25% / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%);
+  mask-image: linear-gradient(90deg, transparent, #000 60%);
+  opacity: 0.55;
+  transition: transform 800ms var(--m-ease);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .pcac-material-focus:hover::before { transform: scale(1.04); }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 :is(.pcac-material-focus__primary, .pcac-material-focus__secondary, .pcac-material-focus__discipline) {
+  border-radius: 999px !important;
+  transition: transform 160ms var(--m-ease), box-shadow 160ms var(--m-ease) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 :is(.pcac-material-focus__primary, .pcac-material-focus__secondary, .pcac-material-focus__discipline):hover { transform: translateY(-1px); }
+
+/* Cartões de legislação e recursos */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card {
+  display: flex !important;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 4.25rem;
+  height: 100%;
+  padding: 0.75rem 0.875rem !important;
+  border: 1px solid var(--m-line) !important;
+  border-radius: 0.875rem !important;
+  background: var(--card) !important;
+  text-decoration: none;
+  transition: transform 180ms var(--m-ease), border-color 180ms var(--m-ease), box-shadow 180ms var(--m-ease) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card__icon {
+  display: grid !important;
+  flex: none;
+  place-items: center;
+  width: 2.375rem !important;
+  height: 2.375rem !important;
+  border-radius: 0.75rem !important;
+  color: var(--m-gold) !important;
+  background: color-mix(in oklab, var(--m-gold) 12%, var(--card)) !important;
+  transition: transform 200ms var(--m-ease), background-color 200ms var(--m-ease), color 200ms var(--m-ease);
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card__icon[data-tone="more"] { color: oklch(0.68 0.15 250) !important; background: color-mix(in oklab, oklch(0.68 0.15 250) 12%, var(--card)) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card__icon svg { width: 1.1rem; height: 1.1rem; stroke-width: 1.75; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card__body strong { display: block; font-size: 0.875rem; font-weight: 700; color: var(--foreground) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card__body > span { font-size: 0.75rem; color: var(--muted-foreground) !important; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--m-gold) 55%, var(--m-line)) !important;
+  box-shadow: 0 14px 28px -22px var(--m-gold) !important;
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .material-card:hover .material-card__icon { transform: scale(1.08); }
+
+/* Entrada suave */
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 > * { animation: mh2-rise 420ms var(--m-ease) both; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 > *:nth-child(2) { animation-delay: 60ms; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 > *:nth-child(3) { animation-delay: 120ms; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 > *:nth-child(n + 4) { animation-delay: 180ms; }
+@keyframes mh2-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 640px) {
+  .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-hero > img { width: 100% !important; opacity: 0.4 !important; border-radius: 1.125rem; }
+  .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 *,
+  .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 > * { animation: none !important; transition: none !important; }
+}
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tiles > li { display: grid; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tiles > li > * { height: 100%; }
+.app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .pcac-material-focus::before { opacity: 0.32; width: 45%; }
