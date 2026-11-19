@@ -207,9 +207,14 @@ export function EditalCommandCenter() {
             <span>{share}% do acervo liberado para treino</span>
           </div>
         )}
-        <Link to="/dashboard/question-trainer" className="ecc-bank__cta">
-          Treinar agora <ArrowRight aria-hidden="true" />
-        </Link>
+        <div className="ecc-bank__links">
+          <Link to="/dashboard/question-bank" className="ecc-bank__more">
+            Catálogo completo
+          </Link>
+          <Link to="/dashboard/question-trainer" className="ecc-bank__cta">
+            Treinar agora <ArrowRight aria-hidden="true" />
+          </Link>
+        </div>
       </aside>
     </div>
   );

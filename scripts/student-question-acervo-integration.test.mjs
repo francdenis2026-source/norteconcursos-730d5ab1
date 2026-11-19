@@ -6,11 +6,15 @@ const source = async (path) => readFile(new URL(path, import.meta.url), "utf8");
 
 test("student home exposes the shared platform question inventory in Editais e acervo", async () => {
   const dashboard = await source("../src/routes/dashboard/index.tsx");
-  assert.match(dashboard, /import \{ PlatformQuestionCounts \} from "@\/components\/dashboard\/PlatformQuestionCounts"/);
+  assert.match(dashboard, /import \{ EditalCommandCenter \} from "@\/components\/dashboard\/EditalCommandCenter"/);
   assert.match(
     dashboard,
-    /<section className="sh2-resources" aria-labelledby="dashboard-resources-title">[\s\S]*?<PlatformQuestionCounts compact \/>[\s\S]*?<\/section>/,
+    /<section className="sh2-resources" aria-labelledby="dashboard-resources-title">[\s\S]*?<EditalCommandCenter \/>[\s\S]*?<\/section>/,
   );
+  const center = await source("../src/components/dashboard/EditalCommandCenter.tsx");
+  assert.match(center, /usePlatformQuestionSummary\(true\)/);
+  assert.match(center, /to="\/dashboard\/question-bank"/);
+  assert.match(center, /Acervo da plataforma/);
 });
 
 test("student inventory cards lead to the complete question catalog", async () => {

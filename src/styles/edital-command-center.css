@@ -210,3 +210,21 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content .ecc .ecc-b
   .ecc *, .ecc *::before, .ecc::before, .ecc-bank::before { animation: none !important; transition: none !important; }
 }
 @media (max-width: 480px) { .ecc-actions { grid-template-columns: minmax(0, 1fr); } .ecc-action { min-height: 2.875rem; } }
+.ecc-bank__links { display: flex; align-items: center; gap: 0.5rem; margin-top: auto; }
+.ecc-bank__links .ecc-bank__cta { flex: 1 1 auto; margin-top: 0; }
+.ecc-bank__more {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 0.875rem;
+  border: 1px solid var(--ecc-line);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ecc-ink);
+  background: var(--ecc-glass);
+  text-decoration: none;
+  transition: border-color 180ms var(--ecc-ease);
+}
+.ecc-bank__more:hover { border-color: var(--ecc-gold); }
+html body .app-shell[data-area] #dashboard-content#dashboard-content .ecc .ecc-bank__more { color: var(--ecc-ink) !important; }
