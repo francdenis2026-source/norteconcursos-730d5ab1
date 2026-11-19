@@ -510,7 +510,7 @@ html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt
     overscroll-behavior: contain;
     scrollbar-width: thin;
   }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero { min-height: 4.5rem !important; padding: 0.75rem 1.125rem !important; flex-shrink: 0; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero { min-height: 4.75rem !important; padding: 0.875rem 1.25rem !important; flex-shrink: 0; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero h1 { font-size: clamp(1.25rem, 1.8vw, 1.625rem) !important; margin: 0 !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero__copy p:not(.qt3-eyebrow) { margin: 0.125rem 0 0 !important; font-size: 0.75rem !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-note { display: none !important; }
