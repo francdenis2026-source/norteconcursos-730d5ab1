@@ -1,0 +1,365 @@
+/*
+  Treinador de questões — sessão "qt4".
+  Computador: a janela ocupa exatamente a altura visível (--qt4-h, medido no componente);
+  enunciado à esquerda, alternativas à direita, cada coluna rola por dentro se precisar,
+  e a barra de resposta é o rodapé fixo do próprio cartão (não flutua).
+  Celular e tablet: fluxo normal, barra de ações presa acima da navegação inferior.
+  Movimento só com transform/opacity; respeita prefers-reduced-motion.
+*/
+html:root body .qt4 {
+  --q4-ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --q4-blue: #3b82f6;
+  --q4-green: #22c55e;
+  --q4-red: #ef4444;
+  --q4-amber: #f59e0b;
+  --q4-violet: #8b5cf6;
+  --q4-card: var(--card);
+  --q4-surface: color-mix(in oklab, var(--card) 82%, var(--muted));
+  --q4-line: var(--border);
+  --q4-dim: var(--muted-foreground);
+}
+html:root.dark body .qt4 {
+  --q4-card: #141c23;
+  --q4-surface: #18222b;
+  --q4-line: rgb(255 255 255 / 9%);
+}
+
+/* ---------- Cartão ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window {
+  border: 1px solid var(--q4-line) !important;
+  border-radius: 20px !important;
+  background:
+    radial-gradient(700px 260px at 0% 0%, rgb(139 92 246 / 8%), transparent 70%),
+    radial-gradient(700px 260px at 100% 0%, rgb(59 130 246 / 8%), transparent 70%),
+    var(--q4-card) !important;
+  box-shadow: 0 24px 60px -36px rgb(0 0 0 / 70%) !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+}
+
+/* ---------- Faixa de metadados ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-meta { align-items: center; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-meta > :is(span, div):not(.ml-auto) {
+  max-width: 34ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-review {
+  padding: 0.375rem 0.75rem !important;
+  border-radius: 10px !important;
+  font-size: 0.75rem !important;
+}
+
+/* ---------- Cabeçalho e progresso ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-heading h2 {
+  font-size: clamp(1.25rem, 1rem + 0.8vw, 1.625rem) !important;
+  letter-spacing: -0.01em;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-progress { align-items: center; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-progress__bars > i {
+  height: 6px !important;
+  transform-origin: left center;
+  animation: q4-bar 520ms var(--q4-ease) both;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-progress__bars > i.bg-amber-400 {
+  box-shadow: 0 0 10px rgb(245 158 11 / 55%);
+}
+@keyframes q4-bar { from { opacity: 0; transform: scaleX(0.2); } to { opacity: 1; transform: none; } }
+
+/* ---------- Enunciado ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem {
+  position: relative;
+  padding: 1.125rem 1.25rem 1.125rem 1.375rem !important;
+  border: 1px solid color-mix(in oklab, var(--q4-violet) 28%, var(--q4-line)) !important;
+  border-radius: 16px !important;
+  background:
+    radial-gradient(420px 200px at 0% 0%, rgb(139 92 246 / 12%), transparent 70%),
+    var(--q4-surface) !important;
+  box-shadow: none !important;
+  animation: q4-rise 360ms var(--q4-ease) both;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem::before {
+  content: "";
+  position: absolute;
+  inset: 14px auto 14px 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(180deg, var(--q4-violet), var(--q4-blue));
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem :is(p, div) {
+  text-align: left !important;
+  hyphens: manual !important;
+  text-wrap: pretty;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem > p {
+  max-width: 72ch;
+  margin: 0 !important;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+  color: var(--foreground) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem details {
+  border-color: var(--q4-line) !important;
+  border-radius: 12px !important;
+  background: color-mix(in oklab, var(--q4-card) 70%, transparent) !important;
+}
+
+/* ---------- Alternativas ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-answers > p:first-child {
+  margin-top: 0 !important;
+  font-size: 0.6875rem !important;
+  letter-spacing: 0.12em;
+  color: var(--q4-dim) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option-row {
+  align-items: stretch !important;
+  animation: q4-rise 340ms var(--q4-ease) both;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option-row:nth-child(2) { animation-delay: 50ms; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option-row:nth-child(3) { animation-delay: 100ms; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option-row:nth-child(4) { animation-delay: 150ms; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option-row:nth-child(5) { animation-delay: 200ms; }
+@keyframes q4-rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option {
+  --oc: var(--q4-blue);
+  gap: 0.75rem !important;
+  padding: 0.75rem 0.875rem !important;
+  border: 1px solid var(--q4-line) !important;
+  border-radius: 14px !important;
+  background: var(--q4-surface) !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.55 !important;
+  color: var(--foreground) !important;
+  box-shadow: none !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  transition: transform 180ms var(--q4-ease), border-color 180ms var(--q4-ease), background-color 180ms var(--q4-ease), box-shadow 180ms var(--q4-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option > span:nth-child(2) { text-align: left; text-wrap: pretty; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__letter {
+  width: 2rem !important;
+  height: 2rem !important;
+  border: 1px solid var(--q4-line);
+  border-radius: 10px !important;
+  background: color-mix(in oklab, var(--foreground) 6%, transparent) !important;
+  font-size: 0.8125rem !important;
+  color: var(--foreground) !important;
+  transition: transform 220ms var(--q4-ease), background-color 180ms, color 180ms, border-color 180ms !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option:not(:disabled):hover {
+  transform: translateX(3px);
+  border-color: color-mix(in oklab, var(--oc) 65%, transparent) !important;
+  background: color-mix(in oklab, var(--oc) 8%, var(--q4-surface)) !important;
+  box-shadow: 0 10px 24px -18px var(--oc) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option:not(:disabled):hover .trainer-option__letter {
+  color: #fff !important;
+  background: var(--oc) !important;
+  border-color: var(--oc);
+  transform: rotate(-6deg) scale(1.05);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option:not(:disabled):active { transform: scale(0.99); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+/* Estados: escolhida (âmbar), correta (verde), errada (vermelho) */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state="selected"] { --oc: var(--q4-amber); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state="right"] { --oc: var(--q4-green); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state="wrong"] { --oc: var(--q4-red); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state] {
+  border-color: var(--oc) !important;
+  background: color-mix(in oklab, var(--oc) 12%, var(--q4-surface)) !important;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--oc) 16%, transparent), 0 12px 26px -20px var(--oc) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state] .trainer-option__letter {
+  color: #fff !important;
+  background: var(--oc) !important;
+  border-color: var(--oc);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state="selected"] .trainer-option__letter { color: #1a1206 !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state="right"] { animation: q4-pop 420ms var(--q4-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option[data-state="wrong"] { animation: q4-shake 360ms var(--q4-ease); }
+@keyframes q4-pop { 40% { transform: scale(1.015); } 100% { transform: none; } }
+@keyframes q4-shake { 25% { transform: translateX(-3px); } 50% { transform: translateX(3px); } 75% { transform: translateX(-2px); } }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option:disabled:not([data-state]) { opacity: 0.72; }
+
+/* Riscar alternativa */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__strike {
+  height: auto !important;
+  min-height: 2.75rem;
+  width: 2.5rem !important;
+  border: 1px solid var(--q4-line) !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  color: var(--q4-dim) !important;
+  transition: border-color 160ms, color 160ms, background-color 160ms !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__strike:not(:disabled):hover,
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__strike[aria-pressed="true"] {
+  color: var(--q4-amber) !important;
+  border-color: color-mix(in oklab, var(--q4-amber) 55%, transparent) !important;
+  background: color-mix(in oklab, var(--q4-amber) 10%, transparent) !important;
+}
+
+/* ---------- Explicação ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-explanation {
+  border: 1px solid color-mix(in oklab, var(--q4-blue) 35%, var(--q4-line)) !important;
+  border-radius: 16px !important;
+  background: radial-gradient(420px 160px at 0% 0%, rgb(59 130 246 / 12%), transparent 70%), var(--q4-surface) !important;
+  animation: q4-rise 360ms var(--q4-ease) both;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-explanation p { text-align: left !important; }
+
+/* ---------- Barra de resposta ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary {
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #f5c451, #e0a83a) !important;
+  color: #1a1206 !important;
+  font-weight: 700 !important;
+  transition: transform 160ms var(--q4-ease), box-shadow 160ms var(--q4-ease), opacity 160ms !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px -12px rgb(245 196 81 / 75%) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary:not(:disabled):active { transform: scale(0.98); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary:disabled { opacity: 0.5; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn {
+  border-radius: 10px !important;
+  transition: color 160ms, background-color 160ms, transform 160ms var(--q4-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn:not(:disabled):hover {
+  color: var(--q4-blue) !important;
+  background: color-mix(in oklab, var(--q4-blue) 10%, transparent) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn svg { transition: transform 200ms var(--q4-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn:not(:disabled):hover svg { transform: scale(1.12); }
+
+/* Celular e tablet: a barra fica colada na navegação inferior, de borda a borda */
+@media (max-width: 1023px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-actions.trainer-action-dock {
+    border-top: 1px solid var(--q4-line) !important;
+    background: color-mix(in oklab, var(--q4-card) 92%, transparent) !important;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 -10px 24px -18px rgb(0 0 0 / 60%) !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem > p { font-size: 1rem !important; line-height: 1.65 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option { padding: 0.625rem 0.75rem !important; font-size: 0.9375rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__letter { width: 1.75rem !important; height: 1.75rem !important; }
+}
+
+/* ================= Computador: tudo cabe na tela ================= */
+@media (min-width: 1024px) and (min-height: 600px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) #dashboard-content:has(.qt4) {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 {
+    padding-bottom: 0 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window {
+    display: flex !important;
+    flex-direction: column;
+    height: var(--qt4-h, calc(100dvh - 140px)) !important;
+    min-height: 520px;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window > .qt2-strip { flex: none; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto minmax(0, 1fr) auto auto;
+    column-gap: 1.5rem;
+    padding: 0.875rem 1.5rem 0 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content > * { margin: 0 !important; min-width: 0; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-meta { grid-column: 1 / -1; grid-row: 1; margin-bottom: 0.625rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-review { grid-column: 2; grid-row: 1; align-self: start; justify-self: end; margin-bottom: 0.625rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content:has(.trainer-reading-review) > .trainer-reading-meta { grid-column: 1; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-heading { grid-column: 1; grid-row: 3; margin-bottom: 0.75rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-progress { grid-column: 2; grid-row: 3; align-self: center; margin-bottom: 0.75rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-pending { grid-column: 1 / -1; grid-row: 4; margin-bottom: 0.625rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem {
+    grid-column: 1;
+    grid-row: 5;
+    align-self: start;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-answers {
+    grid-column: 2;
+    grid-row: 5 / span 2;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 4px 0.75rem 2px;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-explanation,
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content > [role="status"]:not(.trainer-reading-pending) {
+    grid-column: 1;
+    grid-row: 6;
+    max-height: 34vh;
+    overflow-y: auto;
+    margin: 0.75rem 0 0.75rem !important;
+  }
+  /* Barra de resposta = rodapé do cartão */
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-actions.trainer-action-dock {
+    grid-column: 1 / -1;
+    grid-row: 7;
+    position: static !important;
+    inset: auto !important;
+    z-index: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.75rem;
+    margin: 0 -1.5rem !important;
+    padding: 0.75rem 1.5rem !important;
+    border: 0 !important;
+    border-top: 1px solid var(--q4-line) !important;
+    border-radius: 0 !important;
+    background: color-mix(in oklab, var(--q4-surface) 70%, transparent) !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__secondary { display: flex !important; flex-wrap: nowrap !important; gap: 0.375rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary { height: 2.75rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 :is(.trainer-reading-stem, .trainer-reading-answers, .trainer-reading-explanation) {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in oklab, var(--q4-violet) 45%, transparent) transparent;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-review-community { margin-top: 0.75rem !important; }
+}
+
+/* Telas baixas (notebooks): tudo mais compacto para as 5 alternativas caberem */
+@media (min-width: 1024px) and (max-height: 760px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content { padding-top: 0.625rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-meta { padding-bottom: 0 !important; border-bottom: 0 !important; margin-bottom: 0.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-heading { margin-bottom: 0.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-heading h2 { font-size: 1.25rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-heading p { margin-top: 2px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-answers > p:first-child { margin-bottom: -0.25rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-answers .space-y-2 > * + * { margin-top: 0.375rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option { padding: 0.5rem 0.75rem !important; font-size: 0.875rem !important; line-height: 1.45 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__letter { width: 1.75rem !important; height: 1.75rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__strike { min-height: 2.25rem; width: 2.25rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem > p { font-size: 1rem !important; line-height: 1.6 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-actions.trainer-action-dock { padding-block: 0.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary { height: 2.5rem !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qt4 :is(.trainer-option-row, .trainer-option, .trainer-reading-stem, .trainer-reading-explanation, .trainer-reading-progress__bars > i) {
+    animation: none !important;
+    transition: none !important;
+  }
+  .qt4 .trainer-option:hover, .qt4 .trainer-option__letter { transform: none !important; }
+}

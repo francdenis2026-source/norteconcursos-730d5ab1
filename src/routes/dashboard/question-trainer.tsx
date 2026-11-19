@@ -137,6 +137,7 @@ import "@/styles/trainer-mobile-refine.css";
 import "@/styles/trainer-paused.css";
 import "@/styles/trainer-exam-focus.css";
 import "@/styles/trainer-setup-studio.css";
+import "@/styles/trainer-session-qt4.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
 import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
 import {
@@ -1170,7 +1171,8 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="nc-learning-workspace question-workspace trainer-session-shell trainer-reading-workspace qt2-session space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+    <div className="nc-learning-workspace question-workspace trainer-session-shell trainer-reading-workspace qt2-session qt4 space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      <QtFitViewport depKey={question.id} />
       <BackToEdital back={routeFilters.back} />
       {lawNotice}
       {successFeedback && (
@@ -1430,10 +1432,11 @@ function QuestionTrainer() {
                   const isRight = answered && option.letter === question.answer;
                   const isWrong = answered && isSelected && option.letter !== question.answer;
                   return (
-                    <div key={option.letter} className="flex items-start gap-2">
+                    <div key={option.letter} className="trainer-option-row flex items-start gap-2">
                       <button
                         type="button"
                         aria-pressed={isSelected}
+                        data-state={isRight ? "right" : isWrong ? "wrong" : isSelected ? "selected" : undefined}
                         disabled={answered || saving}
                         onClick={() => chooseOption(option.letter)}
                         className={cn(
@@ -1449,7 +1452,7 @@ function QuestionTrainer() {
                       >
                         <span
                           className={cn(
-                            "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
+                            "trainer-option__letter flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
                             isSelected && !answered && "bg-amber-400 text-slate-900",
                             isRight && "bg-emerald-600 text-white",
                             isWrong && "bg-rose-600 text-white",
@@ -1475,7 +1478,7 @@ function QuestionTrainer() {
                         type="button"
                         variant={isStruck ? "secondary" : "ghost"}
                         size="icon"
-                        className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
+                        className="trainer-option__strike h-9 w-9 shrink-0 sm:h-10 sm:w-10"
                         disabled={answered || saving}
                         aria-pressed={isStruck}
                         aria-label={
@@ -2488,4 +2491,39 @@ function formatResponseTime(seconds: number) {
   const minutes = Math.floor(seconds / 60);
   const rest = seconds % 60;
   return minutes > 0 ? `${minutes}min ${String(rest).padStart(2, "0")}s` : `${rest}s`;
+}
+
+/**
+ * Ajusta a janela da questão à altura visível (sem rolagem da página no computador):
+ * mede onde o cartão começa e a faixa fixa do rodapé e grava em --qt4-h.
+ */
+function QtFitViewport({ depKey }: { depKey: string }) {
+  const markerRef = React.useRef<HTMLSpanElement | null>(null);
+  React.useLayoutEffect(() => {
+    const shell = markerRef.current?.closest<HTMLElement>(".qt4");
+    if (!shell) return;
+    const fit = () => {
+      const card = shell.querySelector<HTMLElement>(".question-window");
+      if (!card) return;
+      const top = card.getBoundingClientRect().top + window.scrollY;
+      const strip = document.querySelector<HTMLElement>(".dev-strip");
+      const stripH =
+        strip && getComputedStyle(strip).position === "fixed" ? strip.getBoundingClientRect().height : 0;
+      let tail = 0;
+      for (let el = card.nextElementSibling; el; el = el.nextElementSibling) {
+        const box = (el as HTMLElement).getBoundingClientRect();
+        if (box.height > 0) tail += box.height + 12;
+      }
+      const h = Math.max(520, Math.floor(window.innerHeight - top - stripH - tail - 12));
+      shell.style.setProperty("--qt4-h", `${h}px`);
+    };
+    fit();
+    const raf = requestAnimationFrame(fit);
+    window.addEventListener("resize", fit);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", fit);
+    };
+  }, [depKey]);
+  return <span ref={markerRef} hidden aria-hidden="true" />;
 }
