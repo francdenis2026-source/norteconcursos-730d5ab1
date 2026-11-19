@@ -3,15 +3,11 @@ import { EditalCommandCenter } from "@/components/dashboard/EditalCommandCenter"
 import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
 import { AnswerInsights } from "@/components/dashboard/AnswerInsights";
 import "@/styles/student-desk.css";
-import "@/styles/student-overview.css";
-import "@/styles/student-overview-v3.css";
-import "@/styles/student-hub-refresh.css";
 import "@/styles/student-home-premium.css";
 import "@/styles/student-home-navigation-refinement.css";
 import "@/styles/student-dashboard-premium.css";
 import "@/styles/student-adaptive-agenda.css";
 import "@/styles/student-overview-card-refinement.css";
-import "@/styles/student-home-hero-rework.css";
 import "@/styles/student-dashboard-professional-refinement.css";
 import "@/styles/student-home-astrix.css";
 import "@/styles/student-home-compact.css";
