@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  Area,
   Bar,
   CartesianGrid,
   ComposedChart,
@@ -220,6 +221,10 @@ export function AnswerInsights({
                   <stop offset="0%" stopColor={ERR} stopOpacity={0.95} />
                   <stop offset="100%" stopColor={ERR} stopOpacity={0.6} />
                 </linearGradient>
+                <linearGradient id="ncx-total-area" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="var(--viz-total)" stopOpacity={0.28} />
+                  <stop offset="100%" stopColor="var(--viz-total)" stopOpacity={0} />
+                </linearGradient>
                 <filter id="ncx-glow-2" x="-20%" y="-50%" width="140%" height="200%">
                   <feGaussianBlur stdDeviation="3" result="b" />
                   <feMerge>
@@ -246,7 +251,7 @@ export function AnswerInsights({
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
               />
               <Tooltip
-                cursor={{ fill: "var(--viz-hover)" }}
+                cursor={{ stroke: "var(--viz-muted)", strokeWidth: 1, strokeDasharray: "3 4" }}
                 wrapperStyle={{ outline: "none" }}
                 content={({ active, payload, label }) => {
                   const point = payload?.[0]?.payload as (Bucket & { total: number }) | undefined;
@@ -267,6 +272,15 @@ export function AnswerInsights({
                   );
                 }}
               />
+              <Area
+                type="monotone"
+                dataKey="total"
+                stroke="none"
+                fill="url(#ncx-total-area)"
+                isAnimationActive={!prefersReducedMotion()}
+                animationDuration={1200}
+                tooltipType="none"
+              />
               <Bar
                 dataKey="acertos"
                 name="Acertos"
@@ -276,7 +290,8 @@ export function AnswerInsights({
                 strokeWidth={1}
                 maxBarSize={18}
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={420}
+                animationDuration={700}
+                animationEasing="ease-out"
               />
               <Bar
                 dataKey="erros"
@@ -288,7 +303,8 @@ export function AnswerInsights({
                 radius={[4, 4, 0, 0]}
                 maxBarSize={18}
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={420}
+                animationDuration={700}
+                animationEasing="ease-out"
               />
               <Line
                 type="monotone"
@@ -300,7 +316,8 @@ export function AnswerInsights({
                 activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-total)" }}
                 filter="url(#ncx-glow-2)"
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={600}
+                animationDuration={1200}
+                animationEasing="ease-in-out"
               />
             </ComposedChart>
           </ResponsiveContainer>

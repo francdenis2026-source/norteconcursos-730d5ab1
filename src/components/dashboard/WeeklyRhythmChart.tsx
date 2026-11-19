@@ -1,9 +1,11 @@
 import * as React from "react";
 import {
+  Area,
   Bar,
   CartesianGrid,
   ComposedChart,
   Line,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -107,6 +109,10 @@ export function WeeklyRhythmChart({
                   <stop offset="0%" stopColor="var(--viz-time)" stopOpacity={0.95} />
                   <stop offset="100%" stopColor="var(--viz-time)" stopOpacity={0.35} />
                 </linearGradient>
+                <linearGradient id="ncx-trend-area" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="var(--viz-trend)" stopOpacity={0.28} />
+                  <stop offset="100%" stopColor="var(--viz-trend)" stopOpacity={0} />
+                </linearGradient>
                 <filter id="ncx-glow" x="-20%" y="-50%" width="140%" height="200%">
                   <feGaussianBlur stdDeviation="3" result="b" />
                   <feMerge>
@@ -135,7 +141,7 @@ export function WeeklyRhythmChart({
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
               />
               <Tooltip
-                cursor={{ fill: "var(--viz-hover)" }}
+                cursor={{ stroke: "var(--viz-muted)", strokeWidth: 1, strokeDasharray: "3 4" }}
                 wrapperStyle={{ outline: "none" }}
                 content={({ active: on, payload }) => {
                   const p = payload?.[0]?.payload as (StudyBucket & { minutes: number; trend: number }) | undefined;
@@ -155,6 +161,24 @@ export function WeeklyRhythmChart({
                   );
                 }}
               />
+              {average > 0 && (
+                <ReferenceLine
+                  y={Math.round(average / 60)}
+                  stroke="var(--viz-muted)"
+                  strokeDasharray="4 4"
+                  strokeOpacity={0.7}
+                  label={{ value: "média", position: "insideTopRight", fill: "var(--viz-muted)", fontSize: 11 }}
+                />
+              )}
+              <Area
+                type="monotone"
+                dataKey="trend"
+                stroke="none"
+                fill="url(#ncx-trend-area)"
+                isAnimationActive={!prefersReducedMotion()}
+                animationDuration={1200}
+                tooltipType="none"
+              />
               <Bar
                 dataKey="minutes"
                 name="Tempo ativo"
@@ -163,7 +187,8 @@ export function WeeklyRhythmChart({
                 maxBarSize={18}
                 cursor="pointer"
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={420}
+                animationDuration={700}
+                animationEasing="ease-out"
               />
               <Line
                 type="monotone"
@@ -171,11 +196,21 @@ export function WeeklyRhythmChart({
                 name="Tendência"
                 stroke="var(--viz-trend)"
                 strokeWidth={2}
-                dot={false}
-                activeDot={{ r: 4, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-trend)" }}
+                dot={(props: { cx?: number; cy?: number; index?: number }) =>
+                  props.index === data.length - 1 && props.cx != null && props.cy != null ? (
+                    <g key="live" className="ncx-live-dot">
+                      <circle cx={props.cx} cy={props.cy} r={4} fill="var(--viz-trend)" className="ncx-live-ping" />
+                      <circle cx={props.cx} cy={props.cy} r={4} fill="var(--viz-trend)" stroke="var(--viz-surface)" strokeWidth={2} />
+                    </g>
+                  ) : (
+                    <g key={`d${props.index}`} />
+                  )
+                }
+                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-trend)" }}
                 filter="url(#ncx-glow)"
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={600}
+                animationDuration={1200}
+                animationEasing="ease-in-out"
               />
             </ComposedChart>
           </ResponsiveContainer>
