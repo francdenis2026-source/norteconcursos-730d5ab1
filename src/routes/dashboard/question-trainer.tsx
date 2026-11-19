@@ -1453,6 +1453,30 @@ function QuestionTrainer() {
               )}
               <p className="qx-stem">{parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}</p>
               <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
+
+              {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
+                <div className="qx-explain" role="region" aria-label="Explicação da questão">
+                  <div className="qx-explain__head">
+                    <p className="qx-label">Explicação da questão</p>
+                    {responseSeconds !== null && (
+                      <span className="qx-explain__time">
+                        Tempo: {formatResponseTime(responseSeconds)}
+                      </span>
+                    )}
+                  </div>
+                  {!isCorrect && (
+                    <p className="qx-explain__right">Resposta correta: {labelFor(question.answer)}</p>
+                  )}
+                  {isPlaceholderExplanation(explanation.main) ? null : (
+                    <p className="qx-explain__text">{explanation.main}</p>
+                  )}
+                  {explanation.example && (
+                    <p className="qx-explain__text">
+                      <strong>Exemplo:</strong> {explanation.example}
+                    </p>
+                  )}
+                </div>
+              )}
             </section>
 
             <section className="qx-pane qx-pane--answers" aria-label="Alternativas e explicação" tabIndex={0}>
@@ -1563,30 +1587,6 @@ function QuestionTrainer() {
                       ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
                       : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
                   </p>
-                </div>
-              )}
-
-              {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
-                <div className="qx-explain" role="region" aria-label="Explicação da questão">
-                  <div className="qx-explain__head">
-                    <p className="qx-label">Explicação da questão</p>
-                    {responseSeconds !== null && (
-                      <span className="qx-explain__time">
-                        Tempo: {formatResponseTime(responseSeconds)}
-                      </span>
-                    )}
-                  </div>
-                  {!isCorrect && (
-                    <p className="qx-explain__right">Resposta correta: {labelFor(question.answer)}</p>
-                  )}
-                  {isPlaceholderExplanation(explanation.main) ? null : (
-                    <p className="qx-explain__text">{explanation.main}</p>
-                  )}
-                  {explanation.example && (
-                    <p className="qx-explain__text">
-                      <strong>Exemplo:</strong> {explanation.example}
-                    </p>
-                  )}
                 </div>
               )}
             </section>
@@ -2549,6 +2549,7 @@ function QtFitViewport({
       for (let el: HTMLElement | null = shell; el && el !== app; el = el.parentElement) {
         const cs = getComputedStyle(el);
         if (parseFloat(cs.paddingTop) > 0) zero(el, "padding-top");
+        if (parseFloat(cs.paddingBottom) > 0) zero(el, "padding-bottom");
         if (parseFloat(cs.marginTop) > 0) zero(el, "margin-top");
         for (let sib = el.previousElementSibling as HTMLElement | null; sib; sib = sib.previousElementSibling as HTMLElement | null) {
           const sc = getComputedStyle(sib);
@@ -2609,11 +2610,13 @@ function QtFitViewport({
       }
       const scroller = shell.closest<HTMLElement>(".app-content");
       let bottom = window.innerHeight - stripH;
-      if (scroller) {
+      const focusApp = shell.closest<HTMLElement>(".app-shell");
+      const inFocus = root === ".qx" && focusApp?.getAttribute("data-focus-mode") === "true";
+      if (scroller && !inFocus) {
         const pad = parseFloat(getComputedStyle(scroller).paddingBottom) || 0;
         bottom = Math.min(bottom, scroller.getBoundingClientRect().bottom - pad);
       }
-      const h = Math.max(420, Math.floor(bottom - top - tail - 10));
+      const h = Math.max(420, Math.floor(bottom - top - tail - (inFocus ? 8 : 10)));
       shell.style.setProperty(varName, `${h}px`);
     };
     fit();
