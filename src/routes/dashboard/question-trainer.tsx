@@ -1994,7 +1994,7 @@ function ExamFocusPicker({ mode, setMode, counts, label }: ExamFocusProps) {
               data-active={mode === id}
             >
               {EXAM_FOCUS_LABEL[id]}
-              <small>{counts ? count?.toLocaleString("pt-BR") : "…"}</small>
+              {id !== "off" && <small>{counts ? count?.toLocaleString("pt-BR") : "…"}</small>}
             </button>
           );
         })}
@@ -2518,6 +2518,11 @@ function QtFitViewport({ depKey }: { depKey: string }) {
       shell.style.setProperty("--qt4-h", `${h}px`);
     };
     fit();
+    // Nova questão: se a página ainda estava rolada da leitura anterior, o cartão (já do
+    // tamanho da tela) ficava cortado em cima e embaixo porque a rolagem não voltava ao topo.
+    if (window.scrollY > 0) {
+      shell.scrollIntoView({ block: "start", behavior: "auto" });
+    }
     const raf = requestAnimationFrame(fit);
     window.addEventListener("resize", fit);
     return () => {

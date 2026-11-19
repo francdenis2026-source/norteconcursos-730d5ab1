@@ -2,6 +2,11 @@
   Treinador de questões — "estúdio de sessão" (montagem) e refinamento da tela de questão.
   Cores da plataforma: dourado como acento, neutros do tema; claro e escuro pelos mesmos tokens.
 */
+/* O conteúdo da área do aluno reserva um respiro grande no topo por padrão; aqui ele
+   deixava uma faixa vazia enorme entre o menu e o banner. Começa logo abaixo do menu. */
+html body .app-shell[data-area="student"] #dashboard-content:has(.trainer-setup.qt3) {
+  padding-top: 0.75rem !important;
+}
 .qt3 {
   --q-gold: var(--brass, oklch(0.78 0.13 79));
   --q-gold-ink: oklch(0.22 0.04 70);
@@ -38,12 +43,12 @@
 }
 .qt3-hero img {
   position: absolute;
-  inset: 0 0 0 auto;
+  inset: 0;
   z-index: -2;
-  width: 62%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 18%;
 }
 .qt3-hero::after {
   content: "";
@@ -51,7 +56,7 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, oklch(0.16 0.02 255) 38%, oklch(0.16 0.02 255 / 70%) 62%, oklch(0.16 0.02 255 / 15%)),
+    linear-gradient(90deg, oklch(0.16 0.02 255) 42%, oklch(0.16 0.02 255 / 82%) 68%, oklch(0.16 0.02 255 / 35%)),
     radial-gradient(60% 120% at 0% 0%, color-mix(in oklab, var(--q-gold) 18%, transparent), transparent 70%);
 }
 .qt3-hero__copy small {

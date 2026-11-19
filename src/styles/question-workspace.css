@@ -1409,9 +1409,12 @@
 
 /* Normal mode must remain in document flow. The previous fixed overlay
    sat behind the app shell/parent clipping and collapsed the question to a strip.
-   Only native fullscreen is viewport-constrained (rules above). */
+   Only native fullscreen is viewport-constrained (rules above).
+   Excludes .qt4: that session redesign fits the card to the viewport on its own
+   (--qt4-h, computer only) even outside native fullscreen — these document-flow
+   overrides fought it and cut off the header and the last alternatives. */
 @media (min-width: 1050px) {
- html:not(:fullscreen) .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace {
+ html:not(:fullscreen) .app-shell[data-area="student"] .question-workspace.trainer-session-shell.trainer-reading-workspace:not(.qt4) {
    position: relative !important;
    inset: auto !important;
    z-index: auto !important;
@@ -1427,14 +1430,14 @@
    gap: 10px !important;
    overflow: visible !important;
  }
- html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > .question-window {
    height: auto !important;
    max-height: none !important;
    min-height: 0 !important;
    flex: none !important;
    overflow: visible !important;
  }
- html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > .question-window > .trainer-reading-content {
    height: auto !important;
    max-height: none !important;
    min-height: 0 !important;
@@ -1442,13 +1445,13 @@
    overflow: visible !important;
    grid-template-rows: auto auto auto auto auto auto auto !important;
  }
- html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-stem,
- html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-answers {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-stem,
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-answers {
    height: auto !important;
    max-height: none !important;
    overflow: visible !important;
  }
- html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace .trainer-reading-explanation {
+ html:not(:fullscreen) .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-explanation {
    max-height: none !important;
    overflow: visible !important;
  }
