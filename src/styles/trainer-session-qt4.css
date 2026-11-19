@@ -3,16 +3,16 @@
   Computador: a janela ocupa exatamente a altura visível (--qt4-h, medido no componente);
   enunciado à esquerda, alternativas à direita, cada coluna rola por dentro se precisar,
   e a barra de resposta é o rodapé fixo do próprio cartão (não flutua).
-  Celular e tablet: fluxo normal, barra de ações presa acima da navegação inferior.
+  Celular e tablet: o cartão também é limitado a --qt4-h (empilhado em uma coluna só), então a
+  página nunca fica mais alta que a tela; se o enunciado e as alternativas juntos não couberem,
+  rola só por dentro do cartão — a barra de ações continua presa acima da navegação inferior.
   Movimento só com transform/opacity; respeita prefers-reduced-motion.
 */
 html:root body .qt4 {
   --q4-ease: cubic-bezier(0.32, 0.72, 0, 1);
-  --q4-blue: #3b82f6;
   --q4-green: #22c55e;
   --q4-red: #ef4444;
   --q4-amber: #f59e0b;
-  --q4-violet: #8b5cf6;
   --q4-card: var(--card);
   --q4-surface: color-mix(in oklab, var(--card) 82%, var(--muted));
   --q4-line: var(--border);
@@ -29,8 +29,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-w
   border: 1px solid var(--q4-line) !important;
   border-radius: 20px !important;
   background:
-    radial-gradient(700px 260px at 0% 0%, rgb(139 92 246 / 8%), transparent 70%),
-    radial-gradient(700px 260px at 100% 0%, rgb(59 130 246 / 8%), transparent 70%),
+    radial-gradient(700px 260px at 0% 0%, rgb(245 158 11 / 7%), transparent 70%),
     var(--q4-card) !important;
   box-shadow: 0 24px 60px -36px rgb(0 0 0 / 70%) !important;
   --tw-ring-shadow: 0 0 #0000 !important;
@@ -70,10 +69,10 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-re
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem {
   position: relative;
   padding: 1.125rem 1.25rem 1.125rem 1.375rem !important;
-  border: 1px solid color-mix(in oklab, var(--q4-violet) 28%, var(--q4-line)) !important;
+  border: 1px solid color-mix(in oklab, var(--q4-amber) 26%, var(--q4-line)) !important;
   border-radius: 16px !important;
   background:
-    radial-gradient(420px 200px at 0% 0%, rgb(139 92 246 / 12%), transparent 70%),
+    radial-gradient(420px 200px at 0% 0%, rgb(245 158 11 / 10%), transparent 70%),
     var(--q4-surface) !important;
   box-shadow: none !important;
   animation: q4-rise 360ms var(--q4-ease) both;
@@ -84,7 +83,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-re
   inset: 14px auto 14px 0;
   width: 3px;
   border-radius: 0 3px 3px 0;
-  background: linear-gradient(180deg, var(--q4-violet), var(--q4-blue));
+  background: var(--q4-amber);
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem :is(p, div) {
   text-align: left !important;
@@ -123,7 +122,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-op
 @keyframes q4-rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option {
-  --oc: var(--q4-blue);
+  --oc: var(--q4-amber);
   gap: 0.75rem !important;
   padding: 0.75rem 0.875rem !important;
   border: 1px solid var(--q4-line) !important;
@@ -203,9 +202,9 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-op
 
 /* ---------- Explicação ---------- */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-explanation {
-  border: 1px solid color-mix(in oklab, var(--q4-blue) 35%, var(--q4-line)) !important;
+  border: 1px solid color-mix(in oklab, var(--q4-amber) 30%, var(--q4-line)) !important;
   border-radius: 16px !important;
-  background: radial-gradient(420px 160px at 0% 0%, rgb(59 130 246 / 12%), transparent 70%), var(--q4-surface) !important;
+  background: radial-gradient(420px 160px at 0% 0%, rgb(245 158 11 / 10%), transparent 70%), var(--q4-surface) !important;
   animation: q4-rise 360ms var(--q4-ease) both;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-explanation p { text-align: left !important; }
@@ -229,8 +228,8 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-ac
   transition: color 160ms, background-color 160ms, transform 160ms var(--q4-ease) !important;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn:not(:disabled):hover {
-  color: var(--q4-blue) !important;
-  background: color-mix(in oklab, var(--q4-blue) 10%, transparent) !important;
+  color: color-mix(in oklab, var(--q4-amber) 75%, var(--foreground)) !important;
+  background: color-mix(in oklab, var(--q4-amber) 10%, transparent) !important;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn svg { transition: transform 200ms var(--q4-ease); }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__btn:not(:disabled):hover svg { transform: scale(1.12); }
@@ -246,6 +245,29 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-ac
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem > p { font-size: 1rem !important; line-height: 1.65 !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option { padding: 0.625rem 0.75rem !important; font-size: 0.9375rem !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-option__letter { width: 1.75rem !important; height: 1.75rem !important; }
+
+  /* O cartão é limitado à altura visível (mesma medida --qt4-h do computador, calculada pelo
+     componente): sem isso a página ficava muito mais alta que a tela, com um vão vazio enorme
+     acima do enunciado e exigindo rolar tudo para ver as alternativas. Agora quem rola, quando
+     precisa, é só o conteúdo dentro do cartão — a barra de ações continua fixa embaixo. */
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window {
+    display: flex !important;
+    flex-direction: column;
+    max-height: var(--qt4-h, calc(100dvh - 220px)) !important;
+    overflow: hidden !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window > .qt2-strip,
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window > .qt2-paused {
+    flex: none;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+  }
 }
 
 /* ================= Computador: tudo cabe na tela ================= */
@@ -334,7 +356,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-ac
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-action-dock__primary { height: 2.75rem !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 :is(.trainer-reading-stem, .trainer-reading-answers, .trainer-reading-explanation) {
     scrollbar-width: thin;
-    scrollbar-color: color-mix(in oklab, var(--q4-violet) 45%, transparent) transparent;
+    scrollbar-color: color-mix(in oklab, var(--q4-amber) 45%, transparent) transparent;
   }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-review-community { margin-top: 0.75rem !important; }
 }
