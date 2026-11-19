@@ -17,7 +17,7 @@ html body .home .sx-hero__copy p {
 }
 /* Celular: os ponteiros do relógio de fundo não podem competir com o texto do hero. */
 @media (max-width: 767px) {
-  html body .home .sx-hero .sx-band__clock { opacity: 0.28; }
+  html body .home .sx-band .sx-band__clock { opacity: 0.28; }
   html body .home .sx-hero__copy {
     padding: 14px;
     border-radius: 16px;
