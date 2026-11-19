@@ -14,7 +14,7 @@ import { topicsFor } from "@/data/studyTopics";
 import { canonicalSubject } from "@/lib/subjects";
 
 export const ALL_SUBJECTS = [
-  "Língua Portuguesa", "Matemática e Raciocínio Lógico", "Informática",
+  "Língua Portuguesa", "Matemática e Raciocínio Lógico", "Estatística", "Informática",
   "Direito Constitucional", "Direito Administrativo", "Direito Penal", "Direito Processual Penal",
   "Legislação Especial", "Legislação de Trânsito", "Direitos Humanos", "Contabilidade",
   "Atualidades", "Ética", "Medicina Legal",
