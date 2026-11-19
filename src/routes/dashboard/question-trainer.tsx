@@ -2099,6 +2099,7 @@ function TrainerSetup({
   const minutes = Math.max(1, Math.round(usedCount * 2));
   return (
     <div className="trainer-setup qt2 qt3 pb-4 animate-in fade-in duration-300 sm:pb-6">
+      <QtFitViewport depKey="setup" root=".qt3" target=".qt3" varName="--qt3-h" />
       <div className="qt3-main">
         <header className="qt3-hero">
           <img src="/media/hero/toolkit.webp" alt="" aria-hidden="true" decoding="async" />
@@ -2503,50 +2504,53 @@ function formatResponseTime(seconds: number) {
  * Ajusta a janela da questão à altura visível (sem rolagem da página no computador):
  * mede onde o cartão começa e a faixa fixa do rodapé e grava em --qt4-h.
  */
-function QtFitViewport({ depKey }: { depKey: string }) {
+function QtFitViewport({
+  depKey,
+  root = ".qt4",
+  target = ".question-window",
+  varName = "--qt4-h",
+}: {
+  depKey: string;
+  root?: string;
+  target?: string;
+  varName?: string;
+}) {
   const markerRef = React.useRef<HTMLSpanElement | null>(null);
   React.useLayoutEffect(() => {
-    const shell = markerRef.current?.closest<HTMLElement>(".qt4");
+    const shell = markerRef.current?.closest<HTMLElement>(root);
     if (!shell) return;
     const fit = () => {
-      const card = shell.querySelector<HTMLElement>(".question-window");
+      const card = target === root ? shell : shell.querySelector<HTMLElement>(target);
       if (!card) return;
-      // Both coordinates belong to the visual viewport, even inside a scrolled panel.
       const top = card.getBoundingClientRect().top;
-      const viewport = window.visualViewport;
-      const viewportBottom = (viewport?.offsetTop ?? 0) + (viewport?.height ?? window.innerHeight);
       const strip = document.querySelector<HTMLElement>(".dev-strip");
       const stripH =
         strip && getComputedStyle(strip).position === "fixed" ? strip.getBoundingClientRect().height : 0;
       let tail = 0;
-      for (let el = card.nextElementSibling; el; el = el.nextElementSibling) {
-        const box = (el as HTMLElement).getBoundingClientRect();
-        if (box.height > 0) tail += box.height + 12;
+      if (target !== root) {
+        for (let el = card.nextElementSibling; el; el = el.nextElementSibling) {
+          const box = (el as HTMLElement).getBoundingClientRect();
+          if (box.height > 0) tail += box.height + 12;
+        }
       }
-      const focused = shell.closest('[data-focus-mode="true"]') !== null;
-      const h = Math.max(0, Math.floor(viewportBottom - top - stripH - tail - (focused ? 0 : 12)));
-      shell.style.setProperty("--qt4-h", `${h}px`);
+      const h = Math.max(440, Math.floor(window.innerHeight - top - stripH - tail - 10));
+      shell.style.setProperty(varName, `${h}px`);
     };
     fit();
-    // Nova questão: se a página ainda estava rolada da leitura anterior, o cartão (já do
-    // tamanho da tela) ficava cortado em cima e embaixo porque a rolagem não voltava ao topo.
-    if (window.scrollY > 0) {
-      shell.scrollIntoView({ block: "start", behavior: "auto" });
-    }
     const raf = requestAnimationFrame(fit);
-    const observer = new ResizeObserver(fit);
-    const panel = shell.closest<HTMLElement>("#dashboard-content");
-    if (panel) observer.observe(panel);
+    const late = window.setTimeout(fit, 350);
+    const content = shell.closest<HTMLElement>("#dashboard-content");
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(fit) : null;
+    if (content) ro?.observe(content);
     window.addEventListener("resize", fit);
-    window.visualViewport?.addEventListener("resize", fit);
-    window.visualViewport?.addEventListener("scroll", fit);
+    document.addEventListener("fullscreenchange", fit);
     return () => {
       cancelAnimationFrame(raf);
-      observer.disconnect();
+      window.clearTimeout(late);
+      ro?.disconnect();
       window.removeEventListener("resize", fit);
-      window.visualViewport?.removeEventListener("resize", fit);
-      window.visualViewport?.removeEventListener("scroll", fit);
+      document.removeEventListener("fullscreenchange", fit);
     };
-  }, [depKey]);
+  }, [depKey, root, target, varName]);
   return <span ref={markerRef} hidden aria-hidden="true" />;
 }

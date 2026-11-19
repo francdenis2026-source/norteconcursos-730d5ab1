@@ -273,9 +273,15 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-ac
 /* ================= Computador: tudo cabe na tela ================= */
 @media (min-width: 1024px) and (min-height: 600px) {
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) #dashboard-content:has(.qt4) {
-    padding-top: 0.75rem !important;
+    padding-top: 0.5rem !important;
     padding-bottom: 0 !important;
   }
+  /* Tela cheia: sem faixa vazia no topo, a janela ocupa tudo */
+  html body .app-shell[data-focus-mode="true"][data-area]:not(#_):not(#_):not(#_):not(#_) :is(.app-content, #dashboard-content, .app-content__inner):has(.qt4) {
+    padding-top: 0.375rem !important;
+    margin-top: 0 !important;
+  }
+  html body .app-shell[data-focus-mode="true"][data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 { margin-top: 0 !important; padding-top: 0 !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 {
     padding-bottom: 0 !important;
   }
@@ -472,4 +478,61 @@ html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt
   html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__title { min-width: 0; font-size: 0.75rem; letter-spacing: 0; }
   html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__live { display: none; }
   html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__btn { padding-inline: 0.375rem; font-size: 0.75rem; }
+}
+
+/* ================= Montagem da sessão (qt3): cabe na janela ================= */
+@media (min-width: 1024px) and (min-height: 480px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-content:has(.trainer-setup.qt3) {
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) #dashboard-content:has(.trainer-setup.qt3) {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .trainer-setup.qt3 {
+    height: auto !important;
+    max-height: var(--qt3-h, calc(100dvh - 150px)) !important;
+    padding: 0 !important;
+    gap: 0.625rem !important;
+    overflow: hidden;
+    align-items: start !important;
+    grid-template-rows: auto;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-main {
+    min-height: 0;
+    grid-template-rows: auto;
+    align-content: start;
+    max-height: var(--qt3-h, calc(100dvh - 150px));
+    gap: 0.5rem !important;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero { min-height: 4.25rem !important; padding: 0.625rem 1rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero h1 { font-size: clamp(1.25rem, 1.8vw, 1.625rem) !important; margin: 0 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero__copy p:not(.qt3-eyebrow) { margin: 0.125rem 0 0 !important; font-size: 0.75rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-note { display: none !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt2-focus { padding: 0.5rem 0.75rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt2-focus > p { display: none; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt2-focus__options { margin-top: 0.375rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt2-focus__options button { min-height: 1.875rem !important; padding-block: 0 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-panel { padding: 0.625rem 0.75rem !important; gap: 0.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-panel__title { margin: 0 !important; font-size: 0.875rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-panel > .qt3-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 0.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-field__label { font-size: 0.75rem !important; margin-bottom: 0.2rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-select { height: 2.25rem !important; min-height: 0 !important; font-size: 0.8125rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-row { gap: 0.5rem 1rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-chips button { min-height: 1.875rem !important; padding-block: 0 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-more > summary { min-height: 2rem !important; padding-block: 0.25rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-summary { min-height: 0; max-height: var(--qt3-h, calc(100dvh - 150px)); overflow-y: auto; align-self: start; align-content: start; grid-auto-rows: auto; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-summary__card { padding: 0.875rem !important; gap: 0.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-quick { grid-auto-rows: auto; align-content: start; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-quick a { min-height: 2.5rem !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-summary__count { font-size: 2.25rem !important; line-height: 1 !important; }
+}
+@media (min-width: 1024px) and (max-height: 700px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-hero__copy p:not(.qt3-eyebrow) { display: none; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt2-focus header span { display: none; }
 }
