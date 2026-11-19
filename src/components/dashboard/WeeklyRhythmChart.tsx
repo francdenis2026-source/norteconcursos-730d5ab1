@@ -15,10 +15,10 @@ type WeeklyRhythmChartProps = {
 };
 
 export function useChartHeight() {
-  const [h, setH] = React.useState(220);
+  const [h, setH] = React.useState(164);
   React.useEffect(() => {
     const mq = window.matchMedia("(max-width: 640px)");
-    const set = () => setH(mq.matches ? 190 : 220);
+    const set = () => setH(mq.matches ? 150 : 164);
     set();
     mq.addEventListener("change", set);
     return () => mq.removeEventListener("change", set);

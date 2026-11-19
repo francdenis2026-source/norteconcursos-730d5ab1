@@ -1,79 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Player de videoaulas">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" width="720" height="240" role="img" aria-label="Player de videoaulas">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0d1b2a"/><stop offset=".55" stop-color="#12283a"/><stop offset="1" stop-color="#0a1620"/>
-    </linearGradient>
-    <radialGradient id="glow" cx=".5" cy=".42" r=".55">
-      <stop offset="0" stop-color="#2c5a73" stop-opacity=".55"/><stop offset="1" stop-color="#2c5a73" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f1d77c"/><stop offset=".5" stop-color="#d8b238"/><stop offset="1" stop-color="#b8901f"/>
-    </linearGradient>
-    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#05090e" stop-opacity=".78"/><stop offset="1" stop-color="#05090e" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="scrimBot" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#05090e" stop-opacity=".9"/><stop offset="1" stop-color="#05090e" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
-    <filter id="drop" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".55"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1b2a"/><stop offset=".6" stop-color="#143047"/><stop offset="1" stop-color="#0a1620"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2c5a73" stop-opacity=".55"/><stop offset="1" stop-color="#2c5a73" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d77c"/><stop offset=".5" stop-color="#d8b238"/><stop offset="1" stop-color="#b8901f"/></linearGradient>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity=".5"/></filter>
   </defs>
-  <!-- cena -->
-  <rect width="640" height="400" fill="url(#bg)"/>
-  <rect width="640" height="400" fill="url(#glow)"/>
-  <g opacity=".5" fill="none" stroke="#7fb4cc" stroke-opacity=".16">
-    <path d="M0 250 Q160 210 320 238 T640 222"/><path d="M0 280 Q160 240 320 268 T640 252"/>
+  <rect width="720" height="240" fill="url(#bg)"/>
+  <rect width="720" height="240" fill="url(#glow)"/>
+  <g transform="translate(100 -12) scale(.72)">
+  <!-- quadro de aula ao fundo -->
+  <g opacity=".85">
+    <rect x="70" y="28" width="580" height="150" rx="10" fill="#0a1824" stroke="#25465c" stroke-width="2"/>
+    <g stroke="#4f86a1" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"><path d="M104 66h150"/><path d="M104 92h210"/><path d="M104 118h120"/></g>
+    <g stroke="#d8b238" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"><path d="M104 144h96"/></g>
+    <circle cx="560" cy="102" r="34" fill="none" stroke="#4f86a1" stroke-opacity=".45" stroke-width="3"/>
+    <path d="M542 102h36M560 84v36" stroke="#4f86a1" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
   </g>
-  <!-- quadro de aula estilizado -->
-  <g opacity=".9">
-    <rect x="128" y="86" width="384" height="190" rx="10" fill="#0a1824" stroke="#25465c" stroke-width="2"/>
-    <g stroke="#4f86a1" stroke-opacity=".55" stroke-width="3" stroke-linecap="round">
-      <path d="M162 122h150"/><path d="M162 146h210"/><path d="M162 170h120"/>
-    </g>
-    <g stroke="#d8b238" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"><path d="M162 204h96"/><path d="M162 228h64"/></g>
-    <circle cx="438" cy="156" r="34" fill="none" stroke="#4f86a1" stroke-opacity=".5" stroke-width="3"/>
-    <path d="M420 156h36M438 138v36" stroke="#4f86a1" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
-  </g>
-  <rect width="640" height="400" fill="#06101a" opacity=".38"/>
-  <!-- barra superior -->
-  <rect width="640" height="84" fill="url(#scrimTop)"/>
-  <g font-family="Inter, 'Segoe UI', Arial, sans-serif">
-    <rect x="22" y="20" width="78" height="26" rx="13" fill="url(#gold)"/>
-    <text x="61" y="38" text-anchor="middle" font-size="13" font-weight="800" fill="#2a1d00" letter-spacing=".6">AULA 12</text>
-    <text x="114" y="38" font-size="15" font-weight="700" fill="#f4f6f8">Direito Penal · Teoria do crime</text>
-    <rect x="560" y="20" width="58" height="26" rx="7" fill="#ffffff" fill-opacity=".1" stroke="#ffffff" stroke-opacity=".28"/>
-    <text x="589" y="38" text-anchor="middle" font-size="13" font-weight="800" fill="#f4f6f8" letter-spacing=".8">1080p</text>
-  </g>
-  <!-- botão de play -->
+  <!-- play -->
   <g filter="url(#drop)">
-    <circle cx="320" cy="170" r="62" fill="#05090e" fill-opacity=".45"/>
-    <circle cx="320" cy="170" r="52" fill="url(#gold)"/>
-    <circle cx="320" cy="170" r="52" fill="none" stroke="#fff4c8" stroke-opacity=".55" stroke-width="2"/>
-    <path d="M305 144v52l46-26z" fill="#2a1d00" stroke="#2a1d00" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="360" cy="102" r="46" fill="#05090e" fill-opacity=".45"/>
+    <circle cx="360" cy="102" r="38" fill="url(#gold)"/>
+    <circle cx="360" cy="102" r="38" fill="none" stroke="#fff4c8" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M349 83v38l33-19z" fill="#2a1d00" stroke="#2a1d00" stroke-width="5" stroke-linejoin="round"/>
   </g>
-  <!-- barra de controles -->
-  <rect y="290" width="640" height="110" fill="url(#scrimBot)"/>
   <!-- progresso -->
-  <rect x="22" y="322" width="596" height="6" rx="3" fill="#ffffff" fill-opacity=".22"/>
-  <rect x="22" y="322" width="360" height="6" rx="3" fill="#ffffff" fill-opacity=".34"/>
-  <rect x="22" y="322" width="236" height="6" rx="3" fill="url(#gold)"/>
-  <g fill="#05090e"><rect x="120" y="320" width="3" height="10"/><rect x="196" y="320" width="3" height="10"/><rect x="300" y="320" width="3" height="10"/><rect x="450" y="320" width="3" height="10"/><rect x="530" y="320" width="3" height="10"/></g>
-  <circle cx="258" cy="325" r="10" fill="#fff4c8"/><circle cx="258" cy="325" r="6" fill="#d8b238"/>
-  <!-- ícones -->
-  <g fill="none" stroke="#f4f6f8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M30 346v26l22-13z" fill="#f4f6f8"/>
-    <path d="M70 358 80 350v16zM84 349a14 14 0 0 1 0 18"/>
-    <path d="M118 349l-12 9 12 9"/><path d="M146 349l12 9-12 9" />
-    <path d="M520 351h18M520 358h18M520 365h12"/>
-    <path d="M572 348h-14v14M586 348h14v14M572 372h-14v-14M586 372h14v-14" />
+  <rect x="70" y="196" width="580" height="6" rx="3" fill="#fff" fill-opacity=".22"/>
+  <rect x="70" y="196" width="250" height="6" rx="3" fill="url(#gold)"/>
+  <circle cx="320" cy="199" r="9" fill="#fff4c8"/><circle cx="320" cy="199" r="5.5" fill="#d8b238"/>
   </g>
-  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" fill="#f4f6f8">
-    <text x="182" y="364" font-size="14" font-weight="600" fill-opacity=".9">12:48 / 45:10</text>
-    <rect x="410" y="346" width="52" height="24" rx="6" fill="#fff" fill-opacity=".12"/>
-    <text x="436" y="363" text-anchor="middle" font-size="13" font-weight="800">1.25x</text>
-    <rect x="472" y="346" width="32" height="24" rx="6" fill="none" stroke="#f4f6f8" stroke-opacity=".7" stroke-width="2"/>
-    <text x="488" y="363" text-anchor="middle" font-size="12" font-weight="800">CC</text>
-  </g>
-  <circle cx="554" cy="358" r="0"/>
-  <rect x=".75" y=".75" width="638.5" height="398.5" rx="14" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
 </svg>

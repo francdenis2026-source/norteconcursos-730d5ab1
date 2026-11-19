@@ -126,7 +126,6 @@ import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import "@/styles/trainer-success-feedback.css";
-import "@/styles/trainer-verdict.css";
 import "@/styles/learning-workspace-refinement.css";
 
 import "@/styles/question-trainer-experience.css";
@@ -141,8 +140,7 @@ import "@/styles/trainer-paused.css";
 import "@/styles/trainer-exam-focus.css";
 import "@/styles/trainer-setup-studio.css";
 import "@/styles/trainer-setup-focus-layout.css";
-import "@/styles/trainer-session-qt4.css";
-import "@/styles/trainer-session-frame.css";
+import "@/styles/trainer-question-v2.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
 import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
 import {
@@ -1184,8 +1182,8 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="nc-learning-workspace question-workspace trainer-session-shell trainer-reading-workspace qt2-session qt4 space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
-      <QtFitViewport depKey={question.id} />
+    <div className="qx">
+      <QtFitViewport depKey={question.id} root=".qx" target=".qx-card" varName="--qx-h" />
       <BackToEdital back={routeFilters.back} />
       {lawNotice}
       {successFeedback && (
@@ -1250,95 +1248,107 @@ function QuestionTrainer() {
           </span>
         </div>
       )}
-      <Card
-        className="question-window overflow-hidden border border-border bg-card text-foreground shadow-2xl ring-1 ring-amber-400/15 animate-in fade-in slide-in-from-bottom-3 duration-300"
+      <section
+        className="qx-card"
         key={question.id}
+        aria-label="Treinador de questões"
+        data-answered={answered ? "true" : "false"}
       >
-        <div className="qt2-strip">
-          <span className="qt2-strip__title">Treinador de questões</span>
-          <span className="qt2-strip__live">
-            <i aria-hidden /> Correção imediata
-          </span>
-          <div className="qt2-strip__actions">
+        <header className="qx-top">
+          <div className="qx-top__brand">
+            <span className="qx-top__title">Treinador de questões</span>
+            <span className="qx-top__live">
+              <i aria-hidden /> Correção imediata
+            </span>
+          </div>
+          <div className="qx-top__actions">
             <Hint content={userPaused ? "Retomar o treino e o cronômetro" : "Pausar o treino; o cronômetro para até você retomar"}>
               <Button
                 variant="ghost"
                 size="sm"
-                className="qt2-strip__btn"
+                className="qx-btn"
                 aria-pressed={userPaused}
                 onClick={userPaused ? resumeUserPause : pauseByUser}
               >
                 {userPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
-                {userPaused ? "Retomar" : "Pausar"}
+                <span>{userPaused ? "Retomar" : "Pausar"}</span>
               </Button>
             </Hint>
             <Hint content="Encerrar o treino; pedimos confirmação antes de sair">
               <Button
                 variant="ghost"
                 size="sm"
-                className="qt2-strip__btn qt2-strip__btn--stop"
+                className="qx-btn qx-btn--stop"
                 onClick={() => setConfirmExit(true)}
               >
-                <LogOut className="h-4 w-4" /> Encerrar
+                <LogOut className="h-4 w-4" /> <span>Encerrar</span>
               </Button>
             </Hint>
-          <Hint content={workspaceFs.active ? "Restaurar a janela (Esc)" : "Maximizar a tela"}>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="qt2-strip__fs"
-              aria-label={workspaceFs.active ? "Restaurar a janela" : "Maximizar a tela"}
-              aria-pressed={workspaceFs.active}
-              onClick={workspaceFs.active ? workspaceFs.exit : workspaceFs.enter}
-            >
-              {workspaceFs.active ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
-            </Button>
-          </Hint>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Mais opções do treino" data-hint="Configuração, desempenho e ranking">
-                <MoreHorizontal className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setStarted(false)}>
-                <Settings2 className="mr-2 h-4 w-4" /> Configuração do treino
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/dashboard/performance">
-                  <TrendingUp className="mr-2 h-4 w-4" /> Análise de desempenho
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link
-                  to="/dashboard/ranking"
-                  search={{ section: "general", period: "all", page: 1, size: 20, q: "" }}
-                >
-                  <ListOrdered className="mr-2 h-4 w-4" /> Ranking de questões
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setConfirmExit(true)}
-                className="text-destructive focus:text-destructive"
+            <Hint content={workspaceFs.active ? "Restaurar a janela (Esc)" : "Maximizar a tela"}>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="qx-btn qx-btn--icon"
+                aria-label={workspaceFs.active ? "Restaurar a janela" : "Maximizar a tela"}
+                aria-pressed={workspaceFs.active}
+                onClick={workspaceFs.active ? workspaceFs.exit : workspaceFs.enter}
               >
-                <LogOut className="mr-2 h-4 w-4" /> Sair do treino
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+                {workspaceFs.active ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+              </Button>
+            </Hint>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="qx-btn qx-btn--icon"
+                  aria-label="Mais opções do treino"
+                  data-hint="Configuração, desempenho e ranking"
+                >
+                  <MoreHorizontal className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setStarted(false)}>
+                  <Settings2 className="mr-2 h-4 w-4" /> Configuração do treino
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/dashboard/performance">
+                    <TrendingUp className="mr-2 h-4 w-4" /> Análise de desempenho
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    to="/dashboard/ranking"
+                    search={{ section: "general", period: "all", page: 1, size: 20, q: "" }}
+                  >
+                    <ListOrdered className="mr-2 h-4 w-4" /> Ranking de questões
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setConfirmExit(true)}
+                  className="text-destructive focus:text-destructive"
+                >
+                  <LogOut className="mr-2 h-4 w-4" /> Sair do treino
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
-        </div>
+        </header>
+
         {userPaused && (
-          <div className="qt2-paused" role="dialog" aria-modal="false" aria-label="Treino pausado">
+          <div className="qx-paused" role="dialog" aria-modal="false" aria-label="Treino pausado">
             <Pause aria-hidden="true" />
             <strong>Treino pausado</strong>
             <p>Cronômetro parado. Toque em uma alternativa ou em Retomar para continuar.</p>
-            <Button onClick={resumeUserPause} className="qt2-paused__resume">
+            <Button onClick={resumeUserPause} className="qx-paused__resume">
               <Play className="mr-2 h-4 w-4" /> Retomar treino
             </Button>
           </div>
         )}
-        <CardContent
-          className={`trainer-reading-content p-3.5 sm:p-5 md:p-7${userPaused ? " qt2-content-paused" : ""}`}
+
+        <div
+          className={cn("qx-main", userPaused && "qx-main--paused")}
           // Treino pausado: tocar na questão (ou em uma alternativa) retoma o cronômetro. O primeiro
           // toque só retoma; a questão estava borrada, então nenhuma alternativa é marcada às cegas.
           onClickCapture={
@@ -1351,67 +1361,64 @@ function QuestionTrainer() {
               : undefined
           }
         >
-          <div className="trainer-reading-meta mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-            <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
-              {question.subject}
-            </span>
-            <Badge variant="outline">{examOriginLabel(question)}</Badge>
-            <Badge variant="outline">
-              {question.contest} · {question.year}
-            </Badge>
-            <Badge
-              variant="outline"
-              className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
-            >
-              {DIFFICULTY_LABEL[question.difficulty]}
-            </Badge>
-            <span className="ml-auto">
-              <ReportQuestionButton question={question} />
-            </span>
-          </div>
-          {reviewingPast && (
-            <div className="trainer-reading-review mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
-              <Lock className="h-3.5 w-3.5 shrink-0" /> Você já respondeu esta questão antes —
-              revisão apenas, sem reenvio.
-            </div>
-          )}
-          <div className="trainer-reading-heading mb-3 flex items-end justify-between gap-3">
-            <div>
-              <h2 className="font-display text-2xl font-extrabold leading-none text-foreground sm:text-3xl">
-                Questão {index + 1}{" "}
-                <span className="text-muted-foreground">de {questions.length}</span>
+          <div className="qx-info">
+            <div className="qx-info__count">
+              <h2>
+                Questão {index + 1} <span>de {questions.length}</span>
               </h2>
-              <p className="mt-1.5 text-xs text-muted-foreground">
-                {correct} certas · {wrong} erradas
+              <p>
+                {correct} {correct === 1 ? "certa" : "certas"} · {wrong}{" "}
+                {wrong === 1 ? "errada" : "erradas"}
               </p>
             </div>
-          </div>
-          <div className="trainer-reading-progress mb-4 flex gap-1 sm:mb-6 sm:gap-1.5">
             <div
-              className="trainer-reading-progress__bars"
+              className="qx-bars"
               role="img"
               aria-label={`Questão ${index + 1} de ${questions.length}`}
             >
               {questions.map((q, i) => (
                 <i
                   key={q.id}
-                  className={cn(
-                    "h-1.5 min-w-0 flex-1 rounded-full transition-colors",
-                    results[i] === "ok" && "bg-emerald-500",
-                    results[i] === "err" && "bg-rose-500",
-                    !results[i] && i === index && "bg-amber-400",
-                    !results[i] && i !== index && "bg-muted",
-                  )}
+                  data-state={
+                    results[i] === "ok"
+                      ? "ok"
+                      : results[i] === "err"
+                        ? "err"
+                        : i === index
+                          ? "now"
+                          : "todo"
+                  }
                 />
               ))}
             </div>
             <ElapsedTimer startedAt={startedAt} running={!answered && !pausedAt} />
           </div>
+
+          <div className="qx-chips">
+            <span className="qx-chip qx-chip--subject" title={question.subject}>
+              {question.subject}
+            </span>
+            <span className="qx-chip" title={examOriginLabel(question)}>
+              {examOriginLabel(question)}
+            </span>
+            <span className="qx-chip" title={`${question.contest} · ${question.year}`}>
+              {question.contest} · {question.year}
+            </span>
+            <span className={cn("qx-chip qx-chip--level", DIFFICULTY_STYLE[question.difficulty])}>
+              {DIFFICULTY_LABEL[question.difficulty]}
+            </span>
+            {reviewingPast && (
+              <span className="qx-chip qx-chip--lock">
+                <Lock className="h-3 w-3" aria-hidden="true" /> Já respondida — só revisão
+              </span>
+            )}
+            <span className="qx-chips__report">
+              <ReportQuestionButton question={question} />
+            </span>
+          </div>
+
           {pendingAnswers > 0 && (
-            <div
-              className="trainer-reading-pending mb-2 flex items-center justify-between gap-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-xs font-semibold"
-              role="status"
-            >
+            <div className="qx-pending" role="status">
               <span>
                 {pendingAnswers} resposta{pendingAnswers > 1 ? "s" : ""} aguardando envio
               </span>
@@ -1425,212 +1432,165 @@ function QuestionTrainer() {
               </Button>
             </div>
           )}
-          <div className="trainer-reading-left">
-          <section className="trainer-reading-stem" aria-label="Enunciado da questão">
-            {parsed.base && (
-              <details
-                open
-                className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                  {parsed.baseLabel}
-                  <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
-                </summary>
-                <div className="max-h-52 overflow-y-auto whitespace-pre-line break-words px-3 pb-3 text-base leading-7 text-left [overflow-wrap:anywhere] text-foreground sm:max-h-80 sm:px-4 sm:pb-4">
-                  {parsed.base}
+
+          <div className="qx-body">
+            <section className="qx-pane qx-pane--stem" aria-label="Enunciado da questão" tabIndex={0}>
+              <p className="qx-label">Enunciado</p>
+              {parsed.base && (
+                <details open className="qx-base">
+                  <summary>
+                    {parsed.baseLabel}
+                    <span>mostrar / ocultar</span>
+                  </summary>
+                  <div className="qx-base__text">{parsed.base}</div>
+                </details>
+              )}
+              <p className="qx-stem">{parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}</p>
+              <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
+            </section>
+
+            <section className="qx-pane qx-pane--answers" aria-label="Alternativas e explicação" tabIndex={0}>
+              <p className="qx-label">{certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}</p>
+
+              {answered && (
+                <div className="qx-verdict" data-result={isCorrect ? "ok" : "err"} role="status" aria-live="polite">
+                  <span className="qx-verdict__icon" aria-hidden="true">
+                    {isCorrect ? <CheckCircle2 /> : <XCircle />}
+                  </span>
+                  <span className="qx-verdict__text">
+                    <strong>{isCorrect ? "Você acertou" : "Você errou"}</strong>
+                    <small>
+                      {isCorrect
+                        ? `Gabarito: ${labelFor(question.answer)}`
+                        : `Você marcou ${selected ? labelFor(selected) : "—"} · Gabarito: ${labelFor(question.answer)}`}
+                    </small>
+                  </span>
                 </div>
-              </details>
-            )}
-            <p className="whitespace-pre-line break-words text-left [overflow-wrap:anywhere] text-base font-medium leading-7 text-foreground">
-              {parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}
-            </p>
-            <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
-          </section>
-          {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
-            <div
-              className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4"
-              role="region"
-              aria-label="Explicação da questão"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <p className="text-xs font-black uppercase tracking-wider text-primary">
-                  Explicação da questão
-                </p>
-                {responseSeconds !== null && (
-                  <span className="rounded-full border border-primary/20 bg-background/70 px-2.5 py-1 text-xs font-semibold text-muted-foreground">
-                    Tempo de resposta: {formatResponseTime(responseSeconds)}
-                  </span>
-                )}
-              </div>
-              {!isCorrect && (
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">
-                  Resposta correta: {labelFor(question.answer)}
-                </p>
               )}
-              {isPlaceholderExplanation(explanation.main) ? null : (
-                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">{explanation.main}</p>
-              )}
-              {explanation.example && (
-                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">
-                  <strong>Exemplo:</strong> {explanation.example}
-                </p>
-              )}
-            </div>
-          )}
-          {supportNotice && !supportAvailable && !answered && (
-            <div
-              id={supportNoticeId}
-              role="status"
-              className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
-            >
-              <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <p>
-                {saving
-                  ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
-                  : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
-              </p>
-            </div>
-          )}
-          </div>
-          <section className="trainer-reading-answers" aria-label="Alternativas da questão">
-            <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
-              {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
-            </p>
-            {answered && (
-              <div className="trainer-verdict" data-result={isCorrect ? "ok" : "err"} role="status" aria-live="polite">
-                <span className="trainer-verdict__icon" aria-hidden="true">
-                  {isCorrect ? <CheckCircle2 /> : <XCircle />}
-                </span>
-                <span className="trainer-verdict__text">
-                  <strong>{isCorrect ? "Você acertou" : "Você errou"}</strong>
-                  <small>
-                    {isCorrect
-                      ? `Gabarito: ${labelFor(question.answer)}`
-                      : `Você marcou ${selected ? labelFor(selected) : "—"} · Gabarito: ${labelFor(question.answer)}`}
-                  </small>
-                </span>
-              </div>
-            )}
-            {hasOptions && (
-              <div className="mt-3 space-y-2">
-                {parsed.options.map((option) => {
-                  const isStruck = struck.includes(option.letter);
-                  const isSelected = selected === option.letter;
-                  const isRight = answered && option.letter === question.answer;
-                  const isWrong = answered && isSelected && option.letter !== question.answer;
-                  return (
-                    <div key={option.letter} className="trainer-option-row flex items-start gap-2">
-                      <button
-                        type="button"
-                        aria-pressed={isSelected}
-                        data-state={isRight ? "right" : isWrong ? "wrong" : isSelected ? "selected" : undefined}
-                        disabled={answered || saving}
-                        onClick={() => chooseOption(option.letter)}
-                        className={cn(
-                          "trainer-option group flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-border bg-background p-2.5 text-left text-sm leading-5 transition-all duration-200 hover:border-amber-400/50 hover:bg-amber-400/5 disabled:hover:bg-background sm:gap-3 sm:p-3 sm:leading-6",
-                          isStruck && "opacity-50",
-                          isSelected &&
-                            !answered &&
-                            "border-amber-400/70 bg-amber-400/10 ring-4 ring-amber-400/10 hover:bg-amber-400/10",
-                          isRight &&
-                            "border-emerald-500/70 bg-emerald-500/10 hover:bg-emerald-500/10",
-                          isWrong && "border-rose-500/70 bg-rose-500/10 hover:bg-rose-500/10",
-                        )}
-                      >
-                        <span
-                          className={cn(
-                            "trainer-option__letter flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-muted font-mono text-[11px] font-bold sm:h-7 sm:w-7 sm:rounded-lg sm:text-xs",
-                            isSelected && !answered && "bg-amber-400 text-slate-900",
-                            isRight && "bg-emerald-600 text-white",
-                            isWrong && "bg-rose-600 text-white",
-                          )}
+
+              {hasOptions ? (
+                <div className="qx-options">
+                  {parsed.options.map((option) => {
+                    const isStruck = struck.includes(option.letter);
+                    const isSelected = selected === option.letter;
+                    const isRight = answered && option.letter === question.answer;
+                    const isWrong = answered && isSelected && option.letter !== question.answer;
+                    return (
+                      <div key={option.letter} className="qx-option-row">
+                        <button
+                          type="button"
+                          aria-pressed={isSelected}
+                          data-state={isRight ? "right" : isWrong ? "wrong" : isSelected ? "selected" : undefined}
+                          data-struck={isStruck || undefined}
+                          disabled={answered || saving}
+                          onClick={() => chooseOption(option.letter)}
+                          className="qx-option"
                         >
-                          {option.letter}
-                        </span>
-                        <span className={cn("flex-1", isStruck && "line-through")}>
-                          {option.text}
-                        </span>
-                        {isRight && (
-                          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-                            <Check className="h-3.5 w-3.5" /> Correta
-                          </span>
-                        )}
-                        {isWrong && (
-                          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
-                            <XCircle className="h-3.5 w-3.5" /> Sua resposta
-                          </span>
-                        )}
-                      </button>
-                      <Button
-                        type="button"
-                        variant={isStruck ? "secondary" : "ghost"}
-                        size="icon"
-                        className="trainer-option__strike h-9 w-9 shrink-0 sm:h-10 sm:w-10"
-                        disabled={answered || saving}
-                        aria-pressed={isStruck}
-                        aria-label={
-                          isStruck
-                            ? `Desfazer risco da alternativa ${option.letter}`
-                            : `Riscar alternativa ${option.letter}`
-                        }
-                        title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
-                        onClick={() => toggleStrike(option.letter)}
-                      >
-                        <Strikethrough className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-            <div
-              className={cn(
-                "mt-3 grid gap-2",
-                hasOptions && "hidden",
-                questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+                          <span className="qx-option__letter">{option.letter}</span>
+                          <span className="qx-option__text">{option.text}</span>
+                          {isRight && (
+                            <span className="qx-option__tag">
+                              <Check className="h-3.5 w-3.5" /> Correta
+                            </span>
+                          )}
+                          {isWrong && (
+                            <span className="qx-option__tag">
+                              <XCircle className="h-3.5 w-3.5" /> Sua resposta
+                            </span>
+                          )}
+                        </button>
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="icon"
+                          className="qx-strike"
+                          disabled={answered || saving}
+                          aria-pressed={isStruck}
+                          aria-label={
+                            isStruck
+                              ? `Desfazer risco da alternativa ${option.letter}`
+                              : `Riscar alternativa ${option.letter}`
+                          }
+                          title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
+                          onClick={() => toggleStrike(option.letter)}
+                        >
+                          <Strikethrough className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="qx-choices" data-count={questionAnswers(question).length}>
+                  {questionAnswers(question).map((answer) => (
+                    <button
+                      key={answer}
+                      type="button"
+                      aria-pressed={selected === answer}
+                      data-state={
+                        answered && answer === question.answer
+                          ? "right"
+                          : answered && selected === answer
+                            ? "wrong"
+                            : selected === answer
+                              ? "selected"
+                              : undefined
+                      }
+                      disabled={answered || saving}
+                      onClick={() => setSelected(answer)}
+                      className="qx-choice"
+                    >
+                      <span className="qx-choice__letter">
+                        {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
+                      </span>
+                      <span>{labelFor(answer)}</span>
+                    </button>
+                  ))}
+                </div>
               )}
-            >
-              {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
-                <button
-                  key={answer}
-                  type="button"
-                  aria-pressed={selected === answer}
-                  disabled={answered || saving}
-                  onClick={() => setSelected(answer)}
-                  className={cn(
-                    "group relative flex min-h-12 items-center justify-center gap-2 rounded-lg border-2 border-border bg-background px-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0 sm:min-h-16 sm:rounded-xl sm:px-4 sm:text-base",
-                    selected === answer &&
-                      !answered &&
-                      "scale-[1.02] border-amber-400 bg-amber-400 text-slate-900 shadow-lg shadow-amber-400/20 ring-4 ring-amber-400/15 hover:bg-amber-400 hover:text-slate-900",
-                    answered &&
-                      answer === question.answer &&
-                      "border-emerald-500 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
-                    answered &&
-                      selected === answer &&
-                      answer !== question.answer &&
-                      "border-rose-500 bg-rose-500/10 text-rose-700 dark:text-rose-300",
-                  )}
-                >
-                  <span
-                    className={cn(
-                      "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
-                      selected === answer &&
-                        !answered &&
-                        "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
+
+              {supportNotice && !supportAvailable && !answered && (
+                <div id={supportNoticeId} role="status" className="qx-note">
+                  <Lock className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  <p>
+                    {saving
+                      ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
+                      : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
+                  </p>
+                </div>
+              )}
+
+              {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
+                <div className="qx-explain" role="region" aria-label="Explicação da questão">
+                  <div className="qx-explain__head">
+                    <p className="qx-label">Explicação da questão</p>
+                    {responseSeconds !== null && (
+                      <span className="qx-explain__time">
+                        Tempo: {formatResponseTime(responseSeconds)}
+                      </span>
                     )}
-                  >
-                    {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
-                  </span>
-                  {labelFor(answer)}
-                </button>
-              ))}
-            </div>
-          </section>
-          <div className="trainer-reading-actions trainer-action-dock mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="trainer-action-dock__secondary flex flex-wrap gap-2">
+                  </div>
+                  {!isCorrect && (
+                    <p className="qx-explain__right">Resposta correta: {labelFor(question.answer)}</p>
+                  )}
+                  {isPlaceholderExplanation(explanation.main) ? null : (
+                    <p className="qx-explain__text">{explanation.main}</p>
+                  )}
+                  {explanation.example && (
+                    <p className="qx-explain__text">
+                      <strong>Exemplo:</strong> {explanation.example}
+                    </p>
+                  )}
+                </div>
+              )}
+            </section>
+          </div>
+
+          <footer className="qx-dock">
+            <div className="qx-dock__secondary">
               <Button
                 variant="ghost"
-                className="trainer-action-dock__btn"
+                className="qx-dock__btn"
                 onClick={() => goTo(index - 1)}
                 disabled={index === 0}
                 aria-label="Questão anterior"
@@ -1640,11 +1600,12 @@ function QuestionTrainer() {
                 <span>Anterior</span>
               </Button>
               <Button
-                variant={answered ? "outline" : "ghost"}
+                variant="ghost"
                 aria-disabled={!answered && !supportAvailable}
                 aria-describedby={!answered && supportNotice ? supportNoticeId : undefined}
-                className={cn("trainer-action-dock__btn", !answered && "text-muted-foreground")}
+                className={cn("qx-dock__btn", answered && "qx-dock__btn--on")}
                 onClick={openLearning}
+                aria-label="Entender assunto"
                 data-hint="Abrir a explicação do assunto; o cronômetro pausa"
               >
                 {answered ? (
@@ -1657,7 +1618,7 @@ function QuestionTrainer() {
               {!answered && (
                 <Button
                   variant="ghost"
-                  className="trainer-action-dock__btn"
+                  className="qx-dock__btn"
                   onClick={next}
                   disabled={index + 1 >= questions.length}
                   aria-label="Pular questão"
@@ -1668,9 +1629,10 @@ function QuestionTrainer() {
                 </Button>
               )}
               <Button
-                variant={savedForStudy ? "secondary" : "ghost"}
-                className="trainer-action-dock__btn"
+                variant="ghost"
+                className="qx-dock__btn"
                 onClick={toggleSavedForStudy}
+                aria-label={savedForStudy ? "Questão salva" : "Salvar para estudar"}
                 data-hint="Guardar esta questão no caderno de estudo"
                 disabled={savedForStudy}
                 aria-pressed={savedForStudy}
@@ -1688,27 +1650,23 @@ function QuestionTrainer() {
                 size="lg"
                 disabled={!selected || saving || (reachedDailyLimit && !practiceMode)}
                 onClick={submit}
-                className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
+                className="qx-primary"
               >
-                {selected ? "Confirmar resposta" : "Escolha uma alternativa"}{" "}
-                <Check className="ml-2 h-4 w-4" />
+                <span>{selected ? "Confirmar resposta" : "Escolha uma alternativa"}</span>
+                <Check className="h-4 w-4" />
               </Button>
             ) : (
-              <Button
-                size="lg"
-                onClick={next}
-                className="trainer-action-dock__primary h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
-              >
-                {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                <ArrowRight className="ml-2 h-4 w-4 text-slate-900" aria-hidden="true" />
+              <Button size="lg" onClick={next} className="qx-primary">
+                <span>{index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}</span>
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Button>
             )}
-          </div>
-        </CardContent>
-      </Card>
+          </footer>
+        </div>
+      </section>
       {answered && !isPlaceholderExplanation(explanation.main) && (
         <details
-          className="trainer-review-community"
+          className="trainer-review-community qx-community"
           aria-label="Desempenho e comentários da questão"
         >
           <summary className="trainer-review-community__toggle">
@@ -2560,7 +2518,7 @@ function QtFitViewport({
     };
     const pullUp = () => {
       const app = shell.closest<HTMLElement>(".app-shell");
-      if (!app || app.getAttribute("data-focus-mode") !== "true" || root !== ".qt4") return;
+      if (!app || app.getAttribute("data-focus-mode") !== "true" || root !== ".qx") return;
       if (shell.getBoundingClientRect().top < 16) return;
       for (let el: HTMLElement | null = shell; el && el !== app; el = el.parentElement) {
         const cs = getComputedStyle(el);
@@ -2569,7 +2527,7 @@ function QtFitViewport({
         for (let sib = el.previousElementSibling as HTMLElement | null; sib; sib = sib.previousElementSibling as HTMLElement | null) {
           const sc = getComputedStyle(sib);
           if (sc.display === "none" || sc.position === "fixed" || sc.position === "absolute") continue;
-          if (sib.getBoundingClientRect().height > 0 && !sib.querySelector(".qt2-strip")) {
+          if (sib.getBoundingClientRect().height > 0 && !sib.querySelector(".qx-top")) {
             const prevDisplay = sib.style.getPropertyValue("display");
             sib.style.setProperty("display", "none", "important");
             undo.push(() => (prevDisplay ? sib.style.setProperty("display", prevDisplay) : sib.style.removeProperty("display")));
@@ -2580,7 +2538,7 @@ function QtFitViewport({
     // A tela da questão em tela cheia cabe inteira; qualquer rolagem herdada da tela anterior
     // (ex.: a montagem rolada até o botão) empurrava o topo da janela para baixo do menu.
     const resetScroll = () => {
-      if (root !== ".qt4") return;
+      if (root !== ".qx") return;
       const app = shell.closest<HTMLElement>(".app-shell");
       if (!app || app.getAttribute("data-focus-mode") !== "true") return;
       for (let el: HTMLElement | null = shell.parentElement; el && el !== app; el = el.parentElement) {
@@ -2592,7 +2550,9 @@ function QtFitViewport({
       resetScroll();
       const card = target === root ? shell : shell.querySelector<HTMLElement>(target);
       if (!card) return;
-      const top = card.getBoundingClientRect().top;
+      const scrollerEl = shell.closest<HTMLElement>(".app-content");
+      // Posição do cartão com a página rolada ao topo, para a altura não depender da rolagem atual.
+      const top = card.getBoundingClientRect().top + (scrollerEl?.scrollTop ?? 0);
       const strip = document.querySelector<HTMLElement>(".dev-strip");
       const stripH =
         strip && getComputedStyle(strip).position === "fixed" ? strip.getBoundingClientRect().height : 0;
@@ -2609,7 +2569,7 @@ function QtFitViewport({
         const pad = parseFloat(getComputedStyle(scroller).paddingBottom) || 0;
         bottom = Math.min(bottom, scroller.getBoundingClientRect().bottom - pad);
       }
-      const h = Math.max(440, Math.floor(bottom - top - tail - 10));
+      const h = Math.max(420, Math.floor(bottom - top - tail - 10));
       shell.style.setProperty(varName, `${h}px`);
     };
     fit();

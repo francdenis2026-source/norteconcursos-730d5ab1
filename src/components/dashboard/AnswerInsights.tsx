@@ -207,7 +207,7 @@ export function AnswerInsights({
               line: b.total ? Math.round((b.acertos / b.total) * 100) : null,
             }))}
             line={{ key: "p", label: "Aproveitamento", color: "var(--cat-amber)" }}
-            height={64}
+            height={44}
             ticks={[0, 100]}
             band={{ from: 70, to: 100 }}
             format={(v) => `${Math.round(v)}%`}
@@ -231,7 +231,7 @@ export function AnswerInsights({
               { key: "ok", label: "Acertos", color: OK },
               { key: "err", label: "Erros", color: ERR },
             ]}
-            height={height - 40}
+            height={height - 20}
             format={(v) => `${Math.round(v)}`}
             labelEvery={chartData.length > 14 ? 3 : 1}
             ariaLabel={`Acertos e erros por período, ${periodLabel}`}

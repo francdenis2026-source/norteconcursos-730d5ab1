@@ -97,7 +97,9 @@
 @media (min-width: 561px) {
   .ecc-contest__top { align-items: center; }
   .ecc-contest__copy { flex: 0 1 auto; }
-  .ecc-countdown { align-self: center; margin-inline: auto; }
+  /* O rosto fica à direita do banner: o contador acompanha o texto, nunca vai para o lado da foto. */
+  .ecc-contest__top { justify-content: flex-start; gap: clamp(0.75rem, 3vw, 2rem); }
+  .ecc-countdown { align-self: center; margin-inline: 0 auto; }
 }
 .ecc-countdown b { font-size: 1.875rem; font-weight: 700; line-height: 1; color: var(--ecc-gold); }
 .ecc-countdown span { margin-top: 2px; font-size: 0.6875rem; color: var(--ecc-dim); }
