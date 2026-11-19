@@ -210,3 +210,253 @@ html:root body .student-home.sh2 .sh2-kpi > svg { color: var(--kc) !important; s
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > svg *,
 html:root body .student-home.sh2 .sh2-kpi > svg * { stroke: var(--kc) !important; }
 @media (min-width: 1100px) { html:root body .student-home.sh2.student-overview .sh2-pair { align-items: start !important; } }
+
+/* =====================================================================
+   Fase 2 — página inteira no padrão NextVita (sem mexer na barra superior,
+   nos cartões do topo nem nos gráficos, que já foram refeitos).
+   ===================================================================== */
+
+/* Usa toda a largura útil da janela */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) #dashboard-content .student-home.sh2 {
+  width: 100% !important;
+  max-width: min(1760px, 100%) !important;
+  margin-inline: auto !important;
+  gap: 14px !important;
+}
+
+/* Rótulos de seção: sem caixa alta, ponto colorido e linha sutil */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 4px 0 0 !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label :is(h2, span, strong) {
+  font-size: 0.875rem !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: var(--foreground) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--brass, #d9a441);
+  box-shadow: 0 0 10px color-mix(in oklab, var(--brass, #d9a441) 70%, transparent);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  background: linear-gradient(90deg, var(--nv-line), transparent);
+}
+
+/* Sem rótulos em CAIXA ALTA e texto mínimo de 11px */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(small, .ecc-eyebrow, .resume-session__copy p:first-child, .sh2-card__eyebrow) {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(small, em) { font-size: max(11px, 0.75rem) !important; }
+
+/* ---------- Abertura: cartão em camadas, foto com corte diagonal e zoom lento ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero {
+  position: relative !important;
+  min-height: 180px !important;
+  padding: 22px 26px !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  border: 1px solid var(--nv-line) !important;
+  border-radius: 16px !important;
+  background: var(--nv-card) !important;
+  box-shadow: none !important;
+  animation: nv-enter 550ms var(--nv-ease) both;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art {
+  position: absolute !important;
+  inset: 0 0 0 auto !important;
+  z-index: -1 !important;
+  width: 58% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center 30% !important;
+  opacity: 1 !important;
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  transform-origin: 70% 40%;
+  animation: nv-kenburns 18s var(--nv-ease) infinite alternate;
+}
+@keyframes nv-kenburns { from { transform: scale(1); } to { transform: scale(1.14); } }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello h1 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.02em !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest {
+  position: relative;
+  width: fit-content !important;
+  max-width: 100%;
+  margin-top: 14px !important;
+  padding: 12px 16px !important;
+  border: 1px solid var(--nv-line) !important;
+  border-radius: 14px !important;
+  background: color-mix(in oklab, var(--nv-surface) 82%, transparent) !important;
+  backdrop-filter: blur(10px);
+}
+/* Cartão flutuante: a contagem da prova sobe e desce 6px devagar */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__exam {
+  padding: 8px 14px !important;
+  border: 1px solid color-mix(in oklab, var(--brass, #d9a441) 40%, transparent) !important;
+  border-radius: 12px !important;
+  background: color-mix(in oklab, var(--brass, #d9a441) 10%, var(--nv-card)) !important;
+  animation: nv-float 5.5s ease-in-out infinite;
+}
+@keyframes nv-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__countdown b {
+  font-size: 1.625rem !important;
+  font-weight: 750 !important;
+  font-variant-numeric: tabular-nums;
+  color: var(--brass, #d9a441) !important;
+}
+
+/* ---------- Hoje: três colunas que se completam, sem vazios ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 14px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board > * { min-width: 0; min-height: 0 !important; height: auto !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board > .sh2-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board > .sh2-card > .sh2-card__body {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  min-height: 0 !important;
+  padding: 14px 16px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board > .sh2-card > :is(footer, .sh2-card__foot) {
+  margin-top: auto !important;
+  padding: 12px 16px !important;
+  border-top: 1px solid var(--nv-line) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board .sh2-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board .sh2-stack > :last-child { flex: 1 1 auto; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head {
+  min-height: 46px !important;
+  padding: 10px 16px !important;
+  border-bottom: 1px solid var(--nv-line) !important;
+  background: transparent !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head > svg {
+  width: 28px !important;
+  height: 28px !important;
+  padding: 6px !important;
+  border-radius: 8px !important;
+  color: var(--hc, var(--brass, #d9a441)) !important;
+  background: color-mix(in oklab, var(--hc, var(--brass, #d9a441)) 16%, transparent) !important;
+}
+html:root body .student-home.sh2 .sh2-card[data-tone="gold"] { --hc: var(--brass, #d9a441); }
+html:root body .student-home.sh2 .sh2-card[data-tone="rose"] { --hc: var(--cat-red); }
+html:root body .student-home.sh2 .sh2-card[data-tone="blue"] { --hc: var(--cat-blue); }
+html:root body .student-home.sh2 .sh2-card[data-tone="green"] { --hc: var(--cat-green); }
+html:root body .student-home.sh2 .sh2-card[data-tone="violet"] { --hc: var(--cat-violet); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head h2 {
+  font-size: 0.9375rem !important;
+  font-weight: 650 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+/* Blocos internos (próximo passo, prioridade) em superfície mais funda */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-next, .student-desk__next, .sh2-review li, .sh2-reading a) {
+  border: 1px solid var(--nv-line) !important;
+  border-radius: 12px !important;
+  background: var(--nv-surface) !important;
+  box-shadow: none !important;
+  transition: border-color 220ms var(--nv-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-review li, .sh2-reading a):hover { border-color: color-mix(in oklab, var(--brass, #d9a441) 50%, var(--nv-line)) !important; }
+/* Botões dos cartões: 12px, cor única de destaque */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board :is(a, button):is(.sh2-cta, .sh2-btn, [class*="primary"]) {
+  border-radius: 12px !important;
+}
+
+/* Treino em andamento: borda viva e barra de progresso suave */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .resume-session--compact {
+  border: 1px solid color-mix(in oklab, var(--cat-green) 35%, var(--nv-line)) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(160deg, color-mix(in oklab, var(--cat-green) 8%, var(--nv-card)), var(--nv-card) 60%) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Concurso e acervo: mesmas camadas e cantos ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.ecc-contest, .ecc-bank) {
+  border: 1px solid var(--nv-line) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  animation: nv-enter 550ms var(--nv-ease) both;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-bank { animation-delay: 70ms; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest__bg { animation: nv-kenburns 18s var(--nv-ease) infinite alternate !important; transform-origin: 70% 40%; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-countdown { animation: nv-float 5.5s ease-in-out infinite; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-action { border-radius: 12px !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-action:hover { transform: none !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-bank__stats > div { border-radius: 12px !important; border-color: rgb(255 255 255 / 8%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ecc-bank__stats dd { font-size: 1.625rem !important; font-variant-numeric: tabular-nums; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.ecc-bank__cta, .ecc-bank__more) { border-radius: 12px !important; }
+
+/* Nota de cálculo: uma linha compacta */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .student-home__data-note {
+  padding: 10px 14px !important;
+  border: 1px solid var(--nv-line) !important;
+  border-radius: 12px !important;
+  background: var(--nv-surface) !important;
+}
+
+/* Gráficos: cartões de mesma altura lado a lado */
+@media (min-width: 1100px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; align-items: stretch !important; }
+}
+
+/* Tablet e celular */
+@media (max-width: 1099px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board > .sh2-stack { grid-column: 1 / -1; display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board,
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board > .sh2-stack { grid-template-columns: minmax(0, 1fr) !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero { padding: 18px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art { width: 100% !important; opacity: 0.35 !important; clip-path: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-hero, .sh2-hero__art, .sh2-hero__exam, .ecc-contest, .ecc-bank, .ecc-contest__bg, .ecc-countdown) { animation: none !important; }
+}
+/* Ajustes de ocupação */
+@media (min-width: 1100px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-pair { align-items: start !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero {
+    display: grid !important;
+    grid-template-columns: auto auto 1fr !important;
+    align-items: center !important;
+    gap: 28px !important;
+    min-height: 150px !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest { margin-top: 0 !important; }
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest > .student-hub__acre-flag:empty { width: 34px !important; height: 24px !important; flex: none; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .student-home__data-note { min-height: 0 !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .student-home__data-note summary { min-height: 0 !important; padding: 0 !important; }
