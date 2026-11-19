@@ -94,3 +94,35 @@ html body .app-shell[data-area] .student-home.sh2 .sh2-card:hover {
 html body .app-shell[data-area] .student-home.sh2 .nv-figure {
   gap: 0.875rem;
 }
+
+/* ---------------------------------------------------------------------
+   6) Fundo com um pouco mais de vida atrás da faixa de boas-vindas (não
+      só no fundo da página inteira) e brilho contínuo e discreto na borda
+      do cartão ao passar o mouse. Claro e escuro usam os mesmos tokens
+      (--brass, --nv-card), então o contraste de texto não muda — só o
+      fundo decorativo por trás, que já tem pouca opacidade.
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 .sh2-hero {
+  position: relative;
+  isolation: isolate;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    radial-gradient(70% 140% at 85% 0%, color-mix(in oklab, var(--brass, #d9a441) 14%, transparent), transparent 70%),
+    radial-gradient(60% 120% at 0% 100%, color-mix(in oklab, var(--cat-blue, #3b82f6) 10%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card) {
+    transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease !important;
+  }
+  html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card):hover {
+    transform: translateY(-1px) !important;
+  }
+}
