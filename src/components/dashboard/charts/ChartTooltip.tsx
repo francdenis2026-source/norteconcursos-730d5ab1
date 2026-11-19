@@ -3,13 +3,13 @@ import type * as React from "react";
 export type TooltipRow = {
   label: string;
   value: React.ReactNode;
-  /** Cor do marcador; use tokens CSS, por exemplo "var(--sh2-green)". */
+  /** Cor da série (token CSS). Aparece como traço curto, nunca no texto. */
   color?: string;
 };
 
 /**
- * Conteúdo de dica dos gráficos do painel, no tema da plataforma.
- * Recebe linhas já formatadas para não depender do formato interno do Recharts.
+ * Dica dos gráficos do painel: o valor em destaque, o nome da série em segundo plano,
+ * identificada por um traço curto na cor da série.
  */
 export function ChartTooltipCard({ title, rows }: { title: React.ReactNode; rows: TooltipRow[] }) {
   return (
@@ -18,9 +18,9 @@ export function ChartTooltipCard({ title, rows }: { title: React.ReactNode; rows
       <ul>
         {rows.map((row) => (
           <li key={row.label}>
-            {row.color && <i style={{ background: row.color }} aria-hidden="true" />}
-            <span>{row.label}</span>
+            <i style={{ background: row.color ?? "transparent" }} aria-hidden="true" />
             <strong>{row.value}</strong>
+            <span>{row.label}</span>
           </li>
         ))}
       </ul>

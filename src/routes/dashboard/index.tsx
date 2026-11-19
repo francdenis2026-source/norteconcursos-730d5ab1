@@ -18,7 +18,13 @@ import "@/styles/student-home-compact.css";
 import "@/styles/student-home-polish.css";
 import "@/styles/student-home-charts-premium.css";
 import { Sparkline, type SparkPoint } from "@/components/dashboard/charts/Sparkline";
-import { dailyAnswerSeries, dailyStudySeries } from "@/lib/dashboardTrends";
+import {
+  CHART_RANGES,
+  dailyAnswerSeries,
+  dailyStudySeries,
+  studyBuckets,
+  type ChartRange,
+} from "@/lib/dashboardTrends";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -217,11 +223,15 @@ function StudentHome({ user }: { user: UserProfile }) {
     () => (q.training.data ? dailyAnswerSeries(q.training.data, today, 7) : null),
     [q.training.data, today],
   );
-  const studyTrend = React.useMemo(
-    () => (q.activity.data ? dailyStudySeries(q.activity.data, live, today, 30) : null),
+  const [chartRange, setChartRange] = React.useState<ChartRange>("7d");
+  const weekStudy = React.useMemo(
+    () => (q.activity.data ? dailyStudySeries(q.activity.data, live, today, 7) : null),
     [q.activity.data, live, today],
   );
-  const weekStudy = studyTrend?.slice(-7) ?? null;
+  const rangeBuckets = React.useMemo(
+    () => (q.activity.data ? studyBuckets(q.activity.data, live, today, chartRange) : null),
+    [q.activity.data, live, today, chartRange],
+  );
   // Semana acumulada dia a dia, para mostrar a construção do total semanal.
   const weekRunning = weekStudy
     ? weekStudy.reduce<SparkPoint[]>((acc, d) => {
@@ -848,7 +858,21 @@ function StudentHome({ user }: { user: UserProfile }) {
         </div>
       </div>
 
-      <SectionLabel step={4} title="Ritmo e respostas" />
+      <div className="ncx-section-head">
+        <SectionLabel step={4} title="Ritmo e respostas" />
+        <div className="ncx-range" role="group" aria-label="Período dos gráficos de ritmo e respostas">
+          {CHART_RANGES.map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              aria-pressed={chartRange === value}
+              onClick={() => setChartRange(value)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="sh2-pair">
         <section
           className="sh2-card sh2-card--wide sh2-card--chart"
@@ -867,13 +891,18 @@ function StudentHome({ user }: { user: UserProfile }) {
                 text="Não foi possível consultar o tempo de estudo."
                 retry={() => q.activity.refetch()}
               />
-            ) : !studyTrend ? (
+            ) : !rangeBuckets ? (
               <PanelLoading />
             ) : (
               <WeeklyRhythmChart
-                days={studyTrend}
+                buckets={rangeBuckets}
+                unit={chartRange === "12m" ? "mês" : "dia"}
                 formatDuration={duration}
-                onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
+                onSelect={(key, trigger) =>
+                  chartRange === "12m"
+                    ? openMetric("week", trigger)
+                    : openMetric("today", trigger, key)
+                }
                 onOpenHistory={(trigger) => openMetric("week", trigger)}
               />
             )}
@@ -900,7 +929,11 @@ function StudentHome({ user }: { user: UserProfile }) {
             ) : !q.training.data ? (
               <PanelLoading />
             ) : (
-              <AnswerInsights rows={q.training.data} today={today} />
+              <AnswerInsights
+                rows={q.training.data}
+                today={today}
+                period={chartRange === "7d" ? "week" : chartRange === "30d" ? "month" : "months"}
+              />
             )}
           </div>
         </section>
@@ -975,7 +1008,7 @@ function Metric({
         <em>{detail}</em>
       </span>
       {trend && format && (
-        <Sparkline points={trend} color={`var(--sh2-${tone})`} format={format} label={label} />
+        <Sparkline points={trend} format={format} label={label} />
       )}
     </button>
   );

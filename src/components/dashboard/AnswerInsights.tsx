@@ -1,17 +1,18 @@
 import * as React from "react";
 import {
   Bar,
+  BarChart,
   CartesianGrid,
-  ComposedChart,
-  Line,
+  LabelList,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Percent, Target, XCircle } from "lucide-react";
+import { AlertTriangle, ArrowRight } from "lucide-react";
 import { ChartTooltipCard } from "@/components/dashboard/charts/ChartTooltip";
+import { ChartTable, ViewToggle } from "@/components/dashboard/charts/ChartTable";
 import { prefersReducedMotion } from "@/lib/dashboardTrends";
 import type { TrainingRecord } from "@/lib/studentDashboard";
 import { acreDateKey, acreHour } from "@/lib/acreTime";
@@ -25,12 +26,12 @@ const PERIODS = [
   ["months", "12 meses"],
   ["years", "Anos"],
 ] as const;
-type Period = (typeof PERIODS)[number][0];
+export type Period = (typeof PERIODS)[number][0];
 type Bucket = { label: string; acertos: number; erros: number };
 
-const GREEN = "var(--sh2-green)";
-const ROSE = "var(--sh2-rose)";
-const GOLD = "var(--sh2-gold)";
+/** Paleta validada (CVD): acerto em verde-água, erro em laranja. Nunca vermelho × verde. */
+const OK = "var(--viz-ok)";
+const ERR = "var(--viz-err)";
 /** Respostas com mais de 30 min de intervalo contam como sessões diferentes. */
 const SESSION_GAP_MS = 30 * 60_000;
 const MONTHS = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
@@ -122,13 +123,16 @@ function build(
   };
 }
 
-export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today: string }) {
-  const [period, setPeriod] = React.useState<Period>("week");
-  const [hidden, setHidden] = React.useState<Record<"acertos" | "erros" | "taxa", boolean>>({
-    acertos: false,
-    erros: false,
-    taxa: false,
-  });
+export function AnswerInsights({
+  rows,
+  today,
+  period,
+}: {
+  rows: TrainingRecord[];
+  today: string;
+  period: Period;
+}) {
+  const [view, setView] = React.useState<"chart" | "table">("chart");
   // Mesma regra do restante do painel: vale a primeira resposta de cada questão.
   const first = React.useMemo(() => {
     const seen = new Set<string>();
@@ -153,230 +157,217 @@ export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today:
   const eligible = React.useMemo(() => first.filter((row) => row.day <= today), [first, today]);
   const data = React.useMemo(() => build(eligible, period, today), [eligible, period, today]);
   const chartData = React.useMemo(
-    () =>
-      data.buckets.map((bucket) => {
-        const total = bucket.acertos + bucket.erros;
-        return { ...bucket, taxa: total ? Math.round((bucket.acertos / total) * 100) : null };
-      }),
+    () => data.buckets.map((b) => ({ ...b, total: b.acertos + b.erros })),
     [data.buckets],
+  );
+  const peakIndex = chartData.reduce(
+    (best, b, i) => (b.total > (chartData[best]?.total ?? 0) ? i : best),
+    0,
   );
   const rate = data.total ? Math.round((data.acertos / data.total) * 100) : null;
   const periodLabel = (PERIODS.find(([id]) => id === period)?.[1] ?? "").toLowerCase();
-  const toggle = (key: keyof typeof hidden) => setHidden((h) => ({ ...h, [key]: !h[key] }));
-  const series = [
-    { key: "acertos", label: "Acertos", color: GREEN },
-    { key: "erros", label: "Erros", color: ROSE },
-    { key: "taxa", label: "Aproveitamento", color: GOLD },
-  ] as const;
 
   return (
-    <div className="ncx-answers">
-      <div className="ncx-toolbar">
-        <dl className="ncx-stats ncx-stats--four" aria-label={`Resumo de ${periodLabel}`}>
-          <div data-tone="blue">
-            <dt>
-              <Target aria-hidden="true" /> Respondidas
-            </dt>
-            <dd>{data.total.toLocaleString("pt-BR")}</dd>
-          </div>
-          <div data-tone="green">
-            <dt>
-              <CheckCircle2 aria-hidden="true" /> Acertos
-            </dt>
-            <dd>{data.acertos.toLocaleString("pt-BR")}</dd>
-          </div>
-          <div data-tone="rose">
-            <dt>
-              <XCircle aria-hidden="true" /> Erros
-            </dt>
-            <dd>{data.erros.toLocaleString("pt-BR")}</dd>
-          </div>
-          <div data-tone="gold">
-            <dt>
-              <Percent aria-hidden="true" /> Aproveitamento
-            </dt>
-            <dd>{rate === null ? "—" : `${rate}%`}</dd>
-          </div>
-        </dl>
-      </div>
-      <div className="ncx-segmented ncx-segmented--wide" role="group" aria-label="Filtrar desempenho por período">
-        {PERIODS.map(([id, label]) => (
-          <button
-            key={id}
-            type="button"
-            aria-pressed={period === id}
-            onClick={() => setPeriod(id)}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
+    <div className="ncx-panel">
+      <dl className="ncx-summary ncx-summary--four">
+        <div>
+          <dt>Respondidas</dt>
+          <dd>{data.total.toLocaleString("pt-BR")}</dd>
+        </div>
+        <div>
+          <dt>
+            <i className="ncx-key" style={{ background: OK }} aria-hidden="true" />
+            Acertos
+          </dt>
+          <dd>{data.acertos.toLocaleString("pt-BR")}</dd>
+        </div>
+        <div>
+          <dt>
+            <i className="ncx-key" style={{ background: ERR }} aria-hidden="true" />
+            Erros
+          </dt>
+          <dd>{data.erros.toLocaleString("pt-BR")}</dd>
+        </div>
+        <div>
+          <dt>Aproveitamento</dt>
+          <dd>{rate === null ? "—" : `${rate}%`}</dd>
+        </div>
+      </dl>
+
       {data.total === 0 ? (
         <p className="ncx-empty">
           Sem respostas em {periodLabel}. Resolva questões no treinador para ver seus acertos e
           erros aqui.
         </p>
-      ) : (
-        <>
-          <figure className="ncx-plot">
-            <figcaption className="ncx-plot__head">
-              <span>{period === "session" ? "Questão a questão" : "Acertos, erros e aproveitamento"}</span>
-              <span className="ncx-legend" role="group" aria-label="Mostrar ou ocultar séries">
-                {series.map((item) => (
-                  <button
-                    key={item.key}
-                    type="button"
-                    aria-pressed={!hidden[item.key]}
-                    onClick={() => toggle(item.key)}
-                  >
-                    <i style={{ background: item.color }} aria-hidden="true" data-line={item.key === "taxa" || undefined} />
-                    {item.label}
-                  </button>
-                ))}
-              </span>
-            </figcaption>
-            <ResponsiveContainer width="100%" height={240}>
-              <ComposedChart
-                data={chartData}
-                margin={{ top: 10, right: 4, bottom: 0, left: -14 }}
-                barCategoryGap="26%"
+      ) : view === "chart" ? (
+        <figure className="ncx-figure">
+          <figcaption className="ncx-legend">
+            <span className="sr-only">Acertos e erros por período, {periodLabel}. </span>
+            <span>
+              <i style={{ background: OK }} aria-hidden="true" /> Acertos
+            </span>
+            <span>
+              <i style={{ background: ERR }} aria-hidden="true" /> Erros
+            </span>
+          </figcaption>
+          <ResponsiveContainer width="100%" height={232}>
+            <BarChart data={chartData} margin={{ top: 22, right: 4, bottom: 0, left: 0 }} barCategoryGap="30%">
+              <CartesianGrid vertical={false} stroke="var(--viz-grid)" strokeWidth={1} />
+              <XAxis
+                dataKey="label"
+                tickLine={false}
+                axisLine={{ stroke: "var(--viz-axis)" }}
+                tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
+                tickMargin={8}
+                minTickGap={10}
+              />
+              <YAxis
+                width={36}
+                allowDecimals={false}
+                tickCount={4}
+                tickLine={false}
+                axisLine={false}
+                tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
+              />
+              <Tooltip
+                cursor={{ fill: "var(--viz-hover)" }}
+                wrapperStyle={{ outline: "none" }}
+                content={({ active, payload, label }) => {
+                  const point = payload?.[0]?.payload as (Bucket & { total: number }) | undefined;
+                  if (!active || !point) return null;
+                  return (
+                    <ChartTooltipCard
+                      title={String(label)}
+                      rows={[
+                        { label: "Acertos", value: point.acertos, color: OK },
+                        { label: "Erros", value: point.erros, color: ERR },
+                        {
+                          label: "Aproveitamento",
+                          value: point.total
+                            ? `${Math.round((point.acertos / point.total) * 100)}%`
+                            : "—",
+                        },
+                      ]}
+                    />
+                  );
+                }}
+              />
+              <Bar
+                dataKey="acertos"
+                name="Acertos"
+                stackId="a"
+                fill={OK}
+                stroke="var(--viz-surface)"
+                strokeWidth={1}
+                maxBarSize={24}
+                isAnimationActive={!prefersReducedMotion()}
+                animationDuration={360}
+              />
+              <Bar
+                dataKey="erros"
+                name="Erros"
+                stackId="a"
+                fill={ERR}
+                stroke="var(--viz-surface)"
+                strokeWidth={1}
+                radius={[4, 4, 0, 0]}
+                maxBarSize={24}
+                isAnimationActive={!prefersReducedMotion()}
+                animationDuration={360}
               >
-                <CartesianGrid vertical={false} stroke="var(--border)" strokeDasharray="3 4" />
-                <XAxis
-                  dataKey="label"
-                  tickLine={false}
-                  axisLine={false}
-                  tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
-                  tickMargin={8}
-                  minTickGap={8}
-                />
-                <YAxis
-                  yAxisId="n"
-                  allowDecimals={false}
-                  tickLine={false}
-                  axisLine={false}
-                  tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
-                />
-                <YAxis
-                  yAxisId="p"
-                  orientation="right"
-                  domain={[0, 100]}
-                  ticks={[0, 50, 100]}
-                  hide={hidden.taxa}
-                  width={34}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(value: number) => `${value}%`}
-                  tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
-                />
-                <Tooltip
-                  cursor={{ fill: "var(--foreground)", fillOpacity: 0.05, radius: 8 }}
-                  wrapperStyle={{ outline: "none" }}
-                  content={({ active, payload, label }) => {
-                    const point = payload?.[0]?.payload as
-                      | (Bucket & { taxa: number | null })
-                      | undefined;
-                    if (!active || !point) return null;
-                    const total = point.acertos + point.erros;
+                <LabelList
+                  dataKey="total"
+                  position="top"
+                  content={(props) => {
+                    const { x, y, width, index } = props as {
+                      x?: number;
+                      y?: number;
+                      width?: number;
+                      index?: number;
+                    };
+                    const b = index === undefined ? undefined : chartData[index];
+                    if (!b || index !== peakIndex || !b.total) return null;
                     return (
-                      <ChartTooltipCard
-                        title={period === "session" ? `Questão ${label}` : String(label)}
-                        rows={[
-                          { label: "Acertos", value: point.acertos, color: GREEN },
-                          { label: "Erros", value: point.erros, color: ROSE },
-                          {
-                            label: "Aproveitamento",
-                            value: total ? `${point.taxa}%` : "—",
-                            color: GOLD,
-                          },
-                        ]}
-                      />
+                      <text
+                        x={Number(x ?? 0) + Number(width ?? 0) / 2}
+                        y={Number(y ?? 0) - 6}
+                        textAnchor="middle"
+                        className="ncx-direct-label"
+                      >
+                        {b.total}
+                      </text>
                     );
                   }}
                 />
-                {!hidden.acertos && (
-                  <Bar
-                    yAxisId="n"
-                    dataKey="acertos"
-                    name="Acertos"
-                    stackId="a"
-                    fill={GREEN}
-                    maxBarSize={40}
-                    radius={hidden.erros ? [6, 6, 2, 2] : [0, 0, 2, 2]}
-                    animationDuration={420}
-                    isAnimationActive={!prefersReducedMotion()}
-                  />
-                )}
-                {!hidden.erros && (
-                  <Bar
-                    yAxisId="n"
-                    dataKey="erros"
-                    name="Erros"
-                    stackId="a"
-                    fill={ROSE}
-                    maxBarSize={40}
-                    radius={[6, 6, 0, 0]}
-                    animationDuration={420}
-                    isAnimationActive={!prefersReducedMotion()}
-                  />
-                )}
-                {!hidden.taxa && period !== "session" && (
-                  <Line
-                    yAxisId="p"
-                    type="monotone"
-                    dataKey="taxa"
-                    name="Aproveitamento"
-                    stroke={GOLD}
-                    strokeWidth={2.25}
-                    connectNulls
-                    dot={{ r: 3, strokeWidth: 0, fill: GOLD }}
-                    activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--card)", fill: GOLD }}
-                    animationDuration={420}
-                    isAnimationActive={!prefersReducedMotion()}
-                  />
-                )}
-              </ComposedChart>
-            </ResponsiveContainer>
-          </figure>
-          <div className="ncx-subjects">
-            <h3>Por disciplina · {periodLabel}</h3>
-            <ul>
-              {data.subjects.slice(0, 5).map((entry) => {
-                const total = entry.acertos + entry.erros;
-                const pct = Math.round((entry.acertos / total) * 100);
-                return (
-                  <li key={entry.subject}>
-                    <Link
-                      to="/dashboard/question-trainer"
-                      search={{ subject: entry.subject }}
-                      aria-label={`Treinar ${entry.subject}: ${pct}% de acerto em ${total} questões`}
-                    >
-                      <span className="ncx-subjects__name" title={entry.subject}>
-                        {entry.subject}
-                      </span>
-                      <span className="ncx-subjects__meter" aria-hidden="true">
-                        <i style={{ width: `${pct}%` }} />
-                      </span>
-                      <span className="ncx-subjects__value">
-                        <b data-low={pct < 60 || undefined}>{pct}%</b>
-                        <small>
-                          {entry.acertos}/{total}
-                        </small>
-                      </span>
-                      <ArrowRight aria-hidden="true" />
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-            {data.subjects.length > 5 && (
-              <Link to="/dashboard/performance" className="ncx-link">
-                Mais {data.subjects.length - 5} disciplinas em Desempenho <ArrowRight aria-hidden="true" />
-              </Link>
-            )}
-          </div>
-        </>
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </figure>
+      ) : (
+        <ChartTable
+          caption={`Acertos e erros, ${periodLabel}`}
+          columns={["Período", "Acertos", "Erros", "Aproveitamento"]}
+          rows={[...chartData]
+            .filter((b) => b.total > 0)
+            .reverse()
+            .map((b) => [
+              b.label,
+              b.acertos,
+              b.erros,
+              `${Math.round((b.acertos / b.total) * 100)}%`,
+            ])}
+        />
       )}
+
+      {data.total > 0 && (
+        <section className="ncx-meters" aria-label={`Aproveitamento por disciplina, ${periodLabel}`}>
+          <h3>Por disciplina</h3>
+          <ul>
+            {data.subjects.slice(0, 5).map((entry) => {
+              const total = entry.acertos + entry.erros;
+              const pct = Math.round((entry.acertos / total) * 100);
+              const low = total >= 5 && pct < 60;
+              return (
+                <li key={entry.subject}>
+                  <Link
+                    to="/dashboard/question-trainer"
+                    search={{ subject: entry.subject }}
+                    aria-label={`Treinar ${entry.subject}: ${pct}% de acerto em ${total} questões${low ? ", precisa de reforço" : ""}`}
+                  >
+                    <span className="ncx-meters__name" title={entry.subject}>
+                      {entry.subject}
+                    </span>
+                    <span className="ncx-meters__bar" aria-hidden="true">
+                      <i style={{ width: `${pct}%` }} />
+                    </span>
+                    <span className="ncx-meters__value">
+                      <b>{pct}%</b>
+                      <small>
+                        {entry.acertos}/{total}
+                      </small>
+                    </span>
+                    {low ? (
+                      <span className="ncx-flag">
+                        <AlertTriangle aria-hidden="true" /> Reforçar
+                      </span>
+                    ) : (
+                      <ArrowRight className="ncx-meters__go" aria-hidden="true" />
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      <footer className="ncx-footer">
+        {data.total > 0 ? <ViewToggle view={view} onChange={setView} /> : <span />}
+        <Link to="/dashboard/performance" className="ncx-link">
+          {data.subjects.length > 5 ? `Todas as ${data.subjects.length} disciplinas` : "Desempenho completo"}{" "}
+          <ArrowRight aria-hidden="true" />
+        </Link>
+      </footer>
     </div>
   );
 }

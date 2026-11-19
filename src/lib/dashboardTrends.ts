@@ -81,3 +81,80 @@ export function dayLabel(date: string) {
 export function prefersReducedMotion() {
   return typeof window !== "undefined" && !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 }
+
+export type ChartRange = "7d" | "30d" | "12m";
+export const CHART_RANGES: ReadonlyArray<readonly [ChartRange, string]> = [
+  ["7d", "7 dias"],
+  ["30d", "30 dias"],
+  ["12m", "12 meses"],
+];
+export type StudyBucket = {
+  key: string;
+  /** Rótulo curto do eixo: "qui 12", "12/11" ou "nov". */
+  label: string;
+  /** Rótulo completo da dica: "quinta-feira, 12 de novembro". */
+  fullLabel: string;
+  seconds: number;
+  current: boolean;
+};
+const MONTHS_SHORT = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+
+/** Tempo ativo agrupado por dia (7 ou 30 dias) ou por mês (12 meses), no horário do Acre. */
+export function studyBuckets(
+  rows: ActivityRecord[],
+  live: number,
+  today: string,
+  range: ChartRange,
+): StudyBucket[] {
+  if (range !== "12m") {
+    const days = dailyStudySeries(rows, live, today, range === "7d" ? 7 : 30);
+    return days.map((d) => ({
+      key: d.date,
+      label: range === "7d" ? dayLabel(d.date) : `${d.date.slice(8, 10)}/${d.date.slice(5, 7)}`,
+      fullLabel: new Date(`${d.date}T12:00:00Z`).toLocaleDateString("pt-BR", {
+        weekday: "long",
+        day: "2-digit",
+        month: "long",
+        timeZone: "UTC",
+      }),
+      seconds: d.seconds,
+      current: d.date === today,
+    }));
+  }
+  const byMonth = new Map<string, number>();
+  for (const row of rows)
+    if (/^\d{4}-\d{2}-\d{2}$/.test(row.study_date) && Number.isFinite(row.active_seconds))
+      byMonth.set(
+        row.study_date.slice(0, 7),
+        (byMonth.get(row.study_date.slice(0, 7)) ?? 0) + Math.max(0, row.active_seconds),
+      );
+  // Hoje: soma o relógio ao vivo só se ele passar do registro sincronizado do dia.
+  const todaySynced = rows
+    .filter((r) => r.study_date === today && Number.isFinite(r.active_seconds))
+    .reduce((s, r) => s + Math.max(0, r.active_seconds), 0);
+  const extra = Math.max(0, (Number.isFinite(live) ? live : 0) - todaySynced);
+  byMonth.set(today.slice(0, 7), (byMonth.get(today.slice(0, 7)) ?? 0) + extra);
+  const year = Number(today.slice(0, 4));
+  const month = Number(today.slice(5, 7));
+  return Array.from({ length: 12 }, (_, i) => {
+    const date = new Date(Date.UTC(year, month - 12 + i, 1));
+    const key = date.toISOString().slice(0, 7);
+    const name = MONTHS_SHORT[date.getUTCMonth()] ?? "";
+    return {
+      key,
+      label: name,
+      fullLabel: date.toLocaleDateString("pt-BR", { month: "long", year: "numeric", timeZone: "UTC" }),
+      seconds: byMonth.get(key) ?? 0,
+      current: key === today.slice(0, 7),
+    };
+  });
+}
+
+/** Marcas do eixo de tempo em minutos, em passos redondos (15 min, 30 min, 1 h, 2 h…), até 5 marcas. */
+export function minuteTicks(maxMinutes: number) {
+  const steps = [15, 30, 60, 90, 120, 180, 240, 360, 600, 1200, 3000, 6000];
+  const top = Math.max(1, maxMinutes);
+  const step = steps.find((s) => Math.ceil(top / s) <= 4) ?? Math.ceil(top / 4);
+  const count = Math.max(1, Math.ceil(top / step));
+  return Array.from({ length: count + 1 }, (_, i) => i * step);
+}
