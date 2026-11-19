@@ -1,6 +1,6 @@
 import * as React from "react";
 import {
-  Area,
+  Bar,
   CartesianGrid,
   ComposedChart,
   Line,
@@ -200,19 +200,33 @@ export function AnswerInsights({
           <figcaption className="ncx-legend">
             <span className="sr-only">Acertos e erros por período, {periodLabel}. </span>
             <span>
-              <i data-line style={{ background: OK }} aria-hidden="true" /> Acertos
+              <i data-line style={{ background: "var(--viz-total)" }} aria-hidden="true" /> Respondidas
             </span>
             <span>
-              <i data-line style={{ background: ERR }} aria-hidden="true" /> Erros
+              <i style={{ background: OK }} aria-hidden="true" /> Acertos
+            </span>
+            <span>
+              <i style={{ background: ERR }} aria-hidden="true" /> Erros
             </span>
           </figcaption>
-          <ResponsiveContainer width="100%" height={232}>
-            <ComposedChart data={chartData} margin={{ top: 12, right: 8, bottom: 0, left: 0 }}>
+          <ResponsiveContainer width="100%" height={196}>
+            <ComposedChart data={chartData} margin={{ top: 8, right: 6, bottom: 0, left: 0 }} barCategoryGap="28%">
               <defs>
-                <linearGradient id="ncx-ok-fill" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor={OK} stopOpacity={0.18} />
-                  <stop offset="100%" stopColor={OK} stopOpacity={0.01} />
+                <linearGradient id="ncx-ok-bar" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor={OK} stopOpacity={0.95} />
+                  <stop offset="100%" stopColor={OK} stopOpacity={0.45} />
                 </linearGradient>
+                <linearGradient id="ncx-err-bar" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor={ERR} stopOpacity={0.95} />
+                  <stop offset="100%" stopColor={ERR} stopOpacity={0.6} />
+                </linearGradient>
+                <filter id="ncx-glow-2" x="-20%" y="-50%" width="140%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="b" />
+                  <feMerge>
+                    <feMergeNode in="b" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
               </defs>
               <CartesianGrid vertical={false} stroke="var(--viz-grid)" strokeWidth={1} />
               <XAxis
@@ -220,12 +234,11 @@ export function AnswerInsights({
                 tickLine={false}
                 axisLine={{ stroke: "var(--viz-axis)" }}
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
-                tickMargin={8}
+                tickMargin={6}
                 minTickGap={10}
-                padding={{ left: 8, right: 8 }}
               />
               <YAxis
-                width={36}
+                width={34}
                 allowDecimals={false}
                 tickCount={4}
                 tickLine={false}
@@ -233,7 +246,7 @@ export function AnswerInsights({
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
               />
               <Tooltip
-                cursor={{ stroke: "var(--viz-axis)", strokeWidth: 1 }}
+                cursor={{ fill: "var(--viz-hover)" }}
                 wrapperStyle={{ outline: "none" }}
                 content={({ active, payload, label }) => {
                   const point = payload?.[0]?.payload as (Bucket & { total: number }) | undefined;
@@ -242,6 +255,7 @@ export function AnswerInsights({
                     <ChartTooltipCard
                       title={String(label)}
                       rows={[
+                        { label: "Respondidas", value: point.total, color: "var(--viz-total)" },
                         { label: "Acertos", value: point.acertos, color: OK },
                         { label: "Erros", value: point.erros, color: ERR },
                         {
@@ -253,28 +267,40 @@ export function AnswerInsights({
                   );
                 }}
               />
-              <Area
-                type="monotone"
+              <Bar
                 dataKey="acertos"
                 name="Acertos"
-                stroke={OK}
-                strokeWidth={2}
-                fill="url(#ncx-ok-fill)"
-                dot={chartData.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: OK } : false}
-                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: OK }}
+                stackId="a"
+                fill="url(#ncx-ok-bar)"
+                stroke="var(--viz-surface)"
+                strokeWidth={1}
+                maxBarSize={18}
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={480}
+                animationDuration={420}
+              />
+              <Bar
+                dataKey="erros"
+                name="Erros"
+                stackId="a"
+                fill="url(#ncx-err-bar)"
+                stroke="var(--viz-surface)"
+                strokeWidth={1}
+                radius={[4, 4, 0, 0]}
+                maxBarSize={18}
+                isAnimationActive={!prefersReducedMotion()}
+                animationDuration={420}
               />
               <Line
                 type="monotone"
-                dataKey="erros"
-                name="Erros"
-                stroke={ERR}
+                dataKey="total"
+                name="Respondidas"
+                stroke="var(--viz-total)"
                 strokeWidth={2}
-                dot={chartData.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: ERR } : false}
-                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: ERR }}
+                dot={chartData.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-total)" } : false}
+                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-total)" }}
+                filter="url(#ncx-glow-2)"
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={480}
+                animationDuration={600}
               />
             </ComposedChart>
           </ResponsiveContainer>

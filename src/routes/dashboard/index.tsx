@@ -1,5 +1,5 @@
 import "@/styles/student-home-lean.css";
-import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
+import { EditalCommandCenter } from "@/components/dashboard/EditalCommandCenter";
 import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
 import { AnswerInsights } from "@/components/dashboard/AnswerInsights";
 import "@/styles/student-desk.css";
@@ -65,7 +65,6 @@ import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
-import { PcAcreEditalSpotlight } from "@/components/dashboard/PcAcreEditalSpotlight";
 import type { UserProfile } from "@/types";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -911,9 +910,8 @@ function StudentHome({ user }: { user: UserProfile }) {
 
       <section className="sh2-resources" aria-labelledby="dashboard-resources-title">
         <SectionLabel step={5} id="dashboard-resources-title" title="Editais e acervo" />
-        <PcAcreEditalSpotlight />
+        <EditalCommandCenter />
         <PcprExamSpotlight compact />
-        <PlatformQuestionCounts compact />
       </section>
       <details className="student-home__data-note">
         <summary>Como este painel calcula seus indicadores</summary>
