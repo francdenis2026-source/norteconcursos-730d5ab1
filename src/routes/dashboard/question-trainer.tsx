@@ -1623,7 +1623,7 @@ function QuestionTrainer() {
               </Button>
             )}
           </div>
-          {answered && (
+          {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
             <div
               className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4"
               role="region"
@@ -1644,12 +1644,7 @@ function QuestionTrainer() {
                   Resposta correta: {labelFor(question.answer)}
                 </p>
               )}
-              {isPlaceholderExplanation(explanation.main) ? (
-                <p className="text-sm leading-6 text-muted-foreground">
-                  Esta questão ainda não tem um comentário detalhado. Consulte os materiais
-                  relacionados.
-                </p>
-              ) : (
+              {isPlaceholderExplanation(explanation.main) ? null : (
                 <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">{explanation.main}</p>
               )}
               {explanation.example && (
@@ -1675,7 +1670,7 @@ function QuestionTrainer() {
           )}
         </CardContent>
       </Card>
-      {answered && (
+      {answered && !isPlaceholderExplanation(explanation.main) && (
         <details
           className="trainer-review-community"
           aria-label="Desempenho e comentários da questão"
@@ -2533,7 +2528,13 @@ function QtFitViewport({
           if (box.height > 0) tail += box.height + 12;
         }
       }
-      const h = Math.max(440, Math.floor(window.innerHeight - top - stripH - tail - 10));
+      const scroller = shell.closest<HTMLElement>(".app-content");
+      let bottom = window.innerHeight - stripH;
+      if (scroller) {
+        const pad = parseFloat(getComputedStyle(scroller).paddingBottom) || 0;
+        bottom = Math.min(bottom, scroller.getBoundingClientRect().bottom - pad);
+      }
+      const h = Math.max(440, Math.floor(bottom - top - tail - 10));
       shell.style.setProperty(varName, `${h}px`);
     };
     fit();
