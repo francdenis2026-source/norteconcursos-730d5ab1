@@ -2545,11 +2545,18 @@ function QtFitViewport({
     const pullUp = () => {
       const app = shell.closest<HTMLElement>(".app-shell");
       if (!app || app.getAttribute("data-focus-mode") !== "true" || root !== ".qx") return;
+      // Reserva inferior do painel (faixa do rodapé): em tela cheia o cartão vai até a faixa.
+      if (!shell.hasAttribute("data-qx-bottom-free")) {
+        shell.setAttribute("data-qx-bottom-free", "");
+        undo.push(() => shell.removeAttribute("data-qx-bottom-free"));
+        for (let el: HTMLElement | null = shell; el && el !== app; el = el.parentElement) {
+          if (parseFloat(getComputedStyle(el).paddingBottom) > 0) zero(el, "padding-bottom");
+        }
+      }
       if (shell.getBoundingClientRect().top < 16) return;
       for (let el: HTMLElement | null = shell; el && el !== app; el = el.parentElement) {
         const cs = getComputedStyle(el);
         if (parseFloat(cs.paddingTop) > 0) zero(el, "padding-top");
-        if (parseFloat(cs.paddingBottom) > 0) zero(el, "padding-bottom");
         if (parseFloat(cs.marginTop) > 0) zero(el, "margin-top");
         for (let sib = el.previousElementSibling as HTMLElement | null; sib; sib = sib.previousElementSibling as HTMLElement | null) {
           const sc = getComputedStyle(sib);
