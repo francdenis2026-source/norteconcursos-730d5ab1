@@ -110,7 +110,7 @@
   border: 1px solid var(--ecc-line);
   border-radius: 0.75rem;
   color: var(--ecc-ink);
-  background: rgb(10 14 22 / 50%);
+  background: rgb(8 11 16 / 82%);
   backdrop-filter: blur(8px);
   text-decoration: none;
   transition: transform 180ms var(--ecc-ease), border-color 180ms var(--ecc-ease), background-color 180ms var(--ecc-ease), box-shadow 180ms var(--ecc-ease);

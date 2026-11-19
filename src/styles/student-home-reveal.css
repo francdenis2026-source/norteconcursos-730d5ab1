@@ -174,3 +174,31 @@ html body .app-shell[data-area] .student-home.sh2 .resume-session__actions {
   justify-content: flex-end !important;
   row-gap: 6px !important;
 }
+/* "Catálogo completo" (link contornado ao lado de "Treinar agora"):
+   mesma altura do botão principal, mas em contorno. */
+html body .app-shell[data-area] .student-home.sh2 .ecc-bank__more {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 2.5rem !important;
+  padding: 0.5rem 1rem !important;
+  border: 1px solid color-mix(in oklab, var(--brass, #d9a441) 45%, var(--nv-line, var(--border))) !important;
+  border-radius: 10px !important;
+  color: var(--brass, #d9a441) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+/* ---------------------------------------------------------------------
+   8) "Por disciplina": o nome da disciplina usava a mesma força visual
+      do valor/título ao lado, sem diferenciar rótulo de dado.
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 .ncx-meters__name {
+  color: var(--nv-dim, var(--muted-foreground)) !important;
+  font-weight: 500 !important;
+}
+html body .app-shell[data-area] .student-home.sh2 .ncx-meters__value b {
+  color: var(--foreground) !important;
+  font-weight: 700 !important;
+}
