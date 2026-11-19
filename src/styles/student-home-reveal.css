@@ -42,3 +42,55 @@ html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card):hover
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ---------------------------------------------------------------------
+   3) Alturas: a 3ª coluna de "Hoje" (Continue sua leitura + Treino em
+      andamento) e os dois cartões de "Ritmo e respostas" ficavam com
+      alturas diferentes dos vizinhos. O grid já estica o cartão (stretch),
+      mas o conteúdo interno não distribuía essa altura extra.
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 .sh2-board > .sh2-stack {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-board > .sh2-stack > :last-child {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-pair > .sh2-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ---------------------------------------------------------------------
+   4) Paleta: a cor por categoria (ícone, número) continua, mas a borda
+      superior e o brilho de fundo do cartão viravam um arco-íris sem
+      hierarquia. Uma única cor de destaque (dourado) no contorno dos
+      cartões estruturais; a cor da categoria some só no ícone/número e
+      nos indicadores do topo (onde funciona como legenda).
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 .sh2-card::before {
+  background: var(--brass, #d9a441) !important;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-card {
+  background:
+    radial-gradient(120% 90% at 0% 0%, color-mix(in oklab, var(--brass, #d9a441) 10%, transparent), transparent 62%),
+    var(--nv-card, var(--card)) !important;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-card:hover {
+  border-color: color-mix(in oklab, var(--brass, #d9a441) 55%, transparent) !important;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--brass, #d9a441) 18%, transparent), 0 12px 32px -18px var(--brass, #d9a441) !important;
+}
+
+/* ---------------------------------------------------------------------
+   5) Gráfico de Acertos e erros: a linha de Aproveitamento (0–100%) e as
+      barras (contagem) são dois NvChart empilhados; o espaço entre eles
+      era pequeno demais e os dois eixos pareciam um só, confuso.
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 .nv-figure {
+  gap: 0.875rem;
+}
