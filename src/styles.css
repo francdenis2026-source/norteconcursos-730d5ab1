@@ -17383,3 +17383,9 @@ input[type="datetime-local"]::-webkit-date-and-time-value {
   .study-table :is(th, td) { padding: 8px 10px; overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto; }
   .study-table th { letter-spacing: 0.04em; }
 }
+
+/* Treinador de questões: no celular a sessão usa toda a largura, em uma coluna. */
+@media (max-width: 767px) {
+  .trainer-session-layout { display: flex !important; flex-direction: column; gap: 12px; width: 100%; max-width: 100%; }
+  .trainer-session-layout > * { width: 100% !important; max-width: 100% !important; min-width: 0; }
+}

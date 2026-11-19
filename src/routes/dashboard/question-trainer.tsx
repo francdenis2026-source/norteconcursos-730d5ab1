@@ -740,6 +740,12 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
+  // Durante o treino, a área da questão ocupa a tela inteira (sem menu lateral), sobretudo no celular.
+  React.useEffect(() => {
+    if (!started) return;
+    document.dispatchEvent(new Event("norte:workspace-enter"));
+    return () => { document.dispatchEvent(new Event("norte:workspace-exit")); };
+  }, [started]);
   // Veio do cronograma com ?go=1: começa direto, com 10 questões do assunto, assim que houver questões.
   React.useEffect(() => {
     if (!autoStart.current || loading || started || pool.length === 0) return;
