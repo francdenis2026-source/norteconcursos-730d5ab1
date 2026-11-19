@@ -228,3 +228,36 @@ html body .app-shell[data-area] #dashboard-content#dashboard-content .ecc .ecc-b
 }
 .ecc-bank__more:hover { border-color: var(--ecc-gold); }
 html body .app-shell[data-area] #dashboard-content#dashboard-content .ecc .ecc-bank__more { color: var(--ecc-ink) !important; }
+
+/* Ícones das ações: cor e contraste garantidos acima das regras globais antigas */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action__icon {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  border: 1px solid color-mix(in oklab, var(--tone) 60%, transparent) !important;
+  border-radius: 0.625rem !important;
+  color: var(--tone) !important;
+  background: linear-gradient(145deg, color-mix(in oklab, var(--tone) 30%, transparent), color-mix(in oklab, var(--tone) 10%, transparent)) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%), 0 6px 16px -10px var(--tone) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action__icon svg {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  color: var(--tone) !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  fill: none !important;
+  filter: drop-shadow(0 0 6px color-mix(in oklab, var(--tone) 55%, transparent));
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action:hover .ecc-action__icon {
+  color: oklch(0.18 0.02 260) !important;
+  background: var(--tone) !important;
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--tone) 20%, transparent), 0 10px 22px -10px var(--tone) !important;
+  transform: scale(1.08) rotate(-4deg);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action:hover .ecc-action__icon svg { color: oklch(0.18 0.02 260) !important; filter: none; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action__go { color: rgb(243 245 247 / 55%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action:hover .ecc-action__go { color: var(--tone) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action { border-color: color-mix(in oklab, var(--tone) 22%, rgb(255 255 255 / 12%)) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action:hover { border-color: color-mix(in oklab, var(--tone) 65%, transparent) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action[data-primary] .ecc-action__icon { color: oklch(0.2 0.03 70) !important; background: var(--tone) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action[data-primary] .ecc-action__icon svg { color: oklch(0.2 0.03 70) !important; filter: none; }
