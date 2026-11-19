@@ -2561,6 +2561,23 @@ function QtFitViewport({
         }
       }
     };
+    // Menu superior fixo: depois de tirar o respiro, devolve exatamente a altura do menu para a janela
+    // não ficar por baixo dele (a primeira linha era cortada).
+    const clearFixedTopbar = () => {
+      const app = shell.closest<HTMLElement>(".app-shell");
+      if (!app || app.getAttribute("data-focus-mode") !== "true" || root !== ".qx") return;
+      const bar = app.querySelector<HTMLElement>(".app-topbar");
+      if (!bar) return;
+      const pos = getComputedStyle(bar).position;
+      if (pos !== "fixed" && pos !== "sticky") return;
+      const barBottom = bar.getBoundingClientRect().bottom;
+      const holder = shell.parentElement;
+      if (!holder || shell.getBoundingClientRect().top >= barBottom + 2) return;
+      const prev = holder.style.getPropertyValue("padding-top");
+      const prio = holder.style.getPropertyPriority("padding-top");
+      holder.style.setProperty("padding-top", `${Math.ceil(barBottom) + 6}px`, "important");
+      undo.push(() => (prev ? holder.style.setProperty("padding-top", prev, prio) : holder.style.removeProperty("padding-top")));
+    };
     // A tela da questão em tela cheia cabe inteira; qualquer rolagem herdada da tela anterior
     // (ex.: a montagem rolada até o botão) empurrava o topo da janela para baixo do menu.
     const resetScroll = () => {
@@ -2573,6 +2590,7 @@ function QtFitViewport({
     };
     const fit = () => {
       pullUp();
+      clearFixedTopbar();
       resetScroll();
       const card = target === root ? shell : shell.querySelector<HTMLElement>(target);
       if (!card) return;
@@ -2607,7 +2625,7 @@ function QtFitViewport({
     window.addEventListener("resize", fit);
     document.addEventListener("fullscreenchange", fit);
     return () => {
-      undo.splice(0).forEach((fn) => fn());
+      undo.splice(0).reverse().forEach((fn) => fn());
       cancelAnimationFrame(raf);
       window.clearTimeout(late);
       ro?.disconnect();
