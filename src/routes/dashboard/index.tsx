@@ -97,7 +97,7 @@ const formatExamDate = (value?: string | null) => {
 const destinations = [
   {
     to: "/dashboard/cronograma",
-    image: "/media/hero/journey.webp",
+    image: "/media/hero/card-agenda.webp",
     title: "Agenda de estudos",
     text: "Organize seu dia de estudo",
     tone: "gold",
@@ -105,7 +105,7 @@ const destinations = [
   },
   {
     to: "/dashboard/question-trainer",
-    image: "/media/hero/toolkit.webp",
+    image: "/media/hero/card-treinar.webp",
     title: "Treinar questões",
     tone: "teal",
     text: "Pratique e revise seus erros",
@@ -113,7 +113,7 @@ const destinations = [
   },
   {
     to: "/dashboard/material",
-    image: "/media/hero/preparacao-n-cenas.webp",
+    image: "/media/hero/card-material.webp",
     title: "Material de estudo",
     tone: "gold",
     text: "Leis, teoria e disciplinas",
@@ -121,7 +121,7 @@ const destinations = [
   },
   {
     to: "/dashboard/edital",
-    image: "/media/hero/pcac-capa.webp",
+    image: "/media/hero/card-edital.webp",
     title: "Edital e disciplinas",
     tone: "gold",
     text: "Estude o que será cobrado",
@@ -129,7 +129,7 @@ const destinations = [
   },
   {
     to: "/dashboard/mock-exams",
-    image: "/media/hero/plano-premium-equipe.webp",
+    image: "/media/hero/card-simulados.webp",
     title: "Simulados",
     tone: "gold",
     text: "Prepare seu ritmo de prova",
@@ -137,7 +137,7 @@ const destinations = [
   },
   {
     to: "/dashboard/ranking",
-    image: "/media/hero/careers-team.webp",
+    image: "/media/hero/card-ranking.webp",
     title: "Ranking",
     tone: "gold",
     text: "Veja sua posição entre os alunos",

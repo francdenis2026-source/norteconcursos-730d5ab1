@@ -460,3 +460,8 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .stude
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest > .student-hub__acre-flag:empty { width: 34px !important; height: 24px !important; flex: none; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .student-home__data-note { min-height: 0 !important; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .student-home__data-note summary { min-height: 0 !important; padding: 0 !important; }
+/* Fotos reais dos atalhos: um pouco mais de luz e o degradê só sob o texto */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile img { filter: saturate(1.05) brightness(1.02); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile::after {
+  background: linear-gradient(180deg, transparent 30%, rgb(8 11 14 / 55%) 62%, rgb(8 11 14 / 92%) 100%) !important;
+}
