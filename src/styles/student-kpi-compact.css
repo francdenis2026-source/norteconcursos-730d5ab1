@@ -49,3 +49,50 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .student-home.sh
 @container (max-width: 15.5rem) {
   .sh2-kpi > .nv-spark { display: none !important; }
 }
+
+/*
+  Acesso rápido: a legenda vira uma placa de vidro escuro na base da foto, em vez de texto solto
+  sobre a imagem. Ícone | título + descrição, com um filete da cor do atalho no topo da placa.
+  A foto fica livre acima; o texto tem contraste alto em qualquer imagem.
+*/
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile { min-height: 6.75rem; }
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile::after {
+  background: linear-gradient(180deg, transparent 35%, rgb(8 11 14 / 45%) 100%) !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile__body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: "icon title" "icon sub";
+  align-items: center;
+  column-gap: 0.625rem;
+  row-gap: 1px;
+  width: 100%;
+  padding: 0.5rem 0.625rem 0.5rem;
+  border-top: 2px solid var(--tone);
+  background: rgb(9 13 19 / 74%);
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile__icon { grid-area: icon; width: 2rem; height: 2rem; margin: 0; }
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile strong {
+  grid-area: title;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: #fff !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile small {
+  grid-area: sub;
+  font-size: 0.75rem !important;
+  line-height: 1.25;
+  color: rgb(255 255 255 / 80%) !important;
+}
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile:hover .ncx-tile__body { background: rgb(9 13 19 / 82%); }
+@supports not (backdrop-filter: blur(1px)) {
+  html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile__body { background: rgb(9 13 19 / 92%); }
+}
