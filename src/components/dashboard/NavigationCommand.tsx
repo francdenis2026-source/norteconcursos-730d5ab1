@@ -70,13 +70,13 @@ export function NavigationCommand({ open, onOpenChange, items, userId, pathname,
           <div className="nav-command__hero-copy">
             <span><ShieldCheck size={14} aria-hidden="true" /> Central de navegação</span>
             <DialogTitle>Navegue com direção.</DialogTitle>
-            <DialogDescription>Encontre conteúdo, ferramentas e seu próximo passo.</DialogDescription>
+            <DialogDescription>Encontre conteúdo, ferramentas e o próximo passo dos seus estudos.</DialogDescription>
           </div>
           <DialogClose asChild><button type="button" className="nav-command__close" aria-label="Fechar busca"><X size={18} /></button></DialogClose>
         </header>
         <Command shouldFilter={false} className="nav-command" label="Áreas da plataforma">
           <div className="nav-command__search">
-            <CommandInput ref={input} value={query} onValueChange={setQuery} placeholder="Busque: edital, questões…" aria-label="Buscar área, ferramenta ou conteúdo" />
+            <CommandInput ref={input} value={query} onValueChange={setQuery} placeholder="Buscar edital, questões, provas…" aria-label="Buscar área, ferramenta ou conteúdo" />
             {query && <button type="button" onClick={() => { setQuery(''); input.current?.focus(); }} aria-label="Limpar termo da busca"><X size={16} /></button>}
           </div>
           <div className="nav-command__body">
@@ -88,7 +88,7 @@ export function NavigationCommand({ open, onOpenChange, items, userId, pathname,
               </button>)}
             </nav>
             <div className="nav-command__results">
-              <div className="nav-command__result-meta"><span>{query.trim() ? 'Resultados da busca' : group === 'all' ? 'Encontre seu próximo passo' : studentGroupLabel(group)}</span><span aria-live="polite" role="status">{filtered.length} {filtered.length === 1 ? 'área' : 'áreas'}</span></div>
+              <div className="nav-command__result-meta"><span>{query.trim() ? 'Resultados da busca' : group === 'all' ? 'Sugestões para você' : studentGroupLabel(group)}</span><span aria-live="polite" role="status">{filtered.length} {filtered.length === 1 ? 'área' : 'áreas'}</span></div>
               <CommandList className="nav-command__list">
                 <CommandEmpty><SearchX size={28} aria-hidden="true" /><strong>Nenhum destino encontrado</strong><span>Tente outro termo ou escolha uma categoria.</span><button type="button" onClick={clear}>Limpar busca e filtros</button></CommandEmpty>
                 {recent.length > 0 && <CommandGroup heading={<span><History size={12} aria-hidden="true" /> Acessos recentes</span>}>{recent.map(row)}</CommandGroup>}
