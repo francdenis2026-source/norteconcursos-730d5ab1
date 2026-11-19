@@ -10,7 +10,20 @@ import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
 import { createFileRoute, Link, useBlocker, useNavigate } from "@tanstack/react-router";
 import {
   ArrowRight,
+  BookOpen,
   Bookmark,
+  Briefcase,
+  CalendarDays,
+  Clock3,
+  Database,
+  FileText,
+  Gauge,
+  Landmark,
+  Layers,
+  MapPin,
+  Shuffle,
+  Tags,
+  Trophy,
   BookmarkCheck,
   BookOpenCheck,
   BrainCircuit,
@@ -123,6 +136,7 @@ import "@/styles/question-trainer-viewport.css";
 import "@/styles/trainer-mobile-refine.css";
 import "@/styles/trainer-paused.css";
 import "@/styles/trainer-exam-focus.css";
+import "@/styles/trainer-setup-studio.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
 import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
 import {
@@ -2038,60 +2052,83 @@ function TrainerSetup({
     setters.setRelevance("all");
     setters.setIncludeAnswered(false);
   };
+  const difficultyLabels: Record<string, string> = { fácil: "Fácil", média: "Média", difícil: "Difícil" };
+  const sourceLabels: Record<string, string> = {
+    official: "Provas oficiais",
+    curated: "Questões autorais",
+    personal: "Meu caderno",
+  };
+  const examLabels = Object.fromEntries(choices.exams);
+  const active = (
+    [
+      ["Edital", values.relevance, "PC-AC 2026 · Oficial Investigador", () => setters.setRelevance("all")],
+      ["Banca", values.board, values.board, () => setters.setBoard("all")],
+      ["Disciplina", values.subject, values.subject, () => setters.setSubject("all")],
+      ["Assunto", values.topic, topicFilterLabel(values.topic), () => setters.setTopic("all")],
+      ["Dificuldade", values.difficulty, difficultyLabels[values.difficulty], () => setters.setDifficulty("all")],
+      ["Concurso", values.contest, values.contest, () => setters.setContest("all")],
+      ["Cargo", values.career, values.career, () => setters.setCareer("all")],
+      ["Estado", values.state, values.state, () => setters.setState("all")],
+      ["Categoria", values.category, values.category, () => setters.setCategory("all")],
+      ["Ano", values.year, values.year, () => setters.setYear("all")],
+      ["Prova", values.appliedExam, examLabels[values.appliedExam] ?? values.appliedExam, () => setters.setAppliedExam("all")],
+      ["Origem", values.source, sourceLabels[values.source], () => setters.setSource("all")],
+      ["Explicação", values.reviewed, "Com explicação didática", () => setters.setReviewed("all")],
+    ] as Array<[string, string, string | undefined, () => void]>
+  ).filter(([, value]) => value !== "all");
+  const moreActive = [
+    values.contest,
+    values.career,
+    values.state,
+    values.category,
+    values.year,
+    values.appliedExam,
+    values.source,
+    values.reviewed,
+  ].filter((v) => v !== "all").length + (values.includeAnswered ? 1 : 0);
+  const quantities = trainerQuestionQuantityOptions(available);
+  const minutes = Math.max(1, Math.round(usedCount * 2));
   return (
-    <div className="trainer-setup qt2 space-y-2 pb-4 animate-in fade-in duration-300 sm:space-y-3 sm:pb-6">
-      <Card className="trainer-setup__unified command-panel overflow-hidden border border-border/80 shadow-lg">
-        <CardContent className="p-3 sm:p-4 md:p-5">
-          <header className="qt2-hero">
-            <img src="/media/hero/toolkit.webp" alt="" aria-hidden="true" decoding="async" />
-            <div className="qt2-hero__copy">
-              <small>Treinamento de precisão</small>
-              <h1>Monte sua sessão de questões</h1>
-              <p aria-label="Resumo das questões">
-                <strong>{total.toLocaleString("pt-BR")}</strong> ativas ·{" "}
-                <strong>{available.toLocaleString("pt-BR")}</strong> na seleção
-              </p>
-            </div>
-            <nav className="qt2-quick" aria-label="Acesso rápido">
-              <Link
-                to="/dashboard/question-trainer"
-                search={{ mode: "reforco" } as never}
-                data-tone="rose"
-              >
-                <RotateCcw aria-hidden="true" /> Revisar erros
-              </Link>
-              <Link to="/dashboard/notebooks" data-tone="violet">
-                <Bookmark aria-hidden="true" /> Cadernos
-              </Link>
-              <Link to="/dashboard/mock-exams" data-tone="gold">
-                <Target aria-hidden="true" /> Simulados
-              </Link>
-              <Link to="/dashboard/question-bank" data-tone="blue">
-                <ListOrdered aria-hidden="true" /> Banco de questões
-              </Link>
-              <Link to="/dashboard/performance" data-tone="green">
-                <TrendingUp aria-hidden="true" /> Desempenho
-              </Link>
-            </nav>
-          </header>
-          {values.area !== "all" && (
-            <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
-              Filtro do seu cronograma: {values.area}
-              <button
-                type="button"
-                className="underline"
-                onClick={() => {
-                  setters.setArea("all");
-                  setters.setTopic("all");
-                }}
-              >
-                limpar
-              </button>
+    <div className="trainer-setup qt2 qt3 pb-4 animate-in fade-in duration-300 sm:pb-6">
+      <div className="qt3-main">
+        <header className="qt3-hero">
+          <img src="/media/hero/toolkit.webp" alt="" aria-hidden="true" decoding="async" />
+          <div className="qt3-hero__copy">
+            <small>Treinamento de precisão</small>
+            <h1>Monte sua sessão de questões</h1>
+            <p aria-label="Resumo das questões">
+              <span>
+                <b>{total.toLocaleString("pt-BR")}</b> ativas
+              </span>
+              <span>
+                <b>{available.toLocaleString("pt-BR")}</b> na seleção
+              </span>
             </p>
-          )}
-          {focus && <ExamFocusPicker {...focus} />}
-          <div className="qt2-filters grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
+          </div>
+        </header>
+        {values.area !== "all" && (
+          <p className="qt3-note">
+            Filtro do seu cronograma: <b>{values.area}</b>
+            <button
+              type="button"
+              onClick={() => {
+                setters.setArea("all");
+                setters.setTopic("all");
+              }}
+            >
+              limpar
+            </button>
+          </p>
+        )}
+        {focus && <ExamFocusPicker {...focus} />}
+
+        <section className="qt3-panel" aria-labelledby="qt3-filters-title">
+          <h2 id="qt3-filters-title" className="qt3-panel__title">
+            <Settings2 aria-hidden="true" /> O que você quer treinar
+          </h2>
+          <div className="qt3-grid">
             <TrainerFilter
+              icon={Target}
               label="Aderência ao edital"
               value={values.relevance}
               setValue={setters.setRelevance}
@@ -2100,6 +2137,7 @@ function TrainerSetup({
               allLabel="Todas as questões"
             />
             <TrainerFilter
+              icon={Landmark}
               counts={facets.counts["board"]}
               allCount={facets.totals["board"]}
               label="Banca"
@@ -2108,6 +2146,7 @@ function TrainerSetup({
               options={choices.boards}
             />
             <TrainerFilter
+              icon={BookOpen}
               counts={facets.counts["subject"]}
               allCount={facets.totals["subject"]}
               label="Disciplina"
@@ -2116,184 +2155,199 @@ function TrainerSetup({
               options={choices.subjects}
             />
             <TrainerFilter
+              icon={Tags}
               counts={facets.counts["topic"]}
               allCount={facets.totals["topic"]}
               label="Assunto"
               value={values.topic}
               setValue={setters.setTopic}
               options={choices.topics}
-              labels={Object.fromEntries(
-                choices.topics.map((value) => [value, topicFilterLabel(value)]),
-              )}
+              labels={Object.fromEntries(choices.topics.map((value) => [value, topicFilterLabel(value)]))}
               allLabel="Todos os assuntos"
             />
-            <TrainerFilter
-              counts={facets.counts["difficulty"]}
-              allCount={facets.totals["difficulty"]}
-              label="Dificuldade"
-              value={values.difficulty}
-              setValue={setters.setDifficulty}
-              options={["fácil", "média", "difícil"]}
-              labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
-            />
-            <TrainerFilter
-              label="Quantidade"
-              value={values.limit}
-              setValue={setters.setLimit}
-              options={trainerQuestionQuantityOptions(available)}
-              allLabel="Todas as questões"
-              allCount={available}
-              hideAll={available <= 50}
-              disabled={!available}
-              placeholder="Sem questões disponíveis"
-            />
-            <label className="space-y-1">
-              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
-                Ordem das questões
-              </span>
-              <Select
-                value={values.orderMode}
-                onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
-              >
-                <SelectTrigger className="h-9 bg-background sm:h-10">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="trainer-select-content">
-                  <SelectItem value="random">Aleatório inteligente</SelectItem>
-                  <SelectItem value="exam">Ordem do acervo</SelectItem>
-                </SelectContent>
-              </Select>
-            </label>
           </div>
-          <details className="trainer-more group mt-3 rounded-lg border bg-muted/20 px-3 py-2 open:bg-muted/30">
-            <summary className="flex cursor-pointer list-none items-center justify-between text-xs font-black uppercase tracking-wider text-muted-foreground [&::-webkit-details-marker]:hidden">
-              Mais filtros
-              <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" />
+
+          <div className="qt3-row">
+            <div className="qt3-field">
+              <span className="qt3-field__label" id="qt3-diff">
+                <Gauge aria-hidden="true" /> Dificuldade
+              </span>
+              <div className="qt3-chips" role="radiogroup" aria-labelledby="qt3-diff">
+                {(["all", "fácil", "média", "difícil"] as const).map((d) => {
+                  const count = d === "all" ? facets.totals["difficulty"] : facets.counts["difficulty"]?.get(d);
+                  return (
+                    <button
+                      key={d}
+                      type="button"
+                      role="radio"
+                      aria-checked={values.difficulty === d}
+                      data-level={d}
+                      disabled={d !== "all" && !count && values.difficulty !== d}
+                      onClick={() => setters.setDifficulty(d)}
+                    >
+                      <i aria-hidden="true" />
+                      {d === "all" ? "Todas" : difficultyLabels[d]}
+                      {count !== undefined && <small>{count.toLocaleString("pt-BR")}</small>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="qt3-field">
+              <span className="qt3-field__label" id="qt3-qty">
+                <ListOrdered aria-hidden="true" /> Quantidade
+              </span>
+              {available ? (
+                <div className="qt3-chips" role="radiogroup" aria-labelledby="qt3-qty">
+                  {[...quantities, ...(available > 50 ? ["all"] : [])].map((q) => (
+                    <button
+                      key={q}
+                      type="button"
+                      role="radio"
+                      aria-checked={values.limit === q}
+                      onClick={() => setters.setLimit(q)}
+                    >
+                      {q === "all" ? `Todas (${available.toLocaleString("pt-BR")})` : q}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <p className="qt3-muted">Sem questões disponíveis</p>
+              )}
+            </div>
+            <div className="qt3-field">
+              <span className="qt3-field__label" id="qt3-order">
+                <Shuffle aria-hidden="true" /> Ordem
+              </span>
+              <div className="qt3-chips" role="radiogroup" aria-labelledby="qt3-order">
+                {(
+                  [
+                    ["random", "Aleatório inteligente"],
+                    ["exam", "Ordem do acervo"],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    role="radio"
+                    aria-checked={values.orderMode === id}
+                    onClick={() => setters.setOrderMode(id as OrderMode)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <details className="qt3-more">
+            <summary>
+              <Layers aria-hidden="true" /> Mais filtros
+              {moreActive > 0 && <span className="qt3-badge">{moreActive}</span>}
+              <ChevronDown className="qt3-more__chev" aria-hidden="true" />
             </summary>
-            <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
-              <TrainerFilter
-                counts={facets.counts["contest"]}
-                allCount={facets.totals["contest"]}
-                label="Concurso"
-                value={values.contest}
-                setValue={setters.setContest}
-                options={choices.contests}
-              />
-              <TrainerFilter
-                counts={facets.counts["career"]}
-                allCount={facets.totals["career"]}
-                label="Carreira ou cargo"
-                value={values.career}
-                setValue={setters.setCareer}
-                options={choices.careers}
-              />
-              <TrainerFilter
-                counts={facets.counts["state"]}
-                allCount={facets.totals["state"]}
-                label="Estado"
-                value={values.state}
-                setValue={setters.setState}
-                options={choices.states}
-              />
-              <TrainerFilter
-                counts={facets.counts["category"]}
-                allCount={facets.totals["category"]}
-                label="Categoria"
-                value={values.category}
-                setValue={setters.setCategory}
-                options={choices.categories}
-              />
-              <TrainerFilter
-                counts={facets.counts["year"]}
-                allCount={facets.totals["year"]}
-                label="Ano"
-                value={values.year}
-                setValue={setters.setYear}
-                options={choices.years}
-              />
-              <TrainerFilter
-                counts={facets.counts["exam"]}
-                allCount={facets.totals["exam"]}
-                label="Prova aplicada"
-                value={values.appliedExam}
-                setValue={setters.setAppliedExam}
-                options={choices.exams.map(([value]) => value)}
-                labels={Object.fromEntries(choices.exams)}
-              />
-              <TrainerFilter
-                counts={facets.counts["source"]}
-                allCount={facets.totals["source"]}
-                label="Origem"
-                value={values.source}
-                setValue={setters.setSource}
-                options={["official", "curated", "personal"]}
-                labels={{
-                  official: "Provas oficiais",
-                  curated: "Questões autorais",
-                  personal: "Meu caderno",
-                }}
-              />
-              <TrainerFilter
-                counts={facets.counts["reviewed"]}
-                allCount={facets.totals["reviewed"]}
-                label="Explicação didática"
-                value={values.reviewed}
-                setValue={setters.setReviewed}
-                options={["reviewed"]}
-                labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
-                allLabel="Todas as questões"
-              />
-              <label className="flex items-center gap-3 rounded-lg border bg-background px-3 py-2.5 sm:col-span-2 lg:col-span-3">
+            <div className="qt3-grid">
+              <TrainerFilter icon={Trophy} counts={facets.counts["contest"]} allCount={facets.totals["contest"]} label="Concurso" value={values.contest} setValue={setters.setContest} options={choices.contests} />
+              <TrainerFilter icon={Briefcase} counts={facets.counts["career"]} allCount={facets.totals["career"]} label="Carreira ou cargo" value={values.career} setValue={setters.setCareer} options={choices.careers} />
+              <TrainerFilter icon={MapPin} counts={facets.counts["state"]} allCount={facets.totals["state"]} label="Estado" value={values.state} setValue={setters.setState} options={choices.states} />
+              <TrainerFilter icon={Layers} counts={facets.counts["category"]} allCount={facets.totals["category"]} label="Categoria" value={values.category} setValue={setters.setCategory} options={choices.categories} />
+              <TrainerFilter icon={CalendarDays} counts={facets.counts["year"]} allCount={facets.totals["year"]} label="Ano" value={values.year} setValue={setters.setYear} options={choices.years} />
+              <TrainerFilter icon={FileText} counts={facets.counts["exam"]} allCount={facets.totals["exam"]} label="Prova aplicada" value={values.appliedExam} setValue={setters.setAppliedExam} options={choices.exams.map(([value]) => value)} labels={examLabels} />
+              <TrainerFilter icon={Database} counts={facets.counts["source"]} allCount={facets.totals["source"]} label="Origem" value={values.source} setValue={setters.setSource} options={["official", "curated", "personal"]} labels={sourceLabels} />
+              <TrainerFilter icon={Sparkles} counts={facets.counts["reviewed"]} allCount={facets.totals["reviewed"]} label="Explicação didática" value={values.reviewed} setValue={setters.setReviewed} options={["reviewed"]} labels={{ reviewed: "Com explicação e exemplo do dia a dia" }} allLabel="Todas as questões" />
+              <label className="qt3-toggle">
                 <input
                   type="checkbox"
                   checked={values.includeAnswered}
                   onChange={(event) => setters.setIncludeAnswered(event.target.checked)}
-                  className="h-4 w-4 accent-primary"
                 />
+                <span className="qt3-toggle__switch" aria-hidden="true" />
                 <span>
-                  <span className="block text-sm font-bold">Incluir questões já respondidas</span>
-                  <span className="block text-xs text-muted-foreground">
-                    Exibe questões anteriores para revisão. Elas continuarão bloqueadas para novo
-                    envio.
-                  </span>
+                  <b>Incluir questões já respondidas</b>
+                  <small>Para revisão. Continuam bloqueadas para novo envio.</small>
                 </span>
               </label>
             </div>
           </details>
-          <div className="trainer-start-bar mt-3 flex flex-row items-center justify-between gap-2 rounded-xl border bg-muted/30 p-2 sm:p-3">
-            <p className="trainer-start-bar__count hidden font-black sm:block">
-              {usedCount.toLocaleString("pt-BR")} questões serão usadas
-            </p>
-            <div className="trainer-start-bar__actions flex w-full items-center gap-2 sm:w-auto">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={reset}
-                className="shrink-0 sm:h-10 sm:px-4"
-              >
-                Limpar
-              </Button>
-              <Button
-                disabled={!available}
-                onClick={start}
-                className="hero-primary-action h-10 min-w-0 flex-1 sm:flex-none"
-              >
-                <Sparkles className="mr-2 h-4 w-4 shrink-0" />
-                <span className="truncate">
-                  Iniciar
-                  <span className="sm:hidden"> · {usedCount.toLocaleString("pt-BR")} questões</span>
-                  <span className="hidden sm:inline"> treinamento</span>
-                </span>
-              </Button>
-            </div>
+        </section>
+      </div>
+
+      <aside className="qt3-summary" aria-labelledby="qt3-summary-title">
+        <div className="qt3-summary__card">
+          <p className="qt3-summary__eyebrow">Sua sessão</p>
+          <h2 id="qt3-summary-title" className="qt3-summary__count">
+            <b>{usedCount.toLocaleString("pt-BR")}</b>
+            <span>{usedCount === 1 ? "questão" : "questões"}</span>
+          </h2>
+          <ul className="qt3-summary__facts">
+            <li>
+              <Clock3 aria-hidden="true" /> cerca de {minutes >= 60 ? `${Math.floor(minutes / 60)} h ${minutes % 60 ? `${minutes % 60} min` : ""}` : `${minutes} min`}
+            </li>
+            <li>
+              <Shuffle aria-hidden="true" /> {values.orderMode === "random" ? "Aleatório inteligente" : "Ordem do acervo"}
+            </li>
+          </ul>
+          <div className="qt3-summary__filters">
+            <p>Filtros ativos</p>
+            {active.length ? (
+              <ul>
+                {active.map(([label, , display, clear]) => (
+                  <li key={label}>
+                    <span title={`${label}: ${display ?? ""}`}>
+                      <small>{label}</small> {display}
+                    </span>
+                    <button type="button" onClick={clear} aria-label={`Remover filtro ${label}`}>
+                      <X aria-hidden="true" />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <span className="qt3-muted">Nenhum: todas as questões disponíveis.</span>
+            )}
           </div>
-        </CardContent>
-      </Card>
+          <div className="qt3-summary__actions">
+            <Button disabled={!available} onClick={start} className="qt3-start hero-primary-action">
+              <Sparkles aria-hidden="true" /> Iniciar treinamento
+            </Button>
+            <Button variant="ghost" onClick={reset} className="qt3-reset" disabled={!active.length && !values.includeAnswered}>
+              <RotateCcw aria-hidden="true" /> Limpar filtros
+            </Button>
+          </div>
+        </div>
+        <nav className="qt3-quick" aria-label="Acesso rápido">
+          <Link to="/dashboard/question-trainer" search={{ mode: "reforco" } as never} data-tone="rose">
+            <RotateCcw aria-hidden="true" /> <span>Revisar erros</span>
+          </Link>
+          <Link to="/dashboard/notebooks" data-tone="violet">
+            <Bookmark aria-hidden="true" /> <span>Cadernos</span>
+          </Link>
+          <Link to="/dashboard/mock-exams" data-tone="gold">
+            <Target aria-hidden="true" /> <span>Simulados</span>
+          </Link>
+          <Link to="/dashboard/question-bank" data-tone="blue">
+            <ListOrdered aria-hidden="true" /> <span>Banco de questões</span>
+          </Link>
+          <Link to="/dashboard/performance" data-tone="green">
+            <TrendingUp aria-hidden="true" /> <span>Desempenho</span>
+          </Link>
+        </nav>
+      </aside>
+
+      <div className="qt3-mobilebar">
+        <span>
+          <b>{usedCount.toLocaleString("pt-BR")}</b> questões
+        </span>
+        <Button disabled={!available} onClick={start} className="qt3-start hero-primary-action">
+          <Sparkles aria-hidden="true" /> Iniciar
+        </Button>
+      </div>
     </div>
   );
 }
 
 function TrainerFilter({
+  icon: Icon,
   label,
   value,
   setValue,
@@ -2306,6 +2360,7 @@ function TrainerFilter({
   disabled = false,
   placeholder,
 }: {
+  icon?: typeof Target;
   counts?: Map<string, number> | undefined;
   allCount?: number | undefined;
   disabled?: boolean;
@@ -2319,12 +2374,13 @@ function TrainerFilter({
   hideAll?: boolean;
 }) {
   return (
-    <label className="space-y-1">
-      <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+    <label className="qt3-field" data-set={value !== "all" || undefined}>
+      <span className="qt3-field__label">
+        {Icon && <Icon aria-hidden="true" />}
         {label}
       </span>
       <Select disabled={disabled} value={disabled ? "" : value} onValueChange={setValue}>
-        <SelectTrigger disabled={disabled} className="h-9 bg-background sm:h-10">
+        <SelectTrigger disabled={disabled} className="qt3-select">
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent className="trainer-select-content">
