@@ -1,0 +1,23 @@
+/*
+  Superfícies limpas no dashboard: remove camadas que acinzentavam as áreas.
+  1) "Véu" atrás do painel do aluno (escuro no tema escuro; vidro fosco branco com desfoque no claro).
+  2) Manchas coloridas fixas no fundo da área (luz nos cantos, atrás do conteúdo).
+  3) Faixa de vidro com desfoque no rodapé do modo foco, que cobria o fim do conteúdo.
+*/
+html body .app-shell[data-area="student"] .student-home.student-desk::before,
+html:root:not(.dark) body .app-shell[data-area="student"] .student-home.student-desk::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+html body .app-shell[data-area="student"] #dashboard-content::before { content: none !important; display: none !important; }
+html body .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after {
+  content: none !important;
+  display: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}

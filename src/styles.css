@@ -17366,6 +17366,7 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
 @import "./styles/mobile-student-redesign-nov12.css";
 @import "./styles/gold-palette.css";
 @import "./styles/student-kpi-compact.css";
+@import "./styles/student-clean-surface.css";
 
 /* Campos de data e hora: no iPhone têm largura própria e passavam da borda do cartão. */
 input[type="date"],
