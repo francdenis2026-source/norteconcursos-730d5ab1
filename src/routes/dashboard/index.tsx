@@ -981,7 +981,7 @@ function Metric({
         <em>{detail}</em>
       </span>
       {trend && (
-        <NvSparkline values={trend.map((p) => p.value ?? 0)} color={`var(--cat-${tone})`} />
+        <NvSparkline values={trend.map((p) => p.value ?? 0)} color={`var(--cat-${tone})`} height={32} />
       )}
     </button>
   );
