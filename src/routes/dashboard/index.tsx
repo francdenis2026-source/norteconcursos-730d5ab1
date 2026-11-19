@@ -95,7 +95,7 @@ const formatExamDate = (value?: string | null) => {
 const destinations = [
   {
     to: "/dashboard/media",
-    image: "/media/hero/card-videoaulas.svg",
+    image: "/media/hero/card-videoaulas-v2.svg",
     title: "Videoaulas",
     text: "Assista e estude em vídeo",
     tone: "gold",
