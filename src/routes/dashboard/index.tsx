@@ -16,6 +16,9 @@ import "@/styles/student-dashboard-professional-refinement.css";
 import "@/styles/student-home-astrix.css";
 import "@/styles/student-home-compact.css";
 import "@/styles/student-home-polish.css";
+import "@/styles/student-home-charts-premium.css";
+import { Sparkline, type SparkPoint } from "@/components/dashboard/charts/Sparkline";
+import { dailyAnswerSeries, dailyStudySeries } from "@/lib/dashboardTrends";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -210,6 +213,22 @@ function StudentHome({ user }: { user: UserProfile }) {
     () => (q.activity.data ? summarizeStudyTime(q.activity.data, live, now) : null),
     [q.activity.data, live, now],
   );
+  const answerTrend = React.useMemo(
+    () => (q.training.data ? dailyAnswerSeries(q.training.data, today, 7) : null),
+    [q.training.data, today],
+  );
+  const studyTrend = React.useMemo(
+    () => (q.activity.data ? dailyStudySeries(q.activity.data, live, today, 30) : null),
+    [q.activity.data, live, today],
+  );
+  const weekStudy = studyTrend?.slice(-7) ?? null;
+  // Semana acumulada dia a dia, para mostrar a construção do total semanal.
+  const weekRunning = weekStudy
+    ? weekStudy.reduce<SparkPoint[]>((acc, d) => {
+        acc.push({ date: d.date, value: (acc.at(-1)?.value ?? 0) + d.seconds });
+        return acc;
+      }, [])
+    : null;
   const schedule =
     plan && plan.id === selectedId && validDashboardConfig(plan.config) && q.progress.isSuccess
       ? dashboardSchedule(plan.config, q.progress.data, day)
@@ -382,7 +401,13 @@ function StudentHome({ user }: { user: UserProfile }) {
               ) : (
                 <strong>A definir</strong>
               )}
-              {examCountdown && <p>{examCountdown}</p>}
+              {days !== null && days > 0 ? (
+                <p className="sh2-hero__countdown">
+                  <b>{days}</b> {days === 1 ? "dia" : "dias"} para a prova
+                </p>
+              ) : (
+                examCountdown && <p>{examCountdown}</p>
+              )}
             </div>
           )}
           {q.objective.isError ? (
@@ -411,6 +436,8 @@ function StudentHome({ user }: { user: UserProfile }) {
           onOpen={(event) => openMetric("questions", event.currentTarget)}
           value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
           detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
+          trend={answerTrend?.map((d) => ({ date: d.date, value: d.total }))}
+          format={(v) => `${number(v)} ${v === 1 ? "questão" : "questões"}`}
         />
         <Metric
           icon={CheckCircle2}
@@ -431,6 +458,8 @@ function StudentHome({ user }: { user: UserProfile }) {
               ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
               : "Comece pelas questões"
           }
+          trend={answerTrend?.map((d) => ({ date: d.date, value: d.accuracy }))}
+          format={(v) => `${v}% de acerto`}
         />
         <Metric
           icon={Clock}
@@ -439,6 +468,8 @@ function StudentHome({ user }: { user: UserProfile }) {
           onOpen={(event) => openMetric("today", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
           detail="Somando suas sessões"
+          trend={weekStudy?.map((d) => ({ date: d.date, value: d.seconds }))}
+          format={duration}
         />
         <Metric
           icon={TrendingUp}
@@ -447,10 +478,12 @@ function StudentHome({ user }: { user: UserProfile }) {
           onOpen={(event) => openMetric("week", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
           detail={time ? `${duration(time.total)} no total` : "Semana atual"}
+          trend={weekRunning ?? undefined}
+          format={(v) => `${duration(v)} acumulados`}
         />
       </section>
 
-      <SectionLabel step={2} title="Atalhos" />
+      <SectionLabel step={2} title="Acesso rápido" />
       <nav className="sh2-shortcuts sh2-shortcuts--chips" aria-label="Atalhos de estudo">
         {destinations.map(({ to, title, text, image, icon: Icon }, i) => (
           <Link
@@ -468,7 +501,9 @@ function StudentHome({ user }: { user: UserProfile }) {
                 <Icon aria-hidden="true" />
                 {title}
               </strong>
-              {to === "/dashboard/ranking" && rankText ? <small>{rankText}</small> : null}
+              {to === "/dashboard/ranking" && rank.data?.rank_position ? (
+                <small title={rankText ?? undefined}>{rank.data.rank_position}º</small>
+              ) : null}
             </span>
           </Link>
         ))}
@@ -816,18 +851,13 @@ function StudentHome({ user }: { user: UserProfile }) {
       <SectionLabel step={4} title="Ritmo e respostas" />
       <div className="sh2-pair">
         <section
-          className="sh2-card sh2-card--wide sh2-card--photo"
-          style={
-            {
-              "--sh2-photo": "url(/media/hero/painel-aluno-direcao-estudos.webp)",
-            } as React.CSSProperties
-          }
-          data-tone="blue"
+          className="sh2-card sh2-card--wide sh2-card--chart"
+          data-tone="gold"
           aria-labelledby="dashboard-rhythm-title"
         >
           <SectionTitle
             icon={TrendingUp}
-            title="Seu ritmo na semana"
+            title="Seu ritmo de estudo"
             id="dashboard-rhythm-title"
             onOpen={(event) => openMetric("week", event.currentTarget)}
           />
@@ -837,11 +867,11 @@ function StudentHome({ user }: { user: UserProfile }) {
                 text="Não foi possível consultar o tempo de estudo."
                 retry={() => q.activity.refetch()}
               />
-            ) : !time ? (
+            ) : !studyTrend ? (
               <PanelLoading />
             ) : (
               <WeeklyRhythmChart
-                days={time.days}
+                days={studyTrend}
                 formatDuration={duration}
                 onSelectDay={(date, trigger) => openMetric("today", trigger, date)}
                 onOpenHistory={(trigger) => openMetric("week", trigger)}
@@ -851,10 +881,9 @@ function StudentHome({ user }: { user: UserProfile }) {
         </section>
 
         <section
-          className="sh2-card sh2-card--wide sh2-card--photo"
+          className="sh2-card sh2-card--wide sh2-card--chart"
           data-tone="green"
           aria-labelledby="dashboard-answers-title"
-          style={{ "--sh2-photo": "url(/media/hero/dashboard.webp)" } as React.CSSProperties}
         >
           <SectionTitle
             icon={CheckCircle2}
@@ -918,6 +947,8 @@ function Metric({
   detail,
   onOpen,
   tone,
+  trend,
+  format,
 }: {
   icon: LucideIcon;
   label: string;
@@ -925,6 +956,8 @@ function Metric({
   detail: string;
   onOpen: React.MouseEventHandler<HTMLButtonElement>;
   tone: "blue" | "green" | "amber" | "violet";
+  trend?: SparkPoint[] | undefined;
+  format?: (value: number) => string;
 }) {
   return (
     <button
@@ -941,6 +974,9 @@ function Metric({
         <strong>{value}</strong>
         <em>{detail}</em>
       </span>
+      {trend && format && (
+        <Sparkline points={trend} color={`var(--sh2-${tone})`} format={format} label={label} />
+      )}
     </button>
   );
 }

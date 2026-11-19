@@ -1,0 +1,558 @@
+/*
+  Área do aluno — gráficos interativos e organização premium.
+  Escopo: somente .student-home.sh2 (página inicial do aluno).
+  Seletor reforçado (.sh2.student-overview) para vencer as camadas anteriores sem !important.
+  Cores sempre por tokens; claro e escuro herdam os mesmos nomes.
+*/
+
+html:root body .student-home.sh2.student-overview {
+  --ncx-surface: var(--card);
+  --ncx-sunken: color-mix(in oklab, var(--muted) 70%, var(--card));
+  --ncx-line: var(--border);
+  --ncx-ink: var(--foreground);
+  --ncx-dim: var(--muted-foreground);
+  --ncx-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* ---------- Hero: contagem regressiva em destaque ---------- */
+html:root body .student-home.sh2.student-overview .sh2-hero__countdown {
+  display: flex;
+  align-items: baseline;
+  gap: var(--nc-space-1);
+  margin: 0;
+  font-size: var(--nc-font-xs);
+  color: var(--on-ink-dim, var(--on-ink));
+}
+html:root body .student-home.sh2.student-overview .sh2-hero__countdown b {
+  font-size: var(--nc-font-2xl);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--brass);
+}
+
+/* ---------- Indicadores com minigráfico ---------- */
+html:root body .student-home.sh2.student-overview .sh2-kpis {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 1100px) {
+  html:root body .student-home.sh2.student-overview .sh2-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+html:root body .student-home.sh2.student-overview .sh2-kpi {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(4.5rem, 34%);
+  align-items: center;
+  min-height: 5.5rem;
+  text-align: left;
+  transition:
+    border-color 160ms var(--ncx-ease),
+    box-shadow 160ms var(--ncx-ease),
+    transform 160ms var(--ncx-ease);
+}
+html:root body .student-home.sh2.student-overview .sh2-kpi:hover {
+  background: var(--card);
+  border-color: color-mix(in oklab, var(--sh2-tone) 55%, var(--border));
+  box-shadow: 0 6px 18px -12px color-mix(in oklab, var(--sh2-tone) 70%, transparent);
+}
+html:root body .student-home.sh2.student-overview .sh2-kpi:active { transform: scale(0.99); }
+html:root body .student-home.sh2.student-overview .sh2-kpi > span:not(.ncx-spark) { align-self: center; }
+html:root body .student-home.sh2.student-overview .sh2-kpi em {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ncx-spark {
+  display: block;
+  align-self: stretch;
+  min-width: 0;
+  height: 3.25rem;
+  margin-block: auto;
+}
+.ncx-spark[data-empty] { opacity: 0.45; }
+@media (max-width: 1365px) and (min-width: 1100px), (max-width: 640px) {
+  html:root body .student-home.sh2.student-overview .sh2-kpi {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: var(--nc-space-2);
+  }
+  html:root body .student-home.sh2.student-overview .sh2-kpi .ncx-spark {
+    grid-column: 1 / -1;
+    height: 2.25rem;
+  }
+}
+@media (max-width: 640px) {
+  html:root body .student-home.sh2.student-overview .sh2-kpi { column-gap: var(--nc-space-2); padding: var(--nc-space-3) var(--nc-space-2); }
+  html:root body .student-home.sh2.student-overview .sh2-kpi strong { font-size: var(--nc-font-lg); }
+}
+
+/* ---------- Acesso rápido: barra única e compacta ---------- */
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--nc-space-2);
+}
+@media (min-width: 640px) {
+  html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1480px) {
+  html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips > a {
+  justify-content: flex-start;
+  min-height: 2.75rem;
+  padding: 0 var(--nc-space-3);
+  border-radius: var(--nc-radius-control);
+  border: 1px solid var(--ncx-line);
+  background: var(--ncx-surface);
+  transition: border-color 140ms var(--ncx-ease), background-color 140ms var(--ncx-ease);
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips > a:hover {
+  border-color: color-mix(in oklab, var(--sh2-gold) 60%, var(--border));
+  background: color-mix(in oklab, var(--sh2-gold) 6%, var(--card));
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips > a > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nc-space-2);
+  width: 100%;
+  min-width: 0;
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--nc-font-sm);
+  font-weight: 600;
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips strong svg {
+  flex: none;
+  color: var(--sh2-gold);
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips small {
+  position: static;
+  flex: none;
+  padding: 0.125rem var(--nc-space-2);
+  border-radius: var(--nc-radius-pill);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: color-mix(in oklab, var(--sh2-gold) 12%, var(--card));
+  opacity: 1;
+}
+/* Vence a guarda de contraste (que supunha atalhos com foto escura). */
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .sh2-shortcuts--chips > a small {
+  color: var(--sh2-gold) !important;
+}
+html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips strong { white-space: nowrap; }
+
+/* ---------- Treino em andamento (cartão compacto) ---------- */
+html:root body .student-home.sh2.student-overview .resume-session--compact,
+html:root body .student-home.sh2.student-overview .resume-session--compact * {
+  text-align: left;
+  text-align-last: auto;
+}
+html:root body .student-home.sh2.student-overview .resume-session--compact .resume-session__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+html:root body .student-home.sh2.student-overview .resume-session--compact .resume-session__copy p:first-child {
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ---------- Cartões de gráfico (sem cabeçalho com foto) ---------- */
+html:root body .student-home.sh2.student-overview .sh2-card--chart {
+  overflow: visible;
+}
+html:root body .student-home.sh2.student-overview .sh2-card--chart .sh2-card__head {
+  min-height: 3rem;
+  background: transparent;
+  border-bottom: 1px solid var(--ncx-line);
+}
+html:root body .student-home.sh2.student-overview .sh2-card--chart .sh2-card__head > svg {
+  color: var(--sh2-tone);
+}
+html:root body .student-home.sh2.student-overview .sh2-card--chart .sh2-card__head :is(h2, h2 button) {
+  color: var(--ncx-ink);
+}
+html:root body .student-home.sh2.student-overview .sh2-card--chart .sh2-card__body {
+  padding: var(--nc-space-4);
+}
+@media (min-width: 1100px) {
+  html:root body .student-home.sh2.student-overview .sh2-pair {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+html:root body .student-home.sh2.student-overview .sh2-card--chart {
+  display: flex;
+  flex-direction: column;
+}
+html:root body .student-home.sh2.student-overview .sh2-card--chart .sh2-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+.ncx-rhythm { flex: 1 1 auto; grid-template-rows: auto minmax(15rem, 1fr) auto auto; }
+.ncx-rhythm .ncx-plot { display: flex; min-height: 15rem; }
+.ncx-rhythm .ncx-plot > .recharts-responsive-container { flex: 1 1 auto; min-height: 14rem; }
+
+/* ---------- Blocos comuns dos gráficos ---------- */
+.ncx-rhythm,
+.ncx-answers {
+  display: grid;
+  gap: var(--nc-space-3);
+  min-width: 0;
+  color: var(--ncx-ink);
+}
+.ncx-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--nc-space-3);
+}
+.ncx-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, auto));
+  gap: var(--nc-space-5);
+  margin: 0;
+}
+.ncx-stats--four {
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--nc-space-2);
+}
+.ncx-stats > div { min-width: 0; }
+.ncx-answers { container-type: inline-size; }
+.ncx-stats--four > div {
+  padding: var(--nc-space-2);
+  border: 1px solid var(--ncx-line);
+  border-radius: var(--nc-radius-sm);
+  background: var(--ncx-sunken);
+  border-left: 3px solid var(--tone, var(--ncx-line));
+}
+.ncx-stats--four > [data-tone="blue"] { --tone: var(--sh2-blue); }
+.ncx-stats--four > [data-tone="green"] { --tone: var(--sh2-green); }
+.ncx-stats--four > [data-tone="rose"] { --tone: var(--sh2-rose); }
+.ncx-stats--four > [data-tone="gold"] { --tone: var(--sh2-gold); }
+.ncx-stats dt {
+  display: flex;
+  align-items: center;
+  gap: var(--nc-space-1);
+  overflow: hidden;
+  font-size: var(--nc-font-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--ncx-dim);
+}
+.ncx-stats dt svg { flex: none; width: 0.875rem; height: 0.875rem; color: var(--tone, var(--sh2-gold)); }
+.ncx-stats dd {
+  margin: var(--nc-space-1) 0 0;
+  font-size: var(--nc-font-xl);
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.ncx-stats dd small { margin-left: 2px; font-size: var(--nc-font-sm); font-weight: 600; color: var(--ncx-dim); }
+
+/* Controle segmentado (períodos) */
+.ncx-segmented {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  max-width: 100%;
+  padding: 3px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border: 1px solid var(--ncx-line);
+  border-radius: var(--nc-radius-control);
+  background: var(--ncx-sunken);
+}
+.ncx-segmented::-webkit-scrollbar { display: none; }
+.ncx-segmented--wide { display: flex; width: 100%; }
+.ncx-segmented--wide > button { flex: 1 0 auto; }
+.ncx-segmented > button {
+  min-height: 2rem;
+  padding: 0 var(--nc-space-3);
+  border: 0;
+  border-radius: calc(var(--nc-radius-control) - 3px);
+  font-size: var(--nc-font-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ncx-dim);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 140ms var(--ncx-ease), color 140ms var(--ncx-ease), box-shadow 140ms var(--ncx-ease);
+}
+.ncx-segmented > button:hover { color: var(--ncx-ink); }
+.ncx-segmented > button[aria-pressed="true"] {
+  color: var(--ncx-ink);
+  background: var(--ncx-surface);
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--foreground) 14%, transparent), inset 0 0 0 1px var(--ncx-line);
+}
+.ncx-segmented > button:focus-visible,
+.ncx-legend > button:focus-visible,
+.ncx-days > button:focus-visible,
+.ncx-link:focus-visible,
+.ncx-subjects a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Área do gráfico */
+.ncx-plot {
+  min-width: 0;
+  margin: 0;
+  padding: var(--nc-space-3) var(--nc-space-2) var(--nc-space-1) 0;
+  border: 1px solid var(--ncx-line);
+  border-radius: var(--nc-radius-card);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--sh2-gold) 4%, transparent), transparent 60%),
+    var(--ncx-surface);
+}
+.ncx-plot__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nc-space-2);
+  padding: 0 0 var(--nc-space-2) var(--nc-space-3);
+  font-size: var(--nc-font-sm);
+  font-weight: 600;
+}
+.ncx-plot .recharts-surface { overflow: visible; }
+.ncx-plot .recharts-bar-rectangle path,
+.ncx-plot .recharts-rectangle { transition: fill-opacity 140ms var(--ncx-ease); }
+
+/* Legenda clicável */
+.ncx-legend { display: inline-flex; flex-wrap: wrap; gap: var(--nc-space-1); }
+.ncx-legend > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 1.75rem;
+  padding: 0 var(--nc-space-2);
+  border: 1px solid var(--ncx-line);
+  border-radius: var(--nc-radius-pill);
+  font-size: var(--nc-font-xs);
+  font-weight: 600;
+  color: var(--ncx-ink);
+  background: var(--ncx-surface);
+  cursor: pointer;
+  transition: opacity 140ms var(--ncx-ease), border-color 140ms var(--ncx-ease);
+}
+.ncx-legend > button[aria-pressed="false"] { opacity: 0.5; text-decoration: line-through; }
+.ncx-legend i { width: 0.625rem; height: 0.625rem; border-radius: 3px; }
+.ncx-legend i[data-line] { height: 3px; width: 0.875rem; border-radius: 2px; }
+
+/* Dica (tooltip) */
+.ncx-tooltip {
+  min-width: 10rem;
+  padding: var(--nc-space-2) var(--nc-space-3);
+  border: 1px solid var(--ncx-line, var(--border));
+  border-radius: var(--nc-radius-sm);
+  color: var(--foreground);
+  background: color-mix(in oklab, var(--popover, var(--card)) 96%, transparent);
+  box-shadow: 0 12px 28px -14px color-mix(in oklab, var(--foreground) 45%, transparent);
+  backdrop-filter: blur(6px);
+  font-size: var(--nc-font-xs);
+}
+.ncx-tooltip__title {
+  margin: 0 0 var(--nc-space-1);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.ncx-tooltip ul { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.ncx-tooltip li { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--nc-space-2); }
+.ncx-tooltip li i { width: 0.5rem; height: 0.5rem; border-radius: 2px; }
+.ncx-tooltip li:not(:has(i)) { grid-template-columns: 1fr auto; }
+.ncx-tooltip li span { color: var(--muted-foreground); }
+.ncx-tooltip li strong { font-variant-numeric: tabular-nums; }
+
+/* Dias (7 dias) */
+.ncx-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--nc-space-1);
+}
+.ncx-days > button {
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  min-height: 2.75rem;
+  padding: var(--nc-space-1) 0;
+  border: 1px solid var(--ncx-line);
+  border-radius: var(--nc-radius-sm);
+  color: var(--ncx-dim);
+  background: var(--ncx-surface);
+  cursor: pointer;
+  transition: border-color 140ms var(--ncx-ease), background-color 140ms var(--ncx-ease);
+}
+.ncx-days > button:hover { border-color: color-mix(in oklab, var(--sh2-gold) 60%, var(--border)); }
+.ncx-days > button span { font-size: 0.6875rem; font-weight: 600; text-transform: capitalize; }
+.ncx-days > button strong { font-size: var(--nc-font-xs); font-weight: 700; font-variant-numeric: tabular-nums; }
+.ncx-days > button[data-active] { color: var(--ncx-ink); background: color-mix(in oklab, var(--sh2-gold) 7%, var(--card)); }
+.ncx-days > button[data-today] { border-color: var(--sh2-gold); }
+
+/* Rodapé dos gráficos */
+.ncx-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--nc-space-2);
+  padding-top: var(--nc-space-1);
+}
+html:root body .student-home.sh2.student-overview .ncx-foot p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-size: var(--nc-font-xs);
+  color: var(--ncx-dim);
+}
+.ncx-foot p svg { width: 0.875rem; height: 0.875rem; color: var(--sh2-gold); }
+.ncx-foot p strong { color: var(--ncx-ink); text-transform: capitalize; }
+.ncx-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 2rem;
+  padding: 0;
+  border: 0;
+  font-size: var(--nc-font-xs);
+  font-weight: 700;
+  color: var(--sh2-gold);
+  background: none;
+  cursor: pointer;
+}
+.ncx-link svg { width: 0.875rem; height: 0.875rem; transition: transform 140ms var(--ncx-ease); }
+.ncx-link:hover svg { transform: translateX(2px); }
+.ncx-empty {
+  margin: 0;
+  padding: var(--nc-space-6) var(--nc-space-4);
+  border: 1px dashed var(--ncx-line);
+  border-radius: var(--nc-radius-card);
+  font-size: var(--nc-font-sm);
+  text-align: center;
+  color: var(--ncx-dim);
+}
+
+/* Disciplinas: linhas clicáveis */
+.ncx-subjects { display: grid; gap: var(--nc-space-1); }
+.ncx-subjects h3 {
+  margin: 0 0 var(--nc-space-1);
+  font-size: var(--nc-font-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ncx-dim);
+}
+.ncx-subjects ul { display: grid; margin: 0; padding: 0; list-style: none; }
+.ncx-subjects li + li { border-top: 1px solid var(--ncx-line); }
+.ncx-subjects a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(4rem, 28%) auto auto;
+  align-items: center;
+  gap: var(--nc-space-3);
+  min-height: 2.75rem;
+  padding: 0 var(--nc-space-1);
+  border-radius: var(--nc-radius-sm);
+  color: var(--ncx-ink);
+  text-decoration: none;
+  transition: background-color 140ms var(--ncx-ease);
+}
+.ncx-subjects a:hover { background: var(--ncx-sunken); }
+.ncx-subjects a > svg { width: 0.875rem; height: 0.875rem; color: var(--ncx-dim); }
+.ncx-subjects__name {
+  overflow: hidden;
+  font-size: var(--nc-font-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ncx-subjects__meter {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--nc-radius-pill);
+  background: color-mix(in oklab, var(--sh2-rose) 30%, var(--muted));
+}
+.ncx-subjects__meter i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--sh2-green);
+  transition: width 320ms var(--ncx-ease);
+}
+.ncx-subjects__value { display: grid; justify-items: end; line-height: 1.1; }
+.ncx-subjects__value b { font-size: var(--nc-font-sm); font-variant-numeric: tabular-nums; color: var(--sh2-green); }
+.ncx-subjects__value b[data-low] { color: var(--sh2-rose); }
+.ncx-subjects__value small { font-size: 0.6875rem; color: var(--ncx-dim); font-variant-numeric: tabular-nums; }
+
+@container (max-width: 560px) {
+  .ncx-stats--four dt { font-size: 0.6875rem; }
+  .ncx-stats--four dt svg { display: none; }
+}
+@container (max-width: 380px) {
+  .ncx-stats--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---------- Concurso em destaque: um botão principal, os demais discretos ---------- */
+html:root body .student-home.sh2.student-overview .student-pcac-spotlight__actions a:not([data-tone="gold"]) {
+  border: 1px solid color-mix(in oklab, var(--on-dark-ink, #fff) 22%, transparent);
+  background: color-mix(in oklab, var(--on-dark-ink, #fff) 7%, transparent);
+  backdrop-filter: blur(4px);
+}
+html:root body .student-home.sh2.student-overview .student-pcac-spotlight__actions a:not([data-tone="gold"]):hover {
+  border-color: color-mix(in oklab, var(--pcac-action) 70%, transparent);
+  background: color-mix(in oklab, var(--pcac-action) 16%, transparent);
+}
+html:root body .student-home.sh2.student-overview .student-pcac-spotlight__actions a {
+  border-radius: var(--nc-radius-control);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .ncx-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--nc-space-3); width: 100%; }
+  .ncx-stats dd { font-size: var(--nc-font-lg); }
+  .ncx-stats:not(.ncx-stats--four) dt { align-items: flex-start; white-space: normal; line-height: 1.25; }
+  .ncx-stats--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ncx-segmented:not(.ncx-segmented--wide) { width: 100%; }
+  .ncx-segmented:not(.ncx-segmented--wide) > button { flex: 1 1 0; }
+  .ncx-days > button span { font-size: 0.625rem; }
+  .ncx-subjects a { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .ncx-subjects__meter { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ncx-segmented > button,
+  .ncx-legend > button,
+  .ncx-days > button,
+  .ncx-subjects a,
+  .ncx-subjects__meter i,
+  .ncx-link svg,
+  html:root body .student-home.sh2.student-overview .sh2-kpi,
+  html:root body .student-home.sh2.student-overview .sh2-shortcuts--chips > a {
+    transition: none;
+  }
+}
+
+/* "Hoje" em tablet: a coluna de leitura e treino ocupa a linha inteira, sem vazio à direita. */
+@media (min-width: 640px) and (max-width: 1099px) {
+  html:root body .student-home.sh2.student-overview .sh2-board > .sh2-stack {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+}

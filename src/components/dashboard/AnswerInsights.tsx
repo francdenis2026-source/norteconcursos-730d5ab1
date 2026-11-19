@@ -1,6 +1,18 @@
 import * as React from "react";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { CheckCircle2, Target, XCircle } from "lucide-react";
+import {
+  Bar,
+  CartesianGrid,
+  ComposedChart,
+  Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight, CheckCircle2, Percent, Target, XCircle } from "lucide-react";
+import { ChartTooltipCard } from "@/components/dashboard/charts/ChartTooltip";
+import { prefersReducedMotion } from "@/lib/dashboardTrends";
 import type { TrainingRecord } from "@/lib/studentDashboard";
 import { acreDateKey, acreHour } from "@/lib/acreTime";
 import { canonicalSubject } from "@/lib/subjects";
@@ -16,8 +28,9 @@ const PERIODS = [
 type Period = (typeof PERIODS)[number][0];
 type Bucket = { label: string; acertos: number; erros: number };
 
-const GREEN = "#34c27a";
-const ROSE = "#f0527a";
+const GREEN = "var(--sh2-green)";
+const ROSE = "var(--sh2-rose)";
+const GOLD = "var(--sh2-gold)";
 /** Respostas com mais de 30 min de intervalo contam como sessões diferentes. */
 const SESSION_GAP_MS = 30 * 60_000;
 const MONTHS = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
@@ -111,6 +124,11 @@ function build(
 
 export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today: string }) {
   const [period, setPeriod] = React.useState<Period>("week");
+  const [hidden, setHidden] = React.useState<Record<"acertos" | "erros" | "taxa", boolean>>({
+    acertos: false,
+    erros: false,
+    taxa: false,
+  });
   // Mesma regra do restante do painel: vale a primeira resposta de cada questão.
   const first = React.useMemo(() => {
     const seen = new Set<string>();
@@ -134,12 +152,54 @@ export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today:
   // Respostas com data futura ou relógio incorreto não entram nos períodos do relatório.
   const eligible = React.useMemo(() => first.filter((row) => row.day <= today), [first, today]);
   const data = React.useMemo(() => build(eligible, period, today), [eligible, period, today]);
+  const chartData = React.useMemo(
+    () =>
+      data.buckets.map((bucket) => {
+        const total = bucket.acertos + bucket.erros;
+        return { ...bucket, taxa: total ? Math.round((bucket.acertos / total) * 100) : null };
+      }),
+    [data.buckets],
+  );
   const rate = data.total ? Math.round((data.acertos / data.total) * 100) : null;
   const periodLabel = (PERIODS.find(([id]) => id === period)?.[1] ?? "").toLowerCase();
+  const toggle = (key: keyof typeof hidden) => setHidden((h) => ({ ...h, [key]: !h[key] }));
+  const series = [
+    { key: "acertos", label: "Acertos", color: GREEN },
+    { key: "erros", label: "Erros", color: ROSE },
+    { key: "taxa", label: "Aproveitamento", color: GOLD },
+  ] as const;
 
   return (
-    <div className="sh2-insights">
-      <div className="sh2-insights__tabs" role="group" aria-label="Filtrar desempenho por período">
+    <div className="ncx-answers">
+      <div className="ncx-toolbar">
+        <dl className="ncx-stats ncx-stats--four" aria-label={`Resumo de ${periodLabel}`}>
+          <div data-tone="blue">
+            <dt>
+              <Target aria-hidden="true" /> Respondidas
+            </dt>
+            <dd>{data.total.toLocaleString("pt-BR")}</dd>
+          </div>
+          <div data-tone="green">
+            <dt>
+              <CheckCircle2 aria-hidden="true" /> Acertos
+            </dt>
+            <dd>{data.acertos.toLocaleString("pt-BR")}</dd>
+          </div>
+          <div data-tone="rose">
+            <dt>
+              <XCircle aria-hidden="true" /> Erros
+            </dt>
+            <dd>{data.erros.toLocaleString("pt-BR")}</dd>
+          </div>
+          <div data-tone="gold">
+            <dt>
+              <Percent aria-hidden="true" /> Aproveitamento
+            </dt>
+            <dd>{rate === null ? "—" : `${rate}%`}</dd>
+          </div>
+        </dl>
+      </div>
+      <div className="ncx-segmented ncx-segmented--wide" role="group" aria-label="Filtrar desempenho por período">
         {PERIODS.map(([id, label]) => (
           <button
             key={id}
@@ -151,109 +211,171 @@ export function AnswerInsights({ rows, today }: { rows: TrainingRecord[]; today:
           </button>
         ))}
       </div>
-      <div className="sh2-insights__kpis">
-        <span data-tone="blue">
-          <Target aria-hidden="true" />
-          <small>Respondidas</small>
-          <strong>{data.total.toLocaleString("pt-BR")}</strong>
-        </span>
-        <span data-tone="green">
-          <CheckCircle2 aria-hidden="true" />
-          <small>Acertos</small>
-          <strong>{data.acertos.toLocaleString("pt-BR")}</strong>
-        </span>
-        <span data-tone="rose">
-          <XCircle aria-hidden="true" />
-          <small>Erros</small>
-          <strong>{data.erros.toLocaleString("pt-BR")}</strong>
-        </span>
-        <span data-tone="gold">
-          <small>Aproveitamento</small>
-          <strong>{rate === null ? "—" : `${rate}%`}</strong>
-        </span>
-      </div>
       {data.total === 0 ? (
-        <p className="sh2-insights__empty">
+        <p className="ncx-empty">
           Sem respostas em {periodLabel}. Resolva questões no treinador para ver seus acertos e
           erros aqui.
         </p>
       ) : (
-        <div className="sh2-insights__grid">
-          <figure className="sh2-insights__chart">
-            <figcaption>
-              {period === "session" ? "Questão a questão" : "Acertos e erros por período"}
-              <span>
-                <i style={{ background: GREEN }} /> Acertos <i style={{ background: ROSE }} /> Erros
+        <>
+          <figure className="ncx-plot">
+            <figcaption className="ncx-plot__head">
+              <span>{period === "session" ? "Questão a questão" : "Acertos, erros e aproveitamento"}</span>
+              <span className="ncx-legend" role="group" aria-label="Mostrar ou ocultar séries">
+                {series.map((item) => (
+                  <button
+                    key={item.key}
+                    type="button"
+                    aria-pressed={!hidden[item.key]}
+                    onClick={() => toggle(item.key)}
+                  >
+                    <i style={{ background: item.color }} aria-hidden="true" data-line={item.key === "taxa" || undefined} />
+                    {item.label}
+                  </button>
+                ))}
               </span>
             </figcaption>
-            <ResponsiveContainer width="100%" height={220}>
-              <BarChart
-                data={data.buckets}
-                margin={{ top: 8, right: 4, bottom: 0, left: -18 }}
-                barCategoryGap="22%"
+            <ResponsiveContainer width="100%" height={240}>
+              <ComposedChart
+                data={chartData}
+                margin={{ top: 10, right: 4, bottom: 0, left: -14 }}
+                barCategoryGap="26%"
               >
-                <CartesianGrid vertical={false} stroke="currentColor" strokeOpacity={0.12} />
+                <CartesianGrid vertical={false} stroke="var(--border)" strokeDasharray="3 4" />
                 <XAxis
                   dataKey="label"
                   tickLine={false}
                   axisLine={false}
-                  tick={{ fill: "currentColor", fontSize: 11, opacity: 0.8 }}
-                  minTickGap={6}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
+                  tickMargin={8}
+                  minTickGap={8}
                 />
                 <YAxis
+                  yAxisId="n"
                   allowDecimals={false}
                   tickLine={false}
                   axisLine={false}
-                  tick={{ fill: "currentColor", fontSize: 11, opacity: 0.8 }}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
+                />
+                <YAxis
+                  yAxisId="p"
+                  orientation="right"
+                  domain={[0, 100]}
+                  ticks={[0, 50, 100]}
+                  hide={hidden.taxa}
+                  width={34}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={(value: number) => `${value}%`}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
                 />
                 <Tooltip
-                  cursor={{ fill: "currentColor", fillOpacity: 0.06 }}
-                  contentStyle={{
-                    background: "#131a2c",
-                    border: "1px solid #33405e",
-                    borderRadius: 10,
-                    color: "#fff",
-                    fontSize: 12,
+                  cursor={{ fill: "var(--foreground)", fillOpacity: 0.05, radius: 8 }}
+                  wrapperStyle={{ outline: "none" }}
+                  content={({ active, payload, label }) => {
+                    const point = payload?.[0]?.payload as
+                      | (Bucket & { taxa: number | null })
+                      | undefined;
+                    if (!active || !point) return null;
+                    const total = point.acertos + point.erros;
+                    return (
+                      <ChartTooltipCard
+                        title={period === "session" ? `Questão ${label}` : String(label)}
+                        rows={[
+                          { label: "Acertos", value: point.acertos, color: GREEN },
+                          { label: "Erros", value: point.erros, color: ROSE },
+                          {
+                            label: "Aproveitamento",
+                            value: total ? `${point.taxa}%` : "—",
+                            color: GOLD,
+                          },
+                        ]}
+                      />
+                    );
                   }}
-                  labelStyle={{ color: "#fff", fontWeight: 700 }}
                 />
-                <Bar
-                  dataKey="acertos"
-                  name="Acertos"
-                  stackId="a"
-                  fill={GREEN}
-                  radius={[0, 0, 3, 3]}
-                />
-                <Bar dataKey="erros" name="Erros" stackId="a" fill={ROSE} radius={[3, 3, 0, 0]} />
-              </BarChart>
+                {!hidden.acertos && (
+                  <Bar
+                    yAxisId="n"
+                    dataKey="acertos"
+                    name="Acertos"
+                    stackId="a"
+                    fill={GREEN}
+                    maxBarSize={40}
+                    radius={hidden.erros ? [6, 6, 2, 2] : [0, 0, 2, 2]}
+                    animationDuration={420}
+                    isAnimationActive={!prefersReducedMotion()}
+                  />
+                )}
+                {!hidden.erros && (
+                  <Bar
+                    yAxisId="n"
+                    dataKey="erros"
+                    name="Erros"
+                    stackId="a"
+                    fill={ROSE}
+                    maxBarSize={40}
+                    radius={[6, 6, 0, 0]}
+                    animationDuration={420}
+                    isAnimationActive={!prefersReducedMotion()}
+                  />
+                )}
+                {!hidden.taxa && period !== "session" && (
+                  <Line
+                    yAxisId="p"
+                    type="monotone"
+                    dataKey="taxa"
+                    name="Aproveitamento"
+                    stroke={GOLD}
+                    strokeWidth={2.25}
+                    connectNulls
+                    dot={{ r: 3, strokeWidth: 0, fill: GOLD }}
+                    activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--card)", fill: GOLD }}
+                    animationDuration={420}
+                    isAnimationActive={!prefersReducedMotion()}
+                  />
+                )}
+              </ComposedChart>
             </ResponsiveContainer>
           </figure>
-          <div className="sh2-insights__subjects">
+          <div className="ncx-subjects">
             <h3>Por disciplina · {periodLabel}</h3>
             <ul>
-              {data.subjects.slice(0, 6).map((entry) => {
+              {data.subjects.slice(0, 5).map((entry) => {
                 const total = entry.acertos + entry.erros;
                 const pct = Math.round((entry.acertos / total) * 100);
                 return (
                   <li key={entry.subject}>
-                    <div>
-                      <strong title={entry.subject}>{entry.subject}</strong>
-                      <span>
-                        {entry.acertos} acertos · {entry.erros} erros · <b>{pct}%</b>
+                    <Link
+                      to="/dashboard/question-trainer"
+                      search={{ subject: entry.subject }}
+                      aria-label={`Treinar ${entry.subject}: ${pct}% de acerto em ${total} questões`}
+                    >
+                      <span className="ncx-subjects__name" title={entry.subject}>
+                        {entry.subject}
                       </span>
-                    </div>
-                    <span className="sh2-insights__bar" role="img" aria-label={`${pct}% de acerto`}>
-                      <i style={{ width: `${pct}%` }} />
-                    </span>
+                      <span className="ncx-subjects__meter" aria-hidden="true">
+                        <i style={{ width: `${pct}%` }} />
+                      </span>
+                      <span className="ncx-subjects__value">
+                        <b data-low={pct < 60 || undefined}>{pct}%</b>
+                        <small>
+                          {entry.acertos}/{total}
+                        </small>
+                      </span>
+                      <ArrowRight aria-hidden="true" />
+                    </Link>
                   </li>
                 );
               })}
             </ul>
-            {data.subjects.length > 6 && (
-              <p>Mais {data.subjects.length - 6} disciplinas em Desempenho.</p>
+            {data.subjects.length > 5 && (
+              <Link to="/dashboard/performance" className="ncx-link">
+                Mais {data.subjects.length - 5} disciplinas em Desempenho <ArrowRight aria-hidden="true" />
+              </Link>
             )}
           </div>
-        </div>
+        </>
       )}
     </div>
   );
