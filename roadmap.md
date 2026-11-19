@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Corrigir alternativas cortadas e espaço superior no treinador em tela cheia; verificar computador e celular.
+
 - [x] Refinar cores e hierarquia da Área do aluno, preservando boas-vindas e dados; 24 testes e compilação aprovados, quatro apresentações sem rolagem horizontal. Conferência com conta real administrativa e navegação de aluno simulada; sessão nativa de aluno indisponível.
 
 - [x] Verificar sintaxe de 881 arquivos (incluindo 75 rotas e 3 funções legadas); corrigir resolução das dependências das notificações; 15 testes aprovados, validação Deno e compilação automática aprovadas.

@@ -2511,7 +2511,10 @@ function QtFitViewport({ depKey }: { depKey: string }) {
     const fit = () => {
       const card = shell.querySelector<HTMLElement>(".question-window");
       if (!card) return;
-      const top = card.getBoundingClientRect().top + window.scrollY;
+      // Both coordinates belong to the visual viewport, even inside a scrolled panel.
+      const top = card.getBoundingClientRect().top;
+      const viewport = window.visualViewport;
+      const viewportBottom = (viewport?.offsetTop ?? 0) + (viewport?.height ?? window.innerHeight);
       const strip = document.querySelector<HTMLElement>(".dev-strip");
       const stripH =
         strip && getComputedStyle(strip).position === "fixed" ? strip.getBoundingClientRect().height : 0;
@@ -2520,7 +2523,8 @@ function QtFitViewport({ depKey }: { depKey: string }) {
         const box = (el as HTMLElement).getBoundingClientRect();
         if (box.height > 0) tail += box.height + 12;
       }
-      const h = Math.max(520, Math.floor(window.innerHeight - top - stripH - tail - 12));
+      const focused = shell.closest('[data-focus-mode="true"]') !== null;
+      const h = Math.max(0, Math.floor(viewportBottom - top - stripH - tail - (focused ? 0 : 12)));
       shell.style.setProperty("--qt4-h", `${h}px`);
     };
     fit();
@@ -2530,10 +2534,18 @@ function QtFitViewport({ depKey }: { depKey: string }) {
       shell.scrollIntoView({ block: "start", behavior: "auto" });
     }
     const raf = requestAnimationFrame(fit);
+    const observer = new ResizeObserver(fit);
+    const panel = shell.closest<HTMLElement>("#dashboard-content");
+    if (panel) observer.observe(panel);
     window.addEventListener("resize", fit);
+    window.visualViewport?.addEventListener("resize", fit);
+    window.visualViewport?.addEventListener("scroll", fit);
     return () => {
       cancelAnimationFrame(raf);
+      observer.disconnect();
       window.removeEventListener("resize", fit);
+      window.visualViewport?.removeEventListener("resize", fit);
+      window.visualViewport?.removeEventListener("scroll", fit);
     };
   }, [depKey]);
   return <span ref={markerRef} hidden aria-hidden="true" />;
