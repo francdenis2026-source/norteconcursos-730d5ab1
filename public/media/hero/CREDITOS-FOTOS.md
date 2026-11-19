@@ -1,8 +1,11 @@
-# Créditos das fotos dos cartões (Unsplash License e Pexels License — uso comercial gratuito)
+# Imagens dos cartões de acesso rápido
 
-- card-agenda.webp — Alexa Williams — https://unsplash.com/photos/Lqc-4g9GNOc
-- card-treinar.webp — Jakub Żerdzicki — https://unsplash.com/photos/50comlI_39U
-- card-material.webp — Krists Luhaers — https://unsplash.com/photos/oQWCAU-JLHI
-- card-edital.webp — Pexels — https://www.pexels.com/photo/7054757/
-- card-simulados.webp — Amanda Jones — https://unsplash.com/photos/TbHMgvOBhIQ
-- card-ranking.webp — Pexels — https://www.pexels.com/photo/7110724/
+As imagens card-*.webp são versões tratadas (recorte no formato do cartão, sombras abertas,
+contraste, cor e nitidez) das imagens originais do acervo da plataforma:
+
+- card-agenda.webp — de journey.webp
+- card-treinar.webp — de toolkit.webp
+- card-material.webp — de preparacao-n-cenas.webp
+- card-edital.webp — de pcac-capa.webp (distintivo e viatura, sem o título)
+- card-simulados.webp — de plano-premium-equipe.webp
+- card-ranking.webp — de careers-team.webp
