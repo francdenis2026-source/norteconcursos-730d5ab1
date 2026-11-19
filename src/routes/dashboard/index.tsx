@@ -301,25 +301,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           to: "/dashboard/cronograma",
           search: { plano: plan.id, painel: "1" },
         }
-      : q.reading.data
-        ? {
-            title: "Continue de onde você parou.",
-            reason: `Sua última leitura disponível: ${q.reading.data.title} · ${q.reading.data.label}.`,
-            label: "Continuar minha leitura",
-            to: "/dashboard/legal-course/$slug",
-            params: { slug: q.reading.data.slug },
-            search: { art: q.reading.data.article },
-          }
-        : stats?.pending && stats.pending > 0
-          ? {
-              title: "Transforme os erros em aprendizado.",
-              reason:
-                "Há erros sem acerto posterior registrado. Abra o reforço para conferir as questões disponíveis e revisar o raciocínio.",
-              label: "Revisar meus erros",
-              to: "/dashboard/question-trainer",
-              search: { mode: "reforco" },
-            }
-          : q.objective.isSuccess && !objective
+      : q.objective.isSuccess && !objective
             ? {
                 title: "Comece pelas questões.",
                 reason:
@@ -494,45 +476,34 @@ function StudentHome({ user }: { user: UserProfile }) {
       </section>
 
       <SectionLabel step={2} title="Acesso rápido" />
-      <nav className="sh2-shortcuts sh2-shortcuts--chips" aria-label="Atalhos de estudo">
+      <nav className="ncx-tiles" aria-label="Acesso rápido">
         {destinations.map(({ to, title, text, image, icon: Icon }, i) => (
           <Link
             key={to}
             to={to}
-            data-tone={tones[i % tones.length]}
+            className="ncx-tile"
+            data-tone={tileTones[i % tileTones.length]}
+            style={{ "--i": i } as React.CSSProperties}
             {...(to === "/dashboard/ranking"
               ? {
                   search: { section: "general", period: "all", page: 1, size: 20, q: "" } as never,
                 }
               : {})}
           >
-            <span>
-              <strong>
+            <img src={image} alt="" loading="lazy" decoding="async" />
+            <span className="ncx-tile__body">
+              <span className="ncx-tile__icon">
                 <Icon aria-hidden="true" />
-                {title}
-              </strong>
-              {to === "/dashboard/ranking" && rank.data?.rank_position ? (
-                <small title={rankText ?? undefined}>{rank.data.rank_position}º</small>
-              ) : null}
+              </span>
+              <strong>{title}</strong>
+              <small>
+                {to === "/dashboard/ranking" && rank.data?.rank_position
+                  ? `${rank.data.rank_position}º lugar · ${rank.data.total_points} pts`
+                  : text}
+              </small>
             </span>
           </Link>
         ))}
-        <Link to="/dashboard/performance" data-tone="blue">
-          <span>
-            <strong>
-              <TrendingUp aria-hidden="true" />
-              Desempenho
-            </strong>
-          </span>
-        </Link>
-        <Link to="/dashboard/student-exams" search={{ career: undefined }} data-tone="rose">
-          <span>
-            <strong>
-              <FileText aria-hidden="true" />
-              Minhas provas
-            </strong>
-          </span>
-        </Link>
       </nav>
 
       <StudentMetricPanel
@@ -730,7 +701,6 @@ function StudentHome({ user }: { user: UserProfile }) {
               <Link
                 className="sh2-cta"
                 to={priority.to}
-                {...("params" in priority ? { params: priority.params } : {})}
                 {...("search" in priority ? { search: priority.search } : {})}
               >
                 {priority.label}
@@ -961,7 +931,7 @@ function StudentHome({ user }: { user: UserProfile }) {
   );
 }
 
-const tones = ["gold", "blue", "green", "violet", "amber", "rose"] as const;
+const tileTones = ["gold", "teal", "blue", "violet", "amber", "rose"] as const;
 
 function SectionLabel({ title, id }: { step?: number; title: string; text?: string; id?: string }) {
   return (

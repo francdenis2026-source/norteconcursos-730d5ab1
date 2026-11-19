@@ -575,3 +575,127 @@ html:root body .student-home.sh2.student-overview .student-pcac-spotlight__actio
 @media (prefers-reduced-motion: reduce) {
   .ncx-range > button, .ncx-viewtoggle button, .ncx-link, .ncx-link svg { transition: none; }
 }
+
+/* ---------- Acesso rápido: cartões com imagem ---------- */
+.ncx-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--nc-space-3);
+}
+@media (min-width: 720px) { .ncx-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1240px) { .ncx-tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.ncx-tile {
+  --tone: var(--sh2-gold);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 8.5rem;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--border);
+  border-radius: var(--nc-radius-card);
+  color: #fff;
+  text-decoration: none;
+  background: oklch(0.2 0.02 260);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 6%);
+  transition: transform 200ms var(--ncx-ease), box-shadow 200ms var(--ncx-ease), border-color 200ms var(--ncx-ease);
+  animation: ncx-rise 420ms var(--ncx-ease) both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+.ncx-tile[data-tone="teal"] { --tone: oklch(0.72 0.12 185); }
+.ncx-tile[data-tone="blue"] { --tone: oklch(0.68 0.15 250); }
+.ncx-tile[data-tone="violet"] { --tone: oklch(0.66 0.16 295); }
+.ncx-tile[data-tone="amber"] { --tone: oklch(0.78 0.15 70); }
+.ncx-tile[data-tone="rose"] { --tone: oklch(0.68 0.17 15); }
+.ncx-tile img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms var(--ncx-ease);
+}
+.ncx-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, transparent 15%, rgb(8 10 16 / 55%) 50%, rgb(8 10 16 / 92%) 100%),
+    linear-gradient(135deg, color-mix(in oklab, var(--tone) 38%, transparent), transparent 60%);
+}
+.ncx-tile__body { display: grid; gap: 2px; width: 100%; padding: var(--nc-space-3); }
+.ncx-tile__icon {
+  display: grid;
+  place-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-bottom: var(--nc-space-1);
+  border-radius: 0.5rem;
+  color: oklch(0.18 0.02 260);
+  background: var(--tone);
+  box-shadow: 0 4px 12px -4px color-mix(in oklab, var(--tone) 70%, transparent);
+  transition: transform 200ms var(--ncx-ease);
+}
+.ncx-tile__icon svg { width: 1rem; height: 1rem; }
+.ncx-tile strong { font-size: var(--nc-font-sm); font-weight: 650; line-height: 1.2; color: #fff; }
+.ncx-tile small {
+  overflow: hidden;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgb(255 255 255 / 78%);
+}
+.ncx-tile:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--tone) 70%, transparent);
+  box-shadow: 0 14px 28px -16px color-mix(in oklab, var(--tone) 80%, black);
+}
+.ncx-tile:hover img { transform: scale(1.06); }
+.ncx-tile:hover .ncx-tile__icon { transform: rotate(-6deg) scale(1.06); }
+.ncx-tile:active { transform: translateY(-1px) scale(0.99); }
+.ncx-tile:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+/* Garante texto branco mesmo com a guarda de contraste global */
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile strong { color: #fff !important; }
+html body .app-shell[data-area] #dashboard-content#dashboard-content .student-home.sh2 .ncx-tile small { color: rgb(255 255 255 / 80%) !important; }
+
+/* ---------- Indicadores: cor por tema e microinterações ---------- */
+html:root body .student-home.sh2.student-overview .sh2-kpis .sh2-kpi > svg {
+  color: var(--sh2-tone) !important;
+  background: color-mix(in oklab, var(--sh2-tone) 12%, var(--card));
+  transition: transform 200ms var(--ncx-ease);
+}
+html:root body .student-home.sh2.student-overview .sh2-kpi {
+  animation: ncx-rise 380ms var(--ncx-ease) both;
+}
+html:root body .student-home.sh2.student-overview .sh2-kpi:nth-child(2) { animation-delay: 50ms; }
+html:root body .student-home.sh2.student-overview .sh2-kpi:nth-child(3) { animation-delay: 100ms; }
+html:root body .student-home.sh2.student-overview .sh2-kpi:nth-child(4) { animation-delay: 150ms; }
+html:root body .student-home.sh2.student-overview .sh2-kpi:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--sh2-tone) 55%, var(--border));
+  box-shadow: 0 10px 22px -16px color-mix(in oklab, var(--sh2-tone) 80%, black);
+}
+html:root body .student-home.sh2.student-overview .sh2-kpi:hover > svg { transform: scale(1.08); }
+html:root body .student-home.sh2.student-overview :is(.sh2-board > .sh2-card, .sh2-stack > *, .sh2-card--chart) {
+  transition: border-color 200ms var(--ncx-ease), box-shadow 200ms var(--ncx-ease);
+  animation: ncx-rise 420ms var(--ncx-ease) both;
+}
+html:root body .student-home.sh2.student-overview :is(.sh2-board > .sh2-card, .sh2-card--chart):hover {
+  box-shadow: 0 12px 28px -22px rgb(0 0 0 / 45%);
+}
+@keyframes ncx-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ncx-tile,
+  .ncx-tile img,
+  .ncx-tile__icon,
+  html:root body .student-home.sh2.student-overview :is(.sh2-kpi, .sh2-board > .sh2-card, .sh2-stack > *, .sh2-card--chart) {
+    animation: none;
+    transition: none;
+  }
+  .ncx-tile:hover, .ncx-tile:hover img { transform: none; }
+}
