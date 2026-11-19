@@ -155,18 +155,7 @@
 .ecc-action[data-primary] { border-color: color-mix(in oklab, var(--ecc-gold) 55%, transparent); background: linear-gradient(135deg, color-mix(in oklab, var(--ecc-gold) 22%, rgb(10 14 22 / 60%)), rgb(10 14 22 / 55%)); }
 
 /* Acervo */
-.ecc-bank { display: flex; flex-direction: column; gap: 0.875rem; padding: 1rem; }
-.ecc-bank::before {
-  content: "";
-  position: absolute;
-  inset: -40% -40% auto auto;
-  z-index: -1;
-  width: 16rem;
-  height: 16rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in oklab, var(--ecc-gold) 22%, transparent), transparent 65%);
-  animation: ecc-float 9s ease-in-out infinite alternate;
-}
+.ecc-bank { display: flex; flex-direction: column; gap: 0.875rem; padding: 1rem; background: oklch(0.17 0.02 255); }
 .ecc-bank h3 { margin: 0.15rem 0 0; font-size: 1rem; }
 .ecc-bank__stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; margin: 0; }
 .ecc-bank__stats > div { padding: 0.625rem 0.75rem; border: 1px solid var(--ecc-line); border-radius: 0.75rem; background: var(--ecc-glass); }
