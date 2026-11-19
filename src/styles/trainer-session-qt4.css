@@ -623,3 +623,22 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-op
 html body .app-shell[data-focus-mode="true"][data-area]:not(#_):not(#_):not(#_):not(#_) .app-content:has(.qt4) { padding-bottom: 44px !important; overflow: hidden !important; }
 html body .app-shell[data-focus-mode="true"][data-area]:not(#_):not(#_):not(#_):not(#_) .app-content:has(.qt4)::after { display: none !important; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-meta > :nth-child(4) { flex: none; }
+
+/* Botão discreto de maximizar / restaurar a tela, na faixa do treinador */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--q4-line) !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: var(--q4-dim) !important;
+  transition: color 160ms, border-color 160ms, background-color 160ms, transform 160ms var(--q4-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs:hover {
+  color: var(--q4-blue) !important;
+  border-color: color-mix(in oklab, var(--q4-blue) 60%, transparent) !important;
+  background: color-mix(in oklab, var(--q4-blue) 10%, transparent) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs:active { transform: scale(0.94); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs svg { transition: transform 200ms var(--q4-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs:hover svg { transform: scale(1.12); }

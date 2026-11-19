@@ -38,6 +38,8 @@ import {
   Pause,
   Play,
   MoreHorizontal,
+  Maximize2,
+  Minimize2,
   RotateCcw,
   Settings2,
   SkipForward,
@@ -149,6 +151,7 @@ import {
   type ExamFocus,
 } from "@/lib/examPotential";
 import { Hint } from "@/components/ui/hint";
+import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   head: () => ({
@@ -363,6 +366,7 @@ function QuestionTrainer() {
   const [struck, setStruck] = React.useState<Answer[]>([]);
   const [saving, setSaving] = React.useState(false);
   const savingRef = React.useRef(false);
+  const workspaceFs = useWorkspaceFullscreen(true);
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
   const [responseSeconds, setResponseSeconds] = React.useState<number | null>(null);
@@ -1275,6 +1279,18 @@ function QuestionTrainer() {
                 <LogOut className="h-4 w-4" /> Encerrar
               </Button>
             </Hint>
+          <Hint content={workspaceFs.active ? "Restaurar a janela (Esc)" : "Maximizar a tela"}>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="qt2-strip__fs"
+              aria-label={workspaceFs.active ? "Restaurar a janela" : "Maximizar a tela"}
+              aria-pressed={workspaceFs.active}
+              onClick={workspaceFs.active ? workspaceFs.exit : workspaceFs.enter}
+            >
+              {workspaceFs.active ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+            </Button>
+          </Hint>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Mais opções do treino" data-hint="Configuração, desempenho e ranking">
