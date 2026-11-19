@@ -34,3 +34,28 @@ html body .app-shell[data-area] #dashboard-content [data-slot="button"][data-var
   html body :is(.ecc-bank__cta, .hero-primary-action, .qt3 .qt3-start, .home-button--primary),
   html body .app-shell[data-area] #dashboard-content [data-slot="button"][data-variant="default"] { background: ButtonFace !important; color: ButtonText !important; box-shadow: none !important; }
 }
+
+/*
+  Banner do concurso: enquadramento da policial e destaque.
+  - O zoom lento aproximava a partir de 40% da altura e cortava o topo da cabeça; agora o topo fica fixo.
+  - A foto é ancorada no alto e deslocada para a direita, mostrando cabeça e distintivo inteiros.
+  - Camada de luz quente atrás da figura + leve contraste e vinheta inferior para destacá-la do fundo.
+*/
+@keyframes ecc-kenburns-top { from { transform: scale(1); } to { transform: scale(1.06); } }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest__bg,
+html body .ecc .ecc-contest__bg {
+  object-position: 86% 0% !important;
+  transform-origin: 72% 0% !important;
+  animation: ecc-kenburns-top 20s ease-in-out infinite alternate !important;
+  filter: brightness(1.1) saturate(1.12) contrast(1.06) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest::after,
+html body .ecc .ecc-contest::after {
+  background:
+    radial-gradient(38% 70% at 80% 22%, oklch(0.84 0.125 90 / 20%), transparent 70%),
+    linear-gradient(0deg, rgb(10 15 20 / 55%), transparent 38%),
+    linear-gradient(90deg, rgb(15 22 27 / 96%) 28%, rgb(15 22 27 / 66%) 55%, rgb(15 22 27 / 12%)) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .ecc .ecc-contest__bg { animation: none !important; }
+}
