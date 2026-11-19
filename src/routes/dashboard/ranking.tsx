@@ -1,6 +1,7 @@
 import "@/styles/exam-performance-workspaces.css";
 import "@/styles/ranking-professional-refinement.css";
 import "@/styles/ranking-arena.css";
+import "@/styles/ranking-arena-v2.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -16,6 +17,12 @@ import {
   TrendingUp,
   Users,
   RefreshCw,
+  Trophy,
+  CheckCircle2,
+  Layers,
+  PenLine,
+  Scale,
+  ArrowRight,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -28,7 +35,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
-import { RankingHeader } from "@/components/dashboard/RankingHeader";
+import { TrophyEmblem } from "@/components/dashboard/RankEmblems";
 import { LevelEmblem, MedalEmblem } from "@/components/dashboard/RankEmblems";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -393,275 +400,193 @@ function RankingPage() {
   const me = pageData?.my_entry;
   const tab = TABS.find((t) => t[0] === kind)!;
 
+  const lv = me && hasScore(me) ? levelProgress(me.points) : null;
+  const leaderPoints = Math.max(1, ...(rows ?? []).filter(hasScore).map((r) => r.points));
+
   return (
-    <div className="ranking-workspace space-y-6">
-      <RankingHeader participants={pageData?.partial ? undefined : pageData?.participants} />
-      <Link
-        to="/dashboard/performance"
-        className="ranking-evolution-link flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm shadow-sm transition-colors hover:border-primary/50 hover:bg-primary/5"
-      >
-        <span className="flex items-center gap-2 font-semibold">
-          <TrendingUp className="h-4 w-4 text-primary" aria-hidden="true" />
-          Veja seu gráfico de evolução (dia, semana, mês e ano) e saiba se está avançando ou
-          cometendo muitos erros
-        </span>
-        <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
-      </Link>
-      <Card className="border-0 shadow-lg ring-1 ring-border/70">
-        <CardHeader className="space-y-3">
-          <div className="ranking-controls">
-            <div className="ranking-seg" role="group" aria-label="Classificação">
-              <span className="ranking-seg__label">Classificação</span>
-              {TABS.map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  aria-pressed={kind === id}
-                  onClick={() => {
-                    setQuery("");
-                    void navigate({ search: { ...search, section: id, page: 1, q: "" } });
-                  }}
-                  className="ranking-seg__btn"
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-            <div className="ranking-seg" role="group" aria-label="Período">
-              <span className="ranking-seg__label">Período</span>
-              {PERIODS.map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  aria-pressed={period === id}
-                  onClick={() => {
-                    setQuery("");
-                    void navigate({
-                      search: { ...search, period: id as RankingPeriod, page: 1, q: "" },
-                    });
-                  }}
-                  className="ranking-seg__btn"
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <CardTitle className="text-xl">{tab[1]}</CardTitle>
-          <CardDescription>
-            {tab[2]} {period === "month" && "Mostrando só os pontos deste mês."}
-          </CardDescription>
-          <details className="ranking-rules rounded-lg border bg-muted/30 p-3 text-xs text-muted-foreground">
-            <summary className="cursor-pointer font-semibold text-foreground">
-              Como a pontuação e o desempate funcionam
-            </summary>
-            <ul className="mt-2 list-disc space-y-1 pl-4">
-              <li>
-                <b>Questões:</b> certo sem ajuda +3, com ajuda +1, errado -2, conferido no servidor
-                pelo gabarito oficial. Só vale por inteiro com 70%+ de acertos no dia (50% ou menos
-                não pontua) — até 100 por dia, cada questão conta uma vez só (Treinador +
-                Simulados).
-              </li>
-              <li>
-                <b>Simulados:</b> mesma conta das questões, tentativa de 10s+ por questão. Bônus de
-                precisão (+25/+50/+100 com 70/80/90%) a partir de 20 questões inéditas.
-              </li>
-              <li>
-                <b>Flashcards:</b> +1 por cartão (até 50/dia). <b>Redação:</b> +20 por texto de 150+
-                palavras (1/dia). Horas de estudo são só métrica de dedicação, sem pontos.
-              </li>
-              <li>
-                <b>Desempate:</b> pontos, % de acertos, acertos e questões válidas (critérios variam
-                por seção). Empate total compartilha a mesma posição. Sem bônus por assinatura,
-                tempo conectado ou ordem de cadastro — e administradores ficam fora.
-              </li>
-              <li>
-                <b>Sem pontuação:</b> quem ainda não somou pontos aparece no fim, sem posição e sem
-                estrelas, até a primeira resposta pontuada.
-              </li>
-            </ul>
-            <ul className="ranking-levels" aria-label="Níveis e estrelas">
-              {RANKING_LEVELS.map((level) => (
-                <li key={level.name}>
-                  <Stars n={level.stars} />
-                  <span className="font-semibold text-foreground">{level.name}</span>
-                  <span>{level.min.toLocaleString("pt-BR")}+ pts</span>
-                </li>
-              ))}
-            </ul>
-          </details>
-        </CardHeader>
-        <CardContent>
-          {real && pageData && !loadError && (
-            <>
-              <div className="ranking-mepos mb-4" role="status">
-                <div className="ranking-mepos__me">
-                  <span className="ranking-mepos__label">Sua posição</span>
-                  {me && hasScore(me) ? (
-                    <>
-                      <p className="ranking-mepos__value">
-                        {me.rank_position ? `${me.rank_position}º` : "—"}
-                        <span className="ranking-mepos__pts">{me.points} pts</span>
-                      </p>
-                      <p className="ranking-mepos__meta">
-                        {me.questions} questões · {me.accuracy}%
-                      </p>
-                      {(() => {
-                        const lv = levelProgress(me.points);
-                        return (
-                          <div className="ranking-mepos__level">
-                            <p>
-                              <LevelEmblem stars={lv.stars} size={34} />
-                              <Stars n={lv.stars} /> Nível <b>{lv.name}</b>
-                              {lv.next
-                                ? ` · faltam ${lv.missing.toLocaleString("pt-BR")} pts para ${lv.next.name}`
-                                : " · nível máximo"}
-                            </p>
-                            <Progress
-                              value={lv.percent}
-                              className="h-1.5"
-                              aria-label="Progresso até o próximo nível"
-                            />
-                          </div>
-                        );
-                      })()}
-                    </>
-                  ) : me ? (
-                    <>
-                      <p className="ranking-mepos__value ranking-mepos__value--none">
-                        Sem pontuação
-                      </p>
-                      <p className="ranking-mepos__meta">
-                        Responda questões no Treinador para entrar na classificação.
-                      </p>
-                      <Link to="/dashboard/question-trainer" className="ranking-mepos__cta">
-                        <Target className="h-4 w-4" aria-hidden="true" /> Começar a pontuar
-                      </Link>
-                    </>
-                  ) : (
-                    <p className="ranking-mepos__meta ranking-mepos__meta--empty">
-                      {pageData.partial
-                        ? "Indisponível agora"
-                        : user.role === "admin"
-                          ? "Admins não participam"
-                          : "Ainda sem posição"}
+    <div className="ranking-workspace rka">
+      <header className="rka-hero" aria-labelledby="ranking-page-title">
+        <img className="rka-hero__bg" src="/media/hero/careers-team.webp" alt="" aria-hidden="true" decoding="async" />
+        <div className="rka-hero__copy">
+          <span className="rka-hero__trophy" aria-hidden="true">
+            <TrophyEmblem size={64} />
+          </span>
+          <p className="rka-kicker">Arena Norte · Desempenho</p>
+          <h1 id="ranking-page-title">
+            Ranking <span>{tab[1].toLowerCase()}</span>
+          </h1>
+          <p className="rka-hero__desc">Cada questão certa te aproxima do topo. Suba de nível e acompanhe sua evolução.</p>
+          {pageData && !pageData.partial && (
+            <p className="rka-chip">
+              <Users aria-hidden="true" /> {pageData.participants.toLocaleString("pt-BR")} candidatos na disputa
+            </p>
+          )}
+        </div>
+
+        {real && pageData && !loadError && (
+          <section className="rka-me" role="status" aria-label="Sua posição">
+            <p className="rka-me__label">Sua posição</p>
+            {me && hasScore(me) && lv ? (
+              <>
+                <div className="rka-me__main">
+                  <div
+                    className="rka-ring"
+                    style={{ "--p": lv.percent } as React.CSSProperties}
+                    role="img"
+                    aria-label={`Progresso no nível ${lv.name}: ${lv.percent}%`}
+                  >
+                    <LevelEmblem stars={lv.stars} size={40} />
+                  </div>
+                  <div>
+                    <p className="rka-me__pos">
+                      {me.rank_position ? `${me.rank_position}º` : "—"}
+                      <small>{me.points.toLocaleString("pt-BR")} pts</small>
                     </p>
-                  )}
+                    <p className="rka-me__meta">
+                      <Stars n={lv.stars} /> {lv.name} · {me.questions} questões · {me.accuracy}%
+                    </p>
+                  </div>
                 </div>
-                <div className="ranking-mepos__actions">
-                  {me?.rank_position && hasScore(me) && !pageData.partial && (
+                <p className="rka-me__next">
+                  {lv.next
+                    ? `Faltam ${lv.missing.toLocaleString("pt-BR")} pts para ${lv.next.name}`
+                    : "Nível máximo alcançado"}
+                </p>
+                <div className="rka-me__actions">
+                  {me.rank_position && !pageData.partial && (
                     <Button
                       size="sm"
-                      variant="outline"
                       onClick={() => {
                         setQuery("");
                         setLocating(true);
                         void navigate({
-                          search: {
-                            ...search,
-                            q: "",
-                            page: rankingPositionPage(me.rank_position!, search.size),
-                          },
+                          search: { ...search, q: "", page: rankingPositionPage(me.rank_position!, search.size) },
                         });
                       }}
+                      className="rka-btn rka-btn--gold"
                     >
-                      <LocateFixed className="mr-1.5 h-4 w-4" />
-                      Minha posição
+                      <LocateFixed aria-hidden="true" /> Minha posição
                     </Button>
                   )}
-                  {(user.role !== "admin" || me) && (
-                    <Button size="sm" variant="ghost" onClick={() => setViewing(user.id)}>
-                      Meu desempenho
-                    </Button>
-                  )}
+                  <Button size="sm" variant="ghost" onClick={() => setViewing(user.id)} className="rka-btn">
+                    Meu desempenho
+                  </Button>
                 </div>
-                <p className="ranking-mepos__total">
-                  <Users className="h-3.5 w-3.5" aria-hidden="true" />
-                  {pageData.participants.toLocaleString("pt-BR")}{" "}
-                  {pageData.partial ? "carregados" : "candidatos"}
-                </p>
-              </div>
-              {pageData.partial && (
-                <p
-                  role="status"
-                  className="mb-4 rounded-lg border border-amber-400/60 bg-amber-500/10 p-3 text-sm"
-                >
-                  A lista completa está temporariamente indisponível. Exibindo uma lista parcial;
-                  nem todos os candidatos aparecem aqui.
-                </p>
-              )}
-            </>
-          )}
-          {real && (
-            <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end">
-              <div className="flex-1">
-                <label htmlFor="ranking-search" className="mb-1.5 block text-sm font-semibold">
-                  Buscar pelo nome exibido
-                </label>
-                <div className="relative">
-                  <Search className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    id="ranking-search"
-                    type="search"
-                    className="pl-9"
-                    maxLength={100}
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    placeholder="Digite o nome do candidato"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="ranking-size" className="mb-1.5 block text-sm font-semibold">
-                  Por página
-                </label>
-                <select
-                  id="ranking-size"
-                  className="h-9 rounded-md border bg-background px-3 text-sm"
-                  value={search.size}
-                  onChange={(event) => {
-                    void navigate({
-                      search: { ...search, size: Number(event.target.value), page: 1 },
-                    });
-                  }}
-                >
-                  {[20, 50, 100].map((size) => (
-                    <option key={size} value={size}>
-                      {size} candidatos
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <Button
-                variant="outline"
-                onClick={() => setReload((n) => n + 1)}
-                aria-label="Atualizar ranking"
+              </>
+            ) : me ? (
+              <>
+                <p className="rka-me__pos rka-me__pos--none">Sem pontuação</p>
+                <p className="rka-me__meta">Responda questões no Treinador para entrar na classificação.</p>
+                <Link to="/dashboard/question-trainer" className="rka-btn rka-btn--gold rka-btn--link">
+                  <Target aria-hidden="true" /> Começar a pontuar
+                </Link>
+              </>
+            ) : (
+              <p className="rka-me__meta">
+                {pageData.partial ? "Indisponível agora" : user.role === "admin" ? "Admins não participam" : "Ainda sem posição"}
+              </p>
+            )}
+          </section>
+        )}
+      </header>
+
+      <div className="rka-toolbar">
+        <div className="rka-seg" role="group" aria-label="Classificação">
+          {TABS.map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={kind === id}
+              onClick={() => {
+                setQuery("");
+                void navigate({ search: { ...search, section: id, page: 1, q: "" } });
+              }}
+            >
+              {id === "general" ? <Trophy aria-hidden="true" /> : id === "questions" ? <CheckCircle2 aria-hidden="true" /> : <Layers aria-hidden="true" />}
+              {label}
+            </button>
+          ))}
+        </div>
+        <div className="rka-seg" role="group" aria-label="Período">
+          {PERIODS.map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={period === id}
+              onClick={() => {
+                setQuery("");
+                void navigate({ search: { ...search, period: id as RankingPeriod, page: 1, q: "" } });
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        {real && (
+          <div className="rka-tools">
+            <label className="rka-search" htmlFor="ranking-search">
+              <Search aria-hidden="true" />
+              <span className="sr-only">Buscar pelo nome exibido</span>
+              <Input
+                id="ranking-search"
+                type="search"
+                maxLength={100}
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Buscar candidato"
+              />
+            </label>
+            <label className="rka-size">
+              <span className="sr-only">Por página</span>
+              <select
+                id="ranking-size"
+                value={search.size}
+                onChange={(event) => {
+                  void navigate({ search: { ...search, size: Number(event.target.value), page: 1 } });
+                }}
               >
-                <RefreshCw className="h-4 w-4" />
-              </Button>
-            </div>
+                {[20, 50, 100].map((size) => (
+                  <option key={size} value={size}>
+                    {size} por página
+                  </option>
+                ))}
+              </select>
+            </label>
+            <Button variant="outline" onClick={() => setReload((n) => n + 1)} aria-label="Atualizar ranking" className="rka-icon-btn">
+              <RefreshCw aria-hidden="true" />
+            </Button>
+          </div>
+        )}
+      </div>
+
+      <div className="rka-body">
+        <section className="rka-board" aria-labelledby="rka-board-title">
+          <header className="rka-board__head">
+            <h2 id="rka-board-title">{tab[1]}</h2>
+            <p>
+              {tab[2]} {period === "month" && "Mostrando só os pontos deste mês."}
+            </p>
+          </header>
+          {real && pageData?.partial && (
+            <p role="status" className="rka-notice">
+              A lista completa está temporariamente indisponível. Exibindo uma lista parcial; nem todos os candidatos aparecem aqui.
+            </p>
           )}
           {!real ? (
-            <p className="py-6 text-center text-sm text-muted-foreground">
-              Entre na sua conta para ver o ranking.
-            </p>
+            <p className="rka-empty">Entre na sua conta para ver o ranking.</p>
           ) : loadError ? (
-            <div role="alert" className="py-6 text-center text-sm">
+            <div role="alert" className="rka-empty">
               <p>Não foi possível carregar o ranking. Tente novamente.</p>
-              <button
-                type="button"
-                className="mt-2 font-semibold text-primary underline"
-                onClick={() => setReload((n) => n + 1)}
-              >
+              <button type="button" className="rka-link" onClick={() => setReload((n) => n + 1)}>
                 Recarregar ranking
               </button>
             </div>
           ) : !rows ? (
-            <div className="flex justify-center py-8">
-              <Loader2
-                className="h-5 w-5 animate-spin text-muted-foreground"
-                aria-label="Carregando"
-              />
+            <div className="rka-skeleton" aria-label="Carregando">
+              {[0, 1, 2, 3, 4].map((n) => (
+                <span key={n} />
+              ))}
+              <Loader2 className="sr-only" aria-hidden="true" />
             </div>
           ) : rows.length ? (
             (() => {
@@ -676,7 +601,7 @@ function RankingPage() {
               return (
                 <>
                   {showPodium && (
-                    <ol className="ranking-podium" aria-label="Pódio">
+                    <ol className="rka-podium" aria-label="Pódio">
                       {podium.map((r) => {
                         const pos = Number(r.rank_position);
                         return (
@@ -685,22 +610,29 @@ function RankingPage() {
                               type="button"
                               onClick={() => setViewing(r.user_id)}
                               aria-label={`${pos}º lugar: ${r.display_name}, ${r.points} pontos. Ver perfil`}
-                              className="ranking-podium__card"
+                              className="rka-podium__card"
                             >
-                              <span className="rk-podium__medal">
+                              <span className="rka-podium__glow" aria-hidden="true" />
+                              <span className="rka-podium__medal">
                                 <MedalEmblem
                                   tier={pos === 1 ? "gold" : pos === 2 ? "silver" : "bronze"}
                                   label={pos}
-                                  size={pos === 1 ? 84 : 68}
+                                  size={pos === 1 ? 76 : 60}
                                 />
                               </span>
-                              <span className="ranking-podium__name">
+                              <span className="rka-podium__name">
                                 {r.display_name}
                                 {r.is_me && " (você)"}
                               </span>
                               <Stars n={r.stars} />
-                              <span className="ranking-podium__points">
+                              <span className="rka-podium__points">
                                 {r.points.toLocaleString("pt-BR")} <small>pts</small>
+                              </span>
+                              <span className="rka-podium__stats">
+                                {r.questions} questões · {r.accuracy}%
+                              </span>
+                              <span className="rka-podium__step" aria-hidden="true">
+                                {pos}º
                               </span>
                             </button>
                           </li>
@@ -708,7 +640,7 @@ function RankingPage() {
                       })}
                     </ol>
                   )}
-                  <ol className="space-y-2" aria-label="Classificação dos candidatos">
+                  <ol className="rka-list" aria-label="Classificação dos candidatos">
                     {listRows.map((r, index) => {
                       const pos = Number(r.rank_position);
                       const scored = hasScore(r);
@@ -716,15 +648,11 @@ function RankingPage() {
                       return (
                         <React.Fragment key={r.user_id}>
                           {index === firstUnranked && (
-                            <li
-                              className="ranking-divider"
-                              aria-label="Candidatos ainda sem pontuação"
-                            >
-                              Ainda sem pontuação · entram na classificação na primeira resposta
-                              pontuada
+                            <li className="rka-divider" aria-label="Candidatos ainda sem pontuação">
+                              Ainda sem pontuação · entram na classificação na primeira resposta pontuada
                             </li>
                           )}
-                          <li>
+                          <li style={{ "--i": Math.min(index, 12) } as React.CSSProperties}>
                             <button
                               id={`ranking-${r.user_id}`}
                               type="button"
@@ -732,40 +660,41 @@ function RankingPage() {
                               aria-label={`Ver perfil de ${r.display_name}`}
                               data-podium={scored && pos <= 3 ? pos : undefined}
                               data-unranked={scored ? undefined : "true"}
-                              className={cn(
-                                "ranking-row grid w-full grid-cols-[42px_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border p-3 text-left transition",
-                                r.is_me && "ranking-row--me",
-                              )}
+                              className={cn("rka-row", r.is_me && "rka-row--me")}
                             >
                               <PositionBadge pos={pos} scored={scored} />
-                              <div className="min-w-0">
-                                <p className="ranking-row__name truncate text-sm font-bold">
-                                  <span className="ranking-row__avatar" aria-hidden="true">
-                                    {initial}
-                                  </span>
-                                  <span className="truncate">
-                                    {r.display_name}
-                                    {r.is_me && " (você)"}
-                                  </span>
-                                </p>
-                                <p className="ranking-row__meta flex flex-wrap items-center gap-x-1.5 text-xs text-muted-foreground">
+                              <span className="rka-avatar" aria-hidden="true" data-hue={initial.charCodeAt(0) % 6}>
+                                {initial}
+                              </span>
+                              <span className="rka-row__who">
+                                <span className="rka-row__name">
+                                  {r.display_name}
+                                  {r.is_me && <em>você</em>}
+                                </span>
+                                <span className="rka-row__meta">
                                   {scored ? (
                                     <>
-                                      <LevelEmblem stars={r.stars} size={22} />
-                                      <Stars n={r.stars} />
-                                      <span className="ranking-row__level">{r.level_name}</span>
-                                      <span className="ranking-row__stats">
-                                        {r.questions}q ({r.accuracy}%) · {r.simulators} sim
+                                      <LevelEmblem stars={r.stars} size={18} />
+                                      <span>{r.level_name}</span>
+                                      <span className="rka-row__stats">
+                                        {r.questions} questões · {r.accuracy}% · {r.simulators} simulados
                                       </span>
                                     </>
                                   ) : (
-                                    <span className="rank-chip rank-chip--none">Sem pontuação</span>
+                                    <span>Sem pontuação</span>
                                   )}
-                                </p>
-                              </div>
-                              <span className="ranking-row__points text-sm font-black tabular-nums">
-                                {scored ? r.points.toLocaleString("pt-BR") : "—"}
-                                <small>pts</small>
+                                </span>
+                              </span>
+                              <span className="rka-row__score">
+                                <b>
+                                  {scored ? r.points.toLocaleString("pt-BR") : "—"}
+                                  <small> pts</small>
+                                </b>
+                                {scored && (
+                                  <span className="rka-bar" aria-hidden="true">
+                                    <i style={{ width: `${Math.max(4, (r.points / leaderPoints) * 100)}%` }} />
+                                  </span>
+                                )}
                               </span>
                             </button>
                           </li>
@@ -777,54 +706,110 @@ function RankingPage() {
               );
             })()
           ) : (
-            <p className="py-6 text-center text-sm text-muted-foreground">
-              {search.q
-                ? "Nenhum candidato encontrado com esse nome."
-                : "Ainda não há participantes nesta seção."}
+            <p className="rka-empty">
+              {search.q ? "Nenhum candidato encontrado com esse nome." : "Ainda não há participantes nesta seção."}
             </p>
           )}
           {real && pageData && !loadError && (
-            <nav
-              className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t pt-4"
-              aria-label="Páginas do ranking"
-            >
-              <p className="text-xs text-muted-foreground" aria-live="polite">
+            <nav className="rka-pager" aria-label="Páginas do ranking">
+              <p aria-live="polite">
                 {pageData.total
                   ? `${(pageData.page - 1) * pageData.page_size + 1}–${Math.min(pageData.page * pageData.page_size, pageData.total)} de ${pageData.total}`
                   : "0 resultados"}
                 {search.q && " encontrados"}
               </p>
-              <div className="flex items-center gap-2">
+              <div>
                 <Button
                   size="sm"
                   variant="outline"
                   disabled={pageData.page <= 1}
-                  onClick={() => {
-                    void navigate({ search: { ...search, page: pageData.page - 1 } });
-                  }}
+                  onClick={() => void navigate({ search: { ...search, page: pageData.page - 1 } })}
                   aria-label="Página anterior"
+                  className="rka-icon-btn"
                 >
-                  <ChevronLeft className="h-4 w-4" />
+                  <ChevronLeft aria-hidden="true" />
                 </Button>
-                <span className="text-xs tabular-nums">
+                <span>
                   Página {pageData.page} de {pageData.page_count}
                 </span>
                 <Button
                   size="sm"
                   variant="outline"
                   disabled={pageData.page >= pageData.page_count}
-                  onClick={() => {
-                    void navigate({ search: { ...search, page: pageData.page + 1 } });
-                  }}
+                  onClick={() => void navigate({ search: { ...search, page: pageData.page + 1 } })}
                   aria-label="Próxima página"
+                  className="rka-icon-btn"
                 >
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight aria-hidden="true" />
                 </Button>
               </div>
             </nav>
           )}
-        </CardContent>
-      </Card>
+        </section>
+
+        <aside className="rka-side">
+          <Link to="/dashboard/performance" className="rka-evolution">
+            <img src="/media/hero/dashboard.webp" alt="" aria-hidden="true" loading="lazy" />
+            <span>
+              <TrendingUp aria-hidden="true" />
+              <b>Sua evolução</b>
+              <small>Gráficos por dia, semana, mês e ano</small>
+            </span>
+            <ArrowRight className="rka-evolution__go" aria-hidden="true" />
+          </Link>
+
+          <section className="rka-card" aria-labelledby="rka-points-title">
+            <h3 id="rka-points-title">Como pontuar</h3>
+            <ul className="rka-points">
+              <li>
+                <span data-tone="green"><CheckCircle2 aria-hidden="true" /></span>
+                <div>
+                  <b>Questões</b>
+                  <small>Certo sem ajuda +3, com ajuda +1, errado −2. Vale por inteiro com 70%+ no dia; até 100 por dia.</small>
+                </div>
+              </li>
+              <li>
+                <span data-tone="blue"><Layers aria-hidden="true" /></span>
+                <div>
+                  <b>Simulados</b>
+                  <small>Mesma conta, 10s+ por questão. Bônus +25/+50/+100 com 70/80/90% a partir de 20 inéditas.</small>
+                </div>
+              </li>
+              <li>
+                <span data-tone="violet"><PenLine aria-hidden="true" /></span>
+                <div>
+                  <b>Flashcards e redação</b>
+                  <small>+1 por cartão (até 50/dia). +20 por redação de 150+ palavras (1/dia).</small>
+                </div>
+              </li>
+              <li>
+                <span data-tone="gold"><Scale aria-hidden="true" /></span>
+                <div>
+                  <b>Desempate</b>
+                  <small>Pontos, % de acertos, acertos e questões válidas. Sem bônus por assinatura; administradores ficam fora.</small>
+                </div>
+              </li>
+            </ul>
+            <p className="rka-card__note">Horas de estudo são métrica de dedicação, sem pontos. Sem pontuação, o candidato aparece no fim até a primeira resposta pontuada.</p>
+          </section>
+
+          <section className="rka-card" aria-labelledby="rka-levels-title">
+            <h3 id="rka-levels-title">Níveis</h3>
+            <ol className="rka-levels" aria-label="Níveis e estrelas">
+              {RANKING_LEVELS.map((level) => (
+                <li key={level.name} data-current={lv?.name === level.name || undefined}>
+                  <LevelEmblem stars={level.stars} size={26} />
+                  <span>
+                    <b>{level.name}</b>
+                    <Stars n={level.stars} />
+                  </span>
+                  <small>{level.min.toLocaleString("pt-BR")}+ pts</small>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </aside>
+      </div>
       <ProfileDialog userId={viewing} onClose={() => setViewing(null)} />
     </div>
   );
