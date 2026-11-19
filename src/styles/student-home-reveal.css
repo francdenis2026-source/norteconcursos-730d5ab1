@@ -202,3 +202,32 @@ html body .app-shell[data-area] .student-home.sh2 .ncx-meters__value b {
   color: var(--foreground) !important;
   font-weight: 700 !important;
 }
+
+/* ---------------------------------------------------------------------
+   9) Modo claro: o cartão "Concurso ativo" e o selo da data da prova,
+      dentro da faixa de boas-vindas, usavam tokens que trocam de cor
+      com o tema (--nv-surface/--nv-card). A faixa em si é sempre escura
+      (var(--ink-deep), de propósito, por ficar sobre foto), então no
+      claro esses dois cartões viravam uma caixa cinza-clara com texto
+      claro por cima — quase ilegível. Usam agora os mesmos tokens
+      "sempre escuro" da própria faixa (--ink-deep/--on-ink), nos dois
+      temas. O brilho decorativo atrás da faixa também fica mais discreto
+      no claro, onde a mancha de cor ficava mais visível que no escuro.
+   --------------------------------------------------------------------- */
+html body .app-shell[data-area] .student-home.sh2 .sh2-hero__contest {
+  border-color: var(--on-ink-line, rgb(255 255 255 / 14%)) !important;
+  background: color-mix(in oklab, var(--ink-deep, #15181c) 88%, transparent) !important;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-hero__contest :is(p, strong, span, time) {
+  color: var(--on-ink, #f5f5f5);
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-hero__exam {
+  border-color: color-mix(in oklab, var(--brass, #d9a441) 40%, transparent) !important;
+  background: color-mix(in oklab, var(--brass, #d9a441) 12%, var(--ink-deep, #15181c)) !important;
+}
+html body .app-shell[data-area] .student-home.sh2 .sh2-hero__exam :is(p, strong, span, time) {
+  color: var(--on-ink, #f5f5f5);
+}
+html:root:not(.dark) body .app-shell[data-area] .student-home.sh2 .sh2-hero::before {
+  opacity: 0.4;
+}
