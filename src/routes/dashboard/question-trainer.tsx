@@ -2514,7 +2514,35 @@ function QtFitViewport({
   React.useLayoutEffect(() => {
     const shell = markerRef.current?.closest<HTMLElement>(root);
     if (!shell) return;
+    // Tela cheia: remove o respiro/faixa que a estrutura do painel reserva acima da sessão.
+    const undo: Array<() => void> = [];
+    const zero = (el: HTMLElement, prop: string) => {
+      const prev = el.style.getPropertyValue(prop);
+      const prio = el.style.getPropertyPriority(prop);
+      el.style.setProperty(prop, "0", "important");
+      undo.push(() => (prev ? el.style.setProperty(prop, prev, prio) : el.style.removeProperty(prop)));
+    };
+    const pullUp = () => {
+      const app = shell.closest<HTMLElement>(".app-shell");
+      if (!app || app.getAttribute("data-focus-mode") !== "true" || root !== ".qt4") return;
+      if (shell.getBoundingClientRect().top < 16) return;
+      for (let el: HTMLElement | null = shell; el && el !== app; el = el.parentElement) {
+        const cs = getComputedStyle(el);
+        if (parseFloat(cs.paddingTop) > 0) zero(el, "padding-top");
+        if (parseFloat(cs.marginTop) > 0) zero(el, "margin-top");
+        for (let sib = el.previousElementSibling as HTMLElement | null; sib; sib = sib.previousElementSibling as HTMLElement | null) {
+          const sc = getComputedStyle(sib);
+          if (sc.display === "none" || sc.position === "fixed" || sc.position === "absolute") continue;
+          if (sib.getBoundingClientRect().height > 0 && !sib.querySelector(".qt2-strip")) {
+            const prevDisplay = sib.style.getPropertyValue("display");
+            sib.style.setProperty("display", "none", "important");
+            undo.push(() => (prevDisplay ? sib.style.setProperty("display", prevDisplay) : sib.style.removeProperty("display")));
+          }
+        }
+      }
+    };
     const fit = () => {
+      pullUp();
       const card = target === root ? shell : shell.querySelector<HTMLElement>(target);
       if (!card) return;
       const top = card.getBoundingClientRect().top;
@@ -2546,6 +2574,7 @@ function QtFitViewport({
     window.addEventListener("resize", fit);
     document.addEventListener("fullscreenchange", fit);
     return () => {
+      undo.splice(0).forEach((fn) => fn());
       cancelAnimationFrame(raf);
       window.clearTimeout(late);
       ro?.disconnect();
