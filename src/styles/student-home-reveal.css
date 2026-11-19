@@ -1,0 +1,44 @@
+/* Área do aluno — acabamento final, sem mexer na estrutura nem nos componentes.
+   1) Cor da categoria sempre visível no topo do cartão/KPI (não só no hover),
+      pra área ficar organizada por cor mesmo parada.
+   2) Entrada suave (opacidade + leve subida) da faixa de boas-vindas, dos KPIs
+      e dos atalhos ao carregar a página. Curta (200ms) e só opacity/transform,
+      como pede a diretriz de movimento do projeto. Respeita prefers-reduced-motion.
+   Importado por último: precisa vencer a cascata dos arquivos anteriores. */
+
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card) {
+  position: relative;
+}
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  border-radius: 999px 999px 0 0;
+  background: var(--kc, var(--brass, #d9a441));
+  opacity: 0.55;
+  pointer-events: none;
+  transition: opacity 200ms ease-out;
+}
+html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card):hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html body .app-shell[data-area] .student-home.sh2 .sh2-hero,
+  html body .app-shell[data-area] .student-home.sh2 .sh2-kpis > *,
+  html body .app-shell[data-area] .student-home.sh2 .ncx-tiles > * {
+    animation: sh2-reveal 200ms ease-out both;
+  }
+  html body .app-shell[data-area] .student-home.sh2 .sh2-kpis > *:nth-child(1) { animation-delay: 0ms; }
+  html body .app-shell[data-area] .student-home.sh2 .sh2-kpis > *:nth-child(2) { animation-delay: 30ms; }
+  html body .app-shell[data-area] .student-home.sh2 .sh2-kpis > *:nth-child(3) { animation-delay: 60ms; }
+  html body .app-shell[data-area] .student-home.sh2 .sh2-kpis > *:nth-child(4) { animation-delay: 90ms; }
+  html body .app-shell[data-area] .student-home.sh2 .ncx-tiles > * {
+    animation-delay: calc(100ms + var(--i, 0) * 25ms);
+  }
+}
+@keyframes sh2-reveal {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
