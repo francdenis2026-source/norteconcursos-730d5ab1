@@ -914,7 +914,7 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
   z-index: -2;
   pointer-events: none;
 }
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .home.hr-canvas .sx-band {
     background: #0d1015;
     overflow: hidden;
@@ -928,6 +928,7 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
     width: 100%;
     height: 100%;
   }
+  /* Véu escuro atrás do texto: o relógio/medalha de fundo não pode brigar com a leitura. */
   .home.hr-canvas .sx-band::before {
     content: "";
     position: absolute;
@@ -936,13 +937,15 @@ html:not(.dark) .home.hr-canvas .sx-card__icon {
     background: linear-gradient(
       90deg,
       #0d1015 0%,
-      rgb(13 16 21 / 0.9) 30%,
-      rgb(13 16 21 / 0.35) 52%,
-      rgb(13 16 21 / 0.3) 64%,
-      rgb(13 16 21 / 0.7) 100%
+      rgb(13 16 21 / 0.96) 38%,
+      rgb(13 16 21 / 0.86) 58%,
+      rgb(13 16 21 / 0.55) 72%,
+      rgb(13 16 21 / 0.8) 100%
     );
     pointer-events: none;
   }
+}
+@media (min-width: 1280px) {
   .home.hr-canvas .sx-band .sx-hero {
     grid-template-columns: minmax(0, 1fr) 380px;
     gap: 300px;
