@@ -20,6 +20,7 @@ import "@/styles/student-home-charts-premium.css";
 import { type SparkPoint } from "@/components/dashboard/charts/Sparkline";
 import { NvSparkline } from "@/components/dashboard/charts/NvChart";
 import "@/styles/nextvita-theme.css";
+import "@/styles/student-home-reveal.css";
 import {
   CHART_RANGES,
   dailyAnswerSeries,
