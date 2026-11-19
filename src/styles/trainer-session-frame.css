@@ -37,3 +37,37 @@ html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt
   padding-block: 0.5rem !important;
   overflow: visible;
 }
+
+/*
+  Enunciado, explicação e alternativas: cada bloco rola dentro da própria área.
+  Com a explicação aberta, a altura da coluna esquerda é dividida entre enunciado e explicação
+  (antes a explicação tinha altura automática, espremia o enunciado e passava por cima da barra de ações).
+*/
+@media (min-width: 1024px) and (min-height: 600px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content:has(> .trainer-reading-explanation, > [role="status"]:not(.trainer-reading-pending)) {
+    grid-template-rows: auto auto auto auto minmax(0, 1.15fr) minmax(0, 1fr) auto;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content:has(> .trainer-reading-explanation, > [role="status"]:not(.trainer-reading-pending)) .trainer-reading-answers {
+    grid-row: 5 / span 2;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-content > :is(.trainer-reading-explanation, [role="status"]:not(.trainer-reading-pending)) {
+    min-height: 0;
+    max-height: 100%;
+    margin-block: 0.5rem 0.5rem !important;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  /* Enunciado: ocupa a área toda e rola quando o texto é longo. */
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-stem {
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+  }
+  /* A barra de ações fica sempre por cima do conteúdo que rola, com fundo opaco. */
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .trainer-reading-actions.trainer-action-dock {
+    position: relative !important;
+    z-index: 2 !important;
+    background: var(--card) !important;
+  }
+}
