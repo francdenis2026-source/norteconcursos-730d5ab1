@@ -1,3 +1,4 @@
+import "@/styles/student-metric-panel-refined.css";
 import { disciplineSetupSearch } from "@/lib/practiceLink";
 import { useEffect, useState } from "react";
 import {
@@ -177,17 +178,14 @@ export function StudentMetricPanel({
               <p className="student-metric-panel__owner">{userName} · Minha preparação</p>
               <DialogTitle>{definition.title}</DialogTitle>
               <DialogDescription>{definition.description}</DialogDescription>
-              {metric === "questions" && (
-                <Link
-                  to="/dashboard/performance"
-                  className="mt-3 inline-flex min-h-9 items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3 text-xs font-bold text-primary transition-colors hover:bg-primary/10"
-                >
-                  <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
-                  Abrir análise detalhada
-                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                </Link>
-              )}
             </div>
+            {metric === "questions" && (
+              <Link to="/dashboard/performance" className="smp-action">
+                <TrendingUp aria-hidden="true" />
+                Análise detalhada
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            )}
           </header>
           {error ? (
             <div role="alert" className="student-metric-panel__state">
@@ -386,26 +384,19 @@ export function StudentMetricDetails({
                     to="/dashboard/question-trainer"
                     search={disciplineSetupSearch(s.subject, setupFresh)}
                     className="student-metric-panel__discipline"
-                    aria-label={`Treinar ${s.subject}`}
+                    aria-label={`Treinar ${s.subject}: ${s.accuracy}% de acertos, ${count(s.correct)} acertos e ${count(s.total - s.correct)} erros em ${count(s.total)} questões`}
                   >
-                    <div>
-                      <strong>{s.subject}</strong>
-                      <span>
-                        {metric === "accuracy" ? `${s.accuracy}%` : `${count(s.total)} questões`}
-                      </span>
-                    </div>
-                    <progress
-                      aria-label={`${s.subject}: ${s.accuracy}% de acertos`}
-                      value={s.correct}
-                      max={s.total}
-                    />
-                    <p>
-                      {count(s.correct)} acertos · {count(s.total - s.correct)} erros ·{" "}
-                      {count(s.total)} respondidas
-                    </p>
-                    <small>
-                      Escolher assunto ou iniciar treino <ArrowRight aria-hidden="true" />
-                    </small>
+                    <strong title={s.subject}>{s.subject}</strong>
+                    <span className="smp-meter" aria-hidden="true">
+                      <i style={{ width: `${s.accuracy}%` }} />
+                    </span>
+                    <span className="smp-figure">
+                      <b>{metric === "accuracy" ? `${s.accuracy}%` : count(s.total)}</b>
+                      <small>
+                        {count(s.correct)} ✓ · {count(s.total - s.correct)} ✗
+                      </small>
+                    </span>
+                    <ArrowRight className="smp-go" aria-hidden="true" />
                   </Link>
                 ))}
               </div>

@@ -1,0 +1,409 @@
+/*
+  Janela de métricas do aluno (Questões resolvidas, Taxa de acerto, Tempo).
+  Compacta para caber na janela, cores da plataforma (dourado + neutros) e microinterações.
+  Seletor reforçado para vencer as camadas anteriores.
+*/
+html:root body .student-metric-panel.student-metric-panel {
+  --smp-gold: var(--brass, oklch(0.78 0.13 79));
+  --smp-ok: #1baf7a;
+  --smp-bad: #eb6834;
+  --smp-info: #2a78d6;
+  --smp-warn: #d99a00;
+  --smp-line: var(--border);
+  --smp-soft: color-mix(in oklab, var(--foreground) 4%, transparent);
+  --smp-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(1040px, calc(100vw - 24px));
+  max-width: 1040px;
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--smp-line);
+  border-radius: 1.125rem;
+  background: var(--card);
+  box-shadow: 0 30px 80px -30px rgb(0 0 0 / 55%);
+  animation: smp-in 220ms var(--smp-ease);
+}
+html:root.dark body .student-metric-panel.student-metric-panel {
+  --smp-ok: #199e70;
+  --smp-bad: #d95926;
+  --smp-info: #3987e5;
+  --smp-warn: #c98500;
+}
+
+/* Cabeçalho */
+html:root body .student-metric-panel .student-metric-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 4rem 1rem 1.25rem;
+  border-bottom: 1px solid var(--smp-line);
+  background: linear-gradient(100deg, color-mix(in oklab, var(--smp-gold) 10%, transparent), transparent 55%);
+}
+html:root body .student-metric-panel .student-metric-panel__header > div { flex: 1 1 auto; min-width: 0; }
+html:root body .student-metric-panel .student-metric-panel__icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  color: var(--smp-gold);
+  background: color-mix(in oklab, var(--smp-gold) 14%, var(--card));
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--smp-gold) 35%, transparent);
+}
+html:root body .student-metric-panel .student-metric-panel__icon svg { width: 1.25rem; height: 1.25rem; }
+html:root body .student-metric-panel .student-metric-panel__owner {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+html:root body .student-metric-panel .student-metric-panel__header h2 {
+  margin: 1px 0 0;
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+html:root body .student-metric-panel .student-metric-panel__header h2 + p {
+  margin: 2px 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+}
+.smp-action {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 1px solid color-mix(in oklab, var(--smp-gold) 45%, var(--border));
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  background: color-mix(in oklab, var(--smp-gold) 8%, var(--card));
+  text-decoration: none;
+  transition: transform 160ms var(--smp-ease), box-shadow 160ms var(--smp-ease), border-color 160ms var(--smp-ease);
+}
+.smp-action svg { width: 0.875rem; height: 0.875rem; color: var(--smp-gold); transition: transform 160ms var(--smp-ease); }
+.smp-action:hover { border-color: var(--smp-gold); box-shadow: 0 6px 16px -10px var(--smp-gold); transform: translateY(-1px); }
+.smp-action:hover svg:last-child { transform: translateX(2px); }
+
+/* Corpo: rola por dentro apenas se a tela for baixa */
+html:root body .student-metric-panel .student-metric-panel__body {
+  display: grid;
+  align-content: start;
+  gap: 0.875rem;
+  min-height: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+/* Períodos */
+html:root body .student-metric-panel .study-period-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+html:root body .student-metric-panel .study-period-controls__options {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  max-width: 100%;
+  padding: 3px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border: 1px solid var(--smp-line);
+  border-radius: 999px;
+  background: var(--smp-soft);
+}
+html:root body .student-metric-panel .study-period-controls__options button {
+  min-height: 2rem;
+  padding: 0 0.875rem;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--muted-foreground);
+  background: transparent;
+  box-shadow: none;
+  transition: color 160ms var(--smp-ease), background-color 160ms var(--smp-ease);
+}
+html:root body .student-metric-panel .study-period-controls__options button:hover { color: var(--foreground); background: var(--smp-soft); }
+html:root body .student-metric-panel .study-period-controls__options button[aria-pressed="true"] {
+  color: oklch(0.2 0.03 70);
+  background: var(--smp-gold);
+  box-shadow: 0 2px 8px -3px color-mix(in oklab, var(--smp-gold) 80%, transparent);
+}
+html:root body .student-metric-panel .study-period-controls__date { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+html:root body .student-metric-panel .study-period-controls__date :is(button, input) {
+  min-height: 2rem;
+  border: 1px solid var(--smp-line);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  background: var(--card);
+}
+html:root body .student-metric-panel .student-metric-panel__range {
+  margin: -0.25rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Resumo: número principal + quatro botões numa linha */
+html:root body .student-metric-panel .student-metric-panel__summary {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 2fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.125rem;
+  border: 1px solid var(--smp-line);
+  border-left: 1px solid var(--smp-line);
+  border-radius: 0.875rem;
+  background:
+    radial-gradient(120% 140% at 0% 0%, color-mix(in oklab, var(--smp-gold) 10%, transparent), transparent 55%),
+    var(--card);
+}
+html:root body .student-metric-panel .student-metric-panel__summary > div:first-child span { font-size: 0.8125rem; color: var(--muted-foreground); }
+html:root body .student-metric-panel .student-metric-panel__summary > div:first-child strong {
+  display: block;
+  margin: 2px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--smp-gold);
+}
+html:root body .student-metric-panel .student-metric-panel__summary > div:first-child p { margin: 0; font-size: 0.8125rem; color: var(--muted-foreground); }
+html:root body .student-metric-panel .student-metric-panel__chips {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+html:root body .student-metric-panel .student-metric-panel__chips button {
+  --tone: var(--smp-info);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 3.75rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--smp-line);
+  border-radius: 0.75rem;
+  text-align: left;
+  color: var(--foreground);
+  background: var(--card);
+  cursor: pointer;
+  transition: transform 160ms var(--smp-ease), border-color 160ms var(--smp-ease), box-shadow 160ms var(--smp-ease);
+}
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="ok"] { --tone: var(--smp-ok); }
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="bad"] { --tone: var(--smp-bad); }
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="warn"] { --tone: var(--smp-warn); }
+html:root body .student-metric-panel .student-metric-panel__chips button:not(:disabled):hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--tone) 60%, var(--border));
+  box-shadow: 0 10px 20px -14px var(--tone);
+}
+html:root body .student-metric-panel .student-metric-panel__chips button:disabled { cursor: default; opacity: 0.6; }
+html:root body .student-metric-panel .student-metric-panel__chip-icon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  color: var(--tone);
+  background: color-mix(in oklab, var(--tone) 14%, var(--card));
+}
+html:root body .student-metric-panel .student-metric-panel__chip-icon svg { width: 1rem; height: 1rem; }
+html:root body .student-metric-panel .student-metric-panel__chip-text { display: grid; min-width: 0; }
+html:root body .student-metric-panel .student-metric-panel__chip-text small {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+html:root body .student-metric-panel .student-metric-panel__chip-text strong { font-size: 1.25rem; font-weight: 700; line-height: 1.15; }
+html:root body .student-metric-panel .student-metric-panel__chip-go {
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+  transition: transform 160ms var(--smp-ease), color 160ms var(--smp-ease);
+}
+html:root body .student-metric-panel .student-metric-panel__chips button:hover .student-metric-panel__chip-go { color: var(--tone); transform: translateX(2px); }
+
+/* Títulos de seção */
+html:root body .student-metric-panel .student-metric-panel__body h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--foreground);
+}
+html:root body .student-metric-panel .student-metric-panel__body h3::before {
+  content: "";
+  width: 3px;
+  height: 0.875rem;
+  border-radius: 2px;
+  background: var(--smp-gold);
+}
+
+/* Disciplinas: linhas compactas em duas colunas */
+html:root body .student-metric-panel .student-metric-panel__subjects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.25rem;
+}
+html:root body .student-metric-panel .student-metric-panel__discipline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(4rem, 26%) 4.5rem 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.5rem;
+  border: 0;
+  border-bottom: 1px solid var(--smp-line);
+  border-radius: 0.5rem;
+  color: var(--foreground);
+  background: transparent;
+  text-decoration: none;
+  transition: background-color 140ms var(--smp-ease);
+}
+html:root body .student-metric-panel .student-metric-panel__discipline:hover { background: var(--smp-soft); }
+html:root body .student-metric-panel .student-metric-panel__discipline > strong {
+  overflow: hidden;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.smp-meter {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--smp-ok) 18%, var(--card));
+}
+.smp-meter i { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: var(--smp-ok); transition: width 400ms var(--smp-ease); }
+.smp-figure { display: grid; justify-items: end; line-height: 1.1; }
+.smp-figure b { font-size: 0.875rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.smp-figure small { font-size: 0.6875rem; color: var(--muted-foreground); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.smp-go { width: 0.875rem; height: 0.875rem; color: var(--muted-foreground); transition: transform 140ms var(--smp-ease), color 140ms var(--smp-ease); }
+html:root body .student-metric-panel .student-metric-panel__discipline:hover .smp-go { color: var(--smp-gold); transform: translateX(2px); }
+
+/* Últimas questões: duas colunas, situação em selo */
+html:root body .student-metric-panel .student-metric-panel__history {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html:root body .student-metric-panel .student-metric-panel__history li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.375rem 0.5rem;
+  border: 0;
+  border-bottom: 1px solid var(--smp-line);
+  border-radius: 0;
+  background: transparent;
+}
+html:root body .student-metric-panel .student-metric-panel__history li > div { display: grid; min-width: 0; }
+html:root body .student-metric-panel .student-metric-panel__history li > div > :first-child {
+  overflow: hidden;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+html:root body .student-metric-panel .student-metric-panel__history li > div > span { font-size: 0.6875rem; color: var(--muted-foreground); }
+html:root body .student-metric-panel .student-metric-panel__history [data-correct] {
+  flex: none;
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 650;
+}
+html:root body .student-metric-panel .student-metric-panel__history [data-correct="true"] { color: var(--smp-ok); background: color-mix(in oklab, var(--smp-ok) 14%, transparent); }
+html:root body .student-metric-panel .student-metric-panel__history [data-correct="false"] { color: var(--smp-bad); background: color-mix(in oklab, var(--smp-bad) 14%, transparent); }
+html:root body .student-metric-panel .student-metric-panel__history-discipline svg { display: none; }
+
+/* Rodapé */
+html:root body .student-metric-panel .student-metric-panel__body > footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--smp-line);
+}
+html:root body .student-metric-panel .student-metric-panel__body > footer p { margin: 0; font-size: 0.75rem; color: var(--muted-foreground); }
+html:root body .student-metric-panel .student-metric-panel__body > footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  color: oklch(0.2 0.03 70);
+  background: var(--smp-gold);
+  text-decoration: none;
+  transition: transform 160ms var(--smp-ease), box-shadow 160ms var(--smp-ease);
+}
+html:root body .student-metric-panel .student-metric-panel__body > footer a:hover { transform: translateY(-1px); box-shadow: 0 8px 18px -10px var(--smp-gold); }
+html:root body .student-metric-panel .student-metric-panel__body > footer a svg { width: 0.875rem; height: 0.875rem; }
+
+html:root body .student-metric-panel :is(button, a, input):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+@keyframes smp-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Tablet e celular */
+@media (max-width: 860px) {
+  html:root body .student-metric-panel .student-metric-panel__summary { grid-template-columns: 1fr; }
+  html:root body .student-metric-panel .student-metric-panel__chips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html:root body .student-metric-panel :is(.student-metric-panel__subjects, .student-metric-panel__history) { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  html:root body .student-metric-panel.student-metric-panel { max-height: calc(100dvh - 16px); border-radius: 1rem; }
+  html:root body .student-metric-panel .student-metric-panel__header { padding: 0.875rem 3.5rem 0.875rem 1rem; flex-wrap: wrap; }
+  .smp-action { order: 3; }
+  html:root body .student-metric-panel .student-metric-panel__body { padding: 0.875rem 1rem 1rem; }
+  html:root body .student-metric-panel .student-metric-panel__summary > div:first-child strong { font-size: 2rem; }
+  html:root body .student-metric-panel .student-metric-panel__discipline { grid-template-columns: minmax(0, 1fr) 4.5rem 1rem; }
+  html:root body .student-metric-panel .student-metric-panel__discipline .smp-meter { grid-column: 1 / -1; grid-row: 2; margin-bottom: 0.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:root body .student-metric-panel.student-metric-panel,
+  html:root body .student-metric-panel *,
+  .smp-action, .smp-action svg { animation: none !important; transition: none !important; }
+}
+
+/* Correções sobre as regras antigas */
+html:root body .student-metric-panel .student-metric-panel__chips { max-width: none; flex: none; }
+html:root body .student-metric-panel .student-metric-panel__subjects > .student-metric-panel__discipline { margin: 0; padding: 0 0.5rem; display: grid; }
+html:root body .student-metric-panel .student-metric-panel__history li > div { gap: 1px; line-height: 1.25; height: auto; }
+html:root body .student-metric-panel .student-metric-panel__history li > div > * { margin: 0; }
+html:root body .student-metric-panel .student-metric-panel__history li { min-height: 3rem; height: auto; }
+html:root body .student-metric-panel .student-metric-panel__body { grid-template-columns: minmax(0, 1fr); }
+html:root body .student-metric-panel .student-metric-panel__body > *,
+html:root body .student-metric-panel .student-metric-panel__summary > * { min-width: 0; }
+html:root body .student-metric-panel .study-period-controls { min-width: 0; }
+html:root body .student-metric-panel .study-period-controls__options { min-width: 0; }
