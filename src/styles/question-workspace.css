@@ -1369,41 +1369,44 @@
 }
 @media (min-width: 1050px) and (min-height: 680px) {
  /* Only active training (unanswered) is viewport-constrained. Review keeps readable content. */
- :root:fullscreen .trainer-reading-workspace:not([data-reviewing="true"]) {
+ :root:fullscreen .trainer-reading-workspace:not(.qt4):not([data-reviewing="true"]) {
    height: calc(100dvh - 112px); max-height: calc(100dvh - 112px);
  }
 }
-/* Existing header fullscreen button toggles documentElement; never the trainer itself. */
+/* Existing header fullscreen button toggles documentElement; never the trainer itself.
+   Excludes .qt4 (see note below the "Normal mode" block): that session redesign has its
+   own fullscreen-agnostic viewport fit, and this older system fought it — three competing
+   fullscreen grids ended up cutting off the last answer options. */
 :root:fullscreen, :root:fullscreen body { overflow: hidden !important; overscroll-behavior: none; }
 :root:fullscreen .app-shell[data-area="student"] { height: 100dvh; max-height: 100dvh; overflow: hidden; }
-:root:fullscreen .trainer-reading-workspace {
+:root:fullscreen .trainer-reading-workspace:not(.qt4) {
   box-sizing: border-box; height: calc(100dvh - 112px) !important; max-height: calc(100dvh - 112px) !important;
   min-height: 0 !important; display: flex; flex-direction: column; gap: 8px !important;
   overflow: hidden !important; overscroll-behavior: none;
 }
-:root:fullscreen .trainer-reading-workspace > header { flex: none; }
-:root:fullscreen .trainer-reading-workspace > .question-window { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
-:root:fullscreen .trainer-reading-workspace > .question-window > .trainer-reading-content {
+:root:fullscreen .trainer-reading-workspace:not(.qt4) > header { flex: none; }
+:root:fullscreen .trainer-reading-workspace:not(.qt4) > .question-window { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+:root:fullscreen .trainer-reading-workspace:not(.qt4) > .question-window > .trainer-reading-content {
   flex: 1 1 auto; min-height: 0; display: grid;
   grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   grid-template-rows: auto auto auto auto minmax(0,1fr) auto minmax(0,auto);
   gap: 5px 16px; padding: 10px 14px; overflow: hidden;
 }
-:root:fullscreen .trainer-reading-workspace .trainer-reading-stem,
-:root:fullscreen .trainer-reading-workspace .trainer-reading-answers {
+:root:fullscreen .trainer-reading-workspace:not(.qt4) .trainer-reading-stem,
+:root:fullscreen .trainer-reading-workspace:not(.qt4) .trainer-reading-answers {
   min-height: 0; overflow-y: auto; overflow-x: hidden;
   overscroll-behavior: contain; scrollbar-width: thin;
 }
-:root:fullscreen .trainer-reading-workspace .trainer-reading-explanation {
+:root:fullscreen .trainer-reading-workspace:not(.qt4) .trainer-reading-explanation {
   max-height: min(18dvh,170px); min-height: 0; overflow-y: auto;
   overscroll-behavior: contain; margin-top: 4px; padding: 9px;
 }
-:root:fullscreen .trainer-reading-workspace .trainer-review-community { display: none; }
+:root:fullscreen .trainer-reading-workspace:not(.qt4) .trainer-review-community { display: none; }
 @media (max-width: 1049px) {
- .trainer-reading-workspace > .question-window > .trainer-reading-content { display: block; }
- :root:fullscreen .trainer-reading-workspace > .question-window > .trainer-reading-content { display: block; overflow-y: auto; overscroll-behavior: contain; }
- :root:fullscreen .trainer-reading-workspace .trainer-reading-stem,
- :root:fullscreen .trainer-reading-workspace .trainer-reading-answers { overflow: visible; border-left: 0; padding-left: 0; }
+ .trainer-reading-workspace:not(.qt4) > .question-window > .trainer-reading-content { display: block; }
+ :root:fullscreen .trainer-reading-workspace:not(.qt4) > .question-window > .trainer-reading-content { display: block; overflow-y: auto; overscroll-behavior: contain; }
+ :root:fullscreen .trainer-reading-workspace:not(.qt4) .trainer-reading-stem,
+ :root:fullscreen .trainer-reading-workspace:not(.qt4) .trainer-reading-answers { overflow: visible; border-left: 0; padding-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .trainer-reading-workspace .trainer-shield img { animation: none; } }
 
@@ -1544,7 +1547,7 @@
    Resolve the old normal-mode selector conflict and anchor the complete trainer
    within the fullscreen viewport, above page artwork and beneath the 56px header. */
 @media (min-width: 1050px) and (min-height: 620px) {
-  html:fullscreen .app-shell[data-area="student"] .trainer-session-shell.trainer-reading-workspace {
+  html:fullscreen .app-shell[data-area="student"] .trainer-session-shell.trainer-reading-workspace:not(.qt4) {
     position: fixed !important;
     inset: 58px 12px 10px !important;
     z-index: 36;
@@ -1561,18 +1564,18 @@
     overflow: hidden !important;
     background: var(--background);
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > header {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > header {
     flex: 0 0 auto;
     min-height: 40px;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > .question-window {
     flex: 1 1 0 !important;
     min-height: 0 !important;
     height: auto !important;
     max-height: none !important;
     overflow: hidden !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > .question-window > .trainer-reading-content {
     flex: 1 1 0 !important;
     min-height: 0 !important;
     height: 100% !important;
@@ -1584,8 +1587,8 @@
     padding: 9px 14px !important;
     overflow: hidden !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-stem,
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-answers {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-stem,
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-answers {
     grid-row: 5 !important;
     min-height: 0 !important;
     max-height: 100% !important;
@@ -1593,14 +1596,14 @@
     overflow-x: hidden !important;
     overscroll-behavior: contain;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-actions {
     grid-column: 1 / -1 !important;
     grid-row: 6 !important;
     margin: 2px 0 !important;
     padding-top: 7px !important;
     flex-shrink: 0;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-explanation {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-explanation {
     grid-column: 1 / -1 !important;
     grid-row: 7 !important;
     min-height: 0 !important;
@@ -1631,34 +1634,34 @@
 /* Fullscreen fine tuning: reserve bottom controls above the fixed platform credit.
    Keep body stationary; long stem/answers scroll only inside their own panes. */
 @media (min-width: 1050px) and (min-height: 620px) {
-  html:fullscreen .app-shell[data-area="student"] .trainer-session-shell.trainer-reading-workspace {
+  html:fullscreen .app-shell[data-area="student"] .trainer-session-shell.trainer-reading-workspace:not(.qt4) {
     inset: 48px 12px 48px !important;
     gap: 6px !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > header {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > header {
     min-height: 38px !important;
     padding-block: 2px !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > .question-window {
     min-height: 0 !important;
     flex: 1 1 0 !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace > .question-window > .trainer-reading-content {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) > .question-window > .trainer-reading-content {
     grid-template-rows: auto auto auto auto minmax(0, 1fr) minmax(42px,auto) minmax(0,auto) !important;
     gap: 2px 12px !important;
     padding: 7px 13px 9px !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-meta { margin-bottom: 1px !important; }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-heading { margin: 0 !important; }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-progress { margin: 0 0 5px !important; }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-stem,
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-answers {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-meta { margin-bottom: 1px !important; }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-heading { margin: 0 !important; }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-progress { margin: 0 0 5px !important; }
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-stem,
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-answers {
     min-height: 0 !important;
     max-height: 100% !important;
     overflow-y: auto !important;
     overscroll-behavior-y: contain;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-actions {
     position: relative;
     z-index: 2;
     grid-row: 6 !important;
@@ -1668,11 +1671,11 @@
     align-self: end;
     background: var(--card);
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-actions button {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-actions button {
     min-height: 36px !important;
     padding-block: 6px !important;
   }
-  html:fullscreen .app-shell[data-area="student"] .trainer-reading-content > .trainer-reading-explanation {
+  html:fullscreen .app-shell[data-area="student"] .trainer-reading-workspace:not(.qt4) .trainer-reading-content > .trainer-reading-explanation {
     grid-row: 7 !important;
     max-height: min(16dvh, 130px) !important;
     overflow-y: auto !important;
