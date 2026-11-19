@@ -50,6 +50,7 @@ import {
   X,
   Timer,
   XCircle,
+  MessageSquare,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -365,6 +366,11 @@ function QuestionTrainer() {
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
+  const [communityOpen, setCommunityOpen] = React.useState(false);
+  const currentQuestionId = questions[index]?.id;
+  React.useEffect(() => {
+    setCommunityOpen(false);
+  }, [currentQuestionId]);
   const [saving, setSaving] = React.useState(false);
   const savingRef = React.useRef(false);
   const workspaceFs = useWorkspaceFullscreen(true);
@@ -1584,6 +1590,24 @@ function QuestionTrainer() {
                 </div>
               )}
             </section>
+            {communityOpen && answered && (
+              <section className="qx-community" aria-label="Desempenho e comentários da questão">
+                <div className="qx-community__head">
+                  <p className="qx-label">Desempenho e comentários</p>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="qx-btn"
+                    onClick={() => setCommunityOpen(false)}
+                  >
+                    <XCircle className="h-4 w-4" aria-hidden="true" /> <span>Fechar</span>
+                  </Button>
+                </div>
+                <div className="qx-community__body">
+                  <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
+                </div>
+              </section>
+            )}
           </div>
 
           <footer className="qx-dock">
@@ -1628,6 +1652,19 @@ function QuestionTrainer() {
                   <span>Pular</span>
                 </Button>
               )}
+              {answered && !isPlaceholderExplanation(explanation.main) && (
+                <Button
+                  variant="ghost"
+                  className={cn("qx-dock__btn", communityOpen && "qx-dock__btn--on")}
+                  onClick={() => setCommunityOpen((open) => !open)}
+                  aria-pressed={communityOpen}
+                  aria-label="Desempenho e comentários"
+                  data-hint="Ver desempenho e comentários desta questão"
+                >
+                  <MessageSquare className="h-4 w-4" aria-hidden="true" />
+                  <span>Comentários</span>
+                </Button>
+              )}
               <Button
                 variant="ghost"
                 className="qx-dock__btn"
@@ -1664,17 +1701,6 @@ function QuestionTrainer() {
           </footer>
         </div>
       </section>
-      {answered && !isPlaceholderExplanation(explanation.main) && (
-        <details
-          className="trainer-review-community qx-community"
-          aria-label="Desempenho e comentários da questão"
-        >
-          <summary className="trainer-review-community__toggle">
-            Desempenho e comentários desta questão
-          </summary>
-          <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
-        </details>
-      )}
       <Dialog
         open={confirmExit || blocker.status === "blocked"}
         onOpenChange={(open) => {

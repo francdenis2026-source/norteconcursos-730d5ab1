@@ -547,3 +547,69 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qx .trainer-timer-chip 
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qx .trainer-timer-chip svg { color: var(--qx-gold); }
 :root:not(.dark) .qx .trainer-timer-chip svg { color: oklch(0.5 0.1 75); }
+
+/* ── Comentários e desempenho: painel dentro do cartão, nunca cortado ───── */
+.qx-body { position: relative; }
+.qx .qx-community {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin: 0 !important;
+  background: var(--card);
+  animation: qx-in 160ms ease-out both;
+}
+.qx-community__head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem var(--qx-pad);
+  border-bottom: 1px solid var(--qx-line);
+  background: var(--qx-soft);
+}
+.qx-community__head .qx-label { margin: 0; color: var(--foreground); }
+.qx-community__body {
+  flex: 1 1 0;
+  min-height: 0;
+  padding: 0.75rem var(--qx-pad) 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* ── Certo / Errado: dois botões grandes, claros e fáceis de tocar ──────── */
+.qx-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 0.25rem; }
+.qx-choices[data-count="3"], .qx-choices[data-count="4"], .qx-choices[data-count="5"] {
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+}
+.qx-choice {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 6rem;
+  padding: 0.875rem 0.75rem;
+  border-width: 2px;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.qx-choice__letter { width: 2.25rem; height: 2.25rem; border-radius: 999px; font-size: 0.9375rem; }
+.qx-choice__letter svg { width: 1.125rem; height: 1.125rem; }
+.qx-choice:not(:disabled):hover { background: color-mix(in oklab, var(--qx-gold) 8%, var(--card)); transform: translateY(-1px); }
+.qx-choice:not(:disabled):active { transform: none; }
+.qx-choice[data-state="right"]::after,
+.qx-choice[data-state="wrong"]::after {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.qx-choice[data-state="right"]::after { content: "Gabarito"; color: var(--qx-ok); }
+.qx-choice[data-state="wrong"]::after { content: "Sua resposta"; color: var(--qx-err); }
+@media (max-height: 640px) and (min-width: 900px) { .qx-choice { min-height: 4.75rem; } }
+@media (prefers-reduced-motion: reduce) { .qx-choice { transition: none; } .qx-choice:hover { transform: none; } }
