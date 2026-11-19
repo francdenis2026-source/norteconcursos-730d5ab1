@@ -1425,6 +1425,7 @@ function QuestionTrainer() {
               </Button>
             </div>
           )}
+          <div className="trainer-reading-left">
           <section className="trainer-reading-stem" aria-label="Enunciado da questão">
             {parsed.base && (
               <details
@@ -1445,6 +1446,52 @@ function QuestionTrainer() {
             </p>
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
           </section>
+          {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
+            <div
+              className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4"
+              role="region"
+              aria-label="Explicação da questão"
+            >
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="text-xs font-black uppercase tracking-wider text-primary">
+                  Explicação da questão
+                </p>
+                {responseSeconds !== null && (
+                  <span className="rounded-full border border-primary/20 bg-background/70 px-2.5 py-1 text-xs font-semibold text-muted-foreground">
+                    Tempo de resposta: {formatResponseTime(responseSeconds)}
+                  </span>
+                )}
+              </div>
+              {!isCorrect && (
+                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">
+                  Resposta correta: {labelFor(question.answer)}
+                </p>
+              )}
+              {isPlaceholderExplanation(explanation.main) ? null : (
+                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">{explanation.main}</p>
+              )}
+              {explanation.example && (
+                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">
+                  <strong>Exemplo:</strong> {explanation.example}
+                </p>
+              )}
+            </div>
+          )}
+          {supportNotice && !supportAvailable && !answered && (
+            <div
+              id={supportNoticeId}
+              role="status"
+              className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
+            >
+              <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <p>
+                {saving
+                  ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
+                  : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
+              </p>
+            </div>
+          )}
+          </div>
           <section className="trainer-reading-answers" aria-label="Alternativas da questão">
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
@@ -1657,51 +1704,6 @@ function QuestionTrainer() {
               </Button>
             )}
           </div>
-          {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
-            <div
-              className="trainer-reading-explanation mt-4 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4"
-              role="region"
-              aria-label="Explicação da questão"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <p className="text-xs font-black uppercase tracking-wider text-primary">
-                  Explicação da questão
-                </p>
-                {responseSeconds !== null && (
-                  <span className="rounded-full border border-primary/20 bg-background/70 px-2.5 py-1 text-xs font-semibold text-muted-foreground">
-                    Tempo de resposta: {formatResponseTime(responseSeconds)}
-                  </span>
-                )}
-              </div>
-              {!isCorrect && (
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300">
-                  Resposta correta: {labelFor(question.answer)}
-                </p>
-              )}
-              {isPlaceholderExplanation(explanation.main) ? null : (
-                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">{explanation.main}</p>
-              )}
-              {explanation.example && (
-                <p className="whitespace-pre-line break-words text-base leading-7 text-left [overflow-wrap:anywhere]">
-                  <strong>Exemplo:</strong> {explanation.example}
-                </p>
-              )}
-            </div>
-          )}
-          {supportNotice && !supportAvailable && !answered && (
-            <div
-              id={supportNoticeId}
-              role="status"
-              className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
-            >
-              <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <p>
-                {saving
-                  ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
-                  : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
-              </p>
-            </div>
-          )}
         </CardContent>
       </Card>
       {answered && !isPlaceholderExplanation(explanation.main) && (
