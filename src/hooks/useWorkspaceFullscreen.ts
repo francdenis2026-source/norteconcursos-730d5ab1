@@ -45,28 +45,9 @@ export function useWorkspaceFullscreen(observerOnly = false) {
     beginTransition();
     activeRef.current = true;
     setActive(true);
-    // Tela cheia real do navegador (esconde abas e barra de endereço). O aviso de "Esc para sair"
-    // é do próprio navegador e some sozinho em poucos segundos; sem suporte, o layout imersivo basta.
-    if (
-      !document.fullscreenElement &&
-      document.fullscreenEnabled &&
-      document.documentElement.requestFullscreen
-    ) {
-      pending.current = true;
-      void document.documentElement
-        .requestFullscreen()
-        .then(() => {
-          pending.current = false;
-          native.current = document.fullscreenElement === document.documentElement;
-          if ((!mounted.current || !activeRef.current) && native.current) {
-            native.current = false;
-            void document.exitFullscreen().catch(() => {});
-          }
-        })
-        .catch(() => {
-          pending.current = false;
-        });
-    }
+    // Sem tela cheia nativa do navegador: ela exibe o aviso "Para sair do modo tela cheia,
+    // pressione Esc", que o site não consegue ocultar. O layout imersivo cobre a janela e o
+    // Esc continua saindo do modo de foco (ver `key` abaixo).
   }, [beginTransition, observerOnly]);
   const exit = useCallback(() => {
     if (observerOnly) { document.dispatchEvent(new Event("norte:workspace-exit")); return; }
