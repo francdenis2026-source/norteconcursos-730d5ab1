@@ -275,3 +275,104 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips >
 @media (prefers-reduced-motion: reduce) {
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg { animation: none !important; }
 }
+
+/* =====================================================================
+   Barra de menu no padrão NextVita: camada própria, ícone colorido por
+   seção (sempre a mesma cor), ícone que se preenche ao apontar, item ativo
+   aceso na cor da seção, entrada em cascata.
+   ===================================================================== */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar {
+  --nv-ease: cubic-bezier(0.32, 0.72, 0, 1);
+  background:
+    linear-gradient(90deg, rgb(59 130 246 / 7%), transparent 30%, transparent 70%, rgb(139 92 246 / 7%)),
+    color-mix(in oklab, #141b21 92%, transparent) !important;
+  border-bottom: 1px solid rgb(255 255 255 / 10%) !important;
+}
+:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar {
+  background:
+    linear-gradient(90deg, rgb(59 130 246 / 6%), transparent 30%, transparent 70%, rgb(139 92 246 / 6%)),
+    color-mix(in oklab, #ffffff 90%, transparent) !important;
+  border-bottom-color: rgb(16 21 26 / 10%) !important;
+}
+
+/* Cor fixa por seção */
+html body .app-shell .app-topbar .student-top-navigation__trigger { --sc: var(--brass, #d9a441); }
+html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="orange"] { --sc: #f59e0b; }
+html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="sky"] { --sc: #3b82f6; }
+html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="emerald"] { --sc: #22c55e; }
+html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="teal"] { --sc: #14b8a6; }
+html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="indigo"] { --sc: #8b5cf6; }
+html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="slate"] { --sc: #94a3b8; }
+
+/* Ícone em quadradinho colorido */
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger .student-top-navigation__icon-wrap {
+  width: 1.875rem !important;
+  height: 1.875rem !important;
+  flex-basis: 1.875rem !important;
+  border-radius: 9px !important;
+  color: var(--sc) !important;
+  background: color-mix(in oklab, var(--sc) 16%, transparent) !important;
+  transition: background-color 240ms var(--nv-ease), color 240ms var(--nv-ease), transform 300ms var(--nv-ease), box-shadow 240ms var(--nv-ease) !important;
+}
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger .student-top-navigation__icon-wrap svg { color: var(--sc) !important; }
+
+/* Ao apontar: ícone se preenche com a cor e gira levemente */
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger:is(:hover, [data-state="open"]) .student-top-navigation__icon-wrap {
+  color: #0f161b !important;
+  background: var(--sc) !important;
+  box-shadow: 0 0 14px -3px var(--sc) !important;
+  transform: rotate(-8deg) scale(1.06);
+}
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger:is(:hover, [data-state="open"]) .student-top-navigation__icon-wrap svg { color: #0f161b !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:hover {
+  background: color-mix(in oklab, var(--sc) 9%, transparent) !important;
+  border-color: color-mix(in oklab, var(--sc) 30%, transparent) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:active { transform: scale(0.97); }
+
+/* Item ativo: pílula e indicador na cor da seção */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"]) {
+  border-color: color-mix(in oklab, var(--sc) 50%, transparent) !important;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--sc) 20%, transparent), color-mix(in oklab, var(--sc) 7%, transparent)) !important;
+  box-shadow: 0 6px 18px -12px var(--sc) !important;
+}
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"]) .student-top-navigation__icon-wrap {
+  color: #0f161b !important;
+  background: var(--sc) !important;
+  box-shadow: 0 0 14px -3px var(--sc) !important;
+}
+html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"]) .student-top-navigation__icon-wrap svg { color: #0f161b !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger:is([data-active="true"], [aria-current="page"])::after {
+  background: var(--sc) !important;
+  box-shadow: 0 0 10px var(--sc) !important;
+}
+
+/* Entrada em cascata dos itens (uma vez) */
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > * { animation: tb-enter 550ms var(--nv-ease, ease-out) both; }
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > :nth-child(2) { animation-delay: 60ms; }
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > :nth-child(3) { animation-delay: 120ms; }
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > :nth-child(4) { animation-delay: 180ms; }
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > :nth-child(5) { animation-delay: 240ms; }
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > :nth-child(6) { animation-delay: 300ms; }
+html body .app-shell[data-area] .app-topbar .student-top-navigation__links > :nth-child(n + 7) { animation-delay: 360ms; }
+@keyframes tb-enter { from { opacity: 0.3; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* Ações da direita: cada ícone ganha cor ao apontar */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger):hover { color: #3b82f6 !important; background: rgb(59 130 246 / 12%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-theme-toggle:hover { color: #f59e0b !important; background: rgb(245 158 11 / 12%) !important; }
+
+/* Menus suspensos: ícones na cor da seção */
+html body .student-top-navigation__menu[data-tone] { --sc: var(--brass, #d9a441); }
+html body .student-top-navigation__menu[data-tone="orange"] { --sc: #f59e0b; }
+html body .student-top-navigation__menu[data-tone="sky"] { --sc: #3b82f6; }
+html body .student-top-navigation__menu[data-tone="emerald"] { --sc: #22c55e; }
+html body .student-top-navigation__menu[data-tone="teal"] { --sc: #14b8a6; }
+html body .student-top-navigation__menu[data-tone="indigo"] { --sc: #8b5cf6; }
+html body .student-top-navigation__menu[data-tone="slate"] { --sc: #94a3b8; }
+html body .student-top-navigation__menu [role="menuitem"] svg { color: var(--sc, var(--brass, #d9a441)) !important; }
+html body .student-top-navigation__menu [role="menuitem"]:is(:hover, [data-highlighted]) { background: color-mix(in oklab, var(--sc, var(--brass, #d9a441)) 14%, transparent) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html body .app-shell[data-area] .app-topbar .student-top-navigation__links > * { animation: none !important; }
+  html body .app-shell[data-area] .app-topbar .student-top-navigation__trigger:active { transform: none; }
+}

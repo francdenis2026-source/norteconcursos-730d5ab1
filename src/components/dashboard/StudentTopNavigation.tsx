@@ -319,6 +319,7 @@ export function StudentTopNavigation({
                     align="start"
                     sideOffset={10}
                     className="student-top-navigation__menu"
+                    data-tone={candidate.tone}
                   >
                     <DropdownMenuLabel className="flex flex-col gap-1">
                       <span className="student-top-navigation__menu-title">{candidate.label}</span>
@@ -411,6 +412,7 @@ export function StudentTopNavigation({
                     align="start"
                     sideOffset={10}
                     className="student-top-navigation__menu"
+                    data-tone={section?.tone}
                   >
                     <DropdownMenuLabel className="flex flex-col gap-1">
                       <span className="student-top-navigation__menu-title">{group}</span>

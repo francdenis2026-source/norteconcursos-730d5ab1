@@ -1,0 +1,180 @@
+/*
+  Padrão NextVita nas demais áreas do aluno (janela de métricas, material,
+  ranking e treinador): fundo com auroras, camadas, cor fixa por categoria,
+  ícones que se preenchem ao apontar. Só transform/opacity em movimento.
+*/
+html:root body {
+  --nva-ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --nva-blue: #3b82f6;
+  --nva-green: #22c55e;
+  --nva-red: #ef4444;
+  --nva-amber: #f59e0b;
+  --nva-violet: #8b5cf6;
+  --nva-teal: #14b8a6;
+  --nva-gold: #d9a441;
+}
+
+/* ---------- Fundo com cor em todas as páginas do aluno ---------- */
+html:root.dark body .app-shell[data-area="student"] #dashboard-content,
+html:root.dark body .app-shell[data-area="student"] main.app-content {
+  background:
+    radial-gradient(900px 520px at 8% -6%, rgb(59 130 246 / 14%), transparent 60%),
+    radial-gradient(800px 520px at 96% 4%, rgb(139 92 246 / 12%), transparent 60%),
+    radial-gradient(900px 600px at 50% 110%, rgb(217 164 65 / 9%), transparent 60%),
+    #0f161b !important;
+}
+
+/* ================= Janela de métricas (Questões resolvidas) ================= */
+html:root.dark body .student-metric-panel.student-metric-panel {
+  background:
+    radial-gradient(620px 300px at 0% 0%, rgb(59 130 246 / 12%), transparent 65%),
+    radial-gradient(620px 300px at 100% 0%, rgb(139 92 246 / 10%), transparent 65%),
+    #121a20 !important;
+}
+html:root body .student-metric-panel .student-metric-panel__icon {
+  color: var(--nva-gold) !important;
+  background: color-mix(in oklab, var(--nva-gold) 16%, transparent) !important;
+  border-color: color-mix(in oklab, var(--nva-gold) 45%, transparent) !important;
+}
+html:root body .student-metric-panel .student-metric-panel__summary {
+  background: linear-gradient(135deg, rgb(217 164 65 / 10%), transparent 45%), var(--card) !important;
+  border-color: rgb(217 164 65 / 22%) !important;
+}
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="ok"] { --tone: var(--nva-green) !important; }
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="bad"] { --tone: var(--nva-red) !important; }
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="info"] { --tone: var(--nva-blue) !important; }
+html:root body .student-metric-panel .student-metric-panel__chips button[data-tone="warn"] { --tone: var(--nva-amber) !important; }
+html:root body .student-metric-panel .student-metric-panel__chips button {
+  position: relative;
+  overflow: hidden;
+  border-color: color-mix(in oklab, var(--tone) 32%, transparent) !important;
+  background:
+    radial-gradient(160px 90px at 100% 0%, color-mix(in oklab, var(--tone) 20%, transparent), transparent 70%),
+    color-mix(in oklab, var(--tone) 6%, var(--card)) !important;
+  transition: transform 180ms var(--nva-ease), border-color 180ms var(--nva-ease), box-shadow 180ms var(--nva-ease) !important;
+}
+html:root body .student-metric-panel .student-metric-panel__chips button::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, var(--tone), transparent);
+  opacity: 0.9;
+}
+html:root body .student-metric-panel .student-metric-panel__chips button:not(:disabled):hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--tone) !important;
+  box-shadow: 0 10px 24px -14px var(--tone), 0 0 0 1px color-mix(in oklab, var(--tone) 30%, transparent) !important;
+}
+html:root body .student-metric-panel .student-metric-panel__chips button:not(:disabled):active { transform: scale(0.98) !important; }
+html:root body .student-metric-panel .student-metric-panel__chip-icon {
+  color: var(--tone) !important;
+  background: color-mix(in oklab, var(--tone) 18%, transparent) !important;
+  border: 1px solid color-mix(in oklab, var(--tone) 40%, transparent) !important;
+  transition: transform 220ms var(--nva-ease), background-color 180ms, color 180ms !important;
+}
+html:root body .student-metric-panel .student-metric-panel__chips button:not(:disabled):hover .student-metric-panel__chip-icon {
+  color: #0b1116 !important;
+  background: var(--tone) !important;
+  transform: rotate(-8deg) scale(1.06);
+}
+html:root body .student-metric-panel .student-metric-panel__chip-text small { color: color-mix(in oklab, var(--tone) 70%, var(--foreground)) !important; }
+html:root body .student-metric-panel .student-metric-panel__chip-text strong { color: color-mix(in oklab, var(--tone) 35%, var(--foreground)) !important; }
+
+/* Lista por disciplina: barra em degradê e borda colorida ao apontar */
+html:root body .student-metric-panel .student-metric-panel__discipline {
+  border: 1px solid rgb(255 255 255 / 6%) !important;
+  border-radius: 12px !important;
+  background: color-mix(in oklab, var(--card) 85%, transparent) !important;
+  transition: transform 180ms var(--nva-ease), border-color 180ms, box-shadow 180ms !important;
+}
+html:root body .student-metric-panel .student-metric-panel__discipline:hover {
+  transform: translateX(2px);
+  border-color: color-mix(in oklab, var(--nva-green) 55%, transparent) !important;
+  box-shadow: 0 8px 20px -16px var(--nva-green) !important;
+}
+html:root body .student-metric-panel .smp-meter > :is(i, span, b) {
+  background: linear-gradient(90deg, #16a34a, var(--nva-green) 60%, #4ade80) !important;
+  box-shadow: 0 0 10px -2px rgb(34 197 94 / 55%);
+}
+html:root body .student-metric-panel .student-metric-panel__discipline svg:last-child { transition: transform 180ms var(--nva-ease), color 180ms; }
+html:root body .student-metric-panel .student-metric-panel__discipline:hover svg:last-child { color: var(--nva-green); transform: translateX(3px); }
+
+/* ================= Material didático ================= */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile__icon { transition: transform 220ms var(--nva-ease), background-color 180ms, color 180ms !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile:hover .ak-tile__icon { transform: rotate(-8deg) scale(1.08) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .mh2 .ak-tile:active { transform: scale(0.98) !important; }
+
+/* ================= Ranking ================= */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) :is(.rka-board, .rka-card, .rka-evolution) {
+  border: 1px solid rgb(255 255 255 / 9%) !important;
+  border-radius: 16px !important;
+  transition: border-color 180ms var(--nva-ease), box-shadow 180ms var(--nva-ease), transform 180ms var(--nva-ease) !important;
+}
+html:root.dark body .app-shell[data-area]:not(#_):not(#_):not(#_) :is(.rka-board, .rka-card) {
+  background: radial-gradient(520px 220px at 100% 0%, rgb(139 92 246 / 9%), transparent 70%), #16202a !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) :is(.rka-card, .rka-evolution):hover {
+  border-color: rgb(20 184 166 / 55%) !important;
+  box-shadow: 0 12px 28px -18px #14b8a6 !important;
+  transform: translateY(-2px);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-me {
+  background: linear-gradient(145deg, rgb(217 164 65 / 14%), rgb(20 184 166 / 10%) 60%, rgb(15 22 27 / 92%)) !important;
+  border-color: rgb(217 164 65 / 45%) !important;
+  backdrop-filter: blur(10px);
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-me__pos { color: #f5d38a !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-chip { transition: transform 160ms var(--nva-ease), border-color 160ms, background-color 160ms !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-chip:hover { transform: translateY(-1px); border-color: rgb(217 164 65 / 55%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-chip svg { color: var(--nva-teal) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-chip[aria-pressed="true"] svg,
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-chip[data-active] svg { color: #1a1206 !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-hero__trophy { filter: drop-shadow(0 6px 18px rgb(245 158 11 / 45%)); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-hero:hover .rka-hero__trophy { transform: rotate(-6deg) scale(1.06); transition: transform 260ms var(--nva-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-podium__card { transition: transform 200ms var(--nva-ease), box-shadow 200ms !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-podium__card:hover { transform: translateY(-4px); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-list > * { transition: transform 160ms var(--nva-ease), background-color 160ms !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .rka-list > *:hover { transform: translateX(3px); background: rgb(139 92 246 / 8%) !important; }
+
+/* ================= Treinador de questões ================= */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session {
+  border-radius: 18px;
+}
+html:root.dark body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-stem {
+  background: radial-gradient(420px 200px at 0% 0%, rgb(139 92 246 / 14%), transparent 70%), #16202a !important;
+  border-color: rgb(139 92 246 / 30%) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-answers button:not([aria-label*="Riscar"]):not([title*="iscar"]) {
+  transition: transform 160ms var(--nva-ease), border-color 160ms, box-shadow 160ms, background-color 160ms !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-answers li > button:first-child:not(:disabled):hover,
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-answers .flex > button:first-child:not(:disabled):hover {
+  transform: translateX(3px);
+  border-color: rgb(59 130 246 / 65%) !important;
+  background-color: rgb(59 130 246 / 8%) !important;
+  box-shadow: 0 8px 22px -16px #3b82f6 !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-answers .flex > button:first-child:not(:disabled):hover > span:first-child {
+  color: #fff !important;
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-answers .flex > button:first-child:active { transform: scale(0.99); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .trainer-reading-meta > *:first-child {
+  color: #4ade80 !important;
+  border-color: rgb(34 197 94 / 45%) !important;
+  background: rgb(34 197 94 / 10%) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .qt2-strip__btn { transition: transform 160ms var(--nva-ease), border-color 160ms, box-shadow 160ms !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .qt2-strip__btn:hover { transform: translateY(-1px); border-color: rgb(59 130 246 / 60%) !important; box-shadow: 0 8px 18px -12px #3b82f6 !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .qt2-strip__btn--stop:hover { border-color: rgb(239 68 68 / 70%) !important; box-shadow: 0 8px 18px -12px #ef4444 !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .qt2-strip__btn svg { transition: transform 200ms var(--nva-ease); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt2-session .qt2-strip__btn:hover svg { transform: scale(1.12); }
+
+@media (prefers-reduced-motion: reduce) {
+  .student-metric-panel *, .app-shell[data-area] :is(.rka-card, .rka-evolution, .rka-chip, .rka-list > *, .rka-podium__card, .mh2 .ak-tile__icon, .qt2-session button) {
+    transition: none !important;
+    transform: none !important;
+  }
+}

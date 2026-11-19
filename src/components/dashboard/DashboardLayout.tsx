@@ -21,6 +21,7 @@ import "@/styles/student-light-mobile.css";
 import "@/styles/workspace-banners.css";
 import "@/styles/workspace-topbar.css";
 import "@/styles/topbar-v3.css";
+import "@/styles/nextvita-areas.css";
 import "@/styles/workspace-fullscreen.css";
 import "@/styles/student-mobile-menu.css";
 import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
