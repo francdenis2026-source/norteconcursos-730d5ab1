@@ -40,6 +40,7 @@ import {
   FileText,
   Loader2,
   Medal,
+  PlayCircle,
   RefreshCw,
   Sparkles,
   Target,
@@ -93,12 +94,12 @@ const formatExamDate = (value?: string | null) => {
 };
 const destinations = [
   {
-    to: "/dashboard/cronograma",
-    image: "/media/hero/card-agenda.webp",
-    title: "Agenda de estudos",
-    text: "Organize seu dia de estudo",
+    to: "/dashboard/media",
+    image: "/media/hero/card-videoaulas.svg",
+    title: "Videoaulas",
+    text: "Assista e estude em vídeo",
     tone: "gold",
-    icon: CalendarClock,
+    icon: PlayCircle,
   },
   {
     to: "/dashboard/question-trainer",
