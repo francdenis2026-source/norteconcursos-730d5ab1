@@ -1,20 +1,9 @@
 import * as React from "react";
-import {
-  Area,
-  Bar,
-  CartesianGrid,
-  ComposedChart,
-  Line,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 import { Link } from "@tanstack/react-router";
 import { AlertTriangle, ArrowRight } from "lucide-react";
-import { ChartTooltipCard } from "@/components/dashboard/charts/ChartTooltip";
+import { NvChart } from "@/components/dashboard/charts/NvChart";
+import { useChartHeight } from "@/components/dashboard/WeeklyRhythmChart";
 import { ChartTable, ViewToggle } from "@/components/dashboard/charts/ChartTable";
-import { prefersReducedMotion } from "@/lib/dashboardTrends";
 import type { TrainingRecord } from "@/lib/studentDashboard";
 import { acreDateKey, acreHour } from "@/lib/acreTime";
 import { canonicalSubject } from "@/lib/subjects";
@@ -31,8 +20,8 @@ export type Period = (typeof PERIODS)[number][0];
 type Bucket = { label: string; acertos: number; erros: number };
 
 /** Paleta validada (CVD): acerto em verde-água, erro em laranja. Nunca vermelho × verde. */
-const OK = "var(--viz-ok)";
-const ERR = "var(--viz-err)";
+const OK = "var(--cat-green)";
+const ERR = "var(--cat-red)";
 /** Respostas com mais de 30 min de intervalo contam como sessões diferentes. */
 const SESSION_GAP_MS = 30 * 60_000;
 const MONTHS = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
@@ -134,6 +123,7 @@ export function AnswerInsights({
   period: Period;
 }) {
   const [view, setView] = React.useState<"chart" | "table">("chart");
+  const height = useChartHeight();
   // Mesma regra do restante do painel: vale a primeira resposta de cada questão.
   const first = React.useMemo(() => {
     const seen = new Set<string>();
@@ -166,7 +156,7 @@ export function AnswerInsights({
 
   return (
     <div className="ncx-panel">
-      <dl className="ncx-summary ncx-summary--four">
+      <dl className="nv-summary nv-summary--four">
         <div>
           <dt>Respondidas</dt>
           <dd>{data.total.toLocaleString("pt-BR")}</dd>
@@ -197,130 +187,55 @@ export function AnswerInsights({
           erros aqui.
         </p>
       ) : view === "chart" ? (
-        <figure className="ncx-figure">
-          <figcaption className="ncx-legend">
-            <span className="sr-only">Acertos e erros por período, {periodLabel}. </span>
+        <figure className="nv-figure">
+          <figcaption className="nv-legend">
             <span>
-              <i data-line style={{ background: "var(--viz-total)" }} aria-hidden="true" /> Respondidas
+              <i style={{ background: OK }} /> Acertos
             </span>
             <span>
-              <i style={{ background: OK }} aria-hidden="true" /> Acertos
+              <i style={{ background: ERR }} /> Erros
             </span>
             <span>
-              <i style={{ background: ERR }} aria-hidden="true" /> Erros
+              <i data-line style={{ background: "var(--cat-amber)" }} /> Aproveitamento (%)
             </span>
           </figcaption>
-          <ResponsiveContainer width="100%" height={196}>
-            <ComposedChart data={chartData} margin={{ top: 8, right: 6, bottom: 0, left: 0 }} barCategoryGap="28%">
-              <defs>
-                <linearGradient id="ncx-ok-bar" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor={OK} stopOpacity={0.95} />
-                  <stop offset="100%" stopColor={OK} stopOpacity={0.45} />
-                </linearGradient>
-                <linearGradient id="ncx-err-bar" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor={ERR} stopOpacity={0.95} />
-                  <stop offset="100%" stopColor={ERR} stopOpacity={0.6} />
-                </linearGradient>
-                <linearGradient id="ncx-total-area" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="var(--viz-total)" stopOpacity={0.28} />
-                  <stop offset="100%" stopColor="var(--viz-total)" stopOpacity={0} />
-                </linearGradient>
-                <filter id="ncx-glow-2" x="-20%" y="-50%" width="140%" height="200%">
-                  <feGaussianBlur stdDeviation="3" result="b" />
-                  <feMerge>
-                    <feMergeNode in="b" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <CartesianGrid vertical={false} stroke="var(--viz-grid)" strokeWidth={1} />
-              <XAxis
-                dataKey="label"
-                tickLine={false}
-                axisLine={{ stroke: "var(--viz-axis)" }}
-                tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
-                tickMargin={6}
-                minTickGap={10}
-              />
-              <YAxis
-                width={34}
-                allowDecimals={false}
-                tickCount={4}
-                tickLine={false}
-                axisLine={false}
-                tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
-              />
-              <Tooltip
-                cursor={{ stroke: "var(--viz-muted)", strokeWidth: 1, strokeDasharray: "3 4" }}
-                wrapperStyle={{ outline: "none" }}
-                content={({ active, payload, label }) => {
-                  const point = payload?.[0]?.payload as (Bucket & { total: number }) | undefined;
-                  if (!active || !point) return null;
-                  return (
-                    <ChartTooltipCard
-                      title={String(label)}
-                      rows={[
-                        { label: "Respondidas", value: point.total, color: "var(--viz-total)" },
-                        { label: "Acertos", value: point.acertos, color: OK },
-                        { label: "Erros", value: point.erros, color: ERR },
-                        {
-                          label: "Aproveitamento",
-                          value: point.total ? `${Math.round((point.acertos / point.total) * 100)}%` : "—",
-                        },
-                      ]}
-                    />
-                  );
-                }}
-              />
-              <Area
-                type="monotone"
-                dataKey="total"
-                stroke="none"
-                fill="url(#ncx-total-area)"
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={1200}
-                tooltipType="none"
-              />
-              <Bar
-                dataKey="acertos"
-                name="Acertos"
-                stackId="a"
-                fill="url(#ncx-ok-bar)"
-                stroke="var(--viz-surface)"
-                strokeWidth={1}
-                maxBarSize={18}
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={700}
-                animationEasing="ease-out"
-              />
-              <Bar
-                dataKey="erros"
-                name="Erros"
-                stackId="a"
-                fill="url(#ncx-err-bar)"
-                stroke="var(--viz-surface)"
-                strokeWidth={1}
-                radius={[4, 4, 0, 0]}
-                maxBarSize={18}
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={700}
-                animationEasing="ease-out"
-              />
-              <Line
-                type="monotone"
-                dataKey="total"
-                name="Respondidas"
-                stroke="var(--viz-total)"
-                strokeWidth={2}
-                dot={chartData.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-total)" } : false}
-                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-total)" }}
-                filter="url(#ncx-glow-2)"
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={1200}
-                animationEasing="ease-in-out"
-              />
-            </ComposedChart>
-          </ResponsiveContainer>
+          {/* Aproveitamento numa faixa própria (escala 0–100%), alinhada às barras: um eixo por gráfico. */}
+          <NvChart
+            data={chartData.map((b) => ({
+              label: b.label,
+              title: b.label,
+              line: b.total ? Math.round((b.acertos / b.total) * 100) : null,
+            }))}
+            line={{ key: "p", label: "Aproveitamento", color: "var(--cat-amber)" }}
+            height={64}
+            ticks={[0, 100]}
+            band={{ from: 70, to: 100 }}
+            format={(v) => `${Math.round(v)}%`}
+            labelEvery={0}
+            ariaLabel={`Aproveitamento por período, ${periodLabel}`}
+          />
+          <NvChart
+            data={chartData.map((b) => ({
+              label: b.label,
+              title: b.label,
+              bars: [b.acertos, b.erros],
+              extra: [
+                {
+                  label: "Aproveitamento",
+                  value: b.total ? `${Math.round((b.acertos / b.total) * 100)}%` : "—",
+                  color: "var(--cat-amber)",
+                },
+              ],
+            }))}
+            bars={[
+              { key: "ok", label: "Acertos", color: OK },
+              { key: "err", label: "Erros", color: ERR },
+            ]}
+            height={height - 40}
+            format={(v) => `${Math.round(v)}`}
+            labelEvery={chartData.length > 14 ? 3 : 1}
+            ariaLabel={`Acertos e erros por período, ${periodLabel}`}
+          />
         </figure>
       ) : (
         <ChartTable

@@ -1,0 +1,212 @@
+/*
+  Padrão NextVita — só cartões e gráficos da Área do aluno.
+  Escuro em camadas (cartão #141b21, superfície #11181d, bordas brancas 8%), cantos 16/12 px,
+  cores fixas por categoria e animações só de transform/opacity.
+*/
+html:root body .student-home.sh2 {
+  --nv-ease: cubic-bezier(0.32, 0.72, 0, 1);
+  /* Cores por categoria: iguais em todo o painel */
+  --cat-blue: #3b82f6;   /* tempo de estudo */
+  --cat-amber: #f59e0b;  /* média / aproveitamento / semana */
+  --cat-green: #22c55e;  /* acertos / taxa de acerto */
+  --cat-red: #ef4444;    /* erros */
+  --cat-violet: #8b5cf6; /* questões */
+  --nv-card: var(--card);
+  --nv-surface: color-mix(in oklab, var(--card) 70%, var(--background));
+  --nv-line: var(--border);
+  --nv-dim: var(--muted-foreground);
+}
+html:root.dark body .student-home.sh2 {
+  --nv-card: #141b21;
+  --nv-surface: #11181d;
+  --nv-line: rgb(255 255 255 / 8%);
+}
+
+/* ---------- Cartões: camadas, cantos de 16px, hover só na borda ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card, .ncx-tile) {
+  border: 1px solid var(--nv-line) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  transform: none;
+  transition: border-color 220ms var(--nv-ease) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card) { background: var(--nv-card) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card, .ncx-tile):hover {
+  border-color: color-mix(in oklab, var(--brass, #d9a441) 55%, var(--nv-line)) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi:active { transform: none !important; }
+
+/* Entrada dos cartões: sobe 8px, 30%→100% de opacidade, 0,55s em cascata (uma vez) */
+html:root body .student-home.sh2 :is(.sh2-kpi, .sh2-card, .ncx-tile) {
+  animation: nv-enter 550ms var(--nv-ease) both !important;
+}
+html:root body .student-home.sh2 .sh2-kpis > :nth-child(2),
+html:root body .student-home.sh2 .ncx-tiles > :nth-child(2) { animation-delay: 70ms !important; }
+html:root body .student-home.sh2 .sh2-kpis > :nth-child(3),
+html:root body .student-home.sh2 .ncx-tiles > :nth-child(3) { animation-delay: 140ms !important; }
+html:root body .student-home.sh2 .sh2-kpis > :nth-child(4),
+html:root body .student-home.sh2 .ncx-tiles > :nth-child(4) { animation-delay: 210ms !important; }
+html:root body .student-home.sh2 .ncx-tiles > :nth-child(5) { animation-delay: 280ms !important; }
+html:root body .student-home.sh2 .ncx-tiles > :nth-child(6) { animation-delay: 350ms !important; }
+html:root body .student-home.sh2 .sh2-pair > :nth-child(2) { animation-delay: 70ms !important; }
+@keyframes nv-enter { from { opacity: 0.3; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Cartões do topo: ícone em quadradinho colorido, número grande, minilinha ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  grid-template-rows: auto auto !important;
+  align-items: center !important;
+  gap: 0.5rem 0.75rem !important;
+  min-height: 0 !important;
+  padding: 1rem !important;
+  text-align: left !important;
+}
+html:root body .student-home.sh2 .sh2-kpi[data-tone="violet"] { --kc: var(--cat-violet); }
+html:root body .student-home.sh2 .sh2-kpi[data-tone="green"] { --kc: var(--cat-green); }
+html:root body .student-home.sh2 .sh2-kpi[data-tone="blue"] { --kc: var(--cat-blue); }
+html:root body .student-home.sh2 .sh2-kpi[data-tone="amber"] { --kc: var(--cat-amber); }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > svg {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  padding: 0.5rem !important;
+  border-radius: 10px !important;
+  color: var(--kc) !important;
+  background: color-mix(in oklab, var(--kc) 16%, transparent) !important;
+  align-self: start;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > span:not(.nv-spark) { display: grid !important; gap: 2px; min-width: 0; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi small {
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: var(--nv-dim) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi strong {
+  font-size: 1.625rem !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  font-variant-numeric: tabular-nums !important;
+  color: var(--foreground) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi em {
+  font-size: 0.75rem !important;
+  font-style: normal !important;
+  color: var(--nv-dim) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi .nv-spark { grid-column: 1 / -1; }
+@media (min-width: 1100px) {
+  html:root body .student-home.sh2.student-overview .sh2-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 640px) {
+  html:root body .student-home.sh2.student-overview .sh2-kpis { grid-template-columns: minmax(0, 1fr) !important; }
+  html:root body .student-home.sh2.student-overview .sh2-pair { grid-template-columns: minmax(0, 1fr) !important; }
+}
+
+/* ---------- Atalhos com foto: degradê escuro sob o texto e zoom lento no hover ---------- */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile img { transition: transform 1600ms var(--nv-ease) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile:hover img { transform: scale(1.08) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile::after {
+  background: linear-gradient(180deg, transparent 20%, rgb(8 11 14 / 60%) 55%, rgb(8 11 14 / 94%) 100%) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile:hover .ncx-tile__icon { transform: none !important; }
+
+/* ---------- Gráficos ---------- */
+.nv-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+}
+.nv-summary--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.nv-summary > div { min-width: 0; padding: 0.625rem 0.75rem; border: 1px solid var(--nv-line); border-radius: 12px; background: var(--nv-surface); }
+.nv-summary dt { display: flex; align-items: center; gap: 6px; overflow: hidden; font-size: 0.75rem; white-space: nowrap; text-overflow: ellipsis; color: var(--nv-dim); }
+.nv-summary dd { margin: 2px 0 0; font-size: 1.5rem; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--foreground); }
+.nv-summary dd span { font-size: 0.8125rem; font-weight: 500; color: var(--nv-dim); }
+.nv-summary .ncx-key { width: 8px; height: 8px; border-radius: 2px; }
+@media (max-width: 640px) {
+  .nv-summary, .nv-summary--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nv-summary dd { font-size: 1.25rem; }
+}
+
+.nv-figure { display: grid; gap: 0.25rem; min-width: 0; margin: 0; }
+.nv-legend { display: flex; flex-wrap: wrap; gap: 0.875rem; margin: 0 0 0.25rem; font-size: 0.75rem; color: var(--nv-dim); }
+.nv-legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.nv-legend i { width: 10px; height: 10px; border-radius: 3px; }
+.nv-legend i[data-line] { width: 14px; height: 3px; border-radius: 2px; }
+.nv-legend i[data-dash] { width: 14px; height: 0; border-top: 2px dashed var(--nv-dim); border-radius: 0; }
+
+.nv-chart { position: relative; width: 100%; min-width: 0; outline: none; touch-action: pan-y; cursor: crosshair; }
+.nv-chart:focus-visible { border-radius: 12px; box-shadow: 0 0 0 2px var(--ring); }
+.nv-chart svg { display: block; overflow: visible; }
+.nv-grid { stroke: currentColor; stroke-opacity: 0.07; color: var(--foreground); }
+.nv-axis { font-size: 11px; font-variant-numeric: tabular-nums; fill: var(--nv-dim); }
+.nv-axis[data-active] { fill: var(--foreground); font-weight: 600; }
+.nv-band { fill: currentColor; color: var(--foreground); opacity: 0.05; }
+.nv-goal { stroke: var(--nv-dim); stroke-width: 1.25; stroke-dasharray: 5 5; }
+
+/* Barras crescem de baixo para cima, 30 ms por barra */
+.nv-bars { transform: scaleY(0); transition: transform 700ms var(--nv-ease), opacity 160ms var(--nv-ease); }
+.nv-chart[data-seen] .nv-bars { transform: scaleY(1); }
+/* Linha se desenha em 1,6 s; a área aparece depois */
+.nv-line { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.nv-chart[data-seen] .nv-line, .nv-spark[data-seen] .nv-line { animation: nv-draw 1600ms var(--nv-ease) forwards; }
+.nv-area { opacity: 0; }
+.nv-chart[data-seen] .nv-area, .nv-spark[data-seen] .nv-area { animation: nv-fade 700ms var(--nv-ease) 900ms forwards; }
+/* Anel pulsando no último ponto */
+.nv-pulse { animation: nv-pulse 2.2s var(--nv-ease) infinite; }
+@keyframes nv-draw { to { stroke-dashoffset: 0; } }
+@keyframes nv-fade { to { opacity: 1; } }
+@keyframes nv-pulse { 0% { opacity: 0.6; transform: scale(1); } 80%, 100% { opacity: 0; transform: scale(3); } }
+
+/* Cruz, pílula no eixo e dica escura */
+.nv-cross line { stroke: var(--foreground); stroke-opacity: 0.35; stroke-width: 1; stroke-dasharray: 3 3; }
+.nv-pill { fill: #0d1317; stroke: rgb(255 255 255 / 14%); }
+.nv-pill-text { font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; fill: #fff; }
+.nv-tip {
+  position: absolute;
+  z-index: 5;
+  min-width: 10.5rem;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 12px;
+  color: #f3f5f7;
+  background: rgb(13 19 23 / 96%);
+  box-shadow: 0 16px 36px -16px rgb(0 0 0 / 70%);
+  pointer-events: none;
+  transform: translate(-50%, -100%) translateY(-6px);
+  animation: nv-fade 160ms var(--nv-ease) forwards;
+  opacity: 0;
+}
+.nv-tip p { margin: 0 0 4px; font-size: 11px; color: rgb(243 245 247 / 70%); }
+.nv-tip p::first-letter { text-transform: uppercase; }
+.nv-tip ul { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.nv-tip li { display: grid; grid-template-columns: 10px 1fr auto; align-items: center; gap: 8px; font-size: 12px; }
+.nv-tip li i { width: 10px; height: 10px; border-radius: 3px; }
+.nv-tip li i[data-line] { height: 3px; border-radius: 2px; }
+.nv-tip li span { color: rgb(243 245 247 / 72%); }
+.nv-tip li b { font-weight: 700; font-variant-numeric: tabular-nums; color: #fff; }
+
+/* Minilinha dos cartões */
+.nv-spark { display: block; width: 100%; min-width: 0; }
+.nv-spark svg { display: block; overflow: visible; }
+
+@media (prefers-reduced-motion: reduce) {
+  html:root body .student-home.sh2 :is(.sh2-kpi, .sh2-card, .ncx-tile) { animation: none !important; }
+  .nv-bars { transform: none; transition: none; }
+  .nv-line { stroke-dasharray: none; stroke-dashoffset: 0; animation: none !important; }
+  .nv-area { opacity: 1; animation: none !important; }
+  .nv-pulse { display: none; }
+  .nv-tip { animation: none; opacity: 1; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile img { transition: none !important; }
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > .nv-spark,
+html:root body .student-home.sh2 .sh2-kpi > .nv-spark { grid-column: 1 / -1 !important; grid-row: 2 !important; width: 100% !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > svg,
+html:root body .student-home.sh2 .sh2-kpi > svg { color: var(--kc) !important; stroke: var(--kc) !important; background: color-mix(in oklab, var(--kc) 16%, transparent) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > svg *,
+html:root body .student-home.sh2 .sh2-kpi > svg * { stroke: var(--kc) !important; }
+@media (min-width: 1100px) { html:root body .student-home.sh2.student-overview .sh2-pair { align-items: start !important; } }

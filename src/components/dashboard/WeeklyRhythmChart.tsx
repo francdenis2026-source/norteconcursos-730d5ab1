@@ -1,41 +1,35 @@
 import * as React from "react";
-import {
-  Area,
-  Bar,
-  CartesianGrid,
-  ComposedChart,
-  Line,
-  ReferenceLine,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 import { ArrowRight } from "lucide-react";
-import { ChartTooltipCard } from "@/components/dashboard/charts/ChartTooltip";
+import { NvChart } from "@/components/dashboard/charts/NvChart";
 import { ChartTable, ViewToggle } from "@/components/dashboard/charts/ChartTable";
-import {
-  minuteTicks,
-  prefersReducedMotion,
-  shortDuration,
-  type StudyBucket,
-} from "@/lib/dashboardTrends";
+import { minuteTicks, shortDuration, type StudyBucket } from "@/lib/dashboardTrends";
 
 type WeeklyRhythmChartProps = {
   buckets: StudyBucket[];
-  /** "dia" para 7 e 30 dias; "mês" para 12 meses. */
+  /** Meta diária do cronograma, em segundos (só por dia). */
+  goalSeconds?: number | null;
   unit: "dia" | "mês";
   onSelect: (key: string, trigger: HTMLElement) => void;
   onOpenHistory: (trigger: HTMLButtonElement) => void;
   formatDuration: (seconds: number) => string;
 };
 
-/**
- * Tempo ativo por período: uma série, colunas finas, média como referência.
- * Só o pico recebe rótulo direto; os demais valores ficam na dica e na tabela.
- */
+export function useChartHeight() {
+  const [h, setH] = React.useState(220);
+  React.useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const set = () => setH(mq.matches ? 190 : 220);
+    set();
+    mq.addEventListener("change", set);
+    return () => mq.removeEventListener("change", set);
+  }, []);
+  return h;
+}
+
+/** Horas de estudo: barras azuis por período, linha laranja de média móvel e meta tracejada. */
 export function WeeklyRhythmChart({
   buckets,
+  goalSeconds,
   unit,
   onSelect,
   onOpenHistory,
@@ -43,29 +37,27 @@ export function WeeklyRhythmChart({
 }: WeeklyRhythmChartProps) {
   const [view, setView] = React.useState<"chart" | "table">("chart");
   const plotRef = React.useRef<HTMLDivElement>(null);
+  const height = useChartHeight();
   const total = buckets.reduce((sum, b) => sum + b.seconds, 0);
   const active = buckets.filter((b) => b.seconds >= 60);
   const average = active.length ? Math.round(total / active.length) : 0;
-  const peak = buckets.reduce<StudyBucket | null>(
-    (best, b) => (b.seconds > (best?.seconds ?? 0) ? b : best),
-    null,
-  );
-  // Média móvel (3 períodos; 7 em 30 dias) para mostrar a tendência por cima das barras.
   const win = buckets.length > 14 ? 7 : 3;
   const data = buckets.map((b, i) => {
     const slice = buckets.slice(Math.max(0, i - win + 1), i + 1);
+    const avg = slice.reduce((s, x) => s + x.seconds, 0) / slice.length;
     return {
-      ...b,
-      minutes: Math.round(b.seconds / 60),
-      trend: Math.round(slice.reduce((s2, x) => s2 + x.seconds, 0) / slice.length / 60),
+      label: b.label,
+      title: b.fullLabel,
+      bars: [Math.round(b.seconds / 60)],
+      line: Math.round(avg / 60),
     };
   });
-  const plural = unit === "dia" ? "dias" : "meses";
-  const ticks = minuteTicks(Math.max(...data.map((d) => d.minutes), Math.round(average / 60), 30));
+  const goalMin = goalSeconds ? Math.round(goalSeconds / 60) : null;
+  const ticks = minuteTicks(Math.max(...data.map((d) => d.bars[0] ?? 0), goalMin ?? 0, 30));
 
   return (
     <div className="ncx-panel">
-      <dl className="ncx-summary">
+      <dl className="nv-summary">
         <div>
           <dt>Tempo total</dt>
           <dd>{formatDuration(total)}</dd>
@@ -84,136 +76,35 @@ export function WeeklyRhythmChart({
       </dl>
 
       {view === "chart" ? (
-        <figure className="ncx-figure" ref={plotRef}>
-          <figcaption className="ncx-legend" aria-hidden="true">
-            <span><i style={{ background: "var(--viz-time)" }} /> Tempo ativo</span>
-            <span><i data-line style={{ background: "var(--viz-trend)" }} /> Tendência</span>
+        <figure className="nv-figure" ref={plotRef}>
+          <figcaption className="nv-legend">
+            <span>
+              <i style={{ background: "var(--cat-blue)" }} /> Tempo ativo
+            </span>
+            <span>
+              <i data-line style={{ background: "var(--cat-amber)" }} /> Média ({win} {unit === "dia" ? "dias" : "meses"})
+            </span>
+            {goalMin && (
+              <span>
+                <i data-dash /> Meta do cronograma
+              </span>
+            )}
           </figcaption>
-          <p className="sr-only">
-            Evolução dos minutos de estudo por {unit}, últimos {buckets.length} {plural}. Total{" "}
-            {formatDuration(total)}. Use o botão Tabela para ler todos os valores.
-          </p>
-          <ResponsiveContainer width="100%" height={196}>
-            <ComposedChart
-              data={data}
-              margin={{ top: 8, right: 6, bottom: 0, left: 0 }}
-              barCategoryGap="28%"
-              onClick={(state) => {
-                const i = Number((state as { activeTooltipIndex?: number | string } | null)?.activeTooltipIndex);
-                const b = Number.isFinite(i) ? data[i] : undefined;
-                if (b && plotRef.current) onSelect(b.key, plotRef.current);
-              }}
-            >
-              <defs>
-                <linearGradient id="ncx-time-bar" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="var(--viz-time)" stopOpacity={0.95} />
-                  <stop offset="100%" stopColor="var(--viz-time)" stopOpacity={0.35} />
-                </linearGradient>
-                <linearGradient id="ncx-trend-area" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="var(--viz-trend)" stopOpacity={0.28} />
-                  <stop offset="100%" stopColor="var(--viz-trend)" stopOpacity={0} />
-                </linearGradient>
-                <filter id="ncx-glow" x="-20%" y="-50%" width="140%" height="200%">
-                  <feGaussianBlur stdDeviation="3" result="b" />
-                  <feMerge>
-                    <feMergeNode in="b" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <CartesianGrid vertical={false} stroke="var(--viz-grid)" strokeWidth={1} />
-              <XAxis
-                dataKey="label"
-                tickLine={false}
-                axisLine={{ stroke: "var(--viz-axis)" }}
-                interval={buckets.length > 14 ? 4 : 0}
-                tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
-                tickMargin={6}
-              />
-              <YAxis
-                width={40}
-                tickLine={false}
-                axisLine={false}
-                allowDecimals={false}
-                ticks={ticks}
-                domain={[0, ticks.at(-1) ?? "auto"]}
-                tickFormatter={(v: number) => shortDuration(v * 60)}
-                tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
-              />
-              <Tooltip
-                cursor={{ stroke: "var(--viz-muted)", strokeWidth: 1, strokeDasharray: "3 4" }}
-                wrapperStyle={{ outline: "none" }}
-                content={({ active: on, payload }) => {
-                  const p = payload?.[0]?.payload as (StudyBucket & { minutes: number; trend: number }) | undefined;
-                  if (!on || !p) return null;
-                  return (
-                    <ChartTooltipCard
-                      title={p.fullLabel}
-                      rows={[
-                        {
-                          label: "Tempo ativo",
-                          value: p.seconds ? formatDuration(p.seconds) : "Sem estudo",
-                          color: "var(--viz-time)",
-                        },
-                        { label: `Tendência (${win} ${unit === "dia" ? "dias" : "meses"})`, value: formatDuration(p.trend * 60), color: "var(--viz-trend)" },
-                      ]}
-                    />
-                  );
-                }}
-              />
-              {average > 0 && (
-                <ReferenceLine
-                  y={Math.round(average / 60)}
-                  stroke="var(--viz-muted)"
-                  strokeDasharray="4 4"
-                  strokeOpacity={0.7}
-                  label={{ value: "média", position: "insideTopRight", fill: "var(--viz-muted)", fontSize: 11 }}
-                />
-              )}
-              <Area
-                type="monotone"
-                dataKey="trend"
-                stroke="none"
-                fill="url(#ncx-trend-area)"
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={1200}
-                tooltipType="none"
-              />
-              <Bar
-                dataKey="minutes"
-                name="Tempo ativo"
-                fill="url(#ncx-time-bar)"
-                radius={[4, 4, 0, 0]}
-                maxBarSize={18}
-                cursor="pointer"
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={700}
-                animationEasing="ease-out"
-              />
-              <Line
-                type="monotone"
-                dataKey="trend"
-                name="Tendência"
-                stroke="var(--viz-trend)"
-                strokeWidth={2}
-                dot={(props: { cx?: number; cy?: number; index?: number }) =>
-                  props.index === data.length - 1 && props.cx != null && props.cy != null ? (
-                    <g key="live" className="ncx-live-dot">
-                      <circle cx={props.cx} cy={props.cy} r={4} fill="var(--viz-trend)" className="ncx-live-ping" />
-                      <circle cx={props.cx} cy={props.cy} r={4} fill="var(--viz-trend)" stroke="var(--viz-surface)" strokeWidth={2} />
-                    </g>
-                  ) : (
-                    <g key={`d${props.index}`} />
-                  )
-                }
-                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-trend)" }}
-                filter="url(#ncx-glow)"
-                isAnimationActive={!prefersReducedMotion()}
-                animationDuration={1200}
-                animationEasing="ease-in-out"
-              />
-            </ComposedChart>
-          </ResponsiveContainer>
+          <NvChart
+            data={data}
+            bars={[{ key: "t", label: "Tempo ativo", color: "var(--cat-blue)" }]}
+            line={{ key: "m", label: "Média", color: "var(--cat-amber)" }}
+            height={height}
+            ticks={ticks}
+            {...(goalMin ? { goal: { value: goalMin, label: `meta ${shortDuration(goalMin * 60)}` } } : {})}
+            format={(v) => shortDuration(v * 60)}
+            labelEvery={buckets.length > 14 ? 5 : 1}
+            ariaLabel={`Horas de estudo por ${unit}, últimos ${buckets.length}`}
+            onSelect={(i) => {
+              const b = buckets[i];
+              if (b && plotRef.current) onSelect(b.key, plotRef.current);
+            }}
+          />
         </figure>
       ) : (
         <ChartTable

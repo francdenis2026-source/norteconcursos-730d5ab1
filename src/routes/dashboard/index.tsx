@@ -17,7 +17,9 @@ import "@/styles/student-home-astrix.css";
 import "@/styles/student-home-compact.css";
 import "@/styles/student-home-polish.css";
 import "@/styles/student-home-charts-premium.css";
-import { Sparkline, type SparkPoint } from "@/components/dashboard/charts/Sparkline";
+import { type SparkPoint } from "@/components/dashboard/charts/Sparkline";
+import { NvSparkline } from "@/components/dashboard/charts/NvChart";
+import "@/styles/nextvita-theme.css";
 import {
   CHART_RANGES,
   dailyAnswerSeries,
@@ -223,6 +225,11 @@ function StudentHome({ user }: { user: UserProfile }) {
     [q.training.data, today],
   );
   const [chartRange, setChartRange] = React.useState<ChartRange>("7d");
+  // Meta diária real do cronograma (horas semanais ÷ dias de estudo); sem cronograma, sem meta.
+  const goalSeconds =
+    plan && validDashboardConfig(plan.config) && plan.config.days.length && plan.config.weeklyHours > 0
+      ? Math.round((plan.config.weeklyHours * 3600) / plan.config.days.length)
+      : null;
   const weekStudy = React.useMemo(
     () => (q.activity.data ? dailyStudySeries(q.activity.data, live, today, 7) : null),
     [q.activity.data, live, today],
@@ -423,7 +430,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={BrainCircuit}
           label="Questões resolvidas"
-          tone="blue"
+          tone="violet"
           onOpen={(event) => openMetric("questions", event.currentTarget)}
           value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
           detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
@@ -455,7 +462,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={Clock}
           label="Tempo ativo hoje"
-          tone="amber"
+          tone="blue"
           onOpen={(event) => openMetric("today", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
           detail="Somando suas sessões"
@@ -465,7 +472,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={TrendingUp}
           label="Estudo nesta semana"
-          tone="violet"
+          tone="amber"
           onOpen={(event) => openMetric("week", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
           detail={time ? `${duration(time.total)} no total` : "Semana atual"}
@@ -865,6 +872,7 @@ function StudentHome({ user }: { user: UserProfile }) {
             ) : (
               <WeeklyRhythmChart
                 buckets={rangeBuckets}
+                goalSeconds={chartRange === "12m" ? null : goalSeconds}
                 unit={chartRange === "12m" ? "mês" : "dia"}
                 formatDuration={duration}
                 onSelect={(key, trigger) =>
@@ -975,8 +983,8 @@ function Metric({
         <strong>{value}</strong>
         <em>{detail}</em>
       </span>
-      {trend && format && (
-        <Sparkline points={trend} format={format} label={label} />
+      {trend && (
+        <NvSparkline values={trend.map((p) => p.value ?? 0)} color={`var(--cat-${tone})`} />
       )}
     </button>
   );
