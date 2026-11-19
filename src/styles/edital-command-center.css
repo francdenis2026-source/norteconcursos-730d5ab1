@@ -261,3 +261,11 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action { borde
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action:hover { border-color: color-mix(in oklab, var(--tone) 65%, transparent) !important; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action[data-primary] .ecc-action__icon { color: oklch(0.2 0.03 70) !important; background: var(--tone) !important; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-action[data-primary] .ecc-action__icon svg { color: oklch(0.2 0.03 70) !important; filter: none; }
+
+/* "Treinar agora": seta na mesma cor do texto do botão */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-bank__cta,
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-bank__cta svg {
+  color: oklch(0.2 0.03 70) !important;
+  stroke: oklch(0.2 0.03 70) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-bank__cta svg { width: 1rem !important; height: 1rem !important; stroke-width: 2.25 !important; opacity: 1 !important; }

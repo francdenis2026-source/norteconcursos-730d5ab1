@@ -223,3 +223,55 @@ html body .student-top-navigation__menu [role="menuitem"],
 html body .student-top-navigation__menu [role="menuitem"] span { color: var(--popover-foreground, var(--foreground)) !important; }
 html body .student-top-navigation__menu .student-top-navigation__menu-description { color: var(--muted-foreground) !important; }
 html body .student-top-navigation__menu { background: var(--popover, var(--card)) !important; }
+
+/* Sequência de estudo: pílula única, chama em degradê, sem caixa dentro de caixa */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips {
+  display: inline-flex !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  height: 2.25rem !important;
+  min-width: 0 !important;
+  padding: 0 0.9rem 0 0.75rem !important;
+  border: 1px solid color-mix(in oklab, #f97316 35%, transparent) !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, color-mix(in oklab, #f97316 20%, transparent), color-mix(in oklab, #facc15 8%, transparent)) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 8%), 0 0 14px -6px #f97316 !important;
+  color: var(--foreground) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  transition: box-shadow 220ms cubic-bezier(0.32, 0.72, 0, 1), border-color 220ms cubic-bezier(0.32, 0.72, 0, 1) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak:hover {
+  border-color: color-mix(in oklab, #f97316 65%, transparent) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%), 0 0 20px -4px #f97316 !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  color: #fb923c !important;
+  stroke: #fb923c !important;
+  fill: color-mix(in oklab, #f97316 35%, transparent) !important;
+  filter: drop-shadow(0 0 4px rgb(249 115 22 / 70%));
+  transform-origin: 50% 90%;
+  animation: tb-flame 1.8s ease-in-out infinite !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak .tabular { color: var(--foreground) !important; }
+:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg { color: #ea580c !important; stroke: #ea580c !important; }
+@keyframes tb-flame {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  30% { transform: scale(1.08, 1.12) rotate(-3deg); }
+  60% { transform: scale(0.97, 1.04) rotate(2deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak svg { animation: none !important; }
+}
