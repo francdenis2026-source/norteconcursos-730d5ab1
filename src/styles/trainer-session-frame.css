@@ -1,0 +1,39 @@
+/*
+  Treinador — enquadramento da tela da questão em tela cheia.
+  A janela da questão media a altura só a partir do próprio topo; com o menu superior presente,
+  a primeira linha (matéria, banca, "Reportar questão", aviso de revisão) ficava cortada embaixo do menu.
+  Agora a cadeia de contêineres ocupa exatamente o espaço abaixo do menu, e a janela nunca passa dele.
+*/
+html body .app-shell[data-focus-mode="true"]:has(.qt4):not(#_):not(#_):not(#_):not(#_) .app-main {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+html body .app-shell[data-focus-mode="true"]:has(.qt4):not(#_):not(#_):not(#_):not(#_) .app-topbar { flex: none !important; position: relative; z-index: 30; }
+html body .app-shell[data-focus-mode="true"]:has(.qt4):not(#_):not(#_):not(#_):not(#_) #dashboard-content {
+  flex: 1 1 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  scroll-padding-top: 0 !important;
+}
+html body .app-shell[data-focus-mode="true"]:has(.qt4):not(#_):not(#_):not(#_):not(#_) :is(#dashboard-content > .app-content__inner, .qt4) {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt4 .question-window {
+  height: min(var(--qt4-h, 100dvh), 100%) !important;
+  max-height: min(var(--qt4-h, 100dvh), 100%) !important;
+  /* Respiro mínimo no alto para as etiquetas não encostarem na borda. */
+  padding-top: 0.25rem;
+}
+/* A primeira linha nunca é cortada: quebra em vez de estourar, com um respiro vertical. */
+html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip {
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  min-height: 2.25rem !important;
+  padding-block: 0.5rem !important;
+  overflow: visible;
+}

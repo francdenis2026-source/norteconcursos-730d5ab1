@@ -141,6 +141,7 @@ import "@/styles/trainer-exam-focus.css";
 import "@/styles/trainer-setup-studio.css";
 import "@/styles/trainer-setup-focus-layout.css";
 import "@/styles/trainer-session-qt4.css";
+import "@/styles/trainer-session-frame.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
 import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
 import {
@@ -2558,8 +2559,19 @@ function QtFitViewport({
         }
       }
     };
+    // A tela da questão em tela cheia cabe inteira; qualquer rolagem herdada da tela anterior
+    // (ex.: a montagem rolada até o botão) empurrava o topo da janela para baixo do menu.
+    const resetScroll = () => {
+      if (root !== ".qt4") return;
+      const app = shell.closest<HTMLElement>(".app-shell");
+      if (!app || app.getAttribute("data-focus-mode") !== "true") return;
+      for (let el: HTMLElement | null = shell.parentElement; el && el !== app; el = el.parentElement) {
+        if (el.scrollTop !== 0) el.scrollTop = 0;
+      }
+    };
     const fit = () => {
       pullUp();
+      resetScroll();
       const card = target === root ? shell : shell.querySelector<HTMLElement>(target);
       if (!card) return;
       const top = card.getBoundingClientRect().top;
