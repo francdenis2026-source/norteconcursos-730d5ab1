@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Award, BookOpenCheck, ChevronDown, ClipboardCheck, Crown, Gem, Medal, ShieldCheck, Star, Target, Trophy } from "lucide-react";
+import { ArrowRight, ShieldCheck, Star } from "lucide-react";
+import { MedalEmblem, TrophyEmblem } from "@/components/dashboard/RankEmblems";
 import { supabase } from "@/integrations/supabase/client";
-import "./HomeRankingShowcase.css";
-import "./MobileRanking.css";
+import "@/styles/ranking-arena-v2.css";
+import "./HomeRankingArena.css";
 
 type Candidate = {
   rank_position: number;
@@ -17,6 +18,14 @@ type Candidate = {
 const number = new Intl.NumberFormat("pt-BR");
 const REFRESH_MS = 30 * 60 * 1000;
 const MIN_SHOWCASE_POINTS = 50;
+
+const Stars = ({ n }: { n: number }) => (
+  <span className="hra-stars" aria-label={`${n} de 5 estrelas`}>
+    {[1, 2, 3, 4, 5].map((i) => (
+      <Star key={i} aria-hidden="true" data-on={i <= n} />
+    ))}
+  </span>
+);
 
 export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
   const [candidates, setCandidates] = useState<Candidate[] | null>(null);
@@ -62,152 +71,120 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
     };
   }, []);
 
-  const [open, setOpen] = useState<number | null>(0);
   const emptyMessage = unavailable
     ? "O ranking está temporariamente indisponível."
     : candidates
       ? `Os candidatos aparecerão aqui quando alcançarem pelo menos ${MIN_SHOWCASE_POINTS} pontos.`
       : "Consultando a classificação da plataforma…";
-  if (anchorId === "ranking-destaque-mobile") {
-    const top = candidates?.[0]?.points ?? 0;
-    return (
-      <section id={anchorId} className="rk" aria-labelledby="home-ranking-title-mobile">
-        <header className="rk__banner">
-          <img src="/media/hero/careers-team.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <p className="rk__eyebrow"><Trophy aria-hidden="true" /> Ranking da comunidade</p>
-          <h2 id="home-ranking-title-mobile">Quem está no <em>topo da preparação?</em></h2>
-          <span className="rk__live"><i aria-hidden="true" /> {updated && !unavailable ? "Atualizado periodicamente" : "Classificação da plataforma"}</span>
-        </header>
-        {candidates && candidates.length > 0 ? (
-          <ol className="rk__list" aria-label="Candidatos em destaque">
-            {candidates.map((c, i) => {
-              const name = c.display_name.trim() || "Candidato";
-              const expanded = open === i;
-              const tier = c.rank_position <= 3 ? c.rank_position : 4;
-              const TierIcon = tier === 1 ? Crown : tier === 4 ? Award : Medal;
-              return (
-                <li key={`${c.rank_position}-${name}`} className="rk__item" data-tier={tier} data-open={expanded}>
-                  <button
-                    type="button"
-                    className="rk__row"
-                    aria-expanded={expanded}
-                    aria-controls={`rk-stats-${i}`}
-                    onClick={() => setOpen(expanded ? null : i)}
-                  >
-                    <span className="rk__medal"><TierIcon aria-hidden="true" /><b>{c.rank_position}º</b></span>
-                    <span className="rk__who">
-                      <strong>{name}</strong>
-                      <span className="rk__stars" aria-label={`Nível: ${c.stars} estrelas`}>
-                        {Array.from({ length: 5 }, (_, s) => (
-                          <Star key={s} aria-hidden="true" data-on={s < c.stars} />
-                        ))}
-                      </span>
-                    </span>
-                    <span className="rk__points"><strong>{number.format(c.points)}</strong><small>pontos</small></span>
-                    <ChevronDown className="rk__chevron" aria-hidden="true" />
-                    <span className="rk__bar" aria-hidden="true"><i style={{ width: `${top > 0 ? Math.max(8, Math.round((c.points / top) * 100)) : 0}%` }} /></span>
-                  </button>
-                  <dl className="rk__stats" id={`rk-stats-${i}`} hidden={!expanded}>
-                    <div><Target aria-hidden="true" /><dd>{c.accuracy}%</dd><dt>Acertos</dt></div>
-                    <div><BookOpenCheck aria-hidden="true" /><dd>{number.format(c.questions)}</dd><dt>Questões</dt></div>
-                    <div><ClipboardCheck aria-hidden="true" /><dd>{c.simulators}</dd><dt>Simulados</dt></div>
-                  </dl>
-                </li>
-              );
-            })}
-          </ol>
-        ) : (
-          <div className="rk__empty" role="status">{emptyMessage}</div>
-        )}
-        <p className="rk__trust"><ShieldCheck aria-hidden="true" /> Pontos e acertos reais. Empates legítimos compartilham a posição.</p>
-        <Link to="/dashboard/ranking" search={{ section: "general", period: "all", page: 1, size: 20, q: "" }} className="rk__cta">
-          Ver ranking completo <ArrowRight aria-hidden="true" />
-        </Link>
-        <details className="rk__details">
-          <summary>Como funciona a classificação?</summary>
-          <p>Esta vitrine pública exibe somente candidatos com pelo menos {MIN_SHOWCASE_POINTS} pontos válidos; o ranking completo mantém suas regras próprias. O ranking Geral considera os pontos registrados na plataforma. Quando há empate em pontos, utiliza taxa de acertos, número de acertos, questões válidas e pontos de simulados. Empates completos compartilham a mesma posição. Repetições de questões não somam novos pontos. Nomes são exibidos de forma abreviada; não são divulgados dados pessoais.</p>
-        </details>
-      </section>
-    );
-  }
-  const titleId = "home-ranking-title";
-  const icon = (position: number) =>
-    position === 1 ? <Gem aria-hidden="true" /> :
-    position === 2 || position === 3 ? <Medal aria-hidden="true" /> : <Award aria-hidden="true" />;
+  const titleId = `${anchorId ?? "home-ranking"}-title`;
+  const list = candidates ?? [];
+  const podium = list.filter((c) => c.rank_position <= 3).slice(0, 3);
+  const showPodium = podium.length === 3;
+  const rest = showPodium ? list.filter((c) => !podium.includes(c)) : list;
+  const leader = list[0]?.points ?? 0;
+  const rankingSearch = { section: "general", period: "all", page: 1, size: 20, q: "" } as const;
   return (
-    <section
-      id={anchorId}
-      className="home-ranking hr-section"
-      aria-labelledby={titleId}
-    >
-      <div className="home-container">
-        <div className="home-ranking__shell">
-          <img className="home-ranking__art" src="/media/hero/careers-team.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <div className="home-ranking__heading">
-            <div>
-              <p className="home-ranking__eyebrow"><Trophy aria-hidden="true" /> DESTAQUE DA COMUNIDADE</p>
-              <h2 id={titleId}>Quem está no <em>topo da preparação?</em></h2>
-              <p>Os quatro primeiros colocados do ranking Geral. O próximo nome aqui pode ser o seu.</p>
+    <section id={anchorId} className="home-ranking-arena" aria-labelledby={titleId}>
+      <div className="hra-wrap">
+        <div className="ranking-workspace rka hra">
+          <header className="rka-hero">
+            <img className="rka-hero__bg" src="/media/hero/careers-team.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            <div className="rka-hero__copy">
+              <span className="rka-hero__trophy" aria-hidden="true">
+                <TrophyEmblem size={56} />
+              </span>
+              <p className="rka-kicker">Arena Norte · Destaque da comunidade</p>
+              <h2 id={titleId} className="hra-title">
+                Ranking <span>geral</span>
+              </h2>
+              <p className="rka-hero__desc">Os primeiros colocados da plataforma. O próximo nome aqui pode ser o seu.</p>
+              <p className="rka-chip hra-live">
+                <i aria-hidden="true" /> {updated && !unavailable ? "Atualizado periodicamente" : "Classificação da plataforma"}
+              </p>
             </div>
-            <span className="home-ranking__status">
-              <span className="home-ranking__status-dot" />
-              {updated && !unavailable ? "Atualizado periodicamente" : "Classificação da plataforma"}
-            </span>
-          </div>
-          {candidates && candidates.length > 0 ? (
-            <ol className="home-ranking__grid" aria-label="Candidatos em destaque">
-              {candidates.map((candidate) => {
-                const displayName = candidate.display_name.trim() || "Candidato";
-                return (
-                  <li
-                    className="home-ranking__card hr-ranking-card"
-                    data-medal={candidate.rank_position <= 4 ? candidate.rank_position : "other"}
-                    key={`${candidate.rank_position}-${displayName}`}
-                  >
-                    <span className="home-ranking__position">
-                      {icon(candidate.rank_position)} {candidate.rank_position}º
-                    </span>
-                    <div className="home-ranking__identity">
-                      <span className="home-ranking__avatar" aria-hidden="true">
-                        {displayName.charAt(0).toLocaleUpperCase("pt-BR")}
-                      </span>
-                      <strong className="home-ranking__name">{displayName}</strong>
-                      <span className="home-ranking__stars" aria-label={`Nível: ${candidate.stars} estrelas`}>
-                        {Array.from({ length: 5 }, (_, i) => (
-                          <span key={i} aria-hidden="true">
-                            {i < candidate.stars ? "★" : "☆"}
-                          </span>
-                        ))}
-                      </span>
-                    </div>
-                    <div className="home-ranking__points">
-                      <strong>{number.format(candidate.points)}</strong>
-                      <span>pontos</span>
-                    </div>
-                    <dl className="home-ranking__stats">
-                      <div><dt>Acertos</dt><dd>{candidate.accuracy}%</dd></div>
-                      <div><dt>Questões</dt><dd>{number.format(candidate.questions)}</dd></div>
-                      <div><dt>Simulados</dt><dd>{candidate.simulators}</dd></div>
-                    </dl>
-                  </li>
-                );
-              })}
-            </ol>
-          ) : (
-            <div className="home-ranking__empty" role="status">
-              {emptyMessage}
+            <div className="hra-hero-cta">
+              <p><ShieldCheck aria-hidden="true" /> Pontos e acertos reais. Empates legítimos compartilham a posição.</p>
+              <Link to="/dashboard/ranking" search={rankingSearch} className="hra-cta">
+                Ver ranking completo <ArrowRight aria-hidden="true" />
+              </Link>
             </div>
-          )}
-          <div className="home-ranking__bottom">
-            <div><ShieldCheck aria-hidden="true"/><span><strong>Classificação transparente</strong> Pontos, acertos e desempenho real. Empates legítimos compartilham a posição.</span></div>
-            <Link to="/dashboard/ranking" search={{ section: "general", period: "all", page: 1, size: 20, q: "" }} className="home-ranking__cta">
-              Ver ranking completo <ArrowRight aria-hidden="true" />
-            </Link>
-          </div>
-          <details className="home-ranking__details">
-            <summary>Como funciona a classificação?</summary>
-            <p>Esta vitrine pública exibe somente candidatos com pelo menos 50 pontos válidos; o ranking completo mantém suas regras próprias. O ranking Geral considera os pontos registrados na plataforma. Quando há empate em pontos, utiliza taxa de acertos, número de acertos, questões válidas e pontos de simulados. Empates completos compartilham a mesma posição. Repetições de questões não somam novos pontos. Nomes são exibidos de forma abreviada; não são divulgados dados pessoais.</p>
-          </details>
+          </header>
+
+          <section className="rka-board" aria-label="Candidatos em destaque">
+            {list.length > 0 ? (
+              <>
+                {showPodium && (
+                  <ol className="rka-podium" aria-label="Pódio">
+                    {podium.map((c) => {
+                      const pos = c.rank_position;
+                      const name = c.display_name.trim() || "Candidato";
+                      return (
+                        <li key={`${pos}-${name}`} data-place={pos}>
+                          <Link
+                            to="/dashboard/ranking"
+                            search={rankingSearch}
+                            className="rka-podium__card"
+                            aria-label={`${pos}º lugar: ${name}, ${c.points} pontos. Ver ranking completo`}
+                          >
+                            <span className="rka-podium__glow" aria-hidden="true" />
+                            <span className="rka-podium__medal">
+                              <MedalEmblem tier={pos === 1 ? "gold" : pos === 2 ? "silver" : "bronze"} label={pos} size={pos === 1 ? 76 : 60} />
+                            </span>
+                            <span className="rka-podium__name">{name}</span>
+                            <Stars n={c.stars} />
+                            <span className="rka-podium__points">
+                              {number.format(c.points)} <small>pts</small>
+                            </span>
+                            <span className="rka-podium__stats">
+                              {number.format(c.questions)} questões · {c.accuracy}%
+                            </span>
+                            <span className="rka-podium__step" aria-hidden="true">{pos}º</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                )}
+                {rest.length > 0 && (
+                  <ol className="rka-list" aria-label="Classificação">
+                    {rest.map((c, index) => {
+                      const name = c.display_name.trim() || "Candidato";
+                      const initial = name.charAt(0).toLocaleUpperCase("pt-BR");
+                      return (
+                        <li key={`${c.rank_position}-${name}`} style={{ "--i": index } as CSSProperties}>
+                          <Link to="/dashboard/ranking" search={rankingSearch} className="rka-row" aria-label={`${c.rank_position}º lugar: ${name}`}>
+                            <span className="hra-pos">{c.rank_position}º</span>
+                            <span className="rka-avatar" aria-hidden="true" data-hue={initial.charCodeAt(0) % 6}>{initial}</span>
+                            <span className="rka-row__who">
+                              <span className="rka-row__name">{name}</span>
+                              <span className="rka-row__meta">
+                                <Stars n={c.stars} />
+                                <span className="rka-row__stats">
+                                  {number.format(c.questions)} questões · {c.accuracy}% · {c.simulators} simulados
+                                </span>
+                              </span>
+                            </span>
+                            <span className="rka-row__score">
+                              <b>{number.format(c.points)}<small> pts</small></b>
+                              <span className="rka-bar" aria-hidden="true">
+                                <i style={{ width: `${leader > 0 ? Math.max(4, (c.points / leader) * 100) : 0}%` }} />
+                              </span>
+                            </span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                )}
+              </>
+            ) : (
+              <p className="rka-empty" role="status">{emptyMessage}</p>
+            )}
+            <details className="hra-details">
+              <summary>Como funciona a classificação?</summary>
+              <p>Esta vitrine pública exibe somente candidatos com pelo menos {MIN_SHOWCASE_POINTS} pontos válidos; o ranking completo mantém suas regras próprias. O ranking Geral considera os pontos registrados na plataforma. Quando há empate em pontos, utiliza taxa de acertos, número de acertos, questões válidas e pontos de simulados. Empates completos compartilham a mesma posição. Repetições de questões não somam novos pontos. Nomes são exibidos de forma abreviada; não são divulgados dados pessoais.</p>
+            </details>
+          </section>
         </div>
       </div>
     </section>

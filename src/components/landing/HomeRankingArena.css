@@ -1,0 +1,151 @@
+/* Ranking da página inicial com o mesmo visual da "Arena" do painel (ranking-arena-v2.css). */
+.home-ranking-arena {
+  padding-block: clamp(2rem, 5vw, 4rem);
+  scroll-margin-top: 5rem;
+}
+.home-ranking-arena > .hra-wrap {
+  width: min(1320px, calc(100% - clamp(28px, 4.2vw, 72px))) !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+}
+.home-ranking-arena .rka-hero__trophy svg { width: 56px !important; height: 56px !important; }
+.home-ranking-arena .rka-podium__medal svg { width: 60px !important; height: 60px !important; }
+.home-ranking-arena .rka-podium li[data-place="1"] .rka-podium__medal svg { width: 76px !important; height: 76px !important; }
+.home-ranking-arena .rka-podium { max-width: 920px; width: 100%; margin-inline: auto; }
+.home-ranking-arena .hra { width: 100%; }
+.home-ranking-arena .hra a { text-decoration: none !important; }
+
+/* Abertura */
+.home-ranking-arena .rka-hero { color: #f3f5f7; }
+.home-ranking-arena .rka-hero .hra-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff !important;
+}
+.home-ranking-arena .rka-hero .hra-title span { color: var(--a-gold) !important; font-style: normal; }
+.home-ranking-arena .rka-hero .rka-kicker { color: var(--a-gold) !important; }
+.home-ranking-arena .rka-hero .rka-hero__desc { color: rgb(243 245 247 / 82%) !important; text-align: left; }
+.home-ranking-arena .hra-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0.35rem 0 0;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(243 245 247 / 85%) !important;
+  background: rgb(10 14 18 / 45%);
+  backdrop-filter: blur(6px);
+}
+.home-ranking-arena .hra-live i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgb(34 197 94 / 60%);
+  animation: hra-live 2s ease-out infinite;
+}
+@keyframes hra-live { to { box-shadow: 0 0 0 8px rgb(34 197 94 / 0%); } }
+
+.home-ranking-arena .hra-hero-cta {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  align-content: center;
+  padding: 1rem 1.125rem;
+  border: 1px solid color-mix(in oklab, var(--a-gold) 45%, transparent);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgb(217 164 65 / 16%), rgb(20 184 166 / 10%) 60%, rgb(15 22 27 / 88%));
+  backdrop-filter: blur(10px);
+}
+.home-ranking-arena .hra-hero-cta p {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgb(243 245 247 / 85%);
+}
+.home-ranking-arena .hra-hero-cta p svg { flex: none; width: 1rem; height: 1rem; margin-top: 2px; color: #14b8a6; }
+.home-ranking-arena .hra-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  border-radius: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1206 !important;
+  background: linear-gradient(135deg, #f5c451, #e0a83a);
+  transition: transform 160ms var(--a-ease), box-shadow 160ms var(--a-ease);
+}
+.home-ranking-arena .hra-cta svg { width: 1rem; height: 1rem; transition: transform 200ms var(--a-ease); }
+.home-ranking-arena .hra-cta:hover { transform: translateY(-1px); box-shadow: 0 12px 26px -12px rgb(245 196 81 / 75%); }
+.home-ranking-arena .hra-cta:hover svg { transform: translateX(3px); }
+.home-ranking-arena .hra-cta:active { transform: scale(0.98); }
+
+/* Quadro: mesmas camadas do painel */
+.home-ranking-arena .rka-board {
+  border: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
+  border-radius: 1.125rem;
+}
+:root.dark .home-ranking-arena .rka-board {
+  background: radial-gradient(520px 220px at 100% 0%, rgb(139 92 246 / 9%), transparent 70%), #16202a;
+}
+.home-ranking-arena .rka-podium__card { text-decoration: none; }
+.home-ranking-arena .rka-podium__card:hover { transform: translateY(-4px); }
+.home-ranking-arena .rka-list > li:hover .rka-row { background: color-mix(in oklab, #8b5cf6 8%, var(--card)); }
+.home-ranking-arena .hra-pos {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-inline: auto;
+  border: 1px solid var(--a-line);
+  border-radius: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  background: var(--a-soft);
+}
+.home-ranking-arena .hra-stars { display: inline-flex; gap: 1px; }
+.home-ranking-arena .hra-stars svg { width: 0.75rem; height: 0.75rem; color: color-mix(in oklab, var(--muted-foreground) 45%, transparent); }
+.home-ranking-arena .hra-stars svg[data-on="true"] { color: #fbbf24; fill: #fbbf24; }
+.home-ranking-arena .rka-row__who,
+.home-ranking-arena .rka-podium__name { text-align: inherit; }
+
+.home-ranking-arena .hra-details summary {
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+.home-ranking-arena .hra-details summary:hover { color: var(--foreground); }
+.home-ranking-arena .hra-details p {
+  margin: 0.5rem 0 0;
+  max-width: 75ch;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--muted-foreground);
+}
+.home-ranking-arena .rka-empty { margin: 0; padding: 1.5rem; text-align: center; color: var(--muted-foreground); }
+
+@media (max-width: 640px) {
+  .home-ranking-arena { padding-block: 1.5rem; }
+  .home-ranking-arena .rka-hero { padding: 1rem; }
+  .home-ranking-arena .rka-row { grid-template-columns: 2.25rem 2.25rem minmax(0, 1fr) auto; gap: 0.5rem; }
+  .home-ranking-arena .rka-row__stats { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-ranking-arena .hra-live i { animation: none; }
+  .home-ranking-arena .hra-cta, .home-ranking-arena .hra-cta svg { transition: none; }
+}
