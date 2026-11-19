@@ -642,3 +642,21 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip_
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs:active { transform: scale(0.94); }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs svg { transition: transform 200ms var(--q4-ease); }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt4 .qt2-strip__fs:hover svg { transform: scale(1.12); }
+
+/* Opção selecionada (fundo dourado): texto escuro, forte e legível em qualquer tema */
+html:root body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 :is(.qt3-chips > button, .qt2-focus__options button)[aria-checked="true"],
+html:root body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 :is(.qt3-chips > button, .qt2-focus__options button)[data-active="true"] {
+  color: #1a1206 !important;
+  font-weight: 800 !important;
+  -webkit-text-fill-color: #1a1206 !important;
+  text-shadow: none !important;
+  background: linear-gradient(135deg, #f5c451, #e0a83a) !important;
+  border-color: #c98f1f !important;
+  box-shadow: 0 6px 16px -8px rgb(245 196 81 / 70%) !important;
+}
+html:root body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 :is(.qt3-chips > button, .qt2-focus__options button)[aria-checked="true"] :is(span, small, i, svg) {
+  color: #1a1206 !important;
+  -webkit-text-fill-color: #1a1206 !important;
+  opacity: 1 !important;
+}
+html:root body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .qt3 .qt3-chips > button[aria-checked="true"] small { background: rgb(26 18 6 / 14%) !important; }
