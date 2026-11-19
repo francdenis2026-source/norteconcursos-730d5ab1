@@ -126,6 +126,7 @@ import { BackToEdital } from "@/components/pcAcreVerticalizado/BackToEdital";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import "@/styles/trainer-success-feedback.css";
+import "@/styles/trainer-verdict.css";
 import "@/styles/learning-workspace-refinement.css";
 
 import "@/styles/question-trainer-experience.css";
@@ -1448,6 +1449,21 @@ function QuestionTrainer() {
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
             </p>
+            {answered && (
+              <div className="trainer-verdict" data-result={isCorrect ? "ok" : "err"} role="status" aria-live="polite">
+                <span className="trainer-verdict__icon" aria-hidden="true">
+                  {isCorrect ? <CheckCircle2 /> : <XCircle />}
+                </span>
+                <span className="trainer-verdict__text">
+                  <strong>{isCorrect ? "Você acertou" : "Você errou"}</strong>
+                  <small>
+                    {isCorrect
+                      ? `Gabarito: ${labelFor(question.answer)}`
+                      : `Você marcou ${selected ? labelFor(selected) : "—"} · Gabarito: ${labelFor(question.answer)}`}
+                  </small>
+                </span>
+              </div>
+            )}
             {hasOptions && (
               <div className="mt-3 space-y-2">
                 {parsed.options.map((option) => {
