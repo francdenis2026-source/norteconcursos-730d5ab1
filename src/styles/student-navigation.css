@@ -434,7 +434,7 @@
 /* Customer sidebar: one recognizable, restrained accent per destination.
    Each section owns its hue in expanded sidebar, compact rail and mobile drawer.
    Keep all existing grid columns, widths, row heights and text sizes. */
-:root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"]    { --student-nav-accent: #956015; }
+:root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"]    { --student-nav-accent: var(--gold-700); }
 :root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="sky"]     { --student-nav-accent: #176caa; }
 :root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="violet"]  { --student-nav-accent: #7550b5; }
 :root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="teal"]    { --student-nav-accent: #087d79; }
@@ -444,7 +444,7 @@
 :root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="orange"]  { --student-nav-accent: #a65c23; }
 :root:not(.dark) .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="slate"]   { --student-nav-accent: #42617d; }
 
-:root.dark .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"]    { --student-nav-accent: #e2bd75; }
+:root.dark .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"]    { --student-nav-accent: var(--gold-300); }
 :root.dark .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="sky"]     { --student-nav-accent: #79bff5; }
 :root.dark .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="violet"]  { --student-nav-accent: #bd9ef6; }
 :root.dark .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="teal"]    { --student-nav-accent: #61cfc8; }
@@ -503,7 +503,7 @@
    The earlier palette only tinted an icon in an otherwise transparent row.
    This version gives each section a permanent color rail + soft surface.
    No width, height, padding or grid columns changed. */
-:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"] { --nav-identity: #956015; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"] { --nav-identity: var(--gold-700); }
 :root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="sky"] { --nav-identity: #176caa; }
 :root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="violet"] { --nav-identity: #7550b5; }
 :root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="teal"] { --nav-identity: #087d79; }
@@ -512,7 +512,7 @@
 :root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="indigo"] { --nav-identity: #464cb0; }
 :root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="orange"] { --nav-identity: #a65c23; }
 :root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="slate"] { --nav-identity: #42617d; }
-:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"] { --nav-identity: #e2bd75; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"] { --nav-identity: var(--gold-300); }
 :root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="sky"] { --nav-identity: #79bff5; }
 :root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="violet"] { --nav-identity: #bd9ef6; }
 :root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="teal"] { --nav-identity: #61cfc8; }

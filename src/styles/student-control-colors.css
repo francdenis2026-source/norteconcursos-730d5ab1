@@ -1,6 +1,6 @@
 /* Dark study controls: tinted surfaces, readable labels and stable semantic states. */
-:root.dark .app-shell[data-area="student"] { --control-accent: #e2bd75; }
-:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="gold"], [data-control-tone="gold"]) { --control-accent: #e2bd75; }
+:root.dark .app-shell[data-area="student"] { --control-accent: var(--gold-300); }
+:root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="gold"], [data-control-tone="gold"]) { --control-accent: var(--gold-300); }
 :root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="sky"], [data-control-tone="sky"]) { --control-accent: #79bff5; }
 :root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="violet"], [data-control-tone="violet"]) { --control-accent: #bd9ef6; }
 :root.dark :is(.app-shell[data-area="student"] .app-content[data-hue="teal"], [data-control-tone="teal"]) { --control-accent: #61cfc8; }
@@ -13,8 +13,8 @@
 /* Light study controls: same per-section hues, tuned darker/more saturated so each
    stays >= 4.5:1 against the light card/background (mirrors the sidebar's own
    light-mode hue values in student-navigation.css). */
-:root:not(.dark) .app-shell[data-area="student"] { --control-accent: #956015; }
-:root:not(.dark) :is(.app-shell[data-area="student"] .app-content[data-hue="gold"], [data-control-tone="gold"]) { --control-accent: #956015; }
+:root:not(.dark) .app-shell[data-area="student"] { --control-accent: var(--gold-700); }
+:root:not(.dark) :is(.app-shell[data-area="student"] .app-content[data-hue="gold"], [data-control-tone="gold"]) { --control-accent: var(--gold-700); }
 :root:not(.dark) :is(.app-shell[data-area="student"] .app-content[data-hue="sky"], [data-control-tone="sky"]) { --control-accent: #176caa; }
 :root:not(.dark) :is(.app-shell[data-area="student"] .app-content[data-hue="violet"], [data-control-tone="violet"]) { --control-accent: #7550b5; }
 :root:not(.dark) :is(.app-shell[data-area="student"] .app-content[data-hue="teal"], [data-control-tone="teal"]) { --control-accent: #087d79; }

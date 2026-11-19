@@ -15,7 +15,7 @@ html body .app-shell[data-area] .student-home.sh2 :is(.sh2-kpi, .sh2-card)::befo
   inset: 0 0 auto 0;
   height: 2px;
   border-radius: 999px 999px 0 0;
-  background: var(--kc, var(--brass, #d9a441));
+  background: var(--kc, var(--brass, var(--gold-500)));
   opacity: 0.55;
   pointer-events: none;
   transition: opacity 200ms ease-out;
@@ -74,16 +74,16 @@ html body .app-shell[data-area] .student-home.sh2 .sh2-pair > .sh2-card {
       nos indicadores do topo (onde funciona como legenda).
    --------------------------------------------------------------------- */
 html body .app-shell[data-area] .student-home.sh2 .sh2-card::before {
-  background: var(--brass, #d9a441) !important;
+  background: var(--brass, var(--gold-500)) !important;
 }
 html body .app-shell[data-area] .student-home.sh2 .sh2-card {
   background:
-    radial-gradient(120% 90% at 0% 0%, color-mix(in oklab, var(--brass, #d9a441) 10%, transparent), transparent 62%),
+    radial-gradient(120% 90% at 0% 0%, color-mix(in oklab, var(--brass, var(--gold-500)) 10%, transparent), transparent 62%),
     var(--nv-card, var(--card)) !important;
 }
 html body .app-shell[data-area] .student-home.sh2 .sh2-card:hover {
-  border-color: color-mix(in oklab, var(--brass, #d9a441) 55%, transparent) !important;
-  box-shadow: 0 0 0 1px color-mix(in oklab, var(--brass, #d9a441) 18%, transparent), 0 12px 32px -18px var(--brass, #d9a441) !important;
+  border-color: color-mix(in oklab, var(--brass, var(--gold-500)) 55%, transparent) !important;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--brass, var(--gold-500)) 18%, transparent), 0 12px 32px -18px var(--brass, var(--gold-500)) !important;
 }
 
 /* ---------------------------------------------------------------------
@@ -113,7 +113,7 @@ html body .app-shell[data-area] .student-home.sh2 .sh2-hero::before {
   z-index: -1;
   border-radius: inherit;
   background:
-    radial-gradient(70% 140% at 85% 0%, color-mix(in oklab, var(--brass, #d9a441) 14%, transparent), transparent 70%),
+    radial-gradient(70% 140% at 85% 0%, color-mix(in oklab, var(--brass, var(--gold-500)) 14%, transparent), transparent 70%),
     radial-gradient(60% 120% at 0% 100%, color-mix(in oklab, var(--cat-blue, #3b82f6) 10%, transparent), transparent 70%);
   pointer-events: none;
 }
@@ -144,7 +144,7 @@ html body .app-shell[data-area] .student-home.sh2 :is(.sh2-cta, .pcpr-spot__cta,
   padding: 0.5rem 1rem !important;
   border: 0 !important;
   border-radius: 10px !important;
-  background: var(--brass, #d9a441) !important;
+  background: var(--brass, var(--gold-500)) !important;
   color: oklch(0.2 0.03 70) !important;
   font-size: 0.8125rem !important;
   font-weight: 700 !important;
@@ -159,7 +159,7 @@ html body .app-shell[data-area] .student-home.sh2 :is(.sh2-cta, .pcpr-spot__cta,
 html body .app-shell[data-area] .student-home.sh2 :is(.sh2-link, .pcpr-spot__link, .ncx-link) {
   font-size: 0.8125rem !important;
   font-weight: 700 !important;
-  color: var(--brass, #d9a441) !important;
+  color: var(--brass, var(--gold-500)) !important;
 }
 html body .app-shell[data-area] .student-home.sh2 :is(.sh2-link, .pcpr-spot__link, .ncx-link) svg {
   width: 0.875rem !important;
@@ -182,9 +182,9 @@ html body .app-shell[data-area] .student-home.sh2 .ecc-bank__more {
   justify-content: center !important;
   min-height: 2.5rem !important;
   padding: 0.5rem 1rem !important;
-  border: 1px solid color-mix(in oklab, var(--brass, #d9a441) 45%, var(--nv-line, var(--border))) !important;
+  border: 1px solid color-mix(in oklab, var(--brass, var(--gold-500)) 45%, var(--nv-line, var(--border))) !important;
   border-radius: 10px !important;
-  color: var(--brass, #d9a441) !important;
+  color: var(--brass, var(--gold-500)) !important;
   font-size: 0.8125rem !important;
   font-weight: 700 !important;
   text-decoration: none !important;
@@ -222,8 +222,8 @@ html body .app-shell[data-area] .student-home.sh2 .sh2-hero__contest :is(p, stro
   color: var(--on-ink, #f5f5f5);
 }
 html body .app-shell[data-area] .student-home.sh2 .sh2-hero__exam {
-  border-color: color-mix(in oklab, var(--brass, #d9a441) 40%, transparent) !important;
-  background: color-mix(in oklab, var(--brass, #d9a441) 12%, var(--ink-deep, #15181c)) !important;
+  border-color: color-mix(in oklab, var(--brass, var(--gold-500)) 40%, transparent) !important;
+  background: color-mix(in oklab, var(--brass, var(--gold-500)) 12%, var(--ink-deep, #15181c)) !important;
 }
 html body .app-shell[data-area] .student-home.sh2 .sh2-hero__exam :is(p, strong, span, time) {
   color: var(--on-ink, #f5f5f5);

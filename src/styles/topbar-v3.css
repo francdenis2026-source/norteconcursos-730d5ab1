@@ -301,7 +301,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar {
 }
 
 /* Cor fixa por seção */
-html body .app-shell .app-topbar .student-top-navigation__trigger { --sc: var(--brass, #d9a441); }
+html body .app-shell .app-topbar .student-top-navigation__trigger { --sc: var(--brass, var(--gold-500)); }
 html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="orange"] { --sc: #f59e0b; }
 html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="sky"] { --sc: #3b82f6; }
 html body .app-shell .app-topbar .student-top-navigation__trigger[data-tone="emerald"] { --sc: #22c55e; }
@@ -367,15 +367,15 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-theme-toggle:hover { color: #f59e0b !important; background: rgb(245 158 11 / 12%) !important; }
 
 /* Menus suspensos: ícones na cor da seção */
-html body .student-top-navigation__menu[data-tone] { --sc: var(--brass, #d9a441); }
+html body .student-top-navigation__menu[data-tone] { --sc: var(--brass, var(--gold-500)); }
 html body .student-top-navigation__menu[data-tone="orange"] { --sc: #f59e0b; }
 html body .student-top-navigation__menu[data-tone="sky"] { --sc: #3b82f6; }
 html body .student-top-navigation__menu[data-tone="emerald"] { --sc: #22c55e; }
 html body .student-top-navigation__menu[data-tone="teal"] { --sc: #14b8a6; }
 html body .student-top-navigation__menu[data-tone="indigo"] { --sc: #8b5cf6; }
 html body .student-top-navigation__menu[data-tone="slate"] { --sc: #94a3b8; }
-html body .student-top-navigation__menu [role="menuitem"] svg { color: var(--sc, var(--brass, #d9a441)) !important; }
-html body .student-top-navigation__menu [role="menuitem"]:is(:hover, [data-highlighted]) { background: color-mix(in oklab, var(--sc, var(--brass, #d9a441)) 14%, transparent) !important; }
+html body .student-top-navigation__menu [role="menuitem"] svg { color: var(--sc, var(--brass, var(--gold-500))) !important; }
+html body .student-top-navigation__menu [role="menuitem"]:is(:hover, [data-highlighted]) { background: color-mix(in oklab, var(--sc, var(--brass, var(--gold-500))) 14%, transparent) !important; }
 
 @media (prefers-reduced-motion: reduce) {
   html body .app-shell[data-area] .app-topbar .student-top-navigation__links > * { animation: none !important; }

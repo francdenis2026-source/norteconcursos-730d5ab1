@@ -20,8 +20,8 @@
   --home-muted: #4d5c6c;
   --home-line: color-mix(in srgb, #16202c 14%, transparent);
   --home-accent: #8a5a16;
-  --home-gold: #a9731f;
-  --brass-soft: #a9731f;
+  --home-gold: var(--gold-700);
+  --brass-soft: var(--gold-700);
   --signal-ink: #8a5a16;
   --home-card: color-mix(in srgb, #ffffff 92%, var(--home-bg));
   --home-card-strong: #ffffff;
@@ -36,10 +36,10 @@
   --home-text: #eef3f8;
   --home-muted: #a8b6c4;
   --home-line: color-mix(in srgb, #cfe0f0 16%, transparent);
-  --home-accent: #e3b667;
-  --home-gold: #e3b667;
-  --brass-soft: #e3b667;
-  --signal-ink: #e3b667;
+  --home-accent: var(--gold-300);
+  --home-gold: var(--gold-300);
+  --brass-soft: var(--gold-300);
+  --signal-ink: var(--gold-300);
   --home-card: color-mix(in srgb, #121d28 94%, transparent);
   --home-card-strong: #141f2a;
   --home-shadow: 0 18px 44px -22px rgb(0 0 0 / 55%);

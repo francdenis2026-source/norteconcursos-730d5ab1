@@ -7,7 +7,7 @@
   --rank-accent: var(--control-accent, #087d79);
   --rank-accent-ink: #ffffff;
   --rank-accent-fill: var(--control-accent, #087d79);
-  --rank-gold: #8a5d0a;
+  --rank-gold: var(--gold-700);
   --rank-silver: #5f6b7d;
   --rank-bronze: #9a5a24;
   --rank-line: color-mix(in srgb, var(--border) 88%, transparent);
@@ -16,7 +16,7 @@
   --rank-accent: var(--control-accent, #61cfc8);
   --rank-accent-ink: #062321;
   --rank-accent-fill: var(--control-accent, #61cfc8);
-  --rank-gold: #f2c96b;
+  --rank-gold: var(--gold-300);
   --rank-silver: #cfd6e2;
   --rank-bronze: #e0a46e;
 }

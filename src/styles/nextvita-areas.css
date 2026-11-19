@@ -11,7 +11,7 @@ html:root body {
   --nva-amber: #f59e0b;
   --nva-violet: #8b5cf6;
   --nva-teal: #14b8a6;
-  --nva-gold: #d9a441;
+  --nva-gold: var(--gold-500);
 }
 
 /* ---------- Fundo com cor em todas as páginas do aluno ---------- */

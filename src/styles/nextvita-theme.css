@@ -32,7 +32,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.s
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card) { background: var(--nv-card) !important; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card, .ncx-tile):hover {
-  border-color: color-mix(in oklab, var(--brass, #d9a441) 55%, var(--nv-line)) !important;
+  border-color: color-mix(in oklab, var(--brass, var(--gold-500)) 55%, var(--nv-line)) !important;
   transform: none !important;
   box-shadow: none !important;
 }
@@ -244,8 +244,8 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-l
   width: 8px;
   height: 8px;
   border-radius: 3px;
-  background: var(--brass, #d9a441);
-  box-shadow: 0 0 10px color-mix(in oklab, var(--brass, #d9a441) 70%, transparent);
+  background: var(--brass, var(--gold-500));
+  box-shadow: 0 0 10px color-mix(in oklab, var(--brass, var(--gold-500)) 70%, transparent);
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label::after {
   content: "";
@@ -310,9 +310,9 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-h
 /* Cartão flutuante: a contagem da prova sobe e desce 6px devagar */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__exam {
   padding: 8px 14px !important;
-  border: 1px solid color-mix(in oklab, var(--brass, #d9a441) 40%, transparent) !important;
+  border: 1px solid color-mix(in oklab, var(--brass, var(--gold-500)) 40%, transparent) !important;
   border-radius: 12px !important;
-  background: color-mix(in oklab, var(--brass, #d9a441) 10%, var(--nv-card)) !important;
+  background: color-mix(in oklab, var(--brass, var(--gold-500)) 10%, var(--nv-card)) !important;
   animation: nv-float 5.5s ease-in-out infinite;
 }
 @keyframes nv-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
@@ -320,7 +320,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-h
   font-size: 1.625rem !important;
   font-weight: 750 !important;
   font-variant-numeric: tabular-nums;
-  color: var(--brass, #d9a441) !important;
+  color: var(--brass, var(--gold-500)) !important;
 }
 
 /* ---------- Hoje: três colunas que se completam, sem vazios ---------- */
@@ -366,10 +366,10 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-c
   height: 28px !important;
   padding: 6px !important;
   border-radius: 8px !important;
-  color: var(--hc, var(--brass, #d9a441)) !important;
-  background: color-mix(in oklab, var(--hc, var(--brass, #d9a441)) 16%, transparent) !important;
+  color: var(--hc, var(--brass, var(--gold-500))) !important;
+  background: color-mix(in oklab, var(--hc, var(--brass, var(--gold-500))) 16%, transparent) !important;
 }
-html:root body .student-home.sh2 .sh2-card[data-tone="gold"] { --hc: var(--brass, #d9a441); }
+html:root body .student-home.sh2 .sh2-card[data-tone="gold"] { --hc: var(--brass, var(--gold-500)); }
 html:root body .student-home.sh2 .sh2-card[data-tone="rose"] { --hc: var(--cat-red); }
 html:root body .student-home.sh2 .sh2-card[data-tone="blue"] { --hc: var(--cat-blue); }
 html:root body .student-home.sh2 .sh2-card[data-tone="green"] { --hc: var(--cat-green); }
@@ -388,7 +388,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.s
   box-shadow: none !important;
   transition: border-color 220ms var(--nv-ease) !important;
 }
-html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-review li, .sh2-reading a):hover { border-color: color-mix(in oklab, var(--brass, #d9a441) 50%, var(--nv-line)) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-review li, .sh2-reading a):hover { border-color: color-mix(in oklab, var(--brass, var(--gold-500)) 50%, var(--nv-line)) !important; }
 /* Botões dos cartões: 12px, cor única de destaque */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board :is(a, button):is(.sh2-cta, .sh2-btn, [class*="primary"]) {
   border-radius: 12px !important;
@@ -495,7 +495,7 @@ html:root body .student-home.sh2 :is(.sh2-kpi[data-tone="violet"], .sh2-card[dat
 html:root body .student-home.sh2 :is(.sh2-kpi[data-tone="green"], .sh2-card[data-tone="green"]) { --kc: var(--cat-green); }
 html:root body .student-home.sh2 :is(.sh2-kpi[data-tone="blue"], .sh2-card[data-tone="blue"]) { --kc: var(--cat-blue); }
 html:root body .student-home.sh2 :is(.sh2-kpi[data-tone="amber"]) { --kc: var(--cat-amber); }
-html:root body .student-home.sh2 .sh2-card[data-tone="gold"] { --kc: var(--brass, #d9a441); }
+html:root body .student-home.sh2 .sh2-card[data-tone="gold"] { --kc: var(--brass, var(--gold-500)); }
 html:root body .student-home.sh2 .sh2-card[data-tone="rose"] { --kc: var(--cat-red); }
 html:root body .student-home.sh2 .sh2-card--chart:not([data-tone]) { --kc: var(--cat-blue); }
 
@@ -503,14 +503,14 @@ html:root body .student-home.sh2 .sh2-card--chart:not([data-tone]) { --kc: var(-
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card) {
   position: relative;
   background:
-    radial-gradient(120% 90% at 0% 0%, color-mix(in oklab, var(--kc, var(--brass, #d9a441)) 22%, transparent), transparent 62%),
+    radial-gradient(120% 90% at 0% 0%, color-mix(in oklab, var(--kc, var(--brass, var(--gold-500))) 22%, transparent), transparent 62%),
     var(--nv-card) !important;
   transition: border-color 260ms var(--nv-ease), box-shadow 260ms var(--nv-ease) !important;
 }
 /* Hover: borda acende na cor da categoria + halo suave (sem pular nem crescer) */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card):hover {
-  border-color: color-mix(in oklab, var(--kc, var(--brass, #d9a441)) 60%, transparent) !important;
-  box-shadow: 0 0 0 1px color-mix(in oklab, var(--kc, var(--brass, #d9a441)) 22%, transparent), 0 12px 32px -18px var(--kc, var(--brass, #d9a441)) !important;
+  border-color: color-mix(in oklab, var(--kc, var(--brass, var(--gold-500))) 60%, transparent) !important;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--kc, var(--brass, var(--gold-500))) 22%, transparent), 0 12px 32px -18px var(--kc, var(--brass, var(--gold-500))) !important;
 }
 /* Clique: retorno de pressão */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .ncx-tile, .ecc-action):active { transform: scale(0.985) !important; transition-duration: 90ms !important; }
@@ -523,12 +523,12 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-k
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card:hover .sh2-card__head > svg {
   color: #0f161b !important;
   stroke: #0f161b !important;
-  background: var(--kc, var(--brass, #d9a441)) !important;
-  box-shadow: 0 0 18px -4px var(--kc, var(--brass, #d9a441)) !important;
+  background: var(--kc, var(--brass, var(--gold-500))) !important;
+  box-shadow: 0 0 18px -4px var(--kc, var(--brass, var(--gold-500))) !important;
   transform: rotate(-8deg) scale(1.08);
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi:hover > svg * { stroke: #0f161b !important; }
-html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head > svg { color: var(--kc, var(--brass, #d9a441)) !important; background: color-mix(in oklab, var(--kc, var(--brass, #d9a441)) 18%, transparent) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head > svg { color: var(--kc, var(--brass, var(--gold-500))) !important; background: color-mix(in oklab, var(--kc, var(--brass, var(--gold-500))) 18%, transparent) !important; }
 
 /* Números principais com um toque da cor da categoria */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi strong {

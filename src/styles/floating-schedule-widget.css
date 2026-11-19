@@ -6,7 +6,7 @@
   --fsw-line: rgb(255 255 255 / 14%);
   --fsw-ink: #f4f6f8;
   --fsw-muted: rgb(244 246 248 / 76%);
-  --fsw-accent: #e2bd75;
+  --fsw-accent: var(--gold-300);
   position: fixed;
   right: 14px;
   bottom: calc(86px + env(safe-area-inset-bottom, 0px));

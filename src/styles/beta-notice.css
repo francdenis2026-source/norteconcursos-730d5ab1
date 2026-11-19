@@ -3,7 +3,7 @@
   --beta-line: rgb(255 255 255 / 18%);
   --beta-ink: #f4f6f8;
   --beta-muted: rgb(244 246 248 / 78%);
-  --beta-accent: #e2bd75;
+  --beta-accent: var(--gold-300);
   position: fixed;
   z-index: 40;
   left: 12px;

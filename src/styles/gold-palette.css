@@ -1,0 +1,36 @@
+/*
+  Dourado único da plataforma.
+  Os tokens --gold-* (em styles.css) definem um ouro real, quente e saturado (~#D4AF37),
+  no lugar dos tons de areia/bege apagados que existiam em vários arquivos.
+  Aqui ficam os botões de ação em "ouro metálico": degradê vertical com brilho no topo,
+  tinta escura (contraste > 8:1) e sombra dourada discreta.
+*/
+html body :is(.ecc-bank__cta, .hero-primary-action, .qt3 .qt3-start, .home-button--primary):not(:disabled):not([aria-disabled="true"]) {
+  background: var(--gold-metal) !important;
+  color: var(--gold-ink) !important;
+  border: 0 !important;
+  box-shadow: var(--gold-glow) !important;
+  text-shadow: 0 1px 0 oklch(1 0 0 / 25%);
+}
+html body :is(.ecc-bank__cta, .hero-primary-action, .qt3 .qt3-start, .home-button--primary):not(:disabled):not([aria-disabled="true"]):hover {
+  background: var(--gold-metal-hover) !important;
+  filter: none;
+}
+html body :is(.ecc-bank__cta, .hero-primary-action, .qt3 .qt3-start, .home-button--primary) svg { color: currentColor !important; }
+
+/* Botões principais das áreas autenticadas (antes: bege chapado ou mistura com o fundo). */
+html body .app-shell[data-area] #dashboard-content [data-slot="button"][data-variant="default"]:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--gold-metal) !important;
+  color: var(--gold-ink) !important;
+  border-color: var(--gold-500) !important;
+  box-shadow: var(--gold-glow) !important;
+}
+html body .app-shell[data-area] #dashboard-content [data-slot="button"][data-variant="default"]:not(:disabled):not([aria-disabled="true"]):hover {
+  background: var(--gold-metal-hover) !important;
+}
+html body .app-shell[data-area] #dashboard-content [data-slot="button"][data-variant="default"] svg { color: currentColor !important; }
+
+@media (forced-colors: active) {
+  html body :is(.ecc-bank__cta, .hero-primary-action, .qt3 .qt3-start, .home-button--primary),
+  html body .app-shell[data-area] #dashboard-content [data-slot="button"][data-variant="default"] { background: ButtonFace !important; color: ButtonText !important; box-shadow: none !important; }
+}

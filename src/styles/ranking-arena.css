@@ -55,7 +55,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #f2c96b;
+  color: var(--gold-300);
 }
 .rk-hero h1 {
   margin: 2px 0 0;
@@ -96,7 +96,7 @@
 .rk-hero__facts svg {
   width: 14px;
   height: 14px;
-  color: #f2c96b;
+  color: var(--gold-300);
 }
 .rk-hero__facts strong {
   font-size: 0.95rem;
@@ -251,7 +251,7 @@
 
 /* O cabeçalho é escuro nos dois temas: o texto fixa as próprias cores contra regras globais do modo claro. */
 .rk-hero .rk-hero__kicker {
-  color: #f2c96b !important;
+  color: var(--gold-300) !important;
 }
 .rk-hero .rk-hero__desc {
   color: #e6e1d2 !important;

@@ -291,7 +291,7 @@
     background: var(--nav-wash);
   }
   .student-top-navigation__trigger[data-tone] { --nav-accent: var(--nc-color-action); --nav-wash: var(--nc-color-action-soft); }
-  .student-top-navigation__trigger[data-tone="gold"] { --nav-accent: #e2bd75; }
+  .student-top-navigation__trigger[data-tone="gold"] { --nav-accent: var(--gold-300); }
   .student-top-navigation__trigger[data-tone="sky"] { --nav-accent: #79bff5; }
   .student-top-navigation__trigger[data-tone="violet"] { --nav-accent: #bd9ef6; }
   .student-top-navigation__trigger[data-tone="teal"] { --nav-accent: #61cfc8; }
@@ -643,7 +643,7 @@
     box-shadow: 0 1px 3px rgb(29 57 85 / 5%);
   }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone] { --nav-accent: var(--nc-color-action-text); }
-  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="gold"] { --nav-accent: #956015; }
+  :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="gold"] { --nav-accent: var(--gold-700); }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="sky"] { --nav-accent: #176caa; }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="violet"] { --nav-accent: #7550b5; }
   :root:not(.dark) .app-shell.navigation-v2[data-area="student"] .student-top-navigation__trigger[data-tone="teal"] { --nav-accent: #087d79; }

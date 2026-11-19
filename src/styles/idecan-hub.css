@@ -71,7 +71,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #f2c96b !important;
+  color: var(--gold-300) !important;
 }
 .idx-band h1 {
   margin: 2px 0 0;

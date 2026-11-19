@@ -1,6 +1,6 @@
 /* Concurso ativo + acervo: bloco único, escuro nos dois temas (fica sobre foto). */
 .ecc {
-  --ecc-gold: oklch(0.8 0.13 80);
+  --ecc-gold: var(--gold-300);
   --ecc-ink: #f3f5f7;
   --ecc-dim: rgb(243 245 247 / 72%);
   --ecc-line: rgb(255 255 255 / 12%);
