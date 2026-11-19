@@ -1,9 +1,9 @@
 import * as React from "react";
 import {
-  Bar,
-  BarChart,
+  Area,
   CartesianGrid,
-  LabelList,
+  ComposedChart,
+  Line,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -160,10 +160,6 @@ export function AnswerInsights({
     () => data.buckets.map((b) => ({ ...b, total: b.acertos + b.erros })),
     [data.buckets],
   );
-  const peakIndex = chartData.reduce(
-    (best, b, i) => (b.total > (chartData[best]?.total ?? 0) ? i : best),
-    0,
-  );
   const rate = data.total ? Math.round((data.acertos / data.total) * 100) : null;
   const periodLabel = (PERIODS.find(([id]) => id === period)?.[1] ?? "").toLowerCase();
 
@@ -204,14 +200,20 @@ export function AnswerInsights({
           <figcaption className="ncx-legend">
             <span className="sr-only">Acertos e erros por período, {periodLabel}. </span>
             <span>
-              <i style={{ background: OK }} aria-hidden="true" /> Acertos
+              <i data-line style={{ background: OK }} aria-hidden="true" /> Acertos
             </span>
             <span>
-              <i style={{ background: ERR }} aria-hidden="true" /> Erros
+              <i data-line style={{ background: ERR }} aria-hidden="true" /> Erros
             </span>
           </figcaption>
           <ResponsiveContainer width="100%" height={232}>
-            <BarChart data={chartData} margin={{ top: 22, right: 4, bottom: 0, left: 0 }} barCategoryGap="30%">
+            <ComposedChart data={chartData} margin={{ top: 12, right: 8, bottom: 0, left: 0 }}>
+              <defs>
+                <linearGradient id="ncx-ok-fill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor={OK} stopOpacity={0.18} />
+                  <stop offset="100%" stopColor={OK} stopOpacity={0.01} />
+                </linearGradient>
+              </defs>
               <CartesianGrid vertical={false} stroke="var(--viz-grid)" strokeWidth={1} />
               <XAxis
                 dataKey="label"
@@ -220,6 +222,7 @@ export function AnswerInsights({
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
                 tickMargin={8}
                 minTickGap={10}
+                padding={{ left: 8, right: 8 }}
               />
               <YAxis
                 width={36}
@@ -230,7 +233,7 @@ export function AnswerInsights({
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
               />
               <Tooltip
-                cursor={{ fill: "var(--viz-hover)" }}
+                cursor={{ stroke: "var(--viz-axis)", strokeWidth: 1 }}
                 wrapperStyle={{ outline: "none" }}
                 content={({ active, payload, label }) => {
                   const point = payload?.[0]?.payload as (Bucket & { total: number }) | undefined;
@@ -243,64 +246,37 @@ export function AnswerInsights({
                         { label: "Erros", value: point.erros, color: ERR },
                         {
                           label: "Aproveitamento",
-                          value: point.total
-                            ? `${Math.round((point.acertos / point.total) * 100)}%`
-                            : "—",
+                          value: point.total ? `${Math.round((point.acertos / point.total) * 100)}%` : "—",
                         },
                       ]}
                     />
                   );
                 }}
               />
-              <Bar
+              <Area
+                type="monotone"
                 dataKey="acertos"
                 name="Acertos"
-                stackId="a"
-                fill={OK}
-                stroke="var(--viz-surface)"
-                strokeWidth={1}
-                maxBarSize={24}
+                stroke={OK}
+                strokeWidth={2}
+                fill="url(#ncx-ok-fill)"
+                dot={chartData.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: OK } : false}
+                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: OK }}
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={360}
+                animationDuration={480}
               />
-              <Bar
+              <Line
+                type="monotone"
                 dataKey="erros"
                 name="Erros"
-                stackId="a"
-                fill={ERR}
-                stroke="var(--viz-surface)"
-                strokeWidth={1}
-                radius={[4, 4, 0, 0]}
-                maxBarSize={24}
+                stroke={ERR}
+                strokeWidth={2}
+                dot={chartData.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: ERR } : false}
+                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: ERR }}
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={360}
-              >
-                <LabelList
-                  dataKey="total"
-                  position="top"
-                  content={(props) => {
-                    const { x, y, width, index } = props as {
-                      x?: number;
-                      y?: number;
-                      width?: number;
-                      index?: number;
-                    };
-                    const b = index === undefined ? undefined : chartData[index];
-                    if (!b || index !== peakIndex || !b.total) return null;
-                    return (
-                      <text
-                        x={Number(x ?? 0) + Number(width ?? 0) / 2}
-                        y={Number(y ?? 0) - 6}
-                        textAnchor="middle"
-                        className="ncx-direct-label"
-                      >
-                        {b.total}
-                      </text>
-                    );
-                  }}
-                />
-              </Bar>
-            </BarChart>
+                animationDuration={480}
+              />
+            </ComposedChart>
           </ResponsiveContainer>
         </figure>
       ) : (

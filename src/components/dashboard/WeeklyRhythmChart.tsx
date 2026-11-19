@@ -1,9 +1,9 @@
 import * as React from "react";
 import {
-  Bar,
-  BarChart,
+  Area,
+  AreaChart,
   CartesianGrid,
-  LabelList,
+  ReferenceDot,
   ReferenceLine,
   ResponsiveContainer,
   Tooltip,
@@ -76,11 +76,25 @@ export function WeeklyRhythmChart({
       {view === "chart" ? (
         <figure className="ncx-figure ncx-figure--fill" ref={plotRef}>
           <figcaption className="sr-only">
-            Minutos de estudo por {unit}, últimos {buckets.length} {plural}. Total{" "}
+            Evolução dos minutos de estudo por {unit}, últimos {buckets.length} {plural}. Total{" "}
             {formatDuration(total)}. Use o botão Tabela para ler todos os valores.
           </figcaption>
           <ResponsiveContainer width="100%" height="100%" minHeight={240}>
-            <BarChart data={data} margin={{ top: 22, right: 4, bottom: 0, left: 0 }} barCategoryGap="30%">
+            <AreaChart
+              data={data}
+              margin={{ top: 22, right: 8, bottom: 0, left: 0 }}
+              onClick={(state) => {
+                const i = Number((state as { activeTooltipIndex?: number | string } | null)?.activeTooltipIndex);
+                const b = Number.isFinite(i) ? data[i] : undefined;
+                if (b && plotRef.current) onSelect(b.key, plotRef.current);
+              }}
+            >
+              <defs>
+                <linearGradient id="ncx-time-fill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="var(--viz-time)" stopOpacity={0.22} />
+                  <stop offset="100%" stopColor="var(--viz-time)" stopOpacity={0.02} />
+                </linearGradient>
+              </defs>
               <CartesianGrid vertical={false} stroke="var(--viz-grid)" strokeWidth={1} />
               <XAxis
                 dataKey="label"
@@ -89,6 +103,7 @@ export function WeeklyRhythmChart({
                 interval={buckets.length > 14 ? 4 : 0}
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
                 tickMargin={8}
+                padding={{ left: 8, right: 8 }}
               />
               <YAxis
                 width={44}
@@ -101,7 +116,7 @@ export function WeeklyRhythmChart({
                 tick={{ fill: "var(--viz-muted)", fontSize: 11 }}
               />
               <Tooltip
-                cursor={{ fill: "var(--viz-hover)" }}
+                cursor={{ stroke: "var(--viz-axis)", strokeWidth: 1 }}
                 wrapperStyle={{ outline: "none" }}
                 content={({ active: on, payload }) => {
                   const p = payload?.[0]?.payload as (StudyBucket & { minutes: number }) | undefined;
@@ -116,13 +131,7 @@ export function WeeklyRhythmChart({
                           color: "var(--viz-time)",
                         },
                         ...(average && p.seconds
-                          ? [
-                              {
-                                label: "Média do período",
-                                value: formatDuration(average),
-                                color: "var(--viz-muted)",
-                              },
-                            ]
+                          ? [{ label: "Média do período", value: formatDuration(average), color: "var(--viz-muted)" }]
                           : []),
                       ]}
                     />
@@ -143,46 +152,32 @@ export function WeeklyRhythmChart({
                   }}
                 />
               )}
-              <Bar
+              <Area
+                type="monotone"
                 dataKey="minutes"
                 name="Tempo ativo"
-                fill="var(--viz-time)"
-                radius={[4, 4, 0, 0]}
-                maxBarSize={24}
-                cursor="pointer"
+                stroke="var(--viz-time)"
+                strokeWidth={2}
+                fill="url(#ncx-time-fill)"
+                dot={buckets.length <= 14 ? { r: 3, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-time)" } : false}
+                activeDot={{ r: 5, strokeWidth: 2, stroke: "var(--viz-surface)", fill: "var(--viz-time)", cursor: "pointer" }}
                 isAnimationActive={!prefersReducedMotion()}
-                animationDuration={360}
-                onClick={(_, index) => {
-                  const b = data[index];
-                  if (b && plotRef.current) onSelect(b.key, plotRef.current);
-                }}
-              >
-                <LabelList
-                  dataKey="seconds"
-                  position="top"
-                  content={(props) => {
-                    const { x, y, width, index } = props as {
-                      x?: number;
-                      y?: number;
-                      width?: number;
-                      index?: number;
-                    };
-                    const b = index === undefined ? undefined : data[index];
-                    if (!b || !peak || b.key !== peak.key || !peak.seconds) return null;
-                    return (
-                      <text
-                        x={Number(x ?? 0) + Number(width ?? 0) / 2}
-                        y={Number(y ?? 0) - 6}
-                        textAnchor="middle"
-                        className="ncx-direct-label"
-                      >
-                        {shortDuration(b.seconds)}
-                      </text>
-                    );
+                animationDuration={480}
+              />
+              {peak && peak.seconds > 0 && (
+                <ReferenceDot
+                  x={data.find((d) => d.key === peak.key)?.label ?? ""}
+                  y={Math.round(peak.seconds / 60)}
+                  r={0}
+                  label={{
+                    value: shortDuration(peak.seconds),
+                    position: "top",
+                    offset: 10,
+                    className: "ncx-direct-label",
                   }}
                 />
-              </Bar>
-            </BarChart>
+              )}
+            </AreaChart>
           </ResponsiveContainer>
         </figure>
       ) : (
