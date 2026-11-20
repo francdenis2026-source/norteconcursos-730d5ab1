@@ -1478,7 +1478,7 @@ function QuestionTrainer() {
             <section className="qx-pane qx-pane--stem" aria-label="Enunciado da questão" tabIndex={0}>
               <p className="qx-label">Enunciado</p>
               {parsed.base && (
-                <div className="qx-base" data-open={baseOpen || parsed.base.length < 360 || undefined}>
+                <div className="qx-base" data-kind={/comando/i.test(String(parsed.baseLabel)) ? "command" : "support"} data-open={baseOpen || parsed.base.length < 360 || undefined}>
                   <button
                     type="button"
                     className="qx-base__head"
@@ -1494,7 +1494,10 @@ function QuestionTrainer() {
                   <div className="qx-base__text">{parsed.base}</div>
                 </div>
               )}
-              <p className="qx-stem">{parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}</p>
+              <div className="qx-item" data-judge={certoErrado || undefined}>
+                {certoErrado && <span className="qx-item__tag">Item a julgar</span>}
+                <p className="qx-stem">{parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}</p>
+              </div>
               <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
 
               {answered && (!isPlaceholderExplanation(explanation.main) || explanation.example || !isCorrect) && (
@@ -1511,12 +1514,26 @@ function QuestionTrainer() {
                     <p className="qx-explain__right">Resposta correta: {labelFor(question.answer)}</p>
                   )}
                   {isPlaceholderExplanation(explanation.main) ? null : (
-                    <p className="qx-explain__text">{explanation.main}</p>
+                    (() => {
+                      const lead = /^\s*(Errado|Incorreto|Certo|Correto)\s*[.:–—-]\s*/i.exec(explanation.main);
+                      const bad = lead ? /^(errado|incorreto)$/i.test(lead[1] ?? "") : false;
+                      return (
+                        <p className="qx-explain__text">
+                          {lead && (
+                            <span className="qx-explain__lead" data-v={bad ? "err" : "ok"}>
+                              {lead[1]}
+                            </span>
+                          )}
+                          {lead ? explanation.main.slice(lead[0].length) : explanation.main}
+                        </p>
+                      );
+                    })()
                   )}
                   {explanation.example && (
-                    <p className="qx-explain__text">
-                      <strong>Exemplo:</strong> {explanation.example}
-                    </p>
+                    <div className="qx-example">
+                      <span className="qx-example__tag">Exemplo</span>
+                      <p className="qx-explain__text">{explanation.example}</p>
+                    </div>
                   )}
                 </div>
               )}
