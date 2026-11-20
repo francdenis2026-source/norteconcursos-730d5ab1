@@ -1,4 +1,5 @@
 import * as React from "react";
+import { examDaysLeft } from "@/lib/examClock";
 import { CalendarClock, Download, CheckCircle2, SlidersHorizontal, CalendarDays, ListChecks, Flag, BookOpen, Video, PenLine, RotateCcw, Trophy, Coffee, Dumbbell, Moon, CalendarCheck2, ExternalLink, LockKeyhole, Pencil, Trash2, ChevronLeft, ChevronRight, Clock, Plus, X } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
@@ -25,6 +26,7 @@ import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyReso
 import { useMediaCatalog, type MediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import "@/styles/pcac-schedule.css";
+import { Ani, TodayView, WeekView, PlanView, DisciplinesView, FinalView, studyMinutes } from "./cronograma/Studio";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 const DAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
@@ -443,7 +445,7 @@ export function PcAcCronogramaCard({
   const [cfg, setCfg] = React.useState<PcAcStudyPlanConfig>(DEFAULT_PCAC_STUDY_CONFIG);
   const [loadedConfigKey, setLoadedConfigKey] = React.useState("");
   const [mode, setMode] = React.useState(getActiveTheme);
-  const [tab, setTab] = React.useState("semanas");
+  const [tab, setTab] = React.useState("hoje");
   const [exportError, setExportError] = React.useState("");
   React.useEffect(() => {
     const observer = new MutationObserver(() => setMode(getActiveTheme()));
@@ -557,7 +559,7 @@ export function PcAcCronogramaCard({
   }, []);
   const effectiveStartDate = cfg.startDate || todayKey;
   const lastStudyDate = pcAcLastStudyDate(PCAC_EXAM_DATE);
-  const daysLeft = pcAcDaysBetween(todayKey, PCAC_EXAM_DATE);
+  const daysLeft = examDaysLeft(PCAC_EXAM_DATE) ?? 0;
   const effectiveCfg = React.useMemo(() => ({ ...cfg, startDate: effectiveStartDate }), [cfg, effectiveStartDate]);
   const startError = effectiveStartDate > lastStudyDate
     ? `A data inicial deve ser até ${lastStudyDate.split("-").reverse().join("/")}, três dias antes da prova.`
@@ -637,12 +639,43 @@ export function PcAcCronogramaCard({
   const finalDays = React.useMemo(() => buildPcAcFinalDays(PCAC_EXAM_DATE, effectiveStartDate), [effectiveStartDate]);
   const totalActivities = weeks.reduce((s, w) => s + w.days.reduce((a, d) => a + d.activities.length, 0), 0);
 
-  const exportPdf = async () => {
+  const rootRef = React.useRef<HTMLElement | null>(null);
+  const alignedRef = React.useRef(0);
+  const exportMenuRef = React.useRef<HTMLDetailsElement | null>(null);
+  // Cabe na janela: no desktop a altura é a que sobra abaixo do topo; cada painel rola por dentro.
+  React.useLayoutEffect(() => {
+    const fit = () => {
+      const el = rootRef.current;
+      if (!el) return;
+      if (window.innerWidth < 900) { el.style.height = ""; return; }
+      el.style.height = `${Math.max(480, window.innerHeight - Math.max(48, el.getBoundingClientRect().top) - 44)}px`;
+    };
+    fit();
+    const align = () => {
+      if (window.innerWidth >= 900 && rootRef.current && alignedRef.current < 3) {
+        alignedRef.current += 1;
+        rootRef.current.scrollIntoView({ block: "start", behavior: "instant" as ScrollBehavior });
+      }
+    };
+    const t2 = window.setTimeout(() => { align(); window.setTimeout(() => { fit(); align(); }, 150); window.setTimeout(align, 700); }, 450);
+    window.addEventListener("resize", fit);
+    const t = window.setTimeout(fit, 400);
+    return () => { window.removeEventListener("resize", fit); window.clearTimeout(t); window.clearTimeout(t2); };
+  }, [tab]);
+
+  const exportPdf = async (scope: "full" | "week" | "today" = "full") => {
     setExportError("");
     setExporting(true);
+    if (exportMenuRef.current) exportMenuRef.current.open = false;
     try {
       const { generatePcAcCronogramaPdf } = await import("@/lib/pcAcreCronogramaPdf");
-      await generatePcAcCronogramaPdf({ cargo, cfg: effectiveCfg, grid, weeks, finalDays });
+      let w = weeks, f = finalDays;
+      if (scope === "week" && activeWeek) { w = [activeWeek]; f = []; }
+      if (scope === "today" && todayPlanDay) {
+        const base = weeks.find((x) => x.days.some((d) => d.date === todayKey));
+        if (base) { w = [{ ...base, days: [todayPlanDay] }]; f = []; }
+      }
+      await generatePcAcCronogramaPdf({ cargo, cfg: effectiveCfg, grid, weeks: w, finalDays: f });
     } catch {
       setExportError("Não foi possível gerar o PDF. Tente novamente.");
     } finally {
@@ -672,91 +705,38 @@ export function PcAcCronogramaCard({
 
   return (
     <Theme theme={themes[defaultThemeSlug]} mode={mode}>
-    <section id={CRONOGRAMA_ANCHOR} className="pcac-schedule" aria-label="Cronograma de estudos">
-      <header className="pcac-schedule__header">
-        <h2><CalendarClock aria-hidden="true" /> Seu cronograma</h2>
-        <p>{daysLeft} dias até a prova · {cfg.weeklyHours}h por semana · {cfg.days.length} dias de estudo</p>
-        <nav aria-label="Ações do cronograma">
-          <AstryxButton
-            label={saveStatus === "saving" ? "Guardando…" : "Guardar configurações"}
-            size="sm"
-            variant="primary"
-            icon={saveStatus === "saved" ? <CheckCircle2 /> : <CalendarCheck2 />}
-            clickAction={saveConfiguration}
-            isDisabled={!configLoaded || saveStatus === "saving"}
-          />
-          <AstryxButton label={exporting ? "Gerando PDF…" : "Exportar cronograma em PDF"} size="sm" variant="primary" icon={<Download />} clickAction={exportPdf} isDisabled={!configLoaded || !weeks.length || !!startError || exporting} />
-        </nav>
+    <section id={CRONOGRAMA_ANCHOR} ref={rootRef} className="pcac-schedule cs-root" aria-label="Cronograma de estudos">
+      <header className="cs-head">
+        <h2><Ani anim="tick"><CalendarClock aria-hidden="true" /></Ani> Seu cronograma</h2>
+        <div className="cs-kpis" aria-label="Resumo">
+          <span className="cs-kpi"><b>{daysLeft}</b> dias para a prova</span>
+          <span className="cs-kpi"><b>{cfg.weeklyHours}h</b> por semana</span>
+          <span className="cs-kpi"><b>{cfg.days.length}</b> dias de estudo</span>
+        </div>
+        <div className="cs-head__act">
+          <button type="button" className="cs-btn" onClick={saveConfiguration} disabled={!configLoaded || saveStatus === "saving"}>
+            <Ani anim="tick">{saveStatus === "saved" ? <CheckCircle2 aria-hidden /> : <CalendarCheck2 aria-hidden />}</Ani>{saveStatus === "saving" ? "Guardando…" : "Guardar"}
+          </button>
+          <details className="cs-menu" ref={exportMenuRef}>
+            <summary className="cs-btn cs-btn--gold" aria-disabled={!configLoaded || !weeks.length || !!startError || exporting}><Ani anim="bob"><Download aria-hidden /></Ani>{exporting ? "Gerando PDF…" : "Exportar PDF"}</summary>
+            <div className="cs-menu__list" role="menu">
+              <button type="button" role="menuitem" onClick={() => exportPdf("full")}><Ani anim="flip"><ListChecks aria-hidden /></Ani><span>Plano completo<small>Todas as semanas, grade e reta final</small></span></button>
+              <button type="button" role="menuitem" onClick={() => exportPdf("week")} disabled={!activeWeek}><Ani anim="tick"><CalendarDays aria-hidden /></Ani><span>Semana em foco<small>Só a semana selecionada</small></span></button>
+              <button type="button" role="menuitem" onClick={() => exportPdf("today")} disabled={!todayPlanDay}><Ani anim="pulse"><CalendarCheck2 aria-hidden /></Ani><span>Somente hoje<small>Programação do dia atual</small></span></button>
+            </div>
+          </details>
+        </div>
       </header>
       {exportError && <p role="alert">{exportError}</p>}
       {saveStatus === "saved" && <p className="pcac-schedule__save-feedback" role="status"><CheckCircle2 aria-hidden="true" /> Configurações guardadas com sucesso.</p>}
       {saveStatus === "error" && <p className="pcac-schedule__save-feedback pcac-schedule__save-feedback--error" role="alert">Não foi possível guardar na conta. A cópia local foi mantida.</p>}
-      <section className="pcac-schedule__body">
-        {todayPlanDay && (
-          <Card variant="teal" className="pcac-schedule__today">
-            <div className="flex flex-wrap items-center justify-between gap-2 px-1 pt-1">
-              <p className="flex items-center gap-2 text-sm font-bold text-foreground">
-                <CalendarCheck2 aria-hidden="true" className="h-4 w-4" />
-                Hoje · {WEEKDAY_FULL[todayPlanDay.weekday]} ({todayPlanDay.date.split("-").reverse().join("/")})
-              </p>
-              <AstryxBadge variant="info" label={`${todayPlanDay.activities.length} ${todayPlanDay.activities.length === 1 ? "bloco" : "blocos"} planejados`} />
-            </div>
-            <List density="compact" hasDividers>
-              {todayPlanDay.activities.map((activity, index) => {
-                const Icon = ACTIVITY_ICON[activity.type];
-                const shortcut = materialShortcut(activity, catalog);
-                const badge = (
-                  <AstryxBadge
-                    variant={shortcut?.unavailable ? "neutral" : ACTIVITY_BADGE_VARIANT[activity.type]}
-                    label={activity.type === "rotina" ? "Rotina" : activity.type === "pausa" ? "Pausa" : PCAC_ACTIVITY_LABEL[activity.type]}
-                  />
-                );
-                return (
-                  <Item
-                    key={index}
-                    startContent={<Icon aria-hidden />}
-                    label={
-                      <span className="flex items-center gap-2">
-                        {activity.start ? `${activity.start}–${activity.end}` : ""} {PCAC_ACTIVITY_LABEL[activity.type]}
-                        {activity.subject ? ` · ${activity.subject}` : ""}
-                      </span>
-                    }
-                    description={activity.topic ? `${activity.topic} — ${activity.detail}` : activity.detail}
-                    endContent={
-                      shortcut?.href ? (
-                        <a
-                          href={shortcut.href}
-                          className="pcac-today-badge-link"
-                          aria-label={`Abrir ${shortcut.label.toLocaleLowerCase("pt-BR")}${activity.subject ? `: ${activity.subject}` : ""}`}
-                          title={`Abrir ${shortcut.label}`}
-                        >
-                          {badge}
-                        </a>
-                      ) : shortcut?.unavailable ? (
-                        <span
-                          className="pcac-today-badge-link pcac-today-badge-link--unavailable"
-                          aria-label={`${shortcut.label} indisponível: nenhum material cadastrado ainda`}
-                          title={`Ainda não há ${shortcut.label.toLocaleLowerCase("pt-BR")} cadastrada para este assunto`}
-                        >
-                          {badge}
-                        </span>
-                      ) : (
-                        badge
-                      )
-                    }
-                  />
-                );
-              })}
-            </List>
-          </Card>
-        )}
-        <TabList value={tab === "semanas" && !showDetailedPlan ? "grade" : tab} onChange={setTab} role="tablist" layout="fill" hasDivider aria-label="Seções do cronograma">
-          <Tab id="schedule-tab-visao" value="visao" label="Personalizar" icon={<SlidersHorizontal />} panelId="schedule-panel-visao" />
-          <Tab id="schedule-tab-grade" value="grade" label="Minha semana" icon={<CalendarDays />} panelId="schedule-panel-grade" />
-          {showDetailedPlan && <Tab id="schedule-tab-semanas" value="semanas" label="Plano completo" icon={<ListChecks />} panelId="schedule-panel-semanas" />}
-          <Tab id="schedule-tab-final" value="final" label="Revisão final" icon={<Flag />} panelId="schedule-panel-final" />
-        </TabList>
-          <section role="tabpanel" tabIndex={0} id="schedule-panel-visao" aria-labelledby="schedule-tab-visao" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "visao"} className="pcac-schedule__panel space-y-5">
+      <nav className="cs-tabs" role="tablist" aria-label="Seções do cronograma">
+        {([["hoje", "Hoje", CalendarCheck2, "tick"], ["semana", "Semana", CalendarDays, "bob"], ["plano", "Plano", ListChecks, "flip"], ["disciplinas", "Disciplinas", BookOpen, "flip"], ["final", "Reta final", Flag, "float"], ["visao", "Ajustes", SlidersHorizontal, "spin"]] as const).map(([v, label, Icon, anim]) => (
+          <button key={v} type="button" role="tab" id={`schedule-tab-${v}`} aria-selected={tab === v} onClick={() => setTab(v)}><Ani anim={anim}><Icon aria-hidden /></Ani>{label}</button>
+        ))}
+      </nav>
+      <section className="pcac-schedule__body cs-stage-wrap">
+          <section role="tabpanel" tabIndex={0} id="schedule-panel-visao" aria-labelledby="schedule-tab-visao" hidden={tab !== "visao"} className="pcac-schedule__panel cs-settings space-y-5">
         {(() => {
           // A configuração guarda horas por semana; o aluno pensa em horas por dia. O campo converte os dois lados.
           const dayCount = Math.max(1, cfg.days.length);
@@ -950,171 +930,11 @@ export function PcAcCronogramaCard({
 
 
           </section>
-          <section role="tabpanel" tabIndex={0} id="schedule-panel-grade" aria-labelledby="schedule-tab-grade" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "grade"} className="pcac-schedule__panel space-y-5">
-
-        <div>
-          <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
-            Grade semanal por disciplina
-          </p>
-          {referenceWeek && (
-            <p className="mb-2 text-[11px] text-muted-foreground">
-              Derivada da semana {referenceWeek.weekNumber} ({referenceWeek.startDate.split("-").reverse().join("/")} a {referenceWeek.endDate.split("-").reverse().join("/")}) do mesmo plano detalhado.
-            </p>
-          )}
-          {grid.length ? (
-            <GridTable
-              data={grid}
-              density="compact"
-              dividers="grid"
-              isStriped
-              columns={[
-                {
-                  key: "name",
-                  header: "Disciplina",
-                  width: proportional(2, { minWidth: 160 }),
-                  renderCell: (row) => (
-                    <span className="flex flex-wrap items-center gap-2">
-                      <span className="font-semibold">{row.name}</span>
-                      {findPcAcStudyResource(row.name) && (
-                        <a href={pcAcStudyResourceUrl(findPcAcStudyResource(row.name)!.courseId)} className="whitespace-nowrap text-[11px] font-semibold text-emerald-600 underline-offset-2 hover:underline dark:text-emerald-300">
-                          Estudar teoria
-                        </a>
-                      )}
-                    </span>
-                  ),
-                },
-                { key: "peso", header: "Peso", align: "center", width: proportional(1, { minWidth: 56 }), renderCell: (row) => <strong className="text-primary">{row.peso}</strong> },
-                { key: "horario", header: "Horário", align: "center", width: proportional(1, { minWidth: 92 }), renderCell: (row) => <span className="text-muted-foreground">{row.horario}</span> },
-                ...GRID_DAY_ORDER.map((weekday) => ({
-                  key: `day-${weekday}`,
-                  header: GRID_DAY_LETTER[weekday]!,
-                  align: "center" as const,
-                  width: proportional(1, { minWidth: 32 }),
-                  renderCell: (row: PcAcWeeklyGridRow) => (row.days.includes(weekday) ? <strong className="text-primary">×</strong> : null),
-                })),
-              ]}
-            />
-          ) : (
-            <p className="rounded-lg border px-2.5 py-3 text-center text-xs text-muted-foreground">
-              {startError || "Aguarde o carregamento das suas preferências ou escolha os dias de estudo."}
-            </p>
-          )}
-          <p className="mt-1.5 text-[11px] text-muted-foreground">
-            A distribuição considera os tópicos do cargo e prioriza conhecimentos específicos. O peso IDECAN é exibido quando há classificação específica disponível.
-          </p>
-        </div>
-
-          </section>
-
-        {showDetailedPlan && <section role="tabpanel" tabIndex={0} id="schedule-panel-semanas" aria-labelledby="schedule-tab-semanas" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "semanas"} className="pcac-schedule__panel space-y-4">
-          <div>
-            <p className="mb-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
-              Programação semana a semana
-            </p>
-            {!weeks.length ? (
-              <p className="text-sm text-muted-foreground">
-                Faltam poucos dias para a prova — use o período para revisão leve (ver "Últimos dias"
-                abaixo) em vez de um plano de semanas completas.
-              </p>
-            ) : (
-              <>
-                <p className="mb-2 text-xs text-muted-foreground">
-                  {weeks.length} semana{weeks.length === 1 ? "" : "s"} de estudo · {totalActivities}{" "}
-                  atividades planejadas · encerra conteúdo novo 3 dias antes da prova.
-                </p>
-                {activeWeek && (
-                  <div className={`pcac-week pcac-week--${((activeWeek.weekNumber - 1) % 5) + 1}`}>
-                    <div className="pcac-week__nav">
-                      <AstryxButton label="Semana anterior" size="sm" variant="secondary" icon={<ChevronLeft />} isDisabled={weekIndex <= 0} onClick={() => setWeekIndex((value) => Math.max(0, value - 1))} />
-                      <div className="pcac-week__title" aria-live="polite">
-                        <strong>Semana {activeWeek.weekNumber} de {weeks.length}</strong>
-                        <span>{fmtDateBr(activeWeek.startDate)} a {fmtDateBr(activeWeek.endDate)} · {PCAC_PHASE_LABEL[activeWeek.phase]}</span>
-                      </div>
-                      <AstryxButton label="Próxima semana" size="sm" variant="secondary" icon={<ChevronRight />} isDisabled={weekIndex >= weeks.length - 1} onClick={() => setWeekIndex((value) => Math.min(weeks.length - 1, value + 1))} />
-                    </div>
-                    <ol className="pcac-week__strip" aria-label="Todas as semanas do plano">
-                      {weeks.map((week, index) => (
-                        <li key={week.weekNumber}>
-                          <button
-                            type="button"
-                            className={`pcac-week__pip pcac-week--${(index % 5) + 1}`}
-                            aria-current={index === weekIndex ? "true" : undefined}
-                            aria-label={`Semana ${week.weekNumber}, ${fmtDateBr(week.startDate)} a ${fmtDateBr(week.endDate)}`}
-                            title={`${fmtDateBr(week.startDate)} a ${fmtDateBr(week.endDate)} · ${PCAC_PHASE_LABEL[week.phase]}`}
-                            onClick={() => setWeekIndex(index)}
-                          >
-                            {week.weekNumber}
-                          </button>
-                        </li>
-                      ))}
-                    </ol>
-                    <ul className="pcac-week__days">
-                      {activeWeek.days.map((day) => {
-                        const summary = summarizeDay(day);
-                        const isRest = summary.studyMinutes === 0;
-                        return (
-                          <li key={day.date}>
-                            <button
-                              type="button"
-                              className="pcac-day-card"
-                              data-today={day.date === todayKey ? "true" : undefined}
-                              data-rest={isRest ? "true" : undefined}
-                              aria-haspopup="dialog"
-                              onClick={() => setOpenDate(day.date)}
-                            >
-                              <span className="pcac-day-card__date">
-                                <strong>{DAY_SHORT[day.weekday]}</strong>
-                                <span>{day.date.split("-").reverse().slice(0, 2).join("/")}</span>
-                                {day.date === todayKey && <em>Hoje</em>}
-                              </span>
-                              <span className="pcac-day-card__body">
-                                {isRest ? (
-                                  <span className="pcac-day-card__load">{summary.hasTaf ? "Treino físico / TAF" : "Descanso"}</span>
-                                ) : (
-                                  <>
-                                    <span className="pcac-day-card__load">
-                                      <Clock aria-hidden="true" /> {fmtDuration(summary.studyMinutes)} de estudo
-                                      {summary.start && ` · ${summary.start}–${summary.end}`}
-                                    </span>
-                                    <span className="pcac-day-card__subjects">
-                                      {summary.subjects.slice(0, 3).join(" · ")}
-                                      {summary.subjects.length > 3 && ` · +${summary.subjects.length - 3}`}
-                                    </span>
-                                    {summary.hasTaf && <span className="pcac-day-card__taf"><Dumbbell aria-hidden="true" /> TAF</span>}
-                                  </>
-                                )}
-                              </span>
-                              <ChevronRight aria-hidden="true" className="pcac-day-card__go" />
-                            </button>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                    <p className="pcac-week__hint">Toque em um dia para abrir a cronologia completa, com horários, conteúdos e ações.</p>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-          </section>}
-
-          <section role="tabpanel" tabIndex={0} id="schedule-panel-final" aria-labelledby="schedule-tab-final" hidden={(tab === "semanas" && !showDetailedPlan ? "grade" : tab) !== "final"} className="pcac-schedule__panel space-y-4">
-        <div className="rounded-lg border border-amber-400/40 bg-amber-500/10 p-3">
-          <p className="text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">
-            Últimos dias antes da prova
-          </p>
-          <ul className="mt-2 space-y-1.5">
-            {finalDays.map((day) => (
-              <li key={day.date} className="text-xs text-muted-foreground">
-                <span className="font-semibold text-foreground/90">
-                  {WEEKDAY_FULL[day.weekday]} ({day.date.split("-").reverse().join("/")}):
-                </span>{" "}
-                {day.activities[0]?.detail}
-              </li>
-            ))}
-          </ul>
-        </div>
-          </section>
+          {tab === "hoje" && <div className="cs-stage" key="hoje"><TodayView day={todayPlanDay} nextStudyDay={allDays.find((e) => e.day.date > todayKey && studyMinutes(e.day) > 0)?.day} examDays={daysLeft} todayKey={todayKey} onOpenDay={setOpenDate} renderShortcut={(a) => <MaterialShortcut activity={a} />} /></div>}
+          {tab === "semana" && <div className="cs-stage" key="semana"><WeekView weeks={weeks} weekIndex={weekIndex} setWeekIndex={setWeekIndex} todayKey={todayKey} onOpenDay={setOpenDate} renderShortcut={() => null} /></div>}
+          {tab === "plano" && <div className="cs-stage" key="plano"><PlanView weeks={weeks} todayKey={todayKey} onOpenDay={setOpenDate} onPickWeek={(i) => { setWeekIndex(i); setTab("semana"); }} /></div>}
+          {tab === "disciplinas" && <div className="cs-stage" key="disc"><DisciplinesView grid={grid} empty="Configure seus dias de estudo para ver a distribuição." /></div>}
+          {tab === "final" && <div className="cs-stage" key="final"><FinalView days={finalDays} /></div>}
       </section>
       <Dialog isOpen={!!openEntry} onOpenChange={(open) => { if (!open) setOpenDate(null); }} width="min(1480px, 95vw)" maxHeight="92dvh" padding={0}>
         {openEntry && (() => {

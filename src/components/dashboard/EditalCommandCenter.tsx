@@ -1,4 +1,5 @@
 import * as React from "react";
+import { examDaysLeft } from "@/lib/examClock";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -83,7 +84,7 @@ export function EditalCommandCenter() {
   const registered = useCountUp(summary.data?.registered);
   const available = useCountUp(summary.data?.available);
   const today = acreDateKey(platformDate());
-  const days = Math.round((Date.parse(`${EXAM_DATE}T12:00:00Z`) - Date.parse(`${today}T12:00:00Z`)) / 86_400_000);
+  const days = examDaysLeft(EXAM_DATE) ?? 0;
   const share =
     summary.data?.registered && summary.data.available !== undefined
       ? Math.round((summary.data.available / summary.data.registered) * 100)

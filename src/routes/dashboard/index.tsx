@@ -1,4 +1,5 @@
 import { ExamCountdown } from "@/components/dashboard/ExamCountdown";
+import { examDaysLeft } from "@/lib/examClock";
 import "@/styles/student-home-lean.css";
 import { EditalCommandCenter } from "@/components/dashboard/EditalCommandCenter";
 import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
@@ -280,7 +281,7 @@ function StudentHome({ user }: { user: UserProfile }) {
     objective &&
     /acre|pc[-\s]?ac/i.test(`${objective.agency} ${objective.role} ${objective.examBoard}`),
   );
-  const days = daysToExam(examDate, today);
+  const days = examDaysLeft(examDate ?? null);
   const examCountdown =
     days === null
       ? null

@@ -2,6 +2,7 @@
 // publica condição de export para o ambiente "workerd" (build de servidor/Cloudflare Workers).
 // @ts-expect-error -- jspdf não publica tipos para este subpath; o export tem a mesma forma de "jspdf".
 import { jsPDF } from "jspdf/dist/jspdf.es.min.js";
+import { examDaysLeft } from "@/lib/examClock";
 import type { PcAcVerticalCargo } from "@/data/pcAcreVerticalizado";
 import {
   PCAC_BOARD,
@@ -160,7 +161,7 @@ function drawCoverPage(
 
   const today = platformDate();
   const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
-  const daysLeft = pcAcDaysBetween(todayKey, PCAC_EXAM_DATE);
+  const daysLeft = examDaysLeft(PCAC_EXAM_DATE) ?? 0;
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10.5);
   doc.setTextColor(...MUTED);

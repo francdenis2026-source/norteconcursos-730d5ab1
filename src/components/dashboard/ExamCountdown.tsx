@@ -1,10 +1,9 @@
 import * as React from "react";
+import { examInstant } from "@/lib/examClock";
+import { platformNow } from "@/lib/platformClock";
 import "@/styles/exam-countdown.css";
 
-/** Prova às 8h no horário do Acre (UTC-5), salvo hora já informada na data. */
-function examInstant(examDate: string) {
-  return new Date(examDate.length > 10 ? examDate : `${examDate}T08:00:00-05:00`).getTime();
-}
+
 const pad = (n: number) => String(n).padStart(2, "0");
 
 /** Dígito que rola para cima quando muda. */
@@ -24,10 +23,10 @@ function Roll({ value }: { value: string }) {
  */
 export function ExamCountdown({ examDate }: { examDate: string }) {
   const target = React.useMemo(() => examInstant(examDate), [examDate]);
-  const [now, setNow] = React.useState(() => Date.now());
+  const [now, setNow] = React.useState(() => platformNow());
   React.useEffect(() => {
     let id = 0;
-    const tick = () => setNow(Date.now());
+    const tick = () => setNow(platformNow());
     const start = () => { tick(); window.clearInterval(id); id = window.setInterval(tick, 1000); };
     const vis = () => (document.visibilityState === "visible" ? start() : window.clearInterval(id));
     start();

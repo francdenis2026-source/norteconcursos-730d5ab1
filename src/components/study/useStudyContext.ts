@@ -1,4 +1,5 @@
 import React from "react";
+import { examDaysLeft } from "@/lib/examClock";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { platformDate } from "@/lib/platformClock";
@@ -123,7 +124,7 @@ export function useStudyContext() {
     );
   }, [plan, subjects]);
   const daysToExam = profile?.exam_date
-    ? Math.ceil((new Date(`${profile.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 86_400_000)
+    ? examDaysLeft(profile.exam_date)
     : null;
   return {
     real,

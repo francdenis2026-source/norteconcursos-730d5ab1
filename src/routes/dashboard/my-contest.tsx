@@ -1,4 +1,5 @@
 import React from "react";
+import { examDaysLeft } from "@/lib/examClock";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { Calendar, ChevronRight, FileText } from "lucide-react";
@@ -91,7 +92,7 @@ function MyContestPage() {
     : [];
 
   const days = activeContest?.examDate
-    ? Math.ceil((new Date(activeContest.examDate).getTime() - platformDate().getTime()) / 86400000)
+    ? examDaysLeft(activeContest.examDate)
     : null;
 
   return (

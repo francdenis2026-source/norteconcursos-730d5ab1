@@ -1,4 +1,5 @@
 import { PcAcCronogramaCard } from "@/components/dashboard/PcAcCronogramaCard";
+import { examDaysLeft } from "@/lib/examClock";
 import * as React from "react";
 import { createFileRoute, Link, useNavigate, useSearch } from "@tanstack/react-router";
 import {
@@ -571,9 +572,7 @@ function PcAcreEditalVerticalizadoPage() {
     const timer = window.setInterval(() => setClockNow(new Date()), 1_000);
     return () => window.clearInterval(timer);
   }, []);
-  const examDate = new Date(`${PCAC_EXAM_DATE}T00:00:00-05:00`);
-  const remainingMs = Math.max(0, examDate.getTime() - clockNow.getTime());
-  const daysToExam = Math.floor(remainingMs / 86_400_000);
+  const daysToExam = examDaysLeft(PCAC_EXAM_DATE, clockNow.getTime()) ?? 0;
 
   const [progress, setProgress] = React.useState<Record<string, PcAcVerticalStatus>>({});
 

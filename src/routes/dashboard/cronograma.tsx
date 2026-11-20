@@ -1,4 +1,5 @@
 import { plannedPractice } from "@/lib/plannedStudy";
+import { examDaysLeft } from "@/lib/examClock";
 import { platformDate } from "@/lib/platformClock";
 import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { libraryCollection } from "@/lib/libraryOrganization";
@@ -135,7 +136,7 @@ function CronogramaPage() {
               const dates = (plans ?? [])
                 .map((p) => p.exam_date)
                 .filter((d): d is string => !!d)
-                .map((d) => Math.ceil((new Date(d).getTime() - platformDate().getTime()) / 86400000))
+                .map((d) => examDaysLeft(d) ?? -1)
                 .filter((d) => d >= 0);
               return dates.length ? Math.min(...dates) : "—";
             })()}
@@ -454,7 +455,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         isSecondLastOrOnly: (studyDays.length > 1 ? studyDays.at(-2) : studyDays[0]) === todayDow,
       })
     : [];
-  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 864e5) : null;
+  const daysLeft = examDaysLeft(plan.exam_date);
 
   return (
     <div className="agenda-plan-view space-y-4">
