@@ -1,0 +1,43 @@
+/* Telemetria do topo: HUD de duas linhas. Mono tabular, rótulos em caixa-alta, ponto de transmissão com
+   onda, barras de sinal que respiram (só quando há gente online) e "+1" que sobe a cada novo cadastro.
+   Só transform/opacity; desliga com movimento reduzido. Aparece a partir de 1100 px (abaixo, o topo é do menu). */
+.hls { display: none; }
+@media (min-width: 1100px) {
+  .hls {
+    --hls-gold: var(--qx-gold, #efd090);
+    --hls-ok: #34d399;
+    display: grid; gap: 3px; margin-left: 0.875rem; padding: 0 0 0 0.875rem;
+    border-left: 1px solid color-mix(in oklab, var(--hls-gold) 35%, transparent);
+    font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    color: var(--foreground, #f6f2e8); white-space: nowrap;
+  }
+  .hls__row { position: relative; display: flex; align-items: center; gap: 0.4rem; margin: 0; font-size: 0.6875rem; line-height: 1.2; }
+  .hls__num { min-width: 2.2ch; font-size: 0.8125rem; font-weight: 700; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+  .hls__row[data-kind="users"] .hls__num { color: var(--hls-gold); }
+  .hls__label { font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in oklab, var(--foreground, #f6f2e8) 62%, transparent); }
+  .hls__icon { width: 0.8rem; height: 0.8rem; color: var(--hls-gold); flex: none; }
+
+  .hls__dot { position: relative; flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: color-mix(in oklab, var(--foreground, #fff) 35%, transparent); }
+  .hls__row[data-live] .hls__dot { background: var(--hls-ok); box-shadow: 0 0 8px color-mix(in oklab, var(--hls-ok) 70%, transparent); }
+  .hls__row[data-live] .hls__dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--hls-ok); animation: hls-wave 2s ease-out infinite; }
+  .hls__bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 0.7rem; margin-left: 0.15rem; }
+  .hls__bars i { width: 2px; height: 100%; border-radius: 1px; background: var(--hls-ok); opacity: 0.35; transform-origin: 50% 100%; transform: scaleY(0.3); }
+  .hls__row[data-live] .hls__bars i { opacity: 0.9; animation: hls-bar 1.2s ease-in-out infinite; }
+  .hls__row[data-live] .hls__bars i:nth-child(2) { animation-delay: 0.15s; }
+  .hls__row[data-live] .hls__bars i:nth-child(3) { animation-delay: 0.3s; }
+  .hls__row[data-live] .hls__bars i:nth-child(4) { animation-delay: 0.45s; }
+
+  .hls__toast {
+    position: absolute; left: 100%; top: 50%; margin-left: 0.4rem; padding: 1px 6px; border-radius: 4px;
+    font-size: 0.625rem; font-weight: 700; color: #06231a; background: var(--hls-ok);
+    animation: hls-toast 2.8s ease-out both; pointer-events: none;
+  }
+}
+@keyframes hls-wave { from { transform: scale(1); opacity: 0.8; } to { transform: scale(2.6); opacity: 0; } }
+@keyframes hls-bar { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+@keyframes hls-toast { 0% { opacity: 0; transform: translateY(2px); } 12%, 75% { opacity: 1; transform: translateY(-50%); } 100% { opacity: 0; transform: translateY(-90%); } }
+@media (prefers-reduced-motion: reduce) {
+  .hls__row[data-live] .hls__dot::after, .hls__row[data-live] .hls__bars i, .hls__toast { animation: none !important; }
+  .hls__row[data-live] .hls__bars i { transform: scaleY(0.7); }
+}
+:root:not(.dark) .home-header .hls { --foreground: #f6f2e8; }
