@@ -92,3 +92,9 @@
 }
 @media (prefers-reduced-motion: reduce) { .farewell-metrics > div { animation: none !important; } .farewell-actions > .farewell-stay { transition: none; } }
 @media (forced-colors: active) { .farewell-art, .farewell-dialog::before { display: none; } .farewell-dialog { --farewell-accent: LinkText; border-color: CanvasText; } .farewell-title span { background: none; color: LinkText; } }
+
+/* Modo claro: dourado com corpo (o dourado pálido some sobre fundo claro). */
+:root:not(.dark) .farewell-dialog { --farewell-gold: #b8820f; }
+:root:not(.dark) .farewell-title span { background: linear-gradient(180deg, #d9a12b 0%, #a86d08 60%, #7d4f05 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root:not(.dark) .farewell-metrics > div:first-child dd { color: #9a6406; background: linear-gradient(180deg, #c98d16, #8a5605); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root:not(.dark) .farewell-metrics dt i { background: rgb(184 130 15 / .14); color: #9a6406; }
