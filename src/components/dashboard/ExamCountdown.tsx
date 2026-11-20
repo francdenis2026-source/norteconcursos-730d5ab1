@@ -46,13 +46,11 @@ function Unit({ value, label, accent }: { value: string; label: string; accent?:
 /**
  * Contagem regressiva sincronizada com a data da prova do concurso escolhido.
  * Calendário de mesa (a folha do dia se solta quando a contagem de dias muda), placas split-flap para
- * dias/horas/minutos/segundos, anel dos segundos e barra do dia. Inclina em 3D seguindo o ponteiro.
- * Atualiza a cada segundo, pausa com a aba oculta; leitores de tela recebem um rótulo por minuto.
+ * dias/horas/minutos/segundos, anel dos segundos e barra do dia.  * Atualiza a cada segundo, pausa com a aba oculta; leitores de tela recebem um rótulo por minuto.
  */
 export function ExamCountdown({ examDate }: { examDate: string }) {
   const target = React.useMemo(() => examInstant(examDate), [examDate]);
   const [now, setNow] = React.useState(() => Date.now());
-  const ref = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     let id = 0;
     const tick = () => setNow(Date.now());
@@ -76,45 +74,24 @@ export function ExamCountdown({ examDate }: { examDate: string }) {
     if (d !== lastDays.current) { setTear((t) => ({ n: (t?.n ?? 0) + 1, days: lastDays.current })); lastDays.current = d; }
   }, [d]);
 
-  const onMove = (e: React.PointerEvent) => {
-    const el = ref.current; if (!el || e.pointerType !== "mouse") return;
-    const r = el.getBoundingClientRect();
-    el.style.setProperty("--rx", `${((e.clientY - r.top) / r.height - 0.5) * -8}deg`);
-    el.style.setProperty("--ry", `${((e.clientX - r.left) / r.width - 0.5) * 10}deg`);
-    el.style.setProperty("--gx", `${((e.clientX - r.left) / r.width) * 100}%`);
-  };
-  const onLeave = () => { const el = ref.current; if (!el) return; el.style.setProperty("--rx", "0deg"); el.style.setProperty("--ry", "0deg"); };
-
   const label = `Prova em ${fmt({ day: "2-digit", month: "long", year: "numeric" })}: faltam ${d} dias, ${h} horas e ${m} minutos`;
   const ring = 2 * Math.PI * 15;
 
   return (
-    <div className="xc" ref={ref} onPointerMove={onMove} onPointerLeave={onLeave} role="timer" aria-label={label}>
-      <span className="xc-glare" aria-hidden="true" />
+    <div className="xc" role="timer" aria-label={label}>
       <div className="xc-cal" aria-hidden="true" title={fmt({ weekday: "long", day: "2-digit", month: "long", year: "numeric" })}>
         <span className="xc-cal__rings"><i /><i /></span>
         <span className="xc-cal__month">{fmt({ month: "short" }).replace(".", "")} · {fmt({ year: "2-digit" })}</span>
         <span className="xc-cal__page">
           <b>{fmt({ day: "2-digit" })}</b>
-          <small>{fmt({ weekday: "long" })}</small>
         </span>
         {tear && (
           <span key={tear.n} className="xc-cal__tear">
             <b>{pad(tear.days)}</b>
-            <small>dias</small>
           </span>
         )}
       </div>
       <div className="xc-board">
-        <div className="xc-board__head">
-          <span className="xc-live" aria-hidden="true"><i /></span>
-          <small>Contagem para a prova</small>
-          <svg className="xc-ring" viewBox="0 0 36 36" aria-hidden="true">
-            <circle cx="18" cy="18" r="15" />
-            <circle cx="18" cy="18" r="15" className="xc-ring__fill" strokeDasharray={ring} strokeDashoffset={ring * (sec / 60)} />
-            <text x="18" y="22">{pad(sec)}</text>
-          </svg>
-        </div>
         <div className="xc-board__row" aria-hidden="true">
           <Unit value={pad(d, d > 99 ? 3 : 2)} label="dias" accent />
           <span className="xc-colon"><i /><i /></span>
@@ -124,8 +101,13 @@ export function ExamCountdown({ examDate }: { examDate: string }) {
           <span className="xc-colon"><i /><i /></span>
           <Unit value={pad(sec)} label="seg" />
         </div>
-        <span className="xc-day" aria-hidden="true"><i style={{ transform: `scaleX(${1 - (s % 86400) / 86400})` }} /></span>
       </div>
+      <span className="xc-day" aria-hidden="true"><i style={{ transform: `scaleX(${1 - (s % 86400) / 86400})` }} /></span>
+      <svg className="xc-ring" viewBox="0 0 36 36" aria-hidden="true">
+        <circle cx="18" cy="18" r="15" />
+        <circle cx="18" cy="18" r="15" className="xc-ring__fill" strokeDasharray={ring} strokeDashoffset={ring * (sec / 60)} />
+        <text x="18" y="22">{pad(sec)}</text>
+      </svg>
     </div>
   );
 }
