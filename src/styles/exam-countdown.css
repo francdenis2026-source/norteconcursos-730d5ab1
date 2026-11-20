@@ -1,65 +1,25 @@
-/* Contagem da prova · compacta (≈ 58 px de altura) para caber na faixa sem empurrar a barra.
-   Sem transform no contêiner (evita borrar o texto); 3D só na dobra das placas. */
-.xc {
-  --xc-gold: #f2c24f; --xc-gold-2: #c98a12;
-  position: relative; display: inline-flex; width: fit-content; align-items: center; gap: 10px; height: 58px; padding: 0 10px 0 8px;
-  border-radius: 12px; font-variant-numeric: tabular-nums; overflow: hidden;
-  background: linear-gradient(160deg, rgb(255 255 255 / .07), rgb(255 255 255 / .02));
-  border: 1px solid rgb(242 194 79 / .3);
+/* Contagem da prova · faixa da Área do aluno. Seletor com dois IDs + !important para vencer o guarda-contraste. */
+#dashboard-content#dashboard-content .xc {
+  --g: #ffc94a; --g2: #e79e0f;
+  display: inline-flex; align-items: center; gap: 12px; padding: 0; background: none; border: 0;
+  font-variant-numeric: tabular-nums; line-height: 1;
 }
-/* o guarda-contraste do painel força texto claro em <b>/<small>/<span>: aqui cada peça define a sua cor */
-html body .xc.xc :is(b, small, span) { text-shadow: none; }
+#dashboard-content#dashboard-content .xc__days { position: relative; display: grid; place-items: center; width: 52px; height: 52px; flex: none; }
+#dashboard-content#dashboard-content .xc__days svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); filter: drop-shadow(0 0 6px rgb(255 201 74 / .35)); }
+#dashboard-content#dashboard-content .xc__track { fill: rgb(255 201 74 / .06); stroke: rgb(255 255 255 / .1); stroke-width: 3; }
+#dashboard-content#dashboard-content .xc__arc { fill: none; stroke: var(--g); stroke-width: 3; stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
+#dashboard-content#dashboard-content .xc__days b { position: relative; font-size: 22px !important; font-weight: 800; letter-spacing: -.04em; color: var(--g) !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__info { display: grid; gap: 4px; }
+#dashboard-content#dashboard-content .xc__info small { font-size: 10.5px !important; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffd978 !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__clock { display: inline-flex; align-items: baseline; gap: 1px; font: 700 19px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !important; color: #ffffff !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__clock i { font-style: normal; font-size: 11px; font-weight: 600; color: #9fb3cc !important; margin: 0 5px 0 1px; }
+#dashboard-content#dashboard-content .xc__clock i:last-child { margin-right: 0; }
+#dashboard-content#dashboard-content .xc__date { font-size: 11.5px !important; font-weight: 600; text-transform: none; color: #c9d4e2 !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc .xr { display: inline-flex; overflow: hidden; height: 1.05em; color: inherit !important; }
+#dashboard-content#dashboard-content .xc .xr__d { display: inline-block; color: inherit !important; animation: xr-in .38s cubic-bezier(.2,.8,.2,1); }
+@keyframes xr-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { #dashboard-content#dashboard-content .xc * { animation: none !important; transition: none !important; } }
 
-.xc-cal { position: relative; flex: none; display: grid; grid-template-rows: 13px 1fr; width: 42px; height: 44px; border-radius: 7px; overflow: visible;
-  background: #f7f3e8; box-shadow: 0 2px 0 #cfc4ac; }
-.xc-cal__rings { position: absolute; top: -3px; left: 0; right: 0; display: flex; justify-content: space-around; padding: 0 8px; z-index: 3; }
-.xc-cal__rings i { width: 4px; height: 7px; border-radius: 2px; background: linear-gradient(180deg, #ececec, #8d8d8d); }
-html body .xc.xc .xc-cal__month { display: block; padding: 0; border-radius: 7px 7px 0 0; text-align: center; font-size: 8px !important; line-height: 13px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #fff !important; background: linear-gradient(180deg, #d63b2f, #a82418); }
-.xc-cal__page, .xc-cal__tear { display: grid; place-items: center; background: #f7f3e8; border-radius: 0 0 7px 7px; }
-html body .xc.xc .xc-cal__page b, html body .xc.xc .xc-cal__tear b { font-size: 20px !important; font-weight: 800; line-height: 1; letter-spacing: -.03em; color: #172033 !important; }
-html body .xc.xc .xc-cal__tear b { color: #a82418 !important; }
-.xc-cal__tear { position: absolute; left: 0; right: 0; bottom: 0; top: 13px; transform-origin: 50% 0; z-index: 2; animation: xc-tear 1s cubic-bezier(.5,0,.75,0) forwards; }
-
-.xc-board { min-width: 0; }
-.xc-board__row { display: flex; align-items: flex-start; gap: 4px; }
-.xc-unit { display: grid; justify-items: center; gap: 2px; }
-html body .xc.xc .xc-unit small { font-size: 8.5px !important; line-height: 1; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9fb0c6 !important; }
-html body .xc.xc .xc-unit[data-accent] small { color: var(--xc-gold) !important; }
-.xc-unit__val { display: flex; gap: 2px; }
-.xc-colon { display: grid; gap: 5px; padding-top: 7px; }
-.xc-colon i { width: 2px; height: 2px; border-radius: 50%; background: var(--xc-gold); animation: xc-blink 1s steps(2, jump-none) infinite; }
-
-.xf { --h: 26px; --w: 18px; position: relative; display: block; width: var(--w); height: var(--h); perspective: 140px; border-radius: 4px; }
-.xf::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - .5px); height: 1px; background: #060a11; z-index: 5; }
-.xf-half { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; backface-visibility: hidden; }
-html body .xc.xc .xf-half b { position: absolute; left: 0; right: 0; height: var(--h); display: grid; place-items: center; font: 700 17px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !important; color: #fff !important; }
-html body .xc.xc .xc-unit[data-accent] .xf-half b { color: var(--xc-gold) !important; }
-.xf-top { top: 0; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, #2c4060, #21324c); transform-origin: 50% 100%; }
-.xf-top b { top: 0; }
-.xf-bot { bottom: 0; border-radius: 0 0 4px 4px; background: linear-gradient(180deg, #1a2a42, #142238); transform-origin: 50% 0; }
-.xf-bot b { bottom: 0; }
-.xf-fold { z-index: 3; animation: xf-fold .26s cubic-bezier(.55,0,.9,.4) forwards; }
-.xf-drop { z-index: 4; transform: rotateX(90deg); animation: xf-drop .28s cubic-bezier(.15,.6,.3,1.2) .24s forwards; }
-
-.xc-ring { flex: none; width: 24px; height: 24px; transform: rotate(-90deg); }
-.xc-ring circle { fill: none; stroke: rgb(255 255 255 / .12); stroke-width: 3; }
-.xc-ring .xc-ring__fill { stroke: var(--xc-gold); stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
-.xc-ring text { transform: rotate(90deg); transform-origin: 18px 18px; font: 700 11px ui-monospace, monospace; fill: #fff; text-anchor: middle; }
-.xc-day { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgb(255 255 255 / .08); }
-.xc-day i { display: block; height: 100%; transform-origin: left; background: linear-gradient(90deg, var(--xc-gold-2), var(--xc-gold), #ffe7a8); transition: transform 1s linear; }
-
-@keyframes xf-fold { to { transform: rotateX(-90deg); } }
-@keyframes xf-drop { to { transform: rotateX(0deg); } }
-@keyframes xc-tear { 0% { transform: none; opacity: 1; } 100% { transform: translate(-22px, 46px) rotateX(-80deg) rotateZ(-22deg); opacity: 0; } }
-@keyframes xc-blink { 50% { opacity: .2; } }
-@media (max-width: 520px) { .xc { height: 52px; gap: 8px; } .xf { --w: 15px; --h: 22px; } html body .xc.xc .xf-half b { font-size: 14px !important; } .xc-ring { display: none; } }
-@media (prefers-reduced-motion: reduce) {
-  .xc *, .xc *::before, .xc *::after { animation: none !important; transition: none !important; }
-  .xf-fold, .xc-cal__tear { display: none; }
-  .xf-drop { transform: none; }
-}
-
-/* encaixe na faixa */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__exam:has(.xc) {
-  padding: 0 !important; border: 0 !important; background: none !important; box-shadow: none !important; overflow: visible !important;
+  padding: 0 0 0 16px !important; border: 0 !important; border-left: 1px solid rgb(255 255 255 / .14) !important; background: none !important; box-shadow: none !important;
 }
