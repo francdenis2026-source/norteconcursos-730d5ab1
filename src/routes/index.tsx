@@ -47,6 +47,7 @@ import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
 import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
+import "@/styles/home-footer-pro.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
 import "@/styles/home-layout-fixes.css";
@@ -404,66 +405,66 @@ function Index() {
           Criar conta grátis <ArrowUpRight aria-hidden="true" />
         </Link>
       </div>
-      <footer className="nc-footer">
+      <footer className="nf" aria-label="Rodapé">
         <div className="home-container">
-          <div className="nc-footer__main">
-            <div className="nc-footer__brand">
+          <div className="nf__grid">
+            <div className="nf__brand">
               <NorteBrand />
               <p>Preparação para carreiras policiais.</p>
+              <address className="nf__contact">
+                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">
+                  <MapPin aria-hidden="true" />
+                  <span>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000</span>
+                </a>
+                <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
+                  <Mail aria-hidden="true" />
+                  <span>francdenis2026@gmail.com</span>
+                </a>
+                <a
+                  href="https://wa.me/5568992031340"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
+                >
+                  <MessageCircle aria-hidden="true" />
+                  <span>(68) 99203-1340</span>
+                </a>
+              </address>
             </div>
-            <nav className="nc-footer__links" aria-label="Explore">
+            <nav className="nf__col" aria-label="Explore">
+              <h2>Explore</h2>
               {EXPLORE_LINKS.map(([label, href]) => (
                 <Link key={label} to={href}>{label}</Link>
               ))}
             </nav>
-            <nav className="nc-footer__links" aria-label="Institucional">
+            <nav className="nf__col" aria-label="Institucional">
+              <h2>Institucional</h2>
               {INSTITUTIONAL_LINKS.map(([label, href]) => (
                 <Link key={label} to={href}>{label}</Link>
               ))}
             </nav>
-            <div className="nc-footer__side">
-              <a
-                className="nc-footer__qr"
-                href="https://norteconcursos.xyz/"
-                aria-label="Abrir a plataforma Norte Concurso. Aponte a câmera do celular para o QR Code."
-              >
-                <img
-                  src="/media/brand/platform-qr.svg"
-                  width={56}
-                  height={56}
-                  loading="lazy"
-                  alt="QR Code para https://norteconcursos.xyz/"
-                />
-                <span>
-                  Continue no celular
-                  <small>
-                    norteconcursos.xyz <ArrowUpRight aria-hidden="true" />
-                  </small>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="nc-footer__bar">
-            <address>
-              <MapPin aria-hidden="true" />
-              Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000
-            </address>
-            <a href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
-              <Mail aria-hidden="true" />
-              francdenis2026@gmail.com
-            </a>
             <a
-              href="https://wa.me/5568992031340"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
+              className="nf__app"
+              href="https://norteconcursos.xyz/"
+              aria-label="Abrir a plataforma Norte Concursos. Aponte a câmera do celular para o QR Code."
             >
-              <MessageCircle aria-hidden="true" />
-              (68) 99203-1340
+              <h2>Continue no celular</h2>
+              <img
+                src="/media/brand/platform-qr.svg"
+                width={72}
+                height={72}
+                loading="lazy"
+                alt="QR Code para https://norteconcursos.xyz/"
+              />
+              <span>
+                norteconcursos.xyz <ArrowUpRight aria-hidden="true" />
+              </span>
             </a>
-            <span className="nc-footer__copy">© 2026 Norte Concursos</span>
-            <span className="nc-footer__dev-sign">
-              Dev. <strong>Franc D'nis</strong> · Feijó-AC, Brasil
+          </div>
+          <div className="nf__bar">
+            <span>© 2026 Norte Concursos</span>
+            <span className="nf__sign">
+              Desenvolvido por <strong>Franc D'nis</strong> · Feijó-AC, Brasil
             </span>
           </div>
         </div>
