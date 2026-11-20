@@ -123,7 +123,8 @@ export function AnswerInsights({
   period: Period;
 }) {
   const [view, setView] = React.useState<"chart" | "table">("chart");
-  const height = useChartHeight();
+  const panelRef = React.useRef<HTMLDivElement>(null);
+  const height = useChartHeight(panelRef);
   // Mesma regra do restante do painel: vale a primeira resposta de cada questão.
   const first = React.useMemo(() => {
     const seen = new Set<string>();
@@ -155,7 +156,7 @@ export function AnswerInsights({
   const periodLabel = (PERIODS.find(([id]) => id === period)?.[1] ?? "").toLowerCase();
 
   return (
-    <div className="ncx-panel">
+    <div className="ncx-panel" ref={panelRef}>
       <dl className="nv-summary nv-summary--four">
         <div>
           <dt>Respondidas</dt>

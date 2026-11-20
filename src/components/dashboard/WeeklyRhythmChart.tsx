@@ -14,15 +14,44 @@ type WeeklyRhythmChartProps = {
   formatDuration: (seconds: number) => string;
 };
 
-export function useChartHeight() {
+export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>) {
   const [h, setH] = React.useState(164);
+  const base = React.useRef(164);
   React.useEffect(() => {
     const mq = window.matchMedia("(max-width: 640px)");
-    const set = () => setH(mq.matches ? 150 : 164);
+    const set = () => {
+      base.current = mq.matches ? 150 : 164;
+      setH((cur) => Math.max(cur, base.current));
+    };
     set();
     mq.addEventListener("change", set);
     return () => mq.removeEventListener("change", set);
   }, []);
+  // Ocupa o espaço vazio do cartão: altura do gráfico = altura atual + folga entre o painel e o corpo.
+  React.useEffect(() => {
+    const panel = panelRef?.current;
+    const body = panel?.parentElement;
+    if (!panel || !body || typeof ResizeObserver === "undefined") return;
+    let raf = 0;
+    const fit = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const cs = getComputedStyle(body);
+        const inner = body.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+        setH((cur) => {
+          const next = Math.round(Math.min(340, Math.max(base.current, cur + (inner - panel.offsetHeight))));
+          return Math.abs(next - cur) >= 4 ? next : cur;
+        });
+      });
+    };
+    const ro = new ResizeObserver(fit);
+    ro.observe(body);
+    fit();
+    return () => {
+      cancelAnimationFrame(raf);
+      ro.disconnect();
+    };
+  }, [panelRef]);
   return h;
 }
 
@@ -37,7 +66,8 @@ export function WeeklyRhythmChart({
 }: WeeklyRhythmChartProps) {
   const [view, setView] = React.useState<"chart" | "table">("chart");
   const plotRef = React.useRef<HTMLDivElement>(null);
-  const height = useChartHeight();
+  const panelRef = React.useRef<HTMLDivElement>(null);
+  const height = useChartHeight(panelRef);
   const total = buckets.reduce((sum, b) => sum + b.seconds, 0);
   const active = buckets.filter((b) => b.seconds >= 60);
   const average = active.length ? Math.round(total / active.length) : 0;
@@ -56,7 +86,7 @@ export function WeeklyRhythmChart({
   const ticks = minuteTicks(Math.max(...data.map((d) => d.bars[0] ?? 0), goalMin ?? 0, 30));
 
   return (
-    <div className="ncx-panel">
+    <div className="ncx-panel" ref={panelRef}>
       <dl className="nv-summary">
         <div>
           <dt>Tempo total</dt>
