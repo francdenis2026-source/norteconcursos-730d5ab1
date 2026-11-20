@@ -373,6 +373,10 @@ function QuestionTrainer() {
   React.useEffect(() => {
     setCommunityOpen(false);
     setBaseOpen(false);
+    // As colunas são as mesmas entre questões: volta ambas ao topo para não abrir no meio do texto.
+    document.querySelectorAll<HTMLElement>(".qx-pane").forEach((pane) => {
+      pane.scrollTop = 0;
+    });
   }, [currentQuestionId]);
   const [saving, setSaving] = React.useState(false);
   const savingRef = React.useRef(false);
@@ -2645,12 +2649,22 @@ function QtFitViewport({
       if (!bar) return;
       const pos = getComputedStyle(bar).position;
       if (pos !== "fixed" && pos !== "sticky") return;
-      const barBottom = bar.getBoundingClientRect().bottom;
+      const barRect = bar.getBoundingClientRect();
+      const barCs = getComputedStyle(bar);
+      // Menu escondido (tela cheia, opacidade 0, fora da vista): não reserva espaço para ele.
+      const probe = document.elementFromPoint(window.innerWidth / 2, Math.max(1, Math.min(barRect.bottom - 4, window.innerHeight - 1)));
+      const barVisible =
+        barCs.display !== "none" &&
+        barCs.visibility !== "hidden" &&
+        parseFloat(barCs.opacity) > 0.05 &&
+        barRect.bottom > 8 &&
+        !!probe?.closest(".app-topbar");
+      const barBottom = barVisible ? barRect.bottom : 2;
       const holder = shell.parentElement;
       if (!holder || shell.getBoundingClientRect().top >= barBottom + 2) return;
       const prev = holder.style.getPropertyValue("padding-top");
       const prio = holder.style.getPropertyPriority("padding-top");
-      holder.style.setProperty("padding-top", `${Math.ceil(barBottom) + 6}px`, "important");
+      holder.style.setProperty("padding-top", `${barVisible ? Math.ceil(barBottom) + 6 : 6}px`, "important");
       undo.push(() => (prev ? holder.style.setProperty("padding-top", prev, prio) : holder.style.removeProperty("padding-top")));
     };
     // A tela da questão em tela cheia cabe inteira; qualquer rolagem herdada da tela anterior
