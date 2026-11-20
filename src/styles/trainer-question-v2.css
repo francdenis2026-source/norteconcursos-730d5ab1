@@ -812,3 +812,63 @@ html body .qx .qx-base__toggle {
 }
 :root:not(.dark) html body .qx .qx-base__toggle,
 html:not(.dark) body .qx .qx-base__toggle { color: var(--qx-gold-ink, var(--qx-gold)); }
+
+/* ── Certo / Errado (2 respostas): dois cartões lado a lado que ocupam a coluna ─────────────── */
+@media (min-width: 560px) {
+  html body .qx .qx-pane--answers > .qx-choices[data-count="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: clamp(6.5rem, 30vh, 11rem);
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  html body .qx .qx-choices[data-count="2"] .qx-choice {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    min-height: 0;
+    height: 100%;
+    padding: 0.875rem 1rem 0.875rem 1.125rem;
+    border-radius: 0.875rem;
+    overflow: hidden;
+  }
+  html body .qx .qx-choices[data-count="2"] .qx-choice > span:last-child {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  html body .qx .qx-choices[data-count="2"] .qx-choice__letter {
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 0.625rem;
+    font-size: 0.9375rem;
+  }
+  /* faixa de cor no pé do cartão: estado legível além da cor (texto no canto) */
+  html body .qx .qx-choices[data-count="2"] .qx-choice::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 3px;
+    background: transparent;
+  }
+  html body .qx .qx-choices[data-count="2"] .qx-choice[data-state="right"]::before { background: var(--qx-ok); }
+  html body .qx .qx-choices[data-count="2"] .qx-choice[data-state="wrong"]::before { background: var(--qx-err); }
+  html body .qx .qx-choices[data-count="2"] .qx-choice[data-state="selected"]::before { background: var(--qx-gold); }
+  html body .qx .qx-choices[data-count="2"] .qx-choice[data-state="right"]::after,
+  html body .qx .qx-choices[data-count="2"] .qx-choice[data-state="wrong"]::after {
+    position: absolute;
+    top: 0.875rem;
+    right: 1rem;
+    margin: 0;
+  }
+  html body .qx .qx-choices[data-count="2"] .qx-choice:not(:disabled):hover {
+    border-color: color-mix(in oklab, var(--qx-gold) 60%, var(--qx-line));
+    background: color-mix(in oklab, var(--card) 92%, var(--qx-gold) 8%);
+  }
+}
+@media (max-height: 640px) {
+  html body .qx .qx-pane--answers > .qx-choices[data-count="2"] { grid-auto-rows: 5.5rem; }
+  html body .qx .qx-choices[data-count="2"] .qx-choice > span:last-child { font-size: 1.25rem; }
+}
