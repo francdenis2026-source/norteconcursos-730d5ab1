@@ -1,4 +1,4 @@
-import { Flame, LogOut, Medal, MoonStar, Timer } from "lucide-react";
+import { BookOpen, Flame, LogOut, Medal, MoonStar, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -34,7 +34,10 @@ export function FarewellDialog({ open, name, spent, streak, medals, onStay, onLe
       <DialogContent className="farewell-dialog">
         <div className="farewell-art" aria-hidden="true" />
         <div className="farewell-intro">
-          <span className="farewell-kicker"><MoonStar aria-hidden="true" /> SUA PREPARAÇÃO CONTINUA</span>
+          <div className="farewell-brand">
+            <img src="/media/brand/norte-identity/emblema.svg" width={32} height={32} alt="" aria-hidden="true" decoding="async" />
+            <span className="farewell-kicker"><MoonStar aria-hidden="true" /> SUA PREPARAÇÃO CONTINUA</span>
+          </div>
           <DialogTitle className="farewell-title">
             Uma pausa{first && <>, <span>{first}</span></>}.
             <br />O objetivo permanece.
@@ -46,16 +49,16 @@ export function FarewellDialog({ open, name, spent, streak, medals, onStay, onLe
         <dl className="farewell-metrics" aria-label="Resumo da sua preparação">
           {tiles.map(({ icon: Icon, label, value }) => (
             <div key={label}>
-              <dt><Icon aria-hidden="true" /><span>{label}</span></dt>
+              <dt><i><Icon aria-hidden="true" /></i><span>{label}</span></dt>
               <dd>{value}</dd>
             </div>
           ))}
         </dl>
         <DialogFooter className="farewell-actions">
-          <Button variant="outline" onClick={onStay} autoFocus className="farewell-stay">
-            Continuar estudando
+          <Button onClick={onStay} autoFocus className="farewell-stay">
+            <BookOpen aria-hidden="true" /> Continuar estudando
           </Button>
-          <Button onClick={onLeave} className="farewell-leave">
+          <Button variant="ghost" onClick={onLeave} className="farewell-leave">
             <LogOut aria-hidden="true" /> Encerrar sessão
           </Button>
         </DialogFooter>
