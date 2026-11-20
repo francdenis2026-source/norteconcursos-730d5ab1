@@ -50,6 +50,7 @@ import {
   X,
   Timer,
   XCircle,
+  Info,
   MessageSquare,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -1476,6 +1477,11 @@ function QuestionTrainer() {
                     </p>
                   )}
                 </div>
+              )}
+              {answered && isPlaceholderExplanation(explanation.main) && !explanation.example && (
+                <p className="qx-noexpl">
+                  <Info className="h-3.5 w-3.5" aria-hidden="true" /> Esta questão ainda não tem explicação.
+                </p>
               )}
             </section>
 
