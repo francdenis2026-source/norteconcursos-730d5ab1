@@ -156,3 +156,9 @@
   html body .app-shell.navigation-v2:not(#_):not(#_):not(#_):not(#_) .app-main > .app-content { padding-top: 8px !important; }
   html body .app-shell.navigation-v2:not(#_):not(#_):not(#_):not(#_) .app-main:has(.student-home.sh2) { padding-top: 48px !important; }
 }
+
+/* Sem vão antes da faixa do desenvolvedor (≥1101px): o conteúdo termina onde acaba; a faixa fixa já é reservada pelo padding do body. */
+@media (min-width: 1101px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-main:not(#_):not(#_) { min-height: 0 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-content:not(#_):not(#_) { min-height: 0 !important; flex: 0 0 auto !important; padding-bottom: 6px !important; }
+}

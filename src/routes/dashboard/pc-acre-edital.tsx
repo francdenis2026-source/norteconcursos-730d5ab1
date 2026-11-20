@@ -1,3 +1,4 @@
+import "@/styles/pcac-edital-pro.css";
 import { PcAcCronogramaCard } from "@/components/dashboard/PcAcCronogramaCard";
 import { examDaysLeft } from "@/lib/examClock";
 import * as React from "react";
@@ -17,6 +18,7 @@ import {
   ShieldCheck,
   Users,
   GraduationCap,
+  ListChecks, Layers, FileText, MapPin, Flame, Flag,
 } from "lucide-react";
 import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
@@ -716,123 +718,75 @@ function PcAcreEditalVerticalizadoPage() {
           <TabsTrigger value="conteudo"><CheckCircle2 aria-hidden="true" className="h-4 w-4" /> Conteúdo e progresso</TabsTrigger>
           <TabsTrigger value="cronograma"><CalendarClock aria-hidden="true" className="h-4 w-4" /> Cronograma</TabsTrigger>
         </TabsList>
-        <TabsContent value="resumo" className="pcac-astrix-summary space-y-3">
-      {cargo.id === "investigador" && (
-        <Card className="pcac-edital-card pcac-astrix-focus-card border-amber-400/60">
-          <CardHeader className="pb-3">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <div>
-                <CardTitle className="text-base">Trilha de preparação · Oficial Investigador</CardTitle>
-                <CardDescription>Quatro frentes prioritárias para organizar seus estudos.</CardDescription>
-              </div>
-              <Badge className="bg-amber-500 text-slate-950">74 vagas</Badge>
-            </div>
-          </CardHeader>
-          <CardContent className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-            {["Português e Raciocínio Lógico", "Penal, Processual Penal e Constitucional", "Contabilidade, Estatística e Dados", "Arquivologia e Tecnologia da Informação"].map((focus, index) => (
-              <div key={focus} className="rounded-lg border border-amber-400/30 bg-background/60 p-3">
-                <span className="text-[10px] font-black uppercase tracking-wide text-amber-700 dark:text-amber-300">Etapa {index + 1}</span>
-                <p className="mt-1 text-sm font-semibold">{focus}</p>
-              </div>
-            ))}
-          </CardContent>
-          <details className="pcac-astrix-focus-disclosure"><summary><span><strong>Prioridades para começar</strong><small>Disciplinas, assuntos e acesso rápido às questões</small></span><ChevronDown aria-hidden="true" className="h-4 w-4" /></summary><CardContent className="border-t border-amber-400/20 pt-4">
-            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-              <div>
-                <p className="text-sm font-bold">Assuntos para ganhar tempo</p>
-                <p className="text-xs text-muted-foreground">Prioridade estratégica cruzando o edital PC-AC com o padrão observado em provas policiais da IDECAN, incluindo PC-SC 2026. É orientação de estudo, não alteração do conteúdo oficial.</p>
-              </div>
-              <Badge variant="outline">IDECAN · 2026</Badge>
-            </div>
-            <div className="grid gap-2 lg:grid-cols-2">
-              {INVESTIGATOR_FOCUS.map((item, index) => (
-                <div key={item.subject} className="rounded-lg border bg-background/60 p-3">
-                  <div className="flex items-start justify-between gap-2">
-                    <div><span className="mr-1 text-xs font-black text-muted-foreground">{index + 1}.</span><span className="text-sm font-semibold">{item.subject}</span></div>
-                    <Badge variant={item.priority === "Muito alta" ? "default" : "outline"}>{item.priority}</Badge>
-                  </div>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{item.topics}</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Link to="/dashboard/question-trainer" search={{ subject: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-primary hover:bg-primary/10">Treinar questões</Link>
-                    <Link to="/dashboard/library" search={{ collection: "subjects", discipline: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-muted-foreground hover:bg-muted">Abrir teoria</Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent></details>
-<details className="pcac-astrix-focus-disclosure"><summary><span><strong>Análise de incidência da banca</strong><small>Critérios de priorização e evidências do radar IDECAN</small></span><ChevronDown aria-hidden="true" className="h-4 w-4" /></summary><CardContent className="border-t border-amber-400/20 pt-4">
-            <div className="mb-3">
-              <p className="text-sm font-bold">Radar de incidência para começar</p>
-              <p className="text-xs text-muted-foreground">Mapeamento orientativo: edital PC-AC cruzado com o padrão de provas policiais da IDECAN disponível na plataforma, incluindo PC-SC 2026. Use para priorizar revisões; não substitui o conteúdo oficial.</p>
-            </div>
-            <div className="grid gap-2 lg:grid-cols-2">
-              {INVESTIGATOR_RADAR.map((item, index) => (
-                <div key={item.subject} className="rounded-lg border bg-background/60 p-3">
-                  <div className="flex items-start justify-between gap-2"><span className="text-sm font-semibold">{index + 1}. {item.subject}</span><Badge variant={item.priority === "Muito alta" ? "default" : "outline"}>{item.priority}</Badge></div>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{item.topics}</p>
-                  <p className="mt-2 text-[10px] font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">Base: {item.evidence}</p>
-                </div>
-              ))}
-            </div>
-          </CardContent></details>
-        </Card>
-      )}
-
-      {cargo.exam && (
-        <Card className="pcac-edital-card pcac-edital-overview">
-          <CardHeader>
-            <CardTitle className="text-base">Como será a seleção</CardTitle>
-            <CardDescription>Resumo do edital para {cargo.label}.</CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-3 sm:grid-cols-3">
-            <div className="rounded-lg border bg-muted/20 p-3 text-sm"><strong>{cargo.exam.objectiveQuestions} questões</strong><span className="mt-1 block text-xs text-muted-foreground">prova objetiva · {cargo.exam.objectivePoints} pontos</span></div>
-            <div className="rounded-lg border bg-muted/20 p-3 text-sm"><strong>60 específicas · peso {cargo.exam.specificWeight}</strong><span className="mt-1 block text-xs text-muted-foreground">24 básicas + 16 jurídicas</span></div>
-            <div className="rounded-lg border bg-muted/20 p-3 text-sm"><strong>Prova discursiva</strong><span className="mt-1 block text-xs text-muted-foreground">{cargo.exam.discursive}</span></div>
-          </CardContent>
-        </Card>
-      )}
-
-      {cargo.locations && (
-        <Card className="pcac-edital-card pcac-edital-locations">
-          <CardHeader>
-            <CardTitle className="text-base">Distribuição das vagas por município</CardTitle>
-            <CardDescription>{cargo.vagas} vagas no total, conforme o Anexo I do edital.</CardDescription>
-          </CardHeader>
-          <CardContent className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
-            {cargo.locations.map((location) => (
-              <div key={location.name} className="rounded-lg border bg-background/60 p-2.5 text-sm">
-                <strong>{location.name}</strong>
-                <span className="mt-1 block text-xs text-muted-foreground">{location.vacancies} vaga{location.vacancies === 1 ? "" : "s"}{location.pcd ? ` · ${location.pcd} PcD` : ""}</span>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      )}
-
-      <Card className="pcac-edital-card pcac-priority-card">
-        <CardHeader>
-          <CardTitle className="text-base">Onde concentrar seu tempo</CardTitle>
-          <CardDescription>
-            Ordem de estudo baseada no histórico recente da IDECAN em concursos policiais. Comece pelo topo e avance conforme o seu progresso.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-2 sm:grid-cols-2">
-          {PCAC_IDECAN_PRIORITY.map((item, index) => (
-            <div key={item.subject} className="rounded-lg border bg-background/60 p-3">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-sm font-semibold">{index + 1}. {item.subject}</span>
-                <Badge variant={item.level === "Muito alta" ? "default" : "outline"}>{item.level}</Badge>
-              </div>
-              <p className="mt-1 text-xs text-muted-foreground">{item.reason}</p>
-              <div className="mt-2 flex gap-2">
-                <Link to="/dashboard/question-trainer" search={{ subject: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-primary hover:bg-primary/10">Treinar</Link>
-                <Link to="/dashboard/library" search={{ collection: "subjects", discipline: item.filter }} className="rounded-md border px-2 py-1 text-[11px] font-semibold text-muted-foreground hover:bg-muted">Estudar teoria</Link>
+        <TabsContent value="resumo" className="pcac-astrix-summary">
+          <div className="pe-ov">
+            <ul className="pe-kpis" aria-label="Resumo da seleção">
+              {cargo.exam && (
+                <>
+                  <li style={{ "--d": "0ms" } as React.CSSProperties}><span className="pe-ico" data-a="tick"><ListChecks aria-hidden="true" /></span><div><b>{cargo.exam.objectiveQuestions} questões</b><small>objetiva · {cargo.exam.objectivePoints} pontos</small></div></li>
+                  <li style={{ "--d": "60ms" } as React.CSSProperties}><span className="pe-ico" data-a="bob"><Layers aria-hidden="true" /></span><div><b>60 específicas · peso {cargo.exam.specificWeight}</b><small>24 básicas + 16 jurídicas</small></div></li>
+                  <li style={{ "--d": "120ms" } as React.CSSProperties}><span className="pe-ico" data-a="write"><FileText aria-hidden="true" /></span><div><b>Prova discursiva</b><small>{cargo.exam.discursive}</small></div></li>
+                </>
+              )}
+              <li style={{ "--d": "180ms" } as React.CSSProperties}><span className="pe-ico" data-a="pulse"><Users aria-hidden="true" /></span><div><b>{cargo.vagas} vagas</b><small>{cargo.salario}</small></div></li>
+            </ul>
+            <div className="pe-grid">
+              <section className="pe-pane" aria-labelledby="pe-prio">
+                <header><h3 id="pe-prio"><span className="pe-ico" data-a="flame"><Flame aria-hidden="true" /></span> Onde concentrar seu tempo</h3><small>Ordem pelo histórico recente da IDECAN em provas policiais</small></header>
+                <ol className="pe-prio">
+                  {PCAC_IDECAN_PRIORITY.map((item, index) => (
+                    <li key={item.subject} data-level={item.level} style={{ "--d": `${index * 45}ms` } as React.CSSProperties}>
+                      <span className="pe-prio__n">{index + 1}</span>
+                      <div className="pe-prio__t"><b>{item.subject}</b><small>{item.reason}</small></div>
+                      <span className="pe-chip" data-level={item.level}>{item.level}</span>
+                      <span className="pe-acts">
+                        <Link to="/dashboard/question-trainer" search={{ subject: item.filter }} title="Treinar questões" aria-label={`Treinar ${item.subject}`}><BrainCircuit aria-hidden="true" /></Link>
+                        <Link to="/dashboard/library" search={{ collection: "subjects", discipline: item.filter }} title="Estudar teoria" aria-label={`Teoria de ${item.subject}`}><BookOpen aria-hidden="true" /></Link>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+              <div className="pe-col">
+                {cargo.id === "investigador" && (
+                  <section className="pe-pane pe-steps" aria-labelledby="pe-steps">
+                    <header><h3 id="pe-steps"><span className="pe-ico" data-a="bob"><Flag aria-hidden="true" /></span> Trilha de preparação</h3><small>Quatro frentes, nesta ordem</small></header>
+                    <ol>
+                      {["Português e Raciocínio Lógico", "Penal, Processual Penal e Constitucional", "Contabilidade, Estatística e Dados", "Arquivologia e Tecnologia da Informação"].map((focus, index) => (
+                        <li key={focus} style={{ "--d": `${index * 60}ms` } as React.CSSProperties}><i>{index + 1}</i><span>{focus}</span></li>
+                      ))}
+                    </ol>
+                  </section>
+                )}
+                {cargo.locations && (
+                  <section className="pe-pane pe-loc" aria-labelledby="pe-loc">
+                    <header><h3 id="pe-loc"><span className="pe-ico" data-a="float"><MapPin aria-hidden="true" /></span> Vagas por município</h3><small>{cargo.vagas} no total · Anexo I</small></header>
+                    <ul>
+                      {cargo.locations.map((location) => (
+                        <li key={location.name}><b>{location.name}</b><span>{location.vacancies}{location.pcd ? ` · ${location.pcd} PcD` : ""}</span></li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+                {cargo.id === "investigador" && (
+                  <details className="pe-pane pe-more">
+                    <summary><span><b>Análise detalhada da banca</b><small>Assuntos para ganhar tempo e evidências do radar IDECAN</small></span><ChevronDown aria-hidden="true" /></summary>
+                    <div className="pe-more__body">
+                      <p>Orientação de estudo cruzando o edital com o padrão observado em provas policiais da IDECAN, incluindo PC-SC 2026. Não altera o conteúdo oficial.</p>
+                      <ul>
+                        {INVESTIGATOR_FOCUS.map((item, index) => (
+                          <li key={item.subject}><div><b>{index + 1}. {item.subject}</b><span className="pe-chip" data-level={item.priority}>{item.priority}</span></div><small>{item.topics}</small></li>
+                        ))}
+                        {INVESTIGATOR_RADAR.map((item, index) => (
+                          <li key={`r-${item.subject}`}><div><b>R{index + 1}. {item.subject}</b><span className="pe-chip" data-level={item.priority}>{item.priority}</span></div><small>{item.topics}</small><em>Base: {item.evidence}</em></li>
+                        ))}
+                      </ul>
+                    </div>
+                  </details>
+                )}
               </div>
             </div>
-          ))}
-        </CardContent>
-      </Card>
-
+          </div>
         </TabsContent>
         <TabsContent value="conteudo" className="space-y-5">
           {user?.id && !chance.checking && !chance.edital && (
