@@ -373,3 +373,9 @@ html body .app-shell[data-area] .app-content { padding-bottom: 12px !important; 
 @media (max-width: 1023px) {
   html body .app-shell[data-area] .app-content { padding-bottom: calc(var(--student-nav-h, 64px) + 16px) !important; }
 }
+
+/* Topo do painel: sem o respiro duplo (conteúdo + contêiner) acima da primeira faixa. */
+html body .app-shell[data-area="student"] .app-content { padding-top: 8px !important; }
+html body .app-shell[data-area="student"] .app-content__inner { padding-top: 0 !important; }
+html body .app-shell[data-area="student"] .app-content__inner > :first-child { margin-top: 0 !important; }
+html body .app-shell[data-area="student"] #dashboard-content .student-home.sh2 { padding-top: 0 !important; margin-top: 0 !important; }
