@@ -366,3 +366,10 @@
     font-size: 9px !important;
   }
 }
+
+/* Os créditos já ficam na faixa fixa inferior (dev-strip): o rodapé do painel só deixava uma faixa vazia com linha. */
+html body .app-shell .app-footer { display: none !important; }
+html body .app-shell[data-area] .app-content { padding-bottom: 12px !important; }
+@media (max-width: 1023px) {
+  html body .app-shell[data-area] .app-content { padding-bottom: calc(var(--student-nav-h, 64px) + 16px) !important; }
+}
