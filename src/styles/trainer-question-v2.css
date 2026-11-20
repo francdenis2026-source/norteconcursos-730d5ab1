@@ -706,3 +706,40 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qx .trainer-timer-chip 
   color: var(--muted-foreground);
 }
 .qx-noexpl svg { flex: none; }
+
+/* ── Explicação: leitura discreta, sem caixa pesada e sem texto justificado ── */
+html body .qx :is(.qx-stem, .qx-base__text, .qx-explain__text, .qx-explain__right) {
+  text-align: left !important;
+  -webkit-hyphens: none !important;
+  hyphens: none !important;
+  word-spacing: normal !important;
+  text-wrap: pretty;
+}
+.qx-pane--stem .qx-explain,
+.qx-explain {
+  gap: 0.375rem;
+  margin-top: 1rem;
+  padding: 0.75rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--qx-line);
+  border-radius: 0;
+  background: transparent;
+}
+.qx-explain__head { gap: 0.5rem; }
+.qx-explain__head .qx-label { color: var(--muted-foreground); letter-spacing: 0.1em; }
+.qx-explain__time { padding: 0; border: 0; font-size: 0.75rem; font-weight: 500; }
+.qx-explain__right { font-size: 0.8125rem; font-weight: 650; }
+.qx-explain__text {
+  max-width: 68ch;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+}
+.qx-explain__text strong {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.qx-explain__text + .qx-explain__text { margin-top: 0.125rem; color: var(--muted-foreground); }
