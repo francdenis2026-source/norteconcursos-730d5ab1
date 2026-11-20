@@ -1,0 +1,67 @@
+/* Homepage · microinterações. Só transform/opacity/sombra/cor, 160–320 ms, ease-out; nada em loop.
+   Cartões sobem e ganham fio dourado ao apontar, imagens aproximam devagar, ícones e setas respondem,
+   o clique "afunda" levemente. Desligado com prefers-reduced-motion e em telas sem hover. */
+@media (hover: hover) and (min-width: 761px) and (prefers-reduced-motion: no-preference) {
+  :root { --hm-ease: cubic-bezier(.2, .7, .2, 1); --hm-gold: var(--qx-gold, #efd090); }
+
+  /* Setas e ícones dos botões */
+  html body .home .desktop-homepage :is(.sx-btn, .hr-btn) svg { transition: transform 200ms var(--hm-ease); }
+  html body .home .desktop-homepage :is(.sx-btn, .hr-btn):hover svg { transform: translateX(3px); }
+  html body .home .desktop-homepage :is(.sx-btn, .hr-btn):active { transform: translateY(0) scale(.98); }
+
+  /* Ferramentas (cartões 01–06) */
+  html body .home .desktop-homepage .sx-card { transition: transform 280ms var(--hm-ease), box-shadow 280ms var(--hm-ease), border-color 280ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-card svg { transition: transform 280ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--hm-gold) 45%, transparent); }
+  html body .home .desktop-homepage .sx-card:hover svg { transform: scale(1.12) rotate(-5deg); }
+  html body .home .desktop-homepage .sx-card:active { transform: translateY(-1px) scale(.995); }
+
+  /* Provas recentes */
+  html body .home .desktop-homepage .sx-exam { overflow: hidden; transition: transform 300ms var(--hm-ease), box-shadow 300ms var(--hm-ease), border-color 300ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-exam > img { transition: transform 700ms var(--hm-ease); will-change: transform; }
+  html body .home .desktop-homepage .sx-exam:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--hm-gold) 55%, transparent); box-shadow: 0 22px 40px -22px rgb(0 0 0 / 70%), 0 0 0 1px color-mix(in oklab, var(--hm-gold) 25%, transparent); }
+  html body .home .desktop-homepage .sx-exam:hover > img { transform: scale(1.05); }
+  html body .home .desktop-homepage .sx-exam__link svg { transition: transform 200ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-exam:hover .sx-exam__link svg { transform: translate(2px, -2px); }
+
+  /* Concurso em destaque */
+  html body .home .desktop-homepage .sx-banner { overflow: hidden; }
+  html body .home .desktop-homepage .sx-banner__art { transition: transform 900ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-banner:hover .sx-banner__art { transform: scale(1.04); }
+  html body .home .desktop-homepage .sx-banner__crest { transition: transform 400ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-banner:hover .sx-banner__crest { transform: translateY(-3px) scale(1.03); }
+
+  /* Como funciona (hero) */
+  html body .home .desktop-homepage .sx-hero__steps li { transition: transform 220ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-hero__steps li b { transition: transform 260ms var(--hm-ease), box-shadow 260ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-hero__steps li:hover { transform: translateX(4px); }
+  html body .home .desktop-homepage .sx-hero__steps li:hover b { transform: scale(1.12) rotate(-4deg); box-shadow: 0 8px 18px -8px color-mix(in oklab, var(--hm-gold) 80%, transparent); }
+
+  /* Números do hero */
+  html body .home .desktop-homepage .sx-stats > div { transition: transform 220ms var(--hm-ease); }
+  html body .home .desktop-homepage .sx-stats > div:hover { transform: translateY(-2px); }
+
+  /* Desafio diário */
+  html body .home .desktop-homepage .hd__media img { transition: transform 900ms var(--hm-ease); }
+  html body .home .desktop-homepage .hd__inner:hover .hd__media img { transform: scale(1.03); }
+  html body .home .desktop-homepage .hd__perks li { transition: transform 200ms var(--hm-ease); }
+  html body .home .desktop-homepage .hd__perks li:hover { transform: translateX(3px); }
+
+  /* Ranking */
+  html body .home .desktop-homepage .rka-podium__card { transition: transform 260ms var(--hm-ease), box-shadow 260ms var(--hm-ease), border-color 260ms var(--hm-ease); }
+  html body .home .desktop-homepage .rka-podium__card:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--hm-gold) 55%, transparent); box-shadow: 0 16px 30px -18px rgb(0 0 0 / 70%); }
+  html body .home .desktop-homepage .rka-row { transition: transform 200ms var(--hm-ease), background-color 200ms ease-out; }
+  html body .home .desktop-homepage .rka-row:hover { transform: translateX(3px); background-color: color-mix(in oklab, var(--hm-gold) 7%, transparent); }
+
+  /* Planos: destaque do cartão ao apontar */
+  html body .home .desktop-homepage .hr-plan-card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--hm-gold) 50%, transparent); }
+
+  /* Entrada em cascata dentro das grades (o reveal já existe; aqui só o atraso escalonado) */
+  html body .home .desktop-homepage :is(.sx-grid, .sx-exams, .hp-promo__inner ul) > .hfx-reveal:nth-child(3n + 2) { transition-delay: 70ms; }
+  html body .home .desktop-homepage :is(.sx-grid, .sx-exams, .hp-promo__inner ul) > .hfx-reveal:nth-child(3n + 3) { transition-delay: 140ms; }
+}
+
+/* "Provas recentes" encostava na borda da janela e na tarja lateral: alinha com o hero (margem de 2rem). */
+@media (min-width: 761px) {
+  html body:not(#_):not(#_) .home .desktop-homepage .sx.sx-contests { width: calc(100% - 6rem) !important; max-width: none !important; margin-left: 2rem !important; margin-right: auto !important; }
+}
