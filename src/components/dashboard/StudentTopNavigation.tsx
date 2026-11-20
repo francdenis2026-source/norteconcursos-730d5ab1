@@ -114,8 +114,6 @@ const NavButton = React.forwardRef<
 });
 
 const describe = (item: NavigationItem) => navigationDetails(item).description;
-const listLabels = (labels: string[]) =>
-  new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(labels);
 
 export function StudentTopNavigation({
   items,
@@ -383,10 +381,6 @@ export function StudentTopNavigation({
               if (!GroupIcon) return null;
               return (
                 <DropdownMenu key={group}>
-                  <AreaHint
-                    title={group}
-                    description={listLabels(groupEntries.map((item) => item.label)) + "."}
-                  >
                     <DropdownMenuTrigger asChild>
                       <button
                         type="button"
@@ -407,7 +401,6 @@ export function StudentTopNavigation({
                         />
                       </button>
                     </DropdownMenuTrigger>
-                  </AreaHint>
                   <DropdownMenuContent
                     align="start"
                     sideOffset={10}

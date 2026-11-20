@@ -1,0 +1,17 @@
+/* Inteligência IDECAN — faixa única + painéis em colunas que preenchem a janela */
+.idecan-command-bar{gap:10px!important;padding:6px 10px!important;flex-wrap:nowrap!important}
+.idecan-command-bar h1{font-size:16px!important;margin-right:auto!important;white-space:nowrap}
+.idecan-summary--inline{display:flex!important;gap:6px!important;flex:none;grid-template-columns:none!important}
+.idecan-summary--inline>div{padding:3px 10px!important;border-radius:999px!important;border:1px solid color-mix(in srgb,currentColor 25%,transparent)!important;border-inline-start-width:1px!important;background:color-mix(in srgb,currentColor 8%,transparent)!important;white-space:nowrap;gap:5px!important;flex-wrap:nowrap!important}
+.idecan-summary--inline dt{font-size:11px!important;color:inherit!important;opacity:.8}.idecan-summary--inline dd{font-size:12px!important;color:inherit!important}
+.idecan-workspace>.astryx-tab-list{min-height:0!important}
+html body .idecan-workspace .astryx-tab{min-height:0!important;padding-block:7px!important;transition:transform .15s,background .15s}
+html body .idecan-workspace .astryx-tab:hover:not([data-selected=true]){transform:translateY(-1px)}
+.idecan-workspace .idecan-panel{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));align-content:start;align-items:start;gap:8px!important}
+.idecan-workspace .idecan-panel>[data-slot=card]{height:100%}
+.idecan-workspace .idecan-panel>[data-slot=card]>[data-slot=card-header]{padding:8px 12px 4px!important}
+.idecan-workspace .idecan-panel>[data-slot=card]>[data-slot=card-content]{padding:4px 12px 10px!important}
+.idecan-workspace .idecan-panel>details{grid-column:1/-1}
+.idecan-workspace .idecan-panel>[data-slot=card]{transition:border-color .15s,transform .15s}.idecan-workspace .idecan-panel>[data-slot=card]:hover{border-color:var(--color-border-blue)}
+@media (max-width:899px){.idecan-command-bar{flex-wrap:wrap!important}.idecan-summary--inline{flex-wrap:wrap}}
+@media (max-width:1180px){.idecan-summary--inline dt{display:none}}

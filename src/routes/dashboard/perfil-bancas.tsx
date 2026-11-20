@@ -4,12 +4,19 @@ import { useQuery } from "@tanstack/react-query";
 import {
   ArrowDownRight,
   ArrowUpRight,
+  BarChart3,
+  Dices,
+  Gauge,
   Info,
   Landmark,
+  Lightbulb,
   Loader2,
   Minus,
+  PieChart,
   ScanSearch,
 } from "lucide-react";
+import { Donut, YearBars, CHART_COLORS, type Slice } from "@/components/dashboard/bancas/PerfilCharts";
+import "@/styles/perfil-bancas-pro.css";
 import { PlanGate } from "@/components/dashboard/PlanGate";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
@@ -188,7 +195,18 @@ function PerfilBancasPage() {
       .map((s) => ({ subject: s.subject, themes: recurringThemes(deduped, s.subject) }))
       .filter((t) => t.themes.length > 0);
     const years = deduped.map((r) => r.year);
+    const yearMap = new Map<number, { items: number; exams: Set<string> }>();
+    for (const r of deduped) {
+      if (!Number.isFinite(r.year)) continue;
+      const e = yearMap.get(r.year) ?? { items: 0, exams: new Set<string>() };
+      e.items += 1;
+      e.exams.add(examKey(r));
+      yearMap.set(r.year, e);
+    }
+    const byYear = [...yearMap.entries()].sort((x, y) => x[0] - y[0]).map(([year, e]) => ({ year, items: e.items, exams: e.exams.size }));
     return {
+      rowsScope: deduped,
+      byYear,
       items: deduped.length,
       exams,
       conf,
@@ -246,256 +264,179 @@ function PerfilBancasPage() {
       </div>
     );
 
-  const maxShare = Math.max(0.0001, ...view.profile.subjects.map((s) => s.share));
+  return <PerfilStudio {...{ view, boards, board, org, orgs, career, careers, setBoardChoice, setOrgChoice, setCareerChoice }} />;
+}
+
+interface PerfilView {
+  rowsScope: BancaQuestion[];
+  byYear: { year: number; items: number; exams: number }[];
+  items: number;
+  exams: number;
+  conf: ReturnType<typeof confidence>;
+  answersCe: ReturnType<typeof answerStats> | null;
+  answersMc: ReturnType<typeof answerStats> | null;
+  sequence: ReturnType<typeof sequenceStats> | null;
+  profile: ReturnType<typeof subjectProfile>;
+  themes: { subject: string; themes: ReturnType<typeof recurringThemes> }[];
+  first: number | null;
+  last: number | null;
+  recs: ReturnType<typeof recommendations>;
+}
+
+function useCount(target: number) {
+  const [v, setV] = React.useState(0);
+  React.useEffect(() => {
+    if (typeof window === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setV(target); return; }
+    let raf = 0;
+    const t0 = performance.now();
+    const tick = (t: number) => {
+      const k = Math.min(1, (t - t0) / 700);
+      setV(Math.round(target * (1 - Math.pow(1 - k, 3))));
+      if (k < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [target]);
+  return v;
+}
+
+function PerfilStudio(props: {
+  view: PerfilView;
+  boards: ReturnType<typeof summarizeBoards>;
+  board: string | null;
+  org: string;
+  orgs: ReturnType<typeof orgOptions>;
+  career: string;
+  careers: ReturnType<typeof careerOptions>;
+  setBoardChoice: (v: string) => void;
+  setOrgChoice: (v: string) => void;
+  setCareerChoice: (v: string) => void;
+}) {
+  const { view, boards, board, org, orgs, career, careers, setBoardChoice, setOrgChoice, setCareerChoice } = props;
+  const subjects = view.profile.subjects;
+  const top = subjects.slice(0, 12);
+  const [pick, setPick] = React.useState<string | null>(null);
+  const [hover, setHover] = React.useState<string | null>(null);
+  const [kind, setKind] = React.useState<"ce" | "mc">(view.answersCe ? "ce" : "mc");
+  React.useEffect(() => { setPick(null); setKind(view.answersCe ? "ce" : "mc"); }, [board, org, career, view.answersCe]);
+  const selKey = hover ?? pick ?? top[0]?.subject ?? null;
+  const sel = subjects.find((s) => s.subject === selKey) ?? null;
+  const selThemes = React.useMemo(() => (sel ? recurringThemes(view.rowsScope, sel.subject).slice(0, 6) : []), [sel, view.rowsScope]);
+  const maxShare = Math.max(0.0001, ...top.map((s) => s.share));
+  const slices: Slice[] = React.useMemo(() => {
+    const head = top.slice(0, 6).map((s, i) => ({ key: s.subject, label: s.subject, value: s.share, color: CHART_COLORS[i]! }));
+    const rest = subjects.filter((s) => !head.some((h) => h.key === s.subject)).reduce((a, s) => a + s.share, 0);
+    return rest > 0.001 ? [...head, { key: "__rest", label: "Outras disciplinas", value: rest, color: "var(--c7)" }] : head;
+  }, [top, subjects]);
+  const items = useCount(view.items);
+  const exams = useCount(view.exams);
+  const stats = kind === "ce" ? view.answersCe : view.answersMc;
+  const confTone = view.conf === "alta" || view.conf === "media" ? "ok" : "warn";
+  const trendIcon = (t: string | null) => t === "sobe" ? <ArrowUpRight aria-hidden /> : t === "cai" ? <ArrowDownRight aria-hidden /> : t === "estavel" ? <Minus aria-hidden /> : null;
 
   return (
-    <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero
-        image="field-map"
-        size="sm"
-        kicker="Meu concurso"
-        icon={Landmark}
-        title={
-          <>
-            Perfil das <em>bancas</em>
-          </>
-        }
-        description="Entenda como a banca do seu concurso costuma montar a prova, com base nas provas já realizadas e no que existe de fato no acervo. Onde não há padrão, dizemos que não há."
-      >
-        <div className="page-hero__stats">
-          <HeroStat icon={Landmark} label="Provas analisadas" value={view.exams} />
-          <HeroStat icon={ScanSearch} label="Questões no perfil" value={view.items} />
-        </div>
-      </PageHero>
-
-      <Card>
-        <CardContent className="grid gap-3 pt-6 sm:grid-cols-3">
-          <label className="space-y-1 text-sm">
-            <span className="font-medium">Banca</span>
-            <select
-              className="h-10 w-full rounded-md border border-input bg-background px-3"
-              value={board ?? ""}
-              onChange={(e) => {
-                setBoardChoice(e.target.value);
-                setOrgChoice("");
-                setCareerChoice("");
-              }}
-            >
-              {boards.map((b) => (
-                <option key={b.board} value={b.board}>
-                  {b.board} · {b.items} itens · {CONFIDENCE_LABEL[b.confidence]}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="space-y-1 text-sm">
-            <span className="font-medium">Órgão</span>
-            <select
-              className="h-10 w-full rounded-md border border-input bg-background px-3"
-              value={org}
-              onChange={(e) => {
-                setOrgChoice(e.target.value);
-                setCareerChoice("");
-              }}
-            >
+    <div className="pf-root">
+      <header className="pf-bar">
+        <span className="pf-bar__t"><Landmark aria-hidden /><h1>Perfil das bancas</h1></span>
+        <div className="pf-filters">
+          <label><span>Banca</span>
+            <select value={board ?? ""} onChange={(e) => { setBoardChoice(e.target.value); setOrgChoice(""); setCareerChoice(""); }}>
+              {boards.map((b) => <option key={b.board} value={b.board}>{b.board} · {b.items} itens</option>)}
+            </select></label>
+          <label><span>Órgão</span>
+            <select value={org} onChange={(e) => { setOrgChoice(e.target.value); setCareerChoice(""); }}>
               <option value="">Todos os órgãos</option>
-              {orgs.map((o) => (
-                <option key={o.value} value={o.value}>
-                  {o.value} · {o.items} itens
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="space-y-1 text-sm">
-            <span className="font-medium">Cargo (unificado)</span>
-            <select
-              className="h-10 w-full rounded-md border border-input bg-background px-3"
-              value={career}
-              onChange={(e) => setCareerChoice(e.target.value)}
-            >
+              {orgs.map((o) => <option key={o.value} value={o.value}>{o.value} · {o.items}</option>)}
+            </select></label>
+          <label><span>Cargo</span>
+            <select value={career} onChange={(e) => setCareerChoice(e.target.value)} title="Cargos iguais com nomes diferentes entre órgãos e anos aparecem juntos para dar mais precisão.">
               <option value="">Todos os cargos</option>
-              {careers.map((c) => (
-                <option key={c.value} value={c.value}>
-                  {c.value} · {c.items} itens · {c.exams} {c.exams === 1 ? "prova" : "provas"}
-                </option>
-              ))}
-            </select>
-          </label>
-          <p className="text-xs text-muted-foreground sm:col-span-3">
-            Cargos iguais com nomes diferentes entre órgãos e anos (por exemplo, Agente de Polícia,
-            Agente de Polícia Judiciária e Investigador) aparecem juntos para dar mais precisão. Use
-            o filtro de órgão para separar.
-          </p>
-        </CardContent>
-      </Card>
+              {careers.map((c) => <option key={c.value} value={c.value}>{c.value} · {c.items}</option>)}
+            </select></label>
+        </div>
+        <div className="pf-chips">
+          <span><ScanSearch aria-hidden /><b>{items}</b> questões</span>
+          <span><Landmark aria-hidden /><b>{exams}</b> {view.exams === 1 ? "prova" : "provas"}{view.first != null ? ` · ${view.first === view.last ? view.first : `${view.first}–${view.last}`}` : ""}</span>
+          <span data-tone={confTone} title="Confiança da amostra"><Gauge aria-hidden />{CONFIDENCE_LABEL[view.conf]}</span>
+        </div>
+      </header>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex flex-wrap items-center gap-2 text-base">
-            <ScanSearch className="h-4 w-4" aria-hidden /> Base da análise
-            <Badge
-              variant={view.conf === "alta" || view.conf === "media" ? "default" : "secondary"}
-            >
-              {CONFIDENCE_LABEL[view.conf]}
-            </Badge>
-          </CardTitle>
-          <CardDescription>
-            {view.items} questões oficiais em {view.exams} {view.exams === 1 ? "prova" : "provas"}
-            {view.first != null
-              ? ` (${view.first === view.last ? view.first : `${view.first} a ${view.last}`})`
-              : ""}
-            {career ? `, cargo ${career}` : ""}
-            {org ? `, ${org}` : ""}. Questões repetidas entre cargos da mesma prova contam uma vez.
-          </CardDescription>
-        </CardHeader>
-        {view.conf === "insuficiente" || view.conf === "baixa" ? (
-          <CardContent>
-            <p className="flex gap-2 rounded-md bg-muted/50 p-3 text-sm text-muted-foreground">
-              <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-              Poucas provas dessa banca no acervo. Leia tudo abaixo como pista, não como tendência
-              confirmada.
-            </p>
-          </CardContent>
-        ) : null}
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">Padrões no gabarito</CardTitle>
-          <CardDescription>
-            Testes estatísticos simples sobre as respostas oficiais. O resultado mais comum é “sem
-            padrão”, e isso também é informação útil.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          {[
-            { key: "ce", title: "Provas Certo/Errado", stats: view.answersCe },
-            { key: "mc", title: "Provas de múltipla escolha", stats: view.answersMc },
-          ].map(({ key, title, stats }) =>
-            stats ? (
-              <div key={key} className="space-y-3">
-                <h4 className="text-sm font-semibold">
-                  {title}{" "}
-                  <span className="font-normal text-muted-foreground">· {stats.n} itens</span>
-                </h4>
-                <div className="space-y-2">
-                  {Object.entries(stats.shares)
-                    .sort(([a], [b]) => a.localeCompare(b))
-                    .map(([letter, share]) => (
-                      <div key={letter} className="flex items-center gap-3 text-sm">
-                        <span className="w-12 font-medium">
-                          {key === "ce" ? (letter === "C" ? "Certo" : "Errado") : letter}
-                        </span>
-                        <div className="h-3 flex-1 overflow-hidden rounded bg-muted">
-                          <div className="h-full bg-primary" style={{ width: `${share * 100}%` }} />
-                        </div>
-                        <span className="w-24 text-right tabular-nums text-muted-foreground">
-                          {pct(share, 1)} ({stats.counts[letter]})
-                        </span>
-                      </div>
-                    ))}
+      <div className="pf-grid">
+        <section className="pf-pane pf-subjects" aria-label="O que a banca cobra">
+          <header><h2><PieChart aria-hidden /> O que a banca cobra{career ? ` · ${career}` : ""}</h2><small>Peso médio por prova</small></header>
+          <div className="pf-subjects__body">
+            <div className="pf-side">
+              <Donut slices={slices} active={sel && slices.some((s) => s.key === sel.subject) ? sel.subject : null} onHover={setHover} onPick={(k) => k !== "__rest" && setPick(k)} centerTitle={sel ? "peso médio" : ""} centerValue={sel ? pct(sel.share, 1) : "—"} />
+              {sel && (
+                <div className="pf-detail" key={sel.subject}>
+                  <h3>{sel.subject}</h3>
+                  <p><span><b>~{Math.round(sel.avgItems)}</b> itens/prova</span><span><b>{sel.exams}</b> provas</span>{sel.trend && <span className="pf-trend" data-t={sel.trend}>{trendIcon(sel.trend)}{sel.trend === "sobe" ? "em alta" : sel.trend === "cai" ? "em queda" : "estável"}</span>}</p>
+                  {selThemes.length > 0 ? (
+                    <ul>{selThemes.map((t) => <li key={t.label} title={`${t.exams} provas · ${t.items} itens`}><span>{t.label}</span><em>{t.exams}×</em></li>)}</ul>
+                  ) : <small>Sem assuntos recorrentes nesta disciplina.</small>}
                 </div>
-                <VerdictBox title="Distribuição das respostas" verdict={stats.verdict} />
-                {key === "ce" && view.sequence ? (
-                  <VerdictBox
-                    title="Ordem dos gabaritos na prova"
-                    verdict={view.sequence.verdict}
-                  />
-                ) : null}
-              </div>
-            ) : null,
-          )}
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">
-            O que a banca cobra{career ? ` — ${career}` : ""}
-          </CardTitle>
-          <CardDescription>
-            Peso médio de cada disciplina por prova. A seta compara a prova mais recente com a média
-            das anteriores (só quando há pelo menos 3 provas).
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          {view.profile.subjects.slice(0, 12).map((s) => (
-            <div key={s.subject} className="flex items-center gap-3 text-sm">
-              <span className="w-44 shrink-0 truncate sm:w-56" title={s.subject}>
-                {s.subject}
-              </span>
-              <div className="h-3 flex-1 overflow-hidden rounded bg-muted">
-                <div
-                  className="h-full bg-primary/80"
-                  style={{ width: `${(s.share / maxShare) * 100}%` }}
-                />
-              </div>
-              <span className="w-28 text-right tabular-nums text-muted-foreground">
-                {pct(s.share, 1)} · ~{Math.round(s.avgItems)} itens
-              </span>
-              <span className="w-5" aria-label={s.trend ?? "sem tendência"}>
-                {s.trend === "sobe" ? (
-                  <ArrowUpRight className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                ) : s.trend === "cai" ? (
-                  <ArrowDownRight className="h-4 w-4 text-rose-600 dark:text-rose-400" />
-                ) : s.trend === "estavel" ? (
-                  <Minus className="h-4 w-4 text-muted-foreground" />
-                ) : null}
-              </span>
+              )}
             </div>
-          ))}
-        </CardContent>
-      </Card>
+            <ol className="pf-bars">
+              {top.map((s, i) => (
+                <li key={s.subject} style={{ "--d": `${i * 35}ms`, "--c": CHART_COLORS[i % CHART_COLORS.length] } as React.CSSProperties}>
+                  <button type="button" data-on={sel?.subject === s.subject} onMouseEnter={() => setHover(s.subject)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(s.subject)} onBlur={() => setHover(null)} onClick={() => setPick(s.subject)} aria-pressed={pick === s.subject}>
+                    <span className="pf-bars__n" title={s.subject}>{s.subject}</span>
+                    <span className="pf-bars__t"><i style={{ width: `${(s.share / maxShare) * 100}%` }} /></span>
+                    <span className="pf-bars__v">{pct(s.share, 1)}</span>
+                    <span className="pf-bars__tr" data-t={s.trend ?? ""}>{trendIcon(s.trend)}</span>
+                  </button>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
 
-      {view.themes.length > 0 ? (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Assuntos que a banca repete</CardTitle>
-            <CardDescription>
-              Temas que reaparecem em provas diferentes, nas disciplinas de maior peso. Veja o
-              histórico completo no Panorama das provas.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-4 sm:grid-cols-2">
-            {view.themes.map((t) => (
-              <div key={t.subject} className="space-y-1.5">
-                <h4 className="text-sm font-semibold">{t.subject}</h4>
-                <ul className="space-y-1 text-sm">
-                  {t.themes.slice(0, 5).map((x) => (
-                    <li key={x.label} className="flex justify-between gap-3">
-                      <span>{x.label}</span>
-                      <span className="shrink-0 text-muted-foreground">
-                        {x.exams} provas · {x.items} itens
-                      </span>
+        <div className="pf-col">
+          <section className="pf-pane pf-timeline" aria-label="Questões por ano">
+            <header><h2><BarChart3 aria-hidden /> Questões por ano</h2><small>Volume no acervo</small></header>
+            {view.byYear.length > 0 ? <YearBars data={view.byYear} /> : <small>Sem dados por ano.</small>}
+          </section>
+
+          <section className="pf-pane pf-key" aria-label="Padrões no gabarito">
+            <header>
+              <h2><Dices aria-hidden /> Padrões no gabarito</h2>
+              {view.answersCe && view.answersMc ? (
+                <div className="pf-seg" role="group" aria-label="Tipo de prova">
+                  <button type="button" aria-pressed={kind === "ce"} onClick={() => setKind("ce")}>Certo/Errado</button>
+                  <button type="button" aria-pressed={kind === "mc"} onClick={() => setKind("mc")}>Múltipla</button>
+                </div>
+              ) : <small>{stats ? `${stats.n} itens` : ""}</small>}
+            </header>
+            {stats ? (
+              <>
+                <ul className="pf-answers">
+                  {Object.entries(stats.shares).sort(([a], [b]) => a.localeCompare(b)).map(([letter, share], i) => (
+                    <li key={letter} title={`${stats.counts[letter]} itens`}>
+                      <b>{kind === "ce" ? (letter === "C" ? "Certo" : "Errado") : letter}</b>
+                      <span><i style={{ width: `${share * 100}%`, animationDelay: `${i * 60}ms` }} /></span>
+                      <em>{pct(share, 1)}</em>
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      ) : null}
+                <div className="pf-verdicts">
+                  <p data-l={stats.verdict.level}><b>{VERDICT_LABEL[stats.verdict.level]}</b> {stats.verdict.text}</p>
+                  {kind === "ce" && view.sequence && <p data-l={view.sequence.verdict.level}><b>Ordem · {VERDICT_LABEL[view.sequence.verdict.level]}</b> {view.sequence.verdict.text}</p>}
+                </div>
+              </>
+            ) : <small>Sem gabaritos suficientes.</small>}
+          </section>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">O que fazer com isso</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {view.recs.map((r) => (
-            <div key={r.title} className="rounded-lg border p-4 text-sm">
-              <strong>{r.title}</strong>
-              <p className="mt-1 leading-relaxed text-muted-foreground">{r.text}</p>
-            </div>
-          ))}
-        </CardContent>
-      </Card>
-
-      <p className="flex gap-2 px-1 text-xs leading-relaxed text-muted-foreground">
-        <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
-        Como ler: as contas usam apenas questões oficiais ativas do acervo. Padrão estatístico não é
-        garantia de que a próxima prova repita o histórico. Para decidir o que estudar, o edital do
-        seu concurso vem primeiro.
-      </p>
+          <section className="pf-pane pf-recs" aria-label="O que fazer com isso">
+            <header><h2><Lightbulb aria-hidden /> O que fazer com isso</h2></header>
+            <ul>
+              {view.recs.map((r, i) => (
+                <li key={r.title} style={{ "--d": `${i * 50}ms` } as React.CSSProperties}><b>{r.title}</b><p>{r.text}</p></li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }

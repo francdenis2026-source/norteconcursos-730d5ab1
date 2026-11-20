@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
+import "@/styles/idecan-compact.css";
 import { ArrowDownRight, ArrowRight, ArrowUpRight, BookOpenText, CalendarClock, ChevronDown, ClipboardList, Info, Landmark, Loader2, Minus, Radar, ScanSearch, Target } from "lucide-react";
 import { Button as AstryxButton } from "@astryxdesign/core/Button";
 import { TabList, Tab } from "@astryxdesign/core/TabList";
@@ -7,10 +8,9 @@ import { Theme } from "@astryxdesign/core/theme";
 import { themes as astryxThemes, defaultThemeSlug } from "../../astryx-themes";
 import { getActiveTheme } from "@/lib/theme";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CONFIDENCE_LABEL, answerStats, confidence, dedupeQuestions, examKey, recommendations, recurringThemes, sequenceStats, splitByKind, subjectProfile, type BancaQuestion, type Verdict } from "@/lib/bancaProfile";
 import { cn } from "@/lib/utils";
-import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
 import { INVESTIGATOR_FOCUS, INVESTIGATOR_RADAR } from "@/data/pcAcreIdecanRadar";
 import "@/styles/inteligencia-idecan-refinement.css";
 const PC_CAREERS = new Set(["Delegado de Polícia", "Escrivão de Polícia", "Agente / Investigador de Polícia"]);
@@ -102,7 +102,7 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
   error?: boolean;
   onRetry: () => void;
 }) {
-  const [activeTab, setActiveTab] = React.useState("edital");
+  const [activeTab, setActiveTab] = React.useState("disciplinas");
   const [mode, setMode] = React.useState(getActiveTheme);
   const workspaceRef = React.useRef<HTMLElement>(null);
   React.useEffect(() => {
@@ -186,7 +186,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
   }, [pcRows]);
 
   const profile = React.useMemo(() => subjectProfile(pcRows), [pcRows]);
-  const allProfile = React.useMemo(() => subjectProfile(all), [all]);
   const maxShare = Math.max(0.0001, ...profile.subjects.map((s) => s.share));
   const themes = React.useMemo(
     () =>
@@ -222,67 +221,26 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
       <header className="idecan-command-bar">
         <Radar aria-hidden="true" />
         <h1>Inteligência <strong>IDECAN</strong></h1>
-        <p>Polícia Civil · análise do acervo</p>
+        <dl className="idecan-summary idecan-summary--inline" aria-label="Base da análise IDECAN">
+          <div><dt>Provas IDECAN</dt><dd>{loading || error ? "—" : examsAll}</dd></div>
+          <div><dt>Provas de Polícia Civil</dt><dd>{loading || error ? "—" : examsPc}</dd></div>
+          <div><dt>Questões analisadas · PC</dt><dd>{loading || error ? "—" : pcRows.length}</dd></div>
+          <div><dt>Confiança da amostra</dt><dd>{loading || error ? "—" : CONFIDENCE_LABEL[conf]}</dd></div>
+        </dl>
         <AstryxButton label="Treinar IDECAN" as={IdecanTrainerLink} href="/dashboard/question-trainer?board=IDECAN" icon={<Target />} size="sm" />
       </header>
-      <dl className="idecan-summary" aria-label="Base da análise IDECAN">
-        <div><dt>Provas IDECAN</dt><dd>{loading || error ? "—" : examsAll}</dd></div>
-        <div><dt>Provas de Polícia Civil</dt><dd>{loading || error ? "—" : examsPc}</dd></div>
-        <div><dt>Questões analisadas · PC</dt><dd>{loading || error ? "—" : pcRows.length}</dd></div>
-        <div><dt>Confiança da amostra</dt><dd>{loading || error ? "—" : CONFIDENCE_LABEL[conf]}</dd></div>
-      </dl>
       <TabList value={activeTab} onChange={setActiveTab} role="tablist" layout="fill" hasDivider aria-label="Análises IDECAN">
-        <Tab id="idecan-tab-edital" value="edital" label="Edital PC-AC" icon={<ClipboardList />} panelId="idecan-panel-edital" />
         <Tab id="idecan-tab-disciplinas" value="disciplinas" label="Disciplinas" icon={<BookOpenText />} panelId="idecan-panel-disciplinas" />
         <Tab id="idecan-tab-provas" value="provas" label="Provas" icon={<Landmark />} panelId="idecan-panel-provas" />
         <Tab id="idecan-tab-gabaritos" value="gabaritos" label="Gabaritos" icon={<ScanSearch />} panelId="idecan-panel-gabaritos" />
         <Tab id="idecan-tab-plano" value="plano" label="Plano de ação" icon={<Target />} panelId="idecan-panel-plano" />
       </TabList>
       {loading ? <section role="status" className="idecan-state"><Loader2 className="animate-spin" aria-hidden="true" /> Carregando análise IDECAN…</section> : error ? <section role="alert" className="idecan-state"><p>Não foi possível carregar as provas. Tente novamente.</p><AstryxButton label="Tentar novamente" onClick={onRetry} /></section> : <>
-      <section role="tabpanel" tabIndex={0} id="idecan-panel-edital" aria-labelledby="idecan-tab-edital" hidden={activeTab !== "edital"} className="idecan-panel">
-      <Card className="idecan-card idecan-card--matrix border-primary/25 bg-primary/[0.03]">
-        <CardHeader>
-          <CardTitle className="text-base">Edital PC-AC 2026 · Oficial Investigador</CardTitle>
-          <CardDescription>
-            Disciplinas do Anexo III, com prioridade de estudo e subtemas. Quando não há amostra IDECAN suficiente, esta matriz continua sendo a referência principal.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-3 md:grid-cols-2">
-          {(pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.blocks ?? []).flatMap((block) => block.disciplines).map((discipline) => {
-            const focus = INVESTIGATOR_FOCUS.find((item) => item.subject === discipline.name || item.filter === discipline.name || discipline.name.includes(item.subject));
-            return <details key={discipline.id} className="idecan-discipline-disclosure rounded-xl border bg-card p-3">
-              <summary><strong>{discipline.name}</strong>{focus && <Badge variant="outline">{focus.priority}</Badge>}<ChevronDown aria-hidden="true" /></summary>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{focus?.topics ?? discipline.topics?.slice(0, 3).join(" · ") ?? "Tópicos do Anexo III cadastrados no edital verticalizado."}</p>
-              <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} className="mt-2 inline-flex text-xs font-semibold text-primary hover:underline">Abrir edital →</Link>
-            </details>;
-          })}
-        </CardContent>
-      </Card>
-
-      </section>
       <section role="tabpanel" tabIndex={0} id="idecan-panel-disciplinas" aria-labelledby="idecan-tab-disciplinas" hidden={activeTab !== "disciplinas"} className="idecan-panel">
-      <Card className="idecan-card idecan-card--map">
-        <CardHeader>
-          <CardTitle className="text-base">Mapa completo da IDECAN por disciplina</CardTitle>
-          <CardDescription>
-            Inclui todas as carreiras e provas da banca disponíveis no acervo, além do recorte de Polícia Civil.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {allProfile.subjects.length ? (
-            <SubjectBars subjects={allProfile.subjects} maxShare={Math.max(0.0001, ...allProfile.subjects.map((s) => s.share))} rows={all} />
-          ) : <p className="text-sm text-muted-foreground">Ainda não há disciplinas classificadas.</p>}
-        </CardContent>
-      </Card>
 
       <Card className="idecan-card idecan-card--weights">
         <CardHeader>
           <CardTitle className="text-base">O que a IDECAN mais cobra na Polícia Civil</CardTitle>
-          <CardDescription>
-            Peso médio de cada disciplina nas provas de Delegado, Escrivão e Agente/Investigador. A
-            seta compara a prova mais recente com a média das anteriores (só quando há pelo menos 3
-            provas).
-          </CardDescription>
         </CardHeader>
         <CardContent>
           {profile.subjects.length ? (
@@ -301,9 +259,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
             <CardTitle className="text-base">
               Assuntos que a IDECAN repete em Polícia Civil
             </CardTitle>
-            <CardDescription>
-              Temas que reaparecem em provas diferentes, nas disciplinas de maior peso.
-            </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-4 sm:grid-cols-2">
             {themes.map((t) => (
@@ -333,9 +288,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
             <CardTitle className="text-base">
               Provas da IDECAN em {CURRENT_YEAR} (ano corrente)
             </CardTitle>
-            <CardDescription>
-              As provas mais recentes mostram para onde a banca está indo agora.
-            </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-2 sm:grid-cols-2">
             {currentYearExams.map((e) => (
@@ -353,10 +305,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
       <Card className="idecan-card idecan-card--police">
         <CardHeader>
           <CardTitle className="text-base">Provas de Polícia Civil aplicadas pela IDECAN</CardTitle>
-          <CardDescription>
-            As comparáveis mais diretas para a PC-AC: mesma banca, mesma natureza de carreira. As 3
-            disciplinas de maior peso aparecem em cada prova.
-          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-3">
           {pcExams.length === 0 && (
@@ -397,10 +345,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
         <Card className="idecan-card idecan-card--answers">
           <CardHeader>
             <CardTitle className="text-base">Padrões no gabarito (Polícia Civil)</CardTitle>
-            <CardDescription>
-              Testes estatísticos simples sobre as respostas oficiais. O resultado mais comum é "sem
-              padrão", e isso também é informação útil.
-            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-5">
             {[
@@ -455,11 +399,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
               {CONFIDENCE_LABEL[conf]}
             </Badge>
           </CardTitle>
-          <CardDescription>
-            {pcRows.length} questões oficiais em {examsPc} {examsPc === 1 ? "prova" : "provas"} de
-            Delegado, Escrivão e Agente/Investigador aplicadas pela IDECAN, de um total de{" "}
-            {all.length} questões em {examsAll} provas da banca no acervo.
-          </CardDescription>
         </CardHeader>
         {(conf === "insuficiente" || conf === "baixa") && (
           <CardContent>
@@ -489,9 +428,6 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
       <Card className="idecan-card idecan-card--continue">
         <CardHeader>
           <CardTitle className="text-base">Continue a preparação</CardTitle>
-          <CardDescription>
-            Leve esse diagnóstico para onde você organiza e pratica os estudos.
-          </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-3 sm:grid-cols-2">
           <Link
