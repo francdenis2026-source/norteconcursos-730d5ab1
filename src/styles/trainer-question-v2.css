@@ -1217,3 +1217,25 @@ html body .qx .qx-explain__right { color: var(--qx-err); }
 .qx .qx-scale__pan[data-win] text { fill: var(--qx-ok); }
 .qx .qx-scale__base *, .qx .qx-scale__beam > path, .qx .qx-scale__beam > circle { stroke: none; opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .qx .qx-scale, .qx .qx-scale__swing { animation: none !important; } .qx .qx-scale[data-tilt="left"] { --qx-a: -9deg; } .qx .qx-scale[data-tilt="right"] { --qx-a: 9deg; } }
+
+/* ── Balança 3D (three.js) ─────────────────────────────────────────────────────────────────── */
+.qx .qx-scale3d {
+  display: grid;
+  flex: 1 1 0 !important;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  min-height: 7rem;
+  max-height: 20rem;
+  width: 100%;
+  margin: 0.25rem 0 0;
+  justify-items: center;
+  gap: 0.125rem;
+}
+.qx .qx-scale3d__stage { width: min(100%, 26rem); height: 100%; min-height: 0; }
+.qx .qx-scale3d__labels { display: grid; grid-template-columns: 1fr 1fr; width: min(78%, 20rem); text-align: center; }
+.qx .qx-scale3d__labels span {
+  font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted-foreground); transition: color 400ms ease-out;
+}
+.qx .qx-scale3d__labels span[data-win] { color: var(--qx-ok); }
+.qx .qx-scale3d figcaption { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-foreground); }
+@media (max-width: 559px) { .qx .qx-scale3d { display: none; } }

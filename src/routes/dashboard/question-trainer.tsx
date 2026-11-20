@@ -1667,29 +1667,21 @@ function QuestionTrainer() {
                 </div>
               )}
 
-              {certoErrado && questionAnswers(question).length === 2 && (
-                <QxScale
-                  answered={answered}
-                  tilt={
-                    answered
-                      ? question.answer === "C"
-                        ? "left"
-                        : "right"
-                      : selected
-                        ? selected === "C"
-                          ? "left"
-                          : "right"
-                        : undefined
-                  }
-                  caption={
-                    answered
-                      ? `Gabarito: ${labelFor(question.answer)}`
-                      : selected
-                        ? "Confirme sua resposta"
-                        : "Pese o item: certo ou errado?"
-                  }
-                />
-              )}
+              {certoErrado && questionAnswers(question).length === 2 && (() => {
+                const side = (a: string) => (a === "C" ? "left" : "right");
+                const scaleTilt = answered ? side(question.answer) : selected ? side(selected) : undefined;
+                const scaleCaption = answered
+                  ? `Gabarito: ${labelFor(question.answer)}`
+                  : selected
+                    ? "Confirme sua resposta"
+                    : "Pese o item: certo ou errado?";
+                const flat = <QxScale answered={answered} tilt={scaleTilt} caption={scaleCaption} />;
+                return (
+                  <React.Suspense fallback={flat}>
+                    <QxScale3D answered={answered} tilt={scaleTilt} caption={scaleCaption} fallback={flat} />
+                  </React.Suspense>
+                );
+              })()}
 
               {supportNotice && !supportAvailable && !answered && (
                 <div id={supportNoticeId} role="status" className="qx-note">
@@ -2631,6 +2623,8 @@ function formatResponseTime(seconds: number) {
  * Ajusta a janela da questão à altura visível (sem rolagem da página no computador):
  * mede onde o cartão começa e a faixa fixa do rodapé e grava em --qt4-h.
  */
+const QxScale3D = React.lazy(() => import("@/components/trainer/QxScale3D"));
+
 /** Balança de Certo/Errado: metal escovado, pêndulo amortecido; ao responder, assenta no lado do gabarito. */
 function QxScale({
   tilt,
