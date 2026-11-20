@@ -510,3 +510,13 @@ html body .trainer-setup.qt2.qt3 { display: grid !important; flex-direction: ini
 html body .app-shell[data-area="student"] .trainer-setup.qt2.qt3 { display: grid !important; flex: 1 0 auto; min-height: 0 !important; align-content: start; }
 @media (min-width: 900px) { .qt3-row { display: flex; flex-wrap: wrap; gap: 0.875rem 1.75rem; } }
 .qt3-chips > button { white-space: nowrap; }
+
+/* Seleção dourada: o número ao lado precisa ter contraste (texto escuro sobre pastilha escura translúcida). */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt3 :is(.qt3-chips > button, .qt2-focus__options button)[aria-checked="true"] {
+  color: var(--q-gold-ink) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .qt3 :is(.qt3-chips > button, .qt2-focus__options button)[aria-checked="true"] small {
+  color: var(--q-gold-ink) !important;
+  background: rgb(0 0 0 / 14%) !important;
+  opacity: 1;
+}
