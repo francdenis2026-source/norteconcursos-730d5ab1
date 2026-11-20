@@ -149,3 +149,10 @@
 @media (min-width: 900px) {
   html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-main:has(.student-home.sh2) { padding-top: 48px !important; }
 }
+
+/* Sem vão entre a barra superior e a primeira faixa de conteúdo (todas as páginas do aluno) */
+@media (min-width: 900px) {
+  html body .app-shell.navigation-v2:not(#_):not(#_):not(#_):not(#_) .app-main { padding-top: 52px !important; }
+  html body .app-shell.navigation-v2:not(#_):not(#_):not(#_):not(#_) .app-main > .app-content { padding-top: 8px !important; }
+  html body .app-shell.navigation-v2:not(#_):not(#_):not(#_):not(#_) .app-main:has(.student-home.sh2) { padding-top: 48px !important; }
+}
