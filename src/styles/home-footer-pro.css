@@ -85,3 +85,45 @@ html body .nf__sign strong { color: var(--foreground); font-weight: 700; }
 }
 html body .nf__col a, html body .nf__contact a { min-height: 0 !important; padding-block: 0 !important; }
 html body .nf__col { gap: 0.625rem; }
+
+/* Hero da homepage · composição refinada.
+   Cubo na faixa livre acima do título (entre o selo e o cartão do desafio); selo sem pílula; números em
+   linha, separados por fios, sem caixas. */
+@media (min-width: 1100px) {
+  html body:not(#_):not(#_):not(#_) .sx-band > div.hc-corner {
+    display: block !important;
+    top: 10px !important;
+    left: calc(50% - 40px) !important;
+    margin: 0 !important;
+    width: 72px !important;
+    height: 72px !important;
+  }
+}
+@media (min-width: 761px) {
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-eyebrow {
+    padding: 0 !important; border: 0 !important; border-radius: 0 !important; background: none !important; box-shadow: none !important;
+    gap: 0.625rem; font-size: 0.75rem !important; letter-spacing: 0.16em !important; font-weight: 700; color: var(--qx-gold, #efd090) !important;
+  }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-eyebrow::before {
+    content: ""; width: 1.75rem; height: 1px; background: linear-gradient(90deg, transparent, var(--qx-gold, #efd090));
+  }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-eyebrow svg { width: 0.95rem; height: 0.95rem; }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats {
+    display: flex !important; flex-wrap: nowrap; gap: 0 !important; width: fit-content; max-width: 100%;
+    margin-top: 1.5rem !important; padding: 0 !important; border: 0 !important; background: none !important;
+  }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats > div {
+    padding: 0.125rem 1.5rem !important; min-width: 0;
+    border: 0 !important; border-radius: 0 !important; background: none !important; box-shadow: none !important;
+    border-left: 1px solid color-mix(in oklab, var(--foreground) 14%, transparent) !important;
+  }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats > div:first-child { padding-left: 0 !important; border-left: 0 !important; }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats dd {
+    order: -1; margin: 0; font-size: 1.75rem !important; font-weight: 750; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;
+    background: linear-gradient(180deg, #fff3cf, var(--qx-gold, #efd090) 55%, #c9962b); -webkit-background-clip: text; background-clip: text; color: transparent !important;
+  }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats dt {
+    margin-top: 0.25rem; font-size: 0.6875rem !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground) !important;
+  }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats > div { display: flex; flex-direction: column; }
+}
