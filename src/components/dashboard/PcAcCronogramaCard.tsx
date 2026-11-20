@@ -26,6 +26,7 @@ import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyReso
 import { useMediaCatalog, type MediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import "@/styles/pcac-schedule.css";
+import { DayStudio } from "./cronograma/DayStudio";
 import { Ani, TodayView, WeekView, PlanView, DisciplinesView, FinalView, studyMinutes } from "./cronograma/Studio";
 const CRONOGRAMA_ANCHOR = "pcac-cronograma";
 const DAY_SHORT = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
@@ -930,91 +931,53 @@ export function PcAcCronogramaCard({
           {tab === "disciplinas" && <div className="cs-stage" key="disc"><DisciplinesView grid={grid} empty="Configure seus dias de estudo para ver a distribuição." /></div>}
           {tab === "final" && <div className="cs-stage" key="final"><FinalView days={finalDays} /></div>}
       </section>
-      <Dialog isOpen={!!openEntry} onOpenChange={(open) => { if (!open) setOpenDate(null); }} width="min(1480px, 95vw)" maxHeight="92dvh" padding={0}>
-        {openEntry && (() => {
-          const { day, week } = openEntry;
-          const summary = summarizeDay(day);
-          const typeStats = summarizeDayByType(day);
-          return (
-            <Layout
-              header={
-                <DialogHeader
-                  title={`${WEEKDAY_FULL[day.weekday]} · ${fmtDateBr(day.date)}`}
-                  subtitle={`Semana ${week.weekNumber} · ${PCAC_PHASE_LABEL[week.phase]}${summary.studyMinutes ? ` · ${fmtDuration(summary.studyMinutes)} de estudo` : ""}`}
-                  onOpenChange={() => setOpenDate(null)}
-                  hasDivider
-                />
-              }
-              content={
-                <LayoutContent>
-                  <div className="pcac-day-summary">
-                    <span data-tone="gold"><Clock aria-hidden /> <strong>{summary.studyMinutes ? fmtDuration(summary.studyMinutes) : "Sem estudo"}</strong> de estudo</span>
-                    <span data-tone="blue"><BookOpen aria-hidden /> <strong>{day.activities.filter((a) => !NON_STUDY.has(a.type)).length}</strong> blocos</span>
-                    <span data-tone="green"><Coffee aria-hidden /> <strong>{day.activities.filter((a) => a.type === "pausa").length}</strong> pausas</span>
-                    {summary.hasTaf && <span data-tone="rose"><Dumbbell aria-hidden /> Treino físico</span>}
-                    <small>Siga a ordem de cima para baixo. Cada bloco traz o que fazer e por quanto tempo.</small>
-                  </div>
-                  <div className="pcac-day-window">
-                    <aside className="pcac-day-sidebar" aria-label="Resumo por tipo de atividade">
-                      <p className="pcac-day-sidebar__title">Neste dia</p>
-                      <ul className="pcac-day-sidebar__types">
-                        {typeStats.map(({ type, count, minutes }) => {
-                          const Icon = ACTIVITY_ICON[type];
-                          return (
-                            <li key={type} className="pcac-day-sidebar__type" data-type={type}>
-                              <span className="pcac-day-sidebar__type-icon"><Icon aria-hidden /></span>
-                              <span className="pcac-day-sidebar__type-label">{PCAC_ACTIVITY_LABEL[type]}</span>
-                              <span className="pcac-day-sidebar__type-meta">{count}× · {fmtDuration(minutes)}</span>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </aside>
-                    <ol className={`pcac-day-timeline pcac-week--${((week.weekNumber - 1) % 5) + 1}`}>
-                      {day.activities.map((activity, index) => {
-                        const Icon = ACTIVITY_ICON[activity.type];
-                        const resource = findPcAcStudyResource(activity.subject);
-                        const isStudy = !NON_STUDY.has(activity.type);
-                        return (
-                          <li key={index} className="pcac-day-timeline__item" data-kind={isStudy ? "study" : activity.type} data-type={activity.type}>
-                            <span className="pcac-day-timeline__time">
-                              {activity.start ? <><strong>{activity.start}</strong><span>{activity.end}</span></> : <strong>Dia todo</strong>}
-                            </span>
-                            <span className="pcac-day-timeline__dot"><Icon aria-hidden /></span>
-                            <div className="pcac-day-timeline__content">
-                              <p className="pcac-day-timeline__head">
-                                <AstryxBadge variant={ACTIVITY_BADGE_VARIANT[activity.type]} label={PCAC_ACTIVITY_LABEL[activity.type]} />
-                                {activity.subject && <strong>{activity.subject}</strong>}
-                                {activity.start && <span>{fmtDuration(activityMinutes(activity))}</span>}
-                              </p>
-                              {activity.topic && <p className="pcac-day-timeline__topic">{activity.topic}</p>}
-                              <p className="pcac-day-timeline__detail">{activity.detail}</p>
-                              {isStudy && (resource || materialShortcut(activity, catalog)) && (
-                                <p className="pcac-day-timeline__actions">
-                                  <MaterialShortcut activity={activity} />
-                                  {resource && <a href={pcAcStudyResourceUrl(resource.courseId)}>Abrir aulas</a>}
-                                </p>
-                              )}
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ol>
-                  </div>
-                </LayoutContent>
-              }
-              footer={
-                <LayoutFooter hasDivider>
-                  <div className="pcac-day-dialog__footer">
-                    <AstryxButton label="Dia anterior" size="sm" variant="secondary" icon={<ChevronLeft />} isDisabled={openIndex <= 0} onClick={() => goToDay(openIndex - 1)} />
-                    <AstryxButton label="Próximo dia" size="sm" variant="secondary" icon={<ChevronRight />} isDisabled={openIndex >= allDays.length - 1} onClick={() => goToDay(openIndex + 1)} />
-                  </div>
-                </LayoutFooter>
-              }
-            />
-          );
-        })()}
-      </Dialog>
+      {openEntry && (() => {
+        const { day, week } = openEntry;
+        const summary = summarizeDay(day);
+        const typeStats = summarizeDayByType(day);
+        return (
+          <DayStudio
+            title={`${WEEKDAY_FULL[day.weekday]} · ${fmtDateBr(day.date)}`}
+            subtitle={`Semana ${week.weekNumber} · ${PCAC_PHASE_LABEL[week.phase]}`}
+            weekClass={`pcac-week--${((week.weekNumber - 1) % 5) + 1}`}
+            chips={[
+              { tone: "gold", Icon: Clock, text: <><b>{summary.studyMinutes ? fmtDuration(summary.studyMinutes) : "Sem estudo"}</b> de estudo</> },
+              { tone: "blue", Icon: BookOpen, text: <><b>{day.activities.filter((a) => !NON_STUDY.has(a.type)).length}</b> blocos</> },
+              { tone: "green", Icon: Coffee, text: <><b>{day.activities.filter((a) => a.type === "pausa").length}</b> pausas</> },
+              ...(summary.hasTaf ? [{ tone: "rose" as const, Icon: Dumbbell, text: <>Treino físico</> }] : []),
+            ]}
+            types={typeStats.map(({ type, count, minutes }) => ({ type, label: PCAC_ACTIVITY_LABEL[type], Icon: ACTIVITY_ICON[type], count, minutes }))}
+            items={day.activities.map((activity, index) => {
+              const resource = findPcAcStudyResource(activity.subject);
+              const isStudy = !NON_STUDY.has(activity.type);
+              return {
+                key: index,
+                type: activity.type,
+                Icon: ACTIVITY_ICON[activity.type],
+                label: PCAC_ACTIVITY_LABEL[activity.type],
+                start: activity.start,
+                end: activity.end,
+                minutes: activity.start ? activityMinutes(activity) : 0,
+                subject: activity.subject,
+                topic: activity.topic,
+                detail: activity.detail,
+                isStudy,
+                actions: isStudy && (resource || materialShortcut(activity, catalog)) ? (
+                  <>
+                    <MaterialShortcut activity={activity} />
+                    {resource && <a href={pcAcStudyResourceUrl(resource.courseId)}>Abrir aulas</a>}
+                  </>
+                ) : null,
+              };
+            })}
+            hasPrev={openIndex > 0}
+            hasNext={openIndex < allDays.length - 1}
+            onPrev={() => goToDay(openIndex - 1)}
+            onNext={() => goToDay(openIndex + 1)}
+            onClose={() => setOpenDate(null)}
+          />
+        );
+      })()}
     </section>
     </Theme>
   );

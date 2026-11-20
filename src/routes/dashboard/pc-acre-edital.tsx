@@ -17,7 +17,7 @@ import {
   ShieldCheck,
   Users,
   GraduationCap,
-  ListChecks, Layers, FileText, MapPin, Flame, Flag,
+  ListChecks, Layers, FileText, MapPin, Flame, Flag, Info,
 } from "lucide-react";
 import { findPcAcStudyResource, pcAcStudyResourceUrl } from "@/lib/pcAcStudyResources";
 import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
@@ -348,6 +348,7 @@ function DisciplineAccordionItem({
   const header = (
     <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 text-left">
       <span className="text-sm font-semibold">{discipline.name}</span>
+      <span className="pc-mini" aria-hidden="true"><i style={{ width: `${counts.total ? Math.round((counts.estudado / counts.total) * 100) : 0}%` }} /></span>
       <Badge
         variant="outline"
         className={
@@ -682,6 +683,11 @@ function PcAcreEditalVerticalizadoPage() {
           <span>POLÍCIA CIVIL DO ACRE · IDECAN</span>
           <h1>Edital PC-AC <small>001/2026</small></h1>
         </div>
+      <div className="pcac-metrics" aria-label="Resumo do cargo e da preparação">
+        <span><Users aria-hidden="true" /> <strong>{cargo.vagas}</strong> vagas · {cargo.salario}</span>
+        <span><CheckCircle2 aria-hidden="true" /> <strong>{percent}%</strong> estudado</span>
+        <span><CalendarClock aria-hidden="true" /> Prova 24/01/2027 · <strong>{daysToExam} dias</strong></span>
+      </div>
         <label className="pcac-command-bar__cargo">
           <span>Seu cargo</span>
           <select value={cargo.id} onChange={(event) => setCargoParam(event.target.value)}>
@@ -689,16 +695,11 @@ function PcAcreEditalVerticalizadoPage() {
           </select>
         </label>
         <div className="pcac-command-bar__actions">
-          <Button variant="outline" asChild><Link to="/dashboard/edital"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /> Estudar por assunto</Link></Button>
-          <Button variant="outline" asChild><Link to="/dashboard/inteligencia-idecan"><ScanSearch aria-hidden="true" className="h-4 w-4" /> Inteligência IDECAN</Link></Button>
-          <Button variant="secondary" onClick={() => void exportPdf()}><Download aria-hidden="true" className="h-4 w-4" /> Exportar checklist</Button>
+          <Button variant="outline" asChild><Link to="/dashboard/edital" title="Estudar por assunto" aria-label="Estudar por assunto"><BookOpenCheck aria-hidden="true" className="h-4 w-4" /><span>Estudar por assunto</span></Link></Button>
+          <Button variant="outline" asChild><Link to="/dashboard/inteligencia-idecan" title="Inteligência IDECAN" aria-label="Inteligência IDECAN"><ScanSearch aria-hidden="true" className="h-4 w-4" /><span>Inteligência IDECAN</span></Link></Button>
+          <Button variant="secondary" onClick={() => void exportPdf()} title="Exportar checklist em PDF" aria-label="Exportar checklist"><Download aria-hidden="true" className="h-4 w-4" /><span>Exportar</span></Button>
         </div>
       </header>
-      <div className="pcac-metrics" aria-label="Resumo do cargo e da preparação">
-        <span><Users aria-hidden="true" /> <strong>{cargo.vagas}</strong> vagas · {cargo.salario}</span>
-        <span><CheckCircle2 aria-hidden="true" /> <strong>{percent}%</strong> estudado</span>
-        <span><CalendarClock aria-hidden="true" /> Prova 24/01/2027 · <strong>{daysToExam} dias</strong></span>
-      </div>
 
       <Tabs
         value={editalTab}
@@ -771,7 +772,7 @@ function PcAcreEditalVerticalizadoPage() {
         </TabsContent>
         <TabsContent value="conteudo" className="space-y-5">
           {user?.id && !chance.checking && !chance.edital && (
-            <p className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-sm">
+            <p className="pc-notice flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-3 py-1.5 text-xs">
               <span>Ative o edital da PC-AC para ver, em cada assunto, a chance de cair na prova pelas provas da IDECAN.</span>
               <Link to="/dashboard/my-contest" className="font-semibold text-primary underline-offset-4 hover:underline">Ativar em Meu concurso →</Link>
             </p>
@@ -780,54 +781,46 @@ function PcAcreEditalVerticalizadoPage() {
             <p className="rounded-xl border px-4 py-3 text-sm text-muted-foreground">Não foi possível carregar a análise das provas agora. O edital continua disponível.</p>
           )}
 
-      <Card className="pcac-edital-card pcac-edital-content">
-        <CardHeader>
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <CardTitle className="text-base">
-                {cargo.label} · {cargo.vagas} vagas · {cargo.salario}
-              </CardTitle>
-              <CardDescription>
-                Toque em "Pendente" para alternar entre Pendente → A estudar → Estudado. O progresso
-                fica salvo neste navegador. O selo "questões · % acertos" em cada disciplina vem do
-                seu desempenho real no treinador de questões.
-              </CardDescription>
-            </div>
-            <Badge variant="outline" className="text-sm">
-              {counts.estudado}/{counts.total} estudado
-            </Badge>
+      <div className="pc-ct" data-pct={percent}>
+        <header className="pc-head">
+          <span className="pc-ring" style={{ "--v": percent } as React.CSSProperties} aria-label={`${percent}% estudado`}><b>{percent}%</b></span>
+          <div className="pc-head__t">
+            <h3>{cargo.label}</h3>
+            <p><span>{cargo.salario}</span><span><b>{counts.estudado}</b>/{counts.total} estudado</span></p>
           </div>
-          <Progress value={percent} className="mt-3" />
-        </CardHeader>
-        <CardContent>
-          <Accordion type="multiple" defaultValue={cargo.blocks.map((b) => b.title)}>
-            {cargo.blocks.map((block) => (
-              <AccordionItem key={block.title} value={block.title}>
-                <AccordionTrigger className="text-left">{block.title}</AccordionTrigger>
-                <AccordionContent>
-                  <ul className="space-y-2">
-                    {block.disciplines.map((discipline) => (
-                      <DisciplineAccordionItem
-                        key={discipline.id}
-                        block={block.title}
-                        discipline={discipline}
-                        cargoId={cargo.id}
-                        progress={progress}
-                        subjectStats={subjectStats}
-                        incidence={chance.incidence}
-                        incidenceLabel={chance.edital?.label}
-                        onToggleTopic={(disciplineId, topicIndex, subtopicIndex, forcedStatus) =>
-                          toggle(block.title, disciplineId, topicIndex, subtopicIndex, forcedStatus)
-                        }
-                      />
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </CardContent>
-      </Card>
+          <p className="pc-hint" title='Toque no status de cada assunto para alternar entre Pendente → A estudar → Estudado. O progresso fica salvo neste navegador. O selo "questões · % acertos" vem do seu desempenho real no treinador de questões.'>
+            <Info aria-hidden /> Toque no status para alternar: Pendente → A estudar → Estudado
+          </p>
+          <div className="pc-bar" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100}><i style={{ width: `${percent}%` }} /></div>
+        </header>
+        <div className="pc-scroll">
+          {cargo.blocks.map((block, bi) => {
+            const bc = block.disciplines.reduce((acc, d) => { const c = pcAcVerticalDisciplineCounts(block.title, d, progress); return { e: acc.e + c.estudado, t: acc.t + c.total }; }, { e: 0, t: 0 });
+            return (
+              <section key={block.title} className="pc-block" data-tone={bi % 3}>
+                <h4><span className="pc-dot" /> {block.title} <em>{bc.e}/{bc.t}</em></h4>
+                <ul className="pc-grid">
+                  {block.disciplines.map((discipline) => (
+                    <DisciplineAccordionItem
+                      key={discipline.id}
+                      block={block.title}
+                      discipline={discipline}
+                      cargoId={cargo.id}
+                      progress={progress}
+                      subjectStats={subjectStats}
+                      incidence={chance.incidence}
+                      incidenceLabel={chance.edital?.label}
+                      onToggleTopic={(disciplineId, topicIndex, subtopicIndex, forcedStatus) =>
+                        toggle(block.title, disciplineId, topicIndex, subtopicIndex, forcedStatus)
+                      }
+                    />
+                  ))}
+                </ul>
+              </section>
+            );
+          })}
+        </div>
+      </div>
 
         </TabsContent>
         <TabsContent value="cronograma" className="pcac-astrix-outer-tab">

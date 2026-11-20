@@ -221,6 +221,12 @@ export function PcAcExamMap({
       </div>
 
       <VideoWatchDialog video={watching} onClose={() => setWatching(null)} />
+      <p className="px-legend" aria-label="Escala de chance de cair na prova">
+        <span><i style={{ "--c": "var(--p1)" } as import("react").CSSProperties} />Muito alta</span>
+        <span><i style={{ "--c": "var(--p2)" } as import("react").CSSProperties} />Alta</span>
+        <span><i style={{ "--c": "var(--p3)" } as import("react").CSSProperties} />Média</span>
+        <span><i style={{ "--c": "var(--p4)" } as import("react").CSSProperties} />Baixa</span>
+      </p>
       <p className="px-note" title={`Questões e pesos: Anexo II do edital.${hasEstimate ? " “~” indica estimativa: o edital informa só o total do bloco específico." : ""} “Provável” é estimativa da plataforma com base no padrão da IDECAN; não é garantia.`}>
         <Info aria-hidden="true" /> Anexo II do edital{hasEstimate ? " · ~ = estimado" : ""} · “provável” é estimativa da plataforma, não garantia.
       </p>

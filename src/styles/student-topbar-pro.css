@@ -162,3 +162,6 @@
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-main:not(#_):not(#_) { min-height: 0 !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-content:not(#_):not(#_) { min-height: 0 !important; flex: 0 0 auto !important; padding-bottom: 6px !important; }
 }
+@media (min-width: 1101px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_) { min-height: calc(100dvh - 32px) !important; }
+}
