@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, BrainCircuit, Flame, Info, PlayCircle, Target } from "lucide-react";
+import { ArrowRight, BookOpen, BrainCircuit, Flame, Info, PlayCircle } from "lucide-react";
 import { VideoWatchDialog, type WatchableVideo } from "@/components/media/VideoWatchDialog";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
@@ -19,6 +19,9 @@ import { pcAcDisciplineLink } from "@/lib/pcAcreVerticalLinks";
 import { pcAcDiscursiveBrief } from "@/lib/pcAcreExamWeights";
 import { canonicalSubject } from "@/lib/subjects";
 import "@/styles/pcac-exam-map.css";
+import "@/styles/pcac-exam-map-pro.css";
+import { examDaysLeft } from "@/lib/examClock";
+import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 
 const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1).replace(".", ","));
 type Metric = "questions" | "points";
@@ -111,234 +114,138 @@ export function PcAcExamMap({
     return null;
   };
 
+  const levelLabel = active ? active.level : "";
+  const topicActions = (t: { title: string }) => {
+    const back = "/dashboard/mapa-idecan";
+    const hit = active ? findTheory(theoryIndex, active.name, t.title, 1)[0] : undefined;
+    const target = theoryTarget(hit, t.title, back);
+    const vid = videoFor(t.title);
+    return (
+      <span className="px-acts">
+        {target.direct ? (
+          <Link to={target.to as never} params={target.params as never} search={target.search as never} title={`Estudar: ${target.label}`} aria-label={`Material didático: ${t.title}`} data-k="book"><BookOpen aria-hidden="true" /></Link>
+        ) : subject ? (
+          <Link to="/dashboard/library" search={{ collection: "subjects", discipline: subject, back }} title="Abrir o material da matéria" aria-label={`Material da matéria: ${t.title}`} data-k="book" data-generic="true"><BookOpen aria-hidden="true" /></Link>
+        ) : null}
+        {vid ? (
+          <button type="button" data-k="play" title={vid.exact ? "Assistir videoaula deste assunto" : "Assistir videoaula da matéria"} aria-label={`Videoaula: ${t.title}`} onClick={() => setWatching(vid.video)}><PlayCircle aria-hidden="true" /></button>
+        ) : (
+          <span className="px-acts__none" title="Ainda não há videoaula cadastrada" aria-label="Sem videoaula cadastrada"><PlayCircle aria-hidden="true" /></span>
+        )}
+        {subject && (
+          <Link to="/dashboard/question-trainer" search={{ subject }} title="Treinar questões da matéria" aria-label={`Questões de ${active?.name}`} data-k="brain"><BrainCircuit aria-hidden="true" /></Link>
+        )}
+      </span>
+    );
+  };
+
   return (
-    <section className="pcmap" aria-labelledby="pcmap-title">
-      <header className="pcmap__head">
-        <div>
-          {hideTitle ? (
-            <h2 id="pcmap-title" className="sr-only">
-              Mapa da prova IDECAN · PC-AC 2026
-            </h2>
-          ) : (
-            <h2 id="pcmap-title" className="pcmap__title">
-              <Target aria-hidden="true" /> Mapa da prova IDECAN · PC-AC 2026
-            </h2>
-          )}
-          <p className="pcmap__sub">
-            Edital nº 001 SEAD/PCAC · {totalQ} questões · {fmt(totalP)} pontos ·{" "}
-            {pcAcDiscursiveBrief(cargo)}
-          </p>
+    <section className="px-root" aria-labelledby="pcmap-title">
+      <h2 id="pcmap-title" className="sr-only">Mapa da prova IDECAN · PC-AC 2026</h2>
+      <header className="px-bar">
+        <div role="tablist" aria-label="Cargo" className="px-cargos">
+          {pcAcVerticalCargos.map((c) => (
+            <button key={c.id} type="button" role="tab" aria-selected={c.id === cargoId} onClick={() => { setCargoId(c.id); setSelected(null); }}>{c.label}</button>
+          ))}
         </div>
-        <div className="pcmap__tools">
-          <div role="group" aria-label="Medir por" className="pcmap__seg">
-            {(["questions", "points"] as const).map((m) => (
-              <button
-                key={m}
-                type="button"
-                aria-pressed={metric === m}
-                onClick={() => setMetric(m)}
-              >
-                {m === "questions" ? "Questões" : "Pontos"}
-              </button>
-            ))}
-          </div>
+        <div className="px-sum" title={pcAcDiscursiveBrief(cargo)}>
+          <span><b><CountNum value={totalQ} /></b> questões</span>
+          <span><b><CountNum value={totalP} /></b> pontos</span>
+          <span className="px-sum__d"><b>{examDaysLeft(PCAC_EXAM_DATE) ?? 0}</b> dias p/ a prova</span>
+        </div>
+        <div role="group" aria-label="Medir por" className="px-seg">
+          {(["questions", "points"] as const).map((m) => (
+            <button key={m} type="button" aria-pressed={metric === m} onClick={() => setMetric(m)}>{m === "questions" ? "Questões" : "Pontos"}</button>
+          ))}
         </div>
       </header>
 
-      <div role="tablist" aria-label="Cargo" className="pcmap__cargos">
-        {pcAcVerticalCargos.map((c) => (
-          <button
-            key={c.id}
-            type="button"
-            role="tab"
-            aria-selected={c.id === cargoId}
-            onClick={() => {
-              setCargoId(c.id);
-              setSelected(null);
-            }}
-          >
-            {c.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="pcmap__blocks">
-        {blocks.map((b, bi) => (
-          <div
-            key={b.title}
-            className="pcmap__block"
-            data-tone={bi % 4}
-            style={{ flexGrow: value(b) }}
-          >
-            <div className="pcmap__block-head">
-              <strong>{b.title}</strong>
-              <span>
-                {b.questions} questões · {fmt(b.points)} pts
-              </span>
-            </div>
-            <ul className="pcmap__tiles">
-              {b.disciplines.map((d) => (
-                <li key={d.id} style={{ flexGrow: Math.max(value(d), 0.6) }}>
-                  <button
-                    type="button"
-                    className="pcmap__tile"
-                    data-level={d.level}
-                    aria-pressed={active?.id === d.id}
-                    onClick={() => setSelected(d.id)}
-                  >
-                    <span className="pcmap__tile-name">{d.name}</span>
-                    <span className="pcmap__tile-num">
-                      {fmt(value(d))}
-                      <small>
-                        {metric === "questions" ? (d.estimated ? "questões estimadas" : "questões") : "pontos"}
-                      </small>
-                    </span>
-                    <span className="pcmap__bar" aria-hidden="true">
-                      <i style={{ width: `${Math.round(d.share * 100)}%` }} />
-                    </span>
-                    {(() => {
-                      const progress = materialProgress.get(d.id);
-                      return progress ? (
-                        <span className="pcmap__material-progress" title={progress.total ? `${progress.completed} de ${progress.total} materiais estudados` : "Nenhum material didático vinculado a esta disciplina"}>
-                          <span><strong>{progress.studied}%</strong> estudado · falta {progress.remaining}%</span>
-                          <i aria-hidden="true"><b style={{ width: `${progress.studied}%` }} /></i>
+      <div className="px-main">
+        <div className="px-map" key={cargoId}>
+          {blocks.map((b, bi) => (
+            <section key={b.title} className="px-block" data-tone={bi % 4} style={{ flexGrow: Math.max(value(b), 1) }}>
+              <header>
+                <strong>{b.title}</strong>
+                <span><b>{b.questions}</b> q · {fmt(b.points)} pts</span>
+              </header>
+              <ul>
+                {b.disciplines.map((d, di) => {
+                  const progress = materialProgress.get(d.id);
+                  return (
+                    <li key={d.id} style={{ flexGrow: Math.max(value(d), 0.6), animationDelay: `${(bi * 4 + di) * 40}ms` }}>
+                      <button type="button" className="px-tile" data-level={d.level} aria-pressed={active?.id === d.id} onClick={() => setSelected(d.id)}>
+                        <span className="px-tile__name">{d.name}</span>
+                        <span className="px-tile__num"><CountNum value={value(d)} />{d.estimated && metric === "questions" && <abbr title="Estimado: o edital informa só o total do bloco">~</abbr>}<small>{metric === "questions" ? "q" : "pts"}</small></span>
+                        <span className="px-tile__bar" aria-hidden="true"><i style={{ width: `${Math.round(d.share * 100)}%` }} /></span>
+                        <span className="px-tile__prog" title={progress?.total ? `${progress.completed} de ${progress.total} materiais estudados` : "Nenhum material vinculado"}>
+                          <i style={{ width: `${progress?.studied ?? 0}%` }} /><em>{progress?.studied ?? 0}% estudado</em>
                         </span>
-                      ) : null;
-                    })()}
-                  </button>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          ))}
+        </div>
+
+        {active && (
+          <article className="px-detail" aria-live="polite" key={active.id}>
+            <header className="px-detail__h">
+              <ShareRing share={active.share} />
+              <div>
+                <h3>{active.name}</h3>
+                <p>{fmt(active.questions)} q × peso {active.weight} = <b>{fmt(active.points)} pts</b></p>
+              </div>
+              <span className="px-chance" data-level={active.level}><Flame aria-hidden="true" /> {levelLabel}</span>
+            </header>
+            <div className="px-detail__tools">
+              <button type="button" aria-pressed={onlyHot} onClick={() => setOnlyHot((v) => !v)}><Flame aria-hidden="true" /> Só prováveis</button>
+              <span>{topics.length} assuntos</span>
+            </div>
+            <ul className="px-topics">
+              {topics.map((t, i) => (
+                <li key={`${t.title}-${i}`} data-hot={t.hot} style={{ animationDelay: `${Math.min(i, 14) * 30}ms` }}>
+                  <span>{t.title}{t.hot && <em>provável</em>}</span>
+                  {topicActions(t)}
                 </li>
               ))}
+              {topics.length === 0 && <li className="px-topics__empty">Nenhum assunto marcado nesta disciplina.</li>}
             </ul>
-          </div>
-        ))}
+            <footer className="px-detail__f">
+              {subject && <Link to="/dashboard/question-trainer" search={{ subject }}>Treinar <ArrowRight aria-hidden="true" /></Link>}
+              <Link to="/dashboard/inteligencia-idecan">Estatísticas IDECAN <ArrowRight aria-hidden="true" /></Link>
+            </footer>
+          </article>
+        )}
       </div>
 
-      {active && (
-        <article className="pcmap__detail" aria-live="polite">
-          <div className="pcmap__detail-head">
-            <div>
-              <h3>{active.name}</h3>
-              <p>
-                {fmt(active.questions)} questões × peso {active.weight} ={" "}
-                <strong>{fmt(active.points)} pontos</strong> · {Math.round(active.share * 100)}% da
-                prova objetiva
-              </p>
-            </div>
-            <span className="pcmap__level" data-level={active.level}>
-              <Flame aria-hidden="true" /> Chance {active.level.toLowerCase()}
-            </span>
-          </div>
-          <label className="pcmap__check">
-            <input
-              type="checkbox"
-              checked={onlyHot}
-              onChange={(e) => setOnlyHot(e.target.checked)}
-            />{" "}
-            Só assuntos mais prováveis
-          </label>
-          <ul className="pcmap__topics">
-            {topics.map((t, i) => (
-              <li key={`${t.title}-${i}`} data-hot={t.hot}>
-                <span className="pcmap__topic-text">
-                  {t.title}
-                  {t.hot && <em>provável</em>}
-                </span>
-                <span className="pcmap__topic-actions">
-                  {(() => {
-                    const back = "/dashboard/mapa-idecan";
-                    const hit = findTheory(theoryIndex, active.name, t.title, 1)[0];
-                    const target = theoryTarget(hit, t.title, back);
-                    if (target.direct)
-                      return (
-                        <Link
-                          to={target.to as never}
-                          params={target.params as never}
-                          search={target.search as never}
-                          title={`Estudar: ${target.label}`}
-                          aria-label={`Material didático: ${t.title}`}
-                        >
-                          <BookOpen aria-hidden="true" />
-                        </Link>
-                      );
-                    return subject ? (
-                      <Link
-                        to="/dashboard/library"
-                        search={{ collection: "subjects", discipline: subject, back }}
-                        title="Abrir o material da matéria (sem guia específico deste assunto)"
-                        aria-label={`Material da matéria: ${t.title}`}
-                        data-generic="true"
-                      >
-                        <BookOpen aria-hidden="true" />
-                      </Link>
-                    ) : null;
-                  })()}
-                  {(() => {
-                    const hit = videoFor(t.title);
-                    return hit ? (
-                      <button
-                        type="button"
-                        data-exact={hit.exact}
-                        title={
-                          hit.exact
-                            ? "Assistir videoaula deste assunto"
-                            : "Assistir videoaula da matéria"
-                        }
-                        aria-label={`Videoaula: ${t.title}`}
-                        onClick={() => setWatching(hit.video)}
-                      >
-                        <PlayCircle aria-hidden="true" />
-                      </button>
-                    ) : (
-                      <span
-                        className="pcmap__none"
-                        title="Ainda não há videoaula cadastrada"
-                        aria-label="Sem videoaula cadastrada"
-                      >
-                        <PlayCircle aria-hidden="true" />
-                      </span>
-                    );
-                  })()}
-                  {subject && (
-                    <Link
-                      to="/dashboard/question-trainer"
-                      search={{ subject }}
-                      title="Treinar questões da matéria"
-                      aria-label={`Questões de ${active.name}`}
-                    >
-                      <BrainCircuit aria-hidden="true" />
-                    </Link>
-                  )}
-                </span>
-              </li>
-            ))}
-            {topics.length === 0 && (
-              <li className="pcmap__empty">Nenhum assunto marcado nesta disciplina.</li>
-            )}
-          </ul>
-          <div className="pcmap__actions">
-            {subject && (
-              <Link to="/dashboard/question-trainer" search={{ subject }}>
-                Treinar {active.name} <ArrowRight aria-hidden="true" />
-              </Link>
-            )}
-            <Link to="/dashboard/inteligencia-idecan">
-              Estatísticas da IDECAN <ArrowRight aria-hidden="true" />
-            </Link>
-          </div>
-        </article>
-      )}
-
       <VideoWatchDialog video={watching} onClose={() => setWatching(null)} />
-      <p className="pcmap__note">
-        <Info aria-hidden="true" />
-        <span>
-          Questões e pesos: Anexo II do edital.
-          {hasEstimate &&
-            " “Questões estimadas” indica que o edital informa apenas o total do bloco específico, sem dividir oficialmente por disciplina."}{" "}
-          “Provável” é uma estimativa da plataforma com base no padrão da IDECAN em provas
-          policiais; não é garantia.
-        </span>
+      <p className="px-note" title={`Questões e pesos: Anexo II do edital.${hasEstimate ? " “~” indica estimativa: o edital informa só o total do bloco específico." : ""} “Provável” é estimativa da plataforma com base no padrão da IDECAN; não é garantia.`}>
+        <Info aria-hidden="true" /> Anexo II do edital{hasEstimate ? " · ~ = estimado" : ""} · “provável” é estimativa da plataforma, não garantia.
       </p>
     </section>
+  );
+}
+
+/** Número que sobe até o valor ao aparecer (respeita reduzir movimento). */
+function CountNum({ value }: { value: number }) {
+  const [v, setV] = useState(0);
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setV(value); return; }
+    const t0 = performance.now(); let raf = 0;
+    const tick = (n: number) => { const p = Math.min(1, (n - t0) / 600); setV(value * (1 - Math.pow(1 - p, 3))); if (p < 1) raf = requestAnimationFrame(tick); };
+    raf = requestAnimationFrame(tick); return () => cancelAnimationFrame(raf);
+  }, [value]);
+  return <>{fmt(Math.round(v * 10) / 10)}</>;
+}
+
+function ShareRing({ share }: { share: number }) {
+  const r = 20, c = 2 * Math.PI * r;
+  return (
+    <span className="px-ring" role="img" aria-label={`${Math.round(share * 100)}% da prova`}>
+      <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r={r} className="px-ring__t" /><circle cx="25" cy="25" r={r} className="px-ring__v" strokeDasharray={c} style={{ strokeDashoffset: c * (1 - share) }} /></svg>
+      <b>{Math.round(share * 100)}%</b>
+    </span>
   );
 }
