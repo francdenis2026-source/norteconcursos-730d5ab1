@@ -71,11 +71,6 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
     <>
       <section id={ids.hero} className="sx-band" aria-labelledby={ids.title}>
         <HeroBackdropClock />
-        {!mobile && (
-          <div className="hc-corner">
-            <NorteCube size={0.37} />
-          </div>
-        )}
         <div className="sx sx-hero">
           <div className="sx-hero__copy">
             {mobile && (
@@ -101,20 +96,27 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
                 Ver a plataforma
               </a>
             </div>
+            <div className="sx-statsrow">
             <dl className="sx-stats" aria-label="Números da plataforma">
-              <div>
-                <dt>Total cadastrado</dt>
-                <dd>{fmt(data?.registered)}</dd>
-              </div>
-              <div>
-                <dt>Disponíveis para treinar</dt>
-                <dd>{fmt(data?.available)}</dd>
-              </div>
-              <div>
-                <dt>Grátis por dia, sem cadastro</dt>
-                <dd>{GUEST_DAILY_LIMIT}</dd>
-              </div>
-            </dl>
+                <div>
+                  <dt>Total cadastrado</dt>
+                  <dd>{fmt(data?.registered)}</dd>
+                </div>
+                <div>
+                  <dt>Disponíveis para treinar</dt>
+                  <dd>{fmt(data?.available)}</dd>
+                </div>
+                <div>
+                  <dt>Grátis por dia, sem cadastro</dt>
+                  <dd>{GUEST_DAILY_LIMIT}</dd>
+                </div>
+              </dl>
+              {!mobile && (
+                <div className="hc-inline" aria-hidden="true">
+                  <NorteCube size={0.37} />
+                </div>
+              )}
+            </div>
           </div>
           <div className="sx-hero__panel">
             <DailyChallengeBadge />

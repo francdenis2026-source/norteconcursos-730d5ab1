@@ -127,3 +127,21 @@ html body .nf__col { gap: 0.625rem; }
   }
   html body:not(#_):not(#_):not(#_) .home.hr-canvas .sx-hero .sx-stats > div { display: flex; flex-direction: column; }
 }
+
+/* Cubo em linha com os números (nunca sobre outro elemento) e hero aproveitando a largura até a margem direita. */
+html body:not(#_):not(#_):not(#_) .sx-hero .sx-statsrow { display: flex; align-items: center; gap: 1rem; width: 100%; }
+html body:not(#_):not(#_):not(#_) .sx-hero .sx-statsrow > .sx-stats { flex: 0 1 auto; }
+html body:not(#_):not(#_):not(#_) .sx-hero .hc-inline { display: none; }
+@media (min-width: 1100px) {
+  html body:not(#_):not(#_):not(#_) .sx-hero .hc-inline {
+    display: block; flex: none; margin-left: auto; width: 72px; height: 72px; pointer-events: none;
+  }
+  html body:not(#_):not(#_):not(#_) .sx-hero .hc-inline .ncube { margin: 0; pointer-events: auto; }
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .desktop-homepage > .sx-band > .sx-hero {
+    width: calc(100% - 6rem) !important; max-width: none !important; margin-left: 2rem !important; margin-right: auto !important;
+  }
+  html body:not(#_):not(#_):not(#_) .sx-hero .sx-hero__panel { justify-self: end; }
+}
+@media (min-width: 1100px) {
+  html body:not(#_):not(#_):not(#_) .home.hr-canvas .desktop-homepage > .sx-band { grid-template-columns: minmax(0, 1fr) !important; }
+}
