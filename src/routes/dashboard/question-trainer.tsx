@@ -2631,7 +2631,7 @@ function formatResponseTime(seconds: number) {
  * Ajusta a janela da questão à altura visível (sem rolagem da página no computador):
  * mede onde o cartão começa e a faixa fixa do rodapé e grava em --qt4-h.
  */
-/** Balança de Certo/Errado: repousa balançando; ao responder, pende para o lado do gabarito. */
+/** Balança de Certo/Errado: metal escovado, pêndulo amortecido; ao responder, assenta no lado do gabarito. */
 function QxScale({
   tilt,
   answered,
@@ -2643,25 +2643,74 @@ function QxScale({
 }) {
   const pan = (cx: number, side: "left" | "right", label: string) => (
     <g className="qx-scale__pan" data-side={side} data-win={answered && tilt === side ? "" : undefined}>
-      <line x1={cx} y1="44" x2={cx - 30} y2="112" />
-      <line x1={cx} y1="44" x2={cx + 30} y2="112" />
-      <path className="qx-scale__bowl" d={`M${cx - 38} 112h76a38 14 0 0 1 -76 0z`} />
-      <text x={cx} y="146" textAnchor="middle">
-        {label}
-      </text>
+      <g className="qx-scale__swing" data-side={side}>
+        <path className="qx-chain" d={`M${cx} 46L${cx - 32} 132M${cx} 46L${cx + 32} 132M${cx} 46L${cx} 134`} />
+        <ellipse className="qx-dish__back" cx={cx} cy="132" rx="36" ry="7" />
+        <path className="qx-dish__bowl" d={`M${cx - 36} 132Q${cx} 172 ${cx + 36} 132Z`} fill="url(#qx-steel)" />
+        <ellipse className="qx-dish__rim" cx={cx} cy="132" rx="36" ry="7" fill="url(#qx-steel-rim)" />
+        <ellipse className="qx-dish__in" cx={cx} cy="132.5" rx="31" ry="4.6" />
+        <text x={cx} y="188" textAnchor="middle">
+          {label}
+        </text>
+      </g>
     </g>
   );
   return (
-    <figure className="qx-scale" data-tilt={tilt} data-answered={answered || undefined} aria-label={caption}>
-      <svg viewBox="0 0 320 170" role="img" aria-hidden="true">
-        <g className="qx-scale__stand">
-          <path d="M160 44v112M116 160h88" />
-          <circle cx="160" cy="44" r="6" />
+    <figure
+      className="qx-scale"
+      data-tilt={tilt}
+      data-answered={answered || undefined}
+      data-from={tilt ? "set" : undefined}
+      aria-label={caption}
+    >
+      <svg viewBox="0 0 320 196" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="qx-brass" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#f7e29a" />
+            <stop offset="0.45" stopColor="#d4a63a" />
+            <stop offset="1" stopColor="#8a6212" />
+          </linearGradient>
+          <linearGradient id="qx-brass-v" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#7a5510" />
+            <stop offset="0.35" stopColor="#f3d98b" />
+            <stop offset="0.6" stopColor="#c9972c" />
+            <stop offset="1" stopColor="#6e4b0c" />
+          </linearGradient>
+          <linearGradient id="qx-steel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#d9e2e8" />
+            <stop offset="0.5" stopColor="#8e9ea8" />
+            <stop offset="1" stopColor="#4d5b64" />
+          </linearGradient>
+          <linearGradient id="qx-steel-rim" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#6f7f89" />
+            <stop offset="0.3" stopColor="#eef3f6" />
+            <stop offset="0.7" stopColor="#9aa9b2" />
+            <stop offset="1" stopColor="#5a6770" />
+          </linearGradient>
+          <radialGradient id="qx-ball" cx="0.35" cy="0.3" r="0.8">
+            <stop offset="0" stopColor="#fff3c4" />
+            <stop offset="0.5" stopColor="#d9ab3f" />
+            <stop offset="1" stopColor="#7a5510" />
+          </radialGradient>
+          <filter id="qx-blur" x="-20%" y="-50%" width="140%" height="200%">
+            <feGaussianBlur stdDeviation="3.5" />
+          </filter>
+        </defs>
+        <ellipse cx="160" cy="188" rx="62" ry="6" fill="#000" opacity="0.45" filter="url(#qx-blur)" />
+        <g className="qx-scale__base">
+          <path d="M104 186c0-9 25-14 56-14s56 5 56 14z" fill="url(#qx-brass)" />
+          <ellipse cx="160" cy="172" rx="56" ry="7" fill="url(#qx-brass)" />
+          <ellipse cx="160" cy="171" rx="40" ry="4.6" fill="#f3d98b" opacity="0.35" />
+          <rect x="155" y="48" width="10" height="124" rx="3" fill="url(#qx-brass-v)" />
+          <circle cx="160" cy="46" r="8" fill="url(#qx-ball)" />
         </g>
         <g className="qx-scale__beam">
-          <path className="qx-scale__bar" d="M52 44h216" />
-          {pan(52, "left", "Certo")}
-          {pan(268, "right", "Errado")}
+          <path d="M36 46c40-5 80-7 124-7s84 2 124 7c-40 4-84 6-124 6S76 50 36 46z" fill="url(#qx-brass)" />
+          <circle cx="46" cy="46" r="5" fill="url(#qx-ball)" />
+          <circle cx="274" cy="46" r="5" fill="url(#qx-ball)" />
+          <circle cx="160" cy="46" r="7" fill="url(#qx-ball)" />
+          {pan(46, "left", "CERTO")}
+          {pan(274, "right", "ERRADO")}
         </g>
       </svg>
       <figcaption>{caption}</figcaption>

@@ -1187,3 +1187,33 @@ html body .qx .qx-explain__lead[data-v="err"] { color: var(--qx-err); background
 html body .qx .qx-explain__text { font-size: 0.875rem; line-height: 1.65; color: color-mix(in oklab, var(--foreground) 88%, transparent); }
 html body .qx .qx-example .qx-explain__text { margin: 0; color: var(--foreground); }
 html body .qx .qx-explain__right { color: var(--qx-err); }
+
+/* ── Balança realista (v3): metal, sombra e pêndulo amortecido ──────────────────────────────── */
+.qx .qx-scale { animation: none; transition: none; }
+.qx .qx-scale:not([data-tilt]) { animation: qx-sway 6s ease-in-out infinite alternate; }
+.qx .qx-scale[data-tilt="left"], .qx .qx-scale[data-tilt="right"] { --qx-a: 0deg; }
+.qx .qx-scale[data-tilt="left"]:not([data-answered]) { animation: qx-lean-l 1.1s cubic-bezier(0.3, 0, 0.3, 1) forwards; }
+.qx .qx-scale[data-tilt="right"]:not([data-answered]) { animation: qx-lean-r 1.1s cubic-bezier(0.3, 0, 0.3, 1) forwards; }
+.qx .qx-scale[data-tilt="left"][data-answered] { animation: qx-settle-l 2s cubic-bezier(0.3, 0, 0.3, 1) forwards; }
+.qx .qx-scale[data-tilt="right"][data-answered] { animation: qx-settle-r 2s cubic-bezier(0.3, 0, 0.3, 1) forwards; }
+@keyframes qx-lean-l { 0% { --qx-a: 0deg; } 40% { --qx-a: -6.5deg; } 70% { --qx-a: -3.2deg; } 100% { --qx-a: -4.2deg; } }
+@keyframes qx-lean-r { 0% { --qx-a: 0deg; } 40% { --qx-a: 6.5deg; } 70% { --qx-a: 3.2deg; } 100% { --qx-a: 4.2deg; } }
+@keyframes qx-settle-l { 0% { --qx-a: 0deg; } 20% { --qx-a: -15deg; } 38% { --qx-a: -5.5deg; } 55% { --qx-a: -12.5deg; } 72% { --qx-a: -8deg; } 86% { --qx-a: -10.4deg; } 100% { --qx-a: -9.5deg; } }
+@keyframes qx-settle-r { 0% { --qx-a: 0deg; } 20% { --qx-a: 15deg; } 38% { --qx-a: 5.5deg; } 55% { --qx-a: 12.5deg; } 72% { --qx-a: 8deg; } 86% { --qx-a: 10.4deg; } 100% { --qx-a: 9.5deg; } }
+/* pratos balançam um pouco fora de fase, como pêndulos presos por correntes */
+.qx .qx-scale__swing { transform-box: view-box; animation: qx-pan-sway 3.4s ease-in-out infinite alternate; }
+.qx .qx-scale__swing[data-side="left"] { transform-origin: 46px 46px; }
+.qx .qx-scale__swing[data-side="right"] { transform-origin: 274px 46px; animation-delay: -1.1s; }
+@keyframes qx-pan-sway { from { transform: rotate(-1.4deg); } to { transform: rotate(1.4deg); } }
+.qx .qx-scale__pan[data-side="left"] { transform-origin: 46px 46px; }
+.qx .qx-scale__pan[data-side="right"] { transform-origin: 274px 46px; }
+.qx .qx-chain { fill: none; stroke: #b98d2c; stroke-width: 1; opacity: 0.85; stroke-linecap: round; }
+.qx .qx-dish__back { fill: #2a343b; }
+.qx .qx-dish__rim { stroke: rgb(255 255 255 / 0.35); stroke-width: 0.75; }
+.qx .qx-dish__in { fill: #55636c; opacity: 0.9; transition: fill 500ms ease-out; }
+.qx .qx-scale__pan[data-win] .qx-dish__in { fill: color-mix(in oklab, var(--qx-ok) 70%, #1b2a26); }
+.qx .qx-scale__pan[data-win] .qx-dish__rim { stroke: var(--qx-ok); stroke-width: 1.25; filter: drop-shadow(0 0 5px color-mix(in oklab, var(--qx-ok) 70%, transparent)); }
+.qx .qx-scale text { fill: var(--muted-foreground); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; opacity: 0.9; }
+.qx .qx-scale__pan[data-win] text { fill: var(--qx-ok); }
+.qx .qx-scale__base *, .qx .qx-scale__beam > path, .qx .qx-scale__beam > circle { stroke: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .qx .qx-scale, .qx .qx-scale__swing { animation: none !important; } .qx .qx-scale[data-tilt="left"] { --qx-a: -9deg; } .qx .qx-scale[data-tilt="right"] { --qx-a: 9deg; } }
