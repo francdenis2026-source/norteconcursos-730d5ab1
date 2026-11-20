@@ -1650,6 +1650,30 @@ function QuestionTrainer() {
                 </div>
               )}
 
+              {certoErrado && questionAnswers(question).length === 2 && (
+                <QxScale
+                  answered={answered}
+                  tilt={
+                    answered
+                      ? question.answer === "C"
+                        ? "left"
+                        : "right"
+                      : selected
+                        ? selected === "C"
+                          ? "left"
+                          : "right"
+                        : undefined
+                  }
+                  caption={
+                    answered
+                      ? `Gabarito: ${labelFor(question.answer)}`
+                      : selected
+                        ? "Confirme sua resposta"
+                        : "Pese o item: certo ou errado?"
+                  }
+                />
+              )}
+
               {supportNotice && !supportAvailable && !answered && (
                 <div id={supportNoticeId} role="status" className="qx-note">
                   <Lock className="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -2590,6 +2614,44 @@ function formatResponseTime(seconds: number) {
  * Ajusta a janela da questão à altura visível (sem rolagem da página no computador):
  * mede onde o cartão começa e a faixa fixa do rodapé e grava em --qt4-h.
  */
+/** Balança de Certo/Errado: repousa balançando; ao responder, pende para o lado do gabarito. */
+function QxScale({
+  tilt,
+  answered,
+  caption,
+}: {
+  tilt?: "left" | "right" | undefined;
+  answered: boolean;
+  caption: string;
+}) {
+  const pan = (cx: number, side: "left" | "right", label: string) => (
+    <g className="qx-scale__pan" data-side={side} data-win={answered && tilt === side ? "" : undefined}>
+      <line x1={cx} y1="44" x2={cx - 30} y2="112" />
+      <line x1={cx} y1="44" x2={cx + 30} y2="112" />
+      <path className="qx-scale__bowl" d={`M${cx - 38} 112h76a38 14 0 0 1 -76 0z`} />
+      <text x={cx} y="146" textAnchor="middle">
+        {label}
+      </text>
+    </g>
+  );
+  return (
+    <figure className="qx-scale" data-tilt={tilt} data-answered={answered || undefined} aria-label={caption}>
+      <svg viewBox="0 0 320 170" role="img" aria-hidden="true">
+        <g className="qx-scale__stand">
+          <path d="M160 44v112M116 160h88" />
+          <circle cx="160" cy="44" r="6" />
+        </g>
+        <g className="qx-scale__beam">
+          <path className="qx-scale__bar" d="M52 44h216" />
+          {pan(52, "left", "Certo")}
+          {pan(268, "right", "Errado")}
+        </g>
+      </svg>
+      <figcaption>{caption}</figcaption>
+    </figure>
+  );
+}
+
 function QtFitViewport({
   depKey,
   root = ".qt4",

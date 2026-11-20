@@ -1072,3 +1072,43 @@ html body .qx .qx-verdict__text small { font-size: 0.8125rem; line-height: 1.3; 
 @media (max-height: 640px) {
   html body .qx .qx-pane--answers > .qx-choices[data-count="2"] { grid-auto-rows: 3.5rem; }
 }
+
+/* ── Balança de Certo/Errado: ilustração animada que preenche o vazio da coluna ─────────────── */
+@property --qx-a { syntax: "<angle>"; inherits: true; initial-value: 0deg; }
+.qx .qx-scale {
+  --qx-a: 0deg;
+  display: grid;
+  flex: 1 1 0 !important;
+  min-height: 7rem;
+  max-height: 17rem;
+  margin: 0.25rem 0 0;
+  place-items: center;
+  align-content: center;
+  gap: 0.375rem;
+  color: var(--muted-foreground);
+  transition: --qx-a 1100ms cubic-bezier(0.34, 1.45, 0.64, 1);
+  animation: qx-sway 5.5s ease-in-out infinite alternate;
+}
+.qx .qx-scale[data-tilt="left"] { --qx-a: -9deg; animation: none; }
+.qx .qx-scale[data-tilt="right"] { --qx-a: 9deg; animation: none; }
+.qx .qx-scale svg { width: auto; max-width: min(100%, 22rem); height: 100%; max-height: 13rem; min-height: 0; overflow: visible; }
+.qx .qx-scale svg * { vector-effect: non-scaling-stroke; }
+.qx .qx-scale__stand path, .qx .qx-scale__bar, .qx .qx-scale__pan line, .qx .qx-scale__bowl {
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.55;
+}
+.qx .qx-scale__stand circle { fill: var(--qx-gold); }
+.qx .qx-scale__bar { stroke-width: 3; opacity: 0.8; }
+.qx .qx-scale__beam { transform-origin: 160px 44px; transform: rotate(var(--qx-a)); }
+.qx .qx-scale__pan { transform: rotate(calc(var(--qx-a) * -1)); }
+.qx .qx-scale__pan[data-side="left"] { transform-origin: 52px 44px; }
+.qx .qx-scale__pan[data-side="right"] { transform-origin: 268px 44px; }
+.qx .qx-scale__bowl { fill: color-mix(in oklab, currentColor 8%, transparent); transition: fill 400ms ease-out, stroke 400ms ease-out; }
+.qx .qx-scale text { fill: currentColor; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; opacity: 0.8; }
+.qx .qx-scale[data-tilt="left"]:not([data-answered]) .qx-scale__pan[data-side="left"] .qx-scale__bowl,
+.qx .qx-scale[data-tilt="right"]:not([data-answered]) .qx-scale__pan[data-side="right"] .qx-scale__bowl { stroke: var(--qx-gold); opacity: 1; fill: color-mix(in oklab, var(--qx-gold) 16%, transparent); }
+.qx .qx-scale__pan[data-win] .qx-scale__bowl { stroke: var(--qx-ok); opacity: 1; fill: color-mix(in oklab, var(--qx-ok) 22%, transparent); filter: drop-shadow(0 0 6px color-mix(in oklab, var(--qx-ok) 55%, transparent)); }
+.qx .qx-scale__pan[data-win] text { fill: var(--qx-ok); opacity: 1; }
+.qx .qx-scale figcaption { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.02em; text-align: center; }
+@keyframes qx-sway { from { --qx-a: -2.5deg; } to { --qx-a: 2.5deg; } }
+@media (max-height: 600px), (max-width: 559px) { .qx .qx-scale { display: none; } }
+@media (prefers-reduced-motion: reduce) { .qx .qx-scale { animation: none; transition: none; } }
