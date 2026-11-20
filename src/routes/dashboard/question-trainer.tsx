@@ -369,8 +369,10 @@ function QuestionTrainer() {
   const [struck, setStruck] = React.useState<Answer[]>([]);
   const [communityOpen, setCommunityOpen] = React.useState(false);
   const currentQuestionId = questions[index]?.id;
+  const [baseOpen, setBaseOpen] = React.useState(false);
   React.useEffect(() => {
     setCommunityOpen(false);
+    setBaseOpen(false);
   }, [currentQuestionId]);
   const [saving, setSaving] = React.useState(false);
   const savingRef = React.useRef(false);
@@ -1461,17 +1463,32 @@ function QuestionTrainer() {
             </div>
           )}
 
-          <div className="qx-body">
+          <div
+            className="qx-body"
+            data-split={
+              !parsed.base && parsed.stem.length < 320 && !(question.figures?.length || parsed.illustrations?.length)
+                ? "short"
+                : "wide"
+            }
+          >
             <section className="qx-pane qx-pane--stem" aria-label="Enunciado da questão" tabIndex={0}>
               <p className="qx-label">Enunciado</p>
               {parsed.base && (
-                <details open className="qx-base">
-                  <summary>
-                    {parsed.baseLabel}
-                    <span>mostrar / ocultar</span>
-                  </summary>
+                <div className="qx-base" data-open={baseOpen || parsed.base.length < 360 || undefined}>
+                  <button
+                    type="button"
+                    className="qx-base__head"
+                    aria-expanded={baseOpen || parsed.base.length < 360}
+                    onClick={() => setBaseOpen((v) => !v)}
+                    disabled={parsed.base.length < 360}
+                  >
+                    <span className="qx-base__label">{parsed.baseLabel}</span>
+                    {parsed.base.length >= 360 && (
+                      <span className="qx-base__toggle">{baseOpen ? "Recolher" : "Ler tudo"}</span>
+                    )}
+                  </button>
                   <div className="qx-base__text">{parsed.base}</div>
-                </details>
+                </div>
               )}
               <p className="qx-stem">{parsed.stem.replace(/\*\*(.+?)\*\*/g, "$1")}</p>
               <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
