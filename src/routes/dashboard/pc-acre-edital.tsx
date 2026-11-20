@@ -756,16 +756,6 @@ function PcAcreEditalVerticalizadoPage() {
                     </ol>
                   </section>
                 )}
-                {cargo.locations && (
-                  <section className="pe-pane pe-loc" aria-labelledby="pe-loc">
-                    <header><h3 id="pe-loc"><span className="pe-ico" data-a="float"><MapPin aria-hidden="true" /></span> Vagas por município</h3><small>{cargo.vagas} no total · Anexo I</small></header>
-                    <ul>
-                      {cargo.locations.map((location) => (
-                        <li key={location.name}><b>{location.name}</b><span>{location.vacancies}{location.pcd ? ` · ${location.pcd} PcD` : ""}</span></li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
               </div>
             </div>
           </div>
@@ -791,6 +781,19 @@ function PcAcreEditalVerticalizadoPage() {
           <p className="pc-hint" title='Toque no status de cada assunto para alternar entre Pendente → A estudar → Estudado. O progresso fica salvo neste navegador. O selo "questões · % acertos" vem do seu desempenho real no treinador de questões.'>
             <Info aria-hidden /> Toque no status para alternar: Pendente → A estudar → Estudado
           </p>
+          {cargo.locations && (
+            <details className="pc-vagas">
+              <summary><MapPin aria-hidden="true" /> Vagas por município <em>{cargo.locations.length}</em></summary>
+              <div className="pc-vagas__body">
+                <p>{cargo.vagas} vagas no total · Anexo I do edital</p>
+                <ul>
+                  {cargo.locations.map((location) => (
+                    <li key={location.name}><b>{location.name}</b><span>{location.vacancies}{location.pcd ? ` · ${location.pcd} PcD` : ""}</span></li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+          )}
           <div className="pc-bar" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100}><i style={{ width: `${percent}%` }} /></div>
         </header>
         <div className="pc-scroll">

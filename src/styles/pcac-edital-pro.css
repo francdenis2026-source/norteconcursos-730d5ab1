@@ -131,3 +131,16 @@ html body .pcac-compact-workspace .pcac-command-bar .pcac-metrics>span:first-chi
 .pc-block{padding:8px!important}.pc-block h4{margin-bottom:6px!important}
 html body .pcac-compact-workspace .pcac-command-bar{margin-top:2px;align-items:center!important}
 html body .pcac-compact-workspace .pcac-command-bar__flag{align-self:center;margin:0!important;position:static!important;transform:none!important;border-radius:4px}
+.pc-vagas{position:relative;grid-area:h;justify-self:end}
+.pc-head:has(.pc-vagas){grid-template-columns:auto minmax(0,1fr) auto auto;grid-template-areas:"r t v h" "b b b b"}
+.pc-vagas{grid-area:v}.pc-hint{grid-area:h}
+.pc-vagas summary{list-style:none;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;color:var(--pe-fg);background:var(--pe-pane2);border:1px solid var(--pe-line);transition:border-color .15s,transform .15s}
+.pc-vagas summary::-webkit-details-marker{display:none}.pc-vagas summary:hover,.pc-vagas[open] summary{border-color:var(--pe-gold);transform:translateY(-1px)}
+.pc-vagas summary svg{color:var(--pe-ink)}.pc-vagas summary em{font-style:normal;font-size:11px;padding:0 7px;border-radius:99px;background:color-mix(in srgb,var(--pe-gold) 22%,transparent);color:var(--pe-ink)}
+.pc-vagas__body{position:absolute;right:0;top:calc(100% + 6px);z-index:30;width:min(560px,86vw);max-height:min(60dvh,420px);overflow:auto;padding:12px;border-radius:14px;background:var(--pe-pane);border:1px solid var(--pe-gold);box-shadow:0 18px 40px rgba(0,0,0,.45);animation:pe-in .2s ease-out both}
+.pc-vagas__body p{margin:0 0 8px;font-size:12px;color:var(--pe-mut)}
+.pc-vagas__body ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:5px}
+.pc-vagas__body li{display:flex;justify-content:space-between;gap:8px;padding:5px 9px;border-radius:9px;background:var(--pe-pane2);font-size:12px}.pc-vagas__body li span{color:var(--pe-ink);font-weight:700}
+@media (max-width:899px){.pc-head:has(.pc-vagas){grid-template-columns:auto 1fr;grid-template-areas:"r t" "v v" "h h" "b b"}.pc-vagas__body{position:static;width:100%;margin-top:6px}}
+.pe-col .pe-steps{flex:1;min-height:0;display:flex;flex-direction:column}.pe-steps ol{flex:1;grid-auto-rows:1fr}
+.pe-steps li{font-size:14px;padding:8px 12px;gap:12px;transition:transform .15s,border-color .15s;border:1px solid transparent}.pe-steps li:hover{transform:translateX(3px);border-color:var(--pe-gold)}.pe-steps i{width:28px;height:28px;font-size:13px}
