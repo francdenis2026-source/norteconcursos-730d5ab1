@@ -1620,12 +1620,27 @@ function QuestionTrainer() {
                       }
                       disabled={answered || saving}
                       onClick={() => setSelected(answer)}
+                      data-kind={answer === "C" ? "yes" : answer === "E" ? "no" : undefined}
                       className="qx-choice"
                     >
-                      <span className="qx-choice__letter">
-                        {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
+                      {(answer === "C" || answer === "E") && (
+                        <svg className="qx-choice__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                          <circle className="qx-ci-bg" cx="24" cy="24" r="22" />
+                          <circle className="qx-ci-ring" cx="24" cy="24" r="22" pathLength="1" />
+                          {answer === "C" ? (
+                            <path className="qx-ci-mark" d="M14.5 25l7 7L34 17.5" pathLength="1" />
+                          ) : (
+                            <>
+                              <path className="qx-ci-mark" d="M16.5 16.5l15 15" pathLength="1" />
+                              <path className="qx-ci-mark" d="M31.5 16.5l-15 15" pathLength="1" />
+                            </>
+                          )}
+                        </svg>
+                      )}
+                      <span className="qx-choice__label">{labelFor(answer)}</span>
+                      <span className="qx-choice__letter" aria-hidden="true">
+                        {answer}
                       </span>
-                      <span>{labelFor(answer)}</span>
                     </button>
                   ))}
                 </div>
