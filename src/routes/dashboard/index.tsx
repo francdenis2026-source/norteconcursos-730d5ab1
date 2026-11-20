@@ -1,3 +1,4 @@
+import { ExamCountdown } from "@/components/dashboard/ExamCountdown";
 import "@/styles/student-home-lean.css";
 import { EditalCommandCenter } from "@/components/dashboard/EditalCommandCenter";
 import { WeeklyRhythmChart } from "@/components/dashboard/WeeklyRhythmChart";
@@ -391,18 +392,18 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
           {objective && (
             <div className="sh2-hero__exam">
-              <small>Data da prova</small>
-              {examDate && days !== null ? (
-                <time dateTime={examDate}>{formatExamDate(examDate)}</time>
+              {examDate && days !== null && days > 0 ? (
+                <ExamCountdown examDate={examDate} />
               ) : (
-                <strong>A definir</strong>
-              )}
-              {days !== null && days > 0 ? (
-                <p className="sh2-hero__countdown">
-                  <b>{days}</b> {days === 1 ? "dia" : "dias"} para a prova
-                </p>
-              ) : (
-                examCountdown && <p>{examCountdown}</p>
+                <>
+                  <small>Data da prova</small>
+                  {examDate && days !== null ? (
+                    <time dateTime={examDate}>{formatExamDate(examDate)}</time>
+                  ) : (
+                    <strong>A definir</strong>
+                  )}
+                  {examCountdown && <p>{examCountdown}</p>}
+                </>
               )}
             </div>
           )}
