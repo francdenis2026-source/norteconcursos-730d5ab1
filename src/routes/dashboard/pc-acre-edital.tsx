@@ -672,7 +672,7 @@ function PcAcreEditalVerticalizadoPage() {
   }
 
   return (
-    <div ref={workspaceRef} className="pcac-edital-page pcac-compact-workspace">
+    <div ref={workspaceRef} data-view={editalTab} className="pcac-edital-page pcac-compact-workspace">
       <header className="pcac-command-bar">
         <svg className="pcac-command-bar__flag" viewBox="0 0 50 35" role="img" aria-label="Bandeira do Acre">
           <rect width="50" height="35" fill="#f5da25" />

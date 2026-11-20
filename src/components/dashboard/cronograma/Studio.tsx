@@ -103,7 +103,7 @@ export function TodayView({ day, nextStudyDay, examDays, onOpenDay, renderShortc
                 <span className="cs-tl__dot"><TypeIcon type={a.type} /></span>
                 <div className="cs-tl__body">
                   <p><b>{a.subject ?? PCAC_ACTIVITY_LABEL[a.type]}</b><span className="cs-tag" data-type={a.type}>{PCAC_ACTIVITY_LABEL[a.type]}</span>{a.start && <em>{fmtDur(actMin(a))}</em>}</p>
-                  {(a.topic || a.detail) && <small>{a.topic ? `${a.topic} — ` : ""}{a.detail}</small>}
+                  {isStudy && (a.topic || a.detail) && <small>{a.topic ? `${a.topic} — ` : ""}{a.detail}</small>}
                 </div>
                 {isStudy && <span className="cs-tl__go">{renderShortcut(a)}</span>}
               </li>

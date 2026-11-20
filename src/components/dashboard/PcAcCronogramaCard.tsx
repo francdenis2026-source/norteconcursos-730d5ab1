@@ -707,18 +707,18 @@ export function PcAcCronogramaCard({
     <Theme theme={themes[defaultThemeSlug]} mode={mode}>
     <section id={CRONOGRAMA_ANCHOR} ref={rootRef} className="pcac-schedule cs-root" aria-label="Cronograma de estudos">
       <header className="cs-head">
-        <h2><Ani anim="tick"><CalendarClock aria-hidden="true" /></Ani> Seu cronograma</h2>
-        <div className="cs-kpis" aria-label="Resumo">
-          <span className="cs-kpi"><b>{daysLeft}</b> dias para a prova</span>
-          <span className="cs-kpi"><b>{cfg.weeklyHours}h</b> por semana</span>
-          <span className="cs-kpi"><b>{cfg.days.length}</b> dias de estudo</span>
-        </div>
+        <nav className="cs-tabs" role="tablist" aria-label="Seções do cronograma">
+          {([["hoje", "Hoje", CalendarCheck2, "tick"], ["semana", "Semana", CalendarDays, "bob"], ["plano", "Plano", ListChecks, "flip"], ["disciplinas", "Disciplinas", BookOpen, "flip"], ["final", "Reta final", Flag, "float"], ["visao", "Ajustes", SlidersHorizontal, "spin"]] as const).map(([v, label, Icon, anim]) => (
+            <button key={v} type="button" role="tab" id={`schedule-tab-${v}`} aria-selected={tab === v} onClick={() => setTab(v)}><Ani anim={anim}><Icon aria-hidden /></Ani>{label}</button>
+          ))}
+        </nav>
+        <span className="cs-kpi" title={`${cfg.weeklyHours}h por semana · ${cfg.days.length} dias de estudo`}><b>{daysLeft}</b> dias · {cfg.weeklyHours}h/sem</span>
         <div className="cs-head__act">
-          <button type="button" className="cs-btn" onClick={saveConfiguration} disabled={!configLoaded || saveStatus === "saving"}>
-            <Ani anim="tick">{saveStatus === "saved" ? <CheckCircle2 aria-hidden /> : <CalendarCheck2 aria-hidden />}</Ani>{saveStatus === "saving" ? "Guardando…" : "Guardar"}
+          <button type="button" className="cs-btn" onClick={saveConfiguration} disabled={!configLoaded || saveStatus === "saving"} aria-label="Guardar configurações" title="Guardar configurações">
+            <Ani anim="tick">{saveStatus === "saved" ? <CheckCircle2 aria-hidden /> : <CalendarCheck2 aria-hidden />}</Ani>{saveStatus === "saving" ? "…" : saveStatus === "saved" ? "Guardado" : "Guardar"}
           </button>
           <details className="cs-menu" ref={exportMenuRef}>
-            <summary className="cs-btn cs-btn--gold" aria-disabled={!configLoaded || !weeks.length || !!startError || exporting}><Ani anim="bob"><Download aria-hidden /></Ani>{exporting ? "Gerando PDF…" : "Exportar PDF"}</summary>
+            <summary className="cs-btn cs-btn--gold" aria-disabled={!configLoaded || !weeks.length || !!startError || exporting}><Ani anim="bob"><Download aria-hidden /></Ani>{exporting ? "Gerando…" : "PDF"}</summary>
             <div className="cs-menu__list" role="menu">
               <button type="button" role="menuitem" onClick={() => exportPdf("full")}><Ani anim="flip"><ListChecks aria-hidden /></Ani><span>Plano completo<small>Todas as semanas, grade e reta final</small></span></button>
               <button type="button" role="menuitem" onClick={() => exportPdf("week")} disabled={!activeWeek}><Ani anim="tick"><CalendarDays aria-hidden /></Ani><span>Semana em foco<small>Só a semana selecionada</small></span></button>
@@ -728,13 +728,7 @@ export function PcAcCronogramaCard({
         </div>
       </header>
       {exportError && <p role="alert">{exportError}</p>}
-      {saveStatus === "saved" && <p className="pcac-schedule__save-feedback" role="status"><CheckCircle2 aria-hidden="true" /> Configurações guardadas com sucesso.</p>}
       {saveStatus === "error" && <p className="pcac-schedule__save-feedback pcac-schedule__save-feedback--error" role="alert">Não foi possível guardar na conta. A cópia local foi mantida.</p>}
-      <nav className="cs-tabs" role="tablist" aria-label="Seções do cronograma">
-        {([["hoje", "Hoje", CalendarCheck2, "tick"], ["semana", "Semana", CalendarDays, "bob"], ["plano", "Plano", ListChecks, "flip"], ["disciplinas", "Disciplinas", BookOpen, "flip"], ["final", "Reta final", Flag, "float"], ["visao", "Ajustes", SlidersHorizontal, "spin"]] as const).map(([v, label, Icon, anim]) => (
-          <button key={v} type="button" role="tab" id={`schedule-tab-${v}`} aria-selected={tab === v} onClick={() => setTab(v)}><Ani anim={anim}><Icon aria-hidden /></Ani>{label}</button>
-        ))}
-      </nav>
       <section className="pcac-schedule__body cs-stage-wrap">
           <section role="tabpanel" tabIndex={0} id="schedule-panel-visao" aria-labelledby="schedule-tab-visao" hidden={tab !== "visao"} className="pcac-schedule__panel cs-settings space-y-5">
         {(() => {

@@ -220,3 +220,26 @@ html body .cs-root .cs-phase{color:var(--cs-gold-ink)}
 
 .cs-heat{overflow:auto}.cs-heat__grid{grid-auto-rows:minmax(34px,1fr)}.cs-heat__row,.cs-heat__head{min-height:34px}.cs-heat__c small{display:none}@media (min-height:820px){.cs-heat__c small{display:block}}
 .cs-root{scroll-margin-top:56px}
+
+/* ---- cabeçalho único e topo da página enxuto ---- */
+html body .cs-root .cs-head{flex-wrap:nowrap;gap:10px;padding:6px 8px;border-radius:12px}
+html body .cs-root .cs-head .cs-tabs{flex:1 1 auto;min-width:0;background:transparent;border:0;padding:0;gap:2px}
+html body .cs-root .cs-head .cs-tabs button{flex:0 1 auto;padding:8px 12px;color:#aebbd1}
+html body .cs-root .cs-head .cs-tabs button:hover{color:#fff;background:rgba(255,255,255,.08)}
+.cs-head>.cs-kpi{white-space:nowrap}
+@media (max-width:899px){html body .cs-root .cs-head{flex-wrap:wrap}}
+/* na aba Cronograma, a página some com o que repete (resumo, ações do cargo) */
+.pcac-compact-workspace[data-view=cronograma] .pcac-metrics,
+.pcac-compact-workspace[data-view=cronograma] .pcac-command-bar__actions,
+.pcac-compact-workspace[data-view=cronograma] .pcac-command-bar__cargo span{display:none!important}
+.pcac-compact-workspace[data-view=cronograma] .pcac-command-bar{min-height:0!important;padding-block:4px!important}
+.pcac-compact-workspace[data-view=cronograma] .pcac-command-bar h1{font-size:17px!important;margin:0!important}
+.pcac-compact-workspace[data-view=cronograma] .pcac-command-bar__flag{height:24px!important;width:auto!important}
+.pcac-compact-workspace[data-view=cronograma] .pcac-edital-tabs__list{min-height:0!important;padding:3px!important}
+.pcac-compact-workspace[data-view=cronograma] .pcac-edital-tabs__list button{padding-block:6px!important}
+.pcac-compact-workspace[data-view=cronograma]{gap:6px!important}
+html body .cs-root .cs-head .cs-tabs{border:0!important;box-shadow:none!important;background:none!important}
+html body .cs-root .cs-head .cs-tabs button[aria-selected=true],html body .cs-root .cs-head .cs-tabs button[aria-selected=true] *{color:#2a1c00!important;background-clip:padding-box}
+html body .cs-root .cs-head .cs-tabs button[aria-selected=true]{background:linear-gradient(180deg,#f0c75a,#d9a431)!important}
+.pcac-compact-workspace[data-view=cronograma] .pcac-command-bar__flag{height:26px!important;width:36px!important;flex:none;overflow:visible}
+.cs-tl__row[data-type=rotina],.cs-tl__row[data-type=pausa]{padding-block:3px}.cs-tl__row[data-type=rotina] .cs-tl__dot,.cs-tl__row[data-type=pausa] .cs-tl__dot{width:26px;height:26px;font-size:14px}.cs-tl__row[data-type=rotina] .cs-tag{display:none}
