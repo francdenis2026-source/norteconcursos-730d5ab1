@@ -1528,9 +1528,17 @@ function QuestionTrainer() {
 
               {answered && (
                 <div className="qx-verdict" data-result={isCorrect ? "ok" : "err"} role="status" aria-live="polite">
-                  <span className="qx-verdict__icon" aria-hidden="true">
-                    {isCorrect ? <CheckCircle2 /> : <XCircle />}
-                  </span>
+                  <svg className="qx-verdict__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <circle className="qx-vi-ring" cx="16" cy="16" r="13" pathLength="1" />
+                    {isCorrect ? (
+                      <path className="qx-vi-mark" d="M10 16.5l4.2 4.2L22 12.5" pathLength="1" />
+                    ) : (
+                      <>
+                        <path className="qx-vi-mark" d="M11.5 11.5l9 9" pathLength="1" />
+                        <path className="qx-vi-mark qx-vi-mark--2" d="M20.5 11.5l-9 9" pathLength="1" />
+                      </>
+                    )}
+                  </svg>
                   <span className="qx-verdict__text">
                     <strong>{isCorrect ? "Você acertou" : "Você errou"}</strong>
                     <small>
