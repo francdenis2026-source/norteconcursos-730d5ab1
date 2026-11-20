@@ -384,3 +384,10 @@ html body .app-shell[data-area="student"] #dashboard-content .student-home.sh2 {
 html body .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after { display: none !important; }
 html body .app-shell.navigation-v2[data-focus-mode="true"] .app-content { padding-bottom: 10px !important; }
 html body .app-shell.navigation-v2[data-focus-mode="true"] .app-main { height: 100% !important; padding-bottom: 0 !important; }
+
+/* Fim da página: sem reserva escura sobrando entre o último bloco e a assinatura. */
+html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_) .app-content__inner { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+html body .app-shell[data-area="student"]:not(#_):not(#_) .app-content > :last-child,
+html body .app-shell[data-area="student"]:not(#_):not(#_) .app-content__inner > :last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+html body .app-shell[data-area="student"]:not(#_):not(#_) #dashboard-content .student-home.sh2 { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+html body .app-shell[data-area="student"]:not(#_):not(#_) .app-content { padding-bottom: 8px !important; }
