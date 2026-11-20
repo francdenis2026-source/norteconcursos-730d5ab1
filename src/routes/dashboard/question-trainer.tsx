@@ -369,6 +369,7 @@ function QuestionTrainer() {
   const [struck, setStruck] = React.useState<Answer[]>([]);
   const [communityOpen, setCommunityOpen] = React.useState(false);
   const currentQuestionId = questions[index]?.id;
+  const wideScreen = useWideScreen();
   const [baseOpen, setBaseOpen] = React.useState(false);
   React.useEffect(() => {
     setCommunityOpen(false);
@@ -1667,7 +1668,7 @@ function QuestionTrainer() {
                 </div>
               )}
 
-              {certoErrado && questionAnswers(question).length === 2 && (() => {
+              {certoErrado && wideScreen && questionAnswers(question).length === 2 && (() => {
                 const side = (a: string) => (a === "C" ? "left" : "right");
                 const scaleTilt = answered ? side(question.answer) : selected ? side(selected) : undefined;
                 const scaleCaption = answered
@@ -2623,6 +2624,19 @@ function formatResponseTime(seconds: number) {
  * Ajusta a janela da questão à altura visível (sem rolagem da página no computador):
  * mede onde o cartão começa e a faixa fixa do rodapé e grava em --qt4-h.
  */
+/** Telas largas o bastante para mostrar a balança; em celular estreito ela nem é carregada. */
+function useWideScreen(minWidth = 560) {
+  const [wide, setWide] = React.useState(() => typeof window !== "undefined" && window.innerWidth >= minWidth);
+  React.useEffect(() => {
+    const mq = window.matchMedia(`(min-width: ${minWidth}px)`);
+    const set = () => setWide(mq.matches);
+    set();
+    mq.addEventListener("change", set);
+    return () => mq.removeEventListener("change", set);
+  }, [minWidth]);
+  return wide;
+}
+
 const QxScale3D = React.lazy(() => import("@/components/trainer/QxScale3D"));
 
 /** Balança de Certo/Errado: metal escovado, pêndulo amortecido; ao responder, assenta no lado do gabarito. */
