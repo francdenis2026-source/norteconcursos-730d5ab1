@@ -44,7 +44,6 @@ export function studentGroupLabel(group: string) {
 export function studentNavigationSegment(href: string) {
   if (
     [
-      "/dashboard/edital-radar",
       "/dashboard/exam-panorama",
       "/dashboard/perfil-bancas",
       "/dashboard/inteligencia-idecan",

@@ -244,12 +244,6 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Mapa IDECAN",
-    label: "Radar do edital",
-    icon: Radar,
-    href: "/dashboard/edital-radar",
-  },
-  {
-    group: "Mapa IDECAN",
     label: "Panorama das provas",
     icon: Layers,
     href: "/dashboard/exam-panorama",
@@ -407,7 +401,6 @@ const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
   "/dashboard/study-room": "blue",
   "/dashboard/timer": "blue",
   "/dashboard/profile": "blue",
-  "/dashboard/edital-radar": "blue",
   "/dashboard/exam-panorama": "blue",
   "/dashboard/perfil-bancas": "blue",
   "/dashboard/performance": "blue",
@@ -419,7 +412,6 @@ const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
 const IDECAN_TAB_PATHS = new Set([
   "/dashboard/pc-acre-edital",
   "/dashboard/inteligencia-idecan",
-  "/dashboard/edital-radar",
   "/dashboard/exam-panorama",
   "/dashboard/perfil-bancas",
 ]);
