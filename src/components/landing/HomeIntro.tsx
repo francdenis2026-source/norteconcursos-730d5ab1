@@ -96,53 +96,53 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
                 Ver a plataforma
               </a>
             </div>
-            <div className="sx-statsrow">
             <dl className="sx-stats" aria-label="Números da plataforma">
-                <div>
-                  <dt>Total cadastrado</dt>
-                  <dd>{fmt(data?.registered)}</dd>
-                </div>
-                <div>
-                  <dt>Disponíveis para treinar</dt>
-                  <dd>{fmt(data?.available)}</dd>
-                </div>
-                <div>
-                  <dt>Grátis por dia, sem cadastro</dt>
-                  <dd>{GUEST_DAILY_LIMIT}</dd>
-                </div>
-              </dl>
-              {!mobile && (
-                <div className="hc-inline" aria-hidden="true">
-                  <NorteCube size={0.37} />
-                </div>
-              )}
-            </div>
+              <div>
+                <dt>Total cadastrado</dt>
+                <dd>{fmt(data?.registered)}</dd>
+              </div>
+              <div>
+                <dt>Disponíveis para treinar</dt>
+                <dd>{fmt(data?.available)}</dd>
+              </div>
+              <div>
+                <dt>Grátis por dia, sem cadastro</dt>
+                <dd>{GUEST_DAILY_LIMIT}</dd>
+              </div>
+            </dl>
           </div>
           <div className="sx-hero__panel">
             <DailyChallengeBadge />
-            <ol className="sx-hero__steps" aria-label="Como funciona">
-              <li>
-                <b>1</b>
-                <span>
-                  <strong>Escolha o concurso</strong>
-                  <small>O edital vira uma trilha de estudo.</small>
-                </span>
-              </li>
-              <li>
-                <b>2</b>
-                <span>
-                  <strong>Treine por banca</strong>
-                  <small>Questões oficiais com comentário.</small>
-                </span>
-              </li>
-              <li>
-                <b>3</b>
-                <span>
-                  <strong>Acompanhe a evolução</strong>
-                  <small>Desempenho por disciplina e ranking.</small>
-                </span>
-              </li>
-            </ol>
+            <div className="sx-hero__steps-wrap">
+              <ol className="sx-hero__steps" aria-label="Como funciona">
+                <li>
+                  <b>1</b>
+                  <span>
+                    <strong>Escolha o concurso</strong>
+                    <small>O edital vira uma trilha de estudo.</small>
+                  </span>
+                </li>
+                <li>
+                  <b>2</b>
+                  <span>
+                    <strong>Treine por banca</strong>
+                    <small>Questões oficiais com comentário.</small>
+                  </span>
+                </li>
+                <li>
+                  <b>3</b>
+                  <span>
+                    <strong>Acompanhe a evolução</strong>
+                    <small>Desempenho por disciplina e ranking.</small>
+                  </span>
+                </li>
+              </ol>
+              {!mobile && (
+                <div className="hc-inline" aria-hidden="true">
+                  <NorteCube size={0.4} />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
