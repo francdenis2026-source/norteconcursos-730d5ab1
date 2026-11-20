@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, FileText, Gift, Crown, Gem, LifeBuoy, Lock, Mail, MapPin, MessageCircle, ShieldCheck, Target } from "lucide-react";
+import { ArrowRight, Gift, Crown, Gem, ShieldCheck, Target } from "lucide-react";
 import { HomeIntro } from "@/components/landing/HomeIntro";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
@@ -51,44 +51,6 @@ export function MobileHomepage() {
           Criar conta grátis <ArrowRight />
         </Link>
       </section>
-      <footer className="mf" aria-label="Rodapé">
-        <div className="mf__hero">
-          <img src="/media/hero/careers-team.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <strong className="mf__brand">
-            NORTE <span>CONCURSOS</span>
-          </strong>
-          <p>Preparação séria para carreiras policiais.</p>
-        </div>
-        <nav className="mf__links" aria-label="Institucional">
-          <Link to="/suporte"><LifeBuoy aria-hidden="true" /> Suporte</Link>
-          <Link to="/privacy"><Lock aria-hidden="true" /> Privacidade</Link>
-          <Link to="/terms"><FileText aria-hidden="true" /> Termos</Link>
-        </nav>
-        <address className="mf__contact">
-          <a href="mailto:francdenis2026@gmail.com" data-tone="mail" aria-label="Enviar e-mail para francdenis2026@gmail.com">
-            <Mail aria-hidden="true" /> <span>E-mail</span>
-          </a>
-          <a
-            href="https://wa.me/5568992031340"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-tone="whats"
-            aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
-          >
-            <MessageCircle aria-hidden="true" /> <span>WhatsApp</span>
-          </a>
-          <a
-            className="mf__address"
-            href="https://www.google.com/maps/search/?api=1&query=Rua+Joel+Fereira+de+Sousa%2C+Bela+Vista%2C+Feij%C3%B3%2C+Acre"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-tone="map"
-          >
-            <MapPin aria-hidden="true" /> <span>R. Joel Fereira de Sousa, Bela Vista · Feijó, AC · 69960-000</span>
-          </a>
-        </address>
-        <small className="mf__copy">© 2026 Norte Concursos · Feijó-AC</small>
-      </footer>
     </main>
   );
 }

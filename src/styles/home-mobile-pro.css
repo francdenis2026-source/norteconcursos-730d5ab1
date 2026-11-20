@@ -1,0 +1,150 @@
+/* Homepage mobile: reforma de proporção, ritmo e microinterações.
+   Tudo com transform/opacity; revela ao rolar só onde o navegador suporta animation-timeline; desliga com movimento reduzido. */
+@keyframes mp-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes mp-sweep { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(260%) skewX(-18deg); } }
+@keyframes mp-pulse { 0% { box-shadow: 0 0 0 0 rgb(240 207 134 / .55); } 100% { box-shadow: 0 0 0 7px rgb(240 207 134 / 0); } }
+@keyframes mp-slide { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1023px) {
+  /* ---------- aviso superior mais baixo ---------- */
+  html body:not(#_):not(#_):not(#_) .general-access { padding-block: 8px !important; min-height: 0 !important; }
+  html body:not(#_):not(#_):not(#_) .general-access :is(p, small) { font-size: 12px !important; line-height: 1.35 !important; margin: 0 !important; }
+
+  /* ---------- hero ---------- */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-band { padding-block: 14px 18px !important; min-height: 0 !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy { gap: 10px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy > :is(.sx-eyebrow, h1, .sx-lead, .sx-actions, .sx-stats) { animation: mp-rise .6s cubic-bezier(.2,.7,.2,1) both; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy > h1 { animation-delay: .08s; font-size: clamp(1.55rem, 7.2vw, 1.85rem) !important; line-height: 1.12 !important; letter-spacing: -0.02em; text-wrap: balance; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy > .sx-lead { animation-delay: .16s; font-size: .9375rem !important; line-height: 1.5 !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy > .sx-actions { animation-delay: .24s; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy > .sx-stats { animation-delay: .32s; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-eyebrow::before { animation: mp-pulse 2.2s ease-out infinite; border-radius: 50%; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-stats { padding-top: 12px !important; border-top: 1px solid rgb(255 255 255 / .1); gap: 8px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-stats dt, html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-stats b, html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-stats strong { font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+
+  /* botões: toque com resposta e brilho que passa no principal */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage :is(.sx-btn, .sx-daily__cta, .mobile-homepage__wide-link, a.sx-daily) { transition: transform .16s ease, box-shadow .2s ease, border-color .2s ease; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage :is(.sx-btn, .mobile-homepage__wide-link):active { transform: scale(.97); }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage :is(.sx-btn--primary, .mobile-homepage__wide-link) { position: relative; overflow: hidden; isolation: isolate; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage :is(.sx-btn--primary, .mobile-homepage__wide-link)::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 40%; background: linear-gradient(90deg, transparent, rgb(255 255 255 / .38), transparent); transform: translateX(-120%) skewX(-18deg); animation: mp-sweep 3.8s ease-in-out 1.2s infinite; pointer-events: none; z-index: -1; }
+
+  /* desafio diário */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-daily { padding: 12px !important; gap: 10px !important; }
+
+  /* ---------- seção "A plataforma": cards proporcionais ---------- */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-features { padding-block: 18px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-features .sx-head { margin-bottom: 12px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-card { display: grid !important; grid-template-columns: 1fr !important; align-content: start; gap: 8px !important; padding: 12px !important; min-height: 0 !important; border-radius: 14px !important; transition: transform .18s ease, border-color .2s ease; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-card:active { transform: scale(.975); }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-card__icon { width: 32px !important; height: 32px !important; border-radius: 10px !important; transition: transform .25s ease; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-card:active .sx-card__icon { transform: rotate(-8deg) scale(1.08); }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-card strong { display: block; font-size: .875rem !important; line-height: 1.2 !important; margin: 0 0 3px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-card p { font-size: .75rem !important; line-height: 1.4 !important; margin: 0 !important; color: var(--muted-foreground, #b9c0cb) !important; }
+
+  /* ---------- concursos ---------- */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-banner__art { max-height: 150px; object-fit: cover; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-section, html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-banner-wrap { padding-block: 10px !important; margin-block: 0 !important; }
+
+  /* ---------- ranking compacto ---------- */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .home-ranking-arena { padding-block: 10px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-hero { padding: 12px 14px !important; min-height: 0 !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-hero :is(h2, h3) { font-size: 1.125rem !important; margin: 2px 0 !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-hero__desc { font-size: .8125rem !important; line-height: 1.4 !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-podium { gap: 6px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-podium__card { padding: 8px 12px !important; min-height: 0 !important; border-radius: 12px !important; transition: transform .18s ease; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-podium__card:active { transform: scale(.98); }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .rka-board { padding: 8px !important; gap: 6px !important; }
+
+  /* ---------- planos ---------- */
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mobile-plans { padding-block: 14px !important; gap: 10px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mobile-plans__list { gap: 6px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mobile-plans__list > li { padding-block: 9px !important; min-height: 0 !important; transition: transform .18s ease; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mobile-plans__list > li:active { transform: scale(.985); }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mobile-plans__list small { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; display: block; font-size: .6875rem; line-height: 1.3; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mobile-plans__list > li > div { min-width: 0; flex: 1; }
+
+  /* ---------- rodapé: um só, baixo ---------- */
+  html body:not(#_):not(#_):not(#_) .nf { padding-block: 14px 12px !important; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__grid { display: flex !important; flex-wrap: wrap; align-items: center; gap: 10px 12px !important; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__app, html body:not(#_):not(#_):not(#_) .nf .nf__brand > p, html body:not(#_):not(#_):not(#_) .nf .nf__col h2 { display: none !important; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__brand { display: flex !important; align-items: center; justify-content: space-between; gap: 10px; width: 100%; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__brand .norte-brand { --brand-scale: .72; transform-origin: left center; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__contact { display: flex !important; gap: 8px !important; margin: 0 !important; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__contact a { width: 38px; height: 38px; padding: 0 !important; display: grid !important; place-items: center; border-radius: 12px; border: 1px solid rgb(240 207 134 / .28); background: rgb(240 207 134 / .08); transition: transform .16s ease, background .2s ease; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__contact a:active { transform: scale(.92); }
+  html body:not(#_):not(#_):not(#_) .nf .nf__contact a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__contact svg { width: 18px; height: 18px; margin: 0 !important; color: var(--qx-gold, #efd090); }
+  html body:not(#_):not(#_):not(#_) .nf nav.nf__col { display: contents !important; }
+  html body:not(#_):not(#_):not(#_) .nf nav.nf__col a { padding: 4px 0 !important; font-size: .75rem !important; line-height: 1.2 !important; opacity: .85; }
+  html body:not(#_):not(#_):not(#_) .nf nav.nf__col a:not(:last-child)::after { content: none; }
+  html body:not(#_):not(#_):not(#_) .nf .nf__bar { display: flex !important; flex-wrap: wrap; justify-content: space-between; padding-top: 8px !important; margin-top: 6px !important; font-size: .65rem !important; gap: 2px 8px !important; }
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .mf { display: none !important; }
+}
+
+/* ---------- revelação ao rolar ---------- */
+@media (max-width: 1023px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    html body:not(#_):not(#_):not(#_) .mobile-homepage :is(.sx-card, .sx-exam, .sx-banner, .mobile-plans__list > li, .rka-podium > li, .rka-board > *, .sx-head, .mobile-plans__trial) {
+      animation: mp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 55%;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .mobile-homepage *, html body .mobile-homepage *::before, html body .mobile-homepage *::after { animation: none !important; transition: none !important; }
+}
+
+/* ======================= MENU (três riscos) ======================= */
+html body:not(#_):not(#_):not(#_) .home-menu.hm2 { padding: 0 !important; gap: 0 !important; overflow: hidden auto; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-header { padding: 18px 64px 14px 20px !important; border-bottom: 1px solid rgb(255 255 255 / .08); min-height: 0 !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-header p { font-size: 12px !important; color: #aeb7c4 !important; text-shadow: none !important; max-width: 28ch !important; }
+html body:not(#_):not(#_):not(#_) .hm2 > button:first-of-type { top: 14px !important; right: 14px !important; width: 40px !important; height: 40px !important; border-radius: 50% !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 0 !important; padding: 6px 12px 0; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile {
+  display: grid !important; grid-template-columns: 36px 1fr 16px; align-items: center; gap: 12px; min-height: 54px;
+  padding: 8px 8px !important; border: 0 !important; border-bottom: 1px solid rgb(255 255 255 / .07) !important; border-radius: 0 !important;
+  background: none !important; box-shadow: none !important; font-size: 15px !important; font-weight: 600; text-align: left; justify-content: initial !important; color: #f4f1e8 !important;
+  transition: background .18s ease, padding-left .18s ease;
+}
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile svg { width: 36px !important; height: 36px !important; padding: 8px; border-radius: 11px; color: var(--qx-gold, #efd090) !important; background: rgb(240 207 134 / .1); border: 1px solid rgb(240 207 134 / .22); }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile::after { display: block !important; content: "›"; font-size: 22px; line-height: 1; color: rgb(255 255 255 / .35); transition: transform .18s ease, color .18s ease; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile:is(:hover, :focus-visible, :active) { background: rgb(240 207 134 / .07) !important; padding-left: 12px !important; transform: none; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile:is(:hover, :focus-visible, :active)::after { transform: translateX(3px); color: var(--qx-gold, #efd090); }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-plans { margin: 12px 16px 0 !important; padding: 12px !important; border-radius: 14px !important; background: linear-gradient(135deg, rgb(240 207 134 / .14), rgb(240 207 134 / .04)) !important; border: 1px solid rgb(240 207 134 / .3) !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-plans__prices { grid-template-columns: repeat(4, 1fr); gap: 4px !important; margin-top: 8px; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-plans__prices i { padding: 4px 5px !important; background: rgb(0 0 0 / .22) !important; border-color: rgb(255 255 255 / .08) !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-block { padding: 14px 20px 0 !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-block h2 { color: #8f99a8 !important; margin-bottom: 8px !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-chips { display: flex !important; flex-wrap: wrap; gap: 6px 8px !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-chips a { padding: 6px 12px !important; min-height: 32px !important; border-radius: 999px !important; font-size: 12.5px !important; background: rgb(255 255 255 / .05) !important; border: 1px solid rgb(255 255 255 / .1) !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-chips a::before { display: none !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-contact { display: flex !important; gap: 8px !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-contact a { flex: 1; flex-direction: row; gap: 6px; min-height: 40px; border-radius: 12px !important; background: rgb(255 255 255 / .05) !important; border: 1px solid rgb(255 255 255 / .1) !important; font-size: 12.5px !important; justify-content: center; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-address { color: #8f99a8 !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-access { position: sticky; bottom: 0; margin-top: auto; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)) !important; background: linear-gradient(180deg, transparent, rgb(10 16 26 / .96) 28%); backdrop-filter: blur(10px); border-top: 1px solid rgb(255 255 255 / .08) !important; }
+/* entrada em cascata */
+html body:not(#_):not(#_):not(#_) .home-menu.hm2[data-state="open"] :is(.hm2-tile, .hm2-plans, .hm2-block) { animation: mp-slide .38s cubic-bezier(.2,.7,.2,1) both; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-tile:nth-child(1) { animation-delay: .05s; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-tile:nth-child(2) { animation-delay: .09s; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-tile:nth-child(3) { animation-delay: .13s; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-tile:nth-child(4) { animation-delay: .17s; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-tile:nth-child(5) { animation-delay: .21s; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-plans { animation-delay: .25s; }
+html body:not(#_):not(#_):not(#_) .hm2[data-state="open"] .hm2-block { animation-delay: .3s; }
+@media (prefers-reduced-motion: reduce) { html body .hm2 * { animation: none !important; transition: none !important; } }
+
+/* o cubo do hero não cobre o título */
+@media (max-width: 1023px) {
+  html body:not(#_):not(#_):not(#_) .mobile-homepage .sx-hero__copy > h1 { padding-right: 58px !important; }
+}
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile svg { box-sizing: border-box !important; }
+html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile span { text-align: left !important; justify-self: start; }
+
+/* modo claro: avisos e ranking legíveis */
+@media (max-width: 1023px) {
+  html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .sx-note :is(strong, b) { color: #7a4d08 !important; }
+  html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .sx-note { color: #3d4757 !important; }
+  html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-hero :is(p, span, small):not(.rka-hero__desc) { color: #e8edf3 !important; }
+  html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-podium__card :is([class*="place"], [class*="rank"], [class*="badge"], [class*="pos"]) { color: #5a3a06 !important; }
+  html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-board a, html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-board summary { color: #3d4757; }
+}
