@@ -48,6 +48,8 @@ import { subjectDescription } from "@/lib/areaDescriptions";
 import "@/styles/study-area-compact.css";
 import "@/styles/student-area-kit.css";
 import "@/styles/material-hub-v2.css";
+import "@/styles/material-hub-pro.css";
+import { examDaysLeft } from "@/lib/examClock";
 
 const PCAC_GUIDES = [
   { id: "raciocinio-logico", label: "Raciocínio Lógico" },
@@ -390,21 +392,6 @@ function MaterialHub() {
         )}
       </section>
 
-      <section className="ak-strip ak-guides" aria-labelledby="hub-guides">
-        <header>
-          <h2 id="hub-guides">Aulas por disciplina · PC-AC 2026</h2>
-        </header>
-        <ul className="ak-guides__list">
-          {PCAC_GUIDES.map((item) => (
-            <li key={item.id}>
-              <Link to="/dashboard/library" search={{ collection: "subjects", guia: item.id } as never} hash="materiais-atualizados-pcac">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <section className="pcac-material-focus" aria-labelledby="pcac-material-focus-title">
         <div className="pcac-material-focus__glow" aria-hidden="true" />
         <div className="pcac-material-focus__body">
@@ -415,21 +402,19 @@ function MaterialHub() {
           </p>
           <div className="pcac-material-focus__meta">
             <span>{pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.label ?? "Oficial Investigador"}</span>
-            <span>Prova objetiva: {new Date(`${PCAC_EXAM_DATE}T12:00:00`).toLocaleDateString("pt-BR")}</span>
+            <span>Prova objetiva: {PCAC_EXAM_DATE.split("-").reverse().join("/")}</span>
+            <span className="pcac-material-focus__days"><b>{examDaysLeft(PCAC_EXAM_DATE) ?? 0}</b> dias para a prova</span>
           </div>
         </div>
         <div className="pcac-material-focus__actions">
           <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador" }} className="pcac-material-focus__primary">Abrir edital verticalizado →</Link>
           <Link to="/dashboard/pc-acre-edital" search={{ cargo: "investigador", view: "plan" }} className="pcac-material-focus__secondary">Ver plano de estudos</Link>
         </div>
-        <div className="pcac-material-focus__disciplines" aria-label="Disciplinas do cargo de Oficial Investigador">
-          <span className="pcac-material-focus__disciplines-label">No edital:</span>
-          {(pcAcVerticalCargos.find((cargo) => cargo.id === "investigador")?.blocks ?? []).flatMap((block) => block.disciplines).slice(0, 7).map((discipline) => {
-            const match = subjects.find((subject) => subject.name === discipline.name);
-            return match ? (
-              <Link key={discipline.id} to="/dashboard/disciplinas" search={{ d: match.name }} className="pcac-material-focus__discipline">{discipline.name}</Link>
-            ) : <span key={discipline.id} className="pcac-material-focus__discipline pcac-material-focus__discipline--muted">{discipline.name}</span>;
-          })}
+        <div className="pcac-material-focus__disciplines" aria-label="Aulas por disciplina do edital PC-AC">
+          <span className="pcac-material-focus__disciplines-label">Aulas por disciplina:</span>
+          {PCAC_GUIDES.map((item) => (
+            <Link key={item.id} to="/dashboard/library" search={{ collection: "subjects", guia: item.id } as never} hash="materiais-atualizados-pcac" className="pcac-material-focus__discipline">{item.label}</Link>
+          ))}
         </div>
       </section>
 
