@@ -136,6 +136,10 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
+/** Esconde e remove a marca "Edit with Lovable" desde o primeiro quadro (antes do styles.css carregar). */
+const NO_BADGE_CSS = '[id^="lovable-badge"],[class*="lovable-badge"],[data-lovable-badge],[data-testid="lovable-badge"],lovable-badge,a[href*="lovable.dev"],a[href*="gpteng.co"],iframe[src*="lovable.dev"],iframe[src*="gpteng.co"]{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}';
+const NO_BADGE_SCRIPT = `(function(){var S='[id^="lovable-badge"],[class*="lovable-badge"],[data-lovable-badge],[data-testid="lovable-badge"],lovable-badge,iframe[src*="lovable.dev"],iframe[src*="gpteng.co"],a[href*="lovable.dev"],a[href*="gpteng.co"]';function rm(r){try{r.querySelectorAll(S).forEach(function(n){n.remove()});r.querySelectorAll('*').forEach(function(n){if(n.shadowRoot&&/lovable/i.test(n.tagName+n.id+n.className)){n.remove()}})}catch(e){}}var q=0;function run(){if(q)return;q=1;requestAnimationFrame(function(){q=0;rm(document)})}rm(document);new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true});})();`;
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -198,7 +202,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: READING_SCALE_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: CHUNK_RECOVERY_SCRIPT }} />
-        <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
+        <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS + NO_BADGE_CSS }} />
+        <script dangerouslySetInnerHTML={{ __html: NO_BADGE_SCRIPT }} />
         <link rel="preload" as="image" href={INITIAL_LOADING_ART} fetchPriority="high" type="image/webp" />
         <link rel="preload" as="image" href="/media/brand/norte-identity/logo-vertical-escuro.svg" type="image/svg+xml" />
         <HeadContent />
