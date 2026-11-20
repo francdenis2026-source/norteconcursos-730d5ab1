@@ -791,3 +791,24 @@ html body .qx .qx-pane--stem .qx-stem { font-size: 1.0625rem; line-height: 1.6; 
 .qx .qx-option-row .qx-strike svg { width: 0.875rem; height: 0.875rem; }
 .qx .qx-option__tag { white-space: nowrap; }
 .qx .qx-options { gap: 0.4375rem; }
+
+/* Texto de apoio recolhido: exatamente 2 linhas (sem pedaço da 3ª) e botão legível */
+html body .qx .qx-base:not([data-open]) { padding-bottom: 0.625rem; }
+html body .qx .qx-base:not([data-open]) .qx-base__text {
+  padding-bottom: 0;
+  max-height: calc(2 * 1.6em);
+  line-height: 1.6;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+html body .qx .qx-base__toggle {
+  color: var(--qx-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid color-mix(in oklab, var(--qx-gold) 55%, transparent);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--qx-gold) 12%, transparent);
+}
+:root:not(.dark) html body .qx .qx-base__toggle,
+html:not(.dark) body .qx .qx-base__toggle { color: var(--qx-gold-ink, var(--qx-gold)); }
