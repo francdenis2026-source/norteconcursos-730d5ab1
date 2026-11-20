@@ -1,11 +1,10 @@
 /*
-  Treinador — montagem da sessão em tela cheia (data-focus-mode="true").
-  Antes, uma regra antiga forçava display:block e empilhava o resumo "Sua sessão" abaixo dos
-  filtros, gastando duas telas. Aqui a montagem vira uma única tela: filtros à esquerda e
-  resumo + atalhos à direita, tudo compacto e sem rolagem em janelas comuns.
+  Treinador — montagem da sessão em uma única tela, em tela cheia ou em janela normal:
+  filtros à esquerda e resumo "Sua sessão" à direita, alinhados pelo topo, sem cortes e sem
+  faixa vazia embaixo (a altura vem de --qt3-h, medida por QtFitViewport).
 */
 @media (min-width: 880px) {
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2.qt3 {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2.qt3 {
     --qf-h: var(--qt3-h, calc(100dvh - 8.5rem));
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) clamp(16.5rem, 23vw, 20.5rem) !important;
@@ -15,7 +14,7 @@
     max-width: 1560px !important;
     padding: 0 !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2.qt3 > .qt3-main {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2.qt3 > .qt3-main {
     grid-column: 1;
     grid-row: 1;
     display: grid;
@@ -27,7 +26,7 @@
     overscroll-behavior: contain;
     scrollbar-width: thin;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .trainer-setup.qt2.qt3 > .qt3-summary {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2.qt3 > .qt3-summary {
     grid-column: 2;
     grid-row: 1;
     position: static;
@@ -41,31 +40,31 @@
   }
 
   /* Faixa de título: uma linha, texto à esquerda e contadores à direita. */
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero {
     min-height: 3.75rem !important;
     padding: 0.625rem 1.125rem !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero__copy {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero__copy {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     width: 100%;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero__copy h1 {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero__copy h1 {
     margin: 0 !important;
     font-size: clamp(1.125rem, 1.7vw, 1.4rem) !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero__copy p {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero__copy p {
     display: flex !important;
     flex-wrap: nowrap;
     margin: 0 !important;
     flex: none;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero__copy p span { white-space: nowrap; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero__copy p span { white-space: nowrap; }
 
   /* Foco na prova: título e opções na mesma linha, sem texto explicativo. */
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt2-focus {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus {
     display: flex !important;
     flex-wrap: wrap;
     align-items: center;
@@ -73,58 +72,100 @@
     gap: 0.5rem 1rem;
     padding: 0.5rem 0.875rem !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt2-focus header span,
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt2-focus > p { display: none; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt2-focus__options {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus header span,
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus > p { display: none; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus__options {
     margin: 0 !important;
     flex-wrap: wrap;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt2-focus__options button {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus__options button {
     min-height: 1.875rem !important;
     padding-block: 0 !important;
   }
 
   /* Painel de filtros. */
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-panel {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-panel {
     gap: 0.5rem !important;
     padding: 0.625rem 0.875rem !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-panel__title { margin: 0 !important; font-size: 0.875rem !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-panel > .qt3-grid {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-panel__title { margin: 0 !important; font-size: 0.875rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-panel > .qt3-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 0.5rem !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-select { height: 2.25rem !important; min-height: 0 !important; font-size: 0.8125rem !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-field__label { margin-bottom: 0.2rem !important; font-size: 0.75rem !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-row { gap: 0.5rem 1.25rem !important; padding-top: 0.5rem !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-chips button { min-height: 1.875rem !important; padding-block: 0 !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-more > summary { min-height: 2rem !important; padding-block: 0.25rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-select { height: 2.25rem !important; min-height: 0 !important; font-size: 0.8125rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-field__label { margin-bottom: 0.2rem !important; font-size: 0.75rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-row { gap: 0.5rem 1.25rem !important; padding-top: 0.5rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-chips button { min-height: 1.875rem !important; padding-block: 0 !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-more > summary { min-height: 2rem !important; padding-block: 0.25rem !important; }
 
   /* Resumo lateral: botão de iniciar sempre visível, sem a barra fixa do celular. */
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-summary__actions { display: grid !important; gap: 0.25rem; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-mobilebar { display: none !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-summary__card {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__actions { display: grid !important; gap: 0.25rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-mobilebar { display: none !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__card {
     gap: 0.5rem !important;
     padding: 0.875rem !important;
   }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-summary__count { font-size: 2.25rem !important; line-height: 1 !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-summary__facts {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__count { font-size: 2.25rem !important; line-height: 1 !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__facts {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 0.875rem;
   }
   /* Sem filtros ativos, o bloco só repetiria o óbvio. */
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-summary__filters:has(> .qt3-muted) { display: none; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-start { height: 2.75rem; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-reset { height: 2rem; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-quick { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.375rem; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-quick a { min-height: 2.25rem !important; font-size: 0.8125rem; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-quick a:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__filters:has(> .qt3-muted) { display: none; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-start { height: 2.75rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-reset { height: 2rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.375rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick a { min-height: 2.25rem !important; font-size: 0.8125rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick a:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 /* Janelas muito baixas: o título e o painel ficam ainda mais enxutos. */
 @media (min-width: 880px) and (max-height: 560px) {
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero { min-height: 3rem !important; padding-block: 0.4rem !important; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-hero__copy small { display: none; }
-  html body .app-shell.navigation-v2[data-area="student"][data-focus-mode="true"] #dashboard-content .qt3 .qt3-summary__count { font-size: 1.75rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero { min-height: 3rem !important; padding-block: 0.4rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-hero__copy small { display: none; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__count { font-size: 1.75rem !important; }
+}
+
+/* Aproveita a janela inteira: as colunas ocupam a altura medida e o painel de filtros cresce
+   (controles maiores e espaçamento folgado) em vez de deixar faixa vazia embaixo. */
+@media (min-width: 880px) {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2.qt3 > .qt3-main {
+    min-height: var(--qf-h);
+    display: flex !important;
+    flex-direction: column;
+  }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-main > .qt3-panel {
+    flex: 1 1 auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem !important;
+  }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .trainer-setup.qt2.qt3 > .qt3-summary {
+    min-height: var(--qf-h);
+    grid-template-rows: 1fr auto auto;
+  }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__card {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__filters { flex: 1 1 auto; align-content: start; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick { grid-auto-rows: 1fr; }
+}
+@media (min-width: 880px) and (min-height: 680px) {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-panel { padding: 1rem 1.125rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-panel__title { font-size: 1rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-select { height: 2.75rem !important; font-size: 0.875rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-field__label { font-size: 0.8125rem !important; margin-bottom: 0.35rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-chips button { min-height: 2.5rem !important; font-size: 0.875rem !important; padding-inline: 1rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-row { padding-top: 1rem !important; gap: 1rem 1.75rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-more > summary { min-height: 2.5rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__card { padding: 1.125rem !important; gap: 0.875rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__count { font-size: 3rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-start { height: 3.25rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick a { min-height: 2.75rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus { padding-block: 0.75rem !important; }
 }

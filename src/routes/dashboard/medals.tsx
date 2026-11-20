@@ -22,6 +22,8 @@ import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero
 import { Hint } from "@/components/ui/hint";
 import { cn } from "@/lib/utils";
 
+const QxMedal3D = React.lazy(() => import("@/components/dashboard/QxMedal3D"));
+
 export const Route = createFileRoute("/dashboard/medals")({ component: MedalsPage });
 
 interface Win {
@@ -140,20 +142,34 @@ function Seal({
   return (
     <Hint content={`${m.name} — ${m.description}${when ? ` (conquistada em ${when})` : ""}`}>
       <li className="flex w-[4.75rem] flex-col items-center gap-1 text-center">
+        {(() => {
+          const flat = (
         <span
-          className={cn(
-            "grid h-14 w-14 place-items-center rounded-full",
-            m.earned
-              ? cn("bg-gradient-to-br text-white shadow-lg", tier.grad, tier.shadow)
-              : "border-2 border-dashed border-muted-foreground/30 text-muted-foreground",
-          )}
-        >
-          {m.earned ? (
-            <Icon className="h-6 w-6 drop-shadow" aria-hidden />
-          ) : (
-            <span className="text-xs font-black tabular-nums">{m.target}</span>
-          )}
-        </span>
+              className={cn(
+                "grid h-14 w-14 place-items-center rounded-full",
+                m.earned
+                  ? cn("bg-gradient-to-br text-white shadow-lg", tier.grad, tier.shadow)
+                  : "border-2 border-dashed border-muted-foreground/30 text-muted-foreground",
+              )}
+            >
+              {m.earned ? (
+                <Icon className="h-6 w-6 drop-shadow" aria-hidden />
+              ) : (
+                <span className="text-xs font-black tabular-nums">{m.target}</span>
+              )}
+            </span>
+          );
+          return (
+            <React.Suspense fallback={flat}>
+              <QxMedal3D
+                tier={Math.min(tierIndex, 3) as 0 | 1 | 2 | 3}
+                earned={m.earned}
+                label={`${tier.name}: ${m.name}`}
+                fallback={flat}
+              />
+            </React.Suspense>
+          );
+        })()}
         <span
           className={cn(
             "text-[0.62rem] font-bold uppercase tracking-wide",
