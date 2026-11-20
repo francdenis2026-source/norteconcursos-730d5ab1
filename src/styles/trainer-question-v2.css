@@ -100,7 +100,7 @@
   display: flex;
   flex: 1 1 0;
   flex-direction: column;
-  min-height: 0;
+  min-height: 12rem;
   min-width: 0;
 }
 .qx-main--paused { filter: blur(6px); opacity: 0.5; cursor: pointer; user-select: none; }
@@ -519,7 +519,7 @@ html body .app-shell[data-focus-mode="true"]:has(.qx):not(#_):not(#_):not(#_) :i
 }
 html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-card {
   height: min(var(--qx-h, 100dvh), 100%);
-  min-height: 0;
+  min-height: min(26rem, 100%);
 }
 
 @media (prefers-reduced-motion: reduce) {
