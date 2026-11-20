@@ -375,6 +375,27 @@ function QuestionTrainer() {
   const [saving, setSaving] = React.useState(false);
   const savingRef = React.useRef(false);
   const workspaceFs = useWorkspaceFullscreen(true);
+  // O treino já abre no modo foco (layout imersivo); o botão pede a tela cheia do navegador em um só
+  // clique. Antes ele "restaurava" o modo foco primeiro, e só o segundo clique entrava em tela cheia.
+  const [nativeFs, setNativeFs] = React.useState(false);
+  React.useEffect(() => {
+    const sync = () => setNativeFs(Boolean(document.fullscreenElement));
+    sync();
+    document.addEventListener("fullscreenchange", sync);
+    return () => document.removeEventListener("fullscreenchange", sync);
+  }, []);
+  const toggleFullscreen = () => {
+    if (nativeFs) {
+      workspaceFs.exit();
+      if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
+    } else if (workspaceFs.active) {
+      if (document.fullscreenEnabled && document.documentElement.requestFullscreen)
+        void document.documentElement.requestFullscreen().catch(() => {});
+      else workspaceFs.exit();
+    } else {
+      workspaceFs.enter();
+    }
+  };
   const responseIdRef = React.useRef(crypto.randomUUID());
   const [answered, setAnswered] = React.useState(false);
   const [responseSeconds, setResponseSeconds] = React.useState<number | null>(null);
@@ -1291,16 +1312,16 @@ function QuestionTrainer() {
                 <LogOut className="h-4 w-4" /> <span>Encerrar</span>
               </Button>
             </Hint>
-            <Hint content={workspaceFs.active ? "Restaurar a janela (Esc)" : "Maximizar a tela"}>
+            <Hint content={nativeFs ? "Sair da tela cheia (Esc)" : "Tela cheia"}>
               <Button
                 variant="ghost"
                 size="icon"
                 className="qx-btn qx-btn--icon"
-                aria-label={workspaceFs.active ? "Restaurar a janela" : "Maximizar a tela"}
-                aria-pressed={workspaceFs.active}
-                onClick={workspaceFs.active ? workspaceFs.exit : workspaceFs.enter}
+                aria-label={nativeFs ? "Sair da tela cheia" : "Tela cheia"}
+                aria-pressed={nativeFs}
+                onClick={toggleFullscreen}
               >
-                {workspaceFs.active ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+                {nativeFs ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
               </Button>
             </Hint>
             <DropdownMenu>

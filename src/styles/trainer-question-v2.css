@@ -743,3 +743,16 @@ html body .qx :is(.qx-stem, .qx-base__text, .qx-explain__text, .qx-explain__righ
   color: var(--muted-foreground);
 }
 .qx-explain__text + .qx-explain__text { margin-top: 0.125rem; color: var(--muted-foreground); }
+
+/* Explicação com acento próprio (azul-petróleo): destaca do enunciado sem competir com o dourado dos botões. */
+.qx { --qx-explain: oklch(0.72 0.1 215); }
+:root:not(.dark) .qx { --qx-explain: oklch(0.45 0.1 225); }
+.qx-pane--stem .qx-explain,
+.qx-explain {
+  padding: 0.625rem 0.875rem 0.75rem;
+  border: 1px solid color-mix(in oklab, var(--qx-explain) 30%, var(--qx-line));
+  border-radius: 0.75rem;
+  background: color-mix(in oklab, var(--qx-explain) 7%, transparent);
+}
+.qx-explain__head .qx-label { color: var(--qx-explain); }
+.qx-explain__text strong { color: var(--qx-explain); }
