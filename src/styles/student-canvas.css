@@ -379,3 +379,8 @@ html body .app-shell[data-area="student"] .app-content { padding-top: 8px !impor
 html body .app-shell[data-area="student"] .app-content__inner { padding-top: 0 !important; }
 html body .app-shell[data-area="student"] .app-content__inner > :first-child { margin-top: 0 !important; }
 html body .app-shell[data-area="student"] #dashboard-content .student-home.sh2 { padding-top: 0 !important; margin-top: 0 !important; }
+
+/* Rodapé fixo (assinatura): o conteúdo vai até ela, sem faixa de acabamento nem reserva extra. */
+html body .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after { display: none !important; }
+html body .app-shell.navigation-v2[data-focus-mode="true"] .app-content { padding-bottom: 10px !important; }
+html body .app-shell.navigation-v2[data-focus-mode="true"] .app-main { height: 100% !important; padding-bottom: 0 !important; }
