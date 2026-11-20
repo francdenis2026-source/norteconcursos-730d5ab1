@@ -8,7 +8,6 @@ import {
   BookOpenCheck,
   BrainCircuit,
   CalendarClock,
-  ChevronDown,
   CheckCircle2,
   Download,
   PlayCircle,
@@ -64,8 +63,6 @@ import { PCAC_EXAM_DATE } from "@/lib/pcAcreStudyPlan";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { relatedVideos } from "@/lib/relatedVideos";
 import {
-  INVESTIGATOR_FOCUS,
-  INVESTIGATOR_RADAR,
   PCAC_IDECAN_PRIORITY,
 } from "@/data/pcAcreIdecanRadar";
 import "@/styles/pcac-edital.css";
@@ -767,22 +764,6 @@ function PcAcreEditalVerticalizadoPage() {
                       ))}
                     </ul>
                   </section>
-                )}
-                {cargo.id === "investigador" && (
-                  <details className="pe-pane pe-more">
-                    <summary><span><b>Análise detalhada da banca</b><small>Assuntos para ganhar tempo e evidências do radar IDECAN</small></span><ChevronDown aria-hidden="true" /></summary>
-                    <div className="pe-more__body">
-                      <p>Orientação de estudo cruzando o edital com o padrão observado em provas policiais da IDECAN, incluindo PC-SC 2026. Não altera o conteúdo oficial.</p>
-                      <ul>
-                        {INVESTIGATOR_FOCUS.map((item, index) => (
-                          <li key={item.subject}><div><b>{index + 1}. {item.subject}</b><span className="pe-chip" data-level={item.priority}>{item.priority}</span></div><small>{item.topics}</small></li>
-                        ))}
-                        {INVESTIGATOR_RADAR.map((item, index) => (
-                          <li key={`r-${item.subject}`}><div><b>R{index + 1}. {item.subject}</b><span className="pe-chip" data-level={item.priority}>{item.priority}</span></div><small>{item.topics}</small><em>Base: {item.evidence}</em></li>
-                        ))}
-                      </ul>
-                    </div>
-                  </details>
                 )}
               </div>
             </div>

@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CONFIDENCE_LABEL, answerStats, confidence, dedupeQuestions, examKey, recommendations, recurringThemes, sequenceStats, splitByKind, subjectProfile, type BancaQuestion, type Verdict } from "@/lib/bancaProfile";
 import { cn } from "@/lib/utils";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
-import { INVESTIGATOR_FOCUS } from "@/data/pcAcreIdecanRadar";
+import { INVESTIGATOR_FOCUS, INVESTIGATOR_RADAR } from "@/data/pcAcreIdecanRadar";
 import "@/styles/inteligencia-idecan-refinement.css";
 const PC_CAREERS = new Set(["Delegado de Polícia", "Escrivão de Polícia", "Agente / Investigador de Polícia"]);
 const CURRENT_YEAR = new Date().getFullYear();
@@ -551,6 +551,18 @@ export function IdecanIntelligenceWorkspace({ rows, loading = false, error = fal
         </CardContent>
       </Card>
 
+      <details className="idecan-discipline-disclosure mt-3 rounded-xl border bg-card p-3">
+        <summary><strong>Análise detalhada da banca</strong><ChevronDown aria-hidden="true" /></summary>
+        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">Assuntos para ganhar tempo e evidências do radar IDECAN. Orientação de estudo cruzando o edital com o padrão observado em provas policiais da IDECAN, incluindo PC-SC 2026. Não altera o conteúdo oficial.</p>
+        <ul className="mt-2 grid gap-2 md:grid-cols-2">
+          {INVESTIGATOR_FOCUS.map((item, index) => (
+            <li key={item.subject} className="rounded-lg border p-2 text-xs"><div className="flex items-center justify-between gap-2"><b>{index + 1}. {item.subject}</b><Badge variant="outline">{item.priority}</Badge></div><p className="mt-1 text-muted-foreground">{item.topics}</p></li>
+          ))}
+          {INVESTIGATOR_RADAR.map((item, index) => (
+            <li key={`r-${item.subject}`} className="rounded-lg border p-2 text-xs"><div className="flex items-center justify-between gap-2"><b>R{index + 1}. {item.subject}</b><Badge variant="outline">{item.priority}</Badge></div><p className="mt-1 text-muted-foreground">{item.topics}</p><em className="mt-1 block not-italic text-[11px] text-muted-foreground">Base: {item.evidence}</em></li>
+          ))}
+        </ul>
+      </details>
       </section>
       </>}
       <footer className="idecan-method-note"><Info aria-hidden="true" /> Histórico de questões oficiais ativas. O edital PC-AC 001/2026 orienta a preparação; diferenças estatísticas não garantem resultados futuros.</footer>
