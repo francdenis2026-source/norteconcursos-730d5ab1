@@ -1,3 +1,5 @@
+import "@/styles/student-topbar-pro.css";
+import "@/styles/light-mode-pro.css";
 import { createFileRoute, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";

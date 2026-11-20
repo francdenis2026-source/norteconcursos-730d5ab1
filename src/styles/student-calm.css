@@ -5,12 +5,12 @@
    A paleta única da área vive nas variáveis --sp-* (student-pro.css): é ali que se ajusta. */
 :root:not(.dark) .app-shell[data-area="student"]:not(#_):not(#_):not(#_),
 :root:not(.dark) .app-shell[data-area="student"]:not(#_):not(#_):not(#_) * {
-  --sp-canvas: #e8e7e2;
-  --sp-surface: #f5f4f0;
-  --sp-soft: #ecebe6;
-  --sp-line: #cbc9c0;
-  --sp-ink: #23272e;
-  --sp-muted: #4d545d;
+  --sp-canvas: #eef1f6;
+  --sp-surface: #ffffff;
+  --sp-soft: #f5f7fb;
+  --sp-line: #d6dce6;
+  --sp-ink: #172033;
+  --sp-muted: #44506a;
 }
 
 /* Escuro: fundos um pouco mais fundos; texto e secundário seguem acima de AA. */

@@ -1,0 +1,19 @@
+/* Modo claro, painéis internos: acabamento único. Fundo cinza-azulado frio, cartões brancos, tinta azul-petróleo;
+   faixas escuras (banner, hero) mantêm texto claro; dourado vira âmbar escuro quando é texto sobre fundo claro (AA). */
+:root:not(.dark) {
+  --lm-amber-ink: #7a4d08;
+  --lm-on-dark: #ffffff;
+  --lm-on-dark-soft: #d3dbe6;
+}
+
+/* Faixas escuras com imagem: números e textos claros (antes herdavam tinta escura do tema). */
+:root:not(.dark) .app-shell[data-area] #dashboard-content :is(.workspace-banner, .page-hero, .exam-simulator-hero, .mock-result-hero) :is(.hero-stat strong, .hero-stat b, h1, h2, strong.tabular) { color: var(--lm-on-dark) !important; }
+:root:not(.dark) .app-shell[data-area] #dashboard-content :is(.workspace-banner, .page-hero) :is(.hero-stat span, p, small, .text-slate-200, .text-slate-300) { color: var(--lm-on-dark-soft) !important; }
+
+/* Texto dourado sobre fundo claro. */
+:root:not(.dark) .app-shell[data-area] #dashboard-content :is(a, button, span, b, strong).text-primary:not(:is(.workspace-banner, .page-hero, .sh2-hero, [class*="hero"]) *) { color: var(--lm-amber-ink) !important; }
+:root:not(.dark) .app-shell[data-area] #dashboard-content :is(.rka-reload, [class*="reload"], .empty-state a, .empty-state button) { color: var(--lm-amber-ink); }
+
+/* Superfícies: borda e sombra frias, em vez de bege. */
+:root:not(.dark) .app-shell[data-area="student"] :is(.card, [class*="rounded-xl"].border, [class*="rounded-2xl"].border) { border-color: #d6dce6; }
+:root:not(.dark) .app-shell[data-area] .app-content { background: #eef1f6; }

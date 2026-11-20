@@ -108,39 +108,44 @@
   html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_) .app-content:has(.student-home.sh2) { padding-top: 0 !important; padding-inline: 0 !important; }
   html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_) .app-content__inner:has(.student-home.sh2) { width: 100% !important; max-width: none !important; padding-top: 0 !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) #dashboard-content .student-home.sh2 { max-width: none !important; width: 100% !important; gap: 14px !important; }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) #dashboard-content .student-home.sh2 > :not(.sh2-hero) { margin-inline: clamp(14px, 2vw, 28px) !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) #dashboard-content .student-home.sh2 > :not(.sh2-hero) { margin-inline: clamp(14px, 2vw, 28px) !important; }
 
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero {
     min-height: 0 !important;
     margin: 0 0 2px !important;
     padding: 14px clamp(14px, 2vw, 28px) !important;
     border: 0 !important; border-radius: 0 !important;
-    border-bottom: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent) !important;
-    background: linear-gradient(180deg, color-mix(in oklab, var(--background) 96%, #000), color-mix(in oklab, var(--background) 90%, #fff 2%)) !important;
+    border-bottom: 1px solid rgb(240 207 134 / .35) !important;
+    background: linear-gradient(100deg, #0a1422 0%, #0f1d31 55%, #132640 100%) !important;
     display: flex !important; align-items: center !important; gap: clamp(1rem, 3vw, 2.5rem) !important;
     animation: none !important;
   }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero::after {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero::after {
     content: ""; position: absolute; inset: auto 0 0; height: 1px; z-index: 1;
     background: linear-gradient(90deg, color-mix(in oklab, var(--qx-gold, #efd090) 60%, transparent), transparent 55%);
   }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art { width: 42% !important; opacity: 0.9 !important; }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello h1 { font-size: 1.5rem !important; line-height: 1.15; margin: 0.125rem 0 0.25rem; }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello { padding-right: clamp(1rem, 3vw, 2.5rem); border-right: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent); }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art { width: 42% !important; opacity: 0.9 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello h1 { font-size: 1.5rem !important; line-height: 1.15; margin: 0.125rem 0 0.25rem; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello { padding-right: clamp(1rem, 3vw, 2.5rem); border-right: 1px solid rgb(255 255 255 / .16); }
 
   /* Concurso e prova: sem caixa */
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest {
     display: flex !important; align-items: center !important; gap: clamp(1rem, 2.5vw, 2rem) !important;
     padding: 0 !important; margin: 0 !important; border: 0 !important; border-radius: 0 !important; background: none !important; box-shadow: none !important; backdrop-filter: none !important;
     min-width: 0;
   }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__exam {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__exam {
     padding: 0 0 0 1rem !important; margin: 0 !important; border: 0 !important; border-radius: 0 !important; background: none !important; box-shadow: none !important;
     border-left: 2px solid var(--qx-gold, #efd090) !important;
   }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__countdown { margin: 0 !important; }
-  html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__countdown b {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__countdown { margin: 0 !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__countdown b {
     font-size: 1.75rem; font-weight: 750; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;
     background: linear-gradient(180deg, #fff3cf, var(--qx-gold, #efd090) 60%, #c9962b); -webkit-background-clip: text; background-clip: text; color: transparent;
   }
+}
+
+/* A faixa de boas-vindas encosta na barra de menu (a reserva de 76 px era para a barra antiga). */
+@media (min-width: 900px) {
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-main:has(.student-home.sh2) { padding-top: 48px !important; }
 }
