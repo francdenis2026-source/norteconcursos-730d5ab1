@@ -77,7 +77,7 @@ html body .px-root .px-tile__prog em{display:block;line-height:16px!important;fo
 html body .px-root .px-detail__f a svg{margin-left:2px}
 
 /* ===== Paleta única e grade que preenche a janela ===== */
-.px-root{--p1:#f2c14e;--p2:#e0a15a;--p3:#79aee8;--p4:#6f8399;--ok:#5fc3b0;--b1:#7fa6e8;--b2:#5fc3b0;--b3:#e5b94a}
+.px-root{--p1:#f2c14e;--p2:#e0a15a;--p3:#79aee8;--p4:#a3b3ca;--ok:#5fc3b0;--b1:#7fa6e8;--b2:#5fc3b0;--b3:#e5b94a}
 html:not(.dark) .px-root{--p1:#9a6200;--p2:#a4530f;--p3:#1f6aa8;--p4:#52657d;--ok:#0e7a6a;--b1:#2c5fb3;--b2:#0e7a6a;--b3:#9a6200}
 .px-map{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(min-content,1fr);gap:8px;align-content:stretch;padding:0;overflow:auto}
 .px-block:nth-child(n+3){grid-column:1/-1}
@@ -115,3 +115,18 @@ html body .px-root .px-tile__prog{height:14px!important}html body .px-root .px-t
 
 /* Sem faixa escura sobrando: a página termina logo acima da assinatura fixa. */
 @media (min-width:900px){.px-page{height:calc(100dvh - 98px)!important;min-height:480px}}
+
+/* ===== Cartão legível: chance com ícone + texto, estudo separado ===== */
+.px-key{flex:none;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:5px 12px;border-radius:10px;background:var(--px-pane);border:1px solid var(--px-line);font-size:12px;color:var(--px-mut)}
+.px-key__t{white-space:nowrap}.px-key__sep{width:1px;height:16px;background:var(--px-line)}
+.px-signal{width:16px!important;height:12px!important;fill:currentColor}
+.px-tile__chance{--c:var(--p4);display:inline-flex;align-items:center;gap:5px;align-self:flex-start;padding:2px 9px 2px 7px;border-radius:999px;font-size:11px;font-weight:700;line-height:1.2;color:var(--c);background:color-mix(in srgb,var(--c) 15%,var(--px-pane));border:1px solid color-mix(in srgb,var(--c) 55%,transparent)}
+.px-tile__chance[data-level="Muito alta"]{--c:var(--p1)}.px-tile__chance[data-level="Alta"]{--c:var(--p2)}.px-tile__chance[data-level="Média"]{--c:var(--p3)}.px-tile__chance[data-level="Baixa"]{--c:var(--p4)}
+html body .px-root .px-tile__prog{display:flex!important;flex-direction:column;gap:3px;height:auto!important;background:none!important;overflow:visible!important;border-radius:0}
+.px-tile__prog-l{display:flex;justify-content:space-between;font-size:10.5px;color:var(--px-mut)}.px-tile__prog-l b{color:var(--px-fg);font-weight:700}
+.px-tile__prog-t{display:block;height:4px;border-radius:9px;background:color-mix(in srgb,var(--px-fg) 12%,transparent);overflow:hidden}.px-tile__prog-t i{display:block;height:100%;border-radius:9px;background:var(--ok);animation:px-grow .9s ease-out both;transform-origin:left}
+html body .px-root .px-tile__prog i{position:static!important;inset:auto!important}
+html body .px-root .px-tile{border-left-width:1px!important;border-left-color:var(--px-line)!important;gap:5px!important}
+html body .px-root .px-tile:hover{border-color:var(--lv)!important}
+.px-tile__num{font-size:22px!important}
+.px-page{height:calc(100dvh - 98px)}

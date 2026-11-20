@@ -27,6 +27,18 @@ const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1).repla
 type Metric = "questions" | "points";
 
 /** Mapa interativo da prova IDECAN da PC-AC 2026: quantas questões e quais assuntos por bloco. */
+
+const LEVEL_BARS: Record<string, number> = { "Muito alta": 4, Alta: 3, Média: 2, Baixa: 1 };
+/** Indicador de sinal: quanto mais barras acesas, maior a chance de cair. */
+function Signal({ level }: { level: string }) {
+  const n = LEVEL_BARS[level] ?? 1;
+  return (
+    <svg className="px-signal" viewBox="0 0 16 12" aria-hidden="true">
+      {[0, 1, 2, 3].map((i) => <rect key={i} x={i * 4} y={9 - i * 3} width="3" height={3 + i * 3} rx="1" opacity={i < n ? 1 : 0.25} />)}
+    </svg>
+  );
+}
+
 export function PcAcExamMap({
   initialCargo = "investigador",
   hideTitle = false,
@@ -160,6 +172,14 @@ export function PcAcExamMap({
         </div>
       </header>
 
+      <div className="px-key" aria-label="Como ler os cartões">
+        <span className="px-key__t">Chance de cair na prova:</span>
+        {(["Muito alta", "Alta", "Média", "Baixa"] as const).map((l) => (
+          <span key={l} className="px-tile__chance" data-level={l}><Signal level={l} />{l}</span>
+        ))}
+        <span className="px-key__sep" aria-hidden="true" />
+        <span className="px-key__t">Número grande = questões na prova · Barra = material já estudado</span>
+      </div>
       <div className="px-main">
         <div className="px-map" key={cargoId}>
           {blocks.map((b, bi) => (
@@ -176,9 +196,10 @@ export function PcAcExamMap({
                       <button type="button" className="px-tile" data-level={d.level} aria-pressed={active?.id === d.id} onClick={() => setSelected(d.id)}>
                         <span className="px-tile__name">{d.name}</span>
                         <span className="px-tile__num"><CountNum value={value(d)} />{d.estimated && metric === "questions" && <abbr title="Estimado: o edital informa só o total do bloco">~</abbr>}<small>{metric === "questions" ? "q" : "pts"}</small></span>
-                        <span className="px-tile__bar" aria-hidden="true"><i style={{ width: `${Math.round(d.share * 100)}%` }} /></span>
+                        <span className="px-tile__chance" data-level={d.level} title={`Chance de cair na prova: ${d.level.toLowerCase()} (histórico da IDECAN)`}><Signal level={d.level} />{d.level}</span>
                         <span className="px-tile__prog" title={progress?.total ? `${progress.completed} de ${progress.total} materiais estudados` : "Nenhum material vinculado"}>
-                          <i style={{ width: `${progress?.studied ?? 0}%` }} /><em>{progress?.studied ?? 0}% estudado</em>
+                          <span className="px-tile__prog-l"><span>Estudado</span><b>{progress?.studied ?? 0}%</b></span>
+                          <span className="px-tile__prog-t"><i style={{ width: `${progress?.studied ?? 0}%` }} /></span>
                         </span>
                       </button>
                     </li>
@@ -221,12 +242,6 @@ export function PcAcExamMap({
       </div>
 
       <VideoWatchDialog video={watching} onClose={() => setWatching(null)} />
-      <p className="px-legend" aria-label="Escala de chance de cair na prova">
-        <span><i style={{ "--c": "var(--p1)" } as import("react").CSSProperties} />Muito alta</span>
-        <span><i style={{ "--c": "var(--p2)" } as import("react").CSSProperties} />Alta</span>
-        <span><i style={{ "--c": "var(--p3)" } as import("react").CSSProperties} />Média</span>
-        <span><i style={{ "--c": "var(--p4)" } as import("react").CSSProperties} />Baixa</span>
-      </p>
       <p className="px-note" title={`Questões e pesos: Anexo II do edital.${hasEstimate ? " “~” indica estimativa: o edital informa só o total do bloco específico." : ""} “Provável” é estimativa da plataforma com base no padrão da IDECAN; não é garantia.`}>
         <Info aria-hidden="true" /> Anexo II do edital{hasEstimate ? " · ~ = estimado" : ""} · “provável” é estimativa da plataforma, não garantia.
       </p>
