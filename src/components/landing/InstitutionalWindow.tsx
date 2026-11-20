@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Home, Printer, ShieldCheck } from 
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import "@/styles/institutional-window.css";
+import "@/styles/home-light-fix.css";
 
 const PAGES = [
   ["/sobre", "Nossa história"],

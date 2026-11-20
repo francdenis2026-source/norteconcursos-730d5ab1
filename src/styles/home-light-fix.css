@@ -1,0 +1,48 @@
+/* Homepage · modo claro. Faixas sobre foto/escuro (hero, rodapé) mantêm texto claro; os rótulos em pílula
+   deixam de esticar a largura toda; o pódio do ranking recupera contraste. Tokens locais por faixa. */
+:root:not(.dark) body .home {
+  /* Hero: imagem escura com véu; todo o texto é claro, independente do tema. */
+}
+:root:not(.dark) body .home .sx-band .sx-hero {
+  --foreground: #f6f2e8;
+  --muted-foreground: #cfc9b8;
+  color: #f6f2e8;
+}
+:root:not(.dark) body .home .sx-band .sx-hero h1,
+:root:not(.dark) body .home .sx-band .sx-hero .sx-lead,
+:root:not(.dark) body .home .sx-band .sx-hero .sx-stats dt { color: #f6f2e8 !important; }
+:root:not(.dark) body .home .sx-band .sx-hero .sx-lead { color: #e1dccd !important; }
+:root:not(.dark) body .home .sx-band .sx-hero .sx-stats dt { color: #cfc9b8 !important; }
+:root:not(.dark) body .home .sx-band .sx-hero .sx-eyebrow { color: #efd090 !important; }
+:root:not(.dark) body .home .sx-band .sx-hero .sx-btn--ghost { color: #f6f2e8 !important; background: rgb(255 255 255 / 8%) !important; border-color: rgb(255 255 255 / 22%) !important; }
+
+/* Rodapé: faixa escura (como a chamada logo acima), texto claro */
+:root:not(.dark) body .nf {
+  --foreground: #f4f0e6;
+  --muted-foreground: #bdb7a7;
+  --background: #0c1318;
+  background:
+    radial-gradient(60% 120% at 12% 0%, rgb(239 208 144 / 8%), transparent 70%),
+    #0c1318 !important;
+  color: #f4f0e6;
+}
+:root:not(.dark) body .nf__app img { background: #fff; }
+
+/* Rótulos em pílula: só o tamanho do texto, não a linha toda */
+:root:not(.dark) body .home .desktop-homepage :is(.sx-head, .home-heading, .rka-hero) .sx-eyebrow,
+:root:not(.dark) body .home .desktop-homepage .sx-eyebrow { width: fit-content; max-width: 100%; justify-self: start; }
+@media (min-width: 761px) {
+  html body .home .desktop-homepage .sx-head .sx-eyebrow { width: fit-content !important; }
+}
+
+/* Pódio do ranking: nada de cartão esmaecido */
+:root:not(.dark) body .home .rka-podium__card { opacity: 1 !important; filter: none !important; color: #16202b !important; }
+:root:not(.dark) body .home .rka-podium__card :is(strong, b, span, small, p) { opacity: 1 !important; }
+
+/* Páginas institucionais (modo claro): o botão "Início" segue o dourado da marca, não o azul. */
+:root:not(.dark) body .iw-home {
+  background: linear-gradient(180deg, #f6d57f, #e0ab3a) !important;
+  border-color: #c9962b !important;
+  color: #1c1508 !important;
+}
+:root:not(.dark) body .iw-home:hover { background: linear-gradient(180deg, #f9dd90, #e6b445) !important; }

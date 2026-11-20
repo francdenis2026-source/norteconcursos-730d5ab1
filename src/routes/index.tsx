@@ -49,6 +49,7 @@ import "@/styles/home-footer.css";
 import "@/styles/nc-footer.css";
 import "@/styles/home-footer-pro.css";
 import "@/styles/home-micro.css";
+import "@/styles/home-light-fix.css";
 import "@/styles/home-editorial.css";
 import "@/styles/hero-x.css";
 import "@/styles/home-layout-fixes.css";
