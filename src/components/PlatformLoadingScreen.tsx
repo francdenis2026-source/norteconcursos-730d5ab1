@@ -47,14 +47,6 @@ html[data-norte-startup-stage=intro] #norte-initial-loading>:is(.norte-boot-copy
 @media(max-height:500px){#norte-initial-loading .norte-boot-logo{width:clamp(90px,34vh,150px)}#norte-initial-loading .norte-boot-status{margin-top:10px}#norte-initial-loading .norte-boot-rule,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-sign:before{display:none}#norte-initial-loading .norte-boot-motto{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){#norte-initial-loading{transition:none}#norte-initial-loading :is(.norte-boot-logo,.norte-boot-rule,.norte-boot-motto,.norte-boot-tagline,.norte-boot-status,.norte-boot-track){animation:none!important;opacity:1!important;transform:none!important;filter:none!important}#norte-initial-loading .norte-boot-track:after{animation:none;left:32%}}
 @media(forced-colors:active){#norte-initial-loading{background:Canvas;color:CanvasText}#norte-initial-loading picture,#norte-initial-loading:after{display:none}#norte-initial-loading :is(.norte-boot-status,.norte-boot-motto,.norte-boot-tagline,.norte-boot-sign,.norte-boot-sign strong){color:CanvasText}}
-#norte-initial-loading .norte-boot-compass{display:block;width:clamp(52px,11vmin,72px);height:clamp(52px,11vmin,72px);margin-top:clamp(16px,3vmin,24px);opacity:0;perspective:260px;animation:norte-boot-copy-enter .5s ease-out .58s both;filter:drop-shadow(0 10px 14px #000c)}
-#norte-initial-loading .norte-boot-compass svg{display:block;width:100%;height:100%;overflow:visible;transform:rotateX(18deg);transform-origin:50% 60%}
-#norte-initial-loading .norte-boot-needle{transform-origin:32px 32px;animation:norte-boot-needle 2.6s cubic-bezier(.2,.7,.2,1) .7s both,norte-boot-needle-idle 3.2s ease-in-out 3.3s infinite}
-@keyframes norte-boot-needle{0%{transform:rotate(-140deg)}22%{transform:rotate(58deg)}42%{transform:rotate(-30deg)}60%{transform:rotate(16deg)}78%{transform:rotate(-7deg)}90%{transform:rotate(3deg)}100%{transform:rotate(0)}}
-@keyframes norte-boot-needle-idle{0%,100%{transform:rotate(0)}30%{transform:rotate(2.2deg)}65%{transform:rotate(-1.8deg)}}
-@media(max-height:500px){#norte-initial-loading .norte-boot-compass{display:none}}
-@media(prefers-reduced-motion:reduce){#norte-initial-loading .norte-boot-needle{animation:none!important}#norte-initial-loading .norte-boot-compass{animation:none!important;opacity:1!important}}
-@media(forced-colors:active){#norte-initial-loading .norte-boot-compass{display:none}}
 @media print{#norte-initial-loading{display:none}}
 `;
 
@@ -74,38 +66,6 @@ export function InitialLoadingScreen() {
         <span className="norte-boot-rule" aria-hidden="true" />
         <p className="norte-boot-motto">Direção. Disciplina. Conquista.</p>
         <span className="norte-boot-tagline">Sua preparação tem um norte.</span>
-        <span className="norte-boot-compass" aria-hidden="true">
-          <svg viewBox="0 0 64 64">
-            <defs>
-              <radialGradient id="nbc-bezel" cx="35%" cy="28%" r="85%">
-                <stop offset="0" stopColor="#fff3cf" />
-                <stop offset=".45" stopColor="#efd090" />
-                <stop offset="1" stopColor="#7a5a1c" />
-              </radialGradient>
-              <radialGradient id="nbc-face" cx="50%" cy="42%" r="65%">
-                <stop offset="0" stopColor="#1d2622" />
-                <stop offset="1" stopColor="#0a0f0d" />
-              </radialGradient>
-              <linearGradient id="nbc-glass" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stopColor="#fff" stopOpacity=".28" />
-                <stop offset=".5" stopColor="#fff" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <circle cx="32" cy="32" r="31" fill="url(#nbc-bezel)" />
-            <circle cx="32" cy="32" r="26.5" fill="url(#nbc-face)" stroke="#5c4413" strokeWidth=".8" />
-            <g stroke="#efd090" strokeLinecap="round" opacity=".75">
-              <path d="M32 7.5v4M32 52.5v4M7.5 32h4M52.5 32h4" strokeWidth="1.4" />
-              <path d="M14.7 14.7l2.4 2.4M46.9 46.9l2.4 2.4M49.3 14.7l-2.4 2.4M17.1 46.9l-2.4 2.4" strokeWidth=".9" />
-            </g>
-            <g className="norte-boot-needle">
-              <path d="M32 11.5l4.6 20.5h-9.2z" fill="#e0533f" />
-              <path d="M32 52.5L27.4 32h9.2z" fill="#d9d4c4" />
-              <path d="M32 11.5l2.3 20.5H32z" fill="#000" opacity=".22" />
-            </g>
-            <circle cx="32" cy="32" r="2.6" fill="url(#nbc-bezel)" stroke="#5c4413" strokeWidth=".5" />
-            <ellipse cx="32" cy="19" rx="20" ry="13" fill="url(#nbc-glass)" />
-          </svg>
-        </span>
         <span className="norte-boot-status">Carregando</span>
         <span className="norte-boot-track" aria-hidden="true" />
       </div>
