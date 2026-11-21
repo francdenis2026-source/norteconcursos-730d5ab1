@@ -1954,7 +1954,7 @@ function QuestionTrainer() {
             <div className="space-y-4">
               {!isCorrect && (
                 <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
-                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
+                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700 dark:text-emerald-300">
                     Resposta correta
                   </p>
                   <p className="text-sm font-bold">{labelFor(question.answer)}</p>
@@ -1976,7 +1976,7 @@ function QuestionTrainer() {
               )}
               {explanation.example && (
                 <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
-                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
+                  <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700 dark:text-amber-300">
                     Exemplo do dia a dia
                   </p>
                   <p className="text-sm leading-6">{explanation.example}</p>
