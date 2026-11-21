@@ -3,6 +3,7 @@ import { Fragment, useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
 import { dashboardHref } from "@/lib/internalNavigation";
+import { StudyPriorityBadges } from "@/components/library/StudyPriorityBadges";
 
 export function studyMarkdownHref(value: string): string | null {
   const internal = dashboardHref(value);
@@ -630,10 +631,40 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
 
 export function Markdown({
   source,
+  discipline,
+  contestName,
   renderText = (text) => <GlossaryText text={text} />,
 }: {
   source: string;
+  discipline?: string;
+  contestName?: string | null;
   renderText?: ((text: string) => ReactNode) | undefined;
 }) {
-  return <div className="study-prose">{renderBlocks(parse(source), renderText)}</div>;
+  const rendered = renderBlocks(parse(source), renderText);
+  if (!discipline || !contestName) return <div className="study-prose">{rendered}</div>;
+  // As prioridades aparecem somente nos títulos de subtópicos explicitamente reconhecidos
+  // pela matriz do edital; o texto e a ordem originais do material permanecem intactos.
+  const decorate = (nodes: ReactNode[]): ReactNode[] =>
+    nodes.map((node, index) => {
+      if (!node || typeof node !== "object" || !("type" in node)) return node;
+      const element = node as React.ReactElement<{ children?: ReactNode }>;
+      if (element.type !== "h2" && element.type !== "h3") return node;
+      const titleText = typeof element.props.children === "string"
+        ? element.props.children
+        : Array.isArray(element.props.children)
+          ? element.props.children.map((child) => typeof child === "string" ? child : "").join(" ")
+          : "";
+      return (
+        <Fragment key={element.key ?? `priority-heading-${index}`}>
+          {element}
+          <StudyPriorityBadges
+            contestName={contestName}
+            discipline={discipline}
+            topic={titleText}
+            className="mb-2"
+          />
+        </Fragment>
+      );
+    });
+  return <div className="study-prose">{decorate(rendered)}</div>;
 }
