@@ -1270,3 +1270,62 @@ O conteúdo dos arts. 134–143 foi organizado e explicado a partir do material 
 ### Próxima etapa
 
 Revisar a Lei nº 14.735/2023 e suas interações com a LC estadual nº 129/2004, além do PCCR da Polícia Civil do Acre, observando a redação estadual mais recente.
+
+
+## Nona continuação — Lei Orgânica Nacional e PCCR atualizado — 21/11/2026
+
+### Lei nº 14.735/2023
+
+O material `pcac-2026-legislacao-lei-organica-nacional-14735` foi ampliado para 6.670 caracteres:
+- Texto atualizado após promulgação de partes vetadas em 13/06/2024.
+- Diferença entre veto rejeitado/promulgado e veto mantido.
+- Art. 3º: espaço da lei orgânica estadual e competência suplementar.
+- Atualização estadual de ingresso/formação trazida pela LC nº 526/2026 e nomenclatura do Oficial Investigador após LC nº 496/2025.
+
+A revisão usou o texto atualizado da Câmara dos Deputados e o registro do Senado da promulgação das partes vetadas em junho de 2024.
+
+### PCCR e alterações de 2025–2026
+
+O material `pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025` foi ampliado para 9.160 caracteres:
+- LC nº 526/2026: nova redação dos arts. 64 e 65 da LC nº 129/2004; início do estágio probatório com a investidura; fases de concurso; curso de formação iniciado com ato coletivo de investidura.
+- Revogações expressas da LC nº 526/2026 nos arts. 65, 68, 69, 71, 72 e 79, conforme texto da lei.
+- Lotação inicial conforme art. 67, § 13, e itens 1.2.2 e 1.2.3 do Edital PCAC 2026.
+- Cessão e suspensão do interstício promocional, com exceções expressas previstas na LC nº 526/2026.
+- Relação entre Lei nº 2.250/2009, Lei nº 3.228/2017, LC nº 496/2025 e LC nº 526/2026.
+
+### Lacuna de escopo identificada: LC nº 345/2018
+
+A busca no banco não encontrou material específico sobre a LC nº 345/2018. O edital a cita em seu preâmbulo como norma considerada para o concurso. A LC nº 345/2018 disciplina regras gerais para concursos públicos estaduais e foi alterada pelas LCs nº 346/2018, 409/2022, 445/2023 e 459/2024. Foi acrescentada nota contextual ao mapa de legislação, explicando que a citação no preâmbulo, isoladamente, não significa que todos os dispositivos da LC nº 345/2018 integrem o conteúdo programático do Anexo III. Não foi criada disciplina ou material extenso sem confirmar previsão expressa no conteúdo programático.
+
+### Treinador
+
+Foram adicionadas quatro questões autorais:
+- texto atualizado e promulgação de vetos da Lei nº 14.735/2023;
+- competência suplementar estadual (art. 3º);
+- curso de formação e ato coletivo de investidura (LC nº 526/2026);
+- unificação agente/escrivão como Oficial Investigador (LC nº 496/2025).
+
+Consulta SQL confirmou os quatro registros ativos, com gabarito e vinculação ao material correspondente. Não são questões oficiais da IDECAN.
+
+### Fontes oficiais consultadas
+
+- Lei nº 14.735/2023, texto atualizado da Câmara dos Deputados.
+- Promulgação de partes vetadas em 13/06/2024, Senado Federal.
+- LC nº 496/2025, Portal LEGIS do Acre.
+- LC nº 526/2026, Portal LEGIS do Acre.
+- Lei nº 2.250/2009 e Lei nº 3.228/2017, Portal LEGIS do Acre.
+- LC nº 345/2018 e alterações, Portal LEGIS do Acre.
+- Página oficial da SEAD com Edital PCAC 2026.
+
+### Migrations
+
+- `20261121301600_update_national_law_and_pccr_for_2026_changes.sql` — commit `e43298fe60147e815c41b523e733990974101e54`.
+- `20261121301700_add_national_law_and_pccr_update_questions.sql` — commit `165fb4d6293c40b214fecc4881578e115985fea8`.
+
+### Pendências
+
+- Confrontar artigo por artigo o restante do PCCR e da Lei nº 3.228/2017, sobretudo critérios e documentos exigidos para promoção, e conferir alterações após 2017.
+- Confirmar no Anexo III o escopo exato da LC nº 345/2018; a citação no preâmbulo não basta.
+- Revisar os materiais da Lei nº 14.735/2023 para que todas as referências a dispositivos vetados sejam consistentes com o texto atualizado.
+- Fazer teste visual e de integração do treinador, incluindo contagem das questões autorais no painel e preservação de questões existentes.
+- Não declarar a disciplina integralmente auditada enquanto essas pendências não forem concluídas.
