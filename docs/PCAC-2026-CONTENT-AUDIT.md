@@ -571,3 +571,18 @@ A conferência temática confirmou as respostas das questões sobre grupos do at
 
 Migration: supabase/migrations/20261121210000_add_pcac_accounting_question_legal_bases.sql. Commit: c5462b543fa0a7ae3cee1d6a58b392a1da114507.
 Verificação pós-gravação: 12 questões; zero enunciados ausentes; zero gabaritos ausentes; zero explicações abaixo de 250 caracteres; zero bases normativas ausentes.
+
+
+## Estatística — auditoria de conteúdo e prioridades — 21/11/2026
+
+Consulta direta ao Supabase identificou 12 aulas e 120 questões autorais cadastradas para Estatística. Os enunciados e gabaritos estão presentes, mas as 120 explicações do treinador são curtas (abaixo de 250 caracteres) e não possuem dicas ou resolução em etapas. Portanto, a disciplina NÃO deve ser considerada pedagogicamente concluída: os textos-base das aulas já contêm explicações e exemplos, mas o comentário exibido após responder no treinador ainda precisa ser aprofundado questão por questão.
+
+Aula 1 recebeu roteiro estratégico de prioridades baseado no Anexo III do Edital nº 001 SEAD/PCAC e em questões IDECAN recentes:
+
+- Prioridade 1: tendência central; frequência/tabelas/gráficos; probabilidade e distribuições; dispersão e posição.
+- Prioridade 2: população/amostra/variáveis/amostragem; correlação e regressão.
+- Prioridade 3: séries temporais, outliers e indicadores.
+
+A priorização foi explicitamente identificada como orientação pedagógica, não como estatística oficial de incidência da IDECAN. Foram consultados o edital oficial (Anexo III), bancos públicos de questões IDECAN e levantamentos de concursos policiais de outras bancas. As incidências de Cebraspe não foram atribuídas à IDECAN.
+
+Migration: supabase/migrations/20261121220000_add_pcac_statistics_study_priority_roadmap.sql. Commit: 14bd654ad9c63fdc1e995829cc8ae9db90db7da3.
