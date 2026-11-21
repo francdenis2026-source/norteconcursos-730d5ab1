@@ -1,0 +1,84 @@
+/*
+  Barra superior do aluno — redesenho final (carregado por último em DashboardLayout).
+  Regras: sem formas elípticas (nada de 999px); ícones maiores e com traço firme;
+  logomarca maior sem aumentar a altura da barra; mesmos destinos e funções.
+*/
+
+/* Altura da barra mantida: a logomarca cresce dentro dela. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar {
+  --tb-h: 68px;
+  height: var(--tb-h) !important;
+  min-height: var(--tb-h) !important;
+}
+
+/* ── Logomarca e nome ─────────────────────────────────────────────────── */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand {
+  gap: 10px;
+  padding-right: 14px;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand-emblem {
+  width: 46px !important;
+  height: 46px !important;
+  flex: 0 0 46px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand-word {
+  font-size: 0.9375rem;
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+}
+
+/* ── Itens do menu: retângulos com cantos suaves, sem pílula ─────────── */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  gap: 8px !important;
+  border-radius: 8px !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger::after {
+  border-radius: 2px !important;
+}
+
+/* Ícone: quadrado de 28px com glifo de 20px e traço 2 (antes: 16px, traço fino). */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__icon-wrap {
+  width: 28px !important;
+  height: 28px !important;
+  flex: 0 0 28px !important;
+  border-radius: 6px !important;
+  border-width: 1px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__icon-wrap svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 2 !important;
+}
+
+/* ── Ações da direita (buscar, tela cheia, tema, sair, sequência) ───── */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 8px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 2 !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak,
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-streak {
+  border-radius: 8px !important;
+  height: 38px !important;
+  padding: 0 10px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-streak svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Sem elipses em nenhum controle da barra. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar :is(button, a, [role="button"], .app-streak, .student-top-navigation__active-edition) {
+  border-radius: 8px !important;
+}
