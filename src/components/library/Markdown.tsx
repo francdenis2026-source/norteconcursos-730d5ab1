@@ -105,6 +105,42 @@ function isExampleLabel(text: string): boolean {
   );
 }
 
+/** Identifica blocos de questões e análise para dar hierarquia visual sem alterar o texto. */
+function isQuestionStem(text: string): boolean {
+  return /^\s*(?:quest[aã]o|quest[aã]o de concurso)\s*\d+\s*[.):—-]?/i.test(text);
+}
+function isQuestionOptions(text: string): boolean {
+  return /(?:^|\s)[A-E][).]\s*\S/.test(text) && /(?:^|\s)[B-E][).]\s*\S/.test(text);
+}
+function isAnswerAnalysis(text: string): boolean {
+  return /^\s*(?:gabarito|resposta correta|coment[aá]rio|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text);
+}
+function isAnalysisLabel(text: string): boolean {
+  return /^\s*(?:an[aá]lise|racioc[ií]nio|resolu[cç][aã]o comentada|como resolver)\s*[:—-]/i.test(text);
+}
+function renderQuestionOptions(text: string, key: string, inline: (text: string, key: string) => ReactNode) {
+  const matcher = /(?:^|\\s)([A-E])[).]\\s*/g;
+  const matches = [...text.matchAll(matcher)];
+  if (matches.length < 2) return null;
+  return (
+    <div className="study-question-options" role="list" aria-label="Alternativas">
+      {matches.map((match, index) => {
+        const start = (match.index ?? 0) + (match[0].startsWith(" ") ? 1 : 0);
+        const contentStart = (match.index ?? 0) + match[0].length;
+        const end = matches[index + 1]?.index ?? text.length;
+        const label = match[1] ?? "";
+        const content = text.slice(contentStart, end).trim();
+        return (
+          <div className="study-question-option" role="listitem" key={`${key}-option-${label}`}>
+            <strong className="study-question-option__label">{label}</strong>
+            <span>{inline(content, `${key}-option-${label}`)}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function highlightExampleSections(blocks: Block[]): Block[] {
   const result: Block[] = [];
   for (let index = 0; index < blocks.length; index++) {
@@ -232,12 +268,22 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
         return <h2 key={key}>{inline(block.text, key)}</h2>;
       case "h3":
         return <h3 key={key}>{inline(block.text, key)}</h3>;
-      case "p":
-        return (
-          <p key={key} className={isExampleLabel(block.text) ? "study-example" : undefined}>
-            {inline(block.text, key)}
-          </p>
-        );
+      case "p": {
+        if (isQuestionOptions(block.text)) {
+          const options = renderQuestionOptions(block.text, key, inline);
+          if (options) return <div key={key} className="study-question-options-wrap">{options}</div>;
+        }
+        const className = isQuestionStem(block.text)
+          ? "study-question-stem"
+          : isAnswerAnalysis(block.text)
+            ? "study-answer-analysis"
+            : isAnalysisLabel(block.text)
+              ? "study-analysis-note"
+              : isExampleLabel(block.text)
+                ? "study-example"
+                : undefined;
+        return <p key={key} className={className}>{inline(block.text, key)}</p>;
+      }
       case "quote":
         return (
           <blockquote
