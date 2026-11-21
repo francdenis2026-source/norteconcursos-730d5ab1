@@ -1,0 +1,30 @@
+-- PC-AC 2026 — correct the DVA treatment of sales taxes and deepen DFC/DVA.
+-- CPC 09: DVA revenue is presented gross, including taxes on sales.
+-- Taxes are shown in distribution to government, not deducted before gross VA.
+
+update public.study_materials
+set body_md=split_part(body_md,'**Gabarito: alternativa A — R$ 130.860,00.**',1)
+|| '## Questão Consulplan/CFC 2020.1, questão 32'
+|| split_part(split_part(body_md,'**Gabarito: alternativa A — R$ 130.860,00.**',2),'## Questão Consulplan/CFC 2020.1, questão 32',2)
+|| E'\n\n## 8. DVA: atenção à receita bruta e aos tributos sobre vendas\n\nNa DVA, a receita de vendas é apresentada pelo valor bruto, incluindo os tributos incidentes sobre ela (como ICMS, IPI, PIS e Cofins), mesmo que a DRE apresente a receita líquida desses tributos. Isso ocorre porque os tributos representam parcela da riqueza destinada ao governo e aparecem na distribuição do valor adicionado.\n\n**Não subtraia o ICMS sobre vendas da receita bruta para calcular o valor adicionado bruto.** Os tributos sobre vendas são apresentados na distribuição ao governo.\n\n### Resolução correta da questão Consulplan/CFC 2020.1 — valor adicionado a distribuir\n\nDados: receita bruta R$ 328.000; CMV R$ 146.600; depreciação R$ 8.000; receita financeira R$ 16.500.\n\n1. Receita bruta: R$ 328.000. O ICMS/faturamento de R$ 59.040 permanece no bloco de receitas da DVA.\n2. Insumos adquiridos de terceiros (CMV): R$ 146.600.\n3. Valor adicionado bruto: 328.000 − 146.600 = **R$ 181.400**.\n4. Retenções (depreciação): 181.400 − 8.000 = **R$ 173.400** de valor adicionado líquido produzido.\n5. Valor adicionado recebido em transferência (receita financeira): + R$ 16.500.\n6. Valor adicionado total a distribuir: 173.400 + 16.500 = **R$ 189.900 — alternativa D**.\n\n**Atenção:** a versão anterior da explicação que deduzia ICMS de R$ 59.040 e chegava a R$ 130.860 estava incorreta. O CPC 09 determina receita bruta na DVA; tributos sobre vendas aparecem na distribuição ao governo.\n\n## 9. Estrutura da DVA: formação e distribuição\n\nA DVA tem dois grandes blocos. O primeiro mostra como a entidade gerou riqueza; o segundo mostra a quem essa riqueza foi distribuída.\n\n**Formação:** receitas brutas; insumos adquiridos de terceiros; valor adicionado bruto; retenções (depreciação, amortização e exaustão); valor adicionado líquido produzido; valor adicionado recebido em transferência; valor adicionado total a distribuir.\n\n**Distribuição:** pessoal; impostos, taxas e contribuições (governo); remuneração de capitais de terceiros (juros, aluguéis e outros); remuneração de capitais próprios (dividendos, juros sobre capital próprio, lucros retidos ou prejuízo e participação de não controladores, conforme aplicável).\n\nA soma distribuída deve corresponder ao valor adicionado total a distribuir.\n\n## 10. DFC: método direto e indireto\n\nNo método direto, apresentam-se as principais classes de recebimentos e pagamentos brutos de caixa das atividades operacionais. No método indireto, parte-se do lucro ou prejuízo e ajusta-se por itens sem efeito caixa, variações de estoques e contas operacionais a receber/pagar e itens cujos fluxos pertencem a investimento ou financiamento. Os fluxos de investimento e financiamento são classificados do mesmo modo nos dois métodos.\n\n### Macete para variações no método indireto\n\n- Aumento de ativo operacional (clientes, estoques): subtrai do lucro, pois consumiu caixa ou ainda não foi recebido.\n- Diminuição de ativo operacional: soma ao lucro, pois libera caixa.\n- Aumento de passivo operacional (fornecedores): soma ao lucro, pois o pagamento foi adiado.\n- Diminuição de passivo operacional (salários a pagar): subtrai do lucro, pois houve pagamento.\n- Depreciação e amortização: somam-se de volta porque reduziram o lucro sem saída de caixa no período.\n\n## 11. Classificação rápida dos fluxos da DFC\n\n- **Operacional:** recebimentos de clientes, impostos recebidos, pagamentos a fornecedores e empregados, despesas correntes.\n- **Investimento:** compra e venda de imobilizado, intangível e participações/investimentos de longo prazo.\n- **Financiamento:** captação e amortização de empréstimos, emissão/resgate de ações e operações que alteram capital próprio ou de terceiros.\n\n## 12. Roteiro de prova para DFC e DVA\n\n1. Na DFC, classifique o fluxo como operacional, investimento ou financiamento.\n2. No método indireto, comece pelo lucro e ajuste itens sem caixa e capital de giro operacional.\n3. Aumento de clientes/estoques reduz o fluxo operacional; aumento de fornecedores aumenta.\n4. Na DVA, comece com receita bruta, sem retirar tributos incidentes sobre vendas.\n5. Subtraia insumos adquiridos de terceiros; depois retenções; some valores recebidos em transferência.\n6. Confira se a distribuição total fecha com o valor adicionado a distribuir.\n',
+updated_at=now()
+where contest_name='PC-AC 2026'
+and slug='pcac-2026-contabilidade-15-dfc-dva-fluxos-caixa-demonstracoes';
+
+-- Preserve the 20 trainer questions but correct the three DVA assertions
+-- that used the DRE net revenue instead of the CPC 09 gross revenue basis.
+update public.study_materials m
+set quiz=(select jsonb_agg(
+ case
+  when x.ordinality=5 then jsonb_set(jsonb_set(x.value,'{q}',to_jsonb('O valor adicionado a distribuir na questão é R$ 189.900.'::text),true),'{a}','true'::jsonb,true)
+  when x.ordinality=12 then jsonb_set(x.value,'{a}','false'::jsonb,true)
+  when x.ordinality=13 then jsonb_set(x.value,'{a}','true'::jsonb,true)
+  when x.ordinality=16 then jsonb_set(jsonb_set(x.value,'{q}',to_jsonb('Na questão 30 do CFC 2020.1, o valor adicionado a distribuir é R$ 189.900, alternativa D.'::text),true),'{a}','true'::jsonb,true)
+  else x.value end order by x.ordinality)
+ from jsonb_array_elements(m.quiz) with ordinality x(value,ordinality)),
+updated_at=now()
+where m.contest_name='PC-AC 2026'
+and m.slug='pcac-2026-contabilidade-15-dfc-dva-fluxos-caixa-demonstracoes';
+
+-- Question-specific explanations, tips and resolution_steps are present in
+-- the live trainer record and were verified after the direct update.
