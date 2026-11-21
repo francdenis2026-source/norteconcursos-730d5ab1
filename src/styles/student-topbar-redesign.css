@@ -129,3 +129,47 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar :is(button, 
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero::after {
   display: none !important;
 }
+
+/* Escala da barra na web: acompanha o tamanho do site (antes ficava pequena demais). */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) {
+  --app-topbar-h: 64px;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar {
+  height: 64px !important;
+  min-height: 64px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand-emblem {
+  width: 50px !important;
+  height: 50px !important;
+  flex: 0 0 50px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-top-navigation__brand-word {
+  font-size: 1.0625rem;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger {
+  height: 46px !important;
+  min-height: 46px !important;
+  padding-inline: 14px !important;
+  gap: 10px !important;
+  font-size: 1rem;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__trigger::after {
+  inset: auto 14px 4px 14px;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .student-top-navigation__icon-wrap svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar .app-chips > .app-streak,
+html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar__actions .app-streak {
+  height: 44px !important;
+}
