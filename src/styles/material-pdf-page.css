@@ -317,3 +317,59 @@ html body .app-shell[data-area] .library-reading-workspace .library-body :is(.st
   color: rgba(255, 255, 255, 0.92);
   opacity: 1;
 }
+
+
+/* Leitor responsivo — corrigir a folha estreita e a leitura comprimida.
+   Em telas menores, a folha deve ocupar toda a largura útil do painel; em desktop,
+   não pode ficar limitada por um max-width herdado de componentes internos. */
+html body .app-shell[data-area] .library-reading-workspace {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: none !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: min(100%, 70rem) !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose,
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose > * {
+  width: 100%;
+  max-width: none !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(h2,h3,h4) {
+  color: #17324d !important;
+  font-weight: 800 !important;
+}
+@media (max-width: 899px) {
+  html body .app-shell[data-area] .app-content__inner:has(.library-reading-workspace) {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    padding: 8px 12px 24px !important;
+  }
+  html body .app-shell[data-area] .library-reading-workspace {
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .library-body {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    padding: 16px 14px 22px !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    border: 1px solid #dcd8cf !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 12%) !important;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(p,li) {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(h2,h3) {
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+  }
+}
