@@ -233,3 +233,23 @@ test("combining authored practice preserves different support passages for the s
   };
   assert.equal(mergeMaterialPractice([a], [b]).length, 2);
 });
+
+test("legacy Informatics lessons require exact approved reviews, without opening other slugs", async () => {
+  const { authoredMaterialPractice } = await import("../src/lib/materialPractice.ts");
+  const { matchesManualReview } = await import("../src/lib/materialPracticeReview.ts");
+  const slug = "informatica-01-01";
+  const quiz = [{ q: "Um SSD mantém dados sem energia?", a: true, why: "SSD é armazenamento não volátil." }];
+  const scope = { subject: "Informática", topic: "Hardware, software e periféricos" };
+  const review = {
+    version: 1, review_type: "didactic_manual", status: "reviewed",
+    material_slug: slug, subject: "Informática", topic_label: scope.topic,
+    checked_at: "2026-11-21T18:00:00Z",
+    method: "Revisão editorial item a item.", source_note: "Exercício autoral de fixação.",
+    items: quiz.map(({ q, a, why }) => ({ q, a, why })),
+  };
+  assert.equal(authoredMaterialPractice(quiz, scope, slug, scope.topic).length, 0);
+  assert.equal(matchesManualReview(quiz, review, slug), true);
+  assert.equal(authoredMaterialPractice(quiz, scope, slug, scope.topic, review).length, 1);
+  assert.equal(authoredMaterialPractice(quiz, scope, slug, scope.topic, { ...review, items: [{ ...review.items[0], why: "Alterado" }] }).length, 0);
+  assert.equal(authoredMaterialPractice(quiz, scope, "informatica-99-99", scope.topic, { ...review, material_slug: "informatica-99-99" }).length, 0);
+});
