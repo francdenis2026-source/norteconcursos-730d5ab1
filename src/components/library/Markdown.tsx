@@ -180,6 +180,17 @@ function InteractiveQuestion({
   const feedback = parseAlternativeFeedback(answer);
   const [selected, setSelected] = useState<string | null>(null);
   if (!parsed) return <>{render(prompt, "question-prompt")}{render(answer, "question-answer")}</>;
+  if (!feedback.correct) {
+    return (
+      <section className="study-interactive-question">
+        {parsed.stem && <p className="study-question-stem">{render(parsed.stem, "question-stem")}</p>}
+        <div className="study-question-options-wrap">
+          {parsed.options.map((option) => <div className="study-question-option" key={option.letter}><strong className="study-question-option__label">{option.letter}</strong><span>{render(option.text, "option-" + option.letter)}</span></div>)}
+        </div>
+        <RevealAnswer answer={answer} render={render} />
+      </section>
+    );
+  }
   const answered = selected !== null;
   const isCorrect = answered && selected === feedback.correct;
   return (
