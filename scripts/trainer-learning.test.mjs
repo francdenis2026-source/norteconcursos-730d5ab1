@@ -172,3 +172,18 @@ test("o treinador relaciona subassuntos específicos a aulas que já os explicam
     ["rlm-sequencias"],
   );
 });
+
+test("questões de matemática financeira PC-AC abrem a aula correta", () => {
+  const finance = [
+    material("pcac-finance", "Contabilidade Geral e Análise Financeira", "5. Matemática financeira", {
+      title: "Matemática financeira: juros, descontos e percentuais",
+      summary: "Juros simples e compostos, taxas proporcionais, equivalentes, nominais e efetivas, descontos comerciais e racionais e atualização de valores.",
+    }),
+  ];
+  for (const topic of ["Juros compostos", "Taxas nominais e efetivas", "Desconto comercial simples"]) {
+    assert.deepEqual(
+      relatedTrainerMaterials(question("Contabilidade Geral e Análise Financeira", topic), finance).map((m) => m.slug),
+      ["pcac-finance"],
+    );
+  }
+});
