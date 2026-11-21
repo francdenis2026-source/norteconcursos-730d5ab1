@@ -679,3 +679,32 @@ Também foram enriquecidas diretamente no Supabase:
 As explicações foram ampliadas com exemplos, distinções conceituais, dicas e passos de resolução. Foram preservados os enunciados, os gabaritos e a ordem. Dois comentários que ainda estavam abaixo de 250 caracteres foram complementados após a auditoria.
 
 Auditoria consolidada das 12 aulas/catálogos de Estatística: 120 questões verificadas; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas. Os dados de treinamento estão atualizados no banco Supabase. As migrations registradas nos lotes anteriores permanecem na MAIN; as atualizações diretas deste lote para as aulas 1 e mediana foram aplicadas no banco, sem migration própria nesta etapa.
+
+
+## Estatística — prioridade pedagógica, correções versionadas e esclarecimento da numeração — 21/11/2026
+
+### Esclarecimento sobre a suposta “aula 10”
+Não existe lacuna de conteúdo por ausência de uma aula numerada 10. O Anexo III tem **nove blocos principais de Estatística**. A numeração dos slugs identifica os tópicos do edital e a ordem didática dos materiais; por isso há 12 materiais ativos para cobrir os nove blocos, com complementos e desdobramentos. O material de correlação/regressão, por exemplo, está no tópico 7 do edital, embora ocupe a décima posição na ordenação didática. Não criar um décimo tópico artificial.
+
+### Prioridade de estudo inserida no material didático
+Foi acrescentado ao final da aula de fundamentos um roteiro para o candidato:
+- Prioridade alta: fundamentos e interpretação, frequências/tabelas/gráficos, medidas centrais e posicionais, dispersão, probabilidade, amostragem e variáveis.
+- Prioridade intermediária: distribuições de probabilidade, correlação/regressão e séries temporais.
+- Prioridade complementar: outliers, indicadores, taxas, comparabilidade e limitações.
+
+**Ressalva metodológica:** isso é uma ordem pedagógica, baseada na dependência entre conteúdos, amplitude do edital e sinais disponíveis de provas; não é uma previsão oficial de incidência. O acervo público consultado mostra provas IDECAN antigas para cargos especializados de Estatístico, nas quais aparecem estatística descritiva, dispersão, amostragem, probabilidade e distribuições. Essas provas não são diretamente comparáveis ao cargo de Oficial Investigador. Também há questões IDECAN recentes indexadas sobre séries temporais e análise de dados, mas o conjunto acessível não permite estimar percentuais confiáveis por tópico para a PC-AC. Fontes consultadas:
+- Qconcursos — filtro de questões IDECAN de Estatística: https://www.qconcursos.com/questoes-de-concursos/questoes?discipline_ids%5B%5D=40&examining_board_ids%5B%5D=207
+- Prova IDECAN — Estatístico, Colégio Pedro II (2014): https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2014-colegio-pedro-ii-estatistico
+- Prova IDECAN — Estatístico, DETRAN-RO (2014): https://www.qconcursos.com/questoes-de-concursos/provas/idecan-2014-detran-ro-estatistico
+
+### Sincronização de correções explicativas
+Migration adicionada à MAIN: `supabase/migrations/20261121295000_sync_pcac_statistics_foundation_and_position_explanations.sql` — commit `23d90ce7343d4e4db48a62449a9327cbd86d0055`. Ela torna reproduzíveis as duas ampliações diretas no banco (intervalo sistemático e mediana para quantidade par), preservando enunciados, gabaritos, dicas, etapas e ordem.
+
+Migration do roteiro de prioridades: `supabase/migrations/20261121296000_add_pcac_statistics_study_priority_guide.sql` — commit `798661d5caeee5628c8bbce1b468813c59a2d155`. A aplicação direta no Supabase foi confirmada; o guia está presente na aula de fundamentos.
+
+### Validação desta etapa
+- Inventário: 12 materiais ativos de Estatística, cobrindo os nove blocos do edital.
+- Treinador: 120 questões nos 12 materiais/catálogos auditados.
+- Verificação dos campos de explicação, dica e resolução: 120/120 preenchidos; nenhuma explicação abaixo de 250 caracteres.
+- Não foi possível declarar CI aprovado para os commits desta etapa: o status consultado para o commit da migration de prioridades retornou sem checks associados. Não houve execução local de typecheck/lint/test/build nesta etapa.
+- Não houve publicação manual em produção.
