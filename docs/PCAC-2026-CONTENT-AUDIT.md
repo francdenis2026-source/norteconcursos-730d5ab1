@@ -430,3 +430,17 @@ Base legal: Lei nº 6.404/1976, arts. 182, 193 a 202. Texto oficial: https://www
 Migration: supabase/migrations/20261121110000_deepen_pcac_equity_reserves_dividends.sql. Commit: bf5bddcfc557405f1143f78772a8afa64cb2f723.
 
 Verificação pós-gravação: 21 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — conciliação bancária — 21/11/2026
+
+Aula 17 atualizada diretamente no Supabase:
+
+- 8 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas receberam explicações acima de 250 caracteres, dicas e resolução passo a passo.
+- Conteúdo ampliado para separar lançamentos pendentes de diferenças temporárias: tarifas, débitos automáticos, TED recebida, devolução de duplicata, cheques emitidos ainda não compensados e depósitos em trânsito.
+- Removido trecho indevido de CPC 26.
+- Reforçado o critério operacional: lançar no razão apenas fatos ainda não contabilizados; não repetir cheques e depósitos já registrados.
+
+Migration: supabase/migrations/20261121120000_deepen_pcac_bank_reconciliation_trainer.sql. Commit: f90a2767bf0f8b7f6ca129c8d1c44f6831e7731c.
+Verificação pós-gravação: 8 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
