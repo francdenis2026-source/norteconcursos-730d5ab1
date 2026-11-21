@@ -125,39 +125,69 @@
         {
           "a": true,
           "q": "O planejamento define objetivos e cursos de ação.",
-          "why": "É a função que antecipa escolhas e orienta a execução. Aplicação: PODC: Planejar define o objetivo; Organizar distribui meios; Dirigir comunica, motiva e orienta; Controlar mede desvios. Exemplo: estabelecer fila máxima é planejar; escalar servidores, organizar; orientar a equipe, dirigir; medir espera, controlar."
+          "why": "Certo. Planejar significa definir antecipadamente objetivos, critérios, prazos e caminhos para alcançá-los. Exemplo: estabelecer meta de concluir cem atendimentos por dia antes de distribuir a equipe. A execução vem em seguida."
         },
         {
           "a": true,
           "q": "A organização distribui tarefas, recursos e responsabilidades.",
-          "why": "Ela estrutura os meios para realizar o plano. Aplicação: PODC: Planejar define o objetivo; Organizar distribui meios; Dirigir comunica, motiva e orienta; Controlar mede desvios. Exemplo: estabelecer fila máxima é planejar; escalar servidores, organizar; orientar a equipe, dirigir; medir espera, controlar."
+          "why": "Certo. Organizar estrutura os meios para executar o plano: atribui responsabilidades, distribui recursos e estabelece fluxos. Exemplo: separar dois servidores para triagem e três para análise de documentos."
         },
         {
           "a": false,
           "q": "A direção limita-se à aplicação de sanções disciplinares.",
-          "why": "Direção envolve liderança, comunicação, orientação e coordenação. Aplicação: PODC: Planejar define o objetivo; Organizar distribui meios; Dirigir comunica, motiva e orienta; Controlar mede desvios. Exemplo: estabelecer fila máxima é planejar; escalar servidores, organizar; orientar a equipe, dirigir; medir espera, controlar."
+          "why": "Errado. Dirigir não se resume a punir. A função inclui liderar, orientar, motivar, comunicar expectativas e coordenar pessoas. Aplicar sanção pode ocorrer nos termos legais, mas não define a finalidade principal da direção."
         },
         {
           "a": true,
           "q": "O controle pode ocorrer antes, durante ou depois da atividade.",
-          "why": "Há controles prévios, concomitantes e posteriores. Aplicação: PODC: Planejar define o objetivo; Organizar distribui meios; Dirigir comunica, motiva e orienta; Controlar mede desvios. Exemplo: estabelecer fila máxima é planejar; escalar servidores, organizar; orientar a equipe, dirigir; medir espera, controlar."
+          "why": "Certo. Controle prévio busca impedir erros antes da atividade, concomitante acompanha a execução e posterior avalia resultados. Exemplo: conferir documentos antes, monitorar filas durante e medir reclamações depois."
         },
         {
           "a": false,
           "q": "As funções PODC são isoladas e não se retroalimentam.",
-          "why": "Os resultados do controle podem exigir revisão do planejamento. Aplicação: PODC: Planejar define o objetivo; Organizar distribui meios; Dirigir comunica, motiva e orienta; Controlar mede desvios. Exemplo: estabelecer fila máxima é planejar; escalar servidores, organizar; orientar a equipe, dirigir; medir espera, controlar."
+          "why": "Errado. As funções PODC se influenciam continuamente. Uma medição do controle pode revelar atraso e exigir novo planejamento, reorganização de recursos e orientação da equipe. Não são etapas hermeticamente isoladas."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-02-funcoes-administrativas-podc",
       "discipline": "Noções de Administração",
       "topic_label": "02 · Funções administrativas: planejamento, organização, direção e controle",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "O planejamento define objetivos e cursos de ação.",
+            "why": "Certo. Planejar significa definir antecipadamente objetivos, critérios, prazos e caminhos para alcançá-los. Exemplo: estabelecer meta de concluir cem atendimentos por dia antes de distribuir a equipe. A execução vem em seguida."
+          },
+          {
+            "a": true,
+            "q": "A organização distribui tarefas, recursos e responsabilidades.",
+            "why": "Certo. Organizar estrutura os meios para executar o plano: atribui responsabilidades, distribui recursos e estabelece fluxos. Exemplo: separar dois servidores para triagem e três para análise de documentos."
+          },
+          {
+            "a": false,
+            "q": "A direção limita-se à aplicação de sanções disciplinares.",
+            "why": "Errado. Dirigir não se resume a punir. A função inclui liderar, orientar, motivar, comunicar expectativas e coordenar pessoas. Aplicar sanção pode ocorrer nos termos legais, mas não define a finalidade principal da direção."
+          },
+          {
+            "a": true,
+            "q": "O controle pode ocorrer antes, durante ou depois da atividade.",
+            "why": "Certo. Controle prévio busca impedir erros antes da atividade, concomitante acompanha a execução e posterior avalia resultados. Exemplo: conferir documentos antes, monitorar filas durante e medir reclamações depois."
+          },
+          {
+            "a": false,
+            "q": "As funções PODC são isoladas e não se retroalimentam.",
+            "why": "Errado. As funções PODC se influenciam continuamente. Uma medição do controle pode revelar atraso e exigir novo planejamento, reorganização de recursos e orientação da equipe. Não são etapas hermeticamente isoladas."
+          }
+        ],
+        "method": "Validação individual de enunciado, valor lógico do gabarito e justificativa própria em 5 itens; sem fonte legislativa",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:08:21Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado editorialmente, alinhado ao tópico geral de Noções de Administração do Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "02 · Funções administrativas: planejamento, organização, direção e controle",
+        "material_slug": "pcac-2026-guia-administracao-geral-02-funcoes-administrativas-podc"
       }
     },
     {

@@ -146,66 +146,119 @@
         {
           "a": true,
           "q": "A conjunção V∧V é verdadeira.",
-          "why": "A conjunção exige que ambas as partes sejam verdadeiras. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Certo. Na conjunção P∧Q, o resultado só é verdadeiro quando P e Q são verdadeiras. Na combinação V∧V, ambos cumprem a condição; por isso, o valor final é V. Dica: pense em duas exigências que devem ocorrer juntas."
         },
         {
           "a": false,
           "q": "A conjunção V∧F é verdadeira.",
-          "why": "Uma parte falsa torna a conjunção falsa. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Errado. A conjunção exige que as duas proposições sejam verdadeiras. Como a combinação V∧F contém uma proposição falsa, V∧F resulta em F. Em questões, basta encontrar um componente falso para rejeitar o E lógico."
         },
         {
           "a": true,
           "q": "A disjunção inclusiva F∨V é verdadeira.",
-          "why": "Pelo menos uma parte é verdadeira. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Certo. A disjunção inclusiva P∨Q é verdadeira quando pelo menos uma das partes é verdadeira. Como F∨V contém a segunda parte verdadeira, o resultado é V. O OU inclusivo também admite V∨V."
         },
         {
           "a": false,
           "q": "A disjunção inclusiva F∨F é verdadeira.",
-          "why": "Ambas falsas tornam o OU inclusivo falso. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Errado. Na disjunção inclusiva, basta uma parte verdadeira para resultar V; mas F∨F não possui nenhuma. Portanto o resultado é F. Compare: F∨V=V, V∨F=V e V∨V=V."
         },
         {
           "a": true,
           "q": "A condicional V→F é o único caso falso da condicional.",
-          "why": "A promessa falha quando P ocorre e Q não. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Certo. Na condicional P→Q, o único caso falso é aquele em que o antecedente ocorre e o consequente não ocorre: V→F. Exemplo: 'se entregou, então recebeu protocolo' falha quando entregou mas não recebeu."
         },
         {
           "a": false,
           "q": "A condicional F→V é falsa.",
-          "why": "Na lógica clássica, antecedente falso torna a condicional verdadeira. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Errado. Em lógica proposicional clássica, uma condicional P→Q com antecedente falso não é refutada, seja Q verdadeiro ou falso. Assim F→V é verdadeiro. O único caso falso permanece V→F."
         },
         {
           "a": true,
           "q": "O bicondicional V↔V é verdadeiro.",
-          "why": "Os dois valores são iguais. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Certo. O bicondicional P↔Q é verdadeiro quando as proposições possuem o mesmo valor lógico. Como V e V coincidem, V↔V resulta V. A expressão também é verdadeira em F↔F."
         },
         {
           "a": false,
           "q": "O bicondicional V↔F é verdadeiro.",
-          "why": "Valores diferentes tornam o bicondicional falso. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Errado. O bicondicional P↔Q exige valores iguais, e V↔F reúne valores diferentes. Portanto o resultado é F; compare V↔V=V e F↔F=V."
         },
         {
           "a": true,
           "q": "A negação de uma proposição falsa é verdadeira.",
-          "why": "A negação inverte o valor lógico. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Certo. Negar uma proposição troca seu valor lógico: ¬V=F e ¬F=V. Se P é falsa, sua negação ¬P é verdadeira. Exemplo: se '2 é ímpar' é falso, '2 não é ímpar' é verdadeiro."
         },
         {
           "a": true,
           "q": "O OU inclusivo admite que ambas as proposições sejam verdadeiras.",
-          "why": "Ele exige pelo menos uma verdadeira, não exatamente uma. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+          "why": "Certo. Na disjunção inclusiva, a regra é 'uma ou ambas'. Assim V∨V também resulta verdadeiro. Diferencie do OU exclusivo, que exige exatamente uma alternativa verdadeira."
         }
       ],
       "slug": "pcac-2026-raciocinio-logico-03-conectivos-logicos",
       "discipline": "Raciocínio Lógico",
       "topic_label": "3. Conectivos lógicos",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "A conjunção V∧V é verdadeira.",
+            "why": "Certo. Na conjunção P∧Q, o resultado só é verdadeiro quando P e Q são verdadeiras. Na combinação V∧V, ambos cumprem a condição; por isso, o valor final é V. Dica: pense em duas exigências que devem ocorrer juntas."
+          },
+          {
+            "a": false,
+            "q": "A conjunção V∧F é verdadeira.",
+            "why": "Errado. A conjunção exige que as duas proposições sejam verdadeiras. Como a combinação V∧F contém uma proposição falsa, V∧F resulta em F. Em questões, basta encontrar um componente falso para rejeitar o E lógico."
+          },
+          {
+            "a": true,
+            "q": "A disjunção inclusiva F∨V é verdadeira.",
+            "why": "Certo. A disjunção inclusiva P∨Q é verdadeira quando pelo menos uma das partes é verdadeira. Como F∨V contém a segunda parte verdadeira, o resultado é V. O OU inclusivo também admite V∨V."
+          },
+          {
+            "a": false,
+            "q": "A disjunção inclusiva F∨F é verdadeira.",
+            "why": "Errado. Na disjunção inclusiva, basta uma parte verdadeira para resultar V; mas F∨F não possui nenhuma. Portanto o resultado é F. Compare: F∨V=V, V∨F=V e V∨V=V."
+          },
+          {
+            "a": true,
+            "q": "A condicional V→F é o único caso falso da condicional.",
+            "why": "Certo. Na condicional P→Q, o único caso falso é aquele em que o antecedente ocorre e o consequente não ocorre: V→F. Exemplo: 'se entregou, então recebeu protocolo' falha quando entregou mas não recebeu."
+          },
+          {
+            "a": false,
+            "q": "A condicional F→V é falsa.",
+            "why": "Errado. Em lógica proposicional clássica, uma condicional P→Q com antecedente falso não é refutada, seja Q verdadeiro ou falso. Assim F→V é verdadeiro. O único caso falso permanece V→F."
+          },
+          {
+            "a": true,
+            "q": "O bicondicional V↔V é verdadeiro.",
+            "why": "Certo. O bicondicional P↔Q é verdadeiro quando as proposições possuem o mesmo valor lógico. Como V e V coincidem, V↔V resulta V. A expressão também é verdadeira em F↔F."
+          },
+          {
+            "a": false,
+            "q": "O bicondicional V↔F é verdadeiro.",
+            "why": "Errado. O bicondicional P↔Q exige valores iguais, e V↔F reúne valores diferentes. Portanto o resultado é F; compare V↔V=V e F↔F=V."
+          },
+          {
+            "a": true,
+            "q": "A negação de uma proposição falsa é verdadeira.",
+            "why": "Certo. Negar uma proposição troca seu valor lógico: ¬V=F e ¬F=V. Se P é falsa, sua negação ¬P é verdadeira. Exemplo: se '2 é ímpar' é falso, '2 não é ímpar' é verdadeiro."
+          },
+          {
+            "a": true,
+            "q": "O OU inclusivo admite que ambas as proposições sejam verdadeiras.",
+            "why": "Certo. Na disjunção inclusiva, a regra é 'uma ou ambas'. Assim V∨V também resulta verdadeiro. Diferencie do OU exclusivo, que exige exatamente uma alternativa verdadeira."
+          }
+        ],
+        "method": "Validação individual de enunciado, valor lógico do gabarito e justificativa própria em 10 itens; sem fonte legislativa",
+        "status": "reviewed",
+        "subject": "Raciocínio Lógico",
+        "version": 1,
+        "checked_at": "2026-11-21T18:08:21Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC, Anexo III, Conhecimentos Básicos — Raciocínio Lógico, item 3 (p. 47).",
+        "topic_label": "3. Conectivos lógicos",
+        "material_slug": "pcac-2026-raciocinio-logico-03-conectivos-logicos"
       }
     },
     {
