@@ -400,7 +400,10 @@ html body .qt3 .qt3-start:disabled svg { opacity: 0.55 !important; }
 @media (max-width: 1099px) {
   .qt3-summary__actions { display: none; }
   .qt3-mobilebar {
-    position: sticky;
+    /* Fixa na base da janela (não na coluna, que pode ser mais baixa e fazia a barra flutuar no meio). */
+    position: fixed;
+    left: 0.75rem;
+    right: 0.75rem;
     bottom: calc(env(safe-area-inset-bottom) + 4.5rem);
     z-index: 20;
     display: flex;
