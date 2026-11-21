@@ -623,3 +623,12 @@ Migrations adicionais:
 - 20261121280000_refine_pcac_statistics_probability_complement_explanation.sql — commit 7be767ad77f7d5b7872a8c563d0439487192fdd8.
 
 Também foi corrigida a redação da explicação sobre evento complementar para mostrar claramente que 30% + 70% = 100%. Não houve execução de build/CI nesta etapa.
+
+
+## Estatística — aprofundamento do treinador, lote 3 — 21/11/2026
+
+Aula 7 — Correlação, regressão linear simples e causalidade: 10/10 questões atualizadas diretamente no Supabase. Explicações agora detalham direção e intensidade da correlação, faixa de Pearson, intercepto e inclinação, correlação versus causalidade, relações não lineares, outliers, interpretação da regressão, extrapolação e variável de confusão. Dicas e passos de resolução adicionados sem alterar enunciados, gabaritos ou ordem.
+
+Verificação consolidada das aulas 2 a 7: 60 questões; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas.
+
+Migration: supabase/migrations/20261121290000_deepen_pcac_statistics_correlation_regression_trainer.sql. Commit: a591eae2162724e192abeaf8cca45e37443023d5.
