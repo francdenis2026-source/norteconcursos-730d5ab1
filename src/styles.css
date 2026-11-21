@@ -17512,3 +17512,94 @@ html.dark body .library-reading-workspace .library-body a {
     margin-bottom: 6px !important;
   }
 }
+
+
+/* Study reader — table contrast repair (light and dark themes).
+   The reading sheet has its own theme; table cells must never inherit
+   pale text from a dark ancestor while keeping a light cell background. */
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table {
+  overflow-x: auto;
+  border: 1px solid #9aaabd;
+  border-radius: 10px;
+  background: transparent;
+  isolation: isolate;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #1e293b;
+  background: #ffffff;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table th {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: #29435f !important;
+  border-color: #506a86 !important;
+  font-family: var(--font-display, var(--font-sans));
+  font-size: .78em;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td * {
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td {
+  background: #ffffff !important;
+  border-color: #d5dee8 !important;
+  font-weight: 550;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table tbody tr:nth-child(even) td {
+  background: #f1f5f9 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td a {
+  color: #174f83 !important;
+  -webkit-text-fill-color: #174f83 !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table {
+  border-color: #52677f !important;
+  background: #1b2838 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table table,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table table {
+  color: #edf3fa !important;
+  background: #1b2838 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table th,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table th {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: #304b68 !important;
+  border-color: #52677f !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td *,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td * {
+  color: #edf3fa !important;
+  -webkit-text-fill-color: #edf3fa !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td {
+  background: #1d2b3c !important;
+  border-color: #43566d !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table tbody tr:nth-child(even) td,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table tbody tr:nth-child(even) td {
+  background: #26384d !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td a,
+.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-table td a {
+  color: #9ecbff !important;
+  -webkit-text-fill-color: #9ecbff !important;
+}
