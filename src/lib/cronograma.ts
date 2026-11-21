@@ -50,7 +50,7 @@ export interface TopicProgress {
   qtde: number; acertos: number;
   revPdf: boolean; revQuestoes: boolean;
   /** Última atualização do conteúdo (data em que foi marcado). Base da revisão espaçada. */
-  updatedAt?: string;
+  updatedAt?: string | undefined;
 }
 export const EMPTY_PROGRESS: TopicProgress = {
   video: false, pdf: false, podcast: false, qtde: 0, acertos: 0, revPdf: false, revQuestoes: false,
