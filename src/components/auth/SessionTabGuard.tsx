@@ -51,15 +51,15 @@ export function SessionTabGuard({ sessionKey, children }: { sessionKey: string |
             </div>
             <div className="session-access__status">
               {blocked ? <Copy size={14} aria-hidden="true" /> : <ShieldCheck size={14} aria-hidden="true" />}
-              <span>{checking ? "Validando acesso" : blocked ? "Uma aba por vez" : "Verificação de acesso"}</span>
+              <span>{checking ? "Validando acesso" : blocked ? "Limite de duas abas" : "Verificação de acesso"}</span>
             </div>
             <div className="session-access__message" role="status" aria-live="polite">
               <h1 id="session-tab-title">
-                {checking ? "Verificando sua sessão…" : blocked ? "Sua sessão já está aberta em outra aba" : "Não foi possível verificar suas abas"}
+                {checking ? "Verificando sua sessão…" : blocked ? "Sua conta já está aberta em duas abas" : "Não foi possível verificar suas abas"}
               </h1>
               <p>
                 {checking ? "Aguarde enquanto confirmamos seu acesso nesta janela."
-                  : blocked ? "Continue na aba que já está em uso. Para usar esta, feche a outra aba e toque em Tentar novamente. Sua conta permanece conectada."
+                  : blocked ? "Feche uma das abas abertas e toque em Tentar novamente. Sua conta permanece conectada."
                   : "Tente novamente. Se o problema continuar, abra a plataforma em uma versão atualizada do navegador."}
               </p>
             </div>
