@@ -82,6 +82,7 @@ export function matchesDidacticReview(
  *  Does not substitute the hashed official-source gate for statutory topics.
  */
 const MANUAL_DIDACTIC_SUBJECTS = new Set([
+  "Arquivologia",
   "Análise de Dados e Informações",
   "Estatística",
   "Língua Portuguesa",
@@ -90,6 +91,22 @@ const MANUAL_DIDACTIC_SUBJECTS = new Set([
   "Raciocínio Lógico",
   "Realidade do Estado do Acre",
   "Tecnologia da Informação e Segurança da Informação",
+]);
+/** Explicitly reviewed archival method modules; keep LAI/LGPD, access, privacy and
+ * normative e-ARQ modules behind the official-source approval requirement. */
+const NONSTATUTORY_ARCHIVOLOGY_MODULES = new Set([
+  "pcac-2026-arquivologia-protocolo-classificacao-avaliacao-temporalidade",
+  "pcac-2026-guia-arquivologia-01-arquivo-e-documento-arquivistico",
+  "pcac-2026-guia-arquivologia-02-ciclo-vital-e-tres-idades",
+  "pcac-2026-guia-arquivologia-03-classificacao-ordenacao-e-protocolo",
+  "pcac-2026-guia-arquivologia-04-avaliacao-e-temporalidade",
+  "pcac-2026-guia-arquivologia-07-proveniencia-organicidade-e-ordem-original",
+  "pcac-2026-guia-arquivologia-08-fundo-serie-especie-tipo-e-suporte",
+  "pcac-2026-guia-arquivologia-09-gestao-documental-da-producao-a-destinacao",
+  "pcac-2026-guia-arquivologia-12-metodos-de-arquivamento-e-recuperacao",
+  "pcac-2026-guia-arquivologia-13-acondicionamento-e-conservacao-preventiva",
+  "pcac-2026-guia-arquivologia-14-metadados-e-indexacao-documental",
+  "pcac-2026-guia-arquivologia-15-autenticidade-integridade-e-versoes",
 ]);
 export type MaterialManualReview = {
   version: 1;
@@ -117,6 +134,7 @@ export function matchesManualReview(
     review.status !== "reviewed" ||
     review.material_slug !== materialSlug ||
     !MANUAL_DIDACTIC_SUBJECTS.has(review.subject) ||
+    (review.subject === "Arquivologia" && !NONSTATUTORY_ARCHIVOLOGY_MODULES.has(materialSlug)) ||
     !review.topic_label?.trim() ||
     !review.method?.trim() ||
     !review.source_note?.trim() ||

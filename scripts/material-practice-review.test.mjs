@@ -94,7 +94,7 @@ test('Acre legal source verification accepts the official LEGIS portal only', ()
 test('PC-AC saved subject reviews are enforced against exact production quiz snapshots', () => {
   const manifest = JSON.parse(readFileSync(new URL('../data/pcac-2026/2026-11-21/manifest.json', import.meta.url)));
   const permitted = new Set([
-    'Análise de Dados e Informações', 'Estatística', 'Língua Portuguesa',
+    'Análise de Dados e Informações', 'Estatística', 'Língua Portuguesa', 'Arquivologia',
     'Noções de Administração', 'Noções de Informática', 'Raciocínio Lógico',
     'Realidade do Estado do Acre', 'Tecnologia da Informação e Segurança da Informação',
   ]);
@@ -118,4 +118,24 @@ test('PC-AC saved subject reviews are enforced against exact production quiz sna
   }
   assert.ok(eligibleModules >= 100);
   assert.ok(availableItems >= 700);
+});
+
+test('PC-AC reviewed archival-method topics open; privacy and normative archival topics remain locked', () => {
+  const archived = JSON.parse(readFileSync(new URL('../data/pcac-2026/2026-11-21/quiz-arquivologia.json', import.meta.url)));
+  let opened = 0, blocked = 0;
+  for (const material of archived.materials) {
+    const questions = authoredMaterialPractice(material.quiz, {subject:'Arquivologia'}, material.slug, material.topic_label, material.practice_review);
+    if (material.slug.includes('-06-digitalizacao-acesso-') || material.slug.includes('-11-acesso-sigilo-') || material.slug.includes('-16-gestao-da-informacao-') || material.slug.includes('-05-documentos-digitais-') || material.slug.includes('-10-digitalizacao-e-preservacao-')) {
+      assert.equal(questions.length, 0, 'Normative archival exercises must not be approved through a generic didactic review: ' + material.slug);
+      blocked++;
+    } else {
+      assert.equal(questions.length, material.quiz.length, 'Reviewed archival-method exercises should be accessible: ' + material.slug);
+      opened++;
+      const changed = structuredClone(material.quiz);
+      changed[0].a = !changed[0].a;
+      assert.equal(authoredMaterialPractice(changed, {subject:'Arquivologia'}, material.slug, material.topic_label, material.practice_review).length, 0);
+    }
+  }
+  assert.equal(opened,12);
+  assert.equal(blocked,5);
 });
