@@ -12,72 +12,139 @@
         {
           "a": true,
           "q": "Eficiência está relacionada ao uso dos recursos; eficácia, ao alcance das metas; efetividade, ao impacto produzido.",
-          "why": "Essa é a distinção clássica entre os três conceitos. Aplicação: Eficiência é produzir usando bem recursos; eficácia é cumprir a meta; efetividade é gerar impacto. Exemplo: emitir 100 documentos com menos custo melhora eficiência; atingir 100 planejados é eficácia; reduzir retornos dos cidadãos indica efetividade."
+          "why": "Certo. Eficiência observa relação entre entregas e recursos; eficácia compara resultado e meta; efetividade verifica impacto real. Exemplo: atender cem pessoas com menos desperdício é eficiente, atingir meta de cem é eficaz e reduzir reclamações é efetivo."
         },
         {
           "a": false,
           "q": "Uma unidade que reduz custos necessariamente aumenta sua efetividade.",
-          "why": "Redução de custos pode indicar eficiência, mas impacto precisa ser medido separadamente."
+          "why": "Errado. Reduzir custos pode aumentar eficiência ou economicidade, mas não garante impacto positivo. Se a redução elimina atendimentos essenciais, a efetividade pode cair. É necessário medir resultado social, não apenas despesa."
         },
         {
           "a": true,
           "q": "O controle administrativo compara resultados com metas e permite corrigir desvios.",
-          "why": "Controle acompanha desempenho e subsidia ajustes. Aplicação: Eficiência é produzir usando bem recursos; eficácia é cumprir a meta; efetividade é gerar impacto. Exemplo: emitir 100 documentos com menos custo melhora eficiência; atingir 100 planejados é eficácia; reduzir retornos dos cidadãos indica efetividade."
+          "why": "Certo. Controle compara o desempenho observado com padrões ou metas e identifica desvios para correção. Exemplo: meta de dez minutos de espera e resultado de vinte minutos sinalizam necessidade de rever escala e fluxo."
         },
         {
           "a": true,
           "q": "O ciclo PDCA inclui planejar, executar, verificar e agir corretivamente ou padronizar.",
-          "why": "PDCA organiza melhoria contínua em quatro etapas: Plan (planejar), Do (executar), Check (verificar resultados) e Act (corrigir ou padronizar). Exemplo: criar rotina de atendimento, testar, medir erros e ajustar."
+          "why": "Certo. No PDCA, Plan define objetivo e método; Do executa; Check compara o resultado; Act corrige ou padroniza o que funcionou. O ciclo é contínuo: a verificação pode gerar novo planejamento."
         },
         {
           "a": true,
           "q": "Um indicador só é útil se possuir fórmula, fonte e periodicidade definidas.",
-          "why": "Sem método claro, não é possível interpretar ou comparar resultados adequadamente."
+          "why": "Certo. Indicador útil precisa de definição, fórmula, fonte, período e interpretação. Exemplo: 'tempo médio de atendimento' exige informar início, término, população e período, ou unidades podem registrar números incomparáveis."
         }
       ],
       "slug": "pcac-2026-administracao-eficiencia-eficacia-efetividade-processos-prioridades",
       "discipline": "Noções de Administração",
       "topic_label": "Eficiência, eficácia, efetividade, processos e gestão de prioridades",
-      "practice_review": null
+      "practice_review": {
+        "items": [
+          {
+            "a": true,
+            "q": "Eficiência está relacionada ao uso dos recursos; eficácia, ao alcance das metas; efetividade, ao impacto produzido.",
+            "why": "Certo. Eficiência observa relação entre entregas e recursos; eficácia compara resultado e meta; efetividade verifica impacto real. Exemplo: atender cem pessoas com menos desperdício é eficiente, atingir meta de cem é eficaz e reduzir reclamações é efetivo."
+          },
+          {
+            "a": false,
+            "q": "Uma unidade que reduz custos necessariamente aumenta sua efetividade.",
+            "why": "Errado. Reduzir custos pode aumentar eficiência ou economicidade, mas não garante impacto positivo. Se a redução elimina atendimentos essenciais, a efetividade pode cair. É necessário medir resultado social, não apenas despesa."
+          },
+          {
+            "a": true,
+            "q": "O controle administrativo compara resultados com metas e permite corrigir desvios.",
+            "why": "Certo. Controle compara o desempenho observado com padrões ou metas e identifica desvios para correção. Exemplo: meta de dez minutos de espera e resultado de vinte minutos sinalizam necessidade de rever escala e fluxo."
+          },
+          {
+            "a": true,
+            "q": "O ciclo PDCA inclui planejar, executar, verificar e agir corretivamente ou padronizar.",
+            "why": "Certo. No PDCA, Plan define objetivo e método; Do executa; Check compara o resultado; Act corrige ou padroniza o que funcionou. O ciclo é contínuo: a verificação pode gerar novo planejamento."
+          },
+          {
+            "a": true,
+            "q": "Um indicador só é útil se possuir fórmula, fonte e periodicidade definidas.",
+            "why": "Certo. Indicador útil precisa de definição, fórmula, fonte, período e interpretação. Exemplo: 'tempo médio de atendimento' exige informar início, término, população e período, ou unidades podem registrar números incomparáveis."
+          }
+        ],
+        "method": "Conferência individual de cinco enunciados, gabaritos e justificativas contextualizadas de Administração; revisão sem certificação jurídica específica",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:23:57Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento didático autoral do Anexo III do Edital PC-AC 2026. Questões autorais, não oficiais.",
+        "topic_label": "Eficiência, eficácia, efetividade, processos e gestão de prioridades",
+        "material_slug": "pcac-2026-administracao-eficiencia-eficacia-efetividade-processos-prioridades"
+      }
     },
     {
       "quiz": [
         {
           "a": true,
           "q": "Planejamento define objetivos e ações; controle compara resultados com padrões e identifica desvios.",
-          "why": "São funções administrativas distintas e complementares. Aplicação: Na gestão de uma unidade, planejamento define metas, organização distribui recursos, direção orienta pessoas e controle compara resultados. Estoques exigem inventário e acompanhamento mesmo após a compra; o processo não termina na aquisição."
+          "why": "Certo. Planejar antecipa objetivos e ações; controlar verifica se as ações alcançaram padrões definidos. Exemplo: estabelecer meta de atendimento e, depois, comparar o prazo efetivo com a meta prevista."
         },
         {
           "a": false,
           "q": "Eficiência, eficácia e efetividade são sinônimos.",
-          "why": "Eficiência trata dos recursos; eficácia, das metas; efetividade, dos impactos. Aplicação: Na gestão de uma unidade, planejamento define metas, organização distribui recursos, direção orienta pessoas e controle compara resultados. Estoques exigem inventário e acompanhamento mesmo após a compra; o processo não termina na aquisição."
+          "why": "Errado. Eficiência diz respeito ao uso de recursos, eficácia ao cumprimento da meta e efetividade ao impacto gerado. A unidade pode atingir a meta gastando demais ou sem melhorar a situação do cidadão."
         },
         {
           "a": true,
           "q": "Um processo organizacional transforma entradas em resultados para usuários internos ou externos.",
-          "why": "Essa é a lógica básica de um processo. Aplicação: Na gestão de uma unidade, planejamento define metas, organização distribui recursos, direção orienta pessoas e controle compara resultados. Estoques exigem inventário e acompanhamento mesmo após a compra; o processo não termina na aquisição."
+          "why": "Certo. Um processo recebe entradas e as transforma em saídas para usuários internos ou externos. Exemplo: pedido do cidadão entra no protocolo, passa pela análise e gera resposta formal, com registros e responsáveis."
         },
         {
           "a": false,
           "q": "A gestão de recursos materiais termina no momento da aquisição.",
-          "why": "Inclui recebimento, armazenamento, distribuição, controle e descarte. Aplicação: Na gestão de uma unidade, planejamento define metas, organização distribui recursos, direção orienta pessoas e controle compara resultados. Estoques exigem inventário e acompanhamento mesmo após a compra; o processo não termina na aquisição."
+          "why": "Errado. Após comprar materiais, é necessário receber, conferir, armazenar, controlar consumo, inventariar e eventualmente descartar. A gestão inclui todo o ciclo e não termina na compra."
         },
         {
           "a": false,
           "q": "O sigilo administrativo pode ser aplicado sem observar a legislação ou a classificação da informação.",
-          "why": "O acesso e a restrição devem observar as normas e competências aplicáveis. Aplicação: Na gestão de uma unidade, planejamento define metas, organização distribui recursos, direção orienta pessoas e controle compara resultados. Estoques exigem inventário e acompanhamento mesmo após a compra; o processo não termina na aquisição."
+          "why": "Errado. O sigilo depende de previsão legal e classificação ou hipótese de restrição aplicável. A publicidade é regra constitucional, enquanto dados pessoais e informações protegidas exigem tratamento específico. O servidor não pode decretar sigilo por preferência pessoal."
         }
       ],
       "slug": "pcac-2026-administracao-publica-funcoes-processos-equipes-recursos",
       "discipline": "Noções de Administração",
       "topic_label": "Revisão integradora: funções administrativas, processos, equipes e recursos",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com funções administrativas, processos, eficiência, eficácia, efetividade, equipes, recursos e atendimento previstos no Anexo III.",
-        "result": "Aula integradora revisada e reclassificada em Noções de Administração.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "Planejamento define objetivos e ações; controle compara resultados com padrões e identifica desvios.",
+            "why": "Certo. Planejar antecipa objetivos e ações; controlar verifica se as ações alcançaram padrões definidos. Exemplo: estabelecer meta de atendimento e, depois, comparar o prazo efetivo com a meta prevista."
+          },
+          {
+            "a": false,
+            "q": "Eficiência, eficácia e efetividade são sinônimos.",
+            "why": "Errado. Eficiência diz respeito ao uso de recursos, eficácia ao cumprimento da meta e efetividade ao impacto gerado. A unidade pode atingir a meta gastando demais ou sem melhorar a situação do cidadão."
+          },
+          {
+            "a": true,
+            "q": "Um processo organizacional transforma entradas em resultados para usuários internos ou externos.",
+            "why": "Certo. Um processo recebe entradas e as transforma em saídas para usuários internos ou externos. Exemplo: pedido do cidadão entra no protocolo, passa pela análise e gera resposta formal, com registros e responsáveis."
+          },
+          {
+            "a": false,
+            "q": "A gestão de recursos materiais termina no momento da aquisição.",
+            "why": "Errado. Após comprar materiais, é necessário receber, conferir, armazenar, controlar consumo, inventariar e eventualmente descartar. A gestão inclui todo o ciclo e não termina na compra."
+          },
+          {
+            "a": false,
+            "q": "O sigilo administrativo pode ser aplicado sem observar a legislação ou a classificação da informação.",
+            "why": "Errado. O sigilo depende de previsão legal e classificação ou hipótese de restrição aplicável. A publicidade é regra constitucional, enquanto dados pessoais e informações protegidas exigem tratamento específico. O servidor não pode decretar sigilo por preferência pessoal."
+          }
+        ],
+        "method": "Conferência individual de cinco enunciados, gabaritos e justificativas contextualizadas de Administração; revisão sem certificação jurídica específica",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:23:57Z",
+        "review_type": "didactic_manual",
+        "source_note": "Aula alinhada aos tópicos do programa de Administração Pública do edital PC-AC 2026.",
+        "topic_label": "Revisão integradora: funções administrativas, processos, equipes e recursos",
+        "material_slug": "pcac-2026-administracao-publica-funcoes-processos-equipes-recursos"
       }
     },
     {
@@ -85,39 +152,69 @@
         {
           "a": true,
           "q": "Administrar envolve coordenar recursos para alcançar objetivos.",
-          "why": "A administração articula recursos e esforços para produzir resultados. Aplicação: Uma organização integra pessoas, objetivos, recursos, processos e estrutura. Dividir tarefas sem coordenação causa retrabalho: por exemplo, atendimento e arquivo precisam combinar responsabilidades para que o documento chegue ao destino correto."
+          "why": "Certo. Administrar significa coordenar pessoas, recursos materiais, informação, tempo e processos em direção a objetivos. Exemplo: distribuir tarefas e recursos para entregar um serviço dentro de critérios de qualidade."
         },
         {
           "a": false,
           "q": "A eficiência administrativa autoriza descumprir a lei quando a meta é urgente.",
-          "why": "A atuação pública permanece subordinada à legalidade e aos direitos. Aplicação: Uma organização integra pessoas, objetivos, recursos, processos e estrutura. Dividir tarefas sem coordenação causa retrabalho: por exemplo, atendimento e arquivo precisam combinar responsabilidades para que o documento chegue ao destino correto."
+          "why": "Errado. A eficiência não afasta a legalidade. Uma meta urgente não autoriza o gestor a suprimir procedimento obrigatório nem a realizar despesa sem autorização. O resultado precisa respeitar regras e direitos."
         },
         {
           "a": true,
           "q": "A estrutura formal define responsabilidades e relações institucionais.",
-          "why": "A estrutura distribui autoridade, competências e canais formais. Aplicação: Uma organização integra pessoas, objetivos, recursos, processos e estrutura. Dividir tarefas sem coordenação causa retrabalho: por exemplo, atendimento e arquivo precisam combinar responsabilidades para que o documento chegue ao destino correto."
+          "why": "Certo. Estrutura formal define unidades, responsabilidades, autoridade e canais oficiais, geralmente representados em organograma, normas e atribuições. Ela difere das redes informais de cooperação que surgem entre pessoas."
         },
         {
           "a": false,
           "q": "A divisão do trabalho elimina a necessidade de coordenação.",
-          "why": "A especialização aumenta a necessidade de integrar atividades. Aplicação: Uma organização integra pessoas, objetivos, recursos, processos e estrutura. Dividir tarefas sem coordenação causa retrabalho: por exemplo, atendimento e arquivo precisam combinar responsabilidades para que o documento chegue ao destino correto."
+          "why": "Errado. Dividir o trabalho especializa tarefas, mas exige integração. Exemplo: protocolo e arquivo podem executar etapas distintas; sem coordenação, documentos se perdem ou ficam duplicados."
         },
         {
           "a": true,
           "q": "Organizações públicas devem considerar o interesse público e a prestação de contas.",
-          "why": "A finalidade pública distingue a atuação estatal de objetivos exclusivamente privados."
+          "why": "Certo. A organização pública existe para atender ao interesse público e prestar contas da aplicação de recursos e decisões. A qualidade do serviço não dispensa transparência, responsabilidade e conformidade com a legislação."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-01-administracao-e-organizacao",
       "discipline": "Noções de Administração",
       "topic_label": "01 · Administração e organização",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "Administrar envolve coordenar recursos para alcançar objetivos.",
+            "why": "Certo. Administrar significa coordenar pessoas, recursos materiais, informação, tempo e processos em direção a objetivos. Exemplo: distribuir tarefas e recursos para entregar um serviço dentro de critérios de qualidade."
+          },
+          {
+            "a": false,
+            "q": "A eficiência administrativa autoriza descumprir a lei quando a meta é urgente.",
+            "why": "Errado. A eficiência não afasta a legalidade. Uma meta urgente não autoriza o gestor a suprimir procedimento obrigatório nem a realizar despesa sem autorização. O resultado precisa respeitar regras e direitos."
+          },
+          {
+            "a": true,
+            "q": "A estrutura formal define responsabilidades e relações institucionais.",
+            "why": "Certo. Estrutura formal define unidades, responsabilidades, autoridade e canais oficiais, geralmente representados em organograma, normas e atribuições. Ela difere das redes informais de cooperação que surgem entre pessoas."
+          },
+          {
+            "a": false,
+            "q": "A divisão do trabalho elimina a necessidade de coordenação.",
+            "why": "Errado. Dividir o trabalho especializa tarefas, mas exige integração. Exemplo: protocolo e arquivo podem executar etapas distintas; sem coordenação, documentos se perdem ou ficam duplicados."
+          },
+          {
+            "a": true,
+            "q": "Organizações públicas devem considerar o interesse público e a prestação de contas.",
+            "why": "Certo. A organização pública existe para atender ao interesse público e prestar contas da aplicação de recursos e decisões. A qualidade do serviço não dispensa transparência, responsabilidade e conformidade com a legislação."
+          }
+        ],
+        "method": "Conferência individual de cinco enunciados, gabaritos e justificativas contextualizadas de Administração; revisão sem certificação jurídica específica",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:23:57Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado editorialmente, alinhado ao tópico geral de Noções de Administração do Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "01 · Administração e organização",
+        "material_slug": "pcac-2026-guia-administracao-geral-01-administracao-e-organizacao"
       }
     },
     {
@@ -265,39 +362,69 @@
         {
           "a": true,
           "q": "A definição da missão e das prioridades institucionais é uma atividade estratégica.",
-          "why": "São decisões de alcance amplo e orientação institucional. Aplicação: O nível estratégico decide objetivos gerais de longo prazo; o tático desdobra por unidade; o operacional define rotina. Habilidade técnica domina procedimentos, humana lida com pessoas e conceitual compreende a organização integrada."
+          "why": "Certo. Missão e prioridades institucionais orientam o conjunto da organização e têm horizonte amplo. Esse é o nível estratégico; escalas diárias são operacionais e planos setoriais são táticos."
         },
         {
           "a": true,
           "q": "O nível tático transforma diretrizes em planos de áreas e departamentos.",
-          "why": "Ele faz a ligação entre estratégia e operação. Aplicação: O nível estratégico decide objetivos gerais de longo prazo; o tático desdobra por unidade; o operacional define rotina. Habilidade técnica domina procedimentos, humana lida com pessoas e conceitual compreende a organização integrada."
+          "why": "Certo. O nível tático traduz diretrizes estratégicas em metas e planos para diretorias, setores ou unidades. Exemplo: uma diretriz institucional de reduzir filas vira um plano semestral de atendimento de determinada regional."
         },
         {
           "a": true,
           "q": "A execução de rotinas diárias é predominantemente operacional.",
-          "why": "O nível operacional concentra tarefas e entregas concretas. Aplicação: O nível estratégico decide objetivos gerais de longo prazo; o tático desdobra por unidade; o operacional define rotina. Habilidade técnica domina procedimentos, humana lida com pessoas e conceitual compreende a organização integrada."
+          "why": "Certo. Rotinas e procedimentos diários pertencem principalmente ao nível operacional, onde se executa o serviço. Exemplo: atribuir guichês e horários de triagem para o turno seguinte."
         },
         {
           "a": false,
           "q": "A habilidade humana é relevante apenas para a alta administração.",
-          "why": "Comunicação e cooperação são necessárias em todos os níveis. Aplicação: O nível estratégico decide objetivos gerais de longo prazo; o tático desdobra por unidade; o operacional define rotina. Habilidade técnica domina procedimentos, humana lida com pessoas e conceitual compreende a organização integrada."
+          "why": "Errado. Habilidade humana, como ouvir, negociar, orientar e trabalhar com pessoas, é relevante em todos os níveis. Não fica restrita à direção superior; atendimento e supervisão também dependem dela."
         },
         {
           "a": true,
           "q": "A habilidade conceitual permite compreender interdependências organizacionais.",
-          "why": "Ela envolve visão sistêmica e análise do conjunto. Aplicação: O nível estratégico decide objetivos gerais de longo prazo; o tático desdobra por unidade; o operacional define rotina. Habilidade técnica domina procedimentos, humana lida com pessoas e conceitual compreende a organização integrada."
+          "why": "Certo. Habilidade conceitual é a capacidade de compreender a organização como sistema e perceber relações entre áreas. Exemplo: avaliar como uma mudança no atendimento afeta arquivo, tecnologia e orçamento."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-04-niveis-organizacionais-e-habilidades",
       "discipline": "Noções de Administração",
       "topic_label": "04 · Níveis organizacionais e habilidades gerenciais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "A definição da missão e das prioridades institucionais é uma atividade estratégica.",
+            "why": "Certo. Missão e prioridades institucionais orientam o conjunto da organização e têm horizonte amplo. Esse é o nível estratégico; escalas diárias são operacionais e planos setoriais são táticos."
+          },
+          {
+            "a": true,
+            "q": "O nível tático transforma diretrizes em planos de áreas e departamentos.",
+            "why": "Certo. O nível tático traduz diretrizes estratégicas em metas e planos para diretorias, setores ou unidades. Exemplo: uma diretriz institucional de reduzir filas vira um plano semestral de atendimento de determinada regional."
+          },
+          {
+            "a": true,
+            "q": "A execução de rotinas diárias é predominantemente operacional.",
+            "why": "Certo. Rotinas e procedimentos diários pertencem principalmente ao nível operacional, onde se executa o serviço. Exemplo: atribuir guichês e horários de triagem para o turno seguinte."
+          },
+          {
+            "a": false,
+            "q": "A habilidade humana é relevante apenas para a alta administração.",
+            "why": "Errado. Habilidade humana, como ouvir, negociar, orientar e trabalhar com pessoas, é relevante em todos os níveis. Não fica restrita à direção superior; atendimento e supervisão também dependem dela."
+          },
+          {
+            "a": true,
+            "q": "A habilidade conceitual permite compreender interdependências organizacionais.",
+            "why": "Certo. Habilidade conceitual é a capacidade de compreender a organização como sistema e perceber relações entre áreas. Exemplo: avaliar como uma mudança no atendimento afeta arquivo, tecnologia e orçamento."
+          }
+        ],
+        "method": "Conferência individual de cinco enunciados, gabaritos e justificativas contextualizadas de Administração; revisão sem certificação jurídica específica",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:23:57Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado editorialmente, alinhado ao tópico geral de Noções de Administração do Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "04 · Níveis organizacionais e habilidades gerenciais",
+        "material_slug": "pcac-2026-guia-administracao-geral-04-niveis-organizacionais-e-habilidades"
       }
     },
     {
@@ -305,39 +432,69 @@
         {
           "a": true,
           "q": "A gestão de materiais procura equilibrar disponibilidade e custos.",
-          "why": "O objetivo não é maximizar estoque, mas atender a necessidade com controle. Aplicação: Gestão de materiais equilibra disponibilidade e custo de estocagem. Estoque insuficiente paralisa serviço; estoque excessivo ocupa espaço e capital. O inventário compara bens físicos e registros, identificando extravios ou divergências."
+          "why": "Certo. Gestão de materiais procura garantir suprimentos quando necessários sem manter estoque excessivo. Estoque baixo pode paralisar serviço; estoque alto pode aumentar perdas, custos e ocupação de espaço."
         },
         {
           "a": true,
           "q": "Estoque de segurança serve para absorver incertezas de demanda e reposição.",
-          "why": "É uma reserva contra variações e atrasos. Aplicação: Gestão de materiais equilibra disponibilidade e custo de estocagem. Estoque insuficiente paralisa serviço; estoque excessivo ocupa espaço e capital. O inventário compara bens físicos e registros, identificando extravios ou divergências."
+          "why": "Certo. Estoque de segurança é reserva para absorver incertezas de demanda ou atraso de reposição. Exemplo: guardar formulários adicionais quando o fornecimento pode atrasar, sem confundir a reserva com consumo normal."
         },
         {
           "a": false,
           "q": "O ponto de pedido independe do tempo de reposição.",
-          "why": "O consumo durante o prazo de reposição é componente central do cálculo. Aplicação: Gestão de materiais equilibra disponibilidade e custo de estocagem. Estoque insuficiente paralisa serviço; estoque excessivo ocupa espaço e capital. O inventário compara bens físicos e registros, identificando extravios ou divergências."
+          "why": "Errado. O ponto de pedido depende do consumo durante o prazo de reposição e, conforme o modelo, do estoque de segurança. Se um fornecedor demora mais, o pedido costuma precisar ocorrer antes."
         },
         {
           "a": true,
           "q": "Inventário compara bens ou materiais existentes com registros.",
-          "why": "A conferência identifica divergências e subsidia ajustes justificados. Aplicação: Gestão de materiais equilibra disponibilidade e custo de estocagem. Estoque insuficiente paralisa serviço; estoque excessivo ocupa espaço e capital. O inventário compara bens físicos e registros, identificando extravios ou divergências."
+          "why": "Certo. Inventário é conferência dos bens ou materiais existentes e de suas condições frente aos registros. Diferenças podem indicar erro de lançamento, extravio, perda ou movimentação não registrada."
         },
         {
           "a": true,
           "q": "Acuracidade elevada significa que os registros correspondem ao estoque físico.",
-          "why": "Acuracidade mede a correspondência entre sistema e realidade. Aplicação: Gestão de materiais equilibra disponibilidade e custo de estocagem. Estoque insuficiente paralisa serviço; estoque excessivo ocupa espaço e capital. O inventário compara bens físicos e registros, identificando extravios ou divergências."
+          "why": "Certo. Acuracidade de estoque mede a correspondência entre quantidades e características físicas e registros do sistema. Alta acuracidade significa que o cadastro representa bem a realidade, facilitando compras e controle."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-05-administracao-de-materiais-e-patrimonio",
       "discipline": "Noções de Administração",
       "topic_label": "05 · Administração de materiais e patrimônio",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "A gestão de materiais procura equilibrar disponibilidade e custos.",
+            "why": "Certo. Gestão de materiais procura garantir suprimentos quando necessários sem manter estoque excessivo. Estoque baixo pode paralisar serviço; estoque alto pode aumentar perdas, custos e ocupação de espaço."
+          },
+          {
+            "a": true,
+            "q": "Estoque de segurança serve para absorver incertezas de demanda e reposição.",
+            "why": "Certo. Estoque de segurança é reserva para absorver incertezas de demanda ou atraso de reposição. Exemplo: guardar formulários adicionais quando o fornecimento pode atrasar, sem confundir a reserva com consumo normal."
+          },
+          {
+            "a": false,
+            "q": "O ponto de pedido independe do tempo de reposição.",
+            "why": "Errado. O ponto de pedido depende do consumo durante o prazo de reposição e, conforme o modelo, do estoque de segurança. Se um fornecedor demora mais, o pedido costuma precisar ocorrer antes."
+          },
+          {
+            "a": true,
+            "q": "Inventário compara bens ou materiais existentes com registros.",
+            "why": "Certo. Inventário é conferência dos bens ou materiais existentes e de suas condições frente aos registros. Diferenças podem indicar erro de lançamento, extravio, perda ou movimentação não registrada."
+          },
+          {
+            "a": true,
+            "q": "Acuracidade elevada significa que os registros correspondem ao estoque físico.",
+            "why": "Certo. Acuracidade de estoque mede a correspondência entre quantidades e características físicas e registros do sistema. Alta acuracidade significa que o cadastro representa bem a realidade, facilitando compras e controle."
+          }
+        ],
+        "method": "Conferência individual de cinco enunciados, gabaritos e justificativas contextualizadas de Administração; revisão sem certificação jurídica específica",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:23:57Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado editorialmente, alinhado ao tópico geral de Noções de Administração do Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "05 · Administração de materiais e patrimônio",
+        "material_slug": "pcac-2026-guia-administracao-geral-05-administracao-de-materiais-e-patrimonio"
       }
     },
     {
@@ -345,39 +502,69 @@
         {
           "a": true,
           "q": "O papel de líder pertence à categoria interpessoal.",
-          "why": "Liderar envolve relações e coordenação de pessoas. Aplicação: Papéis gerenciais incluem relações interpessoais, informação e decisão. Decisão programada resolve problema recorrente com procedimento conhecido; não programada atende situação inédita, exigindo critérios, informação e análise de alternativas."
+          "why": "Certo. No modelo de papéis gerenciais de Mintzberg, o líder integra a categoria interpessoal, juntamente com representante e contato. Seu papel envolve orientar, motivar e desenvolver pessoas, não apenas distribuir ordens."
         },
         {
           "a": true,
           "q": "O disseminador compartilha informações dentro da unidade.",
-          "why": "É um papel informacional. Aplicação: Papéis gerenciais incluem relações interpessoais, informação e decisão. Decisão programada resolve problema recorrente com procedimento conhecido; não programada atende situação inédita, exigindo critérios, informação e análise de alternativas."
+          "why": "Certo. Disseminador é papel informacional: o gestor compartilha com a equipe informações relevantes recebidas de outras fontes. Não confunda com porta-voz, que comunica informações para fora da organização."
         },
         {
           "a": true,
           "q": "O negociador é classificado entre os papéis decisórios.",
-          "why": "Negociar envolve decisões e compromissos organizacionais. Aplicação: Papéis gerenciais incluem relações interpessoais, informação e decisão. Decisão programada resolve problema recorrente com procedimento conhecido; não programada atende situação inédita, exigindo critérios, informação e análise de alternativas."
+          "why": "Certo. Negociador é um dos papéis decisórios, pois toma parte na definição de acordos e compromissos da organização. Os outros incluem empreendedor, administrador de conflitos e alocador de recursos."
         },
         {
           "a": false,
           "q": "Decisões programadas são típicas de situações inéditas e sem procedimentos.",
-          "why": "Elas tratam de situações recorrentes e estruturadas. Aplicação: Papéis gerenciais incluem relações interpessoais, informação e decisão. Decisão programada resolve problema recorrente com procedimento conhecido; não programada atende situação inédita, exigindo critérios, informação e análise de alternativas."
+          "why": "Errado. Decisões programadas são recorrentes e seguem procedimentos conhecidos, como regras de reposição de formulários. Situações inéditas e sem rotina definida caracterizam decisões não programadas."
         },
         {
           "a": true,
           "q": "Sob incerteza, o gestor deve explicitar premissas e limitações.",
-          "why": "A decisão responsável reconhece o que não se conhece. Aplicação: Papéis gerenciais incluem relações interpessoais, informação e decisão. Decisão programada resolve problema recorrente com procedimento conhecido; não programada atende situação inédita, exigindo critérios, informação e análise de alternativas."
+          "why": "Certo. Em situação de incerteza, dados incompletos precisam ser explicitados. O gestor deve registrar hipóteses, riscos, critérios e limitações, avaliar alternativas e acompanhar o resultado para corrigir decisões."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-06-papeis-do-administrador-e-situacoes-gerenciais",
       "discipline": "Noções de Administração",
       "topic_label": "06 · Papéis do administrador e situações gerenciais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "O papel de líder pertence à categoria interpessoal.",
+            "why": "Certo. No modelo de papéis gerenciais de Mintzberg, o líder integra a categoria interpessoal, juntamente com representante e contato. Seu papel envolve orientar, motivar e desenvolver pessoas, não apenas distribuir ordens."
+          },
+          {
+            "a": true,
+            "q": "O disseminador compartilha informações dentro da unidade.",
+            "why": "Certo. Disseminador é papel informacional: o gestor compartilha com a equipe informações relevantes recebidas de outras fontes. Não confunda com porta-voz, que comunica informações para fora da organização."
+          },
+          {
+            "a": true,
+            "q": "O negociador é classificado entre os papéis decisórios.",
+            "why": "Certo. Negociador é um dos papéis decisórios, pois toma parte na definição de acordos e compromissos da organização. Os outros incluem empreendedor, administrador de conflitos e alocador de recursos."
+          },
+          {
+            "a": false,
+            "q": "Decisões programadas são típicas de situações inéditas e sem procedimentos.",
+            "why": "Errado. Decisões programadas são recorrentes e seguem procedimentos conhecidos, como regras de reposição de formulários. Situações inéditas e sem rotina definida caracterizam decisões não programadas."
+          },
+          {
+            "a": true,
+            "q": "Sob incerteza, o gestor deve explicitar premissas e limitações.",
+            "why": "Certo. Em situação de incerteza, dados incompletos precisam ser explicitados. O gestor deve registrar hipóteses, riscos, critérios e limitações, avaliar alternativas e acompanhar o resultado para corrigir decisões."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, conceitos administrativos e justificativas, com exemplos e diferenciação de termos",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:24:24Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "06 · Papéis do administrador e situações gerenciais",
+        "material_slug": "pcac-2026-guia-administracao-geral-06-papeis-do-administrador-e-situacoes-gerenciais"
       }
     },
     {
@@ -385,39 +572,69 @@
         {
           "a": true,
           "q": "O planejamento estratégico tem abrangência institucional ampla.",
-          "why": "Define diretrizes e prioridades gerais. Aplicação: Planejamento estratégico define rumo institucional; tático estabelece metas das unidades; operacional organiza tarefas diárias. Exemplo: reduzir espera em dois anos (estratégico), plano semestral da unidade (tático), escala de amanhã (operacional)."
+          "why": "Certo. Planejamento estratégico define direções institucionais amplas, como missão, visão, objetivos e prioridades de longo prazo. Ele orienta os desdobramentos táticos e operacionais."
         },
         {
           "a": true,
           "q": "O planejamento tático traduz a estratégia em planos setoriais.",
-          "why": "É o nível intermediário de desdobramento. Aplicação: Planejamento estratégico define rumo institucional; tático estabelece metas das unidades; operacional organiza tarefas diárias. Exemplo: reduzir espera em dois anos (estratégico), plano semestral da unidade (tático), escala de amanhã (operacional)."
+          "why": "Certo. O planejamento tático transforma objetivos estratégicos em metas, recursos e iniciativas por departamentos ou unidades. Exemplo: plano anual da direção regional para reduzir atrasos."
         },
         {
           "a": true,
           "q": "Escalas e rotinas diárias são exemplos de planejamento operacional.",
-          "why": "Detalham a execução cotidiana. Aplicação: Planejamento estratégico define rumo institucional; tático estabelece metas das unidades; operacional organiza tarefas diárias. Exemplo: reduzir espera em dois anos (estratégico), plano semestral da unidade (tático), escala de amanhã (operacional)."
+          "why": "Certo. Planejamento operacional detalha atividades cotidianas, responsáveis, horários e procedimentos. Exemplo: escala semanal de triagem e conferência de documentos para alcançar a meta setorial."
         },
         {
           "a": false,
           "q": "Na análise SWOT, ameaças são fatores internos.",
-          "why": "Ameaças pertencem ao ambiente externo. Aplicação: Planejamento estratégico define rumo institucional; tático estabelece metas das unidades; operacional organiza tarefas diárias. Exemplo: reduzir espera em dois anos (estratégico), plano semestral da unidade (tático), escala de amanhã (operacional)."
+          "why": "Errado. Na SWOT, ameaças e oportunidades vêm do ambiente externo; forças e fraquezas pertencem ao ambiente interno. Mudança na legislação pode ser ameaça externa, enquanto falta de equipamentos é fraqueza interna."
         },
         {
           "a": false,
           "q": "O planejamento elimina completamente a incerteza.",
-          "why": "Ele reduz improvisação, mas o ambiente permanece sujeito a mudanças. Aplicação: Planejamento estratégico define rumo institucional; tático estabelece metas das unidades; operacional organiza tarefas diárias. Exemplo: reduzir espera em dois anos (estratégico), plano semestral da unidade (tático), escala de amanhã (operacional)."
+          "why": "Errado. Planejar reduz improvisação e prepara a resposta a cenários, mas não elimina incerteza. Mudanças legais, demanda inesperada e falhas técnicas ainda exigem monitoramento e adaptação."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-07-planejamento-estrategico-tatico-e-operacional",
       "discipline": "Noções de Administração",
       "topic_label": "07 · Planejamento estratégico, tático e operacional",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "O planejamento estratégico tem abrangência institucional ampla.",
+            "why": "Certo. Planejamento estratégico define direções institucionais amplas, como missão, visão, objetivos e prioridades de longo prazo. Ele orienta os desdobramentos táticos e operacionais."
+          },
+          {
+            "a": true,
+            "q": "O planejamento tático traduz a estratégia em planos setoriais.",
+            "why": "Certo. O planejamento tático transforma objetivos estratégicos em metas, recursos e iniciativas por departamentos ou unidades. Exemplo: plano anual da direção regional para reduzir atrasos."
+          },
+          {
+            "a": true,
+            "q": "Escalas e rotinas diárias são exemplos de planejamento operacional.",
+            "why": "Certo. Planejamento operacional detalha atividades cotidianas, responsáveis, horários e procedimentos. Exemplo: escala semanal de triagem e conferência de documentos para alcançar a meta setorial."
+          },
+          {
+            "a": false,
+            "q": "Na análise SWOT, ameaças são fatores internos.",
+            "why": "Errado. Na SWOT, ameaças e oportunidades vêm do ambiente externo; forças e fraquezas pertencem ao ambiente interno. Mudança na legislação pode ser ameaça externa, enquanto falta de equipamentos é fraqueza interna."
+          },
+          {
+            "a": false,
+            "q": "O planejamento elimina completamente a incerteza.",
+            "why": "Errado. Planejar reduz improvisação e prepara a resposta a cenários, mas não elimina incerteza. Mudanças legais, demanda inesperada e falhas técnicas ainda exigem monitoramento e adaptação."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, conceitos administrativos e justificativas, com exemplos e diferenciação de termos",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:24:24Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "07 · Planejamento estratégico, tático e operacional",
+        "material_slug": "pcac-2026-guia-administracao-geral-07-planejamento-estrategico-tatico-e-operacional"
       }
     },
     {
@@ -425,39 +642,69 @@
         {
           "a": true,
           "q": "O organograma representa principalmente a estrutura formal.",
-          "why": "Ele registra unidades e relações oficiais. Aplicação: Estrutura formal aparece em organograma e atribuições; informal surge das relações pessoais. Comunicação descendente transmite ordens, ascendente retorna informações e horizontal integra setores no mesmo nível. Ruídos exigem confirmação de entendimento."
+          "why": "Certo. O organograma representa relações formais de autoridade, unidades e subordinação. Ele não mostra todas as amizades e redes informais que também influenciam a comunicação cotidiana."
         },
         {
           "a": true,
           "q": "A estrutura informal pode facilitar a cooperação e também disseminar rumores.",
-          "why": "As redes espontâneas têm efeitos positivos e negativos. Aplicação: Estrutura formal aparece em organograma e atribuições; informal surge das relações pessoais. Comunicação descendente transmite ordens, ascendente retorna informações e horizontal integra setores no mesmo nível. Ruídos exigem confirmação de entendimento."
+          "why": "Certo. Relações informais podem agilizar cooperação, circulação de experiências e solução de problemas; também podem espalhar boatos ou contornar canais adequados. O efeito depende do uso."
         },
         {
           "a": false,
           "q": "Comunicação horizontal ocorre entre níveis hierárquicos diferentes.",
-          "why": "Horizontal ocorre entre pessoas ou unidades de nível semelhante. Aplicação: Estrutura formal aparece em organograma e atribuições; informal surge das relações pessoais. Comunicação descendente transmite ordens, ascendente retorna informações e horizontal integra setores no mesmo nível. Ruídos exigem confirmação de entendimento."
+          "why": "Errado. Comunicação horizontal ocorre entre pessoas ou unidades de nível hierárquico semelhante. Mensagens entre chefia e subordinados são ascendentes ou descendentes conforme o sentido."
         },
         {
           "a": true,
           "q": "Descentralização distribui autoridade decisória para unidades ou níveis.",
-          "why": "A decisão é aproximada da execução dentro de limites. Aplicação: Estrutura formal aparece em organograma e atribuições; informal surge das relações pessoais. Comunicação descendente transmite ordens, ascendente retorna informações e horizontal integra setores no mesmo nível. Ruídos exigem confirmação de entendimento."
+          "why": "Certo. Descentralização administrativa ou organizacional distribui autoridade decisória a outros níveis ou entidades, conforme o modelo. Distinga-a da desconcentração, que distribui atribuições internas sem criar outra pessoa jurídica."
         },
         {
           "a": true,
           "q": "Feedback ajuda a verificar se a mensagem foi compreendida.",
-          "why": "O retorno reduz ambiguidades e permite correções. Aplicação: Estrutura formal aparece em organograma e atribuições; informal surge das relações pessoais. Comunicação descendente transmite ordens, ascendente retorna informações e horizontal integra setores no mesmo nível. Ruídos exigem confirmação de entendimento."
+          "why": "Certo. Feedback confirma se a mensagem foi recebida e compreendida, permitindo corrigir ruídos. Exemplo: após explicar um procedimento, pedir ao destinatário que descreva os passos evita interpretações divergentes."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-08-estrutura-formal-informal-e-comunicacao",
       "discipline": "Noções de Administração",
       "topic_label": "08 · Estrutura formal, informal e comunicação",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "O organograma representa principalmente a estrutura formal.",
+            "why": "Certo. O organograma representa relações formais de autoridade, unidades e subordinação. Ele não mostra todas as amizades e redes informais que também influenciam a comunicação cotidiana."
+          },
+          {
+            "a": true,
+            "q": "A estrutura informal pode facilitar a cooperação e também disseminar rumores.",
+            "why": "Certo. Relações informais podem agilizar cooperação, circulação de experiências e solução de problemas; também podem espalhar boatos ou contornar canais adequados. O efeito depende do uso."
+          },
+          {
+            "a": false,
+            "q": "Comunicação horizontal ocorre entre níveis hierárquicos diferentes.",
+            "why": "Errado. Comunicação horizontal ocorre entre pessoas ou unidades de nível hierárquico semelhante. Mensagens entre chefia e subordinados são ascendentes ou descendentes conforme o sentido."
+          },
+          {
+            "a": true,
+            "q": "Descentralização distribui autoridade decisória para unidades ou níveis.",
+            "why": "Certo. Descentralização administrativa ou organizacional distribui autoridade decisória a outros níveis ou entidades, conforme o modelo. Distinga-a da desconcentração, que distribui atribuições internas sem criar outra pessoa jurídica."
+          },
+          {
+            "a": true,
+            "q": "Feedback ajuda a verificar se a mensagem foi compreendida.",
+            "why": "Certo. Feedback confirma se a mensagem foi recebida e compreendida, permitindo corrigir ruídos. Exemplo: após explicar um procedimento, pedir ao destinatário que descreva os passos evita interpretações divergentes."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, conceitos administrativos e justificativas, com exemplos e diferenciação de termos",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:24:24Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "08 · Estrutura formal, informal e comunicação",
+        "material_slug": "pcac-2026-guia-administracao-geral-08-estrutura-formal-informal-e-comunicacao"
       }
     },
     {
@@ -465,39 +712,69 @@
         {
           "a": true,
           "q": "A tomada de decisão começa pela definição adequada do problema.",
-          "why": "Um problema mal definido compromete as etapas seguintes. Aplicação: O processo decisório começa pelo problema, define critérios, compara alternativas, executa e avalia. Controle prévio ocorre antes da atividade; concomitante durante; posterior após. Não confunda controle com punição: também corrige rotinas."
+          "why": "Certo. A decisão começa por identificar e delimitar o problema real, não por escolher a primeira solução. Exemplo: atraso pode decorrer de fila, sistema indisponível ou documentação incompleta; causas diferentes exigem medidas diferentes."
         },
         {
           "a": false,
           "q": "Racionalidade limitada significa que o gestor pode ignorar critérios.",
-          "why": "Ela reconhece restrições, mas não elimina a necessidade de critérios. Aplicação: O processo decisório começa pelo problema, define critérios, compara alternativas, executa e avalia. Controle prévio ocorre antes da atividade; concomitante durante; posterior após. Não confunda controle com punição: também corrige rotinas."
+          "why": "Errado. Racionalidade limitada significa que pessoas decidem com tempo, informação e capacidade de processamento restritos. Isso exige critérios, simplificações transparentes e revisão, não licença para ignorar evidências."
         },
         {
           "a": false,
           "q": "Viés de confirmação favorece informações contrárias à crença inicial.",
-          "why": "O viés leva a selecionar evidências que confirmam a crença. Aplicação: O processo decisório começa pelo problema, define critérios, compara alternativas, executa e avalia. Controle prévio ocorre antes da atividade; concomitante durante; posterior após. Não confunda controle com punição: também corrige rotinas."
+          "why": "Errado. Viés de confirmação faz a pessoa privilegiar informações que apoiam crenças ou hipóteses iniciais e negligenciar dados contrários. Um método responsável procura também evidências que possam refutar a hipótese."
         },
         {
           "a": true,
           "q": "Controle concomitante ocorre durante a execução.",
-          "why": "Permite detectar desvios enquanto a atividade acontece. Aplicação: O processo decisório começa pelo problema, define critérios, compara alternativas, executa e avalia. Controle prévio ocorre antes da atividade; concomitante durante; posterior após. Não confunda controle com punição: também corrige rotinas."
+          "why": "Certo. Controle concomitante acompanha a atividade durante sua execução. Exemplo: monitorar o tamanho da fila durante o expediente para remanejar servidores antes de encerrar o atendimento."
         },
         {
           "a": true,
           "q": "Indicadores devem considerar qualidade e conformidade, não apenas quantidade.",
-          "why": "Métricas isoladas podem incentivar resultados distorcidos. Aplicação: O processo decisório começa pelo problema, define critérios, compara alternativas, executa e avalia. Controle prévio ocorre antes da atividade; concomitante durante; posterior após. Não confunda controle com punição: também corrige rotinas."
+          "why": "Certo. Indicadores exclusivamente quantitativos podem esconder erros ou descumprimento de normas. Controle deve avaliar quantidade, qualidade, prazo e conformidade, como número de processos concluídos e taxa de retrabalho."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-09-tomada-de-decisao-e-controle",
       "discipline": "Noções de Administração",
       "topic_label": "09 · Tomada de decisão e controle",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "A tomada de decisão começa pela definição adequada do problema.",
+            "why": "Certo. A decisão começa por identificar e delimitar o problema real, não por escolher a primeira solução. Exemplo: atraso pode decorrer de fila, sistema indisponível ou documentação incompleta; causas diferentes exigem medidas diferentes."
+          },
+          {
+            "a": false,
+            "q": "Racionalidade limitada significa que o gestor pode ignorar critérios.",
+            "why": "Errado. Racionalidade limitada significa que pessoas decidem com tempo, informação e capacidade de processamento restritos. Isso exige critérios, simplificações transparentes e revisão, não licença para ignorar evidências."
+          },
+          {
+            "a": false,
+            "q": "Viés de confirmação favorece informações contrárias à crença inicial.",
+            "why": "Errado. Viés de confirmação faz a pessoa privilegiar informações que apoiam crenças ou hipóteses iniciais e negligenciar dados contrários. Um método responsável procura também evidências que possam refutar a hipótese."
+          },
+          {
+            "a": true,
+            "q": "Controle concomitante ocorre durante a execução.",
+            "why": "Certo. Controle concomitante acompanha a atividade durante sua execução. Exemplo: monitorar o tamanho da fila durante o expediente para remanejar servidores antes de encerrar o atendimento."
+          },
+          {
+            "a": true,
+            "q": "Indicadores devem considerar qualidade e conformidade, não apenas quantidade.",
+            "why": "Certo. Indicadores exclusivamente quantitativos podem esconder erros ou descumprimento de normas. Controle deve avaliar quantidade, qualidade, prazo e conformidade, como número de processos concluídos e taxa de retrabalho."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, conceitos administrativos e justificativas, com exemplos e diferenciação de termos",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:24:24Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "09 · Tomada de decisão e controle",
+        "material_slug": "pcac-2026-guia-administracao-geral-09-tomada-de-decisao-e-controle"
       }
     },
     {
@@ -505,39 +782,69 @@
         {
           "a": true,
           "q": "A curva ABC classifica itens segundo participação no valor de consumo.",
-          "why": "A análise prioriza controle conforme relevância econômica. Aplicação: Curva ABC ordena itens pelo valor de consumo, não só quantidade física. Classe A concentra maior impacto econômico; inventário confere existência e condição dos bens; tombamento e rastreabilidade auxiliam controle patrimonial."
+          "why": "Certo. Na curva ABC por valor de consumo, calcula-se participação de cada item no gasto total e ordenam-se os itens pelo valor acumulado. A classe A costuma concentrar maior peso financeiro e requer atenção especial."
         },
         {
           "a": false,
           "q": "Um item de baixo valor nunca pode ser crítico.",
-          "why": "Criticidade operacional não é idêntica ao valor econômico. Aplicação: Curva ABC ordena itens pelo valor de consumo, não só quantidade física. Classe A concentra maior impacto econômico; inventário confere existência e condição dos bens; tombamento e rastreabilidade auxiliam controle patrimonial."
+          "why": "Errado. Item de pequeno valor unitário pode ser crítico para a continuidade do serviço, como uma peça barata indispensável ao funcionamento de equipamento. Valor econômico e criticidade operacional são critérios diferentes."
         },
         {
           "a": true,
           "q": "Inventário físico permite confrontar quantidades reais com registros.",
-          "why": "A comparação identifica diferenças a apurar. Aplicação: Curva ABC ordena itens pelo valor de consumo, não só quantidade física. Classe A concentra maior impacto econômico; inventário confere existência e condição dos bens; tombamento e rastreabilidade auxiliam controle patrimonial."
+          "why": "Certo. Inventário físico verifica a existência, quantidade, localização e condição dos bens e compara com os registros. Diferenças precisam de apuração, não de ajuste sem documentação."
         },
         {
           "a": false,
           "q": "Depreciação implica necessariamente que o bem deve ser descartado.",
-          "why": "Depreciação contábil não determina, isoladamente, a baixa. Aplicação: Curva ABC ordena itens pelo valor de consumo, não só quantidade física. Classe A concentra maior impacto econômico; inventário confere existência e condição dos bens; tombamento e rastreabilidade auxiliam controle patrimonial."
+          "why": "Errado. Depreciação é reconhecimento contábil da perda de valor depreciável ao longo da vida útil, não ordem de descarte. Um equipamento totalmente depreciado pode continuar funcionando e sendo utilizado."
         },
         {
           "a": true,
           "q": "A movimentação de bens patrimoniais deve ser registrada e rastreável.",
-          "why": "O controle identifica localização e responsabilidade pelo bem. Aplicação: Curva ABC ordena itens pelo valor de consumo, não só quantidade física. Classe A concentra maior impacto econômico; inventário confere existência e condição dos bens; tombamento e rastreabilidade auxiliam controle patrimonial."
+          "why": "Certo. Movimentação patrimonial precisa de registro de origem, destino, responsável e data para garantir rastreabilidade. Exemplo: transferir computador entre unidades sem atualizar o cadastro dificulta inventário e prestação de contas."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-10-estoques-inventarios-e-controle-patrimonial",
       "discipline": "Noções de Administração",
       "topic_label": "10 · Estoques, inventários e controle patrimonial",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "A curva ABC classifica itens segundo participação no valor de consumo.",
+            "why": "Certo. Na curva ABC por valor de consumo, calcula-se participação de cada item no gasto total e ordenam-se os itens pelo valor acumulado. A classe A costuma concentrar maior peso financeiro e requer atenção especial."
+          },
+          {
+            "a": false,
+            "q": "Um item de baixo valor nunca pode ser crítico.",
+            "why": "Errado. Item de pequeno valor unitário pode ser crítico para a continuidade do serviço, como uma peça barata indispensável ao funcionamento de equipamento. Valor econômico e criticidade operacional são critérios diferentes."
+          },
+          {
+            "a": true,
+            "q": "Inventário físico permite confrontar quantidades reais com registros.",
+            "why": "Certo. Inventário físico verifica a existência, quantidade, localização e condição dos bens e compara com os registros. Diferenças precisam de apuração, não de ajuste sem documentação."
+          },
+          {
+            "a": false,
+            "q": "Depreciação implica necessariamente que o bem deve ser descartado.",
+            "why": "Errado. Depreciação é reconhecimento contábil da perda de valor depreciável ao longo da vida útil, não ordem de descarte. Um equipamento totalmente depreciado pode continuar funcionando e sendo utilizado."
+          },
+          {
+            "a": true,
+            "q": "A movimentação de bens patrimoniais deve ser registrada e rastreável.",
+            "why": "Certo. Movimentação patrimonial precisa de registro de origem, destino, responsável e data para garantir rastreabilidade. Exemplo: transferir computador entre unidades sem atualizar o cadastro dificulta inventário e prestação de contas."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, conceitos administrativos e justificativas, com exemplos e diferenciação de termos",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:24:24Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "10 · Estoques, inventários e controle patrimonial",
+        "material_slug": "pcac-2026-guia-administracao-geral-10-estoques-inventarios-e-controle-patrimonial"
       }
     },
     {
@@ -545,39 +852,69 @@
         {
           "a": false,
           "q": "A simples reunião de pessoas garante que exista uma equipe eficaz.",
-          "why": "Equipe requer interdependência, coordenação e objetivos compartilhados. Aplicação: Trabalho em equipe demanda objetivos compartilhados, papéis e comunicação. No modelo de Tuckman, formação antecede conflitos, normatização e desempenho. Divergência deve ser tratada por diálogo, critérios e negociação, não por ocultação."
+          "why": "Errado. Reunir pessoas não garante uma equipe eficaz: é preciso objetivo comum, papéis claros, coordenação, confiança e comunicação. Um grupo sem alinhamento pode gerar retrabalho mesmo tendo profissionais competentes."
         },
         {
           "a": true,
           "q": "A fase de normatização envolve consolidação de acordos e padrões.",
-          "why": "É quando regras de convivência e funcionamento se estabilizam. Aplicação: Trabalho em equipe demanda objetivos compartilhados, papéis e comunicação. No modelo de Tuckman, formação antecede conflitos, normatização e desempenho. Divergência deve ser tratada por diálogo, critérios e negociação, não por ocultação."
+          "why": "Certo. Na fase de normatização do desenvolvimento de equipes, os integrantes consolidam acordos, procedimentos e expectativas para trabalhar juntos. Ela sucede a fase de conflitos no modelo usual, antes de desempenho mais estável."
         },
         {
           "a": true,
           "q": "Escuta ativa inclui perguntas de esclarecimento e confirmação do entendimento.",
-          "why": "Essas práticas reduzem interpretações equivocadas. Aplicação: Trabalho em equipe demanda objetivos compartilhados, papéis e comunicação. No modelo de Tuckman, formação antecede conflitos, normatização e desempenho. Divergência deve ser tratada por diálogo, critérios e negociação, não por ocultação."
+          "why": "Certo. Escuta ativa inclui ouvir sem interromper, perguntar para esclarecer e confirmar o entendimento. Exemplo: repetir com suas palavras a solicitação do cidadão evita registrar pedido diferente do que foi apresentado."
         },
         {
           "a": true,
           "q": "Conflitos podem revelar riscos e oportunidades de melhoria.",
-          "why": "O efeito depende da natureza do conflito e da forma de gestão. Aplicação: Trabalho em equipe demanda objetivos compartilhados, papéis e comunicação. No modelo de Tuckman, formação antecede conflitos, normatização e desempenho. Divergência deve ser tratada por diálogo, critérios e negociação, não por ocultação."
+          "why": "Certo. Conflitos podem revelar falhas no fluxo, expectativas incompatíveis ou necessidades não atendidas. Quando tratados com respeito e evidências, ajudam a corrigir procedimentos em vez de apenas produzir desgaste."
         },
         {
           "a": false,
           "q": "Feedback deve priorizar rótulos pessoais em vez de comportamentos observáveis.",
-          "why": "Feedback construtivo descreve fatos, impacto e expectativa. Aplicação: Trabalho em equipe demanda objetivos compartilhados, papéis e comunicação. No modelo de Tuckman, formação antecede conflitos, normatização e desempenho. Divergência deve ser tratada por diálogo, critérios e negociação, não por ocultação."
+          "why": "Errado. Feedback eficaz descreve comportamento observável e consequências, não rotula a pessoa. Exemplo: 'o relatório foi entregue após o prazo' indica um fato; 'você é irresponsável' é julgamento pessoal pouco útil para melhoria."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-11-trabalho-em-equipe-e-relacoes-interpessoais",
       "discipline": "Noções de Administração",
       "topic_label": "11 · Trabalho em equipe e relações interpessoais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": false,
+            "q": "A simples reunião de pessoas garante que exista uma equipe eficaz.",
+            "why": "Errado. Reunir pessoas não garante uma equipe eficaz: é preciso objetivo comum, papéis claros, coordenação, confiança e comunicação. Um grupo sem alinhamento pode gerar retrabalho mesmo tendo profissionais competentes."
+          },
+          {
+            "a": true,
+            "q": "A fase de normatização envolve consolidação de acordos e padrões.",
+            "why": "Certo. Na fase de normatização do desenvolvimento de equipes, os integrantes consolidam acordos, procedimentos e expectativas para trabalhar juntos. Ela sucede a fase de conflitos no modelo usual, antes de desempenho mais estável."
+          },
+          {
+            "a": true,
+            "q": "Escuta ativa inclui perguntas de esclarecimento e confirmação do entendimento.",
+            "why": "Certo. Escuta ativa inclui ouvir sem interromper, perguntar para esclarecer e confirmar o entendimento. Exemplo: repetir com suas palavras a solicitação do cidadão evita registrar pedido diferente do que foi apresentado."
+          },
+          {
+            "a": true,
+            "q": "Conflitos podem revelar riscos e oportunidades de melhoria.",
+            "why": "Certo. Conflitos podem revelar falhas no fluxo, expectativas incompatíveis ou necessidades não atendidas. Quando tratados com respeito e evidências, ajudam a corrigir procedimentos em vez de apenas produzir desgaste."
+          },
+          {
+            "a": false,
+            "q": "Feedback deve priorizar rótulos pessoais em vez de comportamentos observáveis.",
+            "why": "Errado. Feedback eficaz descreve comportamento observável e consequências, não rotula a pessoa. Exemplo: 'o relatório foi entregue após o prazo' indica um fato; 'você é irresponsável' é julgamento pessoal pouco útil para melhoria."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, exemplos e justificativas de gestão e atendimento; referências normativas gerais conferidas no Planalto quando aplicável; não substitui homologação formal de conteúdo jurídico",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:25:05Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "11 · Trabalho em equipe e relações interpessoais",
+        "material_slug": "pcac-2026-guia-administracao-geral-11-trabalho-em-equipe-e-relacoes-interpessoais"
       }
     },
     {
@@ -585,39 +922,69 @@
         {
           "a": false,
           "q": "Uma tarefa urgente é necessariamente a mais importante.",
-          "why": "Urgência e importância são dimensões diferentes. Aplicação: Na matriz de Eisenhower, urgente e importante exige ação; importante sem urgência deve ser planejado; urgente pouco importante pode ser delegado quando possível. Priorizar considera prazo, impacto, risco e competência de quem executa."
+          "why": "Errado. Urgência significa prazo ou necessidade de ação imediata; importância significa impacto nos objetivos. Uma demanda urgente de baixo impacto não supera automaticamente uma atividade essencial de maior relevância."
         },
         {
           "a": true,
           "q": "Atividades preventivas importantes devem ser planejadas mesmo sem urgência imediata.",
-          "why": "Adiar continuamente tarefas preventivas pode gerar crises. Aplicação: Na matriz de Eisenhower, urgente e importante exige ação; importante sem urgência deve ser planejado; urgente pouco importante pode ser delegado quando possível. Priorizar considera prazo, impacto, risco e competência de quem executa."
+          "why": "Certo. Na matriz de Eisenhower, tarefas importantes sem urgência imediata devem ser planejadas. Exemplo: manutenção preventiva e capacitação podem evitar interrupções futuras, mesmo quando não há crise hoje."
         },
         {
           "a": true,
           "q": "A estimativa de tempo deve considerar dependências e revisão.",
-          "why": "O prazo real inclui etapas e condições de execução. Aplicação: Na matriz de Eisenhower, urgente e importante exige ação; importante sem urgência deve ser planejado; urgente pouco importante pode ser delegado quando possível. Priorizar considera prazo, impacto, risco e competência de quem executa."
+          "why": "Certo. Estimativas realistas incluem duração das etapas, dependências, imprevistos, aprovações e revisão. Se o relatório depende da coleta de dados, não se deve estimar apenas o tempo de escrever o texto."
         },
         {
           "a": false,
           "q": "A técnica Pomodoro substitui a análise de prioridades.",
-          "why": "É uma técnica de foco, não um critério de prioridade. Aplicação: Na matriz de Eisenhower, urgente e importante exige ação; importante sem urgência deve ser planejado; urgente pouco importante pode ser delegado quando possível. Priorizar considera prazo, impacto, risco e competência de quem executa."
+          "why": "Errado. Pomodoro divide o trabalho em blocos de concentração e pausas; é técnica de execução, não substituto dos critérios de importância, prazo, impacto e risco usados para priorizar."
         },
         {
           "a": true,
           "q": "A delegação deve considerar competência e carga de trabalho.",
-          "why": "Atribuir sem avaliar capacidade pode comprometer a entrega. Aplicação: Na matriz de Eisenhower, urgente e importante exige ação; importante sem urgência deve ser planejado; urgente pouco importante pode ser delegado quando possível. Priorizar considera prazo, impacto, risco e competência de quem executa."
+          "why": "Certo. Delegar exige verificar atribuições, competência, capacidade e carga de trabalho de quem recebe a tarefa. O gestor também acompanha a entrega; delegar não significa abandonar responsabilidade."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-12-gestao-do-tempo-e-definicao-de-prioridades",
       "discipline": "Noções de Administração",
       "topic_label": "12 · Gestão do tempo e definição de prioridades",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": false,
+            "q": "Uma tarefa urgente é necessariamente a mais importante.",
+            "why": "Errado. Urgência significa prazo ou necessidade de ação imediata; importância significa impacto nos objetivos. Uma demanda urgente de baixo impacto não supera automaticamente uma atividade essencial de maior relevância."
+          },
+          {
+            "a": true,
+            "q": "Atividades preventivas importantes devem ser planejadas mesmo sem urgência imediata.",
+            "why": "Certo. Na matriz de Eisenhower, tarefas importantes sem urgência imediata devem ser planejadas. Exemplo: manutenção preventiva e capacitação podem evitar interrupções futuras, mesmo quando não há crise hoje."
+          },
+          {
+            "a": true,
+            "q": "A estimativa de tempo deve considerar dependências e revisão.",
+            "why": "Certo. Estimativas realistas incluem duração das etapas, dependências, imprevistos, aprovações e revisão. Se o relatório depende da coleta de dados, não se deve estimar apenas o tempo de escrever o texto."
+          },
+          {
+            "a": false,
+            "q": "A técnica Pomodoro substitui a análise de prioridades.",
+            "why": "Errado. Pomodoro divide o trabalho em blocos de concentração e pausas; é técnica de execução, não substituto dos critérios de importância, prazo, impacto e risco usados para priorizar."
+          },
+          {
+            "a": true,
+            "q": "A delegação deve considerar competência e carga de trabalho.",
+            "why": "Certo. Delegar exige verificar atribuições, competência, capacidade e carga de trabalho de quem recebe a tarefa. O gestor também acompanha a entrega; delegar não significa abandonar responsabilidade."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, exemplos e justificativas de gestão e atendimento; referências normativas gerais conferidas no Planalto quando aplicável; não substitui homologação formal de conteúdo jurídico",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:25:05Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "12 · Gestão do tempo e definição de prioridades",
+        "material_slug": "pcac-2026-guia-administracao-geral-12-gestao-do-tempo-e-definicao-de-prioridades"
       }
     },
     {
@@ -625,39 +992,69 @@
         {
           "a": true,
           "q": "Um dado contextualizado pode se transformar em informação.",
-          "why": "O contexto atribui significado ao registro. Aplicação: Conhecimento tácito está na experiência das pessoas; explícito está documentado em manuais e registros. Compartilhar boas práticas e procedimentos reduz perda de informação quando servidores mudam de setor ou se aposentam."
+          "why": "Certo. Um dado isolado é registro bruto; quando contextualizado e relacionado a uma pergunta, torna-se informação. Exemplo: '25' sozinho é dado; '25 atendimentos concluídos no turno' já informa quantidade, evento e período."
         },
         {
           "a": false,
           "q": "Conhecimento tácito é sempre simples de registrar integralmente.",
-          "why": "Ele está ligado à experiência e nem sempre é plenamente formalizável. Aplicação: Conhecimento tácito está na experiência das pessoas; explícito está documentado em manuais e registros. Compartilhar boas práticas e procedimentos reduz perda de informação quando servidores mudam de setor ou se aposentam."
+          "why": "Errado. Conhecimento tácito inclui experiência, percepção e habilidades adquiridas na prática, difíceis de registrar integralmente em manual. Conversas, mentoria e observação ajudam a compartilhá-lo, mas não garantem capturar tudo."
         },
         {
           "a": true,
           "q": "Rastreabilidade permite identificar origem e alterações da informação.",
-          "why": "É dimensão importante de governança e auditoria. Aplicação: Conhecimento tácito está na experiência das pessoas; explícito está documentado em manuais e registros. Compartilhar boas práticas e procedimentos reduz perda de informação quando servidores mudam de setor ou se aposentam."
+          "why": "Certo. Rastreabilidade permite reconstruir origem, versões, responsáveis e alterações. Exemplo: registrar quem modificou o cadastro, quando e por qual motivo ajuda a auditar a integridade do processo."
         },
         {
           "a": true,
           "q": "A LGPD também se aplica ao tratamento de dados pessoais pelo poder público.",
-          "why": "A lei disciplina operações com dados pessoais por entes públicos e privados. Aplicação: Conhecimento tácito está na experiência das pessoas; explícito está documentado em manuais e registros. Compartilhar boas práticas e procedimentos reduz perda de informação quando servidores mudam de setor ou se aposentam."
+          "why": "Certo. A Lei nº 13.709/2018 disciplina o tratamento de dados pessoais também pelo poder público, observadas as regras e hipóteses específicas, especialmente o art. 23. O órgão não está automaticamente dispensado de finalidade, necessidade e segurança por ser público."
         },
         {
           "a": true,
           "q": "A gestão do conhecimento busca preservar e compartilhar experiências relevantes.",
-          "why": "Manuais, tutoria e lições aprendidas ajudam a evitar perda de conhecimento. Aplicação: Conhecimento tácito está na experiência das pessoas; explícito está documentado em manuais e registros. Compartilhar boas práticas e procedimentos reduz perda de informação quando servidores mudam de setor ou se aposentam."
+          "why": "Certo. Gestão do conhecimento procura identificar, preservar e compartilhar experiências e práticas úteis. Exemplo: documentar uma solução técnica e formar servidores reduz o risco de perda de saber quando alguém muda de unidade."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-13-gestao-da-informacao-e-do-conhecimento",
       "discipline": "Noções de Administração",
       "topic_label": "13 · Gestão da informação e do conhecimento",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "Um dado contextualizado pode se transformar em informação.",
+            "why": "Certo. Um dado isolado é registro bruto; quando contextualizado e relacionado a uma pergunta, torna-se informação. Exemplo: '25' sozinho é dado; '25 atendimentos concluídos no turno' já informa quantidade, evento e período."
+          },
+          {
+            "a": false,
+            "q": "Conhecimento tácito é sempre simples de registrar integralmente.",
+            "why": "Errado. Conhecimento tácito inclui experiência, percepção e habilidades adquiridas na prática, difíceis de registrar integralmente em manual. Conversas, mentoria e observação ajudam a compartilhá-lo, mas não garantem capturar tudo."
+          },
+          {
+            "a": true,
+            "q": "Rastreabilidade permite identificar origem e alterações da informação.",
+            "why": "Certo. Rastreabilidade permite reconstruir origem, versões, responsáveis e alterações. Exemplo: registrar quem modificou o cadastro, quando e por qual motivo ajuda a auditar a integridade do processo."
+          },
+          {
+            "a": true,
+            "q": "A LGPD também se aplica ao tratamento de dados pessoais pelo poder público.",
+            "why": "Certo. A Lei nº 13.709/2018 disciplina o tratamento de dados pessoais também pelo poder público, observadas as regras e hipóteses específicas, especialmente o art. 23. O órgão não está automaticamente dispensado de finalidade, necessidade e segurança por ser público."
+          },
+          {
+            "a": true,
+            "q": "A gestão do conhecimento busca preservar e compartilhar experiências relevantes.",
+            "why": "Certo. Gestão do conhecimento procura identificar, preservar e compartilhar experiências e práticas úteis. Exemplo: documentar uma solução técnica e formar servidores reduz o risco de perda de saber quando alguém muda de unidade."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, exemplos e justificativas de gestão e atendimento; referências normativas gerais conferidas no Planalto quando aplicável; não substitui homologação formal de conteúdo jurídico",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:25:05Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "13 · Gestão da informação e do conhecimento",
+        "material_slug": "pcac-2026-guia-administracao-geral-13-gestao-da-informacao-e-do-conhecimento"
       }
     },
     {
@@ -665,39 +1062,69 @@
         {
           "a": true,
           "q": "Um processo pode atravessar diversas unidades organizacionais.",
-          "why": "A visão por processos acompanha o fluxo completo da entrega. Aplicação: PDCA significa planejar, executar, verificar e agir para corrigir/padronizar. Mapeamento de processos identifica entradas, atividades e saídas. Exemplo: medir erros após testar novo fluxo antes de padronizá-lo."
+          "why": "Certo. Um processo é fluxo de atividades que pode envolver protocolo, análise jurídica, tecnologia e atendimento. Atravessar unidades não altera sua natureza; o foco é a entrega final para o usuário."
         },
         {
           "a": false,
           "q": "Processos de apoio não influenciam a continuidade do serviço.",
-          "why": "Apoio fornece recursos essenciais e pode ser crítico. Aplicação: PDCA significa planejar, executar, verificar e agir para corrigir/padronizar. Mapeamento de processos identifica entradas, atividades e saídas. Exemplo: medir erros após testar novo fluxo antes de padronizá-lo."
+          "why": "Errado. Processos de apoio, como manutenção, compras e TI, são fundamentais para que atividades finalísticas continuem. Falha no sistema de energia ou no computador pode interromper atendimento mesmo sem mudar a atividade-fim."
         },
         {
           "a": true,
           "q": "A etapa Check do PDCA verifica resultados com base em critérios.",
-          "why": "A verificação compara desempenho observado com metas. Aplicação: PDCA significa planejar, executar, verificar e agir para corrigir/padronizar. Mapeamento de processos identifica entradas, atividades e saídas. Exemplo: medir erros após testar novo fluxo antes de padronizá-lo."
+          "why": "Certo. A etapa Check (verificar) do PDCA confronta o que foi executado com metas e indicadores definidos no Plan. Se o resultado estiver abaixo do esperado, a etapa Act analisa ajustes ou padronização."
         },
         {
           "a": true,
           "q": "Mapear um processo permite identificar retrabalho e gargalos.",
-          "why": "A representação do fluxo revela etapas e problemas. Aplicação: PDCA significa planejar, executar, verificar e agir para corrigir/padronizar. Mapeamento de processos identifica entradas, atividades e saídas. Exemplo: medir erros após testar novo fluxo antes de padronizá-lo."
+          "why": "Certo. Mapear entradas, responsáveis, etapas e saídas revela pontos de retrabalho, espera e encaminhamento desnecessário. Exemplo: duas conferências idênticas sem exigência legal podem sinalizar oportunidade de simplificação."
         },
         {
           "a": false,
           "q": "Uma etapa legalmente obrigatória pode ser eliminada apenas para reduzir tempo.",
-          "why": "Melhoria deve respeitar requisitos legais e controles necessários. Aplicação: PDCA significa planejar, executar, verificar e agir para corrigir/padronizar. Mapeamento de processos identifica entradas, atividades e saídas. Exemplo: medir erros após testar novo fluxo antes de padronizá-lo."
+          "why": "Errado. Uma obrigação legal não pode ser simplesmente eliminada para reduzir tempo. Melhorias de processo devem respeitar normas e controles obrigatórios; podem simplificar etapas redundantes, desde que juridicamente permitido."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-14-melhoria-continua-e-gestao-por-processos",
       "discipline": "Noções de Administração",
       "topic_label": "14 · Melhoria contínua e gestão por processos",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "Um processo pode atravessar diversas unidades organizacionais.",
+            "why": "Certo. Um processo é fluxo de atividades que pode envolver protocolo, análise jurídica, tecnologia e atendimento. Atravessar unidades não altera sua natureza; o foco é a entrega final para o usuário."
+          },
+          {
+            "a": false,
+            "q": "Processos de apoio não influenciam a continuidade do serviço.",
+            "why": "Errado. Processos de apoio, como manutenção, compras e TI, são fundamentais para que atividades finalísticas continuem. Falha no sistema de energia ou no computador pode interromper atendimento mesmo sem mudar a atividade-fim."
+          },
+          {
+            "a": true,
+            "q": "A etapa Check do PDCA verifica resultados com base em critérios.",
+            "why": "Certo. A etapa Check (verificar) do PDCA confronta o que foi executado com metas e indicadores definidos no Plan. Se o resultado estiver abaixo do esperado, a etapa Act analisa ajustes ou padronização."
+          },
+          {
+            "a": true,
+            "q": "Mapear um processo permite identificar retrabalho e gargalos.",
+            "why": "Certo. Mapear entradas, responsáveis, etapas e saídas revela pontos de retrabalho, espera e encaminhamento desnecessário. Exemplo: duas conferências idênticas sem exigência legal podem sinalizar oportunidade de simplificação."
+          },
+          {
+            "a": false,
+            "q": "Uma etapa legalmente obrigatória pode ser eliminada apenas para reduzir tempo.",
+            "why": "Errado. Uma obrigação legal não pode ser simplesmente eliminada para reduzir tempo. Melhorias de processo devem respeitar normas e controles obrigatórios; podem simplificar etapas redundantes, desde que juridicamente permitido."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, exemplos e justificativas de gestão e atendimento; referências normativas gerais conferidas no Planalto quando aplicável; não substitui homologação formal de conteúdo jurídico",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:25:05Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "14 · Melhoria contínua e gestão por processos",
+        "material_slug": "pcac-2026-guia-administracao-geral-14-melhoria-continua-e-gestao-por-processos"
       }
     },
     {
@@ -705,39 +1132,69 @@
         {
           "a": false,
           "q": "O servidor deve prometer prazo ou resultado que não tem competência para garantir.",
-          "why": "A orientação deve ser transparente e compatível com suas atribuições. Aplicação: Atendimento público demanda respeito, clareza, isonomia e sigilo quando legalmente previsto. Transparência ativa divulga informações por iniciativa do órgão; passiva responde a solicitações. Não exponha dados pessoais para acelerar atendimento."
+          "why": "Errado. Servidor deve informar prazos e condições que conhece e pode cumprir, sem prometer resultado fora de sua competência. Promessa sem fundamento prejudica a confiança do cidadão e pode induzir expectativa indevida."
         },
         {
           "a": true,
           "q": "Impessoalidade impede favorecimento por relações pessoais.",
-          "why": "O atendimento deve seguir critérios objetivos. Aplicação: Atendimento público demanda respeito, clareza, isonomia e sigilo quando legalmente previsto. Transparência ativa divulga informações por iniciativa do órgão; passiva responde a solicitações. Não exponha dados pessoais para acelerar atendimento."
+          "why": "Certo. Impessoalidade, prevista no art. 37 da Constituição, exige atuação conforme critérios institucionais e interesse público, sem favorecimento por amizade, parentesco ou preferência pessoal."
         },
         {
           "a": true,
           "q": "A Lei de Acesso à Informação prevê transparência ativa e passiva.",
-          "why": "Ativa é divulgação sem pedido; passiva responde a solicitações. Aplicação: Atendimento público demanda respeito, clareza, isonomia e sigilo quando legalmente previsto. Transparência ativa divulga informações por iniciativa do órgão; passiva responde a solicitações. Não exponha dados pessoais para acelerar atendimento."
+          "why": "Certo. A Lei nº 12.527/2011 prevê divulgação de interesse coletivo independentemente de pedido (transparência ativa, art. 8º) e acesso mediante requerimento (transparência passiva, art. 10). Nenhuma das formas afasta restrições legais."
         },
         {
           "a": false,
           "q": "Toda informação em poder do Estado é automaticamente sigilosa.",
-          "why": "A publicidade é regra e restrições dependem de fundamento legal. Aplicação: Atendimento público demanda respeito, clareza, isonomia e sigilo quando legalmente previsto. Transparência ativa divulga informações por iniciativa do órgão; passiva responde a solicitações. Não exponha dados pessoais para acelerar atendimento."
+          "why": "Errado. A publicidade é regra e o sigilo depende de hipótese legal ou proteção específica, como dados pessoais. Uma informação não se torna sigilosa apenas por estar em poder de um órgão público."
         },
         {
           "a": true,
           "q": "A proteção de dados exige finalidade e segurança no tratamento.",
-          "why": "O acesso deve ser legítimo e limitado ao necessário. Aplicação: Atendimento público demanda respeito, clareza, isonomia e sigilo quando legalmente previsto. Transparência ativa divulga informações por iniciativa do órgão; passiva responde a solicitações. Não exponha dados pessoais para acelerar atendimento."
+          "why": "Certo. A LGPD, Lei nº 13.709/2018, estabelece princípios como finalidade e necessidade e medidas de segurança. Órgãos públicos também devem tratar dados pessoais de maneira compatível com sua finalidade pública e competências legais."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-15-atendimento-ao-publico-etica-e-sigilo",
       "discipline": "Noções de Administração",
       "topic_label": "15 · Atendimento ao público, ética e sigilo",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": false,
+            "q": "O servidor deve prometer prazo ou resultado que não tem competência para garantir.",
+            "why": "Errado. Servidor deve informar prazos e condições que conhece e pode cumprir, sem prometer resultado fora de sua competência. Promessa sem fundamento prejudica a confiança do cidadão e pode induzir expectativa indevida."
+          },
+          {
+            "a": true,
+            "q": "Impessoalidade impede favorecimento por relações pessoais.",
+            "why": "Certo. Impessoalidade, prevista no art. 37 da Constituição, exige atuação conforme critérios institucionais e interesse público, sem favorecimento por amizade, parentesco ou preferência pessoal."
+          },
+          {
+            "a": true,
+            "q": "A Lei de Acesso à Informação prevê transparência ativa e passiva.",
+            "why": "Certo. A Lei nº 12.527/2011 prevê divulgação de interesse coletivo independentemente de pedido (transparência ativa, art. 8º) e acesso mediante requerimento (transparência passiva, art. 10). Nenhuma das formas afasta restrições legais."
+          },
+          {
+            "a": false,
+            "q": "Toda informação em poder do Estado é automaticamente sigilosa.",
+            "why": "Errado. A publicidade é regra e o sigilo depende de hipótese legal ou proteção específica, como dados pessoais. Uma informação não se torna sigilosa apenas por estar em poder de um órgão público."
+          },
+          {
+            "a": true,
+            "q": "A proteção de dados exige finalidade e segurança no tratamento.",
+            "why": "Certo. A LGPD, Lei nº 13.709/2018, estabelece princípios como finalidade e necessidade e medidas de segurança. Órgãos públicos também devem tratar dados pessoais de maneira compatível com sua finalidade pública e competências legais."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, gabaritos, exemplos e justificativas de gestão e atendimento; referências normativas gerais conferidas no Planalto quando aplicável; não substitui homologação formal de conteúdo jurídico",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:25:05Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao tópico correspondente de Noções de Administração no Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "15 · Atendimento ao público, ética e sigilo",
+        "material_slug": "pcac-2026-guia-administracao-geral-15-atendimento-ao-publico-etica-e-sigilo"
       }
     }
   ]
