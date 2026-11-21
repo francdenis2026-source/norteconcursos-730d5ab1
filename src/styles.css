@@ -1621,7 +1621,7 @@ html {
 }
 .lp-pcac .lp-photo__media {
   background-image: url("/media/hero/landing-pcac.webp");
-  background-position: 70% center;
+  background-position: 70% 6%;
 }
 .lp-pcac .lp-photo__shade {
   background:

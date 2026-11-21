@@ -38,7 +38,8 @@
   width: 60%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  /* Enquadra o rosto da policial (topo da foto) sem cortar a testa. */
+  object-position: 64% 6%;
   transition: transform 900ms var(--ecc-ease);
 }
 .ecc-contest:hover .ecc-contest__bg { transform: scale(1.04); }
