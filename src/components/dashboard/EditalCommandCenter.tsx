@@ -16,33 +16,11 @@ import {
 import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { acreDateKey } from "@/lib/acreTime";
 import { platformDate } from "@/lib/platformClock";
-import { prefersReducedMotion } from "@/lib/dashboardTrends";
 import "@/styles/edital-command-center.css";
 
 const EXAM_DATE = "2027-01-24";
 
 /** Número que sobe suavemente até o valor (sem animação para quem pede menos movimento). */
-function useCountUp(target: number | undefined, duration = 900) {
-  const [value, setValue] = React.useState(target ?? 0);
-  React.useEffect(() => {
-    if (target === undefined) return;
-    if (prefersReducedMotion()) {
-      setValue(target);
-      return;
-    }
-    let frame = 0;
-    const start = performance.now();
-    const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / duration);
-      setValue(Math.round(target * (1 - Math.pow(1 - t, 3))));
-      if (t < 1) frame = requestAnimationFrame(tick);
-    };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [target, duration]);
-  return value;
-}
-
 const actions = [
   {
     to: "/dashboard/pc-acre-edital",
@@ -81,8 +59,9 @@ const actions = [
 /** Concurso ativo e acervo da plataforma num só bloco, com ações diretas. */
 export function EditalCommandCenter() {
   const summary = usePlatformQuestionSummary(true);
-  const registered = useCountUp(summary.data?.registered);
-  const available = useCountUp(summary.data?.available);
+  // Valor direto: a animação de contagem dependia de requestAnimationFrame e ficava presa em 0 em abas ocultas.
+  const registered = summary.data?.registered ?? 0;
+  const available = summary.data?.available ?? 0;
   const today = acreDateKey(platformDate());
   const days = examDaysLeft(EXAM_DATE) ?? 0;
   const share =

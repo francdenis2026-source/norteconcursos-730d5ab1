@@ -749,7 +749,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                     <div>
                       <strong title={s.subject}>{s.subject}</strong>
                       <small>
-                        {s.correct} {s.correct === 1 ? "acerto" : "acertos"} em {s.total}
+                        {s.correct} de {s.total} {s.correct === 1 ? "correta" : "corretas"}
                       </small>
                     </div>
                     <Link
