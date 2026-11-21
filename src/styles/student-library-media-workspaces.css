@@ -576,8 +576,7 @@
   border-color: #cbd5e1;
 }
 :root:not(.dark) .app-shell[data-area="student"] .nc-learning-workspace.material-library :is(
-  .library-focus__identity h1, .library-focus__identity p, .library-section-head h2,
-  .library-section-head p, .library-tabs button:not(.is-active)
+  .library-section-head h2, .library-section-head p, .library-tabs button:not(.is-active)
 ) {
   color: #263442;
 }
