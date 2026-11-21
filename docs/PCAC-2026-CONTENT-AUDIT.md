@@ -668,3 +668,14 @@ Auditoria consolidada das aulas 2 a 9 e 11 a 12: 100 questões; zero explicaçõ
 Migrations:
 - 20261121294000_deepen_pcac_statistics_probability_distributions_trainer.sql — commit 7991757ab86a56192d8981e94dfd5e1f672e2306.
 - 20261121294100_refine_pcac_statistics_z_score_explanation.sql — commit 5efd63957f2ea2b55d3f147d496bdb3a6e46cda9.
+
+
+## Estatística — revisão ampliada do treinador, lote 7 — 21/11/2026
+
+Também foram enriquecidas diretamente no Supabase:
+- Aula 1 — Fundamentos, população, amostra e variáveis: 10/10 questões.
+- Aula complementar — Mediana, moda, quartis e percentis: 10/10 questões.
+
+As explicações foram ampliadas com exemplos, distinções conceituais, dicas e passos de resolução. Foram preservados os enunciados, os gabaritos e a ordem. Dois comentários que ainda estavam abaixo de 250 caracteres foram complementados após a auditoria.
+
+Auditoria consolidada das 12 aulas/catálogos de Estatística: 120 questões verificadas; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas. Os dados de treinamento estão atualizados no banco Supabase. As migrations registradas nos lotes anteriores permanecem na MAIN; as atualizações diretas deste lote para as aulas 1 e mediana foram aplicadas no banco, sem migration própria nesta etapa.
