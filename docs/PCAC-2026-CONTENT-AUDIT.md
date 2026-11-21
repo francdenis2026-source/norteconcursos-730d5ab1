@@ -1777,3 +1777,52 @@ Três questões autorais novas foram inseridas e verificadas como ativas:
 - Conferir o impacto das alterações de 2025/2026 sobre cada vantagem listada.
 - Testar visualmente a exibição e contagem das questões no painel do aluno.
 - Auditoria global de Legislação Institucional permanece em andamento.
+
+
+## Décima nona continuação — fechamento da revisão remuneratória do PCCR — 21/11/2026
+
+### Sexta-parte — requisito constitucional confirmado
+
+A Constituição do Estado do Acre, art. 36, § 4º, com redação da EC nº 36/2005, concede a gratificação correspondente à sexta-parte dos vencimentos integrais após 25 anos de efetivo exercício de serviço público estadual ou municipal, prestado exclusivamente no âmbito do Estado do Acre. O material foi corrigido para incluir o requisito territorial expresso e não apenas mencionar genericamente 25 anos de serviço público.
+
+### Gratificação de chefia
+
+A Lei nº 3.228/2017, art. 5º, VII, lista a gratificação de chefia entre as vantagens. O material esclarece que o dispositivo não fixa percentual universal nem pagamento automático a todo Oficial Investigador. O valor e as condições concretas dependem de designação e da norma/tabela específica vigente. Não foi inventado percentual.
+
+### Quadro geral de remuneração
+
+Foi inserido quadro consolidado com:
+- três parcelas absorvidas no vencimento básico: adicional de atividade policial, gratificação de risco de vida e etapa alimentação;
+- VAP não aplicável aos cargos abrangidos pela Lei nº 3.228/2017;
+- vantagens previstas no art. 5º: gratificação natalina, adicional de férias, diárias/ajudas de custo/transporte, titulação, sexta-parte, instrução e chefia;
+- condições específicas para titulação e gratificação de instrução;
+- distinção entre remuneração do edital e parcelas eventuais ou condicionais.
+
+### Questões novas
+
+Duas questões autorais foram inseridas e confirmadas ativas:
+1. Requisito constitucional de 25 anos e serviço exclusivamente no Acre (gabarito D).
+2. Natureza da gratificação de chefia e ausência de percentual automático no art. 5º (gabarito C).
+
+### Validação
+
+O material foi ampliado para 48.915 caracteres e as seções 49 a 52 foram confirmadas no Supabase. As duas questões aparecem ativas no catálogo com gabarito e explicação.
+
+O conjunto de questões ativas identificado na auditoria do PCCR e normas relacionadas passa a 24, somando as 22 anteriormente confirmadas e estas duas novas.
+
+### Fontes oficiais
+
+- Constituição do Estado do Acre, art. 36, § 4º: https://legis.ac.gov.br/detalhar_constituicao
+- Lei nº 3.228/2017, art. 5º: https://legis.ac.gov.br/detalhar/2499
+- LC nº 496/2025: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9611/pdf
+- Estatuto dos Servidores, LC nº 39/1993: https://legis.ac.gov.br/detalhar/110
+- LC nº 129/2004 consolidada: https://www.legis.ac.gov.br/detalhar_imprimir/674-0
+
+### Migrations
+
+- `20261121303600_complete_sixth_part_chefia_and_remuneration_summary.sql` — commit `45d255e9a95d0307f081d2b5ce225dd340fc30ec`.
+- `20261121303700_add_sixth_part_and_chefia_questions.sql` — commit `051a93dd6f908252a08716a19e518550eb4b42f7`.
+
+### Limites e próximos passos técnicos
+
+A revisão textual das vantagens listadas no art. 5º está consolidada, mas não significa que cada vantagem tenha sido validada em contracheques ou tabelas de pagamento atuais. Permanecem necessários: conferir atos vigentes que fixem valores de chefia; validar a composição detalhada da remuneração inicial; testar visualmente o treinador e o contador do painel; executar testes automatizados/build após a sequência de migrations. A auditoria geral de Legislação Institucional continua em andamento.
