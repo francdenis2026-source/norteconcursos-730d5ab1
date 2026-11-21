@@ -1,46 +1,45 @@
 export type SessionTabState = "checking" | "owner" | "blocked" | "unavailable";
 
-/** One authenticated document per origin, even across independent logins.
- * No copied tab ID, token changes or server heartbeat.
- * A brief abortable acquisition tolerates effect cleanup/reload handoff. A blocked
- * tab never remains queued to take the lock during a later reload of the owner.
- */
+/** Quantas abas autenticadas o mesmo navegador (origem) pode manter ao mesmo tempo. */
+export const SESSION_TAB_SLOTS = 2;
+
+const slotName = (slot: number) => `norte:authenticated-tab:${slot}`;
+
+/** Até SESSION_TAB_SLOTS abas autenticadas por navegador, mesmo com logins independentes.
+ * Cada aba disputa um slot livre sem fila (ifAvailable). Uma aba bloqueada nunca fica
+ * esperando para tomar o slot depois; ela só é liberada quando o usuário tenta de novo.
+ * Não há token copiado, troca de token nem heartbeat no servidor. */
 export function claimSessionTab(
   locks: Pick<LockManager, "request"> | undefined,
   publish: (state: SessionTabState) => void,
+  slots: number = SESSION_TAB_SLOTS,
 ): () => void {
   let disposed = false;
-  let timedOut = false;
   let release: (() => void) | undefined;
   publish("checking");
   if (!locks) {
     publish("unavailable");
     return () => { disposed = true; };
   }
-  const controller = new AbortController();
-  const timer = setTimeout(() => {
-    timedOut = true;
-    controller.abort();
+  void (async () => {
+    for (let slot = 0; slot < slots; slot++) {
+      if (disposed) return;
+      let owned = false;
+      await locks.request(slotName(slot), { ifAvailable: true }, async lock => {
+        if (disposed || !lock) return;
+        owned = true;
+        const held = new Promise<void>(resolve => { release = resolve; });
+        publish("owner");
+        await held;
+      });
+      if (owned) return;
+    }
     if (!disposed) publish("blocked");
-  }, 150);
-  void Promise.resolve().then(() => {
-    if (disposed) return;
-    return locks.request("norte:authenticated-tab", { signal: controller.signal }, async lock => {
-      clearTimeout(timer);
-      if (disposed || timedOut) return;
-      if (!lock) { publish("blocked"); return; }
-      const held = new Promise<void>(resolve => { release = resolve; });
-      publish("owner");
-      await held;
-    });
-  }).catch(() => {
-    clearTimeout(timer);
-    if (!disposed && !timedOut) publish("unavailable");
+  })().catch(() => {
+    if (!disposed) publish("unavailable");
   });
   return () => {
     disposed = true;
-    clearTimeout(timer);
-    controller.abort();
     release?.();
   };
 }
