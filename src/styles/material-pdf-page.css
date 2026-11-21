@@ -642,3 +642,94 @@ html.dark body .app-shell[data-area="student"] .library-reading-workspace .libra
   opacity: 1 !important;
   text-shadow: none !important;
 }
+
+/* Questões de concurso: enunciado, alternativas e comentário com leitura em camadas. */
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem {
+  position: relative; margin: 1.15rem 0 .75rem !important; padding: 1rem 1.15rem 1rem 1.25rem !important;
+  border: 1px solid #c5d6e8 !important; border-left: 5px solid #3478ad !important; border-radius: 12px !important;
+  background: #edf4fb !important; color: #172d44 !important; font-size: 1.02em !important; font-weight: 560 !important;
+  line-height: 1.75 !important; box-shadow: 0 3px 12px rgb(25 55 85 / 7%) !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem strong { color: #164e7a !important; font-weight: 850 !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-options-wrap { margin: .65rem 0 1rem !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-options {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .55rem;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option {
+  display: flex; align-items: flex-start; gap: .65rem; min-width: 0; padding: .7rem .8rem;
+  border: 1px solid #d5e0eb; border-radius: 9px; background: #f8fafc; color: #26384b !important; line-height: 1.55; text-align: left;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option__label {
+  display: inline-flex; flex: 0 0 1.65rem; width: 1.65rem; height: 1.65rem; align-items: center; justify-content: center;
+  border-radius: 6px; background: #dceaf7; color: #174f7c !important; font-size: .82em; font-weight: 850;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option span,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option span * {
+  color: #26384b !important; -webkit-text-fill-color: #26384b !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis {
+  margin: .9rem 0 1.15rem !important; padding: .95rem 1.1rem !important; border: 1px solid #b9ddca !important;
+  border-left: 5px solid #26845b !important; border-radius: 11px !important; background: #edf8f1 !important;
+  color: #194b35 !important; line-height: 1.75 !important; box-shadow: 0 3px 12px rgb(25 80 55 / 6%) !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis strong { color: #12613e !important; font-weight: 850 !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-analysis-note {
+  margin: .85rem 0 !important; padding: .85rem 1rem !important; border: 1px solid #d8c9f0 !important;
+  border-left: 4px solid #8061b5 !important; border-radius: 10px !important; background: #f4f0fb !important; color: #392b56 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example { border-radius: 11px !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > :first-child { margin-top: 0 !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > :last-child { margin-bottom: 0 !important; }
+
+/* Modo escuro: superfícies profundas, texto claro e acentos não fluorescentes. */
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem {
+  background: #1d2d40 !important; border-color: #45617e !important; border-left-color: #75b8ee !important;
+  color: #edf5fd !important; box-shadow: 0 4px 16px rgb(0 0 0 / 16%) !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem *,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem * {
+  color: #edf5fd !important; -webkit-text-fill-color: #edf5fd !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem strong,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem strong {
+  color: #a9d7ff !important; -webkit-text-fill-color: #a9d7ff !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option {
+  background: #24364a !important; border-color: #40566f !important; color: #e6eef8 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option span,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option span *,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option span,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option span * {
+  color: #e6eef8 !important; -webkit-text-fill-color: #e6eef8 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option__label,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-option__label {
+  background: #31516e !important; color: #d8edff !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis {
+  background: #1b382f !important; border-color: #376b54 !important; border-left-color: #63c394 !important; color: #e0f5e9 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis *,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis * {
+  color: #e0f5e9 !important; -webkit-text-fill-color: #e0f5e9 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis strong,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-answer-analysis strong {
+  color: #9be2ba !important; -webkit-text-fill-color: #9be2ba !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-analysis-note,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-analysis-note {
+  background: #302944 !important; border-color: #594b78 !important; border-left-color: #b49ae5 !important; color: #eee7fc !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-analysis-note *,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-analysis-note * {
+  color: #eee7fc !important; -webkit-text-fill-color: #eee7fc !important;
+}
+@media (max-width: 640px) {
+  html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-stem { padding: .85rem .9rem !important; }
+  html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-question-options { grid-template-columns: 1fr; }
+}
