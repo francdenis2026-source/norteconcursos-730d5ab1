@@ -313,7 +313,10 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                     : [`${Number(value ?? 0)} questões`, name]
                 }
               />
-              <Legend wrapperStyle={{ fontSize: 11 }} />
+              <Legend
+                wrapperStyle={{ fontSize: 11 }}
+                formatter={(value) => <span style={{ color: "var(--foreground)" }}>{value}</span>}
+              />
               <Bar yAxisId="count" dataKey="correct" name="Acertos" stackId="r" fill={EMERALD} radius={[3, 3, 0, 0]} animationDuration={600} />
               <Bar yAxisId="count" dataKey="wrong" name="Erros" stackId="r" fill={ROSE} radius={[3, 3, 0, 0]} animationDuration={600} />
               <Line
