@@ -463,13 +463,26 @@ function renderBlocks(
         if (answerIndex >= 0) {
           const answerBlock = blocks[answerIndex]!;
           if (answerBlock.type === "p" || answerBlock.type === "h2" || answerBlock.type === "h3") {
+            // O conteúdo legado pode separar "Gabarito" e "Análise das alternativas"
+            // em parágrafos diferentes. Eles pertencem à mesma questão e devem abrir
+            // em um único painel de correção.
+            const answerParts = [answerBlock.text];
+            let answerEndIndex = answerIndex;
+            while (answerEndIndex + 1 < blocks.length) {
+              const following = blocks[answerEndIndex + 1]!;
+              if (following.type !== "p" || !isAnswerAnalysis(following.text)) break;
+              answerParts.push(following.text);
+              answerEndIndex++;
+            }
             prepared.push({
               type: "interactive-question",
               prompt: stem + " " + combinedOptions,
-              answer: answerBlock.text,
+              answer: answerParts.join(" "),
             });
             for (const item of optionBlocks) consumedAnswers.add(item.index);
-            consumedAnswers.add(answerIndex);
+            for (let consumed = answerIndex; consumed <= answerEndIndex; consumed++) {
+              consumedAnswers.add(consumed);
+            }
             continue;
           }
         }
