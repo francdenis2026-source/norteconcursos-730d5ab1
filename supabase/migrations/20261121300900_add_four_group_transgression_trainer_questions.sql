@@ -1,0 +1,20 @@
+with q as (
+ select * from (values
+ ('pcac-2026-lc129-transgressoes-penalidades-responsabilidades','pcac-groups-101','LC nº 129/2004 — art. 101, primeiro grupo','Qual conduta está expressamente enquadrada no primeiro grupo pelo art. 101 da LC nº 129/2004?','(A) Traficar substância que cause dependência.\n(B) Permutar horário de serviço sem autorização expressa da autoridade hierarquicamente superior.\n(C) Abandonar o cargo por mais de 30 dias consecutivos.\n(D) Revelar dolosamente segredo funcional com prejuízo.\n(E) Praticar homicídio doloso.','B','O art. 101 inclui a permuta de horário ou execução de tarefa sem autorização expressa no primeiro grupo. As demais alternativas descrevem hipóteses de grupos mais graves.'),
+ ('pcac-2026-lc129-transgressoes-penalidades-responsabilidades','pcac-groups-103','LC nº 129/2004 — art. 103, terceiro grupo','Policial civil ausenta-se injustificadamente por 20 dias consecutivos. Em qual grupo o art. 103/104 enquadra expressamente essa conduta?','(A) Primeiro grupo.\n(B) Segundo grupo.\n(C) Terceiro grupo.\n(D) Quarto grupo.\n(E) Não constitui transgressão em nenhuma hipótese.','C','O art. 103, I, inclui a ausência injustificada por até 30 dias consecutivos no terceiro grupo. O art. 104, VI, trata da ausência por mais de 30 dias consecutivos.'),
+ ('pcac-2026-lc129-transgressoes-penalidades-responsabilidades','pcac-groups-culpa-dolo','LC nº 129/2004 — distinção entre culpa e dolo','A revelação culposa de informação sigilosa, com prejuízo para o Estado ou particular, é enquadrada em qual grupo?','(A) Primeiro grupo, art. 101.\n(B) Segundo grupo, art. 102.\n(C) Terceiro grupo, art. 103.\n(D) Quarto grupo, art. 104.\n(E) A lei não prevê essa conduta.','C','O art. 103, XIII, inclui a revelação culposa de informações sigilosas com prejuízo. A revelação dolosa de segredo funcional com prejuízo está no art. 104, III.'),
+ ('pcac-2026-lc129-transgressoes-penalidades-responsabilidades','pcac-groups-104','LC nº 129/2004 — art. 104, quarto grupo','Qual conduta está expressamente prevista no quarto grupo pelo art. 104?','(A) Descuidar-se do asseio pessoal.\n(B) Deixar de apresentar carteira funcional quando exigida.\n(C) Ausentar-se injustificadamente por até 30 dias consecutivos.\n(D) Traficar substância que determine dependência física ou psíquica.\n(E) Faltar ou chegar atrasado ao plantão sem motivo justo.','D','O art. 104, II, prevê o tráfico de substância que determine dependência física ou psíquica como transgressão do quarto grupo.')
+ ) as t(material_slug,external_item_key,subtopic,question_text,options_text,answer,explanation)
+)
+insert into public.curated_question_catalog
+(source_id,syllabus_topic_id,external_item_key,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,content_status,is_original,state,career_category,role_type,tested_topic,import_content_key,import_unique_key,didactic_provenance)
+select '43712f0d-aad2-48b5-a685-6937551f2d74','d204d14f-8aa6-4c57-92ad-3fb3c3e901f1',
+ external_item_key,'Norte Concursos — treino autoral PC-AC 2026',2026,'Oficial Investigador de Polícia','AUTORAL',
+ 'Legislação Institucional',subtopic,question_text||E'\n\n'||options_text,answer,explanation,
+ 'média','active',true,'AC','Polícia Civil','Oficial Investigador de Polícia',
+ subtopic,external_item_key,'pcac-2026-'||external_item_key,
+ jsonb_build_object('kind','didactic_original','authored',true,'target_exam','PC-AC 2026 — Oficial Investigador de Polícia','not_official_exam',true,'license_note','Questão autoral inédita; não é item oficial da IDECAN','linked_study_material_slug',material_slug,'source_material_slug',material_slug,'source_exam_reference','Edital nº 001 SEAD/PCAC, de 05/11/2026, Anexo III')
+from q
+on conflict (source_id,external_item_key) do update set
+ question_text=excluded.question_text,official_answer=excluded.official_answer,explanation=excluded.explanation,
+ didactic_provenance=excluded.didactic_provenance,content_status='active',subtopic=excluded.subtopic;
