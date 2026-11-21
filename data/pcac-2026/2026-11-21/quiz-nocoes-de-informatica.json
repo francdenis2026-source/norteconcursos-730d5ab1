@@ -1,0 +1,495 @@
+{
+  "contest_name": "PC-AC 2026",
+  "discipline": "Noções de Informática",
+  "snapshot_date": "2026-11-21",
+  "modules": 10,
+  "quiz_items": 64,
+  "authorial_not_official": true,
+  "read_only_snapshot": true,
+  "materials": [
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "O slide mestre pode padronizar fontes, cores e rodapés.",
+          "why": "O mestre define elementos comuns aos slides. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        },
+        {
+          "a": false,
+          "q": "Transição e animação designam exatamente o mesmo recurso.",
+          "why": "Transição muda de slide; animação afeta objetos do slide. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        },
+        {
+          "a": true,
+          "q": "Um objeto vinculado pode depender da localização do arquivo original.",
+          "why": "O vínculo pode quebrar se a origem for movida ou removida. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        },
+        {
+          "a": true,
+          "q": "O modo apresentador pode exibir notas apenas ao apresentador.",
+          "why": "É uma finalidade do recurso. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        },
+        {
+          "a": false,
+          "q": "Exportar para PDF preserva integralmente todas as animações e interações.",
+          "why": "O PDF não reproduz necessariamente esses recursos. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        },
+        {
+          "a": true,
+          "q": "Transição é o efeito aplicado entre slides; animação atua em objetos dentro do slide.",
+          "why": "São recursos distintos de apresentações. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        },
+        {
+          "a": false,
+          "q": "Um objeto vinculado continuará atualizado mesmo que seu arquivo de origem seja movido ou apagado.",
+          "why": "O vínculo depende da localização e disponibilidade da origem. Exemplo e pegadinha: Transição atua na passagem de slides; animação atua em objetos internos. Slide mestre padroniza layouts; exportação para PDF preserva o conteúdo estático mas não garante efeitos e interatividade originais."
+        }
+      ],
+      "slug": "pcac-2026-informatica-apresentacoes-integracao-pdf",
+      "discipline": "Noções de Informática",
+      "topic_label": "5. Apresentações e integração entre aplicativos",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "SMTP é utilizado para envio de mensagens eletrônicas.",
+          "why": "É o protocolo de envio/transferência de e-mail. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        },
+        {
+          "a": false,
+          "q": "IMAP é destinado exclusivamente ao envio de e-mails.",
+          "why": "É usado para acesso e sincronização de mensagens no servidor. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        },
+        {
+          "a": true,
+          "q": "POP3 pode ser configurado para baixar mensagens ao dispositivo.",
+          "why": "Esse é seu comportamento tradicional. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        },
+        {
+          "a": false,
+          "q": "O endereço exibido no campo remetente nunca pode ser falsificado.",
+          "why": "A falsificação de remetente é uma técnica de ataque. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        },
+        {
+          "a": true,
+          "q": "Solicitações urgentes de senha devem ser confirmadas por canal independente.",
+          "why": "Isso reduz o risco de phishing e engenharia social. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        },
+        {
+          "a": true,
+          "q": "SMTP é associado ao envio de mensagens eletrônicas.",
+          "why": "SMTP é o protocolo usado para envio/transferência de e-mail. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        },
+        {
+          "a": false,
+          "q": "HTTPS garante que o conteúdo do site seja verdadeiro e que não exista phishing.",
+          "why": "HTTPS protege a conexão, mas não certifica a honestidade do site. Exemplo e pegadinha: SMTP envia mensagens; IMAP sincroniza pastas no servidor; POP3 costuma baixar mensagens. Phishing pode usar domínio semelhante ao legítimo e HTTPS: conexão criptografada não certifica a boa-fé da página."
+        }
+      ],
+      "slug": "pcac-2026-informatica-email-protocolos-phishing",
+      "discipline": "Noções de Informática",
+      "topic_label": "7. Correio eletrônico — SMTP, POP3, IMAP e phishing",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A referência relativa pode mudar quando uma fórmula é copiada para outra célula.",
+          "why": "A referência relativa se ajusta à nova posição. Exemplo e pegadinha: Fórmulas começam com '='; referência absoluta $A$1 não muda ao copiar, relativa A1 pode mudar. SOMASE soma por critério; filtros ocultam linhas sem excluir dados; proteção de planilha não equivale à criptografia forte."
+        },
+        {
+          "a": true,
+          "q": "A referência $A$1 mantém linha e coluna fixas.",
+          "why": "Os cifrões indicam referência absoluta. Exemplo e pegadinha: Fórmulas começam com '='; referência absoluta $A$1 não muda ao copiar, relativa A1 pode mudar. SOMASE soma por critério; filtros ocultam linhas sem excluir dados; proteção de planilha não equivale à criptografia forte."
+        },
+        {
+          "a": false,
+          "q": "Filtros apagam definitivamente as linhas que não correspondem ao critério.",
+          "why": "Filtros apenas ocultam temporariamente registros fora do critério. Exemplo e pegadinha: Fórmulas começam com '='; referência absoluta $A$1 não muda ao copiar, relativa A1 pode mudar. SOMASE soma por critério; filtros ocultam linhas sem excluir dados; proteção de planilha não equivale à criptografia forte."
+        },
+        {
+          "a": true,
+          "q": "Tabelas dinâmicas podem agrupar e resumir grandes conjuntos de dados.",
+          "why": "Esse é o objetivo central do recurso. Exemplo e pegadinha: Fórmulas começam com '='; referência absoluta $A$1 não muda ao copiar, relativa A1 pode mudar. SOMASE soma por critério; filtros ocultam linhas sem excluir dados; proteção de planilha não equivale à criptografia forte."
+        },
+        {
+          "a": false,
+          "q": "A proteção de planilha equivale à criptografia completa dos dados.",
+          "why": "Proteção contra edição não substitui controles robustos de segurança. Exemplo e pegadinha: Fórmulas começam com '='; referência absoluta $A$1 não muda ao copiar, relativa A1 pode mudar. SOMASE soma por critério; filtros ocultam linhas sem excluir dados; proteção de planilha não equivale à criptografia forte."
+        },
+        {
+          "a": true,
+          "q": "A referência absoluta $B$1 mantém a coluna e a linha fixas ao copiar uma fórmula.",
+          "why": "O cifrão fixa a coluna B e a linha 1. Exemplo e pegadinha: Fórmulas começam com '='; referência absoluta $A$1 não muda ao copiar, relativa A1 pode mudar. SOMASE soma por critério; filtros ocultam linhas sem excluir dados; proteção de planilha não equivale à criptografia forte."
+        },
+        {
+          "a": false,
+          "q": "Aplicar filtro em uma planilha apaga definitivamente as linhas que não atendem ao critério.",
+          "why": "O filtro apenas oculta temporariamente registros que não correspondem ao critério."
+        }
+      ],
+      "slug": "pcac-2026-informatica-excel-calc-funcoes-tabelas-graficos",
+      "discipline": "Noções de Informática",
+      "topic_label": "4. Planilhas eletrônicas — Excel e Calc",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Uma intranet é uma rede privada que pode utilizar tecnologias da internet.",
+          "why": "É a definição funcional de intranet. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        },
+        {
+          "a": false,
+          "q": "Extranet é necessariamente aberta a qualquer pessoa na internet.",
+          "why": "O acesso é controlado e destinado a usuários externos autorizados. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        },
+        {
+          "a": true,
+          "q": "HTTPS utiliza TLS para proteger a comunicação em trânsito.",
+          "why": "TLS fornece proteção criptográfica à conexão. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        },
+        {
+          "a": false,
+          "q": "O cadeado HTTPS comprova que o conteúdo do site é verdadeiro.",
+          "why": "O certificado não valida a veracidade das informações. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        },
+        {
+          "a": true,
+          "q": "A data e a autoria devem ser consideradas na avaliação de fontes.",
+          "why": "São critérios básicos de confiabilidade. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        },
+        {
+          "a": true,
+          "q": "DNS traduz nomes de domínio em endereços IP.",
+          "why": "O DNS realiza a resolução de nomes. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        },
+        {
+          "a": false,
+          "q": "A navegação privada torna o usuário anônimo perante sites e provedores.",
+          "why": "Ela reduz registros locais, mas não impede monitoramento externo. Exemplo e pegadinha: DNS resolve domínio para IP; HTTPS usa TLS para proteger a comunicação, mas não prova veracidade do site. Navegação privada reduz histórico local, sem impedir que rede, serviços e provedores vejam conexões."
+        }
+      ],
+      "slug": "pcac-2026-informatica-internet-busca-navegadores-https",
+      "discipline": "Noções de Informática",
+      "topic_label": "6. Internet, intranet e pesquisa — navegadores e HTTPS",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Coautoria permite trabalho simultâneo no mesmo arquivo.",
+          "why": "É uma funcionalidade central de colaboração em nuvem. Exemplo e pegadinha: SaaS é aplicação pronta via rede; IaaS oferece infraestrutura; PaaS fornece ambiente de desenvolvimento. Compartilhamento exige menor privilégio; sincronização não substitui backup independente, pois exclusões podem se propagar."
+        },
+        {
+          "a": false,
+          "q": "Permissão de edição deve ser concedida a todos os usuários por padrão.",
+          "why": "O princípio do menor privilégio exige limitar o acesso. Exemplo e pegadinha: SaaS é aplicação pronta via rede; IaaS oferece infraestrutura; PaaS fornece ambiente de desenvolvimento. Compartilhamento exige menor privilégio; sincronização não substitui backup independente, pois exclusões podem se propagar."
+        },
+        {
+          "a": false,
+          "q": "Histórico de versões substitui qualquer política de backup.",
+          "why": "Histórico e backup possuem finalidades diferentes. Exemplo e pegadinha: SaaS é aplicação pronta via rede; IaaS oferece infraestrutura; PaaS fornece ambiente de desenvolvimento. Compartilhamento exige menor privilégio; sincronização não substitui backup independente, pois exclusões podem se propagar."
+        },
+        {
+          "a": true,
+          "q": "Links públicos podem ampliar indevidamente a exposição de dados.",
+          "why": "O acesso por link pode ultrapassar o grupo pretendido. Exemplo e pegadinha: SaaS é aplicação pronta via rede; IaaS oferece infraestrutura; PaaS fornece ambiente de desenvolvimento. Compartilhamento exige menor privilégio; sincronização não substitui backup independente, pois exclusões podem se propagar."
+        },
+        {
+          "a": true,
+          "q": "A revogação de acesso deve ocorrer quando a necessidade termina.",
+          "why": "É parte da gestão do ciclo de acesso. Exemplo e pegadinha: SaaS é aplicação pronta via rede; IaaS oferece infraestrutura; PaaS fornece ambiente de desenvolvimento. Compartilhamento exige menor privilégio; sincronização não substitui backup independente, pois exclusões podem se propagar."
+        },
+        {
+          "a": false,
+          "q": "Sincronização de arquivos substitui integralmente uma cópia de backup independente.",
+          "why": "Exclusões e arquivos comprometidos podem ser sincronizados; backup deve permitir recuperação independente."
+        },
+        {
+          "a": true,
+          "q": "SaaS corresponde à oferta de software pronto como serviço pela internet.",
+          "why": "O usuário utiliza a aplicação sem administrar toda a infraestrutura subjacente. Exemplo e pegadinha: SaaS é aplicação pronta via rede; IaaS oferece infraestrutura; PaaS fornece ambiente de desenvolvimento. Compartilhamento exige menor privilégio; sincronização não substitui backup independente, pois exclusões podem se propagar."
+        }
+      ],
+      "slug": "pcac-2026-informatica-nuvem-colaboracao-permissoes",
+      "discipline": "Noções de Informática",
+      "topic_label": "8. Computação em nuvem e trabalho colaborativo",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Em planilhas, uma referência absoluta como $A$1 mantém linha e coluna fixas ao copiar a fórmula.",
+          "why": "O cifrão fixa a coluna e a linha. Exemplo e pegadinha: Ao importar planilha, confira separador decimal, formatos de data e duplicidades. Uma tabela dinâmica resume dados sem alterar necessariamente as linhas originais. Backup protege versões; sincronização reflete alterações e exclusões."
+        },
+        {
+          "a": false,
+          "q": "A transição é um efeito aplicado exclusivamente a palavras dentro de um slide.",
+          "why": "Transição é o efeito de passagem entre slides; animação afeta objetos. Exemplo e pegadinha: Ao importar planilha, confira separador decimal, formatos de data e duplicidades. Uma tabela dinâmica resume dados sem alterar necessariamente as linhas originais. Backup protege versões; sincronização reflete alterações e exclusões."
+        },
+        {
+          "a": true,
+          "q": "O protocolo SMTP é associado ao envio de mensagens de e-mail.",
+          "why": "SMTP é utilizado para transmissão de mensagens. Exemplo e pegadinha: Ao importar planilha, confira separador decimal, formatos de data e duplicidades. Uma tabela dinâmica resume dados sem alterar necessariamente as linhas originais. Backup protege versões; sincronização reflete alterações e exclusões."
+        },
+        {
+          "a": false,
+          "q": "A navegação privada impede que o provedor de internet saiba quais conexões foram realizadas.",
+          "why": "Ela não oferece anonimato perante rede ou provedor. Exemplo e pegadinha: Ao importar planilha, confira separador decimal, formatos de data e duplicidades. Uma tabela dinâmica resume dados sem alterar necessariamente as linhas originais. Backup protege versões; sincronização reflete alterações e exclusões."
+        },
+        {
+          "a": true,
+          "q": "Uma chave estrangeira pode estabelecer relacionamento entre tabelas relacionais.",
+          "why": "Ela referencia chave de outra tabela, conforme as restrições definidas. Exemplo e pegadinha: Ao importar planilha, confira separador decimal, formatos de data e duplicidades. Uma tabela dinâmica resume dados sem alterar necessariamente as linhas originais. Backup protege versões; sincronização reflete alterações e exclusões."
+        }
+      ],
+      "slug": "pcac-2026-informatica-office-planilhas-nuvem-bancos-dados",
+      "discipline": "Noções de Informática",
+      "topic_label": "Word/Writer, Excel/Calc, apresentações, nuvem e bancos de dados",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Windows 11 e Ubuntu são exemplos de sistemas operacionais.",
+          "why": "Ambos gerenciam recursos do computador e permitem executar aplicações. Exemplo e pegadinha: Windows e Linux organizam arquivos em diretórios. Renomear a extensão não converte o formato real. No editor de texto, estilos permitem sumário; em apresentações, animação de objeto não é transição entre slides."
+        },
+        {
+          "a": false,
+          "q": "Mover um arquivo é necessariamente o mesmo que criar uma cópia, mantendo o original no local de origem.",
+          "why": "Mover altera a localização; copiar cria outra instância e preserva o original. Exemplo e pegadinha: Windows e Linux organizam arquivos em diretórios. Renomear a extensão não converte o formato real. No editor de texto, estilos permitem sumário; em apresentações, animação de objeto não é transição entre slides."
+        },
+        {
+          "a": true,
+          "q": "Em uma planilha, a referência $A$1 fixa a coluna A e a linha 1.",
+          "why": "O cifrão antes da coluna e da linha indica referência absoluta. Exemplo e pegadinha: Windows e Linux organizam arquivos em diretórios. Renomear a extensão não converte o formato real. No editor de texto, estilos permitem sumário; em apresentações, animação de objeto não é transição entre slides."
+        },
+        {
+          "a": false,
+          "q": "A animação é o efeito aplicado obrigatoriamente à passagem de um slide para outro.",
+          "why": "Esse efeito é a transição; animação é aplicada aos objetos do slide. Exemplo e pegadinha: Windows e Linux organizam arquivos em diretórios. Renomear a extensão não converte o formato real. No editor de texto, estilos permitem sumário; em apresentações, animação de objeto não é transição entre slides."
+        },
+        {
+          "a": false,
+          "q": "O uso de HTTPS, isoladamente, garante que o conteúdo de um site seja verdadeiro.",
+          "why": "HTTPS protege a conexão, mas não certifica a veracidade do conteúdo. Exemplo e pegadinha: Windows e Linux organizam arquivos em diretórios. Renomear a extensão não converte o formato real. No editor de texto, estilos permitem sumário; em apresentações, animação de objeto não é transição entre slides."
+        }
+      ],
+      "slug": "pcac-2026-informatica-sistemas-arquivos-escritorio-internet",
+      "discipline": "Noções de Informática",
+      "topic_label": "Windows 11, Ubuntu, editores, planilhas, apresentações e internet",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Autenticação verifica a identidade do usuário.",
+          "why": "É o processo de confirmar quem está acessando. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        },
+        {
+          "a": true,
+          "q": "Autorização define quais recursos o usuário pode acessar.",
+          "why": "É a gestão de permissões após a identificação. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        },
+        {
+          "a": false,
+          "q": "Segregação de funções procura concentrar todas as etapas em uma pessoa.",
+          "why": "Busca reduzir concentração de poderes e riscos. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        },
+        {
+          "a": false,
+          "q": "A publicidade administrativa impede qualquer restrição de acesso a dados pessoais.",
+          "why": "A transparência deve conviver com sigilo legal e proteção de dados. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        },
+        {
+          "a": true,
+          "q": "Uma trilha de auditoria pode registrar usuário, data e operação.",
+          "why": "Esses dados apoiam rastreabilidade e responsabilização. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        },
+        {
+          "a": true,
+          "q": "Autenticação verifica a identidade declarada; autorização define os recursos permitidos.",
+          "why": "A identificação e a concessão de permissões são etapas distintas. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        },
+        {
+          "a": false,
+          "q": "Transparência pública significa que qualquer pessoa pode acessar qualquer dado pessoal sem restrições.",
+          "why": "O acesso deve respeitar proteção de dados e hipóteses legais de sigilo. Exemplo e pegadinha: Confidencialidade restringe acesso; integridade evita alteração indevida; disponibilidade mantém serviço acessível. Autenticação verifica quem é o usuário, autorização limita o que pode fazer e log registra ações para auditoria."
+        }
+      ],
+      "slug": "pcac-2026-informatica-sistemas-informacao-governanca-publica",
+      "discipline": "Noções de Informática",
+      "topic_label": "9–10. Sistemas de informação, governança, transparência e proteção",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "No Windows 11, Win+E normalmente abre o Explorador de Arquivos.",
+          "why": "É o atalho padrão para essa ferramenta. Exemplo e pegadinha: No Windows, Win+E abre o Explorador e Win+L bloqueia a sessão. No Linux, chmod 640 significa proprietário leitura e escrita (6), grupo só leitura (4) e outros sem permissão (0). Extensão não é conteúdo."
+        },
+        {
+          "a": false,
+          "q": "No Ubuntu, /home é a raiz do sistema de arquivos.",
+          "why": "A raiz é /; /home contém diretórios pessoais. Exemplo e pegadinha: No Windows, Win+E abre o Explorador e Win+L bloqueia a sessão. No Linux, chmod 640 significa proprietário leitura e escrita (6), grupo só leitura (4) e outros sem permissão (0). Extensão não é conteúdo."
+        },
+        {
+          "a": true,
+          "q": "chmod modifica permissões de arquivos e diretórios no Linux.",
+          "why": "Esse é o objetivo do comando chmod. Exemplo e pegadinha: No Windows, Win+E abre o Explorador e Win+L bloqueia a sessão. No Linux, chmod 640 significa proprietário leitura e escrita (6), grupo só leitura (4) e outros sem permissão (0). Extensão não é conteúdo."
+        },
+        {
+          "a": false,
+          "q": "rm sempre envia os arquivos removidos para a lixeira gráfica.",
+          "why": "O comando remove pelo terminal e não equivale à lixeira. Exemplo e pegadinha: No Windows, Win+E abre o Explorador e Win+L bloqueia a sessão. No Linux, chmod 640 significa proprietário leitura e escrita (6), grupo só leitura (4) e outros sem permissão (0). Extensão não é conteúdo."
+        },
+        {
+          "a": false,
+          "q": "O princípio do menor privilégio recomenda usar permissões administrativas para toda tarefa.",
+          "why": "Recomenda conceder apenas as permissões necessárias. Exemplo e pegadinha: No Windows, Win+E abre o Explorador e Win+L bloqueia a sessão. No Linux, chmod 640 significa proprietário leitura e escrita (6), grupo só leitura (4) e outros sem permissão (0). Extensão não é conteúdo."
+        }
+      ],
+      "slug": "pcac-2026-informatica-windows-ubuntu-permissoes",
+      "discipline": "Noções de Informática",
+      "topic_label": "Windows 11, Ubuntu, arquivos, diretórios e permissões",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Aplicar estilos de título pode permitir a criação de sumário automático.",
+          "why": "O sumário utiliza a hierarquia dos estilos de título. Exemplo e pegadinha: Estilos de Título 1/2/3 constroem hierarquia de um sumário automático. Controle de Alterações registra inserções e exclusões para aceitação posterior; comentário sugere ajuste, mas não altera automaticamente o texto definitivo."
+        },
+        {
+          "a": false,
+          "q": "Mala direta serve apenas para inserir imagens em um documento.",
+          "why": "Combina documento-base e fonte de dados para gerar saídas personalizadas. Exemplo e pegadinha: Estilos de Título 1/2/3 constroem hierarquia de um sumário automático. Controle de Alterações registra inserções e exclusões para aceitação posterior; comentário sugere ajuste, mas não altera automaticamente o texto definitivo."
+        },
+        {
+          "a": false,
+          "q": "Comentários e controle de alterações são a mesma função.",
+          "why": "Comentários registram observações; controle de alterações registra mudanças no documento."
+        },
+        {
+          "a": true,
+          "q": "Referências cruzadas podem apontar para figuras e tabelas numeradas.",
+          "why": "São usadas para referenciar elementos internos do documento. Exemplo e pegadinha: Estilos de Título 1/2/3 constroem hierarquia de um sumário automático. Controle de Alterações registra inserções e exclusões para aceitação posterior; comentário sugere ajuste, mas não altera automaticamente o texto definitivo."
+        },
+        {
+          "a": false,
+          "q": "Exportar para PDF dispensa a revisão de links e acessibilidade.",
+          "why": "O arquivo exportado ainda deve ser conferido. Exemplo e pegadinha: Estilos de Título 1/2/3 constroem hierarquia de um sumário automático. Controle de Alterações registra inserções e exclusões para aceitação posterior; comentário sugere ajuste, mas não altera automaticamente o texto definitivo."
+        },
+        {
+          "a": true,
+          "q": "O uso de estilos de título facilita a criação de sumário automático.",
+          "why": "O sumário utiliza a estrutura hierárquica dos estilos. Exemplo e pegadinha: Estilos de Título 1/2/3 constroem hierarquia de um sumário automático. Controle de Alterações registra inserções e exclusões para aceitação posterior; comentário sugere ajuste, mas não altera automaticamente o texto definitivo."
+        },
+        {
+          "a": true,
+          "q": "O controle de alterações permite revisar inserções e exclusões antes de aceitá-las ou rejeitá-las.",
+          "why": "O recurso registra modificações para revisão. Exemplo e pegadinha: Estilos de Título 1/2/3 constroem hierarquia de um sumário automático. Controle de Alterações registra inserções e exclusões para aceitação posterior; comentário sugere ajuste, mas não altera automaticamente o texto definitivo."
+        }
+      ],
+      "slug": "pcac-2026-informatica-word-writer-documentos-estilos-revisao",
+      "discipline": "Noções de Informática",
+      "topic_label": "3. Editores de texto — Word e Writer",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão didática ampliada e conferência dos cinco itens de fixação, alinhadas ao Anexo III do Edital PC-AC 2026.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-20",
+        "items_checked": 5,
+        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador",
+        "current_quiz_items": 7,
+        "previously_checked_items": 5
+      }
+    }
+  ]
+}

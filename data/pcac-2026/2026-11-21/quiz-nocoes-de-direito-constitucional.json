@@ -1,0 +1,212 @@
+{
+  "contest_name": "PC-AC 2026",
+  "discipline": "Noções de Direito Constitucional",
+  "snapshot_date": "2026-11-21",
+  "modules": 5,
+  "quiz_items": 28,
+  "authorial_not_official": true,
+  "read_only_snapshot": true,
+  "materials": [
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A função de confiança é exercida exclusivamente por servidor ocupante de cargo efetivo.",
+          "why": "É a regra expressa do art. 37, V, da Constituição. Aplicação jurídica: A Constituição, arts. 37-41, disciplina Administração e servidores, com concurso como regra e cargos em comissão para direção, chefia e assessoramento conforme condições legais. A EC 138/2025 alterou a acumulação de cargo de professor; confira o inciso XVI atualizado."
+        },
+        {
+          "a": false,
+          "q": "A aprovação em concurso gera validade obrigatória de quatro anos, sem possibilidade de prorrogação.",
+          "why": "A validade é de até dois anos, prorrogável uma vez por igual período. Aplicação jurídica: A Constituição, arts. 37-41, disciplina Administração e servidores, com concurso como regra e cargos em comissão para direção, chefia e assessoramento conforme condições legais. A EC 138/2025 alterou a acumulação de cargo de professor; confira o inciso XVI atualizado."
+        },
+        {
+          "a": true,
+          "q": "A acumulação de dois cargos de professor é admitida se houver compatibilidade de horários e respeito ao teto constitucional.",
+          "why": "É uma das exceções constitucionais à vedação de acumulação. Aplicação jurídica: A Constituição, arts. 37-41, disciplina Administração e servidores, com concurso como regra e cargos em comissão para direção, chefia e assessoramento conforme condições legais. A EC 138/2025 alterou a acumulação de cargo de professor; confira o inciso XVI atualizado."
+        },
+        {
+          "a": false,
+          "q": "A responsabilidade objetiva do Estado dispensa a demonstração de dano e nexo causal.",
+          "why": "A vítima não precisa provar culpa do agente, mas deve demonstrar dano e nexo causal."
+        },
+        {
+          "a": true,
+          "q": "A estabilidade do servidor efetivo é adquirida após três anos de efetivo exercício, observada avaliação especial de desempenho.",
+          "why": "É a regra do art. 41 da Constituição. Aplicação jurídica: A Constituição, arts. 37-41, disciplina Administração e servidores, com concurso como regra e cargos em comissão para direção, chefia e assessoramento conforme condições legais. A EC 138/2025 alterou a acumulação de cargo de professor; confira o inciso XVI atualizado."
+        }
+      ],
+      "slug": "pcac-2026-constitucional-art37-41-servidores-administracao",
+      "discipline": "Noções de Direito Constitucional",
+      "topic_label": "Administração Pública e servidores — arts. 37 a 41 da Constituição Federal",
+      "practice_review": null
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A entrada em residência sem consentimento pode ocorrer, a qualquer hora, em caso de flagrante delito, desastre ou para prestar socorro.",
+          "why": "São as três hipóteses constitucionais que autorizam ingresso a qualquer hora; a ordem judicial é cumprida durante o dia."
+        },
+        {
+          "a": false,
+          "q": "A determinação judicial autoriza ingresso domiciliar noturno, ainda que não haja consentimento ou outra exceção constitucional.",
+          "why": "A Constituição condiciona o ingresso por determinação judicial ao período diurno."
+        },
+        {
+          "a": false,
+          "q": "O habeas data é o instrumento constitucional típico para proteger a liberdade de locomoção.",
+          "why": "A liberdade de locomoção é protegida pelo habeas corpus; habeas data trata de dados pessoais."
+        },
+        {
+          "a": false,
+          "q": "A liberdade de reunião pacífica em local aberto ao público exige autorização prévia da autoridade.",
+          "why": "Não exige autorização. A Constituição prevê prévio aviso e os demais requisitos do art. 5º, XVI."
+        },
+        {
+          "a": true,
+          "q": "A inadmissibilidade das provas obtidas por meios ilícitos é garantia constitucional expressa.",
+          "why": "O art. 5º, LVI, determina que são inadmissíveis no processo as provas obtidas por meios ilícitos."
+        }
+      ],
+      "slug": "pcac-2026-constitucional-art5-direitos-garantias-aplicacao-pratica",
+      "discipline": "Noções de Direito Constitucional",
+      "topic_label": "Direitos e garantias fundamentais — art. 5º: aplicação em situações policiais",
+      "practice_review": null
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "O Estado do Acre possui soberania própria, distinta da República Federativa do Brasil.",
+          "why": "O Acre possui autonomia federativa, não soberania. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+        },
+        {
+          "a": true,
+          "q": "A EC estadual nº 63/2022 atualizou a redação do art. 131 da Constituição do Acre.",
+          "why": "A emenda alterou a lista dos órgãos de segurança pública. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+        },
+        {
+          "a": true,
+          "q": "Na redação atual do art. 131, o Instituto Socioeducativo do Estado do Acre integra a lista de órgãos de segurança pública.",
+          "why": "O inciso IV foi incluído pela EC nº 63/2022. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+        },
+        {
+          "a": false,
+          "q": "A Polícia Civil do Acre exerce, como regra constitucional, a apuração de infrações penais militares.",
+          "why": "O art. 133 exclui as infrações militares e ressalva a competência da União. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+        },
+        {
+          "a": true,
+          "q": "O art. 134 prevê promoções na Polícia Civil pelo critério alternado de antiguidade e merecimento.",
+          "why": "É a regra expressa do caput do art. 134. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+        },
+        {
+          "a": true,
+          "q": "O ingresso na classe inicial das carreiras policiais civis ocorre por concurso público de provas e títulos, com participação da OAB nas fases.",
+          "why": "Regra prevista no art. 134, § 1º. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+        },
+        {
+          "a": false,
+          "q": "Qualquer pessoa aprovada em concurso pode exercer cargos policiais civis, mesmo sem integrar a respectiva carreira.",
+          "why": "O art. 134, § 2º, reserva o exercício aos integrantes das respectivas carreiras."
+        },
+        {
+          "a": false,
+          "q": "A Constituição Estadual e a Lei Orgânica da Polícia Civil têm a mesma função normativa.",
+          "why": "A Constituição estabelece normas constitucionais; a lei orgânica detalha estrutura e funcionamento institucional."
+        }
+      ],
+      "slug": "pcac-2026-constitucional-constituicao-acre-policia-civil",
+      "discipline": "Noções de Direito Constitucional",
+      "topic_label": "Constituição do Estado do Acre e organização da Polícia Civil",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 8,
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "O mandado de segurança protege direito líquido e certo não amparado por habeas corpus ou habeas data.",
+          "why": "É a previsão do art. 5º, LXIX, da Constituição. Aplicação jurídica: Habeas corpus protege locomoção; habeas data, conhecimento/retificação de dados pessoais; mandado de segurança, direito líquido e certo não amparado pelos anteriores; mandado de injunção combate falta de norma; ação popular questiona ato lesivo previsto na Constituição."
+        },
+        {
+          "a": false,
+          "q": "A Constituição permite ingresso em domicílio por determinação judicial durante a noite.",
+          "why": "A hipótese de determinação judicial é durante o dia. Aplicação jurídica: Habeas corpus protege locomoção; habeas data, conhecimento/retificação de dados pessoais; mandado de segurança, direito líquido e certo não amparado pelos anteriores; mandado de injunção combate falta de norma; ação popular questiona ato lesivo previsto na Constituição."
+        },
+        {
+          "a": true,
+          "q": "Eficiência integra o rol expresso do art. 37.",
+          "why": "O art. 37 prevê o conjunto LIMPE. Aplicação jurídica: Habeas corpus protege locomoção; habeas data, conhecimento/retificação de dados pessoais; mandado de segurança, direito líquido e certo não amparado pelos anteriores; mandado de injunção combate falta de norma; ação popular questiona ato lesivo previsto na Constituição."
+        },
+        {
+          "a": false,
+          "q": "A estabilidade torna impossível a perda do cargo público.",
+          "why": "O art. 41 prevê hipóteses de perda do cargo do servidor estável. Aplicação jurídica: Habeas corpus protege locomoção; habeas data, conhecimento/retificação de dados pessoais; mandado de segurança, direito líquido e certo não amparado pelos anteriores; mandado de injunção combate falta de norma; ação popular questiona ato lesivo previsto na Constituição."
+        },
+        {
+          "a": false,
+          "q": "A Polícia Civil exerce ordinariamente apuração de infrações penais militares conforme o art. 144, § 4º.",
+          "why": "O dispositivo exclui as infrações penais militares. Aplicação jurídica: Habeas corpus protege locomoção; habeas data, conhecimento/retificação de dados pessoais; mandado de segurança, direito líquido e certo não amparado pelos anteriores; mandado de injunção combate falta de norma; ação popular questiona ato lesivo previsto na Constituição."
+        }
+      ],
+      "slug": "pcac-2026-constitucional-remedios-art37-art144",
+      "discipline": "Noções de Direito Constitucional",
+      "topic_label": "Remédios constitucionais, Administração Pública e segurança pública",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A dignidade da pessoa humana é fundamento da República previsto no art. 1º da Constituição Federal.",
+          "why": "É expressamente indicada no art. 1º, III. Aplicação jurídica: Fundamentos da República estão no art. 1º da Constituição; objetivos fundamentais, no art. 3º. No art. 5º, direitos e garantias possuem hipóteses e limites específicos; no art. 144, polícia judiciária e investigação têm competências distintas de policiamento ostensivo."
+        },
+        {
+          "a": false,
+          "q": "A redução das desigualdades sociais e regionais é fundamento da República previsto no art. 1º.",
+          "why": "É objetivo fundamental do art. 3º, e não fundamento do art. 1º. Aplicação jurídica: Fundamentos da República estão no art. 1º da Constituição; objetivos fundamentais, no art. 3º. No art. 5º, direitos e garantias possuem hipóteses e limites específicos; no art. 144, polícia judiciária e investigação têm competências distintas de policiamento ostensivo."
+        },
+        {
+          "a": false,
+          "q": "O habeas data é o remédio constitucional voltado à proteção da liberdade de locomoção.",
+          "why": "A liberdade de locomoção é protegida pelo habeas corpus; habeas data trata de informações pessoais."
+        },
+        {
+          "a": true,
+          "q": "Legalidade, impessoalidade, moralidade, publicidade e eficiência são princípios expressos no caput do art. 37.",
+          "why": "O conjunto LIMPE está expressamente previsto no art. 37. Aplicação jurídica: Fundamentos da República estão no art. 1º da Constituição; objetivos fundamentais, no art. 3º. No art. 5º, direitos e garantias possuem hipóteses e limites específicos; no art. 144, polícia judiciária e investigação têm competências distintas de policiamento ostensivo."
+        },
+        {
+          "a": true,
+          "q": "À Polícia Civil compete exercer, ressalvada a competência da União, a polícia judiciária e apurar infrações penais, exceto as militares.",
+          "why": "É a atribuição constitucional descrita no art. 144, § 4º. Aplicação jurídica: Fundamentos da República estão no art. 1º da Constituição; objetivos fundamentais, no art. 3º. No art. 5º, direitos e garantias possuem hipóteses e limites específicos; no art. 144, polícia judiciária e investigação têm competências distintas de policiamento ostensivo."
+        }
+      ],
+      "slug": "pcac-2026-constituicao-federal-fundamentos-direitos-administracao-seguranca",
+      "discipline": "Noções de Direito Constitucional",
+      "topic_label": "Princípios fundamentais, direitos e garantias, Administração Pública e segurança pública",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+      }
+    }
+  ]
+}

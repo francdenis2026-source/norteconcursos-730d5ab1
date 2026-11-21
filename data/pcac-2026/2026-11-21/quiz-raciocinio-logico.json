@@ -1,0 +1,1049 @@
+{
+  "contest_name": "PC-AC 2026",
+  "discipline": "Raciocínio Lógico",
+  "snapshot_date": "2026-11-21",
+  "modules": 16,
+  "quiz_items": 155,
+  "authorial_not_official": true,
+  "read_only_snapshot": true,
+  "materials": [
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Em 12+3×4, a multiplicação deve ser realizada antes da adição.",
+          "why": "A ordem das operações prioriza multiplicação e divisão sobre adição e subtração."
+        },
+        {
+          "a": false,
+          "q": "O resultado de (−5)×(−2) é −10.",
+          "why": "Sinais iguais na multiplicação produzem resultado positivo: +10. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": true,
+          "q": "A expressão −9+4 resulta em −5.",
+          "why": "Os módulos são subtraídos e prevalece o sinal do número de maior módulo. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": false,
+          "q": "Para somar 1/2 e 1/4, basta somar numeradores e denominadores.",
+          "why": "É necessário usar denominador comum: 2/4+1/4=3/4. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": true,
+          "q": "Dividir 2/3 por 4/5 equivale a multiplicar 2/3 por 5/4.",
+          "why": "A divisão por fração usa a inversa do divisor. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": true,
+          "q": "0,25 equivale a 1/4.",
+          "why": "25/100 simplifica para 1/4. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": false,
+          "q": "2³ é igual a 6.",
+          "why": "Potência significa multiplicação repetida: 2³ = 2 × 2 × 2 = 8, e não 2 × 3. A frase apresenta 6 como resultado, portanto está errada."
+        },
+        {
+          "a": true,
+          "q": "A raiz quadrada de 49 é 7.",
+          "why": "7 elevado ao quadrado é 49. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": false,
+          "q": "A raiz de uma soma pode sempre ser separada na soma das raízes.",
+          "why": "A propriedade não vale em geral; √25=5, enquanto √9+√16=7. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        },
+        {
+          "a": true,
+          "q": "Estimar o resultado ajuda a perceber erros de cálculo e unidade.",
+          "why": "A estimativa funciona como conferência de coerência. Dica com exemplo: Para conferir operações, resolva primeiro parênteses, potências e raízes; depois multiplicações e divisões; por fim adições e subtrações. Exemplo: −3×(−4)+2=14. Em frações, 1/2+1/4=3/4 após igualar denominadores."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-01-numeros-reais-problemas",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "1. Raciocínio lógico numérico",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A frase 'O relatório foi protocolado' pode ser uma proposição.",
+          "why": "É uma declaração que pode ser julgada verdadeira ou falsa. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": false,
+          "q": "A frase 'Feche a porta!' é uma proposição lógica.",
+          "why": "É uma ordem, não uma declaração. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": true,
+          "q": "Uma proposição falsa continua sendo proposição.",
+          "why": "O valor lógico pode ser verdadeiro ou falso. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": false,
+          "q": "A sentença 'x é maior que 5', sem valor definido para x, é uma proposição fechada.",
+          "why": "É sentença aberta, pois depende do valor de x. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": true,
+          "q": "Uma proposição composta pode combinar proposições simples.",
+          "why": "Conectivos formam proposições compostas. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": false,
+          "q": "Toda pergunta possui valor lógico verdadeiro ou falso.",
+          "why": "Perguntas não são sentenças declarativas. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": true,
+          "q": "A frase '2 é maior que 10' é uma proposição falsa.",
+          "why": "É declarativa e tem valor lógico falso. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": true,
+          "q": "P e Q são letras usadas para simbolizar proposições.",
+          "why": "A simbologia representa afirmações. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": false,
+          "q": "Uma proposição simples necessariamente é verdadeira.",
+          "why": "Pode ser verdadeira ou falsa. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        },
+        {
+          "a": true,
+          "q": "A frase 'Todo servidor possui matrícula' é uma afirmação declarativa.",
+          "why": "É uma proposição universal que pode ser avaliada. Dica com exemplo: Proposição é sentença declarativa com valor lógico V ou F. '2 é par' é proposição verdadeira; '2 é ímpar' é falsa. Já 'Feche a porta!' é ordem, e 'x>5', sem x definido, é sentença aberta."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-02-proposicoes-simples-compostas",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "2. Estruturas lógicas",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A conjunção V∧V é verdadeira.",
+          "why": "A conjunção exige que ambas as partes sejam verdadeiras. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": false,
+          "q": "A conjunção V∧F é verdadeira.",
+          "why": "Uma parte falsa torna a conjunção falsa. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": true,
+          "q": "A disjunção inclusiva F∨V é verdadeira.",
+          "why": "Pelo menos uma parte é verdadeira. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": false,
+          "q": "A disjunção inclusiva F∨F é verdadeira.",
+          "why": "Ambas falsas tornam o OU inclusivo falso. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": true,
+          "q": "A condicional V→F é o único caso falso da condicional.",
+          "why": "A promessa falha quando P ocorre e Q não. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": false,
+          "q": "A condicional F→V é falsa.",
+          "why": "Na lógica clássica, antecedente falso torna a condicional verdadeira. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": true,
+          "q": "O bicondicional V↔V é verdadeiro.",
+          "why": "Os dois valores são iguais. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": false,
+          "q": "O bicondicional V↔F é verdadeiro.",
+          "why": "Valores diferentes tornam o bicondicional falso. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": true,
+          "q": "A negação de uma proposição falsa é verdadeira.",
+          "why": "A negação inverte o valor lógico. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        },
+        {
+          "a": true,
+          "q": "O OU inclusivo admite que ambas as proposições sejam verdadeiras.",
+          "why": "Ele exige pelo menos uma verdadeira, não exatamente uma. Dica com exemplo: Na tabela-verdade, P∧Q exige ambas V; P∨Q exige pelo menos uma V; P→Q só falha em V→F; P↔Q é V quando os valores coincidem. Compare a combinação descrita no enunciado antes de decidir."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-03-conectivos-logicos",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "3. Conectivos lógicos",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Uma tabela com duas proposições distintas possui quatro linhas.",
+          "why": "2²=4 combinações possíveis. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": false,
+          "q": "Uma tabela com três proposições distintas possui seis linhas.",
+          "why": "Uma tabela-verdade com n proposições simples distintas tem 2ⁿ combinações de verdadeiro ou falso. Para três proposições, calcule 2³ = 8 linhas. Seis linhas não contemplam todas as atribuições."
+        },
+        {
+          "a": true,
+          "q": "P∨¬P é uma tautologia.",
+          "why": "Ou P é verdadeira ou sua negação é verdadeira. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": true,
+          "q": "P∧¬P é uma contradição.",
+          "why": "Uma proposição e sua negação não podem ser verdadeiras simultaneamente. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": true,
+          "q": "P∧Q é uma contingência.",
+          "why": "A expressão é verdadeira em V/V e falsa nas demais combinações. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": true,
+          "q": "P→Q é falsa quando P é verdadeira e Q é falsa.",
+          "why": "É o único caso de falsidade da condicional. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": false,
+          "q": "P↔Q é verdadeira quando P e Q têm valores diferentes.",
+          "why": "O bicondicional é verdadeiro quando os valores são iguais. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": true,
+          "q": "Em expressões com parênteses, deve-se resolver primeiro a subexpressão interna.",
+          "why": "Os parênteses definem o agrupamento. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": false,
+          "q": "Uma tautologia pode apresentar uma linha falsa.",
+          "why": "Tautologia é verdadeira em todas as linhas. Dica com exemplo: Com duas proposições existem 2²=4 combinações: VV, VF, FV e FF. Tautologia é verdadeira em todas; contradição falsa em todas; contingência varia. Em P→Q, apenas VF resulta falso."
+        },
+        {
+          "a": true,
+          "q": "Uma tabela de quatro proposições distintas possui 16 linhas.",
+          "why": "Cada proposição simples tem duas possibilidades, V ou F. Com quatro proposições independentes, o total de linhas é 2 × 2 × 2 × 2 = 2⁴ = 16, confirmando a afirmação."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-04-tabelas-verdade",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "4. Tabelas-verdade",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "P→Q é logicamente equivalente a ¬P∨Q.",
+          "why": "As duas expressões são falsas apenas quando P é verdadeira e Q é falsa. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": true,
+          "q": "A contrapositiva de P→Q é ¬Q→¬P.",
+          "why": "A contrapositiva mantém a equivalência lógica. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": false,
+          "q": "A recíproca Q→P é sempre equivalente a P→Q.",
+          "why": "A recíproca não é equivalente em geral. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": true,
+          "q": "A negação de P∧Q equivale a ¬P∨¬Q.",
+          "why": "É a primeira lei de De Morgan. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": true,
+          "q": "A negação de P∨Q equivale a ¬P∧¬Q.",
+          "why": "É a segunda lei de De Morgan. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": false,
+          "q": "A negação de P→Q é ¬P∧Q.",
+          "why": "A negação correta é P∧¬Q. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": true,
+          "q": "O bicondicional equivale à conjunção das duas condicionais recíprocas.",
+          "why": "P↔Q equivale a (P→Q)∧(Q→P). Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": false,
+          "q": "A negação de 'todos foram aprovados' é 'ninguém foi aprovado'.",
+          "why": "Basta existir pelo menos um que não foi aprovado. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": true,
+          "q": "A negação de 'existe alguém presente' é 'ninguém está presente'.",
+          "why": "A negação do existencial é universal negativa. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+        },
+        {
+          "a": true,
+          "q": "Ao negar uma disjunção, a lei de De Morgan troca OU por E.",
+          "why": "A lei de De Morgan determina ¬(P ∨ Q) ≡ ¬P ∧ ¬Q: a negação da disjunção troca OU por E e nega cada parte. A frase está correta, mas só trocar o conectivo sem negar as partes produziria erro."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-05-equivalencias-negacoes-de-morgan",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "4. Equivalências lógicas e negação",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "P→Q; P; logo Q é uma forma válida chamada modus ponens.",
+          "why": "A afirmação do antecedente permite concluir o consequente. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": true,
+          "q": "P→Q; ¬Q; logo ¬P é modus tollens.",
+          "why": "A negação do consequente permite negar o antecedente. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": false,
+          "q": "P→Q; Q; logo P é sempre válido.",
+          "why": "É a falácia da afirmação do consequente. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": false,
+          "q": "P→Q; ¬P; logo ¬Q é válido.",
+          "why": "É a falácia da negação do antecedente. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": false,
+          "q": "Um argumento válido necessariamente possui premissas verdadeiras.",
+          "why": "Validade diz respeito à estrutura, não à verdade factual das premissas. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": true,
+          "q": "Premissas verdadeiras e conclusão falsa constituem contraexemplo à validade.",
+          "why": "Essa situação demonstra invalidade. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": true,
+          "q": "De P→Q e Q→R pode-se inferir P→R.",
+          "why": "É o silogismo hipotético. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": false,
+          "q": "Uma conclusão verdadeira, sozinha, prova a validade do argumento.",
+          "why": "A validade depende da relação entre premissas e conclusão. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": true,
+          "q": "A expressão 'portanto' pode introduzir a conclusão de um argumento.",
+          "why": "É um indicador linguístico de conclusão. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        },
+        {
+          "a": true,
+          "q": "Encontrar uma linha com premissas verdadeiras e conclusão falsa demonstra invalidade.",
+          "why": "Essa é a definição operacional de contraexemplo. Dica com exemplo: Teste se existe cenário em que todas as premissas são verdadeiras e a conclusão é falsa: se existir, o argumento é inválido. Modus ponens: P→Q e P concluem Q; afirmar Q para concluir P é falácia."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-06-argumentacao-validade",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "5. Argumentação lógica",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "A expressão 'exatamente uma' permite duas afirmações verdadeiras.",
+          "why": "Exatamente uma significa uma e somente uma. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        },
+        {
+          "a": true,
+          "q": "'Pelo menos uma' pode admitir várias afirmações verdadeiras.",
+          "why": "A expressão 'pelo menos uma' fixa um limite inferior igual a 1. Permite 1, 2 ou mais proposições verdadeiras; não quer dizer 'exatamente uma'. A afirmação é correta."
+        },
+        {
+          "a": true,
+          "q": "Uma hipótese em problema de mentirosos deve ser verificada contra todas as declarações.",
+          "why": "Uma única contradição já elimina a hipótese. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        },
+        {
+          "a": true,
+          "q": "Se uma hipótese gera contradição, ela deve ser descartada.",
+          "why": "Ela não satisfaz as condições do enunciado. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        },
+        {
+          "a": true,
+          "q": "'No máximo uma' permite que nenhuma afirmação seja verdadeira.",
+          "why": "'No máximo uma' estabelece limite superior 1: a quantidade de verdadeiras pode ser zero ou uma, nunca duas ou mais. Por isso a possibilidade de nenhuma ser verdadeira está correta."
+        },
+        {
+          "a": true,
+          "q": "Três proposições simples distintas geram oito combinações.",
+          "why": "Como cada proposição simples admite V ou F, três proposições distintas geram 2³ = 2 × 2 × 2 = 8 combinações. A contagem considera todas as atribuições possíveis."
+        },
+        {
+          "a": false,
+          "q": "Todo enigma de verdades e mentiras necessariamente possui uma solução.",
+          "why": "Pode haver condições incompatíveis. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        },
+        {
+          "a": true,
+          "q": "A verdade de uma declaração depende do conteúdo afirmado e dos fatos do cenário.",
+          "why": "Não depende da aparência ou identidade do personagem. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        },
+        {
+          "a": false,
+          "q": "'Pelo menos uma' significa exatamente uma.",
+          "why": "Pelo menos uma pode incluir duas ou mais. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        },
+        {
+          "a": true,
+          "q": "Testar as combinações de forma sistemática reduz erros de raciocínio.",
+          "why": "O método evita esquecer condições. Dica com exemplo: Monte uma tabela com hipóteses possíveis e verifique todas as declarações. 'Pelo menos um' significa um ou mais; 'no máximo um' permite zero ou um; 'exatamente um' exclui zero e dois ou mais."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-07-verdades-mentiras",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "6. Verdades e mentiras",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A sequência 4, 7, 10, 13 é uma PA de razão 3.",
+          "why": "As diferenças consecutivas são iguais a 3. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": true,
+          "q": "A sequência 2, 6, 18, 54 é uma PG de razão 3.",
+          "why": "Cada termo é o anterior multiplicado por 3. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": false,
+          "q": "Na PA com primeiro termo 5 e razão 3, o décimo termo é 35.",
+          "why": "Na progressão aritmética, aₙ = a₁ + (n − 1)r. Aplicando a₁ = 5, n = 10 e r = 3: a₁₀ = 5 + 9 × 3 = 32. Como o enunciado indica 35, está errado."
+        },
+        {
+          "a": true,
+          "q": "A soma de 2, 4, 6, 8 e 10 é 30.",
+          "why": "A soma dos cinco termos é 30. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": true,
+          "q": "Na PG 3, 6, 12, o quarto termo é 24.",
+          "why": "Multiplica-se por 2 novamente. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": false,
+          "q": "A razão da PA é o quociente entre termos consecutivos.",
+          "why": "A razão da PA é a diferença constante. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": true,
+          "q": "A razão da PG é o quociente entre termos consecutivos.",
+          "why": "Essa é a definição da razão geométrica. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": true,
+          "q": "Se a razão da PG é 1, a soma de n termos é n vezes o primeiro termo.",
+          "why": "Todos os termos são iguais ao primeiro. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        },
+        {
+          "a": true,
+          "q": "Na PG de primeiro termo 2 e razão 2, o quinto termo é 32.",
+          "why": "Na progressão geométrica, aₙ = a₁ × q⁽ⁿ⁻¹⁾. Com primeiro termo 2 e razão 2, o quinto termo é 2 × 2⁴ = 32. Logo a afirmação está correta."
+        },
+        {
+          "a": false,
+          "q": "Toda sequência numérica precisa ser uma PA ou PG.",
+          "why": "Existem muitos outros padrões possíveis. Dica com exemplo: Compare diferenças e razões. Na PA 4,7,10 a razão aditiva é 3; na PG 2,6,18 a razão multiplicativa é 3. Use aₙ=a₁+(n−1)r para PA e aₙ=a₁×q⁽ⁿ⁻¹⁾ para PG."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-08-sequencias-pa-pg",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "7. Sequências e padrões; 8. Progressões",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A notação 2∈A indica que o elemento 2 pertence ao conjunto A.",
+          "why": "O símbolo de pertinência relaciona elemento e conjunto. Pertinência (∈) liga um elemento a um conjunto: se A={1,2,3}, então 2∈A é verdadeira. Inclusão (⊂ ou ⊆, conforme convenção) relaciona dois conjuntos, não elemento e conjunto."
+        },
+        {
+          "a": false,
+          "q": "A⊂B significa que A é um elemento de B.",
+          "why": "A⊂B indica inclusão de conjuntos. Inclusão compara conjuntos. Se A={1,2} e B={1,2,3}, A é subconjunto de B; mas A não é um elemento individual de B, a menos que B contenha expressamente o conjunto A como elemento."
+        },
+        {
+          "a": true,
+          "q": "A união reúne os elementos que pertencem a pelo menos um dos conjuntos.",
+          "why": "A união corresponde ao OU. Para A={1,2} e B={2,3}, a união A∪B={1,2,3}, pois inclui elementos de A ou B. O elemento 2 aparece só uma vez no conjunto resultante."
+        },
+        {
+          "a": true,
+          "q": "A interseção contém os elementos comuns aos conjuntos.",
+          "why": "A interseção corresponde ao E. Para A={1,2} e B={2,3}, a interseção A∩B={2}. Só entra quem pertence aos dois conjuntos simultaneamente, o mesmo raciocínio do conectivo lógico 'e'."
+        },
+        {
+          "a": false,
+          "q": "A−B é sempre igual a B−A.",
+          "why": "A diferença depende da ordem dos conjuntos. Exemplo: A={1,2} e B={2,3}. A−B={1}, enquanto B−A={3}; portanto a diferença de conjuntos geralmente não é comutativa."
+        },
+        {
+          "a": true,
+          "q": "Uma relação de equivalência é reflexiva, simétrica e transitiva.",
+          "why": "Essas são as três propriedades exigidas. Reflexividade: aRa; simetria: aRb implica bRa; transitividade: aRb e bRc implicam aRc. Uma relação de equivalência deve cumprir as três propriedades."
+        },
+        {
+          "a": false,
+          "q": "Uma relação de ordem parcial precisa ser simétrica.",
+          "why": "A propriedade é antissimetria. Uma ordem parcial deve ser reflexiva, antissimétrica e transitiva. Antissimetria significa que aRb e bRa implicam a=b, o que é diferente de exigir simetria."
+        },
+        {
+          "a": false,
+          "q": "O conjunto {1,2,2,3} possui quatro elementos distintos.",
+          "why": "Repetições não criam novos elementos; são três. Conjuntos não contam repetições. Em {1,2,2,3}, o número 2 aparece escrito duas vezes mas representa um único elemento, logo a cardinalidade é 3."
+        },
+        {
+          "a": true,
+          "q": "A fórmula da união de dois conjuntos subtrai a interseção para evitar dupla contagem.",
+          "why": "Os elementos comuns foram contados duas vezes. Use |A∪B|=|A|+|B|−|A∩B|. Se A tem 5 elementos, B tem 4 e dois são comuns, a união tem 5+4−2=7, não 9."
+        },
+        {
+          "a": true,
+          "q": "Na fórmula de inclusão-exclusão de três conjuntos, soma-se novamente a interseção tripla.",
+          "why": "A correção restaura a contagem dos elementos comuns aos três. Para três conjuntos, |A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|. A interseção tripla é somada novamente após as subtrações."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-09-conjuntos-relacoes-ordem-equivalencia",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "9. Relações de ordem e equivalência; 10. Conjuntos",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Exemplos de conjuntos, relações e inclusão-exclusão ampliados; revisão anterior invalidada",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "18% de 250 corresponde a 45.",
+          "why": "Porcentagem significa centésimos. Converta 18% em 0,18 e multiplique por 250: 250 × 0,18 = 45. A afirmação está correta."
+        },
+        {
+          "a": true,
+          "q": "45 representa 18% de 250.",
+          "why": "Para descobrir o percentual, divida a parte pelo todo e multiplique por 100: 45 ÷ 250 × 100 = 18%. Confirme que 45 é a parte e 250 é o total."
+        },
+        {
+          "a": false,
+          "q": "Um aumento de 10% seguido de desconto de 10% retorna sempre ao valor original.",
+          "why": "200×1,10×0,90=198; o efeito líquido é redução de 1%. Dica com exemplo: Transforme a porcentagem em decimal: 18% de 250=0,18×250=45. Juros simples: J=C×i×t; com C=1000, i=0,02 ao mês, t=3 meses, J=60. Observe unidades do prazo e taxa."
+        },
+        {
+          "a": true,
+          "q": "Se quatro caixas custam R$ 60, sete caixas custam R$ 105 pelo mesmo preço unitário.",
+          "why": "Cada caixa custa R$ 15; 7×15=105. Dica com exemplo: Transforme a porcentagem em decimal: 18% de 250=0,18×250=45. Juros simples: J=C×i×t; com C=1000, i=0,02 ao mês, t=3 meses, J=60. Observe unidades do prazo e taxa."
+        },
+        {
+          "a": false,
+          "q": "Dobrar trabalhadores sempre reduz pela metade o prazo, independentemente das condições.",
+          "why": "A proporcionalidade inversa exige produtividade e tarefa constantes. Dica com exemplo: Transforme a porcentagem em decimal: 18% de 250=0,18×250=45. Juros simples: J=C×i×t; com C=1000, i=0,02 ao mês, t=3 meses, J=60. Observe unidades do prazo e taxa."
+        },
+        {
+          "a": true,
+          "q": "Nos juros simples, a taxa incide sobre o capital inicial.",
+          "why": "A base de cálculo permanece constante. Dica com exemplo: Transforme a porcentagem em decimal: 18% de 250=0,18×250=45. Juros simples: J=C×i×t; com C=1000, i=0,02 ao mês, t=3 meses, J=60. Observe unidades do prazo e taxa."
+        },
+        {
+          "a": true,
+          "q": "Nos juros compostos, os juros incidem sobre o montante acumulado.",
+          "why": "Há capitalização dos juros. Dica com exemplo: Transforme a porcentagem em decimal: 18% de 250=0,18×250=45. Juros simples: J=C×i×t; com C=1000, i=0,02 ao mês, t=3 meses, J=60. Observe unidades do prazo e taxa."
+        },
+        {
+          "a": true,
+          "q": "R$ 1.000 a 2% ao mês por três meses gera R$ 60 de juros simples.",
+          "why": "Nos juros simples, J = C × i × t. Com capital de R$ 1.000, taxa de 2% por mês e três meses, J = 1.000 × 0,02 × 3 = R$ 60. A taxa e o prazo estão na mesma unidade."
+        },
+        {
+          "a": false,
+          "q": "A taxa de 2% deve ser inserida como 2 na fórmula decimal.",
+          "why": "2% deve ser convertido em 0,02. Dica com exemplo: Transforme a porcentagem em decimal: 18% de 250=0,18×250=45. Juros simples: J=C×i×t; com C=1000, i=0,02 ao mês, t=3 meses, J=60. Observe unidades do prazo e taxa."
+        },
+        {
+          "a": true,
+          "q": "O montante é a soma do capital com os juros.",
+          "why": "Montante é o valor total ao final da operação: M = C + J, ou seja, capital inicial somado aos juros acumulados. Por exemplo, capital R$ 100 com juros R$ 10 produz montante R$ 110."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-10-porcentagem-juros-razao-proporcao-regra-tres",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "10. Porcentagem e juros; 14. Raciocínio lógico quantitativo",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Quatro pessoas distintas podem formar 24 filas.",
+          "why": "A ordem de pessoas distintas na fila importa. O número de permutações de quatro pessoas é 4! = 4 × 3 × 2 × 1 = 24. Portanto, podem ser formadas 24 filas diferentes."
+        },
+        {
+          "a": false,
+          "q": "Escolher presidente e vice entre cinco pessoas gera dez resultados ordenados.",
+          "why": "A ordem dos cargos importa: 5×4=20. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": true,
+          "q": "Escolher uma dupla entre cinco pessoas gera dez combinações.",
+          "why": "Escolher duas pessoas dentre cinco sem atribuir funções diferentes é combinação: C(5,2) = 5!/(2! × 3!) = 5 × 4 ÷ 2 = 10 duplas. A ordem não cria nova dupla."
+        },
+        {
+          "a": true,
+          "q": "Por definição, 0! é igual a 1.",
+          "why": "É a convenção matemática usada nas fórmulas. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": false,
+          "q": "Em uma combinação, trocar a ordem dos escolhidos cria outro grupo.",
+          "why": "A ordem não altera a combinação. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": true,
+          "q": "Em um dado justo, a probabilidade de sair número par é 1/2.",
+          "why": "Há três resultados favoráveis em seis equiprováveis. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": true,
+          "q": "Eventos independentes satisfazem P(A∩B)=P(A)×P(B).",
+          "why": "A ocorrência de um não altera a chance do outro. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": false,
+          "q": "Eventos mutuamente exclusivos podem ocorrer juntos.",
+          "why": "Eles não podem ocorrer simultaneamente. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": true,
+          "q": "A expressão 'sabendo que B ocorreu' indica probabilidade condicional.",
+          "why": "O universo é restringido ao evento B. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        },
+        {
+          "a": true,
+          "q": "O princípio fundamental da contagem multiplica possibilidades de etapas sucessivas.",
+          "why": "A contagem combina as opções de cada etapa. Dica com exemplo: Conte por etapas: 3 escolhas e depois 2 escolhas produzem 3×2=6 arranjos. Em comissão sem cargos, a ordem não importa: C(5,2)=10. Para probabilidade, casos favoráveis ÷ casos possíveis equiprováveis."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-11-combinatoria-probabilidade",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "11. Análise combinatória; 12. Probabilidade",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A média simples de 10, 12, 14 e 16 é 13.",
+          "why": "A soma é 52 e há quatro observações. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": true,
+          "q": "A média ponderada de 6 com peso 2 e 8 com peso 3 é 7,2.",
+          "why": "Na média ponderada, multiplique cada nota pelo peso: 6 × 2 = 12 e 8 × 3 = 24. Some 36 e divida pela soma dos pesos, 5. O resultado é 36 ÷ 5 = 7,2."
+        },
+        {
+          "a": false,
+          "q": "A média de 2, 2, 2, 2 e 12 é 2.",
+          "why": "A soma é 20; dividida por 5, resulta em 4. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": true,
+          "q": "Quinze registros em um total de 60 representam 25%.",
+          "why": "Percentual é parte dividida pelo total: 15 ÷ 60 = 0,25. Multiplicando por 100, obtém-se 25%. O denominador correto é o total de 60 registros."
+        },
+        {
+          "a": true,
+          "q": "Frequência acumulada é a soma progressiva das frequências.",
+          "why": "Ela reúne as frequências até a classe atual. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": true,
+          "q": "Gráfico de linhas é apropriado para observar evolução temporal.",
+          "why": "A sequência de períodos permite visualizar tendências. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": false,
+          "q": "Histograma é usado principalmente para categorias nominais sem ordem.",
+          "why": "Histograma representa dados quantitativos agrupados em intervalos. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": true,
+          "q": "Um eixo truncado pode exagerar diferenças visuais.",
+          "why": "A escala pode distorcer a percepção. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": false,
+          "q": "Totais absolutos sempre são suficientes para comparar populações de tamanhos diferentes.",
+          "why": "Taxas e denominadores podem ser necessários para comparação justa. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        },
+        {
+          "a": true,
+          "q": "Um percentual precisa de denominador e período claros para ser interpretado corretamente.",
+          "why": "A base de cálculo determina o significado do percentual. Dica com exemplo: Média aritmética é soma ÷ quantidade: (8+10+12)/3=10. Na média ponderada, (6×2+8×3)/(2+3)=7,2. Para gráficos, examine escala, unidade, período e denominador antes de comparar."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-12-medias-graficos-tabelas",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "13. Médias; 15. Interpretação de gráficos e tabelas",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 5
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A condicional P → Q é falsa somente quando P é verdadeira e Q é falsa.",
+          "why": "Essa é a única linha falsa da tabela-verdade da condicional. Dica com exemplo: A negação de 'todos são A' é 'pelo menos um não é A'; de 'P e Q' é 'não P ou não Q'; de 'se P então Q' é 'P e não Q'. Teste cada opção com um contraexemplo."
+        },
+        {
+          "a": false,
+          "q": "A negação de “P e Q” é “não P e não Q”.",
+          "why": "Pela lei de De Morgan, a negação é “não P ou não Q”. Dica com exemplo: A negação de 'todos são A' é 'pelo menos um não é A'; de 'P e Q' é 'não P ou não Q'; de 'se P então Q' é 'P e não Q'. Teste cada opção com um contraexemplo."
+        },
+        {
+          "a": true,
+          "q": "A contrapositiva de “Se P, então Q” é “Se não Q, então não P”.",
+          "why": "A contrapositiva é logicamente equivalente à condicional original. Dica com exemplo: A negação de 'todos são A' é 'pelo menos um não é A'; de 'P e Q' é 'não P ou não Q'; de 'se P então Q' é 'P e não Q'. Teste cada opção com um contraexemplo."
+        },
+        {
+          "a": false,
+          "q": "A recíproca de P → Q, isto é, Q → P, é sempre equivalente à proposição original.",
+          "why": "A recíproca não é equivalente em geral. Dica com exemplo: A negação de 'todos são A' é 'pelo menos um não é A'; de 'P e Q' é 'não P ou não Q'; de 'se P então Q' é 'P e não Q'. Teste cada opção com um contraexemplo."
+        },
+        {
+          "a": true,
+          "q": "A negação de “todos os relatórios foram revisados” é “pelo menos um relatório não foi revisado”.",
+          "why": "Negar universal exige apresentar ao menos um contraexemplo. Dica com exemplo: A negação de 'todos são A' é 'pelo menos um não é A'; de 'P e Q' é 'não P ou não Q'; de 'se P então Q' é 'P e não Q'. Teste cada opção com um contraexemplo."
+        }
+      ],
+      "slug": "pcac-2026-raciocinio-logico-proposicoes-negacao-equivalencias",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "Proposições, conectivos, negação e equivalências",
+      "practice_review": null
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A média simples de 10, 12, 14 e 16 é 13.",
+          "why": "A soma é 52 e a quantidade é 4. Dica com exemplo: Em tabela de frequência, a acumulada soma as anteriores: 4, depois 4+6=10, depois 4+6+10=20. Média ponderada considera os pesos, e eixos truncados podem exagerar diferenças visuais."
+        },
+        {
+          "a": true,
+          "q": "A média ponderada de 6 com peso 2 e 8 com peso 3 é 7,2.",
+          "why": "Média ponderada exige considerar os pesos: (6 × 2 + 8 × 3) ÷ (2 + 3) = (12 + 24) ÷ 5 = 7,2. Não faça a média simples 7, pois os pesos são distintos."
+        },
+        {
+          "a": true,
+          "q": "Dezoito atendimentos em um total de 60 representam 30%.",
+          "why": "A razão entre atendimentos selecionados e total é 18 ÷ 60 = 0,30. Convertendo para percentual: 0,30 × 100 = 30%. A afirmação está correta."
+        },
+        {
+          "a": true,
+          "q": "Frequências 4, 6 e 10 produzem acumuladas 4, 10 e 20.",
+          "why": "Frequência acumulada é soma progressiva das frequências: primeiro 4; depois 4 + 6 = 10; por fim 4 + 6 + 10 = 20. Portanto, os acumulados informados estão corretos."
+        },
+        {
+          "a": true,
+          "q": "Gráfico de linhas é adequado para acompanhar valores ao longo dos meses.",
+          "why": "A sequência temporal permite visualizar mudanças. Dica com exemplo: Em tabela de frequência, a acumulada soma as anteriores: 4, depois 4+6=10, depois 4+6+10=20. Média ponderada considera os pesos, e eixos truncados podem exagerar diferenças visuais."
+        },
+        {
+          "a": false,
+          "q": "Histograma é usado principalmente para comparar categorias nominais separadas.",
+          "why": "Histograma representa distribuição quantitativa agrupada em intervalos. Dica com exemplo: Em tabela de frequência, a acumulada soma as anteriores: 4, depois 4+6=10, depois 4+6+10=20. Média ponderada considera os pesos, e eixos truncados podem exagerar diferenças visuais."
+        },
+        {
+          "a": true,
+          "q": "Um eixo truncado pode exagerar visualmente diferenças.",
+          "why": "A escala altera a percepção do tamanho da diferença. Dica com exemplo: Em tabela de frequência, a acumulada soma as anteriores: 4, depois 4+6=10, depois 4+6+10=20. Média ponderada considera os pesos, e eixos truncados podem exagerar diferenças visuais."
+        },
+        {
+          "a": false,
+          "q": "Totais absolutos são sempre suficientes para comparar municípios de populações diferentes.",
+          "why": "Taxas e denominadores podem ser necessários para uma comparação justa. Dica com exemplo: Em tabela de frequência, a acumulada soma as anteriores: 4, depois 4+6=10, depois 4+6+10=20. Média ponderada considera os pesos, e eixos truncados podem exagerar diferenças visuais."
+        },
+        {
+          "a": false,
+          "q": "Média e mediana são sempre iguais.",
+          "why": "São medidas distintas e podem divergir, especialmente com assimetria e extremos."
+        },
+        {
+          "a": true,
+          "q": "Um percentual precisa de denominador claro para ser interpretado.",
+          "why": "A base de cálculo determina o significado do percentual. Dica com exemplo: Em tabela de frequência, a acumulada soma as anteriores: 4, depois 4+6=10, depois 4+6+10=20. Média ponderada considera os pesos, e eixos truncados podem exagerar diferenças visuais."
+        }
+      ],
+      "slug": "pcac-2026-rlm-medias-graficos-tabelas-interpretacao",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "13 e 15. Médias e interpretação de gráficos e tabelas",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 6,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 6
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Em um dado justo, a probabilidade de sair número par é 1/2.",
+          "why": "Há três resultados pares entre seis resultados equiprováveis. Dica com exemplo: União: P(A∪B)=P(A)+P(B)−P(A∩B). Condicional: P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência: P(A∩B)=P(A)P(B). Não confunda independência com exclusão mútua."
+        },
+        {
+          "a": true,
+          "q": "Se P(A)=0,15, o complemento tem probabilidade 0,85.",
+          "why": "A probabilidade de um evento complementar é 1 − P(A). Quando P(A) = 0,15, o complemento é 1 − 0,15 = 0,85, equivalente a 85%."
+        },
+        {
+          "a": false,
+          "q": "A união A∪B representa somente a ocorrência simultânea de A e B.",
+          "why": "A união inclui A, B ou ambos; a simultaneidade é interseção. Dica com exemplo: União: P(A∪B)=P(A)+P(B)−P(A∩B). Condicional: P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência: P(A∩B)=P(A)P(B). Não confunda independência com exclusão mútua."
+        },
+        {
+          "a": true,
+          "q": "A interseção representa ocorrência conjunta de dois eventos.",
+          "why": "A interseção A ∩ B reúne os resultados que pertencem simultaneamente aos dois eventos. Num dado, A = pares e B = maiores que 3; A ∩ B = {4,6}. É ocorrência conjunta."
+        },
+        {
+          "a": true,
+          "q": "A fórmula da união subtrai a interseção para evitar dupla contagem.",
+          "why": "Os resultados comuns foram somados duas vezes. Dica com exemplo: União: P(A∪B)=P(A)+P(B)−P(A∩B). Condicional: P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência: P(A∩B)=P(A)P(B). Não confunda independência com exclusão mútua."
+        },
+        {
+          "a": false,
+          "q": "Eventos mutuamente exclusivos podem ocorrer juntos.",
+          "why": "Eles não podem ocorrer simultaneamente. Dica com exemplo: União: P(A∪B)=P(A)+P(B)−P(A∩B). Condicional: P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência: P(A∩B)=P(A)P(B). Não confunda independência com exclusão mútua."
+        },
+        {
+          "a": true,
+          "q": "A expressão 'sabendo que B ocorreu' indica probabilidade condicional.",
+          "why": "O universo fica restrito aos casos em que B ocorreu. Dica com exemplo: União: P(A∪B)=P(A)+P(B)−P(A∩B). Condicional: P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência: P(A∩B)=P(A)P(B). Não confunda independência com exclusão mútua."
+        },
+        {
+          "a": true,
+          "q": "Eventos independentes satisfazem P(A∩B)=P(A)×P(B).",
+          "why": "Essa é a condição matemática de independência. Dica com exemplo: União: P(A∪B)=P(A)+P(B)−P(A∩B). Condicional: P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência: P(A∩B)=P(A)P(B). Não confunda independência com exclusão mútua."
+        },
+        {
+          "a": false,
+          "q": "Eventos independentes nunca podem ocorrer juntos.",
+          "why": "Eles podem ocorrer simultaneamente; a ocorrência de um não altera a chance do outro."
+        },
+        {
+          "a": true,
+          "q": "A probabilidade condicional P(A|B) utiliza P(B) no denominador.",
+          "why": "Por definição P(A|B) = P(A ∩ B) ÷ P(B), desde que P(B) seja maior que zero. A condição B já ocorrida restringe o espaço de referência e determina o denominador."
+        }
+      ],
+      "slug": "pcac-2026-rlm-probabilidade-uniao-condicional-independencia",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "12. Probabilidade: união, condicional e independência",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 6,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 6
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A sequência 4, 7, 10, 13 é uma PA de razão 3.",
+          "why": "As diferenças consecutivas são 3. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": true,
+          "q": "A sequência 2, 6, 18, 54 é uma PG de razão 3.",
+          "why": "Os quocientes consecutivos são 3. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": false,
+          "q": "Na PA 7, 11, 15..., o oitavo termo é 39.",
+          "why": "A sequência 7, 11, 15 é PA de razão 4. Pela fórmula a₈ = a₁ + (8 − 1) × r = 7 + 7 × 4 = 35. Logo, a indicação de 39 está errada."
+        },
+        {
+          "a": true,
+          "q": "A soma de 2, 5, 8, 11 e 14 é 40.",
+          "why": "A soma dos cinco termos é 40. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": true,
+          "q": "Na PG 5, 10, 20..., o sexto termo é 160.",
+          "why": "A sequência 5, 10, 20 é PG de razão 2. O sexto termo vale a₆ = a₁ × q⁵ = 5 × 2⁵ = 160. A afirmação está correta."
+        },
+        {
+          "a": false,
+          "q": "A PA é identificada pelo quociente constante entre termos.",
+          "why": "A PA é identificada pela diferença constante. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": true,
+          "q": "A PG é identificada pelo quociente constante entre termos.",
+          "why": "Essa é a característica da PG. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": true,
+          "q": "Se q=1, a soma de n termos da PG é n vezes o primeiro termo.",
+          "why": "Todos os termos são iguais a a₁. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": false,
+          "q": "Um aumento fixo de três unidades equivale sempre a um aumento de 3%.",
+          "why": "O percentual depende do valor-base. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        },
+        {
+          "a": true,
+          "q": "Uma razão negativa em uma PG pode produzir alternância de sinais.",
+          "why": "Cada multiplicação por número negativo troca o sinal. Dica com exemplo: Na PA aₙ=a₁+(n−1)r; exemplo: a₁=7,r=4,n=8 produz 35. Na PG aₙ=a₁×q⁽ⁿ⁻¹⁾; exemplo: a₁=5,q=2,n=6 produz 160. Não troque a diferença pela razão."
+        }
+      ],
+      "slug": "pcac-2026-rlm-progressao-aritmetica-geometrica",
+      "discipline": "Raciocínio Lógico",
+      "topic_label": "8. Progressões aritmética e geométrica",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 6,
+        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
+        "current_quiz_items": 10,
+        "previously_checked_items": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,684 @@
+{
+  "contest_name": "PC-AC 2026",
+  "discipline": "Arquivologia",
+  "snapshot_date": "2026-11-21",
+  "modules": 17,
+  "quiz_items": 85,
+  "authorial_not_official": true,
+  "read_only_snapshot": true,
+  "materials": [
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "O protocolo controla operações de recebimento, registro, distribuição e tramitação documental.",
+          "why": "O protocolo organiza e acompanha a circulação dos documentos. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+        },
+        {
+          "a": false,
+          "q": "Classificação e ordenação são sinônimos.",
+          "why": "Classificação relaciona o documento à função/atividade; ordenação define sequência de localização."
+        },
+        {
+          "a": true,
+          "q": "A transferência encaminha documentos do arquivo corrente ao intermediário.",
+          "why": "Transferência é a passagem para a fase intermediária. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+        },
+        {
+          "a": true,
+          "q": "O recolhimento encaminha documentos de valor permanente para guarda definitiva.",
+          "why": "Recolhimento é a passagem ao arquivo permanente. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+        },
+        {
+          "a": false,
+          "q": "Um servidor pode eliminar documentos livremente quando considerar que perderam utilidade.",
+          "why": "Eliminação exige avaliação, tabela, autorização e procedimento institucional. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+        }
+      ],
+      "slug": "pcac-2026-arquivologia-protocolo-classificacao-avaliacao-temporalidade",
+      "discipline": "Arquivologia",
+      "topic_label": "Revisão integrada — fluxo documental e destinação",
+      "practice_review": null
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "Arquivo é qualquer coleção de documentos reunida por assunto.",
+          "why": "O conceito arquivístico pressupõe vínculo orgânico com as atividades do produtor."
+        },
+        {
+          "a": true,
+          "q": "A Lei nº 8.159/1991 abrange documentos independentemente do suporte.",
+          "why": "O conceito legal não restringe arquivo a papel. Exemplo e contexto: Um documento arquivístico resulta de atividade de pessoa ou instituição e mantém relação com outros registros da mesma função. Papel, PDF e áudio podem ser documentos de arquivo; o suporte não altera, por si, a natureza arquivística."
+        },
+        {
+          "a": true,
+          "q": "Uma mensagem eletrônica pode ser documento arquivístico.",
+          "why": "Se produzida ou recebida no exercício de atividade e mantida como evidência, pode ser arquivística."
+        },
+        {
+          "a": false,
+          "q": "Autenticidade garante que todas as informações do documento são verdadeiras.",
+          "why": "Autenticidade e veracidade do conteúdo são conceitos distintos. Exemplo e contexto: Um documento arquivístico resulta de atividade de pessoa ou instituição e mantém relação com outros registros da mesma função. Papel, PDF e áudio podem ser documentos de arquivo; o suporte não altera, por si, a natureza arquivística."
+        },
+        {
+          "a": true,
+          "q": "Organicidade relaciona documentos às atividades que os produziram.",
+          "why": "É a relação contextual entre documentos no conjunto. Exemplo e contexto: Um documento arquivístico resulta de atividade de pessoa ou instituição e mantém relação com outros registros da mesma função. Papel, PDF e áudio podem ser documentos de arquivo; o suporte não altera, por si, a natureza arquivística."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-01-arquivo-e-documento-arquivistico",
+      "discipline": "Arquivologia",
+      "topic_label": "Arquivo e documento arquivístico",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "Documentos correntes são necessariamente os mais recentes.",
+          "why": "A frequência de uso e a necessidade administrativa caracterizam a fase, não apenas a idade cronológica."
+        },
+        {
+          "a": true,
+          "q": "O arquivo intermediário guarda documentos de consulta eventual.",
+          "why": "Eles aguardam cumprimento dos prazos e destinação. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+        },
+        {
+          "a": true,
+          "q": "Recolhimento é a passagem para guarda permanente.",
+          "why": "É a destinação de documentos de valor permanente. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+        },
+        {
+          "a": false,
+          "q": "A transferência ao intermediário equivale à eliminação.",
+          "why": "A transferência mantém a guarda e a responsabilidade documental. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+        },
+        {
+          "a": true,
+          "q": "Documentos de valor permanente são inalienáveis e imprescritíveis.",
+          "why": "A Lei nº 8.159/1991 estabelece essa proteção. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-02-ciclo-vital-e-tres-idades",
+      "discipline": "Arquivologia",
+      "topic_label": "Ciclo vital e três idades",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "Classificar é simplesmente ordenar documentos por data.",
+          "why": "Classificação identifica função ou atividade; ordenar é definir sequência. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+        },
+        {
+          "a": true,
+          "q": "O plano de classificação deve refletir funções e atividades do produtor.",
+          "why": "O contexto funcional orienta a classificação arquivística. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+        },
+        {
+          "a": true,
+          "q": "Protocolo contribui para rastrear a tramitação documental.",
+          "why": "O registro das movimentações permite localizar e acompanhar documentos. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+        },
+        {
+          "a": false,
+          "q": "Apensação e anexação são sempre sinônimos.",
+          "why": "A anexação incorpora; a apensação reúne para análise, preservando autonomia quando cabível."
+        },
+        {
+          "a": true,
+          "q": "O registro incompleto pode prejudicar recuperação e controle de prazos.",
+          "why": "Metadados adequados são necessários para rastreabilidade. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-03-classificacao-ordenacao-e-protocolo",
+      "discipline": "Arquivologia",
+      "topic_label": "Classificação, ordenação e protocolo",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A avaliação documental define prazos e destinação com base nos valores dos documentos.",
+          "why": "A avaliação considera necessidades e valores primários e secundários. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+        },
+        {
+          "a": false,
+          "q": "A tabela de temporalidade é apenas uma lista de datas de produção.",
+          "why": "Ela registra prazos de guarda e destinação por séries documentais. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+        },
+        {
+          "a": false,
+          "q": "Todo documento sem consulta frequente pode ser eliminado.",
+          "why": "Pode haver prazo legal, valor secundário ou impedimento à eliminação. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+        },
+        {
+          "a": true,
+          "q": "Documentos permanentes devem ser preservados definitivamente.",
+          "why": "A Lei de Arquivos confere proteção especial aos documentos de valor permanente. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+        },
+        {
+          "a": false,
+          "q": "Digitalizar um documento elimina automaticamente a necessidade de autorização para destruir o original.",
+          "why": "A digitalização não substitui a avaliação e os requisitos legais de destinação. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-04-avaliacao-e-temporalidade",
+      "discipline": "Arquivologia",
+      "topic_label": "Avaliação e temporalidade documental",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "O e-ARQ Brasil é um programa de computador pronto para instalar.",
+          "why": "É um modelo de requisitos para sistemas de gestão arquivística. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+        },
+        {
+          "a": true,
+          "q": "A versão 2 do e-ARQ Brasil foi aprovada pela Resolução CONARQ nº 50/2022.",
+          "why": "A resolução de 6 de maio de 2022 aprovou o modelo versão 2. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+        },
+        {
+          "a": false,
+          "q": "Um sistema de pastas compartilhadas é automaticamente um SIGAD.",
+          "why": "É necessário atender requisitos de gestão arquivística e ciclo documental. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+        },
+        {
+          "a": true,
+          "q": "Trilhas de auditoria contribuem para rastreabilidade.",
+          "why": "Elas registram eventos, usuários e operações relevantes. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+        },
+        {
+          "a": false,
+          "q": "Backup isolado garante preservação digital de longo prazo.",
+          "why": "Preservação envolve contexto, metadados, integridade, formatos e acesso continuado."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-05-documentos-digitais-sigad-e-e-arq-brasil",
+      "discipline": "Arquivologia",
+      "topic_label": "Documentos digitais, SIGAD e e-ARQ Brasil",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": false,
+          "q": "Qualquer foto de documento feita por celular produz automaticamente os mesmos efeitos do original.",
+          "why": "O Decreto nº 10.278/2020 exige observância de requisitos e condições. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+        },
+        {
+          "a": true,
+          "q": "A LAI prevê transparência ativa e passiva.",
+          "why": "Ativa é divulgação espontânea; passiva é resposta a pedidos. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+        },
+        {
+          "a": false,
+          "q": "A LGPD impede todo acesso a documentos públicos que contenham dados pessoais.",
+          "why": "É necessária análise legal; pode haver acesso parcial e salvaguardas. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+        },
+        {
+          "a": true,
+          "q": "O controle de qualidade verifica legibilidade e completude da digitalização.",
+          "why": "Cortes, páginas ausentes e distorções devem ser identificados. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+        },
+        {
+          "a": true,
+          "q": "Acesso parcial pode ser uma alternativa quando apenas parte do documento é protegida.",
+          "why": "A parte não restrita pode ser fornecida com ocultação do conteúdo protegido, conforme o caso."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-06-digitalizacao-acesso-e-privacidade",
+      "discipline": "Arquivologia",
+      "topic_label": "Digitalização, acesso e privacidade",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Proveniência exige manter documentos vinculados ao produtor.",
+          "why": "Preserva a identidade do fundo. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+        },
+        {
+          "a": true,
+          "q": "Organicidade é a relação natural entre documentos e atividades.",
+          "why": "O vínculo funcional dá contexto ao conjunto. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+        },
+        {
+          "a": false,
+          "q": "Ordem original significa necessariamente ordenar por data.",
+          "why": "Pode ser qualquer organização estabelecida pelo produtor. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+        },
+        {
+          "a": false,
+          "q": "É correto misturar fundos de produtores diferentes para facilitar busca.",
+          "why": "A busca deve respeitar a proveniência. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+        },
+        {
+          "a": true,
+          "q": "A história de custódia pode ser relevante quando há mudança institucional.",
+          "why": "Ajuda a explicar transferências e sucessões. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-07-proveniencia-organicidade-e-ordem-original",
+      "discipline": "Arquivologia",
+      "topic_label": "Proveniência, organicidade e ordem original",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Fundo é conjunto orgânico ligado a um produtor.",
+          "why": "O produtor e suas funções explicam a formação do fundo. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+        },
+        {
+          "a": true,
+          "q": "Relatório de inspeção e relatório de investigação podem ser tipos diferentes da espécie relatório.",
+          "why": "O tipo associa espécie e atividade. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+        },
+        {
+          "a": false,
+          "q": "Suporte e formato são sinônimos.",
+          "why": "Papel é suporte; PDF é formato. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+        },
+        {
+          "a": true,
+          "q": "Ata é exemplo de espécie documental.",
+          "why": "É uma configuração formal. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+        },
+        {
+          "a": true,
+          "q": "Série documental reúne documentos de uma mesma atividade ou procedimento.",
+          "why": "A série mantém relação funcional no fundo. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-08-fundo-serie-especie-tipo-e-suporte",
+      "discipline": "Arquivologia",
+      "topic_label": "Fundo, série, espécie, tipo e suporte",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Gestão documental inclui produção, classificação, tramitação e destinação.",
+          "why": "É um conjunto de procedimentos ao longo do ciclo documental. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+        },
+        {
+          "a": false,
+          "q": "Plano de classificação e tabela de temporalidade são instrumentos idênticos.",
+          "why": "Um organiza funções; outro estabelece prazos e destino. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+        },
+        {
+          "a": true,
+          "q": "A tabela de temporalidade define prazos de guarda e destinação.",
+          "why": "Registra eliminação ou guarda permanente. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+        },
+        {
+          "a": false,
+          "q": "O setor pode eliminar documentos públicos sem autorização.",
+          "why": "A eliminação exige procedimento e autorização competentes. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+        },
+        {
+          "a": true,
+          "q": "A avaliação documental ocorre antes da destinação final.",
+          "why": "A avaliação fundamenta o destino dos documentos. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-09-gestao-documental-da-producao-a-destinacao",
+      "discipline": "Arquivologia",
+      "topic_label": "Gestão documental: da produção à destinação",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Digitalização converte documento não digital em representação digital.",
+          "why": "É uma operação de conversão. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+        },
+        {
+          "a": false,
+          "q": "Backup sozinho garante preservação digital de longo prazo.",
+          "why": "Não assegura contexto, metadados, autenticidade e acesso. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+        },
+        {
+          "a": true,
+          "q": "Migração transfere conteúdo para formato ou ambiente atualizado.",
+          "why": "Deve ser documentada e controlada. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+        },
+        {
+          "a": true,
+          "q": "Emulação reproduz ambiente tecnológico antigo.",
+          "why": "Pode permitir acesso a documentos dependentes de tecnologia obsoleta. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+        },
+        {
+          "a": false,
+          "q": "Hash, isoladamente, comprova autoria do documento.",
+          "why": "Ajuda a detectar alteração, mas não identifica autor sozinho. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-10-digitalizacao-e-preservacao-distincoes-essenciais",
+      "discipline": "Arquivologia",
+      "topic_label": "Digitalização e preservação: distinções essenciais",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A LAI estabelece acesso como regra geral.",
+          "why": "Restrições são exceções fundamentadas. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+        },
+        {
+          "a": false,
+          "q": "Transparência ativa depende sempre de pedido do cidadão.",
+          "why": "É divulgação independente de solicitação. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+        },
+        {
+          "a": true,
+          "q": "Transparência passiva envolve responder a pedidos de acesso.",
+          "why": "É o atendimento das solicitações. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+        },
+        {
+          "a": false,
+          "q": "Informação pessoal e informação classificada são categorias idênticas.",
+          "why": "Possuem fundamentos e regimes diferentes. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+        },
+        {
+          "a": true,
+          "q": "Acesso parcial pode ser adotado quando apenas trecho do documento está protegido.",
+          "why": "Pode-se ocultar o trecho restrito e fornecer o restante. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-11-acesso-sigilo-e-documentos-com-dados-pessoais",
+      "discipline": "Arquivologia",
+      "topic_label": "Acesso, sigilo e documentos com dados pessoais",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Classificação arquivística identifica a função ou atividade relacionada ao documento.",
+          "why": "A classificação contextualiza o documento segundo plano funcional. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+        },
+        {
+          "a": true,
+          "q": "Ordenação define a sequência interna dos documentos.",
+          "why": "Pode ser alfabética, numérica, cronológica, geográfica ou outra padronizada. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+        },
+        {
+          "a": false,
+          "q": "O método numérico dispensa qualquer índice de recuperação.",
+          "why": "Índice ou sistema de referência permite localizar por outros pontos de acesso. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+        },
+        {
+          "a": false,
+          "q": "Indexação substitui o plano de classificação.",
+          "why": "Indexação apoia busca; classificação mantém o contexto funcional. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+        },
+        {
+          "a": true,
+          "q": "Um padrão uniforme de ordenação melhora a recuperação.",
+          "why": "Padronização reduz inconsistência e erro de localização. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-12-metodos-de-arquivamento-e-recuperacao",
+      "discipline": "Arquivologia",
+      "topic_label": "Métodos de arquivamento e recuperação",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Conservação preventiva busca reduzir riscos de deterioração.",
+          "why": "Atua sobre ambiente, manuseio, armazenamento e acondicionamento. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+        },
+        {
+          "a": false,
+          "q": "Restauração e conservação preventiva são sinônimos.",
+          "why": "Restauração intervém em dano existente; prevenção reduz riscos. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+        },
+        {
+          "a": false,
+          "q": "Documentos devem ficar diretamente no chão para facilitar acesso.",
+          "why": "Contato com água, poeira e umidade aumenta riscos. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+        },
+        {
+          "a": false,
+          "q": "Suspeita de fungos deve ser tratada com limpeza improvisada.",
+          "why": "É necessário isolamento e avaliação por pessoal capacitado. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+        },
+        {
+          "a": true,
+          "q": "Acondicionamento inadequado pode acelerar deterioração.",
+          "why": "Materiais e dimensões incompatíveis podem causar danos. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-13-acondicionamento-e-conservacao-preventiva",
+      "discipline": "Arquivologia",
+      "topic_label": "Acondicionamento e conservação preventiva",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Metadados podem registrar produtor, data, formato e nível de acesso.",
+          "why": "Metadados incluem dados descritivos, administrativos e técnicos. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+        },
+        {
+          "a": true,
+          "q": "Indexação atribui termos que facilitam a recuperação.",
+          "why": "Os termos devem ser consistentes e representativos. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+        },
+        {
+          "a": false,
+          "q": "Vocabulário controlado aumenta variações de sinônimos sem padronização.",
+          "why": "Ele padroniza termos e relações para reduzir ambiguidades. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+        },
+        {
+          "a": false,
+          "q": "Metadados são apenas palavras-chave de assunto.",
+          "why": "Também incluem contexto, estrutura, gestão e preservação. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+        },
+        {
+          "a": true,
+          "q": "Metadados devem ser mantidos ao longo do ciclo de vida.",
+          "why": "São essenciais para gestão e preservação continuada. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-14-metadados-e-indexacao-documental",
+      "discipline": "Arquivologia",
+      "topic_label": "Metadados e indexação documental",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Integridade protege o documento contra alterações não autorizadas.",
+          "why": "Também envolve manter o documento completo. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+        },
+        {
+          "a": false,
+          "q": "Hash, sozinho, comprova a identidade de quem criou o arquivo.",
+          "why": "Hash permite comparar conteúdo; não comprova autoria sozinho. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+        },
+        {
+          "a": true,
+          "q": "Um documento autêntico pode conter informação incorreta.",
+          "why": "Autenticidade não é sinônimo de veracidade. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+        },
+        {
+          "a": false,
+          "q": "Sobrescrever silenciosamente uma versão mantém a rastreabilidade.",
+          "why": "É necessário histórico e registro das alterações. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+        },
+        {
+          "a": true,
+          "q": "Assinatura digital pode apoiar autoria e integridade.",
+          "why": "Depende de validação e infraestrutura aplicáveis; não substitui gestão arquivística."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-15-autenticidade-integridade-e-versoes",
+      "discipline": "Arquivologia",
+      "topic_label": "Autenticidade, integridade e controle de versões",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A LAI estabelece transparência como diretriz geral.",
+          "why": "Acesso é regra, restrições exigem fundamento legal. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+        },
+        {
+          "a": false,
+          "q": "A LGPD autoriza negar todo documento que contenha dado pessoal.",
+          "why": "Deve-se avaliar base legal e possibilidade de acesso parcial. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+        },
+        {
+          "a": false,
+          "q": "Informação pessoal e informação classificada por sigilo são categorias idênticas.",
+          "why": "Possuem regimes jurídicos distintos. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+        },
+        {
+          "a": true,
+          "q": "Pode ser possível fornecer documento com ocultação de trecho protegido.",
+          "why": "O acesso parcial preserva a parte não restrita quando cabível. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+        },
+        {
+          "a": true,
+          "q": "O tratamento de dados pelo poder público deve observar finalidade e necessidade.",
+          "why": "São princípios da LGPD, entre outros. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+        }
+      ],
+      "slug": "pcac-2026-guia-arquivologia-16-gestao-da-informacao-e-sigilo-arquivistico",
+      "discipline": "Arquivologia",
+      "topic_label": "Gestão da informação e sigilo arquivístico",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 5,
+        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+      }
+    }
+  ]
+}

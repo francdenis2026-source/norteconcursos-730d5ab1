@@ -1,0 +1,1777 @@
+{
+  "contest_name": "PC-AC 2026",
+  "discipline": "Contabilidade Geral e Análise Financeira",
+  "snapshot_date": "2026-11-21",
+  "modules": 9,
+  "quiz_items": 123,
+  "authorial_not_official": true,
+  "read_only_snapshot": true,
+  "materials": [
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "O objeto da Contabilidade é o patrimônio das entidades.",
+          "tip": "Objeto = patrimônio. Finalidade = informação e controle. Campo = aziendas/entidades.",
+          "why": "O objeto da Contabilidade é o patrimônio das entidades, entendido como o conjunto de bens, direitos e obrigações. A Contabilidade identifica, registra, controla e comunica informações sobre as mudanças patrimoniais para apoiar decisões. Não confunda objeto (patrimônio) com finalidade (fornecer informações úteis) nem com campo de aplicação (entidades/aziendas).",
+          "resolution_steps": [
+            "Identifique o que a Contabilidade estuda.",
+            "Separe objeto de finalidade.",
+            "O objeto é o patrimônio.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O patrimônio líquido corresponde à soma dos bens, direitos e obrigações.",
+          "tip": "Patrimônio = bens + direitos + obrigações. PL = ativo − passivo.",
+          "why": "Patrimônio em sentido amplo é o conjunto de bens, direitos e obrigações. Patrimônio Líquido é diferente: representa o interesse residual nos ativos depois de deduzidos os passivos. Exemplo: bens e direitos de R$ 20.000 e obrigações de R$ 12.000 resultam em PL de R$ 8.000, não R$ 32.000.",
+          "resolution_steps": [
+            "Identifique se a questão fala de patrimônio amplo ou PL.",
+            "Some bens e direitos para obter o ativo.",
+            "Subtraia as obrigações para achar o PL.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Valores a receber de clientes são classificados no ativo.",
+          "tip": "Direito = valor que a entidade tem a receber; fica no Ativo.",
+          "why": "Valores a receber de clientes são direitos da entidade contra terceiros. Direitos integram o Ativo porque representam recursos econômicos que a empresa espera receber. Exemplo: venda a prazo de R$ 2.000 gera Clientes a Receber no Ativo até o pagamento.",
+          "resolution_steps": [
+            "Identifique a natureza do saldo: valor a receber.",
+            "Classifique como direito.",
+            "Direitos integram o Ativo.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Fornecedores a pagar são classificados no passivo.",
+          "tip": "A pagar = obrigação = Passivo. A receber = direito = Ativo.",
+          "why": "Fornecedores a pagar representam obrigação da entidade de entregar dinheiro ou outro recurso ao fornecedor. Obrigações com terceiros integram o Passivo. Quando a empresa compra mercadorias a prazo, aumenta o estoque no Ativo e aumenta Fornecedores no Passivo.",
+          "resolution_steps": [
+            "Identifique que a empresa deve ao fornecedor.",
+            "Classifique como obrigação.",
+            "Obrigações integram o Passivo.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Se o ativo é R$ 20.000 e o passivo é R$ 12.000, o PL é R$ 32.000.",
+          "tip": "PL = A − P. Subtraia as obrigações dos recursos.",
+          "why": "A fórmula do Patrimônio Líquido é PL = Ativo − Passivo. Assim, R$ 20.000 − R$ 12.000 = R$ 8.000. Somar ativo e passivo produziria R$ 32.000, mas isso não representa a participação residual dos proprietários. Se o passivo fosse maior que o ativo, o PL seria negativo; se fossem iguais, o PL seria zero. O patrimônio líquido é o valor residual dos recursos depois de deduzidas todas as obrigações, não a soma dos dois grupos.",
+          "resolution_steps": [
+            "Anote o Ativo: R$ 20.000.",
+            "Anote o Passivo: R$ 12.000.",
+            "Subtraia: 20.000 − 12.000.",
+            "PL = R$ 8.000, não R$ 32.000."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Dois sócios integralizam R$ 25.000 cada em dinheiro, totalizando R$ 50.000 de capital social.",
+          "tip": "Some os aportes individuais: 25 mil + 25 mil.",
+          "why": "Dois sócios aportam R$ 25.000 cada. A soma das contribuições é R$ 50.000, que representa o capital social integralizado em dinheiro. O Caixa aumenta em R$ 50.000 e o Patrimônio Líquido aumenta pelo mesmo valor, mantendo a equação patrimonial equilibrada.",
+          "resolution_steps": [
+            "Identifique o aporte do primeiro sócio: R$ 25.000.",
+            "Identifique o aporte do segundo: R$ 25.000.",
+            "Some os valores: 25.000 + 25.000.",
+            "Capital integralizado = R$ 50.000."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O escritório deve ser registrado no Ativo por R$ 100.000, ainda que R$ 80.000 tenham sido financiados.",
+          "tip": "Bem pelo valor integral no Ativo; financiamento em separado no Passivo.",
+          "why": "O escritório deve ser reconhecido no Ativo pelo valor integral de R$ 100.000. O fato de R$ 80.000 terem sido financiados não reduz o valor do imóvel: o financiamento é registrado separadamente no Passivo. A empresa tem um ativo de R$ 100.000 e uma obrigação de R$ 80.000.",
+          "resolution_steps": [
+            "Identifique o valor do escritório: R$ 100.000.",
+            "Registre o bem pelo valor integral no Ativo.",
+            "Registre o financiamento de R$ 80.000 no Passivo.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma entidade começou com R$ 50.000 em caixa, pagou R$ 20.000 à vista por um escritório e R$ 15.000 à vista por móveis. Ao final, restaram R$ 15.000 em caixa.",
+          "tip": "Caixa final = caixa inicial − pagamentos feitos à vista.",
+          "why": "A empresa começa com R$ 50.000 em caixa. Paga R$ 20.000 pelo escritório e R$ 15.000 pelos móveis. Caixa final = 50.000 − 20.000 − 15.000 = R$ 15.000. Os bens adquiridos continuam no Ativo, além do dinheiro que restou. O caixa diminui apenas pelos pagamentos feitos à vista. Os bens comprados entram no Ativo pelo valor integral: o escritório por R$ 100.000 e os móveis por R$ 15.000. Por isso, o caixa restante deve ser somado aos bens para calcular o Ativo total.",
+          "resolution_steps": [
+            "Caixa inicial: R$ 50.000.",
+            "Subtraia o pagamento do escritório: 50.000 − 20.000 = 30.000.",
+            "Subtraia os móveis: 30.000 − 15.000 = 15.000.",
+            "Caixa final = R$ 15.000."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma entidade possui escritório de R$ 100.000, móveis de R$ 15.000 e caixa de R$ 15.000. O Ativo total é R$ 130.000, mesmo que R$ 80.000 do escritório tenham sido financiados.",
+          "tip": "Some todos os bens e direitos que permaneceram, sem descontar as dívidas do Ativo.",
+          "why": "O Ativo final soma escritório de R$ 100.000, móveis de R$ 15.000 e caixa restante de R$ 15.000: total de R$ 130.000. O financiamento de R$ 80.000 aparece no Passivo e não é subtraído do valor do imóvel no cálculo do Ativo. O financiamento de R$ 80.000 aparece separadamente no Passivo. O imóvel não é registrado apenas pelos R$ 20.000 pagos à vista: o Ativo reconhece o valor total do bem, enquanto o Passivo mostra a obrigação que ainda será liquidada.",
+          "resolution_steps": [
+            "Escritório: R$ 100.000.",
+            "Móveis: R$ 15.000.",
+            "Caixa restante: R$ 15.000.",
+            "Some: 100.000 + 15.000 + 15.000 = R$ 130.000."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A equação patrimonial final é 130.000 = 80.000 + 50.000.",
+          "tip": "Ativo = Passivo + PL. Confira os dois lados.",
+          "why": "A equação patrimonial fecha: Ativo R$ 130.000 = Passivo R$ 80.000 + Patrimônio Líquido R$ 50.000. O Passivo representa o financiamento contratado; o PL representa o capital aportado pelos sócios. A soma dos dois explica os recursos aplicados no Ativo.",
+          "resolution_steps": [
+            "Anote Ativo: R$ 130.000.",
+            "Anote Passivo: R$ 80.000.",
+            "Anote PL: R$ 50.000.",
+            "Some 80.000 + 50.000 = 130.000."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O campo de aplicação da Contabilidade abrange as aziendas, entendidas como patrimônio e gestão.",
+          "tip": "Azienda = patrimônio administrado; não é sinônimo apenas de empresa com fins lucrativos.",
+          "why": "A Contabilidade aplica-se às aziendas, isto é, entidades/patrimônios administrados. O campo de aplicação não se limita a sociedades empresárias: pode abranger entidades públicas, associações, fundações e organizações sem fins lucrativos. O objeto continua sendo o patrimônio.",
+          "resolution_steps": [
+            "Identifique a expressão azienda.",
+            "Associe-a a entidade/patrimônio administrado.",
+            "Considere organizações públicas e privadas.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O patrimônio da sociedade se confunde com o patrimônio particular de seus sócios.",
+          "tip": "Empresa e sócio não são a mesma pessoa patrimonialmente.",
+          "why": "A autonomia patrimonial significa que a pessoa jurídica possui patrimônio próprio, separado do patrimônio particular de seus sócios. Os bens, direitos e obrigações da entidade devem ser registrados em seus próprios controles, sem misturar automaticamente despesas pessoais dos proprietários com operações da empresa.",
+          "resolution_steps": [
+            "Identifique que a questão compara entidade e sócios.",
+            "Aplique o princípio da entidade/autonomia patrimonial.",
+            "Separe os patrimônios.",
+            "A afirmação está errada."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-01-fundamentos-patrimonio-ativo-passivo",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "1. Conceitos fundamentais de contabilidade",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "reviewed",
+        "review_date": "2026-11-14",
+        "items_checked": 12
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Caixa, Estoques e Fornecedores são exemplos de contas patrimoniais.",
+          "tip": "Patrimonial = Ativo, Passivo ou PL. Caixa/estoque são Ativo; fornecedor é Passivo.",
+          "why": "Caixa, Estoques e Fornecedores são contas patrimoniais. Caixa e Estoques representam ativos; Fornecedores representa uma obrigação no passivo. Contas patrimoniais são as que representam Ativo, Passivo e Patrimônio Líquido, diferentemente das contas de resultado, como receitas e despesas.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Representam, respectivamente, ativo, ativo e passivo.\n\nDica para fixar: Caixa e Estoques são Ativo; Fornecedores é Passivo. As três são contas patrimoniais.",
+          "resolution_steps": [
+            "Classifique Caixa: Ativo.",
+            "Classifique Estoques: Ativo.",
+            "Classifique Fornecedores: Passivo.",
+            "Todas representam elementos patrimoniais."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Receita de serviços é uma conta patrimonial do ativo.",
+          "tip": "Receita é resultado; Caixa ou Clientes é que integra o Ativo.",
+          "why": "Receita de serviços é conta de resultado, não conta patrimonial do Ativo. Quando o serviço é prestado a prazo, o direito a receber aparece em Clientes/Contas a Receber no Ativo; a receita é reconhecida separadamente na DRE. Quando recebido à vista, Caixa/Bancos aumenta e a Receita de Serviços é reconhecida.",
+          "difficulty": "fácil",
+          "wrong_feedback": "O erro está na afirmação apresentada: Receita é conta de resultado; o direito a receber ou o caixa correspondente é que integra o ativo. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique a conta citada: Receita de Serviços.",
+            "Classifique como conta de resultado.",
+            "Se houver valor a receber, esse direito é Ativo separado.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A compra de mercadorias à vista, sem outros efeitos, é fato permutativo.",
+          "tip": "Permutativo = troca patrimonial sem mexer no PL.",
+          "why": "Compra de mercadorias à vista, sem juros, descontos, perdas ou outros efeitos, troca um ativo por outro: Estoques aumenta e Caixa/Bancos diminui. O total do Ativo não muda e não há alteração imediata do PL. Por isso, é fato permutativo. A operação só seria modificativa se houvesse receita, despesa, ganho, perda ou outro efeito que alterasse o PL. Na hipótese simples, o valor sai de Caixa e passa para Estoques; os recursos apenas mudam de forma dentro do Ativo.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Ocorre troca entre caixa e estoque, sem alteração imediata do PL.\n\nDica para fixar: Pergunte se o PL mudou: troca de Caixa por Estoque, sem outro efeito, é permutação.",
+          "resolution_steps": [
+            "Identifique o estoque que entra.",
+            "Identifique o dinheiro que sai.",
+            "Observe que ambos são Ativo.",
+            "Como o PL não muda, é permutativo."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O reconhecimento de despesa reduz, em regra, o resultado e o PL.",
+          "tip": "Despesa reduz resultado/PL; o pagamento pode ocorrer em outro momento.",
+          "why": "O reconhecimento de despesa reduz o resultado do período e, em regra, reduz o Patrimônio Líquido. Se a despesa ainda não foi paga, também pode aumentar uma obrigação no passivo. O pagamento posterior baixa a obrigação e o caixa, sem reconhecer a mesma despesa novamente.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. A despesa representa redução de benefícios econômicos, ressalvadas distribuições aos proprietários.\n\nDica para fixar: Despesa reduz o resultado e, em regra, o PL; diferencie-a de distribuição aos sócios.",
+          "resolution_steps": [
+            "Identifique a despesa reconhecida.",
+            "Verifique seu efeito no resultado.",
+            "A despesa reduz o resultado e, em regra, o PL.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Fato misto combina efeitos permutativos e modificativos.",
+          "tip": "Misto = troca de contas + efeito no PL.",
+          "why": "Fato misto combina dois efeitos: uma permuta entre elementos patrimoniais e uma alteração do Patrimônio Líquido. Exemplo: recebimento de duplicata de R$ 1.000 com juros de R$ 100. Caixa aumenta R$ 1.100, Clientes diminui R$ 1.000 e a receita de juros aumenta o PL em R$ 100.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Há alteração qualitativa e também efeito sobre a situação líquida.\n\nDica para fixar: Misto = troca patrimonial + alteração do PL no mesmo fato.",
+          "resolution_steps": [
+            "Identifique a baixa do direito a receber.",
+            "Identifique a entrada de caixa.",
+            "Separe os juros como receita que aumenta o PL.",
+            "Classifique como misto aumentativo."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Atos contábeis são acontecimentos que não provocam alteração no patrimônio.",
+          "tip": "Ato não altera patrimônio; fato altera. Observe as condições concretas do contrato.",
+          "why": "Ato contábil é um acontecimento que, nas condições descritas, não altera o patrimônio. Fato contábil é o acontecimento que produz alteração patrimonial e deve ser reconhecido. Um pedido de compra ainda sem entrega, pagamento ou obrigação reconhecível pode ser ato; o recebimento da mercadoria é fato.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Essa é a distinção apresentada no resumo entre ato e fato contábil.\n\nDica para fixar: No pagamento com juros, separe a baixa da obrigação da despesa financeira: a combinação caracteriza fato misto diminutivo.",
+          "resolution_steps": [
+            "Identifique se houve entrega, pagamento ou obrigação presente.",
+            "Se nada alterou o patrimônio, é ato.",
+            "Se houve alteração patrimonial, é fato contábil.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Todo ato contábil deve ser registrado como fato contábil, mesmo sem alteração patrimonial.",
+          "tip": "Não confunda controle administrativo de um ato com lançamento contábil de um fato.",
+          "why": "A afirmação diz que todo ato deve ser registrado como fato, mesmo sem alteração patrimonial. Isso está errado: o registro contábil reconhece fatos que afetam o patrimônio. Atos sem efeito patrimonial, conforme as condições da operação, não são lançamentos contábeis patrimoniais.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: O ato não provoca variação patrimonial; o fato contábil provoca. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique a ausência de alteração patrimonial.",
+            "Aplique a distinção ato/fato.",
+            "Ato sem efeito patrimonial não é fato contábil.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O recebimento de uma duplicata de R$ 1.000 acrescida de R$ 100 de juros, totalizando R$ 1.100, é um fato misto aumentativo.",
+          "tip": "Separe o principal dos juros: principal troca ativo; juros aumentam o PL.",
+          "why": "Recebimento de duplicata de R$ 1.000 com juros de R$ 100 aumenta Caixa em R$ 1.100 e reduz Clientes em R$ 1.000. A receita financeira de R$ 100 aumenta o resultado e o PL. Há permuta (baixa do direito e entrada de dinheiro) e efeito modificativo aumentativo (juros), formando fato misto aumentativo.",
+          "resolution_steps": [
+            "Baixe Clientes: R$ 1.000.",
+            "Registre entrada de Caixa: R$ 1.100.",
+            "Reconheça receita de juros: R$ 100.",
+            "Permuta + aumento do PL = misto aumentativo."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O reconhecimento de receita de serviço é fato modificativo aumentativo.",
+          "tip": "Receita aumenta o resultado e, em regra, o PL.",
+          "why": "O reconhecimento de receita de serviço aumenta os benefícios econômicos da entidade e, em regra, aumenta o resultado e o PL. Se o serviço foi prestado a prazo, surge também um direito a receber; se foi recebido à vista, aumenta Caixa/Bancos. Em ambos os casos, a receita é modificativa aumentativa.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. A receita aumenta o resultado e, em regra, o PL.\n\nDica para fixar: Receita aumenta o resultado e, em regra, o patrimônio líquido.",
+          "resolution_steps": [
+            "Identifique a receita de serviço.",
+            "Verifique que aumenta benefícios econômicos.",
+            "Reconheça o efeito no resultado e PL.",
+            "Classifique como modificativo aumentativo."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O pagamento de obrigação com juros pode constituir fato misto diminutivo.",
+          "tip": "Pagamento do principal baixa a dívida; juros reduzem o PL.",
+          "why": "O pagamento de obrigação com juros reduz Caixa pelo total pago e reduz a dívida pelo principal. A parcela de juros é despesa financeira e diminui o resultado/PL. Como há baixa de contas patrimoniais e também efeito modificativo, o fato é misto diminutivo.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Há baixa de elementos patrimoniais e despesa de juros que reduz o PL.\n\nDica para fixar: Misto = troca patrimonial + alteração do PL no mesmo fato.",
+          "resolution_steps": [
+            "Separe principal e juros.",
+            "Baixe a obrigação pelo principal.",
+            "Registre a saída total de caixa.",
+            "Reconheça juros como despesa: fato misto diminutivo."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Caixa é uma conta do Ativo e possui natureza devedora.",
+          "tip": "Ativo aumenta por débito; Caixa é Ativo.",
+          "why": "Caixa é conta do Ativo. Contas do Ativo possuem natureza devedora: aumentam por débito e diminuem por crédito. Quando a empresa recebe dinheiro, debita Caixa; quando paga, credita Caixa. A natureza devedora não significa que o saldo seja uma dívida. O fato de Caixa ser devedor não significa que todo lançamento a débito seja entrada de dinheiro. A natureza indica o lado normal de aumento da conta: o saldo cresce por débito e diminui por crédito.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Classifique Caixa como Ativo.",
+            "Lembre a natureza usual do Ativo: devedora.",
+            "Aumento por débito e redução por crédito.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Empréstimos a pagar possui natureza devedora porque representa dinheiro recebido pela empresa.",
+          "tip": "Separe o dinheiro recebido da obrigação assumida. Caixa é devedor; empréstimo a pagar é credor.",
+          "why": "Empréstimos a pagar é Passivo, pois representa obrigação de devolver recursos ao banco. Passivos possuem natureza credora: aumentam por crédito e diminuem por débito. O dinheiro recebido aumenta Caixa/Bancos (Ativo devedor), mas a dívida que nasce é credora.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique Empréstimos a pagar como obrigação.",
+            "Classifique como Passivo.",
+            "Passivo aumenta por crédito.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Salários a pagar é uma obrigação e, por isso, possui natureza credora.",
+          "tip": "“A pagar” normalmente indica obrigação no Passivo.",
+          "why": "Salários a pagar é obrigação da empresa perante os empregados e integra o Passivo. Sua natureza é credora: a obrigação aumenta por crédito e diminui por débito quando a empresa paga os salários. Não confunda com Despesa com Salários, que é conta de resultado de natureza devedora.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique que a empresa ainda deve salários.",
+            "Classifique como Passivo.",
+            "A natureza do Passivo é credora.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Despesa com salários e Salários a pagar possuem necessariamente a mesma natureza.",
+          "tip": "Despesa é devedora; obrigação a pagar é credora.",
+          "why": "Despesa com salários representa o consumo do trabalho no período e é conta de resultado de natureza devedora. Salários a pagar representa a obrigação ainda não liquidada e é Passivo de natureza credora. Um lançamento de folha pode debitar despesa e creditar salários a pagar no mesmo valor.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Separe as duas contas pelo significado.",
+            "Despesa com salários = resultado devedora.",
+            "Salários a pagar = Passivo credora.",
+            "A afirmação de mesma natureza está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Receita de vendas é uma conta de resultado de natureza credora.",
+          "tip": "Receita aumenta por crédito.",
+          "why": "Receita de vendas é conta de resultado que aumenta o resultado do período e, em regra, o Patrimônio Líquido. Por isso, sua natureza usual é credora: aumenta por crédito e diminui por débito em estornos ou ajustes. Por exemplo, ao vender um produto por R$ 500, a conta Receita de Vendas aumenta por crédito. O recebimento pode ser à vista, aumentando Caixa, ou a prazo, aumentando Clientes; a receita continua sendo credora.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique Receita de Vendas como conta de resultado.",
+            "Receitas aumentam por crédito.",
+            "Classifique a natureza como credora.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Contas a receber é de natureza credora porque o cliente deve dinheiro à empresa.",
+          "tip": "Pergunte: quem tem o direito de receber? A empresa. Então é Ativo devedor.",
+          "why": "Contas a receber representam direito da empresa contra clientes. Direitos integram o Ativo, cuja natureza usual é devedora. O fato de o cliente dever dinheiro não torna a conta credora: a classificação é feita pela perspectiva da entidade que possui o direito de receber.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique quem tem o direito: a empresa.",
+            "Classifique como Ativo.",
+            "Ativo possui natureza devedora.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Máquinas e equipamentos são, em regra, contas do Ativo de natureza devedora.",
+          "tip": "Bem usado na operação = imobilizado; Ativo = devedor.",
+          "why": "Máquinas e equipamentos utilizados nas atividades da empresa são bens tangíveis do imobilizado. O imobilizado integra o Ativo e possui natureza devedora, aumentando por débito. A finalidade importa: equipamento comprado para uso é imobilizado; mercadoria comprada para revenda é estoque.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique o bem tangível.",
+            "Verifique a finalidade de uso na entidade.",
+            "Classifique no imobilizado/Ativo.",
+            "Natureza usual devedora."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A depreciação acumulada é uma conta redutora do Ativo com natureza credora.",
+          "tip": "Conta redutora do Ativo costuma ter natureza credora.",
+          "why": "Depreciação acumulada é conta retificadora do imobilizado. Embora o imobilizado tenha natureza devedora, a conta que o reduz apresenta natureza credora. Ela acumula a depreciação reconhecida ao longo do tempo e reduz o valor contábil líquido do ativo.",
+          "difficulty": "difícil",
+          "resolution_steps": [
+            "Identifique Depreciação Acumulada.",
+            "Reconheça que reduz o imobilizado.",
+            "Conta redutora tem natureza oposta à do Ativo.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Um lançamento com um débito e dois créditos utiliza a terceira fórmula de partida dobrada.",
+          "tip": "1 débito + vários créditos = 2ª fórmula. Vários débitos + 1 crédito = 3ª.",
+          "why": "Um lançamento com um débito e dois créditos é de segunda fórmula. A terceira fórmula exige dois ou mais débitos e apenas um crédito. A classificação depende da quantidade de contas em cada lado, não do número de parcelas ou da natureza das contas. A segunda fórmula tem exatamente uma conta no lado do débito e pelo menos duas no lado do crédito. A terceira fórmula inverte essa distribuição: duas ou mais contas debitadas e somente uma creditada.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Conte os débitos: um.",
+            "Conte os créditos: dois.",
+            "Classifique como segunda fórmula.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A segunda fórmula de lançamento possui um débito e dois ou mais créditos.",
+          "tip": "Segunda fórmula = um débito, vários créditos.",
+          "why": "A segunda fórmula de lançamento contém uma conta debitada e duas ou mais contas creditadas. Exemplo: débito Equipamentos R$ 1.000; crédito Caixa R$ 400 e Fornecedores R$ 600. O total debitado e creditado permanece R$ 1.000. A soma dos valores das contas creditadas precisa corresponder ao valor debitado. Se a empresa compra um equipamento de R$ 1.000, pagando R$ 400 e ficando devendo R$ 600, o débito único de R$ 1.000 corresponde aos dois créditos.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Conte as contas debitadas: uma.",
+            "Conte as contas creditadas: duas ou mais.",
+            "Classifique como segunda fórmula.",
+            "Confira igualdade dos valores."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Na compra de equipamento com parte à vista e parte a prazo, pode haver um débito no imobilizado e créditos em Bancos e Fornecedores.",
+          "tip": "O bem entra pelo total; a contrapartida se divide entre dinheiro e dívida.",
+          "why": "Na compra de equipamento por R$ 10.000, com R$ 4.000 pagos à vista e R$ 6.000 a prazo, debita-se Imobilizado em R$ 10.000 e creditam-se Bancos em R$ 4.000 e Fornecedores em R$ 6.000. Há um débito e dois créditos, portanto segunda fórmula. O lançamento mantém a igualdade: débito no Imobilizado pelo preço total e créditos nas fontes de pagamento. A classificação é determinada pela quantidade de contas, não pelo fato de a compra ser à vista ou a prazo.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Debite Equipamentos pelo total: R$ 10.000.",
+            "Credite Bancos pela parcela paga: R$ 4.000.",
+            "Credite Fornecedores pela parcela a prazo: R$ 6.000.",
+            "Um débito e dois créditos = 2ª fórmula."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A quarta fórmula ocorre quando há vários débitos e apenas um crédito.",
+          "tip": "Quarta = vários de cada lado. Terceira = vários débitos e um crédito.",
+          "why": "A quarta fórmula exige duas ou mais contas debitadas e duas ou mais contas creditadas. A estrutura descrita — vários débitos e um crédito — é a terceira fórmula. O total dos valores debitados deve continuar igual ao total dos créditos, independentemente da quantidade de contas.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Conte as contas debitadas: duas ou mais.",
+            "Conte as contas creditadas: uma.",
+            "Classifique como terceira fórmula.",
+            "A afirmação que chama de quarta está errada."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-02-contas-receitas-despesas-fatos",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "2. Contas patrimoniais e de resultado",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 10,
+        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
+        "current_quiz_items": 22,
+        "previously_checked_items": 10
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "No método das partidas dobradas, o total dos débitos deve ser igual ao total dos créditos.",
+          "tip": "Regra de ouro: soma dos débitos = soma dos créditos.",
+          "why": "O método das partidas dobradas exige que cada lançamento tenha débitos e créditos de igual valor. Isso não significa que toda operação tenha apenas uma conta de cada lado: pode haver várias contas debitadas ou creditadas. O essencial é que a soma de todos os débitos seja igual à soma de todos os créditos.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Essa igualdade é a regra fundamental de cada lançamento.\n\nDica para fixar: Regra de ouro: total dos débitos = total dos créditos em cada lançamento.",
+          "resolution_steps": [
+            "Identifique todas as contas debitadas.",
+            "Some os valores debitados.",
+            "Some os valores creditados.",
+            "Confira se os totais são iguais."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O aumento de uma conta do ativo ocorre, em regra, por crédito.",
+          "tip": "Ativo e despesa aumentam por débito; passivo, PL e receita aumentam por crédito.",
+          "why": "Ativo tem natureza devedora: aumenta por débito e diminui por crédito. Exemplo: ao receber R$ 1.000 em dinheiro, Caixa aumenta e é debitada. Ao pagar R$ 300, Caixa diminui e é creditada. A afirmação está errada porque inverte o lado do aumento do ativo.",
+          "difficulty": "fácil",
+          "wrong_feedback": "O erro está na afirmação apresentada: O ativo aumenta por débito e diminui por crédito. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique a conta: Ativo.",
+            "Verifique se está aumentando ou diminuindo.",
+            "Aumento do ativo é débito; redução é crédito.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O aumento de uma obrigação com fornecedor é registrado a crédito na conta Fornecedores.",
+          "tip": "Passivo aumenta por crédito e diminui por débito.",
+          "why": "Fornecedores é uma conta do Passivo. Quando a empresa compra a prazo, a obrigação aumenta e é registrada a crédito. Quando paga a dívida, o passivo diminui e é debitado. O crédito representa aumento da obrigação, não necessariamente entrada de dinheiro.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Passivos aumentam por crédito.\n\nDica para fixar: Passivo aumenta por crédito e diminui por débito.",
+          "resolution_steps": [
+            "Identifique Fornecedores como Passivo.",
+            "Verifique que a compra a prazo aumenta a obrigação.",
+            "Aumento do passivo é crédito.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O balancete de verificação identifica necessariamente qualquer classificação incorreta de conta.",
+          "tip": "Balancete equilibrado não significa escrituração sem erros.",
+          "why": "O balancete compara os saldos devedores e credores e verifica sua igualdade matemática. Mas pode haver erro de classificação, omissão integral de operação ou lançamento em conta errada sem diferença nos totais. Portanto, o balancete ajuda na conferência, mas não garante que todos os registros estejam corretos.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: Pode haver erro de classificação mesmo com débitos e créditos iguais. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o objetivo do balancete: conferir igualdade.",
+            "Lembre que erros podem manter débitos e créditos iguais.",
+            "Diferencie equilíbrio aritmético de correção contábil.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Na integralização de capital em dinheiro, Caixa é debitada e Capital Social é creditada.",
+          "tip": "Caixa aumenta por débito; Capital Social aumenta por crédito.",
+          "why": "Na integralização de capital em dinheiro, o Caixa aumenta, pois a empresa recebe recursos; como Ativo aumenta por débito, debita-se Caixa. O Capital Social, no Patrimônio Líquido, aumenta por crédito. Os dois lados devem registrar R$ 10.000, mantendo o lançamento equilibrado.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Aumenta o ativo Caixa e aumenta o PL representado pelo Capital Social.\n\nDica para fixar: Caixa aumenta (débito); Capital Social aumenta (crédito).",
+          "resolution_steps": [
+            "Identifique Caixa como Ativo que aumenta: débito.",
+            "Identifique Capital Social como PL que aumenta: crédito.",
+            "Registre R$ 10.000 em cada lado.",
+            "Confira a igualdade."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O histórico do lançamento deve representar a essência econômica da transação.",
+          "tip": "Histórico bom explica o que aconteceu e permite rastrear o documento.",
+          "why": "O histórico deve permitir compreender a essência econômica do fato registrado, por exemplo “compra de mercadorias para revenda conforme nota fiscal nº...”. Um texto genérico como “lançamento do mês” não permite identificar adequadamente a operação. A escrituração também precisa conter data, contas, valor e identificação do registro.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. O resumo inclui o histórico entre os elementos mínimos da escrituração.\n\nDica para fixar: O histórico deve permitir entender a essência econômica do fato registrado.",
+          "resolution_steps": [
+            "Identifique o fato econômico.",
+            "Localize o documento de suporte.",
+            "Redija histórico claro e específico.",
+            "Confira se o registro pode ser identificado e rastreado."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A 2ª fórmula de lançamento apresenta uma conta debitada e duas ou mais contas creditadas.",
+          "tip": "2ª fórmula: um débito, vários créditos.",
+          "why": "A 2ª fórmula tem uma conta debitada e duas ou mais contas creditadas. Exemplo: débito Equipamentos R$ 1.000; crédito Caixa R$ 400 e Fornecedores R$ 600. A soma dos créditos (R$ 1.000) é igual ao débito, mesmo havendo duas contas credoras. Exemplo prático: a empresa compra um equipamento de R$ 1.000, paga R$ 400 à vista e fica devendo R$ 600. O lançamento pode debitar Equipamentos em R$ 1.000 e creditar Caixa em R$ 400 e Fornecedores em R$ 600. Há uma conta devedora e duas credoras, portanto é 2ª fórmula.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. É a classificação apresentada no quadro de fórmulas.\n\nDica para fixar: 2ª fórmula: um débito e vários créditos.",
+          "resolution_steps": [
+            "Conte as contas debitadas: uma.",
+            "Conte as contas creditadas: duas ou mais.",
+            "Classifique como 2ª fórmula.",
+            "Confira que os valores totais são iguais."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A 3ª fórmula de lançamento apresenta duas ou mais contas debitadas e uma conta creditada.",
+          "tip": "3ª fórmula: vários débitos, um crédito.",
+          "why": "A 3ª fórmula tem duas ou mais contas debitadas e uma conta creditada. Exemplo: débito Caixa R$ 900 e despesa bancária R$ 100; crédito Clientes R$ 1.000. A estrutura é identificada pela quantidade de contas em cada lado, não pelo valor ou pela natureza das contas.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. É a estrutura da 3ª fórmula.\n\nDica para fixar: 3ª fórmula: vários débitos e um crédito.",
+          "resolution_steps": [
+            "Conte as contas debitadas: duas ou mais.",
+            "Conte as contas creditadas: uma.",
+            "Classifique como 3ª fórmula.",
+            "Confira a igualdade dos valores."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A transferência é uma forma de retificação que transpõe o valor para a conta correta.",
+          "tip": "Transferência troca a conta; estorno inverte; complementação ajusta o valor.",
+          "why": "A transferência é uma forma de retificação que desloca o valor registrado em conta incorreta para a conta correta. Não é o mesmo que estorno, que anula o lançamento por meio de registro inverso, nem complementação, que corrige o valor. A retificação deve preservar a trilha do registro original.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Essa é a definição de transferência no resumo.\n\nDica para fixar: Na retificação, transferência desloca o valor da conta usada para a conta correta.",
+          "resolution_steps": [
+            "Identifique o erro: conta utilizada incorretamente.",
+            "Localize a conta correta.",
+            "Transfira o valor para a conta correta.",
+            "Preserve a rastreabilidade da correção."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O balancete garante que não houve omissão de lançamentos nem erro de classificação.",
+          "tip": "Balancete verifica igualdade, não a validade de cada fato ou conta.",
+          "why": "O balancete mostra se os saldos devedores e credores estão matematicamente iguais, mas não garante ausência de omissões ou erros de classificação. Se uma operação inteira não foi lançada, nenhum lado aparece e o balancete pode continuar equilibrado. Se a conta errada foi usada nos dois lados, a igualdade também pode permanecer.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: O balancete evidencia a igualdade matemática, mas não detecta necessariamente esses erros. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o que o balancete confere: igualdade dos saldos.",
+            "Considere erros que não alteram essa igualdade.",
+            "Omissão integral e conta errada podem passar despercebidas.",
+            "A afirmação está errada."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-03-escrituracao-partidas-dobradas",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "3. Escrituração contábil",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "reviewed",
+        "review_date": "2026-11-14",
+        "items_checked": 10
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "O Balanço Patrimonial apresenta a posição patrimonial em determinada data.",
+          "tip": "Balanço = fotografia em uma data. DRE = filme do desempenho ao longo do período.",
+          "why": "O Balanço Patrimonial mostra a posição patrimonial e financeira em uma data específica, como uma fotografia tirada em 31 de dezembro. Ele apresenta ativos, passivos e patrimônio líquido naquele momento. Não descreve sozinho tudo o que ocorreu durante o ano; essa evolução do desempenho aparece principalmente na DRE e em outras demonstrações.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. É uma demonstração estática da posição patrimonial e financeira.\n\nDica para fixar: Balanço Patrimonial é fotografia: mostra a posição em uma data.",
+          "resolution_steps": [
+            "Identifique a demonstração: Balanço Patrimonial.",
+            "Observe que a pergunta fala de posição em uma data.",
+            "Relacione os grupos Ativo, Passivo e PL.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A DRE demonstra apenas o saldo de caixa no último dia do exercício.",
+          "tip": "DRE = receitas, custos, despesas e lucro/prejuízo do período.",
+          "why": "A DRE não apresenta apenas caixa no último dia do exercício. Ela evidencia receitas, custos, despesas e resultado de um período pelo regime de competência. O caixa pode ser diferente do lucro porque vendas a prazo, despesas incorridas e pagamentos antecipados afetam o momento do reconhecimento e o momento da movimentação financeira.",
+          "difficulty": "fácil",
+          "wrong_feedback": "O erro está na afirmação apresentada: A DRE evidencia receitas, custos, despesas e resultado de um período. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o que a DRE apresenta: desempenho.",
+            "Procure receitas, custos e despesas.",
+            "Não confunda resultado com saldo de caixa.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "No regime de competência, uma receita pode ser reconhecida antes do recebimento.",
+          "tip": "Competência olha quando a receita é gerada; caixa olha quando o dinheiro entra.",
+          "why": "No regime de competência, a receita é reconhecida no período em que é gerada, desde que os critérios de reconhecimento sejam atendidos, mesmo que o cliente pague depois. Exemplo: serviço concluído em dezembro e recebido em janeiro pertence à receita de dezembro; o recebimento em janeiro aparecerá no fluxo de caixa de janeiro.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. O reconhecimento acompanha o período em que a receita é gerada, se os critérios forem atendidos.\n\nDica para fixar: Competência acompanha o fato gerador econômico; não depende de receber ou pagar no mesmo dia.",
+          "resolution_steps": [
+            "Identifique quando o serviço foi realizado.",
+            "Confira se os critérios de reconhecimento foram atendidos.",
+            "Reconheça a receita em dezembro.",
+            "Registre o recebimento em janeiro no fluxo financeiro."
+          ]
+        },
+        {
+          "a": false,
+          "q": "No regime de caixa, uma despesa é reconhecida necessariamente quando o serviço é consumido, mesmo sem pagamento.",
+          "tip": "Caixa = pagou/recebeu. Competência = consumiu/gerou o fato econômico.",
+          "why": "O regime de caixa reconhece a movimentação quando ocorre o pagamento ou recebimento. O consumo do serviço em dezembro, ainda que pago em janeiro, pertence à competência de dezembro. A afirmação mistura o critério de competência com o de caixa e, por isso, está errada.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: O regime de caixa considera o pagamento; o consumo do serviço é tratado pela competência. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o regime mencionado: caixa.",
+            "Procure o momento do pagamento.",
+            "Se a despesa é reconhecida pelo consumo, isso é competência.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma entidade pode ter lucro e enfrentar dificuldade de caixa.",
+          "tip": "Lucro não significa dinheiro na conta. Venda a prazo pode gerar lucro sem entrada imediata.",
+          "why": "Lucro e caixa são conceitos diferentes. A empresa pode reconhecer receita de venda a prazo e obter lucro, mas ainda não receber o dinheiro do cliente. Também pode pagar dívidas antigas e ficar com pouco caixa apesar de apresentar lucro no período. Por isso, a análise do resultado deve ser complementada pelo fluxo de caixa e pelos prazos de recebimento e pagamento.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Vendas a prazo e outros descasamentos entre recebimentos e pagamentos podem gerar essa situação.\n\nDica para fixar: Lucro não é sinônimo de dinheiro disponível: venda a prazo pode gerar lucro sem entrada imediata.",
+          "resolution_steps": [
+            "Identifique se a venda foi a prazo.",
+            "Reconheça a receita pelo regime de competência.",
+            "Observe que o caixa só aumenta quando houver recebimento.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O ativo não circulante inclui realizável a longo prazo, investimentos, imobilizado e intangível.",
+          "tip": "Memorize os quatro grupos do ANC: RLP, investimentos, imobilizado e intangível.",
+          "why": "O Ativo Não Circulante é composto por Realizável a Longo Prazo, Investimentos, Imobilizado e Intangível, conforme a estrutura do balanço brasileiro. São grupos diferentes: máquina usada na produção é imobilizado; participação permanente em outra sociedade pode ser investimento; software identificável que atende aos critérios é intangível.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Esses são os quatro grupos apresentados no resumo.\n\nDica para fixar: Memorize os quatro grupos: realizável a longo prazo, investimentos, imobilizado e intangível.",
+          "resolution_steps": [
+            "Identifique que a pergunta trata do Ativo Não Circulante.",
+            "Liste os quatro grupos formais.",
+            "Compare a alternativa com a estrutura.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "As contas do Ativo são apresentadas em ordem decrescente de liquidez.",
+          "tip": "Mais líquido primeiro: caixa, bancos, recebíveis, estoques, bens de uso.",
+          "why": "As contas do Ativo são apresentadas em ordem decrescente de liquidez: primeiro os recursos que se convertem mais facilmente em dinheiro, como caixa e bancos; depois clientes e estoques; por fim, bens de uso e outros ativos menos líquidos. Liquidez significa facilidade de conversão em dinheiro.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. O resumo descreve essa ordem de apresentação.\n\nDica para fixar: Liquidez é facilidade de conversão em dinheiro: o mais líquido aparece primeiro.",
+          "resolution_steps": [
+            "Defina liquidez como facilidade de virar dinheiro.",
+            "Identifique os ativos mais líquidos.",
+            "A ordem exigida é decrescente.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O Balanço Patrimonial evidencia o desempenho ao longo de um período, enquanto a DRE apresenta a posição em uma data.",
+          "tip": "Balanço = data; DRE = período.",
+          "why": "A afirmação inverte as demonstrações. O Balanço Patrimonial mostra a posição em uma data específica; a DRE apresenta receitas, custos, despesas e resultado ao longo de um período. Uma frase que troca as referências temporais das duas demonstrações está errada.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: Está invertido: o Balanço é uma posição em data específica; a DRE evidencia o resultado de um período. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique as duas demonstrações citadas.",
+            "Associe Balanço à posição em data específica.",
+            "Associe DRE ao desempenho do período.",
+            "A afirmação está invertida e é falsa."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma receita de serviço realizada em dezembro, mas recebida somente em janeiro, é reconhecida em dezembro quando atendidos os critérios do regime de competência.",
+          "tip": "O mês do recebimento pode ser diferente do mês da receita.",
+          "why": "Uma receita de serviço realizada em dezembro é reconhecida em dezembro pelo regime de competência, mesmo que o cliente pague em janeiro, desde que os critérios de reconhecimento estejam atendidos. O recebimento posterior não desloca automaticamente a receita para o mês do caixa.",
+          "resolution_steps": [
+            "Identifique quando o serviço foi realizado.",
+            "Confira os critérios de reconhecimento.",
+            "Registre receita em dezembro.",
+            "Registre o recebimento em janeiro na movimentação de caixa."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Imobilizado e intangível são grupos distintos do ativo não circulante.",
+          "tip": "Tangível e usado na operação = imobilizado; direito incorpóreo identificável = intangível.",
+          "why": "Imobilizado e intangível são grupos distintos do Ativo Não Circulante. Imobilizado reúne bens corpóreos destinados à manutenção das atividades, como máquinas e veículos. Intangível reúne ativos identificáveis sem substância física, como patentes e determinados softwares, quando atendidos os critérios de reconhecimento.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Imobilizado se refere a bens corpóreos; intangível, a direitos incorpóreos.\n\nDica para fixar: Memorize os quatro grupos: realizável a longo prazo, investimentos, imobilizado e intangível.",
+          "resolution_steps": [
+            "Identifique o grupo do Ativo Não Circulante.",
+            "Diferencie bem corpóreo de direito incorpóreo.",
+            "Classifique imobilizado e intangível separadamente.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "No balanço patrimonial, as contas do Ativo são apresentadas em ordem decrescente de liquidez.",
+          "tip": "O mais líquido vem primeiro.",
+          "why": "A ordem decrescente de liquidez significa que o ativo mais fácil de transformar em dinheiro aparece antes. Caixa e disponibilidades ficam antes de clientes, estoques, máquinas e imóveis de uso. Não é ordem alfabética nem crescente. Essa ordem facilita a leitura da liquidez: primeiro o dinheiro e equivalentes, depois direitos que serão recebidos e estoques que precisam ser vendidos, e por fim bens mantidos para uso. O critério é a facilidade de conversão em caixa, não a importância econômica do ativo.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique a expressão ordem decrescente.",
+            "Lembre que caixa é mais líquido que estoque e imobilizado.",
+            "Organize do mais líquido ao menos líquido.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Uma empresa deve apresentar primeiro seus imóveis de uso e, por último, o dinheiro em caixa, pois o Ativo segue ordem crescente de liquidez.",
+          "tip": "Cuidado com a troca de “decrescente” por “crescente”.",
+          "why": "A afirmação diz ordem crescente, mas a regra de apresentação do Ativo é decrescente de liquidez. Caixa deve aparecer antes de imóveis de uso, pois já é dinheiro disponível, enquanto imóveis normalmente exigem processo de venda para se converterem em caixa.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique a palavra usada para a ordem.",
+            "Compare caixa e imóvel quanto à facilidade de conversão.",
+            "Caixa é mais líquido e aparece primeiro.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma máquina utilizada na produção integra, em regra, o Ativo Imobilizado.",
+          "tip": "Máquina usada na operação = imobilizado. Máquina comprada para revenda pode ser estoque.",
+          "why": "Uma máquina utilizada na produção é um bem corpóreo destinado à manutenção das atividades da entidade. Por isso, em regra, integra o Ativo Imobilizado, e não estoques ou intangível. Se a máquina for adquirida para revenda no curso normal dos negócios, a classificação pode ser diferente; observe a finalidade.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique a natureza do bem: tangível.",
+            "Identifique a finalidade: uso na produção.",
+            "Classifique como imobilizado.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O ativo diferido constitui atualmente um dos grupos normais do Ativo Não Circulante.",
+          "tip": "Diferido como grupo autônomo é classificação antiga; ativo fiscal diferido é outro assunto.",
+          "why": "Ativo diferido é terminologia de estrutura histórica. A estrutura atual do Ativo Não Circulante não apresenta o diferido como grupo autônomo. Não confunda essa expressão antiga com ativo fiscal diferido, que é outro conceito contábil e possui norma específica.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique a expressão “ativo diferido”.",
+            "Verifique se a questão trata da estrutura atual do balanço.",
+            "A estrutura atual não inclui o diferido como grupo autônomo.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Um ativo não circulante que atende aos critérios de mantido para venda pode ser apresentado separadamente e classificado no Ativo Circulante.",
+          "tip": "Mantido para venda: disponível imediatamente + venda altamente provável.",
+          "why": "Um ativo não circulante pode ser apresentado separadamente e classificado no Ativo Circulante quando atende aos critérios de mantido para venda: deve estar disponível para venda imediata em suas condições atuais e a venda deve ser altamente provável, conforme CPC 31/NBC TG 31. Não basta a intenção informal de vender.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique que o ativo era não circulante.",
+            "Confira disponibilidade para venda imediata.",
+            "Confira se a venda é altamente provável e há plano efetivo.",
+            "Se os critérios forem atendidos, classifique conforme CPC 31."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A mera intenção da administração de vender uma máquina é suficiente para classificá-la como mantida para venda.",
+          "tip": "Intenção isolada não basta; procure os critérios objetivos do CPC 31.",
+          "why": "A mera intenção da administração não basta para classificar um ativo como mantido para venda. É necessário que esteja disponível para venda imediata em suas condições atuais e que a venda seja altamente provável, com compromisso e ações efetivas para concluí-la. A classificação depende dos critérios do CPC 31.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique que a questão menciona apenas intenção de vender.",
+            "Verifique se há disponibilidade imediata e venda altamente provável.",
+            "Se os critérios não foram demonstrados, não classifique como mantido para venda.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Uma dívida contratualmente de longo prazo será sempre não circulante, mesmo que esteja vencida ou exigível à vista na data do balanço.",
+          "tip": "Olhe os direitos existentes na data do balanço, não apenas o prazo original do contrato.",
+          "why": "Uma dívida não é automaticamente não circulante só porque o contrato original tem prazo longo. A classificação considera os direitos da entidade existentes na data do balanço e os critérios do CPC 26. Se a dívida se tornou exigível à vista por descumprimento de cláusula e a empresa não tinha direito de postergar a liquidação, pode ser circulante.",
+          "difficulty": "difícil",
+          "resolution_steps": [
+            "Identifique o vencimento contratual original.",
+            "Verifique se houve inadimplemento e vencimento antecipado.",
+            "Analise se, na data do balanço, a entidade tinha direito de adiar a liquidação.",
+            "Classifique conforme o direito existente naquela data."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A antiga reserva de reavaliação pode ser criada livremente sempre que o valor de mercado de um imóvel aumentar.",
+          "tip": "Não confunda AAP com autorização genérica para reavaliar qualquer bem.",
+          "why": "A antiga reserva de reavaliação não pode ser criada livremente sempre que o valor de mercado de um imóvel aumenta. O modelo antigo foi alterado pela legislação societária e as normas atuais estabelecem critérios específicos de mensuração e reconhecimento, inclusive para ajustes de avaliação patrimonial em situações próprias.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique a expressão antiga reserva de reavaliação.",
+            "Verifique se a norma atual permite esse reconhecimento específico.",
+            "Não presuma liberdade para reavaliar qualquer ativo.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Mantidos constantes o Passivo Circulante e os demais componentes do Ativo Circulante, o aumento isolado dos estoques eleva a liquidez corrente e não altera a liquidez seca.",
+          "tip": "Corrente inclui estoque; seca exclui estoque.",
+          "why": "A liquidez corrente é AC ÷ PC e inclui estoques. A liquidez seca retira os estoques do numerador. Mantidos os demais valores constantes, o aumento isolado do estoque eleva a liquidez corrente, mas não altera a liquidez seca simplificada, porque o aumento é excluído do cálculo desta.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Escreva LC = AC/PC.",
+            "Escreva LS = (AC − estoque)/PC, conforme fórmula simplificada.",
+            "Aumentar estoque aumenta AC e LC.",
+            "O estoque é subtraído na LS, mantendo seu numerador inalterado."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A liquidez seca considera os estoques integralmente, pois eles representam recursos disponíveis para pagamento imediato.",
+          "tip": "Liquidez seca não conta com a venda do estoque.",
+          "why": "A liquidez seca exclui estoques justamente porque eles precisam ser vendidos para se converter em dinheiro. Estoques podem ter baixa rotação, obsolescência ou necessidade de desconto para venda. Por isso, a liquidez seca avalia a cobertura das obrigações de curto prazo sem depender da realização dos estoques.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique a fórmula da liquidez seca.",
+            "Retire estoques do Ativo Circulante.",
+            "Compare o resultado com o Passivo Circulante.",
+            "A afirmação que inclui estoque está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma entidade possui Ativo Circulante de R$ 18.000, estoques de R$ 6.000 e Passivo Circulante de R$ 6.000. Sua liquidez corrente é 3,00 e sua liquidez seca é 2,00.",
+          "tip": "Faça duas contas separadas: corrente inclui estoque; seca retira estoque.",
+          "why": "Liquidez corrente = 18.000 ÷ 6.000 = 3,00. Liquidez seca simplificada = (18.000 − 6.000) ÷ 6.000 = 12.000 ÷ 6.000 = 2,00. Isso significa R$ 3 de ativo circulante para cada R$ 1 de passivo circulante e R$ 2 sem depender dos estoques.A liquidez corrente de 3,00 indica R$ 3 de ativo circulante para cada R$ 1 de obrigação de curto prazo. A liquidez seca de 2,00 indica R$ 2 por real de obrigação sem depender da venda dos R$ 6.000 em estoque.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "LC = AC/PC = 18.000/6.000 = 3,00.",
+            "Subtraia estoques: 18.000 − 6.000 = 12.000.",
+            "LS = 12.000/6.000 = 2,00.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A margem líquida relaciona o lucro líquido obtido pela entidade com a receita líquida do período, geralmente expressando o resultado em percentual.",
+          "tip": "Margem líquida = lucro líquido/receita líquida.",
+          "why": "Margem líquida é indicador de rentabilidade: lucro líquido dividido pela receita líquida, multiplicado por 100. Mostra quanto de lucro sobra em cada R$ 100 de receita líquida. Não mede diretamente capacidade de pagar obrigações de curto prazo; isso é analisado por indicadores de liquidez.",
+          "difficulty": "fácil",
+          "resolution_steps": [
+            "Identifique lucro líquido.",
+            "Identifique receita líquida.",
+            "Divida lucro por receita e multiplique por 100.",
+            "Interprete como lucro por R$ 100 vendidos."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma empresa apresenta receita líquida de R$ 50.000 e lucro líquido de R$ 5.000. Sua margem líquida é de 10%.",
+          "tip": "Divida lucro por receita; transforme o decimal em percentual.",
+          "why": "Margem líquida = R$ 5.000 ÷ R$ 50.000 = 0,10. Multiplicando por 100, o resultado é 10%. Em linguagem simples, a cada R$ 100 de receita líquida, a empresa obteve R$ 10 de lucro líquido. A margem líquida mostra quanto do faturamento líquido se converte em lucro após custos, despesas e tributos sobre o resultado. Uma margem de 10% significa que, a cada R$ 100 de receita líquida, restam R$ 10 de lucro líquido.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Anote lucro líquido: R$ 5.000.",
+            "Anote receita líquida: R$ 50.000.",
+            "Divida 5.000/50.000 = 0,10.",
+            "Converta: 0,10 × 100 = 10%."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A margem líquida é calculada pela divisão do ativo circulante pelo passivo circulante, indicando a capacidade de pagamento das dívidas de curto prazo.",
+          "tip": "AC/PC = liquidez corrente. Lucro/receita = margem líquida.",
+          "why": "Ativo Circulante ÷ Passivo Circulante é a fórmula da liquidez corrente, um indicador de capacidade de pagamento de curto prazo. Margem líquida é lucro líquido ÷ receita líquida. A questão mistura um índice de liquidez com um indicador de rentabilidade, portanto está errada.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Identifique o numerador e denominador apresentados.",
+            "Reconheça AC/PC como liquidez corrente.",
+            "Compare com a fórmula da margem líquida.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Uma entidade apresenta liquidez corrente de 1,80. Esse resultado, isoladamente, assegura que todas as obrigações serão pagas pontualmente.",
+          "tip": "Índice acima de 1 não garante liquidez imediata nem pontualidade.",
+          "why": "Uma liquidez corrente de 1,80 significa que o Ativo Circulante é 1,8 vez o Passivo Circulante na data analisada. Isso não garante pagamento pontual: estoques podem demorar a ser vendidos, clientes podem atrasar e as obrigações podem vencer antes da conversão dos ativos em caixa.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Interprete 1,80 como relação entre AC e PC.",
+            "Verifique a composição do AC.",
+            "Considere prazos de recebimento e vencimento.",
+            "Conclua que o índice isolado não garante pagamento pontual."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma liquidez corrente de 1,80, isoladamente, não assegura que todas as obrigações serão pagas pontualmente.",
+          "tip": "Olhe a composição do ativo circulante, não apenas o resultado da divisão.",
+          "why": "O índice de 1,80 representa R$ 1,80 de ativo circulante para R$ 1,00 de passivo circulante, mas não garante pagamento pontual. É preciso avaliar vencimentos, qualidade dos recebíveis, giro dos estoques e fluxo de caixa; o exemplo de 50.000/25.000 = 2,00 corresponde a outro cenário.",
+          "difficulty": "média",
+          "resolution_steps": [
+            "Calcule LC: 50.000/25.000 = 2,0.",
+            "Identifique quanto do AC está em estoque: R$ 35.000.",
+            "Avalie giro, obsolescência e prazo de realização.",
+            "Não conclua solvência apenas pelo índice."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma empresa com liquidez corrente de 2,0 e R$ 35.000 em estoques dentro de um Ativo Circulante de R$ 50.000 deve avaliar a capacidade de realização desses estoques antes de concluir sobre sua liquidez.",
+          "tip": "Índice é ponto de partida, não conclusão. Avalie prazos, recebíveis, estoque e caixa.",
+          "why": "A liquidez corrente é uma medida estática e agregada. Para avaliar a capacidade de pagamento, também é necessário examinar os vencimentos das obrigações, a qualidade dos créditos a receber, a velocidade de venda dos estoques e a geração de caixa. Assim, a análise financeira combina índices e informações qualitativas.",
+          "difficulty": "difícil",
+          "resolution_steps": [
+            "Calcule os índices de liquidez.",
+            "Analise a composição dos ativos circulantes.",
+            "Compare datas de recebimento e vencimento.",
+            "Avalie fluxo de caixa e capacidade real de pagamento."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-04-demonstracoes-balanco-dre-regimes",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "4. Demonstrações contábeis",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 10,
+        "revision_reason": "Gabarito do item 25 corrigido e justificativa do item 26 atualizada; revisão anterior não cobre os itens atuais."
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Nos juros simples, os juros de cada período incidem sobre o capital inicial.",
+          "tip": "Simples = mesma base: capital inicial.",
+          "why": "Nos juros simples, a taxa incide sempre sobre o capital inicial. Se o capital é R$ 1.000 e a taxa é 2% ao mês, cada mês gera R$ 20 de juros. Em três meses, os juros são R$ 60. A base permanece R$ 1.000 em todos os períodos, por isso não há juros sobre juros.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. A base de cálculo permanece constante.\n\nDica para fixar: Simples: a base não muda; os juros incidem sempre sobre o capital inicial.",
+          "resolution_steps": [
+            "Identifique o capital inicial.",
+            "Converta a taxa para decimal.",
+            "Multiplique capital × taxa × períodos.",
+            "Não incorpore juros ao capital para o período seguinte."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A fórmula dos juros simples é J = C × i × n.",
+          "tip": "J = C × i × n. Taxa em decimal e prazo na mesma unidade.",
+          "why": "A fórmula dos juros simples é J = C × i × n. C representa capital inicial, i é a taxa em decimal e n é o número de períodos na mesma unidade da taxa. Exemplo: R$ 1.000 a 2% ao mês por três meses: 1.000 × 0,02 × 3 = R$ 60. A fórmula resulta da multiplicação do capital pela taxa e pelo número de períodos. Por exemplo, com R$ 1.000, 2% ao mês e três meses, J = 1.000 × 0,02 × 3 = R$ 60. O montante será R$ 1.060, pois o capital permanece como base em todos os meses.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Capital, taxa e número de períodos determinam os juros simples.\n\nDica para fixar: Memorize J = C × i × n e converta a taxa para decimal.",
+          "resolution_steps": [
+            "Identifique C, i e n.",
+            "Converta 2% em 0,02.",
+            "Substitua: 1.000 × 0,02 × 3.",
+            "Juros = R$ 60."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Nos juros compostos, os juros são calculados apenas sobre o capital inicial durante todo o prazo.",
+          "tip": "Compostos = juros sobre juros; o saldo acumulado vira a nova base.",
+          "why": "Nos juros compostos, os juros de cada período são incorporados ao saldo e passam a render juros nos períodos seguintes. Isso é chamado de juros sobre juros. A fórmula do montante é M = C × (1+i)^n. A afirmação descreve juros simples, não compostos. Em juros compostos, a base cresce a cada período porque os juros são incorporados ao saldo. Com R$ 1.000 a 2% ao mês, após o primeiro mês o saldo é R$ 1.020; no segundo, os 2% incidem sobre R$ 1.020, e não novamente sobre R$ 1.000.",
+          "difficulty": "fácil",
+          "wrong_feedback": "O erro está na afirmação apresentada: Nos compostos, os juros são incorporados ao saldo e passam a compor a base dos períodos seguintes. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o regime: composto.",
+            "Observe que os juros entram no saldo a cada período.",
+            "Use M = C × (1+i)^n.",
+            "Conclua que a afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "10% de R$ 500 corresponde a R$ 50.",
+          "tip": "Percentual de um valor = valor × percentual em decimal. 10% = 0,10.",
+          "why": "Para calcular 10% de R$ 500, transforme 10% em 0,10 e multiplique: 500 × 0,10 = R$ 50. O resultado é a parcela correspondente a dez por cento do valor original. Se a questão pedir o valor após aumento, some R$ 50; se pedir após redução, subtraia R$ 50.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. 0,10 × 500 = 50.\n\nDica para fixar: Valor líquido recebido é o valor atual; desconto é apenas a diferença entre nominal e atual.",
+          "resolution_steps": [
+            "Converta 10% em 0,10.",
+            "Multiplique 500 × 0,10.",
+            "Resultado: R$ 50.",
+            "Leia se a questão pede o percentual ou o valor final após aumento/redução."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Uma taxa mensal pode ser aplicada diretamente a um prazo em anos sem conversão ou ajuste.",
+          "tip": "Mês com mês; ano com ano. Em compostos, converta respeitando a equivalência, não apenas multiplicando.",
+          "why": "Taxa e prazo precisam estar em unidades compatíveis. Uma taxa de 2% ao mês deve ser aplicada a um prazo em meses. Se o prazo estiver em anos, converta-o para meses ou converta a taxa para uma taxa anual adequada ao regime. Não basta inserir 2% e 3 anos na mesma fórmula sem ajustar as unidades.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: Taxa e tempo devem estar em unidades compatíveis. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique a unidade da taxa.",
+            "Identifique a unidade do prazo.",
+            "Converta uma delas para coincidir com a outra.",
+            "Só depois substitua na fórmula."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Em juros simples, 2% ao mês correspondem a 24% ao ano pelo critério proporcional.",
+          "tip": "Proporcional simples: multiplique pela quantidade de períodos.",
+          "why": "No regime simples, a conversão proporcional é linear: 2% ao mês × 12 meses = 24% ao ano. Essa taxa anual é proporcional, não necessariamente equivalente em juros compostos. A regra funciona porque, em juros simples, os juros são calculados sempre sobre o capital inicial.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. 2% × 12 = 24%, na conversão linear.\n\nDica para fixar: Em juros simples, conversão proporcional: 2% × 12 meses = 24% ao ano.",
+          "resolution_steps": [
+            "Identifique juros simples.",
+            "Conte 12 meses em um ano.",
+            "Multiplique 2% × 12.",
+            "Taxa proporcional anual = 24%."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Em juros compostos, 1% ao mês equivale exatamente a 12% ao ano.",
+          "tip": "Compostos: use potência. i anual = (1+i mensal)^12 − 1.",
+          "why": "Em juros compostos, a taxa anual equivalente a 1% ao mês é (1,01)^12 − 1. O resultado é aproximadamente 0,1268, ou 12,68% ao ano. Multiplicar 1% por 12 produz 12%, que é a taxa proporcional simples e não preserva o mesmo montante no regime composto. A taxa equivalente precisa produzir o mesmo montante ao longo de um ano. A capitalização mensal gera 12 aplicações sucessivas de 1%, por isso a taxa efetiva anual é maior que a soma simples das taxas mensais.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: A taxa efetiva anual é (1,01)¹² − 1, aproximadamente 12,68%. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Converta 1% em 0,01.",
+            "Calcule (1,01)^12.",
+            "Subtraia 1.",
+            "Resultado aproximado: 12,68% ao ano."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma taxa de 12% ao ano com capitalização mensal é nominal.",
+          "tip": "Nominal: período anunciado diferente do período de capitalização.",
+          "why": "Uma taxa de 12% ao ano com capitalização mensal é nominal porque o período de referência da taxa (ano) não coincide com o período de capitalização (mês). A taxa periódica mensal é 12% ÷ 12 = 1% ao mês. Com capitalização composta mensal, a taxa efetiva anual correspondente é aproximadamente 12,68%.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. O período de referência anual difere do período mensal de capitalização.\n\nDica para fixar: Nominal: período da taxa (ano) diferente do período de capitalização (mês).",
+          "resolution_steps": [
+            "Leia a taxa anunciada: 12% ao ano.",
+            "Leia a capitalização: mensal.",
+            "Como ano e mês são períodos diferentes, a taxa é nominal.",
+            "Taxa mensal periódica: 12% ÷ 12 = 1%."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Uma taxa de 1% ao mês com capitalização mensal é efetiva.",
+          "tip": "Efetiva = período da taxa igual ao período de capitalização.",
+          "why": "Uma taxa de 1% ao mês com capitalização mensal é efetiva porque o período da taxa coincide com o período em que os juros são incorporados ao saldo. Se a taxa fosse 12% ao ano com capitalização mensal, seria nominal e exigiria conversão para a taxa mensal.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. O período da taxa coincide com o período de capitalização.\n\nDica para fixar: Efetiva: período da taxa coincide com o período de capitalização.",
+          "resolution_steps": [
+            "Identifique o período da taxa: mês.",
+            "Identifique o período de capitalização: mês.",
+            "Como coincidem, a taxa é efetiva.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A taxa real considera o efeito da inflação.",
+          "tip": "Taxa real exata: (1 + nominal)/(1 + inflação) − 1.",
+          "why": "A taxa real mede o ganho ou custo após considerar a inflação. A relação exata é (1+i nominal) ÷ (1+inflação) − 1. Ela não é simplesmente a taxa nominal menos a inflação em todos os casos. Exemplo: nominal 10% e inflação 4%: 1,10/1,04 − 1 ≈ 5,77%. A inflação reduz o poder de compra do dinheiro. Por isso, uma taxa nominal positiva pode representar ganho real menor; se a inflação superar a taxa nominal, a taxa real pode inclusive ser negativa. Use a relação exata entre os fatores para calcular.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. A taxa real expressa o ganho ou custo descontado o efeito inflacionário.\n\nDica para fixar: Taxa real mede o ganho depois de descontar o efeito da inflação.",
+          "resolution_steps": [
+            "Converta 10% e 4% em fatores 1,10 e 1,04.",
+            "Divida 1,10 por 1,04.",
+            "Subtraia 1.",
+            "Resultado aproximado: 5,77%."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Taxas equivalentes produzem o mesmo montante para o mesmo capital e prazo total.",
+          "tip": "Equivalente = mesmo montante no mesmo prazo.",
+          "why": "Taxas equivalentes são taxas de períodos diferentes que, aplicadas ao mesmo capital pelo mesmo prazo total e no mesmo regime, produzem o mesmo montante. Em juros compostos, a equivalência exige capitalização exponencial. A definição não depende de as taxas terem o mesmo número percentual.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Essa é a definição operacional de equivalência de taxas.\n\nDica para fixar: Equivalentes produzem o mesmo montante no mesmo prazo; em compostos, a conversão é exponencial.",
+          "resolution_steps": [
+            "Identifique o capital e o prazo total.",
+            "Compare os montantes produzidos por cada taxa.",
+            "Se os montantes forem iguais, as taxas são equivalentes.",
+            "Em compostos, use fatores de capitalização."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Taxas proporcionais e equivalentes são sempre iguais em juros compostos.",
+          "tip": "Proporcional é linear; equivalente composto é exponencial.",
+          "why": "Taxas proporcionais e equivalentes não são sempre iguais. Em juros simples, a conversão proporcional é linear. Em juros compostos, a taxa equivalente é calculada preservando o montante por capitalização exponencial. Por exemplo, 1% ao mês equivale a cerca de 12,68% ao ano, e não 12%.",
+          "difficulty": "difícil",
+          "wrong_feedback": "O erro está na afirmação apresentada: A proporcionalidade é linear; a equivalência composta utiliza capitalização exponencial. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o regime de capitalização.",
+            "Se simples, use conversão proporcional.",
+            "Se composto, calcule (1+i)^n − 1.",
+            "A afirmação que diz sempre iguais está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "O desconto corresponde à diferença entre o valor nominal e o valor atual.",
+          "tip": "D = N − A; valor recebido é A.",
+          "why": "O desconto é a diferença entre o valor nominal do título e seu valor atual: D = N − A. Se um título de R$ 2.000 vale R$ 1.880 quando antecipado, o desconto é R$ 120. O valor recebido é o valor atual, não o desconto. Exemplo: um título de R$ 2.000 antecipado por R$ 1.880 tem desconto de R$ 120. O desconto não é o dinheiro recebido; é a diferença entre o valor de face e o valor atual pago na antecipação.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. D = N − A.\n\nDica para fixar: Desconto = valor nominal − valor atual.",
+          "resolution_steps": [
+            "Identifique o valor nominal.",
+            "Identifique o valor atual recebido.",
+            "Subtraia nominal menos atual.",
+            "A diferença é o desconto."
+          ]
+        },
+        {
+          "a": true,
+          "q": "No desconto comercial simples, a taxa incide sobre o valor nominal.",
+          "tip": "Comercial = por fora = taxa sobre o nominal.",
+          "why": "No desconto comercial simples, também chamado por fora, a taxa incide sobre o valor nominal do título. Fórmula: D = N × i × n. Isso diferencia o comercial do racional simples, em que a taxa incide sobre o valor atual. Exemplo: título de R$ 2.000, taxa comercial simples de 2% ao mês e antecipação de três meses: 2.000 × 0,02 × 3 = R$ 120. A base é o valor nominal, mesmo que o valor recebido seja menor.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. É a característica do desconto por fora.\n\nDica para fixar: Comercial (por fora): a taxa incide sobre o valor nominal.",
+          "resolution_steps": [
+            "Identifique o desconto comercial simples.",
+            "Use o valor nominal como base.",
+            "Aplique D = N × i × n.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "No desconto racional simples, a taxa incide sobre o valor nominal.",
+          "tip": "Racional = por dentro = taxa sobre o valor atual.",
+          "why": "No desconto racional simples, a taxa incide sobre o valor atual, não sobre o valor nominal. A fórmula do valor atual é A = N ÷ (1+i×n); depois, o desconto é D = N − A. O desconto racional é chamado “por dentro” justamente porque a taxa usa o valor presente como base.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: A base do desconto racional é o valor atual. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o desconto racional simples.",
+            "Calcule A = N ÷ (1+i×n).",
+            "Calcule D = N − A, se solicitado.",
+            "A afirmação está errada porque indica o nominal como base."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Título de R$ 2.000 com desconto comercial simples de 2% ao mês por 3 meses gera desconto de R$ 120.",
+          "tip": "Comercial: use o nominal na fórmula e não confunda desconto com valor líquido.",
+          "why": "O desconto comercial simples é D = N × i × n. Com N = R$ 2.000, i = 2% = 0,02 ao mês e n = 3 meses: D = 2.000 × 0,02 × 3 = R$ 120. O valor atual seria R$ 2.000 − R$ 120 = R$ 1.880. O valor atual correspondente é R$ 1.880, pois 2.000 − 120 = 1.880. Se a questão perguntar quanto o cliente recebe hoje, responda o valor atual, não o desconto calculado.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. 2.000 × 0,02 × 3 = 120.\n\nDica para fixar: Em juros simples, conversão proporcional: 2% × 12 meses = 24% ao ano.",
+          "resolution_steps": [
+            "Anote o nominal: R$ 2.000.",
+            "Converta 2% em 0,02.",
+            "Multiplique por três meses: 2.000 × 0,02 × 3.",
+            "Desconto = R$ 120; valor atual = R$ 1.880."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Título de R$ 1.320 com desconto racional simples de 10% ao mês por 2 meses tem valor atual de R$ 1.100.",
+          "tip": "Racional simples: primeiro calcule o valor atual; depois, se pedido, ache o desconto.",
+          "why": "No desconto racional simples, A = N ÷ (1+i×n). Com N = R$ 1.320, i = 10% = 0,10 e n = 2, temos A = 1.320 ÷ (1+0,20) = 1.320 ÷ 1,20 = R$ 1.100. O desconto é R$ 220. O valor nominal de R$ 1.320 representa o pagamento no vencimento. Ao descontá-lo racionalmente, encontramos quanto ele vale hoje: R$ 1.100. A diferença de R$ 220 é o desconto racional simples.",
+          "difficulty": "difícil",
+          "wrong_feedback": "A afirmação está CERTA. 1.320 ÷ (1 + 0,10 × 2) = 1.100.\n\nDica para fixar: Racional (por dentro): a taxa incide sobre o valor atual.",
+          "resolution_steps": [
+            "Converta 10% em 0,10.",
+            "Calcule 1 + 0,10 × 2 = 1,20.",
+            "Divida 1.320 por 1,20.",
+            "Valor atual = R$ 1.100; desconto = R$ 220."
+          ]
+        },
+        {
+          "a": true,
+          "q": "No desconto racional composto, o valor atual é N dividido por (1+i) elevado a n.",
+          "tip": "Racional composto: A = N/(1+i)^n.",
+          "why": "No desconto racional composto, o valor atual é o valor nominal descontado pela taxa composta durante n períodos: A = N ÷ (1+i)^n. A potência representa a capitalização acumulada até o vencimento. Não use a fórmula do desconto simples quando a questão disser composto.",
+          "difficulty": "difícil",
+          "wrong_feedback": "A afirmação está CERTA. A = N ÷ (1+i)^n.\n\nDica para fixar: Racional composto: divida o nominal por (1+i)^n.",
+          "resolution_steps": [
+            "Identifique o valor nominal N.",
+            "Converta a taxa para decimal.",
+            "Eleve (1+i) ao número de períodos.",
+            "Divida N pelo fator para obter o valor atual."
+          ]
+        },
+        {
+          "a": false,
+          "q": "O valor líquido recebido na antecipação é o próprio desconto.",
+          "tip": "Valor líquido = valor atual; desconto = diferença.",
+          "why": "O valor líquido recebido na antecipação é o valor atual (A). O desconto (D) é apenas a diferença entre o nominal e o atual: D = N − A. Por exemplo, título de R$ 2.000 com desconto de R$ 120 gera recebimento líquido de R$ 1.880, não R$ 120. Se um título de R$ 2.000 tem desconto de R$ 120, o valor líquido é R$ 1.880. O desconto é apenas a redução aplicada ao valor nominal, não o montante entregue ao titular no momento da antecipação.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: O valor líquido é o valor atual; o desconto é N − A. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique o valor nominal.",
+            "Calcule ou identifique o desconto.",
+            "Subtraia D de N para encontrar A.",
+            "Não confunda o desconto com o valor recebido."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-05-matematica-financeira-juros-descontos",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "5. Matemática financeira",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "reviewed",
+        "review_date": "2026-11-20",
+        "items_checked": 19
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "No extrato do titular, um crédito normalmente aumenta o saldo da conta.",
+          "tip": "Extrato do titular: crédito entra; débito sai. Na contabilidade, débito/crédito depende da conta.",
+          "why": "No extrato bancário, a leitura é feita pela perspectiva do titular da conta. Um crédito representa entrada de recursos e aumenta o saldo; um débito representa saída e reduz o saldo. Não confunda essa nomenclatura bancária com o significado técnico de débito e crédito na escrituração contábil, que depende da natureza da conta.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Crédito bancário representa entrada de recursos para o titular.\n\nDica para fixar: Leia pela perspectiva do titular da conta: crédito entra e débito sai.",
+          "resolution_steps": [
+            "Identifique que a questão trata do extrato bancário do titular.",
+            "Pergunte se o dinheiro entrou ou saiu.",
+            "Entrada é crédito e aumenta o saldo.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Um débito no extrato representa necessariamente um lançamento a débito na contabilidade da entidade.",
+          "tip": "Não traduza automaticamente “débito no extrato” como “débito contábil”.",
+          "why": "O débito no extrato indica saída de dinheiro da conta do titular. Isso não significa necessariamente que o lançamento contábil correspondente será um débito: se a conta Bancos é ativo, a saída normalmente é registrada a crédito de Bancos. A linguagem do extrato e a técnica de escrituração são perspectivas diferentes.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: A linguagem do extrato e a técnica de débito/crédito contábil são perspectivas diferentes. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Leia a operação pela perspectiva do titular.",
+            "Débito no extrato significa saída de dinheiro.",
+            "Na conta contábil Bancos, saída normalmente reduz o ativo por crédito.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Saldo inicial de R$ 2.000, créditos de R$ 1.500 e débitos de R$ 900 resultam em saldo final de R$ 2.600.",
+          "tip": "Some entradas e subtraia saídas. Faça a conta em duas etapas para não trocar os sinais.",
+          "why": "A fórmula do saldo final é saldo inicial + créditos − débitos. Portanto: R$ 2.000 + R$ 1.500 − R$ 900 = R$ 2.600. A conta pressupõe que os valores se referem ao mesmo período e que não existem outros lançamentos omitidos. O cálculo pode ser conferido em uma linha: R$ 2.000 + R$ 1.500 = R$ 3.500; depois R$ 3.500 − R$ 900 = R$ 2.600. Se o resultado não coincidir com o extrato, verifique lançamentos ausentes, estornos, bloqueios e se todos os valores pertencem ao mesmo período.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. 2.000 + 1.500 − 900 = 2.600.\n\nDica para fixar: Saldo final = saldo inicial + créditos − débitos.",
+          "resolution_steps": [
+            "Saldo inicial: R$ 2.000.",
+            "Some créditos: 2.000 + 1.500 = R$ 3.500.",
+            "Subtraia débitos: 3.500 − 900 = R$ 2.600.",
+            "Saldo final = R$ 2.600."
+          ]
+        },
+        {
+          "a": false,
+          "q": "A utilização de PIX, por si só, demonstra a prática de ilícito.",
+          "tip": "PIX não é sinônimo de ilícito. O contexto e as evidências é que orientam a análise.",
+          "why": "PIX é um meio de pagamento/transferência. A modalidade, isoladamente, não prova crime, fraude ou irregularidade. Para avaliar uma movimentação, é necessário considerar origem, destino, valor, horário, recorrência, finalidade econômica e documentos disponíveis.",
+          "difficulty": "fácil",
+          "wrong_feedback": "O erro está na afirmação apresentada: A modalidade de transferência não é prova isolada de irregularidade. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique que PIX é modalidade de transferência.",
+            "Verifique se a afirmação conclui irregularidade apenas pela modalidade.",
+            "Procure contexto e evidências adicionais.",
+            "A afirmação está errada."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A análise de uma transferência deve considerar origem, destino, data, horário e contexto.",
+          "tip": "Não analise só o valor. Cruze quem enviou, quem recebeu, quando, quanto e por quê.",
+          "why": "A análise de transferência deve combinar origem, destino, data, horário, valor e contexto. Um valor alto pode ser compatível com uma operação legítima; uma sequência de valores menores pode ter explicação comercial. A interpretação depende da comparação com o padrão e os documentos.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. A leitura conjunta dos dados permite contextualizar a movimentação.\n\nDica para fixar: Cruze origem, destino, data, horário, valor e contexto; não analise um dado isoladamente.",
+          "resolution_steps": [
+            "Identifique os dados da transferência.",
+            "Registre origem e destino.",
+            "Organize data, horário e valor.",
+            "Compare com contexto e documentação."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Depósito e transferência recebida representam, em regra, entradas de recursos na conta do titular; saque e pagamento representam saídas.",
+          "tip": "Recebimento = entrada; pagamento/saque = saída.",
+          "why": "Depósito e transferência recebida normalmente aumentam os recursos do titular; saque e pagamento normalmente os reduzem. A classificação é feita pela perspectiva da conta analisada. Uma transferência enviada reduz a conta de origem e aumenta a conta de destino, considerando os registros de cada titular.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. A questão exige identificar a direção do fluxo sob a perspectiva do titular da conta.\n\nDica para fixar: Depósito/transferência recebida = entrada; saque/pagamento = saída.",
+          "resolution_steps": [
+            "Identifique a operação.",
+            "Verifique se o titular recebe ou envia recursos.",
+            "Recebimento aumenta saldo; pagamento/saque reduz.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": true,
+          "q": "PIX e TED são modalidades de transferência; para identificar origem e destino, devem ser examinados os dados de identificação disponíveis na operação.",
+          "tip": "PIX/TED diz como o dinheiro foi transferido; os dados da operação dizem quem enviou e recebeu.",
+          "why": "PIX e TED são modalidades de transferência. Para identificar remetente e beneficiário, consulte os dados efetivamente disponíveis na operação, como identificador, instituição, conta, data, horário e comprovante. A modalidade não substitui a identificação das partes.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. A modalidade não substitui a identificação das contas, titulares, instituição, data, horário e beneficiário.\n\nDica para fixar: A modalidade não identifica por si só os titulares; confira os identificadores disponíveis.",
+          "resolution_steps": [
+            "Identifique a modalidade de transferência.",
+            "Localize os identificadores e dados de origem/destino.",
+            "Confira os titulares e o comprovante disponível.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Se o extrato não apresentar o nome completo do beneficiário, é correto completar a informação por suposição.",
+          "tip": "Dado ausente não se inventa: registre a lacuna e procure fonte legítima.",
+          "why": "Não se deve completar informação ausente por suposição. Se o extrato não mostrar o nome completo do beneficiário, registre essa limitação e procure fonte complementar legítima, como comprovante ou informação bancária obtida pelos meios autorizados. A análise deve distinguir dado comprovado de hipótese.",
+          "difficulty": "fácil",
+          "wrong_feedback": "O erro está na afirmação apresentada: Não se deve inventar dado ausente. A limitação deve ser registrada e a informação confirmada por fonte legítima. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique qual informação falta no extrato.",
+            "Não presuma o nome do beneficiário.",
+            "Registre a limitação da fonte.",
+            "Busque confirmação em documento ou fonte legítima."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Depósito e transferência recebida representam, em regra, entradas de recursos na conta do titular; saque e pagamento representam saídas.",
+          "tip": "Saldo próprio não é a mesma coisa que limite de cheque especial.",
+          "why": "Saldo disponível é o valor que pode ser utilizado; saldo bloqueado existe, mas está temporariamente indisponível. Limite de crédito é capacidade de empréstimo concedida pelo banco, não dinheiro próprio depositado. Por isso, não se deve somar automaticamente o limite ao saldo próprio ao analisar os recursos da conta.",
+          "resolution_steps": [
+            "Identifique o saldo próprio disponível.",
+            "Separe valores bloqueados.",
+            "Identifique o limite de crédito concedido.",
+            "Não classifique o limite como depósito ou recurso próprio."
+          ]
+        },
+        {
+          "a": true,
+          "q": "PIX e TED são modalidades de transferência; para identificar origem e destino, devem ser examinados os dados de identificação disponíveis na operação.",
+          "tip": "Capacidade de movimentação pode incluir empréstimo; saldo próprio é outra coisa.",
+          "why": "Um saldo disponível de R$ 2.000 somado a limite de crédito de R$ 1.000 pode permitir movimentação até R$ 3.000, conforme contrato, mas apenas R$ 2.000 são recursos próprios depositados. Os R$ 1.000 adicionais representam crédito que pode gerar juros e encargos.",
+          "resolution_steps": [
+            "Identifique o saldo próprio: R$ 2.000.",
+            "Identifique o limite: R$ 1.000.",
+            "Some apenas para estimar capacidade de movimentação, se permitido: R$ 3.000.",
+            "Não chame o limite de saldo próprio."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Se o extrato não apresentar o nome completo do beneficiário, é correto completar a informação por suposição.",
+          "tip": "Estorno corrige/reverte uma operação anterior. Procure a transação original.",
+          "why": "Estorno é a reversão de uma operação anterior. Para analisar corretamente o extrato, relacione o estorno ao lançamento original e verifique se ele é total ou parcial. Contar o estorno como uma operação independente, sem relacioná-lo à transação original, pode duplicar entradas ou saídas na análise.",
+          "resolution_steps": [
+            "Localize o lançamento de estorno.",
+            "Procure a operação original correspondente.",
+            "Confira se a reversão é total ou parcial.",
+            "Evite contar a mesma movimentação duas vezes."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-06-sistema-bancario-extratos-pix-ted",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "6. Sistema bancário e operações financeiras",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 8,
+        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
+        "current_quiz_items": 11,
+        "previously_checked_items": 8
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "A conciliação compara registros de fontes diferentes para localizar diferenças e correspondências.",
+          "tip": "Conciliação = comparar fontes e explicar divergências.",
+          "why": "Conciliação é a comparação sistemática de registros de fontes diferentes, como extrato, razão, comprovantes e controles internos. Ela permite localizar correspondências, diferenças de data ou valor, duplicidades, estornos e lançamentos ausentes. A diferença encontrada deve ser explicada, não presumida como erro ou fraude.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Esse é o objetivo central da conciliação.\n\nDica para fixar: Conciliação = comparar fontes (extrato, razão, comprovantes) e explicar diferenças.",
+          "resolution_steps": [
+            "Identifique as fontes de dados citadas.",
+            "Compare transações por data, valor, origem e destino.",
+            "Localize correspondências e diferenças.",
+            "Documente a causa provável ou a pendência de confirmação."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Uma transferência fracionada comprova, isoladamente, a ocorrência de ilícito.",
+          "tip": "Fracionamento é alerta, não prova automática.",
+          "why": "Fracionar uma transferência significa dividir um valor em várias operações menores. Isso pode ser um padrão relevante para análise, mas não comprova isoladamente ilícito. É necessário avaliar contexto econômico, frequência, participantes, justificativa, documentação e relação entre as operações.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: É um padrão que deve ser contextualizado e confrontado com outras evidências. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique que o valor foi dividido em operações menores.",
+            "Registre datas, valores e participantes.",
+            "Compare com o padrão histórico e a finalidade econômica.",
+            "Não conclua crime apenas pelo fracionamento."
+          ]
+        },
+        {
+          "a": true,
+          "q": "A análise de movimentações deve considerar origem, destino, data, valor e recorrência.",
+          "tip": "Monte uma linha do tempo: quando, quanto, de quem, para quem e com qual documento.",
+          "why": "Origem e destino ajudam a reconstruir o caminho do dinheiro. Data e horário permitem ordenar os fatos; valor permite comparar entradas e saídas; recorrência identifica padrões. Esses campos, combinados com documentos e identificação dos envolvidos, tornam a análise reproduzível e reduzem erros.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. Esses campos permitem organizar e comparar as transações.\n\nDica para fixar: Monte a linha do tempo e identifique origem, destino, valor e repetição.",
+          "resolution_steps": [
+            "Organize cada transação por data e horário.",
+            "Identifique valor e natureza.",
+            "Registre conta de origem e destino e envolvidos.",
+            "Compare frequência e documentos de suporte."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Toda divergência entre extrato e controle interno decorre necessariamente de fraude.",
+          "tip": "Diferença não significa fraude. Primeiro procure causas operacionais e temporais.",
+          "why": "Uma divergência entre extrato e controle interno pode resultar de prazo de compensação, erro de digitação, duplicidade, tarifa, estorno ou falha de integração. A análise deve identificar qual explicação é compatível com os registros e buscar documentos de suporte. Fraude é uma hipótese que exige evidências adicionais.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação apresentada: Pode haver atraso, erro operacional, duplicidade, tarifa ou falha de integração. Na releitura, procure a palavra ou relação que inverteu a regra correta.",
+          "resolution_steps": [
+            "Identifique a divergência de valor ou data.",
+            "Verifique prazos de compensação e estornos.",
+            "Confira tarifas, duplicidades e erros de integração.",
+            "Busque documentos e só então avalie hipóteses."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Um relatório analítico deve indicar limitações e separar dados observados de hipóteses.",
+          "tip": "Separe três caixas: fato, inferência e hipótese; registre o que não foi possível verificar.",
+          "why": "Relatórios analíticos precisam distinguir fatos observados, inferências e hipóteses. Também devem indicar as limitações dos dados, como períodos incompletos, ausência de comprovantes ou fontes não verificadas. Essa transparência impede que a conclusão vá além do que as evidências permitem.",
+          "difficulty": "difícil",
+          "wrong_feedback": "A afirmação está CERTA. A transparência sobre evidências e limitações evita conclusões não sustentadas.\n\nDica para fixar: Separe fato observado, inferência e hipótese; declare as limitações do conjunto de dados.",
+          "resolution_steps": [
+            "Liste os registros diretamente observados.",
+            "Indique as inferências que decorrem desses dados.",
+            "Marque explicações ainda não confirmadas como hipóteses.",
+            "Registre limitações e documentos ausentes."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Um demonstrativo financeiro simplificado pode apresentar saldo inicial, total de entradas, total de saídas, saldo final e principais origens e destinos dos recursos.",
+          "tip": "Confira a equação: saldo inicial + entradas − saídas = saldo final.",
+          "why": "Um demonstrativo simplificado pode apresentar saldo inicial, entradas, saídas, saldo final e principais origens e destinos. A identidade de conferência é saldo inicial + entradas − saídas = saldo final, desde que os valores estejam no mesmo período e escopo. Esse resumo facilita a visualização do fluxo.",
+          "difficulty": "média",
+          "wrong_feedback": "A afirmação está CERTA. Esses elementos resumem o fluxo financeiro e permitem visualizar a movimentação no período.\n\nDica para fixar: Resumo útil: saldo inicial + entradas − saídas = saldo final, com origem e destino.",
+          "resolution_steps": [
+            "Identifique o saldo inicial.",
+            "Some as entradas do período.",
+            "Subtraia as saídas.",
+            "Compare o resultado com o saldo final e explique diferenças."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Um fluxo financeiro pode ser representado pela sequência de entradas, saídas e transferências entre contas, desde que os vínculos estejam apoiados em registros verificáveis.",
+          "tip": "Desenhe apenas vínculos que os registros sustentam; não invente conexões.",
+          "why": "Um diagrama de fluxo organiza a sequência de entradas, saídas e transferências entre contas. Ele não substitui os documentos originais: cada ligação deve estar apoiada em registro verificável, identificador consistente e fonte rastreável. Sem isso, o desenho pode sugerir uma relação que não foi comprovada.",
+          "difficulty": "difícil",
+          "wrong_feedback": "A afirmação está CERTA. A representação organiza as relações entre transações sem substituir a comprovação documental.\n\nDica para fixar: Fluxo financeiro mostra sequência de transações; cada vínculo precisa de registro verificável.",
+          "resolution_steps": [
+            "Ordene as transações no tempo.",
+            "Identifique contas e participantes.",
+            "Conecte operações com base em comprovantes e identificadores.",
+            "Registre fonte e limitações de cada ligação."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Um demonstrativo tem saldo inicial de R$ 12.000, entradas de R$ 8.000 e saídas de R$ 7.000. O saldo final esperado é R$ 13.000.",
+          "tip": "Saldo final = inicial + entradas − saídas. Use o mesmo período e escopo.",
+          "why": "O saldo final é encontrado somando as entradas ao saldo inicial e subtraindo as saídas: 12.000 + 8.000 − 7.000 = R$ 13.000. A conferência só é válida se todos os valores se referirem ao mesmo período, moeda e conjunto de contas. Se o saldo final informado for diferente, a diferença precisa ser investigada e documentada.",
+          "difficulty": "fácil",
+          "wrong_feedback": "A afirmação está CERTA. O saldo final esperado é R$ 13.000.",
+          "resolution_steps": [
+            "Anote o saldo inicial: R$ 12.000.",
+            "Some as entradas: 12.000 + 8.000 = R$ 20.000.",
+            "Subtraia as saídas: 20.000 − 7.000 = R$ 13.000.",
+            "Compare com o saldo final informado."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Um diagrama que mostra transferências repetidas entre duas contas comprova, por si só, a prática de um crime.",
+          "tip": "Padrão suspeito é indício para aprofundar; não é conclusão automática de crime.",
+          "why": "O diagrama organiza a sequência de operações, mas não prova isoladamente a prática de ilícito. É necessário verificar a origem dos dados, documentos, titularidade, finalidade econômica, contexto e outras evidências. A análise deve separar o que os registros mostram da hipótese que ainda precisa ser confirmada.",
+          "difficulty": "média",
+          "wrong_feedback": "O erro está na afirmação: um diagrama não comprova crime sozinho. Ele precisa ser confrontado com outras evidências.",
+          "resolution_steps": [
+            "Identifique o que o diagrama efetivamente mostra: sequência de transferências.",
+            "Verifique se cada vínculo tem documento e origem rastreável.",
+            "Busque contexto, finalidade e outras evidências.",
+            "Não transforme o padrão visual em prova conclusiva."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-07-analise-movimentacoes-financeiras-conciliacao",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "7. Análise de movimentações financeiras",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "needs_revalidation",
+        "review_date": "2026-11-14",
+        "items_checked": 7,
+        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
+        "current_quiz_items": 9,
+        "previously_checked_items": 7
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Tarifa bancária debitada no extrato e ainda não contabilizada reduz o saldo do razão.",
+          "tip": "Se o banco já debitou e a empresa não lançou, ajuste o razão para baixo.",
+          "why": "A tarifa bancária já foi debitada pelo banco, mas a empresa ainda não reconheceu a despesa. Para que o razão represente o saldo real, a empresa deve lançar a despesa e creditar Bancos, reduzindo o saldo contábil em R$ 120. O lançamento é necessário porque o extrato já reflete a saída de dinheiro, mas o razão ainda não. Depois do ajuste, os dois registros passam a considerar a mesma despesa, eliminando a diferença que não era apenas temporal.",
+          "resolution_steps": [
+            "Identifique a tarifa no extrato.",
+            "Confira que ainda não foi contabilizada pela empresa.",
+            "Reconheça a despesa bancária e reduza Bancos.",
+            "A afirmação está correta."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Uma TED recebida e ainda não contabilizada deve reduzir o saldo contábil.",
+          "tip": "TED recebida = entrada; aumenta Bancos e o saldo do razão.",
+          "why": "Uma TED recebida representa entrada de recursos na conta bancária. Se o banco já registrou a entrada e a empresa ainda não, o razão está menor do que deveria e precisa ser aumentado. Não se trata de despesa nem de saída de dinheiro. O razão está subavaliado quando uma entrada já aparece no extrato e ainda não foi registrada pela empresa. O lançamento aumenta Bancos e reconhece a origem do recebimento, conforme a natureza da TED.",
+          "resolution_steps": [
+            "Identifique a TED como recebimento.",
+            "Verifique que a empresa ainda não registrou.",
+            "Registre a entrada no razão.",
+            "A afirmação está errada porque diz que reduz o saldo."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Cheques já emitidos e contabilizados, mas ainda não sacados, devem ser subtraídos novamente do razão.",
+          "tip": "Cheque emitido e já lançado = não subtrair outra vez. É cheque em trânsito.",
+          "why": "O cheque já foi emitido e a empresa já registrou a saída no razão. O fato de o beneficiário ainda não ter apresentado o cheque significa apenas que o banco ainda não compensou a saída. Subtrair novamente do razão duplicaria o mesmo pagamento. A compensação bancária pode ocorrer dias depois da emissão do cheque. A empresa já reduziu seu saldo contábil no momento em que registrou o cheque; repetir a redução faria o saldo ficar artificialmente menor.",
+          "resolution_steps": [
+            "Verifique se o cheque foi emitido.",
+            "Verifique se a empresa já registrou a saída.",
+            "Como já foi registrado, não faça novo lançamento.",
+            "Aguarde a compensação bancária."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Depósito em cheque já contabilizado, mas ainda não creditado pelo banco, deve ser somado novamente ao razão.",
+          "tip": "Depósito já contabilizado e ainda não creditado = não somar de novo.",
+          "why": "O depósito em cheque já foi registrado pela empresa, aumentando o razão. O banco ainda não o creditou porque está em compensação. Trata-se de depósito em trânsito, uma diferença temporal. Somá-lo novamente ao razão duplicaria a entrada. A diferença entre depósito registrado e crédito bancário é chamada depósito em trânsito. O registro contábil já ocorreu, então a conciliação apenas explica por que o extrato ainda não mostra o valor.",
+          "resolution_steps": [
+            "Identifique o depósito.",
+            "Confira se já foi registrado pela empresa.",
+            "Se já aumentou o razão, não faça novo lançamento.",
+            "Aguarde o crédito pelo banco."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Na conciliação bancária, o razão apresenta R$ 10.750; há tarifa não contabilizada de R$ 300, débito de serviços de R$ 700, devolução de duplicata de R$ 1.500 e TED recebida não contabilizada de R$ 5.000. O saldo contábil ajustado é R$ 13.250.",
+          "tip": "Faça uma coluna de entradas (+) e outra de saídas (−). Ignore diferenças temporárias já registradas.",
+          "why": "Comece pelo saldo do razão de R$ 10.750. Subtraia a tarifa de R$ 300, o débito de serviços de R$ 700 e a devolução de duplicata de R$ 1.500; some a TED recebida de R$ 5.000. Resultado: R$ 13.250. Cheques e depósitos já contabilizados são itens em trânsito e não recebem novo lançamento.",
+          "resolution_steps": [
+            "Saldo inicial do razão: R$ 10.750.",
+            "Subtraia tarifa: 10.750 − 300 = 10.450.",
+            "Subtraia serviços: 10.450 − 700 = 9.750.",
+            "Subtraia duplicata devolvida: 9.750 − 1.500 = 8.250.",
+            "Some TED: 8.250 + 5.000 = R$ 13.250."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Se uma tarifa bancária de R$ 120 aparece no extrato e ainda não foi registrada pela empresa, o ajuste contábil reconhece a despesa e reduz Bancos em R$ 120.",
+          "tip": "Tarifa bancária: débito em despesa, crédito em Bancos.",
+          "why": "A tarifa é uma despesa bancária já debitada no extrato. Como ainda não foi lançada, a empresa registra débito em despesa bancária e crédito em Bancos. O crédito em Bancos reduz o ativo e o saldo do razão em R$ 120. O lançamento contábil reduz o ativo Bancos e reconhece a despesa bancária. A conciliação não cria uma nova despesa: apenas registra na contabilidade um fato que o banco já processou.",
+          "resolution_steps": [
+            "Identifique a tarifa como despesa.",
+            "Registre a despesa a débito.",
+            "Registre Bancos a crédito.",
+            "O saldo contábil diminui R$ 120."
+          ]
+        },
+        {
+          "a": false,
+          "q": "Na questão 20, os cheques de R$ 6.000 emitidos e já contabilizados devem ser novamente deduzidos do razão.",
+          "tip": "A palavra-chave é “já contabilizados”. Se já lançou, não repita.",
+          "why": "Os cheques de R$ 6.000 já reduziram o saldo contábil quando foram emitidos e registrados. A falta de compensação bancária não autoriza um segundo lançamento. Eles são cheques em trânsito, usados para explicar a diferença entre extrato e razão. O cheque em trânsito permanece como diferença conciliatória até ser apresentado e compensado. Ele já reduziu o razão na data de emissão, portanto não altera novamente o saldo contábil ajustado.",
+          "resolution_steps": [
+            "Leia que os cheques já foram contabilizados.",
+            "Identifique que ainda não foram sacados pelo beneficiário.",
+            "Classifique como diferença temporal.",
+            "Não deduza novamente do razão."
+          ]
+        },
+        {
+          "a": true,
+          "q": "Na questão 20, o saldo correto do razão após os ajustes é R$ 13.250.",
+          "tip": "Atenção ao que a pergunta pede: saldo correto do razão ou saldo conciliado do extrato.",
+          "why": "O saldo do razão começa em R$ 10.750. Ajustes ainda não contabilizados: −R$ 300 de tarifas, −R$ 700 de serviços, −R$ 1.500 de devolução de duplicata e +R$ 5.000 de TED. O resultado é R$ 13.250. O saldo do extrato de R$ 7.500 não é a base quando a questão pede saldo contábil ajustado.",
+          "resolution_steps": [
+            "Identifique a base: saldo do razão R$ 10.750.",
+            "Aplique apenas itens ainda não lançados pela empresa.",
+            "Some e subtraia conforme a natureza de cada item.",
+            "Resultado: R$ 13.250."
+          ]
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-17-sistema-bancario-conciliacao-extrato-razao",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "7.2 Conciliação de movimentações financeiras",
+      "practice_review": {
+        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
+        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "status": "reviewed",
+        "review_date": "2026-11-14",
+        "items_checked": 8
+      }
+    },
+    {
+      "quiz": [
+        {
+          "a": true,
+          "q": "Três transferências recorrentes e fracionadas podem justificar aprofundamento analítico, mas não provam isoladamente um crime.",
+          "why": "Certo. Operações repartidas em valores pequenos, especialmente de modo recorrente, podem ser padrão que merece aprofundamento, mas fracionamento não prova ilicitude. Exemplo: transferir R$ 1.000 entre contas três vezes pode decorrer de pagamento legítimo ou de operação atípica; é preciso verificar titulares, origem, finalidade e documentação."
+        },
+        {
+          "a": true,
+          "q": "Saldo final pode ser calculado, em termos básicos, por saldo inicial mais créditos menos débitos.",
+          "why": "Certo. A identidade de fluxo é: saldo final = saldo inicial + entradas − saídas. Exemplo: saldo inicial R$ 500, entradas R$ 800 e saídas R$ 450 resultam em saldo final R$ 850. Em conciliação, é preciso reconhecer tarifas, estornos, datas e transferências internas para evitar dupla contagem."
+        },
+        {
+          "a": false,
+          "q": "Uma transferência entre contas do mesmo titular deve ser tratada sempre como nova renda.",
+          "why": "Errado. Transferência entre contas do mesmo titular geralmente apenas desloca recursos já existentes e não cria renda nova. Exemplo: passar R$ 300 da conta-corrente à poupança reduz um saldo e aumenta outro, sem gerar R$ 300 de receita. A origem e eventuais rendimentos devem ser examinados separadamente."
+        },
+        {
+          "a": true,
+          "q": "Conciliação compara registros de fontes diferentes para localizar diferenças e inconsistências.",
+          "why": "Certo. A conciliação bancária confronta extrato da instituição financeira com lançamentos contábeis e comprovantes. Exemplo: o extrato mostra tarifa de R$ 15 ainda não registrada no razão; a diferença precisa ser identificada, explicada e lançada conforme os documentos. Conciliação não significa alterar valores até que coincidam artificialmente."
+        },
+        {
+          "a": true,
+          "q": "Um relatório deve distinguir fatos observados, hipóteses e limitações.",
+          "why": "Certo. Um fato observado é diretamente suportado por registro; hipótese é explicação ainda sujeita a teste; limitação descreve o que os dados não permitem concluir. Exemplo: cinco saques próximos no tempo são fatos; dizer que há combinação entre envolvidos é hipótese, não conclusão automática. Registrar fonte e incerteza evita conclusões acima das evidências."
+        }
+      ],
+      "slug": "pcac-2026-contabilidade-analise-financeira-conciliacao-fracionamento-atipicidade",
+      "discipline": "Contabilidade Geral e Análise Financeira",
+      "topic_label": "Análise de fluxos financeiros, fracionamento e padrões atípicos",
+      "practice_review": {
+        "items": [
+          {
+            "a": true,
+            "q": "Três transferências recorrentes e fracionadas podem justificar aprofundamento analítico, mas não provam isoladamente um crime.",
+            "why": "Certo. Operações repartidas em valores pequenos, especialmente de modo recorrente, podem ser padrão que merece aprofundamento, mas fracionamento não prova ilicitude. Exemplo: transferir R$ 1.000 entre contas três vezes pode decorrer de pagamento legítimo ou de operação atípica; é preciso verificar titulares, origem, finalidade e documentação."
+          },
+          {
+            "a": true,
+            "q": "Saldo final pode ser calculado, em termos básicos, por saldo inicial mais créditos menos débitos.",
+            "why": "Certo. A identidade de fluxo é: saldo final = saldo inicial + entradas − saídas. Exemplo: saldo inicial R$ 500, entradas R$ 800 e saídas R$ 450 resultam em saldo final R$ 850. Em conciliação, é preciso reconhecer tarifas, estornos, datas e transferências internas para evitar dupla contagem."
+          },
+          {
+            "a": false,
+            "q": "Uma transferência entre contas do mesmo titular deve ser tratada sempre como nova renda.",
+            "why": "Errado. Transferência entre contas do mesmo titular geralmente apenas desloca recursos já existentes e não cria renda nova. Exemplo: passar R$ 300 da conta-corrente à poupança reduz um saldo e aumenta outro, sem gerar R$ 300 de receita. A origem e eventuais rendimentos devem ser examinados separadamente."
+          },
+          {
+            "a": true,
+            "q": "Conciliação compara registros de fontes diferentes para localizar diferenças e inconsistências.",
+            "why": "Certo. A conciliação bancária confronta extrato da instituição financeira com lançamentos contábeis e comprovantes. Exemplo: o extrato mostra tarifa de R$ 15 ainda não registrada no razão; a diferença precisa ser identificada, explicada e lançada conforme os documentos. Conciliação não significa alterar valores até que coincidam artificialmente."
+          },
+          {
+            "a": true,
+            "q": "Um relatório deve distinguir fatos observados, hipóteses e limitações.",
+            "why": "Certo. Um fato observado é diretamente suportado por registro; hipótese é explicação ainda sujeita a teste; limitação descreve o que os dados não permitem concluir. Exemplo: cinco saques próximos no tempo são fatos; dizer que há combinação entre envolvidos é hipótese, não conclusão automática. Registrar fonte e incerteza evita conclusões acima das evidências."
+          }
+        ],
+        "method": "Revisão individual de cinco enunciados, respostas e justificativas, com exemplos de fluxo financeiro, conciliação, transferência entre contas e limites de inferência; não substitui parecer jurídico",
+        "status": "reviewed",
+        "subject": "Contabilidade Geral e Análise Financeira",
+        "version": 1,
+        "checked_at": "2026-11-21T17:53:48Z",
+        "review_type": "didactic",
+        "source_note": "Complemento didático autoral do Anexo III do Edital PC-AC 2026. Questões autorais, não oficiais.",
+        "topic_label": "Análise de fluxos financeiros, fracionamento e padrões atípicos",
+        "material_slug": "pcac-2026-contabilidade-analise-financeira-conciliacao-fracionamento-atipicidade"
+      }
+    }
+  ]
+}

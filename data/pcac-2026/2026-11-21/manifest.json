@@ -1,0 +1,102 @@
+{
+  "snapshot_date": "2026-11-21",
+  "contest_name": "PC-AC 2026",
+  "source": "Supabase public.study_materials",
+  "files": [
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-analise-de-dados-e-informacoes.json",
+      "bytes": 41694,
+      "modules": 12,
+      "quiz_items": 78
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-arquivologia.json",
+      "bytes": 50451,
+      "modules": 17,
+      "quiz_items": 85
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-contabilidade-geral.json",
+      "bytes": 137260,
+      "modules": 10,
+      "quiz_items": 141
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-contabilidade-geral-e-analise-financeira.json",
+      "bytes": 129582,
+      "modules": 9,
+      "quiz_items": 123
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-estatistica.json",
+      "bytes": 112649,
+      "modules": 13,
+      "quiz_items": 125
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-legislacao-institucional.json",
+      "bytes": 98622,
+      "modules": 25,
+      "quiz_items": 182
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-lingua-portuguesa.json",
+      "bytes": 92093,
+      "modules": 20,
+      "quiz_items": 195
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-administracao.json",
+      "bytes": 51662,
+      "modules": 17,
+      "quiz_items": 85
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-direito-administrativo.json",
+      "bytes": 27528,
+      "modules": 9,
+      "quiz_items": 49
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-direito-constitucional.json",
+      "bytes": 15842,
+      "modules": 5,
+      "quiz_items": 28
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-direito-penal-e-processual-penal.json",
+      "bytes": 34578,
+      "modules": 10,
+      "quiz_items": 69
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-informatica.json",
+      "bytes": 36789,
+      "modules": 10,
+      "quiz_items": 64
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-raciocinio-logico.json",
+      "bytes": 68519,
+      "modules": 16,
+      "quiz_items": 155
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-realidade-do-estado-do-acre.json",
+      "bytes": 23768,
+      "modules": 7,
+      "quiz_items": 44
+    },
+    {
+      "path": "data/pcac-2026/2026-11-21/quiz-tecnologia-da-informacao-e-seguranca-da-informacao.json",
+      "bytes": 28482,
+      "modules": 10,
+      "quiz_items": 51
+    }
+  ],
+  "notes": [
+    "Snapshots document reviewed and pending material practice; do not auto-approve legacy reviews.",
+    "These JSON files are not deployed SQL migrations.",
+    "Any amended quiz item invalidates prior exact-match practice_review approval."
+  ]
+}
