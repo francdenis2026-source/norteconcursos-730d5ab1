@@ -61,7 +61,7 @@
 .student-home.sh2 .sh2-hero__contest .student-hub__acre-flag { width: 2.25rem; height: 1.5rem; flex: none; margin: 0; border-radius: 0.25rem; }
 .student-home.sh2 :is(.sh2-hero__contest-copy, .sh2-hero__exam) { display: grid; gap: 0.0625rem; min-width: 0; }
 .student-home.sh2 .sh2-hero__exam { padding-left: 1rem; border-left: 1px solid oklch(1 0 0 / 0.2); }
-.student-home.sh2 .sh2-hero small { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.82 0.15 82); }
+.student-home.sh2 .sh2-hero small { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.82 0.15 82); }
 .student-home.sh2 .sh2-hero :is(h2, time, .sh2-hero__exam strong) { font-size: 0.9375rem; font-weight: 800; line-height: 1.2; color: #fff; }
 .student-home.sh2 .sh2-hero :is(.sh2-hero__contest-copy, .sh2-hero__exam) p { font-size: 0.75rem; color: oklch(0.9 0.02 90); }
 .student-home.sh2 .sh2-hero .sh2-link { color: oklch(0.85 0.15 82); }
@@ -88,9 +88,9 @@
 .student-home.sh2 .sh2-kpi:active { transform: scale(0.985); }
 .student-home.sh2 .sh2-kpi > svg { width: 1.375rem; height: 1.375rem; color: var(--sh2-tone); }
 .student-home.sh2 .sh2-kpi > span { display: grid; min-width: 0; }
-.student-home.sh2 .sh2-kpi small { font-size: 0.6875rem; font-weight: 700; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-kpi small { font-size: 0.75rem; font-weight: 700; color: var(--sh2-dim); }
 .student-home.sh2 .sh2-kpi strong { font-size: 1.25rem; font-weight: 800; line-height: 1.15; font-variant-numeric: tabular-nums; }
-.student-home.sh2 .sh2-kpi em { overflow: hidden; font-size: 0.6875rem; font-style: normal; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-kpi em { overflow: hidden; font-size: 0.75rem; font-style: normal; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
 
 /* Quadro principal: agenda, ritmo e revisão lado a lado */
 .student-home.sh2 .sh2-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 0.625rem; align-items: stretch; min-width: 0; }
@@ -116,7 +116,7 @@
 .student-home.sh2 .sh2-card__body { display: grid; gap: 0.5rem; align-content: start; flex: 1; min-width: 0; max-height: 16rem; padding: 0.625rem 0.75rem; overflow-y: auto; }
 .student-home.sh2 .sh2-stack .sh2-card__body { max-height: 10.5rem; }
 .student-home.sh2 .sh2-card__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0.75rem; border-top: 1px solid var(--border); }
-.student-home.sh2 .sh2-tag { max-width: 50%; padding: 0.125rem 0.5rem; overflow: hidden; border-radius: 999px; background: color-mix(in srgb, var(--sh2-tone) 16%, transparent); color: var(--sh2-tone); font-size: 0.6875rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-tag { max-width: 50%; padding: 0.125rem 0.5rem; overflow: hidden; border-radius: 999px; background: color-mix(in srgb, var(--sh2-tone) 16%, transparent); color: var(--sh2-tone); font-size: 0.75rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 .student-home.sh2 .sh2-select { max-width: 55%; min-height: 1.75rem; padding: 0 0.375rem; border: 1px solid var(--border); border-radius: 0.5rem; background: var(--card); color: var(--sh2-ink); font-size: 0.75rem; }
 .student-home.sh2 .sh2-link { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0; border: 0; background: none; color: var(--sh2-tone); font-size: 0.8125rem; font-weight: 700; text-decoration: none; cursor: pointer; }
 .student-home.sh2 .sh2-link:hover { text-decoration: underline; }
@@ -145,7 +145,7 @@
 .student-home.sh2 :is(.sh2-blocks, .sh2-signals) li { display: flex; align-items: center; gap: 0.625rem; min-width: 0; padding: 0.375rem 0.5rem; border-radius: 0.5rem; background: color-mix(in srgb, var(--sh2-tone) 7%, transparent); }
 .student-home.sh2 :is(.sh2-blocks, .sh2-signals) li > div { display: grid; flex: 1; min-width: 0; }
 .student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) strong { overflow: hidden; font-size: 0.8125rem; line-height: 1.25; color: var(--sh2-ink); text-overflow: ellipsis; white-space: nowrap; }
-.student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) small { overflow: hidden; font-size: 0.6875rem; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 :is(.sh2-blocks, .sh2-signals, .sh2-row-link) small { overflow: hidden; font-size: 0.75rem; color: var(--sh2-dim); text-overflow: ellipsis; white-space: nowrap; }
 .student-home.sh2 .sh2-blocks time { display: grid; flex: none; font-size: 0.8125rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--sh2-tone); }
 .student-home.sh2 .sh2-signals li { flex-wrap: wrap; row-gap: 0.5rem; padding: 0.5rem 0.625rem; }
 .student-home.sh2 .sh2-signals li > div { flex-basis: 100%; }
@@ -166,7 +166,7 @@
 .student-home.sh2 .sh2-shortcuts span { display: grid; gap: 0.0625rem; min-width: 0; }
 .student-home.sh2 .sh2-shortcuts strong { display: flex; align-items: center; gap: 0.375rem; min-width: 0; font-size: 0.875rem; font-weight: 800; line-height: 1.2; color: #fff; }
 .student-home.sh2 .sh2-shortcuts strong svg { width: 1rem; height: 1rem; color: oklch(0.85 0.15 82); }
-.student-home.sh2 .sh2-shortcuts small { overflow: hidden; font-size: 0.6875rem; color: oklch(0.92 0.02 90); text-overflow: ellipsis; white-space: nowrap; }
+.student-home.sh2 .sh2-shortcuts small { overflow: hidden; font-size: 0.75rem; color: oklch(0.92 0.02 90); text-overflow: ellipsis; white-space: nowrap; }
 
 /* Ritmo da semana: sempre em largura total para o gráfico respirar */
 .student-home.sh2 .sh2-card--wide .sh2-card__body { max-height: none; overflow: visible; }
@@ -203,7 +203,7 @@
 .student-home.sh2 .sh2-insights__kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: 0.5rem; }
 .student-home.sh2 .sh2-insights__kpis > span { display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem; align-items: center; padding: 0.4375rem 0.625rem; border: 1px solid color-mix(in srgb, var(--sh2-tone) 40%, var(--border)); border-radius: 0.625rem; background: color-mix(in srgb, var(--sh2-tone) 10%, transparent); }
 .student-home.sh2 .sh2-insights__kpis svg { grid-row: span 2; width: 1.25rem; height: 1.25rem; color: var(--sh2-tone); }
-.student-home.sh2 .sh2-insights__kpis small { grid-column: 2; font-size: 0.6875rem; font-weight: 700; color: var(--sh2-dim); }
+.student-home.sh2 .sh2-insights__kpis small { grid-column: 2; font-size: 0.75rem; font-weight: 700; color: var(--sh2-dim); }
 .student-home.sh2 .sh2-insights__kpis strong { grid-column: 2; font-size: 1.25rem; font-weight: 800; line-height: 1.1; color: var(--sh2-ink); font-variant-numeric: tabular-nums; }
 .student-home.sh2 .sh2-insights__kpis > span:not(:has(svg)) :is(small, strong) { grid-column: 1 / -1; }
 .student-home.sh2 .sh2-insights__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 0.75rem; min-width: 0; }
@@ -274,7 +274,7 @@
 .student-home.sh2 .student-pcac-spotlight__action-label {
   flex: 0 0 100%;
   color: oklch(0.82 0.025 90 / 0.82);
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 850;
   letter-spacing: 0.14em;
   line-height: 1;

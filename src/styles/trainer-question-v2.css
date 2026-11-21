@@ -1331,3 +1331,53 @@ html body .app-shell[data-focus-mode="true"]:has(.qx) .app-topbar .workspace-ful
   html body .qx .qx-explain__right { font-size: 0.9375rem; font-weight: 650; color: var(--foreground); margin: 0 0 0.375rem; }
   html body .qx .qx-example .qx-explain__text { font-size: 0.9375rem !important; color: color-mix(in oklab, var(--foreground) 82%, transparent); }
 }
+
+/* ── Ajuste de enquadramento em janela comum (não tela cheia) ───────────────
+   As alternativas não têm mais teto de altura: o painel de respostas rola,
+   então a última alternativa nunca fica cortada em telas baixas. */
+html body .qx .qx-pane--answers > .qx-choices {
+  max-height: none;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* ── Textos do enunciado, explicação e alternativas justificados ───────── */
+html body .qx .qx-stem,
+html body .qx .qx-explain__text,
+html body .qx .qx-base__text,
+html body .qx .qx-option__text,
+html body .qx .qx-choice__text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* ── Botões do treinador: alvo de toque mínimo e texto legível ─────────── */
+html body .qx .qx-btn {
+  height: 2.5rem;
+  font-size: 0.875rem;
+}
+@media (max-width: 720px) {
+  html body .qx .qx-btn { height: 2.75rem; min-width: 2.75rem; }
+}
+
+/* ── Janelas baixas (desktop sem tela cheia): cabeçalho mais enxuto para caber as alternativas ── */
+@media (min-width: 900px) and (max-height: 760px) {
+  html body .qx .qx-top { padding-block: 0.375rem; }
+  html body .qx .qx-info { padding-block: 0.25rem; min-height: 0; }
+  html body .qx .trainer-timer-chip { height: 1.75rem; padding-block: 0; }
+  html body .qx .qx-chips { min-height: 0; padding-block: 0.125rem; }
+  html body .qx .qx-chips__report .qx-btn { height: 2rem; }
+  html body .qx .qx-dock { padding-block: 0.375rem; }
+  html body .qx .qx-pane { padding-block: 0.5rem; }
+  html body .qx .qx-pane--answers { padding-block: 0.375rem; }
+  html body .qx .qx-options,
+  html body .qx .qx-choices { gap: 0.3rem; }
+  html body .qx .qx-option,
+  html body .qx .qx-choice { padding-block: 0.4rem; font-size: 0.875rem; line-height: 1.4; }
+  html body .qx .qx-option__letter,
+  html body .qx .qx-choice__letter { width: 1.75rem; height: 1.75rem; }
+  html body .qx .qx-stem,
+  html body .qx .qx-base__text { font-size: 0.9375rem; line-height: 1.55; }
+}
