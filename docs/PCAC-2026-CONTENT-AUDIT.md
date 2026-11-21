@@ -1826,3 +1826,68 @@ O conjunto de questões ativas identificado na auditoria do PCCR e normas relaci
 ### Limites e próximos passos técnicos
 
 A revisão textual das vantagens listadas no art. 5º está consolidada, mas não significa que cada vantagem tenha sido validada em contracheques ou tabelas de pagamento atuais. Permanecem necessários: conferir atos vigentes que fixem valores de chefia; validar a composição detalhada da remuneração inicial; testar visualmente o treinador e o contador do painel; executar testes automatizados/build após a sequência de migrations. A auditoria geral de Legislação Institucional continua em andamento.
+
+
+## Vigésima continuação — LC nº 129/2004: direitos, deveres e regime disciplinar — 21/11/2026
+
+### Fonte primária e atualização legislativa
+
+Foi consultado o texto da LC nº 129/2004 disponibilizado pela Assembleia Legislativa do Acre (96 páginas), que incorpora alterações até a LC nº 496/2025. A LC nº 526/2026 foi conferida separadamente, pois não aparece incorporada nessa versão consolidada. Para os dispositivos alterados em 2026, prevalece a redação específica da LC nº 526/2026.
+
+A LC nº 496/2025 unificou Agente e Escrivão como Oficial Investigador e manteve expressamente os direitos, garantias, prerrogativas, deveres, vedações e regime disciplinar da LC nº 129/2004.
+
+### Conteúdo didático incluído
+
+Foram acrescentadas as seções 53 a 61 ao material PCCR/Legislação Institucional:
+- funções institucionais da Polícia Civil e atribuições institucionais (arts. 1º e 4º);
+- organização, Direção Geral, Conselho Superior e Corregedoria (arts. 5º, 6º, 9º, 10 e 12);
+- direitos, porte de arma, carteira funcional, equipamentos e recompensas (arts. 89 a 99);
+- deveres funcionais (art. 100);
+- transgressões disciplinares dos quatro grupos (arts. 101 a 104);
+- penas, limites de suspensão, demissão, dosimetria e reabilitação (arts. 107 a 117);
+- afastamento preventivo, apuração e PAD obrigatório em hipóteses sujeitas a demissão (arts. 120 a 131);
+- mudanças da LC nº 496/2025 e LC nº 526/2026 sobre unificação do cargo, ingresso, formação e interstício;
+- roteiro de prioridades e pegadinhas de prova.
+
+### Pontos de atualização de 2026 destacados
+
+- LC nº 526/2026, art. 64: ingresso na classe inicial por concurso; estágio probatório começa com a investidura.
+- Art. 65: fases e provas previstas no texto atualizado; o curso específico de formação começa imediatamente após o ato coletivo de investidura e é frequentado na condição de servidor em efetivo exercício.
+- Art. 79-E: curso de formação conta como efetivo exercício para fins legais, mas não para o interstício promocional; contagem começa no exercício na unidade de primeira lotação.
+- LC nº 526/2026, art. 3º: cessão/disponibilização, como regra, suspende a contagem do interstício; retomada no retorno à unidade de origem, ressalvadas funções estratégicas expressamente previstas.
+
+### Questões autorais
+
+Oito questões novas foram adicionadas ao catálogo e verificadas como ativas, com gabaritos e explicações:
+1. Deveres funcionais (C).
+2. Porte de arma e restrições (C).
+3. Recompensas legais (B).
+4. Transgressão do primeiro grupo (A).
+5. Relação entre grupos e sanções (C).
+6. Hipótese de PAD obrigatório (B).
+7. Suspensão do interstício durante cessão (C).
+8. Início do curso de formação após investidura (C).
+
+Questões inéditas autorais; não são itens oficiais da IDECAN.
+
+### Validação
+
+Material atualizado para 58.652 caracteres; as seções 53, 57 e 60 foram confirmadas por consulta ao Supabase. As oito questões foram consultadas individualmente no catálogo e estão com status active. Não foi executado nesta etapa teste visual do painel nem build completo do projeto.
+
+### Fontes oficiais
+
+- LC nº 129/2004, texto da Assembleia Legislativa (alterações até LC nº 496/2025): https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/6614/pdf
+- LC nº 496/2025: https://legis.ac.gov.br/detalhar/6527
+- LC nº 526/2026: https://legis.ac.gov.br/detalhar/6874 e https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9836/pdf-texto
+
+### Migrations
+
+- `20261121303800_expand_lc129_rights_duties_disciplinary_and_lc526_updates.sql` — commit `3a7df80de6c1586e95a5272ec4c4a402844ccb55`.
+- `20261121303900_add_lc129_rights_duties_discipline_and_lc526_questions.sql` — commit `c4d7321899091edea9ce2a95c200fc39d9db70c2`.
+
+### Pendências
+
+- Revisar integralmente os arts. 102 a 106-C e 118 a 156, incluindo redações e revogações pontuais.
+- Conferir texto integral das alterações de 2026 sobre concurso/formação/interstício e sua integração no material do edital.
+- Validar a contagem no painel do aluno e realizar testes/build do projeto.
+- Auditoria global da disciplina continua em andamento.
