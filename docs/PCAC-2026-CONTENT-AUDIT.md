@@ -241,3 +241,19 @@ Foi removido o bloco “Classificação dos passivos financeiros — CPC 26” q
 - GitHub Actions, execução **44856145884**: testes automatizados, TypeScript, ESLint e build de produção concluídos com sucesso.
 
 A auditoria de gabaritos acima cobre os 59 itens listados e as três novas questões financeiras. Ela não significa que todas as demais questões de Contabilidade, Português ou outras disciplinas tenham sido individualmente reavaliadas nesta etapa.
+
+
+## Continuação da auditoria individual — Contabilidade — 21/11/2026
+
+### Reconciliação do quantitativo
+A consulta atual ao catálogo curado encontrou 45 questões ativas relacionadas à preparação PC-AC em Contabilidade: 33 registradas sob “Polícia Civil do Acre” e 12 no “Banco autoral de preparação PC-AC”. Portanto, o quantitativo de 43 mencionado como próxima etapa na auditoria anterior não coincide com o total atual do catálogo; a diferença deve ser reconciliada antes de declarar o lote completo. Todas as 45 possuem gabarito preenchido e explicação cadastrada. Seis explicações tinham menos de 100 caracteres e foram selecionadas para aprofundamento.
+
+### Lote tratado nesta etapa
+Foram ampliadas seis explicações curtas, preservando integralmente enunciados, alternativas, IDs e gabaritos: patrimônio líquido (equação patrimonial), partidas dobradas e finalidade da DRE. As explicações agora incluem raciocínio, exemplo numérico/cotidiano, distinção conceitual e dica de prova. Os seis gabaritos foram mantidos (C, B, C, B, B e A, respectivamente).
+
+- Migration: `supabase/migrations/20261121010000_expand_legacy_pcac_accounting_explanations.sql`.
+- Commit na MAIN: `64a2412e998cf33a521db7c3354fbb3af059a325`.
+- As alterações correspondentes foram aplicadas diretamente ao catálogo Supabase e verificadas: seis registros atualizados, com explicações entre 669 e 861 caracteres.
+
+### Limite desta etapa
+Este lote não representa a conclusão da auditoria independente das 45 questões. A conferência de gabaritos contra documentos oficiais e a análise substantiva das demais questões ainda precisam ser feitas em lotes, com rastreabilidade da fonte. A simples presença de `verified_at` no banco não substitui a conferência da fonte primária.
