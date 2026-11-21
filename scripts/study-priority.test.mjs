@@ -90,6 +90,11 @@ test("each PC-AC discipline maps known high-incidence topics and leaves unknown 
   assert.equal(timeTotal, 100);
 
   assert.equal(studyPriorityFor("PC-AC 2026", "Análise de Dados e Informações", "Aplicação prática: cruzar bases"), null);
+  assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Contabilidade Geral e Análise Financeira", "Juros simples e compostos"))), { level: "media", top20: false });
+  assert.equal(studyPriorityFor("PC-AC 2026", "Contabilidade Geral", "Goodwill e impairment"), null);
+  assert.equal(studyPriorityFor("PC-AC 2026", "Contabilidade Geral", "Custeio variável e ponto de equilíbrio"), null);
+  assert.equal(studyPriorityFor("PC-AC 2026", "Noções de Administração", "Gestão de materiais e patrimônio"), null);
+
   assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Análise de Dados e Informações", "Correlação e causalidade"))), { level: "alta", top20: false });
   assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Arquivologia", "Protocolo e tramitação"))), { level: "alta", top20: false });
 });
