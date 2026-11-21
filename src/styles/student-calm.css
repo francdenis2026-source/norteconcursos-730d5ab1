@@ -16,11 +16,11 @@
 /* Escuro: fundos um pouco mais fundos; texto e secundário seguem acima de AA. */
 :root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_),
 :root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_) * {
-  --sp-canvas: #0b141a;
-  --sp-surface: #101d25;
-  --sp-soft: #14262f;
-  --sp-ink: #c4ccd5;
-  --sp-muted: #a1abb8;
+  --sp-canvas: #111214;
+  --sp-surface: #17191d;
+  --sp-soft: #1e2126;
+  --sp-ink: #d9dde3;
+  --sp-muted: #a3aab5;
 }
 
 /* Sem brilho em texto, ícones e sombras luminosas. */
@@ -93,17 +93,17 @@
   --sp-muted: #555b63;
 }
 :root.dark .app-shell[data-area="student"]:not(#_):not(#_):not(#_) {
-  --sp-canvas: #0d171d;
-  --sp-surface: #13212a;
-  --sp-soft: #192a34;
-  --sp-line: #2a3b46;
-  --sp-ink: #bac4ce;
-  --sp-muted: #9ba8b5;
+  --sp-canvas: #111214;
+  --sp-surface: #17191d;
+  --sp-soft: #1e2126;
+  --sp-line: #2b2f36;
+  --sp-ink: #d9dde3;
+  --sp-muted: #a3aab5;
 }
 
 /* Reduz o aspecto de texto luminoso sem sacrificar contraste ou legibilidade. */
 :root.dark body .app-shell[data-area="student"] #dashboard-content {
-  color: #bac4ce;
+  color: #d9dde3;
   -webkit-font-smoothing: antialiased;
 }
 :root.dark body .app-shell[data-area="student"] #dashboard-content

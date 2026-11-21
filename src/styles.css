@@ -290,11 +290,11 @@
   /* Cool slate dark palette (not flat neutral, not brown): reads as a deliberate, professional
      theme instead of a washed-out charcoal, and gives white/gold text more lift. Gold stays a
      small accent. */
-  --background: oklch(0.165 0.012 250);
+  --background: oklch(0.17 0 0);
   --foreground: oklch(0.96 0.002 250);
-  --card: oklch(0.21 0.014 250);
+  --card: oklch(0.215 0 0);
   --card-foreground: var(--foreground);
-  --popover: oklch(0.245 0.015 250);
+  --popover: oklch(0.25 0 0);
   --popover-foreground: var(--foreground);
   --primary: var(--foreground);
   --primary-foreground: var(--background);
@@ -17402,4 +17402,20 @@ input[type="datetime-local"]::-webkit-date-and-time-value {
 @media (max-width: 767px) {
   .trainer-session-layout { display: flex !important; flex-direction: column; gap: 12px; width: 100%; max-width: 100%; }
   .trainer-session-layout > * { width: 100% !important; max-width: 100% !important; min-width: 0; }
+}
+
+/* Banner do aluno no modo claro: textos escuros sobre o painel claro (antes, branco sobre branco). */
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello :is(h1, p) {
+  color: #172033 !important;
+  text-shadow: none !important;
+}
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest {
+  background: rgb(255 255 255 / 0.94) !important;
+}
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-hero__contest, .sh2-hero__exam) :is(h2, h3, p, span, strong, small, time):not(.sh2-link, .student-hub__acre-flag) {
+  color: #172033 !important;
+  text-shadow: none !important;
+}
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest small {
+  color: #44506a !important;
 }
