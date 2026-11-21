@@ -17419,3 +17419,31 @@ html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .student
 html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest small {
   color: #44506a !important;
 }
+
+
+/* Hotfix: o artigo da biblioteca usa uma folha própria. Em dark mode essa
+   superfície deve acompanhar o tema, sem transformar o texto em branco sobre branco. */
+html.dark body .library-reading-workspace,
+html.dark body .library-reading-workspace .library-body,
+html.dark body .library-reading-workspace [class*="paper"],
+html.dark body .library-reading-workspace [class*="content-card"] {
+  background-color: #171d26 !important;
+  color: #e8edf4 !important;
+  border-color: #354252 !important;
+}
+html.dark body .library-reading-workspace .library-body :is(
+  h1,h2,h3,h4,h5,h6,p,li,span,strong,b,small,label,figcaption,td,th
+) {
+  color: #e0e7ef;
+}
+html.dark body .library-reading-workspace .library-body :is(
+  blockquote,pre,table,[class*="callout"],[class*="challenge"],[class*="desafio"],
+  [class*="example"],[class*="question"]
+) {
+  background-color: #202936 !important;
+  color: #e0e7ef !important;
+  border-color: #46566b !important;
+}
+html.dark body .library-reading-workspace .library-body a {
+  color: #e1c27f !important;
+}
