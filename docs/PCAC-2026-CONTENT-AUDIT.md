@@ -1021,3 +1021,37 @@ Migrations desta etapa:
 - Validar os itens da Lei nº 14.735/2023 à luz da promulgação dos vetos em 2024 e do Decreto nº 12.996/2026, especialmente onde o material cita regulamentação.
 - Revisar o PCCR com os anexos e a estrutura de carreira atual, sem usar tabelas históricas como vigentes.
 - Fazer conferência visual da Biblioteca e do Treinador, além de testes de integração após as migrations.
+
+
+## Segunda continuação — auditoria disciplinar — 21/11/2026
+
+### Materiais revistos e alterações
+
+- LC nº 129/2004: transgressões disciplinares, grupos, penalidades, dosimetria, reabilitação e responsabilidades.
+- LC nº 129/2004: deveres funcionais, representação, investigação preliminar e instauração do PAD.
+- LC nº 129/2004: processo administrativo disciplinar, citação, provas, defesa, relatório, decisão e recurso.
+- LC nº 129/2004: sindicância, prazos e prescrição.
+- LC nº 39/1993: acumulação de cargos, responsabilidades, penalidades, prescrição, sindicância e PAD.
+
+### Correções de referências
+
+- O material de LC nº 39/1993 tinha apenas a LC nº 51/1996 na base de fontes. Foi substituída pela referência direta ao texto consolidado da LC nº 39/1993 e pela LC nº 525/2026. A LC nº 525/2026 revoga especificamente o § 4º do art. 282; não altera os arts. 168 a 208 usados nesta aula.
+- Os quatro materiais da LC nº 129/2004 receberam links para o texto consolidado oficial e para as leis modificadoras pertinentes (LC nº 208/2010 e LC nº 293/2014). As alterações de 2025 e 2026 foram consideradas na indicação de fonte.
+- Os cinco materiais receberam aprofundamentos com exemplos de situações práticas, distinções entre sindicância e PAD, sequência processual, contagem de prazos e técnicas para evitar troca de grupos disciplinares e penalidades.
+
+### Treinador de questões
+
+Incluídas 10 novas questões autorais, duas por material, com alternativas, gabarito e explicação. Todas estão identificadas como autorais e vinculadas ao respectivo material. A questão sobre prescrição da advertência foi ajustada para manter a unidade legal “seis meses”, em vez de converter para 180 dias.
+
+### Validação
+
+- 10 novas questões autorais confirmadas como ativas no catálogo estruturado, vinculadas a cinco materiais.
+- Os cinco materiais foram ampliados para entre 5.584 e 6.922 caracteres.
+- Os links de legislação foram substituídos por referências oficiais consultáveis no Portal LEGIS do Acre.
+- A leitura da LC nº 129/2004 confirma as alterações indicadas no portal: LC nº 208/2010, LC nº 293/2014, LC nº 496/2025 e LC nº 526/2026. A LC nº 526/2026 concentrou mudanças relevantes em ingresso, estágio, formação e lotação; não foi tratada como alteração automática de todos os artigos disciplinares.
+- Ainda falta teste visual do modo treinador e conferência final artigo por artigo dos prazos e competências dos arts. 118 a 151, bem como validação da redação integral de todos os grupos de transgressões dos arts. 101 a 104.
+
+Migrations desta etapa:
+- `20261121300200_fix_disciplinary_law_source_references.sql` — commit `486bd49f4157ec6966ce99c784d1c12ecc6ca96d`.
+- `20261121300300_expand_disciplinary_law_explanations.sql` — commit `cb92afba2a12a9639e70b4d95d0ecf168f75a69b`.
+- `20261121300400_add_disciplinary_law_trainer_questions.sql` — commit `1b4ae03654b9788149d64a61fb78af93e381924a`.
