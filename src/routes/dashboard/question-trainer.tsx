@@ -2017,7 +2017,7 @@ function QuestionTrainer() {
               {modal === "help" ? (
                 <TrainerLearningMaterials
                   key={question.source + question.id}
-                  userId={userId}
+                  userId={userId ?? "demo-user"}
                   subject={question.subject}
                   topic={question.subtopic ?? ""}
                   materials={relatedMaterials}
@@ -2834,7 +2834,7 @@ function QtFitViewport({
         }
       }
       const scroller = shell.closest<HTMLElement>(".app-content");
-      let bottom = window.innerHeight - stripH;
+      const bottom = window.innerHeight - stripH;
       const focusApp = shell.closest<HTMLElement>(".app-shell");
       const inFocus = root === ".qx" && focusApp?.getAttribute("data-focus-mode") === "true";
       // Sem limitador: o cartão vai até o fim da janela (inclusive em tela cheia).
