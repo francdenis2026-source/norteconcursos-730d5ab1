@@ -7,6 +7,15 @@ const manifest = JSON.parse(fs.readFileSync(path.join(base, 'manifest.json'), 'u
 assert.equal(manifest.contest_name, 'PC-AC 2026');
 assert.equal(manifest.files.length, 15, 'Expected 15 discipline snapshots');
 
+// A redação do material jurídico não é autorização de publicação: cada item
+// exige registro completo de fontes oficiais verificadas, ainda que a aula exista.
+const LEGAL_DISCIPLINES = new Set([
+  'Legislação Institucional',
+  'Noções de Direito Administrativo',
+  'Noções de Direito Constitucional',
+  'Noções de Direito Penal e Processual Penal',
+]);
+const OFFICIAL_HOSTS = new Set(['www.planalto.gov.br', 'planalto.gov.br', 'legis.ac.gov.br', 'www.legis.ac.gov.br', 'www12.senado.leg.br', 'www.stf.jus.br', 'portal.stf.jus.br', 'noticias.stf.jus.br']);
 const uniqueSlugs = new Set();
 const questionAnswers = new Map();
 const report = { disciplines: 0, materials: 0, quiz_items: 0, checked_reviews: 0, legacy_reviews: 0, pending_revalidation: 0, missing_reviews: 0 };
@@ -42,6 +51,22 @@ for (const item of manifest.files) {
       quizCount++;
     }
     const review = material.practice_review;
+    if (LEGAL_DISCIPLINES.has(material.discipline) && review?.status === 'reviewed') {
+      assert.equal(review.version, 1, 'Legacy legal approval: ' + material.slug);
+      assert.ok(review.syllabus_topic_id && /^[0-9a-f-]{36}$/i.test(review.syllabus_topic_id), 'Missing legal syllabus reference: ' + material.slug);
+      assert.ok(review.scope && review.checked_at && Array.isArray(review.sources) && review.sources.length, 'Unverified legal approval: ' + material.slug);
+      for (const source of review.sources) {
+        const url = new URL(source.url);
+        assert.equal(url.protocol, 'https:', 'Non-HTTPS legal source: ' + material.slug);
+        assert.ok(OFFICIAL_HOSTS.has(url.hostname) || /(?:^|\\.)(?:stf|stj)\\.jus\\.br$/.test(url.hostname), 'Nonofficial legal source: ' + material.slug);
+        assert.match(source.sha256 ?? '', /^[0-9a-f]{64}$/i, 'Missing legal source SHA-256: ' + material.slug);
+        assert.ok(!Number.isNaN(Date.parse(source.checked_at ?? '')), 'Missing legal source date: ' + material.slug);
+      }
+      assert.ok(Array.isArray(review.items) && review.items.length === material.quiz.length, 'Incomplete legal source-to-quiz mapping: ' + material.slug);
+      for (const entry of review.items) {
+        assert.ok(review.sources.some(source => source.url === entry.source_url), 'Unmapped legal evidence: ' + material.slug);
+      }
+    }
     if (!review) { report.missing_reviews++; continue; }
     if (review.status === 'needs_revalidation') report.pending_revalidation++;
     if (review.version !== 1) { report.legacy_reviews++; continue; }
