@@ -47,6 +47,17 @@ export function MaterialPractice({
     () => authoredMaterialPractice(authoredQuiz, scope, authoredKey, label, authoredReview),
     [authoredQuiz, scope, authoredKey, label, authoredReview],
   );
+  // A presença de quiz no banco não equivale a uma revisão válida: a validação
+  // compara cada item com a versão efetivamente aprovada, não só um status legado.
+  // Não liberar exercícios normativos sem a conferência formal correspondente.
+  const reviewRequired = Boolean(
+    scope.law ||
+      scope.article ||
+      /direito|legisla|contabilidade|reda[çc][ãa]o oficial/i.test(
+        `${scope.subject ?? ""} ${label}`,
+      ),
+  );
+  const authoredAwaitingReview = reviewRequired && authoredQuiz.length > 0 && authored.length === 0;
   const pool = useMemo(() => mergeMaterialPractice(catalogPool, authored), [catalogPool, authored]);
   const [session, setSession] = useState<{ questions: Question[]; id: number } | null>(null);
   const search = materialPracticeSearch(scope);
@@ -61,6 +72,13 @@ export function MaterialPractice({
           Bateria de até 20 questões do assunto, sem repetir itens para completar a quantidade.
         </p>
       </header>
+      {authoredAwaitingReview && (
+        <p className="rounded-lg border p-3 text-sm text-muted-foreground" role="status">
+          Este material possui {authoredQuiz.length} exercício(s) autoral(is) em revisão de
+          conteúdo e fontes. Eles não entram na bateria até a validação correspondente.
+          Questões já elegíveis do acervo geral continuam acessíveis.
+        </p>
+      )}
       {!requested ? (
         <div className="space-y-2">
           <p className="text-sm" role="status">
