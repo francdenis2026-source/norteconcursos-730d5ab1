@@ -632,3 +632,19 @@ Aula 7 — Correlação, regressão linear simples e causalidade: 10/10 questõe
 Verificação consolidada das aulas 2 a 7: 60 questões; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas.
 
 Migration: supabase/migrations/20261121290000_deepen_pcac_statistics_correlation_regression_trainer.sql. Commit: a591eae2162724e192abeaf8cca45e37443023d5.
+
+
+## Estatística — aprofundamento do treinador, lote 4 — 21/11/2026
+
+Duas aulas adicionais foram enriquecidas diretamente no Supabase:
+
+- Aula 8 — Séries temporais: padrões, tendências e comparação de períodos: 10/10 questões.
+- Aula 9 — Outliers, indicadores e limitações da análise estatística: 10/10 questões.
+
+As explicações incluem exemplos cotidianos, fórmulas, interpretação, dicas e resolução em etapas. Enunciados, gabaritos e ordem foram preservados.
+
+Auditoria consolidada das aulas 2 a 9: 80 questões; zero explicações abaixo de 250 caracteres; zero questões sem dica; zero questões sem etapas de resolução.
+
+Migrations:
+- 20261121291000_deepen_pcac_statistics_time_series_trainer.sql — commit 4d8a96b34ded6491b8e758b879135a8a881d1c0f.
+- 20261121292000_deepen_pcac_statistics_outliers_indicators_trainer.sql — commit 9bdf781d5c55bddf42b4c5f83660200a2435529f.
