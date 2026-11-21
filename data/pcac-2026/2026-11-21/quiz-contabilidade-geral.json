@@ -295,11 +295,114 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "9. Investimentos: método de custo, equivalência patrimonial e dividendos",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "Uma participação de 12% em uma empresa que distribui R$ 18.000 em dividendos dá direito a R$ 2.160.",
+            "tip": "Transforme o percentual em decimal: 12% = 0,12. Depois multiplique pelo valor distribuído.",
+            "why": "O cálculo usa o total efetivamente distribuído, R$ 18.000. A investidora possui 12%, então sua parcela é 18.000 × 0,12 = R$ 2.160. Não se aplica 12% sobre o patrimônio líquido nem sobre um lucro que não foi integralmente distribuído. O percentual de 12% deve ser aplicado somente depois de identificar a distribuição total. A conta pode ser conferida dividindo R$ 18.000 por 100 e multiplicando por 12, chegando aos mesmos R$ 2.160.",
+            "resolution_steps": [
+              "Identifique o total de dividendos: R$ 18.000.",
+              "Converta 12% em 0,12.",
+              "Multiplique 18.000 × 0,12.",
+              "Resultado: R$ 2.160."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Se a empresa distribui apenas 50% de um lucro de R$ 36.000, a investidora com 12% recebe 12% de R$ 36.000.",
+            "tip": "Duas etapas: percentual distribuído primeiro; participação do investidor depois.",
+            "why": "A investida apurou lucro de R$ 36.000, mas distribuiu somente 50%. Primeiro calcule os dividendos: 36.000 × 0,50 = R$ 18.000. Depois aplique a participação de 12%: 18.000 × 0,12 = R$ 2.160. A afirmação está errada porque aplica 12% ao lucro integral, ignorando que metade não foi distribuída.",
+            "resolution_steps": [
+              "Calcule a parcela distribuída: 36.000 × 50% = R$ 18.000.",
+              "Aplique a participação: 18.000 × 12% = R$ 2.160.",
+              "Compare com a afirmação, que usou o lucro integral.",
+              "Conclusão: afirmação errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "No MEP, a participação da investidora no lucro da investida é reconhecida à medida que o resultado é apurado.",
+            "tip": "MEP acompanha o desempenho da investida: lucro aumenta investimento; prejuízo diminui.",
+            "why": "No MEP, a investidora reconhece sua participação no lucro ou prejuízo da investida após a aquisição, sem esperar a distribuição de dividendos. Exemplo: 30% de lucro de R$ 100.000 gera resultado de equivalência patrimonial de R$ 30.000 e aumenta o investimento.",
+            "resolution_steps": [
+              "Identifique o lucro ou prejuízo apurado após a aquisição.",
+              "Multiplique pelo percentual de participação.",
+              "Reconheça a parcela no resultado da investidora.",
+              "Ajuste o valor contábil do investimento."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Pelo MEP, os dividendos declarados geram crédito em Receita de Dividendos.",
+            "tip": "No MEP: Débito em Dividendos a Receber; Crédito em Investimento. Não conte o mesmo lucro duas vezes.",
+            "why": "No MEP, o lucro já foi reconhecido pela participação no resultado da investida. Quando os dividendos são declarados, a investidora registra um direito a receber e reduz o investimento. O crédito, portanto, é em Investimento — MEP, e não em Receita de Dividendos.",
+            "resolution_steps": [
+              "Verifique que a questão está tratando de MEP.",
+              "Reconheça o direito: débito em Dividendos a Receber.",
+              "Reduza o investimento: crédito em Investimento — MEP.",
+              "Não credite Receita de Dividendos nesse lançamento."
+            ]
+          },
+          {
+            "a": true,
+            "q": "O resumo apresenta presunção de influência significativa a partir de 20% do capital votante, sem controle.",
+            "tip": "Memorize: 20% ou mais do poder de voto = presunção relativa de influência significativa.",
+            "why": "O CPC 18 presume influência significativa quando o investidor possui 20% ou mais do poder de voto, salvo demonstração clara em contrário. A presunção também funciona no sentido oposto: menos de 20% presume ausência de influência, mas fatos concretos podem demonstrá-la. Não é um limite absoluto nem se refere automaticamente a qualquer percentual do capital total.",
+            "resolution_steps": [
+              "Localize o percentual do poder de voto, não apenas o capital total.",
+              "Com 20% ou mais, aplique a presunção de influência significativa.",
+              "Confira se há fatos que afastam a presunção.",
+              "Lembre que participação inferior a 20% também pode demonstrar influência por outros elementos."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Na consolidação de B e A, a venda intragrupo de B para A deve permanecer como receita consolidada.",
+            "tip": "Pergunte: o dinheiro veio de alguém de fora do grupo? Venda intragrupo é eliminada na consolidação.",
+            "why": "Na consolidação, controladora e controlada são apresentadas como se fossem uma única entidade econômica. Por isso, a venda entre elas não representa receita obtida de terceiros e deve ser eliminada. Permanecem as operações com clientes e fornecedores externos, observados também os ajustes de saldos e lucros não realizados.",
+            "resolution_steps": [
+              "Identifique se comprador e vendedor pertencem ao mesmo grupo consolidado.",
+              "Se for operação intragrupo, elimine receita e despesa correspondentes.",
+              "Mantenha a venda efetivamente realizada a terceiros.",
+              "Verifique se existe lucro não realizado em estoque final."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão Consulplan/CFC 2020.2, o resultado consolidado é R$ 175.000.",
+            "tip": "Na consolidação, não some a venda interna à venda externa. Acompanhe a mercadoria até a venda ao cliente de fora do grupo.",
+            "why": "O resultado indicado pelo enunciado é a receita externa de R$ 250.000 menos o custo de grupo de R$ 75.000, que corresponde à metade do estoque inicial de R$ 150.000 transferida. Assim: 250.000 − 75.000 = R$ 175.000. A operação intragrupo de R$ 150.000 não é uma segunda receita externa.",
+            "resolution_steps": [
+              "Calcule o custo da parcela transferida: 150.000 × 50% = R$ 75.000.",
+              "Identifique a receita externa: R$ 250.000.",
+              "Subtraia o custo do grupo: 250.000 − 75.000.",
+              "Resultado: R$ 175.000."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o dividendo da investidora pelo método de custo é R$ 2.160.",
+            "tip": "Faça a conta em duas etapas: lucro × percentual distribuído × participação. Identifique também o método e o tipo de demonstração descritos no enunciado.",
+            "why": "A investida apurou lucro de R$ 36.000 e decidiu distribuir 50%, totalizando R$ 18.000. A participação de 12% equivale a R$ 2.160. A questão informa método de custo e o contexto da distribuição após seis meses; não transforme essa regra temporal antiga em regra geral atual para qualquer investimento ou demonstração.",
+            "resolution_steps": [
+              "Calcule o total distribuído: 36.000 × 50% = R$ 18.000.",
+              "Calcule a participação: 18.000 × 12% = R$ 2.160.",
+              "Confira o método contábil e o contexto temporal do enunciado original.",
+              "Não generalize a referência dos seis meses para todos os casos atuais."
+            ]
+          }
+        ],
+        "method": "Conferência individual de oito itens; recálculo de 12% sobre dividendos efetivamente distribuídos (18000 x 0,12 = 2160), MEP e redução do investimento por dividendos, influência significativa presumida por 20% de votos, eliminações intragrupo e resultado consolidado de 175000. Comparação com CPC 18 (R3) e exercício Consulplan/CFC 2020.2.",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 8
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:45:23Z",
+        "review_type": "didactic_manual",
+        "source_note": "Conteúdo organizado exclusivamente a partir dos arquivos enviados: “Resumo - Contabilidade Geral.pdf” (itens 95–114, páginas 19–21) e “Revisão de Véspera - Alunos.pdf” (questão Consulplan/Exame CFC 2020.2, página 1).",
+        "topic_label": "9. Investimentos: método de custo, equivalência patrimonial e dividendos",
+        "material_slug": "pcac-2026-contabilidade-09-investimentos-dividendos-mep-metodo-custo",
+        "reference_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=49"
       }
     },
     {
@@ -651,7 +754,7 @@
       "quiz": [
         {
           "a": true,
-          "q": "A taxa para conversão de ativos e passivos na data do balanço, segundo a questão enviada, é a taxa de fechamento.",
+          "q": "Na data do balanço, itens monetários em moeda estrangeira devem ser convertidos pela taxa de fechamento, conforme o CPC 02 (R2).",
           "tip": "No encerramento: item monetário = taxa de fechamento. Não confunda com taxa inicial da compra.",
           "why": "Na data do balanço, ativos e passivos monetários em moeda estrangeira são convertidos pela taxa de fechamento. A taxa da data da transação é usada no reconhecimento inicial e para itens não monetários mensurados pelo custo histórico. A questão pergunta especificamente por ativos e passivos na data do balanço, portanto a resposta é taxa de fechamento.",
           "resolution_steps": [
@@ -688,7 +791,7 @@
         },
         {
           "a": false,
-          "q": "A taxa média do exercício foi a alternativa indicada para converter ativos e passivos na data do balanço.",
+          "q": "A taxa média do exercício deve substituir a taxa de fechamento na conversão de itens monetários em moeda estrangeira na data do balanço.",
           "tip": "Taxa média é expediente prático para transações ao longo do período, não substitui a taxa de fechamento dos itens monetários.",
           "why": "A taxa média pode ser usada como aproximação prática da taxa da data das transações quando não houver flutuação significativa. Porém, a questão de conversão de itens monetários no balanço exige a taxa de fechamento. Se as taxas flutuarem significativamente, a média do período não é apropriada nem mesmo como aproximação das transações.",
           "resolution_steps": [
@@ -715,11 +818,79 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "12. Operações em moeda estrangeira e CPC 02",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "Na data do balanço, itens monetários em moeda estrangeira devem ser convertidos pela taxa de fechamento, conforme o CPC 02 (R2).",
+            "tip": "No encerramento: item monetário = taxa de fechamento. Não confunda com taxa inicial da compra.",
+            "why": "Na data do balanço, ativos e passivos monetários em moeda estrangeira são convertidos pela taxa de fechamento. A taxa da data da transação é usada no reconhecimento inicial e para itens não monetários mensurados pelo custo histórico. A questão pergunta especificamente por ativos e passivos na data do balanço, portanto a resposta é taxa de fechamento.",
+            "resolution_steps": [
+              "Identifique que a questão trata da data do balanço.",
+              "Verifique se o ativo/passivo é monetário.",
+              "Para itens monetários, aplique a taxa de fechamento.",
+              "Descarte a taxa da data da transação como resposta geral para esse caso."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Variação cambial é uma diferença resultante da conversão a diferentes taxas.",
+            "tip": "Compare o valor em reais na taxa inicial com o valor convertido na taxa aplicável posterior.",
+            "why": "Variação cambial é a diferença causada pela conversão ou liquidação de um valor em moeda estrangeira usando taxas diferentes. Exemplo: uma dívida de US$ 1.000 registrada a R$ 5,00 vale R$ 5.000; se no fechamento o dólar vale R$ 5,40, a obrigação passa a R$ 5.400 e surge diferença de R$ 400.",
+            "resolution_steps": [
+              "Identifique o valor em moeda estrangeira.",
+              "Anote a taxa usada no reconhecimento inicial.",
+              "Anote a taxa posterior de conversão ou liquidação.",
+              "Calcule a diferença em moeda funcional: essa diferença é a variação cambial."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Moeda funcional é a moeda do ambiente econômico principal da entidade.",
+            "tip": "Pergunte em que moeda a empresa realmente gera e gasta caixa e em qual moeda preços e custos são influenciados.",
+            "why": "Moeda funcional é a moeda do ambiente econômico principal no qual a entidade opera. A análise considera a moeda que mais influencia os preços de venda e os custos, além de outros fatores como financiamento e retenção de recursos. Uma empresa brasileira que exporta para a China não passa automaticamente a ter yuan ou dólar como moeda funcional só por vender ao exterior.",
+            "resolution_steps": [
+              "Observe o ambiente econômico principal da entidade.",
+              "Analise a moeda que influencia preços de venda.",
+              "Analise a moeda que influencia custos, mão de obra e insumos.",
+              "Considere financiamento e outros fatores como evidências adicionais.",
+              "Não escolha a moeda apenas pelo país do cliente ou da sede."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A taxa média do exercício deve substituir a taxa de fechamento na conversão de itens monetários em moeda estrangeira na data do balanço.",
+            "tip": "Taxa média é expediente prático para transações ao longo do período, não substitui a taxa de fechamento dos itens monetários.",
+            "why": "A taxa média pode ser usada como aproximação prática da taxa da data das transações quando não houver flutuação significativa. Porém, a questão de conversão de itens monetários no balanço exige a taxa de fechamento. Se as taxas flutuarem significativamente, a média do período não é apropriada nem mesmo como aproximação das transações.",
+            "resolution_steps": [
+              "Identifique se o enunciado fala de transação durante o período ou saldo na data do balanço.",
+              "Para saldo monetário no fechamento, use taxa de fechamento.",
+              "Só use média como aproximação quando representar adequadamente as taxas das datas das transações.",
+              "A afirmação está errada."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Moeda funcional é a taxa de câmbio utilizada para liquidação imediata de operações.",
+            "tip": "Moeda funcional = moeda-base das operações. Taxa à vista = preço de conversão de uma moeda em outra.",
+            "why": "Moeda funcional não é uma taxa de câmbio. É a moeda do ambiente econômico principal da entidade. Taxa à vista é o preço para liquidação imediata de uma operação de câmbio; moeda funcional é a unidade monetária que representa o ambiente em que a entidade principalmente gera e despende caixa.",
+            "resolution_steps": [
+              "Identifique se o enunciado descreve uma moeda ou uma taxa.",
+              "Moeda funcional descreve o ambiente econômico principal.",
+              "Taxa à vista é a cotação usada para conversão imediata.",
+              "A afirmação confunde os conceitos e está errada."
+            ]
+          }
+        ],
+        "method": "Revisão manual de cinco itens segundo CPC 02 (R2): taxa de fechamento apenas para itens monetários, variação cambial, moeda funcional, aproximação por taxa média e taxa à vista. Dois enunciados corrigidos para evitar generalização indevida de ativos e passivos.",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 5
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:44:54Z",
+        "review_type": "didactic_manual",
+        "source_note": "“Prova 2020.2 Resolvida - Parte 02.pdf”, questões Consulplan/Exame CFC 2020.2, páginas 8–10.",
+        "topic_label": "12. Operações em moeda estrangeira e CPC 02",
+        "material_slug": "pcac-2026-contabilidade-12-moeda-estrangeira-cpc02-moeda-funcional",
+        "reference_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=3"
       }
     },
     {
