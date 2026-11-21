@@ -179,3 +179,23 @@ html body .app-shell[data-area] .library-body .study-prose strong { color: var(-
     box-shadow: none;
   }
 }
+
+/* Leitura: só o texto. Sem barra do dashboard, rodapé de autoria, assinatura lateral nem o relógio
+   animado do fundo (animação em loop sob a página inteira deixava a rolagem pesada).
+   No celular a navegação inferior permanece, pois é o caminho de volta. */
+html:has(.library-reading-workspace) { scroll-behavior: auto; }
+html body .app-shell[data-area]:has(.library-reading-workspace) .app-study-backdrop { display: none !important; }
+html body .app-shell[data-area]:has(.library-reading-workspace) .app-study-backdrop * { animation: none !important; }
+@media (min-width: 900px) {
+  html body .app-shell[data-area]:has(.library-reading-workspace) { --app-topbar-h: 0px; }
+  html body .app-shell[data-area]:has(.library-reading-workspace) .app-topbar { display: none !important; }
+  html body:has(.library-reading-workspace) :is(.dev-strip, .platform-signature) { display: none !important; }
+  html body .app-shell[data-area]:has(.library-reading-workspace) :is(#dashboard-content, .app-content, .app-content__inner) {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    min-height: 0;
+  }
+  /* Abas mais baixas */
+  html body .app-shell[data-area] .library-reading-workspace [role="tablist"] { min-height: 0; padding: 3px; }
+  html body .app-shell[data-area] .library-reading-workspace [role="tablist"] [role="tab"] { min-height: 2rem; padding-block: 0.25rem; }
+}

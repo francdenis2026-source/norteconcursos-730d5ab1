@@ -3,14 +3,13 @@ import "@/styles/student-library-media-workspaces.css";
 import "@/styles/library-discipline-fit.css";
 import "@/styles/material-pdf-page.css";
 import "@/styles/student-area-kit.css";
-import type { CSSProperties } from "react";
 import { disciplineTheme } from "@/lib/disciplineTheme";
 import { PortugueseStudyReading } from "@/components/library/PortugueseStudyReading";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
-import { useEffect, useMemo, useState } from "react";
+import { memo, useEffect, useMemo, useState, type CSSProperties } from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import {
@@ -47,6 +46,31 @@ import {
   useStudyMaterial,
   useStudyMaterialList,
 } from "@/lib/studyMaterials";
+
+/** Corpo do material. Memoizado: a barra de progresso muda enquanto se rola e não deve refazer o texto inteiro. */
+const MaterialBody = memo(function MaterialBody({
+  discipline,
+  source,
+  legal,
+}: {
+  discipline: string;
+  source: string;
+  legal: boolean;
+}) {
+  return (
+    <div
+      className={`surface-card library-body ${discipline === "Língua Portuguesa" ? "library-body--portuguese" : ""}`}
+    >
+      {discipline === "Língua Portuguesa" ? (
+        <PortugueseStudyReading source={source} />
+      ) : legal ? (
+        <LegalStudyReading source={source} markdown />
+      ) : (
+        <Markdown source={source} />
+      )}
+    </div>
+  );
+});
 
 export const Route = createFileRoute("/dashboard/library/$slug")({
   component: MaterialPageGated,
@@ -332,17 +356,11 @@ function MaterialPage() {
               </Link>
             )}
 
-            <div
-              className={`surface-card library-body ${material.discipline === "Língua Portuguesa" ? "library-body--portuguese" : ""}`}
-            >
-              {material.discipline === "Língua Portuguesa" ? (
-                <PortugueseStudyReading source={material.body_md} />
-              ) : materialLawSlug(material) || material.legal_review ? (
-                <LegalStudyReading source={material.body_md} markdown />
-              ) : (
-                <Markdown source={material.body_md} />
-              )}
-            </div>
+            <MaterialBody
+              discipline={material.discipline}
+              source={material.body_md}
+              legal={Boolean(materialLawSlug(material) || material.legal_review)}
+            />
 
             {(sources.length > 0 || material.source_note) && (
               <details className="surface-card library-sources" aria-label="Fontes">
