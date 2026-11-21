@@ -1668,3 +1668,55 @@ Gabaritos confirmados: B e B. Itens autorais, não oficiais da IDECAN.
 - Verificar adicionais e gratificações aplicáveis ao Oficial Investigador em 2026.
 - Testar a exibição e a contagem das questões no painel do aluno.
 - Auditoria global de Legislação Institucional continua aberta.
+
+
+## Décima sétima continuação — remuneração e vantagens da carreira do Oficial Investigador — 21/11/2026
+
+### Fonte legal e regra central
+
+Foi confrontado o art. 5º da Lei nº 3.228/2017 com a Lei nº 3.288/2017 (art. 2º, aplicação subsidiária da Lei nº 2.250/2009) e a LC nº 496/2025 (manutenção dos direitos e garantias previstos nos planos de cargos e da estrutura da carreira).
+
+Para os cargos abrangidos pela Lei nº 3.228/2017:
+- § 1º: adicional de atividade policial, gratificação de risco de vida e etapa alimentação estão absorvidos no vencimento básico.
+- § 2º: não se aplica o VAP previsto no art. 22, IX, da Lei nº 2.250/2009 aos cargos contemplados pela Lei nº 3.228/2017.
+- § 3º: preserva vantagens pessoais por tempo de serviço, vantagens e garantias da LC nº 129/2004 e benefícios do Estatuto, naquilo que não conflitar com a Lei nº 3.228/2017.
+- Caput: lista gratificação natalina, adicional de férias, diárias/ajudas de custo/transporte, adicional de titulação, sexta parte, gratificação de instrução e gratificação de chefia.
+
+### Correção didática de remuneração
+
+O material alerta para não somar novamente as três parcelas absorvidas ao vencimento básico, evitando dupla contagem. O edital PCAC 2026 informa remuneração inicial de R$ 6.342,07 para Oficial Investigador, mas não discrimina no item 3.7 a composição de cada rubrica. O material não afirma que esse valor é vencimento básico isolado.
+
+O art. 30 e o Anexo VIII da Lei nº 2.250/2009 tratam do adicional de titulação em seu regime, mas a aplicação de percentuais específicos ao Oficial Investigador exige conferência da última redação do anexo e da compatibilidade com o plano especial de 2017. Percentuais não foram afirmados como definitivamente aplicáveis nesta etapa.
+
+### Questões autorais
+
+Duas questões foram adicionadas e verificadas como ativas:
+1. Parcelas absorvidas no vencimento básico.
+2. Não aplicação do VAP aos cargos contemplados pela Lei nº 3.228/2017.
+
+Gabaritos conferidos: B e C. Questões autorais, não oficiais da IDECAN.
+
+### Material e validação
+
+Material PCCR atualizado para 41.323 caracteres; consulta ao banco confirmou as três novas seções remuneratórias. As duas questões novas aparecem ativas no catálogo com gabaritos e explicações.
+
+### Fontes oficiais
+
+- Lei nº 3.228/2017, art. 5º: https://legis.ac.gov.br/detalhar/2499
+- PDF oficial da Lei nº 3.228/2017: https://estado.ac.gov.br/wp-content/uploads/2021/08/LEI-N.-3228-DE-15-DE-MARCO-DE-2017.pdf
+- Lei nº 3.288/2017, art. 2º: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/5754
+- LC nº 496/2025: https://legis.ac.gov.br/detalhar_imprimir/6527
+- Edital PCAC 2026: https://sead.ac.gov.br/editais-pcac-policia-civil-2026/
+
+### Migrations
+
+- `20261121303200_expand_official_investigator_remuneration_absorbed_benefits.sql` — commit `f57e12119113bf5ccb1eb7aabaadbde1925f97e3`.
+- `20261121303300_add_absorbed_benefits_vap_trainer_questions.sql` — commit `b3e1178d4b10fadd9ccbacac162de728a8cd53ae`.
+
+### Pendências
+
+- Conferir percentuais e condições atuais do adicional de titulação aplicáveis ao Oficial Investigador.
+- Conferir sexta parte, gratificação de instrução e chefia com legislação e regulamentos atualizados.
+- Localizar eventual norma posterior sobre composição da remuneração inicial de R$ 6.342,07.
+- Testar visualmente a exibição e contagem das questões no painel do aluno.
+- Auditoria global de Legislação Institucional segue em andamento.
