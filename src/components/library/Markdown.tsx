@@ -505,8 +505,24 @@ function renderBlocks(
       if (answerIndex >= 0) {
         const answerBlock = blocks[answerIndex]!;
         if (answerBlock.type === "p" || answerBlock.type === "h2" || answerBlock.type === "h3") {
-          prepared.push({ type: "interactive-question", prompt: current.text, answer: answerBlock.text });
-          consumedAnswers.add(answerIndex);
+          // Gabarito e análise podem ter sido gravados em parágrafos separados.
+          // Reúna todos os blocos de correção em um único feedback da questão.
+          const answerParts = [answerBlock.text];
+          let answerEndIndex = answerIndex;
+          while (answerEndIndex + 1 < blocks.length) {
+            const following = blocks[answerEndIndex + 1]!;
+            if (following.type !== "p" || !isAnswerAnalysis(following.text)) break;
+            answerParts.push(following.text);
+            answerEndIndex++;
+          }
+          prepared.push({
+            type: "interactive-question",
+            prompt: current.text,
+            answer: answerParts.join(" "),
+          });
+          for (let consumed = answerIndex; consumed <= answerEndIndex; consumed++) {
+            consumedAnswers.add(consumed);
+          }
           continue;
         }
       }
