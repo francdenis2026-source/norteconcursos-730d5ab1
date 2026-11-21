@@ -586,3 +586,23 @@ Aula 1 recebeu roteiro estratégico de prioridades baseado no Anexo III do Edita
 A priorização foi explicitamente identificada como orientação pedagógica, não como estatística oficial de incidência da IDECAN. Foram consultados o edital oficial (Anexo III), bancos públicos de questões IDECAN e levantamentos de concursos policiais de outras bancas. As incidências de Cebraspe não foram atribuídas à IDECAN.
 
 Migration: supabase/migrations/20261121220000_add_pcac_statistics_study_priority_roadmap.sql. Commit: 14bd654ad9c63fdc1e995829cc8ae9db90db7da3.
+
+
+## Estatística — aprofundamento do treinador, lote 1 — 21/11/2026
+
+Atualizadas diretamente no Supabase as explicações das questões das aulas:
+
+- Aula 2 — distribuição de frequências: 10/10 questões com explicação detalhada, dica e resolução em etapas.
+- Aula 3 — tabelas e gráficos: 10/10 questões com explicação detalhada, dica e resolução em etapas.
+- Aula 4 — média simples e ponderada: 10/10 questões com explicação detalhada, dica e resolução em etapas.
+- Aula 5 — dispersão e coeficiente de variação: 10/10 questões com explicação detalhada, dica e resolução em etapas.
+
+Total neste lote: 40 questões melhoradas. Enunciados, gabaritos e ordem originais preservados. Auditoria pós-gravação encontrou zero explicações abaixo de 250 caracteres, zero questões sem dica e zero questões sem passos de resolução nas aulas 2 a 4; aula 5 teve conteúdo de resolução/dica inserido e será incluída na verificação consolidada subsequente.
+
+Migrations:
+- 20261121230000_deepen_pcac_statistics_frequency_trainer.sql — commit ad016e967a18112613e70bef0afe6ad85f350c21.
+- 20261121240000_deepen_pcac_statistics_charts_trainer.sql — commit 00d9d7aafd0b45fd13599150842f9bc8b19ab3e5.
+- 20261121250000_deepen_pcac_statistics_mean_trainer.sql — commit 84d498e1c1cd744bf353be7a3253cdb6ee93701a.
+- 20261121260000_deepen_pcac_statistics_dispersion_trainer.sql — commit 0ebc6f0b5b17b635a0cc6f97a0c3a08dbd95060f.
+
+Os commits registram as migrações no repositório; as alterações dos registros de treinamento foram aplicadas diretamente no banco conectado. Não declarar build/CI como executados nesta etapa.
