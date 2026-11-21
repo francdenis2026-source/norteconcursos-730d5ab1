@@ -23,9 +23,9 @@
         },
         {
           "a": true,
-          "q": "A seleção de participantes por sorteio, com probabilidades iguais de inclusão, caracteriza amostragem aleatória simples.",
+          "q": "Na amostragem aleatória simples sem reposição, todos os subconjuntos possíveis de n elementos da população têm a mesma probabilidade de seleção.",
           "tip": "Aleatória simples = sorteio com igual chance de inclusão.",
-          "why": "A amostragem aleatória simples seleciona elementos por sorteio, de modo que cada elemento da população tenha a mesma probabilidade de inclusão (no desenho usual de tamanho fixo). Exemplo: numerar os 1.500 boletins e utilizar um sorteio para escolher 150. O ponto decisivo é o mecanismo aleatório, não apenas a quantidade selecionada.",
+          "why": "A amostragem aleatória simples sem reposição exige que cada subconjunto de n elementos entre os N da população possua a mesma chance de ser selecionado. Exemplo: escolher 2 pessoas entre 4 por sorteio uniforme das 6 duplas possíveis. Apenas igualdade das probabilidades individuais de inclusão não basta para caracterizar todos os desenhos amostrais como aleatórios simples; o critério correto considera os subconjuntos de tamanho n.",
           "resolution_steps": [
             "Identifique a lista completa de elementos elegíveis.",
             "Atribua identificação a cada elemento.",
@@ -134,14 +134,67 @@
       "discipline": "Estatística",
       "topic_label": "1. Conceitos fundamentais de estatística",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": false,
+            "q": "Uma pesquisa seleciona 150 dos 1.500 boletins registrados. Os 150 boletins representam a população, enquanto os 1.500 representam a amostra.",
+            "why": "População é o conjunto completo de elementos sobre o qual a pesquisa deseja obter informações; amostra é apenas a parte selecionada para estudo. No exemplo, os 1.500 boletins formam a população de interesse e os 150 escolhidos constituem a amostra. A amostra serve para estudar o conjunto maior, desde que o método de seleção seja adequado."
+          },
+          {
+            "a": true,
+            "q": "Na amostragem aleatória simples sem reposição, todos os subconjuntos possíveis de n elementos da população têm a mesma probabilidade de seleção.",
+            "why": "A amostragem aleatória simples sem reposição exige que cada subconjunto de n elementos entre os N da população possua a mesma chance de ser selecionado. Exemplo: escolher 2 pessoas entre 4 por sorteio uniforme das 6 duplas possíveis. Apenas igualdade das probabilidades individuais de inclusão não basta para caracterizar todos os desenhos amostrais como aleatórios simples; o critério correto considera os subconjuntos de tamanho n."
+          },
+          {
+            "a": false,
+            "q": "Dividir uma população em estratos e selecionar elementos de cada estrato caracteriza amostragem por conglomerados.",
+            "why": "Na amostragem estratificada, a população é dividida em estratos e selecionam-se elementos de cada estrato. Na amostragem por conglomerados, selecionam-se alguns grupos naturais, como escolas ou bairros. A diferença essencial é: estratificada busca representação de todos os estratos; conglomerados sorteia alguns grupos."
+          },
+          {
+            "a": true,
+            "q": "O número de vítimas de uma ocorrência é uma variável quantitativa discreta.",
+            "why": "Variável quantitativa discreta representa contagens, geralmente em números inteiros. O número de vítimas pode ser 0, 1, 2, 3 e assim por diante; não existe 2,5 vítimas em uma contagem de pessoas. Por isso, é discreta. Não confunda com medidas, como tempo e peso, que podem assumir valores fracionários."
+          },
+          {
+            "a": true,
+            "q": "O tempo de atendimento, medido em minutos e segundos, é uma variável quantitativa contínua.",
+            "why": "Tempo é uma variável quantitativa contínua porque pode assumir valores fracionários dentro de um intervalo. Um atendimento pode durar 12 minutos, 12 minutos e 30 segundos ou 12,45 minutos. O fato de um sistema registrar apenas minutos inteiros é uma limitação de medição, não muda a natureza contínua do tempo."
+          },
+          {
+            "a": false,
+            "q": "Uma variável qualitativa nominal apresenta categorias que podem ser organizadas em uma hierarquia natural.",
+            "why": "Variável qualitativa nominal apresenta categorias sem ordem natural, como tipo de ocorrência, cor ou município. Variável qualitativa ordinal apresenta categorias que podem ser ordenadas, como baixo, médio e alto. Os números usados como códigos de categorias nominais não criam uma hierarquia nem transformam a variável em quantitativa."
+          },
+          {
+            "a": false,
+            "q": "Uma amostra de grande tamanho é necessariamente representativa da população, mesmo quando os participantes são escolhidos apenas por conveniência.",
+            "why": "Uma amostra grande pode continuar enviesada quando os participantes são escolhidos apenas por conveniência. Por exemplo, entrevistar 2.000 pessoas que passam em uma única delegacia não garante representar todos os municípios ou grupos da população. Representatividade depende da cobertura e do método de seleção, não apenas do tamanho da amostra."
+          },
+          {
+            "a": true,
+            "q": "Selecionar um registro a cada 20 elementos de uma lista, após definir o início, é exemplo de amostragem sistemática.",
+            "why": "A amostragem sistemática seleciona elementos em intervalos regulares de uma lista. Depois de definir um início, escolhe-se cada vigésimo registro. O método requer atenção à ordem da lista: um padrão periódico coincidente com o intervalo pode gerar viés."
+          },
+          {
+            "a": true,
+            "q": "Uma lista usa os códigos 1 para furto, 2 para roubo e 3 para homicídio. A variável tipo de ocorrência continua sendo qualitativa nominal.",
+            "why": "Os números 1, 2 e 3 podem ser apenas códigos para categorias como furto, roubo e homicídio. Nesse caso, não representam quantidades nem uma ordem matemática entre os tipos de ocorrência. A variável continua sendo qualitativa nominal. Para interpretar o tipo, consulte o significado do código, não faça operações aritméticas com ele."
+          },
+          {
+            "a": true,
+            "q": "Em uma população de 600 registros, selecionar 60 por amostragem sistemática resulta em intervalo k igual a 10.",
+            "why": "O intervalo da amostragem sistemática é k=N÷n. Aqui, N=600 e n=60: k=600÷60=10. Depois de escolher um ponto inicial conforme o plano amostral, seleciona-se um registro a cada dez posições. Exemplo: se o início for 4, a sequência será 4, 14, 24, 34 e assim por diante. Antes, confira se a lista não possui uma periodicidade que coincida com o intervalo, pois isso pode enviesar a seleção."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "1. Conceitos fundamentais de estatística",
+        "material_slug": "pcac-2026-estatistica-01-fundamentos-populacao-amostra-variaveis"
       }
     },
     {
@@ -271,14 +324,67 @@
       "discipline": "Estatística",
       "topic_label": "2. Organização e apresentação de dados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Frequência absoluta corresponde à quantidade de observações de uma classe.",
+            "why": "Frequência absoluta é a quantidade de vezes que determinado valor, categoria ou classe aparece no conjunto observado. Imagine 40 boletins classificados por tipo: se 9 são de furto, a frequência absoluta de furto é 9. Ela é uma contagem, não um percentual. Para transformar essa contagem em frequência relativa, é necessário dividir pelo total de observações."
+          },
+          {
+            "a": true,
+            "q": "Se 15 de 60 registros pertencem a uma categoria, a frequência relativa é 25%.",
+            "why": "A frequência relativa mostra a participação de uma categoria no total. Se 15 dos 60 registros são de determinada categoria, fazemos 15 ÷ 60 = 0,25. Multiplicando por 100, obtemos 25%. Isso significa que um quarto dos registros pertence à categoria. A frequência absoluta é 15 e o total é 60; portanto, a categoria representa 15/60 = 0,25 do conjunto. Ao converter a proporção em porcentagem, multiplicamos por 100 e chegamos a 25%."
+          },
+          {
+            "a": false,
+            "q": "Uma frequência absoluta de 12 significa necessariamente 12%.",
+            "why": "Uma frequência absoluta igual a 12 significa que foram observadas 12 ocorrências daquela categoria. Não significa 12%, porque percentual depende do total. Se o conjunto tiver 100 observações, 12 representa 12%; se tiver 40, representa 30%. A mesma contagem pode corresponder a percentuais diferentes em conjuntos de tamanhos distintos."
+          },
+          {
+            "a": true,
+            "q": "A frequência acumulada é obtida pela soma progressiva das frequências.",
+            "why": "Frequência acumulada é a soma progressiva das frequências absolutas até determinada classe, respeitando a ordem da tabela. Exemplo: frequências 3, 5 e 4 geram acumuladas 3, 8 e 12. Na segunda classe, somamos 3 + 5; na terceira, somamos 3 + 5 + 4. Ela permite responder quantas observações estão até certo limite."
+          },
+          {
+            "a": true,
+            "q": "A última frequência absoluta acumulada deve ser igual ao total de observações.",
+            "why": "A última frequência absoluta acumulada deve corresponder ao total de observações válidas da distribuição, pois até a última classe todos os elementos já foram contabilizados. Se as frequências forem 4, 7 e 9, a acumulada final será 20, que também é a soma 4 + 7 + 9. Se não bater, pode haver erro de soma ou classe omitida."
+          },
+          {
+            "a": false,
+            "q": "A frequência relativa acumulada final deve ser 50%.",
+            "why": "A frequência relativa acumulada final deve alcançar 100% (ou 1, em forma decimal), porque representa a totalidade das observações incluídas na distribuição. Pode aparecer 99,9% ou 100,1% por arredondamentos das parcelas apresentadas, mas o conceito é o conjunto inteiro. 50% indicaria que apenas metade foi acumulada."
+          },
+          {
+            "a": true,
+            "q": "Uma frequência relativa de 0,25 equivale a 25%.",
+            "why": "A frequência relativa pode ser apresentada como fração, número decimal ou percentual. Para converter 0,25 em porcentagem, multiplique por 100: 0,25 × 100 = 25%. A forma decimal 0,25 também pode ser lida como 25 centésimos, isto é, um quarto do total."
+          },
+          {
+            "a": false,
+            "q": "É sempre adequado acumular tipos de ocorrência sem ordem natural.",
+            "why": "A frequência acumulada pressupõe uma ordem significativa entre valores ou classes, como idade, tempo ou faixas de renda. Categorias nominais sem ordem natural, como tipo de crime ou cor de veículo, não devem ser acumuladas como se uma categoria viesse antes ou depois da outra. É possível contar frequências dessas categorias, mas a soma acumulada não tem interpretação ordinal natural."
+          },
+          {
+            "a": true,
+            "q": "Frequências absolutas 4, 7 e 9 produzem acumuladas 4, 11 e 20.",
+            "why": "A frequência acumulada é construída somando progressivamente: primeira classe 4; segunda classe 4 + 7 = 11; terceira classe 11 + 9 = 20. A última acumulada, 20, confirma que o total de observações é 20. Um erro comum é somar apenas a classe atual e esquecer as anteriores."
+          },
+          {
+            "a": true,
+            "q": "Percentuais podem totalizar 99,9% por causa de arredondamentos.",
+            "why": "Quando os percentuais são calculados e arredondados individualmente para uma ou duas casas decimais, a soma exibida pode ficar em 99,9% ou 100,1%, embora os valores não arredondados totalizem exatamente 100%. Isso não indica necessariamente erro. Se a diferença for grande, porém, deve-se conferir os cálculos, o denominador e se todas as categorias foram incluídas."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "2. Organização e apresentação de dados",
+        "material_slug": "pcac-2026-estatistica-02-distribuicao-frequencias"
       }
     },
     {
@@ -408,14 +514,67 @@
       "discipline": "Estatística",
       "topic_label": "2. Organização e apresentação de dados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Gráfico de barras é adequado para comparar quantidades entre municípios.",
+            "why": "O gráfico de barras é indicado para comparar quantidades entre categorias distintas, como número de ocorrências por município ou atendimentos por delegacia. Cada barra representa uma categoria, e sua altura ou comprimento mostra o valor. Antes de comparar, confira se as barras usam a mesma escala e se a legenda identifica corretamente cada grupo."
+          },
+          {
+            "a": true,
+            "q": "Gráfico de linhas é útil para acompanhar valores ao longo dos meses.",
+            "why": "O gráfico de linhas é especialmente útil quando os dados estão organizados em sequência, sobretudo ao longo do tempo. Ligando os pontos, permite perceber tendência, oscilações e mudanças de nível. Exemplo: quantidade de boletins registrados de janeiro a dezembro. Um mês isolado não basta para afirmar tendência; observe a trajetória de vários períodos."
+          },
+          {
+            "a": false,
+            "q": "No histograma, as barras normalmente ficam separadas para indicar categorias nominais.",
+            "why": "No histograma, as barras normalmente ficam encostadas porque representam intervalos contíguos de uma variável quantitativa, como faixas de tempo ou idade. Já o gráfico de barras costuma comparar categorias distintas e apresenta espaços entre as barras. A separação visual ajuda a diferenciar categorias nominais de classes numéricas contínuas."
+          },
+          {
+            "a": true,
+            "q": "Gráfico de setores representa partes de um total.",
+            "why": "O gráfico de setores (pizza) mostra como um total se divide em partes. Cada setor representa a participação de uma categoria no conjunto, e todos os setores correspondem a 100% ou 360 graus. É mais fácil de interpretar quando há poucas categorias e elas formam um total coerente."
+          },
+          {
+            "a": true,
+            "q": "Um eixo vertical truncado pode fazer uma diferença pequena parecer muito grande.",
+            "why": "Quando o eixo vertical não começa em zero, a diferença visual entre barras pode parecer maior do que a diferença real. Exemplo: valores 98 e 100 podem parecer muito distantes se o eixo começar em 97. Isso não torna todo gráfico truncado automaticamente inválido, mas exige atenção à escala e à forma de apresentação."
+          },
+          {
+            "a": false,
+            "q": "Um único mês de aumento prova tendência crescente de longo prazo.",
+            "why": "Uma tendência é um movimento geral observado ao longo de vários períodos. Um aumento em apenas um mês pode ser uma oscilação pontual, sazonal ou irregular. Para afirmar tendência crescente, é necessário observar uma sequência suficientemente longa e considerar o contexto dos dados."
+          },
+          {
+            "a": true,
+            "q": "25% de um círculo correspondem a 90 graus.",
+            "why": "Um círculo completo tem 360°. Para transformar uma participação percentual em ângulo, converta o percentual em decimal e multiplique por 360°. Assim, 25%=0,25 e 0,25×360°=90°. O setor ocupa um quarto do círculo. Faça a conferência dividindo 90° por 360°: o resultado é 0,25, ou 25%."
+          },
+          {
+            "a": true,
+            "q": "Comparar taxas por habitante pode ser mais informativo do que comparar totais entre municípios de tamanhos diferentes.",
+            "why": "Totais absolutos podem enganar quando os municípios têm populações muito diferentes. Exemplo: Município A registra 200 ocorrências para 200 mil habitantes; Município B registra 100 para 50 mil. Por 100 mil habitantes, A tem taxa 100 e B tem taxa 200. B possui menor total, mas maior taxa relativa."
+          },
+          {
+            "a": false,
+            "q": "A legenda pode ser ignorada se as barras tiverem cores diferentes.",
+            "why": "A legenda informa o significado das cores, símbolos ou padrões utilizados no gráfico. Sem ela, o leitor pode atribuir uma série ao grupo errado. Mesmo que as barras tenham cores diferentes, é preciso saber o que cada cor representa, especialmente quando há várias séries ou categorias."
+          },
+          {
+            "a": true,
+            "q": "Um gráfico não demonstra causalidade apenas por apresentar duas séries que se movem juntas.",
+            "why": "Duas séries que sobem ou descem ao mesmo tempo apresentam associação visual, mas isso não demonstra que uma cause a outra. Ambas podem ser influenciadas por uma terceira variável ou apenas coincidir no período. Para estabelecer causalidade, são necessárias evidências e análise apropriada, não apenas a aparência do gráfico."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "2. Organização e apresentação de dados",
+        "material_slug": "pcac-2026-estatistica-03-tabelas-graficos-interpretacao"
       }
     },
     {
@@ -547,14 +706,67 @@
       "discipline": "Estatística",
       "topic_label": "3. Medidas de tendência central",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "A média simples de 4, 6 e 8 é 6.",
+            "why": "A média aritmética simples é obtida somando todos os valores e dividindo pela quantidade de observações. No exemplo, 4 + 6 + 8 = 18; como existem três números, fazemos 18 ÷ 3 = 6. Pense na média como uma divisão igualitária: se os 18 pontos fossem repartidos igualmente entre três provas, cada uma ficaria com 6."
+          },
+          {
+            "a": true,
+            "q": "A média ponderada de 6 com peso 2 e 8 com peso 3 é 7,2.",
+            "why": "Na média ponderada, cada valor tem um peso que indica sua importância ou quantidade de vezes que deve ser considerado. Multiplicamos cada nota pelo respectivo peso, somamos os produtos e dividimos pela soma dos pesos. Assim, a nota 8, com peso 3, influencia mais o resultado do que a nota 6, com peso 2. O cálculo é (6×2 + 8×3) ÷ (2+3) = 36÷5 = 7,2."
+          },
+          {
+            "a": false,
+            "q": "Na média ponderada, divide-se sempre pela quantidade de notas.",
+            "why": "Na média ponderada, o divisor é a soma dos pesos, e não necessariamente a quantidade de notas. No exemplo de duas notas com pesos 2 e 3, existem duas notas, mas a soma dos pesos é 5. Dividir por 2 daria resultado incorreto. A quantidade de valores só coincide com a soma dos pesos quando todos os pesos são iguais a 1."
+          },
+          {
+            "a": true,
+            "q": "A média de 2, 2, 2, 2 e 12 é 4.",
+            "why": "A média de 2, 2, 2, 2 e 12 é calculada somando os cinco valores: 2+2+2+2+12 = 20. Depois dividimos por 5: 20÷5 = 4. O valor 12 puxa a média para cima, por isso ela fica acima de 2. Esse exemplo mostra que a média considera todos os dados e é sensível a valores extremos."
+          },
+          {
+            "a": false,
+            "q": "A média precisa ser igual a um dos valores observados.",
+            "why": "A média é um resultado calculado e não precisa aparecer na lista original. Por exemplo, os valores 1 e 2 têm média 1,5, embora 1,5 não tenha sido observado. Portanto, a afirmação está errada. Não confunda média com moda, que é o valor mais frequente e necessariamente corresponde a um valor observado no conjunto (quando existe moda)."
+          },
+          {
+            "a": true,
+            "q": "Se a média de cinco observações é 8, a soma dos valores é 40.",
+            "why": "A relação é: soma dos valores = média × quantidade de observações. Se cinco observações têm média 8, a soma é 8×5=40. Essa relação também ajuda a descobrir um valor desconhecido: primeiro calcule a soma total esperada e depois subtraia os valores conhecidos."
+          },
+          {
+            "a": true,
+            "q": "Se a média de quatro valores é 10 e três somam 28, o quarto valor é 12.",
+            "why": "Se a média de quatro valores é 10, a soma total é 10×4 = 40. Três valores somam 28. Logo, o quarto valor precisa completar a soma: 40−28 = 12. Esse tipo de questão fica mais fácil quando primeiro se recupera a soma total e só depois se subtraem os valores conhecidos."
+          },
+          {
+            "a": false,
+            "q": "A média aritmética é pouco afetada por valores extremos.",
+            "why": "A média considera todos os valores e, por isso, pode ser bastante afetada por valores extremos. No conjunto 2, 2, 2, 2 e 12, a média sobe para 4, embora quatro observações sejam iguais a 2. Um valor muito alto ou muito baixo pode deslocar a média. Em distribuições com extremos, a mediana pode representar melhor o centro, dependendo do objetivo."
+          },
+          {
+            "a": true,
+            "q": "Com notas 7 (peso 1) e 9 (peso 3), a média ponderada é 8,5.",
+            "why": "Na média ponderada, multiplicamos cada nota pelo peso correspondente. A nota 7 tem peso 1: 7×1 = 7. A nota 9 tem peso 3: 9×3 = 27. Somamos 7+27 = 34 e dividimos pela soma dos pesos, 1+3 = 4. Resultado: 34÷4 = 8,5. A nota 9 influencia mais porque tem peso maior."
+          },
+          {
+            "a": false,
+            "q": "Mediana é a soma dos valores dividida pela quantidade.",
+            "why": "A afirmação descreve a média, não a mediana. Mediana é o valor central depois de ordenar os dados. Exemplo: em 2, 5 e 20, a mediana é 5; a média é (2+5+20)÷3=9. Se a quantidade de observações for par, a mediana será a média dos dois valores centrais. Na prova, procure a palavra-chave: média usa soma e divisão; mediana usa posição."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "3. Medidas de tendência central",
+        "material_slug": "pcac-2026-estatistica-04-medidas-tendencia-central-media"
       }
     },
     {
@@ -684,14 +896,67 @@
       "discipline": "Estatística",
       "topic_label": "4. Medidas de dispersão",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "A amplitude é o maior valor menos o menor valor.",
+            "why": "Amplitude total é a diferença entre o maior e o menor valor do conjunto. Se os tempos de atendimento foram 4, 7, 9 e 15 minutos, a amplitude é 15−4 = 11 minutos. Ela mostra a extensão total dos dados, mas ignora como os valores intermediários estão distribuídos."
+          },
+          {
+            "a": false,
+            "q": "Conjuntos com a mesma média necessariamente têm a mesma dispersão.",
+            "why": "Dois conjuntos podem ter a mesma média e dispersões diferentes. Exemplo: A = 9, 10, 11; B = 0, 10, 20. Ambos têm média 10, mas no conjunto A os valores ficam próximos do centro e no B ficam muito mais espalhados. A média descreve o centro, não o grau de variação."
+          },
+          {
+            "a": true,
+            "q": "O desvio-padrão é a raiz quadrada da variância.",
+            "why": "O desvio-padrão é definido como a raiz quadrada positiva da variância. A variância usa desvios em relação à média elevados ao quadrado; por isso, sua unidade fica ao quadrado. Ao extrair a raiz, voltamos à unidade original, o que facilita interpretar a dispersão."
+          },
+          {
+            "a": true,
+            "q": "Com média 20 e DP 5, o CV é 25%.",
+            "why": "O coeficiente de variação compara o desvio-padrão com a média e expressa essa relação em porcentagem: CV = (DP ÷ média) × 100. Com DP 5 e média 20, fazemos 5÷20 = 0,25; multiplicando por 100, chegamos a 25%. Isso significa que o desvio-padrão corresponde a 25% da média."
+          },
+          {
+            "a": false,
+            "q": "Com média 50 e DP 5, o CV é 20%.",
+            "why": "Com média 50 e desvio-padrão 5, o coeficiente de variação é 5÷50×100 = 10%, não 20%. O erro comum é dividir incorretamente ou confundir o desvio-padrão com outra medida. Sempre coloque o DP no numerador e a média no denominador, desde que a média seja diferente de zero e a escala tenha interpretação adequada."
+          },
+          {
+            "a": true,
+            "q": "A variância utiliza desvios em relação à média elevados ao quadrado.",
+            "why": "A variância mede a dispersão por meio da média dos quadrados dos desvios em relação à média (com divisor N na população ou n−1 na variância amostral não viesada, conforme o contexto). Elevar os desvios ao quadrado impede que valores acima e abaixo da média se anulem na soma. Por isso, a variância não é simplesmente a média dos desvios com sinal."
+          },
+          {
+            "a": true,
+            "q": "O desvio-padrão retorna à unidade original dos dados.",
+            "why": "O desvio-padrão é expresso na mesma unidade da variável. Se os dados representam minutos, o desvio-padrão também será em minutos. A variância, por usar desvios ao quadrado, fica em minutos². Essa diferença é uma das razões pelas quais o desvio-padrão costuma ser mais intuitivo para interpretação."
+          },
+          {
+            "a": false,
+            "q": "A amplitude depende de todos os valores intermediários.",
+            "why": "A amplitude total depende somente dos dois extremos: maior e menor valor. Os valores intermediários não entram diretamente no cálculo. Por exemplo, os conjuntos 1, 5, 9 e 10 e 1, 2, 3 e 10 possuem a mesma amplitude de 9, embora a distribuição interna seja diferente."
+          },
+          {
+            "a": false,
+            "q": "O coeficiente de variação pode ser calculado normalmente quando a média é zero.",
+            "why": "O coeficiente de variação usual é CV = DP/média × 100. Se a média for zero, a fórmula exigiria divisão por zero, que é indefinida. Se a média estiver muito próxima de zero, o CV pode ficar extremamente elevado e pouco informativo. Portanto, não se deve aplicar a fórmula normalmente com média igual a zero."
+          },
+          {
+            "a": true,
+            "q": "Um CV de 20% indica que o desvio-padrão corresponde a 20% da média.",
+            "why": "Um CV de 20% significa que o desvio-padrão equivale a 20% da média. Se a média for 100 unidades, um CV de 20% corresponde a DP 20. O coeficiente é útil para comparar dispersão relativa entre conjuntos com médias ou escalas diferentes, desde que a média seja positiva e a variável tenha escala de razão apropriada."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "4. Medidas de dispersão",
+        "material_slug": "pcac-2026-estatistica-05-dispersao-coeficiente-variacao"
       }
     },
     {
@@ -821,14 +1086,67 @@
       "discipline": "Estatística",
       "topic_label": "6. Probabilidade",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "O espaço amostral contém todos os resultados possíveis do experimento.",
+            "why": "Espaço amostral é o conjunto de todos os resultados possíveis de um experimento aleatório. Ao lançar um dado comum, o espaço amostral é {1, 2, 3, 4, 5, 6}. Ao lançar uma moeda, é {cara, coroa}. Antes de calcular uma probabilidade, identifique quais resultados podem ocorrer e quais deles atendem ao evento pedido."
+          },
+          {
+            "a": true,
+            "q": "Em um dado justo, a probabilidade de sair número par é 1/2.",
+            "why": "Em um dado justo, cada face tem a mesma chance de aparecer. Os resultados pares são 2, 4 e 6: três casos favoráveis entre seis possíveis. Assim, P(par) = 3/6 = 1/2 = 50%. A contagem simples de casos favoráveis sobre possíveis funciona porque os seis resultados são equiprováveis."
+          },
+          {
+            "a": false,
+            "q": "Se P(A)=0,3, então P(não A)=0,3.",
+            "why": "O evento complementar é tudo aquilo em que A não ocorre. A probabilidade de A somada à de seu complemento deve ser 1 (100%). Se P(A)=0,3, então P(não A)=1−0,3=0,7, ou 70%. Dica: quando o enunciado disser “não”, “nenhum” ou “pelo menos um” em certos contextos, verifique se o complemento simplifica a conta."
+          },
+          {
+            "a": false,
+            "q": "Interseção A∩B significa que A ou B ocorre.",
+            "why": "Interseção A∩B significa que A e B ocorrem ao mesmo tempo. A palavra-chave é “e”. União A∪B significa que A ou B ocorre, incluindo a possibilidade de ambos acontecerem. A questão inverte os conceitos: “ou” corresponde à união, enquanto “e” corresponde à interseção."
+          },
+          {
+            "a": true,
+            "q": "A união A∪B inclui os casos em que A e B ocorrem juntos.",
+            "why": "A união A∪B inclui os resultados em que ocorre A, em que ocorre B e também aqueles em que os dois ocorrem simultaneamente. Para evitar contar duas vezes a interseção, usa-se P(A∪B)=P(A)+P(B)−P(A∩B). Se os eventos forem mutuamente exclusivos, a interseção será zero."
+          },
+          {
+            "a": false,
+            "q": "Eventos mutuamente exclusivos podem ocorrer simultaneamente.",
+            "why": "Eventos mutuamente exclusivos não podem ocorrer simultaneamente no mesmo experimento. Sua interseção é vazia e P(A∩B)=0. Exemplo: em um único lançamento de dado, sair 2 e sair 5 são eventos mutuamente exclusivos. Não confunda com eventos independentes: independência não impede que ambos ocorram juntos."
+          },
+          {
+            "a": true,
+            "q": "A expressão 'sabendo que B ocorreu' indica probabilidade condicional.",
+            "why": "A expressão “sabendo que B ocorreu” restringe a análise aos casos em que B aconteceu. Isso caracteriza probabilidade condicional, representada por P(A|B). A condição muda o conjunto de referência: pergunta-se qual é a chance de A dentro do universo reduzido a B, e não no espaço amostral inteiro."
+          },
+          {
+            "a": true,
+            "q": "Para eventos independentes, P(A∩B)=P(A)×P(B).",
+            "why": "Dois eventos são independentes quando a ocorrência de um não altera a probabilidade do outro. Nesse caso, a probabilidade conjunta é o produto: P(A∩B)=P(A)×P(B). Exemplo: obter cara em uma moeda e obter 6 em um dado justo, lançados independentemente. Não confunda independência com exclusão mútua."
+          },
+          {
+            "a": true,
+            "q": "O resultado de uma moeda não altera a chance de sair seis em um dado independente.",
+            "why": "O lançamento de uma moeda e o lançamento de um dado são experimentos independentes quando um não interfere no resultado do outro. Saber que saiu cara não altera a chance de sair 6 no dado, que continua sendo 1/6. A probabilidade conjunta de cara e seis é 1/2 × 1/6 = 1/12."
+          },
+          {
+            "a": false,
+            "q": "A fórmula casos favoráveis/casos possíveis funciona mesmo quando os resultados não são equiprováveis.",
+            "why": "A fórmula casos favoráveis ÷ casos possíveis pressupõe que todos os resultados considerados tenham a mesma probabilidade. Se os resultados não forem equiprováveis, contar casos não basta: é preciso somar as probabilidades dos resultados favoráveis. Exemplo: uma roleta com setores de tamanhos diferentes não dá a mesma chance a cada cor."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "6. Probabilidade",
+        "material_slug": "pcac-2026-estatistica-06-probabilidade-eventos-condicional"
       }
     },
     {
@@ -958,14 +1276,67 @@
       "discipline": "Estatística",
       "topic_label": "7. Análise de relações entre variáveis",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Correlação positiva indica tendência de crescimento conjunto das variáveis.",
+            "why": "Correlação positiva significa que, em geral, valores maiores de uma variável aparecem associados a valores maiores da outra. Exemplo: em determinado conjunto de dados, quanto maior o número de horas de estudo, maior tende a ser a nota. Isso descreve uma associação no mesmo sentido, mas não prova que uma variável cause a outra."
+          },
+          {
+            "a": true,
+            "q": "O coeficiente de correlação linear usual varia de −1 a +1.",
+            "why": "O coeficiente de correlação linear de Pearson varia de −1 a +1. O sinal indica a direção: positivo para associação linear no mesmo sentido e negativo para sentidos opostos. O valor absoluto indica a intensidade da associação linear: quanto mais próximo de 1, mais forte; próximo de zero indica associação linear fraca."
+          },
+          {
+            "a": false,
+            "q": "Em Y=10+4X, o intercepto é 4.",
+            "why": "Na equação de regressão Y = 10 + 4X, o intercepto é 10, pois é o valor de Y estimado quando X vale zero. O número 4 é o coeficiente angular (inclinação), que indica quanto a estimativa de Y varia quando X aumenta uma unidade. A questão troca os dois papéis."
+          },
+          {
+            "a": true,
+            "q": "Em Y=10+4X, o modelo estima aumento de 4 unidades em Y por unidade adicional de X.",
+            "why": "Em Y = 10 + 4X, o coeficiente angular é 4. Portanto, para cada aumento de uma unidade em X, o valor estimado de Y aumenta quatro unidades, mantendo o modelo linear. Se X aumenta duas unidades, a estimativa de Y aumenta 8 unidades. O intercepto 10 é o valor estimado quando X=0."
+          },
+          {
+            "a": false,
+            "q": "Correlação estatística demonstra necessariamente causalidade.",
+            "why": "Correlação indica associação, não necessariamente relação de causa e efeito. Duas variáveis podem variar juntas porque uma influencia a outra, porque existe uma terceira variável relacionada às duas, por causalidade inversa ou por coincidência. Para afirmar causalidade, é necessário desenho de pesquisa e evidências adicionais."
+          },
+          {
+            "a": true,
+            "q": "Correlação próxima de zero não exclui necessariamente uma relação não linear.",
+            "why": "O coeficiente de Pearson mede associação linear. Uma relação curvilínea pode existir mesmo quando a correlação linear é próxima de zero. Exemplo: Y pode aumentar quando X se afasta de zero, tanto para valores positivos quanto negativos; o padrão é curvo, não uma reta. Por isso, um r próximo de zero não prova ausência de qualquer relação."
+          },
+          {
+            "a": true,
+            "q": "Um ponto extremo pode influenciar o coeficiente de correlação.",
+            "why": "Um ponto extremo pode alterar bastante o coeficiente de correlação, porque a medida considera a posição dos pares de valores em relação às médias. Um registro digitado incorretamente ou um caso raro e verdadeiro pode mudar a direção ou a intensidade aparente da associação. Por isso, valores discrepantes devem ser investigados antes de qualquer decisão de exclusão."
+          },
+          {
+            "a": true,
+            "q": "Regressão linear simples modela uma variável resposta em função de uma variável explicativa.",
+            "why": "Regressão linear simples descreve uma variável resposta Y em função de uma variável explicativa X por meio de uma reta, geralmente escrita como Y estimado = a + bX. “Simples” significa que há uma variável explicativa no modelo. A regressão permite estimar valores dentro do contexto e das limitações dos dados."
+          },
+          {
+            "a": false,
+            "q": "Extrapolar muito além dos dados observados é sempre seguro.",
+            "why": "Extrapolação é utilizar o modelo fora da faixa de valores observada na amostra. Isso é arriscado porque a relação identificada nos dados pode mudar em regiões não observadas. Um modelo ajustado para X entre 10 e 30 não garante previsões confiáveis para X=200. Interpolar dentro da faixa observada costuma ser menos arriscado, embora também dependa da qualidade do modelo."
+          },
+          {
+            "a": true,
+            "q": "Uma terceira variável pode explicar a associação observada entre duas variáveis.",
+            "why": "Uma terceira variável pode influenciar simultaneamente duas variáveis observadas, criando ou alterando a associação entre elas. Por exemplo, temperatura pode estar relacionada tanto ao consumo de água quanto a determinadas ocorrências em espaços públicos. Sem controlar ou investigar essa variável, pode-se atribuir incorretamente uma relação direta entre as duas primeiras."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "7. Análise de relações entre variáveis",
+        "material_slug": "pcac-2026-estatistica-07-relacoes-variaveis-correlacao-regressao"
       }
     },
     {
@@ -1095,14 +1466,67 @@
       "discipline": "Estatística",
       "topic_label": "8. Análise de séries temporais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Uma sequência de registros mensais é uma série temporal.",
+            "why": "Série temporal é um conjunto de observações de uma variável organizado em ordem cronológica: dias, meses, trimestres ou anos. Exemplo: número de boletins registrados em cada mês de 2024. A ordem importa porque permite observar como o fenômeno evolui. Diferentemente de uma lista sem tempo, a série temporal destaca a sequência e as mudanças entre períodos."
+          },
+          {
+            "a": false,
+            "q": "Um aumento isolado em um mês prova tendência crescente.",
+            "why": "Tendência é o movimento geral de longo prazo, e não uma oscilação isolada. Um mês com aumento pode decorrer de acaso, feriado, operação especial ou erro de registro. Para falar em tendência crescente, observe vários períodos e procure uma direção persistente. Um ponto sozinho não comprova crescimento estrutural."
+          },
+          {
+            "a": true,
+            "q": "Um aumento que se repete no mesmo período de vários anos sugere sazonalidade.",
+            "why": "Sazonalidade é um padrão que se repete em períodos conhecidos, como meses, estações ou datas do calendário. Se as ocorrências aumentam repetidamente em dezembro durante vários anos, pode existir sazonalidade. A característica central é a repetição em intervalos regulares dentro do calendário, não apenas um aumento ocasional."
+          },
+          {
+            "a": false,
+            "q": "Ciclos sempre possuem duração exatamente fixa.",
+            "why": "Ciclo é uma oscilação de prazo mais longo associada a movimentos de expansão e retração, muitas vezes econômicos ou sociais. Diferentemente da sazonalidade, o ciclo não precisa repetir-se em intervalos exatamente fixos. Assim, dizer que ciclos sempre têm duração fixa está errado."
+          },
+          {
+            "a": true,
+            "q": "A variação absoluta de 80 para 100 é +20.",
+            "why": "Variação absoluta é a diferença entre o valor final e o inicial. De 80 para 100, fazemos 100−80 = +20. O sinal positivo indica aumento de 20 unidades. Essa medida informa quanto mudou em unidades originais, não a proporção da mudança em relação ao valor de partida."
+          },
+          {
+            "a": false,
+            "q": "A variação percentual de 80 para 100 é 20%.",
+            "why": "A variação percentual usa o valor inicial como base: (valor final − valor inicial) ÷ valor inicial × 100. De 80 para 100, a diferença é 20; dividindo por 80, temos 0,25; multiplicando por 100, chegamos a 25%. Portanto, não é 20%. A variação absoluta é 20 unidades, mas a relativa é 25%."
+          },
+          {
+            "a": true,
+            "q": "A redução de 200 para 150 corresponde a −25%.",
+            "why": "Para calcular a variação percentual de 200 para 150, subtraímos 150−200 = −50. Dividimos pelo valor inicial 200: −50÷200 = −0,25. Multiplicando por 100, obtemos −25%. O sinal negativo indica redução. A redução corresponde a um quarto do valor inicial."
+          },
+          {
+            "a": true,
+            "q": "A variação percentual usual é indefinida quando o valor inicial é zero.",
+            "why": "A variação percentual convencional divide a diferença pelo valor inicial. Se esse valor for zero, ocorre divisão por zero, que é indefinida. Quando uma contagem passa de zero para um valor positivo, é possível descrever a variação absoluta, mas não calcular a variação percentual convencional a partir de base zero."
+          },
+          {
+            "a": true,
+            "q": "Mudanças no método de coleta podem prejudicar a comparação temporal.",
+            "why": "Comparações temporais exigem critérios de coleta consistentes. Se uma instituição muda a definição de ocorrência, o formulário, a cobertura territorial ou o sistema de registro, a diferença entre períodos pode refletir a mudança metodológica, e não uma alteração real do fenômeno. Antes de concluir que houve aumento ou queda, verifique se os dados são comparáveis."
+          },
+          {
+            "a": false,
+            "q": "Uma série temporal identifica automaticamente a causa de uma mudança.",
+            "why": "Uma série temporal mostra como os valores mudam ao longo do tempo, mas não identifica automaticamente a causa da mudança. Um aumento de registros pode estar associado a aumento real do fenômeno, maior fiscalização, mudança de legislação, facilidade de denúncia ou alteração no sistema. É preciso investigar hipóteses alternativas e outras evidências antes de atribuir causalidade."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "8. Análise de séries temporais",
+        "material_slug": "pcac-2026-estatistica-08-series-temporais-padroes-tendencias"
       }
     },
     {
@@ -1232,14 +1656,67 @@
       "discipline": "Estatística",
       "topic_label": "9. Análise e interpretação de dados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Outlier é uma observação discrepante em relação ao padrão geral.",
+            "why": "Outlier é uma observação muito distante do padrão predominante dos demais dados. Exemplo: em tempos de atendimento de 8, 9, 10, 11 e 90 minutos, o valor 90 chama atenção por estar muito afastado. Um outlier pode resultar de erro de digitação, situação excepcional ou característica verdadeira do fenômeno. Sua identificação exige investigação."
+          },
+          {
+            "a": false,
+            "q": "Todo outlier deve ser removido antes da análise.",
+            "why": "Nem todo outlier deve ser removido. Um valor extremo pode ser um erro de registro, mas também pode representar um evento real e importante, como uma ocorrência excepcional. Excluir automaticamente pode apagar informação relevante e enviesar os resultados. O correto é verificar a origem, documentar a decisão e avaliar o efeito da observação na análise."
+          },
+          {
+            "a": true,
+            "q": "A amplitude interquartil é Q3−Q1.",
+            "why": "A amplitude interquartil (AIQ) mede a dispersão dos 50% centrais dos dados. É calculada subtraindo o primeiro quartil do terceiro: AIQ = Q3−Q1. Como considera a região central, costuma ser menos sensível a valores extremos do que a amplitude total, que depende apenas do mínimo e do máximo."
+          },
+          {
+            "a": true,
+            "q": "Com Q1=10 e Q3=18, a amplitude interquartil é 8.",
+            "why": "Se Q1=10 e Q3=18, a amplitude interquartil é 18−10 = 8. Isso representa a largura do intervalo entre o primeiro e o terceiro quartis, que abrange a metade central das observações ordenadas. Não confunda AIQ com amplitude total, que exige máximo menos mínimo."
+          },
+          {
+            "a": true,
+            "q": "A regra de 1,5×AIQ pode sinalizar possíveis valores discrepantes.",
+            "why": "A regra de 1,5×AIQ é uma convenção para sinalizar possíveis outliers. Calcule os limites: inferior = Q1−1,5×AIQ e superior = Q3+1,5×AIQ. Valores abaixo ou acima desses limites são sinalizados para investigação. A regra não prova que o dado está errado e não determina sua exclusão automática."
+          },
+          {
+            "a": true,
+            "q": "Um indicador deve explicitar seu denominador e período de referência.",
+            "why": "Um indicador precisa informar claramente o que está sendo contado, o denominador utilizado e o período de referência. Dizer “taxa de 20” sem explicar 20 por quê, por quantas pessoas e em qual período não permite interpretação segura. Indicadores bem definidos permitem comparação e evitam conclusões enganosas."
+          },
+          {
+            "a": true,
+            "q": "Uma taxa por 100 mil habitantes considera o tamanho da população de referência.",
+            "why": "Uma taxa por 100 mil habitantes relaciona o número de ocorrências ao tamanho da população. A fórmula é ocorrências ÷ população × 100.000. Assim, municípios de tamanhos diferentes podem ser comparados de maneira mais justa do que apenas pelos totais, desde que período, definição e qualidade dos registros sejam comparáveis."
+          },
+          {
+            "a": false,
+            "q": "Comparar totais absolutos é sempre suficiente entre municípios de tamanhos diferentes.",
+            "why": "Totais absolutos podem induzir a erro quando os municípios têm populações diferentes. Um município grande pode registrar mais ocorrências apenas porque tem mais habitantes. Taxas ou proporções ajudam a considerar o tamanho da população de referência. Exemplo: 200 ocorrências em 200 mil habitantes equivalem a 100 por 100 mil; 100 em 50 mil equivalem a 200 por 100 mil."
+          },
+          {
+            "a": true,
+            "q": "Dados ausentes podem distorcer uma análise estatística.",
+            "why": "Dados ausentes podem comprometer a análise quando a falta de informação não ocorre ao acaso. Se determinados municípios deixam de informar ocorrências com maior frequência, o conjunto observado pode não representar a realidade. É importante medir a quantidade de ausências, investigar seus motivos e explicar como foram tratadas."
+          },
+          {
+            "a": true,
+            "q": "Relatórios responsáveis devem explicitar limitações metodológicas.",
+            "why": "Todo relatório estatístico deve explicar limitações como cobertura incompleta, dados ausentes, mudanças de metodologia, tamanho da amostra, possíveis vieses e incerteza. Uma conclusão só é válida dentro do alcance dos dados e do método utilizados. Declarar limitações não enfraquece o relatório: torna a interpretação mais transparente e responsável."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital PC-AC 001/2026, Anexo III — Conhecimentos Específicos, Oficial Investigador, p. 36 (guia verticalizado).",
+        "topic_label": "9. Análise e interpretação de dados",
+        "material_slug": "pcac-2026-estatistica-09-outliers-indicadores-limitacoes"
       }
     },
     {
@@ -1369,14 +1846,67 @@
       "discipline": "Estatística",
       "topic_label": "1.3 Técnicas básicas de amostragem",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Dividir servidores por função e selecionar participantes dentro de todos os grupos caracteriza amostragem estratificada.",
+            "why": "A amostragem estratificada divide a população em grupos internamente semelhantes chamados estratos e seleciona participantes de cada estrato. Exemplo: separar servidores por função (investigação, escrivania e perícia) e sortear pessoas dentro de todos esses grupos. O objetivo é garantir que os diferentes segmentos estejam representados na amostra."
+          },
+          {
+            "a": true,
+            "q": "Selecionar um registro a cada 10, após definir o início, caracteriza amostragem sistemática.",
+            "why": "A amostragem sistemática seleciona elementos em intervalos regulares de uma lista. Se o intervalo é 10, escolhe-se um ponto inicial (por sorteio) e depois cada décimo registro. Por exemplo, começando no registro 4: 4, 14, 24, 34 e assim por diante. É importante que a lista não tenha uma periodicidade que coincida com o intervalo e provoque viés."
+          },
+          {
+            "a": false,
+            "q": "Sortear algumas escolas e pesquisar seus alunos é necessariamente amostragem estratificada.",
+            "why": "Na amostragem por conglomerados, a população é dividida em grupos naturais, como escolas, bairros ou unidades, e alguns desses grupos são sorteados. Pesquisar alunos de escolas sorteadas caracteriza conglomerados, não necessariamente estratificada. Na estratificada, selecionam-se elementos de todos os estratos; nos conglomerados, sorteiam-se alguns grupos."
+          },
+          {
+            "a": true,
+            "q": "Em uma amostra proporcional, um estrato que representa 60% da população deve representar 60% da amostra.",
+            "why": "Na alocação proporcional, cada estrato aparece na amostra na mesma proporção em que representa a população. Se determinado grupo corresponde a 60% da população e a amostra tem 100 pessoas, 60 participantes devem vir desse grupo. A ideia é preservar a composição relativa dos estratos."
+          },
+          {
+            "a": false,
+            "q": "Amostragem por conveniência é probabilística porque os participantes estão disponíveis.",
+            "why": "Amostragem por conveniência seleciona participantes que estão mais acessíveis, como pessoas disponíveis em determinado local. Isso não a torna probabilística: não há necessariamente sorteio nem probabilidades conhecidas de inclusão. A facilidade de acesso pode produzir viés, pois certos grupos podem ficar super-representados."
+          },
+          {
+            "a": true,
+            "q": "Uma lista com periodicidade coincidente com o intervalo sistemático pode produzir viés.",
+            "why": "Na amostragem sistemática, uma lista com padrão periódico pode gerar viés se sua periodicidade coincidir com o intervalo de seleção. Por exemplo, se a lista alterna turnos diurno e noturno e o intervalo seleciona sempre a mesma posição do ciclo, a amostra pode incluir quase só um turno. É necessário examinar a organização da lista antes de aplicar o método."
+          },
+          {
+            "a": true,
+            "q": "Na amostragem por conglomerados, podem ser pesquisados todos ou parte dos integrantes dos grupos selecionados.",
+            "why": "Na amostragem por conglomerados, o plano pode prever pesquisar todos os integrantes dos grupos sorteados (um estágio) ou selecionar apenas parte deles dentro dos conglomerados escolhidos (dois estágios). Exemplo: sortear escolas e entrevistar todos os alunos das escolas selecionadas, ou sortear turmas/alunos dentro dessas escolas."
+          },
+          {
+            "a": false,
+            "q": "Uma amostra muito grande é necessariamente representativa.",
+            "why": "Uma amostra grande não é automaticamente representativa. Se a seleção excluir determinados bairros ou incluir principalmente pessoas facilmente acessíveis, o viés pode persistir mesmo com milhares de participantes. Representatividade depende do plano de seleção, da cobertura da população, da não resposta e da qualidade da coleta, não apenas do tamanho."
+          },
+          {
+            "a": true,
+            "q": "A amostragem por cotas estabelece quantidades por categoria, sem exigir sorteio dos participantes.",
+            "why": "A amostragem por cotas define quantidades que devem ser preenchidas em categorias, como idade ou sexo, mas a escolha dos participantes dentro de cada cota não exige necessariamente sorteio. Por isso, costuma ser classificada como não probabilística. A composição pode parecer semelhante à população em algumas características, mas ainda pode existir viés de seleção."
+          },
+          {
+            "a": true,
+            "q": "Com N=1.000, n=100 e estrato de 300 pessoas, a alocação proporcional desse estrato é 30.",
+            "why": "A alocação proporcional é calculada por n_h = (N_h/N)×n. O estrato tem 300 pessoas em uma população de 1.000, portanto representa 30%. Se a amostra total tem 100 pessoas, selecionamos 30 desse estrato: (300/1.000)×100 = 30. O cálculo preserva a participação do estrato na população."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC, de 05/11/2026, Anexo III, Estatística, tópico 1.3. Material autoral complementar, não oficial da banca.",
+        "topic_label": "1.3 Técnicas básicas de amostragem",
+        "material_slug": "pcac-2026-estatistica-11-tecnicas-basicas-amostragem"
       }
     },
     {
@@ -1506,14 +2036,67 @@
       "discipline": "Estatística",
       "topic_label": "6.5 Noções de distribuições de probabilidade",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "O número de ocorrências em um plantão é exemplo de variável aleatória discreta.",
+            "why": "Variável aleatória discreta assume valores separados e contáveis, geralmente números inteiros. O número de ocorrências em um plantão pode ser 0, 1, 2, 3 e assim por diante; não faz sentido registrar 2,4 ocorrências. Por isso, essa contagem é modelada como variável discreta."
+          },
+          {
+            "a": true,
+            "q": "O tempo de atendimento pode ser modelado como variável aleatória contínua.",
+            "why": "Variável aleatória contínua pode assumir qualquer valor dentro de um intervalo, inclusive frações e decimais. O tempo de atendimento pode ser 5 minutos, 5,2 minutos ou 5,27 minutos, dependendo da precisão da medição. Por isso, o tempo costuma ser modelado como variável contínua, mesmo que o sistema arredonde os registros."
+          },
+          {
+            "a": true,
+            "q": "As probabilidades de todos os resultados de uma distribuição discreta válida somam 1.",
+            "why": "Em uma distribuição discreta válida, a soma das probabilidades de todos os resultados possíveis é 1, ou 100%. Isso representa a certeza de que algum dos resultados previstos ocorrerá. Além disso, cada probabilidade deve estar entre 0 e 1. Se a soma der 0,8, por exemplo, falta probabilidade ou há erro na distribuição."
+          },
+          {
+            "a": true,
+            "q": "Em uma distribuição contínua usual, a probabilidade de um ponto isolado é zero.",
+            "why": "Em uma distribuição contínua, a probabilidade é calculada pela área em um intervalo sob a curva de densidade. Um ponto isolado não possui largura e, por isso, sua área é zero: P(X=5)=0 em uma distribuição contínua usual. Isso não significa que o valor 5 seja impossível; significa que a probabilidade de um intervalo, mesmo muito pequeno, é que possui área positiva."
+          },
+          {
+            "a": false,
+            "q": "O valor esperado garante o resultado de uma única repetição.",
+            "why": "Valor esperado é a média teórica de uma variável aleatória ao longo de muitas repetições do experimento, ponderada pelas probabilidades dos resultados. Ele não garante o resultado de uma única ocorrência. Por exemplo, uma moeda pode dar cara em um lançamento, embora a proporção esperada de caras em muitos lançamentos seja próxima de 50%."
+          },
+          {
+            "a": true,
+            "q": "Bernoulli modela um ensaio com dois resultados possíveis.",
+            "why": "Distribuição de Bernoulli modela um único ensaio com dois resultados possíveis, normalmente chamados sucesso e fracasso. “Sucesso” é apenas o nome do resultado de interesse, não significa necessariamente algo bom. Exemplo: verificar se um registro contém erro (sim/não) ou se uma ocorrência foi solucionada (sim/não)."
+          },
+          {
+            "a": true,
+            "q": "A distribuição binomial exige tentativas independentes e probabilidade constante de sucesso.",
+            "why": "A distribuição binomial modela o número de sucessos em n tentativas quando cada tentativa tem dois resultados, as tentativas são independentes e a probabilidade de sucesso p é constante. Exemplo: contar quantas vezes ocorre determinado resultado em 10 verificações independentes com a mesma chance de sucesso. Se a probabilidade variar ou houver dependência, o modelo binomial simples pode não ser adequado."
+          },
+          {
+            "a": false,
+            "q": "A distribuição normal é assimétrica por definição.",
+            "why": "A distribuição normal é simétrica em torno da média e tem formato de sino. Em uma normal, média, mediana e moda coincidem. A maior parte dos valores fica perto do centro, e a frequência diminui de forma simétrica nas duas extremidades. Portanto, dizer que ela é assimétrica por definição está errado."
+          },
+          {
+            "a": true,
+            "q": "Na distribuição normal, um desvio-padrão maior indica maior dispersão.",
+            "why": "Na distribuição normal, o desvio-padrão σ controla o espalhamento da curva. Mantida a mesma média, um σ maior produz uma curva mais larga e menos concentrada perto do centro; um σ menor produz uma curva mais estreita. Portanto, maior desvio-padrão significa maior dispersão."
+          },
+          {
+            "a": true,
+            "q": "Um escore z negativo indica valor abaixo da média.",
+            "why": "O escore z indica quantos desvios-padrão um valor está acima ou abaixo da média: z=(x−μ)÷σ. Como σ é positivo, o sinal depende de x−μ. Se x for menor que a média, z será negativo. Exemplo: média 50, desvio-padrão 10 e valor 40: z=(40−50)÷10=−1. Isso significa um desvio-padrão abaixo da média."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC, de 05/11/2026, Anexo III, Estatística, tópico 6.5. Material autoral complementar, não oficial da banca.",
+        "topic_label": "6.5 Noções de distribuições de probabilidade",
+        "material_slug": "pcac-2026-estatistica-12-distribuicoes-probabilidade"
       }
     },
     {
@@ -1643,14 +2226,67 @@
       "discipline": "Estatística",
       "topic_label": "Mediana, moda, quartis e medidas posicionais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "A mediana é encontrada depois de ordenar os dados.",
+            "why": "Mediana é o valor que ocupa a posição central depois que os dados são colocados em ordem crescente ou decrescente. Ordenar é indispensável porque a posição central não pode ser identificada corretamente em uma lista desorganizada. Exemplo: em 9, 2 e 5, primeiro ordenamos 2, 5, 9; a mediana é 5."
+          },
+          {
+            "a": false,
+            "q": "Em um conjunto par, a mediana é sempre o maior dos dois valores centrais.",
+            "why": "Quando a quantidade de dados é par, ordene os valores e identifique os dois que ficam no centro. A mediana é a média desses dois valores. Exemplo: em 2, 4, 8 e 10, os centrais são 4 e 8; então (4+8)÷2=6. A mediana pode nem aparecer na lista original. A banca costuma tentar induzir o candidato a escolher apenas um dos dois valores centrais."
+          },
+          {
+            "a": true,
+            "q": "A moda é o valor ou categoria mais frequente.",
+            "why": "Moda é o valor ou categoria que aparece com maior frequência. Em 2, 3, 3, 4 e 5, a moda é 3 porque aparece duas vezes, mais do que os demais. A moda pode ser numérica ou categórica, como o tipo de ocorrência mais registrado. Se nenhuma categoria se repete, o conjunto pode não ter moda."
+          },
+          {
+            "a": true,
+            "q": "Uma distribuição pode ter duas modas.",
+            "why": "Uma distribuição pode ter duas modas quando dois valores compartilham a maior frequência. Por exemplo, em 1, 1, 2, 3, 3 e 4, tanto 1 quanto 3 aparecem duas vezes, mais do que os demais. Essa distribuição é bimodal. Também pode haver mais de duas modas ou ausência de moda, conforme a frequência."
+          },
+          {
+            "a": true,
+            "q": "Q2 corresponde à mediana.",
+            "why": "Q2 é o segundo quartil e corresponde à mediana, isto é, ao ponto que divide os dados ordenados em duas metades. Aproximadamente 50% das observações ficam abaixo dele e 50% acima, conforme a convenção de cálculo adotada. Q1 corresponde ao primeiro quartil e Q3 ao terceiro."
+          },
+          {
+            "a": true,
+            "q": "Se Q1=10 e Q3=18, a amplitude interquartil é 8.",
+            "why": "A amplitude interquartil é a diferença entre o terceiro e o primeiro quartis: AIQ=Q3−Q1. Com Q1=10 e Q3=18, fazemos 18−10=8. Ela representa a largura do intervalo central que contém aproximadamente 50% dos dados e é menos sensível a extremos do que a amplitude total."
+          },
+          {
+            "a": false,
+            "q": "Percentil 90 significa necessariamente que a pessoa acertou 90% das questões.",
+            "why": "Percentil 90 é uma medida de posição: indica o ponto abaixo do qual se encontra aproximadamente 90% das observações, segundo a convenção utilizada. Não significa que a pessoa acertou 90% de uma prova. Uma pessoa no percentil 90 teve desempenho igual ou superior ao de aproximadamente 90% do grupo de referência, dependendo da definição adotada."
+          },
+          {
+            "a": true,
+            "q": "O boxplot pode destacar possíveis observações discrepantes.",
+            "why": "Boxplot (diagrama de caixa) resume a distribuição por meio da mediana, quartis e extensão dos dados. Em uma convenção comum, valores além de Q1−1,5×AIQ ou Q3+1,5×AIQ são exibidos como pontos separados e sinalizados como possíveis outliers. O gráfico ajuda a perceber assimetria, dispersão e observações discrepantes, mas não prova que os pontos sejam erros."
+          },
+          {
+            "a": false,
+            "q": "Todos os métodos de cálculo de quartis necessariamente dão o mesmo resultado em amostras pequenas.",
+            "why": "Existem diferentes convenções para calcular quartis, especialmente em amostras pequenas. Alguns métodos incluem ou excluem a mediana ao separar as metades; outros usam interpolação entre posições. Por isso, o resultado pode variar conforme o método adotado. Em prova, siga a convenção explicitada no enunciado ou a metodologia fornecida."
+          },
+          {
+            "a": true,
+            "q": "A mediana costuma ser menos sensível a valores extremos que a média.",
+            "why": "A mediana depende da posição central dos dados ordenados, enquanto a média utiliza a soma de todos os valores. Por isso, um valor extremo costuma alterar muito mais a média do que a mediana. Exemplo: em 2, 3, 4, 5 e 100, a mediana é 4; a média é 22,8. O extremo 100 puxa a média, mas não muda a posição central."
+          }
+        ],
+        "method": "Verificação contextual individual dos enunciados, gabaritos booleanos, fórmulas e justificativas de Estatística, incluindo proporções, estatística descritiva, amostragem, dispersão, probabilidades, inferência básica e interpretação de gráficos. Exigir nova conferência se algum item mudar.",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:22:52Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento específico do tópico de medidas estatísticas. Métodos de cálculo de quartis podem variar; observar a convenção indicada no enunciado.",
+        "topic_label": "Mediana, moda, quartis e medidas posicionais",
+        "material_slug": "pcac-2026-estatistica-mediana-moda-quartis-percentis"
       }
     },
     {
