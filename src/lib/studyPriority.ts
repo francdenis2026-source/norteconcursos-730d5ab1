@@ -39,13 +39,13 @@ export type StudyDisciplineMeta = {
 
 const PCAC_DISCIPLINE_META: Record<string, StudyDisciplineMeta> = {
   "contabilidade": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 14 },
-  "estatística": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 13 },
-  "tecnologia da informação": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 12 },
-  "análise de dados": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 10 },
+  "estatistica": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 13 },
+  "tecnologia da informacao": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 12 },
+  "analise de dados": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 10 },
   "arquivologia": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 7 },
   "noções de administração": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 3 },
-  "língua portuguesa": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 6, weight: 1, points: 6, timePercent: 10 },
-  "raciocínio lógico": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 6, weight: 1, points: 6, timePercent: 9 },
+  "lingua portuguesa": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 6, weight: 1, points: 6, timePercent: 10 },
+  "raciocinio logico": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 6, weight: 1, points: 6, timePercent: 9 },
   "informática": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 8, weight: 1, points: 8, timePercent: 6 },
   "realidade do acre": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 4, weight: 1, points: 4, timePercent: 2 },
   "direito penal": { block: "Conhecimentos Jurídicos", blockQuestions: 16, blockWeight: 1, blockPoints: 16, questions: 6, weight: 1, points: 6, timePercent: 8 },
@@ -101,7 +101,7 @@ export function studyPriorityFor(
   if (matchesAny(text, medium)) return { level: "media", top20: isTop20 };
   // Subtópicos substantivos não listados nominalmente recebem prioridade média como
   // referência inicial. Títulos meramente editoriais não recebem selo.
-  if (/^(objetivos?|para memorizar|pegadinhas?|exemplos?|revis[aã]o(?: r[aá]pida| final| integrada)?|fontes?|duas quest[oõ]es autorais|quest[oõ]es autorais|treino autoral(?: comentado)?|roteiro de prova|roteiro de revis[aã]o|resolu[cç][aã]o comentada.*|quest[aã]o(?: de concurso)?.*|desafio de prova)$/i.test(text)) return null;
+  if (/^(objetivos?|para memorizar|pegadinhas?|exemplos?|revis[aã]o.*|fontes?|duas quest[oõ]es autorais|quest[oõ]es autorais|treino autoral.*|roteiro de prova|roteiro de revis[aã]o|resolu[cç][aã]o comentada.*|quest[aã]o(?: de concurso)?.*|desafio de prova|aplica[cç][aã]o pr[aá]tica.*|aprofundamento.*|exemplo pr[aá]tico.*|revis[aã]o aplicada.*)$/i.test(text)) return null;
   return { level: "media", top20: isTop20 };
 }
 
