@@ -1381,3 +1381,13 @@ html body .qx .qx-btn {
   html body .qx .qx-stem,
   html body .qx .qx-base__text { font-size: 0.9375rem; line-height: 1.55; }
 }
+
+/* ── Etiquetas (chips) longas: reticências em vez de corte seco ───────── */
+html body .qx .qx-chip {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
