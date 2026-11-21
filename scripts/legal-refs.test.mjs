@@ -1,4 +1,5 @@
 import test from "node:test";
+import assert from "node:assert/strict";
 import { selfCheckRefs } from "../src/lib/legalRefs.ts";
 import { isOfficialUrl } from "../src/lib/questionFormat.ts";
 
