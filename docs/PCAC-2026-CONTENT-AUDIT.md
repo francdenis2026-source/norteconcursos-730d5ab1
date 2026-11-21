@@ -394,3 +394,21 @@ Referências oficiais: CPC 27, itens 50–56 (https://conteudo.cvm.gov.br/export
 
 Migration: supabase/migrations/20261121090000_deepen_pcac_ppe_provisions_trainer.sql. Commit: 2dc4c022202c734dba6fcb2b988e5f1611ef2709.
 Verificação pós-gravação: 18 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — DFC e DVA — 21/11/2026
+
+Aula 15 atualizada diretamente no Supabase:
+
+- 20 questões originais preservadas em quantidade e ordem; três afirmações/gabaritos da DVA foram corrigidos porque repetiam uma interpretação errada do valor adicionado bruto.
+- Todas as 20 questões receberam explicações acima de 250 caracteres, dicas e resolução passo a passo.
+- Conteúdo ampliado sobre DFC direta/indireta, sinais de variações de capital de giro, classificação operacional/investimento/financiamento, formação e distribuição da DVA.
+- Removida a seção CPC 26 indevida.
+
+**Correção material importante — DVA, questão Consulplan/CFC 2020.1:** o ICMS sobre vendas não deve ser deduzido da receita bruta antes do cálculo do valor adicionado bruto. O CPC 09 determina apresentação das receitas pelo valor bruto, com tributos incidentes, e a distribuição desses tributos ao governo. Cálculo corrigido: R$ 328.000 − R$ 146.600 = R$ 181.400; menos depreciação R$ 8.000 = R$ 173.400; mais receita financeira R$ 16.500 = **R$ 189.900 (alternativa D)**. A explicação antiga que chegava a R$ 130.860 foi removida e as três questões correspondentes foram corrigidas.
+
+Fonte: CPC 09 (R1), texto oficial: https://s3.sa-east-1.amazonaws.com/static.cpc.aatb.com.br/Documentos/632_CPC%2009%20R1.pdf
+
+Migration: supabase/migrations/20261121100000_correct_pcac_dva_and_deepen_dfc_trainer.sql. Commit: 31ee06d4f192882532c740ba848715ca8c9e9ea2.
+
+Verificação pós-gravação: 20 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente; gabaritos DVA 12, 13 e 16 corrigidos; referência ao resultado incorreto de R$ 130.860 removida. CI não confirmado.
