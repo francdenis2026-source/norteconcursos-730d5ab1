@@ -518,7 +518,7 @@ html body .app-shell[data-focus-mode="true"]:has(.qx):not(#_):not(#_):not(#_) :i
   min-height: 0 !important;
 }
 html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-card {
-  height: min(var(--qx-h, 100dvh), 100%);
+  height: var(--qx-h, calc(100dvh - 7rem));
   min-height: min(26rem, 100%);
 }
 
