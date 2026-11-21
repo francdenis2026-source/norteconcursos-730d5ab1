@@ -232,7 +232,7 @@
   .platform-question-counts--compact
   > header
   span {
-  font-size: 11px;
+  font-size: 12px;
 }
 @media (max-width: 700px) {
   .app-shell[data-area="student"] .student-desk.student-overview .student-hub__shortcuts strong {
@@ -785,11 +785,11 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
     padding: 10px 12px;
   }
   .app-shell[data-area="student"] .student-overview .student-home__metric h2 {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.25;
   }
   .app-shell[data-area="student"] .student-overview .student-home__metric p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .app-shell[data-area="student"] .student-overview .student-hub__shortcuts {
     gap: 6px;
@@ -802,7 +802,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
     font-size: 13px;
   }
   .app-shell[data-area="student"] .student-overview .student-hub__shortcuts small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .app-shell[data-area="student"] .student-overview .platform-question-counts--compact {
     padding: 8px 10px;
@@ -950,7 +950,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric h2 {
   color: var(--home-muted);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .035em;
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-home__metric strong {
@@ -986,7 +986,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-hub__shortcuts small {
   color: var(--home-muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /* Next action reads as one compact call-to-action, not a second hero. */
@@ -1004,7 +1004,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next p {
   color: var(--home-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next .student-home__primary {
   min-height: 36px;
@@ -1013,7 +1013,7 @@ body.light .app-shell[data-area="student"] .edital-edition-meta strong,
   background: #b58a43;
   color: #211b11 !important;
   box-shadow: none;
-  font-size: 11px;
+  font-size: 12px;
 }
 .app-shell.navigation-v2[data-area="student"] .student-overview .student-desk__next .student-home__primary:hover {
   background: #c49a53;
