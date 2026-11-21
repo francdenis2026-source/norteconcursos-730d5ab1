@@ -27,11 +27,14 @@ for (const item of manifest.files) {
     assert.ok(!uniqueSlugs.has(material.slug), 'Duplicate slug: ' + material.slug);
     uniqueSlugs.add(material.slug);
     assert.ok(Array.isArray(material.quiz) && material.quiz.length > 0, material.slug);
+    const promptsInsideMaterial = new Set();
     for (const q of material.quiz) {
       assert.ok(typeof q.q === 'string' && q.q.trim(), 'Empty prompt: ' + material.slug);
       assert.equal(typeof q.a, 'boolean', 'Invalid answer: ' + material.slug);
       assert.ok(typeof q.why === 'string' && q.why.trim().length >= 80, 'Short explanation: ' + material.slug);
       const normalized = q.q.normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/g, ' ').trim().toLowerCase();
+      assert.ok(!promptsInsideMaterial.has(normalized), 'Duplicate question in material: ' + material.slug);
+      promptsInsideMaterial.add(normalized);
       const old = questionAnswers.get(normalized);
       assert.ok(!old || old.answer === q.a,
         'Conflicting answer to equivalent prompt: ' + material.slug + ' versus ' + (old?.slug ?? 'unknown'));
