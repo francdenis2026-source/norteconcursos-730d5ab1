@@ -42,7 +42,7 @@
   object-position: 64% 0%;
   transition: transform 900ms var(--ecc-ease);
 }
-.ecc-contest:hover .ecc-contest__bg { transform: scale(1.04); }
+.ecc-contest:hover .ecc-contest__bg { transform: scale(1.04); transform-origin: 64% 0%; }
 
 .ecc-contest__top { display: flex; align-items: center; gap: 1rem; }
 .ecc-contest__cover {
