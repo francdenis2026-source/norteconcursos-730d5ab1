@@ -648,3 +648,12 @@ Auditoria consolidada das aulas 2 a 9: 80 questões; zero explicações abaixo d
 Migrations:
 - 20261121291000_deepen_pcac_statistics_time_series_trainer.sql — commit 4d8a96b34ded6491b8e758b879135a8a881d1c0f.
 - 20261121292000_deepen_pcac_statistics_outliers_indicators_trainer.sql — commit 9bdf781d5c55bddf42b4c5f83660200a2435529f.
+
+
+## Estatística — aprofundamento do treinador, lote 5 — 21/11/2026
+
+Aula 11 — Técnicas básicas de amostragem: 10/10 questões revisadas no Supabase. Foram aprofundadas as distinções entre amostragem estratificada, sistemática, por conglomerados, proporcional, por conveniência e por cotas, além de vieses, representatividade e cálculo da alocação proporcional. Dicas e resolução em etapas incluídas; enunciados, gabaritos e ordem preservados.
+
+Auditoria consolidada das aulas 2 a 9 e 11: 90 questões; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas.
+
+Migration: 20261121293000_deepen_pcac_statistics_sampling_trainer.sql — commit ca5cd069ef0edb5fe890ad4d53497c78c9d87330.
