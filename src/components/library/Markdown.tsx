@@ -121,12 +121,14 @@ function isSingleQuestionOption(text: string): boolean {
 }
 
 function cleanQuestionStem(lines: string[]): string {
-  // O material legado envolve "Questão:" em negrito; remova a formatação
-  // antes de localizar o enunciado.
-  const normalized = lines
-    .map((line) => line.replace(/\*\*/g, "").replace(/\\/g, " "))
-    .join(" ");
-  return normalized.replace(/^.*?quest[aã]o\s*:\s*/i, "").trim();
+  // Preserve the complete situation and question; do not discard context
+  // preceding the "Questão:" label.
+  return lines
+    .map((line) => line.replace(/^\s*>\s?/, "").replace(/\*\*/g, "").trim())
+    .filter((line) => line && !/🎯?\s*DESAFIO DE PROVA/i.test(line))
+    .map((line) => line.replace(/^(Situação|Questão)\s*:\s*/i, (_, label) => label + ": "))
+    .join("\n\n")
+    .trim();
 }
 function isAnswerAnalysis(text: string): boolean {
   return /^\s*(?:\*\*)?(?:gabarito|resposta correta|coment[aá]rio|resolu[cç][aã]o comentada|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text) || /^\s*#\s+resolu[cç][aã]o comentada\b/i.test(text);
@@ -198,7 +200,13 @@ function InteractiveQuestion({
   if (!feedback.correct) {
     return (
       <section className="study-interactive-question">
-        {parsed.stem && <p className="study-question-stem">{render(parsed.stem, "question-stem")}</p>}
+        {parsed.stem && (
+          <div className="study-question-stem">
+            {parsed.stem.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => (
+              <p key={index}>{render(paragraph, "question-stem-" + index)}</p>
+            ))}
+          </div>
+        )}
         <div className="study-question-options-wrap">
           {parsed.options.map((option) => <div className="study-question-option" key={option.letter}><strong className="study-question-option__label">{option.letter}</strong><span>{render(option.text, "option-" + option.letter)}</span></div>)}
         </div>
@@ -210,7 +218,13 @@ function InteractiveQuestion({
   const isCorrect = answered && selected === feedback.correct;
   return (
     <section className="study-interactive-question" aria-label="Questão interativa">
-      {parsed.stem && <p className="study-question-stem">{render(parsed.stem, "question-stem")}</p>}
+      {parsed.stem && (
+        <div className="study-question-stem">
+          {parsed.stem.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => (
+            <p key={index}>{render(paragraph, "question-stem-" + index)}</p>
+          ))}
+        </div>
+      )}
       <p className="study-question-instruction">Escolha uma alternativa para conferir sua resposta.</p>
       <div className="study-question-options" role="group" aria-label="Alternativas da questão">
         {parsed.options.map((option) => {
