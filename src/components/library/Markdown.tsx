@@ -114,7 +114,7 @@ function isQuestionOptions(text: string): boolean {
   return /(?:^|\s)[A-E][).]\s*\S/.test(text) && /(?:^|\s)[B-E][).]\s*\S/.test(text);
 }
 function isAnswerAnalysis(text: string): boolean {
-  return /^\s*(?:\*\*)?(?:gabarito|resposta correta|coment[aá]rio|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text);
+  return /^\s*(?:\*\*)?(?:gabarito|resposta correta|coment[aá]rio|resolu[cç][aã]o comentada|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text) || /^\s*#\s+resolu[cç][aã]o comentada\b/i.test(text);
 }
 function isAnalysisLabel(text: string): boolean {
   return /^\s*(?:an[aá]lise|racioc[ií]nio|resolu[cç][aã]o comentada|como resolver)\s*[:—-]/i.test(text);
@@ -305,8 +305,15 @@ function parse(markdown: string): Block[] {
       blocks.push({ type: "h2", text: line.slice(3).trim() });
       i++;
     } else if (line.startsWith("# ")) {
-      // "# Título" no meio do texto vira seção, sem sobrar o "#" como texto.
-      blocks.push({ type: "h2", text: line.slice(2).trim() });
+      // Resoluções de desafios antigos foram gravadas como título, embora contenham o gabarito.
+      // Mantê-las como parágrafo permite vinculá-las à questão sem revelar a resposta antes do clique.
+      const headingText = line.slice(2).trim();
+      if (/^resolu[cç][aã]o comentada\b/i.test(headingText) && /gabarito\s*[:—-]/i.test(headingText)) {
+        blocks.push({ type: "p", text: headingText });
+      } else {
+        // "# Título" no meio do texto vira seção, sem sobrar o "#" como texto.
+        blocks.push({ type: "h2", text: headingText });
+      }
       i++;
     } else if (line.startsWith(">")) {
       const quote: string[] = [];
@@ -402,18 +409,33 @@ function RevealAnswer({
 function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode): ReactNode[] {
   const inline = (text: string, key: string) => renderInline(text, key, renderText);
   const prepared: Block[] = [];
+  const consumedAnswers = new Set<number>();
   for (let index = 0; index < blocks.length; index++) {
+    if (consumedAnswers.has(index)) continue;
     const current = blocks[index]!;
-    const following = blocks[index + 1];
-    if (
-      current.type === "p" &&
-      isQuestionOptions(current.text) &&
-      following?.type === "p" &&
-      isAnswerAnalysis(following.text)
-    ) {
-      prepared.push({ type: "interactive-question", prompt: current.text, answer: following.text });
-      index++;
-    } else prepared.push(current);
+    if (current.type === "p" && isQuestionOptions(current.text)) {
+      let answerIndex = -1;
+      for (let candidate = index + 1; candidate < blocks.length; candidate++) {
+        const next = blocks[candidate]!;
+        if (
+          (next.type === "p" && isQuestionOptions(next.text)) ||
+          (next.type === "quote" && isQuestionOptions(next.lines.join("\\n")))
+        ) break;
+        if ((next.type === "p" || next.type === "h2" || next.type === "h3") && isAnswerAnalysis(next.text)) {
+          answerIndex = candidate;
+          break;
+        }
+      }
+      if (answerIndex >= 0) {
+        const answerBlock = blocks[answerIndex]!;
+        if (answerBlock.type === "p" || answerBlock.type === "h2" || answerBlock.type === "h3") {
+          prepared.push({ type: "interactive-question", prompt: current.text, answer: answerBlock.text });
+          consumedAnswers.add(answerIndex);
+          continue;
+        }
+      }
+    }
+    prepared.push(current);
   }
   return prepared.map((block, index) => {
     const key = `b${index}`;
