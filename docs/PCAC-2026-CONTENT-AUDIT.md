@@ -1055,3 +1055,31 @@ Migrations desta etapa:
 - `20261121300200_fix_disciplinary_law_source_references.sql` — commit `486bd49f4157ec6966ce99c784d1c12ecc6ca96d`.
 - `20261121300300_expand_disciplinary_law_explanations.sql` — commit `cb92afba2a12a9639e70b4d95d0ecf168f75a69b`.
 - `20261121300400_add_disciplinary_law_trainer_questions.sql` — commit `1b4ae03654b9788149d64a61fb78af93e381924a`.
+
+
+## Terceira continuação — conferência dos arts. 101 a 114 da LC nº 129/2004 — 21/11/2026
+
+### Fonte oficial e atualização
+
+A referência consolidada da LC nº 129/2004 foi corrigida nos quatro materiais disciplinares para o endereço oficial atual do Portal LEGIS: `https://www.legis.ac.gov.br/detalhar/674`. O Portal identifica a LC nº 129/2004 e lista suas alterações, incluindo LCs nº 496/2025 e nº 526/2026. A página informa natureza consultiva e recomenda observar a publicação oficial quando necessário.
+
+### Conferência de conteúdo
+
+A auditoria do material de transgressões confirmou que ele cobre os arts. 105 a 114, com distinção entre responsabilidades, penalidades, limites de suspensão, demissão, dosimetria, atenuantes/agravantes, reabilitação e competência. O texto atual do material já recebeu exemplos e técnicas de resolução.
+
+**Ponto que permanece em revisão jurídica:** a redação literal do art. 114 e o cruzamento de suas alíneas com o art. 107 devem ser conferidos no texto consolidado integral e nas alterações legislativas. O próprio material atual sinaliza essa cautela; não foi transformado em regra categórica nem criado novo gabarito baseado em leitura incompleta.
+
+### Alteração de fonte
+
+Migration `20261121300500_correct_lc129_official_source_urls.sql`, commit `f5926f7b9c0b8e84aba53156fa23c98171948732`. Consulta ao banco confirmou o endereço oficial corrigido nos quatro materiais.
+
+### Questões e inventário
+
+- Mantidas as 10 questões autorais da etapa disciplinar, ativas e vinculadas a cinco materiais.
+- Mantidos os 25 materiais ativos da disciplina, 182 itens de quiz e 161 flashcards.
+- A contaminação exata por CPC 26 permanece zerada.
+- A página oficial confirma a lista de alterações históricas da LC nº 129/2004, mas a conferência literal de todos os artigos 101 a 114 ainda não está encerrada: a extração integral da página apresentou falha/timeout nesta sessão. Por isso, a disciplina não deve ser marcada como revisão jurídica integral concluída.
+
+### Próximo passo
+
+Prosseguir com leitura artigo por artigo da LC nº 129/2004 (arts. 101 a 114 e 118 a 151), usando a versão oficial consolidada e os textos das leis alteradoras; corrigir apenas após confronto integral, sem presumir que a simples lista de alterações significa que determinado artigo foi ou não modificado.
