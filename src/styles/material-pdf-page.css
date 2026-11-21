@@ -111,19 +111,43 @@ html body .app-shell[data-area] .library-body .study-prose :is(th, td) { padding
 html body .app-shell[data-area] .library-body .study-prose th { background: color-mix(in srgb, var(--sheet-accent) 12%, transparent); font-weight: 700; }
 html body .app-shell[data-area] .library-body .study-prose strong { color: var(--sheet-ink); }
 
-/* Celular: a folha ocupa a largura toda, sem margens de papel e sem rolagem aninhada */
+/* Celular: a página de leitura usa a tela inteira, de ponta a ponta, sem moldura de papel nem
+   rolagem aninhada. O espaçamento lateral do painel (12px) é anulado só nesta tela. */
 @media (max-width: 899px) {
+  html body .app-shell[data-area] .library-reading-workspace {
+    margin-inline: -12px;
+  }
   html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+    max-width: none;
     max-height: none;
     overflow: visible;
-    padding: 1.1rem 1rem 1.5rem;
-    border-radius: 0.25rem;
+    margin-inline: 0;
+    padding: 1rem 0.9rem 1.5rem;
+    border-width: 1px 0;
+    border-radius: 0;
+    box-shadow: none;
     font-size: 1rem;
   }
   html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose :is(p, li) {
     text-align: left;
     hyphens: none;
     -webkit-hyphens: none;
+  }
+  /* Cabeçalho do material: só disciplina, título e progresso, sem foto nem etiquetas */
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero {
+    margin-inline: 0;
+    padding: 0.6rem 0.9rem;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    gap: 0.4rem;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero > img,
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-meta {
+    display: none;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-study-status {
+    min-width: 0;
+    padding: 0.4rem 0.6rem;
   }
 }
 
