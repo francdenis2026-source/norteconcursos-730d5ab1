@@ -43,6 +43,7 @@ import {
 import { useContentSearch } from "@/lib/contentSearch";
 import { scopeLibraryMaterials, matchingLibraryMaterials } from "@/lib/librarySearchScope";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
+import { StudyPriorityBadges } from "@/components/library/StudyPriorityBadges";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 import { BackToPlan } from "@/components/cronograma/BackToPlan";
@@ -900,6 +901,12 @@ function MaterialRow({
           <span className="library-material-topic">
             <LibrarySearchMatch text={item.topic_label} query={query} />
           </span>
+          <StudyPriorityBadges
+            contestName={item.contest_name}
+            discipline={item.discipline}
+            topic={`${item.topic_label} ${item.title}`}
+            className="mt-1"
+          />
           <strong className="block text-sm leading-snug">
             <LibrarySearchMatch text={item.title} query={query} />
           </strong>
