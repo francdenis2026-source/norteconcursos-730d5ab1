@@ -1,4 +1,4 @@
-with items(n,material_slug,subtopic,question_text,answer,explanation) as (
+with items(n,material_slug,subtopic,stem,options_text,answer,explanation) as (
  values (1,$q$pcac-2026-guia-administracao-geral-01-administracao-e-organizacao$q$,$q$01 · Administração e organização$q$,$q$Uma delegacia estabelece objetivos, distribui tarefas entre servidores, define responsáveis e organiza o uso de viaturas e sistemas. Esse exemplo demonstra que uma organização reúne principalmente?$q$,$q$A) apenas prédios e equipamentos.
 (B) pessoas, objetivos, recursos, processos e estrutura coordenados.
 (C) somente normas escritas.
@@ -91,7 +91,7 @@ insert into public.curated_question_catalog
 select source_id,syllabus_topic_id,
  'pcac-admin-challenge-'||lpad(n::text,2,'0'),
  'Norte Concursos — treino autoral PC-AC 2026',2026,'Oficial Investigador de Polícia','AUTORAL',
- 'Noções de Administração',subtopic,question_text,answer,explanation,
+ 'Noções de Administração',subtopic,stem||E'\n\n'||options_text,answer,explanation,
  'média','active',true,'AC','Polícia Civil','Oficial Investigador de Polícia',
  subtopic,'pcac-admin-challenge-'||lpad(n::text,2,'0'),
  'pcac-2026-admin-challenge-'||lpad(n::text,2,'0'),
