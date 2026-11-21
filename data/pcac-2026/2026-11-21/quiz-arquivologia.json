@@ -572,39 +572,69 @@
         {
           "a": true,
           "q": "Fundo é conjunto orgânico ligado a um produtor.",
-          "why": "O produtor e suas funções explicam a formação do fundo. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+          "why": "Certo. Fundo arquivístico é conjunto orgânico de documentos produzidos ou recebidos por uma mesma entidade no exercício de atividades. A proveniência define o produtor e evita misturas arbitrárias."
         },
         {
           "a": true,
           "q": "Relatório de inspeção e relatório de investigação podem ser tipos diferentes da espécie relatório.",
-          "why": "O tipo associa espécie e atividade. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+          "why": "Certo. Espécie 'relatório' descreve configuração documental; tipos 'relatório de inspeção' e 'relatório de investigação' especificam atividade que o originou. O tipo associa a espécie a sua função."
         },
         {
           "a": false,
           "q": "Suporte e formato são sinônimos.",
-          "why": "Papel é suporte; PDF é formato. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+          "why": "Errado. Suporte é o meio material que registra informação, como papel ou mídia digital; formato é configuração técnica ou estrutural, como PDF. Um PDF pode estar em diferentes suportes."
         },
         {
           "a": true,
           "q": "Ata é exemplo de espécie documental.",
-          "why": "É uma configuração formal. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+          "why": "Certo. Ata é espécie documental, pois designa configuração e finalidade formal de registrar reunião ou ocorrência. O tipo pode especificar a atividade, como ata de reunião."
         },
         {
           "a": true,
           "q": "Série documental reúne documentos de uma mesma atividade ou procedimento.",
-          "why": "A série mantém relação funcional no fundo. Exemplo e contexto: Fundo é conjunto orgânico de documentos de um produtor; série reúne registros da mesma atividade; espécie é configuração documental, como ata; tipo associa espécie à função, como ata de reunião. Suporte é o meio físico/digital."
+          "why": "Certo. Série reúne documentos formados pela mesma função, atividade ou procedimento, mantendo relações orgânicas. Exemplo: processos de licenciamento de uma instituição."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-08-fundo-serie-especie-tipo-e-suporte",
       "discipline": "Arquivologia",
       "topic_label": "Fundo, série, espécie, tipo e suporte",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Fundo é conjunto orgânico ligado a um produtor.",
+            "why": "Certo. Fundo arquivístico é conjunto orgânico de documentos produzidos ou recebidos por uma mesma entidade no exercício de atividades. A proveniência define o produtor e evita misturas arbitrárias."
+          },
+          {
+            "a": true,
+            "q": "Relatório de inspeção e relatório de investigação podem ser tipos diferentes da espécie relatório.",
+            "why": "Certo. Espécie 'relatório' descreve configuração documental; tipos 'relatório de inspeção' e 'relatório de investigação' especificam atividade que o originou. O tipo associa a espécie a sua função."
+          },
+          {
+            "a": false,
+            "q": "Suporte e formato são sinônimos.",
+            "why": "Errado. Suporte é o meio material que registra informação, como papel ou mídia digital; formato é configuração técnica ou estrutural, como PDF. Um PDF pode estar em diferentes suportes."
+          },
+          {
+            "a": true,
+            "q": "Ata é exemplo de espécie documental.",
+            "why": "Certo. Ata é espécie documental, pois designa configuração e finalidade formal de registrar reunião ou ocorrência. O tipo pode especificar a atividade, como ata de reunião."
+          },
+          {
+            "a": true,
+            "q": "Série documental reúne documentos de uma mesma atividade ou procedimento.",
+            "why": "Certo. Série reúne documentos formados pela mesma função, atividade ou procedimento, mantendo relações orgânicas. Exemplo: processos de licenciamento de uma instituição."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Fundo, série, espécie, tipo e suporte",
+        "material_slug": "pcac-2026-guia-arquivologia-08-fundo-serie-especie-tipo-e-suporte"
       }
     },
     {
@@ -612,39 +642,69 @@
         {
           "a": true,
           "q": "Gestão documental inclui produção, classificação, tramitação e destinação.",
-          "why": "É um conjunto de procedimentos ao longo do ciclo documental. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+          "why": "Certo. Gestão documental abrange produção, classificação, tramitação, uso, avaliação e destinação. O controle inicia na criação do registro, não apenas quando chega ao depósito."
         },
         {
           "a": false,
           "q": "Plano de classificação e tabela de temporalidade são instrumentos idênticos.",
-          "why": "Um organiza funções; outro estabelece prazos e destino. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+          "why": "Errado. Plano de classificação identifica a função ou classe documental; tabela de temporalidade estabelece prazo de guarda e destinação para essas classes. São instrumentos complementares, não idênticos."
         },
         {
           "a": true,
           "q": "A tabela de temporalidade define prazos de guarda e destinação.",
-          "why": "Registra eliminação ou guarda permanente. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+          "why": "Certo. Tabela de temporalidade define por classe o tempo de guarda em fases adequadas e a destinação final, seja eliminação autorizada ou recolhimento permanente."
         },
         {
           "a": false,
           "q": "O setor pode eliminar documentos públicos sem autorização.",
-          "why": "A eliminação exige procedimento e autorização competentes. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+          "why": "Errado. Documento público não pode ser eliminado por vontade isolada de servidor ou setor. É necessária avaliação e autorização conforme tabela e procedimentos competentes."
         },
         {
           "a": true,
           "q": "A avaliação documental ocorre antes da destinação final.",
-          "why": "A avaliação fundamenta o destino dos documentos. Exemplo e contexto: Gestão documental abrange produção, tramitação, uso, avaliação e arquivamento. O documento deve manter contexto e prazo desde sua criação. A destinação final pode ser eliminação autorizada ou guarda permanente, conforme tabela de temporalidade."
+          "why": "Certo. Avaliação identifica valores e requisitos de guarda antes de decidir eliminação ou preservação permanente. Destinação sem avaliação pode destruir prova e memória institucional."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-09-gestao-documental-da-producao-a-destinacao",
       "discipline": "Arquivologia",
       "topic_label": "Gestão documental: da produção à destinação",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Gestão documental inclui produção, classificação, tramitação e destinação.",
+            "why": "Certo. Gestão documental abrange produção, classificação, tramitação, uso, avaliação e destinação. O controle inicia na criação do registro, não apenas quando chega ao depósito."
+          },
+          {
+            "a": false,
+            "q": "Plano de classificação e tabela de temporalidade são instrumentos idênticos.",
+            "why": "Errado. Plano de classificação identifica a função ou classe documental; tabela de temporalidade estabelece prazo de guarda e destinação para essas classes. São instrumentos complementares, não idênticos."
+          },
+          {
+            "a": true,
+            "q": "A tabela de temporalidade define prazos de guarda e destinação.",
+            "why": "Certo. Tabela de temporalidade define por classe o tempo de guarda em fases adequadas e a destinação final, seja eliminação autorizada ou recolhimento permanente."
+          },
+          {
+            "a": false,
+            "q": "O setor pode eliminar documentos públicos sem autorização.",
+            "why": "Errado. Documento público não pode ser eliminado por vontade isolada de servidor ou setor. É necessária avaliação e autorização conforme tabela e procedimentos competentes."
+          },
+          {
+            "a": true,
+            "q": "A avaliação documental ocorre antes da destinação final.",
+            "why": "Certo. Avaliação identifica valores e requisitos de guarda antes de decidir eliminação ou preservação permanente. Destinação sem avaliação pode destruir prova e memória institucional."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Gestão documental: da produção à destinação",
+        "material_slug": "pcac-2026-guia-arquivologia-09-gestao-documental-da-producao-a-destinacao"
       }
     },
     {
@@ -652,39 +712,69 @@
         {
           "a": true,
           "q": "Digitalização converte documento não digital em representação digital.",
-          "why": "É uma operação de conversão. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+          "why": "Certo. Digitalização converte informação originalmente analógica, como documento em papel, em representação digital capturada por dispositivo apropriado. Não torna original automaticamente descartável."
         },
         {
           "a": false,
           "q": "Backup sozinho garante preservação digital de longo prazo.",
-          "why": "Não assegura contexto, metadados, autenticidade e acesso. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+          "why": "Errado. Backup permite recuperação de cópias, mas preservação digital duradoura exige gestão de formatos, integridade, metadados, cadeia de custódia e migração quando necessário."
         },
         {
           "a": true,
           "q": "Migração transfere conteúdo para formato ou ambiente atualizado.",
-          "why": "Deve ser documentada e controlada. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+          "why": "Certo. Migração de preservação move conteúdo para formato ou ambiente atualizado para manter acesso. É necessário documentar alterações e verificar que informação relevante permaneceu íntegra."
         },
         {
           "a": true,
           "q": "Emulação reproduz ambiente tecnológico antigo.",
-          "why": "Pode permitir acesso a documentos dependentes de tecnologia obsoleta. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+          "why": "Certo. Emulação recria funcionamento de ambiente antigo em sistema atual, como software ou hardware necessário à leitura de arquivo obsoleto. É estratégia distinta da conversão de formato."
         },
         {
           "a": false,
           "q": "Hash, isoladamente, comprova autoria do documento.",
-          "why": "Ajuda a detectar alteração, mas não identifica autor sozinho. Exemplo e contexto: Backup é somente uma medida de recuperação: preservação digital requer formatos sustentáveis, integridade, metadados, monitoramento e migrações planejadas. Um PDF guardado sem controle pode tornar-se inacessível ou perder contexto."
+          "why": "Errado. Hash identifica digest de conteúdo para checagem de integridade frente à referência. Não fornece prova isolada de autoria, identidade de produtor ou veracidade."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-10-digitalizacao-e-preservacao-distincoes-essenciais",
       "discipline": "Arquivologia",
       "topic_label": "Digitalização e preservação: distinções essenciais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Digitalização converte documento não digital em representação digital.",
+            "why": "Certo. Digitalização converte informação originalmente analógica, como documento em papel, em representação digital capturada por dispositivo apropriado. Não torna original automaticamente descartável."
+          },
+          {
+            "a": false,
+            "q": "Backup sozinho garante preservação digital de longo prazo.",
+            "why": "Errado. Backup permite recuperação de cópias, mas preservação digital duradoura exige gestão de formatos, integridade, metadados, cadeia de custódia e migração quando necessário."
+          },
+          {
+            "a": true,
+            "q": "Migração transfere conteúdo para formato ou ambiente atualizado.",
+            "why": "Certo. Migração de preservação move conteúdo para formato ou ambiente atualizado para manter acesso. É necessário documentar alterações e verificar que informação relevante permaneceu íntegra."
+          },
+          {
+            "a": true,
+            "q": "Emulação reproduz ambiente tecnológico antigo.",
+            "why": "Certo. Emulação recria funcionamento de ambiente antigo em sistema atual, como software ou hardware necessário à leitura de arquivo obsoleto. É estratégia distinta da conversão de formato."
+          },
+          {
+            "a": false,
+            "q": "Hash, isoladamente, comprova autoria do documento.",
+            "why": "Errado. Hash identifica digest de conteúdo para checagem de integridade frente à referência. Não fornece prova isolada de autoria, identidade de produtor ou veracidade."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Digitalização e preservação: distinções essenciais",
+        "material_slug": "pcac-2026-guia-arquivologia-10-digitalizacao-e-preservacao-distincoes-essenciais"
       }
     },
     {
@@ -692,39 +782,69 @@
         {
           "a": true,
           "q": "A LAI estabelece acesso como regra geral.",
-          "why": "Restrições são exceções fundamentadas. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+          "why": "Certo. A LAI estabelece publicidade como diretriz geral, sujeita a restrições legais justificadas e proteção de informações pessoais. O acesso não depende de autorização discricionária livre."
         },
         {
           "a": false,
           "q": "Transparência ativa depende sempre de pedido do cidadão.",
-          "why": "É divulgação independente de solicitação. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+          "why": "Errado. Transparência ativa é divulgação espontânea pelo órgão, independentemente de pedido individual. Divulgação reativa a requerimento é transparência passiva."
         },
         {
           "a": true,
           "q": "Transparência passiva envolve responder a pedidos de acesso.",
-          "why": "É o atendimento das solicitações. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+          "why": "Certo. Transparência passiva envolve recepção, análise e resposta a pedidos de acesso. O órgão deve observar prazos e fundamentos legais para eventual restrição."
         },
         {
           "a": false,
           "q": "Informação pessoal e informação classificada são categorias idênticas.",
-          "why": "Possuem fundamentos e regimes diferentes. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+          "why": "Errado. Informação pessoal é protegida em razão da intimidade e de outras garantias; informação formalmente classificada por sigilo obedece outro regime de classificação e prazos. As categorias não são idênticas."
         },
         {
           "a": true,
           "q": "Acesso parcial pode ser adotado quando apenas trecho do documento está protegido.",
-          "why": "Pode-se ocultar o trecho restrito e fornecer o restante. Exemplo e contexto: A Lei de Acesso à Informação tem publicidade como regra, porém dados pessoais e restrições legais exigem análise específica. Informação parcialmente pública pode ser liberada com ocultação de trechos protegidos, quando cabível."
+          "why": "Certo. Quando há parte protegida e parte pública, pode ser fornecida cópia com ocultação do conteúdo restrito, desde que a separação e fundamentação respeitem a norma aplicável."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-11-acesso-sigilo-e-documentos-com-dados-pessoais",
       "discipline": "Arquivologia",
       "topic_label": "Acesso, sigilo e documentos com dados pessoais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "A LAI estabelece acesso como regra geral.",
+            "why": "Certo. A LAI estabelece publicidade como diretriz geral, sujeita a restrições legais justificadas e proteção de informações pessoais. O acesso não depende de autorização discricionária livre."
+          },
+          {
+            "a": false,
+            "q": "Transparência ativa depende sempre de pedido do cidadão.",
+            "why": "Errado. Transparência ativa é divulgação espontânea pelo órgão, independentemente de pedido individual. Divulgação reativa a requerimento é transparência passiva."
+          },
+          {
+            "a": true,
+            "q": "Transparência passiva envolve responder a pedidos de acesso.",
+            "why": "Certo. Transparência passiva envolve recepção, análise e resposta a pedidos de acesso. O órgão deve observar prazos e fundamentos legais para eventual restrição."
+          },
+          {
+            "a": false,
+            "q": "Informação pessoal e informação classificada são categorias idênticas.",
+            "why": "Errado. Informação pessoal é protegida em razão da intimidade e de outras garantias; informação formalmente classificada por sigilo obedece outro regime de classificação e prazos. As categorias não são idênticas."
+          },
+          {
+            "a": true,
+            "q": "Acesso parcial pode ser adotado quando apenas trecho do documento está protegido.",
+            "why": "Certo. Quando há parte protegida e parte pública, pode ser fornecida cópia com ocultação do conteúdo restrito, desde que a separação e fundamentação respeitem a norma aplicável."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Acesso, sigilo e documentos com dados pessoais",
+        "material_slug": "pcac-2026-guia-arquivologia-11-acesso-sigilo-e-documentos-com-dados-pessoais"
       }
     },
     {
@@ -732,39 +852,69 @@
         {
           "a": true,
           "q": "Classificação arquivística identifica a função ou atividade relacionada ao documento.",
-          "why": "A classificação contextualiza o documento segundo plano funcional. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+          "why": "Certo. Classificação funcional relaciona documento à atividade de produção, como contratação, atendimento ou fiscalização. Não se limita a organizar documentos pelo nome."
         },
         {
           "a": true,
           "q": "Ordenação define a sequência interna dos documentos.",
-          "why": "Pode ser alfabética, numérica, cronológica, geográfica ou outra padronizada. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+          "why": "Certo. Ordenação define sequência dos registros em uma classe, podendo usar critérios cronológicos, numéricos, alfabéticos ou outros pertinentes ao sistema."
         },
         {
           "a": false,
           "q": "O método numérico dispensa qualquer índice de recuperação.",
-          "why": "Índice ou sistema de referência permite localizar por outros pontos de acesso. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+          "why": "Errado. Arquivamento numérico frequentemente requer índice ou instrumento que associe número a nome, assunto ou processo para recuperação. Somente números podem dificultar busca do usuário."
         },
         {
           "a": false,
           "q": "Indexação substitui o plano de classificação.",
-          "why": "Indexação apoia busca; classificação mantém o contexto funcional. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+          "why": "Errado. Indexação agrega pontos de acesso e termos de recuperação, mas não substitui o plano de classificação que preserva função, contexto e proveniência."
         },
         {
           "a": true,
           "q": "Um padrão uniforme de ordenação melhora a recuperação.",
-          "why": "Padronização reduz inconsistência e erro de localização. Exemplo e contexto: Método numérico organiza por protocolo; alfabético, por nome; cronológico, por data; geográfico, por local. Índices recuperam registros, mas não substituem a classificação funcional do arquivo."
+          "why": "Certo. Ordem padronizada e aplicada consistentemente permite localizar documentos com menor retrabalho. Exemplo: organizar processos pelo número único do protocolo."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-12-metodos-de-arquivamento-e-recuperacao",
       "discipline": "Arquivologia",
       "topic_label": "Métodos de arquivamento e recuperação",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Classificação arquivística identifica a função ou atividade relacionada ao documento.",
+            "why": "Certo. Classificação funcional relaciona documento à atividade de produção, como contratação, atendimento ou fiscalização. Não se limita a organizar documentos pelo nome."
+          },
+          {
+            "a": true,
+            "q": "Ordenação define a sequência interna dos documentos.",
+            "why": "Certo. Ordenação define sequência dos registros em uma classe, podendo usar critérios cronológicos, numéricos, alfabéticos ou outros pertinentes ao sistema."
+          },
+          {
+            "a": false,
+            "q": "O método numérico dispensa qualquer índice de recuperação.",
+            "why": "Errado. Arquivamento numérico frequentemente requer índice ou instrumento que associe número a nome, assunto ou processo para recuperação. Somente números podem dificultar busca do usuário."
+          },
+          {
+            "a": false,
+            "q": "Indexação substitui o plano de classificação.",
+            "why": "Errado. Indexação agrega pontos de acesso e termos de recuperação, mas não substitui o plano de classificação que preserva função, contexto e proveniência."
+          },
+          {
+            "a": true,
+            "q": "Um padrão uniforme de ordenação melhora a recuperação.",
+            "why": "Certo. Ordem padronizada e aplicada consistentemente permite localizar documentos com menor retrabalho. Exemplo: organizar processos pelo número único do protocolo."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Métodos de arquivamento e recuperação",
+        "material_slug": "pcac-2026-guia-arquivologia-12-metodos-de-arquivamento-e-recuperacao"
       }
     },
     {
@@ -772,39 +922,69 @@
         {
           "a": true,
           "q": "Conservação preventiva busca reduzir riscos de deterioração.",
-          "why": "Atua sobre ambiente, manuseio, armazenamento e acondicionamento. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+          "why": "Certo. Conservação preventiva controla riscos antes do dano, como temperatura, umidade, luz, poeira, pragas e manuseio. A prevenção reduz necessidade de intervenções posteriores."
         },
         {
           "a": false,
           "q": "Restauração e conservação preventiva são sinônimos.",
-          "why": "Restauração intervém em dano existente; prevenção reduz riscos. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+          "why": "Errado. Restauração é intervenção técnica sobre documento já deteriorado; conservação preventiva procura evitar ou retardar danos. Não são a mesma atividade."
         },
         {
           "a": false,
           "q": "Documentos devem ficar diretamente no chão para facilitar acesso.",
-          "why": "Contato com água, poeira e umidade aumenta riscos. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+          "why": "Errado. Armazenar documentos no chão expõe a umidade, sujeira, pragas e alagamento. O correto é utilizar estantes, caixas e condições de guarda adequadas."
         },
         {
           "a": false,
           "q": "Suspeita de fungos deve ser tratada com limpeza improvisada.",
-          "why": "É necessário isolamento e avaliação por pessoal capacitado. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+          "why": "Errado. Fungos podem representar riscos a pessoas e acervo, e limpeza improvisada pode espalhar esporos ou danificar documentos. Isolamento e avaliação técnica são mais adequados."
         },
         {
           "a": true,
           "q": "Acondicionamento inadequado pode acelerar deterioração.",
-          "why": "Materiais e dimensões incompatíveis podem causar danos. Exemplo e contexto: A conservação preventiva reduz riscos de luz, umidade, poeira, pragas e manuseio incorreto antes do dano. Restauração é intervenção especializada posterior. Exemplo: caixas molhadas exigem controle da causa, isolamento e tratamento técnico."
+          "why": "Certo. Acondicionamento inadequado, como caixas ácidas, pressão excessiva e umidade, pode acelerar danos ao papel e outros suportes. Materiais e ambientes compatíveis ajudam a proteger."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-13-acondicionamento-e-conservacao-preventiva",
       "discipline": "Arquivologia",
       "topic_label": "Acondicionamento e conservação preventiva",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Conservação preventiva busca reduzir riscos de deterioração.",
+            "why": "Certo. Conservação preventiva controla riscos antes do dano, como temperatura, umidade, luz, poeira, pragas e manuseio. A prevenção reduz necessidade de intervenções posteriores."
+          },
+          {
+            "a": false,
+            "q": "Restauração e conservação preventiva são sinônimos.",
+            "why": "Errado. Restauração é intervenção técnica sobre documento já deteriorado; conservação preventiva procura evitar ou retardar danos. Não são a mesma atividade."
+          },
+          {
+            "a": false,
+            "q": "Documentos devem ficar diretamente no chão para facilitar acesso.",
+            "why": "Errado. Armazenar documentos no chão expõe a umidade, sujeira, pragas e alagamento. O correto é utilizar estantes, caixas e condições de guarda adequadas."
+          },
+          {
+            "a": false,
+            "q": "Suspeita de fungos deve ser tratada com limpeza improvisada.",
+            "why": "Errado. Fungos podem representar riscos a pessoas e acervo, e limpeza improvisada pode espalhar esporos ou danificar documentos. Isolamento e avaliação técnica são mais adequados."
+          },
+          {
+            "a": true,
+            "q": "Acondicionamento inadequado pode acelerar deterioração.",
+            "why": "Certo. Acondicionamento inadequado, como caixas ácidas, pressão excessiva e umidade, pode acelerar danos ao papel e outros suportes. Materiais e ambientes compatíveis ajudam a proteger."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Acondicionamento e conservação preventiva",
+        "material_slug": "pcac-2026-guia-arquivologia-13-acondicionamento-e-conservacao-preventiva"
       }
     },
     {
@@ -812,39 +992,69 @@
         {
           "a": true,
           "q": "Metadados podem registrar produtor, data, formato e nível de acesso.",
-          "why": "Metadados incluem dados descritivos, administrativos e técnicos. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+          "why": "Certo. Metadados incluem produtor, identificador, data, formato, classe e acesso; auxiliam contexto, gestão, recuperação e preservação de documentos."
         },
         {
           "a": true,
           "q": "Indexação atribui termos que facilitam a recuperação.",
-          "why": "Os termos devem ser consistentes e representativos. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+          "why": "Certo. Indexação atribui palavras-chave ou descritores para facilitar localização por conteúdo e tema. Ela complementa, mas não substitui a classificação funcional."
         },
         {
           "a": false,
           "q": "Vocabulário controlado aumenta variações de sinônimos sem padronização.",
-          "why": "Ele padroniza termos e relações para reduzir ambiguidades. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+          "why": "Errado. Vocabulário controlado reduz variações de sinônimos e termos ambíguos, padronizando descritores. Usar um único termo autorizado pode melhorar recuperação."
         },
         {
           "a": false,
           "q": "Metadados são apenas palavras-chave de assunto.",
-          "why": "Também incluem contexto, estrutura, gestão e preservação. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+          "why": "Errado. Metadados abrangem mais que palavras-chave: descrevem criação, versões, custódia, acesso, integridade e características técnicas. 'Data de criação' é metadado, não palavra-chave temática."
         },
         {
           "a": true,
           "q": "Metadados devem ser mantidos ao longo do ciclo de vida.",
-          "why": "São essenciais para gestão e preservação continuada. Exemplo e contexto: Metadados incluem produtor, data, identificador, tipo, versão, classificação e acesso. Indexação define termos de busca. Dois relatórios chamados 'relatorio.pdf' podem ser diferenciados pelo produtor, data e identificador arquivístico."
+          "why": "Certo. Metadados precisam acompanhar documentos em captura, tramitação, transferência e preservação. Perder origem ou histórico pode comprometer interpretação e autenticidade."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-14-metadados-e-indexacao-documental",
       "discipline": "Arquivologia",
       "topic_label": "Metadados e indexação documental",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Metadados podem registrar produtor, data, formato e nível de acesso.",
+            "why": "Certo. Metadados incluem produtor, identificador, data, formato, classe e acesso; auxiliam contexto, gestão, recuperação e preservação de documentos."
+          },
+          {
+            "a": true,
+            "q": "Indexação atribui termos que facilitam a recuperação.",
+            "why": "Certo. Indexação atribui palavras-chave ou descritores para facilitar localização por conteúdo e tema. Ela complementa, mas não substitui a classificação funcional."
+          },
+          {
+            "a": false,
+            "q": "Vocabulário controlado aumenta variações de sinônimos sem padronização.",
+            "why": "Errado. Vocabulário controlado reduz variações de sinônimos e termos ambíguos, padronizando descritores. Usar um único termo autorizado pode melhorar recuperação."
+          },
+          {
+            "a": false,
+            "q": "Metadados são apenas palavras-chave de assunto.",
+            "why": "Errado. Metadados abrangem mais que palavras-chave: descrevem criação, versões, custódia, acesso, integridade e características técnicas. 'Data de criação' é metadado, não palavra-chave temática."
+          },
+          {
+            "a": true,
+            "q": "Metadados devem ser mantidos ao longo do ciclo de vida.",
+            "why": "Certo. Metadados precisam acompanhar documentos em captura, tramitação, transferência e preservação. Perder origem ou histórico pode comprometer interpretação e autenticidade."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Metadados e indexação documental",
+        "material_slug": "pcac-2026-guia-arquivologia-14-metadados-e-indexacao-documental"
       }
     },
     {
@@ -852,39 +1062,69 @@
         {
           "a": true,
           "q": "Integridade protege o documento contra alterações não autorizadas.",
-          "why": "Também envolve manter o documento completo. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+          "why": "Certo. Integridade indica que conteúdo não sofreu alterações indevidas em relação à versão de referência. Controles incluem permissões, logs e comparações de hash."
         },
         {
           "a": false,
           "q": "Hash, sozinho, comprova a identidade de quem criou o arquivo.",
-          "why": "Hash permite comparar conteúdo; não comprova autoria sozinho. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+          "why": "Errado. Hash demonstra igualdade ou diferença de conteúdo frente a digest confiável; não identifica necessariamente criador do arquivo. Autoria exige outras evidências."
         },
         {
           "a": true,
           "q": "Um documento autêntico pode conter informação incorreta.",
-          "why": "Autenticidade não é sinônimo de veracidade. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+          "why": "Certo. Documento pode ter origem autêntica e mesmo assim apresentar erro factual ou declaração falsa. Autenticidade não equivale à veracidade de cada informação registrada."
         },
         {
           "a": false,
           "q": "Sobrescrever silenciosamente uma versão mantém a rastreabilidade.",
-          "why": "É necessário histórico e registro das alterações. Exemplo e contexto: Integridade significa ausência de alteração indevida; autenticidade, documento ser o que afirma ser; rastreabilidade, histórico de ações. Hash compara alterações em relação a valor confiável, mas isoladamente não prova autoria ou veracidade."
+          "why": "Errado. Sobrescrever sem histórico apaga evidência de alterações e impede rastrear versões anteriores. Controle de versões e trilha de auditoria preservam sequência e responsáveis."
         },
         {
           "a": true,
           "q": "Assinatura digital pode apoiar autoria e integridade.",
-          "why": "Depende de validação e infraestrutura aplicáveis; não substitui gestão arquivística."
+          "why": "Certo. Assinatura digital baseada em chave e certificado adequados pode apoiar verificação de autoria/identidade do signatário e integridade. A validade depende dos procedimentos e confiança na chave."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-15-autenticidade-integridade-e-versoes",
       "discipline": "Arquivologia",
       "topic_label": "Autenticidade, integridade e controle de versões",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Integridade protege o documento contra alterações não autorizadas.",
+            "why": "Certo. Integridade indica que conteúdo não sofreu alterações indevidas em relação à versão de referência. Controles incluem permissões, logs e comparações de hash."
+          },
+          {
+            "a": false,
+            "q": "Hash, sozinho, comprova a identidade de quem criou o arquivo.",
+            "why": "Errado. Hash demonstra igualdade ou diferença de conteúdo frente a digest confiável; não identifica necessariamente criador do arquivo. Autoria exige outras evidências."
+          },
+          {
+            "a": true,
+            "q": "Um documento autêntico pode conter informação incorreta.",
+            "why": "Certo. Documento pode ter origem autêntica e mesmo assim apresentar erro factual ou declaração falsa. Autenticidade não equivale à veracidade de cada informação registrada."
+          },
+          {
+            "a": false,
+            "q": "Sobrescrever silenciosamente uma versão mantém a rastreabilidade.",
+            "why": "Errado. Sobrescrever sem histórico apaga evidência de alterações e impede rastrear versões anteriores. Controle de versões e trilha de auditoria preservam sequência e responsáveis."
+          },
+          {
+            "a": true,
+            "q": "Assinatura digital pode apoiar autoria e integridade.",
+            "why": "Certo. Assinatura digital baseada em chave e certificado adequados pode apoiar verificação de autoria/identidade do signatário e integridade. A validade depende dos procedimentos e confiança na chave."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Autenticidade, integridade e controle de versões",
+        "material_slug": "pcac-2026-guia-arquivologia-15-autenticidade-integridade-e-versoes"
       }
     },
     {
@@ -892,39 +1132,69 @@
         {
           "a": true,
           "q": "A LAI estabelece transparência como diretriz geral.",
-          "why": "Acesso é regra, restrições exigem fundamento legal. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+          "why": "Certo. A Lei de Acesso à Informação estabelece transparência como regra, sujeita a exceções legais fundamentadas. O interesse público orienta acesso sem eliminar proteção de dados pessoais."
         },
         {
           "a": false,
           "q": "A LGPD autoriza negar todo documento que contenha dado pessoal.",
-          "why": "Deve-se avaliar base legal e possibilidade de acesso parcial. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+          "why": "Errado. A LGPD não impõe negar integralmente todo documento com dado pessoal. O órgão deve examinar finalidade, base legal, necessidade e formas de fornecer acesso parcial."
         },
         {
           "a": false,
           "q": "Informação pessoal e informação classificada por sigilo são categorias idênticas.",
-          "why": "Possuem regimes jurídicos distintos. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+          "why": "Errado. Informação pessoal envolve proteção da pessoa; informação classificada decorre de requisitos formais de sigilo e pode ter prazo próprio. São regimes jurídicos distintos."
         },
         {
           "a": true,
           "q": "Pode ser possível fornecer documento com ocultação de trecho protegido.",
-          "why": "O acesso parcial preserva a parte não restrita quando cabível. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+          "why": "Certo. Caso um documento contenha trecho legalmente restrito, o acesso ao restante pode ocorrer com tarja ou outra ocultação adequada. A restrição parcial precisa ser justificada."
         },
         {
           "a": true,
           "q": "O tratamento de dados pelo poder público deve observar finalidade e necessidade.",
-          "why": "São princípios da LGPD, entre outros. Exemplo e contexto: Classificação arquivística por função não é o mesmo que grau de sigilo. Transparência deve observar hipóteses legais de restrição, minimização de dados e controle de acesso. Registre quem acessou informações sensíveis, quando e por quê."
+          "why": "Certo. O poder público deve tratar dados pessoais para finalidades legítimas ligadas a atribuições públicas, observando necessidade, transparência e segurança, conforme LGPD."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-16-gestao-da-informacao-e-sigilo-arquivistico",
       "discipline": "Arquivologia",
       "topic_label": "Gestão da informação e sigilo arquivístico",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "A LAI estabelece transparência como diretriz geral.",
+            "why": "Certo. A Lei de Acesso à Informação estabelece transparência como regra, sujeita a exceções legais fundamentadas. O interesse público orienta acesso sem eliminar proteção de dados pessoais."
+          },
+          {
+            "a": false,
+            "q": "A LGPD autoriza negar todo documento que contenha dado pessoal.",
+            "why": "Errado. A LGPD não impõe negar integralmente todo documento com dado pessoal. O órgão deve examinar finalidade, base legal, necessidade e formas de fornecer acesso parcial."
+          },
+          {
+            "a": false,
+            "q": "Informação pessoal e informação classificada por sigilo são categorias idênticas.",
+            "why": "Errado. Informação pessoal envolve proteção da pessoa; informação classificada decorre de requisitos formais de sigilo e pode ter prazo próprio. São regimes jurídicos distintos."
+          },
+          {
+            "a": true,
+            "q": "Pode ser possível fornecer documento com ocultação de trecho protegido.",
+            "why": "Certo. Caso um documento contenha trecho legalmente restrito, o acesso ao restante pode ocorrer com tarja ou outra ocultação adequada. A restrição parcial precisa ser justificada."
+          },
+          {
+            "a": true,
+            "q": "O tratamento de dados pelo poder público deve observar finalidade e necessidade.",
+            "why": "Certo. O poder público deve tratar dados pessoais para finalidades legítimas ligadas a atribuições públicas, observando necessidade, transparência e segurança, conforme LGPD."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas, com diferenciação de conceitos e exemplos; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:53Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Gestão da informação e sigilo arquivístico",
+        "material_slug": "pcac-2026-guia-arquivologia-16-gestao-da-informacao-e-sigilo-arquivistico"
       }
     }
   ]
