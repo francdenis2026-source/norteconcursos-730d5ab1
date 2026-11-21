@@ -284,3 +284,24 @@ html body .app-shell[data-area] .library-reading-workspace .library-body :is(.st
   color: #1d2126 !important;
   border-left-color: #1f4e79 !important;
 }
+
+/* Escolha de materiais da disciplina (Estudo): contraste AA nos dois estados, claro e escuro. */
+:root body .app-shell[data-area="student"] #dashboard-content [role="tablist"][aria-label="Materiais"] [role="tab"] {
+  color: var(--foreground);
+  background: color-mix(in oklab, var(--card) 70%, transparent);
+  border: 1px solid var(--border);
+}
+:root body .app-shell[data-area="student"] #dashboard-content [role="tablist"][aria-label="Materiais"] [role="tab"]:hover {
+  border-color: #c9a23f;
+  color: var(--foreground);
+}
+:root body .app-shell[data-area="student"] #dashboard-content [role="tablist"][aria-label="Materiais"] [role="tab"][aria-selected="true"] {
+  color: #15181d;
+  background: #e0b44a;
+  border-color: #e0b44a;
+  font-weight: 700;
+}
+:root body .app-shell[data-area="student"] #dashboard-content [role="tablist"][aria-label="Materiais"] [role="tab"]:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
