@@ -970,3 +970,14 @@ A auditoria do formato de referências encontrou um problema de compatibilidade:
 Foi aplicada a migration `supabase/migrations/20261121299500_normalize_pcac_material_sources.sql`, commit `dddc4832539c1fbfe5442da665df9d026de23db8`. Ela converteu os registros antigos para objetos estruturados, preservando títulos e anexando apenas URLs oficiais verificadas. Referências sem URL confirmada mantiveram o título, sem link inventado.
 
 **Validação SQL:** nenhum item string remanescente em `legal_basis` nos 177 materiais PC-AC ativos. Legislação Institucional: 25/25 materiais com referências estruturadas; Realidade do Acre: 6/6. A existência de uma referência estruturada não substitui a conferência do conteúdo legal nem garante que todo assunto tenha fonte suficiente.
+
+
+## Correção de contaminação CPC 26 em materiais PC-AC — 21/11/2026
+
+Uma varredura por título exato encontrou o bloco **“Classificação dos passivos financeiros — CPC 26”** indevidamente anexado a 83 materiais PC-AC ativos, incluindo aulas de Legislação Institucional, Arquivologia, Administração, Direito, Estatística/tecnologia e Realidade do Acre. O conteúdo legítimo de Contabilidade não foi alterado.
+
+Foi removido exclusivamente o bloco iniciado pelo cabeçalho exato `## Classificação dos passivos financeiros — CPC 26`, preservando o texto anterior e qualquer seção posterior após o separador Markdown. Não foram apagadas aulas, questões, flashcards ou resoluções.
+
+Migration: `supabase/migrations/20261121299600_remove_cpc26_contamination_pcac.sql`, commit `728b1476f32356e162301e7d4de8cc220261491c`.
+
+**Validação SQL:** 0 dos 177 materiais PC-AC ativos ainda contêm o cabeçalho exato do bloco contaminante. Os arrays dos quizzes (1.377 questões) e flashcards (1.395) permaneceram com as mesmas contagens antes e depois. A conferência foi por marcador exato; ainda é necessário revisar outros possíveis tipos de contaminação semântica.
