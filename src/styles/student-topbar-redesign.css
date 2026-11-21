@@ -180,3 +180,11 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student
   object-position: 62% 0% !important;
   transform-origin: 62% 0% !important;
 }
+
+/* Foto do cabeçalho nítida: sem máscara de esfumaçado, sem recorte diagonal e sem filtro. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  clip-path: none !important;
+  filter: none !important;
+}
