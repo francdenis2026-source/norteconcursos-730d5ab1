@@ -708,3 +708,20 @@ Migration do roteiro de prioridades: `supabase/migrations/20261121296000_add_pca
 - Verificação dos campos de explicação, dica e resolução: 120/120 preenchidos; nenhuma explicação abaixo de 250 caracteres.
 - Não foi possível declarar CI aprovado para os commits desta etapa: o status consultado para o commit da migration de prioridades retornou sem checks associados. Não houve execução local de typecheck/lint/test/build nesta etapa.
 - Não houve publicação manual em produção.
+
+
+## Estatística — revisão de consistência do treinador, lote 8 — 21/11/2026
+
+Foi feita leitura das 120 afirmações e respectivas justificativas, cobrindo os 12 materiais. Conferi a coerência entre enunciado, gabarito verdadeiro/falso, conceito explicado e cálculos explícitos nos exemplos numéricos. Não encontrei erro de gabarito ou cálculo que justificasse alterar enunciado ou resposta nesta revisão.
+
+Foram identificadas sete justificativas com repetição de explicação ou fórmula após ampliações anteriores. As sete foram reescritas para ficarem mais diretas, mantendo o conteúdo pedagógico:
+- Fundamentos, questão 10: intervalo sistemático k=N÷n.
+- Mediana e quartis, questão 2: mediana com quantidade par.
+- Média, questões 6 e 10: relação soma/média e distinção entre média e mediana.
+- Probabilidade, questão 3: evento complementar.
+- Tabelas e gráficos, questão 7: conversão de percentual em ângulo.
+- Distribuições, questão 10: interpretação e cálculo do escore z negativo.
+
+A atualização foi aplicada diretamente no Supabase e registrada na migration `supabase/migrations/20261121297000_refine_pcac_statistics_trainer_explanations.sql`, commit `dd50c20fbcc2af20499352efff142d87bae0aa26`. Os prompts, chaves verdadeiro/falso, dicas, etapas e ordem das 120 questões foram preservados.
+
+**Escopo e limite:** a revisão foi uma auditoria editorial e matemática das afirmações e justificativas armazenadas. Não equivale a teste automatizado da interface do treinador nem validação por especialista externo. Não foi executado typecheck/lint/test/build nesta etapa; não afirmar CI aprovado sem execução e resultado observável.
