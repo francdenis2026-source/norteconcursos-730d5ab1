@@ -89,6 +89,7 @@ const MANUAL_DIDACTIC_SUBJECTS = new Set([
   "Língua Portuguesa",
   "Noções de Administração",
   "Noções de Informática",
+  "Informática",
   "Raciocínio Lógico",
   "Realidade do Estado do Acre",
   "Tecnologia da Informação e Segurança da Informação",
@@ -114,6 +115,15 @@ const NONSTATUTORY_ACCOUNTING_MODULES = new Set([
   "pcac-2026-contabilidade-08-custos-materia-prima-rateio-departamentalizacao",
   "pcac-2026-contabilidade-13-custeio-rkw-variavel-ponto-equilibrio",
 ]);
+/** Fixed legacy Informatics curriculum. Approval remains bound to each exact quiz item. */
+const REVIEWABLE_INFORMATICS_MODULES = new Set([
+  "informatica-01-01", "informatica-01-02", "informatica-01-03",
+  "informatica-03-01", "informatica-03-02", "informatica-03-03",
+  "informatica-03-04", "informatica-03-041", "informatica-04-01",
+  "informatica-04-02", "informatica-04-03", "informatica-04-04",
+  "informatica-05-01", "informatica-05-02", "informatica-05-03",
+  "informatica-05-04", "informatica-05-05",
+]);
 export type MaterialManualReview = {
   version: 1;
   review_type: "didactic_manual";
@@ -131,7 +141,7 @@ export function matchesManualReview(
   value: unknown,
   materialSlug: string,
 ): value is MaterialManualReview {
-  if (!materialSlug.startsWith("pcac-2026-") || !value || typeof value !== "object") return false;
+  if (!(materialSlug.startsWith("pcac-2026-") || REVIEWABLE_INFORMATICS_MODULES.has(materialSlug)) || !value || typeof value !== "object") return false;
   const review = value as MaterialManualReview;
   const checked = Date.parse(review.checked_at);
   if (
