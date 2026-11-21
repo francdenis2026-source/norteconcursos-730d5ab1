@@ -18,7 +18,7 @@ vm.runInNewContext(code, {
 });
 const { studyPriorityFor } = module.exports;
 
-test("PC-AC topics receive the expected priority and cumulative TOP 20 marker", () => {
+test("PC-AC topics receive expected priority and cumulative TOP 20 marker", () => {
   assert.deepEqual(
     JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Contabilidade e Análise Financeira", "Ativo, passivo e patrimônio líquido"))),
     { level: "muito-alta", top20: true },
@@ -33,21 +33,30 @@ test("PC-AC topics receive the expected priority and cumulative TOP 20 marker", 
   );
 });
 
-test("every PC-AC discipline has a safe fallback and other editais are not mislabeled", () => {
-  const disciplines = [
-    "Contabilidade e Análise Financeira", "Estatística", "TI e Segurança da Informação",
-    "Análise de Dados e Informações", "Arquivologia", "Noções de Administração",
-    "Língua Portuguesa", "Raciocínio Lógico", "Noções de Informática", "Realidade do Acre",
-    "Direito Penal e Processo Penal", "Legislação Institucional", "Direito Constitucional",
-    "Direito Administrativo",
+test("each PC-AC discipline maps known high-incidence topics and leaves unknown titles unclassified", () => {
+  const examples = [
+    ["Contabilidade Geral", "Ativo, passivo e patrimônio líquido"],
+    ["Estatística", "Média aritmética, mediana e moda"],
+    ["Tecnologia da Informação e Segurança da Informação", "Segurança da informação"],
+    ["Análise de Dados e Informações", "Cruzamento de informações"],
+    ["Arquivologia", "Gestão documental e três idades"],
+    ["Noções de Administração", "Eficiência, eficácia e efetividade"],
+    ["Língua Portuguesa", "Interpretação textual e sintaxe"],
+    ["Raciocínio Lógico", "Proposições e tabelas-verdade"],
+    ["Noções de Informática", "Excel e fórmulas"],
+    ["Realidade do Estado do Acre", "Revolução Acreana"],
+    ["Noções de Direito Penal e Processual Penal", "Teoria do crime e tipicidade"],
+    ["Legislação Institucional", "Lei Orgânica Nacional"],
+    ["Noções de Direito Constitucional", "Princípios fundamentais"],
+    ["Noções de Direito Administrativo", "Poder de polícia"],
   ];
-  for (const discipline of disciplines) {
-    assert.ok(studyPriorityFor("PC-AC 2026", discipline, "Assunto complementar do edital"));
+  for (const [discipline, topic] of examples) {
+    assert.ok(studyPriorityFor("PC-AC 2026", discipline, topic), `Expected mapped topic: ${discipline} / ${topic}`);
   }
   assert.ok(studyPriorityFor("PC-AC 2026 — Edital 001 SEAD/PCAC", "Noções de Direito Administrativo", "Princípios da Administração Pública"));
-  assert.ok(studyPriorityFor("PC-AC 2026", "Noções de Administração", "Eficiência, eficácia e efetividade"));
-  assert.equal(studyPriorityFor("Complementar — fora do Anexo III do PC-AC 2026", "Administração Pública", "Evolução da Administração Pública"), null);
   assert.ok(studyPriorityFor("Polícia Civil do Acre — Oficial Investigador — 2026", "Realidade do Estado do Acre", "Revolução Acreana"));
+  assert.equal(studyPriorityFor("PC-AC 2026", "Estatística", "Assunto complementar sem correspondência"), null);
+  assert.equal(studyPriorityFor("Complementar — fora do Anexo III do PC-AC 2026", "Administração Pública", "Evolução da Administração Pública"), null);
   assert.equal(studyPriorityFor("Polícia Civil de outro estado", "Língua Portuguesa", "Interpretação textual"), null);
   assert.equal(studyPriorityFor(null, "Língua Portuguesa", "Interpretação textual"), null);
 });
