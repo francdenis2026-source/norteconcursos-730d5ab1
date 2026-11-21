@@ -151,7 +151,7 @@ function parseAlternativeFeedback(answer: string): {
   const correct = answer.match(/(?:gabarito|resposta correta)\s*[:—-]\s*([A-E])\b/i)?.[1]?.toUpperCase() ?? null;
   const marker = /(?:an[aá]lise|coment[aá]rio|justificativa)s?\s+das?\s+alternativas\s*[:—-]\s*/i.exec(answer);
   const before = marker?.index === undefined ? answer : answer.slice(0, marker.index);
-  const explanation = before.replace(/^\s*(?:gabarito|resposta correta)\s*[:—-]\s*[A-E]\s*[.)—-]?\s*/i, "").trim();
+  const explanation = before.replace(/^\s*(?:\*\*)?(?:gabarito|resposta correta)\s*[:—-]\s*[A-E]\s*[.)—-]?\s*(?:\*\*)?/i, "").trim();
   const alternatives: Record<string, string> = {};
   if (marker && marker.index !== undefined) {
     const detailText = answer.slice(marker.index + marker[0].length);
@@ -363,7 +363,7 @@ function parse(markdown: string): Block[] {
 }
 
 function splitAnswerAndCommentary(text: string): { prompt: string; answer: string } | null {
-  const match = /(?:^|\s)(Gabarito|Resposta correta)\s*[:—-]/i.exec(text);
+  const match = /(?:^|\s|\*\*)(Gabarito|Resposta correta)\s*[:—-]/i.exec(text);
   if (!match || match.index === undefined) return null;
   const prompt = text.slice(0, match.index).trim();
   const answer = text.slice(match.index).trim();
