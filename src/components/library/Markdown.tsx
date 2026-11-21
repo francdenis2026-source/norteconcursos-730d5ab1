@@ -421,7 +421,11 @@ function RevealAnswer({
   );
 }
 
-function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode): ReactNode[] {
+function renderBlocks(
+  blocks: Block[],
+  renderText: (text: string) => ReactNode,
+  priority?: { discipline: string; contestName: string },
+): ReactNode[] {
   const inline = (text: string, key: string) => renderInline(text, key, renderText);
   const prepared: Block[] = [];
   const consumedAnswers = new Set<number>();
@@ -504,13 +508,26 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
       case "example":
         return (
           <section key={key} className="study-example" aria-label="Exemplo aplicado">
-            {renderBlocks(block.blocks, renderText)}
+            {renderBlocks(block.blocks, renderText, priority)}
           </section>
         );
       case "h2":
-        return <h2 key={key}>{inline(block.text, key)}</h2>;
-      case "h3":
-        return <h3 key={key}>{inline(block.text, key)}</h3>;
+      case "h3": {
+        const Heading = block.type;
+        return (
+          <Fragment key={key}>
+            <Heading>{inline(block.text, key)}</Heading>
+            {priority && (
+              <StudyPriorityBadges
+                contestName={priority.contestName}
+                discipline={priority.discipline}
+                topic={block.text}
+                className="mb-2"
+              />
+            )}
+          </Fragment>
+        );
+      }
       case "p": {
         if (isAnswerAnalysis(block.text)) {
           return <RevealAnswer key={key} answer={block.text} render={inline} />;
@@ -640,31 +657,10 @@ export function Markdown({
   contestName?: string | null;
   renderText?: ((text: string) => ReactNode) | undefined;
 }) {
-  const rendered = renderBlocks(parse(source), renderText);
-  if (!discipline || !contestName) return <div className="study-prose">{rendered}</div>;
-  // As prioridades aparecem somente nos títulos de subtópicos explicitamente reconhecidos
-  // pela matriz do edital; o texto e a ordem originais do material permanecem intactos.
-  const decorate = (nodes: ReactNode[]): ReactNode[] =>
-    nodes.map((node, index) => {
-      if (!node || typeof node !== "object" || !("type" in node)) return node;
-      const element = node as React.ReactElement<{ children?: ReactNode }>;
-      if (element.type !== "h2" && element.type !== "h3") return node;
-      const titleText = typeof element.props.children === "string"
-        ? element.props.children
-        : Array.isArray(element.props.children)
-          ? element.props.children.map((child) => typeof child === "string" ? child : "").join(" ")
-          : "";
-      return (
-        <Fragment key={element.key ?? `priority-heading-${index}`}>
-          {element}
-          <StudyPriorityBadges
-            contestName={contestName}
-            discipline={discipline}
-            topic={titleText}
-            className="mb-2"
-          />
-        </Fragment>
-      );
-    });
-  return <div className="study-prose">{decorate(rendered)}</div>;
+  const rendered = renderBlocks(
+    parse(source),
+    renderText,
+    discipline && contestName ? { discipline, contestName } : undefined,
+  );
+  return <div className="study-prose">{rendered}</div>;
 }
