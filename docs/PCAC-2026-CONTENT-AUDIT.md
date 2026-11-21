@@ -1226,3 +1226,47 @@ A leitura desta etapa confirmou diretamente os arts. 143 a 148 e a alteração d
 ### Próximo passo
 
 Conferir artigos 134 a 142 em sua literalidade consolidada; em seguida, revisar a Lei nº 14.735/2023 e o PCCR da Polícia Civil do Acre, distinguindo as normas nacionais das regras estaduais.
+
+
+## Oitava continuação — arts. 134 a 143 da LC nº 129/2004 — 21/11/2026
+
+### Ampliação didática
+
+O material de PAD foi ampliado para 18.597 caracteres, incluindo:
+- Audiência inicial e citação pessoal com antecedência mínima de 48 horas.
+- Citação postal quando o acusado está ausente.
+- Citação por edital com prazo de 15 dias e publicação durante três dias, quando não localizado e com paradeiro ignorado.
+- Declarações do denunciante entre a citação e o interrogatório, ressalvada a hipótese de risco à segurança.
+- Limite de até oito testemunhas indicadas pelo acusado e até oito pela comissão, como limites separados.
+- Regras práticas para distinguir testemunhas por parentesco, sigilo profissional, residência em outra comarca e vínculo de servidor.
+- Pegadinhas que trocam sujeito, marco inicial e unidade de prazo.
+
+### Questões do treinador
+
+Adicionadas quatro questões autorais sobre:
+1. Citação pessoal.
+2. Citação por edital.
+3. Limite de testemunhas do acusado.
+4. Momento das declarações do denunciante e acesso do acusado.
+
+A consulta confirmou oito questões com prefixo `pcac-pad-` ativas, contando as quatro desta etapa e as quatro da etapa anterior. Todas possuem chaves distintas, gabarito e explicação e estão identificadas como autorais, não oficiais da IDECAN.
+
+### Fontes e cautela
+
+- Texto consolidado da LC nº 129/2004, Portal LEGIS do Acre: https://www.legis.ac.gov.br/detalhar/674
+- LC nº 293/2014, que alterou, entre outros, os arts. 102, 127, 148-A e 150: https://www.legis.ac.gov.br/detalhar/3980
+- A versão consolidada lista alterações posteriores, inclusive LC nº 496/2025 e LC nº 526/2026. A LC nº 526/2026 alterou dispositivos da LC nº 129/2004, mas não foi presumido que ela modificou os arts. 134–143 sem evidência textual.
+- O Portal LEGIS é fonte consultiva; prevalece a publicação no Diário Oficial quando houver divergência.
+
+### Limite da auditoria
+
+O conteúdo dos arts. 134–143 foi organizado e explicado a partir do material e das referências legais disponíveis. A conferência literal de todos os parágrafos dos arts. 134–142 ainda não está encerrada por limitação de extração do texto integral em uma única consulta. Não marcar o bloco como auditoria jurídica exaustiva. Teste visual do treinador e contagem no painel ainda pendentes.
+
+### Migrations
+
+- `20261121301400_expand_lc129_citation_hearing_and_witnesses.sql` — commit `25c9b6ea71f9b41e65532fbfe9304311d39b775d`.
+- `20261121301500_add_lc129_citation_witness_trainer_questions.sql` — commit `43c27c4bb5a87e0b3a1a2d0d750ef7d606528257`.
+
+### Próxima etapa
+
+Revisar a Lei nº 14.735/2023 e suas interações com a LC estadual nº 129/2004, além do PCCR da Polícia Civil do Acre, observando a redação estadual mais recente.
