@@ -22,7 +22,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { MODELOS_CRONOGRAMA, type ModeloCronograma } from "@/data/cronogramaModelos";
 import {
-  canonicalDiscipline, accuracy, buildWeek, discStats, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
+  canonicalDiscipline, accuracy, buildWeek, catchUpMinutes, coverage, discStats, essayMinutes, explainWeek, simuladoMinutes, studyPhase, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
@@ -69,6 +69,7 @@ const fmtH = (min: number) => `${Math.floor(min / 60)}h${min % 60 ? String(min %
 function discsFromModel(m: ModeloCronograma): CronoDisc[] {
   return m.disciplinas.map((d, i) => ({
     id: `d${i}`, nome: d.nome, peso: d.peso, topicos: d.topicos.map((t, j) => ({ id: `d${i}.${j}`, t })),
+    ...(d.pontos != null ? { pontos: d.pontos } : {}),
   }));
 }
 
@@ -385,7 +386,13 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
     [theoryIndex, backUrl, mediaCatalog],
   );
   const timers = React.useRef<Record<string, ReturnType<typeof setTimeout>>>({});
-  const cfg = plan.config;
+  // planos criados antes dos pontos da prova ganham os pontos do modelo do edital (pelo nome da disciplina)
+  const cfg = React.useMemo<CronoConfig>(() => {
+    const model = plan.model_id ? MODELOS_CRONOGRAMA.find((m) => m.id === plan.model_id) : undefined;
+    if (!model?.disciplinas.some((d) => d.pontos != null)) return plan.config;
+    const pts = new Map(model.disciplinas.map((d) => [canonicalDiscipline(d.nome), d.pontos]));
+    return { ...plan.config, discs: plan.config.discs.map((d) => { const p = d.pontos ?? pts.get(canonicalDiscipline(d.nome)); return p != null ? { ...d, pontos: p } : d; }) };
+  }, [plan.config, plan.model_id]);
 
   React.useEffect(() => {
     void supabase.from("cronograma_progress").select("*").eq("plan_id", plan.id).then(({ data }) => {
@@ -449,7 +456,11 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
   const done = all.reduce((s, x) => s + x.s.done, 0);
   const total = all.reduce((s, x) => s + x.s.total, 0);
   const pct = total ? Math.round((100 * done) / total) : 0;
-  const week = buildWeek(cfg, progress);
+  const carry = catchUpMinutes(cfg.weeklyHours, studiedMin);
+  const week = buildWeek(cfg, progress, { carryMinutes: carry });
+  const explain = explainWeek(cfg, progress, week);
+  const cover = coverage(cfg, progress, examDaysLeft(plan.exam_date));
+  const phase = studyPhase(examDaysLeft(plan.exam_date));
   const next = nextTopic(cfg, progress);
   const dateKey = acreDateKey();
   const todayDow = new Date(`${dateKey}T12:00:00Z`).getUTCDay();
@@ -513,7 +524,13 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         <TabsList className="grid h-auto w-full grid-cols-3 bg-slate-100 p-1 dark:bg-slate-900/70"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
 
         <TabsContent value="semana" className="space-y-3">
-          <p className="text-xs text-muted-foreground">Tempo por disciplina = peso × o que falta × reforço para desempenho abaixo de 70%. Mude o progresso e a semana se reorganiza.</p>
+          <p className="text-xs text-muted-foreground">Tempo por disciplina = pontos da prova (ou peso) × o que falta × reforço proporcional ao erro. Fase atual: <b>{phase === "base" ? "base (teoria)" : phase === "pratica" ? "prática (mais questões)" : "revisão final (erros e revisão)"}</b>. Mude o progresso e a semana se reorganiza.</p>
+          {carry > 0 && <p className="rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-100">Você ficou abaixo da meta nos últimos 7 dias: somei {fmtH(carry)} a esta semana para recuperar o atraso.</p>}
+          {cover && !cover.ok && <p className="rounded-md border border-rose-300 bg-rose-50 px-3 py-2 text-xs text-rose-900 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-100">No ritmo atual, faltam cerca de {fmtH(cover.need - cover.have)} para ver todo o conteúdo até a prova. Priorize {cover.priority.join(", ")}, ou aumente as horas semanais.</p>}
+          <details className="rounded-md border px-3 py-2 text-xs">
+            <summary className="cursor-pointer font-semibold">Por que cada disciplina recebeu este tempo</summary>
+            <ul className="mt-2 space-y-1">{explain.map((e) => <li key={e.discId}><b>{e.nome}</b> — {fmtH(e.minutes)} · <span className="text-muted-foreground">{e.reason}</span></li>)}</ul>
+          </details>
           {DAY_ORDER.filter((d) => week[d]).map((d) => (
             <Card key={d}>
               <CardHeader className="pb-2"><CardTitle className="text-base">{DAY_NAMES_FULL[d]} {d === todayDow && <Badge className="ml-1 bg-emerald-500 hover:bg-emerald-500">hoje</Badge>} <span className="text-xs font-normal text-muted-foreground">· {fmtH(week[d]!.reduce((s, b) => s + b.minutes, 0))}</span></CardTitle></CardHeader>
@@ -546,8 +563,8 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
               <SettingsFields cfg={cfg} onChange={setCfg} />
               <div className="space-y-2 rounded-xl border bg-gradient-to-r from-amber-50 to-sky-50 p-3 dark:from-amber-950/20 dark:to-sky-950/20">
                 <p className="text-sm font-bold">Extras no painel do dia</p>
-                <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.simulado} onCheckedChange={(v) => setCfg({ simulado: !!v })} />🏆 Simulado de 1 h no último dia de estudo da semana</label>
-                <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.essay} onCheckedChange={(v) => setCfg({ essay: !!v })} />✍️ Redação de 40 min no penúltimo dia de estudo</label>
+                <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.simulado} onCheckedChange={(v) => setCfg({ simulado: !!v })} />🏆 Simulado de {fmtH(simuladoMinutes(cfg.weeklyHours))} no último dia de estudo da semana</label>
+                <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.essay} onCheckedChange={(v) => setCfg({ essay: !!v })} />✍️ Redação de {essayMinutes(cfg.weeklyHours)} min no penúltimo dia de estudo</label>
               </div>
             </CardContent>
           </Card>

@@ -31,7 +31,11 @@ export const isGenericDiscipline = (nome: string) =>
   /^(conhecimentos (especificos|tecnicos)|atualidades e conhecimentos sobre sergipe)$/.test(strip(nome));
 
 export interface CronoTopic { id: string; t: string }
-export interface CronoDisc { id: string; nome: string; peso: 1 | 2; topicos: CronoTopic[] }
+export interface CronoDisc {
+  id: string; nome: string; peso: 1 | 2; topicos: CronoTopic[];
+  /** Pontos da disciplina na prova (questões × peso da questão). Quando existe, manda mais que o peso 1|2. */
+  pontos?: number;
+}
 export interface CronoConfig {
   discs: CronoDisc[];
   days: number[]; // 0 = domingo … 6 = sábado
@@ -76,31 +80,60 @@ export interface WeekBlock {
 export const MIN_BLOCK = 30;
 export const MAX_BLOCK = 120; // PDF: peso 2, primeira vez que vai estudar = 2 horas
 const GAP = 10;
-export const SIMULADO_MIN = 60;
-export const ESSAY_MIN = 40;
-/** Faltando até 30 dias para a prova, o estudo passa de teoria para prática (questões e revisão de erros). */
+/** Simulado ≈ 12% das horas da semana (de 1 a 3 h); redação 40 min (60 min com 10 h ou mais por semana). */
+export const simuladoMinutes = (weeklyHours: number) =>
+  Math.min(180, Math.max(60, Math.round((weeklyHours * 60 * 0.12) / MIN_BLOCK) * MIN_BLOCK));
+export const essayMinutes = (weeklyHours: number) => (weeklyHours >= 10 ? 60 : 40);
+/** Fases até a prova: base (teoria), prática (>90 d → ≤90 d: mais questões) e revisão (≤30 d: erros e revisão). */
+export const PRACTICE_PHASE_DAYS = 90;
 export const FINAL_PHASE_DAYS = 30;
+export type StudyPhase = "base" | "pratica" | "revisao";
+export const studyPhase = (daysLeft?: number | null): StudyPhase =>
+  daysLeft == null || daysLeft < 0 || daysLeft > PRACTICE_PHASE_DAYS ? "base" : daysLeft > FINAL_PHASE_DAYS ? "pratica" : "revisao";
 
 const hhmm = (min: number) =>
   `${String(Math.floor(min / 60) % 24).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
 
-/** Peso efetivo: peso do edital × o quanto falta × reforço se o desempenho está baixo. */
+/** Peso efetivo: pontos da prova (ou peso 1|2 ×10) × o quanto falta × reforço proporcional ao erro. */
 export function effectiveWeight(d: CronoDisc, st: DiscStats): number {
   const remaining = st.total ? 1 - st.done / st.total : 1;
   const acc = accuracy(st);
-  return d.peso * (0.3 + remaining) * (acc !== null && acc < 70 ? 1.3 : 1);
+  // com 5+ questões o reforço cresce com o erro (70% → 1.0 … 40% → 1.45); com menos, o histórico é pouco confiável
+  const boost = acc !== null && st.qtde >= 5 && acc < 70 ? 1 + Math.min(0.5, (70 - acc) / 70 * 1.0) : 1;
+  return (d.pontos ?? d.peso * 10) * (0.3 + remaining) * boost;
+}
+
+/** Assunto já estudado com desempenho fraco (≥5 questões e <60% de acerto): o mais fraco primeiro. */
+export function weakTopic(d: CronoDisc, progress: Record<string, TopicProgress>, skip?: Set<string>): CronoTopic | undefined {
+  let worst: { t: CronoTopic; acc: number } | undefined;
+  for (const t of d.topicos) {
+    const p = progress[t.id];
+    if (!p || p.qtde < 5 || skip?.has(t.id)) continue;
+    const a = (100 * p.acertos) / p.qtde;
+    if (a < 60 && (!worst || a < worst.acc)) worst = { t, acc: a };
+  }
+  return worst?.t;
+}
+
+/** Atraso: se o aluno estudou algo na janela de 7 dias mas ficou abaixo da meta, a diferença (até 25%) entra na semana. */
+export function catchUpMinutes(weeklyHours: number, studiedMin: number | null): number {
+  if (studiedMin === null || studiedMin <= 0) return 0;
+  const deficit = weeklyHours * 60 - studiedMin;
+  if (deficit <= 0) return 0;
+  return Math.floor(Math.min(deficit, weeklyHours * 15) / MIN_BLOCK) * MIN_BLOCK;
 }
 
 /** Monta a semana: day (0-6) → blocos com horário. Minutos em múltiplos de 30. */
-export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgress>): Record<number, WeekBlock[]> {
+export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgress>, opts: { carryMinutes?: number } = {}): Record<number, WeekBlock[]> {
   const days = [...new Set(cfg.days)].sort((a, b) => a - b);
   const out: Record<number, WeekBlock[]> = {};
   for (const d of days) out[d] = [];
   if (!days.length || !cfg.discs.length) return out;
 
   // Simulado (60 min) e redação (40 min) saem do total semanal: a soma da semana bate com as horas informadas.
-  const reserved = (cfg.simulado ? SIMULADO_MIN : 0) + (cfg.essay ? ESSAY_MIN : 0);
-  const slots = Math.max(1, Math.round((cfg.weeklyHours * 60 - Math.min(reserved, cfg.weeklyHours * 30)) / MIN_BLOCK));
+  const reserved = (cfg.simulado ? simuladoMinutes(cfg.weeklyHours) : 0) + (cfg.essay ? essayMinutes(cfg.weeklyHours) : 0);
+  const budget = cfg.weeklyHours * 60 + (opts.carryMinutes ?? 0);
+  const slots = Math.max(1, Math.round((budget - Math.min(reserved, cfg.weeklyHours * 30)) / MIN_BLOCK));
   const stats = new Map(cfg.discs.map((d) => [d.id, discStats(d, progress)]));
   const w = cfg.discs.map((d) => effectiveWeight(d, stats.get(d.id)!));
   const sum = w.reduce((a, b) => a + b, 0);
@@ -173,12 +206,51 @@ export function selfCheck() {
   return true;
 }
 
+export interface WeekExplanation { discId: string; nome: string; minutes: number; reason: string }
+/** Por que cada disciplina recebeu esse tempo (pontos/peso, quanto falta, desempenho). */
+export function explainWeek(cfg: CronoConfig, progress: Record<string, TopicProgress>, week: Record<number, WeekBlock[]>): WeekExplanation[] {
+  const minutes = new Map<string, number>();
+  for (const b of Object.values(week).flat()) minutes.set(b.discId, (minutes.get(b.discId) ?? 0) + b.minutes);
+  return cfg.discs.map((d) => {
+    const st = discStats(d, progress), acc = accuracy(st);
+    const parts = [d.pontos != null ? `vale ${Math.round(d.pontos)} pts na prova` : `peso ${d.peso}`];
+    parts.push(st.total ? `${st.total - st.done} de ${st.total} conteúdos por fazer` : "sem conteúdos");
+    if (acc !== null && st.qtde >= 5) parts.push(acc < 70 ? `acerto ${acc}% (reforço)` : `acerto ${acc}%`);
+    return { discId: d.id, nome: d.nome, minutes: minutes.get(d.id) ?? 0, reason: parts.join(" · ") };
+  }).sort((a, b) => b.minutes - a.minutes);
+}
+
+export const TOPIC_MIN = 60; // estimativa média: aprender + praticar um conteúdo
+export interface Coverage { need: number; have: number; ok: boolean; priority: string[] }
+/** O conteúdo restante cabe até a prova? Se não, diz o que priorizar (maior peso efetivo). */
+export function coverage(cfg: CronoConfig, progress: Record<string, TopicProgress>, daysLeft: number | null): Coverage | null {
+  if (daysLeft === null || daysLeft < 0) return null;
+  const left = cfg.discs.reduce((n, d) => n + d.topicos.filter((t) => !topicDone(progress[t.id])).length, 0);
+  const have = Math.round((daysLeft / 7) * cfg.weeklyHours * 60);
+  const need = left * TOPIC_MIN;
+  const priority = [...cfg.discs]
+    .sort((a, b) => effectiveWeight(b, discStats(b, progress)) - effectiveWeight(a, discStats(a, progress)))
+    .slice(0, 3).map((d) => d.nome);
+  return { need, have, ok: need <= have, priority };
+}
+
 /** Self-check: simulado/redação saem das horas semanais. */
 export function selfCheckReserva() {
   const mk = (id: string, peso: 1 | 2): CronoDisc => ({ id, nome: id, peso, topicos: [{ id: id + "1", t: "x" }] });
   const cfg: CronoConfig = { discs: [mk("a", 2), mk("b", 1)], days: [1, 2, 3, 4, 5], startTime: "19:00", weeklyHours: 10, simulado: true, essay: true };
   const total = Object.values(buildWeek(cfg, {})).flat().reduce((s, b) => s + b.minutes, 0);
-  if (total > 600 - SIMULADO_MIN - ESSAY_MIN + MIN_BLOCK) throw new Error(`reserva ignorada: ${total}`);
+  if (total > 600 - simuladoMinutes(10) - essayMinutes(10) + MIN_BLOCK) throw new Error(`reserva ignorada: ${total}`);
+  // pontos mandam: 20 pts recebem mais que 5 pts
+  const pts: CronoConfig = { ...cfg, simulado: false, essay: false, discs: [{ ...mk("a", 1), pontos: 20 }, { ...mk("b", 1), pontos: 5 }] };
+  const w = Object.values(buildWeek(pts, {})).flat();
+  const m = (id: string) => w.filter((x) => x.discId === id).reduce((n, x) => n + x.minutes, 0);
+  if (m("a") <= m("b") * 2) throw new Error("pontos não pesaram");
+  // assunto fraco e atraso
+  const weak = weakTopic({ ...mk("a", 1), topicos: [{ id: "t", t: "t" }] }, { t: { ...EMPTY_PROGRESS, video: true, qtde: 10, acertos: 3 } });
+  if (weak?.id !== "t") throw new Error("assunto fraco");
+  if (catchUpMinutes(10, 0) !== 0 || catchUpMinutes(10, 300) !== 150 || catchUpMinutes(10, 700) !== 0) throw new Error("atraso");
+  if (studyPhase(null) !== "base" || studyPhase(60) !== "pratica" || studyPhase(10) !== "revisao") throw new Error("fases");
+  if (coverage(cfg, {}, 1)?.ok !== false) throw new Error("cobertura");
   return true;
 }
 
