@@ -12,60 +12,68 @@
         {
           "a": true,
           "q": "A desconcentração distribui competências dentro da mesma pessoa jurídica e não cria, por si só, nova pessoa jurídica.",
-          "why": "A desconcentração é divisão interna de atribuições; a descentralização envolve outra pessoa."
+          "why": "Correto. Desconcentração distribui atribuições dentro da mesma pessoa jurídica: quando uma secretaria cria diretorias internas, não nasce outra entidade. Descentralização, ao contrário, envolve execução por pessoa distinta, como autarquia."
         },
         {
           "a": false,
           "q": "O desvio de finalidade ocorre quando o agente ultrapassa os limites de sua competência.",
-          "why": "Ultrapassar competência é excesso de poder. Desvio de finalidade ocorre quando a competência é usada para fim impróprio."
+          "why": "Errado. Excesso de poder ocorre quando a autoridade ultrapassa competência legal; desvio de finalidade ocorre quando usa competência existente para perseguir finalidade diversa da prevista. Um agente competente que pune por vingança pode atuar com desvio de finalidade."
         },
         {
           "a": true,
           "q": "A revogação retira ato administrativo válido por razões de conveniência e oportunidade.",
-          "why": "A revogação incide sobre mérito administrativo; ilegalidade conduz à anulação. Exemplo jurídico: Antes de escolher alternativa, separe fundamento, competência, finalidade, forma e motivo do ato. Ato ilegal é anulado; ato válido que deixa de ser conveniente pode ser revogado dentro dos limites legais; servidor não pode exercer poder fora da competência."
+          "why": "Correto. A revogação atua sobre ato válido quando o mérito administrativo permite reavaliar conveniência e oportunidade. Ilegalidade deve ser enfrentada por anulação; em ambas as hipóteses devem ser observados limites, efeitos e garantias aplicáveis."
         },
         {
           "a": false,
           "q": "Todo ato de polícia administrativa possui autoexecutoriedade.",
-          "why": "A autoexecutoriedade depende de previsão legal ou situação urgente que justifique execução direta."
+          "why": "Errado. Autoexecutoriedade não está presente universalmente. A execução direta de determinada medida, sem prévia ordem judicial, depende de autorização legal ou situação de urgência justificada, respeitando proporcionalidade e os demais direitos envolvidos."
         },
         {
           "a": false,
           "q": "Após a Lei nº 14.230/2021, a mera voluntariedade do agente basta para configurar improbidade administrativa.",
-          "why": "A lei exige dolo e enquadramento em conduta tipificada, além dos requisitos de cada tipo."
+          "why": "Errado. A Lei 8.429/1992, após Lei 14.230/2021, exige dolo entendido como vontade livre e consciente de alcançar o resultado ilícito tipificado. Mera voluntariedade, sem finalidade ilícita exigida, não basta para condenação por improbidade. Fonte: arts. 1º, §§2º e 3º."
         }
       ],
       "slug": "pcac-2026-administrativo-casos-praticos-atos-poderes-agentes",
       "discipline": "Noções de Direito Administrativo",
       "topic_label": "Casos práticos integrados — organização, poderes, atos e agentes públicos",
-      "practice_review": null
+      "practice_review": {
+        "status": "needs_revalidation",
+        "review_note": "25 justificativas específicas conferidas à luz da CF art. 37, Lei 8429/1992 e Lei 13303/2016. Exige fonte oficial com hash por questão para desbloquear treino.",
+        "official_urls": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm"
+        ]
+      }
     },
     {
       "quiz": [
         {
           "a": false,
           "q": "A eficiência autoriza a Administração a afastar a legalidade quando o resultado for melhor.",
-          "why": "A eficiência deve ser buscada dentro da Constituição e das leis. Exemplo jurídico: Princípios expressos do art. 37 da Constituição: legalidade, impessoalidade, moralidade, publicidade e eficiência. Favorecer amigo viola impessoalidade; divulgar dado sigiloso não é exigência de publicidade; economizar não autoriza infringir a lei."
+          "why": "Errado. Eficiência e legalidade convivem no art. 37, caput, da Constituição. Produzir resultado mais rápido não autoriza contrariar regra legal; por exemplo, contratar sem observar hipótese válida de dispensa não fica lícito só por reduzir prazo."
         },
         {
           "a": true,
           "q": "A impessoalidade impede favorecimentos pessoais na atuação administrativa.",
-          "why": "A atuação deve observar finalidade pública e critérios objetivos. Exemplo jurídico: Princípios expressos do art. 37 da Constituição: legalidade, impessoalidade, moralidade, publicidade e eficiência. Favorecer amigo viola impessoalidade; divulgar dado sigiloso não é exigência de publicidade; economizar não autoriza infringir a lei."
+          "why": "Correto. A impessoalidade exige atuação para finalidade pública, com critérios objetivos e sem favorecer pessoas por amizade, parentesco ou preferência individual. O art. 37, caput, traz o princípio entre os expressos."
         },
         {
           "a": true,
           "q": "A publicidade é regra, mas admite restrições legais.",
-          "why": "A Constituição protege intimidade, dados pessoais e outros interesses legalmente tutelados."
+          "why": "Correto. Publicidade é princípio expresso no art. 37, mas sua concretização respeita limites constitucionais e legais: intimidade, dados pessoais, sigilos protegidos e acesso às informações nos termos próprios. Não equivale à divulgação irrestrita."
         },
         {
           "a": true,
           "q": "A moralidade administrativa exige conduta ética e proba.",
-          "why": "A moralidade é princípio constitucional expresso. Exemplo jurídico: Princípios expressos do art. 37 da Constituição: legalidade, impessoalidade, moralidade, publicidade e eficiência. Favorecer amigo viola impessoalidade; divulgar dado sigiloso não é exigência de publicidade; economizar não autoriza infringir a lei."
+          "why": "Correto. Moralidade administrativa exige honestidade, lealdade institucional, boa-fé e probidade na condução do interesse público. Uma conduta pode contrariar moralidade mesmo quando sua aparência formal parece regular."
         },
         {
           "a": false,
           "q": "A Administração pode dispor livremente do interesse público como se fosse patrimônio particular.",
-          "why": "A indisponibilidade impede o agente de tratar o interesse público como bem próprio."
+          "why": "Errado. O interesse público não é propriedade particular do administrador. Os agentes exercem competências vinculadas às finalidades legais e não podem renunciar livremente a direitos e deveres públicos fora das hipóteses autorizadas."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-01-principios-administracao-publica",
@@ -76,7 +84,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 justificativas específicas conferidas à luz da CF art. 37, Lei 8429/1992 e Lei 13303/2016. Exige fonte oficial com hash por questão para desbloquear treino.",
         "items_checked": 5,
+        "official_urls": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm"
+        ],
         "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
       }
     },
@@ -85,27 +99,27 @@
         {
           "a": true,
           "q": "Secretarias estaduais são órgãos da Administração direta.",
-          "why": "Integram a estrutura do Estado, sem personalidade jurídica própria. Exemplo jurídico: Administração Direta inclui órgãos dos entes políticos, sem personalidade própria. Indireta inclui entidades com personalidade, como autarquias. Criar diretoria dentro da secretaria é desconcentração; criar autarquia é descentralização."
+          "why": "Correto. Secretarias são órgãos integrantes da pessoa jurídica política Estado e, em regra, não possuem personalidade jurídica própria. Atos da secretaria são imputados à pessoa jurídica estadual, salvo capacidades processuais específicas."
         },
         {
           "a": false,
           "q": "Autarquia é órgão sem personalidade jurídica.",
-          "why": "Autarquia é entidade da Administração indireta, com personalidade jurídica de direito público."
+          "why": "Errado. Autarquia é pessoa jurídica de direito público criada por lei específica e integrante da Administração indireta; órgão, como departamento de secretaria, não tem personalidade própria. A Constituição, art. 37, XIX, trata da criação de autarquias."
         },
         {
           "a": true,
           "q": "Empresa pública possui capital integralmente público.",
-          "why": "Essa é uma característica da empresa pública. Exemplo jurídico: Administração Direta inclui órgãos dos entes políticos, sem personalidade própria. Indireta inclui entidades com personalidade, como autarquias. Criar diretoria dentro da secretaria é desconcentração; criar autarquia é descentralização."
+          "why": "Correto em termos do modelo de empresa pública: seu capital é integralmente público, observados os arranjos societários autorizados pela Lei 13.303/2016. Distingue-se da sociedade de economia mista, cujo capital admite participação privada e controle estatal."
         },
         {
           "a": false,
           "q": "Desconcentração cria necessariamente uma nova pessoa jurídica.",
-          "why": "Ela distribui competências dentro da mesma pessoa jurídica. Exemplo jurídico: Administração Direta inclui órgãos dos entes políticos, sem personalidade própria. Indireta inclui entidades com personalidade, como autarquias. Criar diretoria dentro da secretaria é desconcentração; criar autarquia é descentralização."
+          "why": "Errado. Desconcentração é repartição de competências na mesma pessoa jurídica; a criação de órgão não constitui personalidade separada. A descentralização pode criar ou atribuir execução a entidade distinta."
         },
         {
           "a": true,
           "q": "Descentralização pode atribuir a execução de serviço a outra pessoa jurídica.",
-          "why": "A atividade passa a ser executada por pessoa distinta, conforme a lei. Exemplo jurídico: Administração Direta inclui órgãos dos entes políticos, sem personalidade própria. Indireta inclui entidades com personalidade, como autarquias. Criar diretoria dentro da secretaria é desconcentração; criar autarquia é descentralização."
+          "why": "Correto. Descentralização permite execução por pessoa jurídica diferente do ente político, nos termos da lei ou contrato autorizado. Exemplo: uma autarquia estadual executa atividade administrativa específica com personalidade própria."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-02-organizacao-direta-indireta",
@@ -116,7 +130,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 justificativas específicas conferidas à luz da CF art. 37, Lei 8429/1992 e Lei 13303/2016. Exige fonte oficial com hash por questão para desbloquear treino.",
         "items_checked": 5,
+        "official_urls": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm"
+        ],
         "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
       }
     },
@@ -125,27 +145,27 @@
         {
           "a": false,
           "q": "Discricionariedade permite ao agente agir arbitrariamente.",
-          "why": "A escolha administrativa permanece limitada pela lei, finalidade e princípios. Exemplo jurídico: Poder hierárquico organiza tarefas e relações internas; disciplinar apura infrações; regulamentar detalha a execução da lei; de polícia limita atividades nos termos legais. Excesso de poder extrapola competência; desvio de finalidade persegue fim indevido."
+          "why": "Errado. Discricionariedade é margem de escolha conferida pelo direito, submetida à competência, finalidade, motivos, razoabilidade e proporcionalidade. Arbitrariedade é exercício sem respaldo legal ou em desvio das finalidades públicas."
         },
         {
           "a": true,
           "q": "O poder hierárquico permite organizar e fiscalizar atividades internas.",
-          "why": "Essas são manifestações típicas da hierarquia administrativa. Exemplo jurídico: Poder hierárquico organiza tarefas e relações internas; disciplinar apura infrações; regulamentar detalha a execução da lei; de polícia limita atividades nos termos legais. Excesso de poder extrapola competência; desvio de finalidade persegue fim indevido."
+          "why": "Correto. O poder hierárquico permite organizar atividades internas, distribuir tarefas, fiscalizar subordinados e, nos limites legais, revisar atos. A hierarquia não autoriza ordens manifestamente ilegais."
         },
         {
           "a": true,
           "q": "O poder disciplinar pode alcançar particulares vinculados juridicamente à Administração.",
-          "why": "Pode incidir sobre pessoas sujeitas a regime disciplinar específico. Exemplo jurídico: Poder hierárquico organiza tarefas e relações internas; disciplinar apura infrações; regulamentar detalha a execução da lei; de polícia limita atividades nos termos legais. Excesso de poder extrapola competência; desvio de finalidade persegue fim indevido."
+          "why": "Correto. O poder disciplinar pode alcançar servidores e também particulares ligados por vínculo jurídico especial à Administração, como contratados sujeitos às sanções previstas no contrato e na lei. Não se confunde com fiscalização geral do poder de polícia."
         },
         {
           "a": true,
           "q": "O excesso de poder ocorre quando o agente ultrapassa sua competência.",
-          "why": "É uma modalidade de abuso de poder. Exemplo jurídico: Poder hierárquico organiza tarefas e relações internas; disciplinar apura infrações; regulamentar detalha a execução da lei; de polícia limita atividades nos termos legais. Excesso de poder extrapola competência; desvio de finalidade persegue fim indevido."
+          "why": "Correto. Excesso de poder é espécie de abuso: ocorre quando o agente atua além das atribuições que lhe foram legalmente conferidas. Por exemplo, autoridade sem competência que aplica sanção reservada a outro órgão."
         },
         {
           "a": false,
           "q": "O poder regulamentar permite contrariar a lei para atender à conveniência administrativa.",
-          "why": "O regulamento deve respeitar a lei e a Constituição. Exemplo jurídico: Poder hierárquico organiza tarefas e relações internas; disciplinar apura infrações; regulamentar detalha a execução da lei; de polícia limita atividades nos termos legais. Excesso de poder extrapola competência; desvio de finalidade persegue fim indevido."
+          "why": "Errado. Regulamentos devem executar e detalhar a lei sem contrariá-la, respeitadas hipóteses constitucionais específicas de decreto autônomo. Conveniência administrativa não autoriza criar regra incompatível com a legislação superior."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-03-poderes-administrativos",
@@ -156,7 +176,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 justificativas específicas conferidas à luz da CF art. 37, Lei 8429/1992 e Lei 13303/2016. Exige fonte oficial com hash por questão para desbloquear treino.",
         "items_checked": 5,
+        "official_urls": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm"
+        ],
         "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
       }
     },
@@ -165,27 +191,27 @@
         {
           "a": false,
           "q": "Todo ato de polícia é necessariamente discricionário.",
-          "why": "Há atos vinculados e situações em que a lei reduz a margem de escolha. Exemplo jurídico: O poder de polícia administrativa condiciona direitos e atividades para proteger interesse público, como licenciar ou fiscalizar estabelecimento. A polícia judiciária investiga infrações penais; os termos não são sinônimos."
+          "why": "Errado. Nem todo ato de polícia administrativa envolve escolha discricionária: a lei pode fixar pressupostos e consequências objetivas, tornando o ato vinculado. O fiscal deve cumprir os requisitos legais, não decidir sempre por preferência."
         },
         {
           "a": false,
           "q": "A autoexecutoriedade está presente em todos os atos administrativos de polícia sem exceção.",
-          "why": "Depende de previsão legal ou situação urgente que justifique execução direta. Exemplo jurídico: O poder de polícia administrativa condiciona direitos e atividades para proteger interesse público, como licenciar ou fiscalizar estabelecimento. A polícia judiciária investiga infrações penais; os termos não são sinônimos."
+          "why": "Errado. Autoexecutoriedade é atributo de certas medidas de polícia, não de todas. Execução direta depende de previsão legal ou situação urgente justificada, com necessidade, proporcionalidade e respeito às garantias aplicáveis."
         },
         {
           "a": true,
           "q": "A coercibilidade permite impor a medida de polícia dentro dos limites legais.",
-          "why": "A medida pode ser imposta ao administrado, respeitando a lei. Exemplo jurídico: O poder de polícia administrativa condiciona direitos e atividades para proteger interesse público, como licenciar ou fiscalizar estabelecimento. A polícia judiciária investiga infrações penais; os termos não são sinônimos."
+          "why": "Correto. Coercibilidade é a possibilidade de impor determinada medida administrativa ao destinatário, mesmo contra resistência, quando legalmente prevista. Não afasta controle jurisdicional nem autoriza violência desnecessária."
         },
         {
           "a": true,
           "q": "A polícia administrativa atua sobre bens, direitos e atividades.",
-          "why": "Sua finalidade é condicionar atividades e prevenir infrações administrativas. Exemplo jurídico: O poder de polícia administrativa condiciona direitos e atividades para proteger interesse público, como licenciar ou fiscalizar estabelecimento. A polícia judiciária investiga infrações penais; os termos não são sinônimos."
+          "why": "Correto. Poder de polícia administrativa condiciona ou restringe direitos e atividades em prol de interesses coletivos, como fiscalização sanitária ou licenciamento, dentro dos limites da lei. Sua atuação pode incidir sobre bens, atividades e direitos."
         },
         {
           "a": false,
           "q": "Polícia administrativa e polícia judiciária são expressões equivalentes.",
-          "why": "A primeira exerce função administrativa de fiscalização e prevenção; a segunda apura infrações penais."
+          "why": "Errado. Polícia administrativa controla atividades e previne infrações administrativas; polícia judiciária participa da apuração de infrações penais e das funções previstas constitucionalmente. Podem cooperar, mas não são conceitos equivalentes."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-04-poder-de-policia",
@@ -196,7 +222,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 justificativas específicas conferidas à luz da CF art. 37, Lei 8429/1992 e Lei 13303/2016. Exige fonte oficial com hash por questão para desbloquear treino.",
         "items_checked": 5,
+        "official_urls": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13303.htm"
+        ],
         "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
       }
     },
@@ -205,27 +237,27 @@
         {
           "a": true,
           "q": "Competência, finalidade, forma, motivo e objeto são elementos do ato administrativo.",
-          "why": "São os cinco elementos tradicionalmente estudados. Exemplo jurídico: Elementos do ato: competência, finalidade, forma, motivo e objeto. Ato nulo por ilegalidade é anulado; ato válido pode ser revogado por mérito administrativo quando houver margem legal. Presunção de legitimidade é relativa."
+          "why": "Correto. Competência, finalidade, forma, motivo e objeto são os cinco elementos tradicionalmente usados para analisar validade do ato administrativo. Exemplo: multa aplicada por autoridade competente, para finalidade pública e por conduta prevista na norma."
         },
         {
           "a": false,
           "q": "A revogação retira ato ilegal.",
-          "why": "A retirada de ato ilegal é anulação; revogação decorre de mérito administrativo."
+          "why": "Errado. Ilegalidade conduz à anulação do ato; revogação pressupõe ato válido e reavaliação do mérito administrativo, quando possível. Não confunda os fundamentos nem os limites temporais e efeitos de cada forma de retirada."
         },
         {
           "a": false,
           "q": "O Poder Judiciário pode revogar ato administrativo por conveniência e oportunidade da Administração.",
-          "why": "O Judiciário controla legalidade, mas não substitui o mérito administrativo da Administração."
+          "why": "Errado. O Poder Judiciário controla legalidade e pode invalidar atos ilegais, mas não substitui ordinariamente a Administração em juízo de conveniência e oportunidade para revogar ato válido. A avaliação de mérito cabe à autoridade administrativa competente."
         },
         {
           "a": true,
           "q": "A imperatividade permite impor obrigações ao destinatário quando o ato possui esse atributo.",
-          "why": "É a força impositiva do ato, nos limites do ordenamento. Exemplo jurídico: Elementos do ato: competência, finalidade, forma, motivo e objeto. Ato nulo por ilegalidade é anulado; ato válido pode ser revogado por mérito administrativo quando houver margem legal. Presunção de legitimidade é relativa."
+          "why": "Correto. Imperatividade é atributo pelo qual certos atos impõem obrigações unilateralmente, independentemente da concordância do particular, dentro das hipóteses legais. Não se presume em todo e qualquer ato administrativo, como atos meramente enunciativos."
         },
         {
           "a": false,
           "q": "Todos os atos administrativos possuem autoexecutoriedade.",
-          "why": "O atributo não está presente em todos os atos. Exemplo jurídico: Elementos do ato: competência, finalidade, forma, motivo e objeto. Ato nulo por ilegalidade é anulado; ato válido pode ser revogado por mérito administrativo quando houver margem legal. Presunção de legitimidade é relativa."
+          "why": "Errado. A autoexecutoriedade não integra todos os atos administrativos. Certas medidas podem ser cumpridas diretamente quando a lei autoriza ou há urgência juridicamente relevante; outras exigem a via judicial ou procedimento próprio."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-05-atos-administrativos",
@@ -236,8 +268,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 justificativas de ato, agente, responsabilidade e improbidade esclarecidas com CF art 37 e Lei 8429. Acesso ao treinador requer fonte oficial verificada SHA256 e versão do artigo para cada questão.",
         "items_checked": 5,
-        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
+        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm"
+        ]
       }
     },
     {
@@ -245,27 +282,27 @@
         {
           "a": true,
           "q": "Agente público é conceito que pode abranger pessoa que exerce função pública sem remuneração.",
-          "why": "O conceito é amplo e inclui atuação transitória ou sem remuneração. Exemplo jurídico: Cargo público é vínculo estatutário; emprego público é contratual em regra celetista; função pública é conjunto de atribuições. Concurso é regra geral de investidura, com exceções constitucionais. Acumulação depende das hipóteses do art. 37."
+          "why": "Correto. A noção ampla de agente público abrange quem exerce função pública por eleição, nomeação, designação, contratação ou outro vínculo legítimo, ainda que temporariamente ou sem remuneração. O conceito depende do regime jurídico analisado."
         },
         {
           "a": false,
           "q": "Empregado público ocupa cargo estatutário.",
-          "why": "Empregado público ocupa emprego público, regido em regra pela CLT. Exemplo jurídico: Cargo público é vínculo estatutário; emprego público é contratual em regra celetista; função pública é conjunto de atribuições. Concurso é regra geral de investidura, com exceções constitucionais. Acumulação depende das hipóteses do art. 37."
+          "why": "Errado. Empregado público ocupa emprego público com vínculo, em regra, celetista, enquanto ocupante de cargo efetivo segue regime estatutário próprio. Não é adequado tratar ambos indistintamente como titulares de cargos estatutários."
         },
         {
           "a": true,
           "q": "A aprovação em concurso é a regra para investidura em cargo ou emprego público.",
-          "why": "A Constituição estabelece essa exigência, ressalvadas as exceções. Exemplo jurídico: Cargo público é vínculo estatutário; emprego público é contratual em regra celetista; função pública é conjunto de atribuições. Concurso é regra geral de investidura, com exceções constitucionais. Acumulação depende das hipóteses do art. 37."
+          "why": "Correto. A Constituição, art. 37, II, estabelece concurso público como regra para investidura em cargo ou emprego público. Cargos em comissão de livre nomeação e exoneração são exceção constitucional, com funções delimitadas no inciso V."
         },
         {
           "a": false,
           "q": "Funções de confiança podem ser exercidas livremente por qualquer pessoa externa ao quadro efetivo.",
-          "why": "A Constituição reserva funções de confiança a servidores efetivos. Exemplo jurídico: Cargo público é vínculo estatutário; emprego público é contratual em regra celetista; função pública é conjunto de atribuições. Concurso é regra geral de investidura, com exceções constitucionais. Acumulação depende das hipóteses do art. 37."
+          "why": "Errado. O art. 37, V, reserva as funções de confiança exclusivamente a servidores ocupantes de cargos efetivos. Cargos em comissão são figura distinta, destinados apenas a direção, chefia e assessoramento, conforme percentuais e requisitos previstos em lei."
         },
         {
           "a": true,
           "q": "A acumulação constitucionalmente permitida depende de compatibilidade de horários.",
-          "why": "A compatibilidade é requisito das hipóteses autorizadas. Exemplo jurídico: Cargo público é vínculo estatutário; emprego público é contratual em regra celetista; função pública é conjunto de atribuições. Concurso é regra geral de investidura, com exceções constitucionais. Acumulação depende das hipóteses do art. 37."
+          "why": "Correto. A compatibilidade de horários é requisito constitucional para acumulação de cargos nas hipóteses expressamente admitidas pelo art. 37, XVI. Também devem ser observadas as demais condições constitucionais e as alterações posteriores, incluindo EC 138/2025."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-06-agentes-publicos",
@@ -276,8 +313,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 justificativas de ato, agente, responsabilidade e improbidade esclarecidas com CF art 37 e Lei 8429. Acesso ao treinador requer fonte oficial verificada SHA256 e versão do artigo para cada questão.",
         "items_checked": 5,
-        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
+        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm"
+        ]
       }
     },
     {
@@ -285,27 +327,27 @@
         {
           "a": true,
           "q": "Pessoas jurídicas de direito público respondem pelos danos causados por seus agentes nessa qualidade, conforme o art. 37, § 6º.",
-          "why": "A Constituição prevê a responsabilidade das pessoas jurídicas de direito público."
+          "why": "Correto. O art. 37, §6º, da Constituição estabelece que pessoas jurídicas de direito público e pessoas jurídicas de direito privado prestadoras de serviço público respondem por danos causados por seus agentes, nessa qualidade, assegurado regresso em caso de dolo ou culpa."
         },
         {
           "a": false,
           "q": "Na responsabilidade objetiva do Estado, a vítima precisa provar a culpa do agente público.",
-          "why": "A regra objetiva dispensa prova de culpa, mas exige dano e nexo causal. Exemplo jurídico: Art. 37, §6º: em regra, responsabilidade objetiva do Estado por conduta do agente nessa qualidade, com dano e nexo causal. A ação regressiva contra agente exige dolo ou culpa, não basta existir indenização estatal."
+          "why": "Errado. Na regra de responsabilidade objetiva, a vítima não precisa provar culpa pessoal do agente; precisa demonstrar dano e nexo causal com a atuação estatal. Eventuais excludentes e atenuantes são examinadas conforme os fatos."
         },
         {
           "a": true,
           "q": "O nexo causal liga a atuação estatal ao dano alegado.",
-          "why": "Sem nexo causal, não se estabelece o dever de indenizar pela regra. Exemplo jurídico: Art. 37, §6º: em regra, responsabilidade objetiva do Estado por conduta do agente nessa qualidade, com dano e nexo causal. A ação regressiva contra agente exige dolo ou culpa, não basta existir indenização estatal."
+          "why": "Correto. Nexo causal é vínculo entre conduta ou atividade imputável ao Estado e dano alegado. Sem ele, não basta provar que houve dano e que existia uma repartição pública próxima ao evento."
         },
         {
           "a": false,
           "q": "O direito de regresso contra o agente independe de dolo ou culpa.",
-          "why": "O art. 37, § 6º, prevê regresso nos casos de dolo ou culpa. Exemplo jurídico: Art. 37, §6º: em regra, responsabilidade objetiva do Estado por conduta do agente nessa qualidade, com dano e nexo causal. A ação regressiva contra agente exige dolo ou culpa, não basta existir indenização estatal."
+          "why": "Errado. O direito de regresso previsto no art. 37, §6º, exige dolo ou culpa do agente. Responsabilidade objetiva perante a vítima não significa responsabilidade pessoal automática de qualquer servidor."
         },
         {
           "a": true,
           "q": "A responsabilidade por omissão exige verificar o dever jurídico de agir e o nexo causal.",
-          "why": "A omissão deve ser examinada à luz do dever e das circunstâncias concretas. Exemplo jurídico: Art. 37, §6º: em regra, responsabilidade objetiva do Estado por conduta do agente nessa qualidade, com dano e nexo causal. A ação regressiva contra agente exige dolo ou culpa, não basta existir indenização estatal."
+          "why": "Correto. Danos por omissão exigem examinar a existência de dever jurídico específico de agir, possibilidade de atuação, causalidade e regime aplicável. Há distinções jurisprudenciais entre omissões específicas e genéricas; não basta afirmar que toda omissão gera responsabilidade automática."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-07-responsabilidade-civil-estado",
@@ -316,8 +358,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 justificativas de ato, agente, responsabilidade e improbidade esclarecidas com CF art 37 e Lei 8429. Acesso ao treinador requer fonte oficial verificada SHA256 e versão do artigo para cada questão.",
         "items_checked": 5,
-        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
+        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm"
+        ]
       }
     },
     {
@@ -325,47 +372,47 @@
         {
           "a": false,
           "q": "A mera voluntariedade do agente basta para caracterizar dolo na Lei de Improbidade após a Lei nº 14.230/2021.",
-          "why": "O art. 1º, § 2º, exige vontade livre e consciente de alcançar o resultado ilícito tipificado."
+          "why": "Errado. A Lei 8.429/1992, art. 1º, §2º, após Lei 14.230/2021, define dolo como vontade livre e consciente de alcançar resultado ilícito tipificado, não bastando mera voluntariedade do agente. Deve-se examinar o tipo, a conduta e a finalidade exigida."
         },
         {
           "a": false,
           "q": "O exercício regular de competência pública, sem ato doloso com fim ilícito, configura improbidade por si só.",
-          "why": "O art. 1º, § 3º, afasta essa responsabilização. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Errado. A Lei 8.429/1992, art. 1º, §3º, não caracteriza improbidade pelo mero exercício de função ou competência pública sem comprovação de ato doloso com fim ilícito. Conduta administrativa discutível não é automaticamente improbidade."
         },
         {
           "a": true,
           "q": "O art. 9º trata de enriquecimento ilícito.",
-          "why": "É a categoria de vantagem patrimonial indevida. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Correto. O art. 9º da Lei 8.429/1992 reúne atos de improbidade que importam enriquecimento ilícito mediante vantagem patrimonial indevida nos termos do tipo legal. A classificação se distingue de dano ao erário (art. 10) e atentado a princípios (art. 11)."
         },
         {
           "a": true,
           "q": "O art. 10 exige perda patrimonial efetiva e comprovada.",
-          "why": "O dano efetivo ao erário é requisito do tipo. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Correto. Para os atos dolosos do art. 10 da Lei 8.429/1992, a redação de 2021 exige perda patrimonial efetiva e comprovada ao erário, além dos demais elementos típicos. Presumir dano sem demonstração efetiva pode levar a gabarito incorreto."
         },
         {
           "a": false,
           "q": "Qualquer violação genérica a princípio administrativo configura automaticamente o art. 11.",
-          "why": "É necessário enquadramento em conduta dolosa expressamente tipificada. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Errado. O art. 11, após Lei 14.230/2021, tipifica condutas dolosas específicas contra os princípios da Administração. Não basta dizer genericamente que houve violação de princípio sem enquadramento no rol e no requisito subjetivo."
         },
         {
           "a": true,
           "q": "A suspensão dos direitos políticos no art. 9º pode chegar a 14 anos.",
-          "why": "É o limite previsto no art. 12, I. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Correto. O art. 12, I, da Lei 8.429/1992 prevê, para a hipótese do art. 9º, suspensão dos direitos políticos de até catorze anos entre as sanções possíveis. Isso não equivale a sanção automática em prazo máximo para todo caso."
         },
         {
           "a": true,
           "q": "No art. 11, a multa civil pode chegar a 24 vezes a remuneração percebida pelo agente.",
-          "why": "É a sanção prevista no art. 12, III. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Correto. O art. 12, III, da Lei 8.429/1992 prevê multa civil de até vinte e quatro vezes a remuneração percebida pelo agente para hipótese do art. 11, além das demais consequências legais possíveis. 'Até' indica limite, não imposição fixa."
         },
         {
           "a": false,
           "q": "A indisponibilidade de bens é uma sanção definitiva aplicada antes do julgamento.",
-          "why": "É medida cautelar, com requisitos legais próprios. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Errado. Indisponibilidade de bens é medida de natureza cautelar, cujo objetivo é assegurar eventual recomposição patrimonial dentro dos pressupostos legais. Não se confunde com sanção definitiva nem dispensa decisão e requisitos processuais."
         },
         {
           "a": false,
           "q": "A improbidade administrativa é sinônimo de toda ilegalidade administrativa.",
-          "why": "A lei exige tipicidade e dolo, além dos requisitos específicos de cada artigo. Exemplo jurídico: Improbidade administrativa exige enquadramento no tipo legal e elemento subjetivo, observada a Lei 8.429/1992 com alterações da Lei 14.230/2021. Não confunda ilegalidade administrativa, por si só, com improbidade comprovada."
+          "why": "Errado. Ilegalidade administrativa, por si só, não configura improbidade. Após Lei 14.230/2021, é necessário enquadramento em conduta tipificada nos arts. 9º, 10 ou 11, com dolo e demais requisitos correspondentes."
         }
       ],
       "slug": "pcac-2026-direito-administrativo-08-improbidade-administrativa",
@@ -376,8 +423,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 justificativas de ato, agente, responsabilidade e improbidade esclarecidas com CF art 37 e Lei 8429. Acesso ao treinador requer fonte oficial verificada SHA256 e versão do artigo para cada questão.",
         "items_checked": 9,
-        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação"
+        "revision_reason": "Exemplos de direito administrativo acrescentados; conferir todos os gabaritos e textos legais vigentes antes da homologação",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429compilada.htm"
+        ]
       }
     }
   ]

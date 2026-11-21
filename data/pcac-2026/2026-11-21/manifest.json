@@ -53,13 +53,13 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-direito-administrativo.json",
-      "bytes": 27528,
+      "bytes": 30657,
       "modules": 9,
       "quiz_items": 49
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-direito-constitucional.json",
-      "bytes": 15765,
+      "bytes": 17829,
       "modules": 5,
       "quiz_items": 28
     },
