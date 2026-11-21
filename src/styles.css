@@ -17469,3 +17469,46 @@ html.dark body .library-reading-workspace .library-body a {
   padding-block: 8px !important;
   margin-block: 0 10px !important;
 }
+
+
+/* Material reader — compactar o cabeçalho real da rota /dashboard/library/$slug.
+   O espaço vinha do padding padrão de 24px do app-content__inner e da linha
+   breadcrumb + ação de leitura, não de um header genérico. */
+.app-shell.navigation-v2[data-area="student"] .app-content__inner:has(> .library-reading-workspace) {
+  padding-top: 8px !important;
+}
+.app-shell[data-area="student"] .app-content__inner:has(> .library-reading-workspace) > .library-reading-workspace {
+  margin-top: 0 !important;
+}
+.app-shell[data-area="student"] .library-reading-workspace > .flex.flex-wrap.items-center.justify-between {
+  min-height: 0 !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  align-items: center !important;
+  gap: 6px 10px !important;
+}
+.app-shell[data-area="student"] .library-reading-workspace > .flex.flex-wrap.items-center.justify-between > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px !important;
+}
+.app-shell[data-area="student"] .library-reading-workspace .library-back {
+  min-height: 28px !important;
+  padding-block: 2px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+.app-shell[data-area="student"] .library-reading-workspace > .flex.flex-wrap.items-center.justify-between > button {
+  min-height: 32px !important;
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+}
+@media (max-width: 640px) {
+  .app-shell.navigation-v2[data-area="student"] .app-content__inner:has(> .library-reading-workspace) {
+    padding-top: 6px !important;
+  }
+  .app-shell[data-area="student"] .library-reading-workspace > .flex.flex-wrap.items-center.justify-between {
+    margin-bottom: 6px !important;
+  }
+}
