@@ -5,7 +5,6 @@ updated_at=now()
 where slug='pcac-2026-lc129-pad-instrucao-defesa-relatorio-recursos';
 
 update public.study_materials
-set body_md=replace(body_md,'30 dias, prorrogável mediante solicitação fundamentada','30 dias, prorrogáveis mediante solicitação fundamentada'),
-    body_md=replace(body_md,'30 dias, prorrogáveis mediante solicitação fundamentada, conforme material','30 dias, prorrogáveis mediante solicitação fundamentada, sem limite adicional expresso no art. 127 consolidado'),
+set body_md=replace(body_md,'30 dias, prorrogável mediante solicitação fundamentada','30 dias, prorrogáveis mediante solicitação fundamentada, sem limite adicional expresso no art. 127 consolidado'),
     updated_at=now()
 where slug='pcac-2026-lc129-sindicancia-prazos-prescricao-extincao';
