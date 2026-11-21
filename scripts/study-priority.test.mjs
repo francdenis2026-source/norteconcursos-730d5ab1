@@ -16,7 +16,7 @@ vm.runInNewContext(code, {
     throw new Error(`Unexpected dependency: ${name}`);
   },
 });
-const { studyPriorityFor } = module.exports;
+const { studyPriorityFor, studyDisciplineMetaFor } = module.exports;
 
 test("PC-AC topics receive expected priority and cumulative TOP 20 marker", () => {
   assert.deepEqual(
@@ -60,4 +60,16 @@ test("each PC-AC discipline maps known high-incidence topics and leaves unknown 
   assert.equal(studyPriorityFor("Complementar — fora do Anexo III do PC-AC 2026", "Administração Pública", "Evolução da Administração Pública"), null);
   assert.equal(studyPriorityFor("Polícia Civil de outro estado", "Língua Portuguesa", "Interpretação textual"), null);
   assert.equal(studyPriorityFor(null, "Língua Portuguesa", "Interpretação textual"), null);
+  assert.deepEqual(JSON.parse(JSON.stringify(studyDisciplineMetaFor("PC-AC 2026", "Contabilidade Geral e Análise Financeira"))), {
+    block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120,
+    questions: null, weight: 2, points: null, timePercent: 14,
+  });
+  assert.deepEqual(JSON.parse(JSON.stringify(studyDisciplineMetaFor("PC-AC 2026", "Língua Portuguesa"))), {
+    block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24,
+    questions: 6, weight: 1, points: 6, timePercent: 10,
+  });
+  assert.equal(studyDisciplineMetaFor("Outro edital", "Língua Portuguesa"), null);
+  assert.equal(studyPriorityFor("PC-AC 2026", "Análise de Dados e Informações", "Aplicação prática: cruzar bases"), null);
+  assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Análise de Dados e Informações", "Correlação e causalidade"))), { level: "alta", top20: false });
+  assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Arquivologia", "Protocolo e tramitação"))), { level: "alta", top20: false });
 });
