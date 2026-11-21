@@ -760,3 +760,18 @@ Revisadas as aulas 2, 3 e 4, com conferência dos exemplos, cálculos e 30 quest
 - **Treinador:** nas três aulas, 30/30 questões possuem justificativa com pelo menos 250 caracteres, dica e quatro ou mais passos de resolução. Nenhum campo obrigatório estava ausente.
 
 Nenhuma alteração de conteúdo foi necessária neste lote; enunciados, gabaritos e explicações foram preservados. A auditoria de Estatística continua com as demais aulas e com a conferência final de aderência ao edital.
+
+
+## Estatística — dispersão, probabilidade e distribuições, lote 12 — 21/11/2026
+
+Auditoria das aulas 5, 6, 7, 8, 9 e 12, incluindo conceitos, fórmulas, exemplos resolvidos e itens do treinador.
+
+- **Dispersão:** amplitude, variância, desvio-padrão e coeficiente de variação conferidos. Foi ampliada a explicação da diferença entre variância populacional (divisor N) e variância amostral corrigida (n−1), com o mesmo conjunto numérico calculado das duas formas e ressalva para seguir a convenção indicada no enunciado.
+- **Probabilidade:** espaço amostral, eventos, complemento, união, interseção, exclusividade, independência e condicional conferidos. Foi incluído exemplo numérico de probabilidade condicional e comparação de retiradas com e sem reposição, explicitando quando a probabilidade da segunda retirada muda.
+- **Correlação e regressão:** conferidos sinal e intensidade de r, interpretação de intercepto e inclinação, gráfico de dispersão, variáveis de confusão, causalidade inversa e limites de extrapolação. Não foi identificado erro conceitual nos exemplos examinados.
+- **Séries temporais:** conferidas tendência, sazonalidade, ciclos, variações irregulares, mudança de nível e variações absoluta/percentual. Cálculos de aumento de 80 para 100 (+25%) e redução de 200 para 150 (−25%) estão corretos.
+- **Outliers e indicadores:** conferidos limites usuais de 1,5×AIQ, numerador/denominador, taxas por população de referência, comparabilidade e limitações. Mantida a orientação de investigar outliers antes de excluir.
+- **Distribuições:** variável aleatória discreta/contínua, Bernoulli, binomial e normal conferidas. Foi acrescentada a regra empírica aproximada 68–95–99,7, exemplo de escore z e alerta para identificar o tipo de área informado na tabela normal.
+- **Treinador:** as seis aulas têm 60 questões. Todas apresentam dica, justificativa e pelo menos quatro passos de resolução; nenhuma lacuna estrutural foi identificada na consulta de qualidade.
+
+As três ampliações didáticas foram aplicadas no Supabase e versionadas na MAIN pela migration `supabase/migrations/20261121298200_expand_pcac_statistics_variance_conditional_normal.sql`, commit `3cb4a35c8b2cb4a084d50510df850528d73c9000`. A confirmação SQL verificou a presença dos três novos blocos. Os enunciados, gabaritos e respostas existentes foram preservados.
