@@ -35,6 +35,10 @@ jobs:
 
       # Keep collecting diagnostics after a failing test step. The job remains
       # failed, so this never turns a red test suite into a green CI result.
+      - name: Verify PC-AC 2026 quiz snapshot
+        if: ${{ !cancelled() }}
+        run: node scripts/check-pcac-quiz-snapshot.mjs
+
       - name: TypeScript typecheck
         if: ${{ !cancelled() }}
         run: bun run typecheck
