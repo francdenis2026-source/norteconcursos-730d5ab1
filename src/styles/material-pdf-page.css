@@ -19,7 +19,7 @@
   --sheet-line: #354252;
 }
 
-html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+html body .app-shell[data-area] .library-body {
   box-sizing: border-box;
   width: 100%;
   max-width: min(100%, var(--sheet-w));
@@ -37,18 +37,18 @@ html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
 
 /* Altura: a folha acompanha o conteúdo e a página rola (como um PDF contínuo); o cabeçalho é uma
    faixa baixa para a leitura começar logo no topo da janela. */
-html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose {
+html body .app-shell[data-area] .library-body .study-prose {
   font-size: inherit;
   width: 100%;
 }
 
 /* Conteúdo ocupa toda a largura útil da folha */
-html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose,
-html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose > * {
+html body .app-shell[data-area] .library-body .study-prose,
+html body .app-shell[data-area] .library-body .study-prose > * {
   max-width: none;
   margin-inline: 0;
 }
-html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose :is(p, li) {
+html body .app-shell[data-area] .library-body .study-prose :is(p, li) {
   max-width: none;
   font-size: 1em;
   line-height: 1.7;
@@ -111,7 +111,7 @@ html body .app-shell[data-area] .library-body .study-prose strong { color: var(-
   html body .app-shell[data-area] .library-reading-workspace {
     margin-inline: -12px;
   }
-  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+  html body .app-shell[data-area] .library-body {
     max-width: none;
     max-height: none;
     overflow: visible;
@@ -122,7 +122,7 @@ html body .app-shell[data-area] .library-body .study-prose strong { color: var(-
     box-shadow: none;
     font-size: 1rem;
   }
-  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose :is(p, li) {
+  html body .app-shell[data-area] .library-body .study-prose :is(p, li) {
     text-align: left;
     hyphens: none;
     -webkit-hyphens: none;
@@ -172,7 +172,7 @@ html body .app-shell[data-area] .library-body .study-prose strong { color: var(-
 }
 
 @media print {
-  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+  html body .app-shell[data-area] .library-body {
     max-height: none;
     overflow: visible;
     border: 0;
@@ -198,4 +198,37 @@ html body .app-shell[data-area]:has(.library-reading-workspace) .app-study-backd
   /* Abas mais baixas */
   html body .app-shell[data-area] .library-reading-workspace [role="tablist"] { min-height: 0; padding: 3px; }
   html body .app-shell[data-area] .library-reading-workspace [role="tablist"] [role="tab"] { min-height: 2rem; padding-block: 0.25rem; }
+}
+
+/* Língua Portuguesa: o mesmo papel das demais disciplinas. Índice e tópicos viram seções da folha
+   (sem caixas dentro de caixa); os tópicos continuam abrindo e fechando. */
+html body .app-shell[data-area] .library-body .portuguese-reader { gap: 0; }
+html body .app-shell[data-area] .library-body .portuguese-reader__index {
+  margin-bottom: 1.25rem;
+  padding: 0 0 1rem;
+  border: 0;
+  border-bottom: 2px solid var(--sheet-accent);
+  border-radius: 0;
+  background: transparent;
+}
+html body .app-shell[data-area] .library-body .portuguese-reader__index :is(h2, p) { color: var(--sheet-ink); }
+html body .app-shell[data-area] .library-body .portuguese-reader__index a {
+  background: color-mix(in srgb, var(--sheet-accent) 8%, transparent);
+  color: var(--sheet-ink);
+}
+html body .app-shell[data-area] .library-body .portuguese-reader__topic {
+  border: 0;
+  border-bottom: 1px solid var(--sheet-line);
+  border-radius: 0;
+  background: transparent;
+}
+html body .app-shell[data-area] .library-body .portuguese-reader__topic > summary { padding: 0.9rem 0; min-height: 0; }
+html body .app-shell[data-area] .library-body .portuguese-reader__topic > summary h2 { color: var(--sheet-ink); font-size: 1.15em; }
+html body .app-shell[data-area] .library-body .portuguese-reader__topic[open] > summary { border-bottom: 1px solid var(--sheet-line); }
+html body .app-shell[data-area] .library-body .portuguese-reader__body { padding: 0.5rem 0 1.25rem; }
+html body .app-shell[data-area] .library-body .portuguese-reader .study-prose { max-width: none; margin-inline: 0; font-size: inherit; line-height: 1.7; }
+
+/* Cabeçalho do material igual em todas as disciplinas: a etiqueta longa de assunto sai (o índice já mostra) */
+@media (min-width: 900px) {
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-meta li:first-child:not(:last-child) { display: none; }
 }
