@@ -1251,7 +1251,8 @@ html body .qx .qx-explain__right { color: var(--qx-err); }
 html body .qx .qx-card:not(#_):not(#_):not(#_),
 html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-card {
   position: fixed;
-  top: 0;
+  /* Começa abaixo da barra superior (que continua visível no modo foco), para não cobrir nem ser coberto por ela. */
+  top: var(--app-topbar-h, 3.5rem);
   left: 0;
   right: 0;
   /* Reserva o espaço da faixa "DEV. FRANC DENIS" (fixa na base, ~34px) para a barra de ações não ficar sob ela. */
@@ -1290,3 +1291,6 @@ html body .qx .qx-card .qx-body { flex: 1 1 auto; min-height: 0; }
   html body .qx .qx-example .qx-explain__text { font-size: 0.75rem; line-height: 1.45; }
   html body .qx .qx-pane { padding-block: 0.5rem; }
 }
+
+/* Modo foco do treinador: a barra superior fica, mas o botão de tela cheia dela repete o do cartão — sai daqui. */
+html body .app-shell[data-focus-mode="true"]:has(.qx) .app-topbar .workspace-fullscreen-trigger { display: none !important; }
