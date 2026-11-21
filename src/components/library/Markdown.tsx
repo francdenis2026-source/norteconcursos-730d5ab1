@@ -119,7 +119,7 @@ function isAnalysisLabel(text: string): boolean {
   return /^\s*(?:an[aá]lise|racioc[ií]nio|resolu[cç][aã]o comentada|como resolver)\s*[:—-]/i.test(text);
 }
 function renderQuestionOptions(text: string, key: string, inline: (text: string, key: string) => ReactNode) {
-  const matcher = /(?:^|\\s)([A-E])[).]\\s*/g;
+  const matcher = /(?:^|\s)([A-E])[).]\s*/g;
   const matches = [...text.matchAll(matcher)];
   if (matches.length < 2) return null;
   return (
