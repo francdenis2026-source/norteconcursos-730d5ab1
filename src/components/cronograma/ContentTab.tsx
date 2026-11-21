@@ -1,7 +1,7 @@
 import { plannedPractice } from "@/lib/plannedStudy";
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
-import { BookOpen, Layers, Search, Target } from "lucide-react";
+import { BookOpen, Layers, Search, Target, Video } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -30,6 +30,13 @@ const chip = "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs fo
 
 export function TheoryButton({ target }: { target: TheoryTarget }) {
   return (
+    <>
+    {target.video && (
+      <Hint content={`Videoaula: ${target.video.title}`}>
+        <Link to="/dashboard/media" search={{ tab: "videos", subject: target.video.subject, topic: target.video.topic } as never}
+          className={cn(chip, "bg-rose-600 text-white")}><Video className="h-3 w-3" />Videoaula</Link>
+      </Hint>
+    )}
     <Hint content={target.direct ? target.label : "Não há material específico: abre a Biblioteca já pesquisando este assunto"}>
       <Link to={target.to as never} params={target.params as never} search={target.search as never}
         className={cn(chip, target.kind === "busca" ? "bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200" : "bg-sky-600 text-white")}>
@@ -37,6 +44,7 @@ export function TheoryButton({ target }: { target: TheoryTarget }) {
         {target.kind === "material" ? "Estudar o material" : target.kind === "edital" ? "Estudar no edital" : "Procurar teoria"}
       </Link>
     </Hint>
+    </>
   );
 }
 

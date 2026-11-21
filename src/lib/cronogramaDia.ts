@@ -5,7 +5,7 @@ import { plannedPractice } from "./plannedStudy";
  * Funções puras (sem rede nem relógio) para testar sem navegador.
  */
 import {
-  discStats, nextTopic, topicDone, type CronoConfig, type CronoDisc, type TopicProgress, type WeekBlock,
+  discStats, nextTopic, topicDone, ESSAY_MIN, SIMULADO_MIN, FINAL_PHASE_DAYS, type CronoConfig, type CronoDisc, type TopicProgress, type WeekBlock,
 } from "@/lib/cronograma";
 
 export type StepKind = "teoria" | "flashcards" | "questoes" | "erros" | "simulado" | "redacao" | "pausa";
@@ -87,10 +87,12 @@ const round5 = (n: number) => Math.max(5, Math.round(n / 5) * 5);
  * Divide um bloco de disciplina em etapas. 1ª vez na disciplina pesa na teoria; depois pesa nas questões.
  * Etapas abaixo de 10 min somem e o tempo vai para Questões (ou Teoria). A soma é sempre igual ao bloco.
  */
-export function splitBlock(minutes: number, first: boolean): { kind: StepKind; minutes: number }[] {
-  const mix: [StepKind, number][] = first
-    ? [["teoria", 0.5], ["flashcards", 0.1], ["questoes", 0.3], ["erros", 0.1]]
-    : [["teoria", 0.25], ["flashcards", 0.15], ["questoes", 0.45], ["erros", 0.15]];
+export function splitBlock(minutes: number, first: boolean, finalPhase = false): { kind: StepKind; minutes: number }[] {
+  const mix: [StepKind, number][] = finalPhase
+    ? [["teoria", 0.15], ["flashcards", 0.1], ["questoes", 0.55], ["erros", 0.2]]
+    : first
+      ? [["teoria", 0.5], ["flashcards", 0.1], ["questoes", 0.3], ["erros", 0.1]]
+      : [["teoria", 0.25], ["flashcards", 0.15], ["questoes", 0.45], ["erros", 0.15]];
   let steps = mix.map(([kind, f]) => ({ kind, minutes: minutes * f })).filter((s) => s.minutes >= MIN_STEP);
   if (!steps.length) steps = [{ kind: "questoes", minutes }];
   const leftover = minutes - steps.reduce((s, x) => s + x.minutes, 0);
@@ -104,7 +106,7 @@ export function splitBlock(minutes: number, first: boolean): { kind: StepKind; m
   return rounded;
 }
 
-export interface DayOptions { simulado: boolean; essay: boolean; isLastStudyDay: boolean; isSecondLastOrOnly: boolean }
+export interface DayOptions { simulado: boolean; essay: boolean; isLastStudyDay: boolean; isSecondLastOrOnly: boolean; /** Dias até a prova (null = sem data). */ daysLeft?: number | null }
 
 /** Passos do dia: blocos da disciplina em etapas, pausa entre disciplinas e extras (simulado/redação). */
 export function buildDaySteps(
@@ -117,7 +119,8 @@ export function buildDaySteps(
     const disc = cfg.discs.find((d) => d.id === b.discId);
     const topic = disc?.topicos.find((t) => !topicDone(progress[t.id]) && !taken.has(t.id));
     if (topic) taken.add(topic.id);
-    for (const s of splitBlock(b.minutes, b.first)) {
+    const finalPhase = opt.daysLeft != null && opt.daysLeft >= 0 && opt.daysLeft <= FINAL_PHASE_DAYS;
+    for (const s of splitBlock(b.minutes, b.first, finalPhase)) {
       out.push({
         id: `${bi}-${s.kind}`, kind: s.kind, discId: b.discId, nome: b.nome, minutes: s.minutes,
         ...(topic && s.kind !== "erros" ? { topicId: topic.id, topic: topic.t } : {}),
@@ -131,9 +134,9 @@ export function buildDaySteps(
     }
   });
   if (opt.essay && opt.isSecondLastOrOnly)
-    out.push({ id: "x-redacao", kind: "redacao", nome: "Redação", minutes: 40, topic: "Escreva um texto completo e confira estrutura, argumentos e gramática." });
+    out.push({ id: "x-redacao", kind: "redacao", nome: "Redação", minutes: ESSAY_MIN, topic: "Escreva um texto completo e confira estrutura, argumentos e gramática." });
   if (opt.simulado && opt.isLastStudyDay)
-    out.push({ id: "x-simulado", subjects: cfg.discs.map(d => d.nome), kind: "simulado", nome: "Simulado da semana", minutes: 60, topic: "Simulado completo com tempo de prova. Depois, revise o diagnóstico por disciplina." });
+    out.push({ id: "x-simulado", subjects: cfg.discs.map(d => d.nome), kind: "simulado", nome: "Simulado da semana", minutes: SIMULADO_MIN, topic: "Simulado completo com tempo de prova. Depois, revise o diagnóstico por disciplina." });
   return out;
 }
 
@@ -172,6 +175,9 @@ export function selfCheckDia() {
   if (stepMinutes(steps, ["teoria", "flashcards", "questoes", "erros"]) !== 120) throw new Error("minutos de estudo");
   if (steps.filter((s) => s.kind === "pausa").length !== 1) throw new Error("uma pausa entre dois blocos");
   if (steps.at(-1)?.kind !== "simulado" || steps.at(-2)?.kind !== "redacao") throw new Error("extras no fim");
+  const fin = splitBlock(120, false, true), base = splitBlock(120, false);
+  const q = (a: { kind: StepKind; minutes: number }[]) => a.filter((x) => x.kind === "questoes").reduce((n, x) => n + x.minutes, 0);
+  if (q(fin) <= q(base)) throw new Error("reta final deve priorizar questões");
   if (discStats(cfg.discs[0]!, {}).done !== 0 || nextTopic(cfg, {})?.t.t !== "t0") throw new Error("próximo conteúdo");
   return true;
 }

@@ -76,6 +76,10 @@ export interface WeekBlock {
 export const MIN_BLOCK = 30;
 export const MAX_BLOCK = 120; // PDF: peso 2, primeira vez que vai estudar = 2 horas
 const GAP = 10;
+export const SIMULADO_MIN = 60;
+export const ESSAY_MIN = 40;
+/** Faltando até 30 dias para a prova, o estudo passa de teoria para prática (questões e revisão de erros). */
+export const FINAL_PHASE_DAYS = 30;
 
 const hhmm = (min: number) =>
   `${String(Math.floor(min / 60) % 24).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
@@ -94,7 +98,9 @@ export function buildWeek(cfg: CronoConfig, progress: Record<string, TopicProgre
   for (const d of days) out[d] = [];
   if (!days.length || !cfg.discs.length) return out;
 
-  const slots = Math.max(1, Math.round((cfg.weeklyHours * 60) / MIN_BLOCK));
+  // Simulado (60 min) e redação (40 min) saem do total semanal: a soma da semana bate com as horas informadas.
+  const reserved = (cfg.simulado ? SIMULADO_MIN : 0) + (cfg.essay ? ESSAY_MIN : 0);
+  const slots = Math.max(1, Math.round((cfg.weeklyHours * 60 - Math.min(reserved, cfg.weeklyHours * 30)) / MIN_BLOCK));
   const stats = new Map(cfg.discs.map((d) => [d.id, discStats(d, progress)]));
   const w = cfg.discs.map((d) => effectiveWeight(d, stats.get(d.id)!));
   const sum = w.reduce((a, b) => a + b, 0);
@@ -164,6 +170,15 @@ export function selfCheck() {
   const a = blocks.filter((b) => b.discId === "a").reduce((s, b) => s + b.minutes, 0);
   const b2 = blocks.filter((b) => b.discId === "b").reduce((s, b) => s + b.minutes, 0);
   if (a <= b2) throw new Error("peso 2 deve receber mais tempo");
+  return true;
+}
+
+/** Self-check: simulado/redação saem das horas semanais. */
+export function selfCheckReserva() {
+  const mk = (id: string, peso: 1 | 2): CronoDisc => ({ id, nome: id, peso, topicos: [{ id: id + "1", t: "x" }] });
+  const cfg: CronoConfig = { discs: [mk("a", 2), mk("b", 1)], days: [1, 2, 3, 4, 5], startTime: "19:00", weeklyHours: 10, simulado: true, essay: true };
+  const total = Object.values(buildWeek(cfg, {})).flat().reduce((s, b) => s + b.minutes, 0);
+  if (total > 600 - SIMULADO_MIN - ESSAY_MIN + MIN_BLOCK) throw new Error(`reserva ignorada: ${total}`);
   return true;
 }
 

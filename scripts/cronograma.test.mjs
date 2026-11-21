@@ -1,5 +1,5 @@
 import test from "node:test";
-import { selfCheck, disciplineNamesCheck, canonicalDiscipline, isGenericDiscipline } from "../src/lib/cronograma.ts";
+import { selfCheckReserva, selfCheck, disciplineNamesCheck, canonicalDiscipline, isGenericDiscipline } from "../src/lib/cronograma.ts";
 
 test("cronograma: semana soma o tempo semanal e respeita pesos", () => {
   selfCheck();
@@ -67,3 +67,5 @@ test("edital: aulas relacionadas exigem assunto e disciplina compatíveis", asyn
   assert.deepEqual(result.tracks.map(t => t.slug), ["portugues"]);
   assert.equal(editalLessonLinks("Língua Portuguesa", "Figuras de linguagem", tracks).lessons.length, 0);
 });
+
+test("cronograma: simulado e redação saem das horas semanais", () => { selfCheckReserva(); });
