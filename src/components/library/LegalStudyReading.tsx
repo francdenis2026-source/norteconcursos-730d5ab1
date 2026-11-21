@@ -20,7 +20,7 @@ export function LegalSearchText({text, query, highlighted}: {text: string; query
 }
 
 /** Shared by every legal course, annex and legal guide; source stays untouched. */
-export function LegalStudyReading({source,markdown=false,highlightPar,searchQuery}: {source:string;markdown?:boolean;highlightPar?:string|undefined;searchQuery?:string|undefined}) {
+export function LegalStudyReading({source,markdown=false,highlightPar,searchQuery,discipline,contestName}: {source:string;markdown?:boolean;highlightPar?:string|undefined;searchQuery?:string|undefined;discipline?:string;contestName?:string|null}) {
   const [highlighted,setHighlighted]=useState(true);
   const reading = useRef<HTMLElement>(null);
   // link com ?par=16: leva o olho direto ao parágrafo citado
@@ -32,6 +32,6 @@ export function LegalStudyReading({source,markdown=false,highlightPar,searchQuer
       {highlighted&&<ul className="flex flex-wrap gap-2 text-xs" aria-label="Legenda dos grifos">{(Object.keys(LEGAL_HIGHLIGHT_LABELS) as LegalHighlightKind[]).map(kind=><li key={kind}><span className={`legal-highlight legal-highlight-${kind}`}>{LEGAL_HIGHLIGHT_LABELS[kind]}</span></li>)}</ul>}
       <p className="text-xs text-muted-foreground">Grifos automáticos de apoio à leitura. Leia o contexto inteiro e tente explicar a regra sem consultar.</p>
     </div>
-    {markdown?<Markdown source={source} renderText={text=><LegalSearchText text={text} query={searchQuery} highlighted={highlighted}/>} />:<div className="reading-text legal-reading-prose break-words">{source.split(/\n{2,}|\n(?=\s*(?:[IVXLCDM]+\s*[-–—.]|Art\.\s*\d|§\s*\d|Parágrafo único\b|[a-z]\)\s))/i).filter(para=>para.trim()).map((para,i)=>{const enumeration=/^\s*(?:[IVXLCDM]+\s*[-–—.]|[a-z]\)\s)/i.test(para);const hit=!!highlightPar&&paragraphMatches(para,highlightPar);return <p key={i} data-legal-enumeration={enumeration ? "true" : undefined} {...(hit?{"data-par-hit":"true"}:{})} className={`legal-reading-paragraph ${hit?"-mx-2 rounded-xl bg-amber-100 px-2 py-1 ring-2 ring-amber-400 dark:bg-amber-500/20":""}`}>{<LegalSearchText text={para} query={searchQuery} highlighted={highlighted}/>}</p>;})}</div>}
+    {markdown?<Markdown source={source} discipline={discipline} contestName={contestName} renderText={text=><LegalSearchText text={text} query={searchQuery} highlighted={highlighted}/>} />:<div className="reading-text legal-reading-prose break-words">{source.split(/\n{2,}|\n(?=\s*(?:[IVXLCDM]+\s*[-–—.]|Art\.\s*\d|§\s*\d|Parágrafo único\b|[a-z]\)\s))/i).filter(para=>para.trim()).map((para,i)=>{const enumeration=/^\s*(?:[IVXLCDM]+\s*[-–—.]|[a-z]\)\s)/i.test(para);const hit=!!highlightPar&&paragraphMatches(para,highlightPar);return <p key={i} data-legal-enumeration={enumeration ? "true" : undefined} {...(hit?{"data-par-hit":"true"}:{})} className={`legal-reading-paragraph ${hit?"-mx-2 rounded-xl bg-amber-100 px-2 py-1 ring-2 ring-amber-400 dark:bg-amber-500/20":""}`}>{<LegalSearchText text={para} query={searchQuery} highlighted={highlighted}/>}</p>;})}</div>}
   </section>;
 }
