@@ -1616,3 +1616,55 @@ Não foram publicados no material valores de vencimento ou percentuais atuais co
 - Localizar tabela oficial vigente de vencimentos, adicionais e gratificações aplicáveis ao Oficial Investigador em 2026.
 - Testar a exibição das novas questões no treinador e a atualização da contagem no painel do aluno.
 - Auditoria geral de Legislação Institucional permanece em andamento.
+
+
+## Décima sexta continuação — correção de escopo do PCCR do Oficial Investigador — 21/11/2026
+
+### Conferência do texto consolidado da Lei nº 2.250/2009
+
+A leitura direta dos arts. 7º e 11 a 18 no portal da Assembleia Legislativa permitiu corrigir uma distinção essencial que não estava clara nas etapas anteriores:
+- Art. 7º: cinco classes — I, II, III, IV e Especial — cada uma com três referências salariais (1 a 3).
+- Art. 15: progressão = passagem de uma referência para a imediatamente superior dentro da mesma classe; interstício de 36 meses, observadas as condições legais.
+- Art. 16: promoção = elevação para a primeira referência da classe imediatamente superior.
+- Art. 17: trata do antigo Grupo Ocupacional 1.
+- Art. 18: trata do antigo Grupo Ocupacional 2, no qual estavam Agente e Escrivão, atualmente unificados como Oficial Investigador pela LC nº 496/2025.
+
+### Requisitos específicos do art. 18
+
+Para o antigo Grupo Ocupacional 2, o art. 18 exige, em síntese, 36 meses na classe anterior, aprovação da conduta pelo Conselho Superior, média mínima de 80 pontos no triênio e 120 horas de capacitação nos três últimos anos. Para as promoções posteriores à Classe II, prevê trabalho com sugestão de melhoria dos serviços da área de atuação, com temas definidos pela comissão. Essa regra não deve ser confundida com o art. 17, que se dirige ao Grupo Ocupacional 1 e possui exigências diferentes.
+
+### Remuneração do edital
+
+O item 3.7 do Edital nº 001, de 05/11/2026, informa remuneração inicial de R$ 6.342,07 para Oficial Investigador de Polícia. O material deixa claro que o valor do edital não equivale necessariamente ao vencimento básico isolado; não calcular adicionais com base nesse número sem confirmar a composição remuneratória legal.
+
+### Correção didática aplicada
+
+Foi acrescentada seção explícita corrigindo a leitura anterior: para Oficial Investigador, priorizar o art. 18 da Lei nº 2.250/2009 (antigo Grupo Ocupacional 2), não o art. 17; usar Classe Especial, não Classe V; e distinguir progressão de promoção.
+
+Material PCCR atualizado para 38.343 caracteres e verificado no Supabase.
+
+### Questões autorais
+
+Duas novas questões ativas foram inseridas e verificadas no catálogo:
+1. Requisito do art. 18 para promoções do antigo Grupo Ocupacional 2.
+2. Diferença entre progressão e promoção.
+
+Gabaritos confirmados: B e B. Itens autorais, não oficiais da IDECAN.
+
+### Fontes
+
+- Lei nº 2.250/2009 consolidada, arts. 7º e 11–18: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/5556
+- LC nº 496/2025: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9611/pdf-texto
+- Edital PC-AC 2026, item 3.7: https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf
+
+### Migrations
+
+- `20261121303000_correct_official_investigator_pccr_group2_promotion_and_salary.sql` — commit `837048ffe57bf7c31267b5996c922a4a30b7bfc2`.
+- `20261121303100_add_group2_promotion_and_progression_questions.sql` — commit `ab7162da7532727b0008654350ff30aa78f87d8c`.
+
+### Pendências
+
+- Conferir anexos funcionais e remuneratórios em sua última redação e identificar os valores vigentes por classe/referência, se houver publicação oficial atualizada.
+- Verificar adicionais e gratificações aplicáveis ao Oficial Investigador em 2026.
+- Testar a exibição e a contagem das questões no painel do aluno.
+- Auditoria global de Legislação Institucional continua aberta.
