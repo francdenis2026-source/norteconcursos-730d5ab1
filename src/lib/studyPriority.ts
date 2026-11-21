@@ -25,6 +25,35 @@ const PCAC_PROFILE = {
   ] as const,
 };
 
+
+export type StudyDisciplineMeta = {
+  block: "Conhecimentos Específicos" | "Conhecimentos Básicos" | "Conhecimentos Jurídicos";
+  blockQuestions: number;
+  blockWeight: number;
+  blockPoints: number;
+  questions: number | null;
+  weight: number;
+  points: number | null;
+  timePercent: number;
+};
+
+const PCAC_DISCIPLINE_META: Record<string, StudyDisciplineMeta> = {
+  "contabilidade": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 14 },
+  "estatística": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 13 },
+  "tecnologia da informação": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 12 },
+  "análise de dados": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 10 },
+  "arquivologia": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 7 },
+  "noções de administração": { block: "Conhecimentos Específicos", blockQuestions: 60, blockWeight: 2, blockPoints: 120, questions: null, weight: 2, points: null, timePercent: 3 },
+  "língua portuguesa": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 6, weight: 1, points: 6, timePercent: 10 },
+  "raciocínio lógico": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 6, weight: 1, points: 6, timePercent: 9 },
+  "informática": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 8, weight: 1, points: 8, timePercent: 6 },
+  "realidade do acre": { block: "Conhecimentos Básicos", blockQuestions: 24, blockWeight: 1, blockPoints: 24, questions: 4, weight: 1, points: 4, timePercent: 2 },
+  "direito penal": { block: "Conhecimentos Jurídicos", blockQuestions: 16, blockWeight: 1, blockPoints: 16, questions: 6, weight: 1, points: 6, timePercent: 8 },
+  "legislação institucional": { block: "Conhecimentos Jurídicos", blockQuestions: 16, blockWeight: 1, blockPoints: 16, questions: 4, weight: 1, points: 4, timePercent: 4 },
+  "direito constitucional": { block: "Conhecimentos Jurídicos", blockQuestions: 16, blockWeight: 1, blockPoints: 16, questions: 3, weight: 1, points: 3, timePercent: 1 },
+  "direito administrativo": { block: "Conhecimentos Jurídicos", blockQuestions: 16, blockWeight: 1, blockPoints: 16, questions: 3, weight: 1, points: 3, timePercent: 1 },
+};
+
 const PROFILES = [PCAC_PROFILE];
 
 const normalize = (value: string) => norm(value).replace(/\s+/g, " ").trim();
@@ -34,6 +63,20 @@ const matchesAny = (text: string, terms: readonly string[]) =>
 function disciplineProfile(discipline: string) {
   const key = normalize(discipline);
   return PCAC_PROFILE.disciplines.find((entry) => entry.names.some((name) => key.includes(normalize(name))));
+}
+
+
+/** Metadados oficiais do edital e alocação de tempo definida na matriz de estudo PC-AC. */
+export function studyDisciplineMetaFor(
+  contestName: string | null | undefined,
+  discipline: string,
+): StudyDisciplineMeta | null {
+  const contest = contestName?.trim() ?? "";
+  if (!PCAC_PROFILE.matches(contest)) return null;
+  const rule = disciplineProfile(discipline);
+  if (!rule) return null;
+  const canonical = normalize(rule.names[0] ?? "");
+  return PCAC_DISCIPLINE_META[canonical] ?? null;
 }
 
 /** Retorna null para editais sem matriz própria: não inventa classificação para outro concurso. */
