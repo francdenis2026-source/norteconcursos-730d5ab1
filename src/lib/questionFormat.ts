@@ -179,11 +179,19 @@ export const isOfficialUrl = (url?: string) => {
     // da legislação consolidada e do edital PC-AC 2026 efetivamente conferidos.
     const acreOfficialPaths: Record<string, string[]> = {
       "legis.ac.gov.br": [
+        "/detalhar/674",
         "/detalhar/674-1",
         "/detalhar/6874",
         "/detalhar/417-0",
         "/detalhar/6864-1",
         "/detalhar/110",
+        "/detalhar/6527",
+        "/detalhar/3990",
+        "/detalhar/2499",
+        "/detalhar/2741",
+        "/detalhar/5749-0",
+        "/detalhar/5137-0",
+        "/detalhar/5795-0",
         "/detalhar_constituicao",
         "/detalhar_emendas/64",
       ],
@@ -191,6 +199,7 @@ export const isOfficialUrl = (url?: string) => {
         "/legisla-e/legislacao/visualizar/9836",
         "/legisla-e/legislacao/visualizar/9611",
         "/legisla-e/legislacao/visualizar/5556",
+        "/legisla-e/legislacao/visualizar/5556/pdf-texto",
       ],
       "sead.ac.gov.br": [
         "/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf",
