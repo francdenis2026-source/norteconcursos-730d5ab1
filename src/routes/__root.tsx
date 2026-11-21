@@ -33,6 +33,8 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
 import { CHUNK_RECOVERY_SCRIPT } from "../lib/chunkRecovery";
 import { READING_SCALE_INIT_SCRIPT } from "../lib/readingScale";
+import { DashboardThemeToggle } from "@/components/DashboardThemeToggle";
+import "@/styles/theme-switch.css";
 
 function StatusScreen({
   code,
