@@ -123,3 +123,9 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .app-topbar :is(button, 
   html body .app-shell[data-area] .app-topbar .student-top-navigation__trigger::after,
   html body .app-shell[data-area] .app-topbar .student-top-navigation__icon-wrap { transition: none !important; }
 }
+
+/* Linha dupla sob o cabeçalho do aluno: a borda inferior já é a linha dourada.
+   O ::after (de student-topbar-pro) desenhava uma segunda linha 2px acima dela. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero::after {
+  display: none !important;
+}
