@@ -63,7 +63,7 @@
   align-items: center;
   gap: 0.4rem;
   margin: 0;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 650;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -103,7 +103,7 @@
   .ecc-countdown { align-self: center; margin-inline: 0 auto; }
 }
 .ecc-countdown b { font-size: 1.875rem; font-weight: 700; line-height: 1; color: var(--ecc-gold); }
-.ecc-countdown span { margin-top: 2px; font-size: 0.6875rem; color: var(--ecc-dim); }
+.ecc-countdown span { margin-top: 2px; font-size: 0.75rem; color: var(--ecc-dim); }
 
 /* Ações */
 .ecc-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
