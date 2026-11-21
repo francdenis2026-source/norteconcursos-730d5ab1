@@ -1251,10 +1251,14 @@ html body .qx .qx-explain__right { color: var(--qx-err); }
 html body .qx .qx-card:not(#_):not(#_):not(#_),
 html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-card {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Reserva o espaço da faixa "DEV. FRANC DENIS" (fixa na base, ~34px) para a barra de ações não ficar sob ela. */
+  bottom: 2.25rem;
   z-index: 45;
-  width: 100vw;
-  height: 100dvh;
+  width: 100%;
+  height: auto;
   max-width: none;
   max-height: none;
   min-height: 0;
