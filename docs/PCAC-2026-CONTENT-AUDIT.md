@@ -1427,3 +1427,55 @@ A extração disponível do Portal LEGIS não mostrou integralmente todos os par
 3. Verificar atos complementares e compatibilidade prática com a nomenclatura Oficial Investigador.
 4. Testar visualmente o treinador e validar a contagem no painel.
 5. Não declarar auditoria integral concluída enquanto houver lacunas.
+
+
+## Décima segunda continuação — Decreto nº 8.912/2018, leitura integral dos arts. 3º a 20 — 21/11/2026
+
+### Conteúdo confirmado e incluído no material
+
+A busca no texto integral do Portal LEGIS permitiu fechar lacunas antes não verificadas. O material PCCR foi ampliado para 24.677 caracteres com:
+- Art. 3º: seis condições cumulativas para concorrer; impedimentos por disponibilidade, mandato eletivo, última classe, penalidade disciplinar nos 12 meses anteriores e cumprimento de pena por condenação com reclusão; exceções do parágrafo único limitadas aos incisos I e II.
+- Art. 9º: composição distinta da Comissão de Promoção e da Comissão de Recurso; a comissão recursal inclui assistente social e psicólogo; membros estáveis e não em processo de promoção; suplentes para impedimento/afastamento/suspeição.
+- Arts. 10–17: responsabilidades da Secretaria de Gestão Administrativa, Conselho Superior, Secretário, chefe imediato, RH, Comissão de Promoção, Comissão de Recursos e servidor candidato.
+- Prazos: Comissão de Promoção conclui o processo em 30 dias; Comissão de Recursos emite parecer em até 30 dias do recebimento; recurso do servidor em até 15 dias, observados os marcos distintos descritos nos arts. 15, parágrafo único, e 17, VII.
+- Arts. 18–20: 36 meses de efetivo exercício, mínimo de 80 pontos, 120 horas de capacitação durante a classe, pós-graduação mínima de 360 horas na promoção II→III; oito fatores de promoção e pontuação detalhada nos anexos I–III.
+
+### Correção e ressalva de precisão
+
+A versão anterior do material resumia competências de forma incompleta. Esta etapa separa explicitamente:
+- Conselho Superior: aprova membros das comissões e julga em última instância os recursos que lhe chegam.
+- Secretário: constitui comissões e homologa promoções.
+- Comissão de Promoção: avalia, emite relatório final e o encaminha para homologação.
+- Comissão de Recursos: aprecia recurso e emite parecer.
+- RH: registros, apoio e comunicação antecipada.
+
+O decreto usa nomes antigos dos cargos em 2018; a leitura para 2026 deve considerar a unificação agente/escrivão como Oficial Investigador pela LC nº 496/2025, sem presumir automaticamente que todos os dispositivos foram formalmente atualizados.
+
+### Questões no treinador
+
+Quatro questões autorais foram incluídas e verificadas como ativas:
+1. Condições impeditivas para concorrer (art. 3º).
+2. Composição da Comissão de Recursos (art. 9º).
+3. Prazo recursal (arts. 15–17).
+4. Fatores de promoção (art. 20).
+
+Todas têm gabarito e explicação e estão vinculadas ao material PCCR. Não são questões oficiais da IDECAN.
+
+### Pontos que permanecem pendentes
+
+- Conferência dos Anexos I, II e III em sua íntegra e na versão aplicável, para mapear cada quesito, pontuação e eventual pontuação adicional.
+- Conferência de eventuais atos administrativos complementares posteriores ao decreto.
+- Teste visual e de integração do treinador, além da confirmação de que as questões autorais aparecem e entram na contagem exibida no painel do aluno.
+- Auditoria global de todos os dispositivos de Legislação Institucional ainda não encerrada.
+
+### Fontes oficiais
+
+- Decreto nº 8.912/2018, texto integral: https://legis.ac.gov.br/detalhar/5749-0
+- Lei nº 3.228/2017: https://legis.ac.gov.br/detalhar/2499
+- LC nº 129/2004 consolidada: https://legis.ac.gov.br/detalhar/674-1
+- LC nº 496/2025 e LC nº 526/2026: Portal LEGIS do Acre.
+
+### Migrations
+
+- `20261121302200_complete_decree8912_commissions_eligibility_appeals.sql` — commit `0045679eba116c35b452ff9b9d542a2820bf1214`.
+- `20261121302300_add_decree8912_full_process_trainer_questions.sql` — commit `3b1592e8cb325562a1266ca7679d4584531b58bc`.
