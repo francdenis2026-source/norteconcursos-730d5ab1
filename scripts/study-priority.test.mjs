@@ -45,6 +45,8 @@ test("every PC-AC discipline has a safe fallback and other editais are not misla
     assert.ok(studyPriorityFor("PC-AC 2026", discipline, "Assunto complementar do edital"));
   }
   assert.ok(studyPriorityFor("PC-AC 2026 — Edital 001 SEAD/PCAC", "Noções de Direito Administrativo", "Princípios da Administração Pública"));
+  assert.ok(studyPriorityFor("PC-AC 2026", "Noções de Administração", "Eficiência, eficácia e efetividade"));
+  assert.equal(studyPriorityFor("Complementar — fora do Anexo III do PC-AC 2026", "Administração Pública", "Evolução da Administração Pública"), null);
   assert.ok(studyPriorityFor("Polícia Civil do Acre — Oficial Investigador — 2026", "Realidade do Estado do Acre", "Revolução Acreana"));
   assert.equal(studyPriorityFor("Polícia Civil de outro estado", "Língua Portuguesa", "Interpretação textual"), null);
   assert.equal(studyPriorityFor(null, "Língua Portuguesa", "Interpretação textual"), null);
