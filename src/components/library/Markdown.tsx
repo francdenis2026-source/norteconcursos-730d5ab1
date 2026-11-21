@@ -118,6 +118,15 @@ function isAnswerAnalysis(text: string): boolean {
 function isAnalysisLabel(text: string): boolean {
   return /^\s*(?:an[aá]lise|racioc[ií]nio|resolu[cç][aã]o comentada|como resolver)\s*[:—-]/i.test(text);
 }
+function isTipLabel(text: string): boolean {
+  return /^\\s*(?:dica(?:\\s+de\\s+prova)?|macete|observa[cç][aã]o)\\s*[:—-]/i.test(text);
+}
+function isWarningLabel(text: string): boolean {
+  return /^\\s*(?:aten[cç][aã]o|cuidado|pegadinha|erro\\s+comum|armadilha)\\s*[:—-]/i.test(text);
+}
+function isHowToAnswerLabel(text: string): boolean {
+  return /^\\s*(?:como\\s+responder|estrat[eé]gia\\s+de\\s+resolu[cç][aã]o|passo\\s+a\\s+passo)\\s*[:—-]/i.test(text);
+}
 function renderQuestionOptions(text: string, key: string, inline: (text: string, key: string) => ReactNode) {
   const matcher = /(?:^|\s)([A-E])[).]\s*/g;
   const matches = [...text.matchAll(matcher)];
@@ -332,11 +341,17 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
           ? "study-question-stem"
           : isAnswerAnalysis(block.text)
             ? "study-answer-analysis"
-            : isAnalysisLabel(block.text)
-              ? "study-analysis-note"
-              : isExampleLabel(block.text)
-                ? "study-example"
-                : undefined;
+            : isHowToAnswerLabel(block.text)
+              ? "study-how-to-answer"
+              : isWarningLabel(block.text)
+                ? "study-warning"
+                : isTipLabel(block.text)
+                  ? "study-tip"
+                  : isAnalysisLabel(block.text)
+                    ? "study-analysis-note"
+                    : isExampleLabel(block.text)
+                      ? "study-example"
+                      : undefined;
         return <p key={key} className={className}>{inline(block.text, key)}</p>;
       }
       case "quote":
