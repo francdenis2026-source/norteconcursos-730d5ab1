@@ -578,7 +578,6 @@ function ErrorsPage() {
                     {question.itemNumber != null && (
                       <Badge variant="secondary" className="font-mono">Questão {question.itemNumber}</Badge>
                     )}
-                    <QuestionCode question={question} />
                   </div>
                   <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                     {question.contest} · {question.year}

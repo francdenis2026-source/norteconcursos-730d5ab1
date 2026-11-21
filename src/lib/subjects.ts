@@ -109,7 +109,8 @@ export function canonicalSubject(raw: string | null | undefined): string {
 
 /** Match case/accent/spacing variants without merging different articles or narrower subjects. */
 export function topicIdentity(raw: string | null | undefined) {
-  return strip((raw ?? "").replace(/\s+/g, " ").trim()).replace(/[.。]+$/, "");
+  // "4. Atos administrativos" e "Atos administrativos" são o mesmo assunto: a numeração do edital não entra na chave.
+  return strip((raw ?? "").replace(/\s+/g, " ").trim().replace(/^\d+(\.\d+)*\.?\s+(?=\S)/, "")).replace(/[.。]+$/, "");
 }
 
 export function canonicalTopic(raw: string | null | undefined): string | null {
