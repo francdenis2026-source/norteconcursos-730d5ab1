@@ -34,7 +34,7 @@ export function StudyText({ text }: { text: string }) {
   );
 }
 
-const LEGEND: StudyKind[] = ["quantity", "requirement", "exception", "prohibition", "obligation", "sanction"];
+const LEGEND: StudyKind[] = ["quantity", "requirement", "exception", "prohibition", "sanction"];
 
 /** Chave para ligar e desligar os destaques, com a legenda das cores. */
 export function HighlightToggle({ legend = true }: { legend?: boolean }) {
