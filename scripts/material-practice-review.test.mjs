@@ -90,3 +90,32 @@ test('Acre legal source verification accepts the official LEGIS portal only', ()
   assert.equal(isPracticeOfficialSource('https://www.legis.ac.gov.br.evil.example/detalhar/674'), false);
   assert.equal(isPracticeOfficialSource('http://www.legis.ac.gov.br/detalhar/674'), false);
 });
+
+test('PC-AC saved subject reviews are enforced against exact production quiz snapshots', () => {
+  const manifest = JSON.parse(readFileSync(new URL('../data/pcac-2026/2026-11-21/manifest.json', import.meta.url)));
+  const permitted = new Set([
+    'Análise de Dados e Informações', 'Estatística', 'Língua Portuguesa',
+    'Noções de Administração', 'Noções de Informática', 'Raciocínio Lógico',
+    'Realidade do Estado do Acre', 'Tecnologia da Informação e Segurança da Informação',
+  ]);
+  let eligibleModules = 0;
+  let availableItems = 0;
+  for (const file of manifest.files) {
+    const name = file.path.split('/').at(-1);
+    const snapshot = JSON.parse(readFileSync(new URL('../data/pcac-2026/2026-11-21/' + name, import.meta.url)));
+    for (const module of snapshot.materials) {
+      const scope = { subject: module.discipline };
+      const result = authoredMaterialPractice(module.quiz, scope, module.slug, module.topic_label, module.practice_review);
+      const approved = permitted.has(module.discipline) && matchesManualReview(module.quiz, module.practice_review, module.slug);
+      if (approved) {
+        assert.equal(result.length, module.quiz.length, 'Valid didactic review must expose every unique item: ' + module.slug);
+        eligibleModules++;
+        availableItems += result.length;
+      } else if (module.practice_review?.review_type === 'didactic_manual') {
+        assert.equal(result.length, 0, 'Disallowed or out-of-date review must not expose questions: ' + module.slug);
+      }
+    }
+  }
+  assert.ok(eligibleModules >= 100);
+  assert.ok(availableItems >= 700);
+});
