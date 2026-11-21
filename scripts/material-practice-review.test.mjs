@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { authoredMaterialPractice, matchesMaterialScope } from '../src/lib/materialPractice.ts';
-import { matchesPracticeReview, matchesDidacticReview, matchesManualReview } from '../src/lib/materialPracticeReview.ts';
+import { matchesPracticeReview, matchesDidacticReview, matchesManualReview, isPracticeOfficialSource } from '../src/lib/materialPracticeReview.ts';
 const pack=JSON.parse(readFileSync(new URL('../supabase/imports/materials-normative-2026-10-24/course-additions-package.json',import.meta.url)));
 const row=pack.rows.find(r=>r.review.law==='budapeste');
 test('published snapshot unlocks its twenty normative exercises and carries official evidence',()=>{
@@ -82,4 +82,11 @@ test('PC-AC manual reviews unlock only matching nonlegal didactic exercises', ()
   assert.equal(matchesManualReview(quiz, { ...review, material_slug: 'wrong-slug' }, slug), false);
   assert.equal(matchesManualReview(quiz, { ...review, status: 'needs_revalidation' }, slug), false);
   assert.equal(authoredMaterialPractice(quiz, {subject:'Noções de Direito Constitucional'}, slug, 'Artigo 37', {...review,subject:'Noções de Direito Constitucional'}).length, 0);
+});
+
+test('Acre legal source verification accepts the official LEGIS portal only', () => {
+  assert.equal(isPracticeOfficialSource('https://www.legis.ac.gov.br/detalhar_constituicao'), true);
+  assert.equal(isPracticeOfficialSource('https://legis.ac.gov.br/detalhar/674'), true);
+  assert.equal(isPracticeOfficialSource('https://www.legis.ac.gov.br.evil.example/detalhar/674'), false);
+  assert.equal(isPracticeOfficialSource('http://www.legis.ac.gov.br/detalhar/674'), false);
 });
