@@ -1267,3 +1267,26 @@ html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-car
   border-width: 0;
 }
 html body .qx .qx-card .qx-body { flex: 1 1 auto; min-height: 0; }
+
+/* ── Celular: treinador compacto (mais espaço para o enunciado e a explicação) ───────────── */
+@media (max-width: 720px) {
+  /* Cabeçalho: uma linha de etiquetas; a banca repetida some e a etiqueta de prova encolhe. */
+  html body .qx .qx-chips { gap: 0.25rem; padding: 0.125rem var(--qx-pad) 0.375rem; }
+  html body .qx .qx-chip--contest { display: none; }
+  html body .qx .qx-chip { padding: 0.0625rem 0.5rem; font-size: 0.6875rem; max-width: 70%; }
+  html body .qx .qx-chips__report { font-size: 0.6875rem; }
+  html body .qx .qx-chips__report .qx-btn { height: 1.75rem; padding-inline: 0.5rem; }
+
+  /* Certo / Errado: cartões baixos lado a lado, sem a ilustração grande. */
+  html body .qx .qx-choices[data-count="2"] { grid-auto-rows: auto; gap: 0.5rem; }
+  html body .qx .qx-choices[data-count="2"] .qx-choice { min-height: 3.25rem; padding: 0.5rem 0.75rem; gap: 0.5rem; box-shadow: none; }
+  html body .qx .qx-choices[data-count="2"] .qx-choice__icon { width: 1.75rem; height: 1.75rem; }
+  html body .qx .qx-choices[data-count="2"] .qx-choice__label { font-size: 1.125rem; line-height: 1.2; }
+  html body .qx .qx-choices[data-count="2"] .qx-choice__letter { display: none; }
+
+  /* Explicação e exemplo: texto menor e blocos mais justos. */
+  html body .qx .qx-explain__text { font-size: 0.8125rem; line-height: 1.5; }
+  html body .qx .qx-example { margin-top: 0.375rem; padding: 0.375rem 0.625rem 0.5rem; }
+  html body .qx .qx-example .qx-explain__text { font-size: 0.75rem; line-height: 1.45; }
+  html body .qx .qx-pane { padding-block: 0.5rem; }
+}

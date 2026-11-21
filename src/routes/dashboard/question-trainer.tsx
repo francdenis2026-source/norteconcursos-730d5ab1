@@ -1436,7 +1436,7 @@ function QuestionTrainer() {
             <span className="qx-chip" title={examOriginLabel(question)}>
               {examOriginLabel(question)}
             </span>
-            <span className="qx-chip" title={`${question.contest} · ${question.year}`}>
+            <span className="qx-chip qx-chip--contest" title={`${question.contest} · ${question.year}`}>
               {question.contest} · {question.year}
             </span>
             <span className={cn("qx-chip qx-chip--level", DIFFICULTY_STYLE[question.difficulty])}>
