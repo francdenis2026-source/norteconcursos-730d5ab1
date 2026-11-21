@@ -112,47 +112,47 @@
         {
           "a": true,
           "q": "O estágio probatório previsto no art. 73 dura três anos.",
-          "why": "A LC 526/2026 deu nova redação ao dispositivo e manteve o período de três anos. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Correto no âmbito do art. 73 da LC estadual 129/2004, com alterações da LC 526/2026: estágio probatório dura três anos. O prazo legal não se confunde com duração do curso de formação ou tempo exigido para promoção."
         },
         {
           "a": false,
           "q": "A posse deve ocorrer até 30 dias contados da publicação, em qualquer dia útil escolhido pelo candidato.",
-          "why": "O art. 77 fixa o 30º dia subsequente como data de posse. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Errado. A regra especial de posse no art. 77 da LC 129/2004, modificada pela LC 526/2026, usa o trigésimo dia subsequente à publicação da nomeação como referência para a posse, com regras específicas de expediente e exceções. Não permite escolha livre de qualquer dia útil durante o prazo."
         },
         {
           "a": true,
           "q": "Se o 30º dia coincidir com dia sem expediente ordinário, a posse é prorrogada para o primeiro dia útil seguinte.",
-          "why": "É a regra do art. 77, § 1º. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Correto. O art. 77, §1º, da LC 129/2004 disciplina a hipótese de dia sem expediente ordinário: a posse é deslocada ao primeiro dia útil subsequente. Diferencie prorrogação legal do dia fixado de suspensão por questão médica."
         },
         {
           "a": true,
           "q": "O prazo de posse pode ser suspenso por até 120 dias por exigência médica.",
-          "why": "O prazo de posse se relaciona ao período entre nomeação e investidura no cargo. O item atribui ao art. 78 da LC 129/2004 hipótese específica de suspensão por exigência médica, que não deve ser confundida com prorrogação geral ou exercício inicial; confira também eventuais alterações posteriores."
+          "why": "Correto conforme a hipótese específica do art. 78 da LC 129/2004 sobre suspensão do prazo de posse por exigência médica, até o limite legal de cento e vinte dias. Não confunda suspensão da contagem com alteração genérica do edital ou com falta ao ato de posse."
         },
         {
           "a": false,
           "q": "A primeira lotação é definida pela classificação do concurso público.",
-          "why": "O art. 65, § 13, e o art. 79-C adotam a classificação final do curso de formação."
+          "why": "Errado. Os arts. 65, §13, e 79-C da LC 129/2004, após LC 526/2026, relacionam a primeira lotação à classificação final no curso de formação policial, e não simplesmente à classificação no concurso anterior ao curso."
         },
         {
           "a": true,
           "q": "O curso específico de formação policial ocorre em regime de internato.",
-          "why": "É a regra do art. 79-A, § 3º. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Correto. A LC 526/2026 inseriu regra no art. 79-A, §3º, da LC 129/2004 relativa ao regime de internato no curso específico de formação policial. Trata-se de regra da etapa formativa, diferente do expediente ordinário após a lotação."
         },
         {
           "a": false,
           "q": "O período do curso de formação conta para o interstício de promoção.",
-          "why": "O art. 79-E exclui esse interstício até o exercício na primeira lotação. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Errado. A LC 129/2004, art. 79-E, prevê tratamento do período de formação para tempo de serviço e distingue a contagem do interstício de promoção, que não corre até o exercício na primeira lotação nos termos legais."
         },
         {
           "a": true,
           "q": "O servidor deve permanecer pelo menos cinco anos no município de lotação inicial.",
-          "why": "É a regra incluída no art. 65, § 14. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Correto segundo o art. 65, §14, da LC 129/2004, com LC 526/2026: há permanência mínima de cinco anos no município de primeira lotação, observadas condições e exceções legalmente previstas. Quinquênio não significa estabilidade automática no mesmo setor."
         },
         {
           "a": true,
           "q": "Depois do quinquênio, a cessão pode durar até dois anos e ser prorrogada uma vez por mais um ano.",
-          "why": "É a regra do art. 65, § 15, com exceções expressas. Atenção à norma: A LC 526/2026 alterou dispositivos da LC 129/2004 relativos a ingresso, concurso, estrutura e movimentação funcional. A banca pode repetir redação revogada: contraste sempre o texto original com a versão consolidada publicada no Portal LEGIS Acre."
+          "why": "Correto no recorte do art. 65, §15, da LC 129/2004: após o período mínimo exigido, a cessão pode observar duração de dois anos e uma prorrogação de até um, sujeita às exceções e condições do dispositivo. Não se presume cessão livre ou imediata."
         }
       ],
       "slug": "pcac-2026-lc129-atualizacao-lc526-2026-ingresso-formacao-lotacao",
@@ -163,8 +163,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "18 comentários estatutários refeitos segundo LC 129/2004 com LC 526/2026 e LC 39/1993. Antes da liberação exige fonte oficial íntegra identificada por hash e revisão item a item.",
         "items_checked": 9,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/6874",
+          "https://www.legis.ac.gov.br/detalhar/110"
+        ]
       }
     },
     {
@@ -437,47 +443,47 @@
         {
           "a": true,
           "q": "A LC 39 prevê prescrição de 180 dias para advertência.",
-          "why": "Prescrição disciplinar é o prazo para a Administração exercer a pretensão punitiva. O item refere-se à advertência e ao art. 193, III, da LC 39/1993; a prova costuma confundir a prescrição dessa penalidade com as de suspensão e demissão."
+          "why": "Correto. A LC estadual 39/1993, art. 193, III, fixa prazo prescricional disciplinar de cento e oitenta dias para advertência. É preciso verificar momento de ciência, interrupções e penalidade aplicável; não confunda com prazo de suspensão."
         },
         {
           "a": false,
           "q": "A prescrição da suspensão é de cinco anos na LC 39.",
-          "why": "O art. 193, II, prevê dois anos. Atenção à norma: A LC 39/1993 rege servidores civis estaduais nos dispositivos aplicáveis, sem afastar o estatuto policial especial. Acumulação de cargos segue art. 37 da Constituição, com EC 138/2025, e regras de compatibilidade de horários."
+          "why": "Errado. Para suspensão, a LC 39/1993, art. 193, II, estabelece prescrição de dois anos, não cinco. O prazo de cinco anos se relaciona a outras penalidades no mesmo artigo. Diferencie prazo prescricional do prazo de duração da suspensão."
         },
         {
           "a": true,
           "q": "O prazo prescricional começa quando o fato se torna conhecido.",
-          "why": "O marco inicial do prazo prescricional é aspecto distinto da duração do prazo e de suas causas de interrupção. Conforme o dispositivo indicado no art. 193, § 1º, a contagem se relaciona à ciência do fato, e não necessariamente à data em que ocorreu."
+          "why": "Correto em relação ao art. 193, §1º, da LC 39/1993: o termo inicial da prescrição disciplina o momento em que o fato se torna conhecido, não necessariamente a data histórica da conduta. O conhecimento deve ser avaliado nos termos da legislação e jurisprudência."
         },
         {
           "a": true,
           "q": "A abertura de sindicância interrompe a prescrição disciplinar geral.",
-          "why": "Interrupção da prescrição faz a contagem recomeçar conforme as regras legais; não é sinônimo de suspensão do prazo. O item remete ao art. 193, § 3º, da LC 39/1993, que deve ser lido junto às hipóteses e efeitos previstos na redação vigente."
+          "why": "Correto. Conforme art. 193, §3º, da LC 39/1993, a abertura de sindicância ou instauração de PAD pode interromper prescrição, observados os requisitos do dispositivo. Interrupção não é mera suspensão: os efeitos da contagem dependem da lei."
         },
         {
           "a": true,
           "q": "A sindicância geral pode resultar em suspensão de até 30 dias.",
-          "why": "A sindicância pode gerar diferentes encaminhamentos conforme a gravidade e a prova reunida. O enunciado remete ao art. 196, II, da LC 39/1993 para a sanção de suspensão; não transfira automaticamente esse limite ao estatuto especial da Polícia Civil."
+          "why": "Correto. A sindicância geral da LC 39/1993 pode, conforme art. 196, II, resultar na penalidade de suspensão de até trinta dias, nas condições legais. Não transfira esse limite automaticamente ao PAD nem ao regime especial da Polícia Civil."
         },
         {
           "a": false,
           "q": "A sindicância geral é conduzida necessariamente por comissão de três servidores.",
-          "why": "O art. 200, na redação da LC 51/1996, prevê um servidor estável como sindicante."
+          "why": "Errado. O art. 200 da LC 39/1993, na redação citada da LC 51/1996, prevê condução de sindicância por servidor estável designado, não necessariamente comissão de três membros. Comissão de PAD e sindicante são institutos distintos."
         },
         {
           "a": true,
           "q": "O afastamento cautelar do art. 198 pode durar até 60 dias e ser prorrogado por igual período, sem prejuízo da remuneração.",
-          "why": "Afastamento cautelar não antecipa uma condenação disciplinar. O art. 198 da LC 39/1993 trata de prazo, eventual prorrogação e efeitos remuneratórios; diferencie essa providência temporária de suspensão como penalidade após processo regular."
+          "why": "Correto. O art. 198 da LC 39/1993 regula afastamento preventivo por até sessenta dias, prorrogável por igual período, sem prejuízo remuneratório, conforme as condições legais. A medida é cautelar, diferente de suspensão disciplinar como sanção."
         },
         {
           "a": true,
           "q": "O PAD geral tem três fases: instauração; instrução, defesa e relatório; julgamento.",
-          "why": "É a enumeração do art. 206. Atenção à norma: A LC 39/1993 rege servidores civis estaduais nos dispositivos aplicáveis, sem afastar o estatuto policial especial. Acumulação de cargos segue art. 37 da Constituição, com EC 138/2025, e regras de compatibilidade de horários."
+          "why": "Correto. O art. 206 da LC 39/1993 estrutura o PAD geral em instauração; inquérito administrativo com instrução, defesa e relatório; e julgamento. São fases processuais que concretizam contraditório, produção probatória e decisão."
         },
         {
           "a": false,
           "q": "O PAD geral deve ser concluído em até 30 dias, prorrogáveis por mais 30.",
-          "why": "O art. 207 prevê 60 dias, prorrogáveis por igual período. Atenção à norma: A LC 39/1993 rege servidores civis estaduais nos dispositivos aplicáveis, sem afastar o estatuto policial especial. Acumulação de cargos segue art. 37 da Constituição, com EC 138/2025, e regras de compatibilidade de horários."
+          "why": "Errado. O art. 207 da LC 39/1993 fixa prazo geral de sessenta dias para concluir PAD, com possível prorrogação por igual período, e não trinta mais trinta. Confira o marco inicial do prazo e eventual regra especial aplicável."
         }
       ],
       "slug": "pcac-2026-lc39-deveres-acumulacao-penalidades-prescricao-pad",
@@ -488,8 +494,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "18 comentários estatutários refeitos segundo LC 129/2004 com LC 526/2026 e LC 39/1993. Antes da liberação exige fonte oficial íntegra identificada por hash e revisão item a item.",
         "items_checked": 9,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/6874",
+          "https://www.legis.ac.gov.br/detalhar/110"
+        ]
       }
     },
     {
