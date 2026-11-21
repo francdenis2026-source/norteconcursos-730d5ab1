@@ -278,3 +278,19 @@ Migration versionada: supabase/migrations/20261121020000_improve_pcac_accounting
 Commit: 3c3b0b86299badb9046ac7fcf29d3ef4d6a8186c.
 
 **CI:** não foi localizado workflow run associado a esse commit pelo endpoint de consulta utilizado; portanto, não declarar CI aprovado. A atualização direta no banco foi verificada por consulta pós-escrita. A execução da migration versionada em outros ambientes ainda depende do pipeline próprio do projeto.
+
+
+## Revisão aprofundada — custos e rateio — 21/11/2026
+
+Material revisado diretamente no Supabase e persistido no treinador:
+
+- Aula 8: consumo de matéria-prima, custo de produção, custos diretos/indiretos, critérios de rateio, departamentalização e questões CFC/Consulplan.
+- As 14 questões foram preservadas com enunciados, gabaritos e ordem originais; as justificativas foram ampliadas para mais de 250 caracteres, todas receberam dica de prova e resolução passo a passo.
+- Conferência pós-atualização: 14 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica; zero itens sem etapas de resolução.
+- Removida da Aula 8 a seção indevidamente anexada sobre classificação de passivos pelo CPC 26. A seção de custos de empréstimos/ativo qualificável foi preservada por ser pertinente ao estudo de custos.
+- A revisão detalhou especialmente consumo = EI + compras − EF, distinção custo/despesa, cálculo de rateios por área/empregados/máquinas e sequência de departamentalização, incluindo o exemplo de R$ 32.400 e os custos unitários A = R$ 4,49 e B = R$ 5,27.
+
+Migration versionada: supabase/migrations/20261121030000_deepen_pcac_costs_rateio_trainer.sql.
+Commit: e0e3a76f81ed322f1322848c43ddc78f27f7ab24.
+
+A atualização direta do banco foi confirmada por consulta posterior. A execução da migration em outros ambientes depende do pipeline; não há confirmação de CI aprovado neste registro.
