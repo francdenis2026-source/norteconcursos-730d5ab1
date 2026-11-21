@@ -32,7 +32,8 @@ import { DayRun } from "@/components/cronograma/DayRun";
 import { ContentTab, TheoryButton } from "@/components/cronograma/ContentTab";
 import { useQuery } from "@tanstack/react-query";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
-import { buildTheoryIndex, findTheory, theoryTarget, type TheorySyllabus, type TheoryTarget } from "@/lib/cronogramaTeoria";
+import { useMediaCatalog } from "@/lib/mediaStore";
+import { buildTheoryIndex, findTheory, findVideoLesson, theoryTarget, type TheorySyllabus, type TheoryTarget } from "@/lib/cronogramaTeoria";
 import { buildDaySteps, discColor } from "@/lib/cronogramaDia";
 import { cn } from "@/lib/utils";
 import { hasActiveEdital, activeEditalLabel } from "@/lib/cronogramaGuard";
@@ -371,11 +372,17 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       return (data ?? []) as TheorySyllabus[];
     },
   });
+  const { catalog: mediaCatalog } = useMediaCatalog();
   const theoryIndex = React.useMemo(() => buildTheoryIndex(materials.data ?? [], syllabus.data ?? []), [materials.data, syllabus.data]);
   const backUrl = `/dashboard/cronograma?plano=${plan.id}&painel=1`;
   const theoryOf = React.useCallback(
-    (nome: string, topic: string) => { const target = theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl); return target.direct ? target : { ...target, search: { ...target.search, discipline: nome, collection: libraryCollection({slug: "", discipline: nome}) === "subjects" ? "subjects" : "laws" } }; },
-    [theoryIndex, backUrl],
+    (nome: string, topic: string) => {
+      const base = theoryTarget(findTheory(theoryIndex, nome, topic, 1)[0], topic, backUrl);
+      const target = base.direct ? base : { ...base, search: { ...base.search, discipline: nome, collection: libraryCollection({slug: "", discipline: nome}) === "subjects" ? "subjects" : "laws" } };
+      const video = findVideoLesson(mediaCatalog.topicVideos, nome, topic);
+      return video ? { ...target, video } : target;
+    },
+    [theoryIndex, backUrl, mediaCatalog],
   );
   const timers = React.useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const cfg = plan.config;
@@ -453,6 +460,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         simulado: !!cfg.simulado, essay: !!cfg.essay,
         isLastStudyDay: studyDays.at(-1) === todayDow,
         isSecondLastOrOnly: (studyDays.length > 1 ? studyDays.at(-2) : studyDays[0]) === todayDow,
+        daysLeft: examDaysLeft(plan.exam_date),
       })
     : [];
   const daysLeft = examDaysLeft(plan.exam_date);

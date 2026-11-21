@@ -4,6 +4,7 @@
  * Casamento por texto (palavras com radical) + compatibilidade da disciplina; sem rede, testável sem navegador.
  */
 import { canonicalDiscipline } from "@/lib/cronograma";
+import { bestTopicMatch } from "@/lib/videoTopicMatch";
 
 export interface TheoryMaterial { slug: string; discipline: string; topic_label: string; title: string; summary?: string | null }
 export interface TheorySyllabus { id: string; discipline: string; topic_text: string; contest?: string | null }
@@ -99,6 +100,22 @@ export interface TheoryTarget {
   direct: boolean;
   label: string;
   kind: "material" | "edital" | "busca";
+  /** Videoaula da biblioteca para o assunto (quando existe): abre a aba de vídeos já no assunto. */
+  video?: { subject: string; topic: string; title: string };
+}
+
+/** Procura videoaula do assunto no catálogo (matéria → assunto → vídeos); só devolve correspondência real. */
+export function findVideoLesson(
+  topicVideos: Record<string, Record<string, { title: string }[]>>, discipline: string, topic: string,
+): TheoryTarget["video"] | undefined {
+  let best: { subject: string; topic: string; title: string; score: number } | undefined;
+  for (const [subject, byTopic] of Object.entries(topicVideos)) {
+    if (!disciplinesMatch(discipline, subject)) continue;
+    const entries = Object.entries(byTopic).flatMap(([name, vids]) => vids.map((v) => ({ topic: name, title: v.title })));
+    const m = bestTopicMatch(topic, entries);
+    if (m && (!best || m.score > best.score)) best = { subject, topic: m.topic, title: m.entry.title, score: m.score };
+  }
+  return best ? { subject: best.subject, topic: best.topic, title: best.title } : undefined;
 }
 
 /** Palavras fortes do assunto para a busca da Biblioteca quando não há material específico. */
