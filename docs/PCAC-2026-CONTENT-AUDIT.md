@@ -1948,3 +1948,52 @@ O material associado a PCCR/LC nº 129/2004 foi ampliado para 66.219 caracteres;
 - Testar a exibição e a contagem no painel e executar testes/build após todas as migrations.
 
 **Status:** conteúdo ampliado e alterações legais recentes incorporadas; auditoria artigo por artigo e validação final do aplicativo ainda não encerradas.
+
+
+## Vigésima segunda continuação — estágio probatório, estabilidade e fluxo completo de formação — 21/11/2026
+
+### Correção de fonte e redação consolidada
+
+A consulta ao Portal LEGIS confirmou expressamente que a LC nº 129/2004 compilada já lista alterações até a LC nº 526/2026. A versão antiga do PDF da Assembleia não deve ser confundida com a consolidação atual. Fontes oficiais atuais: https://legis.ac.gov.br/detalhar/674 e LC alteradora https://legis.ac.gov.br/detalhar/6874.
+
+### Conteúdo incluído — seções 71 a 75
+
+- Estágio probatório de três anos (art. 73).
+- Comissão de acompanhamento da conduta, relatórios dos fatores II a VI, avaliação quatro meses antes do término, confirmação automática do apto e exoneração do não aprovado.
+- Recondução ao cargo de origem quando o servidor já for estável no serviço público estadual do Acre.
+- Recurso contra proposta de exoneração: cinco dias; parecer técnico em 30 dias; julgamento pelo Delegado-Geral em 30 dias; efeitos suspensivo e devolutivo.
+- Estabilidade após três anos de efetivo exercício, condicionada à avaliação especial que considera relatórios do estágio e aproveitamento no curso (art. 74).
+- Linha do tempo da posse, início do curso, efetivo exercício, lotação e apresentação na unidade (arts. 75 a 79-E).
+- Hipóteses de exoneração no curso: reprovação em qualquer disciplina; mais de 25% de faltas injustificadas em qualquer disciplina; inaptidão disciplinar conforme regulamento.
+- Hipóteses de demissão mediante PAD durante a formação; Termo de Ocorrência Escolar e prazos de defesa/recurso.
+- Atividades práticas e acompanhamento da conduta social computados na avaliação.
+- Quadro de prazos e pegadinhas.
+
+### Oito questões autorais adicionadas
+
+1. Duração do estágio probatório (D).
+2. Prazo de recurso no estágio (B).
+3. Efeitos do recurso (C).
+4. Limite de faltas injustificadas (B).
+5. Reprovação em disciplina (C).
+6. Requisito de estabilidade (B).
+7. Critério da primeira lotação (C).
+8. Prazo para apresentação na unidade (C).
+
+As oito questões foram verificadas individualmente no catálogo e estão ativas. São questões autorais, não oficiais da IDECAN.
+
+### Validação
+
+Material confirmado com 71.927 caracteres e seções 71 a 75 presentes no Supabase. Oito questões consultadas individualmente, status active. Migration de conteúdo: `20261121304200_detail_probation_stability_and_formation_lc526.sql`, commit `aad3391f2c64cbba64b26045be7105913361bd6d`. Migration de questões: `20261121304300_add_lc526_probation_course_and_lotacao_questions.sql`, commit `8b147fdfdcf739822107fb4772ebeceb01922ea4`.
+
+### Observações importantes para não induzir erro
+
+- O art. 73 caput contém seis fatores de avaliação; a consulta exibida no resultado oficial apresentou o inciso II e referência aos incisos II a VI, mas não expôs integralmente a enumeração. O material explica a estrutura e os procedimentos, sem inventar o texto literal dos fatores que não foi recuperado nesta consulta.
+- O curso de formação é efetivo exercício para efeitos legais, mas não integra o interstício promocional (art. 79-E).
+- O art. 65 prevê fases obrigatórias do concurso para as carreiras policiais; a prova oral é acrescida para Delegado, não para Oficial Investigador.
+- O critério da primeira lotação é a classificação final no curso, não a classificação no concurso (art. 79-C, § 1º).
+- A contagem de falta para exoneração usa expressão superior a 25% em qualquer disciplina, não igual a 25%.
+
+### Estado da auditoria global
+
+A etapa remuneratória e os blocos de direitos/deveres, disciplina, prescrição, formação e estágio probatório foram ampliados. Ainda não há base para declarar a cobertura integral artigo por artigo de toda a LC nº 129/2004: falta cotejar todos os dispositivos da lei com o Anexo III do edital e classificar cada artigo como exigido, complementar, alterado ou fora do programa. Também faltam teste visual do treinador, conferência da contagem no painel e build/CI final depois de todas as migrations.
