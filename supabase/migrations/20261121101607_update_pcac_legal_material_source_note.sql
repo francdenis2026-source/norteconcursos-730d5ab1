@@ -1,0 +1,5 @@
+-- Atualiza a proveniência do material para incluir todas as leis efetivamente estudadas.
+update public.study_materials
+set source_note='LC Estadual nº 39/1993, arts. 45–235, texto consolidado no Portal LEGIS do Acre (https://legis.ac.gov.br/detalhar/110); LC nº 154/2005, art. 110 (revogações); LC Estadual nº 129/2004, texto consolidado com alterações até a LC nº 526/2026 (https://legis.ac.gov.br/detalhar/674-0); LC nº 526/2026 (https://legis.ac.gov.br/detalhar/6874); Lei Federal nº 14.735/2023, texto atualizado (https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html); LCs nº 51/1996, 99/2001, 154/2005, 261/2013, 342/2017, 362/2019, 377/2020 e 416/2022; PCCR: Lei nº 2.250/2009, Lei nº 3.228/2017, LC nº 303/2015 e LC nº 496/2025.',
+updated_at=now()
+where slug='pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025';
