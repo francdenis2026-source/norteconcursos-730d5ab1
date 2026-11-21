@@ -748,3 +748,15 @@ Revisadas as aulas de fundamentos/população/amostra/variáveis, técnicas de a
 - **Medidas posicionais:** mediana para quantidades pares/ímpares, moda, quartis, decis, percentis, AIQ e boxplot. Foi esclarecida a interpretação de P90: aproximadamente 90% das observações ficam iguais ou abaixo do ponto e cerca de 10% acima, conforme método e empates; isso não significa acertar 90% da prova.
 
 As duas melhorias foram aplicadas no Supabase e versionadas na MAIN pela migration `supabase/migrations/20261121298100_clarify_pcac_statistics_age_and_percentiles.sql`, commit `e6d1c5b7976f8fe3bfc5d0ce54935c9672821c31`. A verificação SQL confirmou os dois trechos novos. Não foram alterados os 30 itens do treinador.
+
+
+## Estatística — conferência de médias, frequências e gráficos, lote 11 — 21/11/2026
+
+Revisadas as aulas 2, 3 e 4, com conferência dos exemplos, cálculos e 30 questões do treinador.
+
+- **Média simples e ponderada:** cálculos conferidos, inclusive soma dos pesos, recuperação de valor ausente e efeito de valores extremos. Não foi identificado erro aritmético nos exemplos e itens examinados.
+- **Distribuição de frequências:** os exemplos e as 10 questões foram conferidos. A soma progressiva e os percentuais estão coerentes; a correção editorial do exemplo de frequência acumulada feita no lote 9 permanece aplicada.
+- **Tabelas e gráficos:** as 10 questões foram verificadas quanto à escolha de barras, linhas, setores e histograma, escala truncada e interpretação temporal. Não foi identificado gabarito incompatível nos itens examinados.
+- **Treinador:** nas três aulas, 30/30 questões possuem justificativa com pelo menos 250 caracteres, dica e quatro ou mais passos de resolução. Nenhum campo obrigatório estava ausente.
+
+Nenhuma alteração de conteúdo foi necessária neste lote; enunciados, gabaritos e explicações foram preservados. A auditoria de Estatística continua com as demais aulas e com a conferência final de aderência ao edital.
