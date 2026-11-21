@@ -79,6 +79,7 @@ function renderInline(
 
 type Block =
   | { type: "example"; blocks: Block[] }
+  | { type: "interactive-question"; prompt: string; answer: string }
   | { type: "h2" | "h3" | "p"; text: string }
   | { type: "quote"; lines: string[] }
   | { type: "ul" | "ol"; items: { text: string; children: string[] }[] }
@@ -389,9 +390,25 @@ function RevealAnswer({
 
 function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode): ReactNode[] {
   const inline = (text: string, key: string) => renderInline(text, key, renderText);
-  return blocks.map((block, index) => {
+  const prepared: Block[] = [];
+  for (let index = 0; index < blocks.length; index++) {
+    const current = blocks[index]!;
+    const following = blocks[index + 1];
+    if (
+      current.type === "p" &&
+      isQuestionOptions(current.text) &&
+      following?.type === "p" &&
+      isAnswerAnalysis(following.text)
+    ) {
+      prepared.push({ type: "interactive-question", prompt: current.text, answer: following.text });
+      index++;
+    } else prepared.push(current);
+  }
+  return prepared.map((block, index) => {
     const key = `b${index}`;
     switch (block.type) {
+      case "interactive-question":
+        return <InteractiveQuestion key={key} prompt={block.prompt} answer={block.answer} render={inline} />;
       case "example":
         return (
           <section key={key} className="study-example" aria-label="Exemplo aplicado">
