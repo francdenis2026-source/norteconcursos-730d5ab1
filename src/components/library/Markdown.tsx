@@ -148,10 +148,10 @@ function parseAlternativeFeedback(answer: string): {
   explanation: string;
   alternatives: Record<string, string>;
 } {
-  const correct = answer.match(/(?:gabarito|resposta correta)\s*[:—-]\s*(?:\\*\\*)?([A-E])\\b/i)?.[1]?.toUpperCase() ?? null;
+  const correct = answer.match(/(?:gabarito|resposta correta)\s*[:—-]\s*(?:\*\*)?([A-E])\b/i)?.[1]?.toUpperCase() ?? null;
   const marker = /(?:an[aá]lise|coment[aá]rio|justificativa)s?\s+das?\s+alternativas\s*[:—-]\s*/i.exec(answer);
   const before = marker?.index === undefined ? answer : answer.slice(0, marker.index);
-  const explanation = before.replace(/^\s*(?:\*\*)?(?:gabarito|resposta correta)\s*[:—-]\s*[A-E]\s*[.)—-]?\s*(?:\*\*)?/i, "").trim();
+  const explanation = before.replace(/^\s*(?:\*\*)?(?:gabarito|resposta correta)\s*[:—-]\s*(?:\*\*)?[A-E]\s*[.)—-]?\s*(?:\*\*)?/i, "").trim();
   const alternatives: Record<string, string> = {};
   if (marker && marker.index !== undefined) {
     const detailText = answer.slice(marker.index + marker[0].length);
