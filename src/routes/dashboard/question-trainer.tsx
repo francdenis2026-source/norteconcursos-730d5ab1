@@ -2836,11 +2836,9 @@ function QtFitViewport({
       let bottom = window.innerHeight - stripH;
       const focusApp = shell.closest<HTMLElement>(".app-shell");
       const inFocus = root === ".qx" && focusApp?.getAttribute("data-focus-mode") === "true";
-      if (scroller && !inFocus) {
-        const pad = parseFloat(getComputedStyle(scroller).paddingBottom) || 0;
-        bottom = Math.min(bottom, scroller.getBoundingClientRect().bottom - pad);
-      }
-      const h = Math.max(420, Math.floor(bottom - top - tail - (inFocus ? 8 : 10)));
+      // Sem limitador: o cartão vai até o fim da janela (inclusive em tela cheia).
+      void scroller; void inFocus;
+      const h = Math.max(320, Math.floor(bottom - top - tail - 8));
       shell.style.setProperty(varName, `${h}px`);
     };
     fit();
