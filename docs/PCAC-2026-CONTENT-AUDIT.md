@@ -1329,3 +1329,54 @@ Consulta SQL confirmou os quatro registros ativos, com gabarito e vinculação a
 - Revisar os materiais da Lei nº 14.735/2023 para que todas as referências a dispositivos vetados sejam consistentes com o texto atualizado.
 - Fazer teste visual e de integração do treinador, incluindo contagem das questões autorais no painel e preservação de questões existentes.
 - Não declarar a disciplina integralmente auditada enquanto essas pendências não forem concluídas.
+
+
+## Décima continuação — Lei nº 3.228/2017: promoção e titulação — 21/11/2026
+
+### Conferência da fonte primária
+
+O Portal LEGIS do Acre disponibiliza o texto da Lei nº 3.228/2017 e identifica a alteração pela Lei nº 3.288/2017. Foram confrontados os arts. 4º a 12 e a regra de aplicação subsidiária do art. 17, com atenção à manutenção da estrutura de cinco classes pela LC nº 496/2025.
+
+### Conteúdo ampliado
+
+O material `pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025` foi ampliado para 14.388 caracteres e passou a apresentar uma tabela comparativa dos requisitos:
+- Classe I → II: 36 meses, conduta aprovada, média mínima de 80 pontos e 120 horas de capacitação.
+- Classe II → III: os requisitos comuns, mais pós-graduação lato ou stricto sensu reconhecida pelo MEC, mínimo de 360 horas em área de interesse da Polícia Civil, e proposta de melhoria da atuação da unidade.
+- Classe III → IV: os requisitos comuns e proposta de melhoria dos serviços da Polícia Civil.
+- Classe IV → V: os requisitos comuns e proposta de melhoria da segurança pública no Estado.
+
+Também foram aprofundados:
+- Comissão de promoção (análise) versus Secretário (homologação).
+- Exceção do art. 12 para determinados cargos/funções, que afasta especificamente a média mínima do triênio, sem dispensar automaticamente os demais requisitos.
+- Adicional de titulação do art. 6º: especialização de 360h (7,5%), mestrado (15%) e doutorado (20%), com teto total de 20%; regra de acumulação para títulos em áreas distintas ou na mesma área, com intervalo mínimo de cinco anos nesta última hipótese.
+- Diferença entre as 120 horas de capacitação para promoção e a titulação acadêmica remunerada.
+
+### Questões do treinador
+
+Adicionadas quatro questões autorais e verificadas como ativas:
+1. Requisito adicional para promoção à Classe III.
+2. Diferença entre propostas de melhoria nas Classes III, IV e V.
+3. Percentual de adicional por doutorado.
+4. Competência da comissão e do Secretário no processo de promoção.
+
+Cada questão tem gabarito, explicação e vínculo ao material PCCR. Não são questões oficiais da IDECAN.
+
+### Fontes
+
+- Lei nº 3.228/2017, Portal LEGIS: https://legis.ac.gov.br/detalhar/2499
+- Lei nº 3.288/2017, Portal LEGIS: https://legis.ac.gov.br/detalhar/2741
+- LC nº 496/2025, Portal LEGIS: https://legis.ac.gov.br/detalhar_imprimir/6527
+- Edital nº 001 SEAD/PCAC, de 05/11/2026: https://sead.ac.gov.br/editais-pcac-policia-civil-2026/
+
+### Migrations
+
+- `20261121301800_expand_law3228_promotion_and_titling_teaching.sql` — commit `1d031acf3211a5971fe1e5491546ebbeaba49b6d`.
+- `20261121301900_add_pccr_promotion_titling_trainer_questions.sql` — commit `f4ea2624c045d6763a63511268a5a4d7680e1890`.
+
+### Pendências ainda abertas
+
+- Conferir a execução integral do Decreto nº 8.912/2018, que regulamenta a promoção, e sua compatibilidade com a lei e alterações posteriores.
+- Verificar se a redação de promoção e vantagens permanece compatível com a transformação dos cargos em Oficial Investigador.
+- Confirmar regras remuneratórias atuais em tabela oficial de 2026; valores históricos dos anexos de 2017 não foram reapresentados como atuais.
+- Teste visual/integrado do treinador e conferência da contagem no painel permanecem pendentes.
+- A auditoria geral da disciplina não está concluída.
