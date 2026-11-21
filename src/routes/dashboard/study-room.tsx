@@ -34,7 +34,7 @@ import { StudyPractice } from "@/components/library/StudyPractice";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { youtubeEmbedUrl, youtubePlaylistUrl, youtubeSearchUrl } from "@/data/mediaCatalog";
 import { readingMinutes, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
-import { isPlaylistId, loadArsenal, mentionsTopic, rankMaterials, type Arsenal } from "@/lib/arsenal";
+import { isPlaylistId, loadArsenal, mentionsTopic, type Arsenal } from "@/lib/arsenal";
 import { AudioPlayer } from "@/components/media/AudioPlayer";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
@@ -55,7 +55,8 @@ import { StudySubjectPicker } from "@/components/study/StudySubjectPicker";
 import { resolveStudySelection, STUDY_PICK_KEY, type StudySelection } from "@/lib/studySelection";
 import { topicsFor } from "@/data/studyTopics";
 import { libraryCollection } from "@/lib/libraryOrganization";
-import { disciplineMaterials, editalMaterials } from "@/lib/editalCatalog";
+import { editalFold } from "@/lib/editalCatalog";
+import { sameDiscipline } from "@/lib/disciplineHub";
 
 function readSavedPick(): StudySelection | null {
   try {
@@ -370,27 +371,22 @@ function StudyRoomPage() {
   const storageKey = `norte_room_${sp.key ?? `${subject}|${topic}`}_${planned}_${sp.week ?? ""}`;
 
   const { data: list, isPending } = useStudyMaterialList(real);
-  const ranked = React.useMemo(
-    () => rankMaterials(list ?? [], subject, topic),
-    [list, subject, topic],
-  );
-  // Só materiais que tratam do assunto escolhido; sem isso, nada de outro assunto aparece.
-  // Mesma lógica do edital e do hub: ranking da sala + casamento do edital; se nada trata do assunto, os da disciplina.
+  // Só materiais da disciplina escolhida e do assunto escolhido. Nada de outra matéria, nem de outro assunto
+  // da mesma matéria que apenas compartilhe palavras (ex.: "administrativos").
   const exact = React.useMemo(() => {
-    const base = ranked.filter((r) => r.score > 0);
-    const pool = (list ?? []).filter((m) => libraryCollection(m) !== "enem");
-    const seen = new Set(base.map((r) => r.m.slug));
-    const extra = editalMaterials(pool, subject, topic)
-      .filter((hit) => !seen.has(hit.id))
-      .flatMap((hit) => {
-        const m = pool.find((item) => item.slug === hit.id);
-        return m ? [{ m, score: hit.score }] : [];
-      });
-    const merged = [...base, ...extra];
-    if (merged.length) return merged;
-    return disciplineMaterials(pool, subject).map((m) => ({ m, score: 0 }));
-  }, [ranked, list, subject, topic]);
-  const broadMaterials = exact.length > 0 && exact.every((r) => r.score === 0);
+    // O rótulo do material pode vir numerado ("3. Poderes administrativos"): compara só o nome do assunto.
+    const topicName = (label: string) => editalFold(label.replace(/^\s*\d+\s*[.)-]\s*/, ""));
+    const topicKey = topicName(topic);
+    return (list ?? [])
+      .filter(
+        (m) =>
+          libraryCollection(m) !== "enem" &&
+          sameDiscipline(m.discipline, subject) &&
+          topicName(m.topic_label ?? "") === topicKey,
+      )
+      .sort((a, b) => a.sort_order - b.sort_order)
+      .map((m) => ({ m, score: 1 }));
+  }, [list, subject, topic]);
   const [slug, setSlug] = React.useState<string | null>(null);
   // O material aberto vale só enquanto pertence ao assunto atual (trocar de matéria não o mantém).
   const currentSlug = slug && exact.some((r) => r.m.slug === slug) ? slug : (exact[0]?.m.slug ?? "");
@@ -557,7 +553,7 @@ function StudyRoomPage() {
                 {isPending
                   ? "Buscando na Biblioteca…"
                   : exact.length
-                    ? `${exact.length} ${exact.length === 1 ? "material encontrado" : "materiais encontrados"} ${broadMaterials ? "na disciplina (nenhum trata exatamente deste assunto)" : "para este assunto"}.`
+                    ? `${exact.length} ${exact.length === 1 ? "material encontrado" : "materiais encontrados"} para este assunto.`
                     : "Ainda não há material escrito deste assunto."}
               </CardDescription>
             </CardHeader>
