@@ -433,7 +433,7 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
     if (
       current.type === "quote" &&
       /desafio de prova/i.test(current.lines.join(" ")) &&
-      current.lines.some((line) => /quest[aã]o\\s*:/i.test(line))
+      current.lines.some((line) => /quest[aã]o\s*:/i.test(line))
     ) {
       const stem = cleanQuestionStem(current.lines);
       const optionBlocks: { index: number; text: string }[] = [];
