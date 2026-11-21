@@ -58,7 +58,7 @@ for (const item of manifest.files) {
       for (const source of review.sources) {
         const url = new URL(source.url);
         assert.equal(url.protocol, 'https:', 'Non-HTTPS legal source: ' + material.slug);
-        assert.ok(OFFICIAL_HOSTS.has(url.hostname) || /(?:^|\\.)(?:stf|stj)\\.jus\\.br$/.test(url.hostname), 'Nonofficial legal source: ' + material.slug);
+        assert.ok(OFFICIAL_HOSTS.has(url.hostname) || /(?:^|\.)(?:stf|stj)\.jus\.br$/.test(url.hostname), 'Nonofficial legal source: ' + material.slug);
         assert.match(source.sha256 ?? '', /^[0-9a-f]{64}$/i, 'Missing legal source SHA-256: ' + material.slug);
         assert.ok(!Number.isNaN(Date.parse(source.checked_at ?? '')), 'Missing legal source date: ' + material.slug);
       }
