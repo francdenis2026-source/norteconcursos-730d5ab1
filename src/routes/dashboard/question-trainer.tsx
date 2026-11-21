@@ -2835,7 +2835,9 @@ function QtFitViewport({
       }
       const scroller = shell.closest<HTMLElement>(".app-content");
       // O cartão não pode passar do fim da área de conteúdo (que termina acima da faixa do rodapé).
-      const areaBottom = scroller ? scroller.getBoundingClientRect().bottom : Infinity;
+      // Em tela cheia a área de conteúdo encolhe (conteúdo fixo), então ela não serve de limite.
+      const inFocusMode = shell.closest<HTMLElement>(".app-shell")?.getAttribute("data-focus-mode") === "true";
+      const areaBottom = scroller && !inFocusMode ? scroller.getBoundingClientRect().bottom : Infinity;
       const bottom = Math.min(window.innerHeight - stripH, areaBottom);
       const h = Math.max(320, Math.floor(bottom - top - tail - 8));
       shell.style.setProperty(varName, `${h}px`);
