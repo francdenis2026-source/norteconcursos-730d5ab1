@@ -140,7 +140,9 @@ export function authoredMaterialPractice(
   }
   if (manualApproved) {
     if (scope.subject && canonicalSubject(manualApproved.subject) !== canonicalSubject(scope.subject)) return [];
-    if (scope.topic && normalize(materialTopic(manualApproved.subject, canonicalTopic(manualApproved.topic_label) ?? manualApproved.topic_label)) !== normalize(scope.topic)) return [];
+    // Manual approvals are already bound to the exact editorial topic label.
+    // Do not reclassify that reviewed label through the heuristic topic classifier.
+    if (scope.topic && normalize(canonicalTopic(manualApproved.topic_label) ?? manualApproved.topic_label) !== normalize(canonicalTopic(scope.topic) ?? scope.topic)) return [];
   }
   if (didacticApproved) {
     if (scope.subject && canonicalSubject(didacticApproved.subject) !== canonicalSubject(scope.subject)) return [];
