@@ -1772,7 +1772,7 @@
         {
           "a": false,
           "q": "Na PA 7, 11, 15..., o oitavo termo é 39.",
-          "why": "Errado. Na PA aₙ=a₁+(n−1)r. Para 7,11,15,... temos a₈=7+7×4=35, e não 39."
+          "why": "Errado. Na progressão aritmética, aₙ=a₁+(n−1)r. Como a₁=7, razão r=4 e n=8, temos a₈=7+7×4=35, e não 39. A pegadinha é usar oito incrementos em vez dos sete intervalos entre o primeiro e o oitavo termos."
         },
         {
           "a": true,
@@ -1828,7 +1828,7 @@
           {
             "a": false,
             "q": "Na PA 7, 11, 15..., o oitavo termo é 39.",
-            "why": "Errado. Na PA aₙ=a₁+(n−1)r. Para 7,11,15,... temos a₈=7+7×4=35, e não 39."
+            "why": "Errado. Na progressão aritmética, aₙ=a₁+(n−1)r. Como a₁=7, razão r=4 e n=8, temos a₈=7+7×4=35, e não 39. A pegadinha é usar oito incrementos em vez dos sete intervalos entre o primeiro e o oitavo termos."
           },
           {
             "a": true,
@@ -1870,7 +1870,7 @@
         "status": "reviewed",
         "subject": "Raciocínio Lógico",
         "version": 1,
-        "checked_at": "2026-11-21T18:28:10Z",
+        "checked_at": "2026-11-21T18:32:08Z",
         "review_type": "didactic_manual",
         "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Raciocínio Lógico, itens 8 e conexos.",
         "topic_label": "8. Progressões aritmética e geométrica",

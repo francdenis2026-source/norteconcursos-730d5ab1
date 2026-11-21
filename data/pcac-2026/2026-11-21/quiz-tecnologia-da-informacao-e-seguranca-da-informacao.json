@@ -12,39 +12,69 @@
         {
           "a": true,
           "q": "Uma chave primária deve identificar unicamente o registro.",
-          "why": "Chave primária identifica unicamente cada linha de uma tabela relacional e, por regra, não admite valores nulos. Por exemplo, id_pessoa distingue registros de indivíduos com nomes iguais."
+          "why": "Certo. Chave primária é identificador único de cada linha e não admite nulos. Exemplo: id_pessoa permite distinguir dois registros com nomes iguais."
         },
         {
           "a": true,
           "q": "Chave estrangeira referencia campo de outra tabela.",
-          "why": "Ela implementa relações e integridade referencial. Exemplo e pegadinha: Chave primária identifica exclusivamente uma linha; estrangeira referencia chave de outra tabela. SELECT consulta, WHERE filtra e JOIN combina registros; atenção a junções um-para-muitos que multiplicam linhas."
+          "why": "Certo. Chave estrangeira estabelece relação referenciando chave candidata de outra tabela, geralmente a chave primária. Exemplo: ocorrencias.id_pessoa referencia pessoas.id_pessoa, permitindo integridade referencial."
         },
         {
           "a": true,
           "q": "JOIN combina dados de tabelas relacionadas.",
-          "why": "JOIN é operação SQL que combina linhas de tabelas por condição de relacionamento. Por exemplo, vincular uma tabela de ocorrências à tabela de pessoas por id_pessoa; verifique cardinalidade para evitar dupla contagem."
+          "why": "Certo. JOIN combina linhas de tabelas conforme condição de relacionamento. Exemplo: relacionar Ocorrências e Pessoas por id_pessoa. Uma junção um-para-muitos pode multiplicar linhas e exige conferir a contagem."
         },
         {
           "a": false,
           "q": "Relacionamento muitos para muitos normalmente dispensa tabela associativa.",
-          "why": "Em modelo relacional, normalmente usa tabela intermediária. Exemplo e pegadinha: Chave primária identifica exclusivamente uma linha; estrangeira referencia chave de outra tabela. SELECT consulta, WHERE filtra e JOIN combina registros; atenção a junções um-para-muitos que multiplicam linhas."
+          "why": "Errado. Muitos-para-muitos normalmente é representado por tabela associativa com chaves estrangeiras para as duas entidades. Exemplo: aluno_disciplina liga alunos e disciplinas; dispensá-la pode provocar redundância."
         },
         {
           "a": false,
           "q": "WHERE é usado para ordenar os resultados.",
-          "why": "WHERE filtra; ORDER BY ordena. Exemplo e pegadinha: Chave primária identifica exclusivamente uma linha; estrangeira referencia chave de outra tabela. SELECT consulta, WHERE filtra e JOIN combina registros; atenção a junções um-para-muitos que multiplicam linhas."
+          "why": "Errado. WHERE filtra registros por condição, como WHERE municipio='Feijó'. Para ordenar o resultado, usa-se ORDER BY data ou ORDER BY valor DESC."
         }
       ],
       "slug": "pcac-2026-ti-bancos-dados-tabelas-chaves-consultas",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "5. Bancos de dados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": true,
+            "q": "Uma chave primária deve identificar unicamente o registro.",
+            "why": "Certo. Chave primária é identificador único de cada linha e não admite nulos. Exemplo: id_pessoa permite distinguir dois registros com nomes iguais."
+          },
+          {
+            "a": true,
+            "q": "Chave estrangeira referencia campo de outra tabela.",
+            "why": "Certo. Chave estrangeira estabelece relação referenciando chave candidata de outra tabela, geralmente a chave primária. Exemplo: ocorrencias.id_pessoa referencia pessoas.id_pessoa, permitindo integridade referencial."
+          },
+          {
+            "a": true,
+            "q": "JOIN combina dados de tabelas relacionadas.",
+            "why": "Certo. JOIN combina linhas de tabelas conforme condição de relacionamento. Exemplo: relacionar Ocorrências e Pessoas por id_pessoa. Uma junção um-para-muitos pode multiplicar linhas e exige conferir a contagem."
+          },
+          {
+            "a": false,
+            "q": "Relacionamento muitos para muitos normalmente dispensa tabela associativa.",
+            "why": "Errado. Muitos-para-muitos normalmente é representado por tabela associativa com chaves estrangeiras para as duas entidades. Exemplo: aluno_disciplina liga alunos e disciplinas; dispensá-la pode provocar redundância."
+          },
+          {
+            "a": false,
+            "q": "WHERE é usado para ordenar os resultados.",
+            "why": "Errado. WHERE filtra registros por condição, como WHERE municipio='Feijó'. Para ordenar o resultado, usa-se ORDER BY data ou ORDER BY valor DESC."
+          }
+        ],
+        "method": "Revisão individual de 5 exercícios, gabaritos e explicações de banco de dados, metadados e segurança da informação",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:06Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 4.",
+        "topic_label": "5. Bancos de dados",
+        "material_slug": "pcac-2026-ti-bancos-dados-tabelas-chaves-consultas"
       }
     },
     {
@@ -52,39 +82,69 @@
         {
           "a": true,
           "q": "Metadados podem descrever autoria, origem, formato e histórico de um arquivo.",
-          "why": "Eles contextualizam e permitem gerenciar dados. Exemplo e pegadinha: Metadados informam autor declarado, formato, criação, modificação, origem e acesso. Copiar arquivo pode alterar datas; hash auxilia checagem de integridade contra valor conhecido, mas não comprova autoria nem verdade do conteúdo."
+          "why": "Certo. Metadados podem registrar autor declarado, criação, alteração, formato, origem e eventos de processamento. Eles ajudam a interpretar o contexto do arquivo, mas cada campo pode exigir validação independente."
         },
         {
           "a": false,
           "q": "Um hash comprova a autoria do documento.",
-          "why": "Hash verifica integridade relativa, não autoria. Exemplo e pegadinha: Metadados informam autor declarado, formato, criação, modificação, origem e acesso. Copiar arquivo pode alterar datas; hash auxilia checagem de integridade contra valor conhecido, mas não comprova autoria nem verdade do conteúdo."
+          "why": "Errado. Hash criptográfico permite comparar integridade de um conteúdo com digest conhecido, mas não demonstra por si só quem o criou. Autoria exige evidências adicionais, como assinaturas verificáveis e cadeia de custódia."
         },
         {
           "a": false,
           "q": "Data de criação e data de modificação são necessariamente iguais.",
-          "why": "Criação e modificação são eventos diferentes no ciclo do arquivo. Um documento criado ontem pode ser editado hoje; sincronizações e cópias também podem alterar metadados de data, que exigem interpretação contextual."
+          "why": "Errado. Data de criação e modificação representam eventos distintos. Um arquivo criado ontem pode ser modificado hoje; cópias e sincronizações também podem alterar os metadados temporais."
         },
         {
           "a": true,
           "q": "Metadados podem conter dados pessoais e informações de localização.",
-          "why": "Propriedades podem revelar informações sensíveis. Exemplo e pegadinha: Metadados informam autor declarado, formato, criação, modificação, origem e acesso. Copiar arquivo pode alterar datas; hash auxilia checagem de integridade contra valor conhecido, mas não comprova autoria nem verdade do conteúdo."
+          "why": "Certo. Metadados podem incluir geolocalização EXIF, proprietário, endereço IP, nome de usuário e outros dados pessoais. Divulgação exige avaliar finalidade e proteção."
         },
         {
           "a": true,
           "q": "Preservar o original e documentar transformações melhora a rastreabilidade.",
-          "why": "Permite reconstruir operações realizadas. Exemplo e pegadinha: Metadados informam autor declarado, formato, criação, modificação, origem e acesso. Copiar arquivo pode alterar datas; hash auxilia checagem de integridade contra valor conhecido, mas não comprova autoria nem verdade do conteúdo."
+          "why": "Certo. Manter o original protegido e registrar cópias, transformações, ferramentas e responsáveis ajuda a reconstruir o histórico. Hash de referência pode auxiliar na verificação de integridade."
         }
       ],
       "slug": "pcac-2026-ti-metadados-propriedades-arquivos-rastreabilidade",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "7. Metadados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": true,
+            "q": "Metadados podem descrever autoria, origem, formato e histórico de um arquivo.",
+            "why": "Certo. Metadados podem registrar autor declarado, criação, alteração, formato, origem e eventos de processamento. Eles ajudam a interpretar o contexto do arquivo, mas cada campo pode exigir validação independente."
+          },
+          {
+            "a": false,
+            "q": "Um hash comprova a autoria do documento.",
+            "why": "Errado. Hash criptográfico permite comparar integridade de um conteúdo com digest conhecido, mas não demonstra por si só quem o criou. Autoria exige evidências adicionais, como assinaturas verificáveis e cadeia de custódia."
+          },
+          {
+            "a": false,
+            "q": "Data de criação e data de modificação são necessariamente iguais.",
+            "why": "Errado. Data de criação e modificação representam eventos distintos. Um arquivo criado ontem pode ser modificado hoje; cópias e sincronizações também podem alterar os metadados temporais."
+          },
+          {
+            "a": true,
+            "q": "Metadados podem conter dados pessoais e informações de localização.",
+            "why": "Certo. Metadados podem incluir geolocalização EXIF, proprietário, endereço IP, nome de usuário e outros dados pessoais. Divulgação exige avaliar finalidade e proteção."
+          },
+          {
+            "a": true,
+            "q": "Preservar o original e documentar transformações melhora a rastreabilidade.",
+            "why": "Certo. Manter o original protegido e registrar cópias, transformações, ferramentas e responsáveis ajuda a reconstruir o histórico. Hash de referência pode auxiliar na verificação de integridade."
+          }
+        ],
+        "method": "Revisão individual de 5 exercícios, gabaritos e explicações de banco de dados, metadados e segurança da informação",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:06Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 7.",
+        "topic_label": "7. Metadados",
+        "material_slug": "pcac-2026-ti-metadados-propriedades-arquivos-rastreabilidade"
       }
     },
     {
@@ -92,39 +152,69 @@
         {
           "a": false,
           "q": "Padronizar dados significa apagar todas as diferenças entre registros.",
-          "why": "Padronização preserva diferenças legítimas. Exemplo e pegadinha: Padronize datas e identificadores preservando os valores originais; campos vazios não são automaticamente zero. Nomes iguais podem ser homônimos; compare chaves, contexto e cardinalidade antes de juntar registros."
+          "why": "Errado. Padronizar significa aplicar regras consistentes de formato, mantendo diferenças reais e preservando valores de origem. Homônimos ou registros distintos não devem ser fundidos apenas por semelhança."
         },
         {
           "a": true,
           "q": "O cruzamento deve documentar origem e transformações dos dados.",
-          "why": "Isso assegura rastreabilidade. Exemplo e pegadinha: Padronize datas e identificadores preservando os valores originais; campos vazios não são automaticamente zero. Nomes iguais podem ser homônimos; compare chaves, contexto e cardinalidade antes de juntar registros."
+          "why": "Certo. Documentar fonte, data, transformações e critérios do cruzamento permite auditar resultados. Exemplo: registrar como uma data em texto foi convertida e qual chave relacionou tabelas."
         },
         {
           "a": true,
           "q": "Correspondência aproximada pode gerar falsos pareamentos.",
-          "why": "Deve ser validada por contexto e outros atributos. Exemplo e pegadinha: Padronize datas e identificadores preservando os valores originais; campos vazios não são automaticamente zero. Nomes iguais podem ser homônimos; compare chaves, contexto e cardinalidade antes de juntar registros."
+          "why": "Certo. Correspondência aproximada entre nomes pode unir pessoas diferentes, produzindo falsos positivos, ou deixar de unir nomes com grafia alterada. É preciso validação complementar."
         },
         {
           "a": true,
           "q": "Um relatório deve distinguir fatos observados, inferências e hipóteses.",
-          "why": "Isso evita apresentar suposição como fato. Exemplo e pegadinha: Padronize datas e identificadores preservando os valores originais; campos vazios não são automaticamente zero. Nomes iguais podem ser homônimos; compare chaves, contexto e cardinalidade antes de juntar registros."
+          "why": "Certo. Fato observado provém de dado ou documento; inferência é conclusão sustentada; hipótese ainda requer teste. Relatório confiável não apresenta suspeita como crime comprovado."
         },
         {
           "a": false,
           "q": "Compartilhar toda a base sem controle de acesso é boa prática.",
-          "why": "Aplique menor privilégio e proteção de dados. Exemplo e pegadinha: Padronize datas e identificadores preservando os valores originais; campos vazios não são automaticamente zero. Nomes iguais podem ser homônimos; compare chaves, contexto e cardinalidade antes de juntar registros."
+          "why": "Errado. Compartilhar base integral sem controle de acesso viola menor privilégio e pode divulgar dados pessoais ou sigilosos. Conceda acesso proporcional à finalidade e registre operações."
         }
       ],
       "slug": "pcac-2026-ti-organizacao-tratamento-dados-digitais",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "8. Organização e tratamento de informações digitais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": false,
+            "q": "Padronizar dados significa apagar todas as diferenças entre registros.",
+            "why": "Errado. Padronizar significa aplicar regras consistentes de formato, mantendo diferenças reais e preservando valores de origem. Homônimos ou registros distintos não devem ser fundidos apenas por semelhança."
+          },
+          {
+            "a": true,
+            "q": "O cruzamento deve documentar origem e transformações dos dados.",
+            "why": "Certo. Documentar fonte, data, transformações e critérios do cruzamento permite auditar resultados. Exemplo: registrar como uma data em texto foi convertida e qual chave relacionou tabelas."
+          },
+          {
+            "a": true,
+            "q": "Correspondência aproximada pode gerar falsos pareamentos.",
+            "why": "Certo. Correspondência aproximada entre nomes pode unir pessoas diferentes, produzindo falsos positivos, ou deixar de unir nomes com grafia alterada. É preciso validação complementar."
+          },
+          {
+            "a": true,
+            "q": "Um relatório deve distinguir fatos observados, inferências e hipóteses.",
+            "why": "Certo. Fato observado provém de dado ou documento; inferência é conclusão sustentada; hipótese ainda requer teste. Relatório confiável não apresenta suspeita como crime comprovado."
+          },
+          {
+            "a": false,
+            "q": "Compartilhar toda a base sem controle de acesso é boa prática.",
+            "why": "Errado. Compartilhar base integral sem controle de acesso viola menor privilégio e pode divulgar dados pessoais ou sigilosos. Conceda acesso proporcional à finalidade e registre operações."
+          }
+        ],
+        "method": "Revisão individual de 5 exercícios, gabaritos e explicações de banco de dados, metadados e segurança da informação",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:06Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 8.",
+        "topic_label": "8. Organização e tratamento de informações digitais",
+        "material_slug": "pcac-2026-ti-organizacao-tratamento-dados-digitais"
       }
     },
     {
@@ -132,39 +222,69 @@
         {
           "a": true,
           "q": "Cada coluna de uma base tabular deve representar uma variável.",
-          "why": "Essa estrutura facilita filtragem e análise. Exemplo e pegadinha: Referência absoluta $B$1 fixa coluna e linha; referência relativa B1 pode variar ao copiar. A tabela dinâmica agrupa registros; uma chave duplicada pode multiplicar linhas numa junção; valide os resultados após importar dados."
+          "why": "Certo. Em base tabular bem organizada, cada coluna descreve uma variável ou atributo, e cada linha representa um registro. Exemplo: data, município, tipo e identificador de ocorrência."
         },
         {
           "a": false,
           "q": "CSV preserva fórmulas, formatação e múltiplas abas do arquivo original.",
-          "why": "CSV é texto tabular e não preserva esses recursos. Exemplo e pegadinha: Referência absoluta $B$1 fixa coluna e linha; referência relativa B1 pode variar ao copiar. A tabela dinâmica agrupa registros; uma chave duplicada pode multiplicar linhas numa junção; valide os resultados após importar dados."
+          "why": "Errado. CSV é texto tabular, normalmente uma tabela por arquivo. Não preserva fórmulas calculáveis, múltiplas abas nem formatação complexa de planilhas XLSX/ODS."
         },
         {
           "a": true,
           "q": "Classificação ordena registros e filtros exibem subconjuntos por critério.",
-          "why": "São funções distintas de organização. Exemplo e pegadinha: Referência absoluta $B$1 fixa coluna e linha; referência relativa B1 pode variar ao copiar. A tabela dinâmica agrupa registros; uma chave duplicada pode multiplicar linhas numa junção; valide os resultados após importar dados."
+          "why": "Certo. Classificar altera a ordem apresentada dos registros; filtrar exibe apenas linhas que satisfazem critério, sem apagá-las. Exemplo: ordenar por data e filtrar por município."
         },
         {
           "a": false,
           "q": "Todo registro parecido deve ser excluído como duplicado.",
-          "why": "É necessário validar chave, contexto e possibilidade de eventos distintos. Exemplo e pegadinha: Referência absoluta $B$1 fixa coluna e linha; referência relativa B1 pode variar ao copiar. A tabela dinâmica agrupa registros; uma chave duplicada pode multiplicar linhas numa junção; valide os resultados após importar dados."
+          "why": "Errado. Registros semelhantes podem ser pessoas distintas, como homônimos, ou eventos legítimos repetidos. Deduplicação exige critérios e conferência de identificadores, datas e contexto."
         },
         {
           "a": true,
           "q": "Tabelas dinâmicas podem agrupar e agregar dados.",
-          "why": "São usadas para resumir bases tabulares. Exemplo e pegadinha: Referência absoluta $B$1 fixa coluna e linha; referência relativa B1 pode variar ao copiar. A tabela dinâmica agrupa registros; uma chave duplicada pode multiplicar linhas numa junção; valide os resultados após importar dados."
+          "why": "Certo. Tabelas dinâmicas resumem registros por categorias e funções de agregação, como total de atendimentos por mês. É preciso validar campo, medida e filtros usados no cálculo."
         }
       ],
       "slug": "pcac-2026-ti-planilhas-analise-dados-importacao-deduplicacao",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "4. Planilhas eletrônicas aplicadas à análise de dados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": true,
+            "q": "Cada coluna de uma base tabular deve representar uma variável.",
+            "why": "Certo. Em base tabular bem organizada, cada coluna descreve uma variável ou atributo, e cada linha representa um registro. Exemplo: data, município, tipo e identificador de ocorrência."
+          },
+          {
+            "a": false,
+            "q": "CSV preserva fórmulas, formatação e múltiplas abas do arquivo original.",
+            "why": "Errado. CSV é texto tabular, normalmente uma tabela por arquivo. Não preserva fórmulas calculáveis, múltiplas abas nem formatação complexa de planilhas XLSX/ODS."
+          },
+          {
+            "a": true,
+            "q": "Classificação ordena registros e filtros exibem subconjuntos por critério.",
+            "why": "Certo. Classificar altera a ordem apresentada dos registros; filtrar exibe apenas linhas que satisfazem critério, sem apagá-las. Exemplo: ordenar por data e filtrar por município."
+          },
+          {
+            "a": false,
+            "q": "Todo registro parecido deve ser excluído como duplicado.",
+            "why": "Errado. Registros semelhantes podem ser pessoas distintas, como homônimos, ou eventos legítimos repetidos. Deduplicação exige critérios e conferência de identificadores, datas e contexto."
+          },
+          {
+            "a": true,
+            "q": "Tabelas dinâmicas podem agrupar e agregar dados.",
+            "why": "Certo. Tabelas dinâmicas resumem registros por categorias e funções de agregação, como total de atendimentos por mês. É preciso validar campo, medida e filtros usados no cálculo."
+          }
+        ],
+        "method": "Revisão individual de 5 exercícios, gabaritos e explicações de banco de dados, metadados e segurança da informação",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:06Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 3.",
+        "topic_label": "4. Planilhas eletrônicas aplicadas à análise de dados",
+        "material_slug": "pcac-2026-ti-planilhas-analise-dados-importacao-deduplicacao"
       }
     },
     {
@@ -172,39 +292,69 @@
         {
           "a": true,
           "q": "IPv6 utiliza endereços de 128 bits.",
-          "why": "Essa é a extensão do endereçamento IPv6. Exemplo e pegadinha: TLS protege dados em trânsito; criptografia em repouso protege armazenamento; hash detecta alterações em relação a uma referência. Backup independente e testado é essencial porque ransomware e sincronização podem afetar cópias."
+          "why": "Certo. IPv6 possui endereço de 128 bits, normalmente representado por grupos hexadecimais. IPv4 utiliza 32 bits; a diferença de tamanho explica espaço muito maior de endereçamento em IPv6."
         },
         {
           "a": false,
           "q": "DHCP é o serviço responsável por resolver nomes de domínio.",
-          "why": "DNS resolve nomes; DHCP distribui parâmetros de configuração. Exemplo e pegadinha: TLS protege dados em trânsito; criptografia em repouso protege armazenamento; hash detecta alterações em relação a uma referência. Backup independente e testado é essencial porque ransomware e sincronização podem afetar cópias."
+          "why": "Errado. DHCP distribui parâmetros IP automaticamente, como endereço, máscara e gateway. DNS resolve nomes de domínio em registros como endereços IP; são serviços distintos."
         },
         {
           "a": true,
           "q": "Criptografia simétrica utiliza a mesma chave para cifrar e decifrar.",
-          "why": "Essa é sua característica essencial. Exemplo e pegadinha: TLS protege dados em trânsito; criptografia em repouso protege armazenamento; hash detecta alterações em relação a uma referência. Backup independente e testado é essencial porque ransomware e sincronização podem afetar cópias."
+          "why": "Certo. Criptografia simétrica usa a mesma chave secreta para cifrar e decifrar. Exemplo: AES. O desafio é distribuir e proteger a chave de forma segura."
         },
         {
           "a": false,
           "q": "Hash é um mecanismo comum de criptografia reversível.",
-          "why": "Hash gera resumo e não é projetado para decifragem reversível. Exemplo e pegadinha: TLS protege dados em trânsito; criptografia em repouso protege armazenamento; hash detecta alterações em relação a uma referência. Backup independente e testado é essencial porque ransomware e sincronização podem afetar cópias."
+          "why": "Errado. Hash criptográfico é função de mão única destinada a produzir resumo, não cifra reversível. Conhecer o hash não fornece operação de decifragem para recuperar diretamente o conteúdo original."
         },
         {
           "a": false,
           "q": "A sincronização em nuvem, sozinha, garante cópia imutável contra ransomware.",
-          "why": "A sincronização pode replicar alterações maliciosas; backup isolado ou imutável é necessário."
+          "why": "Errado. Sincronização propaga exclusões e arquivos comprometidos, inclusive por ransomware, e não garante imutabilidade. Backup independente, protegido e testado deve permitir restaurar versões anteriores."
         }
       ],
       "slug": "pcac-2026-ti-protocolos-criptografia-backup-evidencias",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "2. Redes, protocolos, criptografia, backup e evidências digitais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": true,
+            "q": "IPv6 utiliza endereços de 128 bits.",
+            "why": "Certo. IPv6 possui endereço de 128 bits, normalmente representado por grupos hexadecimais. IPv4 utiliza 32 bits; a diferença de tamanho explica espaço muito maior de endereçamento em IPv6."
+          },
+          {
+            "a": false,
+            "q": "DHCP é o serviço responsável por resolver nomes de domínio.",
+            "why": "Errado. DHCP distribui parâmetros IP automaticamente, como endereço, máscara e gateway. DNS resolve nomes de domínio em registros como endereços IP; são serviços distintos."
+          },
+          {
+            "a": true,
+            "q": "Criptografia simétrica utiliza a mesma chave para cifrar e decifrar.",
+            "why": "Certo. Criptografia simétrica usa a mesma chave secreta para cifrar e decifrar. Exemplo: AES. O desafio é distribuir e proteger a chave de forma segura."
+          },
+          {
+            "a": false,
+            "q": "Hash é um mecanismo comum de criptografia reversível.",
+            "why": "Errado. Hash criptográfico é função de mão única destinada a produzir resumo, não cifra reversível. Conhecer o hash não fornece operação de decifragem para recuperar diretamente o conteúdo original."
+          },
+          {
+            "a": false,
+            "q": "A sincronização em nuvem, sozinha, garante cópia imutável contra ransomware.",
+            "why": "Errado. Sincronização propaga exclusões e arquivos comprometidos, inclusive por ransomware, e não garante imutabilidade. Backup independente, protegido e testado deve permitir restaurar versões anteriores."
+          }
+        ],
+        "method": "Revisão individual de 5 exercícios, gabaritos e explicações de banco de dados, metadados e segurança da informação",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:06Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material de fundamentos de redes e segurança. Procedimentos de evidência digital devem seguir normas institucionais e legislação aplicável.",
+        "topic_label": "2. Redes, protocolos, criptografia, backup e evidências digitais",
+        "material_slug": "pcac-2026-ti-protocolos-criptografia-backup-evidencias"
       }
     },
     {
@@ -212,72 +362,139 @@
         {
           "a": true,
           "q": "DNS é o serviço que normalmente traduz nomes de domínio em endereços IP.",
-          "why": "DNS resolve nomes para endereços usados na comunicação de rede. Exemplo e pegadinha: DHCP distribui configurações IP; DNS resolve nomes; gateway encaminha pacotes para outras redes. TCP oferece conexão e ordenação; UDP não garante entrega e ordem sozinho. Diagnostique IP, DNS e rota separadamente."
+          "why": "Certo. DNS associa nomes de domínio a registros de recurso, incluindo endereços IPv4/IPv6. Exemplo: resolver portal.gov.br para um endereço IP; isso não é a função do DHCP."
         },
         {
           "a": true,
           "q": "DHCP é o serviço que normalmente atribui automaticamente parâmetros de rede aos dispositivos.",
-          "why": "DHCP pode fornecer IP, máscara, gateway e DNS. Exemplo e pegadinha: DHCP distribui configurações IP; DNS resolve nomes; gateway encaminha pacotes para outras redes. TCP oferece conexão e ordenação; UDP não garante entrega e ordem sozinho. Diagnostique IP, DNS e rota separadamente."
+          "why": "Certo. DHCP pode fornecer automaticamente IP, máscara, gateway, DNS e prazo de concessão. Não é o serviço que traduz nome de domínio para endereço IP."
         },
         {
           "a": false,
           "q": "TCP e UDP garantem ambos a entrega ordenada e confiável dos dados.",
-          "why": "TCP oferece mecanismos de confiabilidade e ordenação; UDP não garante isso por si só."
+          "why": "Errado. TCP oferece mecanismos de conexão, ordenação, confirmação e retransmissão; UDP não garante entrega nem ordem por si só. Ambos transportam datagramas ou segmentos, mas têm propriedades diferentes."
         },
         {
           "a": true,
           "q": "O gateway padrão encaminha tráfego destinado a outras redes.",
-          "why": "É a rota de saída para destinos fora da rede local. Exemplo e pegadinha: DHCP distribui configurações IP; DNS resolve nomes; gateway encaminha pacotes para outras redes. TCP oferece conexão e ordenação; UDP não garante entrega e ordem sozinho. Diagnostique IP, DNS e rota separadamente."
+          "why": "Certo. Gateway padrão, normalmente um roteador, é usado para encaminhar pacotes cujo destino está fora da rede local. Dentro da mesma sub-rede, a comunicação pode ocorrer sem passar pelo gateway."
         },
         {
           "a": false,
           "q": "Um endereço IP, isoladamente, identifica de forma conclusiva a pessoa que utilizou a conexão.",
-          "why": "É preciso correlacionar data, horário, porta, provedor, NAT e outros dados. Exemplo e pegadinha: DHCP distribui configurações IP; DNS resolve nomes; gateway encaminha pacotes para outras redes. TCP oferece conexão e ordenação; UDP não garante entrega e ordem sozinho. Diagnostique IP, DNS e rota separadamente."
+          "why": "Errado. Um IP pode ser compartilhado via NAT, reutilizado dinamicamente ou acessado por diferentes usuários/dispositivos. Identificar pessoa requer logs, horário, contexto e outras evidências."
         }
       ],
       "slug": "pcac-2026-ti-redes-ip-dns-dhcp-tcp-udp-servicos",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "Redes, endereçamento IP, DNS, DHCP e protocolos de comunicação",
-      "practice_review": null
+      "practice_review": {
+        "items": [
+          {
+            "a": true,
+            "q": "DNS é o serviço que normalmente traduz nomes de domínio em endereços IP.",
+            "why": "Certo. DNS associa nomes de domínio a registros de recurso, incluindo endereços IPv4/IPv6. Exemplo: resolver portal.gov.br para um endereço IP; isso não é a função do DHCP."
+          },
+          {
+            "a": true,
+            "q": "DHCP é o serviço que normalmente atribui automaticamente parâmetros de rede aos dispositivos.",
+            "why": "Certo. DHCP pode fornecer automaticamente IP, máscara, gateway, DNS e prazo de concessão. Não é o serviço que traduz nome de domínio para endereço IP."
+          },
+          {
+            "a": false,
+            "q": "TCP e UDP garantem ambos a entrega ordenada e confiável dos dados.",
+            "why": "Errado. TCP oferece mecanismos de conexão, ordenação, confirmação e retransmissão; UDP não garante entrega nem ordem por si só. Ambos transportam datagramas ou segmentos, mas têm propriedades diferentes."
+          },
+          {
+            "a": true,
+            "q": "O gateway padrão encaminha tráfego destinado a outras redes.",
+            "why": "Certo. Gateway padrão, normalmente um roteador, é usado para encaminhar pacotes cujo destino está fora da rede local. Dentro da mesma sub-rede, a comunicação pode ocorrer sem passar pelo gateway."
+          },
+          {
+            "a": false,
+            "q": "Um endereço IP, isoladamente, identifica de forma conclusiva a pessoa que utilizou a conexão.",
+            "why": "Errado. Um IP pode ser compartilhado via NAT, reutilizado dinamicamente ou acessado por diferentes usuários/dispositivos. Identificar pessoa requer logs, horário, contexto e outras evidências."
+          }
+        ],
+        "method": "Conferência individual de 5 gabaritos e justificativas de redes, protocolos e controle de acesso; nenhum item usa fonte jurídica especializada",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:32Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento didático autoral do Anexo III do Edital PC-AC 2026. Questões autorais, não oficiais.",
+        "topic_label": "Redes, endereçamento IP, DNS, DHCP e protocolos de comunicação",
+        "material_slug": "pcac-2026-ti-redes-ip-dns-dhcp-tcp-udp-servicos"
+      }
     },
     {
       "quiz": [
         {
           "a": true,
           "q": "IPv4 usa 32 bits e IPv6 usa 128 bits.",
-          "why": "São os comprimentos dos endereços. Exemplo e pegadinha: LAN é rede local; WAN conecta áreas amplas; roteador encaminha entre redes. DNS converte nomes em endereços IP; DHCP atribui configuração IP; SMTP é associado a envio de e-mail, não a navegação web."
+          "why": "Certo. IPv4 usa endereços de 32 bits e IPv6 de 128 bits. No formato usual, IPv4 aparece em quatro números decimais e IPv6 em grupos hexadecimais."
         },
         {
           "a": false,
           "q": "DNS distribui automaticamente endereços IP aos clientes.",
-          "why": "DHCP distribui configuração; DNS resolve nomes. Exemplo e pegadinha: LAN é rede local; WAN conecta áreas amplas; roteador encaminha entre redes. DNS converte nomes em endereços IP; DHCP atribui configuração IP; SMTP é associado a envio de e-mail, não a navegação web."
+          "why": "Errado. DNS resolve nomes; DHCP atribui configurações IP automaticamente. Exemplo: DHCP concede 192.0.2.15 e DNS responde por endereço associado a portal.gov.br."
         },
         {
           "a": true,
           "q": "TCP oferece entrega confiável e ordenada.",
-          "why": "É orientado à conexão e controle de entrega. Exemplo e pegadinha: LAN é rede local; WAN conecta áreas amplas; roteador encaminha entre redes. DNS converte nomes em endereços IP; DHCP atribui configuração IP; SMTP é associado a envio de e-mail, não a navegação web."
+          "why": "Certo. TCP fornece mecanismos de entrega ordenada, confirmação de recebimento e retransmissão de segmentos perdidos. Isso permite uma conexão confiável no nível de transporte."
         },
         {
           "a": false,
           "q": "UDP garante a entrega de todos os pacotes.",
-          "why": "UDP não garante entrega ou ordenação. Exemplo e pegadinha: LAN é rede local; WAN conecta áreas amplas; roteador encaminha entre redes. DNS converte nomes em endereços IP; DHCP atribui configuração IP; SMTP é associado a envio de e-mail, não a navegação web."
+          "why": "Errado. UDP é protocolo sem conexão e não oferece garantia própria de entrega, ordem ou retransmissão. Aplicações podem implementar mecanismos adicionais, mas não são obrigação do UDP."
         },
         {
           "a": true,
           "q": "O gateway padrão encaminha tráfego para outras redes.",
-          "why": "É o próximo salto para destinos fora da rede local. Exemplo e pegadinha: LAN é rede local; WAN conecta áreas amplas; roteador encaminha entre redes. DNS converte nomes em endereços IP; DHCP atribui configuração IP; SMTP é associado a envio de e-mail, não a navegação web."
+          "why": "Certo. Gateway padrão encaminha o tráfego destinado a redes externas à rede local. O dispositivo pode usar seu endereço IP e máscara para saber quando encaminhar o pacote ao roteador."
         }
       ],
       "slug": "pcac-2026-ti-redes-ip-protocolos-servicos",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "6. Redes de computadores",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": true,
+            "q": "IPv4 usa 32 bits e IPv6 usa 128 bits.",
+            "why": "Certo. IPv4 usa endereços de 32 bits e IPv6 de 128 bits. No formato usual, IPv4 aparece em quatro números decimais e IPv6 em grupos hexadecimais."
+          },
+          {
+            "a": false,
+            "q": "DNS distribui automaticamente endereços IP aos clientes.",
+            "why": "Errado. DNS resolve nomes; DHCP atribui configurações IP automaticamente. Exemplo: DHCP concede 192.0.2.15 e DNS responde por endereço associado a portal.gov.br."
+          },
+          {
+            "a": true,
+            "q": "TCP oferece entrega confiável e ordenada.",
+            "why": "Certo. TCP fornece mecanismos de entrega ordenada, confirmação de recebimento e retransmissão de segmentos perdidos. Isso permite uma conexão confiável no nível de transporte."
+          },
+          {
+            "a": false,
+            "q": "UDP garante a entrega de todos os pacotes.",
+            "why": "Errado. UDP é protocolo sem conexão e não oferece garantia própria de entrega, ordem ou retransmissão. Aplicações podem implementar mecanismos adicionais, mas não são obrigação do UDP."
+          },
+          {
+            "a": true,
+            "q": "O gateway padrão encaminha tráfego para outras redes.",
+            "why": "Certo. Gateway padrão encaminha o tráfego destinado a redes externas à rede local. O dispositivo pode usar seu endereço IP e máscara para saber quando encaminhar o pacote ao roteador."
+          }
+        ],
+        "method": "Conferência individual de 5 gabaritos e justificativas de redes, protocolos e controle de acesso; nenhum item usa fonte jurídica especializada",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:32Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 5.",
+        "topic_label": "6. Redes de computadores",
+        "material_slug": "pcac-2026-ti-redes-ip-protocolos-servicos"
       }
     },
     {
@@ -285,43 +502,79 @@
         {
           "a": false,
           "q": "A confidencialidade garante que os dados estejam sempre disponíveis, inclusive para usuários sem autorização.",
-          "why": "Confidencialidade limita o acesso a pessoas e sistemas autorizados. Disponibilidade é o pilar relacionado ao acesso quando necessário."
+          "why": "Errado. Confidencialidade restringe acesso a pessoas autorizadas; disponibilidade busca manter serviços acessíveis quando necessários. Permitir acesso sem autorização fere confidencialidade, não a garante."
         },
         {
           "a": true,
           "q": "Um usuário pode ser autenticado corretamente e ainda assim não ter autorização para consultar um inquérito sigiloso.",
-          "why": "Autenticação confirma a identidade; autorização verifica as permissões atribuídas a essa identidade."
+          "why": "Certo. Autenticação prova a identidade apresentada; autorização define escopo. Servidor pode entrar no sistema com sua conta e ainda ser impedido de acessar processo sigiloso sem atribuição."
         },
         {
           "a": false,
           "q": "Duas senhas diferentes, usadas em sequência, configuram necessariamente autenticação multifator.",
-          "why": "Duas senhas são fatores da mesma categoria (algo que a pessoa sabe). MFA combina categorias diferentes."
+          "why": "Errado. Duas senhas pertencem ao mesmo fator de conhecimento. Autenticação multifator combina categorias independentes, como senha e token físico ou biometria, conforme o método."
         },
         {
           "a": true,
           "q": "O hash de um arquivo pode ser usado para detectar alteração do conteúdo, mas não comprova sozinho quem criou o arquivo.",
-          "why": "O hash permite comparar resumos e identificar mudanças; autoria e autenticidade dependem de outros controles e evidências."
+          "why": "Certo. Hash permite comparar integridade de arquivo com valor de referência, mas não determina sozinho o criador. Autoria requer assinatura verificável, rastreabilidade e outros elementos."
         },
         {
           "a": false,
           "q": "A sincronização automática entre computadores substitui integralmente a realização de backups.",
-          "why": "A sincronização pode replicar exclusões e alterações maliciosas. Backups versionados, isolados ou imutáveis permitem recuperação."
+          "why": "Errado. Sincronização pode propagar exclusões, corrupção e ransomware. Backup independente, com retenção e teste de restauração, reduz risco de perda permanente."
         },
         {
           "a": false,
           "q": "O princípio do menor privilégio recomenda conceder a todos os servidores acesso administrativo para evitar atrasos no trabalho.",
-          "why": "O princípio limita permissões ao estritamente necessário para reduzir a superfície de risco."
+          "why": "Errado. Menor privilégio concede somente o acesso estritamente necessário. Distribuir privilégios administrativos a todos aumenta o impacto de erro humano ou comprometimento de conta."
         }
       ],
       "slug": "pcac-2026-ti-seguranca-informacao-controle-acesso-backup",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "6. Segurança da informação — confidencialidade, integridade, disponibilidade, controle de acesso, criptografia e backup",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": false,
+            "q": "A confidencialidade garante que os dados estejam sempre disponíveis, inclusive para usuários sem autorização.",
+            "why": "Errado. Confidencialidade restringe acesso a pessoas autorizadas; disponibilidade busca manter serviços acessíveis quando necessários. Permitir acesso sem autorização fere confidencialidade, não a garante."
+          },
+          {
+            "a": true,
+            "q": "Um usuário pode ser autenticado corretamente e ainda assim não ter autorização para consultar um inquérito sigiloso.",
+            "why": "Certo. Autenticação prova a identidade apresentada; autorização define escopo. Servidor pode entrar no sistema com sua conta e ainda ser impedido de acessar processo sigiloso sem atribuição."
+          },
+          {
+            "a": false,
+            "q": "Duas senhas diferentes, usadas em sequência, configuram necessariamente autenticação multifator.",
+            "why": "Errado. Duas senhas pertencem ao mesmo fator de conhecimento. Autenticação multifator combina categorias independentes, como senha e token físico ou biometria, conforme o método."
+          },
+          {
+            "a": true,
+            "q": "O hash de um arquivo pode ser usado para detectar alteração do conteúdo, mas não comprova sozinho quem criou o arquivo.",
+            "why": "Certo. Hash permite comparar integridade de arquivo com valor de referência, mas não determina sozinho o criador. Autoria requer assinatura verificável, rastreabilidade e outros elementos."
+          },
+          {
+            "a": false,
+            "q": "A sincronização automática entre computadores substitui integralmente a realização de backups.",
+            "why": "Errado. Sincronização pode propagar exclusões, corrupção e ransomware. Backup independente, com retenção e teste de restauração, reduz risco de perda permanente."
+          },
+          {
+            "a": false,
+            "q": "O princípio do menor privilégio recomenda conceder a todos os servidores acesso administrativo para evitar atrasos no trabalho.",
+            "why": "Errado. Menor privilégio concede somente o acesso estritamente necessário. Distribuir privilégios administrativos a todos aumenta o impacto de erro humano ou comprometimento de conta."
+          }
+        ],
+        "method": "Conferência individual de 6 gabaritos e justificativas de redes, protocolos e controle de acesso; nenhum item usa fonte jurídica especializada",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 6
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:32Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC, de 05/11/2026, Anexo III — Oficial Investigador, item 6 (Segurança da informação), página 50. Conteúdo alinhado à data de corte do edital.",
+        "topic_label": "6. Segurança da informação — confidencialidade, integridade, disponibilidade, controle de acesso, criptografia e backup",
+        "material_slug": "pcac-2026-ti-seguranca-informacao-controle-acesso-backup"
       }
     },
     {
@@ -329,39 +582,69 @@
         {
           "a": false,
           "q": "Confidencialidade significa que a informação deve estar disponível a qualquer pessoa, sem restrição.",
-          "why": "Confidencialidade restringe o acesso a pessoas e sistemas autorizados. Exemplo e pegadinha: Tríade CID: confidencialidade, integridade e disponibilidade. Autenticação confirma identidade; autorização define o escopo de acesso. Uma senha compartilhada enfraquece rastreabilidade, e menor privilégio reduz exposição."
+          "why": "Errado. Confidencialidade significa impedir divulgação a não autorizados. Disponibilidade é outro princípio e não implica liberação irrestrita de informações."
         },
         {
           "a": true,
           "q": "Autenticação verifica a identidade, enquanto autorização define permissões de acesso.",
-          "why": "São etapas diferentes do controle de acesso. Exemplo e pegadinha: Tríade CID: confidencialidade, integridade e disponibilidade. Autenticação confirma identidade; autorização define o escopo de acesso. Uma senha compartilhada enfraquece rastreabilidade, e menor privilégio reduz exposição."
+          "why": "Certo. Autenticação verifica identidade; autorização verifica permissão. Exemplo: entrar com senha válida não autoriza automaticamente alterar cadastros reservados."
         },
         {
           "a": false,
           "q": "O DNS é responsável por distribuir automaticamente endereços IP aos dispositivos da rede.",
-          "why": "Essa função é tipicamente realizada pelo DHCP; DNS resolve nomes. Exemplo e pegadinha: Tríade CID: confidencialidade, integridade e disponibilidade. Autenticação confirma identidade; autorização define o escopo de acesso. Uma senha compartilhada enfraquece rastreabilidade, e menor privilégio reduz exposição."
+          "why": "Errado. DNS resolve nomes de domínio. A distribuição automática de endereço IP e parâmetros de rede é normalmente realizada por DHCP."
         },
         {
           "a": true,
           "q": "O protocolo TCP oferece mecanismos de transporte confiável e ordenado.",
-          "why": "TCP é orientado à conexão e oferece controle de entrega e ordenação. Exemplo e pegadinha: Tríade CID: confidencialidade, integridade e disponibilidade. Autenticação confirma identidade; autorização define o escopo de acesso. Uma senha compartilhada enfraquece rastreabilidade, e menor privilégio reduz exposição."
+          "why": "Certo. TCP fornece mecanismos de transmissão confiável e ordenada, como sequenciamento, confirmações e retransmissões. Não se deve atribuir essas mesmas garantias diretamente ao UDP."
         },
         {
           "a": false,
           "q": "Uma função hash comum é projetada para permitir a recuperação direta do texto original por decifragem.",
-          "why": "Hash é uma função de resumo unidirecional, não um mecanismo de criptografia reversível."
+          "why": "Errado. Hash é projetado para produzir digest difícil de inverter, não para criptografar com chave e depois decifrar. Não existe operação geral de 'descriptografar hash' recuperando o texto original."
         }
       ],
       "slug": "pcac-2026-ti-seguranca-informacao-fundamentos-redes",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "Sistemas, dados, redes, protocolos, segurança e proteção de informações",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": false,
+            "q": "Confidencialidade significa que a informação deve estar disponível a qualquer pessoa, sem restrição.",
+            "why": "Errado. Confidencialidade significa impedir divulgação a não autorizados. Disponibilidade é outro princípio e não implica liberação irrestrita de informações."
+          },
+          {
+            "a": true,
+            "q": "Autenticação verifica a identidade, enquanto autorização define permissões de acesso.",
+            "why": "Certo. Autenticação verifica identidade; autorização verifica permissão. Exemplo: entrar com senha válida não autoriza automaticamente alterar cadastros reservados."
+          },
+          {
+            "a": false,
+            "q": "O DNS é responsável por distribuir automaticamente endereços IP aos dispositivos da rede.",
+            "why": "Errado. DNS resolve nomes de domínio. A distribuição automática de endereço IP e parâmetros de rede é normalmente realizada por DHCP."
+          },
+          {
+            "a": true,
+            "q": "O protocolo TCP oferece mecanismos de transporte confiável e ordenado.",
+            "why": "Certo. TCP fornece mecanismos de transmissão confiável e ordenada, como sequenciamento, confirmações e retransmissões. Não se deve atribuir essas mesmas garantias diretamente ao UDP."
+          },
+          {
+            "a": false,
+            "q": "Uma função hash comum é projetada para permitir a recuperação direta do texto original por decifragem.",
+            "why": "Errado. Hash é projetado para produzir digest difícil de inverter, não para criptografar com chave e depois decifrar. Não existe operação geral de 'descriptografar hash' recuperando o texto original."
+          }
+        ],
+        "method": "Conferência individual de 5 gabaritos e justificativas de redes, protocolos e controle de acesso; nenhum item usa fonte jurídica especializada",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:32Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material introdutório baseado no programa do edital e em referências oficiais de segurança da informação da Polícia Federal e do Gabinete de Segurança Institucional.",
+        "topic_label": "Sistemas, dados, redes, protocolos, segurança e proteção de informações",
+        "material_slug": "pcac-2026-ti-seguranca-informacao-fundamentos-redes"
       }
     },
     {
@@ -369,39 +652,69 @@
         {
           "a": true,
           "q": "No Linux, as permissões tradicionais distinguem proprietário, grupo e outros.",
-          "why": "É o modelo clássico de permissões. Exemplo e pegadinha: Sistema operacional gerencia processos, memória, arquivos e dispositivos. Em Linux, rwx significa leitura, escrita e execução para proprietário, grupo e outros. Renomear .txt como .pdf não converte o conteúdo."
+          "why": "Certo. Permissões tradicionais Unix/Linux são separadas para proprietário, grupo e outros, com bits de leitura, escrita e execução. Exemplo: rw-r----- dá leitura e escrita ao proprietário, leitura ao grupo e nenhuma permissão aos demais."
         },
         {
           "a": true,
           "q": "O comando chmod altera permissões de arquivo.",
-          "why": "chmod modifica bits/permissões. Exemplo e pegadinha: Sistema operacional gerencia processos, memória, arquivos e dispositivos. Em Linux, rwx significa leitura, escrita e execução para proprietário, grupo e outros. Renomear .txt como .pdf não converte o conteúdo."
+          "why": "Certo. chmod modifica permissões de arquivos ou diretórios quando o usuário possui prerrogativas necessárias. Exemplo: chmod 640 atribui leitura+escrita ao proprietário e leitura ao grupo."
         },
         {
           "a": false,
           "q": "Alterar .txt para .pdf converte o arquivo em PDF.",
-          "why": "Renomear extensão não converte conteúdo. Exemplo e pegadinha: Sistema operacional gerencia processos, memória, arquivos e dispositivos. Em Linux, rwx significa leitura, escrita e execução para proprietário, grupo e outros. Renomear .txt como .pdf não converte o conteúdo."
+          "why": "Errado. Trocar a extensão .txt por .pdf altera apenas o nome. Converter formato exige software que produza conteúdo PDF válido, não simples renomeação."
         },
         {
           "a": false,
           "q": "Um ponto de restauração do sistema equivale a backup completo dos arquivos do usuário.",
-          "why": "Ponto de restauração e backup têm finalidades distintas. Exemplo e pegadinha: Sistema operacional gerencia processos, memória, arquivos e dispositivos. Em Linux, rwx significa leitura, escrita e execução para proprietário, grupo e outros. Renomear .txt como .pdf não converte o conteúdo."
+          "why": "Errado. Ponto de restauração recupera principalmente configurações de sistema, não equivale a cópia completa e independente dos arquivos pessoais. Backup de dados precisa de estratégia própria."
         },
         {
           "a": false,
           "q": "Arquivos compactados são sempre seguros para extração.",
-          "why": "Podem conter malware e devem ser verificados. Exemplo e pegadinha: Sistema operacional gerencia processos, memória, arquivos e dispositivos. Em Linux, rwx significa leitura, escrita e execução para proprietário, grupo e outros. Renomear .txt como .pdf não converte o conteúdo."
+          "why": "Errado. Arquivos compactados podem conter conteúdo malicioso, caminhos perigosos ou arquivos que exploram vulnerabilidades ao serem extraídos. Verifique origem, conteúdo e mantenha software atualizado."
         }
       ],
       "slug": "pcac-2026-ti-sistemas-operacionais-arquivos-permissoes",
       "discipline": "Tecnologia da Informação e Segurança da Informação",
       "topic_label": "3. Sistemas operacionais e aplicativos",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Explicações por tópico de computação e segurança aprofundadas; requer revisão integral do item antes de liberar no treinador"
+        "items": [
+          {
+            "a": true,
+            "q": "No Linux, as permissões tradicionais distinguem proprietário, grupo e outros.",
+            "why": "Certo. Permissões tradicionais Unix/Linux são separadas para proprietário, grupo e outros, com bits de leitura, escrita e execução. Exemplo: rw-r----- dá leitura e escrita ao proprietário, leitura ao grupo e nenhuma permissão aos demais."
+          },
+          {
+            "a": true,
+            "q": "O comando chmod altera permissões de arquivo.",
+            "why": "Certo. chmod modifica permissões de arquivos ou diretórios quando o usuário possui prerrogativas necessárias. Exemplo: chmod 640 atribui leitura+escrita ao proprietário e leitura ao grupo."
+          },
+          {
+            "a": false,
+            "q": "Alterar .txt para .pdf converte o arquivo em PDF.",
+            "why": "Errado. Trocar a extensão .txt por .pdf altera apenas o nome. Converter formato exige software que produza conteúdo PDF válido, não simples renomeação."
+          },
+          {
+            "a": false,
+            "q": "Um ponto de restauração do sistema equivale a backup completo dos arquivos do usuário.",
+            "why": "Errado. Ponto de restauração recupera principalmente configurações de sistema, não equivale a cópia completa e independente dos arquivos pessoais. Backup de dados precisa de estratégia própria."
+          },
+          {
+            "a": false,
+            "q": "Arquivos compactados são sempre seguros para extração.",
+            "why": "Errado. Arquivos compactados podem conter conteúdo malicioso, caminhos perigosos ou arquivos que exploram vulnerabilidades ao serem extraídos. Verifique origem, conteúdo e mantenha software atualizado."
+          }
+        ],
+        "method": "Conferência individual de 5 gabaritos e justificativas de redes, protocolos e controle de acesso; nenhum item usa fonte jurídica especializada",
+        "status": "reviewed",
+        "subject": "Tecnologia da Informação e Segurança da Informação",
+        "version": 1,
+        "checked_at": "2026-11-21T18:31:32Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC/2026, Anexo III, Tecnologia da Informação e Segurança da Informação, item 2.",
+        "topic_label": "3. Sistemas operacionais e aplicativos",
+        "material_slug": "pcac-2026-ti-sistemas-operacionais-arquivos-permissoes"
       }
     }
   ]

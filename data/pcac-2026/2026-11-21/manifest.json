@@ -77,7 +77,7 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-raciocinio-logico.json",
-      "bytes": 105784,
+      "bytes": 106044,
       "modules": 16,
       "quiz_items": 155
     },
@@ -89,7 +89,7 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-tecnologia-da-informacao-e-seguranca-da-informacao.json",
-      "bytes": 28482,
+      "bytes": 44719,
       "modules": 10,
       "quiz_items": 51
     }
