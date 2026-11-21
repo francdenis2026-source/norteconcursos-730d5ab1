@@ -116,14 +116,14 @@ function isQuestionOptions(text: string): boolean {
 
 /** Uma alternativa pode estar sozinha em seu próprio parágrafo no conteúdo legado. */
 function isSingleQuestionOption(text: string): boolean {
-  return /^\\s*[A-E][).]\\s*\\S/i.test(text);
+  return /^\s*[A-E][).]\s*\S/i.test(text);
 }
 
 function cleanQuestionStem(lines: string[]): string {
-  const questionLine = lines.find((line) => /quest[aã]o\\s*:/i.test(line));
+  const questionLine = lines.find((line) => /quest[aã]o\s*:/i.test(line));
   return (questionLine ?? lines.join(" "))
-    .replace(/^.*?quest[aã]o\\s*:\\s*/i, "")
-    .replace(/\\*\\*/g, "")
+    .replace(/^.*?quest[aã]o\s*:\s*/i, "")
+    .replace(/\*\*/g, "")
     .replace(/\\\\n/g, " ")
     .trim();
 }
