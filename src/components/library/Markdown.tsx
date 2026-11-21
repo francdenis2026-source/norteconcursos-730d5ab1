@@ -305,6 +305,9 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
       case "h3":
         return <h3 key={key}>{inline(block.text, key)}</h3>;
       case "p": {
+        if (isAnswerAnalysis(block.text)) {
+          return <RevealAnswer key={key} answer={block.text} render={inline} />;
+        }
         const answerParts = splitAnswerAndCommentary(block.text);
         if (answerParts) {
           const promptOptions = isQuestionOptions(answerParts.prompt)
