@@ -4,14 +4,18 @@ import { libraryCollection } from "@/lib/libraryOrganization";
 import { BookOpenCheck, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStudyMaterial, type StudyMaterialSummary } from "@/lib/studyMaterials";
+import { MaterialPractice } from "@/components/library/MaterialPractice";
+import { materialTopic } from "@/lib/materialPractice";
 
 export function TrainerLearningMaterials({
+  userId,
   subject,
   topic,
   materials,
   loading,
   error,
 }: {
+  userId: string;
   subject: string;
   topic: string;
   materials: StudyMaterialSummary[];
@@ -72,6 +76,21 @@ export function TrainerLearningMaterials({
             {chosen.discipline} · {chosen.topic_label}
           </p>
           {chosen.summary && <p className="text-sm leading-6">{chosen.summary}</p>}
+          {!!detail.data?.quiz?.length && (
+            <MaterialPractice
+              key={chosen.slug}
+              userId={userId}
+              materialId={detail.data.id}
+              scope={{
+                subject: chosen.discipline,
+                topic: materialTopic(chosen.discipline, chosen.topic_label ?? chosen.title),
+              }}
+              label={chosen.topic_label ?? chosen.title}
+              authoredQuiz={detail.data.quiz}
+              authoredReview={detail.data.practice_review}
+              authoredKey={chosen.slug}
+            />
+          )}
           <Link
             to="/dashboard/library/$slug"
             params={{ slug: chosen.slug }}
@@ -109,7 +128,7 @@ export function TrainerLearningMaterials({
                     </details>
                   ))}
                   <p className="text-xs text-muted-foreground">
-                    Abra o material completo para acessar todos os flashcards e exercícios
+                    Abra o material completo para consultar a explicação integral e todos os flashcards
                     disponíveis.
                   </p>
                 </div>
