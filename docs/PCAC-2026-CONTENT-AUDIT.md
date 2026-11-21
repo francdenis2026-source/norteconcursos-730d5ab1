@@ -606,3 +606,20 @@ Migrations:
 - 20261121260000_deepen_pcac_statistics_dispersion_trainer.sql — commit 0ebc6f0b5b17b635a0cc6f97a0c3a08dbd95060f.
 
 Os commits registram as migrações no repositório; as alterações dos registros de treinamento foram aplicadas diretamente no banco conectado. Não declarar build/CI como executados nesta etapa.
+
+
+## Estatística — aprofundamento do treinador, lote 2 — 21/11/2026
+
+Mais 20 questões foram revisadas diretamente no Supabase:
+
+- Aula 5 — medidas de dispersão e coeficiente de variação: 10/10.
+- Aula 6 — probabilidade, eventos, espaço amostral, união/interseção, complemento, condicional e independência: 10/10.
+
+Somando os lotes 1 e 2, as aulas 2 a 6 totalizam 50 questões enriquecidas. Verificação consolidada após correção de um comentário curto: 50 questões; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas. Enunciados, gabaritos e ordem foram preservados.
+
+Migrations adicionais:
+- 20261121260000_deepen_pcac_statistics_dispersion_trainer.sql — commit 0ebc6f0b5b17b635a0cc6f97a0c3a08dbd95060f.
+- 20261121270000_deepen_pcac_statistics_probability_trainer.sql — commit 7ff4b57ed94e32548219d9bcb44bbc598aa5e47a.
+- 20261121280000_refine_pcac_statistics_probability_complement_explanation.sql — commit 7be767ad77f7d5b7872a8c563d0439487192fdd8.
+
+Também foi corrigida a redação da explicação sobre evento complementar para mostrar claramente que 30% + 70% = 100%. Não houve execução de build/CI nesta etapa.
