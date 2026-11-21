@@ -47,7 +47,7 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-administracao.json",
-      "bytes": 53222,
+      "bytes": 55034,
       "modules": 17,
       "quiz_items": 85
     },
@@ -77,7 +77,7 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-raciocinio-logico.json",
-      "bytes": 70908,
+      "bytes": 73780,
       "modules": 16,
       "quiz_items": 155
     },

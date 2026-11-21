@@ -333,66 +333,119 @@
         {
           "a": true,
           "q": "P→Q é logicamente equivalente a ¬P∨Q.",
-          "why": "As duas expressões são falsas apenas quando P é verdadeira e Q é falsa. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Certo. A condicional P→Q só é falsa na linha P=V, Q=F. A disjunção ¬P∨Q é falsa exatamente quando ¬P=F e Q=F, isto é, na mesma linha. Portanto as tabelas-verdade coincidem."
         },
         {
           "a": true,
           "q": "A contrapositiva de P→Q é ¬Q→¬P.",
-          "why": "A contrapositiva mantém a equivalência lógica. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Certo. A contrapositiva de P→Q troca antecedente e consequente, negando ambos: ¬Q→¬P. Exemplo: 'Se chove, a rua molha' equivale a 'Se a rua não molhou, então não choveu', considerando a estrutura lógica."
         },
         {
           "a": false,
           "q": "A recíproca Q→P é sempre equivalente a P→Q.",
-          "why": "A recíproca não é equivalente em geral. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Errado. A recíproca Q→P pode ter outro valor. Tome P=F e Q=V: P→Q é V, mas Q→P é F. Assim não existe equivalência geral, ao contrário da contrapositiva ¬Q→¬P."
         },
         {
           "a": true,
           "q": "A negação de P∧Q equivale a ¬P∨¬Q.",
-          "why": "É a primeira lei de De Morgan. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Certo. Pela primeira lei de De Morgan, ¬(P∧Q)≡¬P∨¬Q. Para negar que 'Ana e Bruno compareceram', basta que Ana não tenha comparecido OU Bruno não tenha comparecido."
         },
         {
           "a": true,
           "q": "A negação de P∨Q equivale a ¬P∧¬Q.",
-          "why": "É a segunda lei de De Morgan. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Certo. Pela segunda lei de De Morgan, ¬(P∨Q)≡¬P∧¬Q. Negar que 'Ana ou Bruno compareceu' significa afirmar que Ana não compareceu E Bruno não compareceu."
         },
         {
           "a": false,
           "q": "A negação de P→Q é ¬P∧Q.",
-          "why": "A negação correta é P∧¬Q. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Errado. A negação de P→Q é P∧¬Q, pois a condicional é falsa somente quando P é verdadeira e Q falsa. A expressão ¬P∧Q descreve um caso em que a condicional é verdadeira."
         },
         {
           "a": true,
           "q": "O bicondicional equivale à conjunção das duas condicionais recíprocas.",
-          "why": "P↔Q equivale a (P→Q)∧(Q→P). Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Certo. O bicondicional P↔Q exige P→Q e Q→P simultaneamente; por isso equivale a (P→Q)∧(Q→P). Exemplo: P e Q são ambos verdadeiros ou ambos falsos nas linhas em que o bicondicional é verdadeiro."
         },
         {
           "a": false,
           "q": "A negação de 'todos foram aprovados' é 'ninguém foi aprovado'.",
-          "why": "Basta existir pelo menos um que não foi aprovado. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Errado. A negação de 'todos foram aprovados' é 'existe pelo menos um que não foi aprovado'. Não significa que ninguém passou. Por exemplo, se nove de dez passaram, a afirmação universal é falsa e sua negação é verdadeira."
         },
         {
           "a": true,
           "q": "A negação de 'existe alguém presente' é 'ninguém está presente'.",
-          "why": "A negação do existencial é universal negativa. Dica com exemplo: Lembre as equivalências ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q e P→Q≡¬P∨Q. O contrário da condicional é P∧¬Q; sua contrapositiva equivalente é ¬Q→¬P."
+          "why": "Certo. Negar 'existe pelo menos uma pessoa presente' exige dizer que não existe nenhuma pessoa presente. Em linguagem de quantificadores, ¬∃x P(x) equivale a ∀x ¬P(x)."
         },
         {
           "a": true,
           "q": "Ao negar uma disjunção, a lei de De Morgan troca OU por E.",
-          "why": "A lei de De Morgan determina ¬(P ∨ Q) ≡ ¬P ∧ ¬Q: a negação da disjunção troca OU por E e nega cada parte. A frase está correta, mas só trocar o conectivo sem negar as partes produziria erro."
+          "why": "Certo, desde que também se neguem as partes: ¬(P∨Q)≡¬P∧¬Q. A troca de OU para E sozinha não basta; é necessário aplicar a negação a P e a Q."
         }
       ],
       "slug": "pcac-2026-raciocinio-logico-05-equivalencias-negacoes-de-morgan",
       "discipline": "Raciocínio Lógico",
       "topic_label": "4. Equivalências lógicas e negação",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complemento didático por tópico incluído em justificativas curtas; necessária validação individual do gabarito e pertinência",
-        "current_quiz_items": 10,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "P→Q é logicamente equivalente a ¬P∨Q.",
+            "why": "Certo. A condicional P→Q só é falsa na linha P=V, Q=F. A disjunção ¬P∨Q é falsa exatamente quando ¬P=F e Q=F, isto é, na mesma linha. Portanto as tabelas-verdade coincidem."
+          },
+          {
+            "a": true,
+            "q": "A contrapositiva de P→Q é ¬Q→¬P.",
+            "why": "Certo. A contrapositiva de P→Q troca antecedente e consequente, negando ambos: ¬Q→¬P. Exemplo: 'Se chove, a rua molha' equivale a 'Se a rua não molhou, então não choveu', considerando a estrutura lógica."
+          },
+          {
+            "a": false,
+            "q": "A recíproca Q→P é sempre equivalente a P→Q.",
+            "why": "Errado. A recíproca Q→P pode ter outro valor. Tome P=F e Q=V: P→Q é V, mas Q→P é F. Assim não existe equivalência geral, ao contrário da contrapositiva ¬Q→¬P."
+          },
+          {
+            "a": true,
+            "q": "A negação de P∧Q equivale a ¬P∨¬Q.",
+            "why": "Certo. Pela primeira lei de De Morgan, ¬(P∧Q)≡¬P∨¬Q. Para negar que 'Ana e Bruno compareceram', basta que Ana não tenha comparecido OU Bruno não tenha comparecido."
+          },
+          {
+            "a": true,
+            "q": "A negação de P∨Q equivale a ¬P∧¬Q.",
+            "why": "Certo. Pela segunda lei de De Morgan, ¬(P∨Q)≡¬P∧¬Q. Negar que 'Ana ou Bruno compareceu' significa afirmar que Ana não compareceu E Bruno não compareceu."
+          },
+          {
+            "a": false,
+            "q": "A negação de P→Q é ¬P∧Q.",
+            "why": "Errado. A negação de P→Q é P∧¬Q, pois a condicional é falsa somente quando P é verdadeira e Q falsa. A expressão ¬P∧Q descreve um caso em que a condicional é verdadeira."
+          },
+          {
+            "a": true,
+            "q": "O bicondicional equivale à conjunção das duas condicionais recíprocas.",
+            "why": "Certo. O bicondicional P↔Q exige P→Q e Q→P simultaneamente; por isso equivale a (P→Q)∧(Q→P). Exemplo: P e Q são ambos verdadeiros ou ambos falsos nas linhas em que o bicondicional é verdadeiro."
+          },
+          {
+            "a": false,
+            "q": "A negação de 'todos foram aprovados' é 'ninguém foi aprovado'.",
+            "why": "Errado. A negação de 'todos foram aprovados' é 'existe pelo menos um que não foi aprovado'. Não significa que ninguém passou. Por exemplo, se nove de dez passaram, a afirmação universal é falsa e sua negação é verdadeira."
+          },
+          {
+            "a": true,
+            "q": "A negação de 'existe alguém presente' é 'ninguém está presente'.",
+            "why": "Certo. Negar 'existe pelo menos uma pessoa presente' exige dizer que não existe nenhuma pessoa presente. Em linguagem de quantificadores, ¬∃x P(x) equivale a ∀x ¬P(x)."
+          },
+          {
+            "a": true,
+            "q": "Ao negar uma disjunção, a lei de De Morgan troca OU por E.",
+            "why": "Certo, desde que também se neguem as partes: ¬(P∨Q)≡¬P∧¬Q. A troca de OU para E sozinha não basta; é necessário aplicar a negação a P e a Q."
+          }
+        ],
+        "method": "Conferência individual dos 10 gabaritos e justificativas, incluindo equivalências formais e exemplos de gestão",
+        "status": "reviewed",
+        "subject": "Raciocínio Lógico",
+        "version": 1,
+        "checked_at": "2026-11-21T18:11:12Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC, Anexo III, Conhecimentos Básicos — Raciocínio Lógico, item 4 (p. 47).",
+        "topic_label": "4. Equivalências lógicas e negação",
+        "material_slug": "pcac-2026-raciocinio-logico-05-equivalencias-negacoes-de-morgan"
       }
     },
     {

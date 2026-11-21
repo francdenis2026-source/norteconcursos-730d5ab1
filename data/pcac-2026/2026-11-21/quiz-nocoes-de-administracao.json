@@ -195,39 +195,69 @@
         {
           "a": true,
           "q": "Produzir a mesma entrega com menor desperdício, mantendo qualidade, expressa eficiência.",
-          "why": "Eficiência relaciona recursos e entregas. Aplicação: Meta atingida é eficácia, uso adequado de recursos é eficiência, efeito real para o cidadão é efetividade. Economicidade não significa automaticamente menor preço: equipamento barato e defeituoso pode custar mais no total."
+          "why": "Certo. Eficiência compara resultados e recursos consumidos. Exemplo: dois setores entregam cem certidões com a mesma qualidade, mas um utiliza menos horas e papel; este é mais eficiente. Atingir a quantidade planejada, por si só, é eficácia."
         },
         {
           "a": true,
           "q": "Alcançar a meta quantitativa demonstra eficácia.",
-          "why": "Eficácia é o alcance do objetivo definido. Aplicação: Meta atingida é eficácia, uso adequado de recursos é eficiência, efeito real para o cidadão é efetividade. Economicidade não significa automaticamente menor preço: equipamento barato e defeituoso pode custar mais no total."
+          "why": "Certo. Eficácia mede o alcance da meta ou objetivo definido. Se o órgão pretendia concluir oitenta solicitações e concluiu oitenta, foi eficaz nessa meta, ainda que tenha gasto recursos demais ou produzido baixo impacto social."
         },
         {
           "a": false,
           "q": "Efetividade é sinônimo de cumprir o cronograma.",
-          "why": "Efetividade examina os efeitos e impactos da ação. Aplicação: Meta atingida é eficácia, uso adequado de recursos é eficiência, efeito real para o cidadão é efetividade. Economicidade não significa automaticamente menor preço: equipamento barato e defeituoso pode custar mais no total."
+          "why": "Errado. Cumprir um prazo é indicador de execução ou eficácia operacional, não sinônimo de efetividade. Efetividade exige avaliar a transformação gerada: por exemplo, reduzir de maneira sustentável o tempo real de espera do cidadão."
         },
         {
           "a": true,
           "q": "Economicidade exige considerar qualidade e adequação, não apenas preço nominal.",
-          "why": "O menor preço pode não representar a melhor condição global. Aplicação: Meta atingida é eficácia, uso adequado de recursos é eficiência, efeito real para o cidadão é efetividade. Economicidade não significa automaticamente menor preço: equipamento barato e defeituoso pode custar mais no total."
+          "why": "Certo. Economicidade examina a obtenção de recursos em condições vantajosas, considerando preço e adequação. Comprar equipamento baratíssimo que quebra em uma semana pode resultar em custo total maior que uma alternativa durável."
         },
         {
           "a": true,
           "q": "Uma ação pode ser eficaz e não ser efetiva.",
-          "why": "A meta pode ser atingida sem produzir a transformação social pretendida. Aplicação: Meta atingida é eficácia, uso adequado de recursos é eficiência, efeito real para o cidadão é efetividade. Economicidade não significa automaticamente menor preço: equipamento barato e defeituoso pode custar mais no total."
+          "why": "Certo. Um programa pode realizar todas as ações previstas (eficácia), mas não melhorar a situação dos destinatários (baixa efetividade). Exemplo: cumprir meta de palestras sem reduzir erros de atendimento."
         }
       ],
       "slug": "pcac-2026-guia-administracao-geral-03-eficiencia-eficacia-efetividade-e-economicidade",
       "discipline": "Noções de Administração",
       "topic_label": "03 · Eficiência, eficácia, efetividade e economicidade",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos didáticos de Administração adicionados; revisão individual de pertinência e gabarito ainda necessária"
+        "items": [
+          {
+            "a": true,
+            "q": "Produzir a mesma entrega com menor desperdício, mantendo qualidade, expressa eficiência.",
+            "why": "Certo. Eficiência compara resultados e recursos consumidos. Exemplo: dois setores entregam cem certidões com a mesma qualidade, mas um utiliza menos horas e papel; este é mais eficiente. Atingir a quantidade planejada, por si só, é eficácia."
+          },
+          {
+            "a": true,
+            "q": "Alcançar a meta quantitativa demonstra eficácia.",
+            "why": "Certo. Eficácia mede o alcance da meta ou objetivo definido. Se o órgão pretendia concluir oitenta solicitações e concluiu oitenta, foi eficaz nessa meta, ainda que tenha gasto recursos demais ou produzido baixo impacto social."
+          },
+          {
+            "a": false,
+            "q": "Efetividade é sinônimo de cumprir o cronograma.",
+            "why": "Errado. Cumprir um prazo é indicador de execução ou eficácia operacional, não sinônimo de efetividade. Efetividade exige avaliar a transformação gerada: por exemplo, reduzir de maneira sustentável o tempo real de espera do cidadão."
+          },
+          {
+            "a": true,
+            "q": "Economicidade exige considerar qualidade e adequação, não apenas preço nominal.",
+            "why": "Certo. Economicidade examina a obtenção de recursos em condições vantajosas, considerando preço e adequação. Comprar equipamento baratíssimo que quebra em uma semana pode resultar em custo total maior que uma alternativa durável."
+          },
+          {
+            "a": true,
+            "q": "Uma ação pode ser eficaz e não ser efetiva.",
+            "why": "Certo. Um programa pode realizar todas as ações previstas (eficácia), mas não melhorar a situação dos destinatários (baixa efetividade). Exemplo: cumprir meta de palestras sem reduzir erros de atendimento."
+          }
+        ],
+        "method": "Conferência individual dos 5 gabaritos e justificativas, incluindo equivalências formais e exemplos de gestão",
+        "status": "reviewed",
+        "subject": "Noções de Administração",
+        "version": 1,
+        "checked_at": "2026-11-21T18:11:12Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado editorialmente, alinhado ao tópico geral de Noções de Administração do Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026. Não constitui material oficial da banca.",
+        "topic_label": "03 · Eficiência, eficácia, efetividade e economicidade",
+        "material_slug": "pcac-2026-guia-administracao-geral-03-eficiencia-eficacia-efetividade-e-economicidade"
       }
     },
     {
