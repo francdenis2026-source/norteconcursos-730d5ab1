@@ -127,25 +127,114 @@ function isWarningLabel(text: string): boolean {
 function isHowToAnswerLabel(text: string): boolean {
   return /^\s*(?:como\s+responder|estrat[eé]gia\s+de\s+resolu[cç][aã]o|passo\s+a\s+passo)\s*[:—-]/i.test(text);
 }
-function renderQuestionOptions(text: string, key: string, inline: (text: string, key: string) => ReactNode) {
+type QuestionOption = { letter: string; text: string };
+function parseQuestionOptions(text: string): { stem: string; options: QuestionOption[] } | null {
   const matcher = /(?:^|\s)([A-E])[).]\s*/g;
   const matches = [...text.matchAll(matcher)];
   if (matches.length < 2) return null;
+  const first = matches[0]!;
+  const stem = text.slice(0, first.index ?? 0).trim();
+  const options = matches.map((match, index) => {
+    const contentStart = (match.index ?? 0) + match[0].length;
+    const end = matches[index + 1]?.index ?? text.length;
+    return { letter: match[1] ?? "", text: text.slice(contentStart, end).trim() };
+  });
+  return options.every((option) => option.text) ? { stem, options } : null;
+}
+
+function parseAlternativeFeedback(answer: string): {
+  correct: string | null;
+  explanation: string;
+  alternatives: Record<string, string>;
+} {
+  const correct = answer.match(/(?:gabarito|resposta correta)\s*[:—-]\s*([A-E])\b/i)?.[1]?.toUpperCase() ?? null;
+  const marker = /(?:an[aá]lise|coment[aá]rio|justificativa)s?\s+das?\s+alternativas\s*[:—-]\s*/i.exec(answer);
+  const before = marker?.index === undefined ? answer : answer.slice(0, marker.index);
+  const explanation = before.replace(/^\s*(?:gabarito|resposta correta)\s*[:—-]\s*[A-E]\s*[.)—-]?\s*/i, "").trim();
+  const alternatives: Record<string, string> = {};
+  if (marker && marker.index !== undefined) {
+    const detailText = answer.slice(marker.index + marker[0].length);
+    const matcher = /(?:^|\s)([A-E])[).:]\s*/g;
+    const matches = [...detailText.matchAll(matcher)];
+    matches.forEach((match, index) => {
+      const begin = (match.index ?? 0) + match[0].length;
+      const finish = matches[index + 1]?.index ?? detailText.length;
+      const rationale = detailText.slice(begin, finish).trim().replace(/[;|]\s*$/, "");
+      if (rationale) alternatives[(match[1] ?? "").toUpperCase()] = rationale;
+    });
+  }
+  return { correct, explanation, alternatives };
+}
+
+function InteractiveQuestion({
+  prompt,
+  answer,
+  render,
+}: {
+  prompt: string;
+  answer: string;
+  render: (text: string, key: string) => ReactNode;
+}) {
+  const parsed = parseQuestionOptions(prompt);
+  const feedback = parseAlternativeFeedback(answer);
+  const [selected, setSelected] = useState<string | null>(null);
+  if (!parsed) return <>{render(prompt, "question-prompt")}{render(answer, "question-answer")}</>;
+  const answered = selected !== null;
+  const isCorrect = answered && selected === feedback.correct;
   return (
-    <div className="study-question-options" role="list" aria-label="Alternativas">
-      {matches.map((match, index) => {
-        const contentStart = (match.index ?? 0) + match[0].length;
-        const end = matches[index + 1]?.index ?? text.length;
-        const label = match[1] ?? "";
-        const content = text.slice(contentStart, end).trim();
-        return (
-          <div className="study-question-option" role="listitem" key={`${key}-option-${label}`}>
-            <strong className="study-question-option__label">{label}</strong>
-            <span>{inline(content, `${key}-option-${label}`)}</span>
+    <section className="study-interactive-question" aria-label="Questão interativa">
+      {parsed.stem && <p className="study-question-stem">{render(parsed.stem, "question-stem")}</p>}
+      <p className="study-question-instruction">Escolha uma alternativa para conferir sua resposta.</p>
+      <div className="study-question-options" role="group" aria-label="Alternativas da questão">
+        {parsed.options.map((option) => {
+          const isChosen = selected === option.letter;
+          const isRight = answered && option.letter === feedback.correct;
+          const isWrongChoice = isChosen && !isRight;
+          return (
+            <button
+              type="button"
+              key={option.letter}
+              className="study-question-option"
+              data-selected={isChosen || undefined}
+              data-correct={isRight || undefined}
+              data-incorrect={isWrongChoice || undefined}
+              aria-pressed={isChosen}
+              disabled={answered}
+              onClick={() => setSelected(option.letter)}
+            >
+              <strong className="study-question-option__label">{option.letter}</strong>
+              <span>{render(option.text, "option-" + option.letter)}</span>
+              {isRight && <span className="study-question-option__status" aria-label="Resposta correta">✓</span>}
+              {isWrongChoice && <span className="study-question-option__status" aria-label="Resposta selecionada incorreta">×</span>}
+            </button>
+          );
+        })}
+      </div>
+      {answered && (
+        <div className="study-question-feedback" role="region" aria-live="polite" aria-label="Correção da questão">
+          <div className="study-question-feedback__result" data-correct={isCorrect || undefined} data-incorrect={!isCorrect || undefined}>
+            <strong>{isCorrect ? "Você acertou!" : "Ainda não. Vamos entender."}</strong>
+            {feedback.correct && <span> Gabarito: alternativa {feedback.correct}.</span>}
           </div>
-        );
-      })}
-    </div>
+          {feedback.explanation && <div className="study-question-feedback__general">{render(feedback.explanation, "general-explanation")}</div>}
+          <h4>Entenda cada alternativa</h4>
+          <div className="study-question-feedback__alternatives">
+            {parsed.options.map((option) => {
+              const rationale = feedback.alternatives[option.letter];
+              return (
+                <div key={option.letter} className="study-question-feedback__alternative" data-correct={option.letter === feedback.correct || undefined}>
+                  <strong>{option.letter} · {option.letter === feedback.correct ? "Correta" : "Incorreta"}</strong>
+                  {rationale
+                    ? <p>{render(rationale, "rationale-" + option.letter)}</p>
+                    : <p className="study-question-feedback__missing">A justificativa individual desta alternativa ainda não foi cadastrada neste material.</p>}
+                </div>
+              );
+            })}
+          </div>
+          <button type="button" className="study-question-feedback__retry" onClick={() => setSelected(null)}>Tentar novamente</button>
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -319,23 +408,19 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
         }
         const answerParts = splitAnswerAndCommentary(block.text);
         if (answerParts) {
-          const promptOptions = isQuestionOptions(answerParts.prompt)
-            ? renderQuestionOptions(answerParts.prompt, key, inline)
-            : null;
+          if (isQuestionOptions(answerParts.prompt)) {
+            return <InteractiveQuestion key={key} prompt={answerParts.prompt} answer={answerParts.answer} render={inline} />;
+          }
           return (
             <Fragment key={key}>
-              {promptOptions ? (
-                <div className="study-question-options-wrap">{promptOptions}</div>
-              ) : (
-                <p className="study-question-stem">{inline(answerParts.prompt, key)}</p>
-              )}
+              <p className="study-question-stem">{inline(answerParts.prompt, key)}</p>
               <RevealAnswer answer={answerParts.answer} render={inline} />
             </Fragment>
           );
         }
         if (isQuestionOptions(block.text)) {
-          const options = renderQuestionOptions(block.text, key, inline);
-          if (options) return <div key={key} className="study-question-options-wrap">{options}</div>;
+          const parsed = parseQuestionOptions(block.text);
+          if (parsed) return <div key={key} className="study-question-options-wrap">{parsed.options.map((option) => <div className="study-question-option" key={option.letter}><strong className="study-question-option__label">{option.letter}</strong><span>{inline(option.text, key + "-option-" + option.letter)}</span></div>)}</div>;
         }
         const className = isQuestionStem(block.text)
           ? "study-question-stem"
