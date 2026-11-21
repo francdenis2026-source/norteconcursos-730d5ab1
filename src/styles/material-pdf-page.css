@@ -472,3 +472,33 @@ html body .app-shell[data-area="student"] .library-reading-workspace .library-bo
   color: #172b40 !important;
   -webkit-text-fill-color: #172b40 !important;
 }
+
+/* Contraste dos cartões didáticos e das seções "Para memorizar".
+   A folha mantém fundo claro mesmo no tema escuro; neutralizar componentes
+   herdados que usavam texto cinza e fundos quase transparentes. */
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(.study-example, blockquote, aside, section) {
+  --foreground: #172b40;
+  --muted-foreground: #43566a;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(.study-example, blockquote, aside) {
+  border-radius: .6rem;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example * {
+  color: #172b40 !important;
+  -webkit-text-fill-color: #172b40 !important;
+  opacity: 1 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(.study-example, blockquote) :is(code, pre) {
+  background: #dce8f3 !important;
+  color: #123450 !important;
+  -webkit-text-fill-color: #123450 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(h2,h3,h4) {
+  background: transparent !important;
+  color: #17324d !important;
+  -webkit-text-fill-color: #17324d !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(p,li,span,strong,em) {
+  opacity: 1 !important;
+}
