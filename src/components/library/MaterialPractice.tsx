@@ -57,7 +57,7 @@ export function MaterialPractice({
         `${scope.subject ?? ""} ${label}`,
       ),
   );
-  const authoredAwaitingReview = (reviewRequired || authoredKey.startsWith("pcac-2026-")) && authoredQuiz.length > 0 && authored.length === 0;
+  const authoredAwaitingReview = (reviewRequired || authoredKey.startsWith("pcac-2026-") || /^informatica-(?:01|03|04|05)-/.test(authoredKey)) && authoredQuiz.length > 0 && authored.length === 0;
   const pool = useMemo(() => mergeMaterialPractice(catalogPool, authored), [catalogPool, authored]);
   const [session, setSession] = useState<{ questions: Question[]; id: number } | null>(null);
   const search = materialPracticeSearch(scope);
