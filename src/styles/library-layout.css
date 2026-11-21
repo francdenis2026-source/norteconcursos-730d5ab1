@@ -19,3 +19,63 @@ html body .app-shell[data-area] .nc-learning-workspace.material-library .library
 @media (min-width: 1024px) {
   .library-split--solo { grid-template-columns: minmax(0, 3fr) minmax(16rem, 1fr); }
 }
+
+/* Biblioteca: cabeçalho compacto e contraste explícito no modo claro.
+   Restringir à página de biblioteca; não alterar o seletor global de tema. */
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library {
+  color: var(--foreground);
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus {
+  min-height: 0;
+  padding: .75rem 1rem;
+  gap: .5rem;
+  color: #17212e;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus :is(h1, .library-eyebrow, .library-focus__identity p, .library-focus__back) {
+  color: #17212e;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus__counts > * {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus__counts strong {
+  color: #0f172a;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library :is(.library-subject__heading, .library-material-row, .library-tabs, .library-tabpanel, .updated-study-collections__panel) {
+  color: #17212e;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library :is(.library-subject__heading, .library-material-row) :is(h2, h3, strong, p, span) {
+  color: inherit;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-material-row {
+  background: #fffefa;
+  border-color: #d5dce4;
+}
+html:not(.dark) body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-material-row:hover {
+  background: #f3ecdf;
+}
+html body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus {
+  min-height: 0;
+  padding-block: .75rem;
+}
+html body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus__identity {
+  gap: .5rem;
+}
+html body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus__identity h1 {
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.2;
+  margin: 0;
+}
+html body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus__identity p {
+  margin-block: .15rem;
+}
+@media (max-width: 640px) {
+  html body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus {
+    padding: .65rem .8rem;
+  }
+  html body .app-shell[data-area="student"] .nc-learning-workspace.material-library .library-focus__counts {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+}
