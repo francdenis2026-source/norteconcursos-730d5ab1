@@ -35,3 +35,18 @@ Após a auditoria:
 5. Validar o comportamento do treinador, contador e filtros na aplicação publicada.
 
 **Nota sobre publicação:** esta documentação acompanha alterações aplicadas diretamente no Supabase. A gravação dos dados não depende de um novo deploy do frontend. Este relatório não é uma migração SQL e não afirma que os 190 materiais foram aprovados.
+
+
+## Continuação — aprofundamento das justificativas de Língua Portuguesa
+
+Execução em 21/11/2026, com gravação direta na tabela `study_materials` no Supabase.
+
+- **63 justificativas aprimoradas individualmente** em sete módulos iniciais de Língua Portuguesa. Cada item recebeu explicação contextualizada e, quando apropriado, exemplo de interpretação, conectivos, semântica, reescrita ou pontuação.
+- O número de explicações com menos de 80 caracteres caiu de **870 para 807**, sendo **111** em Língua Portuguesa (antes eram 174).
+- Permanecem **zero** justificativas com menos de 25 caracteres, zero perguntas vazias, zero explicações vazias e zero gabaritos de tipo não booleano no escopo das **1.474 questões didáticas**.
+- O conteúdo dos exercícios foi alterado, mas os módulos continuam com `practice_review.status = needs_revalidation`, conforme a existência do registro anterior. A mudança não constitui liberação automática do treinador.
+- Não foram alterados gabaritos nesta rodada. Eventuais divergências pedagógicas precisam de revisão posterior.
+- As disciplinas com maior número remanescente de justificativas curtas são Raciocínio Lógico (127), Legislação Institucional (121), Língua Portuguesa (111) e Noções de Administração (81).
+- Os 190 módulos continuam ativos como material de leitura; **apenas um** possui revisão didática de formato atual, e **82** estão explicitamente marcados para revalidação.
+
+**Nota:** a verificação por comprimento de texto é um indicador automatizado de concisão, não uma avaliação de correção ou qualidade da resposta. Não marcar materiais jurídicos como revisados sem verificar texto legal atual e cada enunciado.
