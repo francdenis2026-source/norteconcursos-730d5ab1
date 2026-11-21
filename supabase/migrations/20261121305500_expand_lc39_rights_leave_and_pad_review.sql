@@ -26,8 +26,8 @@ begin
 end
 $lc39_material$;
 
-source_note='LC Estadual nº 39/1993, arts. 45–235, texto consolidado no Portal LEGIS do Acre; LC nº 154/2005, art. 110 (revogações); LCs nº 51/1996, 99/2001, 154/2005, 261/2013, 342/2017, 362/2019, 377/2020, 416/2022 e 525/2026; PCCR: Lei nº 2.250/2009, Lei nº 3.228/2017, LC nº 303/2015 e LC nº 496/2025.',
-updated_at=now()
+update public.study_materials
+set source_note='LC Estadual nº 39/1993, arts. 45–235, texto consolidado no Portal LEGIS do Acre; LC nº 154/2005, art. 110 (revogações); LCs nº 51/1996, 99/2001, 154/2005, 261/2013, 342/2017, 362/2019, 377/2020, 416/2022 e 525/2026; PCCR: Lei nº 2.250/2009, Lei nº 3.228/2017, LC nº 303/2015 e LC nº 496/2025.', updated_at=now()
 where slug='pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025';
 
 with q as (select * from (values
