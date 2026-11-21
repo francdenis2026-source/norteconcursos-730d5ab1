@@ -1246,3 +1246,20 @@ html body .qx .qx-explain__right { color: var(--qx-err); }
 .qx .qx-scale3d__labels span[data-win] { color: var(--qx-ok); }
 .qx .qx-scale3d figcaption { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-foreground); }
 @media (max-width: 559px) { .qx .qx-scale3d { display: none; } }
+
+/* ── Tela da questão: ocupa TODA a janela (largura e altura), independente dos containers ── */
+html body .qx .qx-card:not(#_):not(#_):not(#_),
+html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-card {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  min-height: 0;
+  margin: 0;
+  border-radius: 0;
+  border-width: 0;
+}
+html body .qx .qx-card .qx-body { flex: 1 1 auto; min-height: 0; }
