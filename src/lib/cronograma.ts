@@ -49,6 +49,8 @@ export interface TopicProgress {
   video: boolean; pdf: boolean; podcast: boolean;
   qtde: number; acertos: number;
   revPdf: boolean; revQuestoes: boolean;
+  /** Última atualização do conteúdo (data em que foi marcado). Base da revisão espaçada. */
+  updatedAt?: string;
 }
 export const EMPTY_PROGRESS: TopicProgress = {
   video: false, pdf: false, podcast: false, qtde: 0, acertos: 0, revPdf: false, revQuestoes: false,
@@ -113,6 +115,27 @@ export function weakTopic(d: CronoDisc, progress: Record<string, TopicProgress>,
     if (a < 60 && (!worst || a < worst.acc)) worst = { t, acc: a };
   }
   return worst?.t;
+}
+
+/** Dias de revisão espaçada depois de concluir um conteúdo (mesmo critério do plano de estudos). */
+export const REVIEW_DAYS = [1, 7, 30];
+export interface RevisionDue { discId: string; nome: string; topic: string; topicId: string; daysSince: number; offset: number }
+
+/** Conteúdos concluídos que já pedem revisão: o maior intervalo vencido (1, 7 ou 30 dias), mais atrasados primeiro. */
+export function dueRevisions(
+  cfg: CronoConfig, progress: Record<string, TopicProgress>, now = new Date(), limit = 6,
+): RevisionDue[] {
+  const out: RevisionDue[] = [];
+  for (const d of cfg.discs)
+    for (const t of d.topicos) {
+      const p = progress[t.id];
+      if (!p?.updatedAt || !topicDone(p) || (p.revPdf && p.revQuestoes)) continue;
+      const daysSince = Math.floor((now.getTime() - new Date(p.updatedAt).getTime()) / 86_400_000);
+      const offset = [...REVIEW_DAYS].reverse().find((o) => daysSince >= o);
+      if (offset === undefined) continue;
+      out.push({ discId: d.id, nome: d.nome, topic: t.t, topicId: t.id, daysSince, offset });
+    }
+  return out.sort((a, b) => b.daysSince - a.daysSince).slice(0, limit);
 }
 
 /** Atraso: se o aluno estudou algo na janela de 7 dias mas ficou abaixo da meta, a diferença (até 25%) entra na semana. */
@@ -250,6 +273,9 @@ export function selfCheckReserva() {
   if (weak?.id !== "t") throw new Error("assunto fraco");
   if (catchUpMinutes(10, 0) !== 0 || catchUpMinutes(10, 300) !== 150 || catchUpMinutes(10, 700) !== 0) throw new Error("atraso");
   if (studyPhase(null) !== "base" || studyPhase(60) !== "pratica" || studyPhase(10) !== "revisao") throw new Error("fases");
+  const old = new Date(Date.now() - 8 * 86_400_000).toISOString();
+  const rv = dueRevisions({ discs: [mk("a", 1)] , days: [1], startTime: "19:00", weeklyHours: 1 }, { "a1": { ...EMPTY_PROGRESS, video: true, qtde: 1, acertos: 1, updatedAt: old } });
+  if (rv.length !== 1 || rv[0]!.offset !== 7) throw new Error("revisão: conteúdo de 8 dias deve vencer a revisão de 7 dias");
   if (coverage(cfg, {}, 1)?.ok !== false) throw new Error("cobertura");
   return true;
 }

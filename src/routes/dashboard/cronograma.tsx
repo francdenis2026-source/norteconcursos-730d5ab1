@@ -22,7 +22,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { MODELOS_CRONOGRAMA, type ModeloCronograma } from "@/data/cronogramaModelos";
 import {
-  canonicalDiscipline, accuracy, buildWeek, catchUpMinutes, coverage, discStats, essayMinutes, explainWeek, simuladoMinutes, studyPhase, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
+  canonicalDiscipline, accuracy, buildWeek, catchUpMinutes, coverage, discStats, dueRevisions, essayMinutes, explainWeek, simuladoMinutes, studyPhase, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
@@ -291,7 +291,7 @@ function NewPlan({ userId, onBack, onCreated }: { userId: string; onBack: () => 
     setSaving(true);
     const { data, error } = await supabase.from("cronograma_plans").insert({
       user_id: userId, name: name.trim() || "Meu cronograma", model_id: model === "custom" ? null : model.id,
-      custom: model === "custom", exam_date: examDate || null, config: { ...cfg, simulado: true, essay: false, discs },
+      custom: model === "custom", exam_date: examDate || null, config: { ...cfg, simulado: true, essay: model !== "custom" && /discursiva/i.test(model.metodo), discs },
     }).select("id").single();
     setSaving(false);
     if (error || !data) {
@@ -400,7 +400,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       for (const r of (data ?? []) as Record<string, unknown>[])
         m[r["topic_id"] as string] = {
           video: !!r["video"], pdf: !!r["pdf"], podcast: !!r["podcast"], qtde: Number(r["qtde"]), acertos: Number(r["acertos"]),
-          revPdf: !!r["rev_pdf"], revQuestoes: !!r["rev_questoes"],
+          revPdf: !!r["rev_pdf"], revQuestoes: !!r["rev_questoes"], updatedAt: r["updated_at"] as string | undefined,
         };
       setProgress(m);
     });
@@ -459,6 +459,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
   const carry = catchUpMinutes(cfg.weeklyHours, studiedMin);
   const week = buildWeek(cfg, progress, { carryMinutes: carry });
   const explain = explainWeek(cfg, progress, week);
+  const revisions = dueRevisions(cfg, progress);
   const cover = coverage(cfg, progress, examDaysLeft(plan.exam_date));
   const phase = studyPhase(examDaysLeft(plan.exam_date));
   const next = nextTopic(cfg, progress);
@@ -525,6 +526,15 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
 
         <TabsContent value="semana" className="space-y-3">
           <p className="text-xs text-muted-foreground">Tempo por disciplina = pontos da prova (ou peso) × o que falta × reforço proporcional ao erro. Fase atual: <b>{phase === "base" ? "base (teoria)" : phase === "pratica" ? "prática (mais questões)" : "revisão final (erros e revisão)"}</b>. Mude o progresso e a semana se reorganiza.</p>
+          {revisions.length > 0 && (
+            <Card>
+              <CardHeader className="pb-2"><CardTitle className="text-base">Revisar hoje</CardTitle></CardHeader>
+              <CardContent className="space-y-1.5 text-sm">
+                <p className="text-xs text-muted-foreground">Conteúdos concluídos que pedem revisão (1, 7 e 30 dias depois de estudar). Marque a revisão de questões no conteúdo quando terminar.</p>
+                {revisions.map((r) => <div key={r.topicId} className="flex flex-wrap items-center gap-2"><span className="font-medium">{r.nome}</span><span className="min-w-0 flex-1 truncate text-muted-foreground">{r.topic}</span><span className="text-xs text-muted-foreground">há {r.daysSince} dias</span></div>)}
+              </CardContent>
+            </Card>
+          )}
           {carry > 0 && <p className="rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-100">Você ficou abaixo da meta nos últimos 7 dias: somei {fmtH(carry)} a esta semana para recuperar o atraso.</p>}
           {cover && !cover.ok && <p className="rounded-md border border-rose-300 bg-rose-50 px-3 py-2 text-xs text-rose-900 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-100">No ritmo atual, faltam cerca de {fmtH(cover.need - cover.have)} para ver todo o conteúdo até a prova. Priorize {cover.priority.join(", ")}, ou aumente as horas semanais.</p>}
           <details className="rounded-md border px-3 py-2 text-xs">
