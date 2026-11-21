@@ -237,7 +237,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions .app-streak { height: 40px !important; padding: 0 8px !important; font-size: 14px; }
 
   /* Conteúdo: sempre acima da navegação inferior. */
-  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-content {
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-content:not(#_):not(#_):not(#_) {
     padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)) !important;
     scroll-padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px));
   }
