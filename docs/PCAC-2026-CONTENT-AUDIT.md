@@ -1525,3 +1525,49 @@ O art. 18, § 2º, trata da pós-graduação para promoção da Classe II para I
 - Conferir integralmente a compatibilidade do Decreto nº 8.912/2018 com as alterações estaduais de 2025 e 2026.
 - Testar visualmente o treinador e confirmar a contagem no painel do aluno.
 - A auditoria global de Legislação Institucional permanece em andamento.
+
+
+## Décima quarta continuação — revisão de precisão dos anexos e LC nº 526/2026 — 21/11/2026
+
+### Verificação em fonte oficial
+
+Consulta renovada ao Portal LEGIS confirmou:
+- Art. 18, II, do Decreto nº 8.912/2018: avaliação mínima de 80 pontos nos fatores de promoção dos Anexos I, II e III.
+- Art. 20, § 1º: Anexo I = quesitos; Anexo II = quadro de pontuação.
+- Art. 20, § 2º: Anexo III = pontuação adicional por recompensas do art. 96, II e III, da LC nº 129/2004, sem prejuízo da pontuação do Anexo II.
+- LC nº 526/2026 incluiu o art. 79-E na LC nº 129/2004: frequência ao curso de formação é efetivo exercício para fins legais, mas não conta para o interstício promocional; a contagem começa no exercício na unidade de primeira lotação.
+
+### Atualização do material
+
+Incluídas seções específicas que:
+- explicam a leitura conjunta dos arts. 18 e 20, evitando tratar o Anexo III como quadro comum de quesitos;
+- separam o interstício promocional da contagem de efetivo exercício durante o curso de formação;
+- distinguem a regra do curso de formação da suspensão do interstício durante cessão;
+- deixam explícito que as tabelas integrais dos anexos ainda não foram obtidas e que nenhum peso ou bônus individual foi inventado.
+
+Material PCCR atualizado para 31.185 caracteres e verificado por consulta ao banco.
+
+### Questões autorais
+
+Duas novas questões ativas, verificadas no catálogo:
+1. Início da contagem do interstício após curso de formação (art. 79-E).
+2. Finalidade do Anexo III (art. 20, § 2º).
+
+Total de questões ativas identificadas com prefixo `pcac-dec8912-`: 11 anteriores + 2 itens novos relacionados ao decreto/alterações = 13, sem incluir a questão específica da LC nº 526/2026 na contagem estrita do prefixo do decreto.
+
+### Fontes
+
+- Decreto nº 8.912/2018, Portal LEGIS: https://legis.ac.gov.br/detalhar/5749-0
+- LC nº 129/2004 consolidada, art. 79-E, Portal LEGIS: https://legis.ac.gov.br/detalhar/674-0
+- LC nº 496/2025 e LC nº 526/2026, Portal LEGIS.
+
+### Migrations
+
+- `20261121302600_clarify_annex3_and_lc526_promotion_interstice.sql` — commit `e060132e0598393407e8c22fd41e9435b0ac5037`.
+- `20261121302700_add_lc526_interstice_and_annex3_questions.sql` — commit `12126822eea346cdd9cc79f2eb87b94ca18265a0`.
+
+### Pendências mantidas
+
+- Obter o PDF/Diário Oficial com as tabelas originais completas dos Anexos I, II e III; a página textual não fornece as tabelas na extração acessível.
+- Fazer teste visual/integrado do treinador e verificar se as questões novas entram na contagem do painel do aluno.
+- Conferir integralmente a compatibilidade das regras regulamentares com as alterações de 2025 e 2026.
