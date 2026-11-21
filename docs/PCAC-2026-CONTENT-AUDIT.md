@@ -869,3 +869,20 @@ Os 11 itens são questões autorais no estilo de concursos, sem atribuição a p
 Migration na MAIN: `supabase/migrations/20261121298800_add_opening_questions_pcac_admin_constitutional_law.sql`, commit `8dc2bfe4d77fab0a4c3d68fcd8b84a98ae2907d9`. Aplicação direta no Supabase confirmada.
 
 **Limite:** sem teste de renderização visual nem confirmação de CI nesta etapa; não houve publicação manual em produção.
+
+
+## Informática e Tecnologia da Informação — questão inicial e resolução comentada — 21/11/2026
+
+Aplicado o padrão em todos os 19 materiais ativos:
+- Noções de Informática: 10/10 materiais com questão e resolução.
+- Tecnologia da Informação e Segurança da Informação: 9/9 materiais com questão e resolução.
+
+Os 19 enunciados são autorais no estilo de concursos, não transcrições oficiais. Cobrem slide mestre e animações; SMTP/POP3/IMAP; referências absolutas em planilhas; HTTPS e certificados; compartilhamento e menor privilégio; extensão/formato; autenticação e autorização; atalhos Windows; estilos do Word; chaves primárias; metadados; deduplicação; ordenação; TCP/UDP; DNS; tríade CID; permissões Linux.
+
+**Validação SQL final:** 19/19 materiais com questão de abertura e 19/19 com resolução comentada. As 96 questões anteriores do treinador foram preservadas (50 de Informática e 46 de TI e Segurança).
+
+Migrations na MAIN:
+- `supabase/migrations/20261121298900_add_opening_questions_pcac_informatics_it.sql` — commit `048f76bb29af4b2ff73f801c329057409abdd431`.
+- `supabase/migrations/20261121298910_add_opening_question_pcac_ti_permissions.sql` — commit `e2610f9892cb50a40fdb1041c9b68355524f53cc`.
+
+Aplicação direta no Supabase confirmada. Não houve teste visual na interface nem confirmação de CI; não foi feita publicação manual em produção.
