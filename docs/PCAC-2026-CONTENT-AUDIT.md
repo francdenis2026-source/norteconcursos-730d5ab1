@@ -1109,3 +1109,34 @@ Prosseguir com leitura artigo por artigo da LC nº 129/2004 (arts. 101 a 114 e 1
 - Confirmar a redação atual dos arts. 118 a 147, incluindo os marcos de interrupção/suspensão da prescrição, prazos da sindicância e PAD, composição/impedimentos da comissão, defesa, relatório e julgamento.
 - Conferir o texto da LC nº 39/1993, a Lei nº 14.735/2023 e o PCCR, sem inferir que a atualização de uma norma alterou automaticamente dispositivos de outra.
 - Teste visual e de integração do modo treinador permanece pendente; validação SQL não equivale a teste de interface.
+
+
+## Quinta continuação — revisão dos quatro grupos de transgressões — 21/11/2026
+
+### Conteúdo acrescentado ao material
+
+O material `pcac-2026-lc129-transgressoes-penalidades-responsabilidades` foi ampliado com uma revisão comparativa dos arts. 101 a 104, incluindo exemplos e critérios que mudam o enquadramento:
+
+- Art. 101: exemplos de primeiro grupo, como permuta de horário sem autorização e uso desnecessário de itens funcionais.
+- Art. 102: exemplos do segundo grupo e ressalva da ordem manifestamente ilegal; atualizado que o rol sofreu alterações posteriores, inclusive pela LC nº 293/2014.
+- Art. 103: ausência injustificada por até 30 dias, revelação culposa de informação sigilosa com prejuízo, dano doloso ao patrimônio e outras hipóteses.
+- Art. 104: ausência por mais de 30 dias, revelação dolosa de segredo funcional com prejuízo, tráfico de substância, tortura/crime hediondo e outras hipóteses.
+- Quadro comparativo: “até 30 dias” versus “mais de 30 dias”; culpa versus dolo; pena máxima até 2 anos versus superior a 2 anos.
+
+**Limite da conferência:** a síntese foi confrontada com o texto consolidado oficial do Portal LEGIS, mas não reproduz integralmente todos os incisos dos arts. 101 e 102. Para estudo literal, o material remete ao texto consolidado oficial. Não se declara revisão exaustiva de cada inciso individual dos dois artigos.
+
+### Questões autorais no treinador
+
+Foram registradas quatro questões autorais (uma por grupo ou distinção), com alternativas A–E, gabarito, explicação, identificação de autoria e vínculo ao material. Consulta SQL confirmou 4 registros distintos e ativos. Não são questões oficiais da IDECAN.
+
+### Validação e fonte
+
+- Material ampliado para 16.094 caracteres; consulta confirmou o novo capítulo e o quadro comparativo.
+- Fonte primária: Portal LEGIS do Acre, LC nº 129/2004 consolidada, arts. 101 a 104; LC nº 208/2010 e LC nº 293/2014.
+- Fontes auxiliares de busca utilizadas para localizar a redação dos artigos; a fonte oficial consolidada permanece a referência de estudo.
+- Migration `20261121300800_expand_lc129_transgression_groups_101_104.sql` — commit `b90338dba37404105fa0178c3bd62c281394eb79`.
+- Migration `20261121300900_add_four_group_transgression_trainer_questions.sql` — commit `ecdad151b7a265101877d940cdacdc7e0f563b88`.
+
+### Próxima revisão
+
+Continuar com os arts. 118 a 147: prescrição (termo inicial, interrupção e suspensão), sindicância, competência, composição e impedimentos da comissão, prazos de instrução, defesa, relatório e julgamento. Depois, conferir Lei nº 14.735/2023 e PCCR.
