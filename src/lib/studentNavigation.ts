@@ -78,6 +78,6 @@ export function studentNavigationSegment(href: string) {
   )
     return "Conteúdos";
   if (["/dashboard/ranking", "/dashboard/medals"].includes(href)) return "Conquistas";
-  if (["/dashboard/performance", "/dashboard/history"].includes(href)) return "Resultados";
+  if (href === "/dashboard/performance") return "Resultados";
   return "";
 }

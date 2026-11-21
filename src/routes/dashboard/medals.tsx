@@ -84,7 +84,7 @@ const TRACKS: Track[] = [
       text: "text-orange-600 dark:text-orange-400",
       bar: "bg-orange-500",
     },
-    to: "/dashboard/study-plan",
+    to: "/dashboard/study-coach",
     cta: "Montar meu plano",
     codes: ["STREAK_3", "STREAK_7", "STREAK_30"],
   },

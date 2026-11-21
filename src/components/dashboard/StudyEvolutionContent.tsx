@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
   ArrowRight,
@@ -29,7 +29,6 @@ import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
 import "@/styles/study-plan-professional.css";
 
-export const Route = createFileRoute("/dashboard/study-plan")({ component: StudyPlanPage });
 
 type CareerId = "PF" | "PRF" | "PC";
 type Metric = { correct: number; wrong: number; blank: number; total: number };
@@ -297,7 +296,8 @@ const fmtMinutes = (m: number) =>
       ? `${m}min`
       : `${Math.floor(m / 60)}h${String(m % 60).padStart(2, "0")}`;
 
-function StudyPlanPage() {
+/** Minha evolução: resultados das provas e prioridades de estudo. Aba de Desempenho. */
+export function StudyEvolutionContent() {
   const [career, setCareer] = React.useState<CareerId>("PF");
   const [weeklyHours, setWeeklyHours] = React.useState(15);
   const [examDate, setExamDate] = React.useState("");

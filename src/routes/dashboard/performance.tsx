@@ -28,6 +28,8 @@ import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMate
 import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
 import { PerformanceChartsGrid } from "@/components/dashboard/PerformanceCharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HistoryContent } from "@/components/dashboard/HistoryContent";
+import { StudyEvolutionContent } from "@/components/dashboard/StudyEvolutionContent";
 import "@/styles/performance-refinement.css";
 import "@/styles/performance-professional-refinement.css";
 import "@/styles/student-workspace-unified.css";
@@ -36,14 +38,43 @@ import "@/styles/student-internal-workspace-system.css";
 import "@/styles/exam-performance-workspaces.css";
 import "@/styles/performance-redesign.css";
 
+type PerformanceTab = "visao" | "historico" | "evolucao";
+
 export const Route = createFileRoute("/dashboard/performance")({
+  validateSearch: (search: Record<string, unknown>): { aba?: PerformanceTab | undefined; day?: string | undefined } => ({
+    aba: search["aba"] === "historico" || search["aba"] === "evolucao" ? search["aba"] : undefined,
+    day: typeof search["day"] === "string" && /^\d{4}-\d{2}-\d{2}$/.test(search["day"]) ? search["day"] : undefined,
+  }),
   component: PerformancePage,
+  head: () => ({ meta: [{ title: "Desempenho | Norte Concursos" }] }),
 });
+
+/** Desempenho: uma página com três abas (visão geral, histórico e evolução). */
+function PerformancePage() {
+  const { aba = "visao", day } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  return (
+    <Tabs
+      value={aba}
+      onValueChange={(value) => void navigate({ search: { aba: value as PerformanceTab, day: undefined }, replace: true })}
+      className="performance-hub"
+    >
+      <TabsList className="flex-wrap">
+        <TabsTrigger value="visao">Visão geral</TabsTrigger>
+        <TabsTrigger value="historico">Histórico</TabsTrigger>
+        <TabsTrigger value="evolucao">Evolução</TabsTrigger>
+      </TabsList>
+      <TabsContent value="visao"><PerformanceOverview /></TabsContent>
+      <TabsContent value="historico"><HistoryContent day={day} /></TabsContent>
+      <TabsContent value="evolucao"><StudyEvolutionContent /></TabsContent>
+    </Tabs>
+  );
+}
 
 const MIN_ITEMS_FOR_SIGNAL = 5;
 const WEAK_THRESHOLD = 60;
 
-function PerformancePage() {
+function PerformanceOverview() {
   const { user, isLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const { data, loading, error, retry } = usePerformanceOverview(user?.id, real);

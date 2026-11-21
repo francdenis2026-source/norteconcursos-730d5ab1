@@ -1,7 +1,7 @@
 import { acreDate, acreDateKey, acreDayRangeISO } from "@/lib/acreTime";
 import * as React from "react";
 import "@/styles/student-study-areas-refinement.css";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { Clock, History, Loader2, Trophy, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -20,15 +20,6 @@ import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero
 import { AttemptHistoryList } from "@/components/dashboard/AttemptHistoryList";
 import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 
-export const Route = createFileRoute("/dashboard/history")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    day: typeof search["day"] === "string" && /^\d{4}-\d{2}-\d{2}$/.test(search["day"])
-      ? search["day"]
-      : undefined,
-  }),
-  component: HistoryPage,
-  head: () => ({ meta: [{ title: "Histórico de estudos | Norte Concurso" }] }),
-});
 
 interface Answer {
   id: string;
@@ -47,16 +38,9 @@ interface Me {
 const fmtDate = (iso: string) =>
   acreDate(iso).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" });
 
-function HistoryPage() {
+/** Histórico de estudos, usado como aba de Desempenho. `day` vem do link de um dia no gráfico. */
+export function HistoryContent({ day }: { day?: string | undefined }) {
   const { user, isLoading: authLoading } = useAuthStatus();
-  const { day } = Route.useSearch();
-  const navigate = Route.useNavigate();
-  // O parâmetro inicial (vindo de um link) é lido uma vez e removido da
-  // barra de endereço; não deve continuar visível enquanto o aluno navega.
-  React.useEffect(() => {
-    if (day) void navigate({ search: { day: undefined }, replace: true });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na montagem
-  }, []);
   const real = !!user && user.id !== "demo-user";
   const [attempts, setAttempts] = React.useState<AttemptWithDetails[]>([]);
   const [answers, setAnswers] = React.useState<Answer[]>([]);
@@ -152,8 +136,8 @@ function HistoryPage() {
             <strong>{acreDate(day).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</strong>
           </span>
           <Link
-            to="/dashboard/history"
-            search={{ day: undefined }}
+            to="/dashboard/performance"
+            search={{ aba: "historico", day: undefined }}
             className="inline-flex min-h-11 items-center gap-1 text-xs font-semibold text-primary hover:underline"
           >
             <X className="h-3.5 w-3.5" aria-hidden /> Ver tudo
