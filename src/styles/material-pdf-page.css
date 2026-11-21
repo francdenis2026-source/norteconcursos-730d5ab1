@@ -10,7 +10,7 @@
   --sheet-muted: #5b6168;
   --sheet-line: #dedbd4;
   --sheet-accent: var(--ak-tone, oklch(0.55 0.12 70));
-  --sheet-w: 52rem; /* ≈ largura de uma página A4 na fonte base de 15px */
+  --sheet-w: 70rem; /* usa a área útil da janela; o texto cresce junto */
 }
 .dark .library-body {
   --sheet-bg: #171d26;
@@ -24,28 +24,22 @@ html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
   width: 100%;
   max-width: min(100%, var(--sheet-w));
   margin-inline: auto;
-  padding: clamp(1.25rem, 4.5vw, 3.25rem) clamp(1.1rem, 5vw, 3.5rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1.1rem, 4vw, 3rem);
   border: 1px solid var(--sheet-line);
   border-radius: 0.375rem;
   background: var(--sheet-bg);
   color: var(--sheet-ink);
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 12px 32px -18px rgb(0 0 0 / 35%);
-  font-size: 1.0667rem; /* 16px */
+  font-size: 1.15rem; /* ≈17px: leitura confortável em tela larga */
   line-height: 1.7;
   overflow-wrap: break-word;
 }
 
-/* Altura da janela: a folha cabe na tela e o texto rola dentro dela */
-@media (min-width: 900px) {
-  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
-    max-height: calc(100dvh - 13.5rem);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-gutter: stable;
-  }
-  html body .app-shell[data-area] .focus-study-container .library-body:not(.library-body--portuguese) {
-    max-height: calc(100dvh - var(--focus-bar-height, 3.5rem) - 3rem);
-  }
+/* Altura: a folha acompanha o conteúdo e a página rola (como um PDF contínuo); o cabeçalho é uma
+   faixa baixa para a leitura começar logo no topo da janela. */
+html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose {
+  font-size: inherit;
+  width: 100%;
 }
 
 /* Conteúdo ocupa toda a largura útil da folha */
@@ -151,13 +145,31 @@ html body .app-shell[data-area] .library-body .study-prose strong { color: var(-
   }
 }
 
-/* Faixa de título compacta: o título e o progresso ficam em uma linha e a página ganha a altura */
-html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero {
-  min-height: 0;
-  padding-block: 0.75rem;
+/* Faixa de título compacta (desktop): título, assunto e progresso em uma linha só */
+@media (min-width: 900px) {
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    min-height: 0;
+    padding: 0.55rem 1rem;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero > img { display: none; }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .ak-hero__copy { flex: 1 1 18rem; }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .ak-hero__copy > p { display: none; }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero h1 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-meta { margin: 0; flex-wrap: nowrap; }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-study-status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 0.35rem 0.7rem;
+  }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-study-status > div { gap: 0.5rem; }
+  html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-study-status progress { width: 7rem; }
 }
-html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .ak-hero__copy > p { display: none; }
-html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero h1 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
 
 @media print {
   html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
