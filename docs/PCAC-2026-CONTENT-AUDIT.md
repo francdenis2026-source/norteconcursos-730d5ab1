@@ -1140,3 +1140,45 @@ Foram registradas quatro questões autorais (uma por grupo ou distinção), com 
 ### Próxima revisão
 
 Continuar com os arts. 118 a 147: prescrição (termo inicial, interrupção e suspensão), sindicância, competência, composição e impedimentos da comissão, prazos de instrução, defesa, relatório e julgamento. Depois, conferir Lei nº 14.735/2023 e PCCR.
+
+
+## Sexta continuação — arts. 118 a 151 da LC nº 129/2004 — 21/11/2026
+
+### Prescrição e sindicância
+
+- Reforçado no material que a prescrição do art. 118 começa no dia em que a autoridade toma conhecimento da falta, e que a abertura de sindicância ou, quando cabível, a instauração de PAD interrompe a prescrição.
+- Esclarecido que o texto consolidado consultado não detalha no parágrafo único do art. 118 um prazo máximo de interrupção nem uma regra expressa de reinício. O material agora orienta a não importar automaticamente regras de outros estatutos.
+- Mantidos os prazos do art. 118: advertência, seis meses; suspensão, dois anos; demissão/cassação, cinco anos; infração também penal, prazo prescricional penal.
+- Reforçada a distinção entre prazo de conclusão da sindicância (30 dias, com prorrogação mediante solicitação fundamentada, conforme material), prazos para provas/defesa (10 dias) e recurso (15 dias).
+- Explicado o caminho da sindicância e a necessidade de PAD quando a infração puder levar à demissão a bem do serviço público.
+
+### PAD — comissão, impedimentos, defesa e recursos
+
+- Ampliadas as explicações dos arts. 131 e 132: comissão especial de três membros, presidência, hierarquia, secretário e impedimentos por parentesco até terceiro grau ou subordinação do acusado.
+- Acrescentados exemplos de prazos da citação, produção de provas, vista, defesa escrita, relatório e recurso, sem misturar marcos processuais.
+- Explicado que revelia não elimina a defesa: o material prevê devolução do prazo e defensor dativo.
+- Diferenciadas duas vias: recurso do acusado e remessa ao Conselho Superior por discordância do Delegado-Geral em relação ao relatório.
+- Preservada a ressalva sobre a divergência de remissões entre arts. 107, 114 e 150; o material não presume correção legislativa.
+
+### Treinador
+
+Foram adicionadas quatro questões autorais:
+- duas sobre prescrição (marco inicial e prazo para suspensão);
+- uma sobre impedimento da comissão;
+- uma sobre efeitos da revelia.
+
+Consulta SQL confirmou quatro chaves distintas e quatro registros ativos, com gabarito e explicação e vínculo aos dois materiais. Não são questões oficiais da IDECAN.
+
+### Validação
+
+- Material de sindicância/prescrição: 8.430 caracteres após ampliação.
+- Material de PAD: 11.281 caracteres após ampliação.
+- Fonte primária: LC nº 129/2004 consolidada no Portal LEGIS do Acre, especialmente arts. 118–151; alterações históricas consultadas no próprio Portal.
+- A página do Portal informa que tem natureza consultiva e não substitui a publicação no Diário Oficial. Para controvérsia jurídica, prevalece o ato oficialmente publicado.
+- Migrations:
+  - `20261121301000_deepen_lc129_prescription_and_pad_procedure.sql` — commit `5c2e2df0da71fcc7d6229b0a603ba2ddc6fc54c0`.
+  - `20261121301100_add_prescription_pad_process_questions.sql` — commit `cd2dbc730ce59bd0994701de5d708429f097307e`.
+
+### Pendências
+
+A revisão de conteúdo dos arts. 118 a 151 foi aprofundada, mas não deve ser considerada auditoria jurídica exaustiva de cada inciso: ainda falta confronto integral e individual dos arts. 134–147 e teste visual/de integração do treinador. Permanecem também a conferência final da Lei nº 14.735/2023 e do PCCR.
