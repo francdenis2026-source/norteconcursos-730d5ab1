@@ -533,14 +533,139 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "10. Redução ao valor recuperável de ativos e goodwill",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 6,
-        "revision_reason": "A quantidade atual de exercícios difere da quantidade registrada na revisão antiga. Enunciados, gabaritos e justificativas devem ser reconferidos.",
-        "current_quiz_items": 10,
-        "previously_checked_items": 6
+        "items": [
+          {
+            "a": true,
+            "q": "Uma perda por redução ao valor recuperável anteriormente reconhecida sobre goodwill não pode ser revertida em exercício futuro.",
+            "tip": "Macete direto: goodwill perdeu, não reverte. A regra é diferente da aplicável a outros ativos, cujas perdas podem ser revertidas sob condições.",
+            "why": "A perda reconhecida sobre goodwill não pode ser revertida em períodos posteriores, mesmo que o valor recuperável da unidade aumente. Exemplo: goodwill de R$ 50.000 sofre perda de R$ 20.000 e passa a R$ 30.000. Uma melhora posterior do negócio não autoriza restituir os R$ 20.000 ao ativo, pois isso poderia reconhecer goodwill gerado internamente. CPC 01, itens 124 e 125.",
+            "resolution_steps": [
+              "Identifique que a perda anterior foi atribuída ao goodwill.",
+              "Verifique se a questão pergunta sobre reversão posterior.",
+              "Aplique a proibição dos itens 124 e 125 do CPC 01.",
+              "Mantenha o saldo líquido da perda, sem estorno."
+            ]
+          },
+          {
+            "a": false,
+            "q": "O valor recuperável é o menor entre o valor em uso e o valor justo líquido das despesas de venda.",
+            "tip": "Use a palavra MAIOR. A empresa considera a melhor forma de recuperar o valor: usando o ativo ou vendendo-o.",
+            "why": "O valor recuperável é o MAIOR entre valor em uso e valor justo líquido das despesas de alienação. Se um ativo tem valor em uso de R$ 100.000 e valor justo líquido de R$ 105.000, o valor recuperável é R$ 105.000. A afirmação usa o menor valor e, por isso, está errada.",
+            "resolution_steps": [
+              "Anote os dois valores: R$ 100.000 e R$ 105.000.",
+              "Compare os valores.",
+              "Escolha o maior: R$ 105.000.",
+              "A afirmação diz menor; portanto está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Se o valor contábil é R$ 100.000 e o valor recuperável é R$ 90.000, a perda é de R$ 10.000.",
+            "tip": "Fórmula: perda = valor contábil − valor recuperável, quando o primeiro for maior.",
+            "why": "A perda é a diferença positiva entre valor contábil e valor recuperável. Se o ativo está registrado por R$ 100.000 e só pode recuperar R$ 90.000, há R$ 10.000 que não serão recuperados. A perda por impairment é R$ 10.000, reconhecida conforme as regras do CPC 01.",
+            "resolution_steps": [
+              "Identifique o valor contábil: R$ 100.000.",
+              "Identifique o valor recuperável: R$ 90.000.",
+              "Subtraia: 100.000 − 90.000 = R$ 10.000.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A melhora do valor recuperável permite aumentar o goodwill pelo estorno da perda reconhecida anteriormente.",
+            "tip": "Não generalize a proibição para todos os ativos: a regra especial e absoluta de não reversão é para goodwill.",
+            "why": "A melhora do valor recuperável não autoriza reverter perda anteriormente reconhecida sobre goodwill. A proibição existe porque a recuperação posterior pode representar goodwill criado internamente, que não pode ser reconhecido como ativo. Para outros ativos, a reversão pode ser permitida se houver mudança nas estimativas, respeitados os limites do CPC 01.",
+            "resolution_steps": [
+              "Identifique que o ativo é goodwill.",
+              "Lembre que a perda reconhecida sobre goodwill não pode ser revertida.",
+              "Não confunda com outros ativos sujeitos a regras de reversão.",
+              "A afirmação é falsa."
+            ]
+          },
+          {
+            "a": true,
+            "q": "A questão Consulplan/CFC 2019.1 apresentada no material tem como resposta I e III, apenas.",
+            "tip": "Em itens combinados, julgue cada afirmativa separadamente. Não escolha a alternativa apenas por reconhecer uma frase.",
+            "why": "O material apresenta a questão Consulplan/CFC 2019.1 e informa que a afirmativa II é falsa por defender a reversão de perda do goodwill. Assim, permanecem verdadeiras I e III, resultando na alternativa C. Antes de marcar, confira o conteúdo de cada afirmativa com a regra do CPC 01, especialmente a proibição de reversão do goodwill.",
+            "resolution_steps": [
+              "Analise a afirmativa I conforme o enunciado original.",
+              "Rejeite a II se ela afirmar que perda de goodwill pode ser revertida.",
+              "Confirme a III com a regra aplicável.",
+              "Selecione a combinação I e III, apenas: alternativa C."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na aquisição de 80% da Beta por R$ 300.000, com ativos líquidos a valor justo de R$ 360.000, o goodwill é R$ 12.000.",
+            "tip": "Primeiro calcule ativos líquidos; depois aplique o percentual adquirido; por último subtraia da contraprestação.",
+            "why": "A parcela adquirida dos ativos líquidos a valor justo é 80% × (R$ 560.000 − R$ 200.000) = 80% × R$ 360.000 = R$ 288.000. Comparando com a contraprestação de R$ 300.000, o goodwill é R$ 12.000. Esse cálculo pressupõe mensuração dos não controladores pela participação proporcional nos ativos líquidos identificáveis; outro método de mensuração dos não controladores pode alterar o goodwill.",
+            "resolution_steps": [
+              "Calcule ativos líquidos a valor justo: 560.000 − 200.000 = R$ 360.000.",
+              "Calcule 80%: 360.000 × 0,80 = R$ 288.000.",
+              "Subtraia da contraprestação: 300.000 − 288.000.",
+              "Goodwill = R$ 12.000, sob a premissa indicada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Antes de reconhecer ganho por compra vantajosa, deve-se revisar a contraprestação transferida e a participação de não controladores, além dos ativos e passivos identificáveis.",
+            "tip": "Compra vantajosa exige revisão antes do reconhecimento. Confira todos os componentes do cálculo, não apenas ativos e preço.",
+            "why": "Antes de reconhecer ganho por compra vantajosa, a adquirente deve reavaliar se identificou e mensurou corretamente os ativos identificáveis, passivos assumidos, participação de não controladores, contraprestação transferida e, em aquisição em etapas, participação anteriormente detida. Só depois dessa revisão é reconhecido eventual ganho no resultado.",
+            "resolution_steps": [
+              "Reavalie os ativos identificáveis adquiridos e passivos assumidos.",
+              "Confira a mensuração dos não controladores.",
+              "Confira a contraprestação transferida.",
+              "Se houver aquisição em etapas, confira a participação anteriormente detida.",
+              "Só então reconheça eventual ganho por compra vantajosa."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Na compra de 90% por R$ 300 mil, com ativos líquidos de R$ 400 mil e não controladores de R$ 40 mil, o ganho é R$ 100 mil.",
+            "tip": "Lembre da estrutura: ativos líquidos atribuíveis + não controladores − contraprestação (e participação anterior, se existir).",
+            "why": "O ganho por compra vantajosa é calculado comparando a participação nos ativos líquidos identificáveis, somada à participação de não controladores conforme sua mensuração, com a contraprestação transferida e eventual participação anteriormente detida. No exemplo, R$ 400.000 − R$ 300.000 − R$ 40.000 = R$ 60.000. R$ 100.000 ignora a participação de não controladores.",
+            "resolution_steps": [
+              "Comece com ativos líquidos identificáveis: R$ 400.000.",
+              "Subtraia a contraprestação: R$ 300.000.",
+              "Subtraia os não controladores mensurados em R$ 40.000.",
+              "Resultado: R$ 60.000; não R$ 100.000."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A recuperação dos lucros permite reverter perda anterior de goodwill.",
+            "tip": "Se a questão mencionar goodwill e reversão, procure a proibição expressa.",
+            "why": "A recuperação posterior do negócio não permite reverter perda de goodwill. A vedação está no CPC 01, itens 124 e 125. O motivo didático é que uma melhora pode decorrer de goodwill gerado internamente depois da aquisição, cujo reconhecimento como ativo não é permitido.",
+            "resolution_steps": [
+              "Identifique o goodwill.",
+              "Identifique que já houve perda reconhecida.",
+              "A questão propõe estornar essa perda por melhora dos lucros.",
+              "Aplique CPC 01, itens 124–125: reversão proibida."
+            ]
+          },
+          {
+            "a": true,
+            "q": "A perda por impairment de uma máquina pode ser revertida se satisfeitas as condições e limites do CPC 01.",
+            "tip": "Diferencie: goodwill nunca reverte; outros ativos podem reverter, mas não livremente nem acima do limite contábil hipotético.",
+            "why": "A proibição específica de reversão recai sobre perda reconhecida para goodwill. Para outros ativos, o CPC 01 admite reversão quando houver mudança nas estimativas usadas para determinar o valor recuperável, respeitado o limite do valor contábil que existiria sem a perda anterior. Por isso, a afirmação está correta.",
+            "resolution_steps": [
+              "Identifique que o ativo é uma máquina, não goodwill.",
+              "Verifique se há evidência de mudança nas estimativas do valor recuperável.",
+              "Aplique os limites de reversão do CPC 01.",
+              "Conclua que a possibilidade existe, sob condições."
+            ]
+          }
+        ],
+        "method": "Revisão individual de dez itens: CPC 01 (R1), goodwill sem reversão, valor recuperável como maior entre valor em uso e valor justo líquido, perdas de 10000, compra vantajosa e limite da reversão de ativos não goodwill.",
+        "status": "reviewed",
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:46:02Z",
+        "review_type": "didactic_manual",
+        "source_note": "Conteúdo organizado exclusivamente a partir dos arquivos enviados: “Revisão de Véspera.pdf” (questão Consulplan/Exame CFC 2019.1, páginas 26–27) e “Correção - Simulado.pptx” (questões sobre goodwill e teste de recuperabilidade).",
+        "topic_label": "10. Redução ao valor recuperável de ativos e goodwill",
+        "material_slug": "pcac-2026-contabilidade-10-impairment-goodwill-reducao-valor-recuperavel",
+        "reference_url": "https://www.cpc.org.br/cPc/documentos-emitidos/Pronunciamentos/Pronunciamento?id=2"
       }
     },
     {
@@ -1910,11 +2035,123 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "16. Patrimônio Líquido, reservas e destinação do resultado",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "A reserva legal indicada no resumo corresponde a 5% do lucro líquido antes de qualquer destinação.",
+            "why": "A reserva legal corresponde, em regra, a 5% do lucro líquido do exercício antes de qualquer outra destinação. A constituição deve respeitar o teto de 20% do capital social. Portanto, não basta calcular 5%: também é necessário conferir se há espaço até o limite legal."
+          },
+          {
+            "a": true,
+            "q": "O limite obrigatório apresentado para a reserva legal é 20% do capital social.",
+            "why": "O art. 193 da Lei nº 6.404/1976 fixa em 20% do capital social o limite obrigatório da reserva legal. Não é 20% do lucro líquido. Os 5% incidem sobre o lucro; os 20% servem como teto da reserva em relação ao capital social. O capital social é a base do teto, pois a lei busca preservar a integridade do capital da companhia. A reserva legal existente deve ser comparada com esse limite para saber se ainda há espaço para novas destinações."
+          },
+          {
+            "a": true,
+            "q": "Com capital social integralizado de R$ 70.400, o limite de 20% é R$ 14.080.",
+            "why": "O limite obrigatório é 20% de R$ 70.400, ou seja, R$ 14.080. Esse valor é o teto da reserva legal, não o montante que deve ser constituído no exercício. Para calcular a parcela anual, use 5% do lucro líquido e compare com o espaço disponível até o teto."
+          },
+          {
+            "a": false,
+            "q": "Na questão enviada, a reserva legal a constituir é R$ 5.760.",
+            "why": "A reserva legal do exercício é 5% × R$ 57.600 = R$ 2.880. A reserva existente de R$ 6.400, somada à nova parcela, chega a R$ 9.280, abaixo do limite de R$ 14.080. Logo, não se constitui R$ 5.760; a parcela correta é R$ 2.880. A reserva legal do exercício é limitada ao valor que falta para atingir 20% do capital social. No exemplo, a parcela de 5% do lucro é R$ 2.880 e o espaço disponível é R$ 7.680; portanto, cabe constituir os R$ 2.880, e não R$ 5.760."
+          },
+          {
+            "a": false,
+            "q": "Reserva para contingências e provisão para contingências são classificadas no mesmo grupo patrimonial.",
+            "why": "Reserva para contingências é destinação de lucro no patrimônio líquido; provisão para contingências é passivo reconhecido quando há obrigação presente, saída provável e estimativa confiável. Embora os nomes sejam parecidos, representam fatos contábeis diferentes e aparecem em grupos patrimoniais distintos."
+          },
+          {
+            "a": true,
+            "q": "A reserva legal corresponde, em regra, a 5% do lucro líquido do exercício, antes de qualquer destinação.",
+            "why": "A regra geral do art. 193 é aplicar 5% do lucro líquido antes de qualquer destinação à reserva legal, respeitando o teto de 20% do capital social. Se a reserva já estiver próxima do limite, a parcela efetiva pode ser menor que 5% do lucro. A regra dos 5% é aplicada ao lucro líquido do exercício antes de outras destinações, mas a constituição para quando o teto legal for atingido. O limite de 20% do capital social e a faculdade de 30% com reservas de capital são regras distintas."
+          },
+          {
+            "a": false,
+            "q": "A reserva legal pode ultrapassar o limite de 20% do capital social sem qualquer restrição.",
+            "why": "A reserva legal não pode ultrapassar 20% do capital social. A lei também prevê uma faculdade de não constituir a reserva em determinado exercício quando a soma do saldo da reserva legal com as reservas de capital previstas no art. 182, § 1º, exceder 30% do capital. Isso não autoriza ultrapassar o teto de 20% da reserva legal."
+          },
+          {
+            "a": true,
+            "q": "A companhia pode deixar de constituir reserva legal no exercício quando o saldo dessa reserva, somado às reservas de capital, exceder 30% do capital social.",
+            "why": "O art. 193, § 1º, permite deixar de constituir a reserva legal no exercício em que o saldo da reserva legal acrescido das reservas de capital indicadas na lei exceder 30% do capital social. É uma faculdade legal e não um novo teto obrigatório da reserva legal isoladamente."
+          },
+          {
+            "a": true,
+            "q": "A reserva legal tem por finalidade assegurar a integridade do capital social.",
+            "why": "A finalidade legal da reserva é assegurar a integridade do capital social. Ela só pode ser utilizada para compensar prejuízos ou aumentar o capital, conforme art. 193, § 2º, da Lei das S.A. Não é uma reserva livre para distribuir dividendos ordinários."
+          },
+          {
+            "a": false,
+            "q": "A reserva legal pode ser utilizada apenas para pagamento de dividendos aos acionistas.",
+            "why": "A reserva legal não pode ser utilizada apenas para pagar dividendos. A lei limita sua utilização à compensação de prejuízos ou ao aumento do capital social. Essa restrição protege o capital e impede que a reserva seja tratada como lucro livre para distribuição."
+          },
+          {
+            "a": false,
+            "q": "O ágio na emissão de ações é classificado como receita operacional do exercício.",
+            "why": "O ágio na emissão de ações é reserva de capital, não receita operacional. A companhia recebe recursos de uma operação com seus proprietários/investidores, e a parcela que excede o valor destinado ao capital social é registrada diretamente no patrimônio líquido, conforme art. 182, § 1º."
+          },
+          {
+            "a": true,
+            "q": "Ações em tesouraria são apresentadas como conta redutora do patrimônio líquido.",
+            "why": "Ações em tesouraria são ações da própria companhia que foram recompradas e permanecem sob sua titularidade. Não são um investimento/ativo da companhia; são apresentadas como dedução do patrimônio líquido, reduzindo-o. A companhia não pode tratar suas próprias ações recompradas como investimento no ativo. Enquanto estiverem em tesouraria, elas reduzem o patrimônio líquido, porque representam recursos devolvidos aos acionistas por meio da recompra."
+          },
+          {
+            "a": true,
+            "q": "Capital a integralizar representa parcela do capital subscrito ainda não realizada e reduz o patrimônio líquido apresentado.",
+            "why": "Capital a integralizar é a parcela do capital subscrito que os acionistas ainda não entregaram à companhia. Embora o capital tenha sido subscrito, a parte não realizada aparece como dedução do capital social no patrimônio líquido, reduzindo o valor efetivamente integralizado."
+          },
+          {
+            "a": false,
+            "q": "A reserva para contingências e a provisão para contingências pertencem necessariamente ao mesmo grupo patrimonial.",
+            "why": "Reserva para contingências é uma reserva de lucros no PL, constituída para compensar diminuição futura de lucro decorrente de perda provável e estimável. Provisão para contingências é passivo por obrigação presente. A afirmação está errada ao dizer que necessariamente pertencem ao mesmo grupo."
+          },
+          {
+            "a": true,
+            "q": "A reserva de lucros a realizar pode ser constituída quando o dividendo obrigatório calculado supera a parcela realizada do lucro líquido, observados os requisitos legais.",
+            "why": "A reserva de lucros a realizar pode ser constituída quando o dividendo obrigatório calculado supera a parcela realizada do lucro líquido do exercício. A assembleia pode destinar o excesso à reserva, conforme art. 197, para evitar distribuição de lucro ainda não realizado financeiramente, observados os requisitos legais."
+          },
+          {
+            "a": true,
+            "q": "Se o estatuto for omisso quanto ao dividendo obrigatório, a regra legal toma como base 50% do lucro líquido ajustado.",
+            "why": "Se o estatuto é omisso, o art. 202 estabelece como regra metade do lucro líquido do exercício, ajustado pela reserva legal e pela reserva para contingências e sua reversão, conforme a lei. Não é correto aplicar automaticamente 25% quando o estatuto não define percentual; 25% pode ser regra estatutária ou dado específico da questão."
+          },
+          {
+            "a": true,
+            "q": "As reservas estatutárias devem ser criadas pelo estatuto, que indicará sua finalidade, critérios de constituição e limite máximo.",
+            "why": "A reserva estatutária depende de previsão no estatuto. Para cada reserva, o estatuto deve indicar finalidade precisa e completa, critério para determinar a parcela anual destinada e limite máximo. Sem esses elementos, a criação não atende ao art. 194 da Lei das S.A."
+          },
+          {
+            "a": true,
+            "q": "A reserva para contingências destina parcela do lucro para compensar, em exercício futuro, diminuição de lucro decorrente de perda julgada provável e estimável.",
+            "why": "A reserva para contingências é formada com parte do lucro para compensar, em exercício futuro, diminuição do lucro decorrente de perda julgada provável e cujo valor possa ser estimado. A proposta deve indicar a causa da perda e justificar a prudência. A reserva é revertida quando cessam as razões ou ocorre a perda."
+          },
+          {
+            "a": false,
+            "q": "Gastos com emissão de ações devem ser reconhecidos como ativo imobilizado.",
+            "why": "Gastos diretamente atribuíveis à emissão de instrumentos patrimoniais não são ativo imobilizado nem despesa operacional comum. Em regra, são deduzidos do patrimônio líquido, líquidos dos efeitos tributários relacionados, conforme a norma aplicável. A questão testa a natureza de uma operação de capital."
+          },
+          {
+            "a": false,
+            "q": "O limite de 20% da reserva legal é calculado sobre o lucro líquido do exercício.",
+            "why": "O limite de 20% é calculado sobre o capital social, enquanto os 5% de constituição anual são calculados sobre o lucro líquido do exercício. São percentuais com bases diferentes. Trocar as bases é uma pegadinha frequente em questões de reserva legal. A confusão entre as duas bases muda completamente o resultado. Se o capital é R$ 100.000, o teto da reserva legal é R$ 20.000; se o lucro é R$ 50.000, a constituição anual normal é R$ 2.500, sujeita ao espaço até o teto."
+          },
+          {
+            "a": false,
+            "q": "No cálculo do dividendo por ação, as ações em tesouraria devem ser consideradas como ações em circulação com direito ao dividendo.",
+            "why": "Ações em tesouraria não recebem dividendos enquanto pertencem à própria companhia. Para calcular o dividendo por ação, use as ações em circulação com direito à distribuição: ações emitidas menos ações em tesouraria. Incluir as ações em tesouraria diluiria indevidamente o valor por ação."
+          }
+        ],
+        "method": "Conferência de 21 assertivas sobre reservas, patrimônio líquido e dividendos conforme Lei 6.404/1976 compilada, arts. 182, 193 a 197 e 202; cálculos e justificativas consultados; esta é revisão didática, não autorização automática do treinador",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 21
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:46:39Z",
+        "review_type": "didactic_manual",
+        "source_note": "“Resumo - Contabilidade Geral.pdf”, itens 68–86 e 156, páginas 12–16 e 28; “Revisão de Véspera - Alunos.pdf”, questão Consulplan/CFC 2020.2, página 23.; Questão 22, Consulplan/Exame CFC 2020.1, Prova 2020.1 - Resolvida - Parte 03.pdf, páginas 7–8; cálculo refeito a partir da tabela original.; Questão 28, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, página 19.; Questão 22 (segunda questão, Patrimônio Líquido), Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, páginas 7–8.",
+        "topic_label": "16. Patrimônio Líquido, reservas e destinação do resultado",
+        "material_slug": "pcac-2026-contabilidade-16-patrimonio-liquido-reservas-dividendos",
+        "official_reference": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"
       }
     },
     {
@@ -2021,11 +2258,115 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "18. Folha de pagamento: remuneração, INSS retido, contribuição patronal e FGTS",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "O INSS retido dos empregados já está incluído na remuneração bruta.",
+            "tip": "Retido = parte do salário; patronal = encargo extra da empresa. Nunca some a retenção novamente ao bruto.",
+            "why": "O INSS retido já está dentro da remuneração bruta. A empresa apenas divide a obrigação: paga o salário líquido ao empregado e recolhe a parte retida ao governo. A contribuição patronal é diferente: é encargo próprio e adicional da empresa. Exemplo hipotético: bruto R$ 1.000, retenção R$ 100, patronal R$ 200. O empregado recebe R$ 900; ao INSS vão R$ 300; total de obrigações = R$ 1.200.",
+            "resolution_steps": [
+              "Identifique a remuneração bruta: R$ 210.000.",
+              "Identifique o INSS retido: R$ 23.100, já incluído no bruto.",
+              "Separe o líquido a pagar: 210.000 − 23.100 = R$ 186.900.",
+              "Mantenha R$ 23.100 como obrigação de recolhimento, sem somar novamente ao total bruto."
+            ]
+          },
+          {
+            "a": true,
+            "q": "O INSS patronal é encargo adicional da empresa.",
+            "tip": "Patronal significa pago pela empresa por sua conta, além do salário bruto.",
+            "why": "A contribuição patronal é encargo próprio da empresa, além da remuneração bruta dos empregados. Diferentemente do INSS retido, não é parte do salário que seria pago ao trabalhador. Quando a folha é reconhecida e ainda não paga, a contribuição patronal gera despesa/custo e obrigação a recolher no passivo.",
+            "resolution_steps": [
+              "Identifique a contribuição como patronal.",
+              "Não a confunda com desconto do empregado.",
+              "Reconheça despesa/custo adicional.",
+              "Registre a obrigação a recolher no passivo."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Com remuneração bruta de R$ 210.000 e INSS retido de R$ 23.100, o salário líquido é R$ 186.900.",
+            "tip": "Líquido = bruto − descontos do empregado.",
+            "why": "O salário líquido corresponde ao bruto menos os descontos do empregado. Assim, R$ 210.000 − R$ 23.100 = R$ 186.900. O valor retido não desaparece: a empresa deve recolhê-lo, mas ele não é pago diretamente ao trabalhador. A diferença entre o bruto e o líquido não desaparece: ela fica registrada como obrigação de recolhimento ao INSS. Assim, o passivo total pode ser decomposto em salário líquido a pagar mais INSS retido, além dos encargos patronais e FGTS que a empresa suporta por conta própria.",
+            "resolution_steps": [
+              "Anote o bruto: R$ 210.000.",
+              "Anote a retenção: R$ 23.100.",
+              "Subtraia: 210.000 − 23.100.",
+              "Salário líquido = R$ 186.900."
+            ]
+          },
+          {
+            "a": true,
+            "q": "O FGTS a recolher aumenta o Passivo Circulante.",
+            "tip": "FGTS a recolher é passivo, não valor que pode ser ignorado por não ir diretamente ao empregado.",
+            "why": "O FGTS calculado sobre a folha é obrigação própria do empregador. Mesmo que o valor não seja entregue diretamente ao empregado naquele momento, a empresa deve recolhê-lo e, enquanto não pagar, reconhece um passivo. Por isso, aumenta o Passivo Circulante.",
+            "resolution_steps": [
+              "Identifique o FGTS calculado na folha.",
+              "Verifique que ainda não foi recolhido.",
+              "Reconheça a obrigação a pagar.",
+              "Aumente o Passivo Circulante."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão 22 da Consulplan/CFC 2020.1, o aumento do Passivo Circulante é R$ 268.800.",
+            "tip": "Conferência rápida: bruto + INSS patronal + FGTS. Não some a retenção novamente.",
+            "why": "O salário líquido é R$ 186.900; o INSS retido a recolher é R$ 23.100; o INSS patronal é R$ 42.000; e o FGTS é R$ 16.800. Somando as obrigações: 186.900 + 23.100 + 42.000 + 16.800 = R$ 268.800. É igual a salário bruto de R$ 210.000 mais encargos patronais de R$ 58.800.",
+            "resolution_steps": [
+              "Calcule o salário líquido: 210.000 − 23.100 = R$ 186.900.",
+              "Some INSS retido: + R$ 23.100.",
+              "Some INSS patronal: + R$ 42.000.",
+              "Some FGTS: + R$ 16.800.",
+              "Passivo total = R$ 268.800."
+            ]
+          },
+          {
+            "a": false,
+            "q": "O INSS retido deve ser somado ao salário bruto como se fosse um encargo patronal adicional.",
+            "tip": "Não duplique o INSS retido. A soma total também pode ser feita como bruto + encargos patronais.",
+            "why": "A retenção previdenciária é descontada do salário bruto do empregado. Ela gera obrigação de recolhimento, mas não é um segundo encargo da empresa. Somá-la novamente ao bruto contaria a mesma parcela duas vezes e superestimaria o passivo. O adicional da empresa é a contribuição patronal e o FGTS, conforme os dados da questão.",
+            "resolution_steps": [
+              "Identifique a retenção como parte do bruto.",
+              "Separe o líquido a pagar e o INSS retido a recolher.",
+              "Some os encargos próprios da empresa.",
+              "Não acrescente a retenção novamente ao bruto."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão 22, o aumento do passivo é R$ 268.800.",
+            "tip": "Fórmula de conferência: passivo da folha = remuneração bruta + encargos do empregador ainda não pagos.",
+            "why": "O aumento do passivo é a remuneração bruta de R$ 210.000 acrescida dos encargos patronais de R$ 42.000 e FGTS de R$ 16.800. Total = R$ 268.800. O INSS retido já está contido nos R$ 210.000 e apenas divide o destino do pagamento entre empregado e governo.",
+            "resolution_steps": [
+              "Comece pela remuneração bruta: R$ 210.000.",
+              "Some INSS patronal: R$ 42.000.",
+              "Some FGTS: R$ 16.800.",
+              "Total: R$ 268.800."
+            ]
+          },
+          {
+            "a": false,
+            "q": "O INSS retido dos empregados é encargo patronal adicional ao salário bruto.",
+            "tip": "Retido reduz o líquido; patronal aumenta o custo da empresa.",
+            "why": "O INSS retido é parte da remuneração do empregado e reduz o valor líquido que ele recebe. O encargo patronal é uma contribuição própria da empresa, que aumenta o custo e o passivo. Misturar os dois leva a duplicar a retenção ou a deixar de reconhecer o encargo adicional.",
+            "resolution_steps": [
+              "Identifique quem suporta o valor: empregado ou empregador.",
+              "Retido: desconto do bruto do empregado.",
+              "Patronal: encargo adicional da empresa.",
+              "A afirmação está errada porque classifica o retido como patronal."
+            ]
+          }
+        ],
+        "method": "Revisão individual de oito itens: composição da remuneração bruta, contribuição retida versus patronal, FGTS e cálculo de passivo de 210000 + 42000 + 16800 = 268800.",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 8
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:46:02Z",
+        "review_type": "didactic_manual",
+        "source_note": "Questão 22, Consulplan/Exame CFC 2020.1, Prova 2020.1 - Resolvida - Parte 03.pdf, página 6. Valores e alternativas reproduzidos conforme o enunciado do arquivo.; Questão 22 (folha), Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, página 6.",
+        "topic_label": "18. Folha de pagamento: remuneração, INSS retido, contribuição patronal e FGTS",
+        "material_slug": "pcac-2026-contabilidade-18-folha-pagamento-encargos-inss-fgts",
+        "reference_url": null
       }
     }
   ]
