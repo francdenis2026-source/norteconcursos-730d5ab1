@@ -21,32 +21,3 @@ html, body { min-width: 0; }
 :root[data-theme-switching] *,
 :root[data-theme-switching] *::before,
 :root[data-theme-switching] *::after { animation-name: none !important; }
-
-
-/* Seletor persistente de tema nas páginas internas de estudo. */
-.nc-dashboard-theme-toggle {
-  position: fixed;
-  z-index: 120;
-  right: max(16px, env(safe-area-inset-right));
-  bottom: max(76px, calc(env(safe-area-inset-bottom) + 76px));
-  display: inline-flex;
-  min-height: 42px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 0 13px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--foreground);
-  box-shadow: 0 5px 18px rgb(0 0 0 / 14%);
-  font-size: 12px;
-  font-weight: 750;
-  cursor: pointer;
-}
-.nc-dashboard-theme-toggle svg { width: 17px; height: 17px; color: var(--primary); }
-.nc-dashboard-theme-toggle:hover { border-color: var(--primary); }
-.nc-dashboard-theme-toggle:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
-@media (max-width: 640px) {
-  .nc-dashboard-theme-toggle { right: 12px; bottom: max(78px, calc(env(safe-area-inset-bottom) + 78px)); min-height: 40px; padding-inline: 11px; }
-}
