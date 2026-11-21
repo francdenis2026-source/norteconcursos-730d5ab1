@@ -1571,3 +1571,48 @@ Total de questões ativas identificadas com prefixo `pcac-dec8912-`: 11 anterior
 - Obter o PDF/Diário Oficial com as tabelas originais completas dos Anexos I, II e III; a página textual não fornece as tabelas na extração acessível.
 - Fazer teste visual/integrado do treinador e verificar se as questões novas entram na contagem do painel do aluno.
 - Conferir integralmente a compatibilidade das regras regulamentares com as alterações de 2025 e 2026.
+
+
+## Décima quinta continuação — Lei nº 2.250/2009 e LC nº 496/2025 — 21/11/2026
+
+### Fonte e conferência
+
+Foram consultados o Portal LEGIS do Acre para a Lei nº 2.250/2009, a consolidação de alterações e o texto da LC nº 496/2025 na Assembleia Legislativa, além do edital PC-AC 2026 publicado pela SEAD.
+
+- Lei nº 2.250/2009, art. 2º: PCCR organizado em quatro eixos — estrutura e composição dos grupos ocupacionais/cargos/classes/referências; linhas de promoção; tabelas de vencimentos; quantificação dos cargos.
+- Arts. 3º a 5º: remissão aos anexos do quadro de pessoal, linhas de promoção, vencimentos e quantitativos.
+- LC nº 496/2025, arts. 1º e 2º: unifica Agente e Escrivão sob Oficial Investigador de Polícia; mantém direitos, deveres e regime disciplinar da LC nº 129/2004, direitos e garantias do PCCR e legislação subsidiária, estrutura de carreira da Lei nº 3.228/2017 e quantificação de cargos do Anexo XII da Lei nº 2.250/2009.
+- Edital 2026, item 1.2.5: nomenclatura dos cargos conforme art. 43 da LC nº 129/2004, com redação da LC nº 496/2025.
+
+### Material e questões
+
+O material PCCR foi ampliado para 34.821 caracteres. Foram adicionadas explicações sobre a finalidade do PCCR, os quatro eixos do art. 2º, a leitura dos anexos e a atualização do nome do cargo em 2025.
+
+Duas questões autorais adicionais foram inseridas e verificadas como ativas:
+1. Elementos integrantes do PCCR (art. 2º da Lei nº 2.250/2009).
+2. Nomenclatura após unificação de Agente e Escrivão (LC nº 496/2025).
+
+Gabaritos conferidos no banco: B e C. Não são questões oficiais da IDECAN.
+
+### Cautela sobre valores atuais
+
+Não foram publicados no material valores de vencimento ou percentuais atuais com base apenas em tabelas históricas. A lei de 2009 sofreu alterações e a LC nº 496/2025 preserva partes específicas do PCCR; cada tabela remuneratória e rubrica precisa ser conferida na redação vigente e em publicação oficial atualizada.
+
+### Fontes
+
+- Lei nº 2.250/2009: https://legis.ac.gov.br/detalhar/417-0
+- Consolidação/alterações da Lei nº 2.250/2009: https://legis.ac.gov.br/detalhar/3980
+- LC nº 496/2025: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/9611/pdf
+- Edital PC-AC 2026: https://sead.ac.gov.br/editais-pcac-policia-civil-2026/
+
+### Migrations
+
+- `20261121302800_expand_law2250_pccr_structure_and_lc496_update.sql` — commit `3345f49bc7bc3a944d6cc7ace5978298b261cc93`.
+- `20261121302900_add_law2250_pccr_and_lc496_trainer_questions.sql` — commit `093dcc87061b96d8e8dd7280b3e49481ed6fbb85`.
+
+### Pendências
+
+- Conferir individualmente cada anexo remuneratório e funcional da Lei nº 2.250/2009 em sua última redação.
+- Localizar tabela oficial vigente de vencimentos, adicionais e gratificações aplicáveis ao Oficial Investigador em 2026.
+- Testar a exibição das novas questões no treinador e a atualização da contagem no painel do aluno.
+- Auditoria geral de Legislação Institucional permanece em andamento.
