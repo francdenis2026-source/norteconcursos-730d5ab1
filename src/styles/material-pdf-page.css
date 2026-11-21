@@ -846,3 +846,139 @@ html.dark body .app-shell[data-area="student"] .library-reading-workspace .libra
   color: #9be2ba !important;
   -webkit-text-fill-color: #9be2ba !important;
 }
+
+
+/* Redesign pedagógico: cards compactos, sem selo em formato de cápsula ou grandes áreas vazias.
+   Exemplo = azul; dica = verde; atenção = coral; como responder = violeta. */
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example:where(section, blockquote, div) {
+  display: flow-root;
+  margin: 1rem 0 1.15rem !important;
+  padding: .95rem 1.1rem 1rem !important;
+  border: 1px solid #d5e1ec !important;
+  border-left: 4px solid #4386bd !important;
+  border-radius: 10px !important;
+  background: #f4f8fc !important;
+  background-image: none !important;
+  box-shadow: 0 2px 8px rgb(26 54 82 / 5%) !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h2,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h3 {
+  display: block !important;
+  width: auto !important;
+  margin: 0 0 .65rem !important;
+  padding: 0 0 .45rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid #d8e5f0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #28618f !important;
+  font-family: var(--font-display, inherit) !important;
+  font-size: .82rem !important;
+  font-weight: 850 !important;
+  letter-spacing: .075em !important;
+  line-height: 1.35 !important;
+  text-transform: uppercase !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > :first-child { margin-top: 0 !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > :last-child { margin-bottom: 0 !important; }
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example * {
+  color: #24384b !important;
+  -webkit-text-fill-color: #24384b !important;
+  opacity: 1 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h2,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h3 {
+  color: #28618f !important;
+  -webkit-text-fill-color: #28618f !important;
+}
+
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer {
+  display: flow-root;
+  margin: .9rem 0 1rem !important;
+  padding: .85rem 1rem !important;
+  border: 1px solid transparent !important;
+  border-left-width: 4px !important;
+  border-radius: 9px !important;
+  line-height: 1.7 !important;
+  box-shadow: none !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip {
+  background: #eff8f2 !important; border-color: #cce6d4 !important; border-left-color: #39865a !important;
+  color: #244b32 !important; -webkit-text-fill-color: #244b32 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip strong {
+  color: #236b40 !important; -webkit-text-fill-color: #236b40 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning {
+  background: #fff5f1 !important; border-color: #f0d6cc !important; border-left-color: #cf7158 !important;
+  color: #63382d !important; -webkit-text-fill-color: #63382d !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning strong {
+  color: #a44932 !important; -webkit-text-fill-color: #a44932 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer {
+  background: #f4f0fb !important; border-color: #ded3f0 !important; border-left-color: #8666b5 !important;
+  color: #403257 !important; -webkit-text-fill-color: #403257 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer strong {
+  color: #694a9c !important; -webkit-text-fill-color: #694a9c !important;
+}
+
+/* Dark theme: same semantic colors, surfaces muted and readable. */
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example:where(section, blockquote, div),
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example:where(section, blockquote, div) {
+  background: #1d2d40 !important; border-color: #405a75 !important; border-left-color: #78b9e9 !important;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 13%) !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example *,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example * {
+  color: #e7f0fa !important; -webkit-text-fill-color: #e7f0fa !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h2,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h3,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h2,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example > h3 {
+  border-bottom-color: #405a75 !important; color: #9fd2fa !important; -webkit-text-fill-color: #9fd2fa !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip {
+  background: #1b382e !important; border-color: #345d4b !important; border-left-color: #65c394 !important;
+  color: #e0f4e8 !important; -webkit-text-fill-color: #e0f4e8 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip strong,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip strong {
+  color: #9be2ba !important; -webkit-text-fill-color: #9be2ba !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning {
+  background: #3a2927 !important; border-color: #65413a !important; border-left-color: #df927b !important;
+  color: #fae8e2 !important; -webkit-text-fill-color: #fae8e2 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning strong,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning strong {
+  color: #ffc0a9 !important; -webkit-text-fill-color: #ffc0a9 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer {
+  background: #302944 !important; border-color: #514568 !important; border-left-color: #b49ae5 !important;
+  color: #eee7fc !important; -webkit-text-fill-color: #eee7fc !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer strong,
+:root.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer strong {
+  color: #cdb8f4 !important; -webkit-text-fill-color: #cdb8f4 !important;
+}
+@media (max-width: 640px) {
+  html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-example:where(section, blockquote, div) {
+    padding: .8rem .85rem !important;
+  }
+  html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-tip,
+  html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-warning,
+  html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose p.study-how-to-answer {
+    padding: .75rem .85rem !important;
+  }
+}
