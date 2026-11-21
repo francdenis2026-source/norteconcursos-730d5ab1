@@ -237,7 +237,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions .app-streak { height: 40px !important; padding: 0 8px !important; font-size: 14px; }
 
   /* Conteúdo: sempre acima da navegação inferior. */
-  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-content {
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-content:not(#_):not(#_):not(#_) {
     padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)) !important;
     scroll-padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px));
   }
@@ -245,4 +245,26 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student
   html body .student-home.sh2 :is(small, .sh2-kpi small, .sh2-kpi em) { font-size: 0.8125rem !important; }
   html body .student-home.sh2 .sh2-kpi strong { font-size: 1.5rem !important; }
   html body .app-bottom-nav :is(button, a) { font-size: 12px; }
+}
+
+/* ═══ Celular: textos maiores (sem mexer no tamanho de cartões, áreas e barras) ═══════════
+   Sobe só a escala tipográfica e os textos pequenos; larguras e alturas seguem as mesmas. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  html body .app-shell[data-area="student"] {
+    --nc-font-xs: 0.8125rem;
+    --nc-font-sm: 0.9375rem;
+    --nc-font-base: 1.0625rem;
+    --nc-font-lg: 1.1875rem;
+  }
+  /* Piso de leitura: legendas, subtítulos, etiquetas e notas deixam de ficar em 10–12px. */
+  html body .app-shell[data-area="student"]:not(#_):not(#_):not(#_):not(#_) :is(
+    .sh2-kpi small, .sh2-kpi em, .sh2-card small, .sh2-row-link small, .sh2-signals small,
+    .ncx-tile span:not(.ncx-tile__icon), .sh2-label__title, .qx-chip, .qx-info__count p,
+    figcaption, .app-bottom-nav span, details > summary, [class*="__sub"], [class*="__meta"], [class*="__hint"]
+  ) { font-size: max(0.8125rem, 1em) !important; line-height: 1.35; }
+  html body .app-shell[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .sh2-kpi strong { font-size: 1.625rem !important; }
+  html body .app-shell[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-bottom-nav span { font-size: 0.75rem !important; font-weight: 600; }
+  /* Texto corrido da explicação das questões. */
+  html body .qx :is(.qx-stem, .qx-explain__text, .qx-choice__label) { font-size: max(0.9375rem, 1em) !important; line-height: 1.55; }
+  html body .qx .qx-choices[data-count="2"] .qx-choice__label { font-size: 1.1875rem !important; }
 }
