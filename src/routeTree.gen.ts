@@ -48,7 +48,6 @@ import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/exam-panorama'
 import { Route as DashboardExerciciosRouteImport } from './routes/dashboard/exercicios'
 import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
-import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
 import { Route as DashboardInteligenciaIdecanRouteImport } from './routes/dashboard/inteligencia-idecan'
 import { Route as DashboardLeisRouteImport } from './routes/dashboard/leis'
 import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
@@ -69,7 +68,6 @@ import { Route as DashboardQuestionsRouteImport } from './routes/dashboard/quest
 import { Route as DashboardRankingRouteImport } from './routes/dashboard/ranking'
 import { Route as DashboardStudentExamsRouteImport } from './routes/dashboard/student-exams'
 import { Route as DashboardStudyCoachRouteImport } from './routes/dashboard/study-coach'
-import { Route as DashboardStudyPlanRouteImport } from './routes/dashboard/study-plan'
 import { Route as DashboardStudyRoomRouteImport } from './routes/dashboard/study-room'
 import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/study-tools'
 import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
@@ -281,11 +279,6 @@ const DashboardFlashcardsRoute = DashboardFlashcardsRouteImport.update({
   path: '/flashcards',
   getParentRoute: () => DashboardRoute,
 } as any)
-const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
-  id: '/history',
-  path: '/history',
-  getParentRoute: () => DashboardRoute,
-} as any)
 const DashboardInteligenciaIdecanRoute =
   DashboardInteligenciaIdecanRouteImport.update({
     id: '/inteligencia-idecan',
@@ -386,11 +379,6 @@ const DashboardStudentExamsRoute = DashboardStudentExamsRouteImport.update({
 const DashboardStudyCoachRoute = DashboardStudyCoachRouteImport.update({
   id: '/study-coach',
   path: '/study-coach',
-  getParentRoute: () => DashboardRoute,
-} as any)
-const DashboardStudyPlanRoute = DashboardStudyPlanRouteImport.update({
-  id: '/study-plan',
-  path: '/study-plan',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardStudyRoomRoute = DashboardStudyRoomRouteImport.update({
@@ -500,7 +488,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
-  '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
@@ -521,7 +508,6 @@ export interface FileRoutesByFullPath {
   '/dashboard/ranking': typeof DashboardRankingRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-coach': typeof DashboardStudyCoachRoute
-  '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-room': typeof DashboardStudyRoomRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
@@ -574,7 +560,6 @@ export interface FileRoutesByTo {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
-  '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/mapa-idecan': typeof DashboardMapaIdecanRoute
@@ -594,7 +579,6 @@ export interface FileRoutesByTo {
   '/dashboard/ranking': typeof DashboardRankingRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-coach': typeof DashboardStudyCoachRoute
-  '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-room': typeof DashboardStudyRoomRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
@@ -650,7 +634,6 @@ export interface FileRoutesById {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
-  '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
@@ -671,7 +654,6 @@ export interface FileRoutesById {
   '/dashboard/ranking': typeof DashboardRankingRoute
   '/dashboard/student-exams': typeof DashboardStudentExamsRoute
   '/dashboard/study-coach': typeof DashboardStudyCoachRoute
-  '/dashboard/study-plan': typeof DashboardStudyPlanRoute
   '/dashboard/study-room': typeof DashboardStudyRoomRoute
   '/dashboard/study-tools': typeof DashboardStudyToolsRoute
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
@@ -728,7 +710,6 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/exercicios'
     | '/dashboard/flashcards'
-    | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/library'
@@ -749,7 +730,6 @@ export interface FileRouteTypes {
     | '/dashboard/ranking'
     | '/dashboard/student-exams'
     | '/dashboard/study-coach'
-    | '/dashboard/study-plan'
     | '/dashboard/study-room'
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
@@ -802,7 +782,6 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/exercicios'
     | '/dashboard/flashcards'
-    | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/mapa-idecan'
@@ -822,7 +801,6 @@ export interface FileRouteTypes {
     | '/dashboard/ranking'
     | '/dashboard/student-exams'
     | '/dashboard/study-coach'
-    | '/dashboard/study-plan'
     | '/dashboard/study-room'
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
@@ -877,7 +855,6 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/exercicios'
     | '/dashboard/flashcards'
-    | '/dashboard/history'
     | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/library'
@@ -898,7 +875,6 @@ export interface FileRouteTypes {
     | '/dashboard/ranking'
     | '/dashboard/student-exams'
     | '/dashboard/study-coach'
-    | '/dashboard/study-plan'
     | '/dashboard/study-room'
     | '/dashboard/study-tools'
     | '/dashboard/subscriptions'
@@ -1207,13 +1183,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardFlashcardsRouteImport
       parentRoute: typeof DashboardRoute
     }
-    '/dashboard/history': {
-      id: '/dashboard/history'
-      path: '/history'
-      fullPath: '/dashboard/history'
-      preLoaderRoute: typeof DashboardHistoryRouteImport
-      parentRoute: typeof DashboardRoute
-    }
     '/dashboard/inteligencia-idecan': {
       id: '/dashboard/inteligencia-idecan'
       path: '/inteligencia-idecan'
@@ -1352,13 +1321,6 @@ declare module '@tanstack/react-router' {
       path: '/study-coach'
       fullPath: '/dashboard/study-coach'
       preLoaderRoute: typeof DashboardStudyCoachRouteImport
-      parentRoute: typeof DashboardRoute
-    }
-    '/dashboard/study-plan': {
-      id: '/dashboard/study-plan'
-      path: '/study-plan'
-      fullPath: '/dashboard/study-plan'
-      preLoaderRoute: typeof DashboardStudyPlanRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/study-room': {
@@ -1508,7 +1470,6 @@ interface DashboardRouteChildren {
   DashboardExamPanoramaRoute: typeof DashboardExamPanoramaRoute
   DashboardExerciciosRoute: typeof DashboardExerciciosRoute
   DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
-  DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardInteligenciaIdecanRoute: typeof DashboardInteligenciaIdecanRoute
   DashboardLeisRoute: typeof DashboardLeisRoute
   DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
@@ -1529,7 +1490,6 @@ interface DashboardRouteChildren {
   DashboardRankingRoute: typeof DashboardRankingRoute
   DashboardStudentExamsRoute: typeof DashboardStudentExamsRoute
   DashboardStudyCoachRoute: typeof DashboardStudyCoachRoute
-  DashboardStudyPlanRoute: typeof DashboardStudyPlanRoute
   DashboardStudyRoomRoute: typeof DashboardStudyRoomRoute
   DashboardStudyToolsRoute: typeof DashboardStudyToolsRoute
   DashboardSubscriptionsRoute: typeof DashboardSubscriptionsRoute
@@ -1567,7 +1527,6 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardExamPanoramaRoute: DashboardExamPanoramaRoute,
   DashboardExerciciosRoute: DashboardExerciciosRoute,
   DashboardFlashcardsRoute: DashboardFlashcardsRoute,
-  DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardInteligenciaIdecanRoute: DashboardInteligenciaIdecanRoute,
   DashboardLeisRoute: DashboardLeisRoute,
   DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
@@ -1588,7 +1547,6 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardRankingRoute: DashboardRankingRoute,
   DashboardStudentExamsRoute: DashboardStudentExamsRoute,
   DashboardStudyCoachRoute: DashboardStudyCoachRoute,
-  DashboardStudyPlanRoute: DashboardStudyPlanRoute,
   DashboardStudyRoomRoute: DashboardStudyRoomRoute,
   DashboardStudyToolsRoute: DashboardStudyToolsRoute,
   DashboardSubscriptionsRoute: DashboardSubscriptionsRoute,

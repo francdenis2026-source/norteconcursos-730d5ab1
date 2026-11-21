@@ -1159,7 +1159,7 @@ function NextSteps({
           </li>
         </ul>
         <Button asChild variant="outline">
-          <Link to="/dashboard/study-plan">
+          <Link to="/dashboard/performance" search={{ aba: "evolucao" }}>
             Montar meu plano por resultados <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>

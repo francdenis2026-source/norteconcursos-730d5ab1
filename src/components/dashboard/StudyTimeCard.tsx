@@ -148,8 +148,8 @@ export function StudyTimeCard({ userId }: { userId: string }) {
               return (
                 <Hint key={d.k} content={`${d.label}: ${fmtHuman(d.s)}${isToday ? " · hoje" : ""} — ver atividades`}>
                   <Link
-                    to="/dashboard/history"
-                    search={{ day: d.k }}
+                    to="/dashboard/performance"
+                    search={{ aba: "historico", day: d.k }}
                     aria-label={`Ver atividades de ${d.label}${isToday ? " (hoje)" : ""}: ${fmtHuman(d.s)}`}
                     className="flex h-full min-w-0 flex-1 flex-col items-center gap-1.5 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
                   >

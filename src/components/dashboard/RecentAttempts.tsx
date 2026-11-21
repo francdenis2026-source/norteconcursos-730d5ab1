@@ -31,8 +31,8 @@ export function RecentAttempts({ limit = 5 }: { limit?: number }) {
         </div>
         <Link
           className="text-sm font-semibold underline"
-          to="/dashboard/history"
-          search={{ day: undefined }}
+          to="/dashboard/performance"
+          search={{ aba: "historico", day: undefined }}
         >
           Ver histórico completo
         </Link>

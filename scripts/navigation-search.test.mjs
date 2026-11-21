@@ -29,11 +29,11 @@ test('recent destinations are limited to the current authorized menu',()=>{
 test('previous menu names still find renamed destinations',()=>{
  const renamed=[
   {label:'Configuração do estudo',group:'Planejamento',href:'/dashboard/study-coach'},
-  {label:'Ajustes pelos resultados',group:'Planejamento',href:'/dashboard/study-plan'},
+  {label:'Ajustes pelos resultados',group:'Planejamento',href:'/dashboard/performance'},
   {label:'Leis especiais',group:'Material didático',href:'/dashboard/leis'},
   {label:'Coleções de questões',group:'Questões',href:'/dashboard/notebooks'},
   {label:'Provas realizadas e diagnóstico',group:'Provas',href:'/dashboard/student-exams'},
  ];
- for(const [query,href] of [['estratégia de estudos','/dashboard/study-coach'],['plano por resultados','/dashboard/study-plan'],['leis extravagantes','/dashboard/leis'],['meus cadernos','/dashboard/notebooks'],['minhas provas e diagnóstico','/dashboard/student-exams']]) assert.equal(searchNavigation(renamed,query)[0]?.href,href,query);
+ for(const [query,href] of [['estratégia de estudos','/dashboard/study-coach'],['plano por resultados','/dashboard/performance'],['leis extravagantes','/dashboard/leis'],['meus cadernos','/dashboard/notebooks'],['minhas provas e diagnóstico','/dashboard/student-exams']]) assert.equal(searchNavigation(renamed,query)[0]?.href,href,query);
  assert.ok(searchNavigation(renamed,'meu planejamento').length>=1);
 });
