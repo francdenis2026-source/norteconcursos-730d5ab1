@@ -517,9 +517,13 @@ html body .app-shell[data-focus-mode="true"]:has(.qx):not(#_):not(#_):not(#_) :i
   height: 100% !important;
   min-height: 0 !important;
 }
+/* Em modo foco, .qx já recebe height:100% em cadeia (acima); o cartão só precisa esticar
+   para preencher o que sobra nessa coluna flex — sem depender de um valor calculado em JS
+   nem de uma constante fixa, que deixavam uma faixa vazia entre o cartão e o rodapé. */
 html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_) .qx .qx-card {
-  height: var(--qx-h, calc(100dvh - 7rem));
-  min-height: min(26rem, 100%);
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
