@@ -67,6 +67,13 @@ const wordAliases: Record<string, string> = {
   combinatoria: "combinacao",
   combinatorias: "combinacao",
   complementar: "complemento",
+  descontos: "desconto",
+  taxas: "taxa",
+  nominais: "nominal",
+  efetivas: "efetiva",
+  compostos: "composto",
+  comerciais: "comercial",
+  racionais: "racional",
 };
 const terms = (value: string) =>
   new Set(
