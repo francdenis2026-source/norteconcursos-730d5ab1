@@ -1,0 +1,12 @@
+-- PC-AC 2026 — bank statements, PIX and TED.
+-- Removes misplaced CPC 26 and adds balance, transfer and traceability guidance.
+
+update public.study_materials
+set body_md=split_part(body_md,E'\n## Classificação dos passivos financeiros — CPC 26',1)
+|| E'\n\n## 6. Saldo disponível, saldo bloqueado e limite de crédito\n\nO saldo que aparece no extrato pode ser apresentado em categorias diferentes. Saldo disponível é o valor que pode ser utilizado imediatamente, respeitadas as regras da instituição. Saldo bloqueado é valor existente, mas temporariamente indisponível. Limite de crédito é valor que o banco pode disponibilizar como empréstimo/cheque especial; não é, por si só, dinheiro próprio depositado na conta.\n\n**Exemplo:** uma conta tem R$ 2.000 de saldo próprio disponível e limite de crédito de R$ 1.000. O cliente pode ter até R$ 3.000 de capacidade de movimentação, mas possui apenas R$ 2.000 de recursos próprios na conta; os R$ 1.000 adicionais representam crédito sujeito a encargos e condições.\n\n## 7. PIX e TED: o que a análise deve verificar\n\nPIX e TED são meios de transferência. A modalidade não prova irregularidade nem identifica, sozinha, a titularidade de todas as contas. Para rastrear uma operação, confira identificador, instituição, data, horário, valor, conta de origem, conta de destino, remetente, beneficiário e comprovante, quando disponíveis.\n\n## 8. Estorno, devolução e tarifa\n\nEstorno é a reversão total ou parcial de uma operação anterior. Ao analisar o extrato, relacione o estorno à transação original para não contar a entrada ou saída duas vezes. Tarifa é cobrança de serviço bancário; débito automático é saída de recursos para pagar uma obrigação; depósito e transferência recebida são entradas para o titular.\n\n## 9. Roteiro de leitura de extrato\n\n1. Confirme o titular, a conta e o período do extrato.\n2. Anote o saldo inicial e ordene os lançamentos por data e horário.\n3. Separe créditos (entradas) e débitos (saídas) na perspectiva do titular.\n4. Confira a fórmula saldo inicial + créditos − débitos = saldo final.\n5. Separe saldo próprio, bloqueios e limite de crédito.\n6. Identifique transferências, tarifas, pagamentos e estornos sem presumir fatos que o documento não mostra.\n7. Registre dados ausentes como limitação; não complete por suposição.\n',
+updated_at=now()
+where contest_name='PC-AC 2026'
+and slug='pcac-2026-contabilidade-06-sistema-bancario-extratos-pix-ted';
+
+-- Original 11 quiz items preserved; trainer explanations, tips and solutions
+-- were enriched in the live record.
