@@ -657,3 +657,14 @@ Aula 11 — Técnicas básicas de amostragem: 10/10 questões revisadas no Supab
 Auditoria consolidada das aulas 2 a 9 e 11: 90 questões; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem resolução em etapas.
 
 Migration: 20261121293000_deepen_pcac_statistics_sampling_trainer.sql — commit ca5cd069ef0edb5fe890ad4d53497c78c9d87330.
+
+
+## Estatística — aprofundamento do treinador, lote 6 — 21/11/2026
+
+Aula 12 — Noções de distribuições de probabilidade: 10/10 questões enriquecidas no Supabase. Foram aprofundados os conceitos de variáveis discretas e contínuas, soma das probabilidades, probabilidade em distribuições contínuas, valor esperado, Bernoulli, binomial, normal, desvio-padrão e escore z. Uma explicação curta foi refinada com exemplo numérico do escore z negativo.
+
+Auditoria consolidada das aulas 2 a 9 e 11 a 12: 100 questões; zero explicações abaixo de 250 caracteres; zero sem dica; zero sem etapas de resolução.
+
+Migrations:
+- 20261121294000_deepen_pcac_statistics_probability_distributions_trainer.sql — commit 7991757ab86a56192d8981e94dfd5e1f672e2306.
+- 20261121294100_refine_pcac_statistics_z_score_explanation.sql — commit 5efd63957f2ea2b55d3f147d496bdb3a6e46cda9.
