@@ -378,3 +378,19 @@ Migration: supabase/migrations/20261121080000_deepen_pcac_costing_roi_trainer.sq
 Verificação pós-gravação: 21 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente.
 
 As atualizações de banco foram verificadas por consultas posteriores. A execução do CI para esses commits ainda não foi confirmada.
+
+
+## Revisão aprofundada — imobilizado, depreciação, provisões e contingências — 21/11/2026
+
+Aula 14 atualizada diretamente no Supabase:
+
+- 18 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 18 receberam explicações acima de 250 caracteres, dicas e resolução passo a passo.
+- Conteúdo ampliado com custo inicial do imobilizado, gastos posteriores, depreciação linear, valor residual, início e cessação da depreciação, revisão de estimativas, provisões e passivos contingentes, reserva para contingências e propriedade para investimento.
+- Removido o bloco de CPC 26 que estava indevidamente anexado à aula.
+- Reforçados os três requisitos do CPC 25 para reconhecer provisão e a diferença entre perda provável, possível e remota.
+
+Referências oficiais: CPC 27, itens 50–56 (https://conteudo.cvm.gov.br/export/sites/cvm/menu/regulados/normascontabeis/cpc/CPC_27_rev_12.pdf); CPC 25, itens 14 e seguintes (https://conteudo.cvm.gov.br/export/sites/cvm/menu/regulados/normascontabeis/cpc/CPC_25_rev_12.pdf).
+
+Migration: supabase/migrations/20261121090000_deepen_pcac_ppe_provisions_trainer.sql. Commit: 2dc4c022202c734dba6fcb2b988e5f1611ef2709.
+Verificação pós-gravação: 18 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
