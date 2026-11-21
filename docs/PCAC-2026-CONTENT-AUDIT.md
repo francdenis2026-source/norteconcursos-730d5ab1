@@ -2059,3 +2059,82 @@ O material foi confirmado com 89.392 caracteres; as seções 76, 79, 80 e 81 est
 - O PDF legislativo de 95 páginas utilizado para a leitura minuciosa dos arts. 100 a 159 não exibe no cabeçalho todas as alterações de 2025/2026. Os artigos atingidos pela LC nº 496/2025 e LC nº 526/2026 devem ser conferidos pelo texto compilado do Portal LEGIS.
 - Ainda não foi possível confirmar por execução de workflow/build a validação integral de CI do repositório após estas migrations. As alterações didáticas e o catálogo foram validados por consulta SQL; isso não substitui teste de interface nem build.
 - Para encerrar a cobertura de Legislação Institucional, ainda devem ser auditadas com o mesmo nível de detalhe a Lei Federal nº 14.735/2023, a LC estadual nº 39/1993 nos dispositivos aplicáveis e os dispositivos da LC nº 129/2004 relativos à estrutura/organização/carreira de delegado, cotejando sempre com o programa do Anexo III. A Lei nº 2.250/2009 e alterações/PCCR também requer conferência específica de ingresso, progressão e promoção.
+
+
+## Vigésima quarta continuação — Lei Orgânica Nacional, Estatuto Geral do Acre e PCCR — 21/11/2026
+
+### Escopo oficial conferido
+
+O Anexo III do Edital nº 001 SEAD/PCAC, p. 48, exige para Oficial Investigador:
+- Lei Federal nº 14.735/2023: Lei Orgânica Nacional das Polícias Civis;
+- LC Estadual nº 129/2004: estrutura, organização, competências, carreira de delegado, direitos, deveres e regime disciplinar;
+- Lei Estadual nº 2.250/2009: ingresso, progressão e promoção;
+- LC Estadual nº 39/1993: dispositivos aplicáveis sobre direitos, deveres, regime disciplinar, sindicância e PAD.
+
+O quadro da prova (p. 22) confirma quatro questões de Legislação Institucional, peso 1, para Oficial Investigador. Conhecimentos específicos somam 60 questões de peso 2. A orientação pedagógica passa a refletir esses pesos e a extensão literal do programa.
+
+### Conteúdo incluído — seções 82 a 84
+
+**Lei nº 14.735/2023**
+- Natureza e integração das Polícias Civis no Susp;
+- princípios e diretrizes;
+- competências institucionais e cadeia de custódia;
+- estrutura básica e órgãos essenciais;
+- Conselho Superior, Corregedoria e Escola Superior;
+- quadro policial, concurso e promoção;
+- distinção entre atribuições do Delegado e do Oficial Investigador;
+- direitos, deveres e vedações, com atenção aos vetos legislativos.
+
+**LC nº 39/1993**
+- âmbito de aplicação do Estatuto;
+- deveres do art. 166;
+- proibições do art. 167, incluindo nepotismo, uso de recursos públicos, vantagem indevida, desídia e assédio moral;
+- responsabilidades e penalidades (arts. 171 a 193);
+- prescrição disciplinar: 5 anos para demissão/cassação/destituição, 2 anos para suspensão e 180 dias para advertência;
+- sindicância e PAD (arts. 194 a 227), incluindo prazos, defesa, afastamento preventivo, rito sumário de acumulação ilegal, abandono e inassiduidade habitual.
+
+**PCCR — Lei nº 2.250/2009, Lei nº 3.228/2017 e LC nº 496/2025**
+- função e organização do PCCR;
+- distinção entre ingresso, progressão e promoção;
+- estrutura de cinco classes da Lei nº 3.228/2017;
+- requisitos gerais e requisitos específicos por classe;
+- interstício de 36 meses, avaliação média de 80 pontos e 120 horas de capacitação, além de pós-graduação de 360 horas na promoção da Classe II para III, conforme lei e regulamento;
+- unificação de Agente e Escrivão como Oficial Investigador pela LC nº 496/2025 e manutenção da estrutura de carreira da Lei nº 3.228/2017.
+
+### Dez questões autorais adicionais
+
+Inseridas e consultadas individualmente, todas com status active:
+1. Princípios institucionais da Lei nº 14.735/2023 (B).
+2. Integração ao Susp (B).
+3. Atribuições do Oficial Investigador (C).
+4. Deveres nacionais (B).
+5. Dever de sigilo na LC nº 39/1993 (B).
+6. Uso de recursos públicos em atividade particular (C).
+7. Prescrição de advertência na LC nº 39/1993 (C).
+8. Prazo de sindicância da LC nº 39/1993 (C).
+9. Diferença entre progressão e promoção (B).
+10. Requisitos de promoção da Lei nº 3.228/2017 (B).
+
+Questões autorais inéditas, não oficiais da IDECAN. A consulta individual confirmou dez registros ativos.
+
+### Validação
+
+Material atualizado para 106.426 caracteres; seções 82, 83 e 84 foram confirmadas no Supabase. Dez questões foram consultadas individualmente e retornaram status active com gabaritos. Migration do conteúdo: `20261121304600_expand_national_pc_law_lc39_and_pccr_coverage.sql`, commit `37aeb35f8da0101ebe69d7a3cfe708edc4ac1660`. Migration das questões: `20261121304700_add_national_lc39_and_pccr_trainer_questions.sql`, commit `89b8feaa00557027f21c367e4b683cde558fd839`.
+
+### Limitações legislativas que permanecem registradas
+
+- A LC nº 39/1993 foi alterada pela LC nº 525/2026. O PDF antigo de 2021 foi utilizado para recuperar o conteúdo detalhado de deveres e disciplina, mas não é fonte suficiente para afirmar literalidade atual de todos os dispositivos. O texto compilado do Portal LEGIS, atualizado até a LC nº 525/2026, prevalece.
+- A Lei nº 2.250/2009 e a Lei nº 3.228/2017 têm versões históricas e alterações. A Lei nº 3.228/2017 foi modificada pela Lei nº 3.288/2017; a LC nº 496/2025 unificou Agente e Escrivão e manteve a estrutura de carreira da Lei nº 3.228/2017. Não se devem ensinar nomenclaturas antigas como cargos autônomos atuais.
+- Regras de progressão da redação original da Lei nº 2.250/2009 devem ser cotejadas com a estrutura posterior de carreira da Lei nº 3.228/2017 e os regulamentos vigentes antes de apresentar a literalidade como aplicável hoje.
+- Ainda falta uma conferência final, artigo por artigo, da redação consolidada atual da LC nº 39/1993 após LC nº 525/2026 e da regulamentação atual do PCCR. Esta etapa não autoriza declarar a disciplina completamente encerrada.
+
+### Fontes oficiais
+
+- Edital PC-AC 2026, Anexo III: https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf
+- Lei nº 14.735/2023, texto atualizado da Câmara: https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.pdf
+- LC nº 39/1993 compilada: https://legis.ac.gov.br/detalhar/110
+- Lei nº 2.250/2009: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/5556/pdf-texto
+- Lei nº 3.228/2017: https://legis.ac.gov.br/detalhar/2499
+- Decreto nº 9.367/2018: https://legis.ac.gov.br/detalhar/5749-0
+- LC nº 496/2025: https://legis.ac.gov.br/detalhar/6527
+- LC nº 525/2026: https://legis.ac.gov.br/detalhar/??? (consultar texto oficial antes de inserir link definitivo)
