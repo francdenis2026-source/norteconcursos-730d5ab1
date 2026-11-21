@@ -125,7 +125,6 @@ function renderQuestionOptions(text: string, key: string, inline: (text: string,
   return (
     <div className="study-question-options" role="list" aria-label="Alternativas">
       {matches.map((match, index) => {
-        const start = (match.index ?? 0) + (match[0].startsWith(" ") ? 1 : 0);
         const contentStart = (match.index ?? 0) + match[0].length;
         const end = matches[index + 1]?.index ?? text.length;
         const label = match[1] ?? "";
