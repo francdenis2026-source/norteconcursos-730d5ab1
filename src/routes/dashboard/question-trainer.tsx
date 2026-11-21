@@ -2017,6 +2017,7 @@ function QuestionTrainer() {
               {modal === "help" ? (
                 <TrainerLearningMaterials
                   key={question.source + question.id}
+                  userId={userId}
                   subject={question.subject}
                   topic={question.subtopic ?? ""}
                   materials={relatedMaterials}
