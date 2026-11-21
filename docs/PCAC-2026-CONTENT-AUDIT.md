@@ -1479,3 +1479,49 @@ Todas têm gabarito e explicação e estão vinculadas ao material PCCR. Não s�
 
 - `20261121302200_complete_decree8912_commissions_eligibility_appeals.sql` — commit `0045679eba116c35b452ff9b9d542a2820bf1214`.
 - `20261121302300_add_decree8912_full_process_trainer_questions.sql` — commit `3b1592e8cb325562a1266ca7679d4584531b58bc`.
+
+
+## Décima terceira continuação — Decreto nº 8.912/2018, arts. 19 a 22 e anexos — 21/11/2026
+
+### Conteúdo acrescentado ao material PCCR
+
+O material foi ampliado para 28.520 caracteres e inclui:
+- Art. 19: documentação comprobatória dos cursos/capacitações e pós-graduação, período mínimo de exercício e pontuação mínima; certificado de cursos/eventos afins à segurança pública não oferecidos pelo Estado pode ser apresentado.
+- Art. 21: avaliação dos fatores realizada anualmente; média calculada ao final do triênio.
+- Art. 22: exclusão do dia inicial e inclusão do vencimento; prorrogação quando não houver expediente; prazos em dias contados continuamente; suspensão apenas nas hipóteses previstas.
+- Art. 20 e anexos: Anexo I contém quesitos; Anexo II, quadro de pontuação; Anexo III, pontuação adicional por recompensas específicas do art. 96, II e III, da LC nº 129/2004.
+
+### Cautela com os anexos
+
+A página oficial do Portal LEGIS indexa o texto dos arts. 18–22, mas não exibiu o conteúdo tabular integral dos Anexos I, II e III na extração consultada. Por isso, não foram inventados pesos, valores por quesito ou cálculo de bônus. A transcrição visual dos anexos oficiais permanece pendente.
+
+### Questões do treinador
+
+Quatro questões autorais adicionais foram inseridas e confirmadas como ativas:
+1. Documentos para comprovar capacitação.
+2. Avaliação anual e média trienal.
+3. Contagem contínua dos prazos.
+4. Finalidade dos Anexos I, II e III.
+
+Não são questões oficiais da IDECAN; cada item tem gabarito e explicação e está vinculado ao material PCCR.
+
+### Correção de precisão
+
+O art. 18, § 2º, trata da pós-graduação para promoção da Classe II para III; os §§ 3º e 4º tratam das propostas de melhoria para promoções III→IV e IV→V. A proposta de melhoria da unidade mencionada anteriormente decorre da Lei nº 3.228/2017 e não deve ser atribuída ao § 2º do art. 18 do decreto.
+
+### Fonte oficial
+
+- Decreto nº 8.912/2018, Portal LEGIS do Acre: https://legis.ac.gov.br/detalhar/5749-0
+- Lei nº 3.228/2017, Portal LEGIS: https://legis.ac.gov.br/detalhar/2499
+
+### Migrations
+
+- `20261121302400_add_decree8912_art19_22_and_annex_caveat.sql` — commit `d7c2e01395f4143c02495e1402f8b4807ac76730`.
+- `20261121302500_add_decree8912_docs_assessment_deadlines_questions.sql` — commit `2b2a1fd0bb5005ee391360aa5a97823a95339351`.
+
+### Pendências
+
+- Obter e conferir visualmente as tabelas originais dos Anexos I, II e III.
+- Conferir integralmente a compatibilidade do Decreto nº 8.912/2018 com as alterações estaduais de 2025 e 2026.
+- Testar visualmente o treinador e confirmar a contagem no painel do aluno.
+- A auditoria global de Legislação Institucional permanece em andamento.
