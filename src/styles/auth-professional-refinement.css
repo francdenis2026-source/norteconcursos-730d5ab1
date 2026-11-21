@@ -13,6 +13,14 @@
   .auth .auth-submit { min-height: 46px; }
 }
 
+/* Celular: o cartão cabe na janela sem altura fixa; a foto tática ocupa o espaço que sobra
+   e a assinatura do rodapé fica livre (não encosta no texto do cartão). */
+@media (max-width: 480px) {
+  html body .auth.auth .auth-panel { padding-bottom: calc(44px + env(safe-area-inset-bottom, 0px)); }
+  html body .auth.auth .auth-card { min-height: 0; height: auto; max-height: 100%; }
+  html body .auth.auth .auth-tactical { display: block; flex: 1 1 0; min-height: 150px; }
+}
+
 
 /* Compact session feedback in the Norte Concursos palette. */
 .auth .auth-session-notice,
