@@ -13,7 +13,7 @@ import { getActiveTheme, toggleTheme, type Theme } from "@/lib/theme";
 export function ThemeToggle() {
   // O script do head garante que a classe .dark já está no <html> antes da
   // hidratação; "dark" é o default estável do SSR (src/lib/theme.ts).
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
   useEffect(() => {
     setTheme(getActiveTheme());
   }, []);
