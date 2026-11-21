@@ -1,0 +1,20 @@
+with q as (
+ select * from (values
+ ('pcac-2026-lc129-sindicancia-prazos-prescricao-extincao','pcac-proc-presc-01','LC nº 129/2004 — prescrição','Pelo art. 118 da LC nº 129/2004, quando começa a correr o prazo prescricional da falta disciplinar?','(A) Na data em que a conduta foi praticada, em qualquer hipótese.\n(B) Na data em que o servidor é interrogado.\n(C) No dia em que a autoridade toma conhecimento da existência da falta.\n(D) Na data da publicação da portaria de PAD.\n(E) Na data da conclusão da sindicância.','C','O parágrafo único do art. 118 estabelece que o prazo se inicia no dia em que a autoridade toma conhecimento da existência da falta. A abertura de sindicância ou a instauração do PAD interrompe a prescrição.'),
+ ('pcac-2026-lc129-sindicancia-prazos-prescricao-extincao','pcac-proc-presc-02','LC nº 129/2004 — prazos prescricionais','Qual é o prazo prescricional previsto no art. 118 para falta sujeita à suspensão?','(A) Seis meses.\n(B) Um ano.\n(C) Dois anos.\n(D) Três anos.\n(E) Cinco anos.','C','O art. 118, II, fixa em dois anos a prescrição da falta sujeita à suspensão. Não confunda com seis meses para advertência ou cinco anos para demissão e hipóteses equiparadas.'),
+ ('pcac-2026-lc129-pad-instrucao-defesa-relatorio-recursos','pcac-proc-pad-01','LC nº 129/2004 — impedimento da comissão','Segundo o art. 132 apresentado no material, qual pessoa está impedida de integrar a comissão do PAD, inclusive como secretário?','(A) Servidor de unidade diferente da do acusado.\n(B) Cônjuge ou parente até o terceiro grau do acusado ou denunciante, ou subordinado do acusado.\n(C) Servidor estável de hierarquia superior.\n(D) Servidor que não participou da investigação preliminar.\n(E) Servidor que atua em outro município.','B','O art. 132 impede a participação de cônjuge ou parente consanguíneo ou afim, em linha reta ou colateral até o terceiro grau, do denunciante ou acusado, bem como de subordinado do acusado.'),
+ ('pcac-2026-lc129-pad-instrucao-defesa-relatorio-recursos','pcac-proc-pad-02','LC nº 129/2004 — revelia e defesa','No PAD descrito nos arts. 136 a 138 do material, qual é a consequência da revelia?','(A) Confissão automática e encerramento do processo.\n(B) Perda definitiva do direito de defesa.\n(C) Devolução do prazo para defesa e designação de defensor dativo.\n(D) Aplicação automática de demissão.\n(E) Arquivamento obrigatório.','C','A revelia é registrada, mas não elimina a defesa. O prazo é devolvido e a autoridade instauradora designa defensor dativo, conforme o procedimento apresentado no material.')
+ ) as t(material_slug,external_item_key,subtopic,question_text,options_text,answer,explanation)
+)
+insert into public.curated_question_catalog
+(source_id,syllabus_topic_id,external_item_key,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,content_status,is_original,state,career_category,role_type,tested_topic,import_content_key,import_unique_key,didactic_provenance)
+select '43712f0d-aad2-48b5-a685-6937551f2d74','d204d14f-8aa6-4c57-92ad-3fb3c3e901f1',
+ external_item_key,'Norte Concursos — treino autoral PC-AC 2026',2026,'Oficial Investigador de Polícia','AUTORAL',
+ 'Legislação Institucional',subtopic,question_text||E'\n\n'||options_text,answer,explanation,
+ 'média','active',true,'AC','Polícia Civil','Oficial Investigador de Polícia',
+ subtopic,external_item_key,'pcac-2026-'||external_item_key,
+ jsonb_build_object('kind','didactic_original','authored',true,'target_exam','PC-AC 2026 — Oficial Investigador de Polícia','not_official_exam',true,'license_note','Questão autoral inédita; não é item oficial da IDECAN','linked_study_material_slug',material_slug,'source_material_slug',material_slug,'source_exam_reference','Edital nº 001 SEAD/PCAC, de 05/11/2026, Anexo III')
+from q
+on conflict (source_id,external_item_key) do update set
+ question_text=excluded.question_text,official_answer=excluded.official_answer,explanation=excluded.explanation,
+ didactic_provenance=excluded.didactic_provenance,content_status='active',subtopic=excluded.subtopic;
