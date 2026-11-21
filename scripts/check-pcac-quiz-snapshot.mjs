@@ -63,6 +63,19 @@ for (const item of manifest.files) {
   report.materials += data.modules;
   report.quiz_items += quizCount;
 }
+
+const constitution = JSON.parse(fs.readFileSync(path.join(base, 'quiz-nocoes-de-direito-constitucional.json'), 'utf8'));
+const acreConstitution = constitution.materials.find(m => m.slug === 'pcac-2026-constitucional-constituicao-acre-policia-civil');
+assert.ok(acreConstitution, 'Missing Acre constitutional law lesson');
+assert.equal(acreConstitution.quiz[2].a, false, 'STF ADI 7466 invalidated art. 131 IV: ISE is not a current security organ');
+assert.match(acreConstitution.quiz[2].why, /ADI 7[.]466/);
+
+const institutional = JSON.parse(fs.readFileSync(path.join(base, 'quiz-legislacao-institucional.json'), 'utf8'));
+const institutionalAcre = institutional.materials.find(m => m.slug === 'pcac-2026-constituicao-seguranca-publica-art144-acre');
+assert.ok(institutionalAcre, 'Missing institutional constitutional law lesson');
+assert.equal(institutionalAcre.quiz[4].a, false, 'STF ADI 7466 invalidated art. 131 IV');
+assert.match(institutionalAcre.quiz[4].why, /ADI 7[.]466/);
+
 assert.equal(report.materials, 190);
 assert.equal(report.quiz_items, 1474);
 assert.ok(questionAnswers.size > 1000, 'Unexpectedly many identical quiz prompts');

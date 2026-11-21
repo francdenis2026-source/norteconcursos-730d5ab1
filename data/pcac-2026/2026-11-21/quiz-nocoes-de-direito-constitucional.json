@@ -86,9 +86,9 @@
           "why": "A emenda alterou a lista dos órgãos de segurança pública. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
         },
         {
-          "a": true,
-          "q": "Na redação atual do art. 131, o Instituto Socioeducativo do Estado do Acre integra a lista de órgãos de segurança pública.",
-          "why": "O inciso IV foi incluído pela EC nº 63/2022. Aplicação jurídica: A Constituição Estadual estrutura competências locais dentro dos limites da Constituição Federal. Polícia Civil tem funções de polícia judiciária e investigação de infrações penais, ressalvada competência federal e militar; não confunda com atribuições da Polícia Militar."
+          "a": false,
+          "q": "Atualmente, o Instituto Socioeducativo do Estado do Acre integra validamente o rol de órgãos de segurança pública do art. 131 da Constituição estadual.",
+          "why": "Errado. Embora a EC estadual nº 63/2022 tenha incluído o Instituto Socioeducativo no art. 131, IV, o STF declarou esse inciso inconstitucional na ADI 7.466, julgada em 12/11/2024. A redação histórica não representa o direito válido atual."
         },
         {
           "a": false,
@@ -125,7 +125,7 @@
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
         "items_checked": 8,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "ADI 7.466/STF: gabarito e texto corrigidos, nova verificação jurídica dos demais itens necessária"
       }
     },
     {

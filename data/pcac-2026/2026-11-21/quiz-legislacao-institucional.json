@@ -30,9 +30,9 @@
           "why": "O art. 144, § 5º-A, atribui às polícias penais a segurança dos estabelecimentos penais."
         },
         {
-          "a": true,
-          "q": "Após a EC nº 63/2022, o art. 131 da Constituição do Acre inclui o Instituto Socioeducativo do Estado do Acre no inciso IV.",
-          "why": "A EC nº 63/2022 alterou o art. 131 e passou a listar PC, PM/CBM, Polícia Penal e ISE. Redações anteriores não devem ser usadas como atuais."
+          "a": false,
+          "q": "Após o julgamento da ADI 7.466 pelo STF em novembro de 2024, o Instituto Socioeducativo do Acre permanece validamente incluído como órgão de segurança pública no art. 131, IV, da Constituição estadual.",
+          "why": "Errado. O art. 131, IV, incluído pela EC nº 63/2022, foi declarado inconstitucional pelo STF na ADI 7.466 em 12/11/2024. O rol vigente não pode ser interpretado com base apenas na redação histórica da emenda."
         },
         {
           "a": false,
@@ -59,7 +59,7 @@
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
         "items_checked": 8,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "ADI 7.466/STF: gabarito e texto corrigidos, nova verificação jurídica dos demais itens necessária"
       }
     },
     {

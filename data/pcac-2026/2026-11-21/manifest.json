@@ -35,7 +35,7 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-legislacao-institucional.json",
-      "bytes": 98622,
+      "bytes": 98710,
       "modules": 25,
       "quiz_items": 182
     },
@@ -59,7 +59,7 @@
     },
     {
       "path": "data/pcac-2026/2026-11-21/quiz-nocoes-de-direito-constitucional.json",
-      "bytes": 15842,
+      "bytes": 15765,
       "modules": 5,
       "quiz_items": 28
     },
