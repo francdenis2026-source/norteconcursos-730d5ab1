@@ -2194,7 +2194,6 @@ function TrainerSetup({
         if (event.key === "Escape" && moreOpen) setMoreOpen(false);
       }}
     >
-      <QtFitViewport depKey="setup" root=".qs" target=".qs" varName="--qs-h" />
       <header className="qs-head">
         <div className="qs-head__title">
           <small>Treinamento de precisão</small>
