@@ -1997,3 +1997,65 @@ Material confirmado com 71.927 caracteres e seções 71 a 75 presentes no Supaba
 ### Estado da auditoria global
 
 A etapa remuneratória e os blocos de direitos/deveres, disciplina, prescrição, formação e estágio probatório foram ampliados. Ainda não há base para declarar a cobertura integral artigo por artigo de toda a LC nº 129/2004: falta cotejar todos os dispositivos da lei com o Anexo III do edital e classificar cada artigo como exigido, complementar, alterado ou fora do programa. Também faltam teste visual do treinador, conferência da contagem no painel e build/CI final depois de todas as migrations.
+
+
+## Vigésima terceira continuação — cobertura detalhada dos grupos disciplinares e do PAD — 21/11/2026
+
+### Fonte e escopo efetivo do edital
+
+Foi reaberto o Edital nº 001 SEAD/PCAC, de 05/11/2026, diretamente no PDF oficial da SEAD, e o texto da LC nº 129/2004 no Legisla-e/Assembleia Legislativa. Para Oficial Investigador, o Anexo III (p. 48) define a LC nº 129/2004 como conteúdo de estrutura, organização, competências, carreira de delegado, direitos, deveres e regime disciplinar. O edital não determina leitura indiferenciada de todos os artigos como se todos tivessem o mesmo peso.
+
+O quadro de distribuição (p. 22) reserva 4 questões de Legislação Institucional, peso 1, para Oficial Investigador. A prova tem 100 questões; conhecimentos específicos são 60 questões com peso 2. O estudo deve, portanto, priorizar o programa expresso e manter proporção de tempo compatível com os pesos.
+
+### Conteúdo incluído — seções 76 a 81
+
+- Art. 101: enumeração das dez transgressões do primeiro grupo.
+- Art. 102: organização dos incisos do segundo grupo em núcleos temáticos, mantendo condições legais como dolo, intenção, ausência de justo motivo e ressalva de falta mais grave.
+- Art. 103: enumeração das dezessete hipóteses do terceiro grupo, incluindo distinção entre ausência de até 30 dias e ausência superior a 45 dias interpolados no ano.
+- Art. 104: enumeração das dez hipóteses do quarto grupo, com distinção de dolo, pena máxima do crime e revelação de segredo.
+- Arts. 105 a 119: responsabilidades civil, penal e administrativa; limite de desconto indenizatório; excludentes; efeito de absolvição criminal; prescrição e extinção de punibilidade.
+- Arts. 120 a 123: afastamento preventivo, manutenção de vencimentos/prerrogativas e cômputo do período.
+- Arts. 124 a 128: investigação preliminar, sindicância, impedimentos, comissão, provas, defesa, relatório, decisão e recurso.
+- Arts. 129 a 154: obrigatoriedade e competência para PAD, comissão, prazos, citação, revelia, defensor dativo, provas, testemunhas, diligências, defesa final, relatório, recurso, julgamento e comunicações.
+- Quadro de prazos processuais e pegadinhas.
+- Delimitação do escopo do edital para Oficial Investigador.
+
+### Correção legislativa importante — art. 127
+
+O texto do art. 127 foi corrigido. A redação dada pela LC nº 293/2014 determina conclusão da sindicância em 30 dias, prorrogáveis mediante solicitação fundamentada, mas retirou a expressão anterior “por mais trinta dias”. Assim, o dispositivo não fixa expressamente teto de mais 30 dias para a prorrogação. O material agora registra essa diferença.
+
+### Dez questões autorais adicionais
+
+Foram inseridas e verificadas individualmente como ativas:
+1. Transgressão do primeiro grupo — A.
+2. Ausência injustificada de até 30 dias — C.
+3. Ausência superior a 30 dias consecutivos — D.
+4. Revelação culposa x dolosa de sigilo — B.
+5. Prazo e prorrogação da sindicância — C.
+6. Defesa escrita na sindicância — C.
+7. Prazo de conclusão do PAD — C.
+8. Limite de testemunhas do acusado — D.
+9. Recurso contra relatório do PAD — B.
+10. Manifestação sobre provas de diligência — B.
+
+Todas são autorais, não itens oficiais da IDECAN. Consulta ao catálogo confirmou os dez registros ativos.
+
+### Validação de banco e material
+
+O material foi confirmado com 89.392 caracteres; as seções 76, 79, 80 e 81 estão presentes no Supabase. Dez questões foram consultadas individualmente e retornaram status active e gabarito. Migration de conteúdo: `20261121304400_expand_complete_lc129_groups_and_pad_procedure.sql`, commit `c06f443deedd072442ec7c6ae23a5557241ce7be`. Migration de questões: `20261121304500_add_detailed_lc129_disciplinary_and_pad_questions.sql`, commit `356a7e75f2f3b0ee549e530182ec9d628e17df1b`.
+
+### Fontes primárias consultadas
+
+- Edital oficial SEAD, Anexo III e distribuição de questões: https://sead.ac.gov.br/wp-content/uploads/2026/11/Edital-no-001-PCAC-Edital-de-abertura-05-11-2026.pdf
+- LC nº 129/2004, texto da Assembleia Legislativa (arts. 100 a 159, especialmente arts. 101 a 154): https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/6614/pdf-texto?alteracaoId=83
+- LC nº 129/2004 consolidada no Portal LEGIS, com alterações até LC nº 526/2026: https://legis.ac.gov.br/detalhar/674
+- LC nº 293/2014, alteração do art. 127: https://legis.ac.gov.br/detalhar/3980
+- LC nº 496/2025: https://legis.ac.gov.br/detalhar/6527
+- LC nº 526/2026: https://legis.ac.gov.br/detalhar/6874
+
+### Limitações e pendências remanescentes
+
+- A redação consolidada dos arts. 101 a 159 foi cotejada com o texto legislativo consultado, mas a numeração de alguns incisos do art. 102 aparece com inconsistência tipográfica no PDF antigo; por segurança, o material apresenta os núcleos materiais e preserva a remissão ao texto consolidado vigente, em vez de inventar renumeração.
+- O PDF legislativo de 95 páginas utilizado para a leitura minuciosa dos arts. 100 a 159 não exibe no cabeçalho todas as alterações de 2025/2026. Os artigos atingidos pela LC nº 496/2025 e LC nº 526/2026 devem ser conferidos pelo texto compilado do Portal LEGIS.
+- Ainda não foi possível confirmar por execução de workflow/build a validação integral de CI do repositório após estas migrations. As alterações didáticas e o catálogo foram validados por consulta SQL; isso não substitui teste de interface nem build.
+- Para encerrar a cobertura de Legislação Institucional, ainda devem ser auditadas com o mesmo nível de detalhe a Lei Federal nº 14.735/2023, a LC estadual nº 39/1993 nos dispositivos aplicáveis e os dispositivos da LC nº 129/2004 relativos à estrutura/organização/carreira de delegado, cotejando sempre com o programa do Anexo III. A Lei nº 2.250/2009 e alterações/PCCR também requer conferência específica de ingresso, progressão e promoção.
