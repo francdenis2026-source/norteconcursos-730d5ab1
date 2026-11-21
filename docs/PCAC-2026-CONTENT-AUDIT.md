@@ -981,3 +981,43 @@ Foi removido exclusivamente o bloco iniciado pelo cabeçalho exato `## Classific
 Migration: `supabase/migrations/20261121299600_remove_cpc26_contamination_pcac.sql`, commit `728b1476f32356e162301e7d4de8cc220261491c`.
 
 **Validação SQL:** 0 dos 177 materiais PC-AC ativos ainda contêm o cabeçalho exato do bloco contaminante. Os arrays dos quizzes (1.377 questões) e flashcards (1.395) permaneceram com as mesmas contagens antes e depois. A conferência foi por marcador exato; ainda é necessário revisar outros possíveis tipos de contaminação semântica.
+
+
+## Continuação da revisão jurídica — Legislação Institucional — 21/11/2026
+
+### Correções e aprofundamentos realizados nesta etapa
+
+- Expandidos cinco materiais curtos: licença-prêmio da LC nº 39/1993; visão geral da LC nº 39/1993; PCCR da Lei nº 2.250/2009; Lei Orgânica Nacional nº 14.735/2023; e atualização da LC nº 129/2004 após a LC nº 526/2026. Foram acrescentados exemplos cotidianos, distinções conceituais e técnicas de leitura de questões. Quizzes e flashcards existentes foram preservados.
+- Expandido o material de afastamento preventivo (LC nº 129/2004, arts. 120 a 123), com comparação entre cautelar e suspensão disciplinar, exemplo de prazo e pegadinhas.
+- Aprimorados os mapas de estudo sobre carreira, deveres e disciplina e sobre o conjunto de normas do edital.
+- Corrigida uma referência normativa incorreta: a aula de ingresso/formação/lotação atribuía os §§ 13 a 16 sobre lotação inicial ao art. 65; a referência correta é o **art. 67, §§ 13 a 16**, conforme o item 1.2.2 do edital PC-AC 2026 e a redação consolidada da LC nº 129/2004. A referência foi corrigida e verificada por consulta ao banco.
+- Removida uma referência inadequada: a LC nº 51/1996 havia sido associada aos arts. 133 a 135 da licença-prêmio, embora a LC nº 51/1996 altere outros dispositivos da LC nº 39/1993. A referência foi removida e substituída pelo link oficial da LC nº 39/1993 consolidada.
+- Acrescentados links oficiais verificados para LC nº 208/2010, LC nº 293/2014, LC nº 51/1996 e para a publicação oficial da promulgação dos vetos da Lei nº 14.735/2023. Referências sem URL oficialmente confirmada continuam sem link, em vez de receber endereço presumido.
+
+### Treinador de questões
+
+Foram adicionadas **10 questões autorais de múltipla escolha**, duas para cada um dos cinco materiais expandidos. Cada registro contém alternativas, gabarito, explicação, marcação de questão autoral e vínculo ao material didático. Consulta SQL confirmou 10 questões ativas ligadas a 5 materiais. Elas não são questões oficiais da IDECAN.
+
+### Validação após as alterações
+
+- 25 materiais ativos na disciplina Legislação Institucional.
+- 0 materiais restantes com o bloco contaminante de CPC 26.
+- 182 itens de quiz didático e 161 flashcards existentes na disciplina, preservados pelas atualizações desta etapa.
+- 10 novas questões autorais no catálogo estruturado do treinador.
+- Os dois materiais que ainda tinham menos de 2.500 caracteres foram ampliados; a consulta posterior deve confirmar a contagem final.
+- A validação feita até aqui é de banco e de referências consultadas. Ainda não foi executado teste visual completo da biblioteca nem teste automatizado integral do fluxo do treinador.
+
+Migrations desta etapa:
+- `20261121299700_add_verified_legislation_reference_links.sql` — commit `512b7134541465cc1b14e54123829870ef607db1`.
+- `20261121299800_expand_short_institutional_law_guides.sql` — commit `f10d27cec9af67797be1149f9d42c3d6993d0e94`.
+- `20261121299900_add_institutional_law_trainer_questions.sql` — commit `b01237187b9af9b2ff5bce0137a9e2a353a3e690`.
+- `20261121300000_complete_institutional_law_overview_and_cautelar.sql` — commit `02fe1427551651f273ca75f8db730dce7e691534`.
+- `20261121300100_fix_lc129_initial_allocation_article_reference.sql` — commit `a9d8eb335338632b83347cf374c79225c4667f0c`.
+
+### Pendências da revisão jurídica
+
+- Conferir, artigo por artigo, os materiais de transgressões e penalidades, sindicância, PAD e prazos de prescrição com a redação consolidada da LC nº 129/2004 e as alterações efetivamente incidentes.
+- Conferir a LC nº 39/1993 no recorte de direitos, deveres, regime disciplinar, sindicância e PAD previsto no Anexo III, sem ampliar o conteúdo para dispositivos não aplicáveis ao cargo.
+- Validar os itens da Lei nº 14.735/2023 à luz da promulgação dos vetos em 2024 e do Decreto nº 12.996/2026, especialmente onde o material cita regulamentação.
+- Revisar o PCCR com os anexos e a estrutura de carreira atual, sem usar tabelas históricas como vigentes.
+- Fazer conferência visual da Biblioteca e do Treinador, além de testes de integração após as migrations.
