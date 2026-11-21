@@ -56,7 +56,8 @@ export function studyPriorityFor(
   if (matchesAny(text, very)) return { level: "muito-alta", top20: isTop20 };
   if (matchesAny(text, high)) return { level: "alta", top20: isTop20 };
   if (matchesAny(text, medium)) return { level: "media", top20: isTop20 };
-  return { level: "media", top20: isTop20 };
+  // Não classifica títulos genéricos ou subtópicos sem evidência na matriz do edital.
+  return null;
 }
 
 export function studyPriorityLabel(priority: StudyPriority) {
