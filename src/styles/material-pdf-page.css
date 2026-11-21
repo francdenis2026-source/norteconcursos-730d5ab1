@@ -436,3 +436,39 @@ html body .app-shell[data-area] .library-reading-workspace .library-body .study-
     font-size: 1.1em !important;
   }
 }
+
+/* Correção 21/11: o desafio da aula pode ser um blockquote sem classe
+   study-example; cobrir qualquer citação no texto-base. As cores do papel
+   devem vencer os estilos globais de cartões escuros, inclusive em dark mode. */
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose blockquote,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose blockquote.study-example {
+  background: #e9f0f7 !important;
+  background-color: #e9f0f7 !important;
+  background-image: none !important;
+  border: 1px solid #9eb4c9 !important;
+  border-left: 4px solid #24557f !important;
+  color: #172b40 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose blockquote :is(p, span, strong, em, b, i, code, a),
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose blockquote :is(p, span, strong, em, b, i, code, a) * {
+  color: #172b40 !important;
+  -webkit-text-fill-color: #172b40 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(h1,h2,h3,h4),
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(h1,h2,h3,h4) :is(span,strong,em) {
+  color: #17324d !important;
+  -webkit-text-fill-color: #17324d !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(p,li) {
+  -webkit-text-fill-color: #1d2126;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose mark {
+  color: #172b40 !important;
+  -webkit-text-fill-color: #172b40 !important;
+}
