@@ -305,3 +305,15 @@ html body .app-shell[data-area] .library-reading-workspace .library-body :is(.st
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
+/* Cartas de fixação (flashcards): texto branco sobre o fundo colorido, nos dois temas.
+   Sem isso, o cinza-muted global deixa "Pergunta · toque para virar" quase invisível. */
+:root.dark body .app-shell[data-area="student"] #dashboard-content .fc__face small,
+:root.dark body .app-shell[data-area="student"] #dashboard-content .fc__face p,
+:root.dark body .app-shell[data-area="student"] #dashboard-content .fc__face strong,
+:root body .app-shell[data-area="student"] #dashboard-content .fc__face small,
+:root body .app-shell[data-area="student"] #dashboard-content .fc__face p,
+:root body .app-shell[data-area="student"] #dashboard-content .fc__face strong {
+  color: rgba(255, 255, 255, 0.92);
+  opacity: 1;
+}
