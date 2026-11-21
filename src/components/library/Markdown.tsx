@@ -113,6 +113,20 @@ function isQuestionStem(text: string): boolean {
 function isQuestionOptions(text: string): boolean {
   return /(?:^|\s)[A-E][).]\s*\S/.test(text) && /(?:^|\s)[B-E][).]\s*\S/.test(text);
 }
+
+/** Uma alternativa pode estar sozinha em seu próprio parágrafo no conteúdo legado. */
+function isSingleQuestionOption(text: string): boolean {
+  return /^\\s*[A-E][).]\\s*\\S/i.test(text);
+}
+
+function cleanQuestionStem(lines: string[]): string {
+  const questionLine = lines.find((line) => /quest[aã]o\\s*:/i.test(line));
+  return (questionLine ?? lines.join(" "))
+    .replace(/^.*?quest[aã]o\\s*:\\s*/i, "")
+    .replace(/\\*\\*/g, "")
+    .replace(/\\\\n/g, " ")
+    .trim();
+}
 function isAnswerAnalysis(text: string): boolean {
   return /^\s*(?:\*\*)?(?:gabarito|resposta correta|coment[aá]rio|resolu[cç][aã]o comentada|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text) || /^\s*#\s+resolu[cç][aã]o comentada\b/i.test(text);
 }
@@ -413,6 +427,50 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
   for (let index = 0; index < blocks.length; index++) {
     if (consumedAnswers.has(index)) continue;
     const current = blocks[index]!;
+
+    // Desafios antigos usam um bloco destacado para o enunciado e um parágrafo
+    // separado para cada alternativa. Agrupa tudo antes de renderizar a questão.
+    if (
+      current.type === "quote" &&
+      /desafio de prova/i.test(current.lines.join(" ")) &&
+      current.lines.some((line) => /quest[aã]o\\s*:/i.test(line))
+    ) {
+      const stem = cleanQuestionStem(current.lines);
+      const optionBlocks: { index: number; text: string }[] = [];
+      let cursor = index + 1;
+      while (cursor < blocks.length) {
+        const candidate = blocks[cursor]!;
+        if (candidate.type !== "p" || !isSingleQuestionOption(candidate.text)) break;
+        optionBlocks.push({ index: cursor, text: candidate.text.trim() });
+        cursor++;
+      }
+      const combinedOptions = optionBlocks.map((item) => item.text).join(" ");
+      if (optionBlocks.length >= 2 && parseQuestionOptions(combinedOptions)) {
+        let answerIndex = -1;
+        for (let candidate = cursor; candidate < blocks.length; candidate++) {
+          const next = blocks[candidate]!;
+          if ((next.type === "p" || next.type === "h2" || next.type === "h3") && isAnswerAnalysis(next.text)) {
+            answerIndex = candidate;
+            break;
+          }
+          if (next.type === "h2" || next.type === "h3") break;
+        }
+        if (answerIndex >= 0) {
+          const answerBlock = blocks[answerIndex]!;
+          if (answerBlock.type === "p" || answerBlock.type === "h2" || answerBlock.type === "h3") {
+            prepared.push({
+              type: "interactive-question",
+              prompt: stem + " " + combinedOptions,
+              answer: answerBlock.text,
+            });
+            for (const item of optionBlocks) consumedAnswers.add(item.index);
+            consumedAnswers.add(answerIndex);
+            continue;
+          }
+        }
+      }
+    }
+
     if (current.type === "p" && isQuestionOptions(current.text)) {
       let answerIndex = -1;
       for (let candidate = index + 1; candidate < blocks.length; candidate++) {
