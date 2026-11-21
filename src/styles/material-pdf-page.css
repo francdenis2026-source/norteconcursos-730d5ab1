@@ -232,3 +232,55 @@ html body .app-shell[data-area] .library-body .portuguese-reader .study-prose { 
 @media (min-width: 900px) {
   html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .lr-meta li:first-child:not(:last-child) { display: none; }
 }
+
+/* Papel fixo, nos dois temas: a folha é uma página, então tem cores de papel impresso, não do tema.
+   A área ao redor continua no tema escuro, como um leitor de PDF. Texto escuro sobre papel claro dá
+   contraste alto e leitura longa mais confortável. As regras antigas do leitor escuro são vencidas aqui. */
+html body .app-shell[data-area] .library-reading-workspace .library-body,
+html body .app-shell[data-area] .library-reading-workspace .library-body:not(.library-body--portuguese) {
+  --sheet-bg: #fbfaf6;
+  --sheet-ink: #1d2126;
+  --sheet-muted: #4b525b;
+  --sheet-line: #dcd8cf;
+  --sheet-accent: #1f4e79;
+  background: #fbfaf6 !important;
+  color: #1d2126 !important;
+  border-color: #dcd8cf !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 16px 40px -20px rgb(0 0 0 / 60%) !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body :is(p, li, span, td, th, strong, em, dt, dd) {
+  color: #1d2126 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body :is(h1, h2, h3, h4) {
+  color: #14181d !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body h2 {
+  border-bottom-color: #1f4e79 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body blockquote {
+  background: #f1efe8 !important;
+  border-left-color: #1f4e79 !important;
+  color: #1d2126 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body blockquote :is(p, strong, span) {
+  color: #1d2126 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body :is(th) {
+  background: #eceae2 !important;
+  color: #14181d !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body :is(td, th) {
+  border-color: #dcd8cf !important;
+}
+/* Destaques de palavra-chave: marca-texto suave, legível sobre papel */
+html body .app-shell[data-area] .library-reading-workspace .library-body mark {
+  background: #fde9b8 !important;
+  color: #1d2126 !important;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body :is(.study-example, .study-example-cell) {
+  background: #f3f7fb !important;
+  color: #1d2126 !important;
+  border-left-color: #1f4e79 !important;
+}
