@@ -76,7 +76,7 @@
     border: 0 !important;
     border-radius: 999px !important;
     color: #fff !important;
-    background: var(--plan) !important;
+    background: color-mix(in srgb, var(--plan) 70%, black) !important;
     font-weight: 800 !important;
   }
   .home.home.home .mobile-homepage--recomposed .mobile-plans__list > li[data-plan="plus"] > span {
@@ -170,7 +170,7 @@
     font-weight: 500 !important;
     text-overflow: ellipsis;
     white-space: nowrap;
-    opacity: 0.72;
+    opacity: 0.9;
   }
   .home.home.home .mobile-homepage .sx-exam__body small {
     width: fit-content;
