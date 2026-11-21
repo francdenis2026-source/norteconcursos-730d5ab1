@@ -14,7 +14,6 @@ import {
   Bookmark,
   Briefcase,
   CalendarDays,
-  Clock3,
   Database,
   FileText,
   Gauge,
@@ -140,8 +139,7 @@ import "@/styles/question-trainer-viewport.css";
 import "@/styles/trainer-mobile-refine.css";
 import "@/styles/trainer-paused.css";
 import "@/styles/trainer-exam-focus.css";
-import "@/styles/trainer-setup-studio.css";
-import "@/styles/trainer-setup-focus-layout.css";
+import "@/styles/trainer-setup-compact.css";
 import "@/styles/trainer-question-v2.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
 import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
@@ -2094,47 +2092,7 @@ type ExamFocusProps = {
   label: string;
 };
 
-/** Escolha de foco: começa pelas questões com maior potencial de cair na prova do edital ativo. */
-function ExamFocusPicker({ mode, setMode, counts, label }: ExamFocusProps) {
-  const modes: ExamFocus[] = ["off", "alta", "alta-media", "recentes"];
-  return (
-    <section className="qt2-focus" aria-label={`Foco na prova ${label}`}>
-      <header>
-        <Target aria-hidden="true" />
-        <div>
-          <strong>Foco na prova · {label}</strong>
-          <span>Comece pelo que mais tem chance de cair. Baseado nas provas da banca já cobradas.</span>
-        </div>
-      </header>
-      <div className="qt2-focus__options" role="radiogroup" aria-label="Escolher o foco">
-        {modes.map((id) => {
-          const count = counts?.[id];
-          const empty = counts !== null && id !== "off" && !count;
-          return (
-            <button
-              key={id}
-              type="button"
-              role="radio"
-              aria-checked={mode === id}
-              disabled={!counts || empty}
-              onClick={() => setMode(id)}
-              data-active={mode === id}
-            >
-              {EXAM_FOCUS_LABEL[id]}
-              {id !== "off" && <small>{counts ? count?.toLocaleString("pt-BR") : "…"}</small>}
-            </button>
-          );
-        })}
-      </div>
-      {mode !== "off" && (
-        <p>
-          As questões mais prováveis vêm primeiro. É uma tendência estatística, não uma garantia de prova.
-        </p>
-      )}
-    </section>
-  );
-}
-
+/** Montagem da sessão: uma única janela com duas etapas (o que treinar, como treinar) e o resumo para iniciar. */
 function TrainerSetup({
   total,
   available,
@@ -2165,6 +2123,7 @@ function TrainerSetup({
   start: () => void;
 }) {
   const usedCount = values.limit === "all" ? available : Math.min(available, Number(values.limit));
+  const [moreOpen, setMoreOpen] = React.useState(false);
   const reset = () => {
     setters.setContest("all");
     setters.setBoard("all");
@@ -2218,46 +2177,96 @@ function TrainerSetup({
   ].filter((v) => v !== "all").length + (values.includeAnswered ? 1 : 0);
   const quantities = trainerQuestionQuantityOptions(available);
   const minutes = Math.max(1, Math.round(usedCount * 2));
+  const duration = minutes >= 60 ? `${Math.floor(minutes / 60)} h${minutes % 60 ? ` ${minutes % 60} min` : ""}` : `${minutes} min`;
+  const orderLabel = values.orderMode === "random" ? "Aleatório inteligente" : "Ordem do acervo";
+  const focusModes: ExamFocus[] = ["off", "alta", "alta-media", "recentes"];
+  const quick = [
+    { to: "/dashboard/question-trainer", search: { mode: "reforco" }, icon: RotateCcw, label: "Revisar erros" },
+    { to: "/dashboard/notebooks", icon: Bookmark, label: "Cadernos" },
+    { to: "/dashboard/mock-exams", icon: Target, label: "Simulados" },
+    { to: "/dashboard/question-bank", icon: ListOrdered, label: "Banco de questões" },
+    { to: "/dashboard/performance", icon: TrendingUp, label: "Desempenho" },
+  ] as const;
   return (
-    <div className="trainer-setup qt2 qt3 pb-4 animate-in fade-in duration-300 sm:pb-6">
-      <QtFitViewport depKey="setup" root=".qt3" target=".qt3" varName="--qt3-h" />
-      <div className="qt3-main">
-        <header className="qt3-hero">
-          <img src="/media/hero/toolkit.webp" alt="" aria-hidden="true" decoding="async" />
-          <div className="qt3-hero__copy">
-            <small>Treinamento de precisão</small>
-            <h1>Monte sua sessão de questões</h1>
-            <p aria-label="Resumo das questões">
-              <span>
-                <b>{total.toLocaleString("pt-BR")}</b> ativas
-              </span>
-              <span>
-                <b>{available.toLocaleString("pt-BR")}</b> na seleção
-              </span>
-            </p>
-          </div>
-        </header>
-        {values.area !== "all" && (
-          <p className="qt3-note">
-            Filtro do seu cronograma: <b>{values.area}</b>
-            <button
-              type="button"
-              onClick={() => {
-                setters.setArea("all");
-                setters.setTopic("all");
-              }}
-            >
-              limpar
-            </button>
-          </p>
-        )}
-        {focus && <ExamFocusPicker {...focus} />}
+    <div
+      className="qs animate-in fade-in duration-300"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && moreOpen) setMoreOpen(false);
+      }}
+    >
+      <QtFitViewport depKey="setup" root=".qs" target=".qs" varName="--qs-h" />
+      <header className="qs-head">
+        <div className="qs-head__title">
+          <small>Treinamento de precisão</small>
+          <h1>Monte sua sessão</h1>
+        </div>
+        <nav className="qs-quick" aria-label="Acesso rápido">
+          {quick.map(({ to, icon: Icon, label, ...rest }) => (
+            <Link key={to + label} to={to} {...(rest as object)} title={label} aria-label={label}>
+              <Icon aria-hidden="true" /> <span>{label}</span>
+            </Link>
+          ))}
+        </nav>
+        <p className="qs-head__stats" aria-label="Resumo das questões">
+          <span>
+            <b>{total.toLocaleString("pt-BR")}</b> ativas
+          </span>
+          <span>
+            <b>{available.toLocaleString("pt-BR")}</b> na seleção
+          </span>
+        </p>
+      </header>
 
-        <section className="qt3-panel" aria-labelledby="qt3-filters-title">
-          <h2 id="qt3-filters-title" className="qt3-panel__title">
-            <Settings2 aria-hidden="true" /> O que você quer treinar
+      <div className="qs-body">
+        <section className="qs-col" aria-labelledby="qs-what">
+          <h2 id="qs-what" className="qs-step">
+            <i aria-hidden="true">1</i> O que treinar
           </h2>
-          <div className="qt3-grid">
+          {values.area !== "all" && (
+            <p className="qs-note">
+              Filtro do seu cronograma: <b>{values.area}</b>
+              <button
+                type="button"
+                onClick={() => {
+                  setters.setArea("all");
+                  setters.setTopic("all");
+                }}
+              >
+                limpar
+              </button>
+            </p>
+          )}
+          {focus && (
+            <div className="qs-field">
+              <span
+                className="qs-label"
+                id="qs-focus"
+                title="Comece pelo que mais tem chance de cair, com base nas provas da banca. É uma tendência estatística, não uma garantia."
+              >
+                <Target aria-hidden="true" /> Foco na prova · {focus.label}
+              </span>
+              <div className="qs-chips" role="radiogroup" aria-labelledby="qs-focus">
+                {focusModes.map((id) => {
+                  const count = focus.counts?.[id];
+                  const empty = focus.counts !== null && id !== "off" && !count;
+                  return (
+                    <button
+                      key={id}
+                      type="button"
+                      role="radio"
+                      aria-checked={focus.mode === id}
+                      disabled={!focus.counts || empty}
+                      onClick={() => focus.setMode(id)}
+                    >
+                      {EXAM_FOCUS_LABEL[id]}
+                      {id !== "off" && <small>{focus.counts ? count?.toLocaleString("pt-BR") : "…"}</small>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          <div className="qs-grid">
             <TrainerFilter
               icon={Target}
               label="Aderência ao edital"
@@ -2297,131 +2306,20 @@ function TrainerSetup({
               allLabel="Todos os assuntos"
             />
           </div>
-
-          <div className="qt3-row">
-            <div className="qt3-field">
-              <span className="qt3-field__label" id="qt3-diff">
-                <Gauge aria-hidden="true" /> Dificuldade
-              </span>
-              <div className="qt3-chips" role="radiogroup" aria-labelledby="qt3-diff">
-                {(["all", "fácil", "média", "difícil"] as const).map((d) => {
-                  const count = d === "all" ? facets.totals["difficulty"] : facets.counts["difficulty"]?.get(d);
-                  return (
-                    <button
-                      key={d}
-                      type="button"
-                      role="radio"
-                      aria-checked={values.difficulty === d}
-                      data-level={d}
-                      disabled={d !== "all" && !count && values.difficulty !== d}
-                      onClick={() => setters.setDifficulty(d)}
-                    >
-                      <i aria-hidden="true" />
-                      {d === "all" ? "Todas" : difficultyLabels[d]}
-                      {count !== undefined && <small>{count.toLocaleString("pt-BR")}</small>}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="qt3-field">
-              <span className="qt3-field__label" id="qt3-qty">
-                <ListOrdered aria-hidden="true" /> Quantidade
-              </span>
-              {available ? (
-                <div className="qt3-chips" role="radiogroup" aria-labelledby="qt3-qty">
-                  {[...quantities, ...(available > 50 ? ["all"] : [])].map((q) => (
-                    <button
-                      key={q}
-                      type="button"
-                      role="radio"
-                      aria-checked={values.limit === q}
-                      onClick={() => setters.setLimit(q)}
-                    >
-                      {q === "all" ? `Todas (${available.toLocaleString("pt-BR")})` : q}
-                    </button>
-                  ))}
-                </div>
-              ) : (
-                <p className="qt3-muted">Sem questões disponíveis</p>
-              )}
-            </div>
-            <div className="qt3-field">
-              <span className="qt3-field__label" id="qt3-order">
-                <Shuffle aria-hidden="true" /> Ordem
-              </span>
-              <div className="qt3-chips" role="radiogroup" aria-labelledby="qt3-order">
-                {(
-                  [
-                    ["random", "Aleatório inteligente"],
-                    ["exam", "Ordem do acervo"],
-                  ] as const
-                ).map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    role="radio"
-                    aria-checked={values.orderMode === id}
-                    onClick={() => setters.setOrderMode(id as OrderMode)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <details className="qt3-more">
-            <summary>
+          <div className="qs-tools">
+            <button
+              type="button"
+              className="qs-morebtn"
+              aria-expanded={moreOpen}
+              aria-controls="qs-more"
+              onClick={() => setMoreOpen((open) => !open)}
+            >
               <Layers aria-hidden="true" /> Mais filtros
-              {moreActive > 0 && <span className="qt3-badge">{moreActive}</span>}
-              <ChevronDown className="qt3-more__chev" aria-hidden="true" />
-            </summary>
-            <div className="qt3-grid">
-              <TrainerFilter icon={Trophy} counts={facets.counts["contest"]} allCount={facets.totals["contest"]} label="Concurso" value={values.contest} setValue={setters.setContest} options={choices.contests} />
-              <TrainerFilter icon={Briefcase} counts={facets.counts["career"]} allCount={facets.totals["career"]} label="Carreira ou cargo" value={values.career} setValue={setters.setCareer} options={choices.careers} />
-              <TrainerFilter icon={MapPin} counts={facets.counts["state"]} allCount={facets.totals["state"]} label="Estado" value={values.state} setValue={setters.setState} options={choices.states} />
-              <TrainerFilter icon={Layers} counts={facets.counts["category"]} allCount={facets.totals["category"]} label="Categoria" value={values.category} setValue={setters.setCategory} options={choices.categories} />
-              <TrainerFilter icon={CalendarDays} counts={facets.counts["year"]} allCount={facets.totals["year"]} label="Ano" value={values.year} setValue={setters.setYear} options={choices.years} />
-              <TrainerFilter icon={FileText} counts={facets.counts["exam"]} allCount={facets.totals["exam"]} label="Prova aplicada" value={values.appliedExam} setValue={setters.setAppliedExam} options={choices.exams.map(([value]) => value)} labels={examLabels} />
-              <TrainerFilter icon={Database} counts={facets.counts["source"]} allCount={facets.totals["source"]} label="Origem" value={values.source} setValue={setters.setSource} options={["official", "curated", "personal"]} labels={sourceLabels} />
-              <TrainerFilter icon={Sparkles} counts={facets.counts["reviewed"]} allCount={facets.totals["reviewed"]} label="Explicação didática" value={values.reviewed} setValue={setters.setReviewed} options={["reviewed"]} labels={{ reviewed: "Com explicação e exemplo do dia a dia" }} allLabel="Todas as questões" />
-              <label className="qt3-toggle">
-                <input
-                  type="checkbox"
-                  checked={values.includeAnswered}
-                  onChange={(event) => setters.setIncludeAnswered(event.target.checked)}
-                />
-                <span className="qt3-toggle__switch" aria-hidden="true" />
-                <span>
-                  <b>Incluir questões já respondidas</b>
-                  <small>Para revisão. Continuam bloqueadas para novo envio.</small>
-                </span>
-              </label>
-            </div>
-          </details>
-        </section>
-      </div>
-
-      <aside className="qt3-summary" aria-labelledby="qt3-summary-title">
-        <div className="qt3-summary__card">
-          <p className="qt3-summary__eyebrow">Sua sessão</p>
-          <h2 id="qt3-summary-title" className="qt3-summary__count">
-            <b>{usedCount.toLocaleString("pt-BR")}</b>
-            <span>{usedCount === 1 ? "questão" : "questões"}</span>
-          </h2>
-          <ul className="qt3-summary__facts">
-            <li>
-              <Clock3 aria-hidden="true" /> cerca de {minutes >= 60 ? `${Math.floor(minutes / 60)} h ${minutes % 60 ? `${minutes % 60} min` : ""}` : `${minutes} min`}
-            </li>
-            <li>
-              <Shuffle aria-hidden="true" /> {values.orderMode === "random" ? "Aleatório inteligente" : "Ordem do acervo"}
-            </li>
-          </ul>
-          <div className="qt3-summary__filters">
-            <p>Filtros ativos</p>
-            {active.length ? (
-              <ul>
+              {moreActive > 0 && <span className="qs-badge">{moreActive}</span>}
+              <ChevronDown aria-hidden="true" />
+            </button>
+            {active.length > 0 && (
+              <ul className="qs-active" aria-label="Filtros ativos">
                 {active.map(([label, , display, clear]) => (
                   <li key={label}>
                     <span title={`${label}: ${display ?? ""}`}>
@@ -2433,43 +2331,144 @@ function TrainerSetup({
                   </li>
                 ))}
               </ul>
-            ) : (
-              <span className="qt3-muted">Nenhum: todas as questões disponíveis.</span>
             )}
           </div>
-          <div className="qt3-summary__actions">
-            <Button disabled={!available} onClick={start} className="qt3-start hero-primary-action">
-              <Sparkles aria-hidden="true" /> Iniciar treinamento
-            </Button>
-            <Button variant="ghost" onClick={reset} className="qt3-reset" disabled={!active.length && !values.includeAnswered}>
-              <RotateCcw aria-hidden="true" /> Limpar filtros
-            </Button>
-          </div>
-        </div>
-        <nav className="qt3-quick" aria-label="Acesso rápido">
-          <Link to="/dashboard/question-trainer" search={{ mode: "reforco" } as never} data-tone="rose">
-            <RotateCcw aria-hidden="true" /> <span>Revisar erros</span>
-          </Link>
-          <Link to="/dashboard/notebooks" data-tone="violet">
-            <Bookmark aria-hidden="true" /> <span>Cadernos</span>
-          </Link>
-          <Link to="/dashboard/mock-exams" data-tone="gold">
-            <Target aria-hidden="true" /> <span>Simulados</span>
-          </Link>
-          <Link to="/dashboard/question-bank" data-tone="blue">
-            <ListOrdered aria-hidden="true" /> <span>Banco de questões</span>
-          </Link>
-          <Link to="/dashboard/performance" data-tone="green">
-            <TrendingUp aria-hidden="true" /> <span>Desempenho</span>
-          </Link>
-        </nav>
-      </aside>
+        </section>
 
-      <div className="qt3-mobilebar">
+        <section className="qs-col qs-col--how" aria-labelledby="qs-how">
+          <h2 id="qs-how" className="qs-step">
+            <i aria-hidden="true">2</i> Como treinar
+          </h2>
+          <div className="qs-field">
+            <span className="qs-label" id="qs-diff">
+              <Gauge aria-hidden="true" /> Dificuldade
+            </span>
+            <div className="qs-chips" role="radiogroup" aria-labelledby="qs-diff">
+              {(["all", "fácil", "média", "difícil"] as const).map((d) => {
+                const count = d === "all" ? facets.totals["difficulty"] : facets.counts["difficulty"]?.get(d);
+                return (
+                  <button
+                    key={d}
+                    type="button"
+                    role="radio"
+                    aria-checked={values.difficulty === d}
+                    data-level={d}
+                    disabled={d !== "all" && !count && values.difficulty !== d}
+                    onClick={() => setters.setDifficulty(d)}
+                  >
+                    <i aria-hidden="true" />
+                    {d === "all" ? "Todas" : difficultyLabels[d]}
+                    {count !== undefined && <small>{count.toLocaleString("pt-BR")}</small>}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <div className="qs-field">
+            <span className="qs-label" id="qs-qty">
+              <ListOrdered aria-hidden="true" /> Quantidade
+            </span>
+            {available ? (
+              <div className="qs-chips" role="radiogroup" aria-labelledby="qs-qty">
+                {[...quantities, ...(available > 50 ? ["all"] : [])].map((q) => (
+                  <button
+                    key={q}
+                    type="button"
+                    role="radio"
+                    aria-checked={values.limit === q}
+                    onClick={() => setters.setLimit(q)}
+                  >
+                    {q === "all" ? `Todas (${available.toLocaleString("pt-BR")})` : q}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className="qs-muted">Sem questões disponíveis</p>
+            )}
+          </div>
+          <div className="qs-field">
+            <span className="qs-label" id="qs-order">
+              <Shuffle aria-hidden="true" /> Ordem
+            </span>
+            <div className="qs-chips" role="radiogroup" aria-labelledby="qs-order">
+              {(
+                [
+                  ["random", "Aleatório inteligente"],
+                  ["exam", "Ordem do acervo"],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="radio"
+                  aria-checked={values.orderMode === id}
+                  onClick={() => setters.setOrderMode(id as OrderMode)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="qs-go">
+            <p className="qs-sum" aria-live="polite">
+              <b>{usedCount.toLocaleString("pt-BR")}</b>
+              <span>
+                {usedCount === 1 ? "questão" : "questões"} · cerca de {duration} · {orderLabel}
+              </span>
+            </p>
+            <div className="qs-actions">
+              <Button variant="ghost" onClick={reset} className="qs-reset" disabled={!active.length && !values.includeAnswered}>
+                <RotateCcw aria-hidden="true" /> Limpar
+              </Button>
+              <Button disabled={!available} onClick={start} className="qs-start hero-primary-action">
+                <Sparkles aria-hidden="true" /> Iniciar treinamento
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {moreOpen && (
+          <section id="qs-more" className="qs-more" aria-label="Mais filtros">
+            <header>
+              <h2>
+                <Layers aria-hidden="true" /> Mais filtros
+              </h2>
+              <button type="button" onClick={() => setMoreOpen(false)}>
+                Concluir
+              </button>
+            </header>
+            <div className="qs-grid qs-grid--more">
+              <TrainerFilter icon={Trophy} counts={facets.counts["contest"]} allCount={facets.totals["contest"]} label="Concurso" value={values.contest} setValue={setters.setContest} options={choices.contests} />
+              <TrainerFilter icon={Briefcase} counts={facets.counts["career"]} allCount={facets.totals["career"]} label="Carreira ou cargo" value={values.career} setValue={setters.setCareer} options={choices.careers} />
+              <TrainerFilter icon={MapPin} counts={facets.counts["state"]} allCount={facets.totals["state"]} label="Estado" value={values.state} setValue={setters.setState} options={choices.states} />
+              <TrainerFilter icon={Layers} counts={facets.counts["category"]} allCount={facets.totals["category"]} label="Categoria" value={values.category} setValue={setters.setCategory} options={choices.categories} />
+              <TrainerFilter icon={CalendarDays} counts={facets.counts["year"]} allCount={facets.totals["year"]} label="Ano" value={values.year} setValue={setters.setYear} options={choices.years} />
+              <TrainerFilter icon={FileText} counts={facets.counts["exam"]} allCount={facets.totals["exam"]} label="Prova aplicada" value={values.appliedExam} setValue={setters.setAppliedExam} options={choices.exams.map(([value]) => value)} labels={examLabels} />
+              <TrainerFilter icon={Database} counts={facets.counts["source"]} allCount={facets.totals["source"]} label="Origem" value={values.source} setValue={setters.setSource} options={["official", "curated", "personal"]} labels={sourceLabels} />
+              <TrainerFilter icon={Sparkles} counts={facets.counts["reviewed"]} allCount={facets.totals["reviewed"]} label="Explicação didática" value={values.reviewed} setValue={setters.setReviewed} options={["reviewed"]} labels={{ reviewed: "Com explicação e exemplo do dia a dia" }} allLabel="Todas as questões" />
+            </div>
+            <label className="qs-toggle">
+              <input
+                type="checkbox"
+                checked={values.includeAnswered}
+                onChange={(event) => setters.setIncludeAnswered(event.target.checked)}
+              />
+              <span className="qs-toggle__switch" aria-hidden="true" />
+              <span>
+                <b>Incluir questões já respondidas</b>
+                <small>Para revisão. Continuam bloqueadas para novo envio.</small>
+              </span>
+            </label>
+          </section>
+        )}
+      </div>
+
+
+      <div className="qs-mobilebar">
         <span>
-          <b>{usedCount.toLocaleString("pt-BR")}</b> questões
+          <b>{usedCount.toLocaleString("pt-BR")}</b> {usedCount === 1 ? "questão" : "questões"}
         </span>
-        <Button disabled={!available} onClick={start} className="qt3-start hero-primary-action">
+        <Button disabled={!available} onClick={start} className="qs-start hero-primary-action">
           <Sparkles aria-hidden="true" /> Iniciar
         </Button>
       </div>
@@ -2505,13 +2504,13 @@ function TrainerFilter({
   hideAll?: boolean;
 }) {
   return (
-    <label className="qt3-field" data-set={value !== "all" || undefined}>
-      <span className="qt3-field__label">
+    <label className="qs-field" data-set={value !== "all" || undefined}>
+      <span className="qs-label">
         {Icon && <Icon aria-hidden="true" />}
         {label}
       </span>
       <Select disabled={disabled} value={disabled ? "" : value} onValueChange={setValue}>
-        <SelectTrigger disabled={disabled} className="qt3-select">
+        <SelectTrigger disabled={disabled} className="qs-select">
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent className="trainer-select-content">
