@@ -190,3 +190,54 @@ A cobertura foi comparada com o Anexo III do Edital nº 001/2026 SEAD/PCAC para 
 - Testes de associação: scripts/trainer-learning.test.mjs.
 
 A revisão de cobertura acima confirma o mapeamento dos tópicos, mas não substitui uma auditoria independente de cada gabarito nem a validação de produção após os checks do GitHub Actions. O CI do último commit deve concluir typecheck, lint, testes e build antes de considerar a alteração técnica liberada.
+
+
+## Auditoria complementar — Informática e conteúdos matemáticos do PC-AC — 20/11/2026
+
+### Enquadramento correto do edital
+A conferência do verticalizado oficial do cargo de Oficial Investigador confirma que **Matemática não é uma disciplina autônoma** neste edital. Os conteúdos quantitativos aparecem em Raciocínio Lógico, Estatística e em Matemática Financeira dentro de Contabilidade Geral e Análise Financeira. Os cinco materiais genéricos da disciplina Matemática e o material Matemática básica permanecem como acervo complementar; não foram classificados como conteúdo específico do PC-AC.
+
+### Noções de Informática — cobertura e ampliação
+- **10 materiais PC-AC ativos**, 50 exercícios de fixação e 50 flashcards.
+- **10 questões autorais** na banca principal, com gabaritos conferidos.
+- Os materiais foram aprofundados com exemplos cotidianos, diferenças conceituais, pegadinhas e dicas de prova.
+- O aprofundamento inclui hardware/software/firmware; formatos abertos e proprietários; interoperabilidade; armazenamento local/remoto/nuvem; sincronização e versões; software livre, licenças e acessibilidade; Windows 11 e Ubuntu; perfis, permissões e recuperação; Word/Writer; Excel/Calc; apresentações; protocolos, busca e HTTPS; e-mail; colaboração em nuvem; governança, auditoria e transparência pública.
+- Foram ampliadas as explicações de sete questões com justificativas e exemplos adicionais.
+
+### Tecnologia da Informação e Segurança da Informação
+- **9 materiais ativos**, 46 exercícios de fixação e 46 flashcards.
+- **16 questões autorais** no banco principal, todas com gabarito conferido.
+- As explicações curtas ou intermediárias foram aprofundadas; a questão sobre MFA teve sua alternativa reformulada para exigir fatores de categorias distintas, evitando a expressão ambígua “independentes ou complementares”.
+- A redação das questões deixa claro que são itens autorais de preparação, não questões oficiais da IDECAN.
+
+### Análise de Dados e Informações
+- **11 materiais ativos**, 55 exercícios de fixação e 55 flashcards.
+- A disciplina permanece separada de Noções de Informática e de Tecnologia da Informação, conforme o programa específico do cargo.
+
+### Conteúdos matemáticos distribuídos no edital
+- **Raciocínio Lógico:** 15 materiais PC-AC ativos, 150 exercícios e 150 flashcards; os 15 itens do programa permanecem mapeados.
+- **Estatística:** 12 materiais PC-AC ativos, 120 exercícios e 130 flashcards; os nove blocos do programa permanecem mapeados.
+- **Matemática Financeira:** a aula de Contabilidade contém juros simples e compostos, taxas proporcionais/equivalentes/nominais/efetivas, descontos e atualização de valores, com 19 exercícios de fixação.
+- Foram adicionadas três questões autorais ao banco principal, cobrindo juros compostos, conversão de taxa nominal para efetiva e desconto comercial simples. As três estão ligadas ao tópico de Contabilidade do edital e ao material de Matemática Financeira.
+- A descrição do material foi ajustada para que o treinador relacione corretamente as questões de juros, taxas e descontos à aula específica. Testes automatizados cobrem os três vínculos.
+
+### Auditoria individual de questões
+Foram conferidos os gabaritos e as explicações das **59 questões autorais ativas** destas disciplinas:
+- Noções de Informática: 10.
+- Tecnologia da Informação e Segurança da Informação: 16.
+- Raciocínio Lógico: 18.
+- Estatística: 15.
+
+Dezoito explicações foram ampliadas com raciocínio, fórmula ou exemplo: sete de Noções de Informática, cinco de Tecnologia da Informação e Segurança, quatro de Estatística e duas de Raciocínio Lógico. Os gabaritos corretos foram preservados. As três novas questões de Matemática Financeira também tiveram seus cálculos conferidos. As questões estão identificadas como autorais e não foram apresentadas como questões oficiais de concurso.
+
+### Correção de contaminação editorial
+Foi removido o bloco “Classificação dos passivos financeiros — CPC 26” que havia sido anexado indevidamente a materiais de outras disciplinas. A limpeza atingiu 84 materiais em Informática, Tecnologia da Informação, Análise de Dados, Matemática, Matemática básica e Raciocínio Lógico, além da aula específica de Matemática Financeira em Contabilidade: **85 materiais corrigidos**. A consulta posterior confirmou zero ocorrência do bloco indevido nas disciplinas auditadas.
+
+### Migrações e validação
+- `20261120120000_clean_cross_discipline_cpc26_material_contamination.sql`
+- `20261120130000_expand_pcac_informatics_and_review_math_questions.sql`
+- `20261120140000_record_pcac_informatics_math_review.sql`
+- O treinador passou a normalizar flexões de termos de juros, taxas, aumentos e descontos para relacionar a questão à aula correta.
+- GitHub Actions, execução **44856145884**: testes automatizados, TypeScript, ESLint e build de produção concluídos com sucesso.
+
+A auditoria de gabaritos acima cobre os 59 itens listados e as três novas questões financeiras. Ela não significa que todas as demais questões de Contabilidade, Português ou outras disciplinas tenham sido individualmente reavaliadas nesta etapa.
