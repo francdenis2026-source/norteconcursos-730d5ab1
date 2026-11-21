@@ -1,10 +1,9 @@
 -- Amplia a seção didática sobre fontes de informação no material PC-AC 2026.
--- Substitui somente a seção 3, preservando as seções anteriores e posteriores.
+-- Usa limites por posição para substituir somente a seção 3 e preservar as demais.
 update public.study_materials
-set body_md = regexp_replace(
-  body_md,
-  '## 3\\. Fontes de informação.*?## 4\\. Confiabilidade e qualidade',
-  $replacement$## 3. Fontes de informação
+set body_md =
+  left(body_md, strpos(body_md, '## 3. Fontes de informação') - 1)
+  || $section$## 3. Fontes de informação
 
 Uma **fonte de informação** é a origem de onde um dado ou uma informação é obtido. Pode ser um documento, uma pessoa, um banco de dados, um sistema, uma gravação, uma publicação ou uma instituição.
 
@@ -121,12 +120,9 @@ C) externo e oficial.
 D) externo e não oficial obrigatoriamente.
 E) físico e primário obrigatoriamente.
 
-**Gabarito: C.** É externo porque veio de outra organização e oficial porque foi divulgado pelo órgão competente. Ser externo não significa ser não oficial. O suporte físico ou digital não foi informado e não pode ser presumido.
-
-## 4. Confiabilidade e qualidade$replacement$,
-  'gs'
-),
-updated_at = now()
+**Gabarito: C.** É externo porque veio de outra organização e oficial porque foi divulgado pelo órgão competente. Ser externo não significa ser não oficial. O suporte físico ou digital não foi informado e não pode ser presumido.$section$
+  || substring(body_md from strpos(body_md, '## 4. Confiabilidade e qualidade')),
+  updated_at = now()
 where slug = 'pcac-2026-guia-analise-dados-01-fundamentos-ciclo-analitico'
-  and body_md like '%## 3. Fontes de informação%'
-  and body_md like '%## 4. Confiabilidade e qualidade%';
+  and strpos(body_md, '## 3. Fontes de informação') > 0
+  and strpos(body_md, '## 4. Confiabilidade e qualidade') > 0;
