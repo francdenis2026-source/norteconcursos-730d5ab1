@@ -9,7 +9,7 @@ const migrations = fs.readdirSync(dir)
 assert.equal(migrations.length, 22, 'Expected 22 PC-AC migrations from versions 067 to 088, inclusive');
 const db = new PGlite();
 await db.exec(`create table public.study_materials (
-  slug text primary key, contest_name text, title text, summary text, body_md text, quiz jsonb not null default '[]'::jsonb, flashcards jsonb not null default '[]'::jsonb, practice_review jsonb, updated_at timestamptz
+  id uuid unique not null default gen_random_uuid(), slug text primary key, contest_name text, title text, summary text, body_md text, quiz jsonb not null default '[]'::jsonb, flashcards jsonb not null default '[]'::jsonb, practice_review jsonb, updated_at timestamptz
 )`);
 await db.exec(`create table public.curated_question_catalog (
   id uuid primary key default gen_random_uuid(), external_item_key text,
