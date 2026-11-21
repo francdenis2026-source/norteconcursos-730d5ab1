@@ -1182,3 +1182,47 @@ Consulta SQL confirmou quatro chaves distintas e quatro registros ativos, com ga
 ### Pendências
 
 A revisão de conteúdo dos arts. 118 a 151 foi aprofundada, mas não deve ser considerada auditoria jurídica exaustiva de cada inciso: ainda falta confronto integral e individual dos arts. 134–147 e teste visual/de integração do treinador. Permanecem também a conferência final da Lei nº 14.735/2023 e do PCCR.
+
+
+## Sétima continuação — instrução, diligências e defesa final do PAD — 21/11/2026
+
+### Fonte e artigos confrontados
+
+Consulta à versão consolidada da LC nº 129/2004 no Portal LEGIS confirmou diretamente:
+- Art. 143: mandado para testemunha indicada pelo acusado; se servidor público, comunicação imediata ao chefe da repartição com dia e hora.
+- Art. 144: Presidente da Comissão pode ordenar diligências, de ofício ou a requerimento, em qualquer fase; requisição de técnicos/peritos oficiais e observância dos impedimentos.
+- Art. 145: indeferimento fundamentado de pedido manifestamente protelatório ou sem interesse para esclarecimento.
+- Art. 146: novas arguições; se pertinentes, intimação do acusado e reabertura do prazo de provas.
+- Art. 147: vista por 48 horas e defesa escrita em 10 dias.
+- Art. 148: relatório em 10 dias após o prazo de defesa e saneamento; análise individualizada por acusado, provas, defesa, proposta e agravantes/atenuantes.
+
+A consulta oficial também confirmou que o art. 127 foi alterado pela LC nº 293/2014: prazo de 30 dias, prorrogável mediante solicitação fundamentada, sem o limite fixo de mais 30 dias que constava da redação anterior. O material de sindicância já indicava a redação atual; a atualização desta etapa deixou explícita a pegadinha histórica.
+
+### Material didático
+
+O material `pcac-2026-lc129-pad-instrucao-defesa-relatorio-recursos` foi ampliado para 15.532 caracteres, com exemplos práticos sobre diligências, novas imputações, defesa final e relatório.
+
+O material `pcac-2026-lc129-sindicancia-prazos-prescricao-extincao` foi atualizado para deixar clara a diferença entre redação antiga e redação consolidada do art. 127.
+
+### Treinador
+
+Incluídas quatro questões autorais novas, com gabarito, explicação e vínculo ao material:
+- testemunha servidora pública (art. 143);
+- diligências e indeferimento fundamentado (arts. 144–145);
+- novas imputações e reabertura de prova (art. 146);
+- vista, defesa e relatório (arts. 147–148).
+
+Consulta SQL confirmou quatro registros distintos e ativos. São questões autorais, não questões oficiais da IDECAN.
+
+### Migrations e commits
+
+- `20261121301200_expand_lc129_evidence_defense_and_fix_inquiry_extension.sql` — commit de correção `9536b4aa41c9763d590770bcffb27dcefb573973`.
+- `20261121301300_add_pad_evidence_and_report_questions.sql` — commit `5d12280d684ddd4892c3d42b0bc8fcb61a9a2a9b`.
+
+### Limite da revisão
+
+A leitura desta etapa confirmou diretamente os arts. 143 a 148 e a alteração do art. 127. Os arts. 134 a 142 ainda precisam de conferência individual, com atenção a todos os parágrafos e às alterações históricas. Não declarar auditoria integral concluída. Também permanece pendente teste visual do modo treinador e conferência do fluxo de contagem no painel.
+
+### Próximo passo
+
+Conferir artigos 134 a 142 em sua literalidade consolidada; em seguida, revisar a Lei nº 14.735/2023 e o PCCR da Polícia Civil do Acre, distinguindo as normas nacionais das regras estaduais.
