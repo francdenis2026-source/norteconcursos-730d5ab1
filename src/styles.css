@@ -17447,3 +17447,25 @@ html.dark body .library-reading-workspace .library-body :is(
 html.dark body .library-reading-workspace .library-body a {
   color: #e1c27f !important;
 }
+
+
+/* Biblioteca — reduzir a faixa superior do leitor de materiais.
+   Mantém breadcrumb e cronômetro, mas elimina a altura/padding excedente. */
+.app-shell[data-area="student"] .app-content__inner:has(.library-body) {
+  padding-top: 8px !important;
+}
+.app-shell[data-area="student"] .app-content__inner:has(.library-body) :is(
+  header, [class*="reader-toolbar"], [class*="reading-toolbar"], [class*="article-toolbar"]
+):has(button) {
+  min-height: 0 !important;
+  padding-block: 8px !important;
+  margin-block: 0 10px !important;
+  gap: 10px !important;
+}
+.app-shell[data-area="student"] .app-content__inner:has(.library-body) :is(
+  [class*="reader-header"], [class*="reading-header"], [class*="article-header"]
+) {
+  min-height: 0 !important;
+  padding-block: 8px !important;
+  margin-block: 0 10px !important;
+}
