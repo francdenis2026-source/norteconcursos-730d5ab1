@@ -257,3 +257,24 @@ Foram ampliadas seis explicações curtas, preservando integralmente enunciados,
 
 ### Limite desta etapa
 Este lote não representa a conclusão da auditoria independente das 45 questões. A conferência de gabaritos contra documentos oficiais e a análise substantiva das demais questões ainda precisam ser feitas em lotes, com rastreabilidade da fonte. A simples presença de `verified_at` no banco não substitui a conferência da fonte primária.
+
+
+## Auditoria do treinador de Contabilidade — 21/11/2026
+
+Consulta direta ao projeto Supabase NorteCorcurso Publico (gkwphadbveiyjcwiiizw), tabela study_materials, filtrando contest_name = 'PC-AC 2026' e a disciplina Contabilidade:
+
+- **17 materiais ativos** localizados.
+- **259 questões** embutidas nos arrays JSONB de quiz desses materiais.
+- Nenhuma questão sem enunciado ou sem gabarito na amostra de 259.
+- 43 itens apresentavam feedback de erro genérico; o feedback foi contextualizado com a afirmação correta, a justificativa específica e a dica existente.
+- Três dicas foram corrigidas por incompatibilidade com o enunciado: distinção entre ato e fato contábil; cálculo de 10% de R$ 500; desconto comercial simples de R$ 2.000 a 2% por três meses.
+- Verificação pós-atualização: 259 questões preservadas; zero feedback com o texto genérico anterior; 43 feedbacks contextualizados.
+
+**Pendências pedagógicas identificadas:** 162 explicações têm menos de 80 caracteres; 251 têm menos de 250 caracteres; 168 itens não possuem campo tip; 197 não possuem resolution_steps. Esses indicadores são alertas de profundidade, não prova automática de erro. Devem ser revisados por prioridade e sem ampliar artificialmente conteúdos fora do edital.
+
+A tabela curated_question_catalog contém 12 questões autorais PC-AC de Contabilidade na consulta realizada; sete não possuem legal_basis preenchido. A falta desse campo deve ser tratada como pendência de rastreabilidade, não como gabarito incorreto. A auditoria deve considerar também os quizzes embutidos nos materiais, pois eles compõem o treinador.
+
+Migration versionada: supabase/migrations/20261121020000_improve_pcac_accounting_trainer_feedback.sql.
+Commit: 3c3b0b86299badb9046ac7fcf29d3ef4d6a8186c.
+
+**CI:** não foi localizado workflow run associado a esse commit pelo endpoint de consulta utilizado; portanto, não declarar CI aprovado. A atualização direta no banco foi verificada por consulta pós-escrita. A execução da migration versionada em outros ambientes ainda depende do pipeline próprio do projeto.
