@@ -203,7 +203,7 @@ function ProfilePage() {
           <Button
             variant="ghost"
             size="sm"
-            className="gap-2 text-destructive"
+            className="gap-2 text-destructive dark:text-rose-300"
             onClick={handleLogout}
           >
             <LogOut className="h-4 w-4" /> Sair da conta

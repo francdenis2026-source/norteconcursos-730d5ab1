@@ -678,9 +678,9 @@ function MetricCard({
       <CardContent className="flex items-start gap-3 p-4">
         <Icon className="mt-0.5 h-5 w-5 shrink-0 opacity-80" />
         <div className="min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-wide opacity-70">{label}</p>
+          <p className="text-xs font-semibold uppercase tracking-wide opacity-90">{label}</p>
           <p className="truncate text-xl font-black">{value}</p>
-          {detail && <p className="mt-0.5 truncate text-[11px] opacity-70">{detail}</p>}
+          {detail && <p className="mt-0.5 truncate text-[11px] opacity-90">{detail}</p>}
         </div>
       </CardContent>
     </Card>
