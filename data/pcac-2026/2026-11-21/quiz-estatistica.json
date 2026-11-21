@@ -1658,33 +1658,70 @@
         {
           "a": true,
           "q": "Se 12 de 30 registros noturnos contêm determinado vestígio, a probabilidade condicional do vestígio dado que o registro é noturno é 40%.",
-          "why": "O universo condicionado tem 30 registros; 12/30 = 0,4 = 40%. Resolução: Probabilidade condicional muda o denominador: 12 registros com vestígio dentre 30 noturnos representam 12/30=40%, não 12/total geral. Para união, P(A∪B)=P(A)+P(B)−P(A∩B). Independência exige P(A∩B)=P(A)×P(B)."
+          "why": "Certo. Ao saber que o registro é noturno, o universo de referência fica restrito aos 30 registros noturnos. A probabilidade condicional é 12/30=0,4=40%. Não divida pelo total geral da base, porque essa não é a condição perguntada."
         },
         {
           "a": false,
           "q": "Para calcular P(A ou B), basta sempre somar P(A)+P(B), mesmo quando os eventos podem ocorrer juntos.",
-          "why": "É necessário subtrair P(A∩B) para não contar a interseção duas vezes. Resolução: Probabilidade condicional muda o denominador: 12 registros com vestígio dentre 30 noturnos representam 12/30=40%, não 12/total geral. Para união, P(A∪B)=P(A)+P(B)−P(A∩B). Independência exige P(A∩B)=P(A)×P(B)."
+          "why": "Errado. Em eventos que podem ocorrer ao mesmo tempo, a fórmula correta é P(A∪B)=P(A)+P(B)−P(A∩B). Exemplo: P(A)=0,5, P(B)=0,4 e P(A∩B)=0,2 resultam em 0,7, ou 70%, não 90%."
         },
         {
           "a": true,
           "q": "Eventos independentes satisfazem P(A∩B)=P(A)×P(B).",
-          "why": "Essa é uma caracterização matemática da independência. Resolução: Probabilidade condicional muda o denominador: 12 registros com vestígio dentre 30 noturnos representam 12/30=40%, não 12/total geral. Para união, P(A∪B)=P(A)+P(B)−P(A∩B). Independência exige P(A∩B)=P(A)×P(B)."
+          "why": "Certo. A independência significa que a ocorrência de um evento não altera a probabilidade do outro. Sua condição matemática é P(A∩B)=P(A)P(B). Se A tem chance 1/2 e B chance 1/3 e forem independentes, a interseção vale 1/6."
         },
         {
           "a": false,
           "q": "Eventos mutuamente exclusivos com probabilidades positivas são independentes.",
-          "why": "Se um ocorre, o outro não pode; portanto, a ocorrência de um altera a probabilidade do outro."
+          "why": "Errado. Eventos mutuamente exclusivos não ocorrem juntos, logo P(A∩B)=0. Se ambos têm probabilidade positiva, o produto P(A)P(B)>0, o que viola a fórmula de independência. Exclusão mútua não significa independência."
         },
         {
           "a": true,
           "q": "Na distribuição binomial, é necessário verificar número fixo de tentativas, independência e probabilidade de sucesso constante.",
-          "why": "Essas são condições essenciais do modelo binomial usual. Resolução: Probabilidade condicional muda o denominador: 12 registros com vestígio dentre 30 noturnos representam 12/30=40%, não 12/total geral. Para união, P(A∪B)=P(A)+P(B)−P(A∩B). Independência exige P(A∩B)=P(A)×P(B)."
+          "why": "Certo. Na binomial usual, há n tentativas fixas e independentes, dois resultados por tentativa (sucesso ou fracasso) e chance de sucesso p constante. Exemplo: dez lançamentos independentes de uma moeda equilibrada. Sem essas condições, outra distribuição pode ser mais adequada."
         }
       ],
       "slug": "pcac-2026-estatistica-probabilidade-condicional-distribuicoes-aplicacao",
       "discipline": "Estatística",
       "topic_label": "Probabilidade condicional, independência e distribuições: como interpretar problemas",
-      "practice_review": null
+      "practice_review": {
+        "items": [
+          {
+            "a": true,
+            "q": "Se 12 de 30 registros noturnos contêm determinado vestígio, a probabilidade condicional do vestígio dado que o registro é noturno é 40%.",
+            "why": "Certo. Ao saber que o registro é noturno, o universo de referência fica restrito aos 30 registros noturnos. A probabilidade condicional é 12/30=0,4=40%. Não divida pelo total geral da base, porque essa não é a condição perguntada."
+          },
+          {
+            "a": false,
+            "q": "Para calcular P(A ou B), basta sempre somar P(A)+P(B), mesmo quando os eventos podem ocorrer juntos.",
+            "why": "Errado. Em eventos que podem ocorrer ao mesmo tempo, a fórmula correta é P(A∪B)=P(A)+P(B)−P(A∩B). Exemplo: P(A)=0,5, P(B)=0,4 e P(A∩B)=0,2 resultam em 0,7, ou 70%, não 90%."
+          },
+          {
+            "a": true,
+            "q": "Eventos independentes satisfazem P(A∩B)=P(A)×P(B).",
+            "why": "Certo. A independência significa que a ocorrência de um evento não altera a probabilidade do outro. Sua condição matemática é P(A∩B)=P(A)P(B). Se A tem chance 1/2 e B chance 1/3 e forem independentes, a interseção vale 1/6."
+          },
+          {
+            "a": false,
+            "q": "Eventos mutuamente exclusivos com probabilidades positivas são independentes.",
+            "why": "Errado. Eventos mutuamente exclusivos não ocorrem juntos, logo P(A∩B)=0. Se ambos têm probabilidade positiva, o produto P(A)P(B)>0, o que viola a fórmula de independência. Exclusão mútua não significa independência."
+          },
+          {
+            "a": true,
+            "q": "Na distribuição binomial, é necessário verificar número fixo de tentativas, independência e probabilidade de sucesso constante.",
+            "why": "Certo. Na binomial usual, há n tentativas fixas e independentes, dois resultados por tentativa (sucesso ou fracasso) e chance de sucesso p constante. Exemplo: dez lançamentos independentes de uma moeda equilibrada. Sem essas condições, outra distribuição pode ser mais adequada."
+          }
+        ],
+        "method": "Conferência dos cinco itens: exemplos recalculados de probabilidade condicional e união, teste da condição de independência, exclusão mútua e pressupostos binomiais",
+        "status": "reviewed",
+        "subject": "Estatística",
+        "version": 1,
+        "checked_at": "2026-11-21T18:09:43Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento didático autoral do Anexo III do Edital PC-AC 2026. Questões autorais, não oficiais.",
+        "topic_label": "Probabilidade condicional, independência e distribuições: como interpretar problemas",
+        "material_slug": "pcac-2026-estatistica-probabilidade-condicional-distribuicoes-aplicacao"
+      }
     }
   ]
 }
