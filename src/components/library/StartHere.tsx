@@ -48,7 +48,7 @@ export function StartHere({ userId }: { userId: string }) {
               <li key={c.slug}>
                 <Link to="/dashboard/legal-course/$slug" params={{ slug: c.slug }}
                   className="flex h-full items-center gap-3 rounded-xl border bg-card p-3 transition hover:border-primary hover:shadow">
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-600 text-xs font-black text-white">{i + 1}</span>
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-700 text-xs font-black text-white">{i + 1}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-sm font-bold">{c.title.replace(/ — leitura atualizada$/, "")}</span>
                     <span className="block text-xs text-muted-foreground">{cov && cov.explained > 0 ? `💡 ${cov.explained} de ${cov.total_units} artigos explicados` : cov ? `${cov.total_units} dispositivos · leitura oficial` : "Abrir"}</span>
