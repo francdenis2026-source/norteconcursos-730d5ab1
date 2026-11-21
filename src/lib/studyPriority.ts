@@ -56,8 +56,10 @@ export function studyPriorityFor(
   if (matchesAny(text, very)) return { level: "muito-alta", top20: isTop20 };
   if (matchesAny(text, high)) return { level: "alta", top20: isTop20 };
   if (matchesAny(text, medium)) return { level: "media", top20: isTop20 };
-  // Não classifica títulos genéricos ou subtópicos sem evidência na matriz do edital.
-  return null;
+  // Subtópicos substantivos não listados nominalmente recebem prioridade média como
+  // referência inicial. Títulos meramente editoriais não recebem selo.
+  if (/^(objetivos?|para memorizar|pegadinhas?|exemplos?|revis[aã]o(?: r[aá]pida| final| integrada)?|fontes?|duas quest[oõ]es autorais|quest[oõ]es autorais|treino autoral(?: comentado)?|roteiro de prova|roteiro de revis[aã]o)$/i.test(text)) return null;
+  return { level: "media", top20: isTop20 };
 }
 
 export function studyPriorityLabel(priority: StudyPriority) {
