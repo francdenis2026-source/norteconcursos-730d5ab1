@@ -188,3 +188,20 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student
   clip-path: none !important;
   filter: none !important;
 }
+
+/* Sem "véu" cinza: a faixa de assinatura da base vira uma barra sólida e limpa
+   (antes: brilho branco, desfoque e sombra que acinzentavam o fim da página). */
+@media (min-width: 1101px) {
+  html body .dev-strip:not(#_):not(#_) {
+    background: color-mix(in srgb, var(--background) 94%, #000) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border-top: 1px solid color-mix(in srgb, var(--tbr-gold, #e5b85e) 22%, transparent) !important;
+    color: color-mix(in srgb, var(--foreground) 62%, transparent) !important;
+  }
+}
+/* Cabeçalho do aluno: o degradê sobre a foto não deve apagar a imagem do lado direito. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero::after {
+  display: none !important;
+}
