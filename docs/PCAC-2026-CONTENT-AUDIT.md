@@ -961,3 +961,12 @@ Migrations:
 - A revisão jurídica formal artigo por artigo permanece pendente nos materiais de legislação e nos materiais jurídicos que dependem de lei vigente.
 - Não há evidência de teste visual completo da biblioteca, nem de CI/build integral após todas as migrations recentes.
 - Próxima auditoria deve conferir fonte, data de atualização, cobertura linha a linha do Anexo III, gabaritos e explicações; não marcar conteúdo como integralmente revisado apenas por possuir timestamp.
+
+
+## Normalização das fontes dos materiais — 21/11/2026
+
+A auditoria do formato de referências encontrou um problema de compatibilidade: em alguns materiais, `legal_basis` continha nomes de normas como strings simples ou objetos JSON serializados dentro de strings, embora a interface espere objetos com `title` e, quando confirmada, `url`.
+
+Foi aplicada a migration `supabase/migrations/20261121299500_normalize_pcac_material_sources.sql`, commit `dddc4832539c1fbfe5442da665df9d026de23db8`. Ela converteu os registros antigos para objetos estruturados, preservando títulos e anexando apenas URLs oficiais verificadas. Referências sem URL confirmada mantiveram o título, sem link inventado.
+
+**Validação SQL:** nenhum item string remanescente em `legal_basis` nos 177 materiais PC-AC ativos. Legislação Institucional: 25/25 materiais com referências estruturadas; Realidade do Acre: 6/6. A existência de uma referência estruturada não substitui a conferência do conteúdo legal nem garante que todo assunto tenha fonte suficiente.
