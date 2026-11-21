@@ -1380,3 +1380,50 @@ Cada questão tem gabarito, explicação e vínculo ao material PCCR. Não são 
 - Confirmar regras remuneratórias atuais em tabela oficial de 2026; valores históricos dos anexos de 2017 não foram reapresentados como atuais.
 - Teste visual/integrado do treinador e conferência da contagem no painel permanecem pendentes.
 - A auditoria geral da disciplina não está concluída.
+
+
+## Décima primeira continuação — Decreto nº 8.912/2018 — 21/11/2026
+
+### Dispositivos confirmados no Portal LEGIS
+
+A consulta ao texto oficial confirmou:
+- Arts. 4º e 5º: comissões permanentes, aprovação dos integrantes pelo Conselho Superior, mandato de três anos e conceitos de promoção/fatores.
+- Art. 6º: processo iniciado por portaria do Secretário de Estado da Polícia Civil.
+- Art. 7º: interstício apurado em dias, contado do ingresso no serviço público ou da vigência da última promoção.
+- Art. 8º: promoção pressupõe aptidão e pode implicar mudança de área de atuação, desde que aceita pelo servidor.
+- Arts. 12 a 14: Secretário homologa e encaminha para publicação; chefe imediato presta apoio e comprovantes; RH divulga regras, apoia comissões, mantém registros e comunica com três meses de antecedência quem completará o tempo mínimo.
+
+### Atualização e compatibilidade
+
+O decreto de 2018 usa a nomenclatura antiga de agentes e escrivães. A LC nº 496/2025 unificou esses cargos sob Oficial Investigador e manteve a estrutura de carreira da Lei nº 3.228/2017. A aula alerta para a leitura compatível, sem tratar a nomenclatura antiga como criação de cargos separados atuais.
+
+A LC nº 526/2026 passou a prever suspensão do interstício durante cessão/disponibilização, com exceções específicas. A regra posterior deve ser considerada ao aplicar o art. 7º do decreto.
+
+### Material e questões
+
+- Material PCCR atualizado para 18.674 caracteres, com explicação dos dispositivos confirmados, exemplos, quadro de competências e lacunas explicitadas.
+- Três questões autorais criadas sobre instauração por portaria (art. 6º), contagem do interstício (art. 7º) e comunicação pela Gerência de RH (art. 14, IV).
+- Consulta SQL confirmou as três questões ativas, com gabarito.
+
+### Limitação relevante
+
+A extração disponível do Portal LEGIS não mostrou integralmente todos os parágrafos do art. 9º nem o conteúdo intermediário dos arts. 10 e 11. Portanto, não foram inventados composição completa das comissões, pesos, fórmulas, prazos de recurso ou lista de documentos. Esses pontos permanecem pendentes de conferência literal do texto integral e atos complementares.
+
+### Fontes
+
+- Decreto nº 8.912/2018: https://legis.ac.gov.br/detalhar/5749
+- Lei nº 3.228/2017: https://legis.ac.gov.br/detalhar/2499
+- LC nº 496/2025 e LC nº 526/2026: Portal LEGIS do Acre.
+
+### Migrations
+
+- `20261121302000_add_decree8912_promotion_regulation_material.sql` — commit `fe9c81d77e9ea5bee5a0a40d92c88b84725f02f9`.
+- `20261121302100_add_decree8912_trainer_questions.sql` — commit `5daa909e1c87b7f48a0bf4899ac6516f27df8d8b`.
+
+### Próximas verificações
+
+1. Obter texto integral dos arts. 9º a 11 e conferir composição das comissões e procedimento recursal.
+2. Conferir fatores e instrumentos de avaliação, pesos e documentos exigidos, sem extrapolar o que estiver no decreto.
+3. Verificar atos complementares e compatibilidade prática com a nomenclatura Oficial Investigador.
+4. Testar visualmente o treinador e validar a contagem no painel.
+5. Não declarar auditoria integral concluída enquanto houver lacunas.
