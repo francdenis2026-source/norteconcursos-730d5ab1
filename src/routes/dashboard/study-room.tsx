@@ -489,7 +489,7 @@ function StudyRoomPage() {
     : { area: subject, go: "1", ...(topic ? { topic } : {}) };
 
   return (
-    <div className="study-room mx-auto max-w-6xl space-y-5">
+    <div className="study-room w-full space-y-5">
       {(!fromContext || changing) && (
         <StudySubjectPicker
           subjects={ctx.subjects}
@@ -539,10 +539,26 @@ function StudyRoomPage() {
             </>
           )}
         </p>
+        <nav className="mt-3 flex flex-wrap gap-2" aria-label="Praticar este assunto">
+          <Link
+            to="/dashboard/question-trainer"
+            search={questionSearch}
+            className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-border/80 bg-background/40 px-3 py-2 text-sm font-semibold hover:border-primary/60"
+          >
+            <BookOpenCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" /> Praticar questões deste assunto
+          </Link>
+          <Link
+            to="/dashboard/flashcards"
+            search={{ subject, ...(topic ? { topic } : {}) }}
+            className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-border/80 bg-background/40 px-3 py-2 text-sm font-semibold hover:border-primary/60"
+          >
+            <Layers className="h-4 w-4 text-cyan-600 dark:text-cyan-400" /> Flashcards do assunto
+          </Link>
+        </nav>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
-        <div className="order-2 space-y-5 lg:order-1">
+      <div className="grid gap-5">
+        <div className="space-y-5">
           {/* Material: sem moldura de cartão, para a folha ficar como a da Biblioteca. */}
           <section className="space-y-3" aria-labelledby="study-material-title">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -786,7 +802,7 @@ function StudyRoomPage() {
           </Card>
         </div>
 
-        <aside className="order-1 space-y-5 lg:order-2 lg:sticky lg:top-4 lg:self-start">
+        <aside className="space-y-5">
           {canRegister && (
             <TimerPanel
               segments={segments}
@@ -799,28 +815,7 @@ function StudyRoomPage() {
             />
           )}
 
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-base">Praticar este assunto</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-1.5 text-sm">
-              <Link
-                to="/dashboard/question-trainer"
-                search={questionSearch}
-                className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
-              >
-                <BookOpenCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" /> Praticar questões deste
-                assunto
-              </Link>
-              <Link
-                to="/dashboard/flashcards"
-                search={{ subject, ...(topic ? { topic } : {}) }}
-                className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
-              >
-                <Layers className="h-4 w-4 text-cyan-600 dark:text-cyan-400" /> Flashcards do assunto
-              </Link>
-            </CardContent>
-          </Card>
+
         </aside>
       </div>
     </div>
