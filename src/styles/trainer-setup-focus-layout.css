@@ -169,3 +169,18 @@
   html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick a { min-height: 2.75rem !important; }
   html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt2-focus { padding-block: 0.75rem !important; }
 }
+
+/* Janelas com menos de 760px de altura (janela normal do navegador ou tela cheia em notebook):
+   a coluna "Sua sessão" e o painel de filtros cabem sem rolagem e sem encostar na faixa inferior. */
+@media (min-width: 880px) and (max-height: 760px) {
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__card {
+    padding: 0.75rem !important;
+    gap: 0.5rem !important;
+  }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary__count { font-size: 2.5rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-start { height: 2.75rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-quick a { min-height: 2.25rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-summary { gap: 0.5rem; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-row { padding-top: 0.5rem !important; gap: 0.5rem 1.25rem !important; }
+  html body .app-shell.navigation-v2[data-area="student"] #dashboard-content .qt3 .qt3-panel { padding: 0.75rem 1rem !important; }
+}
