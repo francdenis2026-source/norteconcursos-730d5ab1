@@ -458,3 +458,17 @@ Aula 18 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121130000_deepen_pcac_payroll_social_charges_trainer.sql. Commit: f359f4cde6d46dac944a1258e446a5fb70bdc697.
 Verificação pós-gravação: 8 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — análise de movimentações financeiras — 21/11/2026
+
+Aula 7 atualizada diretamente no Supabase:
+
+- 9 questões mantidas; os dois itens que repetiam conceitos foram transformados em questões distintas (cálculo de saldo final e limites probatórios de diagramas de fluxo).
+- Todas as 9 questões receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com rastreabilidade e integridade dos registros, conciliação entre fontes, padrões recorrentes/fracionados, análise contextual, relatório objetivo e distinção entre fato, inferência e hipótese.
+- Removido o bloco CPC 26 indevido.
+- Reforçado que fracionamento, recorrência e fluxos entre contas são sinais para aprofundamento, não prova isolada de ilícito.
+
+Migration: supabase/migrations/20261121140000_deepen_pcac_financial_movements_analysis.sql. Commit: ea9b9afe3a4838554fc78178158f26b8e7b30df4.
+Verificação pós-gravação: 9 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
