@@ -128,6 +128,10 @@ function parse(markdown: string): Block[] {
   // manutenção usado para corrigir títulos. Nunca o exiba como conteúdo de estudo.
   let cleaned = markdown
     .replace(/\r\n/g, "\n")
+    // Registros antigos gravaram quebras de linha como o texto literal "\n".
+    .replace(/\\n/g, "\n")
+    // Linha de "---" sozinha é separador, nunca conteúdo de estudo.
+    .replace(/^[ \t]*(?:-{3,}|\*{3,}|_{3,})[ \t]*$/gm, "")
     .replace(/(?:^|\n)[^\n]*(?:trimDanglingNumber|document\.querySelectorAll)[^\n]*(?=\n|$)/gi, "")
     .replace(/\b(?:trimDanglingNumber|sciencesSummary|medicinePanel|heading\.remove\(\))\b[^\n]*/gi, "");
   // Alguns registros trazem o script começando no meio de um parágrafo. Nesse

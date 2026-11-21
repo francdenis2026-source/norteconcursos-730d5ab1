@@ -1,6 +1,7 @@
 import "@/styles/study-reader-polish.css";
 import "@/styles/student-library-media-workspaces.css";
 import "@/styles/library-discipline-fit.css";
+import "@/styles/material-pdf-page.css";
 import "@/styles/student-area-kit.css";
 import type { CSSProperties } from "react";
 import { disciplineTheme } from "@/lib/disciplineTheme";
