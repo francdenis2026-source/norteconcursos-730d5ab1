@@ -802,3 +802,18 @@ Temas cobertos nas 12 aberturas:
 A atualização foi aplicada diretamente no Supabase e versionada na MAIN pela migration `supabase/migrations/20261121298300_add_opening_exam_questions_to_pcac_statistics.sql`, commit `75b345bf814c746ea8db18bfe50fb02b54054432`.
 
 **Validação SQL:** 12/12 materiais possuem questão de abertura e resolução comentada; cada material preserva suas 10 questões anteriores no treinador (120 no total). A atualização não substituiu os exercícios existentes.
+
+
+## Contabilidade — questão de abertura e resolução guiada em cada material — 21/11/2026
+
+Aplicado o padrão pedagógico solicitado nos 18 materiais ativos das duas áreas de Contabilidade do PC-AC 2026:
+- Contabilidade Geral: 10/10 materiais com questão inicial e resolução comentada.
+- Contabilidade Geral e Análise Financeira: 8/8 materiais com questão inicial e resolução comentada.
+
+Os 18 enunciados foram elaborados como questões autorais no estilo de concursos públicos, sem atribuição indevida a bancas ou provas específicas. Cada questão apresenta cinco alternativas, gabarito e resolução explicando conceito, cálculo e pegadinha. Os temas incluem patrimônio/equação patrimonial, receitas e despesas, partidas dobradas, competência, juros simples, extratos, conciliação, consumo de matéria-prima, MEP/dividendos, impairment/goodwill, estoques, câmbio, ponto de equilíbrio, depreciação, DFC, reservas, itens em trânsito e folha de pagamento.
+
+**Validação no Supabase:** 18/18 materiais com questão de abertura; 18/18 com resolução comentada. As questões anteriores do treinador foram preservadas: 141 em Contabilidade Geral e 118 em Contabilidade Geral e Análise Financeira (259 no total). Não houve substituição dos quizzes existentes.
+
+Migration na MAIN: `supabase/migrations/20261121298400_add_opening_questions_pcac_accounting.sql`, commit `d76dcb300ba8137008f345866dd33782ddec5e56`.
+
+**Limite da validação:** a consulta confirmou presença das aberturas e preservação das contagens do treinador. Não foi executado teste de renderização do material na interface nem há confirmação de CI para esse commit. Não houve publicação manual em produção.
