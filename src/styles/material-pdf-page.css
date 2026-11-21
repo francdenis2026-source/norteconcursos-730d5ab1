@@ -187,8 +187,8 @@ html:has(.library-reading-workspace) { scroll-behavior: auto; }
 html body .app-shell[data-area]:has(.library-reading-workspace) .app-study-backdrop { display: none !important; }
 html body .app-shell[data-area]:has(.library-reading-workspace) .app-study-backdrop * { animation: none !important; }
 @media (min-width: 900px) {
-  html body .app-shell[data-area]:has(.library-reading-workspace) { --app-topbar-h: 0px; }
-  html body .app-shell[data-area]:has(.library-reading-workspace) .app-topbar { display: none !important; }
+  /* Manter a barra superior visível na leitura: ocultá-la preservava um espaço vazio no layout. */
+  html body .app-shell[data-area]:has(.library-reading-workspace) .app-topbar { display: flex !important; }
   html body:has(.library-reading-workspace) :is(.dev-strip, .platform-signature) { display: none !important; }
   html body .app-shell[data-area]:has(.library-reading-workspace) :is(#dashboard-content, .app-content, .app-content__inner) {
     padding-top: 0.5rem;
