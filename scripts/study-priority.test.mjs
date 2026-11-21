@@ -69,6 +69,26 @@ test("each PC-AC discipline maps known high-incidence topics and leaves unknown 
     questions: 6, weight: 1, points: 6, timePercent: 10,
   });
   assert.equal(studyDisciplineMetaFor("Outro edital", "Língua Portuguesa"), null);
+  const disciplines = [
+    "Contabilidade Geral", "Contabilidade Geral e Análise Financeira", "Estatística",
+    "Tecnologia da Informação e Segurança da Informação", "Análise de Dados e Informações",
+    "Arquivologia", "Noções de Administração", "Língua Portuguesa", "Raciocínio Lógico",
+    "Noções de Informática", "Informática", "Realidade do Estado do Acre",
+    "Noções de Direito Penal e Processual Penal", "Legislação Institucional",
+    "Noções de Direito Constitucional", "Noções de Direito Administrativo",
+  ];
+  for (const discipline of disciplines) {
+    assert.ok(studyDisciplineMetaFor("PC-AC 2026", discipline), `Missing weight/time metadata: ${discipline}`);
+  }
+  const timeTotal = [
+    "Contabilidade Geral", "Estatística", "Tecnologia da Informação e Segurança da Informação",
+    "Análise de Dados e Informações", "Arquivologia", "Noções de Administração",
+    "Língua Portuguesa", "Raciocínio Lógico", "Noções de Informática", "Realidade do Estado do Acre",
+    "Noções de Direito Penal e Processual Penal", "Legislação Institucional",
+    "Noções de Direito Constitucional", "Noções de Direito Administrativo",
+  ].reduce((sum, discipline) => sum + studyDisciplineMetaFor("PC-AC 2026", discipline).timePercent, 0);
+  assert.equal(timeTotal, 100);
+
   assert.equal(studyPriorityFor("PC-AC 2026", "Análise de Dados e Informações", "Aplicação prática: cruzar bases"), null);
   assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Análise de Dados e Informações", "Correlação e causalidade"))), { level: "alta", top20: false });
   assert.deepEqual(JSON.parse(JSON.stringify(studyPriorityFor("PC-AC 2026", "Arquivologia", "Protocolo e tramitação"))), { level: "alta", top20: false });
