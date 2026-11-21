@@ -672,51 +672,89 @@
         {
           "a": true,
           "q": "Latitude indica posição ao norte ou ao sul do Equador.",
-          "why": "A latitude é medida em relação ao Equador. Exemplo aplicado: Distância em linha reta não coincide necessariamente com trajeto viário. Geolocalização precisa de sistema de coordenadas, margem de erro e período. Pontos próximos no mapa podem ter horários incompatíveis."
+          "why": "Certo. Latitude é distância angular em relação ao Equador, expressa em graus ao norte ou sul. Longitude é outra coordenada, referida ao meridiano de Greenwich."
         },
         {
           "a": false,
           "q": "A distância em linha reta é sempre igual à distância percorrida por uma via.",
-          "why": "O trajeto depende da rede viária, barreiras e restrições. Exemplo aplicado: Distância em linha reta não coincide necessariamente com trajeto viário. Geolocalização precisa de sistema de coordenadas, margem de erro e período. Pontos próximos no mapa podem ter horários incompatíveis."
+          "why": "Errado. A distância em linha reta entre pontos não considera ruas, rios ou barreiras; trajeto viário pode ser muito maior. Não confunda proximidade geográfica com tempo de deslocamento."
         },
         {
           "a": true,
           "q": "A geocodificação de endereço incompleto pode resultar em posição aproximada.",
-          "why": "A precisão depende da qualidade e ambiguidade do endereço. Exemplo aplicado: Distância em linha reta não coincide necessariamente com trajeto viário. Geolocalização precisa de sistema de coordenadas, margem de erro e período. Pontos próximos no mapa podem ter horários incompatíveis."
+          "why": "Certo. Geocodificação transforma endereço em coordenadas. Se a referência estiver incompleta, o sistema pode usar centro de bairro ou município, com incerteza que precisa ser registrada."
         },
         {
           "a": true,
           "q": "Um mapa de calor pode ajudar a visualizar concentrações espaciais.",
-          "why": "A representação evidencia áreas de maior densidade estimada. Exemplo aplicado: Distância em linha reta não coincide necessariamente com trajeto viário. Geolocalização precisa de sistema de coordenadas, margem de erro e período. Pontos próximos no mapa podem ter horários incompatíveis."
+          "why": "Certo. Mapa de calor representa concentrações espaciais de ocorrências, permitindo identificar regiões de maior densidade de registros, mas não explica sozinho as causas do padrão."
         },
         {
           "a": true,
           "q": "Longitude indica posição a leste ou a oeste do meridiano de Greenwich.",
-          "why": "A longitude é medida em relação ao meridiano de Greenwich; a latitude é medida em relação ao Equador."
+          "why": "Certo. Longitude informa posição angular a leste ou oeste de Greenwich. Junto à latitude, permite localizar pontos, desde que se respeite o sistema de coordenadas usado."
         },
         {
           "a": false,
           "q": "Distância em linha reta e distância por trajeto viário são sempre iguais.",
-          "why": "O trajeto considera ruas, barreiras e caminhos disponíveis. Exemplo aplicado: Distância em linha reta não coincide necessariamente com trajeto viário. Geolocalização precisa de sistema de coordenadas, margem de erro e período. Pontos próximos no mapa podem ter horários incompatíveis."
+          "why": "Errado. Distância retilínea é medida geométrica direta; a percorrida por vias depende da rede de ruas e acessos. Uma ponte ou desvio pode aumentar significativamente o trajeto."
         },
         {
           "a": true,
           "q": "A precisão e o sistema de coordenadas devem acompanhar a interpretação de dados geográficos.",
-          "why": "Sem referência e precisão, a localização pode ser interpretada incorretamente. Exemplo aplicado: Distância em linha reta não coincide necessariamente com trajeto viário. Geolocalização precisa de sistema de coordenadas, margem de erro e período. Pontos próximos no mapa podem ter horários incompatíveis."
+          "why": "Certo. Dados espaciais exigem sistema de referência, resolução e precisão. Dois pontos sobrepostos em mapa com zoom distante podem não estar no mesmo local real."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-07-analise-geografica-espacial",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "7. Análise geográfica básica",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Latitude indica posição ao norte ou ao sul do Equador.",
+            "why": "Certo. Latitude é distância angular em relação ao Equador, expressa em graus ao norte ou sul. Longitude é outra coordenada, referida ao meridiano de Greenwich."
+          },
+          {
+            "a": false,
+            "q": "A distância em linha reta é sempre igual à distância percorrida por uma via.",
+            "why": "Errado. A distância em linha reta entre pontos não considera ruas, rios ou barreiras; trajeto viário pode ser muito maior. Não confunda proximidade geográfica com tempo de deslocamento."
+          },
+          {
+            "a": true,
+            "q": "A geocodificação de endereço incompleto pode resultar em posição aproximada.",
+            "why": "Certo. Geocodificação transforma endereço em coordenadas. Se a referência estiver incompleta, o sistema pode usar centro de bairro ou município, com incerteza que precisa ser registrada."
+          },
+          {
+            "a": true,
+            "q": "Um mapa de calor pode ajudar a visualizar concentrações espaciais.",
+            "why": "Certo. Mapa de calor representa concentrações espaciais de ocorrências, permitindo identificar regiões de maior densidade de registros, mas não explica sozinho as causas do padrão."
+          },
+          {
+            "a": true,
+            "q": "Longitude indica posição a leste ou a oeste do meridiano de Greenwich.",
+            "why": "Certo. Longitude informa posição angular a leste ou oeste de Greenwich. Junto à latitude, permite localizar pontos, desde que se respeite o sistema de coordenadas usado."
+          },
+          {
+            "a": false,
+            "q": "Distância em linha reta e distância por trajeto viário são sempre iguais.",
+            "why": "Errado. Distância retilínea é medida geométrica direta; a percorrida por vias depende da rede de ruas e acessos. Uma ponte ou desvio pode aumentar significativamente o trajeto."
+          },
+          {
+            "a": true,
+            "q": "A precisão e o sistema de coordenadas devem acompanhar a interpretação de dados geográficos.",
+            "why": "Certo. Dados espaciais exigem sistema de referência, resolução e precisão. Dois pontos sobrepostos em mapa com zoom distante podem não estar no mesmo local real."
+          }
+        ],
+        "method": "Revisão individual de 7 exercícios, gabaritos, interpretação de gráficos, geografia e governança de dados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:34:02Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "7. Análise geográfica básica",
+        "material_slug": "pcac-2026-guia-analise-dados-07-analise-geografica-espacial"
       }
     },
     {
@@ -724,51 +762,89 @@
         {
           "a": true,
           "q": "Uma hipótese deve ser confrontável com evidências que possam confirmá-la ou enfraquecê-la.",
-          "why": "Hipóteses precisam ser verificáveis e admitir alternativas. Exemplo aplicado: Um outlier pode ser erro, exceção legítima ou evento relevante; investigue antes de excluir. Correlação positiva não prova causa. Hipóteses devem ser testadas também contra evidências contrárias para reduzir viés de confirmação."
+          "why": "Certo. Hipótese científica ou analítica deve admitir confronto com dados e eventual refutação. Exemplo: supor que aumentos se concentram no fim de semana e verificar se registros suportam o padrão."
         },
         {
           "a": false,
           "q": "Uma lacuna deve ser preenchida com a suposição mais provável.",
-          "why": "A ausência deve ser registrada; suposição não substitui dado. Exemplo aplicado: Um outlier pode ser erro, exceção legítima ou evento relevante; investigue antes de excluir. Correlação positiva não prova causa. Hipóteses devem ser testadas também contra evidências contrárias para reduzir viés de confirmação."
+          "why": "Errado. Preencher lacuna com suposição cria informação que a fonte não forneceu. Registre como ausente e, se necessário, use método explícito de imputação com avaliação de incerteza."
         },
         {
           "a": false,
           "q": "Consistência entre registros garante, por si só, que sejam verdadeiros.",
-          "why": "Fontes coerentes podem compartilhar erros ou omissões. Exemplo aplicado: Um outlier pode ser erro, exceção legítima ou evento relevante; investigue antes de excluir. Correlação positiva não prova causa. Hipóteses devem ser testadas também contra evidências contrárias para reduzir viés de confirmação."
+          "why": "Errado. Registros podem ser mutuamente consistentes e ainda reproduzir erro de origem comum. A consistência não comprova veracidade sem conferência independente."
         },
         {
           "a": true,
           "q": "Uma correlação pode existir sem relação causal direta entre as variáveis.",
-          "why": "Variáveis de confusão e coincidências podem produzir associação. Exemplo aplicado: Um outlier pode ser erro, exceção legítima ou evento relevante; investigue antes de excluir. Correlação positiva não prova causa. Hipóteses devem ser testadas também contra evidências contrárias para reduzir viés de confirmação."
+          "why": "Certo. Correlação descreve associação entre variáveis; uma pode não causar a outra. Fatores de confusão, causalidade inversa ou coincidência podem explicar relação observada."
         },
         {
           "a": true,
           "q": "A análise deve buscar também evidências que contrariem a hipótese inicial.",
-          "why": "Isso reduz o viés de confirmação e melhora a avaliação de hipóteses alternativas."
+          "why": "Certo. Buscar evidências contrárias reduz viés de confirmação. Uma hipótese forte precisa sobreviver a testes que poderiam enfraquecê-la, não apenas acumular exemplos favoráveis."
         },
         {
           "a": false,
           "q": "Correlação positiva comprova que uma variável causa a outra.",
-          "why": "Associação pode decorrer de confundimento, seleção, causalidade reversa ou coincidência."
+          "why": "Errado. Correlação positiva pode resultar de influência de terceira variável ou de coincidência. Sem análise causal, não se conclui que uma mudança provoca a outra."
         },
         {
           "a": true,
           "q": "Testar hipóteses exige procurar também evidências que possam enfraquecê-las.",
-          "why": "Isso reduz viés de confirmação e melhora a qualidade da conclusão. Exemplo aplicado: Um outlier pode ser erro, exceção legítima ou evento relevante; investigue antes de excluir. Correlação positiva não prova causa. Hipóteses devem ser testadas também contra evidências contrárias para reduzir viés de confirmação."
+          "why": "Certo. Teste de hipótese deve considerar observações que a contradizem, precisão e fontes alternativas. Só repetir registros favoráveis não demonstra que a explicação é correta."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-08-estatistica-outliers-hipoteses",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "8. Métodos de análise de informações",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Uma hipótese deve ser confrontável com evidências que possam confirmá-la ou enfraquecê-la.",
+            "why": "Certo. Hipótese científica ou analítica deve admitir confronto com dados e eventual refutação. Exemplo: supor que aumentos se concentram no fim de semana e verificar se registros suportam o padrão."
+          },
+          {
+            "a": false,
+            "q": "Uma lacuna deve ser preenchida com a suposição mais provável.",
+            "why": "Errado. Preencher lacuna com suposição cria informação que a fonte não forneceu. Registre como ausente e, se necessário, use método explícito de imputação com avaliação de incerteza."
+          },
+          {
+            "a": false,
+            "q": "Consistência entre registros garante, por si só, que sejam verdadeiros.",
+            "why": "Errado. Registros podem ser mutuamente consistentes e ainda reproduzir erro de origem comum. A consistência não comprova veracidade sem conferência independente."
+          },
+          {
+            "a": true,
+            "q": "Uma correlação pode existir sem relação causal direta entre as variáveis.",
+            "why": "Certo. Correlação descreve associação entre variáveis; uma pode não causar a outra. Fatores de confusão, causalidade inversa ou coincidência podem explicar relação observada."
+          },
+          {
+            "a": true,
+            "q": "A análise deve buscar também evidências que contrariem a hipótese inicial.",
+            "why": "Certo. Buscar evidências contrárias reduz viés de confirmação. Uma hipótese forte precisa sobreviver a testes que poderiam enfraquecê-la, não apenas acumular exemplos favoráveis."
+          },
+          {
+            "a": false,
+            "q": "Correlação positiva comprova que uma variável causa a outra.",
+            "why": "Errado. Correlação positiva pode resultar de influência de terceira variável ou de coincidência. Sem análise causal, não se conclui que uma mudança provoca a outra."
+          },
+          {
+            "a": true,
+            "q": "Testar hipóteses exige procurar também evidências que possam enfraquecê-las.",
+            "why": "Certo. Teste de hipótese deve considerar observações que a contradizem, precisão e fontes alternativas. Só repetir registros favoráveis não demonstra que a explicação é correta."
+          }
+        ],
+        "method": "Revisão individual de 7 exercícios, gabaritos, interpretação de gráficos, geografia e governança de dados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:34:02Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "8. Métodos de análise de informações",
+        "material_slug": "pcac-2026-guia-analise-dados-08-estatistica-outliers-hipoteses"
       }
     },
     {
@@ -776,51 +852,89 @@
         {
           "a": true,
           "q": "Um histograma é adequado para visualizar a distribuição de uma variável numérica.",
-          "why": "Agrupa valores em intervalos e mostra suas frequências. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Certo. Histograma mostra a distribuição de variável quantitativa agrupada em classes numéricas. Barras geralmente contíguas representam intervalos, não categorias nominais arbitrárias."
         },
         {
           "a": true,
           "q": "Um relatório analítico pode apresentar hipóteses e explicações alternativas.",
-          "why": "A análise deve mostrar a interpretação e as alternativas consideradas. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Certo. Relatório responsável pode apresentar hipóteses e alternativas explicativas, distinguindo evidências de suposições. A transparência ajuda o leitor a avaliar o alcance das conclusões."
         },
         {
           "a": false,
           "q": "Limitações podem ser omitidas quando o relatório apresenta gráficos claros.",
-          "why": "Gráficos não eliminam lacunas ou incertezas da fonte. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Errado. Gráficos claros não substituem informações sobre cobertura, dados ausentes, erros de medição e vieses. Limitações precisam ser descritas para interpretar corretamente resultados."
         },
         {
           "a": false,
           "q": "A conclusão deve ser mais forte que os dados para ser decisiva.",
-          "why": "A conclusão precisa ser proporcional às evidências e ao escopo. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Errado. A conclusão não pode ultrapassar a força dos dados. Ser categórico diante de evidência fraca transforma hipótese em afirmação indevida e prejudica confiabilidade."
         },
         {
           "a": true,
           "q": "Um relatório analítico deve explicitar método e limitações relevantes.",
-          "why": "O leitor precisa avaliar a robustez e o alcance dos achados. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Certo. Método e limitações permitem reproduzir e avaliar resultados. É importante indicar fonte, critérios de inclusão, período, tratamentos e incerteza."
         },
         {
           "a": true,
           "q": "O gráfico de linhas costuma ser adequado para mostrar evolução de valores ao longo do tempo.",
-          "why": "A linha facilita observar tendência, oscilação e sazonalidade. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Certo. Gráfico de linhas acompanha valores em sequência temporal, facilitando perceber mudanças e oscilações. Um único aumento não prova tendência nem causa."
         },
         {
           "a": false,
           "q": "Uma escala truncada nunca interfere na interpretação de um gráfico.",
-          "why": "A escala pode exagerar ou minimizar visualmente diferenças. Exemplo aplicado: Gráfico de linhas mostra evolução, barras comparam categorias e tabelas detalham valores. Escala truncada pode exagerar diferenças. Relatório apresenta fonte, método, evidências, limitações e conclusão proporcional aos dados."
+          "why": "Errado. Escala truncada altera a percepção visual de diferenças, como eixos começando acima de zero. Confira números e intervalos antes de comparar a altura de barras."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-09-relatorios-visualizacao-rastreabilidade-protecao",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "9. Produção de informações analíticas",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Um histograma é adequado para visualizar a distribuição de uma variável numérica.",
+            "why": "Certo. Histograma mostra a distribuição de variável quantitativa agrupada em classes numéricas. Barras geralmente contíguas representam intervalos, não categorias nominais arbitrárias."
+          },
+          {
+            "a": true,
+            "q": "Um relatório analítico pode apresentar hipóteses e explicações alternativas.",
+            "why": "Certo. Relatório responsável pode apresentar hipóteses e alternativas explicativas, distinguindo evidências de suposições. A transparência ajuda o leitor a avaliar o alcance das conclusões."
+          },
+          {
+            "a": false,
+            "q": "Limitações podem ser omitidas quando o relatório apresenta gráficos claros.",
+            "why": "Errado. Gráficos claros não substituem informações sobre cobertura, dados ausentes, erros de medição e vieses. Limitações precisam ser descritas para interpretar corretamente resultados."
+          },
+          {
+            "a": false,
+            "q": "A conclusão deve ser mais forte que os dados para ser decisiva.",
+            "why": "Errado. A conclusão não pode ultrapassar a força dos dados. Ser categórico diante de evidência fraca transforma hipótese em afirmação indevida e prejudica confiabilidade."
+          },
+          {
+            "a": true,
+            "q": "Um relatório analítico deve explicitar método e limitações relevantes.",
+            "why": "Certo. Método e limitações permitem reproduzir e avaliar resultados. É importante indicar fonte, critérios de inclusão, período, tratamentos e incerteza."
+          },
+          {
+            "a": true,
+            "q": "O gráfico de linhas costuma ser adequado para mostrar evolução de valores ao longo do tempo.",
+            "why": "Certo. Gráfico de linhas acompanha valores em sequência temporal, facilitando perceber mudanças e oscilações. Um único aumento não prova tendência nem causa."
+          },
+          {
+            "a": false,
+            "q": "Uma escala truncada nunca interfere na interpretação de um gráfico.",
+            "why": "Errado. Escala truncada altera a percepção visual de diferenças, como eixos começando acima de zero. Confira números e intervalos antes de comparar a altura de barras."
+          }
+        ],
+        "method": "Revisão individual de 7 exercícios, gabaritos, interpretação de gráficos, geografia e governança de dados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:34:02Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "9. Produção de informações analíticas",
+        "material_slug": "pcac-2026-guia-analise-dados-09-relatorios-visualizacao-rastreabilidade-protecao"
       }
     },
     {
@@ -828,51 +942,89 @@
         {
           "a": false,
           "q": "Um usuário autenticado está automaticamente autorizado a acessar qualquer informação.",
-          "why": "Autenticação verifica identidade; autorização limita ações permitidas. Exemplo aplicado: Autenticação verifica identidade; autorização determina permissões. Logs e hash ajudam a rastrear acesso e integridade, mas não certificam verdade do conteúdo. Princípio do menor privilégio limita exposição indevida."
+          "why": "Errado. Autenticação identifica usuário, mas não autoriza acesso indiscriminado. Quem entra com credenciais válidas ainda depende das permissões atribuídas para cada recurso."
         },
         {
           "a": true,
           "q": "O menor privilégio concede apenas permissões necessárias à função.",
-          "why": "Reduz exposição e risco de uso indevido. Exemplo aplicado: Autenticação verifica identidade; autorização determina permissões. Logs e hash ajudam a rastrear acesso e integridade, mas não certificam verdade do conteúdo. Princípio do menor privilégio limita exposição indevida."
+          "why": "Certo. Menor privilégio limita permissões ao necessário para a tarefa. Exemplo: usuário de consulta não deve poder apagar registros ou acessar informações sigilosas sem atribuição."
         },
         {
           "a": true,
           "q": "Uma função hash pode ajudar a detectar alteração entre arquivos.",
-          "why": "A comparação de resumos digitais pode indicar mudança no conteúdo. Exemplo aplicado: Autenticação verifica identidade; autorização determina permissões. Logs e hash ajudam a rastrear acesso e integridade, mas não certificam verdade do conteúdo. Princípio do menor privilégio limita exposição indevida."
+          "why": "Certo. Hash criptográfico auxilia a detectar alterações ao comparar resumos calculados antes e depois de manipulação. O procedimento exige referência inicial confiável."
         },
         {
           "a": false,
           "q": "Um hash comprova sozinho autoria, veracidade e legalidade da obtenção.",
-          "why": "Hash é controle de integridade, não prova completa de autoria ou legitimidade. Exemplo aplicado: Autenticação verifica identidade; autorização determina permissões. Logs e hash ajudam a rastrear acesso e integridade, mas não certificam verdade do conteúdo. Princípio do menor privilégio limita exposição indevida."
+          "why": "Errado. Hash sozinho não prova autoria, veracidade nem legalidade da coleta. Ele representa um resumo do conteúdo, e cadeia de custódia e contexto continuam necessários."
         },
         {
           "a": true,
           "q": "A autenticação e a autorização são controles diferentes e complementares.",
-          "why": "Uma confirma identidade; a outra limita o que essa identidade pode acessar ou fazer."
+          "why": "Certo. Autenticação e autorização são controles complementares: uma verifica identidade e outra define recursos e operações permitidos."
         },
         {
           "a": false,
           "q": "Autenticação e autorização são conceitos equivalentes.",
-          "why": "Autenticação verifica identidade; autorização define permissões. Exemplo aplicado: Autenticação verifica identidade; autorização determina permissões. Logs e hash ajudam a rastrear acesso e integridade, mas não certificam verdade do conteúdo. Princípio do menor privilégio limita exposição indevida."
+          "why": "Errado. Autenticação responde 'quem é?', enquanto autorização responde 'o que pode fazer?'. São operações distintas e precisam ser aplicadas em conjunto."
         },
         {
           "a": true,
           "q": "Um hash pode ajudar a detectar alterações, mas não comprova sozinho a veracidade do conteúdo.",
-          "why": "Hash auxilia a verificação de integridade, não a confirmação da verdade ou autoria."
+          "why": "Certo. Comparar hashes pode indicar se o conteúdo mudou, mas não demonstra que as informações documentadas sejam verdadeiras. Um arquivo falso pode manter hash íntegro desde sua coleta."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-10-protecao-qualidade-rastreabilidade",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "10. Proteção e qualidade das informações",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": false,
+            "q": "Um usuário autenticado está automaticamente autorizado a acessar qualquer informação.",
+            "why": "Errado. Autenticação identifica usuário, mas não autoriza acesso indiscriminado. Quem entra com credenciais válidas ainda depende das permissões atribuídas para cada recurso."
+          },
+          {
+            "a": true,
+            "q": "O menor privilégio concede apenas permissões necessárias à função.",
+            "why": "Certo. Menor privilégio limita permissões ao necessário para a tarefa. Exemplo: usuário de consulta não deve poder apagar registros ou acessar informações sigilosas sem atribuição."
+          },
+          {
+            "a": true,
+            "q": "Uma função hash pode ajudar a detectar alteração entre arquivos.",
+            "why": "Certo. Hash criptográfico auxilia a detectar alterações ao comparar resumos calculados antes e depois de manipulação. O procedimento exige referência inicial confiável."
+          },
+          {
+            "a": false,
+            "q": "Um hash comprova sozinho autoria, veracidade e legalidade da obtenção.",
+            "why": "Errado. Hash sozinho não prova autoria, veracidade nem legalidade da coleta. Ele representa um resumo do conteúdo, e cadeia de custódia e contexto continuam necessários."
+          },
+          {
+            "a": true,
+            "q": "A autenticação e a autorização são controles diferentes e complementares.",
+            "why": "Certo. Autenticação e autorização são controles complementares: uma verifica identidade e outra define recursos e operações permitidos."
+          },
+          {
+            "a": false,
+            "q": "Autenticação e autorização são conceitos equivalentes.",
+            "why": "Errado. Autenticação responde 'quem é?', enquanto autorização responde 'o que pode fazer?'. São operações distintas e precisam ser aplicadas em conjunto."
+          },
+          {
+            "a": true,
+            "q": "Um hash pode ajudar a detectar alterações, mas não comprova sozinho a veracidade do conteúdo.",
+            "why": "Certo. Comparar hashes pode indicar se o conteúdo mudou, mas não demonstra que as informações documentadas sejam verdadeiras. Um arquivo falso pode manter hash íntegro desde sua coleta."
+          }
+        ],
+        "method": "Revisão individual de 7 exercícios, gabaritos, interpretação de gráficos, geografia e governança de dados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:34:02Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "10. Proteção e qualidade das informações",
+        "material_slug": "pcac-2026-guia-analise-dados-10-protecao-qualidade-rastreabilidade"
       }
     }
   ]
