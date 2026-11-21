@@ -841,3 +841,16 @@ Cobertura: conceito de arquivo/documento arquivístico; três idades; classifica
 Migration na MAIN: `supabase/migrations/20261121298600_add_opening_questions_pcac_archivology.sql`, commit `3869e65d429473209eebe3ec600f9e26e9804faf`. Aplicação direta no Supabase confirmada.
 
 **Limite:** a validação confirmou os conteúdos no banco e preservação das questões do treinador; não houve teste visual da interface nem confirmação de CI. Nenhuma publicação manual em produção.
+
+
+## Direito Penal e Processual Penal — questão de abertura e resolução comentada — 21/11/2026
+
+Aplicado o padrão pedagógico nos 9 materiais ativos de Noções de Direito Penal e Processual Penal. Cada aula começa com questão autoral de múltipla escolha, cinco alternativas e orientação de tentativa; a resolução comentada foi acrescentada após a teoria.
+
+Temas: lei penal no tempo e abolitio criminis; tentativa e consumação; furto e roubo; falsidade ideológica; concussão e corrupção passiva; abuso de autoridade e finalidade específica; inquérito policial; exame de corpo de delito e confissão; prisão em flagrante.
+
+As questões são autorais no estilo de concursos e não foram apresentadas como transcrições oficiais. As explicações apontam os dispositivos legais relevantes e distinguem institutos frequentemente confundidos.
+
+**Validação SQL:** 9/9 materiais com questão de abertura e 9/9 com resolução comentada. As 64 questões existentes no treinador foram preservadas. Migration na MAIN: `supabase/migrations/20261121298700_add_opening_questions_pcac_criminal_law.sql`, commit `2fb7f3bb6eeec01691b6223bb3f70d1ba4aae1bc`. Aplicação direta no Supabase confirmada.
+
+**Limite:** ainda não foi realizado teste visual na interface nem confirmado CI para esse commit. Não houve publicação manual em produção.
