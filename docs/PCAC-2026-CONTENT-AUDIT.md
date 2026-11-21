@@ -2137,4 +2137,11 @@ Material atualizado para 106.426 caracteres; seções 82, 83 e 84 foram confirma
 - Lei nº 3.228/2017: https://legis.ac.gov.br/detalhar/2499
 - Decreto nº 9.367/2018: https://legis.ac.gov.br/detalhar/5749-0
 - LC nº 496/2025: https://legis.ac.gov.br/detalhar/6527
-- LC nº 525/2026: https://legis.ac.gov.br/detalhar/??? (consultar texto oficial antes de inserir link definitivo)
+- LC nº 525/2026: https://legis.ac.gov.br/detalhar/6864-1
+
+
+### Complemento de atualização da LC nº 39/1993 — LC nº 525/2026
+
+A conferência direta da LC nº 525/2026 mostrou que ela revogou somente o § 4º do art. 282 da LC nº 39/1993. Essa alteração é transitória e não modifica os dispositivos de direitos, deveres, proibições, penalidades, sindicância e PAD resumidos nas seções 83. Portanto, para esses dispositivos, as redações consultadas permanecem as referências relevantes, sem prejuízo de conferir futuras alterações.
+
+Fonte oficial da LC nº 525/2026: https://legis.ac.gov.br/detalhar/6864-1
