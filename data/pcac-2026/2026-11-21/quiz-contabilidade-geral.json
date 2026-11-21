@@ -184,12 +184,187 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "8. Contabilidade de custos: matéria-prima, custos de produção, rateio e departamentalização",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 14,
-        "revision_reason": "Item 9 reescrito de pergunta aberta sem resposta booleana para afirmação verificável; exige atualização da revisão"
+        "items": [
+          {
+            "a": true,
+            "q": "Estoque inicial de R$ 3.000, compras de R$ 11.000 e estoque final de R$ 5.000 resultam em consumo de R$ 9.000.",
+            "tip": "Macete: EI + Compras − EF. O estoque final sempre é subtraído porque não foi consumido.",
+            "why": "Consumo é a quantidade de matéria-prima que saiu do estoque para ser usada na produção. Primeiro some o que já existia com as compras: R$ 3.000 + R$ 11.000 = R$ 14.000 disponíveis. Depois retire o que sobrou no fim: R$ 14.000 − R$ 5.000 = R$ 9.000 consumidos.",
+            "resolution_steps": [
+              "Identifique o estoque inicial: R$ 3.000.",
+              "Some as compras: R$ 3.000 + R$ 11.000 = R$ 14.000.",
+              "Subtraia o estoque final: R$ 14.000 − R$ 5.000 = R$ 9.000.",
+              "Compare o resultado com a afirmação: está correta."
+            ]
+          },
+          {
+            "a": true,
+            "q": "No rateio de R$ 50.000 de energia por área, um departamento com 20 m² de um total de 100 m² recebe R$ 10.000.",
+            "tip": "Use a base que o enunciado indicar. Área pede m²; empregados pede quantidade de pessoas; depreciação pode usar máquinas.",
+            "why": "O departamento ocupa 20 dos 100 m², isto é, 20/100 = 0,20 = 20% da área. Como a energia é rateada pela área, ele recebe a mesma proporção da conta: 20% de R$ 50.000 = R$ 10.000. Isso demonstra a regra do rateio proporcional: a fração da área ocupada deve ser igual à fração do custo atribuída. Se o setor ocupasse metade da área, receberia metade da conta; como ocupa apenas um quinto, recebe um quinto.",
+            "resolution_steps": [
+              "Divida a área do setor pela área total: 20 ÷ 100 = 0,20.",
+              "Converta para percentual: 0,20 = 20%.",
+              "Multiplique o gasto pela participação: 50.000 × 0,20 = R$ 10.000.",
+              "Confira se a base usada foi área, como pede o enunciado."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A propaganda de marketing do produto deve integrar o custo de fabricação apresentado na questão da Cia. Faz Agora.",
+            "tip": "Pergunte: esse gasto foi necessário para fabricar ou para vender/administrar? Marketing normalmente é despesa comercial.",
+            "why": "Propaganda e marketing servem para divulgar e vender o produto, não para transformá-lo. Por isso, são despesas comerciais do período. O custo de fabricação reúne matéria-prima consumida, mão de obra da produção e custos indiretos de fabricação. O fato de a propaganda mencionar o produto não a transforma em custo industrial: sua função é comercializar, e não executar uma etapa de fabricação.",
+            "resolution_steps": [
+              "Identifique a finalidade do gasto: divulgação e venda.",
+              "Separe gastos de produção dos gastos comerciais.",
+              "Classifique propaganda/marketing como despesa comercial.",
+              "Não some essa despesa ao custo industrial."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Se a depreciação de R$ 12.000 é rateada entre departamentos com 2, 3 e 5 máquinas, o departamento com 5 máquinas recebe R$ 6.000.",
+            "tip": "Quando o critério é número de máquinas, use máquinas do setor ÷ total de máquinas.",
+            "why": "A depreciação total de R$ 12.000 é distribuída conforme a quantidade de máquinas. Há 2 + 3 + 5 = 10 máquinas. O departamento com 5 máquinas representa 5/10 = 50% do total; portanto recebe 50% × R$ 12.000 = R$ 6.000. A distribuição proporcional garante que departamentos com mais máquinas absorvam uma parcela maior do desgaste dos equipamentos. A soma das parcelas dos três setores deve fechar exatamente os R$ 12.000 de depreciação.",
+            "resolution_steps": [
+              "Some as máquinas: 2 + 3 + 5 = 10.",
+              "Calcule a participação: 5 ÷ 10 = 50%.",
+              "Aplique ao total: 12.000 × 50% = R$ 6.000.",
+              "Confira: os três departamentos devem absorver juntos R$ 12.000."
+            ]
+          },
+          {
+            "a": false,
+            "q": "O estoque final de matéria-prima deve ser somado ao estoque inicial para calcular o consumo.",
+            "tip": "Pense no armário: o que havia + o que entrou − o que sobrou = o que saiu para uso.",
+            "why": "O estoque final representa a matéria-prima que permaneceu guardada e, portanto, não foi consumida. Por isso, deve ser retirado do total disponível. A fórmula correta é consumo = estoque inicial + compras − estoque final. Exemplo: se havia R$ 14.000 disponíveis e sobraram R$ 5.000, somente R$ 9.000 deixaram o estoque. Somar o saldo final produziria uma quantidade maior do que tudo o que estava disponível para consumo.",
+            "resolution_steps": [
+              "Some estoque inicial e compras para encontrar o total disponível.",
+              "Retire o estoque que sobrou no fim do período.",
+              "Não some o estoque final: isso contaria como consumido algo que continua guardado.",
+              "A fórmula é EI + Compras − EF."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão Consulplan/CFC 2020.1, os gastos comuns alocados ao Departamento de Serviços totalizam R$ 32.400.",
+            "tip": "Resolva gasto por gasto. Nunca aplique uma única base de rateio a todos os custos se o enunciado indicar critérios diferentes.",
+            "why": "O Departamento de Serviços recebe três parcelas calculadas com bases diferentes: energia por área (R$ 10.000), água/telefone/alimentação por empregados (R$ 20.000) e depreciação por máquinas (R$ 2.400). Somando: R$ 10.000 + R$ 20.000 + R$ 2.400 = R$ 32.400.",
+            "resolution_steps": [
+              "Energia: 20/100 da área × R$ 50.000 = R$ 10.000.",
+              "Serviços comuns: 40/200 empregados × R$ 100.000 = R$ 20.000.",
+              "Depreciação: 2/10 máquinas × R$ 12.000 = R$ 2.400.",
+              "Some as três parcelas: R$ 32.400."
+            ]
+          },
+          {
+            "a": false,
+            "q": "No rateio da questão, a energia elétrica é distribuída conforme o número de empregados.",
+            "tip": "Faça uma pequena tabela: gasto | critério. Energia–área; água/telefone/alimentação–empregados; depreciação–máquinas.",
+            "why": "A energia elétrica é distribuída pela área ocupada, conforme a regra expressa no enunciado. A quantidade de empregados é a base para água, telefone e alimentação. Trocar as bases altera a distribuição e produz resposta errada. A base de rateio deve ser escolhida para cada gasto separadamente, seguindo o que a questão determina. Não basta encontrar uma proporção correta; é necessário aplicá-la ao gasto certo.",
+            "resolution_steps": [
+              "Leia o critério indicado para energia: área ocupada.",
+              "Leia separadamente o critério de água, telefone e alimentação: empregados.",
+              "Não transfira o critério de um gasto para outro.",
+              "Como a afirmação usa empregados para energia, está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão de rateio, a parcela da depreciação do Departamento de Serviços é R$ 2.400.",
+            "tip": "Parcela do setor = gasto total × quantidade do setor ÷ quantidade total.",
+            "why": "O Departamento de Serviços possui 2 das 10 máquinas da empresa, ou 20%. Aplicando essa participação à depreciação total: 2/10 × R$ 12.000 = R$ 2.400. O cálculo representa a parcela do desgaste atribuída ao departamento, e não uma compra ou pagamento de máquinas. A depreciação é distribuída conforme o critério fornecido no problema.",
+            "resolution_steps": [
+              "Some as máquinas de todos os departamentos: 10.",
+              "Divida as máquinas de Serviços pelo total: 2/10 = 0,20.",
+              "Multiplique R$ 12.000 por 0,20.",
+              "Resultado: R$ 2.400."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2 da Cia. Faz Agora, o custo de produção do período é R$ 21.230, considerando matéria-prima consumida de R$ 9.000, mão de obra direta de R$ 5.000 e custos indiretos de R$ 7.230.",
+            "tip": "Organize em três blocos: MP consumida + MOD + CIF. Só depois some.",
+            "why": "O custo de produção é formado pela matéria-prima consumida (R$ 9.000), mão de obra direta (R$ 5.000) e custos indiretos de fabricação (R$ 7.230). Somando os três grupos: R$ 9.000 + R$ 5.000 + R$ 7.230 = R$ 21.230. A classificação correta dos itens é essencial: a matéria-prima consumida é custo direto, a mão de obra é custo de produção e os gastos comuns da fábrica formam os custos indiretos.",
+            "resolution_steps": [
+              "Calcule a matéria-prima: 3.000 + 11.000 − 5.000 = R$ 9.000.",
+              "Identifique a mão de obra direta: R$ 5.000.",
+              "Some os custos indiretos de fabricação: R$ 7.230.",
+              "Some os blocos: 9.000 + 5.000 + 7.230 = R$ 21.230."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Despesas comerciais, administrativas, financeiras e propaganda integram o custo de fabricação da questão Cia. Faz Agora.",
+            "tip": "A banca costuma misturar custos e despesas na mesma lista. Classifique cada item pela finalidade antes de somar.",
+            "why": "Despesas comerciais, administrativas e financeiras não são custos de fabricação. Propaganda é despesa comercial. O custo de produção considera os recursos consumidos para fabricar: matéria-prima, mão de obra direta e custos indiretos de fabricação. Mesmo que essas despesas ocorram durante o mesmo mês em que a fábrica produz, isso não muda sua natureza. O critério é a finalidade do gasto, não apenas a data em que ele aconteceu.",
+            "resolution_steps": [
+              "Marque os gastos ligados diretamente à fabricação.",
+              "Separe administração e comercialização como despesas do período.",
+              "Separe juros e encargos financeiros como despesas financeiras, salvo regra específica de capitalização.",
+              "Some apenas MP consumida, MOD e CIF."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Na questão da Indústria Alfa, o produto B recebe parte dos custos de Pintura.",
+            "tip": "Produto só recebe custo de departamento pelo qual passa ou que efetivamente o atende, conforme o critério do exercício.",
+            "why": "O enunciado informa que o produto B passa somente por Corte e Costura. Como não utiliza Pintura, não pode receber parcela do custo desse departamento. Atribuir custo a B contrariaria o fluxo produtivo descrito. O rateio deve acompanhar o consumo efetivo dos serviços departamentais descritos no exercício. Se B não passa por Pintura, não há fundamento para atribuir a ele o custo exclusivo dessa etapa.",
+            "resolution_steps": [
+              "Leia o roteiro de produção de A e B.",
+              "Marque os departamentos utilizados por cada produto.",
+              "B utiliza Corte e Costura, mas não Pintura.",
+              "Não distribua o custo exclusivo de Pintura ao produto B."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão de departamentalização da Indústria Alfa, os custos unitários são A = R$ 4,49 e B = R$ 5,27.",
+            "tip": "Não divida o custo total pela produção antes de terminar os rateios. Primeiro atribua todos os departamentos; depois calcule o custo unitário.",
+            "why": "Os custos unitários resultam da soma dos custos diretos com os custos indiretos atribuídos e, depois, da divisão pela quantidade produzida. A recebe R$ 67.280 no total (R$ 4,49 por unidade); B recebe R$ 52.720 (R$ 5,27 por unidade). Pintura é exclusiva de A.",
+            "resolution_steps": [
+              "Rateie Administração Geral pela quantidade de funcionários.",
+              "Redistribua Almoxarifado pela quantidade de requisições.",
+              "Rateie Corte e Costura entre A e B pelo volume produzido.",
+              "Atribua Pintura somente a A.",
+              "Some custos diretos e indiretos de cada produto e divida pela produção: A = 67.280/15.000 ≈ R$ 4,49; B = 52.720/10.000 = R$ 5,27."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão 25, o Departamento de Serviço recebe 20% do custo de energia porque ocupa 20% da área total.",
+            "tip": "20 de 100 é um quinto, ou 20%. Um quinto de R$ 50.000 é R$ 10.000.",
+            "why": "O Departamento de Serviço ocupa 20 m² de um total de 100 m². Isso corresponde a 20%. Como o critério de energia é área, sua parcela é 20% de R$ 50.000 = R$ 10.000. O percentual é aplicado sobre o gasto total, e não sobre uma parcela escolhida arbitrariamente. A operação pode ser feita como fração (20/100) ou como percentual (20%).",
+            "resolution_steps": [
+              "Divida 20 m² por 100 m²: 0,20.",
+              "Converta 0,20 em 20%.",
+              "Calcule 20% de R$ 50.000: R$ 10.000.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Na questão 25, o custo total rateado ao Departamento de Serviço é R$ 30.000.",
+            "tip": "Confira se somou todas as naturezas de gastos rateadas ao departamento. Não pare após os dois maiores valores.",
+            "why": "O total do Departamento de Serviço é R$ 32.400, não R$ 30.000. A soma correta inclui energia (R$ 10.000), água/telefone/alimentação (R$ 20.000) e depreciação (R$ 2.400). O valor de R$ 30.000 corresponde apenas à soma das duas primeiras parcelas e deixa a depreciação de fora. Em questões de rateio, confira se todos os gastos apresentados foram considerados.",
+            "resolution_steps": [
+              "Calcule energia: R$ 10.000.",
+              "Calcule água, telefone e alimentação: R$ 20.000.",
+              "Calcule depreciação: R$ 2.400.",
+              "Some: 10.000 + 20.000 + 2.400 = R$ 32.400.",
+              "Compare com R$ 30.000: a afirmação está errada."
+            ]
+          }
+        ],
+        "method": "Conferência individual de 14 itens de custos. Recalculo matéria-prima 3000+11000-5000=9000, rateio de energia 20/100 de 50000 =10000, depreciação 2/10 de 12000 =2400 e 5/10 =6000, total de serviço 32400 e custo produtivo 9000+5000+7230=21230, classificação de despesas e fluxo dos departamentos.",
+        "status": "reviewed",
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:47:44Z",
+        "review_type": "didactic_manual",
+        "source_note": "Conteúdo organizado exclusivamente a partir dos arquivos enviados: “Prova 2020.2 Resolvida - Parte 02.pdf” (questão Consulplan/CFC 2020.2, páginas 13–18) e “Revisão de Véspera.pdf” (questão Consulplan/CFC 2020.1, páginas 2–3).; Questão 25, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, páginas 11–13.",
+        "topic_label": "8. Contabilidade de custos: matéria-prima, custos de produção, rateio e departamentalização",
+        "material_slug": "pcac-2026-contabilidade-08-custos-materia-prima-rateio-departamentalizacao"
       }
     },
     {
@@ -868,11 +1043,214 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "11. Estoques, critérios de mensuração, inventários e ajuste a valor presente",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": false,
+            "q": "O estoque deve ser mensurado subsequentemente pelo maior entre custo e valor realizável líquido.",
+            "tip": "Decore: estoque = menor entre custo e VRL. VRL é preço de venda menos conclusão e venda.",
+            "why": "O CPC 16 determina que o estoque seja mensurado pelo menor entre custo e valor realizável líquido. Se o custo é R$ 100 e o VRL é R$ 90, registra-se R$ 90. O VRL é o preço estimado de venda menos os custos para concluir e vender. Usar o maior manteria o estoque por valor superior ao que se espera recuperar.",
+            "resolution_steps": [
+              "Identifique o custo do estoque.",
+              "Calcule ou identifique o VRL.",
+              "Compare os dois valores.",
+              "Escolha o menor; a afirmação que diz maior está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Frete sobre compra é apresentado no material como custo do estoque.",
+            "tip": "Pergunte: o frete trouxe o estoque para a empresa ou levou o produto ao cliente? Compra pode integrar o custo; entrega é despesa.",
+            "why": "O frete necessário para trazer a mercadoria comprada à empresa e colocá-la na condição e localização atuais integra o custo de aquisição, conforme CPC 16. É diferente do frete para entregar a mercadoria ao cliente, que normalmente é despesa de venda. Esse tratamento evita que o estoque fique registrado por um valor menor ou maior do que o custo efetivamente necessário para colocá-lo na condição e localização atuais. O destino do transporte é o detalhe decisivo.",
+            "resolution_steps": [
+              "Identifique a finalidade do frete.",
+              "Se for diretamente atribuível à compra, inclua no custo.",
+              "Se for entrega ao cliente, classifique como despesa de venda.",
+              "A afirmação sobre frete de compra está correta."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Desconto comercial incondicional é deduzido do preço de aquisição.",
+            "tip": "Desconto comercial reduz o preço do produto; desconto financeiro decorre da condição de pagamento.",
+            "why": "O desconto comercial incondicional é negociado no momento da compra e reduz o preço que a empresa efetivamente paga pelo estoque. Portanto, deve ser deduzido do custo de aquisição. Não confunda com desconto financeiro por antecipação de pagamento, que decorre do financiamento/condição de pagamento.",
+            "resolution_steps": [
+              "Identifique que o desconto é comercial e incondicional.",
+              "Subtraia-o do preço bruto de compra.",
+              "Calcule o custo líquido, considerando também tributos e frete aplicáveis.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": false,
+            "q": "O inventário periódico registra baixa operação por operação.",
+            "tip": "Periódico = conta no fim do período. Permanente = acompanha cada entrada e saída.",
+            "why": "No inventário periódico, não há baixa de estoque a cada venda no controle contábil de quantidade e valor. O estoque final é apurado por inventário físico e o CMV é calculado ao fim do período. A baixa contínua a cada venda é característica do inventário permanente. No periódico, o cálculo do CMV depende da contagem final: EI + compras líquidas − EF. No permanente, cada venda já provoca a baixa do custo correspondente no momento da saída.",
+            "resolution_steps": [
+              "Identifique a expressão usada: periódico.",
+              "Lembre que o saldo final é apurado por contagem física.",
+              "A baixa a cada venda caracteriza o permanente.",
+              "Logo, a afirmação está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "No AVP da questão, o valor presente aproximado das três parcelas é R$ 45.664,50.",
+            "tip": "Desconte parcela por parcela; os prazos são diferentes. Some os valores presentes e subtraia do total nominal para achar o AVP.",
+            "why": "O valor presente de cada parcela é calculado descontando seu valor futuro pelo prazo correspondente: 20.000/1,15 + 20.000/1,15² + 20.000/1,15³. A soma aproximada é R$ 45.664,50; a diferença em relação aos R$ 60.000 nominais é o AVP de R$ 14.335,50. Arredonde apenas no resultado final para evitar diferença de centavos.",
+            "resolution_steps": [
+              "Desconte a primeira parcela por um período: 20.000/1,15.",
+              "Desconte a segunda por dois períodos: 20.000/1,15².",
+              "Desconte a terceira por três períodos: 20.000/1,15³.",
+              "Some os valores presentes: aproximadamente R$ 45.664,50.",
+              "Calcule AVP: 60.000 − 45.664,50 = R$ 14.335,50."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.1, o CMV pela média ponderada móvel é R$ 4.872.",
+            "tip": "Primeiro calcule o custo médio de todas as unidades disponíveis; só depois multiplique pela quantidade vendida.",
+            "why": "Na média ponderada móvel, o custo total disponível é R$ 9.860 e a quantidade disponível é 850 unidades. O custo médio é 9.860/850 = R$ 11,60 por unidade. Como foram vendidas 420 unidades, CMV = 420 × 11,60 = R$ 4.872. O custo médio é calculado sobre todo o estoque disponível antes da venda, incluindo o estoque inicial e as compras já recebidas. Depois de encontrar R$ 11,60 por unidade, multiplique somente pelas 420 unidades que saíram para obter o CMV.",
+            "resolution_steps": [
+              "Some os custos de aquisição líquidos: R$ 1.455 + R$ 2.640 + R$ 5.765 = R$ 9.860.",
+              "Some as quantidades: 150 + 200 + 500 = 850.",
+              "Divida: 9.860 ÷ 850 = R$ 11,60.",
+              "Multiplique pela venda: 420 × 11,60 = R$ 4.872."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Tributos recuperáveis devem ser somados ao custo do estoque na compra.",
+            "tip": "Recuperável = não fica como custo; não recuperável = pode compor o custo.",
+            "why": "Tributos recuperáveis representam créditos que a empresa poderá compensar ou recuperar e, por isso, não compõem o custo do estoque. Tributos não recuperáveis podem integrar o custo de aquisição. A questão exige distinguir a natureza do tributo antes de somar os valores. A recuperabilidade do tributo depende da legislação e da situação da empresa. Não basta o nome do imposto: verifique se existe direito de crédito/compensação. Se houver, não é custo do estoque.",
+            "resolution_steps": [
+              "Identifique o tributo citado.",
+              "Verifique se a empresa tem direito de recuperar/compensar.",
+              "Se recuperável, exclua do custo do estoque.",
+              "A afirmação que manda somá-lo está errada."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Na questão da Indústria Beta, os encargos de financiamento de $ 2.500 integram o custo da matéria-prima, embora o produto final não seja ativo qualificável.",
+            "tip": "Não capitalize juros automaticamente. Verifique se o ativo exige período substancial para ficar pronto e atende ao conceito de ativo qualificável.",
+            "why": "O enunciado informa que o produto final não é ativo qualificável. Assim, os encargos de financiamento de $ 2.500 não podem ser capitalizados no estoque. O custo da matéria-prima é $ 50.000; os encargos financeiros são reconhecidos como despesa financeira, conforme a regra aplicável.",
+            "resolution_steps": [
+              "Leia a informação sobre o produto final.",
+              "O enunciado diz que não é ativo qualificável.",
+              "Mantenha o estoque por $ 50.000.",
+              "Reconheça $ 2.500 como despesa financeira."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, a matéria-prima é registrada por $ 50.000 e os $ 2.500 como despesa financeira.",
+            "tip": "Separe o preço do insumo dos juros do financiamento. A informação “não é ativo qualificável” resolve a capitalização.",
+            "why": "A matéria-prima é registrada por $ 50.000 porque o produto final não é ativo qualificável e os encargos de financiamento de $ 2.500 não são incorporados ao estoque neste caso. Esses encargos são despesa financeira. A separação evita misturar custo de aquisição da matéria-prima com custo de obtenção do financiamento.",
+            "resolution_steps": [
+              "Identifique o preço da matéria-prima: $ 50.000.",
+              "Identifique os encargos: $ 2.500.",
+              "Confira que não há ativo qualificável.",
+              "Registre o estoque por $ 50.000 e os juros como despesa financeira."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.1, o custo final do estoque para revenda é R$ 594.500.",
+            "tip": "Faça a conta em blocos: preço − tributo recuperável + frete/seguro atribuíveis.",
+            "why": "O custo de aquisição é R$ 594.500: preço de R$ 650.000 menos ICMS recuperável de R$ 110.500, mais seguro de R$ 25.000 e frete de R$ 30.000. O ICMS recuperável não integra o custo; seguro e frete necessários para trazer o estoque à condição/localização atuais integram.",
+            "resolution_steps": [
+              "Calcule o ICMS recuperável: 650.000 × 17% = R$ 110.500.",
+              "Subtraia do preço: 650.000 − 110.500 = R$ 539.500.",
+              "Some seguro: 539.500 + 25.000 = R$ 564.500.",
+              "Some frete: 564.500 + 30.000 = R$ 594.500."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Os juros de financiamento de R$ 40.000 integram o custo das mercadorias para revenda mesmo sem ativo qualificável.",
+            "tip": "Juros só podem ser capitalizados em situações específicas de ativo qualificável; não basta haver empréstimo para comprar mercadoria.",
+            "why": "Os juros de financiamento de R$ 40.000 não integram automaticamente o custo de mercadorias para revenda. O enunciado não apresenta ativo qualificável; por isso, os juros são encargos financeiros e não custo do estoque. A afirmação está errada. O fato de a empresa usar um empréstimo para comprar mercadorias não transforma automaticamente os juros em custo do estoque. A capitalização depende dos critérios de ativo qualificável; o enunciado afasta essa condição.",
+            "resolution_steps": [
+              "Identifique o gasto: juros do empréstimo.",
+              "Verifique se o estoque é ativo qualificável.",
+              "Como não há indicação de ativo qualificável, não capitalize os juros.",
+              "A afirmação está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o valor presente das três parcelas é R$ 45.664,50 e o AVP é R$ 14.335,50.",
+            "tip": "Valor presente é a soma descontada; AVP é nominal menos presente.",
+            "why": "O valor presente é a soma das três parcelas descontadas por seus prazos: 20.000/1,15 + 20.000/1,15² + 20.000/1,15³ = aproximadamente R$ 45.664,50. O ajuste a valor presente é a diferença para o valor nominal de R$ 60.000: R$ 14.335,50. O desconto de cada parcela usa um expoente diferente porque o dinheiro será pago em datas diferentes. A soma dos valores presentes é o valor da compra na data inicial; a diferença para R$ 60.000 representa o componente financeiro total a apropriar ao longo do prazo.",
+            "resolution_steps": [
+              "Desconte cada parcela pelo prazo correspondente.",
+              "Some os três valores presentes.",
+              "Subtraia o valor presente de R$ 60.000.",
+              "Confirme VP R$ 45.664,50 e AVP R$ 14.335,50."
+            ]
+          },
+          {
+            "a": false,
+            "q": "As três parcelas anuais devem ser descontadas pelo mesmo fator de 1,15.",
+            "tip": "O expoente é o número de períodos até o vencimento da parcela.",
+            "why": "Cada parcela vence em data diferente. A primeira, em um ano, é descontada por (1,15)^1; a segunda, em dois anos, por (1,15)^2; a terceira, em três anos, por (1,15)^3. Usar o mesmo fator para todas ignora o tempo e distorce o valor presente. Por exemplo, R$ 20.000 vencendo em um ano vale hoje 20.000/1,15; se vencer em três anos, vale 20.000/1,15³. Quanto maior o prazo, menor tende a ser o valor presente, mantendo-se a mesma taxa positiva.",
+            "resolution_steps": [
+              "Marque o prazo de cada parcela: 1, 2 e 3 anos.",
+              "Use o fator 1,15 elevado a cada prazo.",
+              "Desconte cada valor futuro separadamente.",
+              "A afirmação que usa o mesmo fator para todas está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão 29, os tributos recuperáveis são deduzidos da nota fiscal para calcular o custo do estoque.",
+            "tip": "Na compra, separe tributo recuperável de tributo não recuperável antes de fazer a conta.",
+            "why": "Tributos recuperáveis não compõem o custo do estoque porque representam valores que podem ser compensados ou recuperados. Na questão, são deduzidos da nota fiscal para chegar ao custo líquido da compra, antes de adicionar frete diretamente atribuível. Por exemplo, se uma nota de R$ 10.000 contém R$ 1.800 de tributo recuperável, esse valor é retirado para encontrar o custo, antes de acrescentar frete ou outros custos diretamente atribuíveis.",
+            "resolution_steps": [
+              "Localize os tributos da nota.",
+              "Identifique os recuperáveis.",
+              "Subtraia os recuperáveis do preço de compra.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Na questão 29, o frete diretamente atribuível à compra deve ser excluído do custo do estoque.",
+            "tip": "Frete de compra entra; frete de entrega ao cliente normalmente é despesa de venda.",
+            "why": "O frete diretamente atribuível à aquisição é necessário para trazer o estoque à sua localização atual e integra o custo. Excluí-lo reduziria artificialmente o valor do estoque e do CMV futuro. Diferencie esse frete do transporte para entregar mercadorias ao cliente. Se a empresa paga R$ 500 para trazer o material do fornecedor até seu depósito, esse frete pode compor o custo. Se paga R$ 500 para entregar a mercadoria vendida ao consumidor, é despesa de venda.",
+            "resolution_steps": [
+              "Identifique se o transporte ocorreu na compra ou na venda.",
+              "Frete para trazer estoque à empresa integra o custo, se diretamente atribuível.",
+              "Frete para entregar ao cliente é despesa de venda.",
+              "A afirmação que exclui frete de compra está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão 29, o CMV é R$ 4.872.",
+            "tip": "Depois de encontrar o custo médio, não refaça a média usando apenas as unidades vendidas. Multiplique o custo médio pela quantidade vendida.",
+            "why": "O custo médio calculado antes da venda é R$ 11,60 por unidade. Multiplicando pelas 420 unidades vendidas: 420 × 11,60 = R$ 4.872. Esse é o custo das unidades que saíram do estoque, ou CMV. O CMV representa o custo das unidades efetivamente vendidas. Como a média ponderada móvel apurada antes da saída foi de R$ 11,60, o custo das 420 unidades vendidas é R$ 4.872; o restante permanece no estoque final.",
+            "resolution_steps": [
+              "Use o custo médio já calculado: R$ 11,60.",
+              "Identifique a quantidade vendida: 420 unidades.",
+              "Multiplique: 11,60 × 420.",
+              "CMV = R$ 4.872."
+            ]
+          }
+        ],
+        "method": "Revisão individual dos dezesseis itens: CPC 16 (R1) exige menor entre custo e valor realizável líquido; frete e seguro de aquisição; tributos recuperáveis; média móvel 9860/850=11,60 e 420x11,60=4872; estoque 650000-110500+25000+30000=594500; três prestações anuais de 20000 descontadas a 15% e AVP; empréstimos de ativo não qualificável.",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 16
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:48:09Z",
+        "review_type": "didactic_manual",
+        "source_note": "“Resumo - Contabilidade Geral.pdf”, itens 87–94 e 151–154, páginas 17–19 e 26; “Revisão de Véspera - Alunos.pdf”, questões Consulplan/CFC 2020.2, páginas 10 e 19.; Questão 29, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, página 20.",
+        "topic_label": "11. Estoques, critérios de mensuração, inventários e ajuste a valor presente",
+        "material_slug": "pcac-2026-contabilidade-11-estoques-mensuracao-avp-inventarios",
+        "reference_urls": [
+          "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=47",
+          "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=43"
+        ]
       }
     },
     {
@@ -947,75 +1325,39 @@
           {
             "a": true,
             "q": "Na data do balanço, itens monetários em moeda estrangeira devem ser convertidos pela taxa de fechamento, conforme o CPC 02 (R2).",
-            "tip": "No encerramento: item monetário = taxa de fechamento. Não confunda com taxa inicial da compra.",
-            "why": "Na data do balanço, ativos e passivos monetários em moeda estrangeira são convertidos pela taxa de fechamento. A taxa da data da transação é usada no reconhecimento inicial e para itens não monetários mensurados pelo custo histórico. A questão pergunta especificamente por ativos e passivos na data do balanço, portanto a resposta é taxa de fechamento.",
-            "resolution_steps": [
-              "Identifique que a questão trata da data do balanço.",
-              "Verifique se o ativo/passivo é monetário.",
-              "Para itens monetários, aplique a taxa de fechamento.",
-              "Descarte a taxa da data da transação como resposta geral para esse caso."
-            ]
+            "why": "Na data do balanço, ativos e passivos monetários em moeda estrangeira são convertidos pela taxa de fechamento. A taxa da data da transação é usada no reconhecimento inicial e para itens não monetários mensurados pelo custo histórico. A questão pergunta especificamente por ativos e passivos na data do balanço, portanto a resposta é taxa de fechamento."
           },
           {
             "a": true,
             "q": "Variação cambial é uma diferença resultante da conversão a diferentes taxas.",
-            "tip": "Compare o valor em reais na taxa inicial com o valor convertido na taxa aplicável posterior.",
-            "why": "Variação cambial é a diferença causada pela conversão ou liquidação de um valor em moeda estrangeira usando taxas diferentes. Exemplo: uma dívida de US$ 1.000 registrada a R$ 5,00 vale R$ 5.000; se no fechamento o dólar vale R$ 5,40, a obrigação passa a R$ 5.400 e surge diferença de R$ 400.",
-            "resolution_steps": [
-              "Identifique o valor em moeda estrangeira.",
-              "Anote a taxa usada no reconhecimento inicial.",
-              "Anote a taxa posterior de conversão ou liquidação.",
-              "Calcule a diferença em moeda funcional: essa diferença é a variação cambial."
-            ]
+            "why": "Variação cambial é a diferença causada pela conversão ou liquidação de um valor em moeda estrangeira usando taxas diferentes. Exemplo: uma dívida de US$ 1.000 registrada a R$ 5,00 vale R$ 5.000; se no fechamento o dólar vale R$ 5,40, a obrigação passa a R$ 5.400 e surge diferença de R$ 400."
           },
           {
             "a": true,
             "q": "Moeda funcional é a moeda do ambiente econômico principal da entidade.",
-            "tip": "Pergunte em que moeda a empresa realmente gera e gasta caixa e em qual moeda preços e custos são influenciados.",
-            "why": "Moeda funcional é a moeda do ambiente econômico principal no qual a entidade opera. A análise considera a moeda que mais influencia os preços de venda e os custos, além de outros fatores como financiamento e retenção de recursos. Uma empresa brasileira que exporta para a China não passa automaticamente a ter yuan ou dólar como moeda funcional só por vender ao exterior.",
-            "resolution_steps": [
-              "Observe o ambiente econômico principal da entidade.",
-              "Analise a moeda que influencia preços de venda.",
-              "Analise a moeda que influencia custos, mão de obra e insumos.",
-              "Considere financiamento e outros fatores como evidências adicionais.",
-              "Não escolha a moeda apenas pelo país do cliente ou da sede."
-            ]
+            "why": "Moeda funcional é a moeda do ambiente econômico principal no qual a entidade opera. A análise considera a moeda que mais influencia os preços de venda e os custos, além de outros fatores como financiamento e retenção de recursos. Uma empresa brasileira que exporta para a China não passa automaticamente a ter yuan ou dólar como moeda funcional só por vender ao exterior."
           },
           {
             "a": false,
             "q": "A taxa média do exercício deve substituir a taxa de fechamento na conversão de itens monetários em moeda estrangeira na data do balanço.",
-            "tip": "Taxa média é expediente prático para transações ao longo do período, não substitui a taxa de fechamento dos itens monetários.",
-            "why": "A taxa média pode ser usada como aproximação prática da taxa da data das transações quando não houver flutuação significativa. Porém, a questão de conversão de itens monetários no balanço exige a taxa de fechamento. Se as taxas flutuarem significativamente, a média do período não é apropriada nem mesmo como aproximação das transações.",
-            "resolution_steps": [
-              "Identifique se o enunciado fala de transação durante o período ou saldo na data do balanço.",
-              "Para saldo monetário no fechamento, use taxa de fechamento.",
-              "Só use média como aproximação quando representar adequadamente as taxas das datas das transações.",
-              "A afirmação está errada."
-            ]
+            "why": "A taxa média pode ser usada como aproximação prática da taxa da data das transações quando não houver flutuação significativa. Porém, a questão de conversão de itens monetários no balanço exige a taxa de fechamento. Se as taxas flutuarem significativamente, a média do período não é apropriada nem mesmo como aproximação das transações."
           },
           {
             "a": false,
             "q": "Moeda funcional é a taxa de câmbio utilizada para liquidação imediata de operações.",
-            "tip": "Moeda funcional = moeda-base das operações. Taxa à vista = preço de conversão de uma moeda em outra.",
-            "why": "Moeda funcional não é uma taxa de câmbio. É a moeda do ambiente econômico principal da entidade. Taxa à vista é o preço para liquidação imediata de uma operação de câmbio; moeda funcional é a unidade monetária que representa o ambiente em que a entidade principalmente gera e despende caixa.",
-            "resolution_steps": [
-              "Identifique se o enunciado descreve uma moeda ou uma taxa.",
-              "Moeda funcional descreve o ambiente econômico principal.",
-              "Taxa à vista é a cotação usada para conversão imediata.",
-              "A afirmação confunde os conceitos e está errada."
-            ]
+            "why": "Moeda funcional não é uma taxa de câmbio. É a moeda do ambiente econômico principal da entidade. Taxa à vista é o preço para liquidação imediata de uma operação de câmbio; moeda funcional é a unidade monetária que representa o ambiente em que a entidade principalmente gera e despende caixa."
           }
         ],
-        "method": "Revisão manual de cinco itens segundo CPC 02 (R2): taxa de fechamento apenas para itens monetários, variação cambial, moeda funcional, aproximação por taxa média e taxa à vista. Dois enunciados corrigidos para evitar generalização indevida de ativos e passivos.",
+        "method": "Conferência individual dos cinco gabaritos sobre CPC 02(R2), moeda funcional, variação cambial e taxa de fechamento, conforme versão oficial CVM; a revisão pedagógica não dispensa procedimentos do treinador",
         "status": "reviewed",
         "subject": "Contabilidade Geral",
         "version": 1,
-        "checked_at": "2026-11-21T18:44:54Z",
+        "checked_at": "2026-11-21T18:47:33Z",
         "review_type": "didactic_manual",
         "source_note": "“Prova 2020.2 Resolvida - Parte 02.pdf”, questões Consulplan/Exame CFC 2020.2, páginas 8–10.",
         "topic_label": "12. Operações em moeda estrangeira e CPC 02",
         "material_slug": "pcac-2026-contabilidade-12-moeda-estrangeira-cpc02-moeda-funcional",
-        "reference_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=3"
+        "official_reference": "https://conteudo.cvm.gov.br/cvm_institucional/export/sites/cvm/menu/regulados/normascontabeis/cpc/CPC_02_R2_rev_13.pdf"
       }
     },
     {
@@ -1280,11 +1622,123 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "13. Custeio pleno (RKW), custeio variável e ponto de equilíbrio",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "No exemplo RKW, o custo pleno total é R$ 80.000.",
+            "why": "No RKW, o exercício considera materiais diretos (R$ 10.000), mão de obra (R$ 15.000), custos indiretos (R$ 25.000) e despesas (R$ 30.000). O total é R$ 80.000. O custeio pleno distribui os gastos considerados no modelo, inclusive despesas, ao contrário do custeio por absorção, que incorpora custos de produção."
+          },
+          {
+            "a": false,
+            "q": "O custo pleno unitário do exemplo é R$ 100.",
+            "why": "O custo pleno total é R$ 80.000 e a produção é de 500 unidades. O custo unitário é 80.000 ÷ 500 = R$ 160, não R$ 100. O erro pode surgir de dividir apenas parte dos gastos ou de esquecer as despesas que o RKW inclui no exercício. O valor de R$ 100 pode surgir quando se utiliza apenas uma parte do total de gastos ou se divide pelo número errado de unidades. No RKW, a conta deve começar pelos R$ 80.000 que incluem também as despesas, e somente depois ser dividida pelas 500 unidades produzidas."
+          },
+          {
+            "a": true,
+            "q": "No custeio variável do exemplo, 80% de 10.000 unidades correspondem a 8.000 unidades vendidas.",
+            "why": "Foram produzidas 10.000 unidades e 80% foram vendidas. Quantidade vendida = 10.000 × 0,80 = 8.000 unidades. A receita e os gastos variáveis associados às vendas devem ser calculados sobre essas 8.000 unidades, e não sobre toda a produção. A quantidade vendida é importante porque receita e despesas variáveis de venda acompanham as vendas, não necessariamente toda a produção. As unidades que não foram vendidas permanecem em estoque, conforme o sistema de custeio e a avaliação aplicável."
+          },
+          {
+            "a": true,
+            "q": "A margem de contribuição unitária do exemplo de ponto de equilíbrio é R$ 400.",
+            "why": "A margem de contribuição unitária é o preço de venda menos todos os custos e despesas variáveis por unidade. No exercício: R$ 600 − R$ 200 = R$ 400. Essa parcela contribui primeiro para cobrir os gastos fixos e, depois, para formar lucro. A margem de contribuição não é o lucro final. Ela ainda precisa cobrir os gastos fixos do período; somente o excedente após essa cobertura representa resultado positivo."
+          },
+          {
+            "a": false,
+            "q": "Com custos fixos de R$ 800.000 e margem unitária de R$ 400, o ponto de equilíbrio é 1.500 unidades.",
+            "why": "O ponto de equilíbrio é calculado dividindo os custos e despesas fixos pela margem de contribuição unitária. R$ 800.000 ÷ R$ 400 = 2.000 unidades. Em 1.500 unidades, a margem total seria apenas R$ 600.000, insuficiente para cobrir os R$ 800.000 fixos."
+          },
+          {
+            "a": true,
+            "q": "No exercício RKW da Consulplan/CFC 2020.2, o custo pleno unitário é R$ 160.",
+            "why": "O RKW é custeio pleno: no exercício, materiais, mão de obra, custos indiretos e despesas somam R$ 80.000. Dividindo por 500 unidades, chega-se a R$ 160 por unidade. O cálculo inclui as despesas porque a questão pede especificamente custo pleno. O cálculo unitário é R$ 80.000 dividido por 500 unidades. O custo de fabricação isolado é R$ 50.000, mas o RKW inclui mais R$ 30.000 de despesas, por isso o resultado é R$ 160 por unidade."
+          },
+          {
+            "a": false,
+            "q": "No exercício RKW, as despesas de R$ 30.000 devem ser excluídas do cálculo do custo pleno.",
+            "why": "No exercício RKW, as despesas de R$ 30.000 integram o total de gastos apropriados pelo custeio pleno. Se fossem excluídas, o total cairia para R$ 50.000, que corresponde apenas aos custos de fabricação. A questão pede custo pleno, portanto a exclusão está errada."
+          },
+          {
+            "a": true,
+            "q": "No exercício RKW, o custo de fabricação sem as despesas é R$ 50.000.",
+            "why": "Os custos de fabricação somam R$ 10.000 + R$ 15.000 + R$ 25.000 = R$ 50.000. Esse valor não é o custo pleno, pois o exercício RKW também considera R$ 30.000 de despesas, totalizando R$ 80.000. A questão exige distinguir os dois totais. Esse subtotal ajuda a visualizar a diferença entre fabricação e custeio pleno. No custeio por absorção, as despesas do período ficam fora do custo do produto; no RKW clássico, os gastos e despesas considerados são distribuídos no custo pleno."
+          },
+          {
+            "a": true,
+            "q": "Na questão Consulplan/CFC 2020.1, o ROI da divisão X é 25%.",
+            "why": "ROI da divisão X = margem líquida × giro do ativo. Margem = 100.000 ÷ 500.000 = 20%. Giro = 1,25. ROI = 20% × 1,25 = 25%. O giro mostra quantas vezes as vendas representam o ativo; a margem mostra quanto lucro sobra sobre as vendas. O ROI pode ser entendido como retorno gerado para cada real aplicado em ativos/investimento. O cálculo pela margem multiplicada pelo giro é uma decomposição útil para comparar eficiência operacional e utilização dos ativos."
+          },
+          {
+            "a": true,
+            "q": "O retorno sobre vendas da divisão Y é aproximadamente 16,67%.",
+            "why": "Retorno sobre vendas da divisão Y = lucro líquido ÷ vendas = 100.000 ÷ 600.000 = 0,1667, ou aproximadamente 16,67%. O denominador é a receita de vendas, não o ativo total. Interprete 16,67% como aproximadamente R$ 16,67 de lucro líquido para cada R$ 100 de vendas. Não significa R$ 16,67 para cada R$ 100 investidos; isso seria uma relação com investimento/ativo, não com vendas."
+          },
+          {
+            "a": true,
+            "q": "Na questão, as afirmações corretas são I, III e IV (alternativa B).",
+            "why": "As divisões apresentam ROI X = 25%, Y = 20% e Z ≈ 22,18%. Os retornos sobre vendas são Y ≈ 16,67% e Z ≈ 18,18%; os giros são 1,20 e 1,22. A combinação indicada pelo material é I, III e IV, alternativa B. A afirmativa III usa “capital de giro” de modo impreciso para se referir ao giro do ativo, conforme a nota de auditoria da aula."
+          },
+          {
+            "a": false,
+            "q": "O retorno sobre vendas de Y e Z é igual a 18%.",
+            "why": "O retorno sobre vendas de Y é 100.000 ÷ 600.000 = 16,67%. O de Z é 100.000 ÷ 550.000 = 18,18%. Portanto, não são iguais nem ambos equivalem a 18%. A diferença ocorre porque o lucro é igual, mas as receitas de vendas são diferentes. A margem de Z é maior porque, para o mesmo lucro líquido de R$ 100.000, suas vendas são menores que as de Y. A divisão do lucro pela receita deve ser feita individualmente para cada unidade de negócio."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.1, o estoque final em elaboração é $ 500.",
+            "why": "Os custos totais do período são R$ 2.500 de matéria-prima + R$ 1.500 de mão de obra direta + R$ 1.000 de custos indiretos = R$ 5.000. Esse valor será dividido pelas unidades equivalentes de produção para encontrar o custo equivalente. As 100 unidades equivalentes em elaboração são somadas às 900 unidades acabadas para chegar a 1.000 equivalentes totais. Essa conversão permite dividir os custos totais por uma base comparável de produção."
+          },
+          {
+            "a": false,
+            "q": "As 200 unidades em elaboração devem ser consideradas 200 unidades equivalentes completas.",
+            "why": "Duzentas unidades com 50% de acabamento equivalem a 100 unidades completas para o estágio de produção considerado: 200 × 0,50 = 100. A produção equivalente transforma produtos parcialmente acabados em uma quantidade comparável de unidades completas. O percentual de acabamento representa o trabalho já realizado. Metade do trabalho em 200 unidades equivale ao trabalho completo de 100 unidades; considerar as 200 como completas superestimaria a produção equivalente."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o ponto de equilíbrio é 2.000 unidades e R$ 1.200.000 de receita.",
+            "why": "O custo variável unitário é R$ 200 e o preço é R$ 600, então a margem de contribuição é R$ 400. Dividindo os custos fixos de R$ 800.000 por R$ 400, obtém-se 2.000 unidades. Multiplicando pelo preço, a receita no ponto de equilíbrio é 2.000 × 600 = R$ 1.200.000."
+          },
+          {
+            "a": true,
+            "q": "No custeio variável da questão CFC 2020.2, o resultado operacional é R$ 596.000.",
+            "why": "No custeio variável, a receita de R$ 1.600.000 é reduzida pelos custos variáveis de fabricação de R$ 264.000 e pelas despesas variáveis de venda de R$ 40.000, formando margem de R$ 1.296.000. Depois são deduzidos os gastos fixos de R$ 700.000, chegando ao resultado operacional de R$ 596.000."
+          },
+          {
+            "a": true,
+            "q": "Na questão 26, a divisão X tem ROI de 25%, superior ao de Y e Z.",
+            "why": "A divisão X tem margem líquida de 20% (100.000/500.000) e giro do ativo de 1,25. ROI = 20% × 1,25 = 25%. Y tem ROI de 20% e Z aproximadamente 22,18%, logo X apresenta o maior retorno sobre o ativo/investimento entre as três. A divisão X apresenta margem líquida de 20% e giro de 1,25, combinação que resulta em retorno de 25%. Compare sempre o produto margem × giro, pois lucro líquido igual não garante ROI igual."
+          },
+          {
+            "a": false,
+            "q": "Na questão 26, as divisões Y e Z têm a mesma margem líquida sobre vendas.",
+            "why": "A margem líquida de Y é 100.000 ÷ 600.000 = 16,67%. A de Z é 100.000 ÷ 550.000 = 18,18%. Como os denominadores são diferentes, os percentuais também são diferentes, mesmo com o mesmo lucro líquido. A diferença de margem decorre do volume de vendas: Y vende R$ 600.000 e Z vende R$ 550.000. O mesmo lucro dividido por denominadores diferentes produz percentuais diferentes."
+          },
+          {
+            "a": true,
+            "q": "Na questão 27, o custo total do período é R$ 5.000.",
+            "why": "O custo total do período é a soma dos três componentes de produção: matéria-prima R$ 2.500, mão de obra R$ 1.500 e custos indiretos R$ 1.000. Total = R$ 5.000. Depois, esse custo é dividido pela produção equivalente, não simplesmente pelas 1.100 unidades iniciadas."
+          },
+          {
+            "a": false,
+            "q": "Duzentas unidades com 50% de acabamento representam 200 unidades equivalentes.",
+            "why": "As 200 unidades estão apenas 50% concluídas, então representam 100 unidades equivalentes para o estágio considerado. Contar as 200 como totalmente prontas dobraria indevidamente o trabalho realizado e reduziria artificialmente o custo por unidade equivalente."
+          },
+          {
+            "a": true,
+            "q": "Na questão 27, o estoque em elaboração é R$ 500.",
+            "why": "O custo por unidade equivalente é R$ 5 (R$ 5.000 ÷ 1.000 unidades equivalentes). O estoque final em elaboração corresponde a 200 unidades com 50% de acabamento, ou 100 unidades equivalentes. Portanto, 100 × R$ 5 = R$ 500. Primeiro converta as 200 unidades parcialmente prontas em 100 unidades equivalentes. Como cada equivalente custa R$ 5, o estoque em elaboração absorve R$ 500 de custos de produção."
+          }
+        ],
+        "method": "Conferência individual das 21 assertivas e demonstrações: custo pleno 10+15+25+30 mil=80 mil, custo unitário 80 mil/500=160, margem de contribuição 600-200=400, ponto de equilíbrio 800 mil/400=2 mil, ROI e margens X,Y,Z e unidades equivalentes 200x50%=100 e estoque 100x5=500. Questões CFC revisadas didaticamente a partir dos dados disponíveis no material; cópia e gabarito oficial dependem de cotejo independente.",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 21
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:49:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "“Prova 2020.2 Resolvida - Parte 02.pdf”, questões Consulplan/CFC 2020.2, páginas 12 e 18; “Revisão de Véspera - Alunos.pdf”, questões 7 e 16, páginas 9 e 19.; Questão 26, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, páginas 14–16.; Questão 27, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, páginas 17–18.",
+        "topic_label": "13. Custeio pleno (RKW), custeio variável e ponto de equilíbrio",
+        "material_slug": "pcac-2026-contabilidade-13-custeio-rkw-variavel-ponto-equilibrio",
+        "cfc_official_exam_text_checked": false
       }
     },
     {
@@ -1510,11 +1964,237 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "14. Ativo imobilizado, depreciação, provisões e passivos contingentes",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "No exemplo, o valor residual de 15% sobre R$ 900.000 é R$ 135.000.",
+            "tip": "Primeiro calcule o residual; depois subtraia do custo. Não aplique a vida útil sobre o valor bruto sem verificar o residual.",
+            "why": "O valor residual corresponde a 15% do custo de R$ 900.000. Convertendo 15% em 0,15: 900.000 × 0,15 = R$ 135.000. Esse valor representa quanto se espera obter ao final da vida útil e deve ser retirado do custo para encontrar o valor depreciável. O residual não é depreciação: é a estimativa do valor que a empresa espera recuperar ao final da utilização do bem, já líquido dos custos de alienação. Por isso, ele é deduzido antes de calcular a despesa anual.",
+            "resolution_steps": [
+              "Identifique o custo: R$ 900.000.",
+              "Converta 15% em 0,15.",
+              "Multiplique 900.000 × 0,15.",
+              "Valor residual = R$ 135.000."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A depreciação anual do exemplo é R$ 90.000.",
+            "tip": "Fórmula: (custo − residual) ÷ vida útil.",
+            "why": "O valor depreciável é R$ 900.000 − R$ 135.000 = R$ 765.000. Dividindo por dez anos, a depreciação anual é R$ 76.500, e não R$ 90.000. O valor residual não é depreciado porque representa o valor estimado recuperável ao final da vida útil. Se a empresa dividisse R$ 900.000 por dez anos, ignoraria os R$ 135.000 que se espera recuperar no fim da vida útil. A base depreciável correta é R$ 765.000, resultando em R$ 76.500 por ano.",
+            "resolution_steps": [
+              "Calcule o residual: R$ 135.000.",
+              "Calcule o valor depreciável: 900.000 − 135.000 = R$ 765.000.",
+              "Divida por 10 anos.",
+              "Depreciação anual = R$ 76.500; afirmação errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "A depreciação de nove meses no exemplo é R$ 57.375.",
+            "tip": "Depois da depreciação anual, multiplique pelos meses do período e divida por 12.",
+            "why": "A depreciação anual é R$ 76.500. A máquina ficou disponível para uso em abril e a questão considera nove meses até dezembro. Assim, 76.500 × 9/12 = R$ 57.375. A depreciação começa quando o ativo está disponível para uso, não simplesmente quando é comprado.",
+            "resolution_steps": [
+              "Calcule depreciação anual: R$ 76.500.",
+              "Conte o período considerado: 9 meses.",
+              "Multiplique 76.500 × 9/12.",
+              "Depreciação do período = R$ 57.375."
+            ]
+          },
+          {
+            "a": true,
+            "q": "A reserva para contingências é uma conta do Patrimônio Líquido.",
+            "tip": "Reserva = PL; provisão = passivo. A palavra “contingência” aparece nos dois nomes, mas a natureza é diferente.",
+            "why": "Reserva para contingências é uma reserva de lucros dentro do Patrimônio Líquido. Ela representa destinação de parte do lucro para compensar, em exercício futuro, diminuição de resultado decorrente de perda considerada provável. Não representa dívida ou obrigação presente perante terceiro, por isso não é passivo.",
+            "resolution_steps": [
+              "Identifique que o item é reserva para contingências.",
+              "Verifique sua origem: destinação de lucro.",
+              "Classifique no Patrimônio Líquido.",
+              "Não classifique como passivo."
+            ]
+          },
+          {
+            "a": true,
+            "q": "No exemplo FLAME, perda provável de R$ 20.000 sem provisão anterior requer constituir provisão de R$ 20.000.",
+            "tip": "Provável + obrigação presente + estimativa confiável = reconhecer provisão.",
+            "why": "O processo 2 apresenta perda provável de R$ 20.000 e não há provisão registrada. Atendidos os requisitos de obrigação presente e estimativa confiável, deve-se constituir provisão pelo valor estimado de R$ 20.000. O reconhecimento exige os critérios do CPC 25, não apenas a existência de uma ação judicial.",
+            "resolution_steps": [
+              "Identifique a probabilidade: provável.",
+              "Confira se existe obrigação presente decorrente de evento passado.",
+              "Confira se há estimativa confiável: R$ 20.000.",
+              "Como não existe provisão anterior, constitua R$ 20.000."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o ativo circulante diminui R$ 1.505.000.",
+            "tip": "Separe caixa e estoque. O pagamento de passivo reduz caixa e não reduz o estoque.",
+            "why": "A variação do caixa é −R$ 1.550.000 após considerar recebimentos de vendas e desembolsos informados. Os estoques aumentam R$ 45.000, pois compras de R$ 175.000 menos CMV de R$ 130.000 deixam saldo adicional. Somando as variações do ativo circulante: −1.550.000 + 45.000 = −R$ 1.505.000.",
+            "resolution_steps": [
+              "Calcule a variação do caixa conforme os recebimentos e pagamentos: −R$ 1.550.000.",
+              "Calcule a variação do estoque: 175.000 − 130.000 = +R$ 45.000.",
+              "Some as duas variações: −1.550.000 + 45.000.",
+              "Ativo circulante diminui R$ 1.505.000."
+            ]
+          },
+          {
+            "a": false,
+            "q": "O terreno adquirido para valorização de capital no longo prazo é estoque circulante.",
+            "tip": "Estoque é para venda no curso normal; imóvel para aluguel ou valorização é propriedade para investimento.",
+            "why": "O terreno foi adquirido para valorização de capital no longo prazo, não para revenda no curso normal das atividades. Por isso, não é estoque. É propriedade para investimento, classificada no ativo não circulante, conforme a norma aplicável. O terreno para valorização não é mercadoria adquirida para revenda no ciclo normal da atividade. A finalidade de manter o imóvel para obter valorização ou aluguel conduz à classificação como propriedade para investimento, no ativo não circulante.",
+            "resolution_steps": [
+              "Leia a finalidade do terreno: valorização de longo prazo.",
+              "Verifique se é mantido para venda no curso normal dos negócios.",
+              "Como não é, descarte estoque.",
+              "Classifique como propriedade para investimento no ativo não circulante."
+            ]
+          },
+          {
+            "a": true,
+            "q": "O desgaste pelo uso é uma causa de depreciação.",
+            "tip": "Máquina, veículo e computador são bens tangíveis: pense em depreciação.",
+            "why": "O desgaste pelo uso reduz a capacidade de serviço de um ativo tangível ao longo do tempo. É uma das causas de depreciação, junto com ação da natureza e obsolescência. O valor depreciável é apropriado sistematicamente durante a vida útil estimada. A depreciação representa a alocação sistemática do valor depreciável durante a vida útil estimada. O desgaste físico é um dos fatores que consomem os benefícios econômicos futuros do bem e deve ser considerado na estimativa.",
+            "resolution_steps": [
+              "Identifique o bem: ativo tangível.",
+              "Identifique o fator: desgaste pelo uso.",
+              "Reconheça que o desgaste consome benefícios econômicos futuros.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": true,
+            "q": "A ação da natureza pode contribuir para a depreciação de um bem.",
+            "tip": "Depreciação não decorre só do uso: tempo, ambiente e obsolescência também contam.",
+            "why": "A ação da natureza, como chuva, sol, umidade e corrosão, pode reduzir a vida útil e os benefícios econômicos de um ativo tangível. Isso é considerado na estimativa de vida útil e na depreciação, mesmo quando o desgaste não decorre diretamente da operação da máquina.",
+            "resolution_steps": [
+              "Identifique o agente natural.",
+              "Relacione-o à deterioração do bem tangível.",
+              "Considere o efeito na vida útil e nos benefícios futuros.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A amortização de um intangível é uma causa de depreciação de um item do imobilizado.",
+            "tip": "Tangível = depreciação; intangível com vida útil definida = amortização; recurso natural = exaustão.",
+            "why": "Amortização é o procedimento aplicado, em regra, a ativos intangíveis com vida útil definida, como patentes e licenças. Depreciação é a apropriação do valor depreciável de ativos imobilizados tangíveis, como máquinas e veículos. São procedimentos distintos e não se confundem.",
+            "resolution_steps": [
+              "Identifique o termo usado: amortização.",
+              "Relacione-o a ativo intangível.",
+              "A questão trata de causa de depreciação do imobilizado.",
+              "A afirmação está errada."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Um equipamento pode sofrer obsolescência mesmo que ainda funcione.",
+            "tip": "Um equipamento pode funcionar e ainda assim ficar ultrapassado.",
+            "why": "Obsolescência é a perda de utilidade econômica causada por tecnologia mais moderna, mudanças no mercado ou redução da demanda, mesmo que o equipamento ainda funcione. Por isso, pode reduzir a vida útil econômica estimada e afetar a depreciação. A obsolescência pode reduzir a vida útil econômica mesmo antes de o equipamento deixar de funcionar. Uma máquina pode operar, mas tornar-se antieconômica ou inadequada diante de uma tecnologia mais eficiente.",
+            "resolution_steps": [
+              "Identifique se o equipamento ainda funciona.",
+              "Verifique se perdeu utilidade econômica por tecnologia ou mercado.",
+              "Obsolescência é fator de vida útil e depreciação.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão 21 do CFC 2020.1, a alternativa EXCETO é a letra C.",
+            "tip": "Quando aparecer EXCETO, procure o item que pertence a outra classe de ativo.",
+            "why": "A questão pede a alternativa EXCETO. Desgaste pelo uso, ação da natureza e obsolescência são fatores que podem causar depreciação. Amortização do intangível é outro procedimento contábil, aplicado a ativos intangíveis com vida útil definida; por isso, a alternativa C é a exceção.",
+            "resolution_steps": [
+              "Leia o comando EXCETO.",
+              "Classifique desgaste, natureza e obsolescência como fatores de depreciação.",
+              "Identifique amortização como procedimento de intangível.",
+              "Marque C."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, a depreciação de 2019 da máquina é R$ 57.375.",
+            "tip": "Use a sequência: residual → depreciável → anual → proporcional ao tempo.",
+            "why": "O custo de R$ 900.000 menos o residual de R$ 135.000 resulta em R$ 765.000 depreciáveis. Dividindo por dez anos, são R$ 76.500 ao ano. Como a máquina ficou disponível para uso em abril e a questão considera nove meses, a despesa de 2019 é R$ 57.375. A máquina ficou disponível para uso em abril. A questão considera nove meses de utilização no exercício: depreciação anual de R$ 76.500 × 9/12 = R$ 57.375. A contagem do período deve seguir os dados e a convenção do enunciado.",
+            "resolution_steps": [
+              "Calcule residual: 900.000 × 15% = R$ 135.000.",
+              "Calcule depreciável: 900.000 − 135.000 = R$ 765.000.",
+              "Depreciação anual: 765.000 ÷ 10 = R$ 76.500.",
+              "Aplique 9/12: R$ 57.375."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, a provisão do processo 1 deve ser complementada em R$ 10.000.",
+            "tip": "Compare sempre a estimativa atual com o saldo já provisionado. Registre apenas o complemento ou a reversão necessária.",
+            "why": "A perda provável estimada para o processo 1 é R$ 35.000, mas já existe provisão de R$ 25.000. A empresa não precisa reconhecer novamente os R$ 35.000 inteiros; deve complementar apenas a diferença: 35.000 − 25.000 = R$ 10.000. O ajuste é somente a diferença entre a estimativa atual e o valor já reconhecido. A provisão final necessária é R$ 35.000; como R$ 25.000 já estão contabilizados, o lançamento adicional é de R$ 10.000.",
+            "resolution_steps": [
+              "Identifique a estimativa atual: R$ 35.000.",
+              "Identifique a provisão existente: R$ 25.000.",
+              "Subtraia 35.000 − 25.000.",
+              "Complemento necessário = R$ 10.000."
+            ]
+          },
+          {
+            "a": false,
+            "q": "Uma perda possível exige reconhecer provisão no passivo.",
+            "tip": "Provável reconhece; possível divulga; remota, em regra, não divulga.",
+            "why": "Uma perda possível não atende ao requisito de saída provável para reconhecimento de provisão. A entidade não reconhece provisão, mas divulga passivo contingente em nota explicativa, salvo se a possibilidade de saída de recursos for remota. A questão está errada ao afirmar que toda perda possível exige provisão.",
+            "resolution_steps": [
+              "Identifique a probabilidade: possível.",
+              "Confira se há saída provável: não.",
+              "Não reconheça provisão.",
+              "Divulgue passivo contingente, salvo se a possibilidade for remota."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o processo 3 deve ter sua provisão de R$ 40.000 revertida.",
+            "tip": "Quando a probabilidade muda de provável para possível, reavalie a provisão e reverta o saldo que não atende mais ao CPC 25.",
+            "why": "O processo 3 passou a ter perda possível, não provável. Assim, a provisão de R$ 40.000 anteriormente registrada deixa de atender aos critérios de reconhecimento e deve ser revertida. A contingência passa a ser divulgada como passivo contingente, salvo se a saída for remota.",
+            "resolution_steps": [
+              "Identifique a provisão anterior: R$ 40.000.",
+              "Verifique a nova avaliação: perda possível.",
+              "Conclua que não cabe manter provisão para perda apenas possível.",
+              "Reverta a provisão e avalie divulgação em nota."
+            ]
+          },
+          {
+            "a": true,
+            "q": "Desgaste pelo uso, ação da natureza e obsolescência podem justificar depreciação.",
+            "tip": "Lembre dos três fatores: uso, natureza e obsolescência.",
+            "why": "Desgaste pelo uso, ação da natureza e obsolescência são fatores que reduzem os benefícios econômicos ou a capacidade de serviço de um ativo tangível. Todos podem influenciar a vida útil estimada e a depreciação. A afirmação reúne corretamente as três causas.",
+            "resolution_steps": [
+              "Identifique os três fatores citados.",
+              "Relacione cada um à redução da utilidade do ativo tangível.",
+              "Conclua que todos podem justificar depreciação.",
+              "A afirmação está correta."
+            ]
+          },
+          {
+            "a": false,
+            "q": "A amortização do intangível é uma causa de depreciação de um bem do imobilizado.",
+            "tip": "Patente = amortização; veículo = depreciação.",
+            "why": "Amortização e depreciação não são sinônimos. Amortização é aplicada a ativos intangíveis com vida útil definida, enquanto depreciação é aplicada a ativos imobilizados tangíveis. Por exemplo, uma patente é amortizada; um veículo é depreciado. Amortização não é causa de depreciação. Uma licença ou patente com vida útil definida é amortizada; um veículo, máquina ou computador é depreciado. A questão mistura termos aplicados a classes diferentes de ativos.",
+            "resolution_steps": [
+              "Identifique a classe do ativo intangível.",
+              "Associe amortização ao intangível.",
+              "Associe depreciação ao imobilizado tangível.",
+              "A afirmação está errada."
+            ]
+          }
+        ],
+        "method": "Revisão individual de 18 itens: CPC 27 sobre custo, vida útil, residual de 15% de 900000 =135000 e depreciação de nove meses de 76500 x 9/12 =57375; CPC 25 sobre provisão provável, contingência possível, complementação de 10000, reversão de 40000 e distinção de amortização e depreciação.",
         "status": "reviewed",
-        "review_date": "2026-11-14",
-        "items_checked": 18
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:48:32Z",
+        "review_type": "didactic_manual",
+        "source_note": "“Resumo - Contabilidade Geral.pdf”, itens 115–145 e 137–141, páginas 21–26; “Revisão de Véspera - Alunos.pdf”, questões Consulplan/CFC 2020.2, páginas 13 e 21–22.; Questão 21, Consulplan/Exame CFC 2020.1, Prova 2020.1 - Resolvida - Parte 03.pdf, página 5; resposta explicada por distinção contábil entre depreciação e amortização.; Questão 21, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, página 5.",
+        "topic_label": "14. Ativo imobilizado, depreciação, provisões e passivos contingentes",
+        "material_slug": "pcac-2026-contabilidade-14-imobilizado-depreciacao-provisoes-contingencias",
+        "reference_urls": [
+          "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=58",
+          "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=56"
+        ]
       }
     },
     {
@@ -1569,9 +2249,9 @@
         },
         {
           "a": true,
-          "q": "O valor adicionado a distribuir na questão é R$ 189.900. ",
+          "q": "Na questão CFC 2020.1, o valor adicionado total a distribuir é R$ 189.900.",
           "tip": "Capital próprio e empréstimos = financiamento.",
-          "why": "A emissão de ações altera o capital próprio e o recebimento de empréstimos altera o capital de terceiros. Ambos são fluxos de financiamento porque modificam a estrutura de financiamento da entidade, não representam recebimentos de clientes nem aquisição/venda de ativos de longo prazo.",
+          "why": "Correto. Na DVA da questão, a receita bruta de R$ 328.000 menos o custo dos produtos vendidos de R$ 146.600 gera R$ 181.400 de valor adicionado bruto. Deduzindo a retenção por depreciação de R$ 8.000, restam R$ 173.400 de valor adicionado líquido produzido. A receita financeira de R$ 16.500 é valor recebido em transferência: R$ 173.400 + R$ 16.500 = R$ 189.900 a distribuir. Não confunda a DVA com os fluxos de financiamento da DFC.",
           "resolution_steps": [
             "Identifique emissão de ações: entrada de capital próprio.",
             "Identifique empréstimo: entrada de capital de terceiros.",
@@ -1766,12 +2446,118 @@
       "discipline": "Contabilidade Geral",
       "topic_label": "15. Demonstração dos Fluxos de Caixa e Demonstração do Valor Adicionado",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
+        "items": [
+          {
+            "a": true,
+            "q": "A DFC evidencia a variação de caixa e equivalentes de caixa.",
+            "why": "A DFC evidencia as entradas e saídas de caixa e equivalentes de caixa e explica a variação ocorrida no período. Ela não é a mesma coisa que a DRE: a DRE segue o regime de competência e reconhece receitas e despesas; a DFC mostra fluxos de caixa efetivos."
+          },
+          {
+            "a": true,
+            "q": "A DFC possui fluxos operacionais, de investimento e de financiamento.",
+            "why": "A DFC separa os fluxos em três grupos: operacionais, de investimento e de financiamento. A classificação ajuda a entender se o caixa veio da atividade normal, da compra/venda de ativos de longo prazo ou de operações com capital próprio e de terceiros."
+          },
+          {
+            "a": true,
+            "q": "No método indireto, o resumo indica começar pelo lucro líquido e ajustar itens sem efeito caixa.",
+            "why": "No método indireto, a demonstração parte do lucro ou prejuízo e faz ajustes para converter o resultado por competência em fluxo de caixa operacional. São ajustadas despesas sem desembolso, como depreciação, e variações de ativos e passivos operacionais, como clientes, estoques e fornecedores."
+          },
+          {
+            "a": false,
+            "q": "A aquisição de imobilizado é exemplo de atividade operacional.",
+            "why": "A aquisição de imobilizado representa aplicação de recursos em ativo de longo prazo e, por isso, é fluxo de investimento. A atividade operacional envolve as principais atividades geradoras de receita, como recebimentos de clientes e pagamentos a fornecedores e empregados."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.1, o valor adicionado total a distribuir é R$ 189.900.",
+            "why": "Correto. Na DVA da questão, a receita bruta de R$ 328.000 menos o custo dos produtos vendidos de R$ 146.600 gera R$ 181.400 de valor adicionado bruto. Deduzindo a retenção por depreciação de R$ 8.000, restam R$ 173.400 de valor adicionado líquido produzido. A receita financeira de R$ 16.500 é valor recebido em transferência: R$ 173.400 + R$ 16.500 = R$ 189.900 a distribuir. Não confunda a DVA com os fluxos de financiamento da DFC."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.1, a receita financeira de R$ 16.500 é valor adicionado recebido em transferência.",
+            "why": "Na DVA, a receita financeira é valor adicionado recebido em transferência. No exemplo, o valor adicionado líquido produzido é R$ 173.400; somando a receita financeira de R$ 16.500, chega-se ao total a distribuir de R$ 189.900. A DVA separa a riqueza gerada pela própria entidade da riqueza recebida de terceiros. Receita financeira integra o segundo grupo e não deve ser confundida com receita de venda de mercadorias ou serviços."
+          },
+          {
+            "a": false,
+            "q": "Na questão 30, o aluguel deve ser subtraído junto com o CMV para calcular o valor adicionado bruto.",
+            "why": "Salários são distribuição ao pessoal e aluguéis são remuneração de capitais de terceiros. Eles aparecem na etapa de distribuição do valor adicionado, não como insumos adquiridos de terceiros para calcular o valor adicionado bruto. O CMV e os demais insumos externos são deduzidos na formação da riqueza."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.1, as atividades operacionais e de investimento consomem caixa.",
+            "why": "No método indireto, o fluxo operacional é −R$ 13.300. Nas atividades de investimento, venda de imobilizado de R$ 23.000 menos aquisição de R$ 42.500 resulta em −R$ 19.500. Os dois grupos consumiram caixa; as atividades de financiamento geraram entrada líquida de recursos."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o resultado financeiro líquido por competência em 2019 é positivo em R$ 37.250.",
+            "why": "Pelo regime de competência, entram no resultado de dezembro os juros que pertencem a dezembro, mesmo que ainda não tenham sido pagos ou recebidos. Juros passivos: 18.750 + 24.000 = R$ 42.750. Juros ativos: 50.000 + 30.000 = R$ 80.000. Resultado líquido: 80.000 − 42.750 = R$ 37.250 positivo."
+          },
+          {
+            "a": false,
+            "q": "Juros relativos a janeiro de 2020 devem entrar na DRE de 2019 se foram pagos/recebidos em 2019.",
+            "why": "Os juros relativos a janeiro de 2020 pertencem ao exercício de 2020, ainda que tenham sido pagos ou recebidos antecipadamente em 2019. Pelo regime de competência, receitas e despesas são reconhecidas no período a que se referem, não simplesmente na data do caixa."
+          },
+          {
+            "a": true,
+            "q": "Na questão CFC 2020.2, o resultado bruto após a devolução de 30% é R$ 14.000.",
+            "why": "Após a devolução de 30%, a receita bruta cai R$ 30.000 e o ICMS correspondente é revertido em R$ 6.000. Receita líquida: 100.000 − 30.000 − 20.000 + 6.000 = R$ 56.000. CMV líquido: 60.000 − 18.000 = R$ 42.000. Resultado bruto: R$ 14.000. A devolução também exige reversão proporcional do custo da mercadoria que retornou ao estoque. Se o percentual de devolução for 30%, reduza o CMV em 30% e ajuste o tributo correspondente, conforme os dados do enunciado."
+          },
+          {
+            "a": false,
+            "q": "Na questão 30 do CFC 2020.1, o ICMS/faturamento de R$ 59.040 é deduzido da receita bruta antes de calcular o valor adicionado bruto.",
+            "why": "Na DVA, as receitas são apresentadas pelo valor bruto, incluindo tributos incidentes sobre as vendas, como ICMS, IPI, PIS e Cofins. Esses tributos representam parcela da riqueza distribuída ao governo e aparecem no bloco de distribuição. Por isso, não se deduz o ICMS de R$ 59.040 da receita bruta ao calcular o valor adicionado bruto."
+          },
+          {
+            "a": true,
+            "q": "O valor adicionado bruto da questão 30 é R$ 181.400.",
+            "why": "O valor adicionado bruto da questão é receita bruta de R$ 328.000 menos CMV de R$ 146.600, totalizando R$ 181.400. O ICMS/faturamento não é retirado dessa etapa da DVA: ele será apresentado na distribuição ao governo. Não confunda o valor adicionado bruto com o lucro bruto da DRE, calculado sobre receita líquida. O ICMS sobre vendas não é deduzido na DVA antes do valor adicionado bruto: as receitas entram pelo valor bruto e os tributos incidentes são apresentados na distribuição ao governo."
+          },
+          {
+            "a": true,
+            "q": "A depreciação de R$ 8.000 é deduzida para chegar ao valor adicionado líquido produzido.",
+            "why": "A depreciação é uma retenção na DVA. Ela reduz o valor adicionado bruto para chegar ao valor adicionado líquido produzido pela entidade. No exemplo: R$ 181.400 − R$ 8.000 = R$ 173.400. A retenção representa consumo do potencial de serviço dos ativos utilizados na produção da riqueza. Depois dessa dedução, some as receitas recebidas em transferência para chegar ao valor adicionado total a distribuir."
+          },
+          {
+            "a": true,
+            "q": "A receita financeira de R$ 16.500 é valor adicionado recebido em transferência.",
+            "why": "Receitas financeiras são valor adicionado recebido em transferência, pois representam riqueza gerada por terceiros e transferida à entidade. Elas são somadas ao valor adicionado líquido produzido. No exercício, R$ 173.400 + R$ 16.500 = R$ 189.900. Esse valor não deve ser subtraído como despesa operacional na formação do valor adicionado. Ele é uma riqueza produzida fora da entidade e transferida para ela, por isso entra no grupo de valores recebidos em transferência."
+          },
+          {
+            "a": true,
+            "q": "Na questão 30 do CFC 2020.1, o valor adicionado a distribuir é R$ 189.900, alternativa D.",
+            "why": "O valor adicionado total a distribuir é R$ 189.900: receita bruta R$ 328.000 menos CMV R$ 146.600 = valor adicionado bruto R$ 181.400; menos depreciação R$ 8.000 = R$ 173.400; mais receita financeira R$ 16.500 = R$ 189.900. O cálculo de R$ 130.860 deduz indevidamente o ICMS sobre vendas antes de calcular o valor adicionado bruto."
+          },
+          {
+            "a": true,
+            "q": "Na questão 32, o aumento de clientes de R$ 18.000 é subtraído no fluxo operacional.",
+            "why": "No método indireto, o aumento de clientes significa que parte da receita reconhecida ainda não entrou no caixa. Por isso, subtrai-se o aumento de R$ 18.000 do lucro líquido ao calcular o fluxo operacional. O aumento de clientes é um aumento de contas a receber. A DRE já reconheceu a receita, mas a DFC ainda não recebeu o dinheiro; por isso o aumento do saldo é retirado do lucro no método indireto."
+          },
+          {
+            "a": true,
+            "q": "Na questão 32, a depreciação de R$ 8.000 é somada ao lucro líquido no método indireto.",
+            "why": "A depreciação reduziu o lucro líquido, mas não provocou pagamento em dinheiro naquele momento. No método indireto, ela é somada de volta para retirar do lucro o efeito de uma despesa sem efeito caixa. A depreciação não é entrada de dinheiro; é apenas um ajuste de reconciliação."
+          },
+          {
+            "a": false,
+            "q": "Na questão 32, as atividades de investimento geraram caixa de R$ 19.500.",
+            "why": "A compra de imobilizado é saída de caixa para adquirir ativo de longo prazo, portanto pertence às atividades de investimento. No exercício, as aquisições de R$ 42.500 superam as vendas de R$ 23.000, gerando fluxo líquido negativo de R$ 19.500. O fluxo líquido negativo significa que a empresa gastou mais comprando ativos de longo prazo do que recebeu com vendas desses ativos. O sinal negativo indica consumo de caixa, não geração."
+          },
+          {
+            "a": true,
+            "q": "Na questão 32, as atividades operacionais e de investimento consumiram caixa.",
+            "why": "As atividades operacionais resultam em consumo de R$ 13.300 e as de investimento em consumo de R$ 19.500. Já o financiamento apresenta entradas de capital, empréstimos e duplicatas descontadas conforme o enquadramento do enunciado. Assim, a afirmação está correta."
+          }
+        ],
+        "method": "Conferência individual de 20 assertivas: DFC operacional/investimento/financiamento conforme CPC 03, DVA conforme CPC 09, valor adicionado 328000-146600-8000+16500=189900, juros por competência 80000-42750=37250, devolução 56000-42000=14000, investimento 23000-42500=-19500 e ajuste indireto de clientes e depreciação. Fonte da prova CFC ainda exige cotejo oficial separado.",
         "status": "reviewed",
-        "checked_at": "2026-11-15T05:00:44.000775+00:00",
-        "review_date": "2026-11-14",
-        "items_checked": 20
+        "subject": "Contabilidade Geral",
+        "version": 1,
+        "checked_at": "2026-11-21T18:49:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "“Resumo - Contabilidade Geral.pdf”, itens 157–167, páginas 29–32.; Questão 30, Consulplan/Exame CFC 2020.1, Prova 2020.1 - Resolvida - Parte 03.pdf, páginas 21–22; resolução conferida com a DRE original.; Questão 32, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, páginas 24–25.",
+        "topic_label": "15. Demonstração dos Fluxos de Caixa e Demonstração do Valor Adicionado",
+        "material_slug": "pcac-2026-contabilidade-15-dfc-dva-fluxos-caixa-demonstracoes",
+        "cfc_official_exam_text_checked": false
       }
     },
     {
@@ -2039,119 +2825,268 @@
           {
             "a": true,
             "q": "A reserva legal indicada no resumo corresponde a 5% do lucro líquido antes de qualquer destinação.",
-            "why": "A reserva legal corresponde, em regra, a 5% do lucro líquido do exercício antes de qualquer outra destinação. A constituição deve respeitar o teto de 20% do capital social. Portanto, não basta calcular 5%: também é necessário conferir se há espaço até o limite legal."
+            "tip": "Primeiro calcule 5% do lucro; depois confira o teto de 20% do capital social.",
+            "why": "A reserva legal corresponde, em regra, a 5% do lucro líquido do exercício antes de qualquer outra destinação. A constituição deve respeitar o teto de 20% do capital social. Portanto, não basta calcular 5%: também é necessário conferir se há espaço até o limite legal.",
+            "resolution_steps": [
+              "Identifique o lucro líquido do exercício.",
+              "Multiplique o lucro por 5%.",
+              "Confira o saldo atual da reserva legal e o teto de 20% do capital social.",
+              "Constitua o valor que couber no limite."
+            ]
           },
           {
             "a": true,
             "q": "O limite obrigatório apresentado para a reserva legal é 20% do capital social.",
-            "why": "O art. 193 da Lei nº 6.404/1976 fixa em 20% do capital social o limite obrigatório da reserva legal. Não é 20% do lucro líquido. Os 5% incidem sobre o lucro; os 20% servem como teto da reserva em relação ao capital social. O capital social é a base do teto, pois a lei busca preservar a integridade do capital da companhia. A reserva legal existente deve ser comparada com esse limite para saber se ainda há espaço para novas destinações."
+            "tip": "Não confunda as bases: 5% × lucro líquido; 20% × capital social.",
+            "why": "O art. 193 da Lei nº 6.404/1976 fixa em 20% do capital social o limite obrigatório da reserva legal. Não é 20% do lucro líquido. Os 5% incidem sobre o lucro; os 20% servem como teto da reserva em relação ao capital social. O capital social é a base do teto, pois a lei busca preservar a integridade do capital da companhia. A reserva legal existente deve ser comparada com esse limite para saber se ainda há espaço para novas destinações.",
+            "resolution_steps": [
+              "Identifique a base do limite: capital social.",
+              "Multiplique o capital por 20%.",
+              "Compare o resultado com o saldo da reserva legal.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": true,
             "q": "Com capital social integralizado de R$ 70.400, o limite de 20% é R$ 14.080.",
-            "why": "O limite obrigatório é 20% de R$ 70.400, ou seja, R$ 14.080. Esse valor é o teto da reserva legal, não o montante que deve ser constituído no exercício. Para calcular a parcela anual, use 5% do lucro líquido e compare com o espaço disponível até o teto."
+            "tip": "20% de capital é teto; 5% de lucro é a constituição anual.",
+            "why": "O limite obrigatório é 20% de R$ 70.400, ou seja, R$ 14.080. Esse valor é o teto da reserva legal, não o montante que deve ser constituído no exercício. Para calcular a parcela anual, use 5% do lucro líquido e compare com o espaço disponível até o teto.",
+            "resolution_steps": [
+              "Anote capital social: R$ 70.400.",
+              "Calcule 70.400 × 0,20.",
+              "Resultado: R$ 14.080.",
+              "Não confunda o teto com a parcela anual de 5%."
+            ]
           },
           {
             "a": false,
             "q": "Na questão enviada, a reserva legal a constituir é R$ 5.760.",
-            "why": "A reserva legal do exercício é 5% × R$ 57.600 = R$ 2.880. A reserva existente de R$ 6.400, somada à nova parcela, chega a R$ 9.280, abaixo do limite de R$ 14.080. Logo, não se constitui R$ 5.760; a parcela correta é R$ 2.880. A reserva legal do exercício é limitada ao valor que falta para atingir 20% do capital social. No exemplo, a parcela de 5% do lucro é R$ 2.880 e o espaço disponível é R$ 7.680; portanto, cabe constituir os R$ 2.880, e não R$ 5.760."
+            "tip": "Aplique 5% ao lucro líquido, não ao saldo da reserva ou ao capital.",
+            "why": "A reserva legal do exercício é 5% × R$ 57.600 = R$ 2.880. A reserva existente de R$ 6.400, somada à nova parcela, chega a R$ 9.280, abaixo do limite de R$ 14.080. Logo, não se constitui R$ 5.760; a parcela correta é R$ 2.880. A reserva legal do exercício é limitada ao valor que falta para atingir 20% do capital social. No exemplo, a parcela de 5% do lucro é R$ 2.880 e o espaço disponível é R$ 7.680; portanto, cabe constituir os R$ 2.880, e não R$ 5.760.",
+            "resolution_steps": [
+              "Calcule 5% de R$ 57.600: R$ 2.880.",
+              "Some à reserva existente: 6.400 + 2.880 = R$ 9.280.",
+              "Compare com o teto: R$ 14.080.",
+              "A afirmação de R$ 5.760 está errada."
+            ]
           },
           {
             "a": false,
             "q": "Reserva para contingências e provisão para contingências são classificadas no mesmo grupo patrimonial.",
-            "why": "Reserva para contingências é destinação de lucro no patrimônio líquido; provisão para contingências é passivo reconhecido quando há obrigação presente, saída provável e estimativa confiável. Embora os nomes sejam parecidos, representam fatos contábeis diferentes e aparecem em grupos patrimoniais distintos."
+            "tip": "Reserva = PL; provisão = passivo.",
+            "why": "Reserva para contingências é destinação de lucro no patrimônio líquido; provisão para contingências é passivo reconhecido quando há obrigação presente, saída provável e estimativa confiável. Embora os nomes sejam parecidos, representam fatos contábeis diferentes e aparecem em grupos patrimoniais distintos.",
+            "resolution_steps": [
+              "Identifique se o item é reserva ou provisão.",
+              "Reserva é destinação do lucro e fica no PL.",
+              "Provisão reconhece obrigação e fica no passivo.",
+              "A afirmação de que pertencem ao mesmo grupo está errada."
+            ]
           },
           {
             "a": true,
             "q": "A reserva legal corresponde, em regra, a 5% do lucro líquido do exercício, antes de qualquer destinação.",
-            "why": "A regra geral do art. 193 é aplicar 5% do lucro líquido antes de qualquer destinação à reserva legal, respeitando o teto de 20% do capital social. Se a reserva já estiver próxima do limite, a parcela efetiva pode ser menor que 5% do lucro. A regra dos 5% é aplicada ao lucro líquido do exercício antes de outras destinações, mas a constituição para quando o teto legal for atingido. O limite de 20% do capital social e a faculdade de 30% com reservas de capital são regras distintas."
+            "tip": "A expressão “antes de qualquer outra destinação” é pista da reserva legal.",
+            "why": "A regra geral do art. 193 é aplicar 5% do lucro líquido antes de qualquer destinação à reserva legal, respeitando o teto de 20% do capital social. Se a reserva já estiver próxima do limite, a parcela efetiva pode ser menor que 5% do lucro. A regra dos 5% é aplicada ao lucro líquido do exercício antes de outras destinações, mas a constituição para quando o teto legal for atingido. O limite de 20% do capital social e a faculdade de 30% com reservas de capital são regras distintas.",
+            "resolution_steps": [
+              "Identifique lucro líquido do exercício.",
+              "Calcule 5%.",
+              "Confira o teto de 20% do capital social.",
+              "Conclua que a regra é geral, sujeita aos limites legais."
+            ]
           },
           {
             "a": false,
             "q": "A reserva legal pode ultrapassar o limite de 20% do capital social sem qualquer restrição.",
-            "why": "A reserva legal não pode ultrapassar 20% do capital social. A lei também prevê uma faculdade de não constituir a reserva em determinado exercício quando a soma do saldo da reserva legal com as reservas de capital previstas no art. 182, § 1º, exceder 30% do capital. Isso não autoriza ultrapassar o teto de 20% da reserva legal."
+            "tip": "20% é teto da reserva legal; 30% é condição facultativa que soma reserva legal e reservas de capital.",
+            "why": "A reserva legal não pode ultrapassar 20% do capital social. A lei também prevê uma faculdade de não constituir a reserva em determinado exercício quando a soma do saldo da reserva legal com as reservas de capital previstas no art. 182, § 1º, exceder 30% do capital. Isso não autoriza ultrapassar o teto de 20% da reserva legal.",
+            "resolution_steps": [
+              "Identifique o teto obrigatório da reserva legal: 20% do capital.",
+              "Identifique separadamente a faculdade de 30%.",
+              "A faculdade não elimina o teto de 20%.",
+              "A afirmação está errada."
+            ]
           },
           {
             "a": true,
             "q": "A companhia pode deixar de constituir reserva legal no exercício quando o saldo dessa reserva, somado às reservas de capital, exceder 30% do capital social.",
-            "why": "O art. 193, § 1º, permite deixar de constituir a reserva legal no exercício em que o saldo da reserva legal acrescido das reservas de capital indicadas na lei exceder 30% do capital social. É uma faculdade legal e não um novo teto obrigatório da reserva legal isoladamente."
+            "tip": "Atenção à palavra “poderá”: trata-se de faculdade, não obrigação.",
+            "why": "O art. 193, § 1º, permite deixar de constituir a reserva legal no exercício em que o saldo da reserva legal acrescido das reservas de capital indicadas na lei exceder 30% do capital social. É uma faculdade legal e não um novo teto obrigatório da reserva legal isoladamente.",
+            "resolution_steps": [
+              "Some saldo da reserva legal e reservas de capital abrangidas pela lei.",
+              "Compare com 30% do capital social.",
+              "Se exceder, a companhia poderá deixar de constituir a reserva naquele exercício.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": true,
             "q": "A reserva legal tem por finalidade assegurar a integridade do capital social.",
-            "why": "A finalidade legal da reserva é assegurar a integridade do capital social. Ela só pode ser utilizada para compensar prejuízos ou aumentar o capital, conforme art. 193, § 2º, da Lei das S.A. Não é uma reserva livre para distribuir dividendos ordinários."
+            "tip": "Finalidade da reserva legal: proteger o capital. Uso: compensar prejuízos ou aumentar capital.",
+            "why": "A finalidade legal da reserva é assegurar a integridade do capital social. Ela só pode ser utilizada para compensar prejuízos ou aumentar o capital, conforme art. 193, § 2º, da Lei das S.A. Não é uma reserva livre para distribuir dividendos ordinários.",
+            "resolution_steps": [
+              "Localize a finalidade no art. 193.",
+              "Associe a reserva à proteção da integridade do capital.",
+              "Confira os usos permitidos: compensar prejuízos ou aumentar capital.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": false,
             "q": "A reserva legal pode ser utilizada apenas para pagamento de dividendos aos acionistas.",
-            "why": "A reserva legal não pode ser utilizada apenas para pagar dividendos. A lei limita sua utilização à compensação de prejuízos ou ao aumento do capital social. Essa restrição protege o capital e impede que a reserva seja tratada como lucro livre para distribuição."
+            "tip": "A reserva legal tem uso restrito: prejuízo ou aumento de capital.",
+            "why": "A reserva legal não pode ser utilizada apenas para pagar dividendos. A lei limita sua utilização à compensação de prejuízos ou ao aumento do capital social. Essa restrição protege o capital e impede que a reserva seja tratada como lucro livre para distribuição.",
+            "resolution_steps": [
+              "Leia a finalidade da reserva legal.",
+              "Consulte os usos do art. 193, § 2º.",
+              "Elimine pagamento de dividendos como uso permitido.",
+              "A afirmação está errada."
+            ]
           },
           {
             "a": false,
             "q": "O ágio na emissão de ações é classificado como receita operacional do exercício.",
-            "why": "O ágio na emissão de ações é reserva de capital, não receita operacional. A companhia recebe recursos de uma operação com seus proprietários/investidores, e a parcela que excede o valor destinado ao capital social é registrada diretamente no patrimônio líquido, conforme art. 182, § 1º."
+            "tip": "Emissão de ações = operação com capital, não venda operacional.",
+            "why": "O ágio na emissão de ações é reserva de capital, não receita operacional. A companhia recebe recursos de uma operação com seus proprietários/investidores, e a parcela que excede o valor destinado ao capital social é registrada diretamente no patrimônio líquido, conforme art. 182, § 1º.",
+            "resolution_steps": [
+              "Identifique a origem: emissão de ações.",
+              "Separe a parcela destinada ao capital e o ágio.",
+              "Classifique o ágio como reserva de capital no PL.",
+              "A afirmação que o trata como receita operacional está errada."
+            ]
           },
           {
             "a": true,
             "q": "Ações em tesouraria são apresentadas como conta redutora do patrimônio líquido.",
-            "why": "Ações em tesouraria são ações da própria companhia que foram recompradas e permanecem sob sua titularidade. Não são um investimento/ativo da companhia; são apresentadas como dedução do patrimônio líquido, reduzindo-o. A companhia não pode tratar suas próprias ações recompradas como investimento no ativo. Enquanto estiverem em tesouraria, elas reduzem o patrimônio líquido, porque representam recursos devolvidos aos acionistas por meio da recompra."
+            "tip": "Ações próprias em tesouraria reduzem PL; não são ativo da empresa.",
+            "why": "Ações em tesouraria são ações da própria companhia que foram recompradas e permanecem sob sua titularidade. Não são um investimento/ativo da companhia; são apresentadas como dedução do patrimônio líquido, reduzindo-o. A companhia não pode tratar suas próprias ações recompradas como investimento no ativo. Enquanto estiverem em tesouraria, elas reduzem o patrimônio líquido, porque representam recursos devolvidos aos acionistas por meio da recompra.",
+            "resolution_steps": [
+              "Identifique que são ações emitidas pela própria companhia.",
+              "Verifique que foram recompradas e estão em tesouraria.",
+              "Classifique como dedução do PL.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": true,
             "q": "Capital a integralizar representa parcela do capital subscrito ainda não realizada e reduz o patrimônio líquido apresentado.",
-            "why": "Capital a integralizar é a parcela do capital subscrito que os acionistas ainda não entregaram à companhia. Embora o capital tenha sido subscrito, a parte não realizada aparece como dedução do capital social no patrimônio líquido, reduzindo o valor efetivamente integralizado."
+            "tip": "Subscrito = prometido; integralizado = efetivamente entregue. O que falta integralizar reduz o PL apresentado.",
+            "why": "Capital a integralizar é a parcela do capital subscrito que os acionistas ainda não entregaram à companhia. Embora o capital tenha sido subscrito, a parte não realizada aparece como dedução do capital social no patrimônio líquido, reduzindo o valor efetivamente integralizado.",
+            "resolution_steps": [
+              "Identifique o capital subscrito.",
+              "Identifique a parcela ainda não paga/entregue.",
+              "Registre essa parcela como redutora do capital social.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": false,
             "q": "A reserva para contingências e a provisão para contingências pertencem necessariamente ao mesmo grupo patrimonial.",
-            "why": "Reserva para contingências é uma reserva de lucros no PL, constituída para compensar diminuição futura de lucro decorrente de perda provável e estimável. Provisão para contingências é passivo por obrigação presente. A afirmação está errada ao dizer que necessariamente pertencem ao mesmo grupo."
+            "tip": "Reserva é decisão de destinação do lucro; provisão é reconhecimento de obrigação.",
+            "why": "Reserva para contingências é uma reserva de lucros no PL, constituída para compensar diminuição futura de lucro decorrente de perda provável e estimável. Provisão para contingências é passivo por obrigação presente. A afirmação está errada ao dizer que necessariamente pertencem ao mesmo grupo.",
+            "resolution_steps": [
+              "Identifique reserva para contingências: PL.",
+              "Identifique provisão: passivo.",
+              "Compare os grupos patrimoniais.",
+              "A afirmação está errada."
+            ]
           },
           {
             "a": true,
             "q": "A reserva de lucros a realizar pode ser constituída quando o dividendo obrigatório calculado supera a parcela realizada do lucro líquido, observados os requisitos legais.",
-            "why": "A reserva de lucros a realizar pode ser constituída quando o dividendo obrigatório calculado supera a parcela realizada do lucro líquido do exercício. A assembleia pode destinar o excesso à reserva, conforme art. 197, para evitar distribuição de lucro ainda não realizado financeiramente, observados os requisitos legais."
+            "tip": "“Lucro a realizar” significa lucro contábil ainda sem realização financeira nos termos da lei.",
+            "why": "A reserva de lucros a realizar pode ser constituída quando o dividendo obrigatório calculado supera a parcela realizada do lucro líquido do exercício. A assembleia pode destinar o excesso à reserva, conforme art. 197, para evitar distribuição de lucro ainda não realizado financeiramente, observados os requisitos legais.",
+            "resolution_steps": [
+              "Calcule o dividendo obrigatório.",
+              "Identifique a parcela realizada do lucro líquido.",
+              "Compare os valores.",
+              "Se o dividendo superar a parcela realizada, avalie a reserva nos termos do art. 197."
+            ]
           },
           {
             "a": true,
             "q": "Se o estatuto for omisso quanto ao dividendo obrigatório, a regra legal toma como base 50% do lucro líquido ajustado.",
-            "why": "Se o estatuto é omisso, o art. 202 estabelece como regra metade do lucro líquido do exercício, ajustado pela reserva legal e pela reserva para contingências e sua reversão, conforme a lei. Não é correto aplicar automaticamente 25% quando o estatuto não define percentual; 25% pode ser regra estatutária ou dado específico da questão."
+            "tip": "Estatuto omisso = regra legal de 50% do lucro ajustado; leia o enunciado antes de aplicar 25%.",
+            "why": "Se o estatuto é omisso, o art. 202 estabelece como regra metade do lucro líquido do exercício, ajustado pela reserva legal e pela reserva para contingências e sua reversão, conforme a lei. Não é correto aplicar automaticamente 25% quando o estatuto não define percentual; 25% pode ser regra estatutária ou dado específico da questão.",
+            "resolution_steps": [
+              "Verifique se o estatuto estabelece percentual.",
+              "Se for omisso, aplique art. 202.",
+              "Ajuste o lucro conforme reserva legal e reserva para contingências/reversão.",
+              "Calcule 50% do lucro ajustado."
+            ]
           },
           {
             "a": true,
             "q": "As reservas estatutárias devem ser criadas pelo estatuto, que indicará sua finalidade, critérios de constituição e limite máximo.",
-            "why": "A reserva estatutária depende de previsão no estatuto. Para cada reserva, o estatuto deve indicar finalidade precisa e completa, critério para determinar a parcela anual destinada e limite máximo. Sem esses elementos, a criação não atende ao art. 194 da Lei das S.A."
+            "tip": "Estatutária: finalidade + critério de cálculo + limite máximo.",
+            "why": "A reserva estatutária depende de previsão no estatuto. Para cada reserva, o estatuto deve indicar finalidade precisa e completa, critério para determinar a parcela anual destinada e limite máximo. Sem esses elementos, a criação não atende ao art. 194 da Lei das S.A.",
+            "resolution_steps": [
+              "Identifique que a reserva é estatutária.",
+              "Confira se o estatuto define finalidade.",
+              "Confira critério de cálculo da parcela anual.",
+              "Confira limite máximo.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": true,
             "q": "A reserva para contingências destina parcela do lucro para compensar, em exercício futuro, diminuição de lucro decorrente de perda julgada provável e estimável.",
-            "why": "A reserva para contingências é formada com parte do lucro para compensar, em exercício futuro, diminuição do lucro decorrente de perda julgada provável e cujo valor possa ser estimado. A proposta deve indicar a causa da perda e justificar a prudência. A reserva é revertida quando cessam as razões ou ocorre a perda."
+            "tip": "Reserva para contingências = perda futura provável e estimável; fica no PL.",
+            "why": "A reserva para contingências é formada com parte do lucro para compensar, em exercício futuro, diminuição do lucro decorrente de perda julgada provável e cujo valor possa ser estimado. A proposta deve indicar a causa da perda e justificar a prudência. A reserva é revertida quando cessam as razões ou ocorre a perda.",
+            "resolution_steps": [
+              "Identifique que se trata de perda futura.",
+              "Verifique se é julgada provável e estimável.",
+              "A destinação é feita no PL, a partir do lucro.",
+              "A afirmação está correta."
+            ]
           },
           {
             "a": false,
             "q": "Gastos com emissão de ações devem ser reconhecidos como ativo imobilizado.",
-            "why": "Gastos diretamente atribuíveis à emissão de instrumentos patrimoniais não são ativo imobilizado nem despesa operacional comum. Em regra, são deduzidos do patrimônio líquido, líquidos dos efeitos tributários relacionados, conforme a norma aplicável. A questão testa a natureza de uma operação de capital."
+            "tip": "Custo de emissão de ações reduz PL; não cria máquina, veículo ou outro imobilizado.",
+            "why": "Gastos diretamente atribuíveis à emissão de instrumentos patrimoniais não são ativo imobilizado nem despesa operacional comum. Em regra, são deduzidos do patrimônio líquido, líquidos dos efeitos tributários relacionados, conforme a norma aplicável. A questão testa a natureza de uma operação de capital.",
+            "resolution_steps": [
+              "Identifique que o gasto está ligado à emissão de ações.",
+              "Não há aquisição de bem tangível.",
+              "Classifique como dedução do PL, conforme norma aplicável.",
+              "A afirmação está errada."
+            ]
           },
           {
             "a": false,
             "q": "O limite de 20% da reserva legal é calculado sobre o lucro líquido do exercício.",
-            "why": "O limite de 20% é calculado sobre o capital social, enquanto os 5% de constituição anual são calculados sobre o lucro líquido do exercício. São percentuais com bases diferentes. Trocar as bases é uma pegadinha frequente em questões de reserva legal. A confusão entre as duas bases muda completamente o resultado. Se o capital é R$ 100.000, o teto da reserva legal é R$ 20.000; se o lucro é R$ 50.000, a constituição anual normal é R$ 2.500, sujeita ao espaço até o teto."
+            "tip": "5% do lucro; 20% do capital. Repita essa diferença antes de resolver a conta.",
+            "why": "O limite de 20% é calculado sobre o capital social, enquanto os 5% de constituição anual são calculados sobre o lucro líquido do exercício. São percentuais com bases diferentes. Trocar as bases é uma pegadinha frequente em questões de reserva legal. A confusão entre as duas bases muda completamente o resultado. Se o capital é R$ 100.000, o teto da reserva legal é R$ 20.000; se o lucro é R$ 50.000, a constituição anual normal é R$ 2.500, sujeita ao espaço até o teto.",
+            "resolution_steps": [
+              "Identifique o percentual de 20%.",
+              "Aplique-o ao capital social para obter o teto.",
+              "Identifique os 5%.",
+              "Aplique-os ao lucro líquido para obter a constituição anual.",
+              "A afirmação está errada."
+            ]
           },
           {
             "a": false,
             "q": "No cálculo do dividendo por ação, as ações em tesouraria devem ser consideradas como ações em circulação com direito ao dividendo.",
-            "why": "Ações em tesouraria não recebem dividendos enquanto pertencem à própria companhia. Para calcular o dividendo por ação, use as ações em circulação com direito à distribuição: ações emitidas menos ações em tesouraria. Incluir as ações em tesouraria diluiria indevidamente o valor por ação."
+            "tip": "Dividendo por ação: divida pelas ações em circulação, não pelo total emitido.",
+            "why": "Ações em tesouraria não recebem dividendos enquanto pertencem à própria companhia. Para calcular o dividendo por ação, use as ações em circulação com direito à distribuição: ações emitidas menos ações em tesouraria. Incluir as ações em tesouraria diluiria indevidamente o valor por ação.",
+            "resolution_steps": [
+              "Identifique o total de ações emitidas.",
+              "Subtraia as ações em tesouraria.",
+              "Use o número de ações em circulação como denominador.",
+              "A afirmação está errada."
+            ]
           }
         ],
-        "method": "Conferência de 21 assertivas sobre reservas, patrimônio líquido e dividendos conforme Lei 6.404/1976 compilada, arts. 182, 193 a 197 e 202; cálculos e justificativas consultados; esta é revisão didática, não autorização automática do treinador",
+        "method": "Revisão individual de 21 enunciados com Lei 6.404/1976 consolidada, arts. 193-202: 5% do lucro para reserva legal, limite 20% do capital social, faculdade quando reserva legal + reservas de capital >30%, reservas de contingências, estatutárias, lucros a realizar, dividendos e ações em tesouraria; exemplo 57600x5%=2880.",
         "status": "reviewed",
         "subject": "Contabilidade Geral",
         "version": 1,
-        "checked_at": "2026-11-21T18:46:39Z",
+        "checked_at": "2026-11-21T18:49:36Z",
         "review_type": "didactic_manual",
         "source_note": "“Resumo - Contabilidade Geral.pdf”, itens 68–86 e 156, páginas 12–16 e 28; “Revisão de Véspera - Alunos.pdf”, questão Consulplan/CFC 2020.2, página 23.; Questão 22, Consulplan/Exame CFC 2020.1, Prova 2020.1 - Resolvida - Parte 03.pdf, páginas 7–8; cálculo refeito a partir da tabela original.; Questão 28, Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, página 19.; Questão 22 (segunda questão, Patrimônio Líquido), Consulplan/CFC 2020.1, PDF Prova 2020.1 - Resolvida - Parte 03, páginas 7–8.",
         "topic_label": "16. Patrimônio Líquido, reservas e destinação do resultado",
         "material_slug": "pcac-2026-contabilidade-16-patrimonio-liquido-reservas-dividendos",
-        "official_reference": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"
+        "reference_url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm"
       }
     },
     {
