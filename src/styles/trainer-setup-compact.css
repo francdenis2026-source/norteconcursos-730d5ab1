@@ -273,7 +273,9 @@
 
 /* Telas largas: uma janela só, que ocupa a altura disponível e não rola */
 @media (min-width: 880px) {
-  .qs { height: var(--qs-h, calc(100dvh - 8.5rem)); max-height: var(--qs-h, calc(100dvh - 8.5rem)); overflow: hidden; }
+  /* Altura fixa pela janela (sem JavaScript): não encolhe sozinha. */
+  .qs { height: calc(100dvh - 8.5rem); overflow: hidden; }
+  .app-shell[data-focus-mode="true"] .qs { height: calc(100dvh - 6.25rem); }
   .qs-body { flex: 1 1 auto; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
   .qs-col { overflow-y: auto; }
   .qs-col--how { border-top: 0; border-left: 1px solid var(--qs-line); }
