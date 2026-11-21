@@ -346,3 +346,35 @@ Aula 11 atualizada diretamente no Supabase:
 Referências principais: CPC 16 (Estoques), CPC 12 (Ajuste a Valor Presente) e CPC 20 (Custos de Empréstimos), conforme o contexto de cada questão.
 
 Verificação pós-gravação: 16 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica; zero itens sem resolução; trecho CPC 26 indevido ausente. CI não confirmado.
+
+
+## Revisão aprofundada — moeda estrangeira e moeda funcional — 21/11/2026
+
+Aula 12 atualizada diretamente no Supabase:
+
+- 5 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 5 questões receberam explicações acima de 250 caracteres, dicas e resolução passo a passo.
+- Incluída tabela de seleção de taxas: reconhecimento inicial, itens monetários no fechamento, itens não monetários ao custo histórico e itens não monetários ao valor justo.
+- Acrescentados exemplos numéricos de dívida/recebível em dólar, variação cambial ativa/passiva e distinção entre moeda funcional e moeda de apresentação.
+- Removido trecho indevido de CPC 26.
+
+Base: CPC 02 (R2), especialmente itens 9, 20–23 e regras de reconhecimento de variações cambiais. Fonte oficial: https://s3.sa-east-1.amazonaws.com/static.cpc.aatb.com.br/Documentos/62_CPC_02_R2_rev%2027_ComAVISO.pdf
+
+Migration: supabase/migrations/20261121070000_deepen_pcac_foreign_currency_trainer.sql. Commit: 094608a91f48ca442e4669a4d54872b6203ef76a.
+Verificação: 5 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente.
+
+## Revisão aprofundada — RKW, custeio variável, ROI e ponto de equilíbrio — 21/11/2026
+
+Aula 13 atualizada diretamente no Supabase:
+
+- 21 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas receberam explicações acima de 250 caracteres, dicas de prova e resolução passo a passo.
+- Ampliados os conceitos de RKW versus absorção, custeio variável, margem de contribuição, ponto de equilíbrio contábil/econômico/financeiro, ROI, margem líquida, giro do ativo e unidades equivalentes.
+- Removido trecho indevido de CPC 26.
+- Corrigida a explicação sobre a questão ROI que usa a expressão “capital de giro” de forma imprecisa para descrever o giro do ativo; a aula agora distingue os dois conceitos.
+- Conferidos os cálculos: RKW R$ 160/unidade; ROI X 25%; ponto de equilíbrio 2.000 unidades; produção equivalente e estoque em elaboração R$ 500; resultado operacional no custeio variável R$ 596.000.
+
+Migration: supabase/migrations/20261121080000_deepen_pcac_costing_roi_trainer.sql. Commit: 0c11ccfbf51ffff863b0b227a5875a2e1cc7ad73.
+Verificação pós-gravação: 21 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente.
+
+As atualizações de banco foram verificadas por consultas posteriores. A execução do CI para esses commits ainda não foi confirmada.
