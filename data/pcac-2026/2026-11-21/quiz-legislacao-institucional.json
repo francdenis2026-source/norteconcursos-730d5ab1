@@ -12,42 +12,42 @@
         {
           "a": true,
           "q": "A Constituição Federal define a segurança pública como dever do Estado, direito e responsabilidade de todos.",
-          "why": "É a redação expressa do caput do art. 144. A finalidade é preservar a ordem pública e a incolumidade das pessoas e do patrimônio."
+          "why": "Correto. O art. 144, caput, da Constituição Federal define segurança pública como dever do Estado, direito e responsabilidade de todos, exercida para preservar ordem pública e incolumidade das pessoas e do patrimônio."
         },
         {
           "a": false,
           "q": "À Polícia Civil cabem, como regra constitucional, a polícia ostensiva e a preservação da ordem pública.",
-          "why": "Essas são funções constitucionais da Polícia Militar, conforme art. 144, § 5º. À Polícia Civil cabem polícia judiciária e apuração de infrações penais, exceto militares."
+          "why": "Errado. Policiamento ostensivo e preservação da ordem pública são atribuições constitucionais típicas da Polícia Militar, art. 144, §5º. Polícia Civil exerce polícia judiciária e apuração de infrações penais, excetuadas militares."
         },
         {
           "a": true,
           "q": "A Polícia Civil exerce apuração de infrações penais, ressalvada a competência da União e excetuadas as infrações militares.",
-          "why": "A regra consta do art. 144, § 4º, da Constituição Federal. Atenção à norma: Art. 144 da Constituição distribui funções de segurança pública. À Polícia Civil cabem, ressalvada a competência da União, funções de polícia judiciária e apuração de infrações penais, exceto militares. Não confunda atividade investigativa com policiamento ostensivo."
+          "why": "Correto. A Constituição, art. 144, §4º, atribui às polícias civis as funções de polícia judiciária e apuração de infrações penais, com ressalva da competência federal e exclusão das infrações militares."
         },
         {
           "a": true,
           "q": "A segurança dos estabelecimentos penais é atribuição constitucional das polícias penais.",
-          "why": "O art. 144, § 5º-A, atribui às polícias penais a segurança dos estabelecimentos penais."
+          "why": "Correto. O art. 144, §5º-A, da Constituição atribui às polícias penais a segurança dos estabelecimentos penais. Essa função não significa que toda investigação criminal seja exclusiva dessa carreira."
         },
         {
           "a": false,
           "q": "Após o julgamento da ADI 7.466 pelo STF em novembro de 2024, o Instituto Socioeducativo do Acre permanece validamente incluído como órgão de segurança pública no art. 131, IV, da Constituição estadual.",
-          "why": "Errado. O art. 131, IV, incluído pela EC nº 63/2022, foi declarado inconstitucional pelo STF na ADI 7.466 em 12/11/2024. O rol vigente não pode ser interpretado com base apenas na redação histórica da emenda."
+          "why": "Errado. O STF julgou a ADI 7466 em 2024 e declarou inconstitucional art. 131, IV, da Constituição do Acre, incluído pela EC 63/2022, que classificava o Instituto Socioeducativo como órgão de segurança pública."
         },
         {
           "a": false,
           "q": "O art. 129 da Constituição do Acre trata a Defesa Social como dever exclusivo dos órgãos policiais.",
-          "why": "O dispositivo a define como dever do Estado e responsabilidade de todos, incluindo defesa civil e integração social para prevenção da violência."
+          "why": "Errado. A Constituição do Acre, art. 129, trata a defesa social como dever estatal e responsabilidade de todos, abrangendo estruturas e colaboração social. Não a descreve como dever exclusivo de órgãos policiais."
         },
         {
           "a": true,
           "q": "A Polícia Civil do Acre é instituição permanente, dirigida por Delegado de Polícia de carreira, segundo o art. 133 estadual.",
-          "why": "O art. 133 traz expressamente essa caracterização e os princípios da hierarquia e disciplina."
+          "why": "Correto. A Constituição acreana, art. 133, caracteriza a Polícia Civil como instituição permanente, dirigida por delegado de carreira, e estabelece princípios organizacionais. Distinga essa previsão estadual das competências da CF, art. 144."
         },
         {
           "a": false,
           "q": "O art. 144, § 4º, permite que a Polícia Civil estadual apure crimes militares comuns sempre que ocorram no território do Estado.",
-          "why": "O § 4º exclui as infrações penais militares e ressalva a competência da União. O local do fato não elimina essas exceções."
+          "why": "Errado. O art. 144, §4º, da Constituição exclui infrações penais militares da atribuição de apuração típica da Polícia Civil, ressalvada ainda a competência da União. A localização dentro do estado não afasta essas exceções."
         }
       ],
       "slug": "pcac-2026-constituicao-seguranca-publica-art144-acre",
@@ -58,8 +58,15 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "29 justificativas de segurança, Lei 12830 e SUSP individualizadas com precedentes STF ADI 5043/7466; ainda não há aprovação criptográfica da versão do texto oficial para treino.",
         "items_checked": 8,
-        "revision_reason": "ADI 7.466/STF: gabarito e texto corrigidos, nova verificação jurídica dos demais itens necessária"
+        "revision_reason": "ADI 7.466/STF: gabarito e texto corrigidos, nova verificação jurídica dos demais itens necessária",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13675-11-junho-2018-786843-normaatualizada-pl.html"
+        ]
       }
     },
     {
@@ -67,32 +74,32 @@
         {
           "a": true,
           "q": "O afastamento preventivo pode ser determinado quando necessário à averiguação das faltas ou exigido pela moralidade administrativa ou repercussão do fato.",
-          "why": "São hipóteses previstas no art. 120. Atenção à norma: Afastamento preventivo no PAD tem natureza cautelar, não punitiva. Compare pressupostos, competência, duração, eventual prorrogação e efeitos no tempo de serviço conforme a LC 129/2004 atualizada, antes de aplicar consequência a caso concreto."
+          "why": "Correto. O art. 120 da LC 129/2004 admite afastamento preventivo nas hipóteses legalmente descritas, quando necessário à averiguação de faltas ou por razões ligadas à moralidade administrativa ou repercussão do fato. É cautelar e exige ato motivado, não comprovação definitiva de culpa."
         },
         {
           "a": false,
           "q": "O afastamento preventivo é uma penalidade disciplinar.",
-          "why": "É medida cautelar, com disciplina própria nos arts. 120 a 123. Atenção à norma: Afastamento preventivo no PAD tem natureza cautelar, não punitiva. Compare pressupostos, competência, duração, eventual prorrogação e efeitos no tempo de serviço conforme a LC 129/2004 atualizada, antes de aplicar consequência a caso concreto."
+          "why": "Errado. Afastamento preventivo dos arts. 120 a 123 da LC 129/2004 é medida cautelar durante apuração; não integra automaticamente rol de sanções disciplinares. Suspensão punitiva depende de apuração e decisão legalmente cabíveis."
         },
         {
           "a": true,
           "q": "O afastamento preventivo pode durar até 30 dias, prorrogável por igual período.",
-          "why": "O parágrafo único do art. 120 estabelece esse limite. Atenção à norma: Afastamento preventivo no PAD tem natureza cautelar, não punitiva. Compare pressupostos, competência, duração, eventual prorrogação e efeitos no tempo de serviço conforme a LC 129/2004 atualizada, antes de aplicar consequência a caso concreto."
+          "why": "Correto. Conforme art. 120, parágrafo único, da LC 129/2004, o afastamento preventivo tem duração de até trinta dias, com possibilidade de prorrogação por igual período, nos limites e condições previstos."
         },
         {
           "a": false,
           "q": "Durante o afastamento preventivo, o policial perde seus vencimentos.",
-          "why": "O art. 121 assegura a manutenção dos vencimentos e prerrogativas. Atenção à norma: Afastamento preventivo no PAD tem natureza cautelar, não punitiva. Compare pressupostos, competência, duração, eventual prorrogação e efeitos no tempo de serviço conforme a LC 129/2004 atualizada, antes de aplicar consequência a caso concreto."
+          "why": "Errado. A LC 129/2004, art. 121, resguarda vencimentos e prerrogativas funcionais durante afastamento preventivo. Afastamento cautelar não deve ser confundido com suspensão como penalidade remuneratória."
         },
         {
           "a": true,
           "q": "O período de afastamento preventivo é computado na pena de suspensão efetivamente aplicada.",
-          "why": "O afastamento preventivo é medida cautelar e não equivale automaticamente a suspensão disciplinar. O enunciado remete ao art. 122 da LC 129/2004 para a forma de cômputo do período na sanção eventualmente aplicada; a interpretação deve considerar as condições previstas no texto vigente."
+          "why": "Correto conforme disciplina do art. 122 da LC 129/2004: período de afastamento preventivo é considerado no cômputo da suspensão que venha a ser efetivamente aplicada, sob requisitos legais. Isso não equivale a pena de suspensão antecipada."
         },
         {
           "a": true,
           "q": "Se o procedimento terminar sem punição ou apenas com advertência, o tempo de afastamento será contado integralmente como tempo de serviço.",
-          "why": "É a hipótese prevista no art. 123. Atenção à norma: Afastamento preventivo no PAD tem natureza cautelar, não punitiva. Compare pressupostos, competência, duração, eventual prorrogação e efeitos no tempo de serviço conforme a LC 129/2004 atualizada, antes de aplicar consequência a caso concreto."
+          "why": "Correto. A LC 129/2004, art. 123, cuida do cômputo do tempo quando procedimento termina sem pena ou apenas com advertência. Distinga consequência de absolvição/advertência da hipótese de suspensão punitiva posterior."
         }
       ],
       "slug": "pcac-2026-lc129-afastamento-preventivo-direitos-tempo-servico",
@@ -103,8 +110,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "31 questões estatutárias detalhadas por artigo de LC 129 e LC 39, incluindo alterações posteriores; não homologar sem revisão jurídica documental com hash do texto oficial.",
         "items_checked": 6,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -178,37 +191,37 @@
         {
           "a": true,
           "q": "O art. 100 inclui o dever de atender com urbanidade as pessoas que buscam auxílio.",
-          "why": "O inciso XVI prevê expressamente esse dever. Atenção à norma: O dever funcional decorre de atribuições legais e protocolos institucionais; ato de investigação deve respeitar competência, finalidade, legalidade e sigilo. No PAD, diferencie dever descumprido, infração disciplinar e penalidade aplicável."
+          "why": "Correto. A LC 129/2004, art. 100, XVI, prevê dever de atender com urbanidade pessoas que procuram auxílio policial. Urbanidade exige respeito e tratamento adequado, independentemente da situação do solicitante."
         },
         {
           "a": false,
           "q": "A representação por ilegalidade, omissão ou abuso de poder dispensa a ampla defesa do representado.",
-          "why": "O parágrafo único do art. 100 assegura ampla defesa. Atenção à norma: O dever funcional decorre de atribuições legais e protocolos institucionais; ato de investigação deve respeitar competência, finalidade, legalidade e sigilo. No PAD, diferencie dever descumprido, infração disciplinar e penalidade aplicável."
+          "why": "Errado. O art. 100, parágrafo único, da LC 129/2004 assegura ampla defesa ao representado em apuração por ilegalidade, omissão ou abuso. A representação não autoriza punição sem contraditório e procedimento cabível."
         },
         {
           "a": true,
           "q": "O art. 124 prevê investigação preliminar, sindicância ou processo administrativo para apuração disciplinar.",
-          "why": "As três formas aparecem expressamente no dispositivo. Atenção à norma: O dever funcional decorre de atribuições legais e protocolos institucionais; ato de investigação deve respeitar competência, finalidade, legalidade e sigilo. No PAD, diferencie dever descumprido, infração disciplinar e penalidade aplicável."
+          "why": "Correto. O art. 124 da LC 129/2004 prevê instrumentos de apuração como investigação preliminar, sindicância e processo administrativo. A escolha do rito depende da natureza e gravidade do fato e da disciplina legal."
         },
         {
           "a": false,
           "q": "O silêncio do policial civil pode ser interpretado contra sua defesa, conforme o § 3º do art. 124 apresentado na fonte oficial.",
-          "why": "O texto localizado veda que o silêncio seja interpretado em desfavor da defesa. Atenção à norma: O dever funcional decorre de atribuições legais e protocolos institucionais; ato de investigação deve respeitar competência, finalidade, legalidade e sigilo. No PAD, diferencie dever descumprido, infração disciplinar e penalidade aplicável."
+          "why": "Errado. Conforme art. 124, §3º, da LC 129/2004, silêncio do policial civil não pode ser interpretado contra sua defesa. O direito de não produzir prova contra si não dispensa a avaliação de elementos independentes."
         },
         {
           "a": true,
           "q": "O PAD é obrigatório quando a infração possa determinar demissão a bem do serviço público.",
-          "why": "É a hipótese prevista no art. 129. Atenção à norma: O dever funcional decorre de atribuições legais e protocolos institucionais; ato de investigação deve respeitar competência, finalidade, legalidade e sigilo. No PAD, diferencie dever descumprido, infração disciplinar e penalidade aplicável."
+          "why": "Correto. O art. 129 da LC 129/2004 torna obrigatório processo administrativo disciplinar quando infração puder determinar demissão a bem do serviço público. Não basta procedimento informal para sanção máxima."
         },
         {
           "a": false,
           "q": "A abertura do PAD compete ao Conselho Superior da Polícia Civil, como regra geral do art. 130.",
-          "why": "O art. 130 atribui a competência ao Delegado-Geral; o Conselho Superior aparece no reexame da recusa."
+          "why": "Errado. O art. 130 da LC 129/2004 atribui, como regra examinada, a instauração ao Delegado-Geral; Conselho Superior aparece nas hipóteses de apreciação/reexame legalmente previstas, não como titular ordinário da instauração."
         },
         {
           "a": true,
           "q": "O art. 131 prevê Comissão Especial designada pelo Delegado-Geral.",
-          "why": "Essa é a regra expressa do caput. Atenção à norma: O dever funcional decorre de atribuições legais e protocolos institucionais; ato de investigação deve respeitar competência, finalidade, legalidade e sigilo. No PAD, diferencie dever descumprido, infração disciplinar e penalidade aplicável."
+          "why": "Correto. O art. 131 da LC 129/2004 prevê comissão especial designada pelo Delegado-Geral para apuração do processo disciplinar. A composição e impedimentos são disciplinados por artigos específicos posteriores."
         }
       ],
       "slug": "pcac-2026-lc129-deveres-investigacao-e-processo-disciplinar",
@@ -219,7 +232,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "38 explicações disciplinares da LC 129/2004 reescritas por artigo; fonte consolidada LEGIS Acre, exigida homologação de hash e texto normativo antes de liberar.",
         "items_checked": 7,
+        "official_source": "https://www.legis.ac.gov.br/detalhar/674",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -228,32 +243,32 @@
         {
           "a": true,
           "q": "O art. 89 reconhece o direito a tratamento com urbanidade e respeito.",
-          "why": "É um dos direitos expressos do policial civil. Atenção à norma: Carteira funcional, prerrogativas e porte não autorizam atuação ilimitada. Verifique titularidade, condições, procedimentos e limites legais na LC 129/2004 e regulamentos, distinguindo direito funcional de hipótese de punição por abuso."
+          "why": "Correto. A LC 129/2004, art. 89, lista direitos funcionais do policial civil e inclui tratamento com urbanidade e respeito. O dever de respeito é recíproco nas relações de serviço."
         },
         {
           "a": false,
           "q": "O porte de arma do policial civil ativo independe da legislação federal e dos atos normativos aplicáveis.",
-          "why": "O art. 90 condiciona o porte à legislação federal, à lei estadual e aos atos normativos pertinentes."
+          "why": "Errado. O art. 90 da LC 129/2004 condiciona porte de arma a legislação federal, estadual e atos normativos pertinentes. A condição funcional não afasta requisitos de posse, porte ou situações excepcionais previstos em normas superiores."
         },
         {
           "a": true,
           "q": "O porte do policial inativo pode depender de requerimento e avaliação psicológica a cada três anos.",
-          "why": "É a previsão do art. 90, § 1º. Atenção à norma: Carteira funcional, prerrogativas e porte não autorizam atuação ilimitada. Verifique titularidade, condições, procedimentos e limites legais na LC 129/2004 e regulamentos, distinguindo direito funcional de hipótese de punição por abuso."
+          "why": "Correto. O art. 90, §1º, da LC 129/2004 prevê condições para porte por policial inativo, podendo exigir requerimento e avaliação psicológica periódica trienal nos termos legais. Não confunda regime de ativo e inativo."
         },
         {
           "a": false,
           "q": "A carteira funcional serve apenas como identificação interna, sem fé pública.",
-          "why": "O art. 93 atribui fé pública e função de identidade funcional e civil. Atenção à norma: Carteira funcional, prerrogativas e porte não autorizam atuação ilimitada. Verifique titularidade, condições, procedimentos e limites legais na LC 129/2004 e regulamentos, distinguindo direito funcional de hipótese de punição por abuso."
+          "why": "Errado. A carteira funcional do policial civil, art. 93 da LC 129/2004, tem fé pública e funções de identificação funcional e civil nos termos legais. Não se limita a crachá interno sem valor jurídico."
         },
         {
           "a": true,
           "q": "A bolsa de estudos prevista nos arts. 87 e 88 alcança cursos e estágios com duração superior a 30 dias, observados os requisitos legais.",
-          "why": "A duração superior a 30 dias é exigida pelo art. 88. Atenção à norma: Carteira funcional, prerrogativas e porte não autorizam atuação ilimitada. Verifique titularidade, condições, procedimentos e limites legais na LC 129/2004 e regulamentos, distinguindo direito funcional de hipótese de punição por abuso."
+          "why": "Correto. A LC 129/2004, arts. 87 e 88, disciplina bolsa para cursos/estágios sob requisitos, incluindo duração superior a trinta dias na hipótese indicada. Não é benefício automático de todo curso de curta duração."
         },
         {
           "a": false,
           "q": "A LC nº 496/2025 extinguiu todos os direitos e prerrogativas dos antigos cargos de agente e escrivão.",
-          "why": "O art. 2º da LC 496 mantém direitos, garantias, prerrogativas, deveres, vedações e regime disciplinar."
+          "why": "Errado. A LC 496/2025 reorganizou cargos de agente e escrivão em Oficial Investigador sem abolir indistintamente direitos, garantias, prerrogativas, deveres, vedações e regime disciplinar, conforme art. 2º."
         }
       ],
       "slug": "pcac-2026-lc129-direitos-funcionais-carteira-porte-bolsa",
@@ -264,7 +279,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "38 explicações disciplinares da LC 129/2004 reescritas por artigo; fonte consolidada LEGIS Acre, exigida homologação de hash e texto normativo antes de liberar.",
         "items_checked": 6,
+        "official_source": "https://www.legis.ac.gov.br/detalhar/674",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -273,47 +290,47 @@
         {
           "a": true,
           "q": "O PAD é obrigatório quando a infração puder determinar demissão a bem do serviço público.",
-          "why": "É a hipótese do art. 129. Atenção à norma: Em procedimento disciplinar, instrução reúne provas, defesa exerce contraditório e ampla defesa, relatório analisa fatos e decisão aplica ou afasta responsabilidade. Prazos específicos devem ser localizados no artigo vigente, não presumidos."
+          "why": "Correto. O art. 129 da LC 129/2004 determina PAD quando a infração puder resultar em demissão a bem do serviço público. A gravidade potencial exige rito de instrução, defesa e decisão legalmente previsto."
         },
         {
           "a": false,
           "q": "O PAD deve ser concluído em 30 dias, prorrogáveis por mais 30.",
-          "why": "O art. 133, na redação da LC 208/2010, prevê 60 dias prorrogáveis por igual prazo."
+          "why": "Errado. O art. 133 da LC 129/2004, na redação dada pela LC 208/2010, prevê conclusão do PAD em sessenta dias, prorrogáveis por prazo igual nos termos da lei. Não se aplica o prazo de trinta mais trinta do enunciado."
         },
         {
           "a": true,
           "q": "A citação pessoal do acusado deve ocorrer com antecedência mínima de 48 horas.",
-          "why": "É a regra do art. 134, § 1º. Atenção à norma: Em procedimento disciplinar, instrução reúne provas, defesa exerce contraditório e ampla defesa, relatório analisa fatos e decisão aplica ou afasta responsabilidade. Prazos específicos devem ser localizados no artigo vigente, não presumidos."
+          "why": "Correto. O art. 134, §1º, da LC 129/2004 disciplina citação pessoal do acusado com antecedência mínima de 48 horas, resguardando ciência e possibilidade de defesa. Citação e prazo final de defesa são momentos distintos."
         },
         {
           "a": false,
           "q": "O acusado pode arrolar até dez testemunhas.",
-          "why": "O art. 138, § 1º, limita a oito. Atenção à norma: Em procedimento disciplinar, instrução reúne provas, defesa exerce contraditório e ampla defesa, relatório analisa fatos e decisão aplica ou afasta responsabilidade. Prazos específicos devem ser localizados no artigo vigente, não presumidos."
+          "why": "Errado. O art. 138, §1º, da LC 129/2004 prevê até oito testemunhas arroladas pelo acusado, não dez. A produção de provas é garantida segundo critérios de pertinência e procedimentos aplicáveis."
         },
         {
           "a": false,
           "q": "A revelia elimina a necessidade de defesa técnica ou dativa.",
-          "why": "O art. 137 prevê devolução do prazo e defensor dativo. Atenção à norma: Em procedimento disciplinar, instrução reúne provas, defesa exerce contraditório e ampla defesa, relatório analisa fatos e decisão aplica ou afasta responsabilidade. Prazos específicos devem ser localizados no artigo vigente, não presumidos."
+          "why": "Errado. A revelia não elimina o direito de defesa do acusado: art. 137 da LC 129/2004 trata de devolução de prazo e designação de defensor dativo nas situações legais. O silêncio não equivale a confissão automática."
         },
         {
           "a": true,
           "q": "Encerrada a fase probatória, a defesa escrita deve ser apresentada em 10 dias.",
-          "why": "A defesa escrita integra o contraditório e a ampla defesa no processo administrativo disciplinar. O item remete ao art. 147 da LC 129/2004 para o prazo após a fase probatória; não confunda prazo para defesa com prazo para apresentação do relatório da comissão."
+          "why": "Correto. O art. 147 da LC 129/2004 estabelece prazo de dez dias para defesa escrita depois da fase probatória, conforme rito legal. Diferencie essa manifestação do tempo dado à comissão para relatório."
         },
         {
           "a": true,
           "q": "A comissão apresenta relatório em 10 dias após o prazo de defesa e saneamento.",
-          "why": "O relatório é produzido pela comissão após o encerramento da instrução e da fase de defesa, com apreciação dos elementos reunidos. O item indica o art. 148 da LC 129/2004; o prazo da comissão não é o mesmo ato nem o mesmo destinatário do prazo de defesa."
+          "why": "Correto. Segundo art. 148 da LC 129/2004, a comissão dispõe de dez dias após prazo da defesa e saneamento para elaborar relatório. Ele analisa provas e defesa, sem substituir competência decisória da autoridade julgadora."
         },
         {
           "a": true,
           "q": "O recurso do acusado previsto no art. 148-A, § 3º, é interposto em 10 dias ao Delegado-Geral.",
-          "why": "O Delegado-Geral o submete ao Conselho Superior. Atenção à norma: Em procedimento disciplinar, instrução reúne provas, defesa exerce contraditório e ampla defesa, relatório analisa fatos e decisão aplica ou afasta responsabilidade. Prazos específicos devem ser localizados no artigo vigente, não presumidos."
+          "why": "Correto. O art. 148-A, §3º, da LC 129/2004 prevê recurso ao Delegado-Geral em dez dias, para submissão ao Conselho Superior na forma da lei. O prazo de recurso não se confunde com o prazo de defesa na instrução."
         },
         {
           "a": false,
           "q": "A Comissão Especial pode incluir cônjuge ou parente até terceiro grau do acusado.",
-          "why": "O art. 132 estabelece impedimento. Atenção à norma: Em procedimento disciplinar, instrução reúne provas, defesa exerce contraditório e ampla defesa, relatório analisa fatos e decisão aplica ou afasta responsabilidade. Prazos específicos devem ser localizados no artigo vigente, não presumidos."
+          "why": "Errado. O art. 132 da LC 129/2004 trata de impedimentos dos integrantes de Comissão Especial, incluindo cônjuge e parentesco do acusado até grau indicado. A imparcialidade da comissão integra garantias do processo."
         }
       ],
       "slug": "pcac-2026-lc129-pad-instrucao-defesa-relatorio-recursos",
@@ -324,7 +341,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "38 explicações disciplinares da LC 129/2004 reescritas por artigo; fonte consolidada LEGIS Acre, exigida homologação de hash e texto normativo antes de liberar.",
         "items_checked": 9,
+        "official_source": "https://www.legis.ac.gov.br/detalhar/674",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -333,42 +352,42 @@
         {
           "a": true,
           "q": "A sindicância deve ser concluída em 30 dias, prorrogáveis mediante solicitação fundamentada.",
-          "why": "Sindicância é procedimento de apuração disciplinar com fase de coleta de informações. O item menciona prazo inicial de trinta dias no art. 127 da LC 129/2004; a prorrogação depende das condições e da fundamentação prevista na lei, não de decisão informal."
+          "why": "Correto. O art. 127 da LC 129/2004 prevê sindicância com prazo inicial de trinta dias e possibilidade de prorrogação mediante solicitação fundamentada, segundo requisitos legais. A prorrogação deve ser justificada."
         },
         {
           "a": false,
           "q": "O prazo para defesa escrita do sindicado, após a produção de provas, é de 15 dias.",
-          "why": "O art. 128, § 1º, prevê 10 dias. Atenção à norma: Sindicância e PAD possuem ritos e consequências que dependem do estatuto específico. Prescrição, instauração, prorrogação e extinção têm marcos e requisitos próprios; identifique duração e termo inicial antes de concluir."
+          "why": "Errado. A LC 129/2004, art. 128, §1º, fixa dez dias para defesa escrita após produção de provas na sindicância, não quinze. Não confunda com prazo recursal posterior."
         },
         {
           "a": true,
           "q": "O recurso da decisão da sindicância ao Conselho Superior deve ser interposto em 15 dias da publicação.",
-          "why": "É a redação do art. 128, § 4º. Atenção à norma: Sindicância e PAD possuem ritos e consequências que dependem do estatuto específico. Prescrição, instauração, prorrogação e extinção têm marcos e requisitos próprios; identifique duração e termo inicial antes de concluir."
+          "why": "Correto. O art. 128, §4º, da LC 129/2004 prevê recurso ao Conselho Superior no prazo de quinze dias da publicação, conforme a disciplina legal. Prazo de recurso não equivale ao prazo de defesa de dez dias."
         },
         {
           "a": false,
           "q": "A prescrição da falta sujeita à advertência ocorre em cinco anos.",
-          "why": "O art. 118, I, prevê seis meses. Atenção à norma: Sindicância e PAD possuem ritos e consequências que dependem do estatuto específico. Prescrição, instauração, prorrogação e extinção têm marcos e requisitos próprios; identifique duração e termo inicial antes de concluir."
+          "why": "Errado. A LC 129/2004, art. 118, I, estabelece prescrição de seis meses para falta sujeita a advertência, não cinco anos. Prazo de cinco anos se relaciona a faltas mais graves na regra específica."
         },
         {
           "a": true,
           "q": "A prescrição da falta sujeita à suspensão ocorre em dois anos.",
-          "why": "É o prazo previsto no art. 118, II. Atenção à norma: Sindicância e PAD possuem ritos e consequências que dependem do estatuto específico. Prescrição, instauração, prorrogação e extinção têm marcos e requisitos próprios; identifique duração e termo inicial antes de concluir."
+          "why": "Correto. A LC 129/2004, art. 118, II, prevê prescrição de dois anos para falta sujeita à pena de suspensão. A contagem e sua interrupção devem ser examinadas nos termos do mesmo diploma."
         },
         {
           "a": true,
           "q": "A prescrição da falta sujeita à demissão a bem do serviço público ocorre em cinco anos.",
-          "why": "É o prazo previsto no art. 118, III. Atenção à norma: Sindicância e PAD possuem ritos e consequências que dependem do estatuto específico. Prescrição, instauração, prorrogação e extinção têm marcos e requisitos próprios; identifique duração e termo inicial antes de concluir."
+          "why": "Correto. A LC 129/2004, art. 118, III, prevê prescrição de cinco anos para falta sujeita à demissão a bem do serviço público. A pena cogitada interfere no prazo aplicável."
         },
         {
           "a": false,
           "q": "O prazo prescricional começa necessariamente na data em que a infração foi praticada, independentemente do conhecimento da autoridade.",
-          "why": "O parágrafo único do art. 118 fixa o início no conhecimento da falta pela autoridade."
+          "why": "Errado. O termo inicial da prescrição na LC 129/2004, art. 118, parágrafo único, está ligado ao conhecimento da falta pela autoridade competente, e não necessariamente à data do fato oculto."
         },
         {
           "a": true,
           "q": "A LC nº 129 prevê extinção da punibilidade pela reparação do dano em condutas culposas antes da conclusão da sindicância ou PAD.",
-          "why": "É a hipótese acrescentada ao art. 119 pela LC nº 208/2010. Atenção à norma: Sindicância e PAD possuem ritos e consequências que dependem do estatuto específico. Prescrição, instauração, prorrogação e extinção têm marcos e requisitos próprios; identifique duração e termo inicial antes de concluir."
+          "why": "Correto. O art. 119 da LC 129/2004, com alteração da LC 208/2010, prevê hipótese específica de extinção da punibilidade por reparação do dano em conduta culposa antes de concluir sindicância ou PAD, nas condições do texto."
         }
       ],
       "slug": "pcac-2026-lc129-sindicancia-prazos-prescricao-extincao",
@@ -379,7 +398,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "38 explicações disciplinares da LC 129/2004 reescritas por artigo; fonte consolidada LEGIS Acre, exigida homologação de hash e texto normativo antes de liberar.",
         "items_checked": 8,
+        "official_source": "https://www.legis.ac.gov.br/detalhar/674",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -388,42 +409,42 @@
         {
           "a": true,
           "q": "As responsabilidades civil, penal e administrativa podem cumular-se e são independentes entre si.",
-          "why": "É a regra expressa do art. 106-C. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Correto. O art. 106-C da LC 129/2004 admite independência e cumulação de responsabilidades civil, penal e administrativa nas condições legais. Uma infração funcional pode não configurar crime e vice-versa."
         },
         {
           "a": false,
           "q": "Tratamento psicológico e cassação do porte de arma são penas principais do art. 107.",
-          "why": "A lei as classifica como penas acessórias. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Errado. A LC 129/2004, art. 107, distingue sanções principais de sanções acessórias, entre elas tratamento psicológico e cassação de porte em hipóteses legais. Não são automaticamente penas principais."
         },
         {
           "a": true,
           "q": "A advertência é aplicada às transgressões disciplinares do primeiro grupo e deve ser escrita.",
-          "why": "É o que dispõe o art. 108. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Correto. Advertência por transgressão do primeiro grupo deve ser aplicada por escrito conforme art. 108 da LC 129/2004. A classificação da infração orienta a espécie e intensidade da sanção."
         },
         {
           "a": false,
           "q": "A suspensão por reincidência de falta do primeiro grupo já punida com advertência pode ultrapassar 30 dias.",
-          "why": "O § 1º do art. 109 limita essa hipótese a 30 dias. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Errado. A reincidência em falta do primeiro grupo anteriormente punida com advertência pode implicar suspensão limitada a trinta dias, conforme art. 109, §1º, da LC 129/2004. Não autoriza ultrapassar esse teto na hipótese descrita."
         },
         {
           "a": true,
           "q": "A suspensão aplicada a transgressão do segundo grupo não pode ultrapassar 60 dias.",
-          "why": "Limite expresso no § 2º do art. 109. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Correto. Para transgressões de segundo grupo, o art. 109, §2º, da LC 129/2004 fixa suspensão de até sessenta dias. A penalidade concreta exige proporcionalidade e procedimento próprio."
         },
         {
           "a": true,
           "q": "A suspensão aplicada a transgressão do terceiro grupo não pode ultrapassar 90 dias.",
-          "why": "Limite expresso no § 3º do art. 109. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Correto. Para transgressões do terceiro grupo, o art. 109, §3º, da LC 129/2004 admite suspensão de até noventa dias, respeitada a legislação disciplinar e circunstâncias do caso."
         },
         {
           "a": true,
           "q": "A reincidência das hipóteses do terceiro grupo e a prática de transgressão do quarto grupo podem levar à demissão a bem do serviço público.",
-          "why": "É a previsão do art. 110. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Correto. O art. 110 da LC 129/2004 prevê demissão a bem do serviço público em reincidência de infrações do terceiro grupo e em transgressões do quarto grupo, observados requisitos e processo legal."
         },
         {
           "a": false,
           "q": "A premeditação é circunstância atenuante prevista no art. 112.",
-          "why": "A premeditação figura entre as agravantes. Atenção à norma: Infração disciplinar não é automaticamente crime. Para penalidade, identifique o dever ou proibição legal, prova do fato, proporcionalidade e competência decisória. Não trate afastamento cautelar como suspensão punitiva."
+          "why": "Errado. Premeditação é circunstância agravante prevista no art. 112 da LC 129/2004, não atenuante. A questão troca o sentido de circunstância que pode aumentar a gravidade da resposta disciplinar."
         }
       ],
       "slug": "pcac-2026-lc129-transgressoes-penalidades-responsabilidades",
@@ -434,7 +455,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "38 explicações disciplinares da LC 129/2004 reescritas por artigo; fonte consolidada LEGIS Acre, exigida homologação de hash e texto normativo antes de liberar.",
         "items_checked": 8,
+        "official_source": "https://www.legis.ac.gov.br/detalhar/674",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -509,62 +532,62 @@
         {
           "a": true,
           "q": "O servidor deve cumprir ordens superiores, exceto quando manifestamente ilegais.",
-          "why": "É a exceção expressa do art. 166, IV. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Correto. A LC 39/1993, art. 166, IV, determina cumprir ordens superiores, salvo quando manifestamente ilegais. Ordem evidentemente ilícita não transforma dever de obediência hierárquica em obrigação de praticar ilegalidade."
         },
         {
           "a": true,
           "q": "Guardar sigilo sobre assunto da repartição é dever funcional.",
-          "why": "Guardar sigilo sobre assuntos protegidos da repartição é dever funcional. A publicidade administrativa não autoriza divulgar informações de acesso restrito; a questão remete ao art. 166, VIII, da LC 39/1993."
+          "why": "Correto. Guardar sigilo sobre assuntos protegidos da repartição é dever funcional do art. 166, VIII, da LC 39. Publicidade administrativa não autoriza divulgar informações legalmente restritas."
         },
         {
           "a": false,
           "q": "A representação contra ilegalidade deve ser apresentada diretamente ao Judiciário, sem via hierárquica.",
-          "why": "O art. 166, parágrafo único, determina encaminhamento pela via hierárquica. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Errado. O art. 166, parágrafo único, da LC 39 disciplina encaminhamento de representação contra ilegalidade por via hierárquica. Não se exige que toda reclamação funcional seja dirigida inicialmente e exclusivamente ao Judiciário."
         },
         {
           "a": true,
           "q": "O art. 167 proíbe receber propina, comissão, presente ou vantagem em razão das atribuições.",
-          "why": "Receber vantagem indevida em razão das atribuições compromete a probidade e a impessoalidade do serviço público. O item aponta a vedação do art. 167, XII, da LC 39/1993; não confunda recebimento autorizado com propina ou vantagem vinculada ao exercício do cargo."
+          "why": "Correto. A LC 39/1993, art. 167, XII, veda receber propina, comissão, presente ou vantagem em razão das atribuições. É importante distinguir vantagem indevida de remuneração ou indenização legalmente autorizadas."
         },
         {
           "a": false,
           "q": "O servidor pode usar pessoal e materiais da repartição em atividade particular se não houver dano financeiro.",
-          "why": "O art. 167, XVI, veda o uso de pessoal ou recursos materiais em atividades particulares."
+          "why": "Errado. O art. 167, XVI, da LC 39 veda utilização de pessoal ou recursos materiais da repartição em atividades particulares. A ausência de prejuízo financeiro imediato não elimina a vedação."
         },
         {
           "a": true,
           "q": "A LC nº 39 proíbe a prática de assédio moral e a imputação falsa de assédio moral a terceiro.",
-          "why": "São os incisos XX e XXI do art. 167, incluídos pela LC 377/2020. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Correto. Os incisos XX e XXI do art. 167, introduzidos pela LC 377/2020, tratam de assédio moral e imputação falsa de assédio moral a terceiro. A questão cobra atualização da lista de proibições, não apenas estatuto original."
         },
         {
           "a": false,
           "q": "A responsabilidade civil decorre apenas de ato doloso.",
-          "why": "O art. 172 inclui ato omissivo ou comissivo, doloso ou culposo. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Errado. A responsabilidade civil do servidor prevista na LC 39, art. 172, pode decorrer de ato omissivo ou comissivo doloso ou culposo que produza prejuízo nas condições da lei. Não exige dolo em todos os casos."
         },
         {
           "a": true,
           "q": "As responsabilidades civil, penal e administrativa são independentes e podem cumular-se.",
-          "why": "Um mesmo fato pode repercutir nas esferas civil, penal e administrativa, cada qual com sua finalidade e requisitos. O art. 175 da LC 39/1993 trata da independência e cumulação dessas responsabilidades, observadas exceções previstas na ordem jurídica."
+          "why": "Correto. As responsabilidades civil, penal e administrativa podem acumular-se e possuem fundamentos próprios, conforme LC 39, art. 175. Há repercussões específicas de absolvição criminal sobre instâncias administrativas."
         },
         {
           "a": false,
           "q": "Qualquer absolvição criminal afasta automaticamente a responsabilidade civil-administrativa.",
-          "why": "O art. 176 exige que a absolvição negue a existência do fato ou a autoria. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Errado. Nem toda absolvição penal automaticamente afasta responsabilidade administrativa. A LC 39, art. 176, considera efeitos da absolvição que negue a existência do fato ou autoria, em conformidade com regime jurídico aplicável."
         },
         {
           "a": false,
           "q": "A suspensão prevista no art. 180 pode exceder 90 dias.",
-          "why": "O limite máximo é 90 dias. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Errado. A sanção de suspensão no art. 180 da LC 39 tem limite de noventa dias na regra citada. A imposição concreta depende de procedimento, gradação e fundamentos; não é possível exceder livremente o teto."
         },
         {
           "a": true,
           "q": "A advertência escrita do art. 179 abrange as proibições dos incisos I a VIII e XIX do art. 167.",
-          "why": "Essa é a redação atualizada pela LC 350/2018. Atenção à norma: Deveres incluem zelo, obediência a ordens legais e sigilo nos casos previstos. Proibições alcançam vantagens indevidas; responsabilidades civil, penal e administrativa têm requisitos distintos e podem coexistir segundo a lei."
+          "why": "Correto conforme a redação do art. 179, atualizada pela LC 350/2018: advertência escrita abrange hipóteses específicas das proibições do art. 167, incisos I a VIII e XIX, observadas condições do estatuto."
         },
         {
           "a": false,
           "q": "A LC nº 39 substitui integralmente a disciplina especial da LC nº 129/2004 para policiais civis.",
-          "why": "A LC 129 é a norma especial; a LC 39 é aplicada nos dispositivos gerais/subsidiários pertinentes."
+          "why": "Errado. A LC 129/2004 é regime orgânico e disciplinar especial de policiais civis do Acre; LC 39/1993 funciona como regra geral/subsidiária nos dispositivos aplicáveis. A norma geral não substitui integralmente o estatuto especial."
         }
       ],
       "slug": "pcac-2026-lc39-deveres-proibicoes-responsabilidades-servidor",
@@ -575,8 +598,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "31 questões estatutárias detalhadas por artigo de LC 129 e LC 39, incluindo alterações posteriores; não homologar sem revisão jurídica documental com hash do texto oficial.",
         "items_checked": 12,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -584,32 +613,32 @@
         {
           "a": true,
           "q": "O servidor efetivo em cargo de direção ou chefia fica afastado da função durante o gozo da licença-prêmio, com os direitos e vantagens inerentes ao cargo.",
-          "why": "A licença-prêmio envolve aquisição do direito, autorização de gozo e efeitos sobre o exercício de função de direção ou chefia. O art. 133 da LC 39/1993 deve ser examinado especificamente para saber como a licença repercute nas atribuições e vantagens do cargo."
+          "why": "Correto, conforme regra do art. 133 da LC 39/1993, observadas redações e condições vigentes: licença-prêmio pode produzir afastamento do exercício de direção/chefia mantendo direitos e vantagens previstos. Diferencie cargo efetivo e função temporária."
         },
         {
           "a": false,
           "q": "Qualquer licença por doença em pessoa da família impede a licença-prêmio, mesmo remunerada.",
-          "why": "O art. 134, II, a, refere-se à licença sem remuneração. Atenção à norma: Licença-prêmio distingue período aquisitivo, impedimentos, requerimento e gozo. Faltas injustificadas e determinados afastamentos podem afetar o direito de modos diferentes; consulte os arts. 133 e 134 da LC 39/1993 atualizada."
+          "why": "Errado. A LC 39, art. 134, II, a, distingue licença por doença de familiar com e sem remuneração para efeitos de impedimento à licença-prêmio. Não se pode afirmar que toda licença remunerada impede automaticamente a aquisição."
         },
         {
           "a": true,
           "q": "A suspensão disciplinar no período aquisitivo impede a concessão da licença-prêmio.",
-          "why": "É a hipótese do art. 134, I. Atenção à norma: Licença-prêmio distingue período aquisitivo, impedimentos, requerimento e gozo. Faltas injustificadas e determinados afastamentos podem afetar o direito de modos diferentes; consulte os arts. 133 e 134 da LC 39/1993 atualizada."
+          "why": "Correto. A suspensão disciplinar ocorrida no período aquisitivo integra hipóteses legais de impedimento previstas no art. 134, I, da LC 39/1993. É preciso diferenciar suspensão punitiva de afastamento cautelar."
         },
         {
           "a": true,
           "q": "Uma falta injustificada retarda a licença-prêmio em um mês.",
-          "why": "É a proporção prevista no parágrafo único do art. 134. Atenção à norma: Licença-prêmio distingue período aquisitivo, impedimentos, requerimento e gozo. Faltas injustificadas e determinados afastamentos podem afetar o direito de modos diferentes; consulte os arts. 133 e 134 da LC 39/1993 atualizada."
+          "why": "Correto. O art. 134, parágrafo único, da LC 39/1993 prevê repercussão de falta injustificada no período aquisitivo, retardando a concessão na proporção legal de um mês por falta. Falta justificada não é necessariamente equivalente."
         },
         {
           "a": false,
           "q": "O direito de requerer licença-prêmio está sujeito à prescrição quinquenal.",
-          "why": "O art. 135 afirma que não prescreve nem está sujeito a caducidade. Atenção à norma: Licença-prêmio distingue período aquisitivo, impedimentos, requerimento e gozo. Faltas injustificadas e determinados afastamentos podem afetar o direito de modos diferentes; consulte os arts. 133 e 134 da LC 39/1993 atualizada."
+          "why": "Errado. O art. 135 da LC 39/1993 prevê que o direito de requerer licença-prêmio não está sujeito a prescrição nem caducidade conforme a redação legal examinada. Não confunda com prescrição de valores financeiros associados."
         },
         {
           "a": true,
           "q": "A condenação a pena privativa de liberdade por sentença definitiva aparece entre as hipóteses do art. 134.",
-          "why": "O art. 134 da LC 39/1993 apresenta hipóteses capazes de interferir na aquisição da licença-prêmio. A questão menciona condenação definitiva a pena privativa de liberdade no inciso II, alínea c; diferencie impedimento legal de simples atraso de concessão por falta injustificada."
+          "why": "Correto. A condenação definitiva à pena privativa de liberdade aparece entre hipóteses impeditivas no art. 134, II, c, da LC 39/1993. A banca pode substituir sentença definitiva por mera investigação, que não teria mesmo efeito."
         }
       ],
       "slug": "pcac-2026-lc39-licenca-premio-regras-aquisicao-concessao",
@@ -620,8 +649,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "31 questões estatutárias detalhadas por artigo de LC 129 e LC 39, incluindo alterações posteriores; não homologar sem revisão jurídica documental com hash do texto oficial.",
         "items_checked": 6,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -629,37 +664,37 @@
         {
           "a": true,
           "q": "A LC nº 39/1993 aplica-se aos servidores de qualquer dos Poderes do Estado do Acre.",
-          "why": "É a regra do art. 1º, parágrafo único. Atenção à norma: Provimento preenche cargo; vacância desocupa; nomeação, posse e exercício são atos distintos. Exoneração não é obrigatoriamente penalidade; demissão é sanção disciplinar. Confira limites de aplicação da LC 39 e norma especial policial."
+          "why": "Correto. O art. 1º, parágrafo único, da LC 39/1993 define seu alcance para servidores civis estaduais no âmbito legal, incluídos Poderes e entidades previstas. A carreira policial civil possui disciplina especial em dispositivos específicos."
         },
         {
           "a": false,
           "q": "A prestação de serviços gratuitos é sempre permitida ao servidor público.",
-          "why": "O art. 4º veda, salvo os casos previstos em lei. Atenção à norma: Provimento preenche cargo; vacância desocupa; nomeação, posse e exercício são atos distintos. Exoneração não é obrigatoriamente penalidade; demissão é sanção disciplinar. Confira limites de aplicação da LC 39 e norma especial policial."
+          "why": "Errado. O art. 4º da LC 39 proíbe prestação de serviços gratuitos, salvo nos casos legalmente previstos. Nenhuma autoridade pode autorizar genericamente trabalho gratuito ignorando a norma."
         },
         {
           "a": true,
           "q": "A jornada geral do servidor efetivo é de 40 horas semanais, salvo duração diversa em lei.",
-          "why": "Jornada geral é a carga horária ordinária prevista no estatuto, mas leis específicas podem fixar regime diverso para determinados cargos. O enunciado remete ao art. 20 da LC 39/1993; não confunda regra geral com escalas ou regimes especiais da atividade policial."
+          "why": "Correto. A LC 39, art. 20, estabelece jornada geral de quarenta horas semanais para servidor efetivo, salvo duração diversa fixada em lei. A existência de carreiras com regime especial não torna falsa a regra geral."
         },
         {
           "a": false,
           "q": "O prazo de 30 dias para exercício após remoção a outra localidade exclui o tempo de deslocamento.",
-          "why": "O art. 19 inclui o deslocamento. Atenção à norma: Provimento preenche cargo; vacância desocupa; nomeação, posse e exercício são atos distintos. Exoneração não é obrigatoriamente penalidade; demissão é sanção disciplinar. Confira limites de aplicação da LC 39 e norma especial policial."
+          "why": "Errado. O art. 19 da LC 39/1993 considera o tempo de deslocamento no prazo de exercício após remoção para outra localidade, nas condições previstas. O enunciado exclui indevidamente esse período."
         },
         {
           "a": true,
           "q": "Falecimento e posse em cargo inacumulável são hipóteses de vacância.",
-          "why": "Ambas constam do art. 38. Atenção à norma: Provimento preenche cargo; vacância desocupa; nomeação, posse e exercício são atos distintos. Exoneração não é obrigatoriamente penalidade; demissão é sanção disciplinar. Confira limites de aplicação da LC 39 e norma especial policial."
+          "why": "Correto. Falecimento e posse em outro cargo inacumulável figuram entre hipóteses de vacância do art. 38 da LC 39. Vacância significa desocupação do cargo, não necessariamente punição funcional."
         },
         {
           "a": true,
           "q": "A exoneração de ofício pode ocorrer quando o servidor não satisfaz as condições do estágio probatório.",
-          "why": "É a hipótese do art. 39, parágrafo único, I. Atenção à norma: Provimento preenche cargo; vacância desocupa; nomeação, posse e exercício são atos distintos. Exoneração não é obrigatoriamente penalidade; demissão é sanção disciplinar. Confira limites de aplicação da LC 39 e norma especial policial."
+          "why": "Correto. O art. 39, parágrafo único, I, da LC 39 prevê exoneração de ofício em hipótese de não satisfação das condições do estágio probatório. Exoneração e demissão disciplinar não são categorias equivalentes."
         },
         {
           "a": false,
           "q": "O § 4º do art. 282 continua vigente após a LC nº 525/2026.",
-          "why": "Foi expressamente revogado pelo art. 1º da LC 525/2026. Atenção à norma: Provimento preenche cargo; vacância desocupa; nomeação, posse e exercício são atos distintos. Exoneração não é obrigatoriamente penalidade; demissão é sanção disciplinar. Confira limites de aplicação da LC 39 e norma especial policial."
+          "why": "Errado. A LC 525/2026 revogou expressamente o §4º do art. 282 da LC 39/1993. Não é correto aplicá-lo como vigente sem observar essa lei superveniente e a redação consolidada."
         }
       ],
       "slug": "pcac-2026-lc39-regime-geral-provimento-vacancia-direitos",
@@ -670,8 +705,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "31 questões estatutárias detalhadas por artigo de LC 129 e LC 39, incluindo alterações posteriores; não homologar sem revisão jurídica documental com hash do texto oficial.",
         "items_checked": 7,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -679,27 +720,27 @@
         {
           "a": true,
           "q": "A LC nº 496/2025 unificou os cargos de agente e escrivão sob a nomenclatura de Oficial Investigador de Polícia.",
-          "why": "A LC estadual nº 496/2025, publicada em 1º de agosto de 2025, unificou os cargos de agente e escrivão da Polícia Civil do Acre."
+          "why": "Correto. A LC 496/2025 do Acre promoveu a unificação dos cargos de agente e escrivão no cargo de Oficial Investigador de Polícia. A lei também regula preservação de direitos e quantitativo das vagas, somando as vagas anteriores."
         },
         {
           "a": true,
           "q": "A legislação estadual deve ser interpretada em harmonia com a Constituição e as normas gerais nacionais.",
-          "why": "A autonomia estadual não afasta os limites constitucionais. Atenção à norma: Carreira, direitos e disciplina envolvem atos diferentes: ingresso por concurso, progressão de referência, promoção de classe, deveres funcionais e responsabilização. Identifique qual lei rege cada instituto antes de comparar condições."
+          "why": "Correto. A Constituição Federal estabelece limites aos entes federados; normas gerais nacionais de Polícia Civil, como Lei 14.735/2023, convivem com leis estaduais compatíveis. Autonomia estadual não autoriza contradição com normas superiores."
         },
         {
           "a": false,
           "q": "A ordem hierárquica manifestamente ilegal deve ser cumprida sem questionamento.",
-          "why": "A hierarquia não elimina o dever de legalidade. Atenção à norma: Carreira, direitos e disciplina envolvem atos diferentes: ingresso por concurso, progressão de referência, promoção de classe, deveres funcionais e responsabilização. Identifique qual lei rege cada instituto antes de comparar condições."
+          "why": "Errado. Dever de obediência hierárquica recai sobre ordens legais. A ordem manifestamente ilegal não deve ser cumprida como comando legítimo; a LC 39/1993, art. 166, IV, traz exceção explícita à obediência."
         },
         {
           "a": false,
           "q": "Prazos e sanções da LC estadual podem ser estudados com segurança apenas pela redação original de 2004.",
-          "why": "É necessário conferir alterações e texto consolidado. Atenção à norma: Carreira, direitos e disciplina envolvem atos diferentes: ingresso por concurso, progressão de referência, promoção de classe, deveres funcionais e responsabilização. Identifique qual lei rege cada instituto antes de comparar condições."
+          "why": "Errado. A LC 129/2004 foi alterada em 2025 e 2026, inclusive na estrutura de carreira, ingresso e formação. A redação inicial não contém todas as normas atualmente vigentes, e prazo disciplinar deve ser confrontado com texto consolidado."
         },
         {
           "a": true,
           "q": "Responsabilidades civil, penal e administrativa possuem pressupostos próprios.",
-          "why": "As esferas são distintas e podem coexistir conforme o caso. Atenção à norma: Carreira, direitos e disciplina envolvem atos diferentes: ingresso por concurso, progressão de referência, promoção de classe, deveres funcionais e responsabilização. Identifique qual lei rege cada instituto antes de comparar condições."
+          "why": "Correto. Um mesmo fato pode produzir consequências civil, penal e administrativa, mas cada esfera tem pressupostos, finalidades e procedimento próprios. As esferas podem coexistir sem que a acusação penal prove automaticamente infração administrativa."
         }
       ],
       "slug": "pcac-2026-legislacao-carreira-deveres-disciplina",
@@ -710,8 +751,15 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "29 justificativas de segurança, Lei 12830 e SUSP individualizadas com precedentes STF ADI 5043/7466; ainda não há aprovação criptográfica da versão do texto oficial para treino.",
         "items_checked": 5,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13675-11-junho-2018-786843-normaatualizada-pl.html"
+        ]
       }
     },
     {
@@ -719,27 +767,27 @@
         {
           "a": true,
           "q": "A Lei nº 14.735/2023 institui a Lei Orgânica Nacional das Polícias Civis.",
-          "why": "Essa é a ementa e o objeto central da lei. Atenção à norma: Há normas complementares, não uma lei única: Lei 14.735/2023 é orgânica nacional; LC 129/2004 é estatuto especial acreano; Lei 2.250/2009 rege PCCR; LC 39/1993 rege servidores civis na parte aplicável."
+          "why": "Correto. Lei federal 14.735, de 23 de novembro de 2023, instituiu a Lei Orgânica Nacional das Polícias Civis, com normas gerais de funcionamento. Não substituiu integralmente os estatutos estaduais: estes devem ser interpretados em conformidade com a Constituição e com as normas gerais aplicáveis."
         },
         {
           "a": true,
           "q": "A LC nº 129/2004 institui a Lei Orgânica da Polícia Civil e o Estatuto dos Policiais Civis do Acre.",
-          "why": "É a ementa oficial da lei complementar estadual. Atenção à norma: Há normas complementares, não uma lei única: Lei 14.735/2023 é orgânica nacional; LC 129/2004 é estatuto especial acreano; Lei 2.250/2009 rege PCCR; LC 39/1993 rege servidores civis na parte aplicável."
+          "why": "Correto. A Lei Complementar estadual 129/2004 instituiu a Lei Orgânica da Polícia Civil e o Estatuto dos Policiais Civis do Acre. Fonte oficial: LEGIS Acre, texto consolidado da LC 129, com alterações da LC 496/2025 e LC 526/2026."
         },
         {
           "a": false,
           "q": "É seguro estudar a LC nº 129/2004 somente pela redação original de 2004.",
-          "why": "O portal legislativo registra alterações posteriores, inclusive em 2025 e 2026. Atenção à norma: Há normas complementares, não uma lei única: Lei 14.735/2023 é orgânica nacional; LC 129/2004 é estatuto especial acreano; Lei 2.250/2009 rege PCCR; LC 39/1993 rege servidores civis na parte aplicável."
+          "why": "Errado. A LC 129/2004 sofreu diversas alterações, inclusive LC 496/2025 e LC 526/2026, que criaram/reorganizaram cargo de Oficial Investigador e alteraram ingresso e formação. Estudar só a redação inicial de 2004 levaria a responder regras revogadas."
         },
         {
           "a": false,
           "q": "A lei estadual pode contrariar as normas constitucionais e as normas gerais nacionais aplicáveis.",
-          "why": "A legislação estadual deve respeitar a Constituição e o espaço normativo das normas gerais nacionais."
+          "why": "Errado. Lei estadual deve respeitar a Constituição Federal e normas gerais nacionais válidas na respectiva competência; não pode afastá-las simplesmente por atender a interesse local. A Lei 14.735/2023 estabelece regras gerais sem dispensar lei orgânica estadual."
         },
         {
           "a": true,
           "q": "Na leitura de normas, palavras que indicam obrigação, faculdade, prazo e exceção podem alterar o sentido do dispositivo.",
-          "why": "São elementos frequentemente explorados em questões literais de legislação. Atenção à norma: Há normas complementares, não uma lei única: Lei 14.735/2023 é orgânica nacional; LC 129/2004 é estatuto especial acreano; Lei 2.250/2009 rege PCCR; LC 39/1993 rege servidores civis na parte aplicável."
+          "why": "Correto. 'Deverá' normalmente indica comando, 'poderá' pode indicar faculdade, e expressões como 'salvo' e 'exceto' delimitam hipóteses especiais. Em questão literal, trocar prazo, exceção ou verbo modal altera a consequência legal."
         }
       ],
       "slug": "pcac-2026-legislacao-institucional-policia-civil-acre",
@@ -750,8 +798,16 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 comentários gerais de Lei 14735, LC129/496/526, LC39/525 e PCCR 2250, com exemplos e notas de vigência. Homologação legal exige fonte íntegra e hash por questão.",
         "items_checked": 5,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://www.legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -759,27 +815,27 @@
         {
           "a": true,
           "q": "A LC nº 496/2025 unificou escrivão e agente sob Oficial Investigador de Polícia.",
-          "why": "É o objeto expresso da LC nº 496/2025. Atenção à norma: Use LC 129/2004 consolidada com alterações das LCs 496/2025 e 526/2026. Dispositivo revogado não deve ser aplicado como vigente. Compare a data do concurso, redação e exceções no portal oficial estadual."
+          "why": "Correto. A LC estadual 496/2025 promoveu unificação dos cargos de escrivão e agente de polícia no cargo de Oficial Investigador de Polícia. O quantitativo de vagas decorre da soma das vagas anteriores, conforme a lei. Não envolve unificação de delegado com perito."
         },
         {
           "a": false,
           "q": "A LC nº 496/2025 unificou delegado e perito criminal.",
-          "why": "A unificação foi entre escrivão e agente. Atenção à norma: Use LC 129/2004 consolidada com alterações das LCs 496/2025 e 526/2026. Dispositivo revogado não deve ser aplicado como vigente. Compare a data do concurso, redação e exceções no portal oficial estadual."
+          "why": "Errado. A LC 496/2025 trata de escrivão e agente de polícia, não unifica delegado e perito criminal. São carreiras com atribuições e requisitos distintos, mesmo que integrem a mesma instituição policial."
         },
         {
           "a": true,
           "q": "O art. 64 alterado prevê ingresso na classe inicial de cada cargo.",
-          "why": "Essa é a redação expressa do dispositivo. Atenção à norma: Use LC 129/2004 consolidada com alterações das LCs 496/2025 e 526/2026. Dispositivo revogado não deve ser aplicado como vigente. Compare a data do concurso, redação e exceções no portal oficial estadual."
+          "why": "Correto na redação consolidada do art. 64 da LC 129/2004: ingresso nas carreiras ocorre na classe inicial do cargo, observados concurso e demais exigências de investidura. A nova nomenclatura de Oficial Investigador deve ser considerada ao estudar o dispositivo."
         },
         {
           "a": false,
           "q": "A prova oral prevista no art. 65 é obrigatória para todos os cargos.",
-          "why": "O texto especifica prova oral para Delegado. Atenção à norma: Use LC 129/2004 consolidada com alterações das LCs 496/2025 e 526/2026. Dispositivo revogado não deve ser aplicado como vigente. Compare a data do concurso, redação e exceções no portal oficial estadual."
+          "why": "Errado. A etapa de prova oral indicada na LC 129/2004, art. 65, tem previsão específica para cargo de Delegado, não é exigência indiscriminada para todas as carreiras. Compare etapas de seleção no cargo pretendido."
         },
         {
           "a": true,
           "q": "O estágio probatório começa a partir da investidura.",
-          "why": "O art. 64 alterado estabelece esse marco. Atenção à norma: Use LC 129/2004 consolidada com alterações das LCs 496/2025 e 526/2026. Dispositivo revogado não deve ser aplicado como vigente. Compare a data do concurso, redação e exceções no portal oficial estadual."
+          "why": "Correto segundo o art. 64 da LC 129/2004 consolidada: estágio probatório se vincula à investidura conforme a redação legal. Diferencie posse, exercício e participação em curso de formação, que podem possuir marcos e efeitos próprios."
         }
       ],
       "slug": "pcac-2026-legislacao-lc129-atualizacoes-496-526",
@@ -790,8 +846,16 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 comentários gerais de Lei 14735, LC129/496/526, LC39/525 e PCCR 2250, com exemplos e notas de vigência. Homologação legal exige fonte íntegra e hash por questão.",
         "items_checked": 5,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://www.legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -799,27 +863,27 @@
         {
           "a": true,
           "q": "A LC nº 39/1993 institui o Estatuto dos servidores públicos civis estaduais.",
-          "why": "É o objeto indicado no art. 1º. Atenção à norma: A LC 525/2026 revogou o §4º do art. 282 da LC 39/1993. Na prova, verifique dispositivos expressamente revogados e distinga regra geral dos servidores da lei orgânica especial da Polícia Civil."
+          "why": "Correto. A LC estadual 39/1993 dispõe sobre o Estatuto dos Servidores Públicos Civis do Acre, autarquias e fundações públicas instituídas e mantidas pelo poder público. Sua aplicação a policial civil exige observar normas especiais da LC 129/2004."
         },
         {
           "a": false,
           "q": "Servidor, para o art. 2º, é qualquer pessoa que preste serviço informal ao Estado.",
-          "why": "O texto exige investidura legal em cargo público ou em comissão. Atenção à norma: A LC 525/2026 revogou o §4º do art. 282 da LC 39/1993. Na prova, verifique dispositivos expressamente revogados e distinga regra geral dos servidores da lei orgânica especial da Polícia Civil."
+          "why": "Errado. O art. 2º da LC 39/1993 exige investidura legal em cargo público, efetivo ou em comissão, nas condições do estatuto. Serviço informal ao Estado não torna automaticamente alguém servidor estatutário para todos os efeitos."
         },
         {
           "a": true,
           "q": "O art. 4º admite exceções legais à vedação de serviço gratuito.",
-          "why": "A ressalva legal integra o dispositivo. Atenção à norma: A LC 525/2026 revogou o §4º do art. 282 da LC 39/1993. Na prova, verifique dispositivos expressamente revogados e distinga regra geral dos servidores da lei orgânica especial da Polícia Civil."
+          "why": "Correto. O art. 4º da LC 39/1993 veda prestação de serviços gratuitos, ressalvados os casos previstos em lei. A exceção depende de disposição legal e não de mero acordo informal com chefia."
         },
         {
           "a": false,
           "q": "A LC nº 525/2026 revogou integralmente a LC nº 39/1993.",
-          "why": "A alteração identificada revogou especificamente o § 4º do art. 282. Atenção à norma: A LC 525/2026 revogou o §4º do art. 282 da LC 39/1993. Na prova, verifique dispositivos expressamente revogados e distinga regra geral dos servidores da lei orgânica especial da Polícia Civil."
+          "why": "Errado. A LC 525/2026 não revogou a LC 39/1993 inteira: seu art. 1º revogou especificamente o §4º do art. 282 da LC 39. O restante permanece sujeito às alterações, revogações e interpretações pertinentes."
         },
         {
           "a": false,
           "q": "A regra geral da LC nº 39 deve ser aplicada sem verificar eventual norma especial da carreira policial.",
-          "why": "Devem ser consideradas as regras especiais e o recorte do edital. Atenção à norma: A LC 525/2026 revogou o §4º do art. 282 da LC 39/1993. Na prova, verifique dispositivos expressamente revogados e distinga regra geral dos servidores da lei orgânica especial da Polícia Civil."
+          "why": "Errado. A LC 39/1993 é estatuto geral dos servidores civis, enquanto policiais civis possuem regime orgânico/estatutário especial na LC 129/2004. Não aplique regra geral sem examinar a especialidade e a compatibilidade entre dispositivos."
         }
       ],
       "slug": "pcac-2026-legislacao-lc39-regime-servidor",
@@ -830,8 +894,16 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 comentários gerais de Lei 14735, LC129/496/526, LC39/525 e PCCR 2250, com exemplos e notas de vigência. Homologação legal exige fonte íntegra e hash por questão.",
         "items_checked": 5,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://www.legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -839,27 +911,27 @@
         {
           "a": true,
           "q": "A Lei nº 2.250/2009 institui o PCCR da Polícia Civil do Acre.",
-          "why": "Esse é o objeto expresso da lei. Atenção à norma: PCCR da Polícia Civil organiza classes, referências, vantagens e formas de desenvolvimento funcional. Progressão dentro de classe não é promoção para classe superior; verifique interstício, capacitação e texto atualizado para cada cargo."
+          "why": "Correto. A Lei estadual 2.250, de 21 de dezembro de 2009, institui o Plano de Cargos, Carreiras e Remuneração dos servidores da Polícia Civil do Acre. O PCCR trata de classes, referências e vantagens, sem substituir por completo a lei orgânica."
         },
         {
           "a": false,
           "q": "O art. 20 considera apenas o vencimento básico, sem vantagens.",
-          "why": "O dispositivo inclui vantagens pecuniárias devidas. Atenção à norma: PCCR da Polícia Civil organiza classes, referências, vantagens e formas de desenvolvimento funcional. Progressão dentro de classe não é promoção para classe superior; verifique interstício, capacitação e texto atualizado para cada cargo."
+          "why": "Errado. O art. 20 da Lei 2.250/2009 não limita a remuneração ao vencimento básico em todas as hipóteses; o PCCR também prevê vantagens pecuniárias devidas. Vencimento, remuneração e indenização são conceitos distintos."
         },
         {
           "a": true,
           "q": "A fixação das referências salariais considera natureza, responsabilidade e complexidade dos cargos.",
-          "why": "Esses critérios constam do art. 21. Atenção à norma: PCCR da Polícia Civil organiza classes, referências, vantagens e formas de desenvolvimento funcional. Progressão dentro de classe não é promoção para classe superior; verifique interstício, capacitação e texto atualizado para cada cargo."
+          "why": "Correto. O art. 21 do PCCR relaciona a estrutura remuneratória às características dos cargos, como natureza da atividade, responsabilidade e complexidade. A tabela concreta deve ser lida na versão vigente, inclusive após alterações."
         },
         {
           "a": false,
           "q": "A LC nº 129/2004 e a Lei nº 2.250/2009 possuem o mesmo objeto.",
-          "why": "Uma trata da Lei Orgânica e Estatuto; outra do PCCR. Atenção à norma: PCCR da Polícia Civil organiza classes, referências, vantagens e formas de desenvolvimento funcional. Progressão dentro de classe não é promoção para classe superior; verifique interstício, capacitação e texto atualizado para cada cargo."
+          "why": "Errado. A LC 129/2004 disciplina estrutura e estatuto especial da Polícia Civil; a Lei 2.250/2009 disciplina PCCR e remuneração. São diplomas relacionados, mas objetos normativos não são idênticos."
         },
         {
           "a": true,
           "q": "Tabelas remuneratórias devem ser conferidas na versão atualizada.",
-          "why": "Alterações posteriores podem modificar estrutura e valores. Atenção à norma: PCCR da Polícia Civil organiza classes, referências, vantagens e formas de desenvolvimento funcional. Progressão dentro de classe não é promoção para classe superior; verifique interstício, capacitação e texto atualizado para cada cargo."
+          "why": "Correto. Tabelas e referências salariais podem sofrer alteração por leis posteriores e anexos atualizados. Para resolver questões atuais, verifique data, cargo e redação consolidada do PCCR antes de usar valor extraído de prova antiga."
         }
       ],
       "slug": "pcac-2026-legislacao-lei-2250-pccr",
@@ -870,8 +942,16 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 comentários gerais de Lei 14735, LC129/496/526, LC39/525 e PCCR 2250, com exemplos e notas de vigência. Homologação legal exige fonte íntegra e hash por questão.",
         "items_checked": 5,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://www.legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -879,27 +959,27 @@
         {
           "a": true,
           "q": "A Lei nº 14.735/2023 estabelece normas gerais nacionais de funcionamento das Polícias Civis.",
-          "why": "Esse é o objeto expresso da lei. Atenção à norma: A Lei 14.735/2023 fixa normas gerais sobre organização e funcionamento das polícias civis, sem substituir automaticamente a estrutura estadual compatível. Competências próprias devem ser diferenciadas das diretrizes institucionais."
+          "why": "Correto. A Lei 14.735/2023 institui normas gerais de organização e funcionamento das Polícias Civis, sem excluir a necessidade de regulamentação estadual conforme o art. 3º. Diferença entre norma geral federal e norma específica estadual é central na prova."
         },
         {
           "a": false,
           "q": "O art. 1º caracteriza as Polícias Civis como instituições temporárias.",
-          "why": "A lei as caracteriza como instituições permanentes. Atenção à norma: A Lei 14.735/2023 fixa normas gerais sobre organização e funcionamento das polícias civis, sem substituir automaticamente a estrutura estadual compatível. Competências próprias devem ser diferenciadas das diretrizes institucionais."
+          "why": "Errado. Art. 1º da Lei 14.735/2023 identifica Polícias Civis como instituições permanentes, essenciais à justiça criminal, com funções e natureza legalmente descritas. 'Temporárias' inverte característica expressa."
         },
         {
           "a": true,
           "q": "As Polícias Civis integram operacionalmente o Susp, conforme art. 2º.",
-          "why": "A integração consta do art. 2º. Atenção à norma: A Lei 14.735/2023 fixa normas gerais sobre organização e funcionamento das polícias civis, sem substituir automaticamente a estrutura estadual compatível. Competências próprias devem ser diferenciadas das diretrizes institucionais."
+          "why": "Correto. O art. 2º da Lei 14.735/2023 trata da integração operacional das Polícias Civis ao Sistema Único de Segurança Pública (Susp), em conformidade com suas competências legais e institucionais."
         },
         {
           "a": false,
           "q": "A lei nacional elimina a necessidade de lei orgânica estadual.",
-          "why": "O art. 3º prevê disciplina específica por lei orgânica de cada ente. Atenção à norma: A Lei 14.735/2023 fixa normas gerais sobre organização e funcionamento das polícias civis, sem substituir automaticamente a estrutura estadual compatível. Competências próprias devem ser diferenciadas das diretrizes institucionais."
+          "why": "Errado. O art. 3º da Lei 14.735/2023 prevê que cada ente federado organize aspectos específicos em sua própria lei orgânica, observadas normas gerais nacionais. A lei federal não elimina a atuação legislativa estadual."
         },
         {
           "a": true,
           "q": "A redação vigente deve considerar partes vetadas promulgadas posteriormente.",
-          "why": "Partes vetadas foram promulgadas em 2024. Atenção à norma: A Lei 14.735/2023 fixa normas gerais sobre organização e funcionamento das polícias civis, sem substituir automaticamente a estrutura estadual compatível. Competências próprias devem ser diferenciadas das diretrizes institucionais."
+          "why": "Correto. Partes vetadas da Lei 14.735/2023 tiveram promulgação posterior pelo Congresso em 2024, alterando o texto aplicável. Questão atual deve considerar redação consolidada e veto derrubado, não apenas publicação original de novembro de 2023."
         }
       ],
       "slug": "pcac-2026-legislacao-lei-organica-nacional-14735",
@@ -910,8 +990,16 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "25 comentários gerais de Lei 14735, LC129/496/526, LC39/525 e PCCR 2250, com exemplos e notas de vigência. Homologação legal exige fonte íntegra e hash por questão.",
         "items_checked": 5,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
+          "https://www.legis.ac.gov.br/detalhar/674",
+          "https://www.legis.ac.gov.br/detalhar/110",
+          "https://www.legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/6864-1"
+        ]
       }
     },
     {
@@ -919,42 +1007,42 @@
         {
           "a": true,
           "q": "A Lei nº 12.830/2013 atribui natureza jurídica às funções de polícia judiciária e apuração de infrações penais exercidas pelo delegado.",
-          "why": "O art. 2º expressamente qualifica essas funções como de natureza jurídica, essenciais e exclusivas de Estado."
+          "why": "Correto. A Lei 12.830/2013, art. 2º, qualifica funções de polícia judiciária e apuração de infrações penais exercidas pelo delegado como de natureza jurídica, essenciais e exclusivas de Estado. Essa expressão não cria monopólio de toda atividade investigativa."
         },
         {
           "a": false,
           "q": "Segundo o STF na ADI 5.043, o art. 2º, § 1º, torna privativa do delegado toda e qualquer investigação criminal.",
-          "why": "O STF declarou inconstitucional a interpretação que atribua exclusividade ao delegado. O Ministério Público, CPIs e outras autoridades também podem investigar quando houver competência constitucional ou legal."
+          "why": "Errado. O STF julgou ADI 5043 em 2025 e afastou interpretação do art. 2º, §1º, da Lei 12.830 que atribuía a delegados exclusividade de toda investigação criminal. Outros órgãos com competência legal, como Ministério Público, podem investigar em condições constitucionais."
         },
         {
           "a": true,
           "q": "Durante a investigação, o delegado pode requisitar perícias, informações, documentos e dados que interessem à apuração.",
-          "why": "É a previsão do art. 2º, § 2º. A pertinência com a apuração e as reservas legais de sigilo continuam relevantes."
+          "why": "Correto. A Lei 12.830/2013, art. 2º, §2º, prevê poder de requisitar perícias, informações, documentos e dados de interesse da apuração, respeitando os limites constitucionais, requisitos legais e reservas de jurisdição quando aplicáveis."
         },
         {
           "a": false,
           "q": "Um superior hierárquico pode redistribuir inquérito em curso por simples conveniência pessoal, sem despacho fundamentado.",
-          "why": "O art. 2º, § 4º, exige despacho fundamentado e motivo de interesse público ou inobservância regulamentar que prejudique a eficácia da investigação."
+          "why": "Errado. A redistribuição de inquérito durante investigação exige despacho fundamentado e situação prevista no art. 2º, §4º, da Lei 12.830, como interesse público ou inobservância de procedimento regulamentar que prejudique eficácia. Conveniência pessoal sem fundamento não basta."
         },
         {
           "a": true,
           "q": "O indiciamento é privativo do delegado e deve ser formalizado por ato fundamentado.",
-          "why": "O art. 2º, § 6º, exige análise técnico-jurídica do fato e indicação de autoria, materialidade e circunstâncias."
+          "why": "Correto. Indiciamento é ato privativo do delegado, fundamentado por análise técnico-jurídica do fato e indicação de autoria, materialidade e circunstâncias, conforme Lei 12.830/2013, art. 2º, §6º. Não se confunde com denúncia judicial."
         },
         {
           "a": false,
           "q": "A remoção do delegado pode ser feita sem motivação, por ser ato discricionário.",
-          "why": "O art. 2º, § 5º, determina que a remoção se dê somente por ato fundamentado. Atenção à norma: A Lei 12.830/2013 trata da condução do inquérito pelo delegado e do indiciamento como ato fundamentado privativo da autoridade policial. Isso não significa monopólio absoluto de toda investigação criminal pelo delegado."
+          "why": "Errado. Lei 12.830/2013, art. 2º, §5º, exige remoção do delegado por ato fundamentado. A discricionariedade administrativa não dispensa motivação expressamente exigida por lei."
         },
         {
           "a": true,
           "q": "A lei exige bacharelado em Direito para o cargo de delegado de polícia.",
-          "why": "O art. 3º estabelece que o cargo é privativo de bacharel em Direito. Atenção à norma: A Lei 12.830/2013 trata da condução do inquérito pelo delegado e do indiciamento como ato fundamentado privativo da autoridade policial. Isso não significa monopólio absoluto de toda investigação criminal pelo delegado."
+          "why": "Correto. A Lei 12.830/2013, art. 3º, reserva o cargo de delegado de polícia a bacharel em Direito. Requisitos estaduais adicionais devem respeitar a legislação e regras constitucionais aplicáveis ao concurso."
         },
         {
           "a": false,
           "q": "A exclusividade estatal das funções de polícia judiciária significa que nenhuma outra instituição pode realizar investigação criminal.",
-          "why": "Não confunda natureza de função estatal com monopólio de investigação. A ADI 5.043 reconheceu a possibilidade de investigações por outros órgãos dentro de suas competências."
+          "why": "Errado. A ADI 5043 afastou exclusividade de delegados sobre qualquer investigação criminal. Há órgãos com atribuições próprias investigativas, como Ministério Público e comissões parlamentares de inquérito, sem que isso elimine competência policial sobre inquérito."
         }
       ],
       "slug": "pcac-2026-lei12830-investigacao-delegado-adi5043",
@@ -965,8 +1053,15 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "29 justificativas de segurança, Lei 12830 e SUSP individualizadas com precedentes STF ADI 5043/7466; ainda não há aprovação criptográfica da versão do texto oficial para treino.",
         "items_checked": 8,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13675-11-junho-2018-786843-normaatualizada-pl.html"
+        ]
       }
     },
     {
@@ -974,42 +1069,42 @@
         {
           "a": true,
           "q": "A Lei nº 13.675/2018 instituiu o Susp e criou a PNSPDS.",
-          "why": "A ementa e o art. 1º da lei estabelecem esses dois pilares: política nacional e sistema de integração."
+          "why": "Correto. A Lei 13.675/2018 instituiu o Sistema Único de Segurança Pública (Susp) e a Política Nacional de Segurança Pública e Defesa Social (PNSPDS), com princípios, diretrizes e regras de cooperação entre órgãos."
         },
         {
           "a": false,
           "q": "A Polícia Civil é integrante estratégico do Susp.",
-          "why": "As Polícias Civis aparecem no rol dos integrantes operacionais, no art. 9º, § 2º, IV. Integrantes estratégicos são os entes federativos por seus Executivos e os Conselhos."
+          "why": "Errado. Pela Lei 13.675/2018, art. 9º, §2º, IV, Polícias Civis integram o Susp como integrantes operacionais. Integrantes estratégicos incluem entes federados por intermédio dos executivos e conselhos do sistema."
         },
         {
           "a": true,
           "q": "União, Estados, Distrito Federal e Municípios, por meio de seus respectivos Poderes Executivos, são integrantes estratégicos do Susp.",
-          "why": "É a previsão do art. 9º, § 1º, I. O dispositivo também inclui os Conselhos de Segurança Pública e Defesa Social."
+          "why": "Correto. A Lei 13.675/2018, art. 9º, §1º, I, define União, Estados, Distrito Federal e Municípios, por seus respectivos Poderes Executivos, como integrantes estratégicos do Susp. Conselhos também compõem categoria estratégica nos termos legais."
         },
         {
           "a": true,
           "q": "Os órgãos integrantes do Susp atuam de forma cooperativa, sistêmica e harmônica, dentro dos limites de suas competências.",
-          "why": "Essa é a regra do caput do art. 9º. A integração não autoriza extrapolar competências."
+          "why": "Correto. O art. 9º, caput, da Lei 13.675/2018 organiza integração cooperativa, sistêmica e harmônica, respeitando competências de cada órgão. Cooperação não torna todas as polícias órgãos subordinados a um único comando operacional."
         },
         {
           "a": false,
           "q": "A integração no Susp significa que uma Polícia Civil estadual fica hierarquicamente subordinada à Polícia Federal.",
-          "why": "A lei prevê cooperação e coordenação, não subordinação automática entre órgãos. Cada integrante preserva suas competências e sua estrutura."
+          "why": "Errado. Integração no Susp não implica subordinação hierárquica geral da Polícia Civil estadual à Polícia Federal. Ambas devem cumprir suas competências constitucionais e legais, podendo atuar conjuntamente por cooperação."
         },
         {
           "a": true,
           "q": "Os sistemas estaduais, distrital e municipais têm responsabilidade pela implementação de seus programas, ações e projetos de segurança pública.",
-          "why": "O art. 9º, § 4º, atribui essa responsabilidade aos sistemas locais, com liberdade de organização e funcionamento, respeitada a lei."
+          "why": "Correto. A Lei 13.675/2018, art. 9º, §4º, atribui aos sistemas estaduais, distrital e municipais responsabilidade por seus programas, ações e projetos de segurança, observadas diretrizes de integração e competências próprias."
         },
         {
           "a": false,
           "q": "A PNSPDS é uma instituição policial com poder de polícia próprio.",
-          "why": "A PNSPDS é uma política pública nacional, com princípios, diretrizes e objetivos; não é uma corporação policial."
+          "why": "Errado. PNSPDS é política pública nacional, não corporação policial dotada de poder de polícia próprio. Possui objetivos, diretrizes e instrumentos de gestão; as instituições executam atribuições conforme competências legais."
         },
         {
           "a": true,
           "q": "A Lei nº 14.531/2023 incluiu a polícia legislativa no rol de integrantes operacionais do Susp.",
-          "why": "A alteração acrescentou o inciso XVII ao art. 9º, § 2º, referente à polícia legislativa prevista na Constituição Federal."
+          "why": "Correto. Lei 14.531/2023 acrescentou polícia legislativa ao rol de integrantes operacionais do Susp, art. 9º, §2º, XVII, na forma da Constituição. Não significa transformar polícia legislativa em Polícia Civil estadual."
         }
       ],
       "slug": "pcac-2026-lei13675-susp-politica-seguranca",
@@ -1018,9 +1113,16 @@
       "practice_review": {
         "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "reviewed",
+        "status": "needs_revalidation",
         "review_date": "2026-11-14",
-        "items_checked": 8
+        "review_note": "29 justificativas de segurança, Lei 12830 e SUSP individualizadas com precedentes STF ADI 5043/7466; ainda não há aprovação criptográfica da versão do texto oficial para treino.",
+        "items_checked": 8,
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www.stf.jus.br/arquivo/informativo/documento/informativo1171.htm",
+          "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13675-11-junho-2018-786843-normaatualizada-pl.html"
+        ]
       }
     },
     {
@@ -1028,42 +1130,42 @@
         {
           "a": true,
           "q": "O quadro policial nacional inclui Oficial Investigador de Polícia.",
-          "why": "O art. 19, II, inclui o cargo. Atenção à norma: Ao comparar cargos policiais, identifique quem preside procedimento, quem executa diligências e quem pratica atos periciais. Atribuições do Oficial Investigador não eliminam atos privativos da autoridade policial; concurso exige etapas e requisitos legais."
+          "why": "Correto. O art. 19, II, da Lei 14.735/2023 incluiu o cargo de Oficial Investigador de Polícia no quadro policial civil nacional. Sua organização específica e respectivas atribuições devem considerar o estatuto estadual compatível."
         },
         {
           "a": false,
           "q": "O Oficial Investigador precisa ser bacharel em Direito e comprovar três anos de atividade jurídica.",
-          "why": "Esse requisito é do Delegado; para Oficial Investigador exige-se graduação em qualquer área."
+          "why": "Errado. A exigência de bacharelado em Direito e atividade jurídica/policial refere-se ao Delegado, nos termos legais. Para Oficial Investigador a exigência de escolaridade prevista é graduação em nível superior em qualquer área, observadas regras do edital e cargo."
         },
         {
           "a": true,
           "q": "A prova oral é etapa obrigatória do concurso para Delegado.",
-          "why": "É a regra do art. 21, § 3º. Atenção à norma: Ao comparar cargos policiais, identifique quem preside procedimento, quem executa diligências e quem pratica atos periciais. Atribuições do Oficial Investigador não eliminam atos privativos da autoridade policial; concurso exige etapas e requisitos legais."
+          "why": "Correto. A Lei 14.735/2023, art. 21, §3º, trata da prova oral obrigatória para concurso de Delegado de Polícia. Não é correto estender automaticamente essa exigência a Oficial Investigador sem previsão específica."
         },
         {
           "a": true,
           "q": "O curso de formação profissional possui caráter eliminatório.",
-          "why": "O art. 22 o define dessa forma. Atenção à norma: Ao comparar cargos policiais, identifique quem preside procedimento, quem executa diligências e quem pratica atos periciais. Atribuições do Oficial Investigador não eliminam atos privativos da autoridade policial; concurso exige etapas e requisitos legais."
+          "why": "Correto. O art. 22 da Lei 14.735/2023 confere caráter eliminatório ao curso de formação profissional. Isso significa que a participação e o desempenho na etapa são condições relevantes para prosseguir, conforme regras do edital."
         },
         {
           "a": false,
           "q": "A investidura ocorre na classe final da carreira.",
-          "why": "O art. 23, parágrafo único, determina classe inicial. Atenção à norma: Ao comparar cargos policiais, identifique quem preside procedimento, quem executa diligências e quem pratica atos periciais. Atribuições do Oficial Investigador não eliminam atos privativos da autoridade policial; concurso exige etapas e requisitos legais."
+          "why": "Errado. A Lei 14.735/2023, art. 23, parágrafo único, estabelece investidura na classe inicial da carreira, não na final. A progressão e promoção ocorrem posteriormente segundo requisitos e estrutura legal."
         },
         {
           "a": true,
           "q": "O Oficial Investigador exerce atribuições apuratórias, cartorárias e investigativas nos limites legais.",
-          "why": "É a descrição do art. 27. Atenção à norma: Ao comparar cargos policiais, identifique quem preside procedimento, quem executa diligências e quem pratica atos periciais. Atribuições do Oficial Investigador não eliminam atos privativos da autoridade policial; concurso exige etapas e requisitos legais."
+          "why": "Correto. O art. 27 da Lei 14.735/2023 descreve atribuições do Oficial Investigador, incluindo atividades apuratórias, cartorárias e investigativas, dentro dos limites legais. A função não substitui atos privativos do Delegado."
         },
         {
           "a": false,
           "q": "O Perito Oficial Criminal atua sem autonomia técnica.",
-          "why": "O art. 28 assegura autonomia técnica, científica e funcional. Atenção à norma: Ao comparar cargos policiais, identifique quem preside procedimento, quem executa diligências e quem pratica atos periciais. Atribuições do Oficial Investigador não eliminam atos privativos da autoridade policial; concurso exige etapas e requisitos legais."
+          "why": "Errado. O art. 28 da Lei 14.735/2023 assegura autonomia técnica, científica e funcional ao perito oficial criminal no exercício de atribuições periciais. Requisição da perícia não autoriza determinar resultado técnico."
         },
         {
           "a": true,
           "q": "O tempo de atividade policial civil deve ser considerado na prova de títulos do concurso para Delegado.",
-          "why": "A prova de títulos é etapa com critérios previstos na legislação e no edital. O item se refere ao art. 21 da Lei 14.735/2023 e ao tempo de atividade policial civil; não confunda valorização de experiência profissional com dispensa de concurso ou aprovação automática."
+          "why": "Correto. O art. 21 da Lei 14.735/2023 orienta consideração do tempo de atividade policial civil na prova de títulos do concurso para Delegado, conforme as condições da norma e do edital. Não significa aprovação automática na etapa."
         }
       ],
       "slug": "pcac-2026-lei14735-cargos-concurso-atribuicoes",
@@ -1074,7 +1176,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 explicações da Lei 14735/2023 substituídas por referências a artigos e partes vetadas promulgadas em 2024. A liberação no treinador exige validação individual por hash de fonte oficial.",
         "items_checked": 8,
+        "official_source": "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -1083,42 +1187,42 @@
         {
           "a": true,
           "q": "A Lei 14.735/2023 assegura carga horária máxima não superior a 40 horas semanais, conforme legislação do ente.",
-          "why": "É a regra do art. 30, XIX, no texto promulgado. Atenção à norma: A Lei 14.735/2023 contém direitos, deveres e disposições institucionais. Distinga prerrogativa funcional de imunidade penal ou disciplinar; limites são definidos por norma e interesse público. Datas comemorativas não alteram competência."
+          "why": "Correto. O art. 30, XIX, da Lei 14.735/2023, promulgado após rejeição de veto em 2024, prevê duração máxima do labor conforme legislação do ente federado, não superior a quarenta horas semanais, com direitos remuneratórios e indenizatórios correspondentes. Leia a redação consolidada."
         },
         {
           "a": false,
           "q": "A estabilidade do policial civil ocorre após dois anos de exercício.",
-          "why": "O art. 30, § 15, prevê três anos de efetivo exercício. Atenção à norma: A Lei 14.735/2023 contém direitos, deveres e disposições institucionais. Distinga prerrogativa funcional de imunidade penal ou disciplinar; limites são definidos por norma e interesse público. Datas comemorativas não alteram competência."
+          "why": "Errado. A estabilidade constitucional do servidor efetivo pressupõe três anos de efetivo exercício e avaliação especial, não dois, conforme art. 41 da Constituição e referência do art. 30, §15, da Lei 14.735/2023."
         },
         {
           "a": true,
           "q": "O policial civil deve obedecer prontamente às determinações legais do superior hierárquico.",
-          "why": "O art. 33, II, exige legalidade da determinação. Atenção à norma: A Lei 14.735/2023 contém direitos, deveres e disposições institucionais. Distinga prerrogativa funcional de imunidade penal ou disciplinar; limites são definidos por norma e interesse público. Datas comemorativas não alteram competência."
+          "why": "Correto. O art. 33, II, da Lei 14.735/2023 impõe cumprimento de determinações legais de superior hierárquico. A qualificação 'legais' é essencial: ordem manifestamente ilícita não se transforma em dever funcional obrigatório."
         },
         {
           "a": true,
           "q": "O art. 34 proíbe divulgação de técnicas investigativas fora da esfera policial, ressalvadas hipóteses legais.",
-          "why": "É a regra expressa do caput. Atenção à norma: A Lei 14.735/2023 contém direitos, deveres e disposições institucionais. Distinga prerrogativa funcional de imunidade penal ou disciplinar; limites são definidos por norma e interesse público. Datas comemorativas não alteram competência."
+          "why": "Correto. A Lei 14.735/2023, art. 34, veda divulgação indevida de técnicas de investigação fora da esfera policial, observadas exceções legais. O objetivo envolve preservar métodos sensíveis sem impedir as situações expressamente autorizadas."
         },
         {
           "a": false,
           "q": "A divulgação das técnicas é proibida inclusive em cursos destinados exclusivamente a profissionais das instituições do art. 144.",
-          "why": "O § 1º excepciona esses cursos. Atenção à norma: A Lei 14.735/2023 contém direitos, deveres e disposições institucionais. Distinga prerrogativa funcional de imunidade penal ou disciplinar; limites são definidos por norma e interesse público. Datas comemorativas não alteram competência."
+          "why": "Errado. O art. 34, §1º, da Lei 14.735/2023 prevê exceção para cursos de formação, aperfeiçoamento, atualização e outros destinados exclusivamente a profissionais das instituições previstas no art. 144 da Constituição."
         },
         {
           "a": false,
           "q": "A custódia de preso em unidade policial é absolutamente permitida por prazo curto.",
-          "why": "O art. 40 veda a custódia, salvo interesse fundamentado na investigação. Atenção à norma: A Lei 14.735/2023 contém direitos, deveres e disposições institucionais. Distinga prerrogativa funcional de imunidade penal ou disciplinar; limites são definidos por norma e interesse público. Datas comemorativas não alteram competência."
+          "why": "Errado. O art. 40 da Lei 14.735/2023 veda custódia de preso em unidade policial, ressalvada hipótese de interesse fundamentado da investigação prevista na lei. Prazo curto não basta como autorização universal."
         },
         {
           "a": true,
           "q": "O dia nacional da Polícia Civil é 5 de abril.",
-          "why": "A questão exige memorização de uma data institucional prevista na Lei 14.735/2023, art. 47. Em prova, diferencie a celebração nacional da Polícia Civil de aniversários de criação ou datas comemorativas específicas de instituições estaduais."
+          "why": "Correto. O art. 47 da Lei 14.735/2023 fixa o dia 5 de abril como Dia Nacional da Polícia Civil. Não confunda essa data com aniversário de instituição estadual ou publicação da lei."
         },
         {
           "a": false,
           "q": "O art. 49 revoga automaticamente todas as leis estaduais sobre Polícia Civil.",
-          "why": "Permanecem válidas as leis locais que não sejam incompatíveis com a lei nacional."
+          "why": "Errado. A Lei 14.735/2023 não revoga indistintamente todos os estatutos estaduais de Polícia Civil. Normas estaduais compatíveis com a Constituição e com normas gerais nacionais continuam aplicáveis no âmbito próprio."
         }
       ],
       "slug": "pcac-2026-lei14735-direitos-deveres-disposicoes-finais",
@@ -1129,7 +1233,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 explicações da Lei 14735/2023 substituídas por referências a artigos e partes vetadas promulgadas em 2024. A liberação no treinador exige validação individual por hash de fonte oficial.",
         "items_checked": 8,
+        "official_source": "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -1138,42 +1244,42 @@
         {
           "a": true,
           "q": "A proteção da dignidade humana e dos direitos fundamentais integra os princípios institucionais do art. 4º.",
-          "why": "Está expressamente no inciso I. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Correto. A Lei 14.735/2023, art. 4º, I, inclui proteção da dignidade humana e dos direitos fundamentais entre princípios institucionais. O respeito a esses direitos orienta a atividade investigativa, sem eliminar atribuições legalmente autorizadas."
         },
         {
           "a": false,
           "q": "A busca da verdade real não é princípio institucional da Lei 14.735/2023.",
-          "why": "A busca da verdade real consta do art. 4º, VII. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Errado. A busca da verdade real integra princípios institucionais da Polícia Civil no art. 4º, VII, da Lei 14.735/2023. A afirmação nega expressamente princípio enumerado no texto."
         },
         {
           "a": true,
           "q": "A distribuição do efetivo deve considerar população, extensão territorial e índices de criminalidade.",
-          "why": "É a diretriz do art. 5º, I. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Correto. O art. 5º, I, da Lei 14.735/2023 aponta distribuição de efetivo conforme critérios como população, extensão territorial e índices de criminalidade. Não deve ser determinada apenas por preferência pessoal."
         },
         {
           "a": false,
           "q": "A Polícia Civil pode executar as funções de polícia judiciária da União sem ressalvas.",
-          "why": "O art. 6º ressalva a competência da União e as infrações militares. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Errado. O art. 6º da Lei 14.735/2023 observa competência da União e exceção das infrações militares nas atribuições de polícia judiciária estadual. Nenhuma Polícia Civil pode assumir sem ressalvas todas as funções da União."
         },
         {
           "a": true,
           "q": "O Delegado-Geral deve apresentar planejamento estratégico em até 30 dias após sua nomeação.",
-          "why": "É o prazo do art. 8º, parágrafo único. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Correto. O art. 8º, parágrafo único, da Lei 14.735/2023 estabelece prazo de até trinta dias após nomeação para apresentação do planejamento estratégico pelo Delegado-Geral. O prazo é requisito institucional específico."
         },
         {
           "a": true,
           "q": "A Corregedoria-Geral exerce controle interno e correição.",
-          "why": "É a finalidade prevista no art. 10. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Correto. O art. 10 da Lei 14.735/2023 caracteriza Corregedoria-Geral como unidade de controle interno e correição, atuando sobre regularidade dos procedimentos e responsabilidades funcionais, dentro de suas competências."
         },
         {
           "a": false,
           "q": "A Escola Superior de Polícia Civil tem função apenas disciplinar.",
-          "why": "É órgão de formação, capacitação, pesquisa e extensão. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Errado. A Escola Superior de Polícia Civil exerce funções de formação, capacitação, atualização, pesquisa e extensão nos termos legais. Não se restringe à apuração disciplinar, que tem estrutura própria de controle."
         },
         {
           "a": true,
           "q": "A lei permite unidades especializadas em crimes cibernéticos, lavagem de dinheiro e violência doméstica.",
-          "why": "Essas especializações são mencionadas no art. 12, § 1º. Atenção à norma: Princípios da atuação policial orientam a instituição; competências definem atribuições concretas. Não deduza de uma diretriz geral uma atribuição exclusiva inexistente. A norma nacional convive com lei estadual dentro da Constituição."
+          "why": "Correto. O art. 12, §1º, da Lei 14.735/2023 prevê organização de unidades especializadas, inclusive para criminalidade cibernética, lavagem de dinheiro e violência doméstica, entre outras necessidades e critérios institucionais."
         }
       ],
       "slug": "pcac-2026-lei14735-principios-competencias-estrutura",
@@ -1184,7 +1290,9 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 explicações da Lei 14735/2023 substituídas por referências a artigos e partes vetadas promulgadas em 2024. A liberação no treinador exige validação individual por hash de fonte oficial.",
         "items_checked": 8,
+        "official_source": "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14735-23-novembro-2023-794983-normaatualizada-pl.html",
         "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
       }
     },
@@ -1193,37 +1301,37 @@
         {
           "a": true,
           "q": "O PCCR busca profissionalização e valorização do mérito e desempenho.",
-          "why": "Essas finalidades constam do art. 1º, § 3º. Atenção à norma: Ingresso é investidura inicial no cargo; progressão muda referência dentro de uma classe; promoção muda classe, conforme a legislação. Exemplo: referência I para II na mesma classe é distinta de classe II para III."
+          "why": "Correto. A Lei 2.250/2009 do Acre estabelece PCCR com propósitos de profissionalização e valorização do mérito e desempenho, conforme art. 1º, §3º. Esses objetivos orientam carreira, mas direitos específicos dependem das regras legais."
         },
         {
           "a": false,
           "q": "O concurso do art. 9º é apenas classificatório, sem caráter eliminatório.",
-          "why": "O dispositivo prevê caráter competitivo, eliminatório e classificatório. Atenção à norma: Ingresso é investidura inicial no cargo; progressão muda referência dentro de uma classe; promoção muda classe, conforme a legislação. Exemplo: referência I para II na mesma classe é distinta de classe II para III."
+          "why": "Errado. O art. 9º da Lei 2.250/2009 disciplina concurso com caráter competitivo, eliminatório e classificatório. Classificação ordena candidatos; eliminação exclui quem não alcança requisito mínimo."
         },
         {
           "a": false,
           "q": "Durante o estágio probatório, a lotação inicial nunca pode ser alterada, mesmo por interesse da Administração.",
-          "why": "O art. 10 ressalva o interesse da Administração. Atenção à norma: Ingresso é investidura inicial no cargo; progressão muda referência dentro de uma classe; promoção muda classe, conforme a legislação. Exemplo: referência I para II na mesma classe é distinta de classe II para III."
+          "why": "Errado. A legislação do PCCR admite alteração de lotação por interesse da Administração em hipóteses legais, mesmo durante probatório. Portanto 'nunca' contraria a ressalva do art. 10 e ignora exigências da atividade policial."
         },
         {
           "a": true,
           "q": "Progressão e promoção dependem do interstício mínimo e dos critérios legais e regulamentares.",
-          "why": "Progressão e promoção representam formas distintas de desenvolvimento funcional. O item remete ao art. 11 do regime de carreira: progressão costuma ocorrer entre referências da mesma classe; promoção, entre classes, exigindo observância de interstício e critérios legais."
+          "why": "Correto. Progressão e promoção dependem de interstício, critérios de desempenho e demais condições legais e regulamentares. Progressão muda referência dentro de classe; promoção, a classe superior, conforme o regime de carreira aplicável."
         },
         {
           "a": true,
           "q": "O art. 12 prevê como requisito não ter sofrido penalidade disciplinar nos 12 meses anteriores.",
-          "why": "É uma das condições cumulativas do dispositivo. Atenção à norma: Ingresso é investidura inicial no cargo; progressão muda referência dentro de uma classe; promoção muda classe, conforme a legislação. Exemplo: referência I para II na mesma classe é distinta de classe II para III."
+          "why": "Correto. O art. 12 da Lei 2.250/2009 inclui, entre condições cumulativas, ausência de penalidade disciplinar no período legal dos doze meses anteriores, conforme redação examinada. Não é o único requisito de progressão ou promoção."
         },
         {
           "a": true,
           "q": "O art. 19-A considera férias e licença-prêmio como efetivo exercício para progressão e promoção.",
-          "why": "Essas hipóteses estão expressamente enumeradas. Atenção à norma: Ingresso é investidura inicial no cargo; progressão muda referência dentro de uma classe; promoção muda classe, conforme a legislação. Exemplo: referência I para II na mesma classe é distinta de classe II para III."
+          "why": "Correto. O art. 19-A da Lei 2.250/2009 disciplina contagem de determinados afastamentos, incluindo férias e licença-prêmio, como efetivo exercício para progressão e promoção nas hipóteses legais. Não se confunde com qualquer afastamento sem previsão."
         },
         {
           "a": false,
           "q": "As tabelas originais de cargos e vencimentos podem ser usadas sem considerar alterações posteriores.",
-          "why": "O PCCR recebeu diversas alterações e a carreira foi atualizada em 2025. Atenção à norma: Ingresso é investidura inicial no cargo; progressão muda referência dentro de uma classe; promoção muda classe, conforme a legislação. Exemplo: referência I para II na mesma classe é distinta de classe II para III."
+          "why": "Errado. O PCCR da Polícia Civil passou por alterações posteriores, inclusive mudança de nomenclaturas e quadros em 2025. Uma tabela de 2009 pode refletir situação histórica, mas não necessariamente valores ou cargos vigentes em 2026."
         }
       ],
       "slug": "pcac-2026-lei2250-estrutura-ingresso-progressao-promocao",
@@ -1234,8 +1342,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "17 justificativas de PCCR 2250/2009, Lei 3228/2017 e LC 496/2025 esclarecidas por artigo. Revisão de documentos legais com hashes ainda exigida para treino.",
         "items_checked": 7,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/2499",
+          "https://legis.ac.gov.br/detalhar_imprimir/6527"
+        ]
       }
     },
     {
@@ -1243,52 +1357,52 @@
         {
           "a": true,
           "q": "O quantitativo de vagas do cargo de Oficial Investigador resulta da soma das vagas anteriormente destinadas aos cargos de agente e escrivão.",
-          "why": "É a regra do art. 4º da LC estadual nº 496/2025, que unificou os cargos e somou seus quantitativos."
+          "why": "Correto. A LC 496/2025, art. 4º, dispõe que quantitativo de vagas do cargo de Oficial Investigador resulta da soma das vagas disponíveis para agente e escrivão anteriormente existentes. Trata-se de reorganização formal do quadro."
         },
         {
           "a": false,
           "q": "A LC nº 496/2025 criou uma nova estrutura de carreira, sem manter a Lei nº 3.228/2017.",
-          "why": "O art. 2º, III, da LC 496/2025 mantém a estrutura da carreira estabelecida pela Lei 3.228/2017."
+          "why": "Errado. A LC 496/2025 preservou, em seu art. 2º, III, estrutura de carreira estabelecida na Lei 3.228/2017 para os cargos abrangidos, sem criar do zero regime completo incompatível com o anterior."
         },
         {
           "a": true,
           "q": "A Lei nº 3.228/2017 organiza a carreira em cinco classes, de I a V.",
-          "why": "A questão refere-se à estrutura histórica de classes da Lei 3.228/2017. Como o PCCR sofreu alterações posteriores, o candidato deve comparar o art. 4º na redação aplicável ao edital e não transportar automaticamente a estrutura de uma carreira para outra."
+          "why": "Correto quanto à organização prevista na Lei 3.228/2017 examinada, em cinco classes I a V. Para cargos e períodos específicos, a estrutura deve ser confirmada após alterações; não aplique automaticamente a classes de carreiras diferentes."
         },
         {
           "a": false,
           "q": "Promoção é a passagem de uma referência salarial para outra dentro da mesma classe.",
-          "why": "A Lei nº 3.228/2017 define promoção como elevação para a classe imediatamente superior; não confundir com progressão."
+          "why": "Errado. Promoção significa passar à classe imediatamente superior segundo Lei 3.228/2017. Mudança de referência remuneratória dentro da mesma classe é progressão; trocar os termos produz resposta incorreta."
         },
         {
           "a": true,
           "q": "A promoção para a Classe II exige 36 meses de efetivo exercício na Classe I.",
-          "why": "É o requisito do art. 11, I, a. Atenção à norma: Lei 2.250/2009 e Lei 3.228/2017 tratam de aspectos de carreira conforme cargos e períodos. A LC 496/2025 unificou nomenclaturas; a LC 526/2026 alterou regras de ingresso e movimentação. Não misture redações antigas e atuais."
+          "why": "Correto. O art. 11, I, a, da Lei 3.228/2017 prevê trinta e seis meses de efetivo exercício na Classe I para promoção à Classe II, considerados os demais requisitos previstos em lei e regulamento."
         },
         {
           "a": true,
           "q": "A promoção para a Classe II exige média igual ou superior a 80 pontos nos fatores de promoção.",
-          "why": "É o requisito do art. 11, I, c. Atenção à norma: Lei 2.250/2009 e Lei 3.228/2017 tratam de aspectos de carreira conforme cargos e períodos. A LC 496/2025 unificou nomenclaturas; a LC 526/2026 alterou regras de ingresso e movimentação. Não misture redações antigas e atuais."
+          "why": "Correto. Conforme art. 11, I, c, da Lei 3.228/2017, promoção à Classe II exige média de pelo menos oitenta pontos nos fatores de promoção, além dos demais requisitos cumulativos aplicáveis."
         },
         {
           "a": true,
           "q": "A promoção para a Classe II exige pelo menos 120 horas de capacitação ou aperfeiçoamento nos três últimos anos de permanência na classe.",
-          "why": "Carga horária de capacitação e período de referência são requisitos diferentes: uma condição trata das horas de cursos, outra do intervalo em que foram realizados. O item aponta o art. 11, I, d, da Lei 3.228/2017, sujeito à conferência da redação vigente."
+          "why": "Correto. A Lei 3.228/2017, art. 11, I, d, prevê pelo menos cento e vinte horas de capacitação/aperfeiçoamento nos últimos três anos de permanência na classe, além de outros requisitos. Não confunda tempo do curso com interstício funcional."
         },
         {
           "a": true,
           "q": "Para promoção à Classe III, a Lei nº 3.228/2017 exige pós-graduação reconhecida pelo MEC com carga mínima de 360 horas e proposta de melhoria da unidade.",
-          "why": "A questão diferencia formação de nível de pós-graduação, carga horária mínima e apresentação de proposta de melhoria da unidade. Os requisitos indicados pertencem à promoção de classe na Lei 3.228/2017, art. 11, II, alíneas e e f, conforme texto aplicável."
+          "why": "Correto conforme art. 11, II, e e f, da Lei 3.228/2017: para promoção à Classe III há exigência de pós-graduação reconhecida, com mínimo de 360 horas, e proposta de melhoria de unidade, observadas condições do regime."
         },
         {
           "a": true,
           "q": "O adicional por titulação da Lei nº 3.228/2017 pode chegar a 20% do vencimento básico.",
-          "why": "Adicional por titulação é vantagem vinculada à qualificação acadêmica, sujeita a percentuais e condições legais. A afirmação remete ao art. 6º, III, da Lei 3.228/2017; atenção às alterações legislativas e à diferença entre adicional e promoção de classe."
+          "why": "Correto. O art. 6º, III, da Lei 3.228/2017 disciplina adicional por titulação com percentuais que podem alcançar vinte por cento do vencimento básico para categoria correspondente. Benefício não equivale a promoção automática."
         },
         {
           "a": false,
           "q": "A Lei nº 3.228/2017 mantém, para os cargos que abrange, o prêmio anual de valorização da atividade policial previsto na Lei nº 2.250/2009.",
-          "why": "O art. 5º, § 2º, exclui esses cargos do prêmio anual previsto no art. 22, IX, da Lei 2.250/2009."
+          "why": "Errado. A Lei 3.228/2017 excluiu cargos por ela abrangidos do prêmio anual de valorização da atividade policial previsto na Lei 2.250/2009, conforme art. 5º, §2º. Não trate vantagem histórica como universalmente vigente."
         }
       ],
       "slug": "pcac-2026-pccr-lei-2250-2009-lei-3228-2017-lc-496-2025",
@@ -1299,8 +1413,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "17 justificativas de PCCR 2250/2009, Lei 3228/2017 e LC 496/2025 esclarecidas por artigo. Revisão de documentos legais com hashes ainda exigida para treino.",
         "items_checked": 10,
-        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar"
+        "revision_reason": "Adicionadas explicações de enquadramento normativo; gabaritos e vigência de cada artigo não homologados; conferir fontes oficiais atualizadas antes de liberar",
+        "official_sources": [
+          "https://legis.ac.gov.br/detalhar/417",
+          "https://legis.ac.gov.br/detalhar/2499",
+          "https://legis.ac.gov.br/detalhar_imprimir/6527"
+        ]
       }
     }
   ]
