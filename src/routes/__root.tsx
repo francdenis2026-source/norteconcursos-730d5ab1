@@ -302,6 +302,7 @@ function RootComponent() {
       <div id="norte-platform-surface" style={{ display: "contents" }}>
       <AuthStatusProvider statusObserver={<InitialLoadingReady />}>
         <TooltipProvider delayDuration={200}><Outlet /></TooltipProvider>
+        <DashboardThemeToggle />
         <Toaster position="top-center" closeButton />
         <ConfirmHost />
         <InstallAppPrompt />
