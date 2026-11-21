@@ -775,3 +775,30 @@ Auditoria das aulas 5, 6, 7, 8, 9 e 12, incluindo conceitos, fórmulas, exemplos
 - **Treinador:** as seis aulas têm 60 questões. Todas apresentam dica, justificativa e pelo menos quatro passos de resolução; nenhuma lacuna estrutural foi identificada na consulta de qualidade.
 
 As três ampliações didáticas foram aplicadas no Supabase e versionadas na MAIN pela migration `supabase/migrations/20261121298200_expand_pcac_statistics_variance_conditional_normal.sql`, commit `3cb4a35c8b2cb4a084d50510df850528d73c9000`. A confirmação SQL verificou a presença dos três novos blocos. Os enunciados, gabaritos e respostas existentes foram preservados.
+
+
+## Estatística — questão de abertura e resolução guiada em todas as aulas — 21/11/2026
+
+Implementado novo padrão pedagógico nos 12 materiais ativos de Estatística da PC-AC 2026.
+
+Cada aula agora começa com uma questão de múltipla escolha relacionada ao assunto. O aluno é convidado a tentar responder antes de consultar a resolução. Ao final da aula, há uma seção de resolução comentada com gabarito, raciocínio e passos de solução, incluindo alertas sobre pegadinhas.
+
+Questões adaptadas/parafraseadas com fonte de conferência foram identificadas como tal; quando não havia uma fonte específica adequada, a questão foi identificada expressamente como autoral no padrão de concursos, sem atribuição falsa a uma prova real.
+
+Temas cobertos nas 12 aberturas:
+1. classificação de variáveis;
+2. frequências absoluta e relativa;
+3. interpretação de gráficos e variação percentual;
+4. média, mediana e moda;
+5. desvio-padrão amostral;
+6. eventos independentes e complemento;
+7. regressão linear;
+8. interpretação de séries temporais;
+9. outliers, mediana e dispersão;
+10. amostragem probabilística;
+11. distribuição binomial;
+12. percentis.
+
+A atualização foi aplicada diretamente no Supabase e versionada na MAIN pela migration `supabase/migrations/20261121298300_add_opening_exam_questions_to_pcac_statistics.sql`, commit `75b345bf814c746ea8db18bfe50fb02b54054432`.
+
+**Validação SQL:** 12/12 materiais possuem questão de abertura e resolução comentada; cada material preserva suas 10 questões anteriores no treinador (120 no total). A atualização não substituiu os exercícios existentes.
