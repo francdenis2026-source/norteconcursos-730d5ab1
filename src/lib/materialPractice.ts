@@ -131,7 +131,7 @@ export function authoredMaterialPractice(
   const manualApproved = !normative && matchesManualReview(quiz, review, key) ? review : null;
   // A current PC-AC didactic review must match the exact question, answer and explanation.
   // Other courses retain their established behavior.
-  if (key.startsWith("pcac-2026-") && !normative && !manualApproved) return [];
+  if ((key.startsWith("pcac-2026-") || /^informatica-(?:01|03|04|05)-/.test(key)) && !normative && !manualApproved && !approved) return [];
   if (normative && !approved && !didacticApproved) return [];
   if (approved) {
     if (scope.subject && canonicalSubject(approved.subject) !== canonicalSubject(scope.subject)) return [];
