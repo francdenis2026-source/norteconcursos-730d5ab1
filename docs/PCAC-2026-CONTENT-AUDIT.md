@@ -940,3 +940,24 @@ Incluída uma questão autoral de cinco alternativas e uma resolução comentada
 **Validação SQL:** 16/16 materiais com desafio e 16/16 com resolução comentada. As 80 questões existentes no treinador foram preservadas. Migration: `supabase/migrations/20261121299300_add_challenges_pcac_administration.sql`, commit `f4057ec8401a0ed886fad9d25af5368525255015`. Aplicação direta no Supabase confirmada.
 
 **Limite:** conteúdo e formatação Markdown foram validados por SQL; não foi realizado teste visual no navegador nem confirmado CI. Nenhuma publicação manual em produção.
+
+
+## Correção de integração — questões de Administração no treinador — 21/11/2026
+
+As 16 questões autorais que haviam sido inseridas nos materiais didáticos de Noções de Administração não estavam inicialmente no catálogo de questões de múltipla escolha do treinador. A estrutura do campo `study_materials.quiz` aceita apenas itens de verdadeiro/falso (`q/a/why`), portanto não era correto inserir ali questões A–E.
+
+As 16 questões foram registradas em `public.curated_question_catalog`, com alternativas A–E, gabarito, explicação, proveniência autoral e vínculo ao material didático correspondente. A inserção foi validada por consulta SQL: **16 registros ativos, ligados a 16 materiais**. As questões anteriores não foram substituídas.
+
+Migrations:
+- `supabase/migrations/20261121299400_register_admin_challenges_in_trainer.sql` — commit `3f97b1a8f29e180419964741eb0b6014fa322d7e` (15 questões).
+- `supabase/migrations/20261121299410_register_admin_integrative_question.sql` — commit `58cada8be4428b73961cd560c24dd044f136fd00` (1 questão integradora).
+
+**Contagem do inventário atual do banco (21/11/2026):** 177 materiais PC-AC ativos; 1.377 questões embutidas nos quizzes didáticos; 1.395 flashcards. As 16 novas questões de Administração estão no catálogo estruturado de múltipla escolha e devem ser contabilizadas separadamente do array `quiz` dos materiais. A consulta confirmou os registros e vínculos no banco; a conferência visual do filtro e da contagem no painel do Treinador ainda precisa ser feita.
+
+## Pendências de revisão — atualização operacional — 21/11/2026
+
+- Os 177 materiais ativos têm corpo não vazio, campo `reviewed_at` preenchido, array de quiz e flashcards. Esses indicadores técnicos não provam revisão pedagógica integral.
+- 146 materiais têm o bloco visual `🎯 DESAFIO DE PROVA`; 31 ainda não têm esse padrão: 25 de Legislação Institucional e 6 de Realidade do Estado do Acre.
+- A revisão jurídica formal artigo por artigo permanece pendente nos materiais de legislação e nos materiais jurídicos que dependem de lei vigente.
+- Não há evidência de teste visual completo da biblioteca, nem de CI/build integral após todas as migrations recentes.
+- Próxima auditoria deve conferir fonte, data de atualização, cobertura linha a linha do Anexo III, gabaritos e explicações; não marcar conteúdo como integralmente revisado apenas por possuir timestamp.
