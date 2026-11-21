@@ -25,6 +25,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { StudyPriorityBadges } from "@/components/library/StudyPriorityBadges";
+import { StudyDisciplineMetaLine } from "@/components/library/StudyDisciplineMetaLine";
 import { Markdown } from "@/components/library/Markdown";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { materialLawSlug } from "@/lib/legalLibrary";
@@ -320,6 +321,7 @@ function MaterialPage() {
             topic={`${material.topic_label} ${material.title}`}
             className="mt-2"
           />
+          <StudyDisciplineMetaLine contestName={material.contest_name} discipline={material.discipline} />
           {material.summary && <p>{material.summary}</p>}
         </div>
         <ul className="lr-meta">
