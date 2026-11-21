@@ -34,7 +34,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .student-home.sh
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi em {
   display: block !important;
   overflow: hidden !important;
-  font-size: 0.6875rem !important;
+  font-size: 0.75rem !important;
   line-height: 1.3 !important;
   white-space: nowrap !important;
   text-overflow: ellipsis !important;
