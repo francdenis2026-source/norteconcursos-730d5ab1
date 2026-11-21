@@ -1083,3 +1083,29 @@ Migration `20261121300500_correct_lc129_official_source_urls.sql`, commit `f5926
 ### Próximo passo
 
 Prosseguir com leitura artigo por artigo da LC nº 129/2004 (arts. 101 a 114 e 118 a 151), usando a versão oficial consolidada e os textos das leis alteradoras; corrigir apenas após confronto integral, sem presumir que a simples lista de alterações significa que determinado artigo foi ou não modificado.
+
+
+## Quarta continuação — arts. 107, 114, 116, 117 e 148–151 da LC nº 129/2004 — 21/11/2026
+
+### Correções e aprofundamentos no banco
+
+- O material de penalidades foi ampliado com a competência do art. 114, exclusão de falta do art. 116, extinção de punibilidade do art. 119 e repercussão da absolvição criminal prevista no art. 117.
+- O material de PAD foi ampliado com os prazos e o fluxo de recurso/diligências dos arts. 148 a 151.
+- A leitura da fonte oficial revelou uma **inconsistência de remissão legislativa** que foi registrada didaticamente sem tentar corrigi-la por interpretação: o art. 107, I, enumera alíneas a, b e c; o art. 114 menciona c e d; e o art. 150, com redação posterior da LC nº 293/2014, menciona apenas c. O conteúdo ensina a separar a literalidade dos artigos e não inventa uma alínea d no art. 107.
+- A regra do art. 117 foi explicitada: a absolvição criminal afasta a responsabilidade administrativa quando nega a existência do fato ou sua autoria; não se generaliza para qualquer absolvição.
+- Fonte oficial utilizada: texto consolidado da LC nº 129/2004 no Portal LEGIS e redações históricas da LC nº 208/2010 e LC nº 293/2014.
+
+### Validação
+
+- Material de transgressões atualizado para 9.785 caracteres; consulta confirmou os dois novos blocos (inconsistência dos arts. 107/114/150 e art. 117).
+- Material de PAD atualizado para 8.197 caracteres; consulta confirmou o bloco de prazos e recurso.
+- Migrations:
+  - `20261121300600_expand_lc129_competence_exclusions_and_appeals.sql` — commit `778a03414a7dbb4421c40c2f8a0f9ca819151278`.
+  - `20261121300700_document_lc129_cross_reference_issue_and_art117.sql` — commit `f44d1de9a5d8b8a492c7cd5ae8357b3a718a9834`.
+
+### Pendências remanescentes
+
+- Conferir individualmente a redação integral dos quatro grupos de transgressões (arts. 101 a 104), verificando se as condutas listadas no material coincidem com a versão consolidada.
+- Confirmar a redação atual dos arts. 118 a 147, incluindo os marcos de interrupção/suspensão da prescrição, prazos da sindicância e PAD, composição/impedimentos da comissão, defesa, relatório e julgamento.
+- Conferir o texto da LC nº 39/1993, a Lei nº 14.735/2023 e o PCCR, sem inferir que a atualização de uma norma alterou automaticamente dispositivos de outra.
+- Teste visual e de integração do modo treinador permanece pendente; validação SQL não equivale a teste de interface.
