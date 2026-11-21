@@ -65,9 +65,9 @@ const MaterialBody = memo(function MaterialBody({
       className={`surface-card library-body ${discipline === "Língua Portuguesa" ? "library-body--portuguese" : ""}`}
     >
       {discipline === "Língua Portuguesa" ? (
-        <PortugueseStudyReading source={source} />
+        <PortugueseStudyReading source={source} discipline={discipline} contestName={contestName} />
       ) : legal ? (
-        <LegalStudyReading source={source} markdown />
+        <LegalStudyReading source={source} markdown discipline={discipline} contestName={contestName} />
       ) : (
         <Markdown source={source} discipline={discipline} contestName={contestName} />
       )}
