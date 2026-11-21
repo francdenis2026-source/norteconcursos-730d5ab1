@@ -12,39 +12,69 @@
         {
           "a": true,
           "q": "O relatório deve descrever fontes, método e limitações.",
-          "why": "Esses elementos permitem avaliar e reproduzir a análise. Exemplo aplicado: Antes de cruzar bases, defina a unidade observada e uma chave confiável: homônimos não comprovam identidade. Uma hipótese deve poder ser contrariada por evidências. O relatório diferencia fato, inferência, hipótese e limitação do método."
+          "why": "Certo. Relatório deve informar quais bases foram usadas, datas, procedimentos de tratamento, método de cruzamento e limitações. Sem isso, a conclusão não pode ser reproduzida ou auditada."
         },
         {
           "a": false,
           "q": "Uma correspondência entre registros comprova automaticamente identidade.",
-          "why": "Correspondência exige validação e pode conter falsos positivos. Exemplo aplicado: Antes de cruzar bases, defina a unidade observada e uma chave confiável: homônimos não comprovam identidade. Uma hipótese deve poder ser contrariada por evidências. O relatório diferencia fato, inferência, hipótese e limitação do método."
+          "why": "Errado. Mesmo identificadores parecidos podem representar pessoas ou entidades distintas. Correspondência entre campos é indício de ligação, não comprovação automática de identidade; confirme com outras fontes."
         },
         {
           "a": true,
           "q": "Uma junção um-para-muitos pode multiplicar linhas.",
-          "why": "Cada correspondência pode gerar uma linha no resultado. Exemplo aplicado: Antes de cruzar bases, defina a unidade observada e uma chave confiável: homônimos não comprovam identidade. Uma hipótese deve poder ser contrariada por evidências. O relatório diferencia fato, inferência, hipótese e limitação do método."
+          "why": "Certo. Em relação um-para-muitos, uma linha da tabela A pode corresponder a várias linhas da B. Exemplo: uma pessoa relacionada a três ocorrências aparecerá em três linhas após o JOIN, sem significar três pessoas."
         },
         {
           "a": false,
           "q": "A hipótese analítica deve ser formulada de modo que não possa ser contrariada pelos dados.",
-          "why": "Deve ser verificável e admitir resultados que a enfraqueçam. Exemplo aplicado: Antes de cruzar bases, defina a unidade observada e uma chave confiável: homônimos não comprovam identidade. Uma hipótese deve poder ser contrariada por evidências. O relatório diferencia fato, inferência, hipótese e limitação do método."
+          "why": "Errado. Hipótese útil deve ser testável e passível de refutação por evidências. Formular enunciado que nunca possa ser contrariado impede verificar se a explicação é boa."
         },
         {
           "a": true,
           "q": "O relatório deve distinguir resultados observados de inferências e conclusões.",
-          "why": "A conclusão precisa ser proporcional à evidência disponível. Exemplo aplicado: Antes de cruzar bases, defina a unidade observada e uma chave confiável: homônimos não comprovam identidade. Uma hipótese deve poder ser contrariada por evidências. O relatório diferencia fato, inferência, hipótese e limitação do método."
+          "why": "Certo. Dado observado, inferência e conclusão têm níveis de certeza diferentes. Exemplo: 'houve cinco transferências' é fato; 'pode haver fracionamento intencional' é hipótese a apurar."
         }
       ],
       "slug": "pcac-2026-analise-dados-cruzamento-hipoteses-relatorios",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "Cruzamento de registros, hipóteses, validação e relatórios",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa"
+        "items": [
+          {
+            "a": true,
+            "q": "O relatório deve descrever fontes, método e limitações.",
+            "why": "Certo. Relatório deve informar quais bases foram usadas, datas, procedimentos de tratamento, método de cruzamento e limitações. Sem isso, a conclusão não pode ser reproduzida ou auditada."
+          },
+          {
+            "a": false,
+            "q": "Uma correspondência entre registros comprova automaticamente identidade.",
+            "why": "Errado. Mesmo identificadores parecidos podem representar pessoas ou entidades distintas. Correspondência entre campos é indício de ligação, não comprovação automática de identidade; confirme com outras fontes."
+          },
+          {
+            "a": true,
+            "q": "Uma junção um-para-muitos pode multiplicar linhas.",
+            "why": "Certo. Em relação um-para-muitos, uma linha da tabela A pode corresponder a várias linhas da B. Exemplo: uma pessoa relacionada a três ocorrências aparecerá em três linhas após o JOIN, sem significar três pessoas."
+          },
+          {
+            "a": false,
+            "q": "A hipótese analítica deve ser formulada de modo que não possa ser contrariada pelos dados.",
+            "why": "Errado. Hipótese útil deve ser testável e passível de refutação por evidências. Formular enunciado que nunca possa ser contrariado impede verificar se a explicação é boa."
+          },
+          {
+            "a": true,
+            "q": "O relatório deve distinguir resultados observados de inferências e conclusões.",
+            "why": "Certo. Dado observado, inferência e conclusão têm níveis de certeza diferentes. Exemplo: 'houve cinco transferências' é fato; 'pode haver fracionamento intencional' é hipótese a apurar."
+          }
+        ],
+        "method": "Conferência individual de 5 gabaritos, inferências e explicações com exemplos de fontes, cruzamento, temporalidade e rastreabilidade",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:09Z",
+        "review_type": "didactic_manual",
+        "source_note": "Aula alinhada ao tópico de Análise de Dados e Informações do edital. Procedimentos devem observar autorização, proteção de dados e normas institucionais.",
+        "topic_label": "Cruzamento de registros, hipóteses, validação e relatórios",
+        "material_slug": "pcac-2026-analise-dados-cruzamento-hipoteses-relatorios"
       }
     },
     {
@@ -52,82 +82,159 @@
         {
           "a": false,
           "q": "A proximidade temporal entre dois eventos prova que um causou o outro.",
-          "why": "Sequência temporal é necessária em algumas relações causais, mas não prova causalidade."
+          "why": "Errado. Um evento acontecer antes de outro não prova causa. Exemplo: dois acessos próximos no tempo podem ser independentes; é necessário avaliar contexto, mecanismo e evidências adicionais."
         },
         {
           "a": true,
           "q": "Em um grafo de vínculos, entidades podem ser representadas por nós e relações por arestas.",
-          "why": "Essa é a representação básica de redes. Exemplo aplicado: Em grafo, nós representam entidades e arestas representam relações definidas. Caminho indireto entre A e C via B não prova contato direto A-C. Coincidência geográfica e temporal exige avaliar precisão e hipóteses alternativas."
+          "why": "Certo. Em grafo, nós podem representar pessoas, contas ou dispositivos; arestas representam conexões explicitamente definidas. A legenda deve explicar que vínculo cada ligação significa."
         },
         {
           "a": true,
           "q": "Um vínculo indireto entre A e C pode ocorrer por intermédio de B.",
-          "why": "A relação pode ser representada por A—B—C, sem relação direta comprovada A—C. Exemplo aplicado: Em grafo, nós representam entidades e arestas representam relações definidas. Caminho indireto entre A e C via B não prova contato direto A-C. Coincidência geográfica e temporal exige avaliar precisão e hipóteses alternativas."
+          "why": "Certo. Uma sequência A–B e B–C cria caminho indireto entre A e C por intermédio de B. Isso não autoriza afirmar que existe aresta direta A–C."
         },
         {
           "a": false,
           "q": "Metadados de chamadas revelam necessariamente o conteúdo da conversa.",
-          "why": "Registros de origem, destino, horário e duração não equivalem ao conteúdo. Exemplo aplicado: Em grafo, nós representam entidades e arestas representam relações definidas. Caminho indireto entre A e C via B não prova contato direto A-C. Coincidência geográfica e temporal exige avaliar precisão e hipóteses alternativas."
+          "why": "Errado. Registros de chamadas podem conter horário, duração e identificadores, mas não necessariamente a fala ou mensagem. Conteúdo requer fonte apropriada e não pode ser inferido só de metadados."
         },
         {
           "a": false,
           "q": "A distância em linha reta entre dois pontos é sempre igual ao trajeto percorrido por vias.",
-          "why": "O trajeto real depende da rede viária e de obstáculos. Exemplo aplicado: Em grafo, nós representam entidades e arestas representam relações definidas. Caminho indireto entre A e C via B não prova contato direto A-C. Coincidência geográfica e temporal exige avaliar precisão e hipóteses alternativas."
+          "why": "Errado. Distância retilínea é o segmento direto entre pontos; percurso por vias depende de ruas, rios, desvios e barreiras. O trajeto real normalmente é igual ou maior que a reta."
         },
         {
           "a": false,
           "q": "A coincidência temporal e espacial, isoladamente, prova que duas entidades participaram do mesmo evento.",
-          "why": "É necessário considerar precisão, fonte, margem de erro e hipóteses alternativas."
+          "why": "Errado. Estar próximo no espaço e tempo pode ser coincidência ou registro impreciso; não comprova participação conjunta. Verifique precisão do local, horários, identidade e outras evidências."
         },
         {
           "a": true,
           "q": "Uma análise integrada deve identificar fontes, períodos e limitações de cada dimensão.",
-          "why": "Tempo, rede e espaço respondem a perguntas diferentes e têm incertezas próprias."
+          "why": "Certo. Integrar dados temporais, espaciais e de comunicação requer registrar fonte, método, fuso, precisão e lacunas em cada dimensão. Sem isso, uma aparente convergência pode ser enganosa."
         }
       ],
       "slug": "pcac-2026-analise-dados-vinculos-redes-linhas-tempo-geografia",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "Análise temporal, vínculos, comunicações e geográfica",
-      "practice_review": null
+      "practice_review": {
+        "items": [
+          {
+            "a": false,
+            "q": "A proximidade temporal entre dois eventos prova que um causou o outro.",
+            "why": "Errado. Um evento acontecer antes de outro não prova causa. Exemplo: dois acessos próximos no tempo podem ser independentes; é necessário avaliar contexto, mecanismo e evidências adicionais."
+          },
+          {
+            "a": true,
+            "q": "Em um grafo de vínculos, entidades podem ser representadas por nós e relações por arestas.",
+            "why": "Certo. Em grafo, nós podem representar pessoas, contas ou dispositivos; arestas representam conexões explicitamente definidas. A legenda deve explicar que vínculo cada ligação significa."
+          },
+          {
+            "a": true,
+            "q": "Um vínculo indireto entre A e C pode ocorrer por intermédio de B.",
+            "why": "Certo. Uma sequência A–B e B–C cria caminho indireto entre A e C por intermédio de B. Isso não autoriza afirmar que existe aresta direta A–C."
+          },
+          {
+            "a": false,
+            "q": "Metadados de chamadas revelam necessariamente o conteúdo da conversa.",
+            "why": "Errado. Registros de chamadas podem conter horário, duração e identificadores, mas não necessariamente a fala ou mensagem. Conteúdo requer fonte apropriada e não pode ser inferido só de metadados."
+          },
+          {
+            "a": false,
+            "q": "A distância em linha reta entre dois pontos é sempre igual ao trajeto percorrido por vias.",
+            "why": "Errado. Distância retilínea é o segmento direto entre pontos; percurso por vias depende de ruas, rios, desvios e barreiras. O trajeto real normalmente é igual ou maior que a reta."
+          },
+          {
+            "a": false,
+            "q": "A coincidência temporal e espacial, isoladamente, prova que duas entidades participaram do mesmo evento.",
+            "why": "Errado. Estar próximo no espaço e tempo pode ser coincidência ou registro impreciso; não comprova participação conjunta. Verifique precisão do local, horários, identidade e outras evidências."
+          },
+          {
+            "a": true,
+            "q": "Uma análise integrada deve identificar fontes, períodos e limitações de cada dimensão.",
+            "why": "Certo. Integrar dados temporais, espaciais e de comunicação requer registrar fonte, método, fuso, precisão e lacunas em cada dimensão. Sem isso, uma aparente convergência pode ser enganosa."
+          }
+        ],
+        "method": "Conferência individual de 7 gabaritos, inferências e explicações com exemplos de fontes, cruzamento, temporalidade e rastreabilidade",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:09Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento didático autoral do Anexo III do Edital PC-AC 2026. Questões autorais, não oficiais.",
+        "topic_label": "Análise temporal, vínculos, comunicações e geográfica",
+        "material_slug": "pcac-2026-analise-dados-vinculos-redes-linhas-tempo-geografia"
+      }
     },
     {
       "quiz": [
         {
           "a": true,
           "q": "Dados estruturados seguem um esquema de campos previamente definido.",
-          "why": "Tabelas com colunas e tipos conhecidos são exemplos de dados estruturados. Exemplo aplicado: Dado é registro bruto, informação é dado interpretado em contexto e conhecimento orienta decisões. Um registro oficial ainda pode conter erro, desatualização ou campo vazio; qualidade depende de fonte, data e método."
+          "why": "Certo. Dados estruturados seguem campos e tipos em esquema definido, como tabela com colunas para data, município e código. Isso facilita consultas e validação."
         },
         {
           "a": false,
           "q": "Um arquivo JSON é necessariamente não estruturado.",
-          "why": "JSON é normalmente semiestruturado, pois utiliza chaves, valores e estruturas aninhadas."
+          "why": "Errado. JSON é semiestruturado: usa chaves e valores para organizar conteúdo, sem exigir estrutura tabular rígida. Não é necessariamente dado não estruturado."
         },
         {
           "a": false,
           "q": "A aparência oficial garante que todos os registros sejam exatos e atuais.",
-          "why": "Fontes oficiais também podem conter erros, lacunas ou atrasos. Exemplo aplicado: Dado é registro bruto, informação é dado interpretado em contexto e conhecimento orienta decisões. Um registro oficial ainda pode conter erro, desatualização ou campo vazio; qualidade depende de fonte, data e método."
+          "why": "Errado. Registro com aparência oficial pode conter erro, campo desatualizado ou inserção incorreta. Verifique origem, método de atualização, data e consistência antes de utilizá-lo."
         },
         {
           "a": true,
           "q": "A avaliação de uma fonte deve considerar sua origem e sua adequação à pergunta.",
-          "why": "Proveniência e pertinência são elementos centrais da confiabilidade. Exemplo aplicado: Dado é registro bruto, informação é dado interpretado em contexto e conhecimento orienta decisões. Um registro oficial ainda pode conter erro, desatualização ou campo vazio; qualidade depende de fonte, data e método."
+          "why": "Certo. Uma fonte deve ser avaliada pela origem, confiabilidade, cobertura e pertinência à pergunta. Base adequada a estudo anual pode não servir para analisar eventos de determinada hora."
         },
         {
           "a": true,
           "q": "A proveniência descreve a origem e o percurso de um dado ou informação.",
-          "why": "A origem e o histórico ajudam a avaliar confiabilidade e contexto. Exemplo aplicado: Dado é registro bruto, informação é dado interpretado em contexto e conhecimento orienta decisões. Um registro oficial ainda pode conter erro, desatualização ou campo vazio; qualidade depende de fonte, data e método."
+          "why": "Certo. Proveniência documenta origem e percurso de um dado, incluindo produtor, coleta e transformações. Preservar essa informação permite rastrear conclusões e detectar erros."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-01-fundamentos-ciclo-analitico",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "1. Conceitos fundamentais de dados, informação e conhecimento",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa"
+        "items": [
+          {
+            "a": true,
+            "q": "Dados estruturados seguem um esquema de campos previamente definido.",
+            "why": "Certo. Dados estruturados seguem campos e tipos em esquema definido, como tabela com colunas para data, município e código. Isso facilita consultas e validação."
+          },
+          {
+            "a": false,
+            "q": "Um arquivo JSON é necessariamente não estruturado.",
+            "why": "Errado. JSON é semiestruturado: usa chaves e valores para organizar conteúdo, sem exigir estrutura tabular rígida. Não é necessariamente dado não estruturado."
+          },
+          {
+            "a": false,
+            "q": "A aparência oficial garante que todos os registros sejam exatos e atuais.",
+            "why": "Errado. Registro com aparência oficial pode conter erro, campo desatualizado ou inserção incorreta. Verifique origem, método de atualização, data e consistência antes de utilizá-lo."
+          },
+          {
+            "a": true,
+            "q": "A avaliação de uma fonte deve considerar sua origem e sua adequação à pergunta.",
+            "why": "Certo. Uma fonte deve ser avaliada pela origem, confiabilidade, cobertura e pertinência à pergunta. Base adequada a estudo anual pode não servir para analisar eventos de determinada hora."
+          },
+          {
+            "a": true,
+            "q": "A proveniência descreve a origem e o percurso de um dado ou informação.",
+            "why": "Certo. Proveniência documenta origem e percurso de um dado, incluindo produtor, coleta e transformações. Preservar essa informação permite rastrear conclusões e detectar erros."
+          }
+        ],
+        "method": "Conferência individual de 5 gabaritos, inferências e explicações com exemplos de fontes, cruzamento, temporalidade e rastreabilidade",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:09Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "1. Conceitos fundamentais de dados, informação e conhecimento",
+        "material_slug": "pcac-2026-guia-analise-dados-01-fundamentos-ciclo-analitico"
       }
     },
     {
@@ -135,51 +242,89 @@
         {
           "a": true,
           "q": "A coleta deve considerar finalidade, período, fontes e campos necessários.",
-          "why": "A delimitação evita coleta indiscriminada e melhora a pertinência. Exemplo aplicado: Estruture a coleta por finalidade, período e fonte. Dados estruturados seguem colunas; semiestruturados usam chaves/etiquetas (JSON); não estruturados incluem áudio e texto livre. Ausência de valor não equivale a zero."
+          "why": "Certo. Antes de coletar, defina pergunta analítica, período, fontes e campos necessários. Coletar tudo indiscriminadamente pode aumentar erros e exposição de dados pessoais."
         },
         {
           "a": false,
           "q": "A padronização deve apagar o valor original.",
-          "why": "O original deve ser preservado para rastreabilidade. Exemplo aplicado: Estruture a coleta por finalidade, período e fonte. Dados estruturados seguem colunas; semiestruturados usam chaves/etiquetas (JSON); não estruturados incluem áudio e texto livre. Ausência de valor não equivale a zero."
+          "why": "Errado. Padronização não deve apagar valor original sem registro. Exemplo: converter '21/11/2026' em formato ISO para análise mantendo o texto de origem assegura rastreabilidade."
         },
         {
           "a": true,
           "q": "Um campo vazio pode representar situação diferente de zero ou resposta negativa.",
-          "why": "A ausência pode decorrer de não coleta, desconhecimento ou não aplicabilidade. Exemplo aplicado: Estruture a coleta por finalidade, período e fonte. Dados estruturados seguem colunas; semiestruturados usam chaves/etiquetas (JSON); não estruturados incluem áudio e texto livre. Ausência de valor não equivale a zero."
+          "why": "Certo. Campo vazio pode significar desconhecido, não informado ou não aplicável; não equivale necessariamente a zero ou 'não'. A interpretação depende do dicionário de dados."
         },
         {
           "a": false,
           "q": "Registros com nomes semelhantes devem ser automaticamente excluídos como duplicados.",
-          "why": "É necessário avaliar identificadores, datas, contexto e natureza do evento. Exemplo aplicado: Estruture a coleta por finalidade, período e fonte. Dados estruturados seguem colunas; semiestruturados usam chaves/etiquetas (JSON); não estruturados incluem áudio e texto livre. Ausência de valor não equivale a zero."
+          "why": "Errado. Nome parecido não basta para identificar duplicata: homônimos podem ser pessoas diferentes e grafias divergentes podem corresponder à mesma pessoa. Valide outras chaves."
         },
         {
           "a": true,
           "q": "Registros incompletos ainda podem ser comparados quando existem identificadores confiáveis e critérios de validação documentados.",
-          "why": "A ausência de alguns campos não impede toda comparação; é necessário avaliar a qualidade dos identificadores e registrar as limitações."
+          "why": "Certo. Registros incompletos podem ser comparados quando há identificadores e regras confiáveis. Documente campos ausentes, critérios de pareamento e grau de incerteza."
         },
         {
           "a": false,
           "q": "Um campo vazio deve ser automaticamente tratado como valor zero.",
-          "why": "Ausência de dado não equivale a zero; é preciso identificar a causa e documentar o tratamento."
+          "why": "Errado. Substituir ausência por zero fabrica informação e pode distorcer médias ou totais. O tratamento de faltantes exige avaliar significado e método apropriado."
         },
         {
           "a": true,
           "q": "A padronização deve preservar o valor original para permitir rastreabilidade.",
-          "why": "A cópia tratada facilita a análise e o original permite conferir a transformação."
+          "why": "Certo. Conserve valor original e documente cada transformação, como normalização de datas, telefones ou códigos. Isso permite reproduzir o resultado e corrigir eventual mapeamento equivocado."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-02-tipos-fontes-organizacao",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "2. Organização e tratamento de dados",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "A coleta deve considerar finalidade, período, fontes e campos necessários.",
+            "why": "Certo. Antes de coletar, defina pergunta analítica, período, fontes e campos necessários. Coletar tudo indiscriminadamente pode aumentar erros e exposição de dados pessoais."
+          },
+          {
+            "a": false,
+            "q": "A padronização deve apagar o valor original.",
+            "why": "Errado. Padronização não deve apagar valor original sem registro. Exemplo: converter '21/11/2026' em formato ISO para análise mantendo o texto de origem assegura rastreabilidade."
+          },
+          {
+            "a": true,
+            "q": "Um campo vazio pode representar situação diferente de zero ou resposta negativa.",
+            "why": "Certo. Campo vazio pode significar desconhecido, não informado ou não aplicável; não equivale necessariamente a zero ou 'não'. A interpretação depende do dicionário de dados."
+          },
+          {
+            "a": false,
+            "q": "Registros com nomes semelhantes devem ser automaticamente excluídos como duplicados.",
+            "why": "Errado. Nome parecido não basta para identificar duplicata: homônimos podem ser pessoas diferentes e grafias divergentes podem corresponder à mesma pessoa. Valide outras chaves."
+          },
+          {
+            "a": true,
+            "q": "Registros incompletos ainda podem ser comparados quando existem identificadores confiáveis e critérios de validação documentados.",
+            "why": "Certo. Registros incompletos podem ser comparados quando há identificadores e regras confiáveis. Documente campos ausentes, critérios de pareamento e grau de incerteza."
+          },
+          {
+            "a": false,
+            "q": "Um campo vazio deve ser automaticamente tratado como valor zero.",
+            "why": "Errado. Substituir ausência por zero fabrica informação e pode distorcer médias ou totais. O tratamento de faltantes exige avaliar significado e método apropriado."
+          },
+          {
+            "a": true,
+            "q": "A padronização deve preservar o valor original para permitir rastreabilidade.",
+            "why": "Certo. Conserve valor original e documente cada transformação, como normalização de datas, telefones ou códigos. Isso permite reproduzir o resultado e corrigir eventual mapeamento equivocado."
+          }
+        ],
+        "method": "Conferência individual de 7 gabaritos, inferências e explicações com exemplos de fontes, cruzamento, temporalidade e rastreabilidade",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:09Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "2. Organização e tratamento de dados",
+        "material_slug": "pcac-2026-guia-analise-dados-02-tipos-fontes-organizacao"
       }
     },
     {
@@ -187,51 +332,89 @@
         {
           "a": true,
           "q": "A igualdade de identificador estável é exemplo de correspondência determinística.",
-          "why": "A regra é explícita e exata, desde que o identificador seja confiável. Exemplo aplicado: Padronização normaliza datas, nomes e códigos preservando original. Deduplicação exige evidências e critérios; duas pessoas chamadas 'Ana Silva' podem ser distintas. Registre a decisão para auditoria e correção posterior."
+          "why": "Certo. Correspondência determinística compara identificador estável e exato, como um ID interno único e validado. Ainda é preciso assegurar que esse identificador não foi reutilizado ou corrompido."
         },
         {
           "a": false,
           "q": "Um escore alto de correspondência probabilística comprova identidade.",
-          "why": "O escore indica semelhança e exige validação. Exemplo aplicado: Padronização normaliza datas, nomes e códigos preservando original. Deduplicação exige evidências e critérios; duas pessoas chamadas 'Ana Silva' podem ser distintas. Registre a decisão para auditoria e correção posterior."
+          "why": "Errado. Escore elevado de pareamento probabilístico indica semelhança, mas não comprova identidade; homônimos e dados desatualizados podem gerar falsos positivos."
         },
         {
           "a": false,
           "q": "Duas fontes que reproduzem a mesma base constituem necessariamente confirmações independentes.",
-          "why": "Pode haver dependência entre fontes. Exemplo aplicado: Padronização normaliza datas, nomes e códigos preservando original. Deduplicação exige evidências e critérios; duas pessoas chamadas 'Ana Silva' podem ser distintas. Registre a decisão para auditoria e correção posterior."
+          "why": "Errado. Duas fontes que copiaram a mesma base não fornecem evidências independentes. Confirmação exige origens ou métodos realmente distintos, não apenas nomes diferentes de sites."
         },
         {
           "a": true,
           "q": "Uma relação um-para-muitos pode aumentar o número de linhas após uma junção.",
-          "why": "Cada correspondência pode gerar uma linha no resultado. Exemplo aplicado: Padronização normaliza datas, nomes e códigos preservando original. Deduplicação exige evidências e critérios; duas pessoas chamadas 'Ana Silva' podem ser distintas. Registre a decisão para auditoria e correção posterior."
+          "why": "Certo. Junção um-para-muitos pode criar várias linhas para uma única entidade. Exemplo: uma pessoa e três ocorrências geram três linhas no resultado, sem representar três pessoas."
         },
         {
           "a": true,
           "q": "A deduplicação deve registrar os critérios utilizados e preservar rastreabilidade das decisões.",
-          "why": "O registro dos critérios permite revisar falsos positivos, falsos negativos e a origem dos dados."
+          "why": "Certo. Registrar critérios, valores antes/depois, decisões e responsáveis na deduplicação preserva rastreabilidade. Isso permite desfazer fusões erradas e reproduzir o tratamento."
         },
         {
           "a": false,
           "q": "Um nome semelhante, isoladamente, comprova que dois registros pertencem à mesma pessoa.",
-          "why": "Homônimos, abreviações e erros exigem comparação de múltiplos atributos e validação."
+          "why": "Errado. Semelhança de nomes isoladamente não prova identidade. Deve-se cruzar informações adicionais autorizadas, como identificadores confiáveis, data e contexto."
         },
         {
           "a": true,
           "q": "Uma junção um-para-muitos pode aumentar a quantidade de linhas do resultado.",
-          "why": "Uma linha da primeira tabela pode encontrar várias correspondências na segunda. Exemplo aplicado: Padronização normaliza datas, nomes e códigos preservando original. Deduplicação exige evidências e critérios; duas pessoas chamadas 'Ana Silva' podem ser distintas. Registre a decisão para auditoria e correção posterior."
+          "why": "Certo. Se a chave A encontra três correspondências em B, um JOIN pode aumentar o número total de linhas. A cardinalidade precisa ser considerada antes de contar pessoas ou eventos."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-03-qualidade-limpeza-padronizacao",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "3. Cruzamento e comparação de informações",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "A igualdade de identificador estável é exemplo de correspondência determinística.",
+            "why": "Certo. Correspondência determinística compara identificador estável e exato, como um ID interno único e validado. Ainda é preciso assegurar que esse identificador não foi reutilizado ou corrompido."
+          },
+          {
+            "a": false,
+            "q": "Um escore alto de correspondência probabilística comprova identidade.",
+            "why": "Errado. Escore elevado de pareamento probabilístico indica semelhança, mas não comprova identidade; homônimos e dados desatualizados podem gerar falsos positivos."
+          },
+          {
+            "a": false,
+            "q": "Duas fontes que reproduzem a mesma base constituem necessariamente confirmações independentes.",
+            "why": "Errado. Duas fontes que copiaram a mesma base não fornecem evidências independentes. Confirmação exige origens ou métodos realmente distintos, não apenas nomes diferentes de sites."
+          },
+          {
+            "a": true,
+            "q": "Uma relação um-para-muitos pode aumentar o número de linhas após uma junção.",
+            "why": "Certo. Junção um-para-muitos pode criar várias linhas para uma única entidade. Exemplo: uma pessoa e três ocorrências geram três linhas no resultado, sem representar três pessoas."
+          },
+          {
+            "a": true,
+            "q": "A deduplicação deve registrar os critérios utilizados e preservar rastreabilidade das decisões.",
+            "why": "Certo. Registrar critérios, valores antes/depois, decisões e responsáveis na deduplicação preserva rastreabilidade. Isso permite desfazer fusões erradas e reproduzir o tratamento."
+          },
+          {
+            "a": false,
+            "q": "Um nome semelhante, isoladamente, comprova que dois registros pertencem à mesma pessoa.",
+            "why": "Errado. Semelhança de nomes isoladamente não prova identidade. Deve-se cruzar informações adicionais autorizadas, como identificadores confiáveis, data e contexto."
+          },
+          {
+            "a": true,
+            "q": "Uma junção um-para-muitos pode aumentar a quantidade de linhas do resultado.",
+            "why": "Certo. Se a chave A encontra três correspondências em B, um JOIN pode aumentar o número total de linhas. A cardinalidade precisa ser considerada antes de contar pessoas ou eventos."
+          }
+        ],
+        "method": "Revisão individual de 7 questões de análise de registros, vínculos e comunicações, com gabaritos, limitações e exemplos validados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "3. Cruzamento e comparação de informações",
+        "material_slug": "pcac-2026-guia-analise-dados-03-qualidade-limpeza-padronizacao"
       }
     },
     {
@@ -239,39 +422,69 @@
         {
           "a": true,
           "q": "A data de recebimento pode ser diferente da data de ocorrência.",
-          "why": "Pode existir atraso de transmissão ou lançamento. Exemplo aplicado: Uma chave identifica a mesma entidade em bases distintas. A relação um-para-muitos pode multiplicar linhas da junção, elevando artificialmente contagens se não houver deduplicação. Data de ocorrência não é igual a data de inserção."
+          "why": "Certo. O evento pode ocorrer no dia 10 e só ser registrado no dia 12. Data de ocorrência e data de recebimento são campos diferentes que não devem ser intercambiados."
         },
         {
           "a": true,
           "q": "Uma linha do tempo pode indicar lacunas e horários aproximados.",
-          "why": "A representação deve preservar limitações e precisão disponíveis. Exemplo aplicado: Uma chave identifica a mesma entidade em bases distintas. A relação um-para-muitos pode multiplicar linhas da junção, elevando artificialmente contagens se não houver deduplicação. Data de ocorrência não é igual a data de inserção."
+          "why": "Certo. Linha do tempo ajuda a localizar intervalos e lacunas; eventos com horários aproximados devem permanecer indicados como aproximados, não convertidos em hora exata inventada."
         },
         {
           "a": true,
           "q": "Comparar horários de sistemas diferentes pode exigir conferência de fuso e sincronização.",
-          "why": "Relógios e padrões temporais distintos podem alterar a comparação. Exemplo aplicado: Uma chave identifica a mesma entidade em bases distintas. A relação um-para-muitos pode multiplicar linhas da junção, elevando artificialmente contagens se não houver deduplicação. Data de ocorrência não é igual a data de inserção."
+          "why": "Certo. Dois sistemas podem usar fusos distintos, horários de verão históricos ou relógios dessincronizados. Antes de ordenar eventos, normalize a referência e registre a precisão."
         },
         {
           "a": false,
           "q": "Se um evento antecede outro, a relação causal está comprovada.",
-          "why": "Anterioridade é insuficiente para demonstrar causalidade. Exemplo aplicado: Uma chave identifica a mesma entidade em bases distintas. A relação um-para-muitos pode multiplicar linhas da junção, elevando artificialmente contagens se não houver deduplicação. Data de ocorrência não é igual a data de inserção."
+          "why": "Errado. Sequência temporal não prova relação causal. Um acesso ocorrer antes de uma transferência não demonstra que provocou a transferência sem evidências complementares."
         },
         {
           "a": true,
           "q": "A ordenação de eventos deve preservar a precisão temporal informada pela fonte, sem inventar horário ausente.",
-          "why": "Se a fonte informa apenas a data, não se deve atribuir horário exato sem evidência."
+          "why": "Certo. Se uma fonte informa apenas a data, não atribua arbitrariamente hora de início do dia. Preservar precisão evita falsas coincidências temporais."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-04-cruzamento-registros-vinculacao",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "4. Análise temporal",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa"
+        "items": [
+          {
+            "a": true,
+            "q": "A data de recebimento pode ser diferente da data de ocorrência.",
+            "why": "Certo. O evento pode ocorrer no dia 10 e só ser registrado no dia 12. Data de ocorrência e data de recebimento são campos diferentes que não devem ser intercambiados."
+          },
+          {
+            "a": true,
+            "q": "Uma linha do tempo pode indicar lacunas e horários aproximados.",
+            "why": "Certo. Linha do tempo ajuda a localizar intervalos e lacunas; eventos com horários aproximados devem permanecer indicados como aproximados, não convertidos em hora exata inventada."
+          },
+          {
+            "a": true,
+            "q": "Comparar horários de sistemas diferentes pode exigir conferência de fuso e sincronização.",
+            "why": "Certo. Dois sistemas podem usar fusos distintos, horários de verão históricos ou relógios dessincronizados. Antes de ordenar eventos, normalize a referência e registre a precisão."
+          },
+          {
+            "a": false,
+            "q": "Se um evento antecede outro, a relação causal está comprovada.",
+            "why": "Errado. Sequência temporal não prova relação causal. Um acesso ocorrer antes de uma transferência não demonstra que provocou a transferência sem evidências complementares."
+          },
+          {
+            "a": true,
+            "q": "A ordenação de eventos deve preservar a precisão temporal informada pela fonte, sem inventar horário ausente.",
+            "why": "Certo. Se uma fonte informa apenas a data, não atribua arbitrariamente hora de início do dia. Preservar precisão evita falsas coincidências temporais."
+          }
+        ],
+        "method": "Revisão individual de 5 questões de análise de registros, vínculos e comunicações, com gabaritos, limitações e exemplos validados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "4. Análise temporal",
+        "material_slug": "pcac-2026-guia-analise-dados-04-cruzamento-registros-vinculacao"
       }
     },
     {
@@ -279,51 +492,89 @@
         {
           "a": true,
           "q": "Uma conexão indireta pode ocorrer por intermédio de uma terceira entidade.",
-          "why": "O caminho entre dois nós pode passar por intermediários. Exemplo aplicado: Ordene eventos por instante real e fonte; separe ocorrência, registro e processamento. Correlação temporal indica sequência, mas não causalidade. Medir intervalo requer mesma referência de fuso horário e precisão."
+          "why": "Certo. Grafo pode mostrar A ligado a B e B ligado a C, formando caminho indireto A–C. A existência do caminho depende das duas relações informadas."
         },
         {
           "a": false,
           "q": "Se A está ligado a B e B a C, está demonstrado que A manteve contato direto com C.",
-          "why": "Há caminho indireto, mas não necessariamente ligação direta. Exemplo aplicado: Ordene eventos por instante real e fonte; separe ocorrência, registro e processamento. Correlação temporal indica sequência, mas não causalidade. Medir intervalo requer mesma referência de fuso horário e precisão."
+          "why": "Errado. A–B e B–C não implicam aresta direta A–C. Uma rede de contatos não prova que pessoas conectadas por intermediário conversaram diretamente."
         },
         {
           "a": true,
           "q": "A legenda deve explicar o significado dos símbolos e das relações.",
-          "why": "Sem legenda, não é possível interpretar corretamente as conexões. Exemplo aplicado: Ordene eventos por instante real e fonte; separe ocorrência, registro e processamento. Correlação temporal indica sequência, mas não causalidade. Medir intervalo requer mesma referência de fuso horário e precisão."
+          "why": "Certo. Legenda define o que nós, cores, linhas, pesos e setas representam. Sem esses significados, o diagrama pode ser interpretado de modo errôneo."
         },
         {
           "a": false,
           "q": "A centralidade de um nó comprova participação em infração.",
-          "why": "A métrica descreve posição na rede, não autoria ou responsabilidade. Exemplo aplicado: Ordene eventos por instante real e fonte; separe ocorrência, registro e processamento. Correlação temporal indica sequência, mas não causalidade. Medir intervalo requer mesma referência de fuso horário e precisão."
+          "why": "Errado. Alta centralidade indica posição na rede segundo métrica definida; não demonstra participação em infração nem intenção. A relação entre nós precisa ser contextualizada."
         },
         {
           "a": true,
           "q": "Um diagrama de vínculos deve diferenciar a direção e o peso das relações quando esses dados estiverem disponíveis.",
-          "why": "Direção e intensidade podem alterar a interpretação da rede; a legenda e a fonte devem explicar a representação."
+          "why": "Certo. Setas podem indicar direção de chamadas ou transações e pesos podem indicar frequência ou valor. Se esses dados existem, representá-los explicitamente reduz ambiguidade."
         },
         {
           "a": false,
           "q": "O horário de processamento de um registro é necessariamente o horário em que o fato ocorreu.",
-          "why": "Ocorrência, comunicação, recebimento e processamento podem acontecer em momentos distintos."
+          "why": "Errado. Horário de processamento corresponde ao registro no sistema e pode diferir de quando o fato ocorreu. Confundir as datas altera a reconstrução temporal."
         },
         {
           "a": true,
           "q": "Comparar taxas por dia pode ser mais adequado que comparar totais quando os períodos têm durações diferentes.",
-          "why": "A taxa considera a exposição temporal e evita comparações distorcidas. Exemplo aplicado: Ordene eventos por instante real e fonte; separe ocorrência, registro e processamento. Correlação temporal indica sequência, mas não causalidade. Medir intervalo requer mesma referência de fuso horário e precisão."
+          "why": "Certo. Se um grupo foi observado por 5 dias e outro por 20, totais absolutos não são diretamente comparáveis; taxas por dia podem ajustar a diferença de duração, desde que a coleta seja comparável."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-05-analise-temporal-padroes",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "5. Análise de vínculos",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Uma conexão indireta pode ocorrer por intermédio de uma terceira entidade.",
+            "why": "Certo. Grafo pode mostrar A ligado a B e B ligado a C, formando caminho indireto A–C. A existência do caminho depende das duas relações informadas."
+          },
+          {
+            "a": false,
+            "q": "Se A está ligado a B e B a C, está demonstrado que A manteve contato direto com C.",
+            "why": "Errado. A–B e B–C não implicam aresta direta A–C. Uma rede de contatos não prova que pessoas conectadas por intermediário conversaram diretamente."
+          },
+          {
+            "a": true,
+            "q": "A legenda deve explicar o significado dos símbolos e das relações.",
+            "why": "Certo. Legenda define o que nós, cores, linhas, pesos e setas representam. Sem esses significados, o diagrama pode ser interpretado de modo errôneo."
+          },
+          {
+            "a": false,
+            "q": "A centralidade de um nó comprova participação em infração.",
+            "why": "Errado. Alta centralidade indica posição na rede segundo métrica definida; não demonstra participação em infração nem intenção. A relação entre nós precisa ser contextualizada."
+          },
+          {
+            "a": true,
+            "q": "Um diagrama de vínculos deve diferenciar a direção e o peso das relações quando esses dados estiverem disponíveis.",
+            "why": "Certo. Setas podem indicar direção de chamadas ou transações e pesos podem indicar frequência ou valor. Se esses dados existem, representá-los explicitamente reduz ambiguidade."
+          },
+          {
+            "a": false,
+            "q": "O horário de processamento de um registro é necessariamente o horário em que o fato ocorreu.",
+            "why": "Errado. Horário de processamento corresponde ao registro no sistema e pode diferir de quando o fato ocorreu. Confundir as datas altera a reconstrução temporal."
+          },
+          {
+            "a": true,
+            "q": "Comparar taxas por dia pode ser mais adequado que comparar totais quando os períodos têm durações diferentes.",
+            "why": "Certo. Se um grupo foi observado por 5 dias e outro por 20, totais absolutos não são diretamente comparáveis; taxas por dia podem ajustar a diferença de duração, desde que a coleta seja comparável."
+          }
+        ],
+        "method": "Revisão individual de 7 questões de análise de registros, vínculos e comunicações, com gabaritos, limitações e exemplos validados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "5. Análise de vínculos",
+        "material_slug": "pcac-2026-guia-analise-dados-05-analise-temporal-padroes"
       }
     },
     {
@@ -331,51 +582,89 @@
         {
           "a": true,
           "q": "Frequência corresponde à quantidade de eventos em intervalo definido.",
-          "why": "É uma contagem que depende do período e do critério de inclusão. Exemplo aplicado: Metadados de comunicação podem registrar origem, destino, horário e duração, mas não revelam automaticamente conteúdo ou intenção. Graus de centralidade ajudam a priorizar análise, não a provar participação em infração."
+          "why": "Certo. Frequência é quantidade de eventos por período definido. Exemplo: 15 chamadas em cinco dias equivalem a média de três chamadas por dia, se o período e o critério estiverem claros."
         },
         {
           "a": false,
           "q": "Metadados sempre revelam o conteúdo integral da comunicação.",
-          "why": "Metadados descrevem atributos do evento e não equivalem necessariamente ao conteúdo."
+          "why": "Errado. Metadados de uma chamada podem conter origem, destino, horário e duração, mas não necessariamente áudio ou transcrição. Conteúdo depende de fonte distinta."
         },
         {
           "a": true,
           "q": "Comparar horários exige conhecer fuso e significado do campo temporal.",
-          "why": "O campo pode representar momentos distintos e estar em fuso diferente. Exemplo aplicado: Metadados de comunicação podem registrar origem, destino, horário e duração, mas não revelam automaticamente conteúdo ou intenção. Graus de centralidade ajudam a priorizar análise, não a provar participação em infração."
+          "why": "Certo. Comparar logs requer saber fuso, sincronização do relógio e se o campo representa início, fim ou processamento. Erros de interpretação podem criar sequências artificiais."
         },
         {
           "a": false,
           "q": "Um identificador de aparelho comprova, isoladamente, quem utilizou o dispositivo.",
-          "why": "A atribuição a uma pessoa requer validação independente. Exemplo aplicado: Metadados de comunicação podem registrar origem, destino, horário e duração, mas não revelam automaticamente conteúdo ou intenção. Graus de centralidade ajudam a priorizar análise, não a provar participação em infração."
+          "why": "Errado. Identificador de aparelho não comprova sozinho quem o operou. Dispositivos podem ser emprestados, compartilhados ou utilizados por terceiros; são necessárias outras evidências."
         },
         {
           "a": true,
           "q": "A interpretação de uma sequência de comunicações deve considerar a completude dos registros e o significado dos campos.",
-          "why": "Registros parciais, campos ausentes e critérios diferentes de coleta podem distorcer frequência e sequência."
+          "why": "Certo. Sequência de chamadas deve ser interpretada conforme cobertura, campos e falhas da base. Registros ausentes ou horários incompletos limitam a força das conclusões."
         },
         {
           "a": false,
           "q": "Metadados de chamadas revelam automaticamente o conteúdo e a intenção da conversa.",
-          "why": "Metadados descrevem características do registro, não o conteúdo ou a intenção. Exemplo aplicado: Metadados de comunicação podem registrar origem, destino, horário e duração, mas não revelam automaticamente conteúdo ou intenção. Graus de centralidade ajudam a priorizar análise, não a provar participação em infração."
+          "why": "Errado. Metadados de comunicação não revelam automaticamente conteúdo, contexto ou intenção. Duas chamadas próximas podem ter propósitos muito diferentes."
         },
         {
           "a": true,
           "q": "Em um grafo, nós e arestas devem ter seus significados definidos antes da interpretação.",
-          "why": "Nós podem representar aparelhos ou contas; arestas representam relações definidas pela metodologia."
+          "why": "Certo. Nós e arestas só têm sentido quando definidos: nó pode ser número telefônico ou pessoa; aresta pode significar chamada, mensagem ou relação declarada. A legenda evita misturar entidades."
         }
       ],
       "slug": "pcac-2026-guia-analise-dados-06-vinculos-comunicacoes-redes",
       "discipline": "Análise de Dados e Informações",
       "topic_label": "6. Análise de registros de comunicação",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Exemplos do método analítico acrescentados; item atualizado requer revalidação de gabarito e justificativa",
-        "current_quiz_items": 7,
-        "previously_checked_items": 5
+        "items": [
+          {
+            "a": true,
+            "q": "Frequência corresponde à quantidade de eventos em intervalo definido.",
+            "why": "Certo. Frequência é quantidade de eventos por período definido. Exemplo: 15 chamadas em cinco dias equivalem a média de três chamadas por dia, se o período e o critério estiverem claros."
+          },
+          {
+            "a": false,
+            "q": "Metadados sempre revelam o conteúdo integral da comunicação.",
+            "why": "Errado. Metadados de uma chamada podem conter origem, destino, horário e duração, mas não necessariamente áudio ou transcrição. Conteúdo depende de fonte distinta."
+          },
+          {
+            "a": true,
+            "q": "Comparar horários exige conhecer fuso e significado do campo temporal.",
+            "why": "Certo. Comparar logs requer saber fuso, sincronização do relógio e se o campo representa início, fim ou processamento. Erros de interpretação podem criar sequências artificiais."
+          },
+          {
+            "a": false,
+            "q": "Um identificador de aparelho comprova, isoladamente, quem utilizou o dispositivo.",
+            "why": "Errado. Identificador de aparelho não comprova sozinho quem o operou. Dispositivos podem ser emprestados, compartilhados ou utilizados por terceiros; são necessárias outras evidências."
+          },
+          {
+            "a": true,
+            "q": "A interpretação de uma sequência de comunicações deve considerar a completude dos registros e o significado dos campos.",
+            "why": "Certo. Sequência de chamadas deve ser interpretada conforme cobertura, campos e falhas da base. Registros ausentes ou horários incompletos limitam a força das conclusões."
+          },
+          {
+            "a": false,
+            "q": "Metadados de chamadas revelam automaticamente o conteúdo e a intenção da conversa.",
+            "why": "Errado. Metadados de comunicação não revelam automaticamente conteúdo, contexto ou intenção. Duas chamadas próximas podem ter propósitos muito diferentes."
+          },
+          {
+            "a": true,
+            "q": "Em um grafo, nós e arestas devem ter seus significados definidos antes da interpretação.",
+            "why": "Certo. Nós e arestas só têm sentido quando definidos: nó pode ser número telefônico ou pessoa; aresta pode significar chamada, mensagem ou relação declarada. A legenda evita misturar entidades."
+          }
+        ],
+        "method": "Revisão individual de 7 questões de análise de registros, vínculos e comunicações, com gabaritos, limitações e exemplos validados",
+        "status": "reviewed",
+        "subject": "Análise de Dados e Informações",
+        "version": 1,
+        "checked_at": "2026-11-21T18:33:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026, item Análise de Dados e Informações. Conteúdo para estudo; não constitui questão oficial da banca.",
+        "topic_label": "6. Análise de registros de comunicação",
+        "material_slug": "pcac-2026-guia-analise-dados-06-vinculos-comunicacoes-redes"
       }
     },
     {
