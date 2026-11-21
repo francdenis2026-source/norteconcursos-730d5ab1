@@ -2145,3 +2145,18 @@ Material atualizado para 106.426 caracteres; seções 82, 83 e 84 foram confirma
 A conferência direta da LC nº 525/2026 mostrou que ela revogou somente o § 4º do art. 282 da LC nº 39/1993. Essa alteração é transitória e não modifica os dispositivos de direitos, deveres, proibições, penalidades, sindicância e PAD resumidos nas seções 83. Portanto, para esses dispositivos, as redações consultadas permanecem as referências relevantes, sem prejuízo de conferir futuras alterações.
 
 Fonte oficial da LC nº 525/2026: https://legis.ac.gov.br/detalhar/6864-1
+
+
+### Consolidação quantitativa da etapa
+
+Consulta SQL específica ao catálogo, filtrando `contest_name = 'Norte Concursos — treino autoral PC-AC 2026'`, `subject = 'Legislação Institucional'` e os prefixos de chave das cinco frentes (LC 129, LC 526, Lei 14.735, LC 39 e PCCR), retornou **51 questões ativas, sem chaves duplicadas nesse conjunto**. Esse número é o conjunto específico de questões autorais da auditoria institucional, não o total de questões de todas as disciplinas do concurso.
+
+O material único da frente institucional/PCCR foi confirmado com 106.426 caracteres e com as seções 82 a 84 presentes. O relatório desta auditoria foi atualizado no commit `ed74b54e5cf0914b1ca781fa420ee14891e26057`.
+
+### Estado de encerramento técnico
+
+- Conteúdo e questões: inseridos e verificados por consulta SQL.
+- Arquivos de migration: criados na branch `main`.
+- Build/TypeScript/ESLint e teste visual: não executados nesta etapa.
+- A consulta de workflows associada aos commits mais recentes não retornou execuções disponíveis; portanto, não há evidência para declarar CI aprovado.
+- Não houve publicação manual em produção.
