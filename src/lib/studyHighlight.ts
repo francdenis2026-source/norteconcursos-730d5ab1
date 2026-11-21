@@ -3,7 +3,7 @@ import { legalTextParts, type LegalHighlightKind } from "@/lib/legalHighlights";
 /**
  * Destaques didáticos para textos explicativos (explicações por artigo, cursos, resoluções, exemplos).
  * Reaproveita os grifos do texto oficial (requisitos, exceções, números e penas) e acrescenta:
- * vedações, palavras que restringem (somente, exclusivo, obrigatório) e rótulos de abertura
+ * vedações explícitas e rótulos de abertura
  * (ATUALIZAÇÃO, Exemplo, Atenção...). São auxílios de leitura: não reescrevem nem classificam o texto.
  */
 export type StudyKind = LegalHighlightKind | "prohibition" | "obligation";
@@ -30,7 +30,7 @@ const TAGS: { re: RegExp; tag: TagKind }[] = [
 
 const EXTRA: { kind: StudyKind; pattern: string }[] = [
   { kind: "prohibition", pattern: String.raw`vedad[oa]s?|proibid[oa]s?|inadmissíve(?:l|is)|ilícit[oa]s?|nul[oa]s?|nulidade|inafiançáve(?:l|is)|imprescritíve(?:l|is)|insuscetíve(?:l|is)|não\s+cabe(?:m)?|em\s+nenhuma\s+hipótese|sob\s+pena\s+de` },
-  { kind: "obligation", pattern: String.raw`obrigatóri[oa]s?|exclusiv[oa]s?|exclusivamente|privativ[oa]s?|privativamente|somente|apenas|unicamente|indispensáve(?:l|is)` },
+  
 ];
 
 function extraParts(text: string): StudyPart[] {
