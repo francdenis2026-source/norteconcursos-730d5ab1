@@ -898,3 +898,30 @@ Durante a revisão, a primeira versão da questão de verdades e mentiras foi id
 
 **Validação SQL:** 15/15 materiais com questão de abertura e 15/15 com resolução comentada. As 150 questões anteriores do treinador foram preservadas. A migration principal é `supabase/migrations/20261121299000_add_opening_questions_pcac_reasoning.sql`, commit `48068139f37a950f475199fb19f0597f06f41ef7`.
 
+
+
+## Informática e Tecnologia da Informação — questão inicial e resolução comentada — 21/11/2026
+
+Aplicado o padrão em todos os 19 materiais ativos:
+- Noções de Informática: 10/10 materiais com questão e resolução.
+- Tecnologia da Informação e Segurança da Informação: 9/9 materiais com questão e resolução.
+
+Os 19 enunciados são autorais no estilo de concursos, não transcrições oficiais. Cobrem slide mestre e animações; SMTP/POP3/IMAP; referências absolutas em planilhas; HTTPS e certificados; compartilhamento e menor privilégio; extensão/formato; autenticação e autorização; atalhos Windows; estilos do Word; chaves primárias; metadados; deduplicação; ordenação; TCP/UDP; DNS; tríade CID; permissões Linux.
+
+**Validação SQL:** 19/19 materiais com questão de abertura e 19/19 com resolução comentada. As 96 questões anteriores do treinador foram preservadas (50 de Informática e 46 de TI e Segurança).
+
+Migrations na MAIN:
+- `supabase/migrations/20261121298900_add_opening_questions_pcac_informatics_it.sql` — commit `048f76bb29af4b2ff73f801c329057409abdd431`.
+- `supabase/migrations/20261121298910_add_opening_question_pcac_ti_permissions.sql` — commit `e2610f9892cb50a40fdb1041c9b68355524f53cc`.
+
+## Língua Portuguesa — questão inicial e resolução comentada — 21/11/2026
+
+Aplicado o padrão nos 19 materiais ativos de Língua Portuguesa. Cada aula começa com questão autoral de cinco alternativas e apresenta resolução comentada após a teoria.
+
+Temas: interpretação e inferência; estrutura e progressão textual; pronomes e conectivos; coesão/coerência; reescrita e equivalência; semântica e ambiguidade; ortografia/acentuação; formação de palavras; classes gramaticais; sintaxe; concordância; regência e crase; variação linguística; colocação pronominal; figuras de linguagem e gêneros digitais.
+
+**Validação SQL:** 19/19 materiais com questão inicial e 19/19 com resolução. As 190 questões anteriores do treinador foram preservadas. Questões novas identificadas como autorais, sem falsa atribuição a provas oficiais.
+
+Migration na MAIN: `supabase/migrations/20261121299100_add_opening_questions_pcac_portuguese.sql`, commit `c7ac44bbc6f5bc804da2d0f3d5651eacbe4899dd`. Aplicação direta no Supabase confirmada.
+
+**Limite das etapas de Informática e Português:** não foi feito teste visual na interface nem confirmado CI; não houve publicação manual em produção.
