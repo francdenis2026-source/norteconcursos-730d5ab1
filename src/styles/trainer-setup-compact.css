@@ -33,7 +33,7 @@
 }
 .qs-head__title { display: flex; align-items: baseline; gap: 0.75rem; min-width: 0; flex-wrap: wrap; }
 .qs-head small {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -45,7 +45,7 @@
   padding: 0.25rem 0.625rem;
   border: 1px solid var(--qs-line);
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--muted-foreground);
   white-space: nowrap;
 }
@@ -74,7 +74,7 @@
   border-radius: 50%;
   background: var(--qs-gold);
   color: var(--qs-gold-ink);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 700;
 }
@@ -88,7 +88,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--muted-foreground);
 }
@@ -122,7 +122,7 @@
   cursor: pointer;
   transition: border-color 160ms var(--qs-ease), background-color 160ms var(--qs-ease), transform 160ms var(--qs-ease);
 }
-.qs-chips > button small { font-size: 0.75rem; font-weight: 500; color: var(--muted-foreground); font-variant-numeric: tabular-nums; }
+.qs-chips > button small { font-size: 0.8rem; font-weight: 500; color: var(--muted-foreground); font-variant-numeric: tabular-nums; }
 .qs-chips > button:not(:disabled):hover { border-color: color-mix(in oklab, var(--qs-gold) 60%, var(--qs-line)); transform: translateY(-1px); }
 .qs-chips > button:disabled { opacity: 0.45; cursor: not-allowed; }
 .qs-chips > button[aria-checked="true"] { border-color: var(--qs-gold); background: var(--qs-gold); color: var(--qs-gold-ink); }
@@ -160,7 +160,7 @@
   border-radius: 999px;
   background: var(--qs-gold);
   color: var(--qs-gold-ink);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 .qs-active { display: flex; flex-wrap: wrap; gap: 0.375rem; max-height: 4.75rem; margin: 0; padding: 0; overflow: hidden; list-style: none; min-width: 0; }
@@ -173,10 +173,10 @@
   border: 1px solid color-mix(in oklab, var(--qs-gold) 35%, var(--qs-line));
   border-radius: 999px;
   background: color-mix(in oklab, var(--qs-gold) 8%, var(--card));
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 .qs-active li span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.qs-active li small { font-size: 0.75rem; color: var(--muted-foreground); }
+.qs-active li small { font-size: 0.8rem; color: var(--muted-foreground); }
 .qs-active li button { display: grid; place-items: center; width: 1.5rem; height: 1.5rem; border-radius: 50%; cursor: pointer; }
 .qs-active li button svg { width: 0.75rem; height: 0.75rem; }
 
@@ -234,7 +234,7 @@
 .qs-toggle input:checked + .qs-toggle__switch::after { transform: translateX(1rem); background: var(--qs-gold); }
 .qs-toggle input:focus-visible + .qs-toggle__switch { outline: 2px solid var(--qs-gold); outline-offset: 2px; }
 .qs-toggle b { display: block; font-size: 0.875rem; font-weight: 600; }
-.qs-toggle small { font-size: 0.75rem; color: var(--muted-foreground); }
+.qs-toggle small { font-size: 0.8rem; color: var(--muted-foreground); }
 
 /* Fim da etapa 2: resumo e ação principal */
 .qs-go { display: flex; flex-direction: column; gap: 0.625rem; margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--qs-line); }
