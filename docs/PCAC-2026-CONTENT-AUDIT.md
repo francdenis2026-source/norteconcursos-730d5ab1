@@ -500,3 +500,17 @@ Aula 5 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121160000_deepen_pcac_financial_math_trainer.sql. Commit: 22ab799c03b049f9bced7fdffd0de549bdb1113d.
 Verificação pós-gravação: 19 questões; zero explicações abaixo de 250 caracteres; zero itens sem resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — Balanço Patrimonial, DRE e regimes — 21/11/2026
+
+Aula 4 atualizada diretamente no Supabase:
+
+- 27 questões originais preservadas, com gabaritos mantidos; duas questões formuladas de modo interrogativo/incompleto foram reescritas como afirmações objetivas sem alterar a resposta pretendida.
+- Todas as 27 receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com índices de liquidez corrente e seca, margem líquida, capital de giro, diferença entre posição patrimonial e desempenho, regime de competência/caixa, classificação de ativos e passivos, mantido para venda e terminologia histórica.
+- Removido trecho CPC 26 indevidamente anexado.
+- Verificados exemplos: LC 3,00 e LS 2,00; margem líquida 10%; análise de solvência não pode depender de um único índice.
+
+Migration: supabase/migrations/20261121170000_deepen_pcac_balance_sheet_dre_liquidity.sql. Commit: c558e905b9eb08fb1c3288719a0f729416dea5e4.
+Verificação pós-gravação: 27 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
