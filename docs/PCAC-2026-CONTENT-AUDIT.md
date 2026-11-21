@@ -555,3 +555,19 @@ Aula 2 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121200000_deepen_pcac_accounts_revenue_expenses_facts.sql. Commit: f7e03eefc1f759cf20532d5c7c8a09ec4d3d6242.
 Verificação pós-gravação: 22 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Auditoria das questões autorais do catálogo principal — 21/11/2026
+
+Revisadas as 12 questões de Contabilidade da tabela curated_question_catalog:
+
+- 12/12 possuem enunciado.
+- 12/12 possuem gabarito.
+- 12/12 possuem explicação com mais de 250 caracteres.
+- 12/12 agora possuem base legal/normativa registrada; sete registros que estavam sem referência receberam referências apropriadas.
+- Não foram alterados gabaritos nem enunciados nesta etapa.
+
+A conferência temática confirmou as respostas das questões sobre grupos do ativo não circulante, DRE e prejuízo, fatos permutativos/modificativos, ativo intangível e treinamento, perdas esperadas de crédito, participação de não controladores, classificação de passivo pelo CPC 26 e superveniências/insubsistências. Questões de consolidação e intangível foram mantidas sinalizadas como aprofundamento quando não expressamente detalhadas no edital.
+
+Migration: supabase/migrations/20261121210000_add_pcac_accounting_question_legal_bases.sql. Commit: c5462b543fa0a7ae3cee1d6a58b392a1da114507.
+Verificação pós-gravação: 12 questões; zero enunciados ausentes; zero gabaritos ausentes; zero explicações abaixo de 250 caracteres; zero bases normativas ausentes.
