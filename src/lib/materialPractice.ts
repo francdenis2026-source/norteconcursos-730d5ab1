@@ -1,4 +1,4 @@
-import { matchesDidacticReview, matchesPracticeReview } from "./materialPracticeReview";
+import { matchesDidacticReview, matchesManualReview, matchesPracticeReview } from "./materialPracticeReview";
 import { normalizeDifficulty } from "./questionFormat";
 import type { Question } from "./questionFormat";
 import { parseQuestion, questionAnswers } from "./questionFormat";
@@ -123,11 +123,19 @@ export function authoredMaterialPractice(
   const normative = !!(scope.law || scope.article || /direito|legisla|contabilidade|reda[çc][ãa]o oficial/i.test(`${scope.subject ?? ""} ${label}`));
   const approved = matchesPracticeReview(quiz, review, key) ? review : null;
   const didacticApproved = canonicalSubject(scope.subject ?? "") === canonicalSubject("Contabilidade Geral e Análise Financeira") && matchesDidacticReview(quiz, review, key) ? review : null;
+  const manualApproved = !normative && matchesManualReview(quiz, review, key) ? review : null;
+  // A current PC-AC didactic review must match the exact question, answer and explanation.
+  // Other courses retain their established behavior.
+  if (key.startsWith("pcac-2026-") && !normative && !manualApproved) return [];
   if (normative && !approved && !didacticApproved) return [];
   if (approved) {
     if (scope.subject && canonicalSubject(approved.subject) !== canonicalSubject(scope.subject)) return [];
     if (scope.law && approved.law !== scope.law) return [];
     if (scope.topic && normalize(materialTopic(approved.subject, canonicalTopic(approved.topic_label) ?? approved.topic_label)) !== normalize(scope.topic)) return [];
+  }
+  if (manualApproved) {
+    if (scope.subject && canonicalSubject(manualApproved.subject) !== canonicalSubject(scope.subject)) return [];
+    if (scope.topic && normalize(materialTopic(manualApproved.subject, canonicalTopic(manualApproved.topic_label) ?? manualApproved.topic_label)) !== normalize(scope.topic)) return [];
   }
   if (didacticApproved) {
     if (scope.subject && canonicalSubject(didacticApproved.subject) !== canonicalSubject(scope.subject)) return [];

@@ -77,3 +77,57 @@ export function matchesDidacticReview(
     return !!item && item.q === q.q && item.a === q.a && item.why === q.why;
   });
 }
+
+/** Explicit PC-AC course-only approval for nonlegal, nonfinancial didactic exercises.
+ *  Does not substitute the hashed official-source gate for statutory topics.
+ */
+const MANUAL_DIDACTIC_SUBJECTS = new Set([
+  "Análise de Dados e Informações",
+  "Estatística",
+  "Língua Portuguesa",
+  "Noções de Administração",
+  "Noções de Informática",
+  "Raciocínio Lógico",
+  "Realidade do Estado do Acre",
+  "Tecnologia da Informação e Segurança da Informação",
+]);
+export type MaterialManualReview = {
+  version: 1;
+  review_type: "didactic_manual";
+  status: "reviewed";
+  material_slug: string;
+  subject: string;
+  topic_label: string;
+  checked_at: string;
+  method: string;
+  source_note: string;
+  items: { q: string; a: boolean; why: string }[];
+};
+export function matchesManualReview(
+  quiz: QuizItem[],
+  value: unknown,
+  materialSlug: string,
+): value is MaterialManualReview {
+  if (!materialSlug.startsWith("pcac-2026-") || !value || typeof value !== "object") return false;
+  const review = value as MaterialManualReview;
+  const checked = Date.parse(review.checked_at);
+  if (
+    review.version !== 1 ||
+    review.review_type !== "didactic_manual" ||
+    review.status !== "reviewed" ||
+    review.material_slug !== materialSlug ||
+    !MANUAL_DIDACTIC_SUBJECTS.has(review.subject) ||
+    !review.topic_label?.trim() ||
+    !review.method?.trim() ||
+    !review.source_note?.trim() ||
+    !Number.isFinite(checked) ||
+    checked > Date.now() + 60_000 ||
+    !Array.isArray(review.items) ||
+    !quiz.length ||
+    review.items.length !== quiz.length
+  ) return false;
+  return quiz.every((q, i) => {
+    const item = review.items[i];
+    return !!item && item.q === q.q && item.a === q.a && item.why === q.why && typeof q.a === "boolean";
+  });
+}
