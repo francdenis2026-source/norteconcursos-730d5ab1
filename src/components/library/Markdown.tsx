@@ -114,7 +114,7 @@ function isQuestionOptions(text: string): boolean {
   return /(?:^|\s)[A-E][).]\s*\S/.test(text) && /(?:^|\s)[B-E][).]\s*\S/.test(text);
 }
 function isAnswerAnalysis(text: string): boolean {
-  return /^\s*(?:gabarito|resposta correta|coment[aá]rio|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text);
+  return /^\s*(?:\*\*)?(?:gabarito|resposta correta|coment[aá]rio|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text);
 }
 function isAnalysisLabel(text: string): boolean {
   return /^\s*(?:an[aá]lise|racioc[ií]nio|resolu[cç][aã]o comentada|como resolver)\s*[:—-]/i.test(text);
