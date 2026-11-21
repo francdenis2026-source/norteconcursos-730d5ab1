@@ -725,3 +725,14 @@ Foram identificadas sete justificativas com repetição de explicação ou fórm
 A atualização foi aplicada diretamente no Supabase e registrada na migration `supabase/migrations/20261121297000_refine_pcac_statistics_trainer_explanations.sql`, commit `dd50c20fbcc2af20499352efff142d87bae0aa26`. Os prompts, chaves verdadeiro/falso, dicas, etapas e ordem das 120 questões foram preservados.
 
 **Escopo e limite:** a revisão foi uma auditoria editorial e matemática das afirmações e justificativas armazenadas. Não equivale a teste automatizado da interface do treinador nem validação por especialista externo. Não foi executado typecheck/lint/test/build nesta etapa; não afirmar CI aprovado sem execução e resultado observável.
+
+
+## Estatística — auditoria do texto teórico, lote 9 — 21/11/2026
+
+Foi iniciada a leitura do conteúdo didático das aulas, além da auditoria anterior do treinador. Na aula de distribuição de frequências foi encontrado um trecho editorial confuso no exemplo de frequência acumulada: “8 + 5? Não...”. Embora o resultado final estivesse correto, a autocorreção inserida no texto poderia atrapalhar a compreensão do candidato.
+
+Correção aplicada no Supabase: a terceira classe agora explica diretamente que se deve somar o acumulado anterior (8) à frequência da terceira classe (4), resultando em 12. O cálculo, o conteúdo conceitual e as demais seções foram preservados.
+
+Migration registrada na MAIN: `supabase/migrations/20261121298000_clarify_pcac_statistics_cumulative_frequency_example.sql`, commit `79a788ca569a94a9cac6a8c7b79a6594b4fd80c6`.
+
+A leitura das aulas de tabelas/gráficos, dispersão e probabilidade não identificou, nos trechos examinados, erro aritmético equivalente. A auditoria teórica continua: esta etapa não representa certificação completa de todo o conteúdo nem substitui conferência final do edital e das fontes oficiais.
