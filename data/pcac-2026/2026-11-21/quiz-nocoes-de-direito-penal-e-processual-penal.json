@@ -12,27 +12,27 @@
         {
           "a": true,
           "q": "O princípio da legalidade exige lei anterior para definir crime e cominar pena.",
-          "why": "É a garantia expressa no art. 5º, XXXIX, da Constituição e no art. 1º do CP. Aplicação jurídica: Em Direito Penal, legalidade e anterioridade exigem lei prévia que defina crime e pena; lei penal posterior mais benéfica pode retroagir. Tempo do crime, lugar do crime e regras extraterritoriais são institutos diferentes; leia os dispositivos próprios."
+          "why": "Correto. Constituição Federal, art. 5º, XXXIX, e Código Penal, art. 1º, consagram legalidade e anterioridade: não há crime sem lei anterior que o defina nem pena sem prévia cominação legal. Costume, decreto administrativo e analogia contra o réu não criam crime."
         },
         {
           "a": false,
           "q": "A lei penal mais grave retroage para alcançar fato anterior.",
-          "why": "A lei penal mais gravosa não retroage. Aplicação jurídica: Em Direito Penal, legalidade e anterioridade exigem lei prévia que defina crime e pena; lei penal posterior mais benéfica pode retroagir. Tempo do crime, lugar do crime e regras extraterritoriais são institutos diferentes; leia os dispositivos próprios."
+          "why": "Errado. A lei penal posterior mais grave não retroage para alcançar fatos anteriores. A Constituição, art. 5º, XL, prevê que a lei penal não retroagirá, salvo para beneficiar o réu; por isso, agravamento posterior não alcança conduta passada."
         },
         {
           "a": true,
           "q": "A lei penal posterior mais benéfica pode retroagir.",
-          "why": "A retroatividade benéfica é garantia constitucional e legal. Aplicação jurídica: Em Direito Penal, legalidade e anterioridade exigem lei prévia que defina crime e pena; lei penal posterior mais benéfica pode retroagir. Tempo do crime, lugar do crime e regras extraterritoriais são institutos diferentes; leia os dispositivos próprios."
+          "why": "Correto. A lei penal mais benéfica retroage conforme Constituição, art. 5º, XL, e Código Penal, art. 2º, parágrafo único, inclusive para fatos já julgados definitivamente, observadas as regras legais de aplicação."
         },
         {
           "a": false,
           "q": "O tempo do crime é determinado pela teoria da ubiquidade.",
-          "why": "O tempo segue a teoria da atividade; ubiquidade define o lugar. Aplicação jurídica: Em Direito Penal, legalidade e anterioridade exigem lei prévia que defina crime e pena; lei penal posterior mais benéfica pode retroagir. Tempo do crime, lugar do crime e regras extraterritoriais são institutos diferentes; leia os dispositivos próprios."
+          "why": "Errado. Código Penal, art. 4º, segue teoria da atividade para o tempo do crime: considera o momento da ação ou omissão. A teoria da ubiquidade, prevista no art. 6º, é usada para o lugar do crime, não para o momento."
         },
         {
           "a": true,
           "q": "O lugar do crime segue a teoria da ubiquidade no Código Penal.",
-          "why": "Consideram-se os locais da ação/omissão e do resultado ou onde deveria ocorrer. Aplicação jurídica: Em Direito Penal, legalidade e anterioridade exigem lei prévia que defina crime e pena; lei penal posterior mais benéfica pode retroagir. Tempo do crime, lugar do crime e regras extraterritoriais são institutos diferentes; leia os dispositivos próprios."
+          "why": "Correto. Pelo art. 6º do Código Penal, considera-se praticado o crime tanto onde ocorreu ação ou omissão, total ou parcialmente, quanto onde se produziu ou deveria produzir-se o resultado: é a teoria da ubiquidade."
         }
       ],
       "slug": "pcac-2026-direito-penal-01-aplicacao-lei-penal",
@@ -43,8 +43,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "30 explicações penais atualizadas com referências a Código Penal, Lei 9455/1997 e Lei 13869/2019; bloqueio normativo mantido até validação de SHA256 por fonte e item",
         "items_checked": 5,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+        ]
       }
     },
     {
@@ -52,27 +58,27 @@
         {
           "a": true,
           "q": "Na concepção tripartida, crime é fato típico, ilícito e culpável.",
-          "why": "Essa é a estrutura analítica mais cobrada em concursos. Aplicação jurídica: Analise fato típico, ilicitude e culpabilidade. Dolo envolve vontade ou assunção do risco; culpa pode decorrer de imprudência, negligência ou imperícia quando prevista. Erro de tipo e erro de proibição afetam elementos distintos."
+          "why": "Correto na concepção analítica tripartida frequentemente cobrada: fato típico, ilicitude e culpabilidade. Essa é uma construção dogmática usada para sistematizar o crime; outras correntes doutrinárias devem ser identificadas se o enunciado as adotar."
         },
         {
           "a": true,
           "q": "A culpa pode decorrer de imprudência, negligência ou imperícia.",
-          "why": "São as modalidades clássicas de culpa previstas no direito penal. Aplicação jurídica: Analise fato típico, ilicitude e culpabilidade. Dolo envolve vontade ou assunção do risco; culpa pode decorrer de imprudência, negligência ou imperícia quando prevista. Erro de tipo e erro de proibição afetam elementos distintos."
+          "why": "Correto. Código Penal, art. 18, II, descreve crime culposo quando o agente dá causa ao resultado por imprudência, negligência ou imperícia, nos casos em que a lei pune modalidade culposa. Exemplo: operar equipamento sem cuidado exigido."
         },
         {
           "a": false,
           "q": "A tentativa ocorre antes de qualquer início de execução.",
-          "why": "É necessário início da execução e não consumação por circunstâncias alheias à vontade."
+          "why": "Errado. Tentativa exige início de execução e não consumação por circunstâncias alheias à vontade do agente, conforme Código Penal, art. 14, II. Cogitação e atos preparatórios, em regra, não se confundem com execução iniciada."
         },
         {
           "a": true,
           "q": "Legítima defesa é causa legal de exclusão da ilicitude.",
-          "why": "Está prevista no art. 23 do Código Penal. Aplicação jurídica: Analise fato típico, ilicitude e culpabilidade. Dolo envolve vontade ou assunção do risco; culpa pode decorrer de imprudência, negligência ou imperícia quando prevista. Erro de tipo e erro de proibição afetam elementos distintos."
+          "why": "Correto. A legítima defesa é uma das causas de exclusão da ilicitude do Código Penal, art. 23, II, com requisitos do art. 25. Necessidade e moderação dos meios empregados devem ser analisadas; excesso pode ser punível."
         },
         {
           "a": true,
           "q": "O art. 29 do CP disciplina o concurso de pessoas.",
-          "why": "O dispositivo trata da responsabilização de quem concorre para o crime. Aplicação jurídica: Analise fato típico, ilicitude e culpabilidade. Dolo envolve vontade ou assunção do risco; culpa pode decorrer de imprudência, negligência ou imperícia quando prevista. Erro de tipo e erro de proibição afetam elementos distintos."
+          "why": "Correto. Código Penal, art. 29, disciplina concurso de pessoas: quem de qualquer modo concorre para o crime incide nas penas cominadas, na medida de sua culpabilidade, observadas regras de participação e exceções legais."
         }
       ],
       "slug": "pcac-2026-direito-penal-02-teoria-do-crime",
@@ -83,8 +89,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "30 explicações penais atualizadas com referências a Código Penal, Lei 9455/1997 e Lei 13869/2019; bloqueio normativo mantido até validação de SHA256 por fonte e item",
         "items_checked": 5,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+        ]
       }
     },
     {
@@ -92,27 +104,27 @@
         {
           "a": false,
           "q": "O furto exige violência ou grave ameaça à pessoa como elemento do tipo básico.",
-          "why": "Violência ou grave ameaça caracterizam o roubo, não o furto básico. Aplicação jurídica: Furto envolve subtração de coisa alheia móvel; roubo acrescenta violência ou grave ameaça, conforme o tipo legal. Homicídio atinge a vida; lesão corporal, a integridade física. Descreva a conduta antes de escolher o enquadramento."
+          "why": "Errado. Furto básico no art. 155 do Código Penal consiste em subtrair coisa alheia móvel, sem exigir violência ou grave ameaça contra pessoa. Tais meios integram o roubo do art. 157, com elementos próprios."
         },
         {
           "a": true,
           "q": "O roubo envolve subtração mediante violência ou grave ameaça, conforme o art. 157 do CP.",
-          "why": "Essa é a estrutura central do tipo penal. Aplicação jurídica: Furto envolve subtração de coisa alheia móvel; roubo acrescenta violência ou grave ameaça, conforme o tipo legal. Homicídio atinge a vida; lesão corporal, a integridade física. Descreva a conduta antes de escolher o enquadramento."
+          "why": "Correto. Código Penal, art. 157, tipifica subtração de coisa móvel alheia mediante grave ameaça ou violência à pessoa, ou após reduzi-la à impossibilidade de resistência, observadas demais modalidades legais. Compare com furto do art. 155."
         },
         {
           "a": true,
           "q": "Na apropriação indébita, o agente já possui ou detém legitimamente a coisa antes de se apropriar dela.",
-          "why": "A posse ou detenção antecede a inversão do ânimo. Aplicação jurídica: Furto envolve subtração de coisa alheia móvel; roubo acrescenta violência ou grave ameaça, conforme o tipo legal. Homicídio atinge a vida; lesão corporal, a integridade física. Descreva a conduta antes de escolher o enquadramento."
+          "why": "Correto. Na apropriação indébita, art. 168 do Código Penal, o agente já tem posse ou detenção da coisa móvel alheia e passa a se comportar como dono indevidamente. No furto há subtração; na apropriação, há inversão do título da posse."
         },
         {
           "a": true,
           "q": "No estelionato, a fraude é utilizada para induzir ou manter a vítima em erro.",
-          "why": "Esse é elemento central do art. 171 do CP. Aplicação jurídica: Furto envolve subtração de coisa alheia móvel; roubo acrescenta violência ou grave ameaça, conforme o tipo legal. Homicídio atinge a vida; lesão corporal, a integridade física. Descreva a conduta antes de escolher o enquadramento."
+          "why": "Correto. O estelionato do art. 171 do Código Penal envolve obtenção de vantagem ilícita em prejuízo alheio por induzir ou manter alguém em erro mediante artifício, ardil ou outro meio fraudulento. Identifique fraude, erro, vantagem e prejuízo."
         },
         {
           "a": false,
           "q": "Crimes contra a pessoa protegem exclusivamente o patrimônio econômico.",
-          "why": "Protegem vida, integridade, honra, liberdade e outros bens pessoais. Aplicação jurídica: Furto envolve subtração de coisa alheia móvel; roubo acrescenta violência ou grave ameaça, conforme o tipo legal. Homicídio atinge a vida; lesão corporal, a integridade física. Descreva a conduta antes de escolher o enquadramento."
+          "why": "Errado. Crimes contra a pessoa abrangem bens como vida, integridade corporal, honra e liberdade individual. Patrimônio econômico é tutelado principalmente pelos crimes patrimoniais, não exclusivamente pelos crimes contra a pessoa."
         }
       ],
       "slug": "pcac-2026-direito-penal-03-crimes-pessoa-patrimonio",
@@ -123,8 +135,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "30 explicações penais atualizadas com referências a Código Penal, Lei 9455/1997 e Lei 13869/2019; bloqueio normativo mantido até validação de SHA256 por fonte e item",
         "items_checked": 5,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+        ]
       }
     },
     {
@@ -132,27 +150,27 @@
         {
           "a": true,
           "q": "O edital delimita os crimes contra o respeito aos mortos nos arts. 209 a 212 do CP.",
-          "why": "Esse é o recorte indicado expressamente no Anexo III para Oficial Investigador. Aplicação jurídica: Crimes contra dignidade sexual exigem leitura atualizada dos elementos típicos. Crimes contra fé pública protegem autenticidade e confiança documental; falsidade ideológica está no conteúdo falso de documento materialmente autêntico. Não confunda com falsificação material."
+          "why": "Correto quanto ao recorte indicado no material do edital: os arts. 209 a 212 do Código Penal incluem impedimento ou perturbação de cerimônia funerária, violação de sepultura, destruição/subtração/ocultação de cadáver e vilipêndio a cadáver. Confira sempre se o edital os enumera exatamente."
         },
         {
           "a": true,
           "q": "Falsa identidade está prevista no art. 307 do Código Penal.",
-          "why": "O dispositivo trata de atribuir falsa identidade para obter vantagem ou causar dano."
+          "why": "Correto. Código Penal, art. 307, tipifica atribuir-se ou atribuir a terceiro falsa identidade com finalidade de obter vantagem, em proveito próprio ou alheio, ou causar dano a outrem. Exige os elementos previstos no tipo."
         },
         {
           "a": true,
           "q": "O estupro está previsto no art. 213 do Código Penal.",
-          "why": "Esse é o dispositivo correspondente. Aplicação jurídica: Crimes contra dignidade sexual exigem leitura atualizada dos elementos típicos. Crimes contra fé pública protegem autenticidade e confiança documental; falsidade ideológica está no conteúdo falso de documento materialmente autêntico. Não confunda com falsificação material."
+          "why": "Correto. O delito de estupro é tratado no art. 213 do Código Penal. Não confunda com outras infrações sexuais de tipos e requisitos próprios; a adequada subsunção depende de conduta, meio empregado e circunstâncias da vítima."
         },
         {
           "a": false,
           "q": "A análise de falsidade documental dispensa verificar se o documento é público ou particular.",
-          "why": "A natureza do documento pode alterar o enquadramento e a pena. Aplicação jurídica: Crimes contra dignidade sexual exigem leitura atualizada dos elementos típicos. Crimes contra fé pública protegem autenticidade e confiança documental; falsidade ideológica está no conteúdo falso de documento materialmente autêntico. Não confunda com falsificação material."
+          "why": "Errado. A natureza pública ou particular do documento interfere no enquadramento e nas consequências das figuras de falsificação e falsidade ideológica do Código Penal, como arts. 297, 298 e 299. Ignorar esse dado pode mudar o tipo aplicável."
         },
         {
           "a": true,
           "q": "Crimes contra a dignidade sexual devem ser analisados conforme os elementos legais do tipo.",
-          "why": "A tipificação depende dos elementos objetivos e subjetivos previstos em lei. Aplicação jurídica: Crimes contra dignidade sexual exigem leitura atualizada dos elementos típicos. Crimes contra fé pública protegem autenticidade e confiança documental; falsidade ideológica está no conteúdo falso de documento materialmente autêntico. Não confunda com falsificação material."
+          "why": "Correto. Crimes contra a dignidade sexual devem ser examinados pelos elementos objetivos e subjetivos previstos nos tipos legais, considerando regras atuais e possíveis alterações legislativas. Uma descrição genérica de 'conduta sexual inadequada' não substitui os requisitos de tipificação."
         }
       ],
       "slug": "pcac-2026-direito-penal-04-crimes-sexuais-mortos-fe-publica",
@@ -163,8 +181,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "30 explicações penais atualizadas com referências a Código Penal, Lei 9455/1997 e Lei 13869/2019; bloqueio normativo mantido até validação de SHA256 por fonte e item",
         "items_checked": 5,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+        ]
       }
     },
     {
@@ -172,27 +196,27 @@
         {
           "a": true,
           "q": "Concussão tem como verbo central exigir vantagem indevida.",
-          "why": "O art. 316 do CP utiliza o verbo exigir. Aplicação jurídica: Peculato, concussão, corrupção passiva e prevaricação têm núcleos e elementos distintos: apropriar/desviar, exigir vantagem, solicitar/receber/aceitar promessa e retardar/deixar de praticar ato por interesse pessoal, respectivamente. Compare verbos legais."
+          "why": "Correto. No art. 316 do Código Penal, o verbo central da concussão é exigir vantagem indevida, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela. Distinga de solicitar/receber na corrupção passiva."
         },
         {
           "a": false,
           "q": "Corrupção passiva exige necessariamente que o agente receba a vantagem para consumar o tipo básico.",
-          "why": "Solicitar ou aceitar promessa também são condutas previstas no art. 317. Aplicação jurídica: Peculato, concussão, corrupção passiva e prevaricação têm núcleos e elementos distintos: apropriar/desviar, exigir vantagem, solicitar/receber/aceitar promessa e retardar/deixar de praticar ato por interesse pessoal, respectivamente. Compare verbos legais."
+          "why": "Errado. Código Penal, art. 317, descreve corrupção passiva com solicitar, receber ou aceitar promessa de vantagem indevida, nas condições legais. A consumação da modalidade solicitar não exige recebimento efetivo da vantagem."
         },
         {
           "a": true,
           "q": "Prevaricação exige finalidade de satisfazer interesse ou sentimento pessoal.",
-          "why": "Essa finalidade especial integra o art. 319. Aplicação jurídica: Peculato, concussão, corrupção passiva e prevaricação têm núcleos e elementos distintos: apropriar/desviar, exigir vantagem, solicitar/receber/aceitar promessa e retardar/deixar de praticar ato por interesse pessoal, respectivamente. Compare verbos legais."
+          "why": "Correto. Prevaricação, art. 319 do Código Penal, exige retardar, deixar de praticar indevidamente ato de ofício ou praticá-lo contra disposição expressa de lei para satisfazer interesse ou sentimento pessoal. Essa finalidade especial distingue o delito."
         },
         {
           "a": true,
           "q": "Falso testemunho ou falsa perícia está previsto no art. 342 do CP.",
-          "why": "O edital destaca expressamente esse dispositivo. Aplicação jurídica: Peculato, concussão, corrupção passiva e prevaricação têm núcleos e elementos distintos: apropriar/desviar, exigir vantagem, solicitar/receber/aceitar promessa e retardar/deixar de praticar ato por interesse pessoal, respectivamente. Compare verbos legais."
+          "why": "Correto. O art. 342 do Código Penal trata de falso testemunho ou falsa perícia nos contextos legalmente previstos. Verifique quem pode ser sujeito ativo e se houve afirmação falsa, negação ou silêncio sobre a verdade nos termos típicos."
         },
         {
           "a": true,
           "q": "Fraude processual está prevista no art. 347 do CP.",
-          "why": "O tipo trata de inovação artificiosa com finalidade de induzir a erro, conforme a lei."
+          "why": "Correto. Fraude processual é tratada no art. 347 do Código Penal e exige inovação artificiosa no estado de lugar, coisa ou pessoa, com finalidade de induzir juiz ou perito a erro, no contexto legal. Nem toda alteração física basta."
         }
       ],
       "slug": "pcac-2026-direito-penal-05-crimes-administracao-publica",
@@ -203,8 +227,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "30 explicações penais atualizadas com referências a Código Penal, Lei 9455/1997 e Lei 13869/2019; bloqueio normativo mantido até validação de SHA256 por fonte e item",
         "items_checked": 5,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+        ]
       }
     },
     {
@@ -212,27 +242,27 @@
         {
           "a": true,
           "q": "A Lei nº 9.455/1997 disciplina os crimes de tortura.",
-          "why": "É a lei específica indicada no edital. Aplicação jurídica: Tortura (Lei 9.455/1997) e abuso de autoridade (Lei 13.869/2019) possuem requisitos específicos. No abuso, a finalidade especial prevista na lei importa; o simples desacordo com interpretação da lei não constitui crime automaticamente."
+          "why": "Correto. A Lei 9.455/1997 define crimes de tortura e seus requisitos. O reconhecimento depende do modo da conduta, finalidade, vítima e elementos descritos no tipo; nem toda violência praticada por agente público é automaticamente tortura."
         },
         {
           "a": true,
           "q": "A Lei nº 13.869/2019 trata de abuso de autoridade.",
-          "why": "É a lei de abuso de autoridade. Aplicação jurídica: Tortura (Lei 9.455/1997) e abuso de autoridade (Lei 13.869/2019) possuem requisitos específicos. No abuso, a finalidade especial prevista na lei importa; o simples desacordo com interpretação da lei não constitui crime automaticamente."
+          "why": "Correto. A Lei 13.869/2019 disciplina crimes de abuso de autoridade e define sujeitos, finalidades especiais e condutas típicas. Para prova, compare o caput do art. 1º e seus §§1º e 2º com o crime específico."
         },
         {
           "a": false,
           "q": "Qualquer divergência na interpretação da lei configura abuso de autoridade.",
-          "why": "A lei prevê que divergência interpretativa ou de avaliação de fatos e provas, por si só, não configura abuso."
+          "why": "Errado. A Lei 13.869/2019, art. 1º, §2º, diz que divergência na interpretação da lei ou avaliação de fatos e provas, por si só, não configura abuso de autoridade. Exigem-se conduta tipificada e demais elementos legais."
         },
         {
           "a": true,
           "q": "O abuso de autoridade exige finalidade específica prevista em lei.",
-          "why": "O art. 1º, § 1º, exige uma das finalidades legais. Aplicação jurídica: Tortura (Lei 9.455/1997) e abuso de autoridade (Lei 13.869/2019) possuem requisitos específicos. No abuso, a finalidade especial prevista na lei importa; o simples desacordo com interpretação da lei não constitui crime automaticamente."
+          "why": "Correto. O art. 1º, §1º, da Lei 13.869/2019 exige finalidade específica de prejudicar outrem, beneficiar a si mesmo ou terceiro, ou agir por mero capricho/satisfação pessoal. Não basta exercer função pública e praticar conduta voluntária."
         },
         {
           "a": false,
           "q": "A condição de agente público dispensa a análise dos elementos do tipo penal.",
-          "why": "É indispensável verificar conduta, finalidade e demais requisitos legais. Aplicação jurídica: Tortura (Lei 9.455/1997) e abuso de autoridade (Lei 13.869/2019) possuem requisitos específicos. No abuso, a finalidade especial prevista na lei importa; o simples desacordo com interpretação da lei não constitui crime automaticamente."
+          "why": "Errado. Ser agente público é somente uma condição do sujeito ativo de tipos da Lei 13.869/2019. Ainda é necessário comprovar a conduta legalmente descrita, finalidade especial e demais elementos; o cargo não dispensa tipicidade."
         }
       ],
       "slug": "pcac-2026-direito-penal-06-tortura-abuso-autoridade",
@@ -243,8 +273,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "30 explicações penais atualizadas com referências a Código Penal, Lei 9455/1997 e Lei 13869/2019; bloqueio normativo mantido até validação de SHA256 por fonte e item",
         "items_checked": 5,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm"
+        ]
       }
     },
     {
@@ -252,85 +288,92 @@
         {
           "a": true,
           "q": "Inserir declaração falsa em documento formalmente verdadeiro, nas condições do tipo, caracteriza falsidade ideológica.",
-          "why": "O art. 299 pune omitir declaração devida ou inserir/fazer inserir declaração falsa ou diversa em documento, com finalidade específica."
+          "why": "Correto. Código Penal, art. 299, descreve falsidade ideológica quando o agente omite declaração que deveria constar, ou insere/faz inserir declaração falsa ou diversa em documento público ou particular, com finalidade legalmente prevista. Documento pode ser materialmente autêntico, mas ideologicamente falso."
         },
         {
           "a": false,
           "q": "O art. 304 do Código Penal descreve a fabricação de documento público falso.",
-          "why": "O art. 304 trata do uso de documento falso; a falsificação de documento público está no art. 297."
+          "why": "Errado. O art. 304 do Código Penal tipifica usar documento falso, nas hipóteses legais. A falsificação material de documento público está no art. 297; de documento particular, no art. 298. Confundir uso e fabricação altera o tipo penal."
         },
         {
           "a": true,
           "q": "A ocultação de cadáver é conduta prevista no art. 211 do Código Penal.",
-          "why": "O art. 211 reúne destruir, subtrair ou ocultar cadáver ou parte dele. Aplicação jurídica: Falsidade ideológica afeta conteúdo de documento autêntico; fraude processual envolve alteração artificiosa para induzir juiz/perito a erro. Identifique contexto, meio empregado, elemento subjetivo e hipótese legal, sem tratar indício isolado como crime provado."
+          "why": "Correto. Código Penal, art. 211, tipifica destruir, subtrair ou ocultar cadáver ou parte dele. A simples referência a 'crimes contra o respeito aos mortos' exige identificar qual conduta se enquadra em cada artigo."
         },
         {
           "a": false,
           "q": "Toda alteração de objeto durante investigação configura automaticamente fraude processual.",
-          "why": "O art. 347 exige inovação artificiosa, contexto e finalidade específica de induzir juiz ou perito a erro."
+          "why": "Errado. O art. 347 do Código Penal exige inovação artificiosa no estado de lugar, coisa ou pessoa com finalidade de induzir juiz ou perito a erro e contexto processual legal. Alteração lícita ou sem finalidade específica não se transforma automaticamente em fraude processual."
         },
         {
           "a": true,
           "q": "A falsa identidade perante autoridade policial pode configurar o art. 307 do Código Penal, conforme a Súmula 522 do STJ.",
-          "why": "A Súmula 522 estabelece que a atribuição de falsa identidade perante autoridade policial é típica, ainda que em alegada autodefesa."
+          "why": "Correto. Súmula 522 do STJ: atribuir-se falsa identidade perante autoridade policial é conduta típica mesmo alegando autodefesa, se presentes os requisitos do art. 307 do Código Penal. O direito de defesa não autoriza toda atribuição falsa de identidade."
         }
       ],
       "slug": "pcac-2026-penal-crimes-fe-publica-mortos-testemunho-fraude",
       "discipline": "Noções de Direito Penal e Processual Penal",
       "topic_label": "Crimes contra os mortos, fé pública e administração da justiça — arts. 209 a 212, 296 a 311, 342 e 347 do CP",
-      "practice_review": null
+      "practice_review": {
+        "status": "needs_revalidation",
+        "review_note": "15 explicações específicas de fé pública e inquérito penal elaboradas com CP arts. 297-307, 347 e CPP arts. 7-21; exigida evidência oficial por item para liberação.",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ]
+      }
     },
     {
       "quiz": [
         {
           "a": false,
           "q": "A autoridade policial pode arquivar o inquérito.",
-          "why": "O art. 17 do CPP proíbe o arquivamento pela autoridade policial. Aplicação jurídica: O inquérito policial é procedimento investigativo administrativo, em regra escrito e de natureza inquisitiva, destinado a apurar infração e autoria. Ação penal, denúncia e processo judicial são etapas distintas; garantias constitucionais continuam aplicáveis."
+          "why": "Errado. O art. 17 do Código de Processo Penal estabelece que autoridade policial não pode mandar arquivar autos de inquérito. Concluída a investigação, encaminha-se o procedimento para providências legalmente cabíveis; polícia e titular da ação penal possuem competências distintas."
         },
         {
           "a": true,
           "q": "O prazo geral do art. 10 é de 10 dias se o indiciado estiver preso e 30 dias se estiver solto.",
-          "why": "É a regra geral do CPP, ressalvados os prazos de leis especiais. Aplicação jurídica: O inquérito policial é procedimento investigativo administrativo, em regra escrito e de natureza inquisitiva, destinado a apurar infração e autoria. Ação penal, denúncia e processo judicial são etapas distintas; garantias constitucionais continuam aplicáveis."
+          "why": "Correto para o prazo geral do CPP, art. 10: dez dias com indiciado preso e trinta dias se solto, ressalvados prazos especiais e disciplina aplicável em legislações específicas. Não aplique automaticamente esse prazo a toda investigação federal ou especial."
         },
         {
           "a": false,
           "q": "O inquérito é condição indispensável para toda denúncia.",
-          "why": "O inquérito é dispensável quando já existem elementos suficientes para o oferecimento da denúncia."
+          "why": "Errado. Inquérito policial é dispensável para denúncia quando o titular da ação já possui elementos suficientes de materialidade e autoria obtidos licitamente. A investigação formal é meio comum de apuração, mas não requisito absoluto de toda acusação."
         },
         {
           "a": false,
           "q": "A reprodução simulada pode contrariar a moralidade ou a ordem pública.",
-          "why": "O art. 7º condiciona a reprodução simulada a que não contrarie a moralidade ou a ordem pública."
+          "why": "Errado. O CPP, art. 7º, somente permite reprodução simulada dos fatos se não contrariar moralidade ou ordem pública. Uma reprodução vedada por essas condições não fica autorizada apenas porque auxiliaria a investigação."
         },
         {
           "a": true,
           "q": "O MP pode requisitar diligências imprescindíveis ao oferecimento da denúncia.",
-          "why": "É a previsão do art. 16 do CPP. Aplicação jurídica: O inquérito policial é procedimento investigativo administrativo, em regra escrito e de natureza inquisitiva, destinado a apurar infração e autoria. Ação penal, denúncia e processo judicial são etapas distintas; garantias constitucionais continuam aplicáveis."
+          "why": "Correto. O art. 16 do CPP prevê que o Ministério Público pode devolver o inquérito para novas diligências imprescindíveis ao oferecimento da denúncia. O termo 'imprescindíveis' evita requisições indefinidas sem necessidade concreta."
         },
         {
           "a": false,
           "q": "O sigilo do inquérito elimina qualquer acesso da defesa a elementos já documentados.",
-          "why": "O sigilo não afasta as garantias legais de acesso da defesa aos elementos já documentados."
+          "why": "Errado. O sigilo investigativo não elimina o direito da defesa de acessar elementos de prova já documentados e pertinentes ao exercício defensivo, nos limites legalmente admitidos. Veja Súmula Vinculante 14 do STF; diligências ainda em curso podem ter restrições justificadas."
         },
         {
           "a": false,
           "q": "O art. 13-A permite requisitar conteúdo de conversas privadas em qualquer investigação.",
-          "why": "O art. 13-A trata de dados e informações cadastrais em crimes expressamente enumerados, não de acesso irrestrito ao conteúdo de comunicações."
+          "why": "Errado. O art. 13-A do CPP trata de requisição de dados e informações cadastrais de vítimas ou suspeitos nos crimes listados em seu texto. Não autoriza indiscriminadamente interceptar conteúdo de conversas privadas em qualquer investigação."
         },
         {
           "a": true,
           "q": "O art. 14-A prevê prazo de até 48 horas, contado da citação, para o investigado constituir defensor nas hipóteses legais.",
-          "why": "O prazo está no § 1º do art. 14-A; se não houver indicação, a instituição é comunicada nos termos dos parágrafos seguintes."
+          "why": "Correto nos casos disciplinados pelo art. 14-A, §1º, do CPP: investigado sujeito às hipóteses legais deve ser citado para constituir defensor no prazo de até 48 horas. Verifique a qualidade do investigado e contexto específico antes de generalizar."
         },
         {
           "a": true,
           "q": "O art. 13-B disciplina meios técnicos de localização em investigação de tráfico de pessoas, sob condições legais.",
-          "why": "O dispositivo trata de sinais e meios técnicos de localização, com autorização judicial e limites próprios."
+          "why": "Correto. O CPP, art. 13-B, prevê uso de meios técnicos para localização de vítima ou suspeito em investigação de tráfico de pessoas, sob requisitos e controle previstos na lei. Não equipare automaticamente acesso a sinal de localização com interceptação irrestrita de conteúdo."
         },
         {
           "a": false,
           "q": "A previsão do art. 21 autoriza incomunicabilidade irrestrita do preso.",
-          "why": "A leitura deve respeitar a Constituição e as garantias de defesa; não autoriza isolamento arbitrário."
+          "why": "Errado. A previsão histórica do art. 21 do CPP não autoriza incomunicabilidade arbitrária ou ilimitada, à vista da Constituição de 1988 e das garantias de defesa e assistência. A interpretação da norma deve observar hierarquia constitucional."
         }
       ],
       "slug": "pcac-2026-processo-penal-07-inquerito-policial",
@@ -341,8 +384,13 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "15 explicações específicas de fé pública e inquérito penal elaboradas com CP arts. 297-307, 347 e CPP arts. 7-21; exigida evidência oficial por item para liberação.",
         "items_checked": 10,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ]
       }
     },
     {
@@ -350,62 +398,62 @@
         {
           "a": false,
           "q": "O juiz pode condenar só com elementos informativos do inquérito.",
-          "why": "O art. 155 exige prova produzida em contraditório judicial, ressalvadas as provas cautelares, não repetíveis e antecipadas."
+          "why": "Errado. O CPP, art. 155, proíbe condenação fundamentada exclusivamente em elementos informativos colhidos na investigação, ressalvadas provas cautelares, não repetíveis e antecipadas. Prova judicial produzida em contraditório não se confunde com relato investigativo."
         },
         {
           "a": true,
           "q": "Provas ilícitas são inadmissíveis e o art. 157 também trata das provas derivadas.",
-          "why": "O § 1º alcança as provas derivadas, ressalvadas ausência de nexo causal ou fonte independente."
+          "why": "Correto. O CPP, art. 157, e a Constituição, art. 5º, LVI, tratam da inadmissibilidade de prova ilícita e derivada, ressalvadas as hipóteses legais como ausência de nexo causal ou fonte independente. Analise como a prova posterior foi obtida."
         },
         {
           "a": false,
           "q": "A confissão substitui o exame de corpo de delito quando a infração deixa vestígios.",
-          "why": "O art. 158 exige exame direto ou indireto e proíbe sua substituição pela confissão."
+          "why": "Errado. O CPP, art. 158, exige exame direto ou indireto do corpo de delito quando a infração deixa vestígios; confissão não o supre. Quando os vestígios desaparecem, o art. 167 prevê hipótese de suprimento por prova testemunhal."
         },
         {
           "a": true,
           "q": "Se os vestígios desaparecerem, a prova testemunhal pode suprir a falta do exame.",
-          "why": "É a hipótese expressa do art. 167. Aplicação jurídica: Cadeia de custódia documenta reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte. Vestígios exigem preservação e registro de responsabilidades; prova pericial não é sinônimo de confissão."
+          "why": "Correto. O CPP, art. 167, permite prova testemunhal suprir o exame de corpo de delito quando vestígios desapareceram. Não se trata de autorização geral para deixar de realizar perícia disponível em infração que deixa vestígios."
         },
         {
           "a": true,
           "q": "A cadeia de custódia vai do reconhecimento do vestígio até o descarte.",
-          "why": "É a definição do art. 158-A. Aplicação jurídica: Cadeia de custódia documenta reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte. Vestígios exigem preservação e registro de responsabilidades; prova pericial não é sinônimo de confissão."
+          "why": "Correto. A cadeia de custódia, no CPP, art. 158-A, documenta a história cronológica do vestígio, do reconhecimento até o descarte, com coleta, acondicionamento, transporte, processamento e armazenamento conforme procedimentos legais."
         },
         {
           "a": false,
           "q": "Na falta de perito oficial, o exame será realizado por uma única pessoa escolhida livremente pelas partes.",
-          "why": "O art. 159, § 1º, prevê duas pessoas idôneas com diploma superior e habilitação técnica; as partes não nomeiam o perito."
+          "why": "Errado. Na falta de perito oficial, o CPP, art. 159, §1º, exige duas pessoas idôneas com diploma de curso superior, preferencialmente em área específica e com habilitação técnica relacionada. Uma pessoa livremente indicada pelas partes não basta."
         },
         {
           "a": false,
           "q": "O juiz é obrigado a seguir integralmente o laudo pericial.",
-          "why": "O art. 182 permite aceitar ou rejeitar o laudo, total ou parcialmente. Aplicação jurídica: Cadeia de custódia documenta reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte. Vestígios exigem preservação e registro de responsabilidades; prova pericial não é sinônimo de confissão."
+          "why": "Errado. O CPP, art. 182, permite que o juiz aceite ou rejeite laudo pericial total ou parcialmente, mediante apreciação fundamentada das provas. Laudo não vincula automaticamente o magistrado."
         },
         {
           "a": true,
           "q": "O art. 180 prevê a nomeação de terceiro perito quando houver divergência entre os primeiros.",
-          "why": "A divergência deve ser registrada e a autoridade nomeia terceiro; pode determinar novo exame se persistir a divergência."
+          "why": "Correto. CPP, art. 180, prevê registro de divergências entre peritos e nomeação de terceiro perito; persistindo divergência, pode haver novo exame conforme requisitos legais. O objetivo é esclarecer conflito de conclusões técnicas."
         },
         {
           "a": true,
           "q": "O art. 280 trata da aplicação aos peritos, no que couber, das regras de suspeição dos juízes.",
-          "why": "Essa é a regra expressa do art. 280; não é uma norma genérica sobre testemunhas."
+          "why": "Correto. CPP, art. 280, aplica aos peritos, no que couber, disposições sobre suspeição dos juízes. A imparcialidade do perito deve ser examinada pelas hipóteses pertinentes."
         },
         {
           "a": true,
           "q": "O art. 281 equipara os intérpretes aos peritos para todos os efeitos.",
-          "why": "A equiparação consta literalmente do art. 281. Aplicação jurídica: Cadeia de custódia documenta reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte. Vestígios exigem preservação e registro de responsabilidades; prova pericial não é sinônimo de confissão."
+          "why": "Correto. O CPP, art. 281, equipara intérpretes a peritos para os efeitos previstos na lei. A norma processual não implica que todo intérprete tenha a mesma formação técnica de um perito criminal."
         },
         {
           "a": true,
           "q": "O não comparecimento injustificado do perito pode levar à sua condução pela autoridade.",
-          "why": "É a previsão do art. 278 do CPP. Aplicação jurídica: Cadeia de custódia documenta reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte. Vestígios exigem preservação e registro de responsabilidades; prova pericial não é sinônimo de confissão."
+          "why": "Correto. O CPP, art. 278, prevê providência diante do não comparecimento injustificado de perito regularmente intimado. A condução não é automática sem verificar intimação válida e justificativa."
         },
         {
           "a": false,
           "q": "A autoridade pode negar qualquer exame de corpo de delito quando entender que não é necessário.",
-          "why": "O art. 184 ressalva o exame de corpo de delito; a possibilidade de negar perícia desnecessária não se aplica a ele."
+          "why": "Errado. O CPP, art. 184, admite negar perícia desnecessária, exceto exame de corpo de delito. Em infração com vestígios, o art. 158 exige exame direto ou indireto, conforme a hipótese."
         }
       ],
       "slug": "pcac-2026-processo-penal-08-provas-cadeia-custodia-peritos",
@@ -416,8 +464,14 @@
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
         "status": "needs_revalidation",
         "review_date": "2026-11-14",
+        "review_note": "24 justificativas de prova e cautelares atualizadas com CPP, Lei 12037, Leis 15295/2025, 15272/2025 e 15487/2026; evidência oficial por item ainda exigida",
         "items_checked": 12,
-        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item"
+        "revision_reason": "Contextos constitucionais/penais ampliados; gabaritos e vigência legal pendentes de validação item a item",
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www2.camara.leg.br/legin/fed/lei/2009/lei-12037-1-outubro-2009-591435-normaatualizada-pl.html",
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm"
+        ]
       }
     },
     {
@@ -425,62 +479,62 @@
         {
           "a": false,
           "q": "A pessoa civilmente identificada nunca poderá ser submetida à identificação criminal.",
-          "why": "A Lei nº 12.037/2009 estabelece uma regra geral, mas prevê exceções. A Lei nº 15.295/2025 acrescentou novas hipóteses, inclusive relacionadas a crimes graves e sexuais."
+          "why": "Errado. A Lei 12.037/2009 admite identificação criminal de civilmente identificado nas exceções do art. 3º. Lei 15.295/2025 acrescentou hipótese para determinados crimes e regras de coleta genética; não é proibição absoluta."
         },
         {
           "a": true,
           "q": "A Lei nº 15.295/2025 acrescentou hipóteses de identificação criminal e de coleta de material biológico para perfil genético.",
-          "why": "A alteração entrou em vigor em janeiro de 2026. Ela acrescentou o inciso VII ao art. 3º e modificou o art. 5º da Lei nº 12.037/2009, com hipóteses específicas de coleta genética."
+          "why": "Correto. Lei 15.295/2025 modificou a Lei 12.037/2009, arts. 3º e 5º, incluindo hipótese de identificação criminal e coleta de material para perfil genético em situações específicas, com vigência posterior à publicação."
         },
         {
           "a": false,
           "q": "O flagrante presumido ocorre quando a pessoa é perseguida logo após a infração.",
-          "why": "A perseguição logo após, em situação que faça presumir autoria, caracteriza flagrante impróprio. O presumido ocorre quando a pessoa é encontrada logo depois com objetos ou instrumentos que indiquem autoria."
+          "why": "Errado. CPP, art. 302, III, descreve flagrante impróprio quando pessoa é perseguida logo após; o presumido do inciso IV ocorre quando encontrada logo depois com instrumentos, armas, objetos ou papéis que façam presumir autoria."
         },
         {
           "a": true,
           "q": "Ao receber o auto de flagrante, o juiz pode relaxar a prisão ilegal, converter em preventiva se presentes os requisitos ou conceder liberdade provisória.",
-          "why": "Essas são as três providências do art. 310. A conversão exige requisitos do art. 312 e demonstração de que medidas cautelares diversas são inadequadas ou insuficientes."
+          "why": "Correto. CPP, art. 310, prevê que juiz relaxe prisão ilegal, converta flagrante em preventiva se presentes requisitos legais e insuficientes outras cautelares, ou conceda liberdade provisória conforme o caso."
         },
         {
           "a": false,
           "q": "A autoridade policial pode decretar prisão preventiva quando entender que há risco de fuga.",
-          "why": "A autoridade policial pode representar pela preventiva, mas a decretação é ato do juiz, mediante provocação legítima, conforme art. 311 do CPP."
+          "why": "Errado. A prisão preventiva é decretada judicialmente, nas hipóteses do CPP, arts. 311 e 312. Autoridade policial pode representar pela medida, mas não possui competência para decretá-la."
         },
         {
           "a": false,
           "q": "A gravidade abstrata do crime, isoladamente, é fundamento suficiente para a prisão preventiva.",
-          "why": "O art. 312, § 4º, incluído pela Lei nº 15.272/2025, exige demonstração concreta da periculosidade e do risco cautelar. A gravidade abstrata não basta."
+          "why": "Errado. Gravidade abstrata isolada não é fundamento suficiente para preventiva. Art. 312 do CPP exige prova da existência do crime, indícios suficientes de autoria e perigo concreto ligado à liberdade, com fundamentação."
         },
         {
           "a": true,
           "q": "A Lei nº 15.487/2026 incluiu no art. 313 hipótese de admissibilidade da preventiva para determinados crimes sexuais contra crianças e adolescentes.",
-          "why": "O inciso VI do art. 313 foi acrescentado pela Lei nº 15.487/2026, publicada em agosto de 2026, antes da data de corte do edital."
+          "why": "Correto. Lei 15.487/2026 acrescentou hipótese ao art. 313, VI, do CPP para crimes sexuais contra criança ou adolescente e alguns crimes do ECA. A admissibilidade ainda exige requisitos cautelares dos arts. 312 e 315."
         },
         {
           "a": false,
           "q": "A prisão temporária pode ser decretada apenas porque o investigado não possui residência fixa.",
-          "why": "O STF afastou essa interpretação isolada. A temporária exige cinco requisitos cumulativos e não pode ser usada como prisão para averiguações."
+          "why": "Errado. Prisão temporária não se decreta apenas porque investigado não tem residência fixa. Lei 7.960/1989 exige requisitos legais cumulativos interpretados pelo STF, necessidade, proporcionalidade e enquadramento em crimes previstos."
         },
         {
           "a": true,
           "q": "A prisão temporária geral tem prazo de cinco dias, prorrogável por mais cinco em caso de extrema e comprovada necessidade.",
-          "why": "Esse é o prazo do art. 2º da Lei nº 7.960/1989. Para crimes hediondos e equiparados, existe prazo especial de 30 dias, prorrogável por mais 30."
+          "why": "Correto. Lei 7.960/1989, art. 2º, fixa prazo geral de cinco dias, prorrogáveis por cinco em extrema e comprovada necessidade. Há prazo específico mais longo para crimes hediondos e equiparados."
         },
         {
           "a": true,
           "q": "O art. 310-A do CPP prevê coleta de material biológico em hipóteses específicas de prisão em flagrante.",
-          "why": "O dispositivo, incluído pela Lei nº 15.272/2025, trata de crimes específicos e exige coleta por agente treinado, com respeito à cadeia de custódia."
+          "why": "Correto. O CPP, art. 310-A, incluído pela Lei 15.272/2025, disciplina coleta de material biológico em determinadas hipóteses de flagrante e exige os requisitos da lei. Não se aplica universalmente a todo preso."
         },
         {
           "a": true,
           "q": "A prisão preventiva deve ser revista a cada 90 dias por decisão fundamentada.",
-          "why": "O art. 316, parágrafo único, prevê revisão periódica da necessidade de manutenção da preventiva. A revisão exige decisão fundamentada."
+          "why": "Correto. CPP, art. 316, parágrafo único, prevê revisão fundamentada da necessidade de preventiva a cada noventa dias. A falta de revisão não implica automaticamente soltura sem apreciação do caso e jurisprudência."
         },
         {
           "a": true,
           "q": "A monitoração eletrônica é uma medida cautelar diversa da prisão prevista no art. 319.",
-          "why": "A monitoração eletrônica consta expressamente do art. 319. É medida cautelar, não pena, e deve observar necessidade e adequação."
+          "why": "Correto. CPP, art. 319, IX, traz monitoração eletrônica como cautelar diversa da prisão, submetida à fundamentação, adequação e necessidade. Não se confunde com pena autônoma."
         }
       ],
       "slug": "pcac-2026-processo-penal-09-identificacao-criminal-prisoes-medidas-cautelares",
@@ -489,9 +543,15 @@
       "practice_review": {
         "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
         "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "reviewed",
+        "status": "needs_revalidation",
         "review_date": "2026-11-14",
-        "items_checked": 12
+        "review_note": "24 justificativas de prova e cautelares atualizadas com CPP, Lei 12037, Leis 15295/2025, 15272/2025 e 15487/2026; evidência oficial por item ainda exigida",
+        "items_checked": 12,
+        "official_sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www2.camara.leg.br/legin/fed/lei/2009/lei-12037-1-outubro-2009-591435-normaatualizada-pl.html",
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm"
+        ]
       }
     }
   ]
