@@ -2160,3 +2160,10 @@ O material único da frente institucional/PCCR foi confirmado com 106.426 caract
 - Build/TypeScript/ESLint e teste visual: não executados nesta etapa.
 - A consulta de workflows associada aos commits mais recentes não retornou execuções disponíveis; portanto, não há evidência para declarar CI aprovado.
 - Não houve publicação manual em produção.
+
+
+### Fechamento da relação entre as leis do PCCR
+
+A seção 85 foi acrescentada para esclarecer a Lei nº 3.288/2017: ela estendeu a Lei nº 3.228/2017 a determinadas carreiras em extinção e deu nova redação ao art. 17 para estabelecer aplicação subsidiária da Lei nº 2.250/2009 aos servidores abrangidos. A explicação evita tratar as duas leis como normas cumulativas e equivalentes. Fonte oficial: https://legis.ac.gov.br/detalhar/2741.
+
+Material atualizado e verificado no Supabase com 107.959 caracteres; a seção 85 está presente. Migration: `20261121304800_clarify_law3288_supplementary_pccr_application.sql`, commit `466ff524d14b6d4352350d90c0c0c8f85dabddab`.
