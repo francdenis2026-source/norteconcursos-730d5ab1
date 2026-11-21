@@ -313,3 +313,36 @@ Migration versionada: supabase/migrations/20261121040000_correct_pcac_investment
 Commit: 4bd0bc69e34600ccb0660239197d9ad19e0a72bb.
 
 Verificação pós-gravação: 8 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica; zero itens sem resolução; seção CPC 26 indevida ausente; regra de dividendos atualizada. CI não confirmado.
+
+
+## Revisão aprofundada — goodwill e impairment — 21/11/2026
+
+Aula 10 atualizada diretamente no Supabase:
+
+- 10 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas receberam explicação com mais de 250 caracteres, dica de prova e resolução passo a passo.
+- Material ampliado com unidade geradora de caixa (UGC), teste anual do goodwill, ordem de alocação da perda e limites para redução dos demais ativos.
+- Removido trecho indevido de CPC 26 sobre classificação de passivos.
+- Reforçada a regra do CPC 01: perda reconhecida sobre goodwill não pode ser revertida; para outros ativos, a reversão pode ser permitida sob condições e limites.
+- Explicado o cálculo do goodwill na aquisição de 80%, explicitando a premissa de mensuração proporcional dos não controladores.
+
+Referências: CPC 01 (R1), itens 90, 104–105 e 124–125. Fontes oficiais CVM: https://conteudo.cvm.gov.br/export/sites/cvm/menu/regulados/normascontabeis/cpc/CPC_01_R1_rev_12.pdf
+
+Migration versionada: supabase/migrations/20261121050000_deepen_pcac_goodwill_impairment_trainer.sql.
+Commit: 0f96ad9481b8a926a3d9b5331cfbe3988e22da8a.
+
+Verificação pós-gravação: 10 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica; zero itens sem resolução; trecho CPC 26 indevido ausente. CI não confirmado.
+
+## Revisão aprofundada — estoques, inventário e AVP — 21/11/2026
+
+Aula 11 atualizada diretamente no Supabase:
+
+- 16 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 16 receberam explicações com mais de 250 caracteres, dicas de prova e resolução passo a passo.
+- Conteúdo ampliado sobre menor entre custo e valor realizável líquido; componentes do custo; tributos recuperáveis; frete de compra e de venda; perdas normais/anormais; inventário periódico e permanente; PEPS, média ponderada e vedação ao UEPS; AVP e desconto composto.
+- Removida seção indevida de CPC 26 que estava anexada à aula.
+- Mantidos os cálculos da média ponderada móvel (CMV R$ 4.872), custo de estoque (R$ 594.500) e AVP (VP R$ 45.664,50; ajuste R$ 14.335,50), com explicação de arredondamento e prazos de cada parcela.
+
+Referências principais: CPC 16 (Estoques), CPC 12 (Ajuste a Valor Presente) e CPC 20 (Custos de Empréstimos), conforme o contexto de cada questão.
+
+Verificação pós-gravação: 16 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica; zero itens sem resolução; trecho CPC 26 indevido ausente. CI não confirmado.
