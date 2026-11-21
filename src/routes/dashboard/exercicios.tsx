@@ -117,7 +117,8 @@ function MaterialExercisesPage() {
       />
     );
 
-  const loading = !!discipline && (authored.isPending || catalog.loading);
+  // isLoading (não isPending): disciplina só do banco de questões não tem consulta de autorais e não pode ficar presa.
+  const loading = !!discipline && (authored.isLoading || catalog.loading);
   const selectClass = "block min-h-11 w-full rounded-xl border bg-background px-3";
   return (
     <div className="nc-student-workspace w-full space-y-4 pb-10">
