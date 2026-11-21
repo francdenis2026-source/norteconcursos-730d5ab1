@@ -4,12 +4,12 @@ import { PGlite } from '@electric-sql/pglite';
 
 const dir = 'supabase/migrations';
 const migrations = fs.readdirSync(dir)
-  .filter(name => /^2026112130(?:6[7-9]|7[0-9]|8[0-7])00_.*\.sql$/.test(name))
+  .filter(name => /^2026112130(?:6[7-9]|7[0-9]|8[0-8])00_.*\.sql$/.test(name))
   .sort();
-assert.equal(migrations.length, 21, 'Expected 21 PC-AC migrations from versions 067 to 087, inclusive');
+assert.equal(migrations.length, 22, 'Expected 22 PC-AC migrations from versions 067 to 088, inclusive');
 const db = new PGlite();
 await db.exec(`create table public.study_materials (
-  slug text primary key, contest_name text, title text, summary text, body_md text, quiz jsonb not null default '[]'::jsonb, practice_review jsonb, updated_at timestamptz
+  slug text primary key, contest_name text, title text, summary text, body_md text, quiz jsonb not null default '[]'::jsonb, flashcards jsonb not null default '[]'::jsonb, practice_review jsonb, updated_at timestamptz
 )`);
 await db.exec(`create table public.curated_question_catalog (
   id uuid primary key default gen_random_uuid(), external_item_key text,
@@ -32,8 +32,8 @@ try {
         }));
         items[index - 1].q = 'O Instituto Socioeducativo integra o rol atual de órgãos de segurança pública.';
         await db.query(
-          'insert into public.study_materials (slug, contest_name, body_md, quiz) values ($1, $2, $3, $4::jsonb)',
-          [slug, 'PC-AC 2026', 'QUESTÃO DE ABERTURA — padrão IDECAN (autoral)', JSON.stringify(items)],
+          'insert into public.study_materials (slug, contest_name, body_md, quiz, flashcards) values ($1, $2, $3, $4::jsonb, $5::jsonb)',
+          [slug, 'PC-AC 2026', 'QUESTÃO DE ABERTURA — padrão IDECAN (autoral)', JSON.stringify(items), JSON.stringify(Array.from({length:8},(_,i)=>({f:'Revisão '+(i+1),b:'Órgãos: inclui Instituto Socioeducativo'})))],
         );
       }
     }
@@ -42,7 +42,7 @@ try {
     await db.exec(sql);
     checked++;
   }
-  assert.equal(checked, 21);
+  assert.equal(checked, 22);
   const corrected = await db.query("select slug, quiz, body_md from public.study_materials where contest_name='PC-AC 2026' order by slug");
   assert.equal(corrected.rows.length, 2);
   for (const row of corrected.rows) {
@@ -51,6 +51,12 @@ try {
     assert.match(row.quiz[index].why, /ADI 7[.]466/, 'Must explain STF ruling');
     assert.match(row.body_md, /ADI 7[.]466/);
     assert.ok(!row.body_md.includes('QUESTÃO DE ABERTURA'));
+  }
+  const cards = await db.query("select slug, flashcards from public.study_materials where contest_name='PC-AC 2026' order by slug");
+  for (const row of cards.rows) {
+    const index = row.slug.includes('constitucional-constituicao-acre') ? 1 : 4;
+    assert.match(row.flashcards[index].b, /inconstitucional/);
+    assert.match(row.flashcards[index].f, /ADI 7[.]466/);
   }
   // A migration is safe to re-run: it must not duplicate its legal correction.
   const before = corrected.rows.map(row => ({ slug: row.slug, quiz: row.quiz, body_md: row.body_md }));
