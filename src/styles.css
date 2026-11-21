@@ -17603,3 +17603,70 @@ html.dark body .app-shell[data-area="student"] .library-reading-workspace .libra
   color: #9ecbff !important;
   -webkit-text-fill-color: #9ecbff !important;
 }
+
+
+/* Leitor didático: texto dos destaques precisa contrastar com o fundo colorido.
+   Alguns estilos herdados de texto branco estavam vencendo a cor do marcador. */
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(
+  mark,
+  .legal-highlight,
+  .legal-highlight-requirement,
+  .legal-highlight-exception,
+  .legal-highlight-quantity,
+  .legal-highlight-sanction,
+  .legal-highlight-prohibition,
+  .legal-highlight-obligation,
+  .study-tag-update,
+  .study-tag-example,
+  .study-tag-warning,
+  .library-search-match
+) {
+  color: #51380b !important;
+  -webkit-text-fill-color: #51380b !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose mark,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-tag-update,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .legal-highlight-quantity,
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .library-search-match {
+  background: #f6d47a !important;
+  border: 1px solid #c89b36 !important;
+  border-radius: .25em !important;
+  padding-inline: .22em !important;
+  font-weight: 750 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(
+  mark,
+  .legal-highlight,
+  .legal-highlight-requirement,
+  .legal-highlight-exception,
+  .legal-highlight-quantity,
+  .legal-highlight-sanction,
+  .legal-highlight-prohibition,
+  .legal-highlight-obligation,
+  .study-tag-update,
+  .study-tag-example,
+  .study-tag-warning,
+  .library-search-match
+) {
+  color: #fff1c2 !important;
+  -webkit-text-fill-color: #fff1c2 !important;
+  opacity: 1 !important;
+}
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose mark,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .study-tag-update,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .legal-highlight-quantity,
+html.dark body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose .library-search-match {
+  background: #604817 !important;
+  border-color: #b78b35 !important;
+}
+html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(
+  mark, .legal-highlight, .study-tag-update, .study-tag-example, .study-tag-warning,
+  .legal-highlight-requirement, .legal-highlight-exception, .legal-highlight-quantity,
+  .legal-highlight-sanction, .legal-highlight-prohibition, .legal-highlight-obligation,
+  .library-search-match
+) * {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+}
