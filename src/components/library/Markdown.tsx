@@ -148,7 +148,7 @@ function parseAlternativeFeedback(answer: string): {
   explanation: string;
   alternatives: Record<string, string>;
 } {
-  const correct = answer.match(/(?:gabarito|resposta correta)\s*[:—-]\s*([A-E])\b/i)?.[1]?.toUpperCase() ?? null;
+  const correct = answer.match(/(?:gabarito|resposta correta)\s*[:—-]\s*(?:\\*\\*)?([A-E])\\b/i)?.[1]?.toUpperCase() ?? null;
   const marker = /(?:an[aá]lise|coment[aá]rio|justificativa)s?\s+das?\s+alternativas\s*[:—-]\s*/i.exec(answer);
   const before = marker?.index === undefined ? answer : answer.slice(0, marker.index);
   const explanation = before.replace(/^\s*(?:\*\*)?(?:gabarito|resposta correta)\s*[:—-]\s*[A-E]\s*[.)—-]?\s*(?:\*\*)?/i, "").trim();
@@ -467,7 +467,12 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
                       : undefined;
         return <p key={key} className={className}>{inline(block.text, key)}</p>;
       }
-      case "quote":
+      case "quote": {
+        const quoteText = block.lines.join("\\n");
+        const answerParts = splitAnswerAndCommentary(quoteText);
+        if (answerParts && isQuestionOptions(answerParts.prompt)) {
+          return <InteractiveQuestion key={key} prompt={answerParts.prompt} answer={answerParts.answer} render={inline} />;
+        }
         return (
           <blockquote
             key={key}
@@ -478,6 +483,7 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
             ))}
           </blockquote>
         );
+      }
       case "ul":
       case "ol": {
         const List = block.type === "ol" ? "ol" : "ul";
