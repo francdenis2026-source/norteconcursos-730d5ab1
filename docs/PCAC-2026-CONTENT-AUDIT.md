@@ -886,3 +886,15 @@ Migrations na MAIN:
 - `supabase/migrations/20261121298910_add_opening_question_pcac_ti_permissions.sql` — commit `e2610f9892cb50a40fdb1041c9b68355524f53cc`.
 
 Aplicação direta no Supabase confirmada. Não houve teste visual na interface nem confirmação de CI; não foi feita publicação manual em produção.
+
+
+## Raciocínio Lógico — questão de abertura e resolução comentada — 21/11/2026
+
+Aplicado o padrão nos 15 materiais ativos de Raciocínio Lógico. Cada aula começa com questão autoral de múltipla escolha e termina com resolução comentada, estratégia de resolução e alerta de pegadinha.
+
+Temas: operações com números reais; proposições; conectivos; tabelas-verdade; equivalências e De Morgan; validade de argumentos; problemas de verdade e mentira; sequências/PA/PG; conjuntos; porcentagem e regra de três; combinatória; médias e gráficos; probabilidade; média ponderada; união de eventos e termo geral de PA.
+
+Durante a revisão, a primeira versão da questão de verdades e mentiras foi identificada como ambígua. O enunciado foi complementado com uma segunda declaração para garantir solução única, e a explicação foi corrigida. A correção está versionada na migration `supabase/migrations/20261121299010_fix_truth_lie_opening_question.sql`, commit `b6f5bba57e80105d1fa3286a88cd9fbe20ae02a4`.
+
+**Validação SQL:** 15/15 materiais com questão de abertura e 15/15 com resolução comentada. As 150 questões anteriores do treinador foram preservadas. A migration principal é `supabase/migrations/20261121299000_add_opening_questions_pcac_reasoning.sql`, commit `48068139f37a950f475199fb19f0597f06f41ef7`.
+
