@@ -1,5 +1,5 @@
 import { GlossaryText } from "./GlossaryText";
-import { Fragment, type ReactNode } from "react";
+import { Fragment, useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
 import { dashboardHref } from "@/lib/internalNavigation";
@@ -252,6 +252,43 @@ function parse(markdown: string): Block[] {
   return highlightExampleSections(blocks);
 }
 
+function splitAnswerAndCommentary(text: string): { prompt: string; answer: string } | null {
+  const match = /(?:^|\\s)(Gabarito|Resposta correta)\\s*[:—-]/i.exec(text);
+  if (!match || match.index === undefined) return null;
+  const prompt = text.slice(0, match.index).trim();
+  const answer = text.slice(match.index).trim();
+  return prompt && answer ? { prompt, answer } : null;
+}
+
+function RevealAnswer({
+  answer,
+  render,
+}: {
+  answer: string;
+  render: (text: string, key: string) => ReactNode;
+}) {
+  const [revealed, setRevealed] = useState(false);
+  return (
+    <section className="study-answer-reveal" aria-label="Resposta e comentário">
+      <button
+        type="button"
+        className="study-answer-reveal__trigger"
+        aria-expanded={revealed}
+        onClick={() => setRevealed((value) => !value)}
+      >
+        <span className="study-answer-reveal__icon" aria-hidden="true">{revealed ? "−" : "?"}</span>
+        <span>{revealed ? "Ocultar resposta e comentário" : "Revelar gabarito e comentário"}</span>
+        <span className="study-answer-reveal__chevron" aria-hidden="true">{revealed ? "⌃" : "⌄"}</span>
+      </button>
+      {revealed && (
+        <div className="study-answer-reveal__content" role="region" aria-label="Gabarito e comentário">
+          {render(answer, "revealed-answer")}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode): ReactNode[] {
   const inline = (text: string, key: string) => renderInline(text, key, renderText);
   return blocks.map((block, index) => {
@@ -268,6 +305,22 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
       case "h3":
         return <h3 key={key}>{inline(block.text, key)}</h3>;
       case "p": {
+        const answerParts = splitAnswerAndCommentary(block.text);
+        if (answerParts) {
+          const promptOptions = isQuestionOptions(answerParts.prompt)
+            ? renderQuestionOptions(answerParts.prompt, key, inline)
+            : null;
+          return (
+            <Fragment key={key}>
+              {promptOptions ? (
+                <div className="study-question-options-wrap">{promptOptions}</div>
+              ) : (
+                <p className="study-question-stem">{inline(answerParts.prompt, key)}</p>
+              )}
+              <RevealAnswer answer={answerParts.answer} render={inline} />
+            </Fragment>
+          );
+        }
         if (isQuestionOptions(block.text)) {
           const options = renderQuestionOptions(block.text, key, inline);
           if (options) return <div key={key} className="study-question-options-wrap">{options}</div>;
