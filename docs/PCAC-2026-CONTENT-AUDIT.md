@@ -412,3 +412,21 @@ Fonte: CPC 09 (R1), texto oficial: https://s3.sa-east-1.amazonaws.com/static.cpc
 Migration: supabase/migrations/20261121100000_correct_pcac_dva_and_deepen_dfc_trainer.sql. Commit: 31ee06d4f192882532c740ba848715ca8c9e9ea2.
 
 Verificação pós-gravação: 20 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente; gabaritos DVA 12, 13 e 16 corrigidos; referência ao resultado incorreto de R$ 130.860 removida. CI não confirmado.
+
+
+## Revisão aprofundada — patrimônio líquido, reservas e dividendos — 21/11/2026
+
+Aula 16 atualizada diretamente no Supabase:
+
+- 21 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 21 receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Material ampliado com reserva legal (5% do lucro, teto de 20% do capital e regra facultativa de 30% com reservas de capital), reservas de capital, reservas estatutárias, contingências, lucros a realizar, dividendos obrigatórios e ações em tesouraria.
+- Removido bloco indevido de CPC 26.
+- Reforçada a diferença entre a regra estatutária e o dividendo legal quando o estatuto é omisso: regra legal de 50% do lucro líquido ajustado, não 25% universal.
+- Dividendo por ação calculado sobre ações em circulação, excluídas as ações em tesouraria.
+
+Base legal: Lei nº 6.404/1976, arts. 182, 193 a 202. Texto oficial: https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm
+
+Migration: supabase/migrations/20261121110000_deepen_pcac_equity_reserves_dividends.sql. Commit: bf5bddcfc557405f1143f78772a8afa64cb2f723.
+
+Verificação pós-gravação: 21 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
