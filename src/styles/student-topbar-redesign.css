@@ -205,3 +205,44 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero::after {
   display: none !important;
 }
+
+/* ═══ Celular / tablet toque (iPhone e Android) ═══════════════════════════════════════════
+   A barra respeita a área segura do aparelho (relógio/entalhe), botões legíveis, e o conteúdo
+   termina acima da navegação inferior. Vale depois das regras da web acima. */
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  html body .app-shell.navigation-v2[data-area]:not(#_):not(#_):not(#_):not(#_) { --app-topbar-h: calc(56px + env(safe-area-inset-top, 0px)); }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar {
+    box-sizing: border-box;
+    height: calc(56px + env(safe-area-inset-top, 0px)) !important;
+    min-height: calc(56px + env(safe-area-inset-top, 0px)) !important;
+    padding-top: env(safe-area-inset-top, 0px) !important;
+    align-items: center;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-mobile-bar { gap: 6px; align-items: center; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-mobile-bar > button,
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-mobile-bar [data-slot="sheet-trigger"] {
+    width: 44px !important; height: 44px !important; min-width: 44px !important; border-radius: 8px !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-mobile-bar svg { width: 24px !important; height: 24px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-location__context { font-size: 13px !important; font-weight: 600; line-height: 1.2; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions {
+    gap: 2px !important; border-radius: 10px !important; padding: 2px !important; flex: none;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) {
+    width: 40px !important; height: 40px !important; min-width: 40px !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .app-text-size-trigger, button) svg {
+    width: 22px !important; height: 22px !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions .app-streak { height: 40px !important; padding: 0 8px !important; font-size: 14px; }
+
+  /* Conteúdo: sempre acima da navegação inferior. */
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-content {
+    padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)) !important;
+    scroll-padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px));
+  }
+  /* Textos e ícones da área do aluno: leitura confortável. */
+  html body .student-home.sh2 :is(small, .sh2-kpi small, .sh2-kpi em) { font-size: 0.8125rem !important; }
+  html body .student-home.sh2 .sh2-kpi strong { font-size: 1.5rem !important; }
+  html body .app-bottom-nav :is(button, a) { font-size: 12px; }
+}
