@@ -1891,3 +1891,60 @@ Material atualizado para 58.652 caracteres; as seções 53, 57 e 60 foram confir
 - Conferir texto integral das alterações de 2026 sobre concurso/formação/interstício e sua integração no material do edital.
 - Validar a contagem no painel do aluno e realizar testes/build do projeto.
 - Auditoria global da disciplina continua em andamento.
+
+
+## Vigésima primeira continuação — fechamento ampliado da LC nº 129/2004 e LC nº 526/2026 — 21/11/2026
+
+### Atualização da fonte consolidada
+
+A consulta ao Portal LEGIS confirmou que a versão compilada da LC nº 129/2004 já indica alterações até a LC nº 526/2026. Corrige-se, portanto, a observação da etapa anterior: não é necessário tratar a versão compilada atual como limitada à LC nº 496/2025; o PDF antigo da Assembleia, sim, pode não conter a alteração de 2026. Para estudar, usar o texto compilado atual do Portal LEGIS e conferir a LC nº 526/2026 como fonte de alteração.
+
+### Conteúdo complementar incluído — seções 62 a 70
+
+- Responsabilidade civil administrativa e independência/cumulação das esferas civil, penal e administrativa (arts. 106-B e 106-C).
+- Prescrição disciplinar: advertência, seis meses; suspensão, dois anos; demissão/cassação, cinco anos; termo inicial e interrupção (art. 118).
+- Extinção da punibilidade por morte e reparação do dano em conduta culposa antes da conclusão da apuração (art. 119).
+- Prazo da sindicância: 30 dias, prorrogáveis mediante solicitação fundamentada (art. 127, redação LC nº 293/2014).
+- Obrigatoriedade do PAD em hipótese sujeita à demissão e competência do Delegado-Geral para determinar sua abertura (arts. 129 e 130).
+- Proteção de informações que possam prejudicar investigações (art. 155), nulidades sem prejuízo (art. 156) e hipóteses de revisão do processo (art. 157).
+- Curso de formação em regime de internato, restrição de porte de arma durante aulas e dependências administrativas, hipóteses de exoneração/demissão, ressarcimento de custos em exoneração a pedido antes de três anos, classificação e lotação (arts. 79-A a 79-E).
+- Permanência mínima de cinco anos no município da lotação inicial e regras posteriores de cessão/disposição (art. 67, §§ 13 a 16).
+- Quadro comparativo de prazos e pegadinhas.
+
+### Questões autorais adicionais
+
+Oito novas questões foram inseridas e verificadas como ativas:
+1. Prescrição de advertência (B).
+2. Prescrição de suspensão (C).
+3. Prazo de sindicância (D).
+4. Independência das responsabilidades (C).
+5. Revisão por prova nova de inocência (B).
+6. Ressarcimento proporcional da formação (C).
+7. Permanência mínima de cinco anos na lotação inicial (D).
+8. Restrição de porte de arma durante o curso (B).
+
+Itens autorais, não oficiais da IDECAN. A consulta ao catálogo confirmou oito registros ativos.
+
+### Material e validação
+
+O material associado a PCCR/LC nº 129/2004 foi ampliado para 66.219 caracteres; as seções 62, 63, 67 e 68 foram confirmadas no Supabase. Oito novas questões foram verificadas individualmente por contagem no catálogo. Não foi realizado nesta etapa build ou teste visual da interface.
+
+### Fontes oficiais
+
+- LC nº 129/2004 consolidada até LC nº 526/2026: https://legis.ac.gov.br/detalhar/674-1
+- LC nº 526/2026: https://legis.ac.gov.br/detalhar/6874
+- LC nº 293/2014: https://legis.ac.gov.br/detalhar/3980
+
+### Migrations
+
+- `20261121304000_complete_lc129_prescription_disciplinary_review_and_lc526_training_rules.sql` — commit `fe6ef5ef2697119260b9e0f8cc58ea2e1b248670`.
+- `20261121304100_add_lc129_prescription_and_lc526_formation_questions.sql` — commit `51f185987401fae8dec73762908216d9beff598d`.
+
+### Pendências reais para encerramento integral
+
+- Fazer cotejo artigo por artigo do texto consolidado dos arts. 1º a 157, marcando cada artigo como conferido, alterado, revogado ou fora do conteúdo programático.
+- Confirmar todos os incisos dos arts. 101 a 104 e os procedimentos dos arts. 120 a 154, sem depender de resumos.
+- Cruzar a incidência desses dispositivos com o Anexo III do edital PC-AC 2026, evitando ensinar matéria fora do programa como se fosse exigida.
+- Testar a exibição e a contagem no painel e executar testes/build após todas as migrations.
+
+**Status:** conteúdo ampliado e alterações legais recentes incorporadas; auditoria artigo por artigo e validação final do aplicativo ainda não encerradas.
