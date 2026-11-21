@@ -1720,3 +1720,60 @@ Material PCCR atualizado para 41.323 caracteres; consulta ao banco confirmou as 
 - Localizar eventual norma posterior sobre composição da remuneração inicial de R$ 6.342,07.
 - Testar visualmente a exibição e contagem das questões no painel do aluno.
 - Auditoria global de Legislação Institucional segue em andamento.
+
+
+## Décima oitava continuação — titulação, sexta-parte e gratificação de instrução — 21/11/2026
+
+### Titulação — Lei nº 3.228/2017, art. 6º
+
+Confirmados os percentuais para os cargos abrangidos:
+- especialização lato sensu de no mínimo 360 horas: 7,5%;
+- mestrado: 15%;
+- doutorado: 20%;
+- teto do adicional: 20% sobre o vencimento básico.
+
+A lei admite cumulatividade nas condições dos §§ 1º e 2º. Especializações em áreas distintas podem ser requeridas após conclusão; para especializações na mesma área, há intervalo mínimo de cinco anos para acumulação.
+
+### Regra transitória da LC nº 293/2014
+
+O art. 8º concedeu a antigos ocupantes do Grupo Ocupacional 2 que ingressaram quando o requisito era nível médio adicional de 20% por graduação superior, desde que requerido em cinco anos da publicação da LC. É regra transitória histórica, não prazo aberto atualmente. Não confundir com os percentuais gerais do art. 6º da Lei nº 3.228/2017.
+
+### Sexta-parte
+
+A Lei nº 3.228/2017, art. 5º, V, inclui a sexta-parte e remete o cálculo ao art. 36, § 4º, da Constituição Estadual e ao Estatuto dos Servidores. O material evita inventar requisito temporal ou fórmula sem a leitura integral da norma remetida.
+
+### Gratificação de instrução
+
+A LC nº 279/2014 acrescentou o art. 31-A à Lei nº 2.250/2009:
+- pagamento por aula a policial civil que ministre cursos de formação/aperfeiçoamento nas áreas previstas;
+- valor por aula correspondente a 1% do vencimento básico de referência do Delegado Classe II, Referência 3;
+- monitor recebe metade do valor do instrutor;
+- palestrante recebe metade do valor do instrutor por hora;
+- coincidindo com jornada, exige autorização expressa, possibilidade de substituição sem prejuízo e ausência de risco à continuidade do serviço.
+
+### Material e questões
+
+Material PCCR atualizado para 45.310 caracteres e as seções de titulação, sexta-parte e gratificação de instrução foram confirmadas no banco.
+
+Três questões autorais novas foram inseridas e verificadas como ativas:
+1. Percentual de titulação do mestrado (gabarito D).
+2. Hipótese de pagamento da gratificação de instrução (gabarito B).
+3. Regra de cálculo da sexta-parte (gabarito B).
+
+### Fontes oficiais
+
+- Lei nº 3.228/2017, arts. 5º e 6º: https://legis.ac.gov.br/detalhar/2499
+- LC nº 293/2014, art. 8º e consolidação: https://legis.ac.gov.br/detalhar/3980
+- LC nº 279/2014, art. 2º: https://app.al.ac.leg.br/legisla-e/legislacao/visualizar/6710/pdf
+
+### Migrations
+
+- `20261121303400_detail_titling_sixth_part_and_instruction_bonus.sql` — commit `e60b7ad7cfdaadc8b39daa5ab0c5e54bcbce5f9a`.
+- `20261121303500_add_titling_sixth_part_instruction_questions.sql` — commit `98d7df3d071c445c6c15f01b62a17d2209867167`.
+
+### Pendências
+
+- Conferir a regra constitucional/estatutária integral da sexta-parte e os atos atuais de gratificação de chefia.
+- Conferir o impacto das alterações de 2025/2026 sobre cada vantagem listada.
+- Testar visualmente a exibição e contagem das questões no painel do aluno.
+- Auditoria global de Legislação Institucional permanece em andamento.
