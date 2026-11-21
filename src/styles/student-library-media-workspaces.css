@@ -535,3 +535,56 @@
 .essay-fullscreen__paper { max-width: 920px; margin: 0 auto; border-color: color-mix(in oklab, var(--primary) 35%, transparent); box-shadow: 0 18px 55px hsl(220 30% 5% / .18); }
 .essay-fullscreen__paper > div:first-child { padding-top: .9rem; padding-bottom: .9rem; }
 .essay-fullscreen__paper textarea { font-size: 1.05rem; }
+
+
+/* Correção definitiva da folha de leitura no tema escuro.
+   O papel do artigo não pode permanecer branco quando o shell está em dark mode. */
+html.dark body .app-shell .library-reading-workspace,
+html.dark body .library-reading-workspace {
+  --study-ink: #e8edf4 !important;
+  --study-muted: #aab6c5 !important;
+  --study-line: #354252 !important;
+  --study-paper: #171d26 !important;
+  --study-soft: #202936 !important;
+  --study-accent: #d0b27d !important;
+  --study-accent-strong: #e1c99e !important;
+  --study-accent-soft: #3b3428 !important;
+  color: #e8edf4 !important;
+}
+html.dark body .app-shell .library-reading-workspace .library-body,
+html.dark body .library-reading-workspace .library-body {
+  background: #171d26 !important;
+  background-color: #171d26 !important;
+  border-color: #354252 !important;
+  color: #e8edf4 !important;
+}
+html.dark body .app-shell .library-reading-workspace .library-body :is(
+  h1,h2,h3,h4,h5,h6,p,li,ul,ol,span,strong,b,em,small,label,figcaption,td,th
+),
+html.dark body .library-reading-workspace .library-body :is(
+  h1,h2,h3,h4,h5,h6,p,li,ul,ol,span,strong,b,em,small,label,figcaption,td,th
+) {
+  color: #e0e7ef;
+}
+html.dark body .app-shell .library-reading-workspace .library-body :is(
+  blockquote,pre,table,[class*="callout"],[class*="challenge"],[class*="desafio"],
+  [class*="example"],[class*="example"],[class*="question"]
+),
+html.dark body .library-reading-workspace .library-body :is(
+  blockquote,pre,table,[class*="callout"],[class*="challenge"],[class*="desafio"],
+  [class*="example"],[class*="question"]
+) {
+  background-color: #202936 !important;
+  border-color: #46566b !important;
+  color: #e0e7ef !important;
+}
+html.dark body .app-shell .library-reading-workspace .library-body a,
+html.dark body .library-reading-workspace .library-body a {
+  color: #e1c27f !important;
+}
+html.dark body .app-shell .library-reading-workspace .library-sources,
+html.dark body .app-shell .library-reading-workspace .surface-card {
+  background: #202936 !important;
+  border-color: #354252 !important;
+  color: #e8edf4 !important;
+}
