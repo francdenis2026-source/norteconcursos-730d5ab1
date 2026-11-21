@@ -19,7 +19,7 @@ const normalize = (value: string) =>
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 const generic = new Set(
-  "direito legislacao questoes questao geral gerais especial especiais principios principio estudo revisao teoria pratica concurso concursos publico publicos sobre para como penal processual codigo introducao basico basica simples composta problema problemas nocao nocoes".split(
+  "direito legislacao questoes questao geral gerais especial especiais principios principio estudo revisao teoria pratica concurso concursos publico publicos sobre para como penal processual codigo introducao basico basica simples composta problema problemas nocao nocoes tres".split(
     " ",
   ),
 );
