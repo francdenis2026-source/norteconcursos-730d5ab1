@@ -828,3 +828,16 @@ Aplicado o mesmo padrão nos 11 materiais ativos de Análise de Dados e Informa�
 Migration na MAIN: `supabase/migrations/20261121298500_add_opening_questions_pcac_data_analysis.sql`, commit `5db44ee00e8a19e0fcc94a5d6f762123ff513e52`. Aplicação direta no Supabase confirmada.
 
 **Limite:** não houve teste de renderização na interface nem confirmação de CI para esta etapa. Nenhuma publicação manual em produção.
+
+
+## Arquivologia — questão de abertura e resolução comentada — 21/11/2026
+
+Aplicado o padrão pedagógico nos 16 materiais ativos de Arquivologia. Cada aula agora começa com uma questão autoral de múltipla escolha no estilo de concursos, cinco alternativas e orientação para tentativa; a resolução comentada foi incluída após a teoria, com explicação do conceito e das pegadinhas.
+
+Cobertura: conceito de arquivo/documento arquivístico; três idades; classificação, ordenação e protocolo; avaliação e temporalidade; SIGAD/e-ARQ Brasil; digitalização, acesso e privacidade; proveniência e ordem original; fundo/série/espécie/tipo/suporte; gestão documental; preservação digital; LAI/LGPD; métodos de arquivamento; conservação preventiva; metadados/indexação; autenticidade/integridade; gestão da informação e sigilo.
+
+**Validação SQL:** 16/16 materiais com questão inicial e 16/16 com resolução comentada. As 80 questões anteriores do treinador foram preservadas. Enunciados novos estão identificados como autorais, sem atribuição indevida a bancas ou provas oficiais.
+
+Migration na MAIN: `supabase/migrations/20261121298600_add_opening_questions_pcac_archivology.sql`, commit `3869e65d429473209eebe3ec600f9e26e9804faf`. Aplicação direta no Supabase confirmada.
+
+**Limite:** a validação confirmou os conteúdos no banco e preservação das questões do treinador; não houve teste visual da interface nem confirmação de CI. Nenhuma publicação manual em produção.
