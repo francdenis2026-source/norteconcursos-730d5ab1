@@ -50,9 +50,6 @@ li[data-sonner-toast].auth-session-toast {
   color: var(--brass);
 }
 
-/* Tela de acesso: no celular a foto decorativa repete o cabeçalho e empurra o formulário; sai. */
-@media (max-width: 767px) {
-  html:root body .auth-card .auth-tactical { display: none; }
-}
+/* Tela de acesso: a foto tática da área inferior aparece também no celular (ocupa o espaço livre do cartão). */
 /* Abas com respiro em relação à borda do cartão. */
 html:root body .auth-card .auth-tabs { margin-top: 10px; }
