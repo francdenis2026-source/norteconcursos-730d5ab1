@@ -94,7 +94,7 @@ test('Acre legal source verification accepts the official LEGIS portal only', ()
 test('PC-AC saved subject reviews are enforced against exact production quiz snapshots', () => {
   const manifest = JSON.parse(readFileSync(new URL('../data/pcac-2026/2026-11-21/manifest.json', import.meta.url)));
   const permitted = new Set([
-    'Análise de Dados e Informações', 'Estatística', 'Língua Portuguesa', 'Arquivologia',
+    'Análise de Dados e Informações', 'Estatística', 'Língua Portuguesa', 'Arquivologia', 'Contabilidade Geral',
     'Noções de Administração', 'Noções de Informática', 'Raciocínio Lógico',
     'Realidade do Estado do Acre', 'Tecnologia da Informação e Segurança da Informação',
   ]);
@@ -138,4 +138,25 @@ test('PC-AC reviewed archival-method topics open; privacy and normative archival
   }
   assert.equal(opened,12);
   assert.equal(blocked,5);
+});
+
+test('PC-AC calculation-only accounting modules unlock after exact manual review; accounting norms remain locked', () => {
+  const snapshot = JSON.parse(readFileSync(new URL('../data/pcac-2026/2026-11-21/quiz-contabilidade-geral.json', import.meta.url)));
+  const eligibleSlugs = new Set([
+    'pcac-2026-contabilidade-08-custos-materia-prima-rateio-departamentalizacao',
+    'pcac-2026-contabilidade-13-custeio-rkw-variavel-ponto-equilibrio',
+  ]);
+  let approved = 0;
+  for (const lesson of snapshot.materials) {
+    const scope = { subject: 'Contabilidade Geral' };
+    const result = authoredMaterialPractice(lesson.quiz, scope, lesson.slug, lesson.topic_label, lesson.practice_review);
+    if (eligibleSlugs.has(lesson.slug)) {
+      assert.equal(result.length, lesson.quiz.length, 'Calculation lesson must expose each reviewed item: ' + lesson.slug);
+      assert.equal(authoredMaterialPractice(lesson.quiz, {...scope, law:'codigo-penal'}, lesson.slug, lesson.topic_label, lesson.practice_review).length, 0);
+      const changed = structuredClone(lesson.quiz); changed[0].why += ' altered';
+      assert.equal(authoredMaterialPractice(changed, scope, lesson.slug, lesson.topic_label, lesson.practice_review).length, 0);
+      approved++;
+    } else assert.equal(result.length, 0, 'Normative accounting lesson must remain blocked: ' + lesson.slug);
+  }
+  assert.equal(approved,2);
 });

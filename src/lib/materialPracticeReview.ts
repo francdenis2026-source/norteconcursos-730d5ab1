@@ -83,6 +83,7 @@ export function matchesDidacticReview(
  */
 const MANUAL_DIDACTIC_SUBJECTS = new Set([
   "Arquivologia",
+  "Contabilidade Geral",
   "Análise de Dados e Informações",
   "Estatística",
   "Língua Portuguesa",
@@ -107,6 +108,11 @@ const NONSTATUTORY_ARCHIVOLOGY_MODULES = new Set([
   "pcac-2026-guia-arquivologia-13-acondicionamento-e-conservacao-preventiva",
   "pcac-2026-guia-arquivologia-14-metadados-e-indexacao-documental",
   "pcac-2026-guia-arquivologia-15-autenticidade-integridade-e-versoes",
+]);
+/** Narrow exception: vetted arithmetic-only accounting modules, not CPC/legal texts. */
+const NONSTATUTORY_ACCOUNTING_MODULES = new Set([
+  "pcac-2026-contabilidade-08-custos-materia-prima-rateio-departamentalizacao",
+  "pcac-2026-contabilidade-13-custeio-rkw-variavel-ponto-equilibrio",
 ]);
 export type MaterialManualReview = {
   version: 1;
@@ -135,6 +141,7 @@ export function matchesManualReview(
     review.material_slug !== materialSlug ||
     !MANUAL_DIDACTIC_SUBJECTS.has(review.subject) ||
     (review.subject === "Arquivologia" && !NONSTATUTORY_ARCHIVOLOGY_MODULES.has(materialSlug)) ||
+    (review.subject === "Contabilidade Geral" && !NONSTATUTORY_ACCOUNTING_MODULES.has(materialSlug)) ||
     !review.topic_label?.trim() ||
     !review.method?.trim() ||
     !review.source_note?.trim() ||

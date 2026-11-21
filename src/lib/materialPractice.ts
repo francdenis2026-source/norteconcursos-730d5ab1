@@ -120,7 +120,12 @@ export function authoredMaterialPractice(
   label: string,
   review?: unknown,
 ): Question[] {
-  const normative = !!(scope.law || scope.article || /direito|legisla|contabilidade|reda[çc][ãa]o oficial/i.test(`${scope.subject ?? ""} ${label}`));
+  // Calculation-only accounting lessons use individually reviewed authorial
+  // exercises; law, CPC and other accounting standards retain their stricter gate.
+  const auditedCalculation = !scope.law && !scope.article &&
+    canonicalSubject(scope.subject ?? "") === canonicalSubject("Contabilidade Geral") &&
+    matchesManualReview(quiz, review, key);
+  const normative = !auditedCalculation && !!(scope.law || scope.article || /direito|legisla|contabilidade|reda[çc][ãa]o oficial/i.test(`${scope.subject ?? ""} ${label}`));
   const approved = matchesPracticeReview(quiz, review, key) ? review : null;
   const didacticApproved = canonicalSubject(scope.subject ?? "") === canonicalSubject("Contabilidade Geral e Análise Financeira") && matchesDidacticReview(quiz, review, key) ? review : null;
   const manualApproved = !normative && matchesManualReview(quiz, review, key) ? review : null;
