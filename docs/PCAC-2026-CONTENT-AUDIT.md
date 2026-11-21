@@ -2167,3 +2167,29 @@ O material único da frente institucional/PCCR foi confirmado com 106.426 caract
 A seção 85 foi acrescentada para esclarecer a Lei nº 3.288/2017: ela estendeu a Lei nº 3.228/2017 a determinadas carreiras em extinção e deu nova redação ao art. 17 para estabelecer aplicação subsidiária da Lei nº 2.250/2009 aos servidores abrangidos. A explicação evita tratar as duas leis como normas cumulativas e equivalentes. Fonte oficial: https://legis.ac.gov.br/detalhar/2741.
 
 Material atualizado e verificado no Supabase com 107.959 caracteres; a seção 85 está presente. Migration: `20261121304800_clarify_law3288_supplementary_pccr_application.sql`, commit `466ff524d14b6d4352350d90c0c0c8f85dabddab`.
+
+
+### Carreira de Delegado incluída — LC nº 303/2015
+
+A seção 86 cobre a carreira de Delegado, expressamente mencionada no Anexo III:
+- cargo privativo de bacharel em Direito;
+- concurso de provas e títulos com participação da OAB/AC;
+- cinco classes (I a IV e Especial);
+- extinção da progressão e das referências salariais para Delegado;
+- promoção, requisitos gerais e requisitos por classe;
+- comissão e homologação;
+- adicional indenizatório de 7% por sujeição a serviço/sobreaviso, introduzido pela LC nº 401/2022 e alterado pela LC nº 448/2023.
+
+Quatro questões autorais foram adicionadas e verificadas ativas:
+45. requisito de formação (B);
+46. cinco classes (C);
+47. extinção da progressão (B);
+48. adicional de 7% (C).
+
+Fontes oficiais: LC nº 303/2015 consolidada https://legis.ac.gov.br/detalhar/3990 ; LC nº 401/2022 https://legis.ac.gov.br/detalhar/5137-0 ; LC nº 448/2023 https://legis.ac.gov.br/detalhar/5795-0 .
+
+Material confirmado com 111.249 caracteres e seção 86 presente no Supabase. Migration do conteúdo: `20261121304900_add_delegate_career_lc303_2015_coverage.sql`, commit `0c25ab79f63941edbb3a80b1ab63e354e32b8669`. Migration das questões: `20261121305000_add_lc303_delegate_career_trainer_questions.sql`, commit `af9089b96cb3a5e466e78f21327dc6e964998a58`.
+
+### Contagem consolidada atual
+
+O conjunto específico de questões autorais da Legislação Institucional passa a incluir 55 registros ativos e únicos, somando as 51 questões anteriormente verificadas e as quatro questões da carreira de Delegado. Build e testes visuais continuam sem execução confirmada.
