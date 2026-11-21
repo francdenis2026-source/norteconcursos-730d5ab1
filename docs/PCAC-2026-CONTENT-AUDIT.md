@@ -925,3 +925,18 @@ Temas: interpretação e inferência; estrutura e progressão textual; pronomes 
 Migration na MAIN: `supabase/migrations/20261121299100_add_opening_questions_pcac_portuguese.sql`, commit `c7ac44bbc6f5bc804da2d0f3d5651eacbe4899dd`. Aplicação direta no Supabase confirmada.
 
 **Limite das etapas de Informática e Português:** não foi feito teste visual na interface nem confirmado CI; não houve publicação manual em produção.
+
+
+## Padrão visual das questões — 21/11/2026
+
+Reformatei os 146 blocos de desafio já existentes em materiais ativos do PC-AC 2026. O cabeçalho antigo “Questão de abertura — ...”, a explicação introdutória e a instrução “Antes de continuar” foram removidos. O enunciado agora aparece diretamente em destaque com o rótulo **🎯 DESAFIO DE PROVA**, seguido das alternativas. As atribuições de fonte das 9 questões adaptadas de Estatística foram preservadas e reposicionadas após o enunciado.
+
+**Validação SQL:** 146 materiais/blocos destacados; nenhum cabeçalho antigo remanescente nos materiais ativos. Migration: `supabase/migrations/20261121299200_redesign_pcac_question_callouts.sql`, commit `ad25fe486252546b19483bb868fe500c40ddd9f0`; ajuste das fontes de Estatística: `supabase/migrations/20261121299210_reformat_adapted_statistics_questions.sql`, commit `2d8ad016c926c3e56ca6fa2ee4fd654d69d3b03f`.
+
+## Noções de Administração — questões de desafio e resoluções — 21/11/2026
+
+Incluída uma questão autoral de cinco alternativas e uma resolução comentada em cada um dos 16 materiais ativos. Conteúdos: funções PODC; organização e seus elementos; eficiência, eficácia, efetividade e economicidade; níveis organizacionais; gestão de materiais e recebimento; papéis gerenciais de Mintzberg; planejamento estratégico/tático/operacional; comunicação organizacional; tomada de decisão; Curva ABC; grupo e equipe; Matriz de Eisenhower; dado, informação e conhecimento; ciclo PDCA; atendimento ao público, ética e sigilo.
+
+**Validação SQL:** 16/16 materiais com desafio e 16/16 com resolução comentada. As 80 questões existentes no treinador foram preservadas. Migration: `supabase/migrations/20261121299300_add_challenges_pcac_administration.sql`, commit `f4057ec8401a0ed886fad9d25af5368525255015`. Aplicação direta no Supabase confirmada.
+
+**Limite:** conteúdo e formatação Markdown foram validados por SQL; não foi realizado teste visual no navegador nem confirmado CI. Nenhuma publicação manual em produção.
