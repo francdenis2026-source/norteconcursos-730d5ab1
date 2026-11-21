@@ -31,7 +31,7 @@ for (const item of manifest.files) {
       assert.ok(typeof q.q === 'string' && q.q.trim(), 'Empty prompt: ' + material.slug);
       assert.equal(typeof q.a, 'boolean', 'Invalid answer: ' + material.slug);
       assert.ok(typeof q.why === 'string' && q.why.trim().length >= 80, 'Short explanation: ' + material.slug);
-      const normalized = q.q.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').replace(/\\s+/g, ' ').trim().toLowerCase();
+      const normalized = q.q.normalize('NFD').replace(/\p{M}/gu, '').replace(/\s+/g, ' ').trim().toLowerCase();
       const old = questionAnswers.get(normalized);
       assert.ok(!old || old.answer === q.a,
         'Conflicting answer to equivalent prompt: ' + material.slug + ' versus ' + (old?.slug ?? 'unknown'));
