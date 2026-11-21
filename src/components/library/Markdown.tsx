@@ -142,6 +142,8 @@ function parse(markdown: string): Block[] {
     const lineStart = cleaned.lastIndexOf("\n", leakedScriptAt);
     cleaned = cleaned.slice(0, lineStart >= 0 ? lineStart : 0);
   }
+  // O título do material já aparece no cabeçalho: um "# Título" inicial no texto só duplicaria.
+  cleaned = cleaned.replace(/^\s*#[ \t]+[^\n]*\n/, "");
   const lines = cleaned.split("\n");
   const blocks: Block[] = [];
   let i = 0;
