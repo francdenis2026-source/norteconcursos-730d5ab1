@@ -486,3 +486,17 @@ Aula 6 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121150000_deepen_pcac_bank_statement_pix_ted_lesson.sql. Commit: ac4344af04f91ada7ca1b6031900990ac9fecbe8.
 Verificação pós-gravação: 11 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — Matemática Financeira — 21/11/2026
+
+Aula 5 atualizada diretamente no Supabase:
+
+- 19 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 19 receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Corrigidas dicas incompatíveis com os enunciados em questões de percentuais e descontos; ampliadas resoluções de juros simples/compostos, taxas proporcionais/equivalentes, nominal/efetiva/real, desconto comercial e racional.
+- Removido trecho CPC 26 indevido.
+- Conferidos exemplos: 10% de R$ 500 = R$ 50; 1% a.m. equivalente a cerca de 12,68% a.a. em juros compostos; desconto comercial de R$ 120; valor atual racional de R$ 1.100.
+
+Migration: supabase/migrations/20261121160000_deepen_pcac_financial_math_trainer.sql. Commit: 22ab799c03b049f9bced7fdffd0de549bdb1113d.
+Verificação pós-gravação: 19 questões; zero explicações abaixo de 250 caracteres; zero itens sem resolução; seção CPC 26 indevida ausente. CI não confirmado.
