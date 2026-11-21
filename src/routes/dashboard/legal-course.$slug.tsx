@@ -1,3 +1,4 @@
+import "@/styles/material-pdf-page.css";
 import { materialPracticeSearch } from "@/lib/materialPractice";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";

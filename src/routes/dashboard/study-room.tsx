@@ -1,5 +1,6 @@
 import { SmartBackLink } from "@/components/dashboard/SmartBackLink";
 import "@/styles/study-enem-fit.css";
+import "@/styles/material-pdf-page.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {

@@ -1,0 +1,10 @@
+/* Treinador de questões: a barra superior de navegação sai da tela e a janela de estudo ganha a altura.
+   A barra continua nas demais áreas. No celular ela permanece, pois é o caminho de volta. */
+@media (min-width: 900px) {
+  html body .app-shell[data-area="student"]:has(.qs, .qx) .app-topbar {
+    display: none !important;
+  }
+  html body .app-shell[data-area="student"]:has(.qs, .qx) {
+    --app-topbar-h: 0px;
+  }
+}

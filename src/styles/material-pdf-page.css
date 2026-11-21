@@ -1,0 +1,145 @@
+/* Material de estudo como página de PDF.
+   Uma única "folha" de papel, igual em todas as disciplinas: largura de página A4 limitada
+   pela janela, altura ajustada à janela (a folha rola por dentro, como um leitor de PDF),
+   margens, hierarquia de títulos e tipografia padronizadas. Vale para o leitor da biblioteca,
+   da sala de estudo e dos anexos dos cursos de lei. */
+
+.library-body {
+  --sheet-bg: #fffefa;
+  --sheet-ink: #25282c;
+  --sheet-muted: #5b6168;
+  --sheet-line: #dedbd4;
+  --sheet-accent: var(--ak-tone, oklch(0.55 0.12 70));
+  --sheet-w: 52rem; /* ≈ largura de uma página A4 na fonte base de 15px */
+}
+.dark .library-body {
+  --sheet-bg: #171d26;
+  --sheet-ink: #e8edf4;
+  --sheet-muted: #aab4c2;
+  --sheet-line: #354252;
+}
+
+html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: min(100%, var(--sheet-w));
+  margin-inline: auto;
+  padding: clamp(1.25rem, 4.5vw, 3.25rem) clamp(1.1rem, 5vw, 3.5rem);
+  border: 1px solid var(--sheet-line);
+  border-radius: 0.375rem;
+  background: var(--sheet-bg);
+  color: var(--sheet-ink);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 12px 32px -18px rgb(0 0 0 / 35%);
+  font-size: 1.0667rem; /* 16px */
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+/* Altura da janela: a folha cabe na tela e o texto rola dentro dela */
+@media (min-width: 900px) {
+  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+    max-height: calc(100dvh - 13.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  html body .app-shell[data-area] .focus-study-container .library-body:not(.library-body--portuguese) {
+    max-height: calc(100dvh - var(--focus-bar-height, 3.5rem) - 3rem);
+  }
+}
+
+/* Conteúdo ocupa toda a largura útil da folha */
+html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose,
+html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose > * {
+  max-width: none;
+  margin-inline: 0;
+}
+html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose :is(p, li) {
+  max-width: none;
+  font-size: 1em;
+  line-height: 1.7;
+  color: var(--sheet-ink);
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Hierarquia única de títulos */
+html body .app-shell[data-area] .library-body .study-prose :is(h2, h3) {
+  color: var(--sheet-ink);
+  text-align: left;
+  text-wrap: balance;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+html body .app-shell[data-area] .library-body .study-prose h2 {
+  margin: 2em 0 0.7em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--sheet-accent);
+  font-size: 1.3em;
+  font-weight: 800;
+}
+html body .app-shell[data-area] .library-body .study-prose h3 {
+  margin: 1.5em 0 0.5em;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+html body .app-shell[data-area] .library-body .study-prose > :first-child { margin-top: 0; }
+html body .app-shell[data-area] .library-body .study-prose p + p { margin-top: 0.8em; }
+html body .app-shell[data-area] .library-body .study-prose :is(ul, ol) { margin-block: 0.8em; padding-inline-start: 1.5em; }
+html body .app-shell[data-area] .library-body .study-prose li + li { margin-top: 0.35em; }
+
+/* Citações, exemplos e tabelas dentro da mesma folha */
+html body .app-shell[data-area] .library-body .study-prose blockquote {
+  margin-block: 1.1em;
+  padding: 0.75em 1em;
+  border: 0;
+  border-left: 4px solid var(--sheet-accent);
+  border-radius: 0 0.375rem 0.375rem 0;
+  background: color-mix(in srgb, var(--sheet-accent) 9%, transparent);
+  color: var(--sheet-ink);
+}
+html body .app-shell[data-area] .library-body .study-prose .study-table {
+  margin-block: 1.1em;
+  overflow-x: auto;
+  border: 1px solid var(--sheet-line);
+  border-radius: 0.375rem;
+}
+html body .app-shell[data-area] .library-body .study-prose table { width: 100%; font-size: 0.9em; border-collapse: collapse; }
+html body .app-shell[data-area] .library-body .study-prose :is(th, td) { padding: 0.5em 0.75em; border-bottom: 1px solid var(--sheet-line); vertical-align: top; }
+html body .app-shell[data-area] .library-body .study-prose th { background: color-mix(in srgb, var(--sheet-accent) 12%, transparent); font-weight: 700; }
+html body .app-shell[data-area] .library-body .study-prose strong { color: var(--sheet-ink); }
+
+/* Celular: a folha ocupa a largura toda, sem margens de papel e sem rolagem aninhada */
+@media (max-width: 899px) {
+  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+    max-height: none;
+    overflow: visible;
+    padding: 1.1rem 1rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+  }
+  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) .study-prose :is(p, li) {
+    text-align: left;
+    hyphens: none;
+    -webkit-hyphens: none;
+  }
+}
+
+/* Faixa de título compacta: o título e o progresso ficam em uma linha e a página ganha a altura */
+html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero {
+  min-height: 0;
+  padding-block: 0.75rem;
+}
+html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero .ak-hero__copy > p { display: none; }
+html body .app-shell[data-area] .library-reading-workspace .ak-hero.lr-hero h1 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+
+@media print {
+  html body .app-shell[data-area] .library-body:not(.library-body--portuguese) {
+    max-height: none;
+    overflow: visible;
+    border: 0;
+    box-shadow: none;
+  }
+}

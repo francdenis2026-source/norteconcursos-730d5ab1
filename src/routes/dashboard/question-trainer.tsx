@@ -140,6 +140,7 @@ import "@/styles/trainer-mobile-refine.css";
 import "@/styles/trainer-paused.css";
 import "@/styles/trainer-exam-focus.css";
 import "@/styles/trainer-setup-compact.css";
+import "@/styles/trainer-no-topbar.css";
 import "@/styles/trainer-question-v2.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
 import { PCAC_INCIDENCE_ITEMS } from "@/lib/pcAcIncidenceItems";
