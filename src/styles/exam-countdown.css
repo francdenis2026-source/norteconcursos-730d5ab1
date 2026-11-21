@@ -9,14 +9,17 @@
 #dashboard-content#dashboard-content .xc__track { fill: rgb(255 201 74 / .06); stroke: rgb(255 255 255 / .1); stroke-width: 3; }
 #dashboard-content#dashboard-content .xc__arc { fill: none; stroke: var(--g); stroke-width: 3; stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
 #dashboard-content#dashboard-content .xc__days b { position: relative; font-size: 22px !important; font-weight: 800; letter-spacing: -.04em; color: var(--g) !important; opacity: 1 !important; }
-#dashboard-content#dashboard-content .xc__info { display: grid; gap: 4px; }
+#dashboard-content#dashboard-content .xc__info { display: grid; gap: 4px; min-width: 11.5rem; }
+#dashboard-content#dashboard-content .xc__date { white-space: nowrap; }
+#dashboard-content#dashboard-content .xc__days b { min-width: 3ch; text-align: center; display: inline-flex; justify-content: center; }
 #dashboard-content#dashboard-content .xc__info small { font-size: 10.5px !important; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffd978 !important; opacity: 1 !important; }
 #dashboard-content#dashboard-content .xc__clock { display: inline-flex; align-items: baseline; gap: 1px; font: 700 19px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !important; color: #ffffff !important; opacity: 1 !important; }
 #dashboard-content#dashboard-content .xc__clock i { font-style: normal; font-size: 11px; font-weight: 600; color: #9fb3cc !important; margin: 0 5px 0 1px; }
 #dashboard-content#dashboard-content .xc__clock i:last-child { margin-right: 0; }
 #dashboard-content#dashboard-content .xc__date { font-size: 11.5px !important; font-weight: 600; text-transform: none; color: #c9d4e2 !important; opacity: 1 !important; }
 #dashboard-content#dashboard-content .xc .xr { display: inline-flex; overflow: hidden; height: 1.05em; color: inherit !important; }
-#dashboard-content#dashboard-content .xc .xr__d { display: inline-block; color: inherit !important; animation: xr-in .38s cubic-bezier(.2,.8,.2,1); }
+#dashboard-content#dashboard-content .xc .xr__d { display: inline-block; min-width: 1ch; text-align: center; color: inherit !important; }
+#dashboard-content#dashboard-content .xc[data-live="true"] .xr__d { animation: xr-in .38s cubic-bezier(.2,.8,.2,1); }
 @keyframes xr-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { #dashboard-content#dashboard-content .xc * { animation: none !important; transition: none !important; } }
 

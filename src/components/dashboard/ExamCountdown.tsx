@@ -24,6 +24,12 @@ function Roll({ value }: { value: string }) {
 export function ExamCountdown({ examDate }: { examDate: string }) {
   const target = React.useMemo(() => examInstant(examDate), [examDate]);
   const [now, setNow] = React.useState(() => platformNow());
+  // Os dígitos só rolam depois da primeira exibição: na abertura da página nada se mexe nem muda de tamanho.
+  const [live, setLive] = React.useState(false);
+  React.useEffect(() => {
+    const id = window.setTimeout(() => setLive(true), 1200);
+    return () => window.clearTimeout(id);
+  }, []);
   React.useEffect(() => {
     let id = 0;
     const tick = () => setNow(platformNow());
@@ -40,7 +46,7 @@ export function ExamCountdown({ examDate }: { examDate: string }) {
   const dayLeft = (s % 86400) / 86400;
 
   return (
-    <div className="xc" role="timer" aria-label={`Prova em ${fmt({ day: "2-digit", month: "long", year: "numeric" })}: faltam ${d} dias, ${h} horas e ${m} minutos`}>
+    <div className="xc" data-live={live ? "true" : "false"} role="timer" aria-label={`Prova em ${fmt({ day: "2-digit", month: "long", year: "numeric" })}: faltam ${d} dias, ${h} horas e ${m} minutos`}>
       <span className="xc__days" aria-hidden="true">
         <svg viewBox="0 0 48 48">
           <circle cx="24" cy="24" r="21" className="xc__track" />
