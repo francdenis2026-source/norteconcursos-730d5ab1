@@ -69,3 +69,23 @@ test("edital: aulas relacionadas exigem assunto e disciplina compatíveis", asyn
 });
 
 test("cronograma: simulado e redação saem das horas semanais", () => { selfCheckReserva(); });
+
+test("PC-AC: os pontos por disciplina somam o total de cada prova e cada cargo tem disciplina pontuada", async () => {
+  const { pcAcDisciplinePoints } = await import("../src/lib/pcAcreExamWeights.ts");
+  const { pcAcVerticalCargos } = await import("../src/data/pcAcreVerticalizado.ts");
+  for (const cargo of pcAcVerticalCargos) {
+    const rows = pcAcDisciplinePoints(cargo);
+    const total = rows.reduce((s, r) => s + r.points, 0);
+    const want = cargo.exam?.objectivePoints;
+    if (!want) continue;
+    if (Math.abs(total - want) > 0.01) throw new Error(`${cargo.id}: pontos ${total} != ${want}`);
+    if (rows.some((r) => !(r.points > 0))) throw new Error(`${cargo.id}: disciplina sem pontos`);
+  }
+});
+
+test("PC-AC: modelos com prova discursiva são identificados pelo método", async () => {
+  const { MODELOS_CRONOGRAMA } = await import("../src/data/cronogramaModelos.ts");
+  const pc = MODELOS_CRONOGRAMA.filter((m) => m.id.startsWith("pcac-2026-"));
+  if (!pc.length) throw new Error("sem modelos PC-AC");
+  if (pc.some((m) => !/discursiva/i.test(m.metodo))) throw new Error("modelo PC-AC sem discursiva no método");
+});
