@@ -1,14 +1,14 @@
 export type Theme = "light" | "dark";
 
-const STORAGE_KEY = "theme";
+const STORAGE_KEY = "norte-theme-preference-v2";
 let transitionCleanup: number | null = null;
 
 /** Script embutido no <head>, antes de qualquer renderização, para o tema
  * já nascer correto (sem piscar entre claro e escuro ao carregar a página). */
-export const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('${STORAGE_KEY}');var d=t?t==='dark':true;document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light';var m=document.querySelector('meta[name="theme-color"]')||document.createElement('meta');m.setAttribute('name','theme-color');m.setAttribute('content',d?'#141414':'#f4f5f6');if(!m.parentNode)document.head.appendChild(m);if(!t)localStorage.setItem('${STORAGE_KEY}',d?'dark':'light');}catch(e){}})();`;
+export const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('${STORAGE_KEY}');var d=t?t==='dark':false;document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light';var m=document.querySelector('meta[name="theme-color"]')||document.createElement('meta');m.setAttribute('name','theme-color');m.setAttribute('content',d?'#141414':'#f4f5f6');if(!m.parentNode)document.head.appendChild(m);if(!t)localStorage.setItem('${STORAGE_KEY}',d?'dark':'light');}catch(e){}})();`;
 
 export function getActiveTheme(): Theme {
-  if (typeof document === "undefined") return "dark";
+  if (typeof document === "undefined") return "light";
   return document.documentElement.classList.contains("dark") ? "dark" : "light";
 }
 
