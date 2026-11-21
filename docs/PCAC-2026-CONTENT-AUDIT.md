@@ -817,3 +817,14 @@ Os 18 enunciados foram elaborados como questões autorais no estilo de concursos
 Migration na MAIN: `supabase/migrations/20261121298400_add_opening_questions_pcac_accounting.sql`, commit `d76dcb300ba8137008f345866dd33782ddec5e56`.
 
 **Limite da validação:** a consulta confirmou presença das aberturas e preservação das contagens do treinador. Não foi executado teste de renderização do material na interface nem há confirmação de CI para esse commit. Não houve publicação manual em produção.
+
+
+## Análise de Dados e Informações — questão inicial e resolução comentada — 21/11/2026
+
+Aplicado o mesmo padrão nos 11 materiais ativos de Análise de Dados e Informações. Cada aula inicia com uma questão autoral no estilo de concursos, cinco alternativas, convite para tentativa e resolução comentada ao final. Os temas cobrem dado/informação/conhecimento, organização e padronização, cruzamento determinístico/probabilístico, análise temporal, vínculos, metadados de comunicação, geografia e coordenadas, fato/inferência/hipótese, gráficos e relatórios, autorização e menor privilégio, falsos positivos e validação.
+
+**Validação SQL:** 11/11 materiais com questão de abertura e 11/11 com resolução comentada. As 55 questões anteriores do treinador foram preservadas. Os novos enunciados estão claramente identificados como autorais, não como transcrições de provas oficiais.
+
+Migration na MAIN: `supabase/migrations/20261121298500_add_opening_questions_pcac_data_analysis.sql`, commit `5db44ee00e8a19e0fcc94a5d6f762123ff513e52`. Aplicação direta no Supabase confirmada.
+
+**Limite:** não houve teste de renderização na interface nem confirmação de CI para esta etapa. Nenhuma publicação manual em produção.
