@@ -6,7 +6,7 @@ import { legalTextParts, type LegalHighlightKind } from "@/lib/legalHighlights";
  * vedações explícitas e rótulos de abertura
  * (ATUALIZAÇÃO, Exemplo, Atenção...). São auxílios de leitura: não reescrevem nem classificam o texto.
  */
-export type StudyKind = LegalHighlightKind | "prohibition" | "obligation";
+export type StudyKind = LegalHighlightKind | "prohibition";
 export type TagKind = "update" | "example" | "warning" | "exception" | "rule" | "tip";
 export type StudyPart = { text: string; kind?: StudyKind; tag?: TagKind };
 
@@ -16,7 +16,6 @@ export const STUDY_LABELS: Record<StudyKind, string> = {
   quantity: "Números, prazos e limites",
   sanction: "Penas e consequências",
   prohibition: "Proibições e nulidades",
-  obligation: "Regras que restringem",
 };
 
 const TAGS: { re: RegExp; tag: TagKind }[] = [
