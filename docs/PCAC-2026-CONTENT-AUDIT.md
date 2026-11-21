@@ -527,3 +527,17 @@ Aula 3 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121180000_deepen_pcac_journal_entries_trial_balance.sql. Commit: 77d7c4552401de3e52b657184b3fc29502e0f89f.
 Verificação pós-gravação: 10 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — fundamentos da Contabilidade e patrimônio — 21/11/2026
+
+Aula 1 atualizada diretamente no Supabase:
+
+- 12 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com objeto/finalidade/campo de aplicação, bens/direitos/obrigações, ativo/passivo/PL, situações patrimoniais e efeitos de operações no patrimônio.
+- Removido bloco CPC 26 indevido.
+- Reforçado que bem financiado é registrado pelo valor integral no Ativo e a dívida aparece separadamente no Passivo.
+
+Migration: supabase/migrations/20261121190000_deepen_pcac_accounting_fundamentals.sql. Commit: 02c9d2e4be2d8d454d2c37cb11daadcf2ff882a6.
+Verificação pós-gravação: 12 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
