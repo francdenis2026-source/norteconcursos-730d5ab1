@@ -355,3 +355,7 @@
     font-size: 1.1rem;
   }
 }
+
+/* Auditoria de contraste: o link "Revisar" do card de prioridades ficava em 3,9:1 no modo escuro. */
+.student-home.sh2 .sh2-signals a { color: color-mix(in srgb, var(--sh2-tone) 45%, white); }
+:root:not(.dark) .student-home.sh2 .sh2-signals a { color: var(--sh2-tone); }
