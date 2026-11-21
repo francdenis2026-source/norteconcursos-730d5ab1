@@ -736,3 +736,15 @@ Correção aplicada no Supabase: a terceira classe agora explica diretamente que
 Migration registrada na MAIN: `supabase/migrations/20261121298000_clarify_pcac_statistics_cumulative_frequency_example.sql`, commit `79a788ca569a94a9cac6a8c7b79a6594b4fd80c6`.
 
 A leitura das aulas de tabelas/gráficos, dispersão e probabilidade não identificou, nos trechos examinados, erro aritmético equivalente. A auditoria teórica continua: esta etapa não representa certificação completa de todo o conteúdo nem substitui conferência final do edital e das fontes oficiais.
+
+
+## Estatística — auditoria de fundamentos, amostragem e medidas posicionais, lote 10 — 21/11/2026
+
+Revisadas as aulas de fundamentos/população/amostra/variáveis, técnicas de amostragem e mediana/moda/quartis/percentis, incluindo os 30 itens do treinador.
+
+- **Treinador:** 30/30 questões possuem justificativa, dica e resolução em etapas (mínimo de quatro passos); nenhuma questão ficou sem esses campos. Enunciados, gabaritos e ordem foram preservados.
+- **Fundamentos:** o conteúdo diferencia corretamente população/amostra, censo/pesquisa amostral, descritiva/inferencial, viés/erro amostral, variáveis qualitativas e quantitativas, escalas nominal/ordinal/intervalar/razão e métodos de amostragem. Foi acrescentada uma ressalva didática importante: idade registrada com precisão é medida contínua; idade registrada apenas em anos completos aparece como contagem discreta na base, conforme a definição operacional.
+- **Amostragem:** conferidas as diferenças entre aleatória simples, sistemática, estratificada, conglomerados e métodos não probabilísticos (conveniência, julgamento e cotas), incluindo alocação proporcional, periodicidade na lista sistemática, cobertura e não resposta. A distinção entre estratificada e conglomerados está explícita.
+- **Medidas posicionais:** mediana para quantidades pares/ímpares, moda, quartis, decis, percentis, AIQ e boxplot. Foi esclarecida a interpretação de P90: aproximadamente 90% das observações ficam iguais ou abaixo do ponto e cerca de 10% acima, conforme método e empates; isso não significa acertar 90% da prova.
+
+As duas melhorias foram aplicadas no Supabase e versionadas na MAIN pela migration `supabase/migrations/20261121298100_clarify_pcac_statistics_age_and_percentiles.sql`, commit `e6d1c5b7976f8fe3bfc5d0ce54935c9672821c31`. A verificação SQL confirmou os dois trechos novos. Não foram alterados os 30 itens do treinador.
