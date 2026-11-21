@@ -294,3 +294,22 @@ Migration versionada: supabase/migrations/20261121030000_deepen_pcac_costs_ratei
 Commit: e0e3a76f81ed322f1322848c43ddc78f27f7ab24.
 
 A atualização direta do banco foi confirmada por consulta posterior. A execução da migration em outros ambientes depende do pipeline; não há confirmação de CI aprovado neste registro.
+
+
+## Revisão aprofundada — investimentos, MEP e dividendos — 21/11/2026
+
+Aula 9 atualizada diretamente no Supabase e conferida após gravação:
+
+- 8 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 8 questões receberam justificativa ampliada (mais de 250 caracteres), dica de prova e resolução passo a passo.
+- Conteúdo didático reorganizado para distinguir controle, influência significativa e controle conjunto; demonstrações individuais, separadas e consolidadas; MEP; dividendos; e eliminações intragrupo.
+- Corrigida a generalização desatualizada da regra dos seis meses sobre dividendos. O material agora alerta que essa referência não deve ser tratada como regra universal vigente e exige identificar o contexto normativo e o tipo de demonstração.
+- Reforçada a presunção relativa de influência significativa a partir de 20% do poder de voto, não de qualquer percentual do capital.
+- Removido o trecho indevidamente anexado de CPC 26 sobre classificação de passivos, preservando os conteúdos de investimentos.
+
+Base de atualização: CPC 18 (R3), aprovado pela Resolução CVM nº 211/2024, vigente desde 1º/1/2025; Lei 6.404/1976, art. 248; CPC 35, CPC 36 e CPC 48. Referência oficial: https://conteudo.cvm.gov.br/cvm_institucional/legislacao/resolucoes/anexos/200/resol211.htm
+
+Migration versionada: supabase/migrations/20261121040000_correct_pcac_investments_mep_material.sql.
+Commit: 4bd0bc69e34600ccb0660239197d9ad19e0a72bb.
+
+Verificação pós-gravação: 8 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica; zero itens sem resolução; seção CPC 26 indevida ausente; regra de dividendos atualizada. CI não confirmado.
