@@ -1,0 +1,1 @@
+UPDATE study_materials SET body_md=replace(body_md,'## Busca, fontes e certificados'||chr(92)||'n'||chr(92)||'n## Complemento','## Busca, fontes e certificados'||chr(10)||chr(10)||'## Complemento'),updated_at=now() WHERE slug='informatica-03-04' AND strpos(body_md,'## Busca, fontes e certificados'||chr(92)||'n'||chr(92)||'n## Complemento')>0;
