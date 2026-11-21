@@ -1,0 +1,41 @@
+WITH src AS (INSERT INTO content_sources (source_type,title,issuer,url,status,is_official,notes) SELECT 'outro','Capturas de questões enviadas pelo usuário — lote 2026-11-21','Usuário da plataforma','user-upload://chatgpt/2026-11-21/questoes-capturas','em_revisao',false,'Capturas de tela de transmissão ao vivo; gabaritos oficiais e proveniência editorial pendentes de conferência.' WHERE NOT EXISTS (SELECT 1 FROM content_sources WHERE url='user-upload://chatgpt/2026-11-21/questoes-capturas') RETURNING id), chosen AS (SELECT id FROM src UNION ALL SELECT id FROM content_sources WHERE url='user-upload://chatgpt/2026-11-21/questoes-capturas' LIMIT 1) INSERT INTO curated_question_catalog (source_id,external_item_key,contest_name,contest_year,exam_board,subject,subtopic,question_text,official_answer,explanation,content_status,is_original,didactic_provenance) VALUES ((SELECT id FROM chosen),'user-capture-20261121-portugues-rogo-lhe-servir-nos','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Português','Regência verbal e pronomes oblíquos','Rogo-lhe (1) a fineza de servir-nos (2) dois uísques com gelo.
+
+Nos termos destacados, é correto afirmar que, em:
+A) (2), o verbo é transitivo direto e o pronome é objeto direto.
+B) (2), o verbo é transitivo indireto e o pronome é objeto direto.
+C) (1), o verbo é transitivo indireto e o pronome é objeto indireto.
+D) (1), o verbo é transitivo direto e o pronome é objeto indireto.','D','Em ''rogo-lhe a fineza'', ''a fineza'' é objeto direto do verbo rogar e ''lhe'' indica a pessoa a quem se faz o pedido, objeto indireto. Em ''servir-nos dois uísques'', ''dois uísques'' é objeto direto e ''nos'' funciona como objeto indireto. A questão exibida possui alternativas A–D; confirmar gabarito na fonte original.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb),
+((SELECT id FROM chosen),'user-capture-20261121-administrativo-poder-policia','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Direito Administrativo','Poder de polícia','Discricionariedade, autoexecutoriedade e coercibilidade são atributos do poder:
+A) regulamentar.
+B) normativo.
+C) de polícia.
+D) hierárquico.
+E) disciplinar.','C','A alternativa C é a resposta doutrinária tradicional: discricionariedade, autoexecutoriedade e coercibilidade são atributos associados ao poder de polícia. Atenção: discricionariedade e autoexecutoriedade não estão presentes indistintamente em todo ato de polícia.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb),
+((SELECT id FROM chosen),'user-capture-20261121-penal-resistencia-ameaca-fiscalizacao','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Direito Penal','Resistência e desobediência','Durante uma fiscalização de trânsito, um motorista recebeu ordem legal para apresentar sua documentação. Inconformado, recusou-se a cumprir a determinação e, além disso, ameaçou o agente responsável para tentar impedir a continuidade da fiscalização. Considerando o Código Penal, a conduta descrita caracteriza, principalmente, o crime de:
+A) Desacato.
+B) Resistência.
+C) Prevaricação.
+D) Desobediência.
+E) Usurpação de função pública.','B','A resistência do art. 329 do Código Penal exige oposição à execução de ato legal mediante violência ou ameaça ao funcionário competente ou a quem lhe preste auxílio. A ameaça para impedir a fiscalização distingue a situação da mera desobediência do art. 330. A captura não contém gabarito oficial.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb),
+((SELECT id FROM chosen),'user-capture-20261121-penal-peculato-apropriacao-minacu','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Direito Penal','Peculato-apropriação','O Código Penal prevê crime funcional praticado por servidor público que se apropria de dinheiro, valor ou outro bem móvel, público ou particular, cuja posse decorra do exercício do cargo. Essa conduta corresponde ao crime de:
+A) furto qualificado.
+B) peculato.
+C) concussão.
+D) prevaricação.','B','O art. 312, caput, do Código Penal descreve peculato-apropriação quando o funcionário público se apropria de bem móvel de que tem posse em razão do cargo. A captura apresenta alternativas A–D; o gabarito oficial não foi exibido.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb),
+((SELECT id FROM chosen),'user-capture-20261121-penal-peculato-desvio-oficial-justica','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Direito Penal','Peculato-desvio','Caio, funcionário público que exerce a função de oficial de justiça, realiza a apreensão de um automóvel cujo modelo era desejado por sua amante. Para atender ao desejo dela, desvia o bem, sob o pretexto de que o veículo havia sido furtado após a apreensão, e o destina ao uso de sua amante. Nesse caso, é correto afirmar que a conduta de Caio se enquadra no crime de:
+A) corrupção.
+B) furto qualificado.
+C) roubo.
+D) peculato.
+E) desobediência.','D','Peculato-desvio, art. 312, caput, do Código Penal: o funcionário desvia, em proveito próprio ou alheio, bem móvel de que tem posse em razão do cargo. A apreensão explica a posse funcional e o desvio para terceiro. A captura não mostra gabarito oficial.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb),
+((SELECT id FROM chosen),'user-capture-20261121-penal-peculato-desvio-municipal','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Direito Penal','Peculato-desvio','Um servidor público municipal desvia dinheiro público que estava sob sua posse, em razão do cargo, e o utiliza em proveito alheio. Nos termos do Decreto-Lei nº 2.848/1940 — Código Penal, essa conduta:
+A) Configura peculato.
+B) Configura usurpação.
+C) Configura prevaricação.
+D) Não configura crime.','A','Pelo art. 312, caput, do Código Penal, desviar dinheiro de que o funcionário público tem posse em razão do cargo, em proveito próprio ou alheio, configura peculato-desvio. O gabarito indicado é análise jurídica, não gabarito oficial conferido.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb),
+((SELECT id FROM chosen),'user-capture-20261121-portugues-objeto-direto-pleonastico','Questão exibida em transmissão de concurso',2026,'BANCA A CONFIRMAR','Português','Objeto direto pleonástico','Ocorre objeto direto pleonástico em:
+A) quem submete todos os seus atos à própria censura.
+B) isso os ocupados não têm tempo de fazer;
+C) não lhes sobra tempo para examinar o passado.
+D) o que havemos de atravessar é duvidoso.
+E) Esse período os ocupados o perdem.','E','Em ''Esse período os ocupados o perdem'', o termo ''Esse período'' é antecipado e retomado pelo pronome oblíquo ''o'', que exerce função de objeto direto pleonástico. Na alternativa C, ''lhes'' é objeto indireto.','under_review',false,'{"source":"captura de tela enviada pelo usuário","official_answer_verified":false,"transcription":"reconstituída de imagem","review_reason":"aguardando gabarito oficial e validação de fonte","trainer_release_blocked":true}'::jsonb) ON CONFLICT (source_id,external_item_key) DO NOTHING;
