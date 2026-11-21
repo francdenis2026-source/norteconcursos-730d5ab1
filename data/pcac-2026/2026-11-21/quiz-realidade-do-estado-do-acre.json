@@ -12,82 +12,159 @@
         {
           "a": true,
           "q": "As reservas extrativistas conciliam conservação ambiental com uso sustentável por populações tradicionais.",
-          "why": "Essa é a finalidade central da categoria RESEX no SNUC. Contexto histórico-geográfico: Chico Mendes defendeu a organização dos seringueiros e o extrativismo sustentável; reserva extrativista é unidade de uso sustentável no SNUC. A fronteira exige cooperação e fiscalização, mas não transforma toda circulação em ato ilícito."
+          "why": "Certo. Reservas extrativistas pertencem ao grupo de Uso Sustentável do SNUC e visam proteger meios de vida e cultura das populações extrativistas tradicionais, assegurando uso sustentável dos recursos naturais, conforme Lei 9.985/2000, art. 18."
         },
         {
           "a": true,
           "q": "Chico Mendes esteve ligado à organização dos seringueiros e à defesa de seus territórios e meios de vida.",
-          "why": "Sua atuação sindical e comunitária articulou defesa dos trabalhadores e conservação da floresta."
+          "why": "Certo. Chico Mendes foi liderança da organização dos seringueiros e da defesa dos territórios de uso tradicional, articulando proteção da floresta e manutenção dos meios de subsistência. Sua trajetória integra a história socioambiental acreana."
         },
         {
           "a": false,
           "q": "Reserva extrativista é categoria de Proteção Integral do SNUC.",
-          "why": "RESEX integra o grupo de Uso Sustentável. Contexto histórico-geográfico: Chico Mendes defendeu a organização dos seringueiros e o extrativismo sustentável; reserva extrativista é unidade de uso sustentável no SNUC. A fronteira exige cooperação e fiscalização, mas não transforma toda circulação em ato ilícito."
+          "why": "Errado. Reserva Extrativista é Unidade de Conservação de Uso Sustentável no SNUC (Lei 9.985/2000, arts. 14 e 18). Não pertence ao grupo de Proteção Integral, que reúne outras categorias."
         },
         {
           "a": true,
           "q": "O Acre faz fronteira internacional com Peru e Bolívia.",
-          "why": "São os dois países que fazem fronteira com o estado. Contexto histórico-geográfico: Chico Mendes defendeu a organização dos seringueiros e o extrativismo sustentável; reserva extrativista é unidade de uso sustentável no SNUC. A fronteira exige cooperação e fiscalização, mas não transforma toda circulação em ato ilícito."
+          "why": "Certo. O Acre possui fronteiras internacionais com Peru e Bolívia; com Amazonas e Rondônia possui divisas estaduais, não fronteiras entre países. Diferencie essas categorias em mapas."
         },
         {
           "a": true,
           "q": "A BR-317 integra o eixo de ligação de Rio Branco a Assis Brasil e à fronteira peruana.",
-          "why": "A BR-317 é associada ao corredor internacional do Pacífico até Assis Brasil. Contexto histórico-geográfico: Chico Mendes defendeu a organização dos seringueiros e o extrativismo sustentável; reserva extrativista é unidade de uso sustentável no SNUC. A fronteira exige cooperação e fiscalização, mas não transforma toda circulação em ato ilícito."
+          "why": "Certo. A BR-317 conecta Rio Branco em direção a Brasileia, Epitaciolândia e Assis Brasil, no eixo de integração da fronteira peruana. Ela compõe o corredor rodoviário associado à ligação interoceânica."
         }
       ],
       "slug": "pcac-2026-acre-chico-mendes-reservas-seguranca-fronteira",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "Seringueiros, Chico Mendes, reservas extrativistas e segurança pública nas fronteiras",
-      "practice_review": null
+      "practice_review": {
+        "items": [
+          {
+            "a": true,
+            "q": "As reservas extrativistas conciliam conservação ambiental com uso sustentável por populações tradicionais.",
+            "why": "Certo. Reservas extrativistas pertencem ao grupo de Uso Sustentável do SNUC e visam proteger meios de vida e cultura das populações extrativistas tradicionais, assegurando uso sustentável dos recursos naturais, conforme Lei 9.985/2000, art. 18."
+          },
+          {
+            "a": true,
+            "q": "Chico Mendes esteve ligado à organização dos seringueiros e à defesa de seus territórios e meios de vida.",
+            "why": "Certo. Chico Mendes foi liderança da organização dos seringueiros e da defesa dos territórios de uso tradicional, articulando proteção da floresta e manutenção dos meios de subsistência. Sua trajetória integra a história socioambiental acreana."
+          },
+          {
+            "a": false,
+            "q": "Reserva extrativista é categoria de Proteção Integral do SNUC.",
+            "why": "Errado. Reserva Extrativista é Unidade de Conservação de Uso Sustentável no SNUC (Lei 9.985/2000, arts. 14 e 18). Não pertence ao grupo de Proteção Integral, que reúne outras categorias."
+          },
+          {
+            "a": true,
+            "q": "O Acre faz fronteira internacional com Peru e Bolívia.",
+            "why": "Certo. O Acre possui fronteiras internacionais com Peru e Bolívia; com Amazonas e Rondônia possui divisas estaduais, não fronteiras entre países. Diferencie essas categorias em mapas."
+          },
+          {
+            "a": true,
+            "q": "A BR-317 integra o eixo de ligação de Rio Branco a Assis Brasil e à fronteira peruana.",
+            "why": "Certo. A BR-317 conecta Rio Branco em direção a Brasileia, Epitaciolândia e Assis Brasil, no eixo de integração da fronteira peruana. Ela compõe o corredor rodoviário associado à ligação interoceânica."
+          }
+        ],
+        "method": "Conferência individual de 5 enunciados e gabaritos territoriais e institucionais com fontes oficiais estaduais, FUNAI, IBGE e SNUC",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:38:59Z",
+        "review_type": "didactic_manual",
+        "source_note": "Conteúdo complementar autoral alinhado ao Anexo III do Edital nº 001 SEAD/PCAC, de 05/11/2026; recorte até 06/11/2026. Questões autorais, não oficiais.",
+        "topic_label": "Seringueiros, Chico Mendes, reservas extrativistas e segurança pública nas fronteiras",
+        "material_slug": "pcac-2026-acre-chico-mendes-reservas-seguranca-fronteira"
+      }
     },
     {
       "quiz": [
         {
           "a": true,
           "q": "O Edital PC-AC 2026 define cinco regionais de desenvolvimento para fins de sua organização territorial.",
-          "why": "O subitem 1.2.3 enumera Baixo Acre, Purus, Alto Acre, Envira e Juruá. Contexto histórico-geográfico: O Acre faz fronteira internacional com Peru e Bolívia e divisas estaduais com Amazonas e Rondônia. Fronteira separa países, divisa separa estados. Regionalizações administrativas e geográficas podem empregar critérios diferentes."
+          "why": "Certo. Para organização territorial considerada pelo edital, são tratadas as regionais do Alto Acre, Baixo Acre, Purus, Tarauacá e Envira e Juruá, previstas na LC Acre 126/2003. Essa divisão não é a mesma regionalização geográfica do IBGE."
         },
         {
           "a": false,
           "q": "A regional do Baixo Acre possui cinco municípios.",
-          "why": "A Regional do Baixo Acre reúne sete municípios: Rio Branco, Acrelândia, Bujari, Capixaba, Plácido de Castro, Porto Acre e Senador Guiomard, segundo a regionalização estadual. Logo, a afirmação de que são apenas cinco está errada. Não confunda regiões administrativas com regiões geográficas do IBGE."
+          "why": "Errado. A LC estadual 126/2003 inclui sete municípios no Baixo Acre: Acrelândia, Bujari, Capixaba, Plácido de Castro, Porto Acre, Rio Branco e Senador Guiomard. Afirmar cinco reduz indevidamente a composição."
         },
         {
           "a": true,
           "q": "Sena Madureira, Manoel Urbano e Santa Rosa do Purus integram a regional do Purus.",
-          "why": "Essa é a composição expressa no subitem 1.2.3. Contexto histórico-geográfico: O Acre faz fronteira internacional com Peru e Bolívia e divisas estaduais com Amazonas e Rondônia. Fronteira separa países, divisa separa estados. Regionalizações administrativas e geográficas podem empregar critérios diferentes."
+          "why": "Certo. A regional do Purus, na LC 126/2003, inclui Sena Madureira, Manoel Urbano e Santa Rosa do Purus. A localização administrativa é distinta da classificação das bacias hidrográficas."
         },
         {
           "a": false,
           "q": "A regional do Juruá inclui Feijó e Jordão.",
-          "why": "Feijó e Jordão pertencem à regional Envira; o Juruá inclui Cruzeiro do Sul, Rodrigues Alves, Mâncio Lima, Marechal Thaumaturgo e Porto Walter."
+          "why": "Errado. Feijó e Jordão pertencem à regional do Tarauacá e Envira, não à regional do Juruá, conforme a divisão estadual da LC 126/2003."
         },
         {
           "a": false,
           "q": "A divisão do edital em cinco regionais é idêntica às duas regiões intermediárias do IBGE.",
-          "why": "São recortes diferentes: o edital lista cinco regionais; o IBGE 2017, duas intermediárias."
+          "why": "Errado. A divisão do Estado em cinco regionais de planejamento não é idêntica às regiões geográficas intermediárias do IBGE. Finalidade, método e número de unidades diferem."
         },
         {
           "a": true,
           "q": "A BR-317 integra o corredor do Pacífico e alcança Assis Brasil, na fronteira com o Peru.",
-          "why": "É a função da BR-317 no eixo de integração internacional. Contexto histórico-geográfico: O Acre faz fronteira internacional com Peru e Bolívia e divisas estaduais com Amazonas e Rondônia. Fronteira separa países, divisa separa estados. Regionalizações administrativas e geográficas podem empregar critérios diferentes."
+          "why": "Certo. A BR-317 integra ligação rodoviária da capital ao Alto Acre, incluindo Assis Brasil na fronteira com o Peru. Sua função é relevante à integração fronteiriça e ao corredor interoceânico."
         },
         {
           "a": true,
           "q": "O Acre possui 22 municípios distribuídos pelas cinco regionais do edital.",
-          "why": "A soma das quantidades regionais é 7 + 3 + 4 + 3 + 5 = 22. Contexto histórico-geográfico: O Acre faz fronteira internacional com Peru e Bolívia e divisas estaduais com Amazonas e Rondônia. Fronteira separa países, divisa separa estados. Regionalizações administrativas e geográficas podem empregar critérios diferentes."
+          "why": "Certo. O Acre possui 22 municípios, distribuídos pelas cinco regionais instituídas pela LC estadual 126/2003. O número de municípios não deve ser confundido com o número de regionais."
         }
       ],
       "slug": "pcac-2026-acre-municipios-fronteiras-integracao-regional",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "Municípios, fronteiras, infraestrutura e integração regional",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 7,
-        "revision_reason": "Informações históricas e geográficas ampliadas; revisão pedagógica pendente"
+        "items": [
+          {
+            "a": true,
+            "q": "O Edital PC-AC 2026 define cinco regionais de desenvolvimento para fins de sua organização territorial.",
+            "why": "Certo. Para organização territorial considerada pelo edital, são tratadas as regionais do Alto Acre, Baixo Acre, Purus, Tarauacá e Envira e Juruá, previstas na LC Acre 126/2003. Essa divisão não é a mesma regionalização geográfica do IBGE."
+          },
+          {
+            "a": false,
+            "q": "A regional do Baixo Acre possui cinco municípios.",
+            "why": "Errado. A LC estadual 126/2003 inclui sete municípios no Baixo Acre: Acrelândia, Bujari, Capixaba, Plácido de Castro, Porto Acre, Rio Branco e Senador Guiomard. Afirmar cinco reduz indevidamente a composição."
+          },
+          {
+            "a": true,
+            "q": "Sena Madureira, Manoel Urbano e Santa Rosa do Purus integram a regional do Purus.",
+            "why": "Certo. A regional do Purus, na LC 126/2003, inclui Sena Madureira, Manoel Urbano e Santa Rosa do Purus. A localização administrativa é distinta da classificação das bacias hidrográficas."
+          },
+          {
+            "a": false,
+            "q": "A regional do Juruá inclui Feijó e Jordão.",
+            "why": "Errado. Feijó e Jordão pertencem à regional do Tarauacá e Envira, não à regional do Juruá, conforme a divisão estadual da LC 126/2003."
+          },
+          {
+            "a": false,
+            "q": "A divisão do edital em cinco regionais é idêntica às duas regiões intermediárias do IBGE.",
+            "why": "Errado. A divisão do Estado em cinco regionais de planejamento não é idêntica às regiões geográficas intermediárias do IBGE. Finalidade, método e número de unidades diferem."
+          },
+          {
+            "a": true,
+            "q": "A BR-317 integra o corredor do Pacífico e alcança Assis Brasil, na fronteira com o Peru.",
+            "why": "Certo. A BR-317 integra ligação rodoviária da capital ao Alto Acre, incluindo Assis Brasil na fronteira com o Peru. Sua função é relevante à integração fronteiriça e ao corredor interoceânico."
+          },
+          {
+            "a": true,
+            "q": "O Acre possui 22 municípios distribuídos pelas cinco regionais do edital.",
+            "why": "Certo. O Acre possui 22 municípios, distribuídos pelas cinco regionais instituídas pela LC estadual 126/2003. O número de municípios não deve ser confundido com o número de regionais."
+          }
+        ],
+        "method": "Conferência individual de 7 enunciados e gabaritos territoriais e institucionais com fontes oficiais estaduais, FUNAI, IBGE e SNUC",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:38:59Z",
+        "review_type": "didactic_manual",
+        "source_note": "Edital nº 001 SEAD/PCAC, de 05/11/2026, subitem 1.2.3; IBGE, Divisão Regional do Brasil 2017; SEPLAN/AC, Diagnóstico socioeconômico.",
+        "topic_label": "Municípios, fronteiras, infraestrutura e integração regional",
+        "material_slug": "pcac-2026-acre-municipios-fronteiras-integracao-regional"
       }
     },
     {
@@ -95,54 +172,99 @@
         {
           "a": true,
           "q": "A Constituição do Acre estabelece os Poderes Legislativo, Executivo e Judiciário como independentes e harmônicos.",
-          "why": "É o art. 6º da Constituição Estadual. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Certo. O art. 6º da Constituição do Acre estabelece os Poderes Legislativo, Executivo e Judiciário, independentes e harmônicos entre si. Ministério Público e Tribunal de Contas são instituições, não novos Poderes."
         },
         {
           "a": false,
           "q": "A capital do Estado do Acre é Cruzeiro do Sul.",
-          "why": "A capital é Rio Branco, conforme art. 7º. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Errado. O art. 7º da Constituição estadual define Rio Branco como capital do Acre. Cruzeiro do Sul é município relevante do Vale do Juruá, mas não é a capital."
         },
         {
           "a": true,
           "q": "O art. 2º da Constituição Estadual menciona os Tratados de Petrópolis de 1903 e do Rio de Janeiro de 1909.",
-          "why": "São referências expressas aos limites estaduais. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Certo. O art. 2º da Constituição do Estado do Acre menciona os limites definidos nos tratados de Petrópolis (1903) e do Rio de Janeiro (1909), além do reconhecimento constitucional previsto no ADCT."
         },
         {
           "a": true,
           "q": "O Acre possui 22 municípios.",
-          "why": "Informação constante do IBGE Cidades e Estados. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Certo. O Acre possui 22 municípios, conforme a organização territorial e dados do IBGE. Esse número não se confunde com cinco regionais de planejamento estadual."
         },
         {
           "a": false,
           "q": "A população censitária de 2022 e a estimativa de 2026 são indicadores intercambiáveis.",
-          "why": "Censo e estimativa são medidas diferentes e têm anos de referência próprios. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Errado. Censo 2022 e estimativa de 2026 medem populações de períodos e metodologias diferentes. O Censo é levantamento, enquanto a estimativa é cálculo para o ano de referência."
         },
         {
           "a": true,
           "q": "A FUNAI informou em novembro de 2026 que a FPE Envira acompanhava oito registros, seis confirmados e dois em estudo.",
-          "why": "É o recorte informado na notícia oficial de 05/11/2026. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Certo. Em notícia oficial publicada pela FUNAI em 5/11/2026, a FPE Envira acompanha oito registros de povos isolados, dos quais seis confirmados e dois em estudo. Identifique data e órgão da informação."
         },
         {
           "a": false,
           "q": "Povos de recente contato são necessariamente povos sem qualquer relação com a sociedade nacional.",
-          "why": "A FUNAI os caracteriza por relações permanentes ou intermitentes com a sociedade nacional, mantendo autonomia."
+          "why": "Errado. Povos de recente contato não são necessariamente povos sem qualquer relação com a sociedade nacional. A categoria refere-se a condições específicas de contato, vulnerabilidade e políticas de proteção."
         },
         {
           "a": true,
           "q": "A proteção dos povos isolados respeita a decisão de permanecer em isolamento e evita promover contato forçado.",
-          "why": "É princípio da política de proteção da FUNAI. Contexto histórico-geográfico: O estado possui Legislativo, Executivo e Judiciário. A presença de povos indígenas impõe respeito a diversidade cultural, territorial e linguística. Para interpretar indicadores, verifique ano, fonte, unidade e denominador antes de comparar taxas."
+          "why": "Certo. A política de proteção de povos isolados deve respeitar sua autonomia e decisão de permanecer em isolamento, evitando promover contato forçado. Monitoramento territorial não equivale à imposição de contato."
         }
       ],
       "slug": "pcac-2026-realidade-acre-constituicao-indigenas-indicadores",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "Constituição estadual, povos indígenas e indicadores sociais",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 8,
-        "revision_reason": "Informações históricas e geográficas ampliadas; revisão pedagógica pendente"
+        "items": [
+          {
+            "a": true,
+            "q": "A Constituição do Acre estabelece os Poderes Legislativo, Executivo e Judiciário como independentes e harmônicos.",
+            "why": "Certo. O art. 6º da Constituição do Acre estabelece os Poderes Legislativo, Executivo e Judiciário, independentes e harmônicos entre si. Ministério Público e Tribunal de Contas são instituições, não novos Poderes."
+          },
+          {
+            "a": false,
+            "q": "A capital do Estado do Acre é Cruzeiro do Sul.",
+            "why": "Errado. O art. 7º da Constituição estadual define Rio Branco como capital do Acre. Cruzeiro do Sul é município relevante do Vale do Juruá, mas não é a capital."
+          },
+          {
+            "a": true,
+            "q": "O art. 2º da Constituição Estadual menciona os Tratados de Petrópolis de 1903 e do Rio de Janeiro de 1909.",
+            "why": "Certo. O art. 2º da Constituição do Estado do Acre menciona os limites definidos nos tratados de Petrópolis (1903) e do Rio de Janeiro (1909), além do reconhecimento constitucional previsto no ADCT."
+          },
+          {
+            "a": true,
+            "q": "O Acre possui 22 municípios.",
+            "why": "Certo. O Acre possui 22 municípios, conforme a organização territorial e dados do IBGE. Esse número não se confunde com cinco regionais de planejamento estadual."
+          },
+          {
+            "a": false,
+            "q": "A população censitária de 2022 e a estimativa de 2026 são indicadores intercambiáveis.",
+            "why": "Errado. Censo 2022 e estimativa de 2026 medem populações de períodos e metodologias diferentes. O Censo é levantamento, enquanto a estimativa é cálculo para o ano de referência."
+          },
+          {
+            "a": true,
+            "q": "A FUNAI informou em novembro de 2026 que a FPE Envira acompanhava oito registros, seis confirmados e dois em estudo.",
+            "why": "Certo. Em notícia oficial publicada pela FUNAI em 5/11/2026, a FPE Envira acompanha oito registros de povos isolados, dos quais seis confirmados e dois em estudo. Identifique data e órgão da informação."
+          },
+          {
+            "a": false,
+            "q": "Povos de recente contato são necessariamente povos sem qualquer relação com a sociedade nacional.",
+            "why": "Errado. Povos de recente contato não são necessariamente povos sem qualquer relação com a sociedade nacional. A categoria refere-se a condições específicas de contato, vulnerabilidade e políticas de proteção."
+          },
+          {
+            "a": true,
+            "q": "A proteção dos povos isolados respeita a decisão de permanecer em isolamento e evita promover contato forçado.",
+            "why": "Certo. A política de proteção de povos isolados deve respeitar sua autonomia e decisão de permanecer em isolamento, evitando promover contato forçado. Monitoramento territorial não equivale à imposição de contato."
+          }
+        ],
+        "method": "Conferência individual de 8 enunciados e gabaritos territoriais e institucionais com fontes oficiais estaduais, FUNAI, IBGE e SNUC",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:38:59Z",
+        "review_type": "didactic_manual",
+        "source_note": "LEGIS — Constituição do Estado do Acre, texto compilado; FUNAI, notícia de monitoramento de povos isolados (05/11/2026); IBGE Cidades e Estados — Acre, consulta em 14/11/2026.",
+        "topic_label": "Constituição estadual, povos indígenas e indicadores sociais",
+        "material_slug": "pcac-2026-realidade-acre-constituicao-indigenas-indicadores"
       }
     },
     {
@@ -150,54 +272,99 @@
         {
           "a": true,
           "q": "O Acre integra o fuso UTC−5 e fica duas horas atrás de Brasília.",
-          "why": "A Lei nº 12.876/2013 restabeleceu o quarto fuso, Greenwich menos cinco horas. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Certo. O Acre adota UTC−5, enquanto Brasília costuma estar em UTC−3, diferença de duas horas. Quando são 12h em Brasília, são 10h no Acre, considerando esses fusos."
         },
         {
           "a": false,
           "q": "O Acre está no mesmo fuso horário de Brasília.",
-          "why": "Brasília está em UTC−3 e o Acre em UTC−5. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Errado. O Acre está em UTC−5 e Brasília em UTC−3, não compartilham o mesmo fuso. Para comparar horários de registros, verifique sempre a referência utilizada."
         },
         {
           "a": true,
           "q": "As bacias do Juruá e do Purus integram a Bacia Amazônica.",
-          "why": "Ambas drenam para o sistema amazônico e são afluentes da margem direita do Solimões."
+          "why": "Certo. Os rios Juruá e Purus integram a drenagem amazônica. Bacia hidrográfica é área de contribuição para um sistema de rios; não se confunde com regional de planejamento."
         },
         {
           "a": false,
           "q": "A Serra do Divisor está no extremo leste do Acre, distante da fronteira peruana.",
-          "why": "Fica no extremo oeste, junto à fronteira com o Peru. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Errado. A Serra do Divisor fica no oeste do Acre, próxima à fronteira com o Peru, e não no extremo leste. É referência importante do relevo e da conservação."
         },
         {
           "a": true,
           "q": "O clima predominante do Acre é equatorial quente e úmido.",
-          "why": "É a caracterização geral do Zoneamento Ecológico-Econômico. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Certo. O Acre tem clima predominantemente equatorial, com temperaturas elevadas, umidade e variação sazonal de chuva. O período menos chuvoso não torna o estado de clima árido."
         },
         {
           "a": true,
           "q": "O ZEE do Acre destaca Floresta Tropical Aberta e Floresta Tropical Densa.",
-          "why": "São as duas formações florestais gerais descritas no documento. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Certo. O Zoneamento Ecológico-Econômico do Acre destaca tipologias como Floresta Tropical Aberta e Densa, relevantes à diversidade ambiental e ao planejamento territorial."
         },
         {
           "a": false,
           "q": "Terra indígena e unidade de conservação são categorias jurídicas idênticas.",
-          "why": "São categorias distintas de áreas protegidas. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Errado. Terra Indígena e Unidade de Conservação possuem fundamentos constitucionais e legais próprios. Podem ter objetivos de proteção ambiental, mas não são categorias jurídicas idênticas."
         },
         {
           "a": true,
           "q": "A BR-364 conecta Rio Branco ao Vale do Juruá, enquanto a BR-317 integra o corredor até Assis Brasil e a fronteira peruana.",
-          "why": "São os eixos rodoviários federais de integração regional e internacional. Contexto histórico-geográfico: O Acre utiliza UTC−5; a diferença com Brasília em UTC−3 é de duas horas. Os rios Juruá e Purus integram a bacia amazônica; divisor de águas separa bacias, não significa fronteira internacional."
+          "why": "Certo. A BR-364 liga Rio Branco em direção ao Vale do Juruá; a BR-317 integra o eixo do Alto Acre até Assis Brasil, na fronteira peruana. Não confunda rodovias e sentidos."
         }
       ],
       "slug": "pcac-2026-realidade-acre-geografia-fuso-bacias-relevo",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "Geografia do Acre — fuso, hidrografia, relevo, clima, vegetação e transportes",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 8,
-        "revision_reason": "Informações históricas e geográficas ampliadas; revisão pedagógica pendente"
+        "items": [
+          {
+            "a": true,
+            "q": "O Acre integra o fuso UTC−5 e fica duas horas atrás de Brasília.",
+            "why": "Certo. O Acre adota UTC−5, enquanto Brasília costuma estar em UTC−3, diferença de duas horas. Quando são 12h em Brasília, são 10h no Acre, considerando esses fusos."
+          },
+          {
+            "a": false,
+            "q": "O Acre está no mesmo fuso horário de Brasília.",
+            "why": "Errado. O Acre está em UTC−5 e Brasília em UTC−3, não compartilham o mesmo fuso. Para comparar horários de registros, verifique sempre a referência utilizada."
+          },
+          {
+            "a": true,
+            "q": "As bacias do Juruá e do Purus integram a Bacia Amazônica.",
+            "why": "Certo. Os rios Juruá e Purus integram a drenagem amazônica. Bacia hidrográfica é área de contribuição para um sistema de rios; não se confunde com regional de planejamento."
+          },
+          {
+            "a": false,
+            "q": "A Serra do Divisor está no extremo leste do Acre, distante da fronteira peruana.",
+            "why": "Errado. A Serra do Divisor fica no oeste do Acre, próxima à fronteira com o Peru, e não no extremo leste. É referência importante do relevo e da conservação."
+          },
+          {
+            "a": true,
+            "q": "O clima predominante do Acre é equatorial quente e úmido.",
+            "why": "Certo. O Acre tem clima predominantemente equatorial, com temperaturas elevadas, umidade e variação sazonal de chuva. O período menos chuvoso não torna o estado de clima árido."
+          },
+          {
+            "a": true,
+            "q": "O ZEE do Acre destaca Floresta Tropical Aberta e Floresta Tropical Densa.",
+            "why": "Certo. O Zoneamento Ecológico-Econômico do Acre destaca tipologias como Floresta Tropical Aberta e Densa, relevantes à diversidade ambiental e ao planejamento territorial."
+          },
+          {
+            "a": false,
+            "q": "Terra indígena e unidade de conservação são categorias jurídicas idênticas.",
+            "why": "Errado. Terra Indígena e Unidade de Conservação possuem fundamentos constitucionais e legais próprios. Podem ter objetivos de proteção ambiental, mas não são categorias jurídicas idênticas."
+          },
+          {
+            "a": true,
+            "q": "A BR-364 conecta Rio Branco ao Vale do Juruá, enquanto a BR-317 integra o corredor até Assis Brasil e a fronteira peruana.",
+            "why": "Certo. A BR-364 liga Rio Branco em direção ao Vale do Juruá; a BR-317 integra o eixo do Alto Acre até Assis Brasil, na fronteira peruana. Não confunda rodovias e sentidos."
+          }
+        ],
+        "method": "Conferência individual de 8 questões de geografia, história, cronologia, limites e indicadores do Acre com fontes oficiais e historiográficas",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:39:23Z",
+        "review_type": "didactic_manual",
+        "source_note": "SEMA/AC — Zoneamento Ecológico-Econômico Fase II; Lei Federal nº 12.876/2013; SEMA — Unidades de Conservação; SEPLAN — Diagnóstico socioeconômico do Acre.",
+        "topic_label": "Geografia do Acre — fuso, hidrografia, relevo, clima, vegetação e transportes",
+        "material_slug": "pcac-2026-realidade-acre-geografia-fuso-bacias-relevo"
       }
     },
     {
@@ -205,39 +372,69 @@
         {
           "a": true,
           "q": "O Tratado de Petrópolis foi firmado em 1903 e integrou o processo de incorporação do Acre ao Brasil.",
-          "why": "O tratado de 1903 encerrou a disputa diplomática central entre Brasil e Bolívia."
+          "why": "Certo. O Tratado de Petrópolis foi assinado entre Brasil e Bolívia em 17 de novembro de 1903, no processo diplomático de incorporação do Acre ao Brasil após conflitos territoriais."
         },
         {
           "a": false,
           "q": "O Acre tornou-se Estado brasileiro em 1904.",
-          "why": "Em 1904 foi organizado como território federal; a elevação a Estado ocorreu em 1962."
+          "why": "Errado. O Acre foi organizado como Território Federal em 1904; a elevação à categoria de Estado ocorreu em 1962, marcos jurídicos distintos."
         },
         {
           "a": true,
           "q": "Rio Branco é a capital do Acre.",
-          "why": "A capital estadual é Rio Branco. Contexto histórico-geográfico: Ciclo da borracha foi relevante historicamente, porém a economia contemporânea inclui serviços, comércio, agropecuária e administração pública. População de Censo e estimativa anual são medidas de anos e metodologias distintos."
+          "why": "Certo. Rio Branco é a capital do Acre, conforme Constituição estadual, art. 7º. Cruzeiro do Sul é município importante da região do Juruá."
         },
         {
           "a": true,
           "q": "O Acre faz fronteira internacional com Peru e Bolívia.",
-          "why": "Esses são os dois países vizinhos do estado. Contexto histórico-geográfico: Ciclo da borracha foi relevante historicamente, porém a economia contemporânea inclui serviços, comércio, agropecuária e administração pública. População de Censo e estimativa anual são medidas de anos e metodologias distintos."
+          "why": "Certo. O Acre faz fronteira internacional com Peru e Bolívia. Amazonas e Rondônia são unidades da federação brasileira com as quais mantém divisas estaduais."
         },
         {
           "a": false,
           "q": "A estimativa populacional do IBGE para 2026 deve ser apresentada como se fosse o resultado do Censo 2022.",
-          "why": "Censo e estimativa são indicadores distintos e devem ser identificados pelo respectivo ano e método."
+          "why": "Errado. Estimativa IBGE de 2026 refere-se a projeção/cálculo anual de população, enquanto Censo 2022 é recenseamento. Os resultados não podem ser apresentados como se fossem da mesma operação."
         }
       ],
       "slug": "pcac-2026-realidade-acre-historia-geografia-economia",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "História, geografia, formação social, economia e organização territorial do Acre",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Informações históricas e geográficas ampliadas; revisão pedagógica pendente"
+        "items": [
+          {
+            "a": true,
+            "q": "O Tratado de Petrópolis foi firmado em 1903 e integrou o processo de incorporação do Acre ao Brasil.",
+            "why": "Certo. O Tratado de Petrópolis foi assinado entre Brasil e Bolívia em 17 de novembro de 1903, no processo diplomático de incorporação do Acre ao Brasil após conflitos territoriais."
+          },
+          {
+            "a": false,
+            "q": "O Acre tornou-se Estado brasileiro em 1904.",
+            "why": "Errado. O Acre foi organizado como Território Federal em 1904; a elevação à categoria de Estado ocorreu em 1962, marcos jurídicos distintos."
+          },
+          {
+            "a": true,
+            "q": "Rio Branco é a capital do Acre.",
+            "why": "Certo. Rio Branco é a capital do Acre, conforme Constituição estadual, art. 7º. Cruzeiro do Sul é município importante da região do Juruá."
+          },
+          {
+            "a": true,
+            "q": "O Acre faz fronteira internacional com Peru e Bolívia.",
+            "why": "Certo. O Acre faz fronteira internacional com Peru e Bolívia. Amazonas e Rondônia são unidades da federação brasileira com as quais mantém divisas estaduais."
+          },
+          {
+            "a": false,
+            "q": "A estimativa populacional do IBGE para 2026 deve ser apresentada como se fosse o resultado do Censo 2022.",
+            "why": "Errado. Estimativa IBGE de 2026 refere-se a projeção/cálculo anual de população, enquanto Censo 2022 é recenseamento. Os resultados não podem ser apresentados como se fossem da mesma operação."
+          }
+        ],
+        "method": "Conferência individual de 5 questões de geografia, história, cronologia, limites e indicadores do Acre com fontes oficiais e historiográficas",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:39:23Z",
+        "review_type": "didactic_manual",
+        "source_note": "Dados territoriais e populacionais: IBGE Cidades e Estados, consulta com referência 2022, 2025 e estimativa 2026. Formação histórica: publicações históricas do IBGE. Atualizar indicadores conforme novas divulgações.",
+        "topic_label": "História, geografia, formação social, economia e organização territorial do Acre",
+        "material_slug": "pcac-2026-realidade-acre-historia-geografia-economia"
       }
     },
     {
@@ -245,44 +442,79 @@
         {
           "a": true,
           "q": "O Tratado de Ayacucho foi firmado em 1867 entre Brasil e Bolívia.",
-          "why": "O tratado foi assinado em 27 de março de 1867. Contexto histórico-geográfico: Cronologia para a prova: Tratado de Ayacucho (1867), Revolução Acreana (1902), Tratado de Petrópolis (1903), Território Federal (1904) e elevação a Estado (1962). Não confunda negociação de limites com estadualização."
+          "why": "Certo. O Tratado de Ayacucho, também conhecido como tratado de limites entre Brasil e Bolívia, foi celebrado em 27 de março de 1867, antecedendo a Revolução Acreana e o Tratado de Petrópolis."
         },
         {
           "a": true,
           "q": "O art. 2º do Tratado de Ayacucho adotou o princípio do uti possidetis.",
-          "why": "O princípio foi expressamente indicado como base para a determinação da fronteira."
+          "why": "Certo. O art. 2º do Tratado de Ayacucho recorre ao princípio do uti possidetis, relacionado à ocupação territorial como critério de delimitação na época."
         },
         {
           "a": false,
           "q": "O Tratado de Ayacucho reconheceu o atual Acre como território brasileiro.",
-          "why": "Na delimitação de 1867, a região ficou do lado boliviano. Contexto histórico-geográfico: Cronologia para a prova: Tratado de Ayacucho (1867), Revolução Acreana (1902), Tratado de Petrópolis (1903), Território Federal (1904) e elevação a Estado (1962). Não confunda negociação de limites com estadualização."
+          "why": "Errado. Ayacucho de 1867 não reconheceu o território do atual Acre como brasileiro. A questão territorial foi modificada posteriormente, sobretudo pelo Tratado de Petrópolis de 1903."
         },
         {
           "a": true,
           "q": "A expansão da borracha atraiu migrantes brasileiros para os vales do Purus e do Juruá.",
-          "why": "A economia da borracha impulsionou a ocupação brasileira. Contexto histórico-geográfico: Cronologia para a prova: Tratado de Ayacucho (1867), Revolução Acreana (1902), Tratado de Petrópolis (1903), Território Federal (1904) e elevação a Estado (1962). Não confunda negociação de limites com estadualização."
+          "why": "Certo. A expansão dos seringais e da demanda por borracha atraiu migrantes brasileiros aos vales do Purus e Juruá e intensificou disputas territoriais e relações com populações indígenas."
         },
         {
           "a": false,
           "q": "A Revolução Acreana começou em 1903, depois do Tratado de Petrópolis.",
-          "why": "A revolução começou em 1902; o Tratado de Petrópolis foi assinado em 1903. Contexto histórico-geográfico: Cronologia para a prova: Tratado de Ayacucho (1867), Revolução Acreana (1902), Tratado de Petrópolis (1903), Território Federal (1904) e elevação a Estado (1962). Não confunda negociação de limites com estadualização."
+          "why": "Errado. A Revolução Acreana teve início em 1902 e antecedeu o Tratado de Petrópolis, assinado em novembro de 1903. Inverter essa ordem é erro comum."
         },
         {
           "a": true,
           "q": "O Tratado de Petrópolis foi assinado em 17 de novembro de 1903.",
-          "why": "É a data de assinatura do tratado que resolveu diplomaticamente a questão. Contexto histórico-geográfico: Cronologia para a prova: Tratado de Ayacucho (1867), Revolução Acreana (1902), Tratado de Petrópolis (1903), Território Federal (1904) e elevação a Estado (1962). Não confunda negociação de limites com estadualização."
+          "why": "Certo. O Tratado de Petrópolis foi assinado em 17/11/1903 entre Brasil e Bolívia. A organização como Território Federal ocorreu em 1904 e a condição de Estado em 1962."
         }
       ],
       "slug": "pcac-2026-realidade-acre-tratado-ayacucho-formacao-historica",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "História do Acre — Tratado de Ayacucho e questão acreana",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 6,
-        "revision_reason": "Informações históricas e geográficas ampliadas; revisão pedagógica pendente"
+        "items": [
+          {
+            "a": true,
+            "q": "O Tratado de Ayacucho foi firmado em 1867 entre Brasil e Bolívia.",
+            "why": "Certo. O Tratado de Ayacucho, também conhecido como tratado de limites entre Brasil e Bolívia, foi celebrado em 27 de março de 1867, antecedendo a Revolução Acreana e o Tratado de Petrópolis."
+          },
+          {
+            "a": true,
+            "q": "O art. 2º do Tratado de Ayacucho adotou o princípio do uti possidetis.",
+            "why": "Certo. O art. 2º do Tratado de Ayacucho recorre ao princípio do uti possidetis, relacionado à ocupação territorial como critério de delimitação na época."
+          },
+          {
+            "a": false,
+            "q": "O Tratado de Ayacucho reconheceu o atual Acre como território brasileiro.",
+            "why": "Errado. Ayacucho de 1867 não reconheceu o território do atual Acre como brasileiro. A questão territorial foi modificada posteriormente, sobretudo pelo Tratado de Petrópolis de 1903."
+          },
+          {
+            "a": true,
+            "q": "A expansão da borracha atraiu migrantes brasileiros para os vales do Purus e do Juruá.",
+            "why": "Certo. A expansão dos seringais e da demanda por borracha atraiu migrantes brasileiros aos vales do Purus e Juruá e intensificou disputas territoriais e relações com populações indígenas."
+          },
+          {
+            "a": false,
+            "q": "A Revolução Acreana começou em 1903, depois do Tratado de Petrópolis.",
+            "why": "Errado. A Revolução Acreana teve início em 1902 e antecedeu o Tratado de Petrópolis, assinado em novembro de 1903. Inverter essa ordem é erro comum."
+          },
+          {
+            "a": true,
+            "q": "O Tratado de Petrópolis foi assinado em 17 de novembro de 1903.",
+            "why": "Certo. O Tratado de Petrópolis foi assinado em 17/11/1903 entre Brasil e Bolívia. A organização como Território Federal ocorreu em 1904 e a condição de Estado em 1962."
+          }
+        ],
+        "method": "Conferência individual de 6 questões de geografia, história, cronologia, limites e indicadores do Acre com fontes oficiais e historiográficas",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:39:23Z",
+        "review_type": "didactic_manual",
+        "source_note": "Câmara dos Deputados, Decreto nº 4.280/1868 (texto original do Tratado de Ayacucho); SEPLAN Acre — Rota de Integração, 1867.",
+        "topic_label": "História do Acre — Tratado de Ayacucho e questão acreana",
+        "material_slug": "pcac-2026-realidade-acre-tratado-ayacucho-formacao-historica"
       }
     },
     {
@@ -290,39 +522,69 @@
         {
           "a": true,
           "q": "A expansão da borracha contribuiu para a migração e ocupação dos seringais no Acre.",
-          "why": "A atividade atraiu trabalhadores e interesses econômicos para a região. Contexto histórico-geográfico: O Tratado de Petrópolis foi firmado em 17/11/1903 entre Brasil e Bolívia após conflitos e negociações territoriais. O Acre foi organizado como Território Federal em 1904 e elevado à condição de Estado em 1962."
+          "why": "Certo. A exploração da borracha atraiu migrantes e estruturou seringais no Acre, influenciando economia, ocupação de território e tensões fronteiriças. A história também envolve povos indígenas."
         },
         {
           "a": false,
           "q": "O Tratado de Petrópolis foi firmado em 1962.",
-          "why": "O tratado foi firmado em 1903; 1962 marca a elevação do Acre a estado. Contexto histórico-geográfico: O Tratado de Petrópolis foi firmado em 17/11/1903 entre Brasil e Bolívia após conflitos e negociações territoriais. O Acre foi organizado como Território Federal em 1904 e elevado à condição de Estado em 1962."
+          "why": "Errado. O Tratado de Petrópolis foi firmado em 17 de novembro de 1903. O ano de 1962 marca a elevação do Acre à condição de Estado brasileiro, não a assinatura do tratado."
         },
         {
           "a": true,
           "q": "Plácido de Castro é uma liderança associada à Revolução Acreana.",
-          "why": "É uma das figuras centrais do processo de conflito armado. Contexto histórico-geográfico: O Tratado de Petrópolis foi firmado em 17/11/1903 entre Brasil e Bolívia após conflitos e negociações territoriais. O Acre foi organizado como Território Federal em 1904 e elevado à condição de Estado em 1962."
+          "why": "Certo. Plácido de Castro é liderança central associada à Revolução Acreana de 1902 e ao movimento que precedeu a incorporação diplomática da região em 1903."
         },
         {
           "a": false,
           "q": "A condição de território federal em 1904 e a condição de estado em 1962 são o mesmo marco jurídico.",
-          "why": "São etapas históricas e administrativas diferentes. Contexto histórico-geográfico: O Tratado de Petrópolis foi firmado em 17/11/1903 entre Brasil e Bolívia após conflitos e negociações territoriais. O Acre foi organizado como Território Federal em 1904 e elevado à condição de Estado em 1962."
+          "why": "Errado. Território Federal em 1904 e Estado em 1962 são situações institucionais distintas. No segundo caso, o Acre adquiriu condição estadual na Federação."
         },
         {
           "a": false,
           "q": "A história econômica do Acre pode ser estudada sem considerar povos indígenas e conflitos territoriais.",
-          "why": "A formação social e territorial inclui povos indígenas, migração, relações de trabalho e conflitos."
+          "why": "Errado. A história da borracha e da ocupação acreana envolve territórios e sociedades indígenas, conflitos, migrações e negociações internacionais. Excluir esses fatores produz análise incompleta."
         }
       ],
       "slug": "pcac-2026-realidade-acre-tratado-petropolis-ciclos-borracha",
       "discipline": "Realidade do Estado do Acre",
       "topic_label": "Revolução Acreana, Tratado de Petrópolis e ciclos da borracha",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Informações históricas e geográficas ampliadas; revisão pedagógica pendente"
+        "items": [
+          {
+            "a": true,
+            "q": "A expansão da borracha contribuiu para a migração e ocupação dos seringais no Acre.",
+            "why": "Certo. A exploração da borracha atraiu migrantes e estruturou seringais no Acre, influenciando economia, ocupação de território e tensões fronteiriças. A história também envolve povos indígenas."
+          },
+          {
+            "a": false,
+            "q": "O Tratado de Petrópolis foi firmado em 1962.",
+            "why": "Errado. O Tratado de Petrópolis foi firmado em 17 de novembro de 1903. O ano de 1962 marca a elevação do Acre à condição de Estado brasileiro, não a assinatura do tratado."
+          },
+          {
+            "a": true,
+            "q": "Plácido de Castro é uma liderança associada à Revolução Acreana.",
+            "why": "Certo. Plácido de Castro é liderança central associada à Revolução Acreana de 1902 e ao movimento que precedeu a incorporação diplomática da região em 1903."
+          },
+          {
+            "a": false,
+            "q": "A condição de território federal em 1904 e a condição de estado em 1962 são o mesmo marco jurídico.",
+            "why": "Errado. Território Federal em 1904 e Estado em 1962 são situações institucionais distintas. No segundo caso, o Acre adquiriu condição estadual na Federação."
+          },
+          {
+            "a": false,
+            "q": "A história econômica do Acre pode ser estudada sem considerar povos indígenas e conflitos territoriais.",
+            "why": "Errado. A história da borracha e da ocupação acreana envolve territórios e sociedades indígenas, conflitos, migrações e negociações internacionais. Excluir esses fatores produz análise incompleta."
+          }
+        ],
+        "method": "Conferência individual de 5 questões de geografia, história, cronologia, limites e indicadores do Acre com fontes oficiais e historiográficas",
+        "status": "reviewed",
+        "subject": "Realidade do Estado do Acre",
+        "version": 1,
+        "checked_at": "2026-11-21T18:39:23Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento histórico baseado em marcos amplamente documentados. Para datas, cláusulas específicas e redação do tratado, consultar o instrumento oficial e fontes históricas institucionais.",
+        "topic_label": "Revolução Acreana, Tratado de Petrópolis e ciclos da borracha",
+        "material_slug": "pcac-2026-realidade-acre-tratado-petropolis-ciclos-borracha"
       }
     }
   ]
