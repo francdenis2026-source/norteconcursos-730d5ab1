@@ -854,3 +854,18 @@ As questões são autorais no estilo de concursos e não foram apresentadas como
 **Validação SQL:** 9/9 materiais com questão de abertura e 9/9 com resolução comentada. As 64 questões existentes no treinador foram preservadas. Migration na MAIN: `supabase/migrations/20261121298700_add_opening_questions_pcac_criminal_law.sql`, commit `2fb7f3bb6eeec01691b6223bb3f70d1ba4aae1bc`. Aplicação direta no Supabase confirmada.
 
 **Limite:** ainda não foi realizado teste visual na interface nem confirmado CI para esse commit. Não houve publicação manual em produção.
+
+
+## Direito Administrativo e Constitucional — questões de abertura e resolução comentada — 21/11/2026
+
+Aplicado o padrão nos 11 materiais ativos:
+- Noções de Direito Administrativo: 8/8 aulas com questão inicial e resolução.
+- Noções de Direito Constitucional: 3/3 aulas com questão inicial e resolução.
+
+Os 11 itens são questões autorais no estilo de concursos, sem atribuição a provas oficiais. Cobrem princípios do art. 37/LIMPE; administração direta, indireta e autarquias; poderes hierárquico e disciplinar; atributos do poder de polícia; elementos dos atos administrativos; validade do concurso público; responsabilidade civil objetiva; improbidade após a Lei 14.230/2021; autonomia estadual; habeas data; fundamentos da República.
+
+**Validação SQL:** 11/11 materiais com questão de abertura e resolução comentada. As 62 questões anteriores do treinador foram preservadas (44 de Administrativo e 18 de Constitucional).
+
+Migration na MAIN: `supabase/migrations/20261121298800_add_opening_questions_pcac_admin_constitutional_law.sql`, commit `8dc2bfe4d77fab0a4c3d68fcd8b84a98ae2907d9`. Aplicação direta no Supabase confirmada.
+
+**Limite:** sem teste de renderização visual nem confirmação de CI nesta etapa; não houve publicação manual em produção.
