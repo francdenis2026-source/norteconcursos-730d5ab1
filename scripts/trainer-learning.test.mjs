@@ -86,3 +86,42 @@ test("tópicos genéricos e coincidências parciais não recomendam material alh
     [],
   );
 });
+
+test("Estatística e RLM encontram materiais pelo resumo e por flexões dos termos", () => {
+  const stats = [
+    material("stats-frequencias", "Estatística", "2. Organização e apresentação de dados", {
+      title: "Distribuição de frequências",
+      summary: "Frequências absolutas, relativas e acumuladas; tabelas e classes.",
+    }),
+    material("stats-dispersao", "Estatística", "4. Medidas de dispersão", {
+      title: "Medidas de dispersão e coeficiente de variação",
+      summary: "Amplitude, variância, desvio-padrão e coeficiente de variação.",
+    }),
+  ];
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Estatística", "Frequência relativa"), stats).map((m) => m.slug),
+    ["stats-frequencias"],
+  );
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Estatística", "Desvio-padrão"), stats).map((m) => m.slug),
+    ["stats-dispersao"],
+  );
+  const rlm = [
+    material("rlm-combinatoria", "Raciocínio Lógico", "11. Análise combinatória", {
+      title: "Análise combinatória e probabilidade",
+      summary: "Combinação, arranjo, permutação e princípio fundamental da contagem.",
+    }),
+    material("rlm-proposicoes", "Raciocínio Lógico", "2. Estruturas lógicas", {
+      title: "Proposições simples e compostas",
+      summary: "Sentenças abertas, proposições e valores lógicos.",
+    }),
+  ];
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Raciocínio Lógico", "Combinação simples"), rlm).map((m) => m.slug),
+    ["rlm-combinatoria"],
+  );
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Raciocínio Lógico", "Proposições simples e proposições compostas"), rlm).map((m) => m.slug),
+    ["rlm-proposicoes"],
+  );
+});
