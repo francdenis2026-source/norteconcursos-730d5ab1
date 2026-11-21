@@ -39,6 +39,10 @@ jobs:
         if: ${{ !cancelled() }}
         run: node scripts/check-pcac-quiz-snapshot.mjs
 
+      - name: Validate restored PC-AC SQL migrations
+        if: ${{ !cancelled() }}
+        run: node scripts/check-pcac-sql-migrations.mjs
+
       - name: TypeScript typecheck
         if: ${{ !cancelled() }}
         run: bun run typecheck
