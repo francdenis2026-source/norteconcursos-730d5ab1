@@ -8,6 +8,7 @@ assert.equal(manifest.contest_name, 'PC-AC 2026');
 assert.equal(manifest.files.length, 15, 'Expected 15 discipline snapshots');
 
 const uniqueSlugs = new Set();
+const questionAnswers = new Map();
 const report = { disciplines: 0, materials: 0, quiz_items: 0, checked_reviews: 0, legacy_reviews: 0, pending_revalidation: 0, missing_reviews: 0 };
 for (const item of manifest.files) {
   assert.match(item.path, /^data\/pcac-2026\/2026-11-21\/quiz-[a-z0-9-]+\.json$/);
@@ -30,6 +31,11 @@ for (const item of manifest.files) {
       assert.ok(typeof q.q === 'string' && q.q.trim(), 'Empty prompt: ' + material.slug);
       assert.equal(typeof q.a, 'boolean', 'Invalid answer: ' + material.slug);
       assert.ok(typeof q.why === 'string' && q.why.trim().length >= 80, 'Short explanation: ' + material.slug);
+      const normalized = q.q.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').replace(/\\s+/g, ' ').trim().toLowerCase();
+      const old = questionAnswers.get(normalized);
+      assert.ok(!old || old.answer === q.a,
+        'Conflicting answer to equivalent prompt: ' + material.slug + ' versus ' + (old?.slug ?? 'unknown'));
+      questionAnswers.set(normalized, { answer: q.a, slug: material.slug });
       quizCount++;
     }
     const review = material.practice_review;
@@ -56,4 +62,5 @@ for (const item of manifest.files) {
 }
 assert.equal(report.materials, 190);
 assert.equal(report.quiz_items, 1474);
+assert.ok(questionAnswers.size > 1000, 'Unexpectedly many identical quiz prompts');
 console.log('PC-AC 2026 snapshot integrity:', JSON.stringify(report, null, 2));
