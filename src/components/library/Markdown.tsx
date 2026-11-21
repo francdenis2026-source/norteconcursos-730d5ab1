@@ -289,7 +289,7 @@ function parse(markdown: string): Block[] {
   let cleaned = markdown
     .replace(/\r\n/g, "\n")
     // Registros antigos gravaram quebras de linha como o texto literal "\n".
-    .replace(/\\n/g, "\n")
+    .replace(/\\{1,2}n/g, "\n")
     // Linha de "---" sozinha é separador, nunca conteúdo de estudo.
     .replace(/^[ \t]*(?:-{3,}|\*{3,}|_{3,})[ \t]*$/gm, "")
     .replace(/(?:^|\n)[^\n]*(?:trimDanglingNumber|document\.querySelectorAll)[^\n]*(?=\n|$)/gi, "")
