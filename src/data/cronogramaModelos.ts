@@ -1,9 +1,10 @@
 import { canonicalDiscipline } from "@/lib/cronograma";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { pcAcDisciplinePoints } from "@/lib/pcAcreExamWeights";
 
 // Modelos fixos de cronograma, extraídos dos cronogramas do Método Focus (edital → disciplinas → conteúdo programático).
 // "peso" é a sugestão inicial (2 = disciplina de maior peso/dificuldade: bloco inicial de 2 h); o aluno pode ajustar.
-export interface ModeloDisciplina { nome: string; peso: 1 | 2; topicos: string[] }
+export interface ModeloDisciplina { nome: string; peso: 1 | 2; topicos: string[]; /** pontos da disciplina na prova (edital) */ pontos?: number }
 export interface ModeloCronograma {
   id: string; orgao: string; cargo: string; banca: string; nivel: string; metodo: string; questoes: string; ano: number;
   disciplinas: ModeloDisciplina[];
@@ -2161,11 +2162,15 @@ const MODELOS_BRUTOS: ModeloCronograma[] = [
       : "Prova objetiva + discursiva",
     ano: 2026,
     disciplinas: cargo.blocks.flatMap((block) =>
-      block.disciplines.map((discipline) => ({
-        nome: discipline.name,
-        peso: /específicos/i.test(block.title) ? 2 as const : 1 as const,
-        topicos: discipline.topics ?? [],
-      })),
+      block.disciplines.map((discipline) => {
+        const pontos = pcAcDisciplinePoints(cargo).find((row) => row.id === discipline.id)?.points;
+        return {
+          nome: discipline.name,
+          peso: /específicos/i.test(block.title) ? 2 as const : 1 as const,
+          topicos: discipline.topics ?? [],
+          ...(pontos != null ? { pontos } : {}),
+        };
+      }),
     ),
   })),
 ] as ModeloCronograma[];
@@ -2187,7 +2192,8 @@ export const MODELOS_CRONOGRAMA: ModeloCronograma[] = MODELOS_BRUTOS.map((m) => 
     if (cur) {
       cur.topicos = semRepetir([...cur.topicos, ...d.topicos]);
       cur.peso = Math.max(cur.peso, d.peso) as 1 | 2;
-    } else por.set(nome, { nome, peso: d.peso, topicos: semRepetir(d.topicos) });
+      if (d.pontos != null) cur.pontos = (cur.pontos ?? 0) + d.pontos;
+    } else por.set(nome, { nome, peso: d.peso, topicos: semRepetir(d.topicos), ...(d.pontos != null ? { pontos: d.pontos } : {}) });
   }
   return { ...m, disciplinas: [...por.values()] };
 });
