@@ -547,42 +547,37 @@ function StudyRoomPage() {
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
         <div className="order-2 space-y-5 lg:order-1">
-          {/* Material */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-base">
+          {/* Material: sem moldura de cartão, para a folha ficar como a da Biblioteca. */}
+          <section className="space-y-3" aria-labelledby="study-material-title">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h2 id="study-material-title" className="flex items-center gap-2 text-base font-bold">
                 <FileText className="h-5 w-5 text-primary" /> Material de estudo
-              </CardTitle>
-              <CardDescription>
+              </h2>
+              <p className="text-sm text-muted-foreground">
                 {isPending
                   ? "Buscando na Biblioteca…"
                   : exact.length
                     ? `${exact.length} ${exact.length === 1 ? "material encontrado" : "materiais encontrados"} ${broadMaterials ? "na disciplina (nenhum trata exatamente deste assunto)" : "para este assunto"}.`
                     : "Ainda não há material escrito deste assunto."}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
+              </p>
+            </div>
+            <div className="space-y-4">
               {exact.length > 1 && (
-                <div className="flex flex-wrap gap-2" role="tablist" aria-label="Materiais">
-                  {exact.slice(0, 8).map(({ m, score }) => (
-                    <button
-                      key={m.slug}
-                      type="button"
-                      role="tab"
-                      aria-selected={m.slug === currentSlug}
-                      onClick={() => setSlug(m.slug)}
-                      className={cn(
-                        "rounded-full border px-3 py-1 text-xs font-semibold",
-                        m.slug === currentSlug
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : "hover:border-primary/50",
-                      )}
-                    >
-                      {score > 0 && "★ "}
-                      {m.title}
-                    </button>
-                  ))}
-                </div>
+                <label className="flex flex-col gap-1 text-sm font-semibold">
+                  Material
+                  <select
+                    value={currentSlug ?? ""}
+                    onChange={(e) => setSlug(e.target.value)}
+                    className="h-11 rounded-lg border border-border bg-background px-3 text-sm font-medium text-foreground"
+                  >
+                    {exact.slice(0, 8).map(({ m, score }) => (
+                      <option key={m.slug} value={m.slug}>
+                        {score > 0 ? "★ " : ""}
+                        {m.title}
+                      </option>
+                    ))}
+                  </select>
+                </label>
               )}
               {currentSlug && loadingMaterial && (
                 <Loader2
@@ -637,8 +632,8 @@ function StudyRoomPage() {
                   </Link>
                 </div>
               )}
-            </CardContent>
-          </Card>
+            </div>
+          </section>
 
           {/* Videoaulas */}
           <Card>

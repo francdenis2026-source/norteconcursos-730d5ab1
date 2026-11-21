@@ -159,6 +159,10 @@ function parse(markdown: string): Block[] {
     } else if (line.startsWith("## ")) {
       blocks.push({ type: "h2", text: line.slice(3).trim() });
       i++;
+    } else if (line.startsWith("# ")) {
+      // "# Título" no meio do texto vira seção, sem sobrar o "#" como texto.
+      blocks.push({ type: "h2", text: line.slice(2).trim() });
+      i++;
     } else if (line.startsWith(">")) {
       const quote: string[] = [];
       while (i < lines.length && (lines[i] ?? "").startsWith(">")) {
@@ -192,7 +196,7 @@ function parse(markdown: string): Block[] {
       while (
         i < lines.length &&
         (lines[i] ?? "").trim() &&
-        !/^(#{2,3} |>|\s*([-*]|\d+\.)\s+|\s*\|)/.test(lines[i] ?? "")
+        !/^(#{1,3} |>|\s*([-*]|\d+\.)\s+|\s*\|)/.test(lines[i] ?? "")
       ) {
         paragraph.push((lines[i] ?? "").trim());
         i++;
