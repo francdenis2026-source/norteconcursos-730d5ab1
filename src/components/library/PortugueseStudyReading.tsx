@@ -1,6 +1,7 @@
 import { useId, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
 import { Markdown } from "./Markdown";
+import { StudyPriorityBadges } from "./StudyPriorityBadges";
 
 /** The original Markdown stays intact within each topic, including tables and source links. */
 export function portugueseSections(source: string) {
@@ -18,9 +19,13 @@ export function portugueseSections(source: string) {
 
 export function PortugueseStudyReading({
   source,
-  renderSection = (body) => <Markdown source={body} />,
+  discipline,
+  contestName,
+  renderSection,
 }: {
   source: string;
+  discipline?: string;
+  contestName?: string | null;
   renderSection?: (body: string) => ReactNode;
 }) {
   const prefix = useId();
@@ -58,10 +63,10 @@ export function PortugueseStudyReading({
             <span className="portuguese-reader__number" aria-hidden="true">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h2>{section.title}</h2>
+            <span className="min-w-0 flex-1"><h2>{section.title}</h2>{discipline && contestName && <StudyPriorityBadges discipline={discipline} contestName={contestName} topic={section.title} className="mt-1" />}</span>
             <ChevronDown size={18} aria-hidden="true" />
           </summary>
-          <div className="portuguese-reader__body">{renderSection(section.body)}</div>
+          <div className="portuguese-reader__body">{renderSection ? renderSection(section.body) : <Markdown source={section.body} discipline={discipline} contestName={contestName} />}</div>
         </details>
       ))}
     </div>
