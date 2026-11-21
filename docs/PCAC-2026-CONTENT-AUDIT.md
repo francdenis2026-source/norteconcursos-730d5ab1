@@ -444,3 +444,17 @@ Aula 17 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121120000_deepen_pcac_bank_reconciliation_trainer.sql. Commit: f90a2767bf0f8b7f6ca129c8d1c44f6831e7731c.
 Verificação pós-gravação: 8 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — folha de pagamento e encargos — 21/11/2026
+
+Aula 18 atualizada diretamente no Supabase:
+
+- 8 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com diferença entre salário bruto/líquido, INSS retido, contribuição patronal, FGTS, regime de competência e lançamentos simplificados.
+- Removido trecho indevido de CPC 26.
+- Incluído alerta de que percentuais legais dependem do regime e das premissas do enunciado; exemplos de alíquotas foram identificados como hipotéticos, não como taxas legais vigentes.
+
+Migration: supabase/migrations/20261121130000_deepen_pcac_payroll_social_charges_trainer.sql. Commit: f359f4cde6d46dac944a1258e446a5fb70bdc697.
+Verificação pós-gravação: 8 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
