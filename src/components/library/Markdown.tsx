@@ -120,12 +120,12 @@ function isSingleQuestionOption(text: string): boolean {
 }
 
 function cleanQuestionStem(lines: string[]): string {
-  const questionLine = lines.find((line) => /quest[aã]o\s*:/i.test(line));
-  return (questionLine ?? lines.join(" "))
-    .replace(/^.*?quest[aã]o\s*:\s*/i, "")
-    .replace(/\*\*/g, "")
-    .replace(/\\\\n/g, " ")
-    .trim();
+  // O material legado envolve "Questão:" em negrito; remova a formatação
+  // antes de localizar o enunciado.
+  const normalized = lines
+    .map((line) => line.replace(/\*\*/g, "").replace(/\\/g, " "))
+    .join(" ");
+  return normalized.replace(/^.*?quest[aã]o\s*:\s*/i, "").trim();
 }
 function isAnswerAnalysis(text: string): boolean {
   return /^\s*(?:\*\*)?(?:gabarito|resposta correta|coment[aá]rio|resolu[cç][aã]o comentada|an[aá]lise da quest[aã]o|an[aá]lise das alternativas)\s*[:—-]?/i.test(text) || /^\s*#\s+resolu[cç][aã]o comentada\b/i.test(text);
@@ -433,7 +433,7 @@ function renderBlocks(blocks: Block[], renderText: (text: string) => ReactNode):
     if (
       current.type === "quote" &&
       /desafio de prova/i.test(current.lines.join(" ")) &&
-      current.lines.some((line) => /quest[aã]o\s*:/i.test(line))
+      current.lines.some((line) => /quest[aã]o\s*:/i.test(line.replace(/\*/g, "")))
     ) {
       const stem = cleanQuestionStem(current.lines);
       const optionBlocks: { index: number; text: string }[] = [];
