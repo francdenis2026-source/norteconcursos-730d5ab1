@@ -131,3 +131,62 @@ A conferência das fontes oficiais identificou nove questões autorais do lote 0
 - `NC-PCAC-LEG-005`: Lei estadual nº 2.250/2009, art. 1º, e LC estadual nº 39/1993.
 
 Os enunciados, gabaritos e status foram preservados. A conferência foi feita contra o Planalto e o portal oficial de legislação do Estado do Acre. Fontes: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm ; https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm ; https://legis.ac.gov.br/detalhar_constituicao ; https://legis.ac.gov.br/detalhar_emendas/64 ; https://legis.ac.gov.br/detalhar/674 ; https://legis.ac.gov.br/detalhar/6874 ; https://legis.ac.gov.br/detalhar_imprimir/6527 ; https://legis.ac.gov.br/detalhar/417 ; https://legis.ac.gov.br/detalhar/110.
+
+
+## Revisão de Estatística, Raciocínio Lógico e integração ao treinador — 20/11/2026
+
+### Fonte e escopo
+A cobertura foi comparada com o Anexo III do Edital nº 001/2026 SEAD/PCAC para o cargo de Oficial Investigador de Polícia. A versão digital do edital no repositório apresenta o programa detalhado de Raciocínio Lógico (15 itens) e Estatística (9 blocos com subitens). Esta seção atualiza as contagens históricas de 14/11/2026; não as apaga.
+
+### Estado confirmado no Supabase
+- **Estatística:** 12 materiais PC-AC ativos, 120 questões autorais embutidas e 130 flashcards.
+- **Raciocínio Lógico:** 15 materiais PC-AC ativos, 150 questões autorais embutidas e 150 flashcards.
+- Cada um dos 27 materiais PC-AC tem 10 questões, pelo menos 10 flashcards, exemplos e seção de revisão. O primeiro material de Estatística tem 20 flashcards.
+- Raciocínio Lógico possui outros materiais ativos de acervo/complementares além desses 15; eles não foram somados ao inventário PC-AC específico.
+- Os arrays JSONB foram conferidos diretamente no banco. Os materiais estão publicados (content_status = active).
+
+### Correspondência do edital — Estatística
+1. **Fundamentos:** estatística descritiva e inferencial, população, amostra, técnicas de amostragem e variáveis qualitativas/quantitativas — materiais 01 e 11.
+2. **Organização e apresentação:** distribuição de frequências absolutas, relativas e acumuladas, tabelas, barras, linhas, setores e histogramas — materiais 02 e 03.
+3. **Tendência central:** média simples/ponderada, mediana e moda — materiais 04 e “Mediana, moda, quartis e medidas posicionais”.
+4. **Dispersão:** amplitude, variância, desvio-padrão e coeficiente de variação — material 05.
+5. **Posição:** quartis, decis e percentis — “Mediana, moda, quartis e medidas posicionais”.
+6. **Probabilidade:** espaço amostral, eventos, probabilidade condicional, independência e distribuições — materiais 06 e 12.
+7. **Relações entre variáveis:** correlação, regressão linear simples e distinção entre correlação e causalidade — material 07.
+8. **Séries temporais:** padrões, tendências, variações e comparação entre períodos — material 08.
+9. **Análise e interpretação:** outliers, indicadores, comparação de conjuntos, limitações e erros de interpretação — material 09.
+
+**Resultado da cobertura:** os nove blocos e os subitens expressos no programa estão mapeados a materiais ativos. A aula de mediana/moda também reúne medidas posicionais; a divisão é didática por conteúdo, não uma correspondência de um material para cada número do edital.
+
+### Correspondência do edital — Raciocínio Lógico
+1. Números reais e resolução de problemas — material 01.
+2. Proposições simples e compostas — material 02.
+3. Conjunção, disjunção, condicional e bicondicional — material 03.
+4. Tabelas-verdade, equivalências e negações — materiais 04 e 05.
+5. Argumentação e validade — material 06.
+6. Verdades e mentiras — material 07.
+7. Sequências e padrões — material 08.
+8. Progressões aritméticas e geométricas — material 08 e complemento específico de PA/PG.
+9. Relações de ordem e equivalência — material 09.
+10. Conjuntos, porcentagem e juros simples/compostos — materiais 09 e 10.
+11. Análise combinatória — material 11.
+12. Probabilidade da união, condicional e independência — material 11 e complemento específico de probabilidade.
+13. Médias simples e ponderadas — material 12 e complemento de médias/gráficos/tabelas.
+14. Porcentagem, razão, proporção e regra de três simples/composta — material 10.
+15. Interpretação de gráficos e tabelas — material 12 e complemento de médias/gráficos/tabelas.
+
+**Resultado da cobertura:** os 15 itens do programa estão mapeados aos 15 materiais PC-AC ativos, incluindo os três complementos de PA/PG, probabilidade e médias/gráficos/tabelas.
+
+### Integração ao treinador de questões
+- A aba “Praticar” de cada material já usa o formato autoral q/a/why, mostra acerto/erro e explicação e registra respostas por material.
+- A revisão aberta dentro do treinador agora também incorpora a bateria autoral do material selecionado, em vez de oferecer apenas o resumo e alguns flashcards.
+- A associação entre questão e material passou a considerar título, tópico e resumo, com normalização de flexões e critérios específicos para Estatística/Raciocínio Lógico. Foram adicionados testes para frequência relativa, desvio-padrão, combinação simples e proposições.
+- O registro das respostas utiliza a RPC record_material_practice_answer, com attempt_id, material e índice da questão; a tabela de respostas mantém RLS para que o aluno consulte somente os próprios registros.
+
+### Arquivos e commits
+- Materiais de Estatística: scripts/content/pcac-statistics-materials-expanded-20261121.sql.
+- Materiais de Raciocínio Lógico: scripts/content/pcac-raciocinio-logico-materials-expanded-20261120.sql.
+- Integração do treinador: src/components/dashboard/TrainerLearningMaterials.tsx, src/routes/dashboard/question-trainer.tsx e src/lib/trainerLearning.ts.
+- Testes de associação: scripts/trainer-learning.test.mjs.
+
+A revisão de cobertura acima confirma o mapeamento dos tópicos, mas não substitui uma auditoria independente de cada gabarito nem a validação de produção após os checks do GitHub Actions. O CI do último commit deve concluir typecheck, lint, testes e build antes de considerar a alteração técnica liberada.
