@@ -514,3 +514,16 @@ Aula 4 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121170000_deepen_pcac_balance_sheet_dre_liquidity.sql. Commit: c558e905b9eb08fb1c3288719a0f729416dea5e4.
 Verificação pós-gravação: 27 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — escrituração, partidas dobradas e balancete — 21/11/2026
+
+Aula 3 atualizada diretamente no Supabase:
+
+- 10 questões preservadas, com gabaritos e ordem mantidos.
+- Todas receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com lógica de débito/crédito, exemplos de aluguel, compra a prazo e integralização, quatro fórmulas de lançamento, estorno/transferência/complementação, Diário, Razão e limites do balancete.
+- Removido o bloco CPC 26 indevido.
+
+Migration: supabase/migrations/20261121180000_deepen_pcac_journal_entries_trial_balance.sql. Commit: 77d7c4552401de3e52b657184b3fc29502e0f89f.
+Verificação pós-gravação: 10 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
