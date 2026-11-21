@@ -502,3 +502,68 @@ html body .app-shell[data-area="student"] .library-reading-workspace .library-bo
 html body .app-shell[data-area="student"] .library-reading-workspace .library-body .study-prose :is(p,li,span,strong,em) {
   opacity: 1 !important;
 }
+
+/* Leitor acompanha o tema: no escuro, a folha, títulos, exemplos,
+   tabelas e marcações mudam juntos. Sobrescreve o antigo "papel fixo"
+   e os ajustes de contraste claro adicionados anteriormente. */
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body,
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body:not(.library-body--portuguese) {
+  --sheet-bg: #151e2b;
+  --sheet-ink: #edf3fa;
+  --sheet-muted: #c3d0df;
+  --sheet-line: #43536a;
+  --sheet-accent: #e3b45b;
+  --foreground: #edf3fa;
+  --muted-foreground: #c3d0df;
+  background: #151e2b !important;
+  color: #edf3fa !important;
+  border-color: #43536a !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose,
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(p,li,span,strong,em,dt,dd,a,code),
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(p,li,span,strong,em,dt,dd,a,code) * {
+  color: #edf3fa !important;
+  -webkit-text-fill-color: #edf3fa !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(h1,h2,h3,h4),
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(h1,h2,h3,h4) * {
+  color: #f2c977 !important;
+  -webkit-text-fill-color: #f2c977 !important;
+  opacity: 1 !important;
+  border-bottom-color: #b28c45 !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(blockquote,blockquote.study-example,.study-example,aside) {
+  background: #24364b !important;
+  background-color: #24364b !important;
+  background-image: none !important;
+  border-color: #607b99 !important;
+  border-left: 4px solid #e3b45b !important;
+  color: #f0f5fc !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(blockquote,blockquote.study-example,.study-example,aside) :is(p,li,span,strong,em,b,i,code,a),
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(blockquote,blockquote.study-example,.study-example,aside) :is(p,li,span,strong,em,b,i,code,a) * {
+  color: #f0f5fc !important;
+  -webkit-text-fill-color: #f0f5fc !important;
+  opacity: 1 !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(th,td) {
+  color: #edf3fa !important;
+  -webkit-text-fill-color: #edf3fa !important;
+  border-color: #43536a !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose th {
+  background: #30445c !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(mark,blockquote mark,.study-example mark) {
+  background: #f2c977 !important;
+  color: #172231 !important;
+  -webkit-text-fill-color: #172231 !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(pre,code) {
+  background: #30445c !important;
+}
+html.dark body .app-shell[data-area] .library-reading-workspace .library-body .study-prose .study-table {
+  border-color: #43536a !important;
+}
