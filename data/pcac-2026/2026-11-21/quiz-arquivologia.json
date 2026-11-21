@@ -12,72 +12,139 @@
         {
           "a": true,
           "q": "O protocolo controla operações de recebimento, registro, distribuição e tramitação documental.",
-          "why": "O protocolo organiza e acompanha a circulação dos documentos. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+          "why": "Certo. Protocolo recebe, registra, distribui e acompanha documentos, permitindo saber quando entraram, quem os recebeu e onde tramitam. Exemplo: um ofício é registrado antes de encaminhamento à unidade responsável."
         },
         {
           "a": false,
           "q": "Classificação e ordenação são sinônimos.",
-          "why": "Classificação relaciona o documento à função/atividade; ordenação define sequência de localização."
+          "why": "Errado. Classificar determina a função ou classe documental, enquanto ordenar estabelece a sequência dos documentos dentro da classe, como ordem cronológica ou numérica. São operações diferentes."
         },
         {
           "a": true,
           "q": "A transferência encaminha documentos do arquivo corrente ao intermediário.",
-          "why": "Transferência é a passagem para a fase intermediária. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+          "why": "Certo. Transferência é a passagem de documentos do arquivo corrente ao intermediário, quando o uso frequente termina mas prazos e interesses administrativos ainda exigem guarda. Não significa descarte."
         },
         {
           "a": true,
           "q": "O recolhimento encaminha documentos de valor permanente para guarda definitiva.",
-          "why": "Recolhimento é a passagem ao arquivo permanente. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+          "why": "Certo. Recolhimento destina documentos avaliados como permanentes à guarda definitiva. Diferencie-o da transferência ao intermediário e da eliminação autorizada de documentos temporários."
         },
         {
           "a": false,
           "q": "Um servidor pode eliminar documentos livremente quando considerar que perderam utilidade.",
-          "why": "Eliminação exige avaliação, tabela, autorização e procedimento institucional. Exemplo e contexto: Percurso prático: uma comunicação é recebida e registrada no protocolo, classificada pela atividade e encaminhada; encerrado o uso corrente, pode ser transferida ao intermediário. Recolhimento destina à guarda permanente; eliminação exige avaliação e autorização."
+          "why": "Errado. Eliminação documental pública depende de avaliação, tabela de temporalidade e procedimento formal autorizado. Um servidor não pode destruir documentos apenas por considerá-los pouco úteis."
         }
       ],
       "slug": "pcac-2026-arquivologia-protocolo-classificacao-avaliacao-temporalidade",
       "discipline": "Arquivologia",
       "topic_label": "Revisão integrada — fluxo documental e destinação",
-      "practice_review": null
+      "practice_review": {
+        "items": [
+          {
+            "a": true,
+            "q": "O protocolo controla operações de recebimento, registro, distribuição e tramitação documental.",
+            "why": "Certo. Protocolo recebe, registra, distribui e acompanha documentos, permitindo saber quando entraram, quem os recebeu e onde tramitam. Exemplo: um ofício é registrado antes de encaminhamento à unidade responsável."
+          },
+          {
+            "a": false,
+            "q": "Classificação e ordenação são sinônimos.",
+            "why": "Errado. Classificar determina a função ou classe documental, enquanto ordenar estabelece a sequência dos documentos dentro da classe, como ordem cronológica ou numérica. São operações diferentes."
+          },
+          {
+            "a": true,
+            "q": "A transferência encaminha documentos do arquivo corrente ao intermediário.",
+            "why": "Certo. Transferência é a passagem de documentos do arquivo corrente ao intermediário, quando o uso frequente termina mas prazos e interesses administrativos ainda exigem guarda. Não significa descarte."
+          },
+          {
+            "a": true,
+            "q": "O recolhimento encaminha documentos de valor permanente para guarda definitiva.",
+            "why": "Certo. Recolhimento destina documentos avaliados como permanentes à guarda definitiva. Diferencie-o da transferência ao intermediário e da eliminação autorizada de documentos temporários."
+          },
+          {
+            "a": false,
+            "q": "Um servidor pode eliminar documentos livremente quando considerar que perderam utilidade.",
+            "why": "Errado. Eliminação documental pública depende de avaliação, tabela de temporalidade e procedimento formal autorizado. Um servidor não pode destruir documentos apenas por considerá-los pouco úteis."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "Complemento didático autoral do Anexo III do Edital PC-AC 2026. Questões autorais, não oficiais.",
+        "topic_label": "Revisão integrada — fluxo documental e destinação",
+        "material_slug": "pcac-2026-arquivologia-protocolo-classificacao-avaliacao-temporalidade"
+      }
     },
     {
       "quiz": [
         {
           "a": false,
           "q": "Arquivo é qualquer coleção de documentos reunida por assunto.",
-          "why": "O conceito arquivístico pressupõe vínculo orgânico com as atividades do produtor."
+          "why": "Errado. Arquivo não é coleção artificial de documentos sobre um tema: é o conjunto organicamente produzido e recebido por uma pessoa ou instituição no exercício de atividades. Exemplo: ofícios e registros de uma delegacia formam arquivo pelo vínculo funcional; recortes reunidos por assunto formam coleção."
         },
         {
           "a": true,
           "q": "A Lei nº 8.159/1991 abrange documentos independentemente do suporte.",
-          "why": "O conceito legal não restringe arquivo a papel. Exemplo e contexto: Um documento arquivístico resulta de atividade de pessoa ou instituição e mantém relação com outros registros da mesma função. Papel, PDF e áudio podem ser documentos de arquivo; o suporte não altera, por si, a natureza arquivística."
+          "why": "Certo. O art. 2º da Lei nº 8.159/1991 define arquivos independentemente da natureza do suporte. Documentos em papel, mensagens eletrônicas e arquivos digitais podem integrar o arquivo quando produzidos ou recebidos em atividades e preservado seu vínculo com o produtor."
         },
         {
           "a": true,
           "q": "Uma mensagem eletrônica pode ser documento arquivístico.",
-          "why": "Se produzida ou recebida no exercício de atividade e mantida como evidência, pode ser arquivística."
+          "why": "Certo. Um e-mail produzido ou recebido para instruir um processo administrativo pode integrar o arquivo institucional. O que importa é a relação com a atividade, a função de evidência e a preservação de metadados, não o fato de estar em formato eletrônico."
         },
         {
           "a": false,
           "q": "Autenticidade garante que todas as informações do documento são verdadeiras.",
-          "why": "Autenticidade e veracidade do conteúdo são conceitos distintos. Exemplo e contexto: Um documento arquivístico resulta de atividade de pessoa ou instituição e mantém relação com outros registros da mesma função. Papel, PDF e áudio podem ser documentos de arquivo; o suporte não altera, por si, a natureza arquivística."
+          "why": "Errado. Autenticidade significa que o documento é aquilo que afirma ser, com identidade e integridade documentadas; não significa que seu conteúdo seja verdadeiro. Um relato autêntico pode conter equívocos factuais, que exigem verificação independente."
         },
         {
           "a": true,
           "q": "Organicidade relaciona documentos às atividades que os produziram.",
-          "why": "É a relação contextual entre documentos no conjunto. Exemplo e contexto: Um documento arquivístico resulta de atividade de pessoa ou instituição e mantém relação com outros registros da mesma função. Papel, PDF e áudio podem ser documentos de arquivo; o suporte não altera, por si, a natureza arquivística."
+          "why": "Certo. Organicidade é o vínculo dos documentos com as funções, atividades e outros registros do produtor. Exemplo: despacho, relatório e protocolo do mesmo procedimento formam relações relevantes. Arquivar apenas por palavra-chave pode perder esse contexto."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-01-arquivo-e-documento-arquivistico",
       "discipline": "Arquivologia",
       "topic_label": "Arquivo e documento arquivístico",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": false,
+            "q": "Arquivo é qualquer coleção de documentos reunida por assunto.",
+            "why": "Errado. Arquivo não é coleção artificial de documentos sobre um tema: é o conjunto organicamente produzido e recebido por uma pessoa ou instituição no exercício de atividades. Exemplo: ofícios e registros de uma delegacia formam arquivo pelo vínculo funcional; recortes reunidos por assunto formam coleção."
+          },
+          {
+            "a": true,
+            "q": "A Lei nº 8.159/1991 abrange documentos independentemente do suporte.",
+            "why": "Certo. O art. 2º da Lei nº 8.159/1991 define arquivos independentemente da natureza do suporte. Documentos em papel, mensagens eletrônicas e arquivos digitais podem integrar o arquivo quando produzidos ou recebidos em atividades e preservado seu vínculo com o produtor."
+          },
+          {
+            "a": true,
+            "q": "Uma mensagem eletrônica pode ser documento arquivístico.",
+            "why": "Certo. Um e-mail produzido ou recebido para instruir um processo administrativo pode integrar o arquivo institucional. O que importa é a relação com a atividade, a função de evidência e a preservação de metadados, não o fato de estar em formato eletrônico."
+          },
+          {
+            "a": false,
+            "q": "Autenticidade garante que todas as informações do documento são verdadeiras.",
+            "why": "Errado. Autenticidade significa que o documento é aquilo que afirma ser, com identidade e integridade documentadas; não significa que seu conteúdo seja verdadeiro. Um relato autêntico pode conter equívocos factuais, que exigem verificação independente."
+          },
+          {
+            "a": true,
+            "q": "Organicidade relaciona documentos às atividades que os produziram.",
+            "why": "Certo. Organicidade é o vínculo dos documentos com as funções, atividades e outros registros do produtor. Exemplo: despacho, relatório e protocolo do mesmo procedimento formam relações relevantes. Arquivar apenas por palavra-chave pode perder esse contexto."
+          }
+        ],
+        "method": "Conferência individual de 5 questões de Arquivologia, com gabaritos e exemplos. Referências: Lei nº 8.159/1991; e-ARQ Brasil e orientações CONARQ; avaliação não substitui atualização de normas",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral aprofundado, com referências à Lei nº 8.159/1991, à Resolução CONARQ nº 50/2022 e ao Decreto nº 10.278/2020, conforme aplicabilidade. Alinhamento temático ao edital PC-AC 2026; não é material oficial da banca.",
+        "topic_label": "Arquivo e documento arquivístico",
+        "material_slug": "pcac-2026-guia-arquivologia-01-arquivo-e-documento-arquivistico"
       }
     },
     {
@@ -85,39 +152,69 @@
         {
           "a": false,
           "q": "Documentos correntes são necessariamente os mais recentes.",
-          "why": "A frequência de uso e a necessidade administrativa caracterizam a fase, não apenas a idade cronológica."
+          "why": "Errado. A fase corrente é caracterizada pela tramitação ou consulta frequente, não apenas pela data de criação. Um documento antigo ainda utilizado diariamente pode permanecer corrente; um recente, após encerramento, pode ter outro tratamento conforme avaliação."
         },
         {
           "a": true,
           "q": "O arquivo intermediário guarda documentos de consulta eventual.",
-          "why": "Eles aguardam cumprimento dos prazos e destinação. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+          "why": "Certo. O arquivo intermediário reúne documentos que já não têm uso corrente, mas conservam valor administrativo ou legal temporário e aguardam prazo de guarda e destinação. Exemplo: processos concluídos conservados até vencer obrigação de retenção."
         },
         {
           "a": true,
           "q": "Recolhimento é a passagem para guarda permanente.",
-          "why": "É a destinação de documentos de valor permanente. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+          "why": "Certo. Recolhimento é a passagem de documentos de valor permanente para guarda definitiva no arquivo permanente. Transferência é diferente: desloca documentos do arquivo corrente para o intermediário, onde aguardam destinação final."
         },
         {
           "a": false,
           "q": "A transferência ao intermediário equivale à eliminação.",
-          "why": "A transferência mantém a guarda e a responsabilidade documental. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+          "why": "Errado. Transferir ao arquivo intermediário não destrói nem elimina documento. A eliminação exige avaliação e procedimento autorizado; na transferência, a documentação permanece preservada enquanto cumpre prazos de guarda."
         },
         {
           "a": true,
           "q": "Documentos de valor permanente são inalienáveis e imprescritíveis.",
-          "why": "A Lei nº 8.159/1991 estabelece essa proteção. Exemplo e contexto: Ciclo vital depende do uso e valor: corrente é consultado frequentemente; intermediário aguarda prazos e consultas ocasionais; permanente é guardado pelo valor duradouro. Transferência leva do corrente ao intermediário; recolhimento leva ao permanente."
+          "why": "Certo. O art. 10 da Lei nº 8.159/1991 determina que documentos de valor permanente são inalienáveis e imprescritíveis. Isso reforça a proteção contra alienação e perda do direito de preservação, sem dispensar medidas técnicas de conservação."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-02-ciclo-vital-e-tres-idades",
       "discipline": "Arquivologia",
       "topic_label": "Ciclo vital e três idades",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": false,
+            "q": "Documentos correntes são necessariamente os mais recentes.",
+            "why": "Errado. A fase corrente é caracterizada pela tramitação ou consulta frequente, não apenas pela data de criação. Um documento antigo ainda utilizado diariamente pode permanecer corrente; um recente, após encerramento, pode ter outro tratamento conforme avaliação."
+          },
+          {
+            "a": true,
+            "q": "O arquivo intermediário guarda documentos de consulta eventual.",
+            "why": "Certo. O arquivo intermediário reúne documentos que já não têm uso corrente, mas conservam valor administrativo ou legal temporário e aguardam prazo de guarda e destinação. Exemplo: processos concluídos conservados até vencer obrigação de retenção."
+          },
+          {
+            "a": true,
+            "q": "Recolhimento é a passagem para guarda permanente.",
+            "why": "Certo. Recolhimento é a passagem de documentos de valor permanente para guarda definitiva no arquivo permanente. Transferência é diferente: desloca documentos do arquivo corrente para o intermediário, onde aguardam destinação final."
+          },
+          {
+            "a": false,
+            "q": "A transferência ao intermediário equivale à eliminação.",
+            "why": "Errado. Transferir ao arquivo intermediário não destrói nem elimina documento. A eliminação exige avaliação e procedimento autorizado; na transferência, a documentação permanece preservada enquanto cumpre prazos de guarda."
+          },
+          {
+            "a": true,
+            "q": "Documentos de valor permanente são inalienáveis e imprescritíveis.",
+            "why": "Certo. O art. 10 da Lei nº 8.159/1991 determina que documentos de valor permanente são inalienáveis e imprescritíveis. Isso reforça a proteção contra alienação e perda do direito de preservação, sem dispensar medidas técnicas de conservação."
+          }
+        ],
+        "method": "Conferência individual de 5 questões de Arquivologia, com gabaritos e exemplos. Referências: Lei nº 8.159/1991; e-ARQ Brasil e orientações CONARQ; avaliação não substitui atualização de normas",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral aprofundado, com referências à Lei nº 8.159/1991, à Resolução CONARQ nº 50/2022 e ao Decreto nº 10.278/2020, conforme aplicabilidade. Alinhamento temático ao edital PC-AC 2026; não é material oficial da banca.",
+        "topic_label": "Ciclo vital e três idades",
+        "material_slug": "pcac-2026-guia-arquivologia-02-ciclo-vital-e-tres-idades"
       }
     },
     {
@@ -125,39 +222,69 @@
         {
           "a": false,
           "q": "Classificar é simplesmente ordenar documentos por data.",
-          "why": "Classificação identifica função ou atividade; ordenar é definir sequência. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+          "why": "Errado. Classificação arquivística associa o documento à função ou atividade que o gerou; ordenar por data é um critério de arranjo dentro da classe. Exemplo: contratos e processos disciplinares não devem ser misturados só porque possuem a mesma data."
         },
         {
           "a": true,
           "q": "O plano de classificação deve refletir funções e atividades do produtor.",
-          "why": "O contexto funcional orienta a classificação arquivística. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+          "why": "Certo. Um plano de classificação representa funções e atividades do produtor, preservando a contextualização orgânica dos registros. Exemplo: documentos de gestão de pessoal ficam em classe distinta dos registros de atividade finalística."
         },
         {
           "a": true,
           "q": "Protocolo contribui para rastrear a tramitação documental.",
-          "why": "O registro das movimentações permite localizar e acompanhar documentos. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+          "why": "Certo. Protocolo registra recebimento, identificação, encaminhamento e tramitação. Cada movimentação documentada permite localizar o processo, atribuir responsáveis e controlar prazos, reduzindo perda e extravio de documentos."
         },
         {
           "a": false,
           "q": "Apensação e anexação são sempre sinônimos.",
-          "why": "A anexação incorpora; a apensação reúne para análise, preservando autonomia quando cabível."
+          "why": "Errado. Anexação e apensação não são automaticamente sinônimos: conforme o procedimento, a anexação incorpora peças ou processos ao principal, enquanto a apensação pode reunir registros mantendo sua autonomia. Consulte as regras do órgão aplicáveis."
         },
         {
           "a": true,
           "q": "O registro incompleto pode prejudicar recuperação e controle de prazos.",
-          "why": "Metadados adequados são necessários para rastreabilidade. Exemplo e contexto: Classificar é atribuir a classe funcional da atividade; ordenar é estabelecer sequência dentro dela; protocolo controla recebimento, registro, encaminhamento e circulação. Apensar e anexar podem produzir efeitos processuais diferentes; leia os requisitos do procedimento."
+          "why": "Certo. Registro incompleto — sem identificador, data, origem ou destinatário — dificulta localizar e provar a tramitação. Metadados como número de protocolo, setor responsável e data de movimentação são essenciais ao controle e aos prazos."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-03-classificacao-ordenacao-e-protocolo",
       "discipline": "Arquivologia",
       "topic_label": "Classificação, ordenação e protocolo",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": false,
+            "q": "Classificar é simplesmente ordenar documentos por data.",
+            "why": "Errado. Classificação arquivística associa o documento à função ou atividade que o gerou; ordenar por data é um critério de arranjo dentro da classe. Exemplo: contratos e processos disciplinares não devem ser misturados só porque possuem a mesma data."
+          },
+          {
+            "a": true,
+            "q": "O plano de classificação deve refletir funções e atividades do produtor.",
+            "why": "Certo. Um plano de classificação representa funções e atividades do produtor, preservando a contextualização orgânica dos registros. Exemplo: documentos de gestão de pessoal ficam em classe distinta dos registros de atividade finalística."
+          },
+          {
+            "a": true,
+            "q": "Protocolo contribui para rastrear a tramitação documental.",
+            "why": "Certo. Protocolo registra recebimento, identificação, encaminhamento e tramitação. Cada movimentação documentada permite localizar o processo, atribuir responsáveis e controlar prazos, reduzindo perda e extravio de documentos."
+          },
+          {
+            "a": false,
+            "q": "Apensação e anexação são sempre sinônimos.",
+            "why": "Errado. Anexação e apensação não são automaticamente sinônimos: conforme o procedimento, a anexação incorpora peças ou processos ao principal, enquanto a apensação pode reunir registros mantendo sua autonomia. Consulte as regras do órgão aplicáveis."
+          },
+          {
+            "a": true,
+            "q": "O registro incompleto pode prejudicar recuperação e controle de prazos.",
+            "why": "Certo. Registro incompleto — sem identificador, data, origem ou destinatário — dificulta localizar e provar a tramitação. Metadados como número de protocolo, setor responsável e data de movimentação são essenciais ao controle e aos prazos."
+          }
+        ],
+        "method": "Conferência individual de 5 questões de Arquivologia, com gabaritos e exemplos. Referências: Lei nº 8.159/1991; e-ARQ Brasil e orientações CONARQ; avaliação não substitui atualização de normas",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:35Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral aprofundado, com referências à Lei nº 8.159/1991, à Resolução CONARQ nº 50/2022 e ao Decreto nº 10.278/2020, conforme aplicabilidade. Alinhamento temático ao edital PC-AC 2026; não é material oficial da banca.",
+        "topic_label": "Classificação, ordenação e protocolo",
+        "material_slug": "pcac-2026-guia-arquivologia-03-classificacao-ordenacao-e-protocolo"
       }
     },
     {
@@ -165,39 +292,69 @@
         {
           "a": true,
           "q": "A avaliação documental define prazos e destinação com base nos valores dos documentos.",
-          "why": "A avaliação considera necessidades e valores primários e secundários. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+          "why": "Certo. Avaliação documental atribui prazos de guarda e destinação considerando valores administrativos, legais, fiscais, informativos e históricos. O objetivo é conservar o necessário e destinar corretamente."
         },
         {
           "a": false,
           "q": "A tabela de temporalidade é apenas uma lista de datas de produção.",
-          "why": "Ela registra prazos de guarda e destinação por séries documentais. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+          "why": "Errado. Tabela de temporalidade registra séries/classes, prazos de guarda nas fases e destinação final, não apenas datas em que documentos foram produzidos."
         },
         {
           "a": false,
           "q": "Todo documento sem consulta frequente pode ser eliminado.",
-          "why": "Pode haver prazo legal, valor secundário ou impedimento à eliminação. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+          "why": "Errado. Baixa frequência de consulta não autoriza eliminar um documento. Prazos legais podem continuar vigentes e documentos de valor permanente podem ser consultados raramente."
         },
         {
           "a": true,
           "q": "Documentos permanentes devem ser preservados definitivamente.",
-          "why": "A Lei de Arquivos confere proteção especial aos documentos de valor permanente. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+          "why": "Certo. Documentos avaliados como permanentes devem ser preservados de forma definitiva. Sua relevância probatória e histórica permanece além do uso administrativo cotidiano."
         },
         {
           "a": false,
           "q": "Digitalizar um documento elimina automaticamente a necessidade de autorização para destruir o original.",
-          "why": "A digitalização não substitui a avaliação e os requisitos legais de destinação. Exemplo e contexto: A tabela de temporalidade associa uma classe documental ao prazo de guarda e destinação, conforme avaliação. Exemplo: um processo encerrado pode aguardar prazo legal no intermediário; vencido o prazo, a eliminação ainda exige ato formal competente."
+          "why": "Errado. Digitalização cria representação digital e não dispensa automaticamente avaliação ou procedimento legal para eliminar original. Autorização e requisitos normativos precisam ser verificados."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-04-avaliacao-e-temporalidade",
       "discipline": "Arquivologia",
       "topic_label": "Avaliação e temporalidade documental",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "A avaliação documental define prazos e destinação com base nos valores dos documentos.",
+            "why": "Certo. Avaliação documental atribui prazos de guarda e destinação considerando valores administrativos, legais, fiscais, informativos e históricos. O objetivo é conservar o necessário e destinar corretamente."
+          },
+          {
+            "a": false,
+            "q": "A tabela de temporalidade é apenas uma lista de datas de produção.",
+            "why": "Errado. Tabela de temporalidade registra séries/classes, prazos de guarda nas fases e destinação final, não apenas datas em que documentos foram produzidos."
+          },
+          {
+            "a": false,
+            "q": "Todo documento sem consulta frequente pode ser eliminado.",
+            "why": "Errado. Baixa frequência de consulta não autoriza eliminar um documento. Prazos legais podem continuar vigentes e documentos de valor permanente podem ser consultados raramente."
+          },
+          {
+            "a": true,
+            "q": "Documentos permanentes devem ser preservados definitivamente.",
+            "why": "Certo. Documentos avaliados como permanentes devem ser preservados de forma definitiva. Sua relevância probatória e histórica permanece além do uso administrativo cotidiano."
+          },
+          {
+            "a": false,
+            "q": "Digitalizar um documento elimina automaticamente a necessidade de autorização para destruir o original.",
+            "why": "Errado. Digitalização cria representação digital e não dispensa automaticamente avaliação ou procedimento legal para eliminar original. Autorização e requisitos normativos precisam ser verificados."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral aprofundado, com referências à Lei nº 8.159/1991, à Resolução CONARQ nº 50/2022 e ao Decreto nº 10.278/2020, conforme aplicabilidade. Alinhamento temático ao edital PC-AC 2026; não é material oficial da banca.",
+        "topic_label": "Avaliação e temporalidade documental",
+        "material_slug": "pcac-2026-guia-arquivologia-04-avaliacao-e-temporalidade"
       }
     },
     {
@@ -205,39 +362,69 @@
         {
           "a": false,
           "q": "O e-ARQ Brasil é um programa de computador pronto para instalar.",
-          "why": "É um modelo de requisitos para sistemas de gestão arquivística. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+          "why": "Errado. O e-ARQ Brasil é modelo de requisitos para sistemas informatizados de gestão arquivística de documentos, não um aplicativo único pronto para instalar. Um produto deve implementar requisitos pertinentes."
         },
         {
           "a": true,
           "q": "A versão 2 do e-ARQ Brasil foi aprovada pela Resolução CONARQ nº 50/2022.",
-          "why": "A resolução de 6 de maio de 2022 aprovou o modelo versão 2. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+          "why": "Certo. O Conselho Nacional de Arquivos aprovou a versão 2 do e-ARQ Brasil pela Resolução nº 50/2022. A versão orienta requisitos para gestão arquivística de documentos digitais."
         },
         {
           "a": false,
           "q": "Um sistema de pastas compartilhadas é automaticamente um SIGAD.",
-          "why": "É necessário atender requisitos de gestão arquivística e ciclo documental. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+          "why": "Errado. Pasta compartilhada apenas armazena arquivos; SIGAD envolve captura, classificação, metadados, tramitação, controle de acesso, temporalidade, destinação e trilhas de auditoria."
         },
         {
           "a": true,
           "q": "Trilhas de auditoria contribuem para rastreabilidade.",
-          "why": "Elas registram eventos, usuários e operações relevantes. Exemplo e contexto: SIGAD precisa controlar captura, classificação, metadados, acesso, tramitação, temporalidade e destinação. Uma pasta na nuvem guarda arquivos, mas não satisfaz automaticamente os requisitos do e-ARQ Brasil para gestão arquivística."
+          "why": "Certo. Trilha de auditoria registra eventos de acesso e alteração, incluindo responsáveis e horários, e permite reconstituir ações. Precisa ser protegida contra adulteração."
         },
         {
           "a": false,
           "q": "Backup isolado garante preservação digital de longo prazo.",
-          "why": "Preservação envolve contexto, metadados, integridade, formatos e acesso continuado."
+          "why": "Errado. Backup copia arquivos para recuperação, mas preservação digital exige integridade, autenticidade, metadados, formatos sustentáveis e procedimentos de longo prazo. Cópia isolada não basta."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-05-documentos-digitais-sigad-e-e-arq-brasil",
       "discipline": "Arquivologia",
       "topic_label": "Documentos digitais, SIGAD e e-ARQ Brasil",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": false,
+            "q": "O e-ARQ Brasil é um programa de computador pronto para instalar.",
+            "why": "Errado. O e-ARQ Brasil é modelo de requisitos para sistemas informatizados de gestão arquivística de documentos, não um aplicativo único pronto para instalar. Um produto deve implementar requisitos pertinentes."
+          },
+          {
+            "a": true,
+            "q": "A versão 2 do e-ARQ Brasil foi aprovada pela Resolução CONARQ nº 50/2022.",
+            "why": "Certo. O Conselho Nacional de Arquivos aprovou a versão 2 do e-ARQ Brasil pela Resolução nº 50/2022. A versão orienta requisitos para gestão arquivística de documentos digitais."
+          },
+          {
+            "a": false,
+            "q": "Um sistema de pastas compartilhadas é automaticamente um SIGAD.",
+            "why": "Errado. Pasta compartilhada apenas armazena arquivos; SIGAD envolve captura, classificação, metadados, tramitação, controle de acesso, temporalidade, destinação e trilhas de auditoria."
+          },
+          {
+            "a": true,
+            "q": "Trilhas de auditoria contribuem para rastreabilidade.",
+            "why": "Certo. Trilha de auditoria registra eventos de acesso e alteração, incluindo responsáveis e horários, e permite reconstituir ações. Precisa ser protegida contra adulteração."
+          },
+          {
+            "a": false,
+            "q": "Backup isolado garante preservação digital de longo prazo.",
+            "why": "Errado. Backup copia arquivos para recuperação, mas preservação digital exige integridade, autenticidade, metadados, formatos sustentáveis e procedimentos de longo prazo. Cópia isolada não basta."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral aprofundado, com referências à Lei nº 8.159/1991, à Resolução CONARQ nº 50/2022 e ao Decreto nº 10.278/2020, conforme aplicabilidade. Alinhamento temático ao edital PC-AC 2026; não é material oficial da banca.",
+        "topic_label": "Documentos digitais, SIGAD e e-ARQ Brasil",
+        "material_slug": "pcac-2026-guia-arquivologia-05-documentos-digitais-sigad-e-e-arq-brasil"
       }
     },
     {
@@ -245,39 +432,69 @@
         {
           "a": false,
           "q": "Qualquer foto de documento feita por celular produz automaticamente os mesmos efeitos do original.",
-          "why": "O Decreto nº 10.278/2020 exige observância de requisitos e condições. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+          "why": "Errado. Uma foto por celular pode ser ilegível, incompleta ou não atender requisitos legais de digitalização e autenticidade. Equivalência probatória depende do procedimento e da norma aplicável."
         },
         {
           "a": true,
           "q": "A LAI prevê transparência ativa e passiva.",
-          "why": "Ativa é divulgação espontânea; passiva é resposta a pedidos. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+          "why": "Certo. A Lei de Acesso à Informação estabelece transparência ativa, divulgada independentemente de pedido, e passiva, realizada em resposta a solicitação do cidadão."
         },
         {
           "a": false,
           "q": "A LGPD impede todo acesso a documentos públicos que contenham dados pessoais.",
-          "why": "É necessária análise legal; pode haver acesso parcial e salvaguardas. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+          "why": "Errado. A LGPD não proíbe todo acesso a documento que contenha dados pessoais. É preciso avaliar base legal, finalidade pública, minimização e possibilidade de ocultar informações protegidas."
         },
         {
           "a": true,
           "q": "O controle de qualidade verifica legibilidade e completude da digitalização.",
-          "why": "Cortes, páginas ausentes e distorções devem ser identificados. Exemplo e contexto: Digitalização produz representação digital; não dispensa automaticamente a guarda do original. Na transparência, acesso deve ser conciliado com restrições legais e dados pessoais. Exemplo: pode caber versão pública com ocultação de informações protegidas."
+          "why": "Certo. Controle de qualidade verifica se todas as páginas foram capturadas, se o texto é legível e se a representação corresponde ao original, evitando perda de informação na digitalização."
         },
         {
           "a": true,
           "q": "Acesso parcial pode ser uma alternativa quando apenas parte do documento é protegida.",
-          "why": "A parte não restrita pode ser fornecida com ocultação do conteúdo protegido, conforme o caso."
+          "why": "Certo. Quando apenas parte do documento contém dado protegido, pode ser cabível fornecer versão com ocultação do trecho restrito, preservando o restante do acesso público."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-06-digitalizacao-acesso-e-privacidade",
       "discipline": "Arquivologia",
       "topic_label": "Digitalização, acesso e privacidade",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": false,
+            "q": "Qualquer foto de documento feita por celular produz automaticamente os mesmos efeitos do original.",
+            "why": "Errado. Uma foto por celular pode ser ilegível, incompleta ou não atender requisitos legais de digitalização e autenticidade. Equivalência probatória depende do procedimento e da norma aplicável."
+          },
+          {
+            "a": true,
+            "q": "A LAI prevê transparência ativa e passiva.",
+            "why": "Certo. A Lei de Acesso à Informação estabelece transparência ativa, divulgada independentemente de pedido, e passiva, realizada em resposta a solicitação do cidadão."
+          },
+          {
+            "a": false,
+            "q": "A LGPD impede todo acesso a documentos públicos que contenham dados pessoais.",
+            "why": "Errado. A LGPD não proíbe todo acesso a documento que contenha dados pessoais. É preciso avaliar base legal, finalidade pública, minimização e possibilidade de ocultar informações protegidas."
+          },
+          {
+            "a": true,
+            "q": "O controle de qualidade verifica legibilidade e completude da digitalização.",
+            "why": "Certo. Controle de qualidade verifica se todas as páginas foram capturadas, se o texto é legível e se a representação corresponde ao original, evitando perda de informação na digitalização."
+          },
+          {
+            "a": true,
+            "q": "Acesso parcial pode ser uma alternativa quando apenas parte do documento é protegida.",
+            "why": "Certo. Quando apenas parte do documento contém dado protegido, pode ser cabível fornecer versão com ocultação do trecho restrito, preservando o restante do acesso público."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral aprofundado, com referências à Lei nº 8.159/1991, à Resolução CONARQ nº 50/2022 e ao Decreto nº 10.278/2020, conforme aplicabilidade. Alinhamento temático ao edital PC-AC 2026; não é material oficial da banca.",
+        "topic_label": "Digitalização, acesso e privacidade",
+        "material_slug": "pcac-2026-guia-arquivologia-06-digitalizacao-acesso-e-privacidade"
       }
     },
     {
@@ -285,39 +502,69 @@
         {
           "a": true,
           "q": "Proveniência exige manter documentos vinculados ao produtor.",
-          "why": "Preserva a identidade do fundo. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+          "why": "Certo. O princípio da proveniência mantém documentos relacionados à instituição ou pessoa que os produziu. Misturar registros de origens diversas sem identificar os fundos prejudica contexto."
         },
         {
           "a": true,
           "q": "Organicidade é a relação natural entre documentos e atividades.",
-          "why": "O vínculo funcional dá contexto ao conjunto. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+          "why": "Certo. Organicidade surge das relações naturais entre documentos e atividades. Exemplo: autuação, despacho e julgamento são peças vinculadas a uma função administrativa."
         },
         {
           "a": false,
           "q": "Ordem original significa necessariamente ordenar por data.",
-          "why": "Pode ser qualquer organização estabelecida pelo produtor. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+          "why": "Errado. Ordem original busca preservar arranjo significativo criado pelo produtor, que pode ser por processo, função ou outra regra. Não significa necessariamente ordenação cronológica."
         },
         {
           "a": false,
           "q": "É correto misturar fundos de produtores diferentes para facilitar busca.",
-          "why": "A busca deve respeitar a proveniência. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+          "why": "Errado. Fundos de produtores diferentes devem manter proveniência distinta mesmo quando o assunto é o mesmo. A pesquisa pode cruzar fundos por índices sem misturá-los fisicamente."
         },
         {
           "a": true,
           "q": "A história de custódia pode ser relevante quando há mudança institucional.",
-          "why": "Ajuda a explicar transferências e sucessões. Exemplo e contexto: Proveniência preserva a origem de cada fundo; organicidade conserva vínculos criados pelas atividades; ordem original preserva o arranjo significativo do produtor. Misturar documentos de duas unidades por tema pode destruir o contexto institucional."
+          "why": "Certo. História custodial registra transferências, reorganizações e responsáveis pela guarda, importante para avaliar continuidade e autenticidade diante de mudanças institucionais."
         }
       ],
       "slug": "pcac-2026-guia-arquivologia-07-proveniencia-organicidade-e-ordem-original",
       "discipline": "Arquivologia",
       "topic_label": "Proveniência, organicidade e ordem original",
       "practice_review": {
-        "method": "Conferência individual de enunciados, gabaritos e justificativas com o conteúdo e o tópico do Anexo III; questões numéricas recalculadas quando aplicável.",
-        "result": "Revisão pedagógica e estrutural concluída para o conjunto PC-AC 2026 — Oficial Investigador de Polícia.",
-        "status": "needs_revalidation",
-        "review_date": "2026-11-14",
-        "items_checked": 5,
-        "revision_reason": "Complementos arquivísticos por tópico adicionados; exige conferência individual de itens e fontes"
+        "items": [
+          {
+            "a": true,
+            "q": "Proveniência exige manter documentos vinculados ao produtor.",
+            "why": "Certo. O princípio da proveniência mantém documentos relacionados à instituição ou pessoa que os produziu. Misturar registros de origens diversas sem identificar os fundos prejudica contexto."
+          },
+          {
+            "a": true,
+            "q": "Organicidade é a relação natural entre documentos e atividades.",
+            "why": "Certo. Organicidade surge das relações naturais entre documentos e atividades. Exemplo: autuação, despacho e julgamento são peças vinculadas a uma função administrativa."
+          },
+          {
+            "a": false,
+            "q": "Ordem original significa necessariamente ordenar por data.",
+            "why": "Errado. Ordem original busca preservar arranjo significativo criado pelo produtor, que pode ser por processo, função ou outra regra. Não significa necessariamente ordenação cronológica."
+          },
+          {
+            "a": false,
+            "q": "É correto misturar fundos de produtores diferentes para facilitar busca.",
+            "why": "Errado. Fundos de produtores diferentes devem manter proveniência distinta mesmo quando o assunto é o mesmo. A pesquisa pode cruzar fundos por índices sem misturá-los fisicamente."
+          },
+          {
+            "a": true,
+            "q": "A história de custódia pode ser relevante quando há mudança institucional.",
+            "why": "Certo. História custodial registra transferências, reorganizações e responsáveis pela guarda, importante para avaliar continuidade e autenticidade diante de mudanças institucionais."
+          }
+        ],
+        "method": "Revisão individual de 5 afirmações e justificativas arquivísticas; não equivale à certificação normativa do treinador",
+        "status": "reviewed",
+        "subject": "Arquivologia",
+        "version": 1,
+        "checked_at": "2026-11-21T18:37:16Z",
+        "review_type": "didactic_manual",
+        "source_note": "Material didático autoral revisado e ampliado com fontes normativas oficiais. Alinhamento temático ao edital PCAC 2026; não constitui material oficial da banca.",
+        "topic_label": "Proveniência, organicidade e ordem original",
+        "material_slug": "pcac-2026-guia-arquivologia-07-proveniencia-organicidade-e-ordem-original"
       }
     },
     {
