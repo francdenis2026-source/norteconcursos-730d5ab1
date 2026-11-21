@@ -512,6 +512,11 @@ html body .app-shell[data-focus-mode="true"]:has(.qx):not(#_):not(#_):not(#_) #d
   min-height: 0 !important;
   overflow: hidden !important;
   scroll-padding-top: 0 !important;
+  /* workspace-fullscreen.css reserva ~112px no fim (faixa de acabamento + assinatura do rodapé
+     de outros modos foco, ex. leitura cronometrada). O treinador não tem essa faixa, só a
+     assinatura fixa (.dev-strip, ~48px) — a reserva de 112px só sobrava como espaço vazio
+     abaixo do cartão. */
+  padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px)) !important;
 }
 html body .app-shell[data-focus-mode="true"]:has(.qx):not(#_):not(#_):not(#_) :is(#dashboard-content > .app-content__inner, .qx) {
   height: 100% !important;
