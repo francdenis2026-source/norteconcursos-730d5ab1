@@ -373,3 +373,66 @@ html body .app-shell[data-area] .library-reading-workspace .library-body .study-
     line-height: 1.35 !important;
   }
 }
+
+
+/* Revisão visual da folha de estudo — desafio, títulos e ritmo vertical.
+   O callout de abertura estava herdando uma superfície navy de .study-example,
+   enquanto regras globais mantinham o texto escuro; títulos também herdavam
+   tons esmaecidos. Fixar pares de cores e hierarquia dentro da folha. */
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(
+  blockquote.study-example,
+  .study-example:where(section, div, p, li)
+) {
+  background: #eef3f8 !important;
+  background-color: #eef3f8 !important;
+  color: #202a35 !important;
+  border: 1px solid #c8d5e2 !important;
+  border-left: 4px solid #244f78 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(
+  blockquote.study-example,
+  .study-example:where(section, div, p, li)
+) * {
+  color: #202a35 !important;
+  opacity: 1 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(
+  blockquote.study-example, blockquote.study-example p
+) {
+  margin-block: 0.35em !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(h2,h3,h4),
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(h2,h3,h4) * {
+  color: #263b50 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose h2 {
+  margin: 1.15em 0 0.45em !important;
+  padding: 0 0 0.28em !important;
+  border-bottom: 1px solid #315d83 !important;
+  font-size: 1.2em !important;
+  line-height: 1.3 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose h3 {
+  margin: 0.9em 0 0.35em !important;
+  font-size: 1.08em !important;
+  line-height: 1.32 !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose :is(p,ul,ol,blockquote) {
+  margin-block: 0.55em !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose li + li {
+  margin-top: 0.2em !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose > :first-child {
+  margin-top: 0 !important;
+}
+@media (max-width: 899px) {
+  html body .app-shell[data-area] .library-reading-workspace .library-body .study-prose h2 {
+    margin-top: 1em !important;
+    font-size: 1.1em !important;
+  }
+}
