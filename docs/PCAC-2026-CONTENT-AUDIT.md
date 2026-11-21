@@ -472,3 +472,17 @@ Aula 7 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121140000_deepen_pcac_financial_movements_analysis.sql. Commit: ea9b9afe3a4838554fc78178158f26b8e7b30df4.
 Verificação pós-gravação: 9 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — sistema bancário, extratos, PIX e TED — 21/11/2026
+
+Aula 6 atualizada diretamente no Supabase:
+
+- 11 questões preservadas; duas questões duplicadas foram substituídas por itens distintos sobre saldo próprio/limite de crédito e estornos.
+- Todas as 11 receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com leitura de extrato, saldo inicial/créditos/débitos, saldo disponível/bloqueado, limite de crédito, PIX/TED, estornos, tarifas e rastreabilidade.
+- Removido bloco CPC 26 indevido.
+- Reforçado que crédito/débito no extrato é a perspectiva do titular e não se confunde automaticamente com débito/crédito da escrituração contábil.
+
+Migration: supabase/migrations/20261121150000_deepen_pcac_bank_statement_pix_ted_lesson.sql. Commit: ac4344af04f91ada7ca1b6031900990ac9fecbe8.
+Verificação pós-gravação: 11 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
