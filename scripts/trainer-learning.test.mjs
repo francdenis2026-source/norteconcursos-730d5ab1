@@ -125,3 +125,50 @@ test("Estatística e RLM encontram materiais pelo resumo e por flexões dos term
     ["rlm-proposicoes"],
   );
 });
+
+test("o treinador relaciona subassuntos específicos a aulas que já os explicam", () => {
+  const stats = [
+    material("stats-media-extremos", "Estatística", "3. Medidas de tendência central", {
+      title: "Média aritmética simples e ponderada",
+      summary: "Média simples, efeitos de valores extremos e comparação com mediana.",
+    }),
+  ];
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Estatística", "média, mediana e outlier"), stats).map((m) => m.slug),
+    ["stats-media-extremos"],
+  );
+  const rlm = [
+    material("rlm-negacao", "Raciocínio Lógico", "4. Equivalências lógicas e negação", {
+      title: "Equivalências lógicas, negação e leis de De Morgan",
+      summary: "Negação de proposições universais e existenciais; quantificadores.",
+    }),
+    material("rlm-conjuntos", "Raciocínio Lógico", "10. Problemas com conjuntos", {
+      title: "Relações e operações com conjuntos",
+      summary: "Inclusão-exclusão para dois e três conjuntos; diagramas e relações.",
+    }),
+    material("rlm-porcentagem", "Raciocínio Lógico", "14. Raciocínio lógico quantitativo", {
+      title: "Porcentagem, juros, razão, proporção e regra de três",
+      summary: "Aumentos e descontos percentuais, variações sucessivas e regra de três.",
+    }),
+    material("rlm-sequencias", "Raciocínio Lógico", "7. Sequências e padrões", {
+      title: "Sequências numéricas e padrões",
+      summary: "Identificação de padrões numéricos e sequências figurais.",
+    }),
+  ];
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Raciocínio Lógico", "Negação de proposições universais"), rlm).map((m) => m.slug),
+    ["rlm-negacao"],
+  );
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Raciocínio Lógico", "Problemas de conjuntos — três grupos"), rlm).map((m) => m.slug),
+    ["rlm-conjuntos"],
+  );
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Raciocínio Lógico", "Problemas de porcentagem com aumento e desconto"), rlm).map((m) => m.slug),
+    ["rlm-porcentagem"],
+  );
+  assert.deepEqual(
+    relatedTrainerMaterials(question("Raciocínio Lógico", "Sequência lógica de figuras/padrões numéricos"), rlm).map((m) => m.slug),
+    ["rlm-sequencias"],
+  );
+});
