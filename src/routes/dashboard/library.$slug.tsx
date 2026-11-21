@@ -24,6 +24,7 @@ import {
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
+import { StudyPriorityBadges } from "@/components/library/StudyPriorityBadges";
 import { Markdown } from "@/components/library/Markdown";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { materialLawSlug } from "@/lib/legalLibrary";
@@ -311,6 +312,12 @@ function MaterialPage() {
             <ScrollText size={14} aria-hidden="true" /> {material.discipline}
           </small>
           <h1>{material.title}</h1>
+          <StudyPriorityBadges
+            contestName={material.contest_name}
+            discipline={material.discipline}
+            topic={`${material.topic_label} ${material.title}`}
+            className="mt-2"
+          />
           {material.summary && <p>{material.summary}</p>}
         </div>
         <ul className="lr-meta">
