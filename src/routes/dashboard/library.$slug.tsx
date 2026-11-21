@@ -51,10 +51,12 @@ import {
 /** Corpo do material. Memoizado: a barra de progresso muda enquanto se rola e não deve refazer o texto inteiro. */
 const MaterialBody = memo(function MaterialBody({
   discipline,
+  contestName,
   source,
   legal,
 }: {
   discipline: string;
+  contestName: string | null;
   source: string;
   legal: boolean;
 }) {
@@ -67,7 +69,7 @@ const MaterialBody = memo(function MaterialBody({
       ) : legal ? (
         <LegalStudyReading source={source} markdown />
       ) : (
-        <Markdown source={source} />
+        <Markdown source={source} discipline={discipline} contestName={contestName} />
       )}
     </div>
   );
@@ -365,6 +367,7 @@ function MaterialPage() {
 
             <MaterialBody
               discipline={material.discipline}
+              contestName={material.contest_name}
               source={material.body_md}
               legal={Boolean(materialLawSlug(material) || material.legal_review)}
             />
