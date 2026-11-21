@@ -541,3 +541,17 @@ Aula 1 atualizada diretamente no Supabase:
 
 Migration: supabase/migrations/20261121190000_deepen_pcac_accounting_fundamentals.sql. Commit: 02c9d2e4be2d8d454d2c37cb11daadcf2ff882a6.
 Verificação pós-gravação: 12 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
+
+
+## Revisão aprofundada — contas, receitas, despesas e fatos contábeis — 21/11/2026
+
+Aula 2 atualizada diretamente no Supabase:
+
+- 22 questões originais preservadas, com gabaritos e ordem mantidos.
+- Todas as 22 receberam explicações acima de 250 caracteres, dicas e resoluções passo a passo.
+- Conteúdo ampliado com contas patrimoniais/de resultado, receitas e despesas, atos/fatos, fatos permutativos/modificativos/mistos, natureza devedora/credora, contas retificadoras, fórmulas de lançamento e superveniências/insubsistências.
+- Removido trecho indevido de CPC 26.
+- Corrigidas dicas incompatíveis com questões sobre atos contábeis e classificação dos fatos; reforçada a regra de que permutativo/modificativo depende do efeito sobre o PL, não do número de contas.
+
+Migration: supabase/migrations/20261121200000_deepen_pcac_accounts_revenue_expenses_facts.sql. Commit: f7e03eefc1f759cf20532d5c7c8a09ec4d3d6242.
+Verificação pós-gravação: 22 questões; zero explicações abaixo de 250 caracteres; zero itens sem dica ou resolução; seção CPC 26 indevida ausente. CI não confirmado.
