@@ -455,40 +455,58 @@ function renderBlocks(
     if (consumedAnswers.has(index)) continue;
     const current = blocks[index]!;
 
-    // Desafios antigos usam um bloco destacado para o enunciado e um parágrafo
-    // separado para cada alternativa. Agrupa tudo antes de renderizar a questão.
+    // Desafios legados podem estar inteiramente dentro de um blockquote.
+    // Aceita tanto "Questão:" quanto "Pergunta:" e separa enunciado,
+    // alternativas e gabarito antes de renderizar os botões.
     if (
       current.type === "quote" &&
       /desafio de prova/i.test(current.lines.join(" ")) &&
-      current.lines.some((line) => /quest[aã]o\s*:/i.test(line.replace(/\*/g, "")))
+      current.lines.some((line) => /(?:quest[aã]o|pergunta)\\s*:/i.test(line.replace(/\\*/g, "")))
     ) {
-      const stem = cleanQuestionStem(current.lines);
+      const quoteText = current.lines.join("\\n");
+      const quoteParts = splitAnswerAndCommentary(quoteText);
+      const quotePrompt = quoteParts?.prompt ?? quoteText;
+      const embeddedOptions = parseQuestionOptions(quotePrompt);
       const optionBlocks: { index: number; text: string }[] = [];
       let cursor = index + 1;
-      while (cursor < blocks.length) {
-        const candidate = blocks[cursor]!;
-        if (candidate.type !== "p" || !isSingleQuestionOption(candidate.text)) break;
-        optionBlocks.push({ index: cursor, text: candidate.text.trim() });
-        cursor++;
-      }
-      const combinedOptions = optionBlocks.map((item) => item.text).join(" ");
-      if (optionBlocks.length >= 2 && parseQuestionOptions(combinedOptions)) {
-        let answerIndex = -1;
-        for (let candidate = cursor; candidate < blocks.length; candidate++) {
-          const next = blocks[candidate]!;
-          if ((next.type === "p" || next.type === "h2" || next.type === "h3") && isAnswerAnalysis(next.text)) {
-            answerIndex = candidate;
-            break;
-          }
-          if (next.type === "h2" || next.type === "h3") break;
+      let prompt = "";
+
+      if (embeddedOptions) {
+        // Quando enunciado e alternativas vierem no mesmo destaque,
+        // o parser separa tudo sem deixar a alternativa E colada ao gabarito.
+        prompt = quotePrompt;
+      } else {
+        const stem = cleanQuestionStem(current.lines);
+        while (cursor < blocks.length) {
+          const candidate = blocks[cursor]!;
+          if (candidate.type !== "p" || !isSingleQuestionOption(candidate.text)) break;
+          optionBlocks.push({ index: cursor, text: candidate.text.trim() });
+          cursor++;
         }
+        const combinedOptions = optionBlocks.map((item) => item.text).join(" ");
+        if (optionBlocks.length >= 2 && parseQuestionOptions(combinedOptions)) {
+          prompt = stem + "\\n\\n" + combinedOptions;
+        }
+      }
+
+      if (prompt && parseQuestionOptions(prompt)) {
+        const answerParts: string[] = quoteParts?.answer ? [quoteParts.answer] : [];
+        let answerIndex = -1;
+        if (!answerParts.length) {
+          for (let candidate = cursor; candidate < blocks.length; candidate++) {
+            const next = blocks[candidate]!;
+            if ((next.type === "p" || next.type === "h2" || next.type === "h3") && isAnswerAnalysis(next.text)) {
+              answerIndex = candidate;
+              break;
+            }
+            if (next.type === "h2" || next.type === "h3") break;
+          }
+        }
+
         if (answerIndex >= 0) {
           const answerBlock = blocks[answerIndex]!;
           if (answerBlock.type === "p" || answerBlock.type === "h2" || answerBlock.type === "h3") {
-            // O conteúdo legado pode separar "Gabarito" e "Análise das alternativas"
-            // em parágrafos diferentes. Eles pertencem à mesma questão e devem abrir
-            // em um único painel de correção.
-            const answerParts = [answerBlock.text];
+            answerParts.push(answerBlock.text);
             let answerEndIndex = answerIndex;
             while (answerEndIndex + 1 < blocks.length) {
               const following = blocks[answerEndIndex + 1]!;
@@ -496,17 +514,20 @@ function renderBlocks(
               answerParts.push(following.text);
               answerEndIndex++;
             }
-            prepared.push({
-              type: "interactive-question",
-              prompt: stem + " " + combinedOptions,
-              answer: answerParts.join(" "),
-            });
-            for (const item of optionBlocks) consumedAnswers.add(item.index);
             for (let consumed = answerIndex; consumed <= answerEndIndex; consumed++) {
               consumedAnswers.add(consumed);
             }
-            continue;
           }
+        }
+
+        if (answerParts.length) {
+          prepared.push({
+            type: "interactive-question",
+            prompt,
+            answer: answerParts.join(" "),
+          });
+          for (const item of optionBlocks) consumedAnswers.add(item.index);
+          continue;
         }
       }
     }
