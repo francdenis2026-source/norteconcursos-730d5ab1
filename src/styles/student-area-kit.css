@@ -479,3 +479,28 @@
 .ak-video__more a { color: #c2527c; font-weight: 800; text-decoration: underline; }
 
 .ak-video__list button { font: inherit; text-align: left; cursor: pointer; width: 100%; }
+
+
+/* Selos de prioridade na mesma faixa horizontal do título, no espaço antes do tempo de leitura. */
+.lr-themed .lr-meta > .lr-meta-priority {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.lr-themed .lr-meta-priority > span {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
+.lr-themed .lr-meta-priority .inline-flex > span {
+  min-height: 1.25rem;
+  padding-inline: .45rem;
+  font-size: .625rem;
+  letter-spacing: .035em;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .lr-themed .lr-meta-priority { order: -1; }
+  .lr-themed .lr-meta { align-items: center; }
+}
