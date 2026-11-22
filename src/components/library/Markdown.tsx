@@ -335,13 +335,13 @@ function parse(markdown: string): Block[] {
   const challengeStart = cleaned.search(/🎯?\s*DESAFIO DE PROVA/i);
   if (challengeStart >= 0) {
     const challengeText = cleaned.slice(challengeStart).replace(/^>\s?/gm, "");
-    const answerMatch = /(?:^|\s)(?:\*\*)?Gabarito\\s*[:—-]\\s*(?:\\*\\*)?([A-E])\\b/i.exec(challengeText);
+    const answerMatch = /(?:^|\s)(?:\*\*)?Gabarito\s*[:—-]\s*(?:\*\*)?([A-E])\b/i.exec(challengeText);
     if (answerMatch && answerMatch.index !== undefined) {
       const answerStart = answerMatch.index + (answerMatch[0].startsWith(" ") ? 1 : 0);
-      const nextSection = challengeText.slice(answerStart).search(/\n\s*(?=(?:#{1,3}\s+|\d+\.\s+(?:O que|Como|Por que|Exemplo|Questões|Fontes)\\b))/i);
+      const nextSection = challengeText.slice(answerStart).search(/\n\s*(?=(?:#{1,3}\s+|\d+\.\s+(?:O que|Como|Por que|Exemplo|Questões|Fontes)\b))/i);
       const answerEnd = nextSection >= 0 ? answerStart + nextSection : challengeText.length;
       const promptText = challengeText.slice(0, answerStart)
-        .replace(/^.*?DESAFIO DE PROVA[^\n]*\\n?/i, "")
+        .replace(/^.*?DESAFIO DE PROVA[^\n]*\n?/i, "")
         .replace(/^\s*>\s?/gm, "")
         .trim();
       const answerText = challengeText.slice(answerStart, answerEnd).trim();
