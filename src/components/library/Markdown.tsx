@@ -473,6 +473,7 @@ function renderBlocks(
       const optionBlocks: { index: number; text: string }[] = [];
       let cursor = index + 1;
       let prompt = "";
+      let inlineOptionAnswer: string | null = null;
 
       if (embeddedOptions) {
         // Quando enunciado e alternativas vierem no mesmo destaque,
@@ -487,13 +488,20 @@ function renderBlocks(
           cursor++;
         }
         const combinedOptions = optionBlocks.map((item) => item.text).join(" ");
-        if (optionBlocks.length >= 2 && parseQuestionOptions(combinedOptions)) {
-          prompt = stem + "\n\n" + combinedOptions;
+        const separatedOptions = splitAnswerAndCommentary(combinedOptions);
+        const cleanOptions = separatedOptions?.prompt ?? combinedOptions;
+        inlineOptionAnswer = separatedOptions?.answer ?? null;
+        if (optionBlocks.length >= 2 && parseQuestionOptions(cleanOptions)) {
+          prompt = stem + "\n\n" + cleanOptions;
         }
       }
 
       if (prompt && parseQuestionOptions(prompt)) {
-        const answerParts: string[] = quoteParts?.answer ? [quoteParts.answer] : [];
+        const answerParts: string[] = quoteParts?.answer
+          ? [quoteParts.answer]
+          : inlineOptionAnswer
+            ? [inlineOptionAnswer]
+            : [];
         let answerIndex = -1;
         if (!answerParts.length) {
           for (let candidate = cursor; candidate < blocks.length; candidate++) {
