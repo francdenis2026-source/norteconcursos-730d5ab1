@@ -461,9 +461,9 @@ function renderBlocks(
     if (
       current.type === "quote" &&
       /desafio de prova/i.test(current.lines.join(" ")) &&
-      current.lines.some((line) => /(?:quest[aã]o|pergunta)\\s*:/i.test(line.replace(/\\*/g, "")))
+      current.lines.some((line) => /(?:quest[aã]o|pergunta)\s*:/i.test(line.replace(/\*/g, "")))
     ) {
-      const quoteText = current.lines.join("\\n");
+      const quoteText = current.lines.join("\n");
       const quoteParts = splitAnswerAndCommentary(quoteText);
       const quotePrompt = quoteParts?.prompt ?? quoteText;
       const embeddedOptions = parseQuestionOptions(quotePrompt);
@@ -485,7 +485,7 @@ function renderBlocks(
         }
         const combinedOptions = optionBlocks.map((item) => item.text).join(" ");
         if (optionBlocks.length >= 2 && parseQuestionOptions(combinedOptions)) {
-          prompt = stem + "\\n\\n" + combinedOptions;
+          prompt = stem + "\n\n" + combinedOptions;
         }
       }
 
