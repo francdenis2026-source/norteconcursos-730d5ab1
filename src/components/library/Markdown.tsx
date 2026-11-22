@@ -332,17 +332,17 @@ function parse(markdown: string): Block[] {
   // Isso impede que o gabarito e a análise sejam anexados à alternativa E
   // quando o conteúdo foi salvo inteiro em um único bloco Markdown.
   let extractedChallenge: { prompt: string; answer: string } | null = null;
-  const challengeStart = cleaned.search(/🎯?\\s*DESAFIO DE PROVA/i);
+  const challengeStart = cleaned.search(/🎯?\s*DESAFIO DE PROVA/i);
   if (challengeStart >= 0) {
-    const challengeText = cleaned.slice(challengeStart).replace(/^>\\s?/gm, "");
-    const answerMatch = /(?:^|\\s)(?:\\*\\*)?Gabarito\\s*[:—-]\\s*(?:\\*\\*)?([A-E])\\b/i.exec(challengeText);
+    const challengeText = cleaned.slice(challengeStart).replace(/^>\s?/gm, "");
+    const answerMatch = /(?:^|\s)(?:\*\*)?Gabarito\\s*[:—-]\\s*(?:\\*\\*)?([A-E])\\b/i.exec(challengeText);
     if (answerMatch && answerMatch.index !== undefined) {
       const answerStart = answerMatch.index + (answerMatch[0].startsWith(" ") ? 1 : 0);
-      const nextSection = challengeText.slice(answerStart).search(/\\n\\s*(?=(?:#{1,3}\\s+|\\d+\\.\\s+(?:O que|Como|Por que|Exemplo|Questões|Fontes)\\b))/i);
+      const nextSection = challengeText.slice(answerStart).search(/\n\s*(?=(?:#{1,3}\s+|\d+\.\s+(?:O que|Como|Por que|Exemplo|Questões|Fontes)\\b))/i);
       const answerEnd = nextSection >= 0 ? answerStart + nextSection : challengeText.length;
       const promptText = challengeText.slice(0, answerStart)
-        .replace(/^.*?DESAFIO DE PROVA[^\\n]*\\n?/i, "")
-        .replace(/^\\s*>\\s?/gm, "")
+        .replace(/^.*?DESAFIO DE PROVA[^\n]*\\n?/i, "")
+        .replace(/^\s*>\s?/gm, "")
         .trim();
       const answerText = challengeText.slice(answerStart, answerEnd).trim();
       const parsedPrompt = parseQuestionOptions(promptText);
@@ -353,7 +353,7 @@ function parse(markdown: string): Block[] {
         const originalStart = challengeStart;
         const originalEnd = originalStart + answerEnd;
         cleaned = cleaned.slice(0, originalStart) +
-          "\\n__NORTE_INTERACTIVE_CHALLENGE__\\n" +
+          "\n__NORTE_INTERACTIVE_CHALLENGE__\n" +
           cleaned.slice(originalEnd);
       }
     }
