@@ -38,3 +38,94 @@ html:root body .study-prose table td, html:root body .study-prose table td * { t
   text-decoration: underline;
   text-underline-offset: 0.18rem;
 }
+
+
+/* Cabeçalho do leitor: compacto, com metadados e selos alinhados à direita. */
+.lr-themed .lr-hero {
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  grid-template-areas:
+    "copy meta"
+    "status meta";
+  align-items: center;
+  align-content: center;
+  column-gap: 1rem;
+  row-gap: 0.55rem;
+  min-height: 0;
+  padding: 0.8rem 1rem;
+}
+.lr-themed .lr-hero > .ak-hero__copy {
+  grid-area: copy;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.lr-themed .lr-hero .ak-hero__copy h1 {
+  max-width: 34ch;
+  font-size: clamp(1.2rem, 1.9vw, 1.65rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.lr-themed .lr-hero .ak-hero__copy p {
+  margin-top: 0.15rem;
+}
+.lr-themed .lr-hero > .lr-meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  min-width: 0;
+}
+.lr-themed .lr-hero > .lr-meta > li {
+  max-width: 100%;
+  padding: 0.22rem 0.58rem;
+  font-size: 0.69rem;
+  line-height: 1.25;
+}
+.lr-themed .lr-hero > .lr-meta > li:not(.lr-meta-priority) {
+  overflow-wrap: anywhere;
+}
+.lr-themed .lr-hero > .lr-study-status {
+  grid-area: status;
+  display: grid;
+  grid-template-columns: auto minmax(5rem, 7rem) auto;
+  align-items: center;
+  gap: 0.55rem 0.7rem;
+  width: fit-content;
+  min-width: min(100%, 22rem);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.7rem;
+}
+.lr-themed .lr-hero .lr-study-status > div {
+  display: contents;
+}
+.lr-themed .lr-hero .lr-study-status progress {
+  margin: 0;
+}
+.lr-themed .lr-hero .lr-study-status button {
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
+@media (max-width: 760px) {
+  .lr-themed .lr-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "copy"
+      "meta"
+      "status";
+    gap: 0.65rem;
+    padding: 0.8rem;
+  }
+  .lr-themed .lr-hero > .lr-meta {
+    justify-content: flex-start;
+  }
+  .lr-themed .lr-hero > .lr-study-status {
+    grid-template-columns: auto minmax(4rem, 1fr);
+    width: 100%;
+    min-width: 0;
+  }
+  .lr-themed .lr-hero .lr-study-status button {
+    grid-column: 1 / -1;
+  }
+}
