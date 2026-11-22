@@ -153,7 +153,7 @@ function parseQuestionOptions(text: string): { stem: string; options: QuestionOp
   const normalized = text
     .replace(/\\+n/g, "\n")
     .replace(/\r\n/g, "\n")
-    .replace(/\n\s*(?:gabarito|resolu[cç][aã]o|an[aá]lise das alternativas|coment[aá]rio das alternativas)\s*[:—-].*$/is, "")
+    .replace(/\s+(?:gabarito|resolu[cç][aã]o|an[aá]lise das alternativas|coment[aá]rio das alternativas)\s*[:—-].*$/is, "")
     .trim();
   const matcher = /(?:^|\s)([A-E])[).]\s*/g;
   const matches = [...normalized.matchAll(matcher)];
@@ -462,8 +462,9 @@ function renderBlocks(
     // alternativas e gabarito antes de renderizar os botões.
     if (
       current.type === "quote" &&
-      /desafio de prova/i.test(current.lines.join(" ")) &&
-      current.lines.some((line) => /(?:quest[aã]o|pergunta)\s*:/i.test(line.replace(/\*/g, "")))
+      (parseQuestionOptions(current.lines.join("\n")) !== null ||
+        (/desafio de prova/i.test(current.lines.join(" ")) &&
+          current.lines.some((line) => /(?:quest[aã]o|pergunta)\s*:/i.test(line.replace(/\*/g, "")))))
     ) {
       const quoteText = current.lines.join("\n");
       const quoteParts = splitAnswerAndCommentary(quoteText);
@@ -535,6 +536,17 @@ function renderBlocks(
     }
 
     if (current.type === "p" && isQuestionOptions(current.text)) {
+      // Quando o material legado gravou o gabarito no mesmo parágrafo da
+      // alternativa E, separe-o antes de criar a questão interativa.
+      const inlineAnswer = splitAnswerAndCommentary(current.text);
+      if (inlineAnswer && parseQuestionOptions(inlineAnswer.prompt)) {
+        prepared.push({
+          type: "interactive-question",
+          prompt: inlineAnswer.prompt,
+          answer: inlineAnswer.answer,
+        });
+        continue;
+      }
       let answerIndex = -1;
       for (let candidate = index + 1; candidate < blocks.length; candidate++) {
         const next = blocks[candidate]!;
