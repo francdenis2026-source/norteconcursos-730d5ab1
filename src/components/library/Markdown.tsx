@@ -266,20 +266,22 @@ function InteractiveQuestion({
             {feedback.correct && <span> Gabarito: alternativa {feedback.correct}.</span>}
           </div>
           {feedback.explanation && <div className="study-question-feedback__general">{render(feedback.explanation, "general-explanation")}</div>}
-          <h4>Entenda cada alternativa</h4>
-          <div className="study-question-feedback__alternatives">
-            {parsed.options.map((option) => {
-              const rationale = feedback.alternatives[option.letter];
-              return (
-                <div key={option.letter} className="study-question-feedback__alternative" data-correct={option.letter === feedback.correct || undefined}>
-                  <strong>{option.letter} · {option.letter === feedback.correct ? "Correta" : "Incorreta"}</strong>
-                  {rationale
-                    ? <p>{render(rationale, "rationale-" + option.letter)}</p>
-                    : <p className="study-question-feedback__missing">A justificativa individual desta alternativa ainda não foi cadastrada neste material.</p>}
-                </div>
-              );
-            })}
-          </div>
+          <details className="study-question-feedback__details">
+            <summary>Ver análise de cada alternativa</summary>
+            <div className="study-question-feedback__alternatives">
+              {parsed.options.map((option) => {
+                const rationale = feedback.alternatives[option.letter];
+                return (
+                  <div key={option.letter} className="study-question-feedback__alternative" data-correct={option.letter === feedback.correct || undefined}>
+                    <strong>{option.letter} · {option.letter === feedback.correct ? "Correta" : "Incorreta"}</strong>
+                    {rationale
+                      ? <p>{render(rationale, "rationale-" + option.letter)}</p>
+                      : <p className="study-question-feedback__missing">A justificativa individual desta alternativa ainda não foi cadastrada neste material.</p>}
+                  </div>
+                );
+              })}
+            </div>
+          </details>
           <button type="button" className="study-question-feedback__retry" onClick={() => setSelected(null)}>Tentar novamente</button>
         </div>
       )}
