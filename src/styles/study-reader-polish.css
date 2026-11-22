@@ -89,7 +89,7 @@ html:root body .study-prose table td, html:root body .study-prose table td * { t
 .lr-themed .lr-hero > .lr-study-status {
   grid-area: status;
   display: grid;
-  grid-template-columns: auto minmax(5rem, 7rem) auto;
+  grid-template-columns: auto auto minmax(5rem, 7rem) auto;
   align-items: center;
   gap: 0.55rem 0.7rem;
   width: fit-content;
