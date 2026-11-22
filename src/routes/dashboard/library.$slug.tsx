@@ -315,16 +315,18 @@ function MaterialPage() {
             <ScrollText size={14} aria-hidden="true" /> {material.discipline}
           </small>
           <h1>{material.title}</h1>
-          <StudyPriorityBadges
-            contestName={material.contest_name}
-            discipline={material.discipline}
-            topic={`${material.topic_label} ${material.title}`}
-            className="mt-2"
-          />
+
           <StudyDisciplineMetaLine contestName={material.contest_name} discipline={material.discipline} />
           {material.summary && <p>{material.summary}</p>}
         </div>
         <ul className="lr-meta">
+          <li className="lr-meta-priority">
+            <StudyPriorityBadges
+              contestName={material.contest_name}
+              discipline={material.discipline}
+              topic={`${material.topic_label} ${material.title}`}
+            />
+          </li>
           <li>Assunto: {material.topic_label}</li>
           <li>
             <Clock3 aria-hidden="true" /> {readingMinutes(material.body_md)} min de leitura
