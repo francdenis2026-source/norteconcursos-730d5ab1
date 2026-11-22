@@ -148,15 +148,22 @@ function isHowToAnswerLabel(text: string): boolean {
 }
 type QuestionOption = { letter: string; text: string };
 function parseQuestionOptions(text: string): { stem: string; options: QuestionOption[] } | null {
+  // Materiais legados podem trazer "\n" literal e até a resolução anexada
+  // ao fim da alternativa E. Normalize e separe esses trechos antes do parse.
+  const normalized = text
+    .replace(/\\+n/g, "\n")
+    .replace(/\r\n/g, "\n")
+    .replace(/\n\s*(?:gabarito|resolu[cç][aã]o|an[aá]lise das alternativas|coment[aá]rio das alternativas)\s*[:—-].*$/is, "")
+    .trim();
   const matcher = /(?:^|\s)([A-E])[).]\s*/g;
-  const matches = [...text.matchAll(matcher)];
+  const matches = [...normalized.matchAll(matcher)];
   if (matches.length < 2) return null;
   const first = matches[0]!;
-  const stem = text.slice(0, first.index ?? 0).trim();
+  const stem = normalized.slice(0, first.index ?? 0).trim();
   const options = matches.map((match, index) => {
     const contentStart = (match.index ?? 0) + match[0].length;
-    const end = matches[index + 1]?.index ?? text.length;
-    return { letter: match[1] ?? "", text: text.slice(contentStart, end).trim() };
+    const end = matches[index + 1]?.index ?? normalized.length;
+    return { letter: match[1] ?? "", text: normalized.slice(contentStart, end).trim() };
   });
   return options.every((option) => option.text) ? { stem, options } : null;
 }
