@@ -1,0 +1,84 @@
+/* Compact, readable layout for study-material interactive questions. */
+.study-interactive-question {
+  display: grid; gap: 10px; width: 100%; min-width: 0; margin: 14px 0 18px;
+}
+.study-interactive-question .study-question-stem {
+  min-width: 0; padding: 13px 16px; border: 1px solid rgba(117,177,224,.34);
+  border-left: 4px solid #75b7e8; border-radius: 11px;
+  background: rgba(37,57,78,.72); color: var(--foreground,#e7edf5);
+  line-height: 1.58; overflow-wrap: anywhere;
+}
+.study-interactive-question .study-question-stem p { margin: 0; }
+.study-interactive-question .study-question-stem p + p { margin-top: 8px; }
+.study-interactive-question .study-question-instruction {
+  margin: 0 2px; color: var(--muted-foreground,#aebdce);
+  font-size: .82rem; line-height: 1.35; font-weight: 600;
+}
+.study-interactive-question .study-question-options,
+.study-interactive-question .study-question-options-wrap {
+  display: grid; grid-template-columns: minmax(0,1fr); gap: 7px;
+  width: 100%; min-width: 0;
+}
+.study-interactive-question .study-question-option {
+  display: flex; align-items: flex-start; gap: 10px; width: 100%;
+  min-width: 0; min-height: 0; padding: 9px 12px;
+  border: 1px solid rgba(111,145,177,.38); border-radius: 9px;
+  background: rgba(39,59,80,.78); color: var(--foreground,#e7edf5);
+  text-align: left; font-size: .91rem; line-height: 1.45;
+  white-space: normal; overflow-wrap: anywhere;
+  transition: border-color .16s ease, background .16s ease, box-shadow .16s ease;
+}
+.study-interactive-question button.study-question-option { cursor: pointer; }
+.study-interactive-question button.study-question-option:hover:not(:disabled) {
+  border-color: #78b9e8; background: rgba(48,76,102,.9);
+}
+.study-interactive-question button.study-question-option:focus-visible {
+  outline: 2px solid #8ac8f4; outline-offset: 2px;
+}
+.study-interactive-question button.study-question-option:disabled { opacity: 1; cursor: default; }
+.study-interactive-question .study-question-option__label {
+  display: inline-flex; flex: 0 0 25px; width: 25px; height: 25px;
+  align-items: center; justify-content: center; margin-top: 0;
+  border-radius: 6px; background: #355a78; color: #f4f8fc;
+  font-size: .76rem; line-height: 1; font-weight: 800;
+}
+.study-interactive-question .study-question-option > span:not(.study-question-option__status) {
+  flex: 1 1 auto; min-width: 0;
+}
+.study-interactive-question .study-question-option[data-selected="true"] {
+  border-color: #78b9e8; background: rgba(48,76,102,.95);
+}
+.study-interactive-question .study-question-option[data-correct="true"] {
+  border-color: #36a77b; background: rgba(25,105,75,.2);
+}
+.study-interactive-question .study-question-option[data-incorrect="true"] {
+  border-color: #d16d70; background: rgba(140,48,55,.18);
+}
+.study-interactive-question .study-question-feedback {
+  display: grid; gap: 10px; padding: 13px;
+  border: 1px solid rgba(111,145,177,.34); border-radius: 10px;
+  background: rgba(26,42,58,.72);
+}
+.study-interactive-question .study-question-feedback__general { line-height: 1.55; }
+.study-interactive-question .study-question-feedback__alternatives {
+  display: grid; grid-template-columns: minmax(0,1fr); gap: 7px;
+}
+.study-interactive-question .study-question-feedback__alternative {
+  padding: 9px 11px; border: 1px solid rgba(111,145,177,.28);
+  border-radius: 8px; background: rgba(39,59,80,.48); line-height: 1.5;
+}
+.study-interactive-question .study-question-feedback__alternative p { margin: 4px 0 0; }
+.study-interactive-question .study-question-feedback__retry {
+  justify-self: start; min-height: 34px; padding: 7px 12px;
+  border: 1px solid rgba(120,185,232,.5); border-radius: 7px;
+  color: var(--foreground,#e7edf5); background: rgba(53,90,120,.55); font-weight: 700;
+}
+@media (min-width: 900px) {
+  .study-interactive-question .study-question-feedback__alternatives {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width: 640px) {
+  .study-interactive-question .study-question-stem { padding: 11px 12px; }
+  .study-interactive-question .study-question-option { padding: 9px 10px; font-size: .87rem; }
+}
