@@ -4,6 +4,7 @@ import { Link } from "@tanstack/react-router";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
 import { dashboardHref } from "@/lib/internalNavigation";
 import { StudyPriorityBadges } from "@/components/library/StudyPriorityBadges";
+import "./StudyQuestionCompact.css";
 
 export function studyMarkdownHref(value: string): string | null {
   const internal = dashboardHref(value);
@@ -303,7 +304,7 @@ function parse(markdown: string): Block[] {
   let cleaned = markdown
     .replace(/\r\n/g, "\n")
     // Registros antigos gravaram quebras de linha como o texto literal "\n".
-    .replace(/\\{1,2}n/g, "\n")
+    .replace(/\\+n/g, "\n")
     // Linha de "---" sozinha é separador, nunca conteúdo de estudo.
     .replace(/^[ \t]*(?:-{3,}|\*{3,}|_{3,})[ \t]*$/gm, "")
     .replace(/(?:^|\n)[^\n]*(?:trimDanglingNumber|document\.querySelectorAll)[^\n]*(?=\n|$)/gi, "")
