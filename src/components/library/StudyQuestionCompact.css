@@ -82,3 +82,12 @@
   .study-interactive-question .study-question-stem { padding: 11px 12px; }
   .study-interactive-question .study-question-option { padding: 9px 10px; font-size: .87rem; }
 }
+.study-interactive-question .study-question-feedback { gap: 8px; padding: 10px 12px; }
+.study-interactive-question .study-question-feedback__details { margin-top: 1px; }
+.study-interactive-question .study-question-feedback__details summary {
+  width: fit-content; color: #9bcdf2; cursor: pointer; font-size: .82rem;
+  font-weight: 700; line-height: 1.4; padding: 2px 0;
+}
+.study-interactive-question .study-question-feedback__details[open] summary { margin-bottom: 7px; }
+.study-interactive-question .study-question-feedback__alternative { padding: 7px 9px; }
+.study-interactive-question .study-question-feedback__retry { min-height: 30px; padding: 5px 10px; }
