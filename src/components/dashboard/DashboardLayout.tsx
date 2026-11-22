@@ -468,7 +468,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, [router]);
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   const fullscreen = useWorkspaceFullscreen();
-  const compactSidebar = isCollapsed || fullscreen.active;
+  const isQuestionTrainerArea = location.pathname.replace(/\\/+$/, "") === "/dashboard/question-trainer";
+
+  // O Treinador precisa manter a navegação principal disponível na tela de configuração.
+  // Se a sessão anterior deixou o modo imersivo ativo, restaura o shell ao entrar nessa área.
+  React.useEffect(() => {
+    if (isQuestionTrainerArea && fullscreen.active) fullscreen.exit();
+  }, [isQuestionTrainerArea, fullscreen.active, fullscreen.exit]);
+
+  const compactSidebar = isCollapsed || (fullscreen.active && !isQuestionTrainerArea);
   // Default estável igual ao SSR ("dark"); o tema real é sincronizado depois
   // da hidratação para não gerar mismatch (ver src/lib/theme.ts).
   const [isDarkMode, setIsDarkMode] = React.useState(true);
@@ -709,7 +717,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div
         className="app-shell navigation-v2"
         data-area={isAdmin ? "admin" : "student"}
-        data-focus-mode={fullscreen.active}
+        data-focus-mode={fullscreen.active && !isQuestionTrainerArea}
         style={{ "--workspace-banner-art": `url("${workspaceBannerArt}")` } as React.CSSProperties}
         data-brand-bg={brandBg ?? "off"}
       >
