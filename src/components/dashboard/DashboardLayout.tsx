@@ -476,7 +476,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     if (isQuestionTrainerArea && fullscreen.active) fullscreen.exit();
   }, [isQuestionTrainerArea, fullscreen.active, fullscreen.exit]);
 
-  const compactSidebar = isCollapsed || (fullscreen.active && !isQuestionTrainerArea);
+  const compactSidebar = !isQuestionTrainerArea && (isCollapsed || fullscreen.active);
   // Default estável igual ao SSR ("dark"); o tema real é sincronizado depois
   // da hidratação para não gerar mismatch (ver src/lib/theme.ts).
   const [isDarkMode, setIsDarkMode] = React.useState(true);
