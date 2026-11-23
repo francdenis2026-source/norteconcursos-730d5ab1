@@ -66,7 +66,7 @@ export function PortugueseStudyReading({
             <span className="min-w-0 flex-1"><h2>{section.title}</h2>{discipline && contestName && <StudyPriorityBadges discipline={discipline} contestName={contestName} topic={section.title} className="mt-1" />}</span>
             <ChevronDown size={18} aria-hidden="true" />
           </summary>
-          <div className="portuguese-reader__body">{renderSection ? renderSection(section.body) : <Markdown source={section.body} discipline={discipline} contestName={contestName} />}</div>
+          <div className="portuguese-reader__body">{renderSection ? renderSection(section.body) : <Markdown source={section.body} {...(discipline ? { discipline } : {})} {...(contestName ? { contestName } : {})} />}</div>
         </details>
       ))}
     </div>

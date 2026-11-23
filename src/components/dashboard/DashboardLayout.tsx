@@ -468,7 +468,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, [router]);
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   const fullscreen = useWorkspaceFullscreen();
-  const isQuestionTrainerArea = location.pathname.replace(/\\/+$/, "") === "/dashboard/question-trainer";
+  const isQuestionTrainerArea = location.pathname.replace(/[/]+$/, "") === "/dashboard/question-trainer";
 
   // O Treinador precisa manter a navegação principal disponível na tela de configuração.
   // Se a sessão anterior deixou o modo imersivo ativo, restaura o shell ao entrar nessa área.
