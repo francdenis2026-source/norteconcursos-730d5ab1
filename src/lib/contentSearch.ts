@@ -37,7 +37,20 @@ export function collectContentHits(q: string, units: SearchUnitRow[], explanatio
   return [...hits.values()];
 }
 
+/** Cache em memória por busca: evita baixar de novo os textos das leis a cada repetição da mesma pesquisa. */
+const SEARCH_CACHE_TTL_MS = 10 * 60 * 1000;
+const searchCache = new Map<string, { at: number; hits: ContentHit[] }>();
+
 export async function searchContent(q: string, allowedSlugs?: readonly string[], signal?: AbortSignal): Promise<ContentHit[]> {
+  const key = JSON.stringify([normalizeLibrarySearch(q), legalArticleSearchKey(q) ?? null, allowedSlugs ? [...allowedSlugs].sort() : null]);
+  const cached = searchCache.get(key);
+  if (cached && Date.now() - cached.at < SEARCH_CACHE_TTL_MS) return cached.hits;
+  const hits = await searchContentUncached(q, allowedSlugs, signal);
+  if (!signal?.aborted) searchCache.set(key, { at: Date.now(), hits });
+  return hits;
+}
+
+async function searchContentUncached(q: string, allowedSlugs?: readonly string[], signal?: AbortSignal): Promise<ContentHit[]> {
   if ((normalizeLibrarySearch(q).length < 2 && !legalArticleSearchKey(q)) || allowedSlugs?.length === 0) return [];
   const articleKey = legalArticleSearchKey(q);
   const token = normalizeLibrarySearch(q).split(" ").sort((a,b) => b.length - a.length)[0]!;
