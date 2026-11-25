@@ -64,7 +64,7 @@ function EstudoPcAcre() {
         <iframe
           title="Estudo PC-AC 2026"
           srcDoc={srcDoc}
-          allow="clipboard-write"
+          allow="clipboard-write; web-share"
           className="h-[calc(100vh-140px)] min-h-[760px] w-full border-0"
         />
       ) : (
