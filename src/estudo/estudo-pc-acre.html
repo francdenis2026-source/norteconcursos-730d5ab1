@@ -928,9 +928,10 @@ function vPlan() {
 
 function shareArea(){
   var b=document.getElementById("shareb");
-  var url=location.href;
-  try{ if(window.parent&&window.parent!==window) url=window.parent.location.href; }catch(e){}
-  var title="Área de estudo PC-AC 2026 | Norte Concursos";
+  var base=location.origin;
+  try{ if(window.parent&&window.parent!==window) base=window.parent.location.origin; }catch(e){}
+  var url=(base&&base!=="null"?base:"https://"+location.host)+"/";
+  var title="Norte Concursos | Estudo PC-AC 2026";
   if(navigator.share){ navigator.share({title:title,url:url}).catch(function(){}); return; }
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(url).then(function(){

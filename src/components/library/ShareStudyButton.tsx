@@ -16,7 +16,8 @@ export function ShareStudyButton({ title }: { title: string }) {
   }, [status]);
 
   async function share() {
-    const url = window.location.href;
+    // Link público da plataforma (home), para abrir em redes sociais sem exigir login.
+    const url = `${window.location.origin}/`;
     try {
       if (typeof navigator.share === "function") {
         await navigator.share({ title, url });
