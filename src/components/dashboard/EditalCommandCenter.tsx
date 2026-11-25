@@ -8,6 +8,7 @@ import {
   CalendarDays,
   Database,
   FileText,
+  GraduationCap,
   ListChecks,
   ScanSearch,
   ShieldCheck,
@@ -22,6 +23,15 @@ const EXAM_DATE = "2027-01-24";
 
 /** Número que sobe suavemente até o valor (sem animação para quem pede menos movimento). */
 const actions = [
+  {
+    to: "/dashboard/estudo-pc-acre",
+    title: "Área de estudo interativa",
+    text: "Questões com explicação, teoria e treino",
+    icon: GraduationCap,
+    tone: "gold",
+    primary: true,
+    featured: true,
+  },
   {
     to: "/dashboard/pc-acre-edital",
     title: "Checklist do edital",
@@ -119,6 +129,7 @@ export function EditalCommandCenter() {
                 className="ecc-action"
                 data-tone={a.tone}
                 data-primary={"primary" in a || undefined}
+                data-featured={"featured" in a || undefined}
                 style={{ "--i": i } as React.CSSProperties}
               >
                 <span className="ecc-action__icon">

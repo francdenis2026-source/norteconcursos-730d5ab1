@@ -107,6 +107,7 @@
 
 /* Ações */
 .ecc-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.ecc-action[data-featured] { grid-column: 1 / -1; }
 @media (min-width: 720px) { .ecc-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .ecc-action {
   --tone: oklch(0.72 0.12 185);
