@@ -226,6 +226,13 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Mapa IDECAN",
+    label: "Área de estudo",
+    icon: BookOpen,
+    href: "/dashboard/estudo-pc-acre",
+    primary: true,
+  },
+  {
+    group: "Mapa IDECAN",
     label: "Mapa da prova",
     icon: Target,
     href: "/dashboard/mapa-idecan",
