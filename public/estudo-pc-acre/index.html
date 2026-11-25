@@ -112,10 +112,11 @@ h2{font-size:19px;font-weight:700;letter-spacing:-.2px;margin:0 0 10px}
 a,.link{color:var(--verde-d);text-underline-offset:3px}
 :focus-visible{outline:3px solid #12864a66;outline-offset:2px}
 /* ---- shell ---- */
-.shell{display:grid;grid-template-columns:268px minmax(0,1fr);min-height:100vh}
+body{--sbw:268px}
+.shell{display:grid;grid-template-columns:var(--sbw) minmax(0,1fr);min-height:100vh}
 body.locked .shell{display:none}
-#side{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--mata);color:#c9ddd0;display:flex;flex-direction:column;z-index:40}
-.sb-brand{display:flex;align-items:center;gap:12px;padding:22px 20px 18px;cursor:pointer;background:none;border:0;color:inherit;text-align:left;font:inherit}
+#side{position:sticky;top:0;height:100vh;width:var(--sbw);overflow-x:hidden;transition:width .2s ease,visibility .2s;overflow-y:auto;background:var(--mata);color:#c9ddd0;display:flex;flex-direction:column;z-index:40}
+.sb-brand{display:flex;align-items:center;gap:12px;padding:22px 52px 18px 20px;cursor:pointer;background:none;border:0;color:inherit;text-align:left;font:inherit}
 .sb-brand svg{width:40px;height:40px;flex:none}
 .sb-brand b{display:block;font:800 16px var(--hd);color:#fff;letter-spacing:.2px}
 .sb-brand small{display:block;font-size:12px;color:#8fb39c}
@@ -148,8 +149,6 @@ body.locked .shell{display:none}
 .fsb{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;flex:none}
 .sbt{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;flex:none}
 .sbt:hover{border-color:#b8c8bd;background:#f7faf6}
-body.side-off .shell{grid-template-columns:minmax(0,1fr)}
-body.side-off #side{display:none}
 @media(max-width:900px){.sbt{display:none}}
 .fsb:hover{border-color:#b8c8bd;background:#f7faf6}
 .fsb .x{display:none}.fs-on .fsb .x{display:inline}.fs-on .fsb .e{display:none}
@@ -397,6 +396,35 @@ ol.steps li:last-child{padding-bottom:4px}
 .sym{border-bottom:1px dotted #12864a;cursor:help}
 #symtip{position:fixed;z-index:300;display:none;background:#0b2a1f;color:#fff;padding:9px 12px;border-radius:10px;font-size:13px;line-height:1.45;max-width:270px;box-shadow:0 8px 22px #0004;pointer-events:none}
 #symtip b{color:#f6d55c}
+/* ---- compacto + barra lateral retrátil ---- */
+body{font-size:15px;line-height:1.5}
+main{max-width:1180px;padding:14px clamp(12px,2vw,24px) 36px}
+h1{font-size:22px;margin:0 0 4px}
+.muted{font-size:13.5px}
+.top{height:50px}
+.card{padding:13px 16px;margin-bottom:10px}
+.card h2{margin:0 0 6px;font-size:17px}
+.card h3{margin:14px 0 6px}
+.card p{margin:4px 0}
+.note{padding:9px 12px;margin:10px 0;font-size:13.5px}
+.nv{padding:6px 9px}
+.nv-sec{padding:10px 10px 4px}
+#nav{padding:4px 10px 10px}
+.sb-brand{padding:14px 16px 10px}
+.sb-flag{margin:0 16px 6px}
+.sb-foot{padding:12px 16px 14px}
+body.side-off{--sbw:0px}
+body.side-off #side{visibility:hidden}
+body.side-off.peek #side{visibility:visible;position:fixed;left:0;top:0;bottom:0;width:268px;z-index:60;box-shadow:12px 0 32px #0005}
+#edge{display:none;position:fixed;left:0;top:0;bottom:0;width:10px;z-index:58}
+body.side-off:not(.side-lock) #edge{display:block}
+body.side-lock #lockb{background:#fff7d6;border-color:var(--ouro);color:#7a5a00}
+@media(max-width:900px){
+ #side{width:280px !important;visibility:visible !important}
+ #edge{display:none !important}
+ body.side-off #side{visibility:visible}
+ body.side-off.peek #side{position:fixed}
+}
 </style>
 </head>
 <body>
@@ -426,6 +454,7 @@ ol.steps li:last-child{padding-bottom:4px}
  </div>
 </div>
 <div id="tmodal" hidden role="dialog" aria-modal="true" aria-labelledby="tmt"><div class="tm"><div class="bigclock" id="bc1"></div><h2 id="tmt">Bem-vindo(a) à área de estudo</h2><p>Você entrou com um <b>acesso de cortesia</b>, liberado pela Norte Concursos para você conhecer a plataforma.</p><p>Ele vale por <b>60 minutos</b>, contados a partir de agora. Passado esse tempo, o acesso é encerrado automaticamente. Para continuar estudando, solicite a senha completa.</p><button class="go" id="tok" type="button">Começar a estudar</button></div></div>
+<div id="edge" aria-hidden="true"></div>
 <div class="shell">
  <aside id="side" aria-label="Navegação">
   <button class="sb-brand" type="button" onclick="go('home',{b:null,d:null,t:null})"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 56 12v20c0 15-10 24-24 29C18 56 8 47 8 32V12L32 3Z" fill="#f2c200"/><path d="M32 3 56 12v20c0 15-10 24-24 29V3Z" fill="#12864a"/><path d="M8 32v-20L32 3v58C18 56 8 47 8 32Z" fill="#f2c200"/><path d="M8 40 56 24v10L32 61C18 56 8 47 8 40Z" fill="#12864a"/><path d="M20 12l2.4 7.2 7.6.1-6.1 4.5 2.3 7.2-6.2-4.4-6.2 4.4 2.3-7.2-6.1-4.5 7.6-.1z" fill="#d62828" transform="translate(2 0) scale(.9)"/></svg><span><b>Norte Concursos</b><small>PC-AC · Oficial Investigador</small></span></button>
@@ -438,7 +467,7 @@ ol.steps li:last-child{padding-bottom:4px}
   <header class="top">
    <button class="hamb" type="button" aria-label="Abrir menu" onclick="document.body.classList.toggle('nav-open')"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
    <nav class="crumbs" id="crumbs" aria-label="Você está em"></nav>
-   <div class="tools"><button class="sbt" type="button" id="sbt" aria-label="Recolher menu" title="Mostrar ou ocultar o menu" onclick="sideTog()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button><div class="tchip" id="tchip" hidden title="Tempo restante do acesso de cortesia"><span class="mini" id="tmini"></span><span class="tl"><small>Cortesia</small><b id="ttxt">60:00</b></span></div><svg class="acflag" viewBox="0 0 100 70" aria-label="Bandeira do Acre" role="img"><path d="M0 0H100L0 70Z" fill="#f4c20d"/><path d="M100 0V70H0Z" fill="#0e8a45"/><g transform="translate(19 19) scale(12.5)"><path d="M0-1 .29-.4.95-.31.47.15.59.81 0 .5-.59.81-.47.15-.95-.31-.29-.4z" fill="#d62828"/></g></svg><button class="fsb" type="button" aria-label="Tela cheia" title="Tela cheia / restaurar"><svg class="fsi" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="e" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="x" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button><button class="out" id="gout" type="button">Sair</button></div>
+   <div class="tools"><button class="sbt" type="button" id="lockb" onclick="sideLock()" aria-pressed="false" title="Travar: não abrir o menu ao encostar na borda"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></button><button class="sbt" type="button" id="sbt" aria-label="Recolher menu" title="Mostrar ou ocultar o menu" onclick="sideTog()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button><div class="tchip" id="tchip" hidden title="Tempo restante do acesso de cortesia"><span class="mini" id="tmini"></span><span class="tl"><small>Cortesia</small><b id="ttxt">60:00</b></span></div><svg class="acflag" viewBox="0 0 100 70" aria-label="Bandeira do Acre" role="img"><path d="M0 0H100L0 70Z" fill="#f4c20d"/><path d="M100 0V70H0Z" fill="#0e8a45"/><g transform="translate(19 19) scale(12.5)"><path d="M0-1 .29-.4.95-.31.47.15.59.81 0 .5-.59.81-.47.15-.95-.31-.29-.4z" fill="#d62828"/></g></svg><button class="fsb" type="button" aria-label="Tela cheia" title="Tela cheia / restaurar"><svg class="fsi" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="e" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="x" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button><button class="out" id="gout" type="button">Sair</button></div>
   </header>
   <main id="main"></main>
   <footer class="appfoot"><span>Página exclusiva do concurso da Polícia Civil do Acre · Norte Concursos</span><span>Desenvolvido por <b>Franc D'nis</b> · <a href="https://wa.me/5568992031340" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:economizafeijo@gmail.com">E-mail</a></span></footer>
@@ -514,7 +543,7 @@ function save() { try { localStorage.setItem("pcac_ans", JSON.stringify(ans)); }
 let marks = {};
 try { marks = JSON.parse(localStorage.getItem("pcac_marks") || "{}"); } catch (e) { marks = {}; }
 function mark(k, v) { marks[k] = v; try { localStorage.setItem("pcac_marks", JSON.stringify(marks)); } catch (e) {} }
-function go(v, o) { S = Object.assign({}, S, { v }, o || {}); if (document.body) document.body.classList.remove("nav-open"); render(); window.scrollTo(0, 0); }
+function go(v, o) { S = Object.assign({}, S, { v }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
 const blk = () => BLOCOS.find(b => b.id === S.b);
 const qIdx = t => QS.map((q, i) => i).filter(i => QS[i].t === t);
 const subQ = sid => sj(sid).qs;
@@ -893,8 +922,18 @@ function vPlan() {
   return h;
 }
 
-function sideTog(){ const off=document.body.classList.toggle("side-off"); try{localStorage.setItem("pcac_side",off?"1":"0")}catch(e){} }
-(function(){ try{ if(localStorage.getItem("pcac_side")==="1") document.body.classList.add("side-off"); }catch(e){} })();
+function sideTog(){ const off=document.body.classList.toggle("side-off"); document.body.classList.remove("peek"); try{localStorage.setItem("pcac_side",off?"1":"0")}catch(e){} }
+function sideLock(){ const on=document.body.classList.toggle("side-lock"); const b=document.getElementById("lockb"); if(b){ b.setAttribute("aria-pressed",on?"true":"false"); b.title=on?"Destravar: abrir o menu ao encostar na borda":"Travar: não abrir o menu ao encostar na borda"; } try{localStorage.setItem("pcac_lock",on?"1":"0")}catch(e){} }
+(function(){
+  if(typeof document==='undefined'||!document.body) return;
+  try{ if(localStorage.getItem("pcac_side")==="1") document.body.classList.add("side-off"); if(localStorage.getItem("pcac_lock")==="1") document.body.classList.add("side-lock"); }catch(e){}
+  const b=document.getElementById("lockb"); if(b) b.setAttribute("aria-pressed", document.body.classList.contains("side-lock")?"true":"false");
+  const edge=document.getElementById("edge"), side=document.getElementById("side");
+  if(edge&&side){
+    edge.addEventListener("mouseenter",()=>{ if(document.body.classList.contains("side-off")) document.body.classList.add("peek"); });
+    side.addEventListener("mouseleave",()=>document.body.classList.remove("peek"));
+  }
+})();
 /* ---------- Arquivo e meus erros ---------- */
 function lastOkMap() { const m = {}; LOG.forEach(l => { m[l.i] = l.ok; }); return m; }
 function refazer(i) { delete ans[i]; save(); HIT = null; go("topic", { d: QSUBJ[i], t: QS[i].t, tab: "questoes" }); setTimeout(() => { const el = document.getElementById("q" + i); if (el) el.scrollIntoView({ block: "center" }); }, 60); }
