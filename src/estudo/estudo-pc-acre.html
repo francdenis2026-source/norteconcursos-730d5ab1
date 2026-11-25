@@ -932,13 +932,31 @@ function shareArea(){
   try{ if(window.parent&&window.parent!==window) base=window.parent.location.origin; }catch(e){}
   var url=(base&&base!=="null"?base:"https://"+location.host)+"/";
   var title="Norte Concursos | Estudo PC-AC 2026";
-  if(navigator.share){ navigator.share({title:title,url:url}).catch(function(){}); return; }
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(url).then(function(){
-      if(!b) return; b.title="Link copiado"; b.setAttribute("aria-label","Link copiado");
-      setTimeout(function(){ b.title="Compartilhar"; b.setAttribute("aria-label","Compartilhar área de estudo"); },2500);
-    }).catch(function(){});
+  function copiar(){
+    var ok=false;
+    var ta=document.createElement("textarea");
+    ta.value=url; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.top="0"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try{ ok=document.execCommand("copy"); }catch(e){}
+    document.body.removeChild(ta);
+    if(ok){ aviso("Link copiado: "+url); return; }
+    window.prompt("Copie o link da plataforma:", url);
   }
+  if(navigator.share){
+    navigator.share({title:title,url:url}).catch(function(e){ if(e&&e.name==="AbortError") return; copiar(); });
+    return;
+  }
+  copiar();
+}
+function aviso(texto){
+  var el=document.getElementById("shareToast");
+  if(!el){
+    el=document.createElement("div"); el.id="shareToast"; el.setAttribute("role","status");
+    el.style.cssText="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99;background:#14211a;color:#fff;padding:9px 16px;border-radius:10px;font:600 13px var(--bd, sans-serif);box-shadow:0 6px 20px #0004;max-width:90vw;overflow-wrap:anywhere";
+    document.body.appendChild(el);
+  }
+  el.textContent=texto; el.style.display="block";
+  clearTimeout(el._t); el._t=setTimeout(function(){ el.style.display="none"; },3000);
 }
 function sideTog(){ const off=document.body.classList.toggle("side-off"); document.body.classList.remove("peek"); try{localStorage.setItem("pcac_side",off?"1":"0")}catch(e){} }
 function sideLock(){ const on=document.body.classList.toggle("side-lock"); const b=document.getElementById("lockb"); if(b){ b.setAttribute("aria-pressed",on?"true":"false"); b.title=on?"Destravar: abrir o menu ao encostar na borda":"Travar: não abrir o menu ao encostar na borda"; } try{localStorage.setItem("pcac_lock",on?"1":"0")}catch(e){} }
