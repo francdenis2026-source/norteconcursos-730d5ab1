@@ -1151,7 +1151,7 @@ function render(scroll) {
       }catch(x){ note("Tela cheia bloqueada aqui. No computador use F11; no celular, instale como aplicativo."); }
     }
     if(typeof document.querySelectorAll!=="function") return;
-    document.querySelectorAll(".fsb").forEach(b=>b.addEventListener("click",tog));
+    document.querySelectorAll(".fsb:not(#shareb)").forEach(b=>b.addEventListener("click",tog));
     const sync=()=>document.body.classList.toggle("fs-on",on());
     document.addEventListener("fullscreenchange",sync); document.addEventListener("webkitfullscreenchange",sync);
   })();
