@@ -45,6 +45,7 @@ import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edi
 import { Route as DashboardEnemRouteImport } from './routes/dashboard/enem'
 import { Route as DashboardErrorsRouteImport } from './routes/dashboard/errors'
 import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
+import { Route as DashboardEstudoPcAcreRouteImport } from './routes/dashboard/estudo-pc-acre'
 import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/exam-panorama'
 import { Route as DashboardExerciciosRouteImport } from './routes/dashboard/exercicios'
 import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
@@ -262,6 +263,11 @@ const DashboardErrorsRoute = DashboardErrorsRouteImport.update({
 const DashboardEssaysRoute = DashboardEssaysRouteImport.update({
   id: '/essays',
   path: '/essays',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardEstudoPcAcreRoute = DashboardEstudoPcAcreRouteImport.update({
+  id: '/estudo-pc-acre',
+  path: '/estudo-pc-acre',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardExamPanoramaRoute = DashboardExamPanoramaRouteImport.update({
@@ -485,6 +491,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
+  '/dashboard/estudo-pc-acre': typeof DashboardEstudoPcAcreRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
@@ -557,6 +564,7 @@ export interface FileRoutesByTo {
   '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
+  '/dashboard/estudo-pc-acre': typeof DashboardEstudoPcAcreRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
@@ -631,6 +639,7 @@ export interface FileRoutesById {
   '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
   '/dashboard/essays': typeof DashboardEssaysRoute
+  '/dashboard/estudo-pc-acre': typeof DashboardEstudoPcAcreRoute
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/exercicios': typeof DashboardExerciciosRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
@@ -707,6 +716,7 @@ export interface FileRouteTypes {
     | '/dashboard/enem'
     | '/dashboard/errors'
     | '/dashboard/essays'
+    | '/dashboard/estudo-pc-acre'
     | '/dashboard/exam-panorama'
     | '/dashboard/exercicios'
     | '/dashboard/flashcards'
@@ -779,6 +789,7 @@ export interface FileRouteTypes {
     | '/dashboard/enem'
     | '/dashboard/errors'
     | '/dashboard/essays'
+    | '/dashboard/estudo-pc-acre'
     | '/dashboard/exam-panorama'
     | '/dashboard/exercicios'
     | '/dashboard/flashcards'
@@ -852,6 +863,7 @@ export interface FileRouteTypes {
     | '/dashboard/enem'
     | '/dashboard/errors'
     | '/dashboard/essays'
+    | '/dashboard/estudo-pc-acre'
     | '/dashboard/exam-panorama'
     | '/dashboard/exercicios'
     | '/dashboard/flashcards'
@@ -1162,6 +1174,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardEssaysRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/estudo-pc-acre': {
+      id: '/dashboard/estudo-pc-acre'
+      path: '/estudo-pc-acre'
+      fullPath: '/dashboard/estudo-pc-acre'
+      preLoaderRoute: typeof DashboardEstudoPcAcreRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/exam-panorama': {
       id: '/dashboard/exam-panorama'
       path: '/exam-panorama'
@@ -1467,6 +1486,7 @@ interface DashboardRouteChildren {
   DashboardEnemRoute: typeof DashboardEnemRoute
   DashboardErrorsRoute: typeof DashboardErrorsRoute
   DashboardEssaysRoute: typeof DashboardEssaysRoute
+  DashboardEstudoPcAcreRoute: typeof DashboardEstudoPcAcreRoute
   DashboardExamPanoramaRoute: typeof DashboardExamPanoramaRoute
   DashboardExerciciosRoute: typeof DashboardExerciciosRoute
   DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
@@ -1524,6 +1544,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardEnemRoute: DashboardEnemRoute,
   DashboardErrorsRoute: DashboardErrorsRoute,
   DashboardEssaysRoute: DashboardEssaysRoute,
+  DashboardEstudoPcAcreRoute: DashboardEstudoPcAcreRoute,
   DashboardExamPanoramaRoute: DashboardExamPanoramaRoute,
   DashboardExerciciosRoute: DashboardExerciciosRoute,
   DashboardFlashcardsRoute: DashboardFlashcardsRoute,
