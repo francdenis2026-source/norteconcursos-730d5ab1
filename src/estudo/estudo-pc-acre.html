@@ -675,7 +675,7 @@ function vBloco() {
 }
 function vDisc() {
   const s = sj(S.d), all = subQ(s.id), tops = ST[s.id];
-  let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button></p>
+  let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button>${canShare() ? ` · <button class="link" onclick="shareArea('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
   <div class="note"><b>Ordem de estudo por prioridade (estimada).</b> Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Analisei duas provas reais da banca (PC-SC 2026 e PC-BA 2022) e, onde não havia registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div>`;
   if (s.id === "estatistica") h += `<div class="card"><h2>Provas reais para resolver</h2><p class="muted">Os enunciados originais ficam nas provas abaixo (não posso copiá-los para o app). Resolva as questões indicadas e depois confira no gabarito.</p>${PROVAS.map(p => `<p><b>${p[0]}</b><br><span class="muted">${p[1]}</span><br><a href="${p[2]}" target="_blank" rel="noopener">Abrir a prova</a>${p[3] ? ` · <a href="${p[3]}" target="_blank" rel="noopener">Gabarito</a>` : ""}</p>`).join("")}</div>`;
   h += `<div class="list">`;
@@ -1157,6 +1157,9 @@ function render(scroll) {
     if(ev.key==="F12"||(c&&["s","p","u","a","c","x"].includes(k)&&!inField(ev))||(c&&ev.shiftKey&&["i","j","c"].includes(k))||ev.key==="PrintScreen"){ ev.preventDefault(); if(ev.key==="PrintScreen"){try{navigator.clipboard.writeText("Conteúdo protegido · Norte Concursos")}catch(x){}} }
   });
 })();
+function canShare() { try { return !!window.parent && window.parent !== window && window.parent.location.origin === location.origin; } catch (e) { return false; } }
+function shareArea(id, btn) { if (!canShare()) return; const url = window.parent.location.origin + "/dashboard/estudo-pc-acre?area=" + encodeURIComponent(id); const fallback = () => prompt("Copie o link desta área:", url); const ok = () => { if (btn) { btn.textContent = "Link copiado ✓"; setTimeout(() => { btn.textContent = "Copiar link desta área"; }, 2000); } }; try { navigator.clipboard.writeText(url).then(ok, fallback); } catch (e) { fallback(); } }
+(function openArea(){ if (typeof location === "undefined") return; const a = window.__AREA__ || ((/(?:^|[#&])area=([a-z0-9_-]{1,40})/i.exec(location.hash || "")) || [])[1]; const sj0 = a && SUBJ.find(x => x.id === a); if (sj0) S = Object.assign({}, S, { v: "disc", d: sj0.id, b: sj0.bloco, t: null }); })();
 try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(x){}
 render();
 </script>
