@@ -425,6 +425,7 @@ body.side-lock #lockb{background:#fff7d6;border-color:var(--ouro);color:#7a5a00}
  body.side-off #side{visibility:visible}
  body.side-off.peek #side{position:fixed}
 }
+.chip.lk{background:#eef2ff;color:#3730a3;border-color:#c7d2fe}
 </style>
 </head>
 <body>
@@ -553,7 +554,9 @@ let LOG = [];
 try { LOG = JSON.parse(localStorage.getItem("pcac_log") || "[]"); } catch (e) { LOG = []; }
 (function migrate() { const has = new Set(LOG.map(l => l.i)); let ch = false; Object.keys(ans).forEach(k => { if (!has.has(+k)) { LOG.push({ i: +k, ok: ans[k] === QS[+k].c ? 1 : 0, t: Date.now(), m: "antes" }); ch = true; } }); if (ch) saveLog(); })();
 function saveLog() { try { localStorage.setItem("pcac_log", JSON.stringify(LOG)); } catch (e) {} }
-function logAns(i, ok, m, t) { LOG.push({ i, ok: ok ? 1 : 0, t: t || Date.now(), m }); saveLog(); HIT = null; }
+function qKey(i) { const s = QS[i].q; let h = 5381; for (let k = 0; k < s.length; k++) h = ((h * 33) ^ s.charCodeAt(k)) >>> 0; return QS[i].t + ":" + h.toString(36); }
+function reportAns(i, sel, m, t) { try { if (!window.parent || window.parent === window || typeof crypto === "undefined" || !crypto.randomUUID) return; const q = QS[i]; const tp = TOP.find(x => x.id === q.t); const sj = SUBJ.find(x => x.id === QSUBJ[i]); window.parent.postMessage({ type: "pcac-answer", id: crypto.randomUUID(), key: qKey(i), question_text: q.q, topic_id: q.t, topic_name: tp ? tp.nome : q.t, subject_name: sj ? sj.nome : null, mode: m === "simulado" ? "simulado" : "estudo", selected: "ABCDE"[sel], correct: "ABCDE"[q.c], answered_at: new Date(t || Date.now()).toISOString() }, location.origin); } catch (e) {} }
+function logAns(i, ok, m, t, sel) { if (seen(i)) return; LOG.push({ i, ok: ok ? 1 : 0, t: t || Date.now(), m }); saveLog(); HIT = null; if (sel !== undefined) reportAns(i, sel, m, t); }
 let HIT = null, SEEN = null;
 function sets() { if (!HIT) { HIT = new Set(LOG.filter(l => l.ok).map(l => l.i)); SEEN = new Set(LOG.map(l => l.i)); } }
 const hit = i => { sets(); return HIT.has(i); };
@@ -573,9 +576,10 @@ function crumbs() {
   if (S.d) add(sj(S.d).nome.split(" e ")[0], () => go("disc"));
   if (S.t) add(tp(S.t).nome.split(" (")[0], () => go("topic"));
 }
-function choose(i, o) { if (ans[i] !== undefined) return; ans[i] = o; save(); logAns(i, o === QS[i].c, "estudo"); render(i); }
+function choose(i, o) { if (ans[i] !== undefined) return; ans[i] = o; save(); logAns(i, o === QS[i].c, "estudo", undefined, o); render(i); }
 function redo(i) { delete ans[i]; save(); render(i); }
 function toggleFilt() { S.filt = S.filt === "todas" ? "pend" : "todas"; render(); }
+function resetTopic(t) { if (!confirm("Resetar as respostas deste assunto? Elas voltam a ficar abertas. O que já foi contado não conta de novo.")) return; Object.keys(ans).forEach(k => { if (QS[k].t === t) delete ans[k]; }); save(); render(); }
 function reset() { if (confirm("Limpar as respostas na tela? O histórico de desempenho é mantido.")) { ans = {}; save(); render(); } }
 const feitas = ids => ids.filter(i => seen(i)).length;
 const certas = ids => ids.filter(i => hit(i)).length;
@@ -607,7 +611,7 @@ function receitaHtml(r) {
 }
 function qHtml(i, n) {
   const q = QS[i], done = ans[i] !== undefined, ok = done && ans[i] === q.c;
-  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}"><div class="qh"><span class="qn">${n}</span>Questão ${n}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}</div><p class="qt">${q.q}</p>`;
+  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}"><div class="qh"><span class="qn">${n}</span>Questão ${n}${done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}</div><p class="qt">${q.q}</p>`;
   q.ops.forEach((o, k) => {
     let cl = "opt"; if (done) { if (k === q.c) cl += " right"; else if (k === ans[i]) cl += " wrong"; }
     h += `<button class="${cl}" ${done ? "disabled" : ""} onclick="choose(${i},${k})"><b>${"ABCDE"[k]}</b><span>${o}</span></button>`;
@@ -694,7 +698,7 @@ function vTopic() {
     const filt = S.filt || "pend";
     const show = filt === "todas" ? ids : ids.filter(i => !hit(i) || ans[i] !== undefined);
     const ocultas = ids.length - show.length;
-    h += `<p class="muted">${ocultas ? `${ocultas} já acertada(s) ocultada(s). ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as já acertadas"}</button></p>`;
+    h += `<p class="muted">${ocultas ? `${ocultas} já acertada(s) ocultada(s). ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as já acertadas"}</button> · <button class="link" onclick="resetTopic('${S.t}')">Resetar respostas deste assunto</button></p>`;
     if (!show.length) h += `<div class="note">Você já acertou todas as questões deste assunto. Parabéns! Passe ao próximo assunto ou refaça pelo simulado.</div>`;
     show.forEach((i, k) => { h += qHtml(i, ids.indexOf(i) + 1); });
   }
@@ -741,7 +745,7 @@ function simFinish(auto) {
   if (!auto) { const un = SIM.ids.length - Object.keys(SIM.a).length; if (!confirm(un ? `Faltam ${un} questões sem resposta. Finalizar mesmo assim?` : "Finalizar o simulado?")) return; }
   if (TM) { clearInterval(TM); TM = null; }
   SIM.done = true; SIM.fim = Date.now();
-  const t0 = SIM.fim; SIM.ids.forEach((i, k) => { if (SIM.a[k] !== undefined) logAns(i, SIM.a[k] === QS[i].c, "simulado", t0); });
+  const t0 = SIM.fim; SIM.ids.forEach((i, k) => { if (SIM.a[k] !== undefined) logAns(i, SIM.a[k] === QS[i].c, "simulado", t0, SIM.a[k]); });
   go("simres");
 }
 function vSimRun() {
