@@ -25,6 +25,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { StudyPriorityBadges } from "@/components/library/StudyPriorityBadges";
+import { ShareStudyButton } from "@/components/library/ShareStudyButton";
 import { StudyDisciplineMetaLine } from "@/components/library/StudyDisciplineMetaLine";
 import { Markdown } from "@/components/library/Markdown";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
@@ -304,7 +305,10 @@ function MaterialPage() {
             <BackToPlan back={backToPlan} topic={tema} />
             {back}
           </div>
-          {fm.button}
+          <div className="flex items-center gap-2">
+            <ShareStudyButton title={`${material.title} — ${material.discipline}`} />
+            {fm.button}
+          </div>
         </div>
       )}
 
