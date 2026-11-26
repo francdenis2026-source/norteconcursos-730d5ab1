@@ -475,7 +475,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, [router]);
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   const fullscreen = useWorkspaceFullscreen();
-  const isQuestionTrainerArea = location.pathname.replace(/[/]+$/, "") === "/dashboard/question-trainer";
+  const isQuestionTrainerArea =
+    location.pathname.replace(/[/]+$/, "") === "/dashboard/question-trainer";
 
   // O Treinador precisa manter a navegação principal disponível na tela de configuração.
   // Se a sessão anterior deixou o modo imersivo ativo, restaura o shell ao entrar nessa área.
@@ -610,6 +611,45 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         event.preventDefault();
         setPaletteOpen((open) => !open);
       }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Teclas de rolagem (setas, PageUp/PageDown, Home/End, Espaço) rolam o painel mesmo com o foco fora dele:
+  // a rolagem fica num contêiner interno, e o navegador só a aciona pelo teclado com o foco dentro dele.
+  React.useEffect(() => {
+    const SCROLL_KEYS = new Set(["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "]);
+    const onKey = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
+      if (!SCROLL_KEYS.has(event.key)) return;
+      const target = event.target as HTMLElement | null;
+      const scroller = document.getElementById("dashboard-content");
+      if (!scroller || !target) return;
+      // Dentro do painel o navegador já rola sozinho; campos, menus e caixas de diálogo ficam intocados.
+      if (scroller.contains(target) && target !== scroller) return;
+      if (
+        target.closest(
+          "input, textarea, select, [contenteditable='true'], [role='dialog'], [role='menu'], [role='listbox'], [role='slider'], [role='tablist'], iframe, video, audio",
+        )
+      )
+        return;
+      if (event.key === " " && target !== document.body && target !== scroller) return;
+      const page = scroller.clientHeight * 0.9;
+      const step =
+        event.key === "ArrowDown"
+          ? 60
+          : event.key === "ArrowUp"
+            ? -60
+            : event.key === "PageDown" || (event.key === " " && !event.shiftKey)
+              ? page
+              : event.key === "PageUp" || event.key === " "
+                ? -page
+                : 0;
+      event.preventDefault();
+      if (event.key === "Home") scroller.scrollTo({ top: 0 });
+      else if (event.key === "End") scroller.scrollTo({ top: scroller.scrollHeight });
+      else scroller.scrollBy({ top: step });
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
