@@ -549,7 +549,7 @@ function save() { try { localStorage.setItem("pcac_ans", JSON.stringify(ans)); }
 let marks = {};
 try { marks = JSON.parse(localStorage.getItem("pcac_marks") || "{}"); } catch (e) { marks = {}; }
 function mark(k, v) { marks[k] = v; try { localStorage.setItem("pcac_marks", JSON.stringify(marks)); } catch (e) {} }
-function go(v, o) { S = Object.assign({}, S, { v }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
+function go(v, o) { SHOW = {}; S = Object.assign({}, S, { v }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
 const blk = () => BLOCOS.find(b => b.id === S.b);
 const qIdx = t => QS.map((q, i) => i).filter(i => QS[i].t === t);
 const subQ = sid => sj(sid).qs;
@@ -581,13 +581,13 @@ function crumbs() {
   if (S.d) add(sj(S.d).nome.split(" e ")[0], () => go("disc"));
   if (S.t) add(tp(S.t).nome.split(" (")[0], () => go("topic"));
 }
-let PEND = {}, STK = {};
+let PEND = {}, STK = {}, SHOW = {};
 try { STK = JSON.parse(localStorage.getItem("pcac_strike") || "{}") || {}; } catch (e) { STK = {}; }
 function saveStk() { try { localStorage.setItem("pcac_strike", JSON.stringify(STK)); } catch (e) {} }
 function strike(i, k) { const cur = STK[i] || []; const on = cur.includes(k); STK[i] = on ? cur.filter(x => x !== k) : cur.concat([k]); if (!on && PEND[i] === k) delete PEND[i]; saveStk(); render(i); }
 function pick(i, k) { if (ans[i] !== undefined || (STK[i] || []).includes(k)) return; PEND[i] = k; render(i); }
 function confirmar(i) { if (ans[i] !== undefined || PEND[i] === undefined) return; const k = PEND[i]; delete PEND[i]; choose(i, k); }
-function choose(i, o) { if (ans[i] !== undefined) return; ans[i] = o; save(); logAns(i, o === QS[i].c, "estudo", undefined, o); render(i); }
+function choose(i, o) { if (ans[i] !== undefined) return; ans[i] = o; SHOW[i] = true; save(); logAns(i, o === QS[i].c, "estudo", undefined, o); render(i); }
 function redo(i) { delete ans[i]; save(); render(i); }
 let MIX = 0; try { MIX = +(localStorage.getItem("pcac_mix") || 0); if (!MIX) { MIX = Math.floor(Math.random() * 1e9) + 1; localStorage.setItem("pcac_mix", String(MIX)); } } catch (e) { MIX = 7; }
 const mixKey = i => (((i + 1) * 2654435761) ^ MIX) >>> 0;
@@ -704,7 +704,7 @@ function vDisc() {
 }
 function vTodas() {
   const s = sj(S.d), all = subQ(s.id), pend = S.tf !== "todas";
-  const show = pend ? all.filter(i => !hit(i)) : all;
+  const show = pend ? all.filter(i => !hit(i) || SHOW[i]) : all;
   let h = `<h1>${s.nome} · todas as questões</h1><p class="muted">${feitas(all)} de ${all.length} respondidas · ${certas(all)} já acertadas. Na mesma ordem do PDF. <button class="link" onclick="S.tf=S.tf==='todas'?'pend':'todas';render()">${pend ? "Mostrar também as já acertadas" : "Mostrar só as pendentes"}</button> · <button class="link" onclick="go('disc')">Voltar à disciplina</button></p>`;
   if (!show.length) h += `<div class="note">Você já acertou todas as questões desta matéria.</div>`;
   show.forEach(i => { h += qHtml(i, all.indexOf(i) + 1); });
@@ -721,7 +721,7 @@ function vTopic() {
       <button class="btn" onclick="go('topic',{tab:'questoes'})">Resolver questões deste assunto</button></div>`;
   } else {
     const filt = S.filt || "pend";
-    const show = filt === "todas" ? ids : mixed(ids.filter(i => !hit(i)));
+    const show = filt === "todas" ? ids : mixed(ids.filter(i => !hit(i) || SHOW[i]));
     const ocultas = ids.length - show.length;
     h += `<p class="muted">${ocultas ? `${ocultas} já acertada(s) ocultada(s). ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as já acertadas"}</button>${filt === "todas" ? "" : " · <button class=\"link\" onclick=\"reshuffle()\">Embaralhar</button>"} · <button class="link" onclick="resetTopic('${S.t}')">Resetar respostas deste assunto</button></p>`;
     if (!show.length) h += `<div class="note">Você já acertou todas as questões deste assunto. Parabéns! Passe ao próximo assunto ou refaça pelo simulado.</div>`;
