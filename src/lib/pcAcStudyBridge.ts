@@ -88,6 +88,8 @@ export function enqueueStudyAnswer(row: PcAcStudyAnswer) {
   writePending([...queue.filter((r) => r.id !== row.id), row]);
 }
 
+export const pendingStudyCount = () => readPending().length;
+
 let flushing = false;
 
 /** Envia as respostas pendentes. Só remove da fila o que o banco confirmou. */

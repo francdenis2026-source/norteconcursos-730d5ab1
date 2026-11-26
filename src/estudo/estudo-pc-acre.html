@@ -1024,6 +1024,7 @@ html.dark .chip.re{background:#3a3018;color:#f5d57a;border-color:#6b5a24}
 .solm-c .exemplo,.solm-c .wex,.solm-c .rec{background:color-mix(in srgb,var(--acc) 9%,var(--card));border:1px solid color-mix(in srgb,var(--acc) 28%,var(--line));border-left:4px solid var(--acc);color:var(--ink);border-radius:12px;padding:12px 16px;margin:14px 0}
 .solm-c p,.solm-c li,.solm-c b,.solm-c div{color:inherit}
 .solbtn{margin:12px 16px!important}
+.syncst{font-size:12px;color:var(--muted);padding:0 2px}.syncst.ok{color:var(--ok)}.syncst.wait{color:#b7791f}
 html.dark .fb.no .fbh{background:#4a2a26;color:#ffb4a8}html.dark .fb.ok .fbh{background:#1f3a2c;color:#8fe3b5}html.dark .fbh span{color:#e8e6dc}
 </style>
 <script>
@@ -1301,6 +1302,9 @@ function receitaHtml(r) {
   return `<div class="rec"><div class="wex-h">Como resolver qualquer questão deste assunto</div>${it.length > 1 ? `${/\(1\)/.test(r) && !/^\(1\)/.test(r.trim()) ? `<p>${it[0]}</p><ol class="steps">${it.slice(1).map(s => `<li>${s}</li>`).join("")}</ol>` : `<ol class="steps">${it.map(s => `<li>${s}</li>`).join("")}</ol>`}` : `<p>${r}</p>`}</div>`;
 }
 function theoryHtml(tq) { return `<p class="muted" style="margin:0 0 8px"><b>Assunto:</b> ${tq.nome}</p>${tq.teoria}${exHtml(tq.exemplo)}${receitaHtml(tq.receita)}<div class="macete"><b>Macete:</b> ${tq.macete}</div>`; }
+let PENDN = null;
+function updSync() { document.querySelectorAll(".syncst").forEach(el => { if (PENDN === null) { el.textContent = ""; return; } el.className = "syncst " + (PENDN ? "wait" : "ok"); el.textContent = PENDN ? "⏳ " + PENDN + " resposta" + (PENDN > 1 ? "s" : "") + " aguardando envio" : "☁ Respostas salvas na sua conta"; }); }
+window.addEventListener("message", e => { if (e.source !== window.parent || !e.data || typeof e.data.ncPending !== "number") return; PENDN = e.data.ncPending; updSync(); });
 function openSol(i, tab) {
   const q = QS[i], tq = tp(q.t), done = ans[i] !== undefined, sjn = QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "";
   const hasT = !!(tq && tq.teoria), first = tab === "assunto" && hasT ? "assunto" : (done || tab === "res" ? "res" : (hasT ? "assunto" : "res"));
@@ -1469,7 +1473,7 @@ function qStage(list, key, numOf, extra) {
   const nav = n <= 40 ? list.map((j, x) => `<button class="qd ${x === cur ? "cur" : ""} ${ans[j] === undefined ? "" : (ans[j] === QS[j].c ? "ok" : "no")}" onclick="qGo('${k}',${x})" aria-label="Ir para a questão ${x + 1}"${x === cur ? ' aria-current="true"' : ""}></button>`).join("") : `<span class="qprog" aria-hidden="true"><i style="width:${Math.round(100 * resp / n)}%"></i></span>`;
   const okN = list.filter(j => ans[j] !== undefined && ans[j] === QS[j].c).length, noN = resp - okN;
   const dots = n <= 60 ? `<span class="qdots" role="group" aria-label="Navegar entre as questões">${nav}</span>` : "";
-  return `<div class="qstage"><div class="qmain">${qHtml(i, numOf(i))}<div class="qnavb"><button class="b2 sm" ${cur ? "" : "disabled"} onclick="qGo('${k}',${cur - 1})">← Anterior</button><span class="qhint">${done ? "Leia a explicação e avance quando quiser." : "Escolha uma alternativa e confirme."}</span><button class="b1 sm" ${cur < n - 1 ? "" : "disabled"} onclick="qGo('${k}',${cur + 1})">Próxima questão →</button></div></div><aside class="qside" aria-label="Andamento"><div class="qbar"><span class="qcount"><b>Questão ${cur + 1}</b> de ${n}</span><span class="qprog" aria-hidden="true"><i style="width:${Math.round(100 * resp / n)}%"></i></span><span class="trainbox"><span>Treino <b class="trainclk">${fmtH(TRAIN.s)}</b></span><button type="button" onclick="stopTrain()">Encerrar treino</button></span><span class="qstats"><span><b>${resp}</b>respondidas</span><span class="ok"><b>${okN}</b>acertos</span><span class="no"><b>${noN}</b>erros</span></span>${dots}</div>${extra ? extra(i) : ""}</aside></div>`;
+  return `<div class="qstage"><div class="qmain">${qHtml(i, numOf(i))}<div class="qnavb"><button class="b2 sm" ${cur ? "" : "disabled"} onclick="qGo('${k}',${cur - 1})">← Anterior</button><span class="qhint">${done ? "Leia a explicação e avance quando quiser." : "Escolha uma alternativa e confirme."}</span><button class="b1 sm" ${cur < n - 1 ? "" : "disabled"} onclick="qGo('${k}',${cur + 1})">Próxima questão →</button></div></div><aside class="qside" aria-label="Andamento"><div class="qbar"><span class="qcount"><b>Questão ${cur + 1}</b> de ${n}</span><span class="qprog" aria-hidden="true"><i style="width:${Math.round(100 * resp / n)}%"></i></span><span class="trainbox"><span>Treino <b class="trainclk">${fmtH(TRAIN.s)}</b></span><button type="button" onclick="stopTrain()">Encerrar treino</button></span><span class="syncst" aria-live="polite"></span><span class="qstats"><span><b>${resp}</b>respondidas</span><span class="ok"><b>${okN}</b>acertos</span><span class="no"><b>${noN}</b>erros</span></span>${dots}</div>${extra ? extra(i) : ""}</aside></div>`;
 }
 function vTodas() {
   const s = sj(S.d), all = subQ(s.id), pend = S.tf !== "todas";
@@ -1987,6 +1991,7 @@ function render(scroll) {
   m.innerHTML = (V[S.v] || vHome)();
   side();
   markSyms(m);
+  updSync();
   if (wantPos) { window.__restorePos = false; setTimeout(restorePos, 80); }
   if (scroll === undefined && m.classList && m.classList.add) { m.classList.remove("fade"); void m.offsetWidth; m.classList.add("fade"); }
   if (scroll !== undefined) { const el = document.getElementById("q" + scroll); if (el) el.scrollIntoView({ block: "center" }); }

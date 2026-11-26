@@ -8,6 +8,7 @@ import {
   enqueueStudyAnswer,
   fetchAnsweredAreaQuestions,
   flushStudyAnswers,
+  pendingStudyCount,
   parseStudyMessage,
 } from "@/lib/pcAcStudyBridge";
 
@@ -69,6 +70,12 @@ function EstudoPcAcre() {
   const frame = useRef<HTMLIFrameElement>(null);
   const queryClient = useQueryClient();
   // Respostas que o banco já tem (treinador, outro aparelho ou esta área) valem aqui: uma tentativa por questão.
+  const postStatus = useCallback(() => {
+    frame.current?.contentWindow?.postMessage(
+      { ncPending: pendingStudyCount() },
+      window.location.origin,
+    );
+  }, []);
   const syncAnswered = useCallback(async () => {
     const rows = await fetchAnsweredAreaQuestions();
     if (rows)
@@ -88,10 +95,11 @@ function EstudoPcAcre() {
         },
       });
       void syncAnswered();
+      postStatus();
     };
     window.addEventListener(PC_AC_STUDY_SAVED_EVENT, onSaved);
     return () => window.removeEventListener(PC_AC_STUDY_SAVED_EVENT, onSaved);
-  }, [queryClient, syncAnswered]);
+  }, [queryClient, syncAnswered, postStatus]);
   const [frameH, setFrameH] = useState<number | null>(null);
   useEffect(() => {
     document.documentElement.dataset["studyArea"] = "true";
@@ -147,7 +155,8 @@ function EstudoPcAcre() {
       const row = parseStudyMessage(event.data);
       if (!row) return;
       enqueueStudyAnswer(row);
-      void flushStudyAnswers();
+      postStatus();
+      void flushStudyAnswers().finally(postStatus);
     };
     window.addEventListener("message", onMessage);
     void flushStudyAnswers();
@@ -165,7 +174,10 @@ function EstudoPcAcre() {
           onLoad={() => {
             window.dispatchEvent(new Event("resize"));
             sendTheme();
-            void flushStudyAnswers().finally(() => void syncAnswered());
+            void flushStudyAnswers().finally(() => {
+              void syncAnswered();
+              postStatus();
+            });
           }}
           allow="clipboard-write; web-share"
           allowFullScreen
