@@ -996,6 +996,8 @@ html:not(.dark){--bg:#edf0f4;--card:#fff;--line:#d9dfe7;--muted:#566174;--ink:#1
 html:not(.dark) body{background:var(--bg)}
 html:not(.dark) .wm{opacity:.01!important}
 html:not(.dark) .top,html:not(.dark) .appfoot{background:#fff}
+.chip.re{background:#fff6e0;color:#7a4b00;border-color:#e8c27a;font-weight:700}
+html.dark .chip.re{background:#3a3018;color:#f5d57a;border-color:#6b5a24}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1138,7 +1140,7 @@ function save() { try { localStorage.setItem("pcac_ans", JSON.stringify(ans)); }
 let marks = {};
 try { marks = JSON.parse(localStorage.getItem("pcac_marks") || "{}"); } catch (e) { marks = {}; }
 function mark(k, v) { marks[k] = v; try { localStorage.setItem("pcac_marks", JSON.stringify(marks)); } catch (e) {} }
-function go(v, o) { SHOW = {}; if (v !== "topic" && v !== "todas") TRAIN = null; S = Object.assign({}, S, { v, only: undefined }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
+function go(v, o) { SHOW = {}; if (v !== "topic" && v !== "todas" && v !== "ret") TRAIN = null; S = Object.assign({}, S, { v, only: undefined, rd: undefined }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
 const blk = () => BLOCOS.find(b => b.id === S.b);
 const qIdx = t => QS.map((q, i) => i).filter(i => QS[i].t === t);
 const subQ = sid => sj(sid).qs;
@@ -1178,6 +1180,7 @@ function crumbs() {
   const add = (txt, fn) => { if (c.children.length) { const s = document.createElement("span"); s.textContent = "›"; c.appendChild(s); } const b = document.createElement("button"); b.textContent = txt; b.onclick = fn; c.appendChild(b); };
   add("Início", () => go("home"));
   if (S.v === "plan") { add("Meu cronograma", () => go("plan")); return; }
+  if (S.v === "ret") { add("Caderno de erros", () => go("ret")); return; }
   if (S.v === "arq") { add("Arquivo e erros", () => go("arq")); return; }
   if (S.v === "dash") { add("Meu desempenho", () => go("dash")); return; } if (S.v === "ana") { add("Painel analítico", () => go("ana")); return; }
   if (S.v === "sim" || S.v === "simrun" || S.v === "simres") { add("Modo Simulado", () => go("sim")); return; }
@@ -1223,12 +1226,16 @@ function hiddenControl(ids) {
 }
 function choose(i, o) {
   if (!QS[i] || !Number.isInteger(o) || o < 0 || o >= QS[i].ops.length || ans[i] !== undefined) return;
+  const was = seen(i);
   ans[i] = o; SHOW[i] = true; HIDDEN.delete(i); save();
   logAns(i, o === QS[i].c, "estudo", undefined, o, qDur(i));
+  if (was) { RT[i] = { ok: o === QS[i].c, t: Date.now(), n: ((RT[i] || {}).n || 0) + 1 }; RETEST.add(i); saveRT(); }
   const next = o !== QS[i].c ? relatedQuestion(i) : null;
   REINFORCE = next === null ? null : { from: i, to: next };
   render(i);
 }
+let RT = {}; try { RT = JSON.parse(localStorage.getItem("pcac_retest") || "{}") || {}; } catch (e) { RT = {}; }
+const saveRT = () => { try { localStorage.setItem("pcac_retest", JSON.stringify(RT)); } catch (e) {} };
 function redo(i) { delete ans[i]; HIDDEN.delete(i); SHOW[i] = true; RETEST.add(i); delete QACC[i]; delete QSEEN[i]; save(); render(i); }
 const RETEST = new Set();
 let MIX = 0; try { MIX = +(localStorage.getItem("pcac_mix") || 0); if (!MIX) { MIX = Math.floor(Math.random() * 1e9) + 1; localStorage.setItem("pcac_mix", String(MIX)); } } catch (e) { MIX = 7; }
@@ -1268,8 +1275,8 @@ function receitaHtml(r) {
 }
 function qHtml(i, n) { if (!QSEEN[i] && ans[i] === undefined) QSEEN[i] = Date.now();
   const q = QS[i], done = ans[i] !== undefined, ok = done && ans[i] === q.c;
-  const lockedBefore = done && !SHOW[i] && seen(i), retest = !done && seen(i);
-  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}">${lockedBefore ? `<div class="qlock">🔒 <span>Você já fez esta questão e a resposta está registrada.</span><button type="button" onclick="redo(${i})">Liberar para refazer (não conta)</button></div>` : ""}${retest ? `<div class="qlock re">🔓 <span>Reteste: esta questão já foi contada e <b>não será contabilizada</b> de novo.</span></div>` : ""}<div class="qh"><span class="qn">${n}</span>Questão ${n}${done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}${done ? (() => { const lg = LOG.find(l => l.i === i); return lg && lg.d ? '<span class="qtimer done" title="Tempo gasto nesta questão">' + fmtT(lg.d) + "</span>" : ""; })() : '<span class="qtimer" data-q="' + i + '" title="Tempo nesta questão (conta só com a aba visível)">' + fmtT(QACC[i] || 0) + "</span>"}</div><div class="qctx"><span class="qc1">${(QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "")}</span><span class="qc2" title="Assunto da matéria cobrado nesta questão">Assunto: <b>${(tp(q.t) ? tp(q.t).nome : q.t)}</b></span>${chanceHtml(q.t)}</div><p class="qt">${q.q}</p>`;
+  const isRe = seen(i) && (RETEST.has(i) || !!RT[i]), lockedBefore = done && !SHOW[i] && seen(i) && !isRe, retest = !done && seen(i);
+  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}">${lockedBefore ? `<div class="qlock">🔒 <span>Você já fez esta questão e a resposta está registrada.</span><button type="button" onclick="redo(${i})">Liberar para refazer (não conta)</button></div>` : ""}${retest ? `<div class="qlock re">🔓 <span>Reteste: esta questão já foi contada e <b>não será contabilizada</b> de novo.</span></div>` : ""}<div class="qh"><span class="qn">${n}</span>Questão ${n}${isRe && (done || retest) ? ' <span class="chip re" title="Esta tentativa não conta no ranking nem nas métricas">🔁 RETESTE · não contabilizado</span>' : done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}${done ? (() => { const lg = LOG.find(l => l.i === i); return lg && lg.d ? '<span class="qtimer done" title="Tempo gasto nesta questão">' + fmtT(lg.d) + "</span>" : ""; })() : '<span class="qtimer" data-q="' + i + '" title="Tempo nesta questão (conta só com a aba visível)">' + fmtT(QACC[i] || 0) + "</span>"}</div><div class="qctx"><span class="qc1">${(QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "")}</span><span class="qc2" title="Assunto da matéria cobrado nesta questão">Assunto: <b>${(tp(q.t) ? tp(q.t).nome : q.t)}</b></span>${chanceHtml(q.t)}</div><p class="qt">${q.q}</p>`;
   const st = STK[i] || [], pd = PEND[i];
   q.ops.forEach((o, k) => {
     let cl = "opt"; if (done) { if (k === q.c) cl += " right"; else if (k === ans[i]) cl += " wrong"; } else { if (k === pd) cl += " pend"; if (st.includes(k)) cl += " strk"; }
@@ -1351,7 +1358,7 @@ function side() {
       h += `<button class="nv ${S.d === d.id && S.v !== "home" && S.v !== "dash" && S.v !== "ana" && S.v !== "plan" && !S.v.startsWith("sim") ? "on" : ""}" onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"><span class="dot ${p ? "p" : ""}"></span><span class="tx">${d.nome}</span><span class="pc">${p}%</span><span class="nvbar" aria-hidden="true"><i style="width:${p}%"></i></span></button>`;
     });
   });
-  h += `<div class="nv-sec">Treino</div><button class="nv ${S.v.startsWith("sim") ? "on" : ""}" onclick="go('sim')">${ic("sim")}<span class="tx">Modo Simulado</span></button><button class="nv ${S.v === "plan" ? "on" : ""}" onclick="go('plan')">${ic("plan")}<span class="tx">Meu cronograma</span></button><button class="nv ${S.v === "dash" ? "on" : ""}" onclick="go('dash')">${ic("dash")}<span class="tx">Meu desempenho</span></button><button class="nv ${S.v === "ana" ? "on" : ""}" onclick="go('ana')">${ic("dash")}<span class="tx">Painel analítico</span></button><button class="nv ${S.v === "arq" ? "on" : ""}" onclick="go('arq',{tab:'erros'})">${ic("dash")}<span class="tx">Arquivo e erros</span></button>`;
+  h += `<div class="nv-sec">Treino</div><button class="nv ${S.v.startsWith("sim") ? "on" : ""}" onclick="go('sim')">${ic("sim")}<span class="tx">Modo Simulado</span></button><button class="nv ${S.v === "plan" ? "on" : ""}" onclick="go('plan')">${ic("plan")}<span class="tx">Meu cronograma</span></button><button class="nv ${S.v === "dash" ? "on" : ""}" onclick="go('dash')">${ic("dash")}<span class="tx">Meu desempenho</span></button><button class="nv ${S.v === "ana" ? "on" : ""}" onclick="go('ana')">${ic("dash")}<span class="tx">Painel analítico</span></button><button class="nv ${S.v === "arq" ? "on" : ""}" onclick="go('arq',{tab:'erros'})">${ic("dash")}<span class="tx">Arquivo e erros</span></button><button class="nv ${S.v === "ret" ? "on" : ""}" onclick="go('ret')">${ic("sim")}<span class="tx">Caderno de erros</span><span class="pc">${retErrs().length}</span></button>`;
   n.innerHTML = h;
 }
 function vBloco() {
@@ -1411,7 +1418,7 @@ function onlyTopic(t) { S.only = t || undefined; render(); window.scrollTo(0, 0)
 function qStage(list, key, numOf, extra) {
   if (!list.length) return "";
   if (!TRAIN) TRAIN = { t0: Date.now(), s: 0 };
-  const k = key + ":" + String(S.d || "") + ":" + String(S.t || "") + ":" + String(S.filt || S.tf || "") + ":" + String(S.only || "");
+  const k = key + ":" + String(S.d || "") + ":" + String(S.t || "") + ":" + String(S.filt || S.tf || "") + ":" + String(S.only || "") + ":" + String(S.rd || "") + ":" + String(S.ord || "");
   let cur = QCUR[k]; if (cur === undefined) cur = Math.max(0, list.findIndex(i => ans[i] === undefined));
   cur = Math.min(Math.max(0, cur), list.length - 1); QCUR[k] = cur;
   const i = list[cur], done = ans[i] !== undefined, n = list.length, resp = list.filter(j => ans[j] !== undefined).length;
@@ -1803,6 +1810,22 @@ function sideLock(){ const on=document.body.classList.toggle("side-lock"); const
 /* ---------- Arquivo e meus erros ---------- */
 function lastOkMap() { const m = {}; LOG.forEach(l => { m[l.i] = l.ok; }); return m; }
 function refazer(i) { delete ans[i]; save(); HIT = null; go("topic", { d: QSUBJ[i], t: QS[i].t, tab: "questoes" }); setTimeout(() => { const el = document.getElementById("q" + i); if (el) el.scrollIntoView({ block: "center" }); }, 60); }
+function retErrs() { const lo = lastOkMap(); return Object.keys(lo).map(Number).filter(i => lo[i] === false && !HID.has(i) && QS[i] && !(RT[i] && RT[i].ok)); }
+function setRd(v) { S.rd = v || undefined; QCUR = {}; render(); }
+function vRet() {
+  const lo = lastOkMap();
+  let base = Object.keys(lo).map(Number).filter(i => lo[i] === false && !HID.has(i) && QS[i] && (!(RT[i] && RT[i].ok) || SHOW[i]));
+  const pend = retErrs().length, rec = Object.keys(RT).filter(k => RT[k].ok && lo[k] === false).length;
+  base.forEach(i => { if (!RETEST.has(i) && ans[i] !== undefined && !RT[i]) { RETEST.add(i); delete ans[i]; } });
+  save();
+  const subs = SUBJ.map(x => ({ x, n: base.filter(i => QSUBJ[i] === x.id).length })).filter(o => o.n);
+  let ids = S.rd ? base.filter(i => QSUBJ[i] === S.rd) : base.slice();
+  if (S.ord === "prob") { const rk = { alta: 0, media: 1, baixa: 2 }; ids = ids.map((i, x) => [i, x]).sort((a, b) => ((rk[(tp(QS[a[0]].t) || {}).prio] ?? 3) - (rk[(tp(QS[b[0]].t) || {}).prio] ?? 3)) || a[1] - b[1]).map(p => p[0]); }
+  let h = `<h1>Caderno de erros</h1><p class="muted">Refaça as questões que você errou. O reteste <b>não conta</b> no ranking nem nas métricas e leva o selo <b>🔁 RETESTE</b>. Quem acerta sai do caderno.</p>
+  <div class="qfilt"><span class="qprob"><b>${pend}</b> para refazer</span><span class="qprob"><b>${rec}</b> recuperadas</span><label>Disciplina <select onchange="setRd(this.value)"><option value="">Todas (${base.length})</option>${subs.map(o => `<option value="${o.x.id}" ${S.rd === o.x.id ? "selected" : ""}>${o.x.nome} (${o.n})</option>`).join("")}</select></label><label>Ordem <select onchange="setOrd(this.value)"><option value="">Mais antigas primeiro</option><option value="prob" ${S.ord === "prob" ? "selected" : ""}>Maior chance de cair primeiro</option></select></label></div>`;
+  if (!ids.length) return h + `<div class="note">${pend ? "Nenhum erro nesta disciplina." : "Nenhum erro para refazer. Bom trabalho!"}</div>`;
+  return h + qStage(ids, "r", i => ids.indexOf(i) + 1);
+}
 function vArq() {
   const lo = lastOkMap(), ids = Object.keys(lo).map(Number).sort((a, b) => a - b);
   const errs = ids.filter(i => !lo[i]), tab = S.tab === "erros" ? "erros" : "todas", list = tab === "erros" ? errs : ids;
@@ -1915,7 +1938,7 @@ function render(scroll) {
   const wantPos = window.__restorePos && document.body && document.body.classList && !document.body.classList.contains("locked");
   crumbs();
   const m = document.getElementById("main");
-  const V = { home: vHome, bloco: vBloco, disc: vDisc, topic: vTopic, todas: vTodas, sim: vSim, simrun: vSimRun, simres: vSimRes, dash: vDash, ana: vAna, plan: vPlan, arq: vArq };
+  const V = { home: vHome, bloco: vBloco, disc: vDisc, topic: vTopic, todas: vTodas, sim: vSim, simrun: vSimRun, simres: vSimRes, dash: vDash, ana: vAna, plan: vPlan, arq: vArq, ret: vRet };
   if (S.v === "simrun" && !SIM) S.v = "sim";
   m.innerHTML = (V[S.v] || vHome)();
   side();
