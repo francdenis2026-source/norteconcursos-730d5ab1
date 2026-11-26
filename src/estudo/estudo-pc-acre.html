@@ -331,7 +331,7 @@ body.locked #gate{display:block}
 body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 input,textarea{-webkit-user-select:text;user-select:text}
 img,svg{-webkit-user-drag:none}
-.wm{position:fixed;inset:0;z-index:150;pointer-events:none;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='220'%3E%3Ctext x='30' y='120' transform='rotate(-22 170 110)' font-family='Arial' font-weight='700' font-size='13' fill='%23000'%3ENORTE CONCURSOS · PC-AC%3C/text%3E%3C/svg%3E")}
+.wm{position:fixed;inset:0;z-index:150;pointer-events:none;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='220'%3E%3Ctext x='30' y='120' transform='rotate(-22 170 110)' font-family='Arial' font-weight='700' font-size='13' fill='%23000'%3ENORTE CONCURSOS · FEIJ%C3%93-AC · 2026%3C/text%3E%3C/svg%3E")}
 body.locked .wm{display:none}
 @media print{body *{display:none!important}body::before{content:"Conteúdo protegido · Norte Concursos. Impressão não permitida.";display:block!important;font:700 18px sans-serif;padding:40px}}
 /* ---- responsivo ---- */
@@ -407,6 +407,12 @@ h1{font-size:22px;margin:0 0 4px}
 .card h3{margin:14px 0 6px}
 .card p{margin:4px 0}
 .note{padding:9px 12px;margin:10px 0;font-size:13.5px}
+.ordem{margin:12px 0;border:1px solid var(--line);border-radius:10px;background:#fff}
+.ordem>summary{cursor:pointer;padding:10px 14px;font-size:13.5px;color:var(--muted);list-style:none}
+.ordem>summary::-webkit-details-marker{display:none}
+.ordem>summary::after{content:"+";float:right;color:var(--muted)}
+.ordem[open]>summary::after{content:"\2212"}
+.ordem-b{padding:0 14px 12px;font-size:14px}
 .nv{padding:6px 9px}
 .nv-sec{padding:10px 10px 4px}
 #nav{padding:4px 10px 10px}
@@ -477,7 +483,7 @@ body.side-lock #lockb{background:#fff7d6;border-color:var(--ouro);color:#7a5a00}
    <div class="tools"><button class="sbt" type="button" id="lockb" onclick="sideLock()" aria-pressed="false" title="Travar: não abrir o menu ao encostar na borda"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></button><button class="sbt" type="button" id="sbt" aria-label="Recolher menu" title="Mostrar ou ocultar o menu" onclick="sideTog()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button><div class="tchip" id="tchip" hidden title="Tempo restante do acesso de cortesia"><span class="mini" id="tmini"></span><span class="tl"><small>Cortesia</small><b id="ttxt">60:00</b></span></div><svg class="acflag" viewBox="0 0 100 70" aria-label="Bandeira do Acre" role="img"><path d="M0 0H100L0 70Z" fill="#f4c20d"/><path d="M100 0V70H0Z" fill="#0e8a45"/><g transform="translate(19 19) scale(12.5)"><path d="M0-1 .29-.4.95-.31.47.15.59.81 0 .5-.59.81-.47.15-.95-.31-.29-.4z" fill="#d62828"/></g></svg><button class="fsb" type="button" id="shareb" onclick="shareArea()" aria-label="Compartilhar área de estudo" title="Compartilhar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button><button class="fsb" type="button" aria-label="Tela cheia" title="Tela cheia / restaurar"><svg class="fsi" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="e" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="x" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button><button class="out" id="gout" type="button">Sair</button></div>
   </header>
   <main id="main"></main>
-  <footer class="appfoot"><span>Página exclusiva do concurso da Polícia Civil do Acre · Norte Concursos</span><span>Desenvolvido por <b>Franc D'nis</b> · <a href="https://wa.me/5568992031340" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:economizafeijo@gmail.com">E-mail</a></span></footer>
+  <footer class="appfoot"><span>Material da plataforma Norte Concursos · Feijó-Acre · 2026</span><span>Desenvolvedor: <b>Franc D'nis</b> · <a href="https://wa.me/5568992031340" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:economizafeijo@gmail.com">E-mail</a></span></footer>
  </div>
 </div>
 <div id="fstoast" hidden></div>
@@ -694,8 +700,8 @@ function vBloco() {
 function vDisc() {
   const s = sj(S.d), all = subQ(s.id), tops = ST[s.id];
   let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button> · <button class="link" onclick="go('todas',{d:'${s.id}'})">Resolver todas em sequência (como no PDF)</button>${canShare() ? ` · <button class="link" onclick="shareDisc('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
-  <div class="note"><b>Ordem de estudo por prioridade (estimada).</b> Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Contei os itens de estatística das provas IDECAN do repositório (PC-SC 2026 Agente e Escrivão, CBMMG 2026) e somei a PC-BA 2022, analisada antes. Essas provas não são da PC-AC: onde não há registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div>`;
-  if (s.id === "estatistica") h += `<div class="card"><h2>Provas reais para resolver</h2><p class="muted">Os enunciados originais ficam nas provas abaixo (não posso copiá-los para o app). Resolva as questões indicadas e depois confira no gabarito.</p>${PROVAS.map(p => `<p><b>${p[0]}</b><br><span class="muted">${p[1]}</span><br><a href="${p[2]}" target="_blank" rel="noopener">Abrir a prova</a>${p[3] ? ` · <a href="${p[3]}" target="_blank" rel="noopener">Gabarito</a>` : ""}</p>`).join("")}</div>`;
+  <details class="ordem"><summary>Ordem de estudo por prioridade (estimada)</summary><div class="ordem-b">Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Contei os itens de estatística das provas IDECAN do repositório (PC-SC 2026 Agente e Escrivão, CBMMG 2026) e somei a PC-BA 2022, analisada antes. Essas provas não são da PC-AC: onde não há registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div></details>`;
+  if (s.id === "estatistica") h += `<details class="ordem"><summary>Provas reais para resolver (IDECAN)</summary><div class="ordem-b"><p class="muted">Os enunciados originais ficam nas provas abaixo (não posso copiá-los para o app). Resolva as questões indicadas e depois confira no gabarito.</p>${PROVAS.map(p => `<p><b>${p[0]}</b><br><span class="muted">${p[1]}</span><br><a href="${p[2]}" target="_blank" rel="noopener">Abrir a prova</a>${p[3] ? ` · <a href="${p[3]}" target="_blank" rel="noopener">Gabarito</a>` : ""}</p>`).join("")}</div></details>`;
   h += `<div class="list">`;
   tops.forEach((t, r) => {
     const ids = qIdx(t.id), f = feitas(ids);
