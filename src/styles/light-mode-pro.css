@@ -17,3 +17,31 @@
 /* Superfícies: borda e sombra frias, em vez de bege. */
 :root:not(.dark) .app-shell[data-area="student"] :is(.card, [class*="rounded-xl"].border, [class*="rounded-2xl"].border) { border-color: #d6dce6; }
 :root:not(.dark) .app-shell[data-area] .app-content { background: #eef1f6; }
+
+/* Barra superior do aluno no modo claro: fundo branco-frio com borda e sombra definidas, textos firmes e ícones com cor. */
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-topbar {
+  --tb-ink: #14213a;
+  --tb-mute: #3b475c;
+  --tb-gold: #b7791f;
+  background: linear-gradient(180deg, #ffffff, #f3f6fa) !important;
+  box-shadow: 0 1px 0 #d3dae5, 0 8px 18px -14px rgb(20 33 58 / 38%) !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .student-top-navigation__trigger { color: #26324a !important; font-weight: 650 !important; }
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .student-top-navigation__icon-wrap { color: #b45309 !important; }
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .student-top-navigation__trigger:hover,
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .student-top-navigation__trigger[aria-expanded="true"] {
+  background: linear-gradient(180deg, transparent, rgb(183 121 31 / 12%)) !important;
+}
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-topbar__actions { border-left-color: #cfd7e3 !important; }
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .panel-text-scale button, button) {
+  color: #26324a;
+  background: #eef2f7 !important;
+}
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-topbar__actions :is(.app-top-btn, .app-top-search, .workspace-fullscreen-trigger, .panel-text-scale button, button):hover {
+  color: #8a4b05;
+  background: #fdebc8 !important;
+}
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-streak { background: #ffedd5 !important; color: #9a3412; }
+html:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_) .app-streak svg { color: #ea580c; }
