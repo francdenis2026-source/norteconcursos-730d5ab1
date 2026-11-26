@@ -97,20 +97,31 @@ function EstudoPcAcre() {
     const fit = () => {
       const el = frame.current;
       if (!el) return;
-      const top = el.getBoundingClientRect().top;
-      // Ocupa tudo o que resta do contêiner de rolagem do painel (a área não tem mais nada abaixo dela).
       const box = document.getElementById("dashboard-content");
-      const bottom = box ? box.getBoundingClientRect().bottom : window.innerHeight;
-      setFrameH(Math.max(420, Math.floor(bottom - top - 14)));
+      // Medida independente da rolagem: posição do quadro dentro do contêiner + altura visível dele.
+      let h: number;
+      if (box) {
+        const offset = el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
+        h = box.clientHeight - offset - 8;
+      } else {
+        h = window.innerHeight - el.getBoundingClientRect().top - 8;
+      }
+      setFrameH(Math.max(420, Math.floor(h)));
     };
     fit();
-    const id = window.setTimeout(fit, 300);
+    const timers = [100, 300, 700].map((t) => window.setTimeout(fit, t));
+    const box = document.getElementById("dashboard-content");
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(fit) : null;
+    if (box) ro?.observe(box);
     window.addEventListener("resize", fit);
     document.addEventListener("fullscreenchange", fit);
+    document.addEventListener("norte:workspace-state", fit);
     return () => {
-      window.clearTimeout(id);
+      timers.forEach((t) => window.clearTimeout(t));
+      ro?.disconnect();
       window.removeEventListener("resize", fit);
       document.removeEventListener("fullscreenchange", fit);
+      document.removeEventListener("norte:workspace-state", fit);
     };
   }, [srcDoc]);
   const sendTheme = useCallback(() => {
