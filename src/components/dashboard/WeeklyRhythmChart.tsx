@@ -79,7 +79,7 @@ export function WeeklyRhythmChart({
       label: b.label,
       title: b.fullLabel,
       bars: [Math.round(b.seconds / 60)],
-      line: Math.round(avg / 60),
+      line: avg > 0 ? Math.round(avg / 60) : null,
     };
   });
   const goalMin = goalSeconds ? Math.round(goalSeconds / 60) : null;
@@ -126,6 +126,7 @@ export function WeeklyRhythmChart({
             line={{ key: "m", label: "Média", color: "var(--cat-amber)" }}
             height={height}
             ticks={ticks}
+            smooth={buckets.length > 14}
             {...(goalMin ? { goal: { value: goalMin, label: `meta ${shortDuration(goalMin * 60)}` } } : {})}
             format={(v) => shortDuration(v * 60)}
             labelEvery={buckets.length > 14 ? 5 : 1}

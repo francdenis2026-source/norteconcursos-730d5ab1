@@ -208,8 +208,9 @@ export function AnswerInsights({
               line: b.total ? Math.round((b.acertos / b.total) * 100) : null,
             }))}
             line={{ key: "p", label: "Aproveitamento", color: "var(--cat-amber)" }}
-            height={44}
+            height={56}
             ticks={[0, 100]}
+            smooth={false}
             band={{ from: 70, to: 100 }}
             format={(v) => `${Math.round(v)}%`}
             labelEvery={0}
@@ -232,7 +233,8 @@ export function AnswerInsights({
               { key: "ok", label: "Acertos", color: OK },
               { key: "err", label: "Erros", color: ERR },
             ]}
-            height={height - 20}
+            height={height - 32}
+            ticks={intTicks(Math.max(1, ...chartData.map((b) => b.acertos + b.erros)))}
             format={(v) => `${Math.round(v)}`}
             labelEvery={chartData.length > 14 ? 3 : 1}
             ariaLabel={`Acertos e erros por período, ${periodLabel}`}
@@ -305,4 +307,12 @@ export function AnswerInsights({
       </footer>
     </div>
   );
+}
+
+/** Marcas inteiras no eixo de contagem (sem repetir 1, 1, 2, 2). */
+function intTicks(max: number) {
+  const step = Math.max(1, Math.ceil(max / 4));
+  const out: number[] = [];
+  for (let v = 0; v < max + step; v += step) out.push(v);
+  return out.length > 1 ? out : [0, 1];
 }

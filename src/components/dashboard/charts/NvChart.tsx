@@ -34,6 +34,8 @@ type Props = {
   onSelect?: (index: number) => void;
   /** Mostra 1 rótulo do eixo x a cada N pontos. */
   labelEvery?: number;
+  /** Curva suave (padrão) ou segmentos retos, melhor para poucos pontos. */
+  smooth?: boolean;
 };
 
 const EASE = "cubic-bezier(0.32, 0.72, 0, 1)";
@@ -116,6 +118,7 @@ export function NvChart({
   ariaLabel,
   onSelect,
   labelEvery = 1,
+  smooth = true,
 }: Props) {
   const [wrapRef, width] = useWidth<HTMLDivElement>();
   const seen = useInView(wrapRef);
@@ -151,7 +154,9 @@ export function NvChart({
         .map((d, i) => (d.line === null || d.line === undefined ? null : ([cx(i), y(d.line)] as [number, number])))
         .filter((p): p is [number, number] => !!p)
     : [];
-  const linePath = monotonePath(linePts);
+  const linePath = smooth
+    ? monotonePath(linePts)
+    : linePts.map(([px, py], k) => `${k ? "L" : "M"}${px},${py}`).join("");
   const last = linePts.at(-1);
   const areaPath =
     line?.area && linePts.length > 1
