@@ -493,13 +493,13 @@ const EDITAL = {
 };
 /* Ordem de estudo: prioridade ESTIMADA (não é estatística oficial de incidência da IDECAN) */
 const PRIO = [
-  ["dispersao", "alta", "Caiu nas duas provas da IDECAN que analisei (desvio-padrão amostral e conceito de dispersão)."],
-  ["probabilidade", "alta", "Caiu nas duas provas analisadas (eventos independentes; espaço amostral e eventos mutuamente excludentes)."],
+  ["comb", "alta", "8 itens de contagem e progressões nas provas IDECAN do repositório: arranjo, combinação e anagrama (PC-SC 2026 Agente q.87 e q.94; Escrivão q.90; CBMMG 2026 q.6) e PA/PG (Agente q.89 e q.92; Escrivão q.92; CBMMG 2026 q.7)."],
+  ["probabilidade", "alta", "5 itens de probabilidade: 4 no repositório (PC-SC 2026 Agente q.86 e q.96; Escrivão q.89; CBMMG 2026 q.15) e PC-BA 2022 q.62."],
+  ["dispersao", "alta", "2 itens: desvio-padrão amostral na PC-SC 2026 Escrivão (q.91) e medida de dispersão na PC-BA 2022 (q.59)."],
   ["tendencia", "alta", "Caiu em uma das provas (média e mediana), mais curtose, e é base de quase toda questão."],
+  ["series", "media", "1 item no repositório: crescimento mensal de inquéritos (PC-SC 2026 Escrivão q.99), tratado como série temporal."],
+  ["posicao", "media", "1 item de média ponderada na PC-SC 2026 Agente (q.88); também aparece em interpretação de dados e boxplot."],
   ["conceitos", "media", "Amostragem estratificada já caiu na IDECAN."],
-  ["comb", "media", "Combinação e progressão aritmética apareceram na PC-SC 2026 (IDECAN) em questões práticas de contagem."],
-  ["series", "media", "Sem registro nas provas analisadas, mas o edital dá ênfase à interpretação de dados, que combina com o cargo."],
-  ["posicao", "media", "Sem registro nas provas analisadas; aparece em interpretação de dados e boxplot."],
   ["frequencias", "baixa", "Sem registro nas provas analisadas; serve de base para tabelas e gráficos."],
   ["correlacao", "baixa", "Sem registro nas provas analisadas; costuma cair como conceito (correlação x causalidade)."]
 ];
@@ -680,7 +680,7 @@ function vBloco() {
 function vDisc() {
   const s = sj(S.d), all = subQ(s.id), tops = ST[s.id];
   let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button>${canShare() ? ` · <button class="link" onclick="shareDisc('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
-  <div class="note"><b>Ordem de estudo por prioridade (estimada).</b> Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Analisei duas provas reais da banca (PC-SC 2026 e PC-BA 2022) e, onde não havia registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div>`;
+  <div class="note"><b>Ordem de estudo por prioridade (estimada).</b> Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Contei os itens de estatística das provas IDECAN do repositório (PC-SC 2026 Agente e Escrivão, CBMMG 2026) e somei a PC-BA 2022, analisada antes. Essas provas não são da PC-AC: onde não há registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div>`;
   if (s.id === "estatistica") h += `<div class="card"><h2>Provas reais para resolver</h2><p class="muted">Os enunciados originais ficam nas provas abaixo (não posso copiá-los para o app). Resolva as questões indicadas e depois confira no gabarito.</p>${PROVAS.map(p => `<p><b>${p[0]}</b><br><span class="muted">${p[1]}</span><br><a href="${p[2]}" target="_blank" rel="noopener">Abrir a prova</a>${p[3] ? ` · <a href="${p[3]}" target="_blank" rel="noopener">Gabarito</a>` : ""}</p>`).join("")}</div>`;
   h += `<div class="list">`;
   tops.forEach((t, r) => {
