@@ -51,6 +51,7 @@ import "@/styles/student-areas-polish.css";
 import "@/styles/student-windows-polish.css";
 import "@/styles/student-home-layout.css";
 import "@/styles/student-calm.css";
+import "@/styles/mobile-fit.css";
 import "@/styles/student-topbar-redesign.css";
 import {
   DashboardNavigation,

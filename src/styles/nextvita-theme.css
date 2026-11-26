@@ -169,6 +169,8 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-t
 .nv-tip {
   position: absolute;
   z-index: 5;
+  width: max-content;
+  max-width: min(18rem, calc(100vw - 2rem));
   min-width: 10.5rem;
   padding: 0.5rem 0.625rem;
   border: 1px solid rgb(255 255 255 / 10%);
@@ -187,7 +189,7 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .ncx-t
 .nv-tip li { display: grid; grid-template-columns: 10px 1fr auto; align-items: center; gap: 8px; font-size: 12px; }
 .nv-tip li i { width: 10px; height: 10px; border-radius: 3px; }
 .nv-tip li i[data-line] { height: 3px; border-radius: 2px; }
-.nv-tip li span { color: rgb(243 245 247 / 72%); }
+.nv-tip li span { color: rgb(243 245 247 / 72%); white-space: nowrap; }
 .nv-tip li b { font-weight: 700; font-variant-numeric: tabular-nums; color: #fff; }
 
 /* Minilinha dos cartões */

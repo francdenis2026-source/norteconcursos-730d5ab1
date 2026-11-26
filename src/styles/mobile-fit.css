@@ -1,0 +1,42 @@
+/* Celular: leitura confortável, gráficos legíveis e conteúdo que não fica sob a barra inferior. */
+@media (max-width: 767px), (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  /* Tudo um pouco maior (rem): textos, botões e ícones ficam mais fáceis de ler e tocar. */
+  html[data-mobile-app="true"] { font-size: 17px; }
+
+  /* O fim da página nunca fica escondido atrás da barra de navegação inferior. */
+  html body .app-shell[data-area] #dashboard-content {
+    padding-bottom: calc(132px + env(safe-area-inset-bottom, 0px)) !important;
+    scroll-padding-bottom: calc(132px + env(safe-area-inset-bottom, 0px));
+  }
+  html body .app-shell[data-area] #dashboard-content .student-home__data-note {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+  html body .app-shell[data-area] #dashboard-content .student-home__data-note > summary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  /* Alvos de toque e ícones. */
+  html body .app-shell[data-area] #dashboard-content :is(button, [role="button"], summary) { min-height: 44px; }
+  html body .app-shell[data-area] #dashboard-content svg:not(.nv-chart svg):not([width]) { min-width: 1.15rem; }
+
+  /* Gráficos: eixos legíveis. */
+  .nv-axis { font-size: 12.5px; }
+  .nv-pill-text { font-size: 12.5px; }
+  .nv-legend, .nv-summary dt { font-size: 0.9rem; }
+
+  /* Dica do gráfico: nunca quebra letra por letra; cabe na largura da tela. */
+  .nv-tip {
+    width: max-content;
+    min-width: 11rem;
+    max-width: min(17rem, calc(100vw - 2rem));
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .nv-tip p { font-size: 0.85rem; white-space: normal; }
+  .nv-tip li { grid-template-columns: 10px minmax(0, 1fr) auto; font-size: 0.9rem; }
+  .nv-tip li span, .nv-tip li b { white-space: nowrap; }
+}

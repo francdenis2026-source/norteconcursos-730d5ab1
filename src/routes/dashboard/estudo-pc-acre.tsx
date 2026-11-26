@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import questoesPdf from "@/estudo/pdf/Estatistica_PC-AC_Questoes_Franc_DNis_Norte_Concursos.pdf?url";
 import gabaritoPdf from "@/estudo/pdf/Estatistica_PC-AC_Gabarito_Franc_DNis_Norte_Concursos.pdf?url";
 import { useQueryClient } from "@tanstack/react-query";
+import { MOBILE_APP_QUERY } from "@/lib/appScroll";
 import {
   PC_AC_STUDY_SAVED_EVENT,
   enqueueStudyAnswer,
@@ -114,6 +115,12 @@ function EstudoPcAcre() {
       const box = document.getElementById("dashboard-content");
       // Medida independente da rolagem: topo do quadro com a página no início, até o fim da janela
       // (menos a faixa fixa do desenvolvedor, quando ela existe).
+      if (box && window.matchMedia(MOBILE_APP_QUERY).matches) {
+        // No celular o painel rola dentro do contêiner: o quadro ocupa exatamente a altura visível dele.
+        const offset = el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
+        setFrameH(Math.max(360, Math.floor(box.clientHeight - offset)));
+        return;
+      }
       const strip = document.querySelector<HTMLElement>(".dev-strip");
       const stripH = strip && getComputedStyle(strip).display !== "none" ? strip.getBoundingClientRect().height : 0;
       const scrolled = (box?.scrollTop ?? 0) + window.scrollY;
@@ -165,7 +172,7 @@ function EstudoPcAcre() {
 
   return (
     <div className="w-full">
-      <style>{`html[data-study-area] .app-footer{display:none!important}html[data-study-area] #dashboard-content,html[data-study-area] .app-content__inner{padding-bottom:0!important;min-height:0!important}`}</style>
+      <style>{`html[data-study-area] .app-footer{display:none!important}html[data-study-area] #dashboard-content,html[data-study-area] .app-content__inner{padding-bottom:0!important;min-height:0!important}@media (max-width:767px){html[data-study-area] body .app-shell[data-area] #dashboard-content{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))!important}}`}</style>
       {srcDoc ? (
         <iframe
           ref={frame}
