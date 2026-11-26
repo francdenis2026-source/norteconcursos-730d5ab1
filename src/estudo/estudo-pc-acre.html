@@ -679,7 +679,7 @@ function vBloco() {
 }
 function vDisc() {
   const s = sj(S.d), all = subQ(s.id), tops = ST[s.id];
-  let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button>${canShare() ? ` · <button class="link" onclick="shareDisc('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
+  let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button> · <button class="link" onclick="go('todas',{d:'${s.id}'})">Resolver todas em sequência (como no PDF)</button>${canShare() ? ` · <button class="link" onclick="shareDisc('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
   <div class="note"><b>Ordem de estudo por prioridade (estimada).</b> Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Contei os itens de estatística das provas IDECAN do repositório (PC-SC 2026 Agente e Escrivão, CBMMG 2026) e somei a PC-BA 2022, analisada antes. Essas provas não são da PC-AC: onde não há registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div>`;
   if (s.id === "estatistica") h += `<div class="card"><h2>Provas reais para resolver</h2><p class="muted">Os enunciados originais ficam nas provas abaixo (não posso copiá-los para o app). Resolva as questões indicadas e depois confira no gabarito.</p>${PROVAS.map(p => `<p><b>${p[0]}</b><br><span class="muted">${p[1]}</span><br><a href="${p[2]}" target="_blank" rel="noopener">Abrir a prova</a>${p[3] ? ` · <a href="${p[3]}" target="_blank" rel="noopener">Gabarito</a>` : ""}</p>`).join("")}</div>`;
   h += `<div class="list">`;
@@ -688,6 +688,14 @@ function vDisc() {
     h += `<button class="row" onclick="go('topic',{t:'${t.id}',tab:'estudar'})"><div class="rk">${r + 1}</div><div class="mid"><div class="nm">${t.nome}</div><div class="sub">Item ${t.item} do edital · ${ids.length} questões · ${certas(ids)} acertadas · ${f} feitas</div><div class="bar"><div style="width:${ids.length ? 100 * certas(ids) / ids.length : 0}%"></div></div></div><span class="lv ${t.prio}">${t.prio.toUpperCase()}</span></button>`;
   });
   return h + `</div>`;
+}
+function vTodas() {
+  const s = sj(S.d), all = subQ(s.id), pend = S.tf !== "todas";
+  const show = pend ? all.filter(i => !hit(i)) : all;
+  let h = `<h1>${s.nome} · todas as questões</h1><p class="muted">${feitas(all)} de ${all.length} respondidas · ${certas(all)} já acertadas. Na mesma ordem do PDF. <button class="link" onclick="S.tf=S.tf==='todas'?'pend':'todas';render()">${pend ? "Mostrar também as já acertadas" : "Mostrar só as pendentes"}</button> · <button class="link" onclick="go('disc')">Voltar à disciplina</button></p>`;
+  if (!show.length) h += `<div class="note">Você já acertou todas as questões desta matéria.</div>`;
+  show.forEach(i => { h += qHtml(i, all.indexOf(i) + 1); });
+  return h;
 }
 function vTopic() {
   const t = tp(S.t), tops = ST[t.sid], r = tops.findIndex(x => x.id === t.id), ids = qIdx(t.id);
@@ -1089,7 +1097,7 @@ function render(scroll) {
   const wantPos = window.__restorePos && document.body && document.body.classList && !document.body.classList.contains("locked");
   crumbs();
   const m = document.getElementById("main");
-  const V = { home: vHome, bloco: vBloco, disc: vDisc, topic: vTopic, sim: vSim, simrun: vSimRun, simres: vSimRes, dash: vDash, plan: vPlan, arq: vArq };
+  const V = { home: vHome, bloco: vBloco, disc: vDisc, topic: vTopic, todas: vTodas, sim: vSim, simrun: vSimRun, simres: vSimRes, dash: vDash, plan: vPlan, arq: vArq };
   if (S.v === "simrun" && !SIM) S.v = "sim";
   m.innerHTML = (V[S.v] || vHome)();
   side();
