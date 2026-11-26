@@ -961,6 +961,34 @@ main:has(.qstage) .qfilt>.muted{display:none}
 .qside{gap:10px!important}.qbar{padding:12px!important;gap:8px!important}
 .qstats span{padding:5px 4px}.qstats b{font-size:16px}
 .qonly{padding:10px 12px!important;gap:6px!important}
+
+/* ---- Painel numa só janela (computador): tudo cabe sem rolar a página ---- */
+@media (min-width:1101px) and (min-height:620px){
+main:has(.pv){padding:8px clamp(14px,2vw,28px) 8px!important}
+.pv{height:calc(100vh - 16px);gap:14px!important;align-items:stretch}
+.pv-main{display:flex!important;flex-direction:column;gap:10px!important;min-height:0}
+.pv-head{align-items:center;gap:10px}.pv-head h1{font-size:22px!important;margin:2px 0 0}.pv-eyebrow{font-size:11px}
+.pv-count{padding:6px 12px}.pv-count b{font-size:26px}
+.pv-cont{padding:10px 16px!important}.pv-ico{width:38px;height:38px}.pv-cont-t h2{font-size:16px}.pv-cont-t p{font-size:12.5px;margin:1px 0 0}
+.pv-cont-a button{min-height:38px;padding:0 16px}
+.pv-kpis{gap:10px}.pv-k{padding:8px 12px;gap:10px}.pv-ki{width:34px;height:34px}.pv-k b{font-size:20px}.pv-k span{font-size:12px}
+.pv-sh{margin-top:0}.pv-sh h2{font-size:16px}
+.pv-blocks{flex:1;min-height:0;align-items:stretch!important;overflow:auto;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px}
+.pv-blk{padding:12px 14px;gap:6px;grid-template-rows:auto 1fr auto;min-height:0}
+.pv-blk header .m{display:none}.pv-blk h3{font-size:16px}
+.pv-blk ul{align-content:space-evenly;margin:0}
+.pv-d{padding:5px 8px;gap:3px 8px}.pv-dn{font-size:13px}
+.pv-blk footer{padding-top:6px;font-size:12px}
+.pv-side{position:static!important;gap:10px;min-height:0;overflow:auto;align-content:start}
+.pv-ringc{grid-template-columns:auto 1fr;justify-items:start;align-items:center;gap:12px;padding:10px 14px;text-align:left}
+.pv-ring{width:76px;height:76px}.pv-ring b{font-size:18px}.pv-ring small{display:none}
+.pv-week{padding:10px 14px!important}.pv-week h2{margin:0 0 4px!important;font-size:14px!important}
+.pv-wb{height:34px!important}
+.pv-focus{padding:10px 14px!important;gap:6px!important}.pv-focus h2{font-size:14px!important;margin:0!important}
+.pv-fi small{display:none}.pv-fi{gap:4px}
+.pv-nav{padding:10px 12px;gap:6px}.pv-nav h2{font-size:14px}
+.pv-nav button{padding:7px 10px;gap:10px}.pv-ni{width:30px;height:30px}.pv-nt small{display:none}.pv-nt b{font-size:13.5px}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
