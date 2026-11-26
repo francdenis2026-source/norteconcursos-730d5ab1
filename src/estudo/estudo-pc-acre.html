@@ -837,6 +837,26 @@ html.dark .nv .nvbar i{background:#d97757}
 .pv-focus{padding:10px 12px}.pv-fi{padding:7px 0}.pv-fi button{margin-top:3px;min-height:28px;font-size:12px}
 .pv-nav{padding:10px;gap:5px}.pv-nav button{padding:6px 9px}.pv-ni{width:30px;height:30px}
 @media(max-height:860px){.pv-nt small{display:none}.pv-nav button{padding:5px 9px}}
+
+/* ===== Uma questão por tela ===== */
+.qstage{display:grid;gap:12px;max-width:980px}
+.qbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.qcount{font-size:13px;color:var(--muted)}.qcount b{color:var(--ink);font-size:15px}
+.qdots{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.qd{width:13px;height:13px;padding:0;border-radius:50%;border:1.5px solid var(--muted);background:transparent;cursor:pointer;transition:transform .12s}
+.qd:hover{transform:scale(1.25)}.qd.cur{outline:2px solid var(--acc);outline-offset:2px}
+.qd.ok{background:var(--ok);border-color:var(--ok)}.qd.no{background:var(--bad);border-color:var(--bad)}
+.qprog{display:block;width:160px;height:8px;border-radius:99px;background:var(--line);overflow:hidden}.qprog i{display:block;height:100%;background:var(--acc)}
+.qnavb{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);position:sticky;bottom:8px;box-shadow:0 -6px 18px -12px rgba(0,0,0,.35)}
+.qhint{font-size:12.5px;color:var(--muted);flex:1;text-align:center}
+.b1.sm{min-height:38px;padding:0 18px;border-radius:10px;font-weight:700;font-size:14px;cursor:pointer;background:var(--acc);color:#fff;border:0}
+.b1.sm:hover:not(:disabled){filter:brightness(1.08)}.b1.sm:disabled{opacity:.4;cursor:default}
+html.dark .b1.sm{background:#d97757;color:#1f1e1d}
+html.dark .qbar,html.dark .qnavb{background:#30302e;border-color:#3d3d3a}
+@media(prefers-reduced-motion:reduce){.qd{transition:none}.qd:hover{transform:none}}
+
+/* Com uma questão por tela, os atalhos "ocultar/treinar outra ↓" ficam no botão Próxima questão */
+.qstage p:has(> button[onclick^="hideAnswered"]),.qstage p:has(> button[onclick^="render("]){display:none}
 </style>
 <script>
 window.addEventListener('message',function(e){
@@ -1053,7 +1073,7 @@ function redo(i) { delete ans[i]; HIDDEN.delete(i); save(); render(i); }
 let MIX = 0; try { MIX = +(localStorage.getItem("pcac_mix") || 0); if (!MIX) { MIX = Math.floor(Math.random() * 1e9) + 1; localStorage.setItem("pcac_mix", String(MIX)); } } catch (e) { MIX = 7; }
 const mixKey = i => (((i + 1) * 2654435761) ^ MIX) >>> 0;
 function mixed(ids) { return ids.slice().sort((a, b) => mixKey(a) - mixKey(b)); }
-function reshuffle() { MIX = Math.floor(Math.random() * 1e9) + 1; try { localStorage.setItem("pcac_mix", String(MIX)); } catch (e) {} render(); }
+function reshuffle() { QCUR = {}; MIX = Math.floor(Math.random() * 1e9) + 1; try { localStorage.setItem("pcac_mix", String(MIX)); } catch (e) {} render(); }
 function toggleFilt() { S.filt = S.filt === "todas" ? "pend" : "todas"; render(); }
 function resetTopic(t) { if (!confirm("Resetar as respostas deste assunto? Elas voltam a ficar abertas. O que já foi contado não conta de novo.")) return; Object.keys(ans).forEach(k => { if (QS[k].t === t) delete ans[k]; }); save(); render(); }
 function reset() { if (confirm("Limpar as respostas na tela? O histórico de desempenho é mantido.")) { ans = {}; save(); render(); } }
@@ -1194,13 +1214,25 @@ function vDisc() {
   });
   return h + `</div>`;
 }
+/* Uma questão por tela: o aluno responde, lê a explicação e só então avança, quando quiser. */
+let QCUR = {};
+function qGo(k, n) { QCUR[k] = n; render(); const m = document.getElementById("main"); if (m && m.scrollIntoView) window.scrollTo(0, 0); }
+function qStage(list, key, numOf) {
+  if (!list.length) return "";
+  const k = key + ":" + String(S.d || "") + ":" + String(S.t || "") + ":" + String(S.filt || S.tf || "");
+  let cur = QCUR[k]; if (cur === undefined) cur = Math.max(0, list.findIndex(i => ans[i] === undefined));
+  cur = Math.min(Math.max(0, cur), list.length - 1); QCUR[k] = cur;
+  const i = list[cur], done = ans[i] !== undefined, n = list.length, resp = list.filter(j => ans[j] !== undefined).length;
+  const nav = n <= 40 ? list.map((j, x) => `<button class="qd ${x === cur ? "cur" : ""} ${ans[j] === undefined ? "" : (ans[j] === QS[j].c ? "ok" : "no")}" onclick="qGo('${k}',${x})" aria-label="Ir para a questão ${x + 1}"${x === cur ? ' aria-current="true"' : ""}></button>`).join("") : `<span class="qprog" aria-hidden="true"><i style="width:${Math.round(100 * resp / n)}%"></i></span>`;
+  return `<div class="qstage"><div class="qbar"><span class="qcount"><b>Questão ${cur + 1}</b> de ${n} · ${resp} respondida${resp === 1 ? "" : "s"}</span><span class="qdots" role="group" aria-label="Navegar entre as questões">${nav}</span></div>${qHtml(i, numOf(i))}<div class="qnavb"><button class="b2 sm" ${cur ? "" : "disabled"} onclick="qGo('${k}',${cur - 1})">← Anterior</button><span class="qhint">${done ? "Leia a explicação e avance quando quiser." : "Escolha uma alternativa e confirme."}</span><button class="b1 sm" ${cur < n - 1 ? "" : "disabled"} onclick="qGo('${k}',${cur + 1})">Próxima questão →</button></div></div>`;
+}
 function vTodas() {
   const s = sj(S.d), all = subQ(s.id), pend = S.tf !== "todas";
   const show = readingOrder(pend ? all.filter(i => !hit(i) || SHOW[i]) : all);
   let h = `<h1>${s.nome} · todas as questões</h1><p class="muted">${feitas(all)} de ${all.length} respondidas · ${certas(all)} já acertadas. Na mesma ordem do PDF. <button class="link" onclick="S.tf=S.tf==='todas'?'pend':'todas';render()">${pend ? "Mostrar também as já acertadas" : "Mostrar só as pendentes"}</button> · <button class="link" onclick="go('disc')">Voltar à disciplina</button></p>`;
   h += hiddenControl(all);
   if (!show.length) h += `<p class="muted">Nenhuma questão pendente nesta lista.</p>`;
-  show.forEach(i => { h += qHtml(i, all.indexOf(i) + 1); });
+  h += qStage(show, "d", i => all.indexOf(i) + 1);
   return h;
 }
 function vTopic() {
@@ -1219,7 +1251,7 @@ function vTopic() {
     h += `<p class="muted">${ocultas ? `${ocultas} já acertada(s) ocultada(s). ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as já acertadas"}</button>${filt === "todas" ? "" : " · <button class=\"link\" onclick=\"reshuffle()\">Embaralhar</button>"} · <button class="link" onclick="resetTopic('${S.t}')">Resetar respostas deste assunto</button></p>`;
     h += hiddenControl(ids);
     if (!show.length) h += `<p class="muted">Nenhuma questão pendente neste assunto.</p>`;
-    show.forEach((i, k) => { h += qHtml(i, ids.indexOf(i) + 1); });
+    h += qStage(show, "t", i => ids.indexOf(i) + 1);
   }
   const nx = tops[r + 1], pv = tops[r - 1];
   h += `<div class="nav2">${pv ? `<button class="link" onclick="go('topic',{t:'${pv.id}',tab:'estudar'})">← Anterior</button>` : "<span></span>"}${nx ? `<button class="link" onclick="go('topic',{t:'${nx.id}',tab:'estudar'})">Próximo assunto →</button>` : "<span></span>"}</div>`;

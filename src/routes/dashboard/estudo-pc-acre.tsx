@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import questoesPdf from "@/estudo/pdf/Estatistica_PC-AC_Questoes_Franc_DNis_Norte_Concursos.pdf?url";
 import gabaritoPdf from "@/estudo/pdf/Estatistica_PC-AC_Gabarito_Franc_DNis_Norte_Concursos.pdf?url";
-import { PcAcStudyPerformance } from "@/components/estudo/PcAcStudyPerformance";
 import { enqueueStudyAnswer, flushStudyAnswers, parseStudyMessage } from "@/lib/pcAcStudyBridge";
 
 export const Route = createFileRoute("/dashboard/estudo-pc-acre")({
@@ -67,7 +66,10 @@ function EstudoPcAcre() {
       const el = frame.current;
       if (!el) return;
       const top = el.getBoundingClientRect().top;
-      setFrameH(Math.max(480, Math.floor(window.innerHeight - top - 44)));
+      // Ocupa tudo o que resta do contêiner de rolagem do painel (a área não tem mais nada abaixo dela).
+      const box = document.getElementById("dashboard-content");
+      const bottom = box ? box.getBoundingClientRect().bottom : window.innerHeight;
+      setFrameH(Math.max(420, Math.floor(bottom - top - 14)));
     };
     fit();
     const id = window.setTimeout(fit, 300);
@@ -122,8 +124,6 @@ function EstudoPcAcre() {
           Carregando a área de estudo…
         </p>
       )}
-
-      <PcAcStudyPerformance />
     </div>
   );
 }
