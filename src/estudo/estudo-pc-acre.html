@@ -1026,6 +1026,13 @@ html.dark .chip.re{background:#3a3018;color:#f5d57a;border-color:#6b5a24}
 .solbtn{margin:12px 16px!important}
 .syncst{font-size:12px;color:var(--muted);padding:0 2px}.syncst.ok{color:var(--ok)}.syncst.wait{color:#b7791f}
 html.dark .fb.no .fbh{background:#4a2a26;color:#ffb4a8}html.dark .fb.ok .fbh{background:#1f3a2c;color:#8fe3b5}html.dark .fbh span{color:#e8e6dc}
+.qhelp{margin-left:auto;border:1px dashed var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:3px 11px;font:600 12px inherit;cursor:pointer}
+.qhelp:hover{color:var(--ink);border-color:var(--acc);border-style:solid}
+.th-pause{margin:0;padding:8px 22px;font-size:12.5px;color:#7a4b00;background:#fff6e0;border-bottom:1px solid #e8c27a}
+html.dark .th-pause{background:#3a3018;color:#f5d57a;border-color:#6b5a24}
+.th-s{margin:0 0 18px}.th-s h3{display:flex;align-items:center;gap:10px;margin:0 0 8px;font-size:16px}
+.th-s h3 span{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;font-size:13px}
+.solm-c .wex-h{display:none}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1181,7 +1188,8 @@ const HID_LOG = LOG.filter(l => HID.has(l.i)); LOG = LOG.filter(l => !HID.has(l.
 function qKey(i) { const s = QS[i].q; let h = 5381; for (let k = 0; k < s.length; k++) h = ((h * 33) ^ s.charCodeAt(k)) >>> 0; return QS[i].t + ":" + h.toString(36); }
 function reportAns(i, sel, m, t, d) { try { if (!window.parent || window.parent === window || typeof crypto === "undefined" || !crypto.randomUUID) return; const q = QS[i]; const tp = TOP.find(x => x.id === q.t); const sj = SUBJ.find(x => x.id === QSUBJ[i]); window.parent.postMessage({ type: "pcac-answer", id: crypto.randomUUID(), key: qKey(i), question_text: q.q, topic_id: q.t, topic_name: tp ? tp.nome : q.t, subject_name: sj ? sj.nome : null, mode: m === "simulado" ? "simulado" : "estudo", uid: q.u || null, seconds: d || 0, selected: "ABCDE"[sel], correct: "ABCDE"[q.c], answered_at: new Date(t || Date.now()).toISOString() }, location.origin); } catch (e) {} }
 const QACC = {}; const fmtT = x => String(Math.floor(x / 60)).padStart(2, "0") + ":" + String(x % 60).padStart(2, "0");
-setInterval(() => { if (typeof document === "undefined" || document.visibilityState === "hidden") return; document.querySelectorAll(".qtimer[data-q]").forEach(el => { const i = +el.getAttribute("data-q"); if (ans[i] !== undefined || PEND[i] === -1) return; QACC[i] = (QACC[i] || 0) + 1; el.textContent = fmtT(QACC[i]); }); }, 1000);
+let PAUSED = 0;
+setInterval(() => { if (typeof document === "undefined" || document.visibilityState === "hidden" || PAUSED) return; document.querySelectorAll(".qtimer[data-q]").forEach(el => { const i = +el.getAttribute("data-q"); if (ans[i] !== undefined || PEND[i] === -1) return; QACC[i] = (QACC[i] || 0) + 1; el.textContent = fmtT(QACC[i]); }); }, 1000);
 const QSEEN = {}; let SIMT = {}, SIMD = {}; function secSince(t0) { if (!t0) return null; const sec = Math.round((Date.now() - t0) / 1000); return sec >= 2 && sec <= 900 ? sec : null; } function qDur(i) { const x = QACC[i]; return x >= 1 && x <= 1800 ? x : null; } function logAns(i, ok, m, t, sel, d) { if (seen(i)) return; LOG.push({ i, ok: ok ? 1 : 0, t: t || Date.now(), m, d: d || null }); saveLog(); HIT = null; if (sel !== undefined) { reportAns(i, sel, m, t, d); SYNCED.add(i); try { localStorage.setItem("pcac_synced", JSON.stringify([...SYNCED])); } catch (e) {} } }
 /* Organismo único: a área e o treinador usam o mesmo banco de questões e a mesma primeira tentativa. */
 const UIDX = {}; QS.forEach((q, i) => { if (q.u) UIDX[q.u] = i; });
@@ -1305,6 +1313,24 @@ function theoryHtml(tq) { return `<p class="muted" style="margin:0 0 8px"><b>Ass
 let PENDN = null;
 function updSync() { document.querySelectorAll(".syncst").forEach(el => { if (PENDN === null) { el.textContent = ""; return; } el.className = "syncst " + (PENDN ? "wait" : "ok"); el.textContent = PENDN ? "⏳ " + PENDN + " resposta" + (PENDN > 1 ? "s" : "") + " aguardando envio" : "☁ Respostas salvas na sua conta"; }); }
 window.addEventListener("message", e => { if (e.source !== window.parent || !e.data || typeof e.data.ncPending !== "number") return; PENDN = e.data.ncPending; updSync(); });
+function openTheory(i) {
+  const q = QS[i], tq = tp(q.t); if (!tq || !tq.teoria) return;
+  const old = document.getElementById("solm"); if (old) return;
+  const sjn = QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "";
+  PAUSED++;
+  const o = document.createElement("div"); o.id = "solm"; o.className = "solm"; o.setAttribute("role", "dialog"); o.setAttribute("aria-modal", "true"); o.setAttribute("aria-label", "Entenda o assunto");
+  const sec = (n, t, b) => b ? `<section class="th-s"><h3><span>${n}</span>${t}</h3>${b}</section>` : "";
+  o.innerHTML = `<div class="solm-b"><header><div><span class="solm-k">${sjn}</span><h2>${tq.nome}</h2>${chanceHtml(q.t)}</div><button type="button" class="solm-x" aria-label="Voltar às questões" data-a="x">✕</button></header>
+  <p class="th-pause">⏸ Cronômetro pausado. Estude com calma: a questão e a resposta ficam fora desta janela.</p>
+  <div class="solm-c">${sec(1, "Entenda a ideia", tq.teoria)}${sec(2, "Exemplo resolvido", exHtml(tq.exemplo))}${sec(3, "Como resolver este tipo de questão", receitaHtml(tq.receita))}${sec(4, "Macete para a prova", `<div class="macete">${tq.macete}</div>`)}</div>
+  <footer><button type="button" class="b1" data-a="x">Voltar às questões e retomar o cronômetro</button></footer></div>`;
+  document.body.appendChild(o);
+  const close = () => { o.remove(); document.removeEventListener("keydown", esc); PAUSED = Math.max(0, PAUSED - 1); };
+  const esc = e => { if (e.key === "Escape") close(); };
+  document.addEventListener("keydown", esc);
+  o.addEventListener("click", e => { const t = e.target; if (t === o || (t.getAttribute && t.getAttribute("data-a") === "x")) close(); });
+  const f = o.querySelector(".solm-x"); if (f) f.focus();
+}
 function openSol(i, tab) {
   const q = QS[i], tq = tp(q.t), done = ans[i] !== undefined, sjn = QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "";
   const hasT = !!(tq && tq.teoria), first = tab === "assunto" && hasT ? "assunto" : (done || tab === "res" ? "res" : (hasT ? "assunto" : "res"));
@@ -1324,7 +1350,7 @@ function openSol(i, tab) {
 function qHtml(i, n) { if (!QSEEN[i] && ans[i] === undefined) QSEEN[i] = Date.now();
   const q = QS[i], done = ans[i] !== undefined, ok = done && ans[i] === q.c;
   const isRe = seen(i) && (RETEST.has(i) || !!RT[i]), lockedBefore = done && !SHOW[i] && seen(i) && !isRe, retest = !done && seen(i);
-  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}">${lockedBefore ? `<div class="qlock">🔒 <span>Você já fez esta questão e a resposta está registrada.</span><button type="button" onclick="redo(${i})">Liberar para refazer (não conta)</button></div>` : ""}${retest ? `<div class="qlock re">🔓 <span>Reteste: esta questão já foi contada e <b>não será contabilizada</b> de novo.</span></div>` : ""}<div class="qh"><span class="qn">${n}</span>Questão ${n}${isRe && (done || retest) ? ' <span class="chip re" title="Esta tentativa não conta no ranking nem nas métricas">🔁 RETESTE · não contabilizado</span>' : done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}${done ? (() => { const lg = LOG.find(l => l.i === i); return lg && lg.d ? '<span class="qtimer done" title="Tempo gasto nesta questão">' + fmtT(lg.d) + "</span>" : ""; })() : '<span class="qtimer" data-q="' + i + '" title="Tempo nesta questão (conta só com a aba visível)">' + fmtT(QACC[i] || 0) + "</span>"}</div><div class="qctx"><span class="qc1">${(QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "")}</span><span class="qc2" title="Assunto da matéria cobrado nesta questão">Assunto: <b>${(tp(q.t) ? tp(q.t).nome : q.t)}</b></span>${chanceHtml(q.t)}</div><p class="qt">${q.q}</p>`;
+  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}">${lockedBefore ? `<div class="qlock">🔒 <span>Você já fez esta questão e a resposta está registrada.</span><button type="button" onclick="redo(${i})">Liberar para refazer (não conta)</button></div>` : ""}${retest ? `<div class="qlock re">🔓 <span>Reteste: esta questão já foi contada e <b>não será contabilizada</b> de novo.</span></div>` : ""}<div class="qh"><span class="qn">${n}</span>Questão ${n}${isRe && (done || retest) ? ' <span class="chip re" title="Esta tentativa não conta no ranking nem nas métricas">🔁 RETESTE · não contabilizado</span>' : done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}${done ? (() => { const lg = LOG.find(l => l.i === i); return lg && lg.d ? '<span class="qtimer done" title="Tempo gasto nesta questão">' + fmtT(lg.d) + "</span>" : ""; })() : '<span class="qtimer" data-q="' + i + '" title="Tempo nesta questão (conta só com a aba visível)">' + fmtT(QACC[i] || 0) + "</span>"}</div><div class="qctx"><span class="qc1">${(QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "")}</span><span class="qc2" title="Assunto da matéria cobrado nesta questão">Assunto: <b>${(tp(q.t) ? tp(q.t).nome : q.t)}</b></span>${chanceHtml(q.t)}${!done && tp(q.t) && tp(q.t).teoria ? `<button type="button" class="qhelp" onclick="openTheory(${i})" title="Abre a explicação do assunto e pausa o cronômetro">💡 Entender o assunto</button>` : ""}</div><p class="qt">${q.q}</p>`;
   const st = STK[i] || [], pd = PEND[i];
   q.ops.forEach((o, k) => {
     let cl = "opt"; if (done) { if (k === q.c) cl += " right"; else if (k === ans[i]) cl += " wrong"; } else { if (k === pd) cl += " pend"; if (st.includes(k)) cl += " strk"; }
@@ -1332,7 +1358,7 @@ function qHtml(i, n) { if (!QSEEN[i] && ans[i] === undefined) QSEEN[i] = Date.no
   });
   if (!done && pd !== undefined) h += `<div class="confirm"><span>Alternativa ${"ABCDE"[pd]} marcada.</span> <button class="btn" type="button" onclick="confirmar(${i})">Confirmar alternativa ${"ABCDE"[pd]}</button></div>`;
   if (done) h += `<div class="fb ${ok ? "ok" : "no"}"><div class="fbh">${ok ? "✓ Você acertou" : "✗ Não foi dessa vez"} <span>Gabarito: <b>${"ABCDE"[q.c]}</b>${ok ? "" : ` · você marcou ${"ABCDE"[ans[i]]}`}</span></div><p class="solbtn"><button class="btn" type="button" onclick="openSol(${i})">📖 Ver explicação completa</button></p><p><button class="link" type="button" onclick="hideAnswered(${i})">Ocultar respondida e continuar ↓</button></p>${REINFORCE && REINFORCE.from === i ? `<p><button class="btn" type="button" onclick="render(${REINFORCE.to})">Treinar outra do mesmo assunto ↓</button></p>` : !ok ? '<p class="muted">Nenhuma outra questão inédita deste assunto disponível.</p>' : ''}${ok ? "" : `<p><button class="btn" onclick="redo(${i})">Refazer esta questão</button></p>`}</div>`;
-  if (S.v === "topic") { const tq = tp(q.t); if (tq && tq.teoria) h += `<p class="solbtn"><button class="link" type="button" onclick="openSol(${i},'assunto')">Não sei resolver: explicar o assunto desta questão</button></p>`; }
+  if (S.v === "topic") { const tq = tp(q.t);  }
   return h + "</div>";
 }
 
@@ -1449,7 +1475,7 @@ function setPr(v) { S.pr = v || undefined; QCUR = {}; render(); }
 /* Treino em andamento: relógio da sessão com encerramento confirmado. */
 let TRAIN = null;
 const fmtH = x => String(Math.floor(x / 3600)).padStart(2, "0") + ":" + String(Math.floor(x / 60) % 60).padStart(2, "0") + ":" + String(x % 60).padStart(2, "0");
-setInterval(() => { if (!TRAIN || document.visibilityState === "hidden") return; TRAIN.s++; document.querySelectorAll(".trainclk").forEach(el => { el.textContent = fmtH(TRAIN.s); }); }, 1000);
+setInterval(() => { if (!TRAIN || document.visibilityState === "hidden" || PAUSED) return; TRAIN.s++; document.querySelectorAll(".trainclk").forEach(el => { el.textContent = fmtH(TRAIN.s); }); }, 1000);
 function stopTrain() {
   if (!TRAIN) return go("home", { b: null, d: null, t: null });
   const n = LOG.filter(l => l.t >= TRAIN.t0).length, ok = LOG.filter(l => l.t >= TRAIN.t0 && l.ok).length;
