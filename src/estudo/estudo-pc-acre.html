@@ -868,11 +868,23 @@ html.dark .qbar,html.dark .qnavb{background:#30302e;border-color:#3d3d3a}
 .qc2{padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}.qc2 b{color:var(--ink)}
 html.dark .qc1{background:#3d2a22;color:#e8a58b}
 @media(prefers-reduced-motion:reduce){.qtimer::before{box-shadow:none}}
+.nt,.nt *,.nt *::before,.nt *::after{transition:none!important;animation-duration:0s!important}
+.qlock{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 12px;padding:10px 14px;border-radius:12px;border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13.5px}
+.qlock button{border:1px solid currentColor;background:transparent;color:inherit;border-radius:9px;padding:6px 12px;font:700 13px inherit;cursor:pointer}
+.qlock.re{border-color:#e8c27a;background:#fff6e0;color:#7a4b00}
+.qonly{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 10px;padding:8px 14px;border-radius:12px;border:1px dashed var(--line);font-size:13.5px;color:var(--muted)}
+.qonly b{color:var(--ink)}.qonly button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:6px 12px;font:700 13px inherit;cursor:pointer}
+html.dark .qlock{background:#2d2b3a;border-color:#4b4870;color:#c9c6ff}html.dark .qlock.re{background:#3a3018;border-color:#6b5a24;color:#f5d57a}
 </style>
 <script>
 window.addEventListener('message',function(e){
   if(e.source!==window.parent||!e.data||typeof e.data.ncDark!=='boolean')return;
-  document.documentElement.classList.toggle('dark',e.data.ncDark);
+  var r=document.documentElement;
+  if(r.classList.contains('dark')===e.data.ncDark)return;
+  r.classList.add('nt');
+  r.classList.toggle('dark',e.data.ncDark);
+  void r.offsetWidth;
+  clearTimeout(window.__ntT);window.__ntT=setTimeout(function(){r.classList.remove('nt')},60);
 });
 </script>
 <script>
@@ -1004,7 +1016,7 @@ function save() { try { localStorage.setItem("pcac_ans", JSON.stringify(ans)); }
 let marks = {};
 try { marks = JSON.parse(localStorage.getItem("pcac_marks") || "{}"); } catch (e) { marks = {}; }
 function mark(k, v) { marks[k] = v; try { localStorage.setItem("pcac_marks", JSON.stringify(marks)); } catch (e) {} }
-function go(v, o) { SHOW = {}; S = Object.assign({}, S, { v }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
+function go(v, o) { SHOW = {}; S = Object.assign({}, S, { v, only: undefined }, o || {}); if (document.body) document.body.classList.remove("nav-open", "peek"); render(); window.scrollTo(0, 0); }
 const blk = () => BLOCOS.find(b => b.id === S.b);
 const qIdx = t => QS.map((q, i) => i).filter(i => QS[i].t === t);
 const subQ = sid => sj(sid).qs;
@@ -1095,7 +1107,8 @@ function choose(i, o) {
   REINFORCE = next === null ? null : { from: i, to: next };
   render(i);
 }
-function redo(i) { delete ans[i]; HIDDEN.delete(i); save(); render(i); }
+function redo(i) { delete ans[i]; HIDDEN.delete(i); SHOW[i] = true; RETEST.add(i); delete QACC[i]; delete QSEEN[i]; save(); render(i); }
+const RETEST = new Set();
 let MIX = 0; try { MIX = +(localStorage.getItem("pcac_mix") || 0); if (!MIX) { MIX = Math.floor(Math.random() * 1e9) + 1; localStorage.setItem("pcac_mix", String(MIX)); } } catch (e) { MIX = 7; }
 const mixKey = i => (((i + 1) * 2654435761) ^ MIX) >>> 0;
 function mixed(ids) { return ids.slice().sort((a, b) => mixKey(a) - mixKey(b)); }
@@ -1133,7 +1146,8 @@ function receitaHtml(r) {
 }
 function qHtml(i, n) { if (!QSEEN[i] && ans[i] === undefined) QSEEN[i] = Date.now();
   const q = QS[i], done = ans[i] !== undefined, ok = done && ans[i] === q.c;
-  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}"><div class="qh"><span class="qn">${n}</span>Questão ${n}${done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}${done ? (() => { const lg = LOG.find(l => l.i === i); return lg && lg.d ? '<span class="qtimer done" title="Tempo gasto nesta questão">' + fmtT(lg.d) + "</span>" : ""; })() : '<span class="qtimer" data-q="' + i + '" title="Tempo nesta questão (conta só com a aba visível)">' + fmtT(QACC[i] || 0) + "</span>"}</div><div class="qctx"><span class="qc1">${(QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "")}</span><span class="qc2" title="Assunto da matéria cobrado nesta questão">Assunto: <b>${(tp(q.t) ? tp(q.t).nome : q.t)}</b></span></div><p class="qt">${q.q}</p>`;
+  const lockedBefore = done && !SHOW[i] && seen(i), retest = !done && seen(i);
+  let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}">${lockedBefore ? `<div class="qlock">🔒 <span>Você já fez esta questão e a resposta está registrada.</span><button type="button" onclick="redo(${i})">Liberar para refazer (não conta)</button></div>` : ""}${retest ? `<div class="qlock re">🔓 <span>Reteste: esta questão já foi contada e <b>não será contabilizada</b> de novo.</span></div>` : ""}<div class="qh"><span class="qn">${n}</span>Questão ${n}${done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}${done ? (() => { const lg = LOG.find(l => l.i === i); return lg && lg.d ? '<span class="qtimer done" title="Tempo gasto nesta questão">' + fmtT(lg.d) + "</span>" : ""; })() : '<span class="qtimer" data-q="' + i + '" title="Tempo nesta questão (conta só com a aba visível)">' + fmtT(QACC[i] || 0) + "</span>"}</div><div class="qctx"><span class="qc1">${(QSUBJ[i] && sj(QSUBJ[i]) ? sj(QSUBJ[i]).nome : "")}</span><span class="qc2" title="Assunto da matéria cobrado nesta questão">Assunto: <b>${(tp(q.t) ? tp(q.t).nome : q.t)}</b></span></div><p class="qt">${q.q}</p>`;
   const st = STK[i] || [], pd = PEND[i];
   q.ops.forEach((o, k) => {
     let cl = "opt"; if (done) { if (k === q.c) cl += " right"; else if (k === ans[i]) cl += " wrong"; } else { if (k === pd) cl += " pend"; if (st.includes(k)) cl += " strk"; }
@@ -1243,22 +1257,24 @@ function vDisc() {
 /* Uma questão por tela: o aluno responde, lê a explicação e só então avança, quando quiser. */
 let QCUR = {};
 function qGo(k, n) { QCUR[k] = n; render(); const m = document.getElementById("main"); if (m && m.scrollIntoView) window.scrollTo(0, 0); }
-function qStage(list, key, numOf) {
+function onlyTopic(t) { S.only = t || undefined; render(); window.scrollTo(0, 0); }
+function qStage(list, key, numOf, extra) {
   if (!list.length) return "";
-  const k = key + ":" + String(S.d || "") + ":" + String(S.t || "") + ":" + String(S.filt || S.tf || "");
+  const k = key + ":" + String(S.d || "") + ":" + String(S.t || "") + ":" + String(S.filt || S.tf || "") + ":" + String(S.only || "");
   let cur = QCUR[k]; if (cur === undefined) cur = Math.max(0, list.findIndex(i => ans[i] === undefined));
   cur = Math.min(Math.max(0, cur), list.length - 1); QCUR[k] = cur;
   const i = list[cur], done = ans[i] !== undefined, n = list.length, resp = list.filter(j => ans[j] !== undefined).length;
   const nav = n <= 40 ? list.map((j, x) => `<button class="qd ${x === cur ? "cur" : ""} ${ans[j] === undefined ? "" : (ans[j] === QS[j].c ? "ok" : "no")}" onclick="qGo('${k}',${x})" aria-label="Ir para a questão ${x + 1}"${x === cur ? ' aria-current="true"' : ""}></button>`).join("") : `<span class="qprog" aria-hidden="true"><i style="width:${Math.round(100 * resp / n)}%"></i></span>`;
-  return `<div class="qstage"><div class="qbar"><span class="qcount"><b>Questão ${cur + 1}</b> de ${n} · ${resp} respondida${resp === 1 ? "" : "s"}</span><span class="qdots" role="group" aria-label="Navegar entre as questões">${nav}</span></div>${qHtml(i, numOf(i))}<div class="qnavb"><button class="b2 sm" ${cur ? "" : "disabled"} onclick="qGo('${k}',${cur - 1})">← Anterior</button><span class="qhint">${done ? "Leia a explicação e avance quando quiser." : "Escolha uma alternativa e confirme."}</span><button class="b1 sm" ${cur < n - 1 ? "" : "disabled"} onclick="qGo('${k}',${cur + 1})">Próxima questão →</button></div></div>`;
+  return `<div class="qstage"><div class="qbar"><span class="qcount"><b>Questão ${cur + 1}</b> de ${n} · ${resp} respondida${resp === 1 ? "" : "s"}</span><span class="qdots" role="group" aria-label="Navegar entre as questões">${nav}</span></div>${extra ? extra(i) : ""}${qHtml(i, numOf(i))}<div class="qnavb"><button class="b2 sm" ${cur ? "" : "disabled"} onclick="qGo('${k}',${cur - 1})">← Anterior</button><span class="qhint">${done ? "Leia a explicação e avance quando quiser." : "Escolha uma alternativa e confirme."}</span><button class="b1 sm" ${cur < n - 1 ? "" : "disabled"} onclick="qGo('${k}',${cur + 1})">Próxima questão →</button></div></div>`;
 }
 function vTodas() {
   const s = sj(S.d), all = subQ(s.id), pend = S.tf !== "todas";
-  const show = readingOrder(pend ? all.filter(i => !hit(i) || SHOW[i]) : all);
-  let h = `<h1>${s.nome} · todas as questões</h1><p class="muted">${feitas(all)} de ${all.length} respondidas · ${certas(all)} já acertadas. Na mesma ordem do PDF. <button class="link" onclick="S.tf=S.tf==='todas'?'pend':'todas';render()">${pend ? "Mostrar também as já acertadas" : "Mostrar só as pendentes"}</button> · <button class="link" onclick="go('disc')">Voltar à disciplina</button></p>`;
+  let show = readingOrder(pend ? all.filter(i => !seen(i) || SHOW[i] || RETEST.has(i)) : all);
+  if (S.only) show = show.filter(i => QS[i].t === S.only);
+  let h = `<h1>${s.nome} · todas as questões</h1><p class="muted">${feitas(all)} de ${all.length} respondidas · ${certas(all)} já acertadas. Na mesma ordem do PDF. <button class="link" onclick="S.tf=S.tf==='todas'?'pend':'todas';render()">${pend ? "Mostrar também as respondidas 🔒" : "Mostrar só as pendentes"}</button> · <button class="link" onclick="go('disc')">Voltar à disciplina</button></p>`;
   h += hiddenControl(all);
   if (!show.length) h += `<p class="muted">Nenhuma questão pendente nesta lista.</p>`;
-  h += qStage(show, "d", i => all.indexOf(i) + 1);
+  h += qStage(show, "d", i => all.indexOf(i) + 1, i => { const nm = tp(QS[i].t) ? tp(QS[i].t).nome : QS[i].t; return S.only ? `<div class="qonly"><span>Somente o assunto <b>${nm}</b></span><button type="button" onclick="onlyTopic(null)">← Voltar ao modo anterior</button></div>` : `<div class="qonly"><span>Assunto desta questão: <b>${nm}</b></span><button type="button" onclick="onlyTopic('${QS[i].t}')">Fazer mais deste assunto</button></div>`; });
   return h;
 }
 function vTopic() {
@@ -1272,12 +1288,12 @@ function vTopic() {
       <button class="btn" onclick="go('topic',{tab:'questoes'})">Resolver questões deste assunto</button></div>`;
   } else {
     const filt = S.filt || "pend";
-    const show = readingOrder(filt === "todas" ? ids : mixed(ids.filter(i => !hit(i) || SHOW[i])));
-    const ocultas = ids.filter(i => hit(i) && !SHOW[i] && !HIDDEN.has(i)).length;
-    h += `<p class="muted">${ocultas ? `${ocultas} já acertada(s) ocultada(s). ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as já acertadas"}</button>${filt === "todas" ? "" : " · <button class=\"link\" onclick=\"reshuffle()\">Embaralhar</button>"} · <button class="link" onclick="resetTopic('${S.t}')">Resetar respostas deste assunto</button></p>`;
+    const show = readingOrder(filt === "todas" ? ids : mixed(ids.filter(i => !seen(i) || SHOW[i] || RETEST.has(i))));
+    const ocultas = ids.filter(i => seen(i) && !SHOW[i] && !RETEST.has(i) && !HIDDEN.has(i)).length;
+    h += `<p class="muted">${ocultas ? `${ocultas} respondida(s) 🔒 fora da lista. ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as respondidas 🔒"}</button>${filt === "todas" ? "" : " · <button class=\"link\" onclick=\"reshuffle()\">Embaralhar</button>"} · <button class="link" onclick="resetTopic('${S.t}')">Resetar respostas deste assunto</button></p>`;
     h += hiddenControl(ids);
     if (!show.length) h += `<p class="muted">Nenhuma questão pendente neste assunto.</p>`;
-    h += qStage(show, "t", i => ids.indexOf(i) + 1);
+    h += qStage(show, "t", i => ids.indexOf(i) + 1, i => `<div class="qonly"><span>Só deste assunto. Quer variar?</span><button type="button" onclick="go('todas',{d:'${QSUBJ[i]}',b:S.b,t:null,tab:null})">Misturar com a disciplina</button></div>`);
   }
   const nx = tops[r + 1], pv = tops[r - 1];
   h += `<div class="nav2">${pv ? `<button class="link" onclick="go('topic',{t:'${pv.id}',tab:'estudar'})">← Anterior</button>` : "<span></span>"}${nx ? `<button class="link" onclick="go('topic',{t:'${nx.id}',tab:'estudar'})">Próximo assunto →</button>` : "<span></span>"}</div>`;
