@@ -157,6 +157,7 @@ function EstudoPcAcre() {
           title="Estudo PC-AC 2026"
           srcDoc={srcDoc}
           onLoad={() => {
+            window.dispatchEvent(new Event("resize"));
             sendTheme();
             void flushStudyAnswers().finally(() => void syncAnswered());
           }}
