@@ -94,18 +94,23 @@ function EstudoPcAcre() {
   }, [queryClient, syncAnswered]);
   const [frameH, setFrameH] = useState<number | null>(null);
   useEffect(() => {
+    document.documentElement.dataset["studyArea"] = "true";
+    return () => {
+      delete document.documentElement.dataset["studyArea"];
+    };
+  }, []);
+  useEffect(() => {
     const fit = () => {
       const el = frame.current;
       if (!el) return;
       const box = document.getElementById("dashboard-content");
-      // Medida independente da rolagem: posição do quadro dentro do contêiner + altura visível dele.
-      let h: number;
-      if (box) {
-        const offset = el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
-        h = box.clientHeight - offset - 8;
-      } else {
-        h = window.innerHeight - el.getBoundingClientRect().top - 8;
-      }
+      // Medida independente da rolagem: topo do quadro com a página no início, até o fim da janela
+      // (menos a faixa fixa do desenvolvedor, quando ela existe).
+      const strip = document.querySelector<HTMLElement>(".dev-strip");
+      const stripH = strip && getComputedStyle(strip).display !== "none" ? strip.getBoundingClientRect().height : 0;
+      const scrolled = (box?.scrollTop ?? 0) + window.scrollY;
+      const topStatic = el.getBoundingClientRect().top + scrolled;
+      const h = window.innerHeight - topStatic - stripH - 2;
       setFrameH(Math.max(420, Math.floor(h)));
     };
     fit();
@@ -151,6 +156,7 @@ function EstudoPcAcre() {
 
   return (
     <div className="w-full">
+      <style>{`html[data-study-area] .app-footer{display:none!important}html[data-study-area] #dashboard-content,html[data-study-area] .app-content__inner{padding-bottom:0!important;min-height:0!important}`}</style>
       {srcDoc ? (
         <iframe
           ref={frame}
