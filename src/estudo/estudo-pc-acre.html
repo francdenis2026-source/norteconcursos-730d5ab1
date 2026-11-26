@@ -597,8 +597,45 @@ function saveStk() { try { localStorage.setItem("pcac_strike", JSON.stringify(ST
 function strike(i, k) { const cur = STK[i] || []; const on = cur.includes(k); STK[i] = on ? cur.filter(x => x !== k) : cur.concat([k]); if (!on && PEND[i] === k) delete PEND[i]; saveStk(); render(i); }
 function pick(i, k) { if (ans[i] !== undefined || (STK[i] || []).includes(k)) return; PEND[i] = k; render(i); }
 function confirmar(i) { if (ans[i] !== undefined || PEND[i] === undefined) return; const k = PEND[i]; delete PEND[i]; choose(i, k); }
-function choose(i, o) { if (ans[i] !== undefined) return; ans[i] = o; SHOW[i] = true; save(); logAns(i, o === QS[i].c, "estudo", undefined, o); render(i); }
-function redo(i) { delete ans[i]; save(); render(i); }
+// Ocultar afeta somente a leitura desta sessão; respostas e histórico são preservados.
+const HIDDEN = new Set();
+let REINFORCE = null;
+function relatedQuestion(i) {
+  const q = QS[i];
+  if (!q) return null;
+  const next = mixed(qIdx(q.t)).find(k => k !== i && QSUBJ[k] === QSUBJ[i] && ans[k] === undefined && !seen(k) && !HIDDEN.has(k));
+  return next === undefined ? null : next;
+}
+function readingOrder(ids) {
+  const visible = ids.filter(i => !HIDDEN.has(i));
+  if (!REINFORCE || !visible.includes(REINFORCE.to)) return visible;
+  const ordered = visible.filter(i => i !== REINFORCE.to);
+  const anchor = ordered.indexOf(REINFORCE.from);
+  ordered.splice(anchor < 0 ? 0 : anchor + 1, 0, REINFORCE.to);
+  return ordered;
+}
+function hideAnswered(i) {
+  if (ans[i] === undefined) return;
+  const cards = Array.from(document.querySelectorAll('#main .q[id]'));
+  const current = cards.findIndex(el => el.id === 'q' + i);
+  const next = cards[current + 1];
+  HIDDEN.add(i); delete SHOW[i];
+  render(next ? Number(next.id.slice(1)) : undefined);
+}
+function restoreAnswered() { HIDDEN.forEach(i => { SHOW[i] = true; }); HIDDEN.clear(); render(); }
+function hiddenControl(ids) {
+  const count = ids.filter(i => HIDDEN.has(i)).length;
+  return count ? `<p class="muted">${count} respondida(s) ocultada(s). <button class="link" onclick="restoreAnswered()">Mostrar respondidas ocultadas</button></p>` : '';
+}
+function choose(i, o) {
+  if (!QS[i] || !Number.isInteger(o) || o < 0 || o >= QS[i].ops.length || ans[i] !== undefined) return;
+  ans[i] = o; SHOW[i] = true; HIDDEN.delete(i); save();
+  logAns(i, o === QS[i].c, "estudo", undefined, o);
+  const next = o !== QS[i].c ? relatedQuestion(i) : null;
+  REINFORCE = next === null ? null : { from: i, to: next };
+  render(i);
+}
+function redo(i) { delete ans[i]; HIDDEN.delete(i); save(); render(i); }
 let MIX = 0; try { MIX = +(localStorage.getItem("pcac_mix") || 0); if (!MIX) { MIX = Math.floor(Math.random() * 1e9) + 1; localStorage.setItem("pcac_mix", String(MIX)); } } catch (e) { MIX = 7; }
 const mixKey = i => (((i + 1) * 2654435761) ^ MIX) >>> 0;
 function mixed(ids) { return ids.slice().sort((a, b) => mixKey(a) - mixKey(b)); }
@@ -643,7 +680,7 @@ function qHtml(i, n) {
     h += `<div class="orow"><button class="${cl}" ${done ? "disabled" : ""} onclick="pick(${i},${k})"><b>${"ABCDE"[k]}</b><span>${o}</span></button>${done ? "" : `<button class="xs" type="button" onclick="strike(${i},${k})">${st.includes(k) ? "Desfazer" : "Descartar"}</button>`}</div>`;
   });
   if (!done && pd !== undefined) h += `<div class="confirm"><span>Alternativa ${"ABCDE"[pd]} marcada.</span> <button class="btn" type="button" onclick="confirmar(${i})">Confirmar alternativa ${"ABCDE"[pd]}</button></div>`;
-  if (done) h += `<div class="fb ${ok ? "ok" : "no"}"><div class="fbh">${ok ? "✓ Você acertou" : "✗ Não foi dessa vez"} <span>Gabarito: <b>${"ABCDE"[q.c]}</b>${ok ? "" : ` · você marcou ${"ABCDE"[ans[i]]}`}</span></div><details class="sol"><summary>Quer entender melhor? Ver explicação e exemplo</summary>${solHtml(q)}</details>${ok ? "" : `<p><button class="btn" onclick="redo(${i})">Refazer esta questão</button></p>`}</div>`;
+  if (done) h += `<div class="fb ${ok ? "ok" : "no"}"><div class="fbh">${ok ? "✓ Você acertou" : "✗ Não foi dessa vez"} <span>Gabarito: <b>${"ABCDE"[q.c]}</b>${ok ? "" : ` · você marcou ${"ABCDE"[ans[i]]}`}</span></div><details class="sol"><summary>Quer entender melhor? Ver explicação e exemplo</summary>${solHtml(q)}</details><p><button class="link" type="button" onclick="hideAnswered(${i})">Ocultar respondida e continuar ↓</button></p>${REINFORCE && REINFORCE.from === i ? `<p><button class="btn" type="button" onclick="render(${REINFORCE.to})">Treinar outra do mesmo assunto ↓</button></p>` : !ok ? '<p class="muted">Nenhuma outra questão inédita deste assunto disponível.</p>' : ''}${ok ? "" : `<p><button class="btn" onclick="redo(${i})">Refazer esta questão</button></p>`}</div>`;
   if (S.v === "topic") { const tq = tp(q.t); if (tq && tq.teoria) h += `<details class="explica"><summary>Não sei resolver: explicar o assunto desta questão</summary><div class="explica-b"><p class="muted" style="margin:0 0 8px"><b>Assunto:</b> ${tq.nome}</p>${tq.teoria}${exHtml(tq.exemplo)}${receitaHtml(tq.receita)}<div class="macete"><b>Macete:</b> ${tq.macete}</div></div></details>`; }
   return h + "</div>";
 }
@@ -714,9 +751,10 @@ function vDisc() {
 }
 function vTodas() {
   const s = sj(S.d), all = subQ(s.id), pend = S.tf !== "todas";
-  const show = pend ? all.filter(i => !hit(i) || SHOW[i]) : all;
+  const show = readingOrder(pend ? all.filter(i => !hit(i) || SHOW[i]) : all);
   let h = `<h1>${s.nome} · todas as questões</h1><p class="muted">${feitas(all)} de ${all.length} respondidas · ${certas(all)} já acertadas. Na mesma ordem do PDF. <button class="link" onclick="S.tf=S.tf==='todas'?'pend':'todas';render()">${pend ? "Mostrar também as já acertadas" : "Mostrar só as pendentes"}</button> · <button class="link" onclick="go('disc')">Voltar à disciplina</button></p>`;
-  if (!show.length) h += `<div class="note">Você já acertou todas as questões desta matéria.</div>`;
+  h += hiddenControl(all);
+  if (!show.length) h += `<p class="muted">Nenhuma questão pendente nesta lista.</p>`;
   show.forEach(i => { h += qHtml(i, all.indexOf(i) + 1); });
   return h;
 }
@@ -731,10 +769,11 @@ function vTopic() {
       <button class="btn" onclick="go('topic',{tab:'questoes'})">Resolver questões deste assunto</button></div>`;
   } else {
     const filt = S.filt || "pend";
-    const show = filt === "todas" ? ids : mixed(ids.filter(i => !hit(i) || SHOW[i]));
-    const ocultas = ids.length - show.length;
+    const show = readingOrder(filt === "todas" ? ids : mixed(ids.filter(i => !hit(i) || SHOW[i])));
+    const ocultas = ids.filter(i => hit(i) && !SHOW[i] && !HIDDEN.has(i)).length;
     h += `<p class="muted">${ocultas ? `${ocultas} já acertada(s) ocultada(s). ` : ""}<button class="link" onclick="toggleFilt()">${filt === "todas" ? "Mostrar só as pendentes" : "Mostrar também as já acertadas"}</button>${filt === "todas" ? "" : " · <button class=\"link\" onclick=\"reshuffle()\">Embaralhar</button>"} · <button class="link" onclick="resetTopic('${S.t}')">Resetar respostas deste assunto</button></p>`;
-    if (!show.length) h += `<div class="note">Você já acertou todas as questões deste assunto. Parabéns! Passe ao próximo assunto ou refaça pelo simulado.</div>`;
+    h += hiddenControl(ids);
+    if (!show.length) h += `<p class="muted">Nenhuma questão pendente neste assunto.</p>`;
     show.forEach((i, k) => { h += qHtml(i, ids.indexOf(i) + 1); });
   }
   const nx = tops[r + 1], pv = tops[r - 1];

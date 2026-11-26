@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Ocultar questões respondidas sem apagar histórico e priorizar outra inédita do mesmo assunto após erro na área PC-AC; validar regras e navegação.
+
 - [ ] Corrigir alternativas cortadas e espaço superior no treinador em tela cheia; verificar computador e celular.
 
 - [x] Refinar cores e hierarquia da Área do aluno, preservando boas-vindas e dados; 24 testes e compilação aprovados, quatro apresentações sem rolagem horizontal. Conferência com conta real administrativa e navegação de aluno simulada; sessão nativa de aluno indisponível.

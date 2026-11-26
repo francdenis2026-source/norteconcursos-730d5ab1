@@ -52,6 +52,7 @@ Homepage, área do aluno e totais administrativos usam `usePlatformQuestionSumma
 - A pre-enforced resolver in `vite.config.ts` maps bare `jspdf` to its ES build, because the package lacks Worker export conditions and synced code may import it directly.
 - Keep the source syntax regression test on Vite's production transformer to catch malformed edits across screens, shared modules, scripts and background functions.
 - Legacy push function dependencies use Deno automatic node-module resolution so deployment does not depend on packages installed for the frontend.
+- PC-AC reading visibility is session-only and independent of answer history; reinforcement reorders existing unanswered questions by exact topic and subject, without generating content.
 
 <!-- ASTRYX:START -->
 Astryx v0.7.11 · 174 components
