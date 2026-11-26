@@ -82,7 +82,7 @@ function EstudoPcAcre() {
   }, []);
 
   return (
-    <div className="px-page">
+    <div className="w-full">
       {srcDoc ? (
         <iframe
           ref={frame}
@@ -98,31 +98,26 @@ function EstudoPcAcre() {
           Carregando a área de estudo…
         </p>
       )}
-      <section className="mt-6 rounded-xl border bg-card p-4" aria-label="Materiais em PDF">
-        <h2 className="mb-2 text-lg font-semibold">Estatística em PDF</h2>
-        <p className="mb-3 text-sm text-muted-foreground">
-          288 questões de Estatística para imprimir ou estudar fora da tela. O gabarito fica em
-          arquivo separado.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a
-            className="rounded-lg border px-4 py-2 text-sm font-semibold"
-            href={questoesPdf}
-            target="_blank"
-            rel="noopener"
-          >
-            Questões (PDF)
-          </a>
-          <a
-            className="rounded-lg border px-4 py-2 text-sm font-semibold"
-            href={gabaritoPdf}
-            target="_blank"
-            rel="noopener"
-          >
-            Gabarito e explicações (PDF)
-          </a>
-        </div>
-      </section>
+      <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 px-1 text-xs text-muted-foreground">
+        <span>Estatística em PDF (288 questões):</span>
+        <a
+          className="underline underline-offset-2 hover:text-foreground"
+          href={questoesPdf}
+          target="_blank"
+          rel="noopener"
+        >
+          Questões
+        </a>
+        <span aria-hidden="true">·</span>
+        <a
+          className="underline underline-offset-2 hover:text-foreground"
+          href={gabaritoPdf}
+          target="_blank"
+          rel="noopener"
+        >
+          Gabarito e explicações
+        </a>
+      </p>
       <PcAcStudyPerformance />
     </div>
   );
