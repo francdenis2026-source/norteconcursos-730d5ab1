@@ -128,5 +128,327 @@
    "provas_com_tema": 1,
    "chance": 22
   }
+ },
+ "t": {
+  "port_conc": {
+   "obs": 2,
+   "provas": 2,
+   "chance": 15,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "port_reg": {
+   "obs": 11,
+   "provas": 6,
+   "chance": 48,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "port_pont": {
+   "obs": 6,
+   "provas": 4,
+   "chance": 32,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "port_interp": {
+   "obs": 71,
+   "provas": 9,
+   "chance": 99,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "port_sem": {
+   "obs": 50,
+   "provas": 11,
+   "chance": 96,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "port_red": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 5,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "port_sint": {
+   "obs": 41,
+   "provas": 10,
+   "chance": 92,
+   "n_itens_disc": 233,
+   "n_provas_disc": 11
+  },
+  "ti_cripto": {
+   "obs": 9,
+   "provas": 2,
+   "chance": 91,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_leis": {
+   "obs": 4,
+   "provas": 2,
+   "chance": 68,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_ia": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 19,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_seg": {
+   "obs": 5,
+   "provas": 2,
+   "chance": 74,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_redes": {
+   "obs": 10,
+   "provas": 2,
+   "chance": 93,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_meta": {
+   "obs": 3,
+   "provas": 2,
+   "chance": 59,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_bd": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 19,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_plan": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 19,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_org": {
+   "obs": 5,
+   "provas": 1,
+   "chance": 74,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_conc": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 19,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "ti_so": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 19,
+   "n_itens_disc": 40,
+   "n_provas_disc": 2
+  },
+  "info_win": {
+   "obs": 4,
+   "provas": 2,
+   "chance": 61,
+   "n_itens_disc": 20,
+   "n_provas_disc": 3
+  },
+  "info_word": {
+   "obs": 10,
+   "provas": 2,
+   "chance": 91,
+   "n_itens_disc": 20,
+   "n_provas_disc": 3
+  },
+  "info_excel": {
+   "obs": 4,
+   "provas": 3,
+   "chance": 61,
+   "n_itens_disc": 20,
+   "n_provas_disc": 3
+  },
+  "info_net": {
+   "obs": 1,
+   "provas": 1,
+   "chance": 29,
+   "n_itens_disc": 20,
+   "n_provas_disc": 3
+  },
+  "info_seg": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 16,
+   "n_itens_disc": 20,
+   "n_provas_disc": 3
+  },
+  "cont_pericia": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 23,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_mf": {
+   "obs": 8,
+   "provas": 2,
+   "chance": 93,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_dem": {
+   "obs": 10,
+   "provas": 3,
+   "chance": 96,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_conc": {
+   "obs": 8,
+   "provas": 4,
+   "chance": 93,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_escrit": {
+   "obs": 2,
+   "provas": 2,
+   "chance": 55,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_contas": {
+   "obs": 3,
+   "provas": 2,
+   "chance": 66,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_mov": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 23,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "cont_banco": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 23,
+   "n_itens_disc": 49,
+   "n_provas_disc": 5
+  },
+  "adm_funcoes": {
+   "obs": 6,
+   "provas": 2,
+   "chance": 97,
+   "n_itens_disc": 24,
+   "n_provas_disc": 2
+  },
+  "adm_plan": {
+   "obs": 5,
+   "provas": 2,
+   "chance": 94,
+   "n_itens_disc": 24,
+   "n_provas_disc": 2
+  },
+  "adm_org": {
+   "obs": 2,
+   "provas": 2,
+   "chance": 74,
+   "n_itens_disc": 24,
+   "n_provas_disc": 2
+  },
+  "adm_dir": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 35,
+   "n_itens_disc": 24,
+   "n_provas_disc": 2
+  },
+  "adm_ctrl": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 35,
+   "n_itens_disc": 24,
+   "n_provas_disc": 2
+  },
+  "adm_qual": {
+   "obs": 5,
+   "provas": 2,
+   "chance": 94,
+   "n_itens_disc": 24,
+   "n_provas_disc": 2
+  },
+  "arq_desc": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 61,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  },
+  "arq_ciclo": {
+   "obs": 3,
+   "provas": 1,
+   "chance": 99,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  },
+  "arq_info": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 61,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  },
+  "arq_conc": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 61,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  },
+  "arq_gest": {
+   "obs": 1,
+   "provas": 1,
+   "chance": 87,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  },
+  "arq_dig": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 61,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  },
+  "arq_pres": {
+   "obs": 0,
+   "provas": 0,
+   "chance": 61,
+   "n_itens_disc": 5,
+   "n_provas_disc": 1
+  }
+ },
+ "n_disciplina": {
+  "port": 10,
+  "rl": 6,
+  "info": 4,
+  "acre": 4,
+  "contabilidade": 10,
+  "estatistica": 10,
+  "arquivologia": 10,
+  "ti": 10,
+  "analise": 10,
+  "adm": 10
  }
 }
