@@ -290,14 +290,14 @@
   /* Cool slate dark palette (not flat neutral, not brown): reads as a deliberate, professional
      theme instead of a washed-out charcoal, and gives white/gold text more lift. Gold stays a
      small accent. */
-  --background: oklch(0.17 0 0);
-  --foreground: oklch(0.96 0.002 250);
-  --card: oklch(0.215 0 0);
-  --card-foreground: var(--foreground);
-  --popover: oklch(0.25 0 0);
-  --popover-foreground: var(--foreground);
-  --primary: var(--foreground);
-  --primary-foreground: var(--background);
+  --background: #262624;
+  --foreground: #faf9f5;
+  --card: #30302e;
+  --card-foreground: #faf9f5;
+  --popover: #30302e;
+  --popover-foreground: #faf9f5;
+  --primary: #d97757;
+  --primary-foreground: #1f1e1d;
   --brass: oklch(0.8 0.13 89);
   --brass-hover: oklch(0.85 0.125 90);
   --ink: var(--background);
@@ -306,17 +306,17 @@
   --on-ink: var(--foreground);
   --on-ink-muted: oklch(0.78 0.008 250);
   --on-ink-line: oklch(0.33 0.016 250);
-  --secondary: var(--brass);
-  --secondary-foreground: var(--background);
-  --muted: oklch(0.255 0.014 250);
-  --muted-foreground: oklch(0.78 0.008 250);
-  --accent: oklch(0.29 0.008 83);
-  --accent-foreground: var(--brass);
+  --secondary: #3d3d3a;
+  --secondary-foreground: #faf9f5;
+  --muted: #3d3d3a;
+  --muted-foreground: #c2c0b6;
+  --accent: #3d3d3a;
+  --accent-foreground: #faf9f5;
   --destructive: oklch(0.62 0.18 22);
   --destructive-foreground: oklch(0.98 0.01 25);
-  --border: oklch(0.33 0.016 250);
-  --input: #5c6a7d;
-  --ring: oklch(0.8 0.13 78);
+  --border: #3d3d3a;
+  --input: #3d3d3a;
+  --ring: #d97757;
 
   --chart-1: oklch(0.8 0.13 78);
   --chart-2: #BBC3CE;
@@ -17670,3 +17670,7 @@ html body .app-shell[data-area="student"] .library-reading-workspace .library-bo
   color: inherit !important;
   -webkit-text-fill-color: currentColor !important;
 }
+
+/* Paleta do modo escuro do Claude: fundo, cartões, texto e destaques (vale em todo o site escuro). */
+html.dark{--background:#262624;--foreground:#faf9f5;--card:#30302e;--card-foreground:#faf9f5;--popover:#30302e;--popover-foreground:#faf9f5;--primary:#d97757;--primary-foreground:#1f1e1d;--secondary:#3d3d3a;--secondary-foreground:#faf9f5;--muted:#3d3d3a;--muted-foreground:#c2c0b6;--accent:#3d3d3a;--accent-foreground:#faf9f5;--border:#3d3d3a;--input:#3d3d3a;--ring:#d97757}
+html.dark body{background:#262624;color:#faf9f5}
