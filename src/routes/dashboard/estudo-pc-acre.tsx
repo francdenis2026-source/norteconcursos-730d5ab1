@@ -2,7 +2,14 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import questoesPdf from "@/estudo/pdf/Estatistica_PC-AC_Questoes_Franc_DNis_Norte_Concursos.pdf?url";
 import gabaritoPdf from "@/estudo/pdf/Estatistica_PC-AC_Gabarito_Franc_DNis_Norte_Concursos.pdf?url";
-import { enqueueStudyAnswer, flushStudyAnswers, parseStudyMessage } from "@/lib/pcAcStudyBridge";
+import { useQueryClient } from "@tanstack/react-query";
+import {
+  PC_AC_STUDY_SAVED_EVENT,
+  enqueueStudyAnswer,
+  fetchAnsweredAreaQuestions,
+  flushStudyAnswers,
+  parseStudyMessage,
+} from "@/lib/pcAcStudyBridge";
 
 export const Route = createFileRoute("/dashboard/estudo-pc-acre")({
   component: EstudoPcAcre,
@@ -60,6 +67,31 @@ function EstudoPcAcre() {
 
   // Tema do site (classe "dark" em <html>): enviado ao iframe ao carregar e a cada troca na barra.
   const frame = useRef<HTMLIFrameElement>(null);
+  const queryClient = useQueryClient();
+  // Respostas que o banco já tem (treinador, outro aparelho ou esta área) valem aqui: uma tentativa por questão.
+  const syncAnswered = useCallback(async () => {
+    const rows = await fetchAnsweredAreaQuestions();
+    if (rows)
+      frame.current?.contentWindow?.postMessage({ ncAnswered: rows }, window.location.origin);
+  }, []);
+  useEffect(() => {
+    const onSaved = () => {
+      // O desempenho geral (painel, métricas do dia, histórico) passa a enxergar a resposta na hora.
+      void queryClient.invalidateQueries({
+        predicate: (q) => {
+          const k = String(q.queryKey[0] ?? "");
+          return (
+            k === "student-home" ||
+            k === "question-locked-answers" ||
+            /performance|training|ranking|activity|answers/i.test(k)
+          );
+        },
+      });
+      void syncAnswered();
+    };
+    window.addEventListener(PC_AC_STUDY_SAVED_EVENT, onSaved);
+    return () => window.removeEventListener(PC_AC_STUDY_SAVED_EVENT, onSaved);
+  }, [queryClient, syncAnswered]);
   const [frameH, setFrameH] = useState<number | null>(null);
   useEffect(() => {
     const fit = () => {
@@ -113,7 +145,10 @@ function EstudoPcAcre() {
           ref={frame}
           title="Estudo PC-AC 2026"
           srcDoc={srcDoc}
-          onLoad={sendTheme}
+          onLoad={() => {
+            sendTheme();
+            void flushStudyAnswers().finally(() => void syncAnswered());
+          }}
           allow="clipboard-write; web-share"
           allowFullScreen
           className="block min-h-0 w-full border-0"
