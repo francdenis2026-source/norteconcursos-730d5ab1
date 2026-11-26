@@ -71,6 +71,8 @@ def main():
         rows.append((i + 1, q["u"], subj, disc, topic_name[q["t"]], plain(q["q"]), opts, letters[q["c"]], expl))
 
     for old in OUT.glob("*.sql"):
+        if old.name[:3] in ("97-", "98-"):  # correções manuais: preservar
+            continue
         old.unlink()
     head = ("with ed as (select t.id, t.discipline from public.syllabus_topics t "
             "join public.syllabus_editions e on e.id = t.edition_id "
