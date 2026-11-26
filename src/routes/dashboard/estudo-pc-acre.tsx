@@ -172,7 +172,7 @@ function EstudoPcAcre() {
 
   return (
     <div className="w-full">
-      <style>{`html[data-study-area] .app-footer{display:none!important}html[data-study-area] #dashboard-content,html[data-study-area] .app-content__inner{padding-bottom:0!important;min-height:0!important}@media (max-width:767px){html[data-study-area] body .app-shell[data-area] #dashboard-content{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))!important}}`}</style>
+      <style>{`html[data-study-area] .app-footer{display:none!important}html[data-study-area] #dashboard-content,html[data-study-area] .app-content__inner{padding-bottom:0!important;min-height:0!important}@media (max-width:767px){html[data-study-area] body .app-shell[data-area] #dashboard-content{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))!important}html[data-study-area] #dashboard-content,html[data-study-area] .app-content__inner{padding-left:0!important;padding-right:0!important;max-width:none!important;width:100%!important}}`}</style>
       {srcDoc ? (
         <iframe
           ref={frame}

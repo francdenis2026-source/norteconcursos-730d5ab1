@@ -1057,7 +1057,24 @@ button,.btn,.b1,.b2,.tabs button,.xs,.link{min-height:44px}
 .dc{padding:16px}.dk b{font-size:26px}.dk span{font-size:14px}
 .row{padding:14px}.nv{min-height:48px;font-size:16px}
 .top button,.tools button,.sbt{min-width:44px;min-height:44px}
-main{padding-bottom:16px!important}
+main{padding:8px 8px 14px!important}
+.top{height:auto!important;min-height:48px;padding:calc(6px + env(safe-area-inset-top,0px)) 8px 6px!important;gap:6px!important;flex-wrap:nowrap}
+.top .crumbs{min-width:0;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px}
+.tools{gap:4px!important;flex-shrink:0}
+.tools .acflag{width:26px}
+.top button,.tools button,.sbt{min-width:40px;min-height:40px;padding:6px!important}
+h1{font-size:20px!important;margin:0 0 4px!important;line-height:1.25}
+main>p.muted{font-size:13.5px!important;line-height:1.4;margin:0 0 8px!important;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
+main>p.muted .link{display:inline-flex;align-items:center;min-height:36px;padding:4px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-weight:600;text-decoration:none}
+.qfilt{display:grid!important;grid-template-columns:1fr 1fr;gap:6px 8px!important;margin:4px 0 8px!important}
+.qfilt label{display:flex;flex-direction:column;gap:2px;font-size:12.5px;min-width:0}
+.qfilt select{width:100%;min-width:0;min-height:40px}
+.qstage{gap:10px!important}
+.qside{order:2!important}
+.q{padding:12px!important}
+.opt{padding:10px 11px!important}
+.orow{gap:6px!important}
+.orow .xs{padding:4px 8px!important;min-height:36px;font-size:12.5px!important;flex-shrink:0}
 }
 </style>
 <script>

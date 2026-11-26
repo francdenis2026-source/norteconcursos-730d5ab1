@@ -555,3 +555,5 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 .sh2-l
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .sh2-card):hover :is(svg) { transform: none !important; }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) .student-home.sh2 :is(.sh2-kpi, .ncx-tile, .ecc-action):active { transform: none !important; }
 }
+
+.nv-tag { font-size: 11px; font-weight: 700; fill: var(--cat-amber, #f59e0b); font-variant-numeric: tabular-nums; }

@@ -16,6 +16,8 @@ export type NvPoint = {
   title: string;
   bars?: number[];
   line?: number | null;
+  /** Rótulo curto acima da barra (ex.: aproveitamento). */
+  tag?: string;
   /** Linhas extras só para a dica (outras escalas), já formatadas. */
   extra?: Array<{ label: string; value: string; color?: string }>;
 };
@@ -127,7 +129,7 @@ export function NvChart({
 
   const padL = 44;
   const padR = 12;
-  const padT = 14;
+  const padT = 24;
   const padB = labelEvery > 0 ? 26 : 6;
   const innerW = Math.max(0, width - padL - padR);
   const innerH = height - padT - padB;
@@ -260,6 +262,16 @@ export function NvChart({
               </g>
             );
           })}
+          {step >= 26 &&
+            data.map((d, i) => {
+              if (!d.tag) return null;
+              const top = (d.bars ?? []).reduce((sum, v) => sum + Math.max(0, v), 0);
+              return (
+                <text key={`tag${i}`} x={cx(i)} y={y(top) - 6} textAnchor="middle" className="nv-tag">
+                  {d.tag}
+                </text>
+              );
+            })}
           {goal && (
             <g>
               <line x1={padL} x2={width - padR} y1={y(goal.value)} y2={y(goal.value)} className="nv-goal" />

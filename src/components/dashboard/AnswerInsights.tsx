@@ -197,30 +197,15 @@ export function AnswerInsights({
               <i style={{ background: ERR }} /> Erros
             </span>
             <span>
-              <i data-line style={{ background: "var(--cat-amber)" }} /> Aproveitamento (%)
+              <b aria-hidden="true">%</b> Aproveitamento no topo da barra
             </span>
           </figcaption>
-          {/* Aproveitamento numa faixa própria (escala 0–100%), alinhada às barras: um eixo por gráfico. */}
-          <NvChart
-            data={chartData.map((b) => ({
-              label: b.label,
-              title: b.label,
-              line: b.total ? Math.round((b.acertos / b.total) * 100) : null,
-            }))}
-            line={{ key: "p", label: "Aproveitamento", color: "var(--cat-amber)" }}
-            height={56}
-            ticks={[0, 100]}
-            smooth={false}
-            band={{ from: 70, to: 100 }}
-            format={(v) => `${Math.round(v)}%`}
-            labelEvery={0}
-            ariaLabel={`Aproveitamento por período, ${periodLabel}`}
-          />
           <NvChart
             data={chartData.map((b) => ({
               label: b.label,
               title: b.label,
               bars: [b.acertos, b.erros],
+              tag: b.total ? `${Math.round((b.acertos / b.total) * 100)}%` : undefined,
               extra: [
                 {
                   label: "Aproveitamento",
@@ -233,7 +218,7 @@ export function AnswerInsights({
               { key: "ok", label: "Acertos", color: OK },
               { key: "err", label: "Erros", color: ERR },
             ]}
-            height={height - 32}
+            height={height - 8}
             ticks={intTicks(Math.max(1, ...chartData.map((b) => b.acertos + b.erros)))}
             format={(v) => `${Math.round(v)}`}
             labelEvery={chartData.length > 14 ? 3 : 1}
