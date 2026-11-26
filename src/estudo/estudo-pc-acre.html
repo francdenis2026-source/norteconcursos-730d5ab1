@@ -461,7 +461,7 @@ html.dark .w2{background:#3a3018!important;color:#f5d57a!important}
 
 /* Destaque ao apontar: borda forte + sombra + sublinhado, para ficar claro que é clicável. */
 button:not(:disabled),a,.tile,.row,.opt{transition:border-color .15s,box-shadow .15s,background-color .15s,color .15s}
-main button:not(:disabled):hover,main a:hover{text-decoration:underline;text-underline-offset:3px}
+main button:hover,main a:hover{text-decoration:none}
 .tile:hover,.row:hover{border-color:var(--acc);box-shadow:0 0 0 2px color-mix(in srgb,var(--acc) 35%,transparent)}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 
@@ -516,6 +516,25 @@ main .dh-i .ring small{display:block;white-space:normal;line-height:1.3}
 html.dark main .dh-i .ring{background:#3d3d3a!important;border:1px solid #4a4a46}
 html.dark main .dh-i .ring b{color:#faf9f5}
 main .dh-i .ring{background:rgba(11,42,31,.82);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.14)}
+
+/* ===== Cartões interativos: ao apontar, sobem, ganham borda de destaque e sombra (sem sublinhado) ===== */
+main .tile,main .row,main .bkc,main .acc,main .kp>div{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background-color .18s ease}
+main .bkc,main .acc,main .tile,main .row{cursor:pointer;position:relative}
+main .bkc:hover,main .acc:hover,main .tile:hover,main .row:hover{transform:translateY(-3px);border-color:var(--bc,var(--acc));box-shadow:0 14px 30px rgba(0,0,0,.16),0 0 0 2px color-mix(in srgb,var(--bc,var(--acc)) 45%,transparent)}
+main .bkc:active,main .acc:active,main .tile:active,main .row:active{transform:translateY(-1px)}
+main .bkc:focus-visible,main .acc:focus-visible,main .tile:focus-visible,main .row:focus-visible{outline:2px solid var(--bc,var(--acc));outline-offset:3px}
+main .acc .go2{transition:transform .18s ease}
+main .acc:hover .go2{transform:translateX(4px)}
+main .acc .go2::after{content:" →"}
+main .bkc:hover h3,main .acc:hover h3{color:var(--bc,var(--acc))}
+@media(prefers-reduced-motion:reduce){main .bkc,main .acc,main .tile,main .row,main .acc .go2{transition:none}main .bkc:hover,main .acc:hover,main .tile:hover,main .row:hover{transform:none}}
+/* Escuro: textos de ação e rodapé com contraste */
+html.dark main .acc .go2{color:#e8a58b}
+html.dark main .acc:hover{background:#383836}
+html.dark main .bkc:hover,html.dark main .acc:hover,html.dark main .tile:hover,html.dark main .row:hover{box-shadow:0 14px 30px rgba(0,0,0,.5),0 0 0 2px color-mix(in srgb,var(--bc,#d97757) 55%,transparent)}
+html.dark .appfoot,html.dark .appfoot span{color:#c2c0b6}
+html.dark .appfoot a{color:#e8a58b}
+html.dark .appfoot a:hover{color:#faf9f5}
 </style>
 <script>
 window.addEventListener('message',function(e){
