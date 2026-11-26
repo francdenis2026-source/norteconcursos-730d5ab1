@@ -990,6 +990,12 @@ main:has(.pv){padding:8px clamp(14px,2vw,28px) 8px!important}
 .pv-nav{padding:10px 12px;gap:6px}.pv-nav h2{font-size:14px}
 .pv-nav button{padding:7px 10px;gap:10px}.pv-ni{width:30px;height:30px}.pv-nt small{display:none}.pv-nt b{font-size:13.5px}
 }
+
+/* ---- Modo claro: fundo cinza-azulado suave, cartões brancos que destacam o conteúdo ---- */
+html:not(.dark){--bg:#edf0f4;--card:#fff;--line:#d9dfe7;--muted:#566174;--ink:#162033;--acc2:#e4f1e9;--sh:0 1px 2px rgba(16,24,40,.06),0 6px 16px -10px rgba(16,24,40,.16);--pv-sh:0 1px 2px rgba(16,24,40,.06),0 6px 16px -10px rgba(16,24,40,.16)}
+html:not(.dark) body{background:var(--bg)}
+html:not(.dark) .wm{opacity:.01!important}
+html:not(.dark) .top,html:not(.dark) .appfoot{background:#fff}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
