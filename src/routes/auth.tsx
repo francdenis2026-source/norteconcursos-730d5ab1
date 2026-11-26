@@ -1,3 +1,4 @@
+import { takeAfterAuth } from "@/lib/afterAuth";
 import "@/styles/auth-art.css";
 import "@/styles/auth-professional-refinement.css";
 import authComposition from "@/assets/auth/carreiras-composicao.webp";
@@ -112,7 +113,7 @@ function AuthPage() {
       if (routeSearch.recovery || recovery) {
         setMode("reset");
         setRecoverySession(!!session);
-      } else if (session) navigate({ to: "/dashboard", replace: true });
+      } else if (session) navigate({ ...(takeAfterAuth() as never), replace: true });
     });
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "PASSWORD_RECOVERY" && session) {
@@ -132,7 +133,7 @@ function AuthPage() {
             duration: 8000,
           });
         }
-        navigate({ to: "/dashboard" });
+        navigate(takeAfterAuth() as never);
       }
     });
     return () => { active = false; sub.subscription.unsubscribe(); };
@@ -206,7 +207,7 @@ function AuthPage() {
               : "Organize seu primeiro plano de estudos e já comece a treinar.",
             duration: 8000,
           });
-          navigate({ to: "/dashboard" });
+          navigate(takeAfterAuth() as never);
         } else {
           setPendingEmail(email.trim().toLowerCase());
           setCooldown(60);
@@ -247,7 +248,7 @@ function AuthPage() {
             closeButton: false,
           });
         }
-        navigate({ to: "/dashboard" });
+        navigate(takeAfterAuth() as never);
       }
     } catch (error: unknown) {
       setFormError(friendlyAuthError(error));
@@ -323,7 +324,7 @@ function AuthPage() {
                 setRecoverySession(false);
                 navigate({ to: "/auth", search: {} });
               }}
-              onComplete={() => navigate({ to: "/dashboard" })}
+              onComplete={() => navigate(takeAfterAuth() as never)}
             />
           ) : pendingEmail ? (
             <div className="space-y-5 text-center" role="status" aria-live="polite">

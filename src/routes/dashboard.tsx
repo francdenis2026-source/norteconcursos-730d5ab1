@@ -3,6 +3,7 @@ import "@/styles/light-mode-pro.css";
 import { createFileRoute, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
+import { rememberAfterAuth } from "@/lib/afterAuth";
 import { useAuthStatus } from "@/hooks/useDashboard";
 
 export const Route = createFileRoute("/dashboard")({ component: DashboardComponent });
@@ -21,8 +22,13 @@ function DashboardComponent() {
       (pathname === "/dashboard" || pathname.startsWith("/dashboard/"))
     ) {
       // Replace protected history entries, including sign-out from another tab.
-      const to =
-        !hadSession.current && pathname === "/dashboard/question-trainer" ? "/desafio-diario" : "/";
+      const shared = !hadSession.current && pathname === "/dashboard/estudo-pc-acre";
+      if (shared) rememberAfterAuth(pathname + window.location.search);
+      const to = shared
+        ? "/auth"
+        : !hadSession.current && pathname === "/dashboard/question-trainer"
+          ? "/desafio-diario"
+          : "/";
       void navigate({ to, replace: true });
     }
   }, [isLoading, isAuthenticated, user, pathname, navigate, error]);

@@ -1752,8 +1752,9 @@ function vPlan() {
 function shareArea(){
   var base=location.origin;
   try{ if(window.parent&&window.parent!==window) base=window.parent.location.origin; }catch(e){}
-  var url=(base&&base!=="null"?base:"https://"+location.host)+"/";
-  var title="Norte Concursos | Estudo PC-AC 2026";
+  var disc=null; try{ disc=(S&&S.d)?sj(S.d):null; }catch(e){}
+  var url=(base&&base!=="null"?base:"https://"+location.host)+"/dashboard/estudo-pc-acre"+(disc?"?area="+encodeURIComponent(disc.id):"");
+  var title="Norte Concursos | Estudo PC-AC 2026"+(disc?" · "+disc.nome:"");
   var old=document.getElementById("shareMenu"); if(old){ old.remove(); return; }
   function copiar(){
     function fallback(){
@@ -1766,7 +1767,7 @@ function shareArea(){
   var e=encodeURIComponent, t=e(title+" "), u=e(url);
   var redes=[["WhatsApp","https://wa.me/?text="+t+u],["Telegram","https://t.me/share/url?url="+u+"&text="+e(title)],["Facebook","https://www.facebook.com/sharer/sharer.php?u="+u],["X","https://twitter.com/intent/tweet?text="+e(title)+"&url="+u],["E-mail","mailto:?subject="+e(title)+"&body="+u]];
   var m=document.createElement("div"); m.id="shareMenu"; m.setAttribute("role","dialog"); m.setAttribute("aria-label","Compartilhar");
-  m.innerHTML='<div class="shm-b"><b>Compartilhar</b><input readonly value="'+url+'" aria-label="Link"><button type="button" data-a="copy">Copiar link</button>'+(navigator.share?'<button type="button" data-a="native">Mais opções…</button>':"")+'<div class="shm-r">'+redes.map(function(r){return '<a href="'+r[1]+'" target="_blank" rel="noopener noreferrer">'+r[0]+'</a>';}).join("")+'</div><button type="button" class="shm-x" data-a="close">Fechar</button></div>';
+  m.innerHTML='<div class="shm-b"><b>Compartilhar</b><small style="color:var(--muted)">'+(disc?'Abre em: '+disc.nome+'. ':'Abre a área de estudo. ')+'Quem já tem conta entra direto; quem não tem é levado ao cadastro.</small><input readonly value="'+url+'" aria-label="Link"><button type="button" data-a="copy">Copiar link</button>'+(navigator.share?'<button type="button" data-a="native">Mais opções…</button>':"")+'<div class="shm-r">'+redes.map(function(r){return '<a href="'+r[1]+'" target="_blank" rel="noopener noreferrer">'+r[0]+'</a>';}).join("")+'</div><button type="button" class="shm-x" data-a="close">Fechar</button></div>';
   document.body.appendChild(m);
   m.addEventListener("click",function(ev){ var a=ev.target&&ev.target.getAttribute&&ev.target.getAttribute("data-a"); if(ev.target===m||a==="close") m.remove(); else if(a==="copy") copiar(); else if(a==="native") navigator.share({title:title,url:url}).catch(function(){}); });
   m.querySelector("input").addEventListener("focus",function(){ this.select(); });
