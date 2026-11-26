@@ -620,12 +620,51 @@ html.dark .pv-nav button:hover{border-color:#d97757}
 .pv-kpis{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
 .pv-k span{display:block;line-height:1.25}
 main .pv-blk header .w{display:inline-block;width:fit-content;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;background:color-mix(in srgb,var(--bc) 16%,transparent)!important;color:var(--ink)!important}
+
+/* ===== Compacto: o painel cabe inteiro numa janela ===== */
+main{padding-top:12px!important;padding-bottom:28px!important}
+.pv{gap:16px}.pv-main{gap:12px}
+.pv-head h1{font-size:24px}.pv-eyebrow{font-size:11px}
+.pv-count{padding:6px 12px}.pv-count b{font-size:26px}
+.pv-cont{padding:12px 16px;gap:12px}.pv-ico{width:40px;height:40px;border-radius:12px}.pv-cont-t h2{font-size:17px}.pv-cont-t p{font-size:13px}
+.pv-cont-a button{min-height:38px;padding:0 16px}
+.pv-k{padding:9px 12px;gap:10px}.pv-ki{width:34px;height:34px;border-radius:10px}.pv-ki svg{width:18px;height:18px}.pv-k b{font-size:20px}.pv-k span{font-size:12px}
+.pv-kpis{gap:10px}
+.pv-sh h2{font-size:16px}.pv-sh{margin-top:2px}
+.pv-blocks{gap:12px}
+.pv-blk{padding:12px 14px;gap:6px;border-radius:14px}.pv-blk h3{font-size:15px}.pv-blk .m{font-size:12px}
+main .pv-blk header .w{font-size:11px;padding:2px 9px}
+.pv-d{padding:5px 8px;gap:3px 8px}.pv-dn{font-size:13px}.pv-dt{font-size:11px;padding:1px 8px}.pv-dp{height:3px}
+.pv-blk footer{padding-top:6px;font-size:12px}
+.pv-side{gap:12px}
+.pv-ringc{padding:12px 14px;grid-template-columns:auto 1fr;justify-items:start;align-items:center;text-align:left;gap:14px}
+.pv-ring{width:84px;height:84px}.pv-ring b{font-size:19px}.pv-ring small{font-size:10px}
+.pv-ringc p{font-size:13px}
+.pv-nav{padding:12px;gap:6px}.pv-nav h2{font-size:14px}
+.pv-nav button{padding:8px 10px;gap:10px}.pv-ni{width:32px;height:32px}.pv-ni svg{width:17px;height:17px}.pv-nt b{font-size:13.5px}.pv-nt small{font-size:11.5px}
+.appfoot{padding:8px 16px;font-size:12px}
+.appfoot #pdfl a{text-decoration:underline;text-underline-offset:2px}
+.appfoot #pdfl{margin-right:14px}
+@media(max-height:760px){.pv-blk ul{gap:0}.pv-d{padding:3px 8px}.pv-k b{font-size:18px}.pv-cont{padding:9px 14px}.pv-head h1{font-size:21px}}
+
+.pv-k .pv-ki{display:grid;place-items:center;color:var(--acc);font-size:0;line-height:0}
+.pv-k div span{display:block;font-size:12px;line-height:1.25;color:var(--muted)}
+html.dark .pv-k .pv-ki{color:#e8a58b}
+.pv{grid-template-columns:minmax(0,1fr) 290px;gap:14px}
+.pv-blocks{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.pv-dn{font-size:12.5px}
+.pv-ringc{padding:10px 12px;gap:10px}.pv-ring{width:72px;height:72px}.pv-ring b{font-size:16px}.pv-ring small{display:none}
 </style>
 <script>
 window.addEventListener('message',function(e){
   if(e.source!==window.parent||!e.data||typeof e.data.ncDark!=='boolean')return;
   document.documentElement.classList.toggle('dark',e.data.ncDark);
 });
+</script>
+<script>
+(function(){var d=window.__PC__||{};if(d.area&&!window.__AREA__)window.__AREA__=d.area;
+document.addEventListener('DOMContentLoaded',function(){var el=document.getElementById('pdfl');if(!el||!d.pdf)return;
+el.innerHTML='Estatística em PDF: <a href="'+d.pdf.questoes+'" target="_blank" rel="noopener">Questões</a> · <a href="'+d.pdf.gabarito+'" target="_blank" rel="noopener">Gabarito</a>';});})();
 </script>
 </head>
 <body>
@@ -671,7 +710,7 @@ window.addEventListener('message',function(e){
    <div class="tools"><button class="sbt" type="button" id="lockb" onclick="sideLock()" aria-pressed="false" title="Travar: não abrir o menu ao encostar na borda"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></button><button class="sbt" type="button" id="sbt" aria-label="Recolher menu" title="Mostrar ou ocultar o menu" onclick="sideTog()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button><div class="tchip" id="tchip" hidden title="Tempo restante do acesso de cortesia"><span class="mini" id="tmini"></span><span class="tl"><small>Cortesia</small><b id="ttxt">60:00</b></span></div><svg class="acflag" viewBox="0 0 100 70" aria-label="Bandeira do Acre" role="img"><path d="M0 0H100L0 70Z" fill="#f4c20d"/><path d="M100 0V70H0Z" fill="#0e8a45"/><g transform="translate(19 19) scale(12.5)"><path d="M0-1 .29-.4.95-.31.47.15.59.81 0 .5-.59.81-.47.15-.95-.31-.29-.4z" fill="#d62828"/></g></svg><button class="fsb" type="button" id="shareb" onclick="shareArea()" aria-label="Compartilhar área de estudo" title="Compartilhar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button><button class="fsb" type="button" aria-label="Tela cheia" title="Tela cheia / restaurar"><svg class="fsi" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="e" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><path class="x" d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button><button class="out" id="gout" type="button">Sair</button></div>
   </header>
   <main id="main"></main>
-  <footer class="appfoot"><span>Material da plataforma Norte Concursos · Feijó-Acre · 2026</span><span>Desenvolvedor: <b>Franc D'nis</b> · <a href="https://wa.me/5568992031340" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:economizafeijo@gmail.com">E-mail</a></span></footer>
+  <footer class="appfoot"><span>Material da plataforma Norte Concursos · Feijó-Acre · 2026</span><span id="pdfl"></span><span>Desenvolvedor: <b>Franc D'nis</b> · <a href="https://wa.me/5568992031340" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:economizafeijo@gmail.com">E-mail</a></span></footer>
  </div>
 </div>
 <div id="fstoast" hidden></div>
@@ -907,7 +946,7 @@ function vHome() {
     h += `<article class="pv-blk" data-i="${bi}"><header><span class="w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h3>${b.nome.replace(" (gerais)", "")}</h3><span class="m">${rd.length} de ${b.discs.length} disciplinas com material</span></header><ul>`;
     b.discs.forEach(d => {
       const dq = d.pronto ? subQ(d.id) : [], dc = certas(dq), dp = dq.length ? Math.round(100 * dc / dq.length) : 0;
-      h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}">${d.pronto ? dq.length + " questões" : "em breve"}</span>${d.pronto ? `<span class="pv-dp" aria-label="${dp}% acertadas"><i style="width:${dp}%"></i></span>` : ""}</button></li>`;
+      h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}" title="${d.pronto ? dq.length + " questões" : ""}">${d.pronto ? dq.length + " q." : "em breve"}</span>${d.pronto ? `<span class="pv-dp" aria-label="${dp}% acertadas"><i style="width:${dp}%"></i></span>` : ""}</button></li>`;
     });
     h += `</ul><footer><span>${c} acertadas</span><span>${p}%</span></footer></article>`;
   });

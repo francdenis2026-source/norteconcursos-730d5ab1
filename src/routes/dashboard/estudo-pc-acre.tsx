@@ -49,13 +49,36 @@ function EstudoPcAcre() {
 
   const srcDoc = useMemo(() => {
     if (!html) return null;
-    if (!area) return html;
-    const safe = JSON.stringify(area);
-    return html.replace("<head>", `<head><script>window.__AREA__=${safe};</script>`);
+    const data = JSON.stringify({
+      area: area ?? null,
+      pdf: { questoes: questoesPdf, gabarito: gabaritoPdf },
+    });
+    return html.replace(
+      "<head>",
+      `<head><script>window.__PC__=${data.replace(/</g, "\\u003c")};</script>`,
+    );
   }, [html, area]);
 
   // Tema do site (classe "dark" em <html>): enviado ao iframe ao carregar e a cada troca na barra.
   const frame = useRef<HTMLIFrameElement>(null);
+  const [frameH, setFrameH] = useState<number | null>(null);
+  useEffect(() => {
+    const fit = () => {
+      const el = frame.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top;
+      setFrameH(Math.max(480, Math.floor(window.innerHeight - top - 44)));
+    };
+    fit();
+    const id = window.setTimeout(fit, 300);
+    window.addEventListener("resize", fit);
+    document.addEventListener("fullscreenchange", fit);
+    return () => {
+      window.clearTimeout(id);
+      window.removeEventListener("resize", fit);
+      document.removeEventListener("fullscreenchange", fit);
+    };
+  }, [srcDoc]);
   const sendTheme = useCallback(() => {
     frame.current?.contentWindow?.postMessage(
       { ncDark: document.documentElement.classList.contains("dark") },
@@ -91,33 +114,15 @@ function EstudoPcAcre() {
           onLoad={sendTheme}
           allow="clipboard-write; web-share"
           allowFullScreen
-          className="block h-[calc(100dvh-140px)] min-h-0 w-full border-0"
+          className="block min-h-0 w-full border-0"
+          style={{ height: frameH ?? "calc(100dvh - 140px)" }}
         />
       ) : (
         <p className="p-6 text-sm text-muted-foreground" role="status">
           Carregando a área de estudo…
         </p>
       )}
-      <p className="mt-2 flex flex-wrap items-center justify-end gap-x-3 gap-y-1 px-1 text-xs text-muted-foreground">
-        <span className="whitespace-nowrap">Estatística em PDF (288 questões):</span>
-        <a
-          className="whitespace-nowrap underline underline-offset-2 hover:text-foreground"
-          href={questoesPdf}
-          target="_blank"
-          rel="noopener"
-        >
-          Questões
-        </a>
-        <span aria-hidden="true">·</span>
-        <a
-          className="whitespace-nowrap underline underline-offset-2 hover:text-foreground"
-          href={gabaritoPdf}
-          target="_blank"
-          rel="noopener"
-        >
-          Gabarito e explicações
-        </a>
-      </p>
+
       <PcAcStudyPerformance />
     </div>
   );
