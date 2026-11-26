@@ -103,7 +103,10 @@ svg text{font-family:inherit}
 :root{--mata:#0b2a1f;--mata2:#123a2b;--verde:#12864a;--verde-d:#0b6b39;--ouro:#e8b40f;--ouro-l:#f6d55c;--estrela:#c8102e;
 --bg:#f4f6f2;--card:#fff;--ink:#14211a;--muted:#5e6e64;--line:#e2e8e0;--acc:#0b6b39;--acc2:#e6f3eb;--ok:#12864a;--bad:#c4392b;
 --hd:"Montserrat","Segoe UI",system-ui,sans-serif;--bd:"DM Sans","Segoe UI",system-ui,sans-serif;--r:14px;--sh:0 1px 2px #14211a0f,0 4px 14px #14211a0a}
-html{scroll-behavior:smooth}
+/* Keep the embedded document as the scroll owner, including native fullscreen. */
+html{scroll-behavior:smooth;height:100%;overflow-x:hidden;overflow-y:scroll;scrollbar-gutter:stable;scrollbar-width:auto;scrollbar-color:var(--muted) var(--bg)}
+html:fullscreen,html:-webkit-full-screen{overflow-y:scroll!important;height:100%!important}
+body{height:auto;min-height:100%;overflow:visible;padding-bottom:env(safe-area-inset-bottom)}
 body{font-family:var(--bd);font-size:16px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
 h1,h2,h3,.n,.nm,.rk,.score,.kpi b,.timer,.qn,.btn{font-family:var(--hd)}
 h1{font-size:clamp(24px,2.6vw,30px);font-weight:800;letter-spacing:-.5px;line-height:1.2;margin:0 0 8px}

@@ -21,6 +21,10 @@ export const Route = createFileRoute("/dashboard/estudo-pc-acre")({
         content:
           "Área de estudo da Polícia Civil do Acre 2026: questões, teoria, cronograma e treino no estilo IDECAN.",
       },
+      { property: "og:title", content: "Estudo PC-AC | Norte Concursos" },
+      { property: "og:description", content: "Questões, teoria e acompanhamento da preparação para a Polícia Civil do Acre." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
@@ -67,7 +71,8 @@ function EstudoPcAcre() {
           title="Estudo PC-AC 2026"
           srcDoc={srcDoc}
           allow="clipboard-write; web-share"
-          className="h-[calc(100vh-140px)] min-h-[760px] w-full border-0"
+          allowFullScreen
+          className="block h-[calc(100dvh-140px)] min-h-0 w-full border-0"
         />
       ) : (
         <p className="p-6 text-sm text-muted-foreground" role="status">
