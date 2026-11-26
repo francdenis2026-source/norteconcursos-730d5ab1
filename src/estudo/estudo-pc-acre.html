@@ -943,6 +943,24 @@ html.emb .fsb:not(#shareb){display:none!important}
 .dsh .t{width:100%;font-size:13px}.dsh .t th{text-align:left;color:var(--muted);font-weight:600;padding:6px 4px}.dsh .t td{padding:7px 4px;border-top:1px solid var(--line)}
 .dbk summary{cursor:pointer;font-weight:700}.dbk textarea{width:100%;height:120px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;font:12px ui-monospace,monospace;box-sizing:border-box}
 @media(max-width:960px){.dks{grid-template-columns:repeat(2,minmax(0,1fr))}.dg2{grid-template-columns:1fr}}
+
+/* ---- Questão compacta: cabe na janela (rolagem só se a explicação aparecer) ---- */
+main:has(.qstage){padding-top:8px!important;padding-bottom:10px!important}
+main:has(.qstage)>h1{font-size:19px!important;margin:0 0 2px!important;line-height:1.2}
+main:has(.qstage)>p.muted{margin:0 0 4px!important;font-size:12.5px}
+main:has(.qstage) .qfilt{margin:2px 0 8px;gap:8px 12px;font-size:12.5px}
+main:has(.qstage) .qfilt>.muted{display:none}
+.qstage{gap:10px!important}.qmain{gap:8px!important}
+.qstage .q{padding:12px 18px!important}
+.qstage .qh{margin-bottom:4px}.qstage .qctx{margin:2px 0 6px!important}
+.qstage .qt{font-size:15.5px!important;line-height:1.5!important;margin:2px 0 8px!important}
+.qstage .orow{gap:8px;margin-bottom:6px}.qstage .opt{padding:7px 12px!important;min-height:0!important;line-height:1.4}
+.qstage .opt b{flex:none}
+.qstage .xs{padding:3px 9px!important;font-size:11.5px}
+.qstage .qnavb{padding:8px 12px!important}
+.qside{gap:10px!important}.qbar{padding:12px!important;gap:8px!important}
+.qstats span{padding:5px 4px}.qstats b{font-size:16px}
+.qonly{padding:10px 12px!important;gap:6px!important}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
