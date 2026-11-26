@@ -1,0 +1,117 @@
+{
+ "provas": [
+  "CBMMG",
+  "PC SC - Agente",
+  "PC SC - Escrivão",
+  "PMSC"
+ ],
+ "itens_rlm": 38,
+ "contagem": {
+  "probabilidade": 4,
+  "comb": 5,
+  "tendencia": 1,
+  "progressoes": 5,
+  "decimais": 1,
+  "logica": 7,
+  "geometria": 5,
+  "regra_de_tres": 2,
+  "porcentagem": 3,
+  "conjuntos": 3,
+  "mmc": 1,
+  "dispersao": 1
+ },
+ "provas_com_tema": {
+  "probabilidade": 3,
+  "comb": 3,
+  "tendencia": 1,
+  "progressoes": 3,
+  "decimais": 1,
+  "logica": 3,
+  "geometria": 3,
+  "regra_de_tres": 2,
+  "porcentagem": 3,
+  "conjuntos": 3,
+  "mmc": 1,
+  "dispersao": 1
+ },
+ "n_estatistica_assumido": 10,
+ "estatistica": {
+  "conceitos": {
+   "itens_observados": 0,
+   "peso": 0.0714,
+   "chance": 52
+  },
+  "frequencias": {
+   "itens_observados": 0,
+   "peso": 0.0714,
+   "chance": 52
+  },
+  "tendencia": {
+   "itens_observados": 1,
+   "peso": 0.1429,
+   "chance": 79
+  },
+  "dispersao": {
+   "itens_observados": 1,
+   "peso": 0.1429,
+   "chance": 79
+  },
+  "posicao": {
+   "itens_observados": 0,
+   "peso": 0.0714,
+   "chance": 52
+  },
+  "probabilidade": {
+   "itens_observados": 4,
+   "peso": 0.3571,
+   "chance": 99
+  },
+  "correlacao": {
+   "itens_observados": 0,
+   "peso": 0.0714,
+   "chance": 52
+  },
+  "series": {
+   "itens_observados": 0,
+   "peso": 0.0714,
+   "chance": 52
+  }
+ },
+ "raciocinio": {
+  "comb": {
+   "itens": 5,
+   "provas_com_tema": 3,
+   "chance": 67
+  },
+  "progressoes": {
+   "itens": 5,
+   "provas_com_tema": 3,
+   "chance": 67
+  },
+  "conjuntos": {
+   "itens": 3,
+   "provas_com_tema": 3,
+   "chance": 67
+  },
+  "logica": {
+   "itens": 7,
+   "provas_com_tema": 3,
+   "chance": 67
+  },
+  "geometria": {
+   "itens": 5,
+   "provas_com_tema": 3,
+   "chance": 67
+  },
+  "porcentagem": {
+   "itens": 3,
+   "provas_com_tema": 3,
+   "chance": 67
+  },
+  "regra_de_tres": {
+   "itens": 2,
+   "provas_com_tema": 2,
+   "chance": 50
+  }
+ }
+}
