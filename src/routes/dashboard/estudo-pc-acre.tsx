@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import questoesPdf from "@/estudo/pdf/Estatistica_PC-AC_Questoes_Franc_DNis_Norte_Concursos.pdf?url";
+import gabaritoPdf from "@/estudo/pdf/Estatistica_PC-AC_Gabarito_Franc_DNis_Norte_Concursos.pdf?url";
 import { PcAcStudyPerformance } from "@/components/estudo/PcAcStudyPerformance";
 import { enqueueStudyAnswer, flushStudyAnswers, parseStudyMessage } from "@/lib/pcAcStudyBridge";
 
@@ -72,6 +74,20 @@ function EstudoPcAcre() {
           Carregando a área de estudo…
         </p>
       )}
+      <section className="mt-6 rounded-xl border bg-card p-4" aria-label="Materiais em PDF">
+        <h2 className="mb-2 text-lg font-semibold">Estatística em PDF</h2>
+        <p className="mb-3 text-sm text-muted-foreground">
+          288 questões de Estatística para imprimir ou estudar fora da tela. O gabarito fica em arquivo separado.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <a className="rounded-lg border px-4 py-2 text-sm font-semibold" href={questoesPdf} target="_blank" rel="noopener">
+            Questões (PDF)
+          </a>
+          <a className="rounded-lg border px-4 py-2 text-sm font-semibold" href={gabaritoPdf} target="_blank" rel="noopener">
+            Gabarito e explicações (PDF)
+          </a>
+        </div>
+      </section>
       <PcAcStudyPerformance />
     </div>
   );
