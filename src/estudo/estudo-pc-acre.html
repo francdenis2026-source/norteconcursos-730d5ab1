@@ -431,6 +431,7 @@ body.side-lock #lockb{background:#fff7d6;border-color:var(--ouro);color:#7a5a00}
 .opt.strk{opacity:.45}.opt.strk span{text-decoration:line-through}
 .xs{border:0;background:none;padding:4px 2px;font-size:12px;color:#7a857e;cursor:pointer;white-space:nowrap;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9d2cc}.xs:hover{color:#0f3d2e}
 .confirm{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 4px;font-size:14px}
+.sol{margin:8px 0 6px}.sol>summary{cursor:pointer;color:#0f3d2e;font-weight:600;font-size:14px;list-style:none}.sol>summary::-webkit-details-marker{display:none}.sol>summary::before{content:"+ ";font-weight:700}.sol[open]>summary::before{content:"− "}
 </style>
 </head>
 <body>
@@ -633,7 +634,7 @@ function qHtml(i, n) {
     h += `<div class="orow"><button class="${cl}" ${done ? "disabled" : ""} onclick="pick(${i},${k})"><b>${"ABCDE"[k]}</b><span>${o}</span></button>${done ? "" : `<button class="xs" type="button" onclick="strike(${i},${k})">${st.includes(k) ? "Desfazer" : "Descartar"}</button>`}</div>`;
   });
   if (!done && pd !== undefined) h += `<div class="confirm"><span>Alternativa ${"ABCDE"[pd]} marcada.</span> <button class="btn" type="button" onclick="confirmar(${i})">Confirmar alternativa ${"ABCDE"[pd]}</button></div>`;
-  if (done) h += `<div class="fb ${ok ? "ok" : "no"}"><div class="fbh">${ok ? "✓ Você acertou" : "✗ Não foi dessa vez"} <span>Gabarito: <b>${"ABCDE"[q.c]}</b>${ok ? "" : ` · você marcou ${"ABCDE"[ans[i]]}`}</span></div>${solHtml(q)}${ok ? "" : `<p><button class="btn" onclick="redo(${i})">Refazer esta questão</button></p>`}</div>`;
+  if (done) h += `<div class="fb ${ok ? "ok" : "no"}"><div class="fbh">${ok ? "✓ Você acertou" : "✗ Não foi dessa vez"} <span>Gabarito: <b>${"ABCDE"[q.c]}</b>${ok ? "" : ` · você marcou ${"ABCDE"[ans[i]]}`}</span></div><details class="sol"><summary>Ver explicação, passo a passo e exemplo</summary>${solHtml(q)}</details>${ok ? "" : `<p><button class="btn" onclick="redo(${i})">Refazer esta questão</button></p>`}</div>`;
   if (S.v === "topic") { const tq = tp(q.t); if (tq && tq.teoria) h += `<details class="explica"><summary>Não sei resolver: explicar o assunto desta questão</summary><div class="explica-b"><p class="muted" style="margin:0 0 8px"><b>Assunto:</b> ${tq.nome}</p>${tq.teoria}${exHtml(tq.exemplo)}${receitaHtml(tq.receita)}<div class="macete"><b>Macete:</b> ${tq.macete}</div></div></details>`; }
   return h + "</div>";
 }
