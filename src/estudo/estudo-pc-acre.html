@@ -726,6 +726,117 @@ html.dark .g-side .nv{color:#c2c0b6!important}
 html.dark .g-side .nv:hover{background:#2b2a28!important;color:#faf9f5!important}
 .wm{opacity:.018!important}
 html.dark .wm{opacity:.03!important;filter:invert(1)}
+
+/* ===== Painel analítico ===== */
+.dprog{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:8px 0 12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.dprog-b{flex:1 1 220px;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.dprog-b i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--pva,#1f6f4a),var(--pvb,#2f6fb0))}
+.dprog-t{font-size:13px;color:var(--muted)}.dprog-t b{color:var(--ink);font-size:16px}
+.pv-dpw{grid-column:1/-1;display:flex;align-items:center;gap:8px;min-width:0}
+.pv-dpw .pv-dp{flex:1;height:7px;border-radius:99px;background:var(--line);overflow:hidden}
+.pv-dpw em{font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap}
+.an{display:grid;gap:14px}
+.an-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.an-h h1{margin:2px 0 0;font-size:26px}.an-hb{display:flex;gap:8px}
+.b2.sm{min-height:34px;padding:0 14px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.b2.sm:hover:not(:disabled){border-color:var(--acc)}.b2.sm:disabled{opacity:.5;cursor:default}
+.an-fil{display:grid;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.an-per{display:flex;flex-wrap:wrap;gap:6px}
+.fch{min-height:34px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:13px;font-weight:600;cursor:pointer}
+.fch.on{background:var(--acc);border-color:var(--acc);color:#fff}html.dark .fch.on{color:#1f1e1d}
+.fch:hover:not(.on){border-color:var(--acc)}
+.an-sel{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.an-sel label{display:grid;gap:3px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.an-sel select,.an-sel input{min-height:36px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);padding:0 8px;font:inherit;font-size:13px;text-transform:none;letter-spacing:0;font-weight:500}
+.an-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.an-k{display:grid;gap:2px;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:12px;background:var(--card);min-width:0}
+.an-k span{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.an-k b{font-size:22px;line-height:1.15;overflow-wrap:anywhere}.an-k small{font-size:12px;color:var(--muted)}
+.an-k.tg{border-left-color:var(--ok)}.an-k.ty{border-left-color:var(--md)}.an-k.tr,.an-k.tr2{border-left-color:var(--bad)}
+.tr.up{color:var(--ok)}.tr.dn{color:var(--bad)}
+.an-g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.an-g3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.an-c{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);min-width:0}
+.an-c h2{margin:0 0 4px;font-size:15px}.an-c h2.mt{margin-top:14px}
+.an-l{margin:2px 0 8px;font-size:12px;color:var(--muted)}
+.an-l i{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 4px 0 8px;vertical-align:-1px}.an-l i:first-child{margin-left:0}
+.chart{width:100%;height:auto;display:block}
+.chart .sa,.an-l i.sa{fill:var(--ok);background:var(--ok)}.chart .se,.an-l i.se{fill:var(--bad);background:var(--bad)}.chart .s0{fill:var(--line)}
+.chart .gl{stroke:var(--line);stroke-width:1}.chart .ax{fill:var(--muted);font:10px system-ui,sans-serif}
+.chart .ln{fill:none;stroke:var(--acc);stroke-width:2.4;stroke-linejoin:round}.chart .area{fill:var(--acc);opacity:.13}
+.chart .pt{fill:var(--card);stroke:var(--acc);stroke-width:2}.chart .meta{stroke:var(--md);stroke-dasharray:5 4;stroke-width:1.2}
+.hb,.hist{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:7px}
+.hb li{display:grid;grid-template-columns:minmax(90px,1.1fr) minmax(70px,1.5fr) auto;gap:10px;align-items:center}
+.hb-l{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb-b{height:9px;border-radius:99px;background:var(--line);overflow:hidden;display:block}.hb-b i{display:block;height:100%;border-radius:99px}
+.hb-b .tg{background:var(--ok)}.hb-b .ty{background:var(--md)}.hb-b .tr{background:var(--bad)}.hb-b .tb{background:var(--acc)}
+.hb-v{display:grid;text-align:right;line-height:1.2}.hb-v b{font-size:13px}.hb-v small{font-size:11px;color:var(--muted)}
+.hist li{display:grid;grid-template-columns:70px 1fr 34px;gap:10px;align-items:center;font-size:12.5px}.hist b{text-align:right}
+.an-tw{overflow:auto}
+.an-t{width:100%;border-collapse:collapse;font-size:13px}
+.an-t th{position:sticky;top:0;text-align:left;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);background:var(--card);white-space:nowrap}
+.an-t td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+.an-t tr:hover td{background:color-mix(in srgb,var(--acc) 7%,transparent)}
+.an-t .r{text-align:right;white-space:nowrap}
+.pc-g{color:var(--ok)}.pc-y{color:var(--md)}.pc-r{color:var(--bad)}
+.an-pg{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:12.5px;color:var(--muted)}
+.an-note{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+@media(max-width:900px){.an-g2,.an-g3{grid-template-columns:1fr}.hb li{grid-template-columns:minmax(80px,1fr) minmax(60px,1fr) auto}}
+@media(prefers-reduced-motion:reduce){.an *{transition:none!important}}
+html.dark .an-fil,html.dark .an-c,html.dark .an-k,html.dark .dprog{background:#30302e;border-color:#3d3d3a}
+html.dark .an-t th{background:#30302e}
+html.dark .an-sel select,html.dark .an-sel input{background:#262624;border-color:#4a4a46;color:#faf9f5;color-scheme:dark}
+
+/* ===== Ajuste de tela: blocos de mesma altura, lateral preenchida, menu com progresso ===== */
+.pv{min-height:min(calc(100dvh - 128px),860px);align-items:stretch}
+.pv-main{align-content:start;grid-template-rows:auto auto auto auto 1fr}
+.pv-blocks{align-items:stretch;align-self:stretch;grid-auto-rows:1fr}
+.pv-blk{display:flex;flex-direction:column;gap:0}
+.pv-blk header{flex:none}
+.pv-blk ul{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;padding:8px 8px 6px}
+.pv-blk footer{flex:none;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 0 8px;border-top:1px solid var(--line);position:relative;background:color-mix(in srgb,var(--bc) 5%,var(--card));text-align:center}
+.pv-blk footer>div{display:grid;gap:0;padding-top:8px}
+.pv-blk footer b{font-size:16px;line-height:1.2}.pv-blk footer span{font-size:11px;color:var(--muted)}
+.pv-bp{grid-column:1/-1;display:block!important;height:5px;background:var(--line);overflow:hidden}
+.pv-bp i{display:block;height:100%;background:var(--bc)}
+.pv-side{align-self:stretch;position:static;grid-template-rows:auto auto auto 1fr;align-content:stretch}
+.pv-nav{align-content:start}
+.pv-week,.pv-focus{padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--pv-sh)}
+.pv-week h2,.pv-focus h2{margin:0 0 8px;font-size:14px}
+.pv-wk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;align-items:end;height:84px}
+.pv-wd{display:grid;grid-template-rows:14px 1fr 14px;gap:2px;height:100%;text-align:center}
+.pv-wn{font-size:10.5px;font-weight:700;color:var(--muted)}
+.pv-wb{display:flex;align-items:flex-end;justify-content:center;background:var(--line);border-radius:6px;overflow:hidden;min-height:6px}
+.pv-wb i{display:block;width:100%;background:var(--pva);border-radius:6px 6px 0 0}
+.pv-wd.hoje .pv-wb i{background:var(--pvc)}.pv-wd em{font-style:normal;font-size:10.5px;color:var(--muted)}
+.pv-week p{margin:8px 0 0;font-size:12.5px;color:var(--muted)}.pv-week p b{color:var(--ink)}
+.pv-fi{display:grid;gap:2px;padding:10px 0;border-top:1px solid var(--line)}.pv-fi:first-of-type{border-top:0;padding-top:0}
+.pv-fk{justify-self:start;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px}
+.pv-fk.r{background:var(--pvc-s);color:var(--pvc)}.pv-fk.g{background:var(--pva-s);color:var(--pva)}
+.pv-fi b{font-size:14px;overflow-wrap:anywhere}.pv-fi small{font-size:12px;color:var(--muted)}
+.pv-fi button{justify-self:start;margin-top:6px;min-height:32px;padding:0 12px;border-radius:9px;border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s}
+.pv-fi button:hover{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 10%,transparent)}
+html.dark .pv-week,html.dark .pv-focus{background:#30302e;border-color:#3d3d3a;box-shadow:none}
+html.dark .pv-wb{background:#3d3d3a}html.dark .pv-wb i{background:#7fd1a1}html.dark .pv-wd.hoje .pv-wb i{background:#d97757}
+.nv{position:relative}
+.nv .nvbar{position:absolute;left:36px;right:12px;bottom:3px;height:3px;border-radius:3px;background:rgba(255,255,255,.13);overflow:hidden}
+.nv .nvbar i{display:block;height:100%;border-radius:3px;background:#7fd1a1}
+.nv:has(.nvbar){padding-bottom:12px}
+html.dark .nv .nvbar i{background:#d97757}
+.g-side nav,#nav{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent}
+@media(max-width:1100px){.pv{min-height:0}.pv-side{grid-template-rows:none}}
+
+/* compactação final: blocos com a altura do maior, lateral enxuta */
+.pv{min-height:0!important}
+.pv-main{grid-template-rows:none!important}
+.pv-blocks{grid-auto-rows:auto!important}
+.pv-blk ul{justify-content:space-between!important;gap:2px;padding:6px 8px 6px!important}
+.pv-blk footer b{font-size:15px}
+.pv-ringc{padding:8px 12px}
+.pv-wk{height:58px}.pv-week{padding:10px 12px}.pv-week h2,.pv-focus h2{margin-bottom:6px}
+.pv-focus{padding:10px 12px}.pv-fi{padding:7px 0}.pv-fi button{margin-top:3px;min-height:28px;font-size:12px}
+.pv-nav{padding:10px;gap:5px}.pv-nav button{padding:6px 9px}.pv-ni{width:30px;height:30px}
+@media(max-height:860px){.pv-nt small{display:none}.pv-nav button{padding:5px 9px}}
 </style>
 <script>
 window.addEventListener('message',function(e){
@@ -841,8 +952,15 @@ const BLOCOS = [
   { id: "especificos", nome: "Conhecimentos Específicos", peso: 2, total: 60, discs: SUBJ.filter(s => s.bloco === "especificos").map(s => ({ id: s.id, nome: s.nome, pronto: s.pronto })) }
 ];
 let S = (function () { const base = { v: "home", b: null, d: null, t: null, tab: "estudar" }; try { const v = JSON.parse(localStorage.getItem("pcac_view") || "null"); if (v && typeof v.v === "string") return Object.assign(base, v); } catch (e) {} return base; })();
-const ST = {};
-SUBJ.forEach(s => {
+/* Conteúdo só do cargo de Oficial Investigador (Anexo III do edital 001/2026 SEAD/PCAC): o que não consta do edital sai da área; o que é do cargo, mas de outra disciplina, vai para ela. Os índices das questões não mudam, então o histórico salvo continua válido. */
+const FORA_DO_CARGO = new Set(["port_red", "cont_pericia", "ti_leis", "ti_ia"]), HID = new Set();
+(function cargoOnly() {
+  const tid = "comb", t = TOP.find(x => x.id === tid), A = SUBJ.find(x => x.id === "estatistica"), B = SUBJ.find(x => x.id === "rl");
+  if (t && A && B) { const idx = QS.map((q, i) => q.t === tid ? i : -1).filter(i => i >= 0), pr = PRIO.findIndex(x => x[0] === tid), pv = pr >= 0 ? PRIO[pr] : null; A.qs = A.qs.filter(i => !idx.includes(i)); B.qs = B.qs.concat(idx); TOP.splice(TOP.indexOf(t), 1); if (pr >= 0) PRIO.splice(pr, 1); B.topics.push(Object.assign({}, t, { item: "Anexo III · Raciocínio Lógico", edital: "análise combinatória; progressões aritmética e geométrica", prio: pv ? pv[1] : "media", motivo: pv ? pv[2] : "" })); }
+  QS.forEach((q, i) => { if (FORA_DO_CARGO.has(q.t)) HID.add(i); });
+  SUBJ.forEach(x => { if (x.topics) x.topics = x.topics.filter(y => !FORA_DO_CARGO.has(y.id)); x.qs = x.qs.filter(i => !HID.has(i)); });
+})();
+const ST = {}; SUBJ.forEach(s => {
   if (s.id === "estatistica") ST[s.id] = PRIO.map((p, k) => Object.assign({}, TOP.find(x => x.id === p[0]), { item: p[0] === "comb" ? "ver Anexo III" : "2." + (TOP.findIndex(x => x.id === p[0]) + 1), edital: EDITAL[p[0]], prio: p[1], motivo: p[2] }));
   else ST[s.id] = s.topics;
 });
@@ -864,10 +982,10 @@ const QSUBJ = {}; SUBJ.forEach(s => s.qs.forEach(i => QSUBJ[i] = s.id));
 let LOG = [];
 try { LOG = JSON.parse(localStorage.getItem("pcac_log") || "[]"); } catch (e) { LOG = []; }
 (function migrate() { const has = new Set(LOG.map(l => l.i)); let ch = false; Object.keys(ans).forEach(k => { if (!has.has(+k)) { LOG.push({ i: +k, ok: ans[k] === QS[+k].c ? 1 : 0, t: Date.now(), m: "antes" }); ch = true; } }); if (ch) saveLog(); })();
-function saveLog() { try { localStorage.setItem("pcac_log", JSON.stringify(LOG)); } catch (e) {} }
+const HID_LOG = LOG.filter(l => HID.has(l.i)); LOG = LOG.filter(l => !HID.has(l.i)); function saveLog() { try { localStorage.setItem("pcac_log", JSON.stringify(LOG.concat(HID_LOG))); } catch (e) {} }
 function qKey(i) { const s = QS[i].q; let h = 5381; for (let k = 0; k < s.length; k++) h = ((h * 33) ^ s.charCodeAt(k)) >>> 0; return QS[i].t + ":" + h.toString(36); }
 function reportAns(i, sel, m, t) { try { if (!window.parent || window.parent === window || typeof crypto === "undefined" || !crypto.randomUUID) return; const q = QS[i]; const tp = TOP.find(x => x.id === q.t); const sj = SUBJ.find(x => x.id === QSUBJ[i]); window.parent.postMessage({ type: "pcac-answer", id: crypto.randomUUID(), key: qKey(i), question_text: q.q, topic_id: q.t, topic_name: tp ? tp.nome : q.t, subject_name: sj ? sj.nome : null, mode: m === "simulado" ? "simulado" : "estudo", selected: "ABCDE"[sel], correct: "ABCDE"[q.c], answered_at: new Date(t || Date.now()).toISOString() }, location.origin); } catch (e) {} }
-function logAns(i, ok, m, t, sel) { if (seen(i)) return; LOG.push({ i, ok: ok ? 1 : 0, t: t || Date.now(), m }); saveLog(); HIT = null; if (sel !== undefined) reportAns(i, sel, m, t); }
+const QSEEN = {}; let SIMT = {}, SIMD = {}; function secSince(t0) { if (!t0) return null; const sec = Math.round((Date.now() - t0) / 1000); return sec >= 2 && sec <= 900 ? sec : null; } function qDur(i) { return secSince(QSEEN[i]); } function logAns(i, ok, m, t, sel, d) { if (seen(i)) return; LOG.push({ i, ok: ok ? 1 : 0, t: t || Date.now(), m, d: d || null }); saveLog(); HIT = null; if (sel !== undefined) reportAns(i, sel, m, t); }
 let HIT = null, SEEN = null;
 function sets() { if (!HIT) { HIT = new Set(LOG.filter(l => l.ok).map(l => l.i)); SEEN = new Set(LOG.map(l => l.i)); } }
 const hit = i => { sets(); return HIT.has(i); };
@@ -881,7 +999,7 @@ function crumbs() {
   add("Início", () => go("home"));
   if (S.v === "plan") { add("Meu cronograma", () => go("plan")); return; }
   if (S.v === "arq") { add("Arquivo e erros", () => go("arq")); return; }
-  if (S.v === "dash") { add("Meu desempenho", () => go("dash")); return; }
+  if (S.v === "dash") { add("Meu desempenho", () => go("dash")); return; } if (S.v === "ana") { add("Painel analítico", () => go("ana")); return; }
   if (S.v === "sim" || S.v === "simrun" || S.v === "simres") { add("Modo Simulado", () => go("sim")); return; }
   if (S.b) add(blk().nome.split(" (")[0], () => go("bloco"));
   if (S.d) add(sj(S.d).nome.split(" e ")[0], () => go("disc"));
@@ -926,7 +1044,7 @@ function hiddenControl(ids) {
 function choose(i, o) {
   if (!QS[i] || !Number.isInteger(o) || o < 0 || o >= QS[i].ops.length || ans[i] !== undefined) return;
   ans[i] = o; SHOW[i] = true; HIDDEN.delete(i); save();
-  logAns(i, o === QS[i].c, "estudo", undefined, o);
+  logAns(i, o === QS[i].c, "estudo", undefined, o, qDur(i));
   const next = o !== QS[i].c ? relatedQuestion(i) : null;
   REINFORCE = next === null ? null : { from: i, to: next };
   render(i);
@@ -967,7 +1085,7 @@ function receitaHtml(r) {
   const it = String(r).split(/\s*\(\d+\)\s*/).map(s => s.trim()).filter(Boolean);
   return `<div class="rec"><div class="wex-h">Como resolver qualquer questão deste assunto</div>${it.length > 1 ? `${/\(1\)/.test(r) && !/^\(1\)/.test(r.trim()) ? `<p>${it[0]}</p><ol class="steps">${it.slice(1).map(s => `<li>${s}</li>`).join("")}</ol>` : `<ol class="steps">${it.map(s => `<li>${s}</li>`).join("")}</ol>`}` : `<p>${r}</p>`}</div>`;
 }
-function qHtml(i, n) {
+function qHtml(i, n) { if (!QSEEN[i] && ans[i] === undefined) QSEEN[i] = Date.now();
   const q = QS[i], done = ans[i] !== undefined, ok = done && ans[i] === q.c;
   let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}"><div class="qh"><span class="qn">${n}</span>Questão ${n}${done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}</div><p class="qt">${q.q}</p>`;
   const st = STK[i] || [], pd = PEND[i];
@@ -985,7 +1103,7 @@ function vHome() {
   sets();
   const PROVA = new Date("2027-01-24T08:00:00-05:00");
   const dias = Math.max(0, Math.ceil((PROVA - Date.now()) / 864e5));
-  const tot = QS.length, ac = HIT.size, resp = SEEN.size, nl = LOG.length, okl = LOG.filter(l => l.ok).length;
+  const tot = QS.length - HID.size, ac = HIT.size, resp = SEEN.size, nl = LOG.length, okl = LOG.filter(l => l.ok).length;
   const taxa = nl ? Math.round(100 * okl / nl) : 0, prog = tot ? Math.round(100 * ac / tot) : 0;
   const days = new Set(LOG.map(l => dkey(l.t))); let st = 0; for (let d = new Date(); ; d.setDate(d.getDate() - 1)) { if (days.has(dkey(d))) st++; else if (st || dkey(d) !== dkey(Date.now())) break; if (st > 400) break; }
   const hr = new Date().getHours(), oi = hr < 12 ? "Bom dia" : hr < 18 ? "Boa tarde" : "Boa noite";
@@ -1004,6 +1122,10 @@ function vHome() {
     chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>'
   };
   const kpi = (ic, v, l) => `<div class="pv-k"><span class="pv-ki">${ic}</span><div><b>${v}</b><span>${l}</span></div></div>`;
+  const rowsH = anaRows(), wk = Array.from({ length: 7 }, (_, k) => { const d = new Date(); d.setDate(d.getDate() - (6 - k)); const key = dkey(d.getTime()), x = rowsH.filter(r => dkey(r.t) === key); return { l: ["D", "S", "T", "Q", "Q", "S", "S"][d.getDay()], n: x.length, ok: x.filter(r => r.ok).length, today: k === 6 }; }), wmax = Math.max(1, ...wk.map(x => x.n)), wtot = wk.reduce((p, q) => p + q.n, 0), wok = wk.reduce((p, q) => p + q.ok, 0);
+  const tmap = {}; rowsH.forEach(r => { const o = tmap[r.tid] = tmap[r.tid] || { tid: r.tid, tn: r.tn, sid: r.sid, sn: r.sn, bl: r.bl, n: 0, ok: 0 }; o.n++; if (r.ok) o.ok++; });
+  const weak = Object.values(tmap).map(o => Object.assign(o, { p: Math.round(100 * o.ok / o.n) })).filter(o => o.n >= 2 && o.p < 70).sort((p, q) => p.p - q.p || q.n - p.n)[0];
+  const nextD = SUBJ.filter(x => x.pronto && x.qs.length).map(x => ({ x, ac: certas(x.qs), tot: x.qs.length })).filter(o => o.ac < o.tot).sort((p, q) => p.ac / p.tot - q.ac / q.tot || (q.x.bloco === "especificos") - (p.x.bloco === "especificos") || q.tot - p.tot)[0];
   const R = 52, CR = 2 * Math.PI * R;
   let h = `<div class="pv"><div class="pv-main">
   <header class="pv-head"><div><span class="pv-eyebrow">${oi} · Oficial Investigador · PC-AC · IDECAN</span><h1>Painel de estudos</h1></div>
@@ -1018,16 +1140,19 @@ function vHome() {
     h += `<article class="pv-blk" data-i="${bi}"><header><span class="w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h3>${b.nome.replace(" (gerais)", "")}</h3><span class="m">${rd.length} de ${b.discs.length} disciplinas com material</span></header><ul>`;
     b.discs.forEach(d => {
       const dq = d.pronto ? subQ(d.id) : [], dc = certas(dq), dp = dq.length ? Math.round(100 * dc / dq.length) : 0;
-      h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}" title="${d.pronto ? dq.length + " questões" : ""}">${d.pronto ? dq.length + " q." : "em breve"}</span>${d.pronto ? `<span class="pv-dp" aria-label="${dp}% acertadas"><i style="width:${dp}%"></i></span>` : ""}</button></li>`;
+      h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}" title="${d.pronto ? dq.length + " questões" : ""}">${d.pronto ? dq.length + " q." : "em breve"}</span>${d.pronto ? `<span class="pv-dpw"><span class="pv-dp" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${dp}" aria-label="Progresso em ${d.nome}"><i style="width:${dp}%"></i></span><em>${dc}/${dq.length} · ${dp}%</em></span>` : ""}</button></li>`;
     });
-    h += `</ul><footer><span>${c} acertadas</span><span>${p}%</span></footer></article>`;
+    h += `</ul><footer><span class="pv-bp" aria-hidden="true"><i style="width:${p}%"></i></span><div><b>${c}</b><span>acertadas</span></div><div><b>${feitas(ids)}</b><span>respondidas</span></div><div><b>${p}%</b><span>do bloco</span></div></footer></article>`;
   });
   h += `</div></div><aside class="pv-side" aria-label="Resumo e atalhos">
   <section class="pv-ringc"><div class="pv-ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="${R}" class="rb"/><circle cx="60" cy="60" r="${R}" class="rv2" transform="rotate(-90 60 60)" stroke-dasharray="${CR.toFixed(1)}" stroke-dashoffset="${(CR * (1 - prog / 100)).toFixed(1)}"/></svg><span><b>${prog}%</b><small>do banco</small></span></div>
   <p><b>${ac}</b> de <b>${tot}</b> questões acertadas</p></section>
+  <section class="pv-week" aria-label="Respostas dos últimos 7 dias"><h2>Esta semana</h2><div class="pv-wk">${wk.map(x => `<div class="pv-wd ${x.today ? "hoje" : ""}" title="${x.n} respostas, ${x.ok} acertos"><span class="pv-wn">${x.n || ""}</span><span class="pv-wb"><i style="height:${x.n ? Math.max(8, Math.round(100 * x.n / wmax)) : 0}%"></i></span><em>${x.l}</em></div>`).join("")}</div><p><b>${wtot}</b> respostas · <b>${wtot ? Math.round(100 * wok / wtot) : 0}%</b> de acerto</p></section>
+  <section class="pv-focus" aria-label="Foco recomendado"><h2>Foco recomendado</h2>${weak ? `<div class="pv-fi"><span class="pv-fk r">Ponto fraco</span><b>${weak.tn}</b><small>${weak.sn} · ${weak.p}% em ${weak.n} respostas</small><button onclick="go('topic',{b:'${weak.bl}',d:'${weak.sid}',t:'${weak.tid}',tab:'questoes'})">Treinar este assunto</button></div>` : ""}${nextD ? `<div class="pv-fi"><span class="pv-fk g">Menor progresso</span><b>${nextD.x.nome}</b><small>${nextD.ac} de ${nextD.tot} acertadas · ${Math.round(100 * nextD.ac / nextD.tot)}%</small><button onclick="go('disc',{b:'${nextD.x.bloco}',d:'${nextD.x.id}',t:null})">Abrir disciplina</button></div>` : ""}${!weak && !nextD ? '<p class="muted">Disciplinas concluídas. Faça um simulado para revisar.</p>' : ""}</section>
   <nav class="pv-nav" aria-label="Atalhos"><h2>Treino e acompanhamento</h2>
   <button onclick="go('sim')"><span class="pv-ni">${IC.timer}</span><span class="pv-nt"><b>Modo Simulado</b><small>Cronômetro e correção só no final</small></span>${IC.chev}</button>
   <button onclick="go('plan')"><span class="pv-ni">${IC.cal}</span><span class="pv-nt"><b>Meu cronograma</b><small>Seu plano até a prova</small></span>${IC.chev}</button>
+  <button onclick="go('ana')"><span class="pv-ni">${IC.chart}</span><span class="pv-nt"><b>Painel analítico</b><small>Gráficos, tempo e pontos fracos</small></span>${IC.chev}</button>
   <button onclick="go('dash')"><span class="pv-ni">${IC.chart}</span><span class="pv-nt"><b>Meu desempenho</b><small>${nl} respostas registradas</small></span>${IC.chev}</button></nav></aside></div>`;
   return h;
 }
@@ -1041,10 +1166,10 @@ function side() {
     b.discs.forEach(d => {
       if (!d.pronto) { h += `<button class="nv" disabled><span class="dot"></span><span class="tx">${d.nome}</span><span class="pc">em breve</span></button>`; return; }
       const ids = subQ(d.id), p = ids.length ? Math.round(100 * certas(ids) / ids.length) : 0;
-      h += `<button class="nv ${S.d === d.id && S.v !== "home" && S.v !== "dash" && S.v !== "plan" && !S.v.startsWith("sim") ? "on" : ""}" onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"><span class="dot ${p ? "p" : ""}"></span><span class="tx">${d.nome}</span><span class="pc">${p}%</span></button>`;
+      h += `<button class="nv ${S.d === d.id && S.v !== "home" && S.v !== "dash" && S.v !== "ana" && S.v !== "plan" && !S.v.startsWith("sim") ? "on" : ""}" onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"><span class="dot ${p ? "p" : ""}"></span><span class="tx">${d.nome}</span><span class="pc">${p}%</span><span class="nvbar" aria-hidden="true"><i style="width:${p}%"></i></span></button>`;
     });
   });
-  h += `<div class="nv-sec">Treino</div><button class="nv ${S.v.startsWith("sim") ? "on" : ""}" onclick="go('sim')">${ic("sim")}<span class="tx">Modo Simulado</span></button><button class="nv ${S.v === "plan" ? "on" : ""}" onclick="go('plan')">${ic("plan")}<span class="tx">Meu cronograma</span></button><button class="nv ${S.v === "dash" ? "on" : ""}" onclick="go('dash')">${ic("dash")}<span class="tx">Meu desempenho</span></button><button class="nv ${S.v === "arq" ? "on" : ""}" onclick="go('arq',{tab:'erros'})">${ic("dash")}<span class="tx">Arquivo e erros</span></button>`;
+  h += `<div class="nv-sec">Treino</div><button class="nv ${S.v.startsWith("sim") ? "on" : ""}" onclick="go('sim')">${ic("sim")}<span class="tx">Modo Simulado</span></button><button class="nv ${S.v === "plan" ? "on" : ""}" onclick="go('plan')">${ic("plan")}<span class="tx">Meu cronograma</span></button><button class="nv ${S.v === "dash" ? "on" : ""}" onclick="go('dash')">${ic("dash")}<span class="tx">Meu desempenho</span></button><button class="nv ${S.v === "ana" ? "on" : ""}" onclick="go('ana')">${ic("dash")}<span class="tx">Painel analítico</span></button><button class="nv ${S.v === "arq" ? "on" : ""}" onclick="go('arq',{tab:'erros'})">${ic("dash")}<span class="tx">Arquivo e erros</span></button>`;
   n.innerHTML = h;
 }
 function vBloco() {
@@ -1059,7 +1184,7 @@ function vBloco() {
 }
 function vDisc() {
   const s = sj(S.d), all = subQ(s.id), tops = ST[s.id];
-  let h = `<h1>${s.nome}</h1><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button> · <button class="link" onclick="go('todas',{d:'${s.id}'})">Resolver todas em sequência (como no PDF)</button>${canShare() ? ` · <button class="link" onclick="shareDisc('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
+  let h = `<h1>${s.nome}</h1><div class="dprog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${all.length ? Math.round(100 * certas(all) / all.length) : 0}" aria-label="Progresso na disciplina"><span class="dprog-b"><i style="width:${all.length ? Math.round(100 * certas(all) / all.length) : 0}%"></i></span><span class="dprog-t"><b>${all.length ? Math.round(100 * certas(all) / all.length) : 0}%</b> concluído · ${certas(all)} de ${all.length} acertadas · ${feitas(all)} respondidas</span></div><p class="muted">${feitas(all)} de ${all.length} questões respondidas · ${certas(all)} já acertadas. <button class="link" onclick="reset()">Zerar tudo</button> · <button class="link" onclick="go('sim',{sel:'${s.id}'})">Simular prova desta matéria</button> · <button class="link" onclick="go('todas',{d:'${s.id}'})">Resolver todas em sequência (como no PDF)</button>${canShare() ? ` · <button class="link" onclick="shareDisc('${s.id}',this)">Copiar link desta área</button>` : ""}</p>
   <details class="ordem"><summary>Ordem de estudo por prioridade (estimada)</summary><div class="ordem-b">Não há estatística pública de incidência da IDECAN para este edital. ${s.id === "estatistica" ? "Contei os itens de estatística das provas IDECAN do repositório (PC-SC 2026 Agente e Escrivão, CBMMG 2026) e somei a PC-BA 2022, analisada antes. Essas provas não são da PC-AC: onde não há registro, usei a importância do assunto no edital." : "Ordenei pela ênfase do edital e por provas recentes da banca onde havia registro."} Use como guia, não como garantia.${s.id === "adm" ? " Atenção: não li o Anexo III de Administração por inteiro; confira os itens no edital." : ""}</div></details>`;
   if (s.id === "estatistica") h += `<details class="ordem"><summary>Provas reais para resolver (IDECAN)</summary><div class="ordem-b"><p class="muted">Os enunciados originais ficam nas provas abaixo (não posso copiá-los para o app). Resolva as questões indicadas e depois confira no gabarito.</p>${PROVAS.map(p => `<p><b>${p[0]}</b><br><span class="muted">${p[1]}</span><br><a href="${p[2]}" target="_blank" rel="noopener">Abrir a prova</a>${p[3] ? ` · <a href="${p[3]}" target="_blank" rel="noopener">Gabarito</a>` : ""}</p>`).join("")}</div></details>`;
   h += `<div class="list">`;
@@ -1120,7 +1245,7 @@ function simStart() {
   if (!pool.length) { alert("Você já acertou todas as questões desta seleção. Desmarque 'Não repetir' para refazê-las."); return; }
   for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
   const ids = pool.slice(0, Math.min(n, pool.length));
-  SIM = { ids, a: {}, cur: 0, end: Date.now() + ids.length * mins * 60000, mat: m };
+  SIMT = {}; SIMD = {}; SIM = { ids, a: {}, cur: 0, end: Date.now() + ids.length * mins * 60000, mat: m };
   go("simrun");
   startTimer();
 }
@@ -1133,16 +1258,16 @@ function startTimer() {
     if (left <= 0) { simFinish(true); }
   }, 500);
 }
-function simPick(k) { SIM.a[SIM.cur] = k; render(); }
+function simPick(k) { if (SIMD[SIM.cur] === undefined) SIMD[SIM.cur] = secSince(SIMT[SIM.cur]); SIM.a[SIM.cur] = k; render(); }
 function simGo(i) { SIM.cur = i; render(); window.scrollTo(0, 0); }
 function simFinish(auto) {
   if (!auto) { const un = SIM.ids.length - Object.keys(SIM.a).length; if (!confirm(un ? `Faltam ${un} questões sem resposta. Finalizar mesmo assim?` : "Finalizar o simulado?")) return; }
   if (TM) { clearInterval(TM); TM = null; }
   SIM.done = true; SIM.fim = Date.now();
-  const t0 = SIM.fim; SIM.ids.forEach((i, k) => { if (SIM.a[k] !== undefined) logAns(i, SIM.a[k] === QS[i].c, "simulado", t0, SIM.a[k]); });
+  const t0 = SIM.fim; SIM.ids.forEach((i, k) => { if (SIM.a[k] !== undefined) logAns(i, SIM.a[k] === QS[i].c, "simulado", t0, SIM.a[k], SIMD[k]); });
   go("simres");
 }
-function vSimRun() {
+function vSimRun() { if (!SIMT[SIM.cur]) SIMT[SIM.cur] = Date.now();
   const i = SIM.ids[SIM.cur], q = QS[i], n = SIM.ids.length;
   let h = `<div class="sim-top"><span>Questão <b>${SIM.cur + 1}</b> de ${n} · ${Object.keys(SIM.a).length} respondidas</span><span class="timer" id="tm">--:--</span></div>
   <div class="q"><div class="qh"><span class="qn">${SIM.cur + 1}</span>Questão ${SIM.cur + 1}</div><p class="qt">${q.q}</p>`;
@@ -1189,6 +1314,84 @@ function lineSvg(pts, W, H, label) {
   [0, 50, 100].forEach(v => { const y = base - (base - top) * v / 100; s += `<line x1="26" x2="${W}" y1="${y}" y2="${y}" stroke="#e3e7f0"/><text x="0" y="${y + 3}" font-size="9" fill="#667089">${v}%</text>`; });
   return s + `<path d="${d}" fill="none" stroke="#0f7a43" stroke-width="2"/></svg>`;
 }
+/* ============ Painel analítico (independente do "Meu desempenho") ============ */
+let ANA = (function () { const b = { p: "30d", from: "", to: "", month: "", year: "", sub: "all", bloco: "all", modo: "all", pg: 0 }; try { const v = JSON.parse(localStorage.getItem("pcac_ana") || "null"); if (v && typeof v === "object") return Object.assign(b, v); } catch (e) {} return b; })();
+function anaSave() { try { localStorage.setItem("pcac_ana", JSON.stringify(ANA)); } catch (e) {} }
+function anaSet(k, v) { if (k === "p") { ANA.p = v; ANA.month = ""; ANA.year = ""; } else if (k === "month") { ANA.month = v; ANA.year = ""; ANA.p = v ? "m" : "tudo"; } else if (k === "year") { ANA.year = v; ANA.month = ""; ANA.p = v ? "y" : "tudo"; } else if (k === "from" || k === "to") { ANA[k] = v; ANA.p = "custom"; } else ANA[k] = v; if (k !== "pg") ANA.pg = 0; anaSave(); render(); }
+function anaReset() { ANA = { p: "30d", from: "", to: "", month: "", year: "", sub: "all", bloco: "all", modo: "all", pg: 0 }; anaSave(); render(); }
+const ANA_DAY = 864e5, ANA_BL = { basicos: "Básicos", juridicos: "Jurídicos", especificos: "Específicos" }, ANA_MODO = { estudo: "Estudo", simulado: "Simulado", antes: "Anteriores" };
+const anaPct = (a, n) => n ? Math.round(100 * a / n) : 0;
+const anaFmtS = s => s == null ? "—" : s < 60 ? Math.round(s) + " s" : Math.floor(s / 60) + " min " + String(Math.round(s % 60)).padStart(2, "0") + " s";
+const anaFmtH = s => s < 3600 ? Math.max(1, Math.round(s / 60)) + " min" : Math.floor(s / 3600) + " h " + String(Math.round((s % 3600) / 60)).padStart(2, "0") + " min";
+const anaAvg = a => a.length ? a.reduce((p, q) => p + q, 0) / a.length : null;
+const anaMed = a => { if (!a.length) return null; const x = a.slice().sort((p, q) => p - q), m = x.length >> 1; return x.length % 2 ? x[m] : (x[m - 1] + x[m]) / 2; };
+const anaTier = p => p >= 70 ? "g" : p >= 50 ? "y" : "r";
+const anaDt = t => { const d = new Date(t); return String(d.getDate()).padStart(2, "0") + "/" + String(d.getMonth() + 1).padStart(2, "0") + "/" + String(d.getFullYear()).slice(2) + " " + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0"); };
+function anaRows() { return LOG.map(l => { const q = QS[l.i]; if (!q) return null; const sid = QSUBJ[l.i], sb = sid ? sj(sid) : null, tpc = TOP.find(x => x.id === q.t); return { i: l.i, ok: !!l.ok, t: l.t, m: l.m || "estudo", d: l.d || null, sid, sn: sb ? sb.nome : "—", bl: sb ? sb.bloco : "", tid: q.t, tn: tpc ? tpc.nome : q.t, pr: tpc && tpc.prio ? tpc.prio : "—" }; }).filter(Boolean).sort((a, b) => a.t - b.t); }
+function anaRange() { const now = new Date(), d0 = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime(), p = ANA.p;
+  if (p === "hoje") return [d0, d0 + ANA_DAY]; if (p === "7d") return [d0 - 6 * ANA_DAY, d0 + ANA_DAY]; if (p === "30d") return [d0 - 29 * ANA_DAY, d0 + ANA_DAY];
+  if (p === "mes") return [new Date(now.getFullYear(), now.getMonth(), 1).getTime(), new Date(now.getFullYear(), now.getMonth() + 1, 1).getTime()];
+  if (p === "ano") return [new Date(now.getFullYear(), 0, 1).getTime(), new Date(now.getFullYear() + 1, 0, 1).getTime()];
+  if (p === "m" && /^\d{4}-\d{2}$/.test(ANA.month)) { const ym = ANA.month.split("-").map(Number); return [new Date(ym[0], ym[1] - 1, 1).getTime(), new Date(ym[0], ym[1], 1).getTime()]; }
+  if (p === "y" && /^\d{4}$/.test(ANA.year)) { const y = +ANA.year; return [new Date(y, 0, 1).getTime(), new Date(y + 1, 0, 1).getTime()]; }
+  if (p === "custom") { const f = ANA.from ? new Date(ANA.from + "T00:00:00").getTime() : 0, t = ANA.to ? new Date(ANA.to + "T00:00:00").getTime() + ANA_DAY : Infinity; return [isNaN(f) ? 0 : f, isNaN(t) ? Infinity : t]; }
+  return [0, Infinity]; }
+function anaFilt(rows, a, b) { return rows.filter(r => r.t >= a && r.t < b && (ANA.sub === "all" || r.sid === ANA.sub) && (ANA.bloco === "all" || r.bl === ANA.bloco) && (ANA.modo === "all" || r.m === ANA.modo)); }
+function anaSeries(rows, a, b) { const now = Date.now(); let lo = a > 0 ? a : (rows.length ? rows[0].t : now), hi = Math.min(isFinite(b) ? b : now + ANA_DAY, now + ANA_DAY); if (hi <= lo) hi = lo + ANA_DAY;
+  const days = Math.ceil((hi - lo) / ANA_DAY), mode = ANA.p === "hoje" ? "h" : days <= 62 ? "d" : days <= 400 ? "w" : "m";
+  const keyOf = t => { const d = new Date(t); if (mode === "h") return String(d.getHours()); if (mode === "d") return dkey(t); if (mode === "w") { const w = new Date(d.getFullYear(), d.getMonth(), d.getDate()); w.setDate(w.getDate() - ((w.getDay() + 6) % 7)); return dkey(w.getTime()); } return dkey(t).slice(0, 7); };
+  const lab = k => mode === "h" ? k + "h" : mode === "m" ? k.slice(5) + "/" + k.slice(2, 4) : k.slice(8) + "/" + k.slice(5, 7);
+  const keys = []; if (mode === "h") { for (let h = 0; h < 24; h++) keys.push(String(h)); } else { const c = new Date(lo); c.setHours(0, 0, 0, 0); if (mode === "w") c.setDate(c.getDate() - ((c.getDay() + 6) % 7)); if (mode === "m") c.setDate(1); let g = 0; while (c.getTime() < hi && g++ < 800) { const k = keyOf(c.getTime()); if (keys[keys.length - 1] !== k) keys.push(k); if (mode === "d") c.setDate(c.getDate() + 1); else if (mode === "w") c.setDate(c.getDate() + 7); else c.setMonth(c.getMonth() + 1); } }
+  const m = {}; keys.forEach(k => m[k] = { l: lab(k), a: 0, e: 0 }); rows.forEach(r => { const o = m[keyOf(r.t)]; if (o) o[r.ok ? "a" : "e"]++; });
+  return { items: keys.map(k => m[k]), mode }; }
+function anaBars(items, label) { const W = 640, H = 190, pl = 30, pb = 22, pt = 8, n = items.length || 1, bw = (W - pl) / n, mx = Math.max(1, ...items.map(x => x.a + x.e)), nice = Math.max(1, Math.ceil(mx / 4)) * 4, sc = (H - pb - pt) / nice; let g = "";
+  for (let k = 0; k <= 4; k++) { const v = nice / 4 * k, y = H - pb - v * sc; g += `<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" class="gl"/><text x="${pl - 5}" y="${y + 3}" text-anchor="end" class="ax">${Math.round(v)}</text>`; }
+  const step = Math.ceil(n / 12), yb = H - pb;
+  items.forEach((x, k) => { const bx = pl + k * bw + bw * .14, w = bw * .72, ha = x.a * sc, he = x.e * sc; g += `<g><title>${x.l}: ${x.a} acertos, ${x.e} erros (${anaPct(x.a, x.a + x.e)}%)</title>`; if (he) g += `<rect x="${bx.toFixed(1)}" y="${(yb - he - ha).toFixed(1)}" width="${w.toFixed(1)}" height="${he.toFixed(1)}" class="se" rx="2"/>`; if (ha) g += `<rect x="${bx.toFixed(1)}" y="${(yb - ha).toFixed(1)}" width="${w.toFixed(1)}" height="${ha.toFixed(1)}" class="sa" rx="2"/>`; if (!ha && !he) g += `<rect x="${bx.toFixed(1)}" y="${yb - 1.5}" width="${w.toFixed(1)}" height="1.5" class="s0"/>`; g += "</g>"; if (k % step === 0) g += `<text x="${(bx + w / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle" class="ax">${x.l}</text>`; });
+  return `<svg viewBox="0 0 ${W} ${H}" class="chart" role="img" aria-label="${label}">${g}</svg>`; }
+function anaLine(rows) { if (rows.length < 3) return '<p class="muted">Responda pelo menos 3 questões no filtro para ver a evolução.</p>'; const W = 640, H = 190, pl = 30, pb = 22, pt = 10, win = 10, pts = []; for (let k = 0; k < rows.length; k++) { const seg = rows.slice(Math.max(0, k - win + 1), k + 1); pts.push(anaPct(seg.filter(r => r.ok).length, seg.length)); }
+  const n = pts.length, x = k => pl + (n === 1 ? 0 : k * (W - pl - 8) / (n - 1)), y = v => H - pb - v * (H - pb - pt) / 100; let g = ""; [0, 25, 50, 75, 100].forEach(v => g += `<line x1="${pl}" x2="${W}" y1="${y(v)}" y2="${y(v)}" class="gl"/><text x="${pl - 5}" y="${y(v) + 3}" text-anchor="end" class="ax">${v}%</text>`);
+  g += `<line x1="${pl}" x2="${W}" y1="${y(70)}" y2="${y(70)}" class="meta"/><text x="${W - 4}" y="${y(70) - 4}" text-anchor="end" class="ax">meta 70%</text>`;
+  const d = pts.map((v, k) => (k ? "L" : "M") + x(k).toFixed(1) + " " + y(v).toFixed(1)).join(" "); g += `<path d="${d} L${x(n - 1).toFixed(1)} ${y(0)} L${x(0).toFixed(1)} ${y(0)} Z" class="area"/><path d="${d}" class="ln"/>`;
+  const stp = Math.ceil(n / 40); pts.forEach((v, k) => { if (k % stp === 0 || k === n - 1) g += `<circle cx="${x(k).toFixed(1)}" cy="${y(v).toFixed(1)}" r="3" class="pt"><title>Resposta ${k + 1}: ${v}% (média das últimas ${Math.min(win, k + 1)})</title></circle>`; });
+  g += `<text x="${pl}" y="${H - 6}" class="ax">1ª resposta</text><text x="${W - 4}" y="${H - 6}" text-anchor="end" class="ax">resposta ${n}</text>`; return `<svg viewBox="0 0 ${W} ${H}" class="chart" role="img" aria-label="Evolução do percentual de acerto, média móvel das últimas 10 respostas">${g}</svg>`; }
+function anaH(items) { if (!items.length) return '<p class="muted">Sem dados no filtro.</p>'; return '<ul class="hb">' + items.map(x => `<li><span class="hb-l" title="${x.l}">${x.l}</span><span class="hb-b"><i class="t${anaTier(x.p)}" style="width:${Math.max(2, x.p)}%"></i></span><span class="hb-v"><b>${x.p}%</b><small>${x.n} resp.${x.x ? " · " + x.x : ""}</small></span></li>`).join("") + "</ul>"; }
+function anaHist(times) { if (!times.length) return '<p class="muted">Ainda sem tempos registrados neste filtro.</p>'; const b = [["< 30 s", 0, 30], ["30–60 s", 30, 60], ["1–2 min", 60, 120], ["2–5 min", 120, 300], ["> 5 min", 300, 1e9]], c = b.map(x => times.filter(t => t >= x[1] && t < x[2]).length), mx = Math.max(1, ...c); return '<ul class="hist">' + b.map((x, k) => `<li><span>${x[0]}</span><span class="hb-b"><i class="tb" style="width:${Math.round(100 * c[k] / mx)}%"></i></span><b>${c[k]}</b></li>`).join("") + "</ul>"; }
+function anaCsv() { const rows = window.ANA_ROWS || [], esc = v => '"' + String(v).replace(/"/g, '""') + '"', lines = [["data_hora", "disciplina", "assunto", "modo", "resultado", "tempo_s"].join(";")].concat(rows.map(r => [new Date(r.t).toLocaleString("pt-BR"), r.sn, r.tn, r.m, r.ok ? "acertou" : "errou", r.d == null ? "" : r.d].map(esc).join(";"))); const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" }), u = URL.createObjectURL(blob), a = document.createElement("a"); a.href = u; a.download = "analitico-pc-ac.csv"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 1000); }
+function vAna() {
+  const all = anaRows(), r2 = anaRange(), a = r2[0], b = r2[1], rows = anaFilt(all, a, b); window.ANA_ROWS = rows.slice().reverse();
+  const prev = (isFinite(b) && a > 0) ? anaFilt(all, a - (b - a), a) : [];
+  const n = rows.length, ok = rows.filter(r => r.ok).length, pct = anaPct(ok, n), pprev = prev.length ? anaPct(prev.filter(r => r.ok).length, prev.length) : null;
+  const tms = rows.filter(r => r.d).map(r => r.d), tok = rows.filter(r => r.d && r.ok).map(r => r.d), terr = rows.filter(r => r.d && !r.ok).map(r => r.d), avgT = anaAvg(tms), medT = anaMed(tms), sumT = tms.reduce((p, q) => p + q, 0);
+  const dayN = new Set(rows.map(r => dkey(r.t))).size;
+  const subs = SUBJ.filter(x => x.pronto).map(x => { const xs = rows.filter(r => r.sid === x.id), pv = prev.filter(r => r.sid === x.id), okx = xs.filter(r => r.ok).length, allq = subQ(x.id), ts = xs.filter(r => r.d).map(r => r.d); return { s: x, n: xs.length, ok: okx, p: anaPct(okx, xs.length), tt: anaAvg(ts), pp: pv.length ? anaPct(pv.filter(r => r.ok).length, pv.length) : null, tot: allq.length, ac: certas(allq), prog: allq.length ? Math.round(100 * certas(allq) / allq.length) : 0 }; });
+  const ranked = subs.filter(x => x.n >= 3).sort((p, q) => q.p - p.p || q.n - p.n), best = ranked[0], worst = ranked.length > 1 ? ranked[ranked.length - 1] : null;
+  const tm = {}; rows.forEach(r => { const o = tm[r.tid] = tm[r.tid] || { tid: r.tid, tn: r.tn, sid: r.sid, sn: r.sn, bl: r.bl, n: 0, ok: 0, ts: [] }; o.n++; if (r.ok) o.ok++; if (r.d) o.ts.push(r.d); });
+  const tops = Object.values(tm).map(o => Object.assign(o, { p: anaPct(o.ok, o.n), tt: anaAvg(o.ts) }));
+  const weak = tops.filter(o => o.n >= 2 && o.p < 70).sort((p, q) => p.p - q.p || q.n - p.n).slice(0, 10), slow = tops.filter(o => o.ts.length >= 2).sort((p, q) => q.tt - p.tt).slice(0, 5);
+  const grp = (fn, lbl) => { const m = {}; rows.forEach(r => { const k = fn(r), o = m[k] = m[k] || { n: 0, ok: 0, ts: [] }; o.n++; if (r.ok) o.ok++; if (r.d) o.ts.push(r.d); }); return Object.keys(m).map(k => ({ l: (lbl && lbl[k]) || k, n: m[k].n, p: anaPct(m[k].ok, m[k].n), x: m[k].ts.length ? "tempo " + anaFmtS(anaAvg(m[k].ts)) : "" })).sort((p, q) => q.n - p.n); };
+  const ser = anaSeries(rows, a, b), hrs = Array.from({ length: 24 }, (_, h) => ({ l: String(h), a: 0, e: 0 })), wd = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"].map(l => ({ l, a: 0, e: 0 }));
+  rows.forEach(r => { const d = new Date(r.t); hrs[d.getHours()][r.ok ? "a" : "e"]++; wd[(d.getDay() + 6) % 7][r.ok ? "a" : "e"]++; });
+  const months = [...new Set(all.map(r => dkey(r.t).slice(0, 7)))].sort().reverse(), years = [...new Set(all.map(r => String(new Date(r.t).getFullYear())))].sort().reverse();
+  const chip = (v, l) => `<button class="fch ${ANA.p === v ? "on" : ""}" onclick="anaSet('p','${v}')">${l}</button>`, opt = (v, l, cur) => `<option value="${v}" ${String(cur) === String(v) ? "selected" : ""}>${l}</option>`;
+  const trend = pprev == null || !n ? "" : (pct - pprev === 0 ? '<small class="tr">= período anterior</small>' : `<small class="tr ${pct > pprev ? "up" : "dn"}">${pct > pprev ? "▲" : "▼"} ${Math.abs(pct - pprev)} p.p. vs período anterior</small>`);
+  const kp = (l, v, sub, c) => `<div class="an-k ${c || ""}"><span>${l}</span><b>${v}</b>${sub ? `<small>${sub}</small>` : ""}</div>`;
+  let h = `<div class="an"><header class="an-h"><div><span class="pv-eyebrow">Somente esta área · dados deste aparelho</span><h1>Painel analítico</h1></div><div class="an-hb"><button class="b2 sm" onclick="anaCsv()" ${n ? "" : "disabled"}>Exportar CSV</button><button class="b2 sm" onclick="anaReset()">Limpar filtros</button></div></header>
+  <section class="an-fil" aria-label="Filtros"><div class="an-per" role="group" aria-label="Período">${chip("hoje", "Hoje")}${chip("7d", "7 dias")}${chip("30d", "30 dias")}${chip("mes", "Este mês")}${chip("ano", "Este ano")}${chip("tudo", "Tudo")}</div>
+  <div class="an-sel"><label>Mês<select onchange="anaSet('month',this.value)"><option value="">—</option>${months.map(m => opt(m, m.slice(5) + "/" + m.slice(0, 4), ANA.month)).join("")}</select></label><label>Ano<select onchange="anaSet('year',this.value)"><option value="">—</option>${years.map(y => opt(y, y, ANA.year)).join("")}</select></label><label>De<input type="date" value="${ANA.from}" onchange="anaSet('from',this.value)"></label><label>Até<input type="date" value="${ANA.to}" onchange="anaSet('to',this.value)"></label>
+  <label>Disciplina<select onchange="anaSet('sub',this.value)">${opt("all", "Todas", ANA.sub)}${SUBJ.filter(x => x.pronto).map(x => opt(x.id, x.nome, ANA.sub)).join("")}</select></label><label>Bloco<select onchange="anaSet('bloco',this.value)">${opt("all", "Todos", ANA.bloco)}${Object.keys(ANA_BL).map(k => opt(k, ANA_BL[k], ANA.bloco)).join("")}</select></label><label>Modo<select onchange="anaSet('modo',this.value)">${opt("all", "Todos", ANA.modo)}${Object.keys(ANA_MODO).map(k => opt(k, ANA_MODO[k], ANA.modo)).join("")}</select></label></div></section>`;
+  if (!all.length) return h + `<div class="note">Ainda não há respostas registradas. Resolva questões ou faça um simulado: cada resposta guarda data, hora, assunto e tempo, e este painel se preenche sozinho.</div></div>`;
+  if (!n) return h + `<div class="note">Nenhuma resposta neste filtro. Amplie o período ou limpe os filtros.</div></div>`;
+  h += `<section class="an-kpis">${kp("Respondidas", n, dayN + (dayN === 1 ? " dia de estudo" : " dias de estudo"))}${kp("Acerto", pct + "%", trend, "t" + anaTier(pct))}${kp("Tempo médio por questão", anaFmtS(avgT), tms.length ? "mediana " + anaFmtS(medT) + " · " + tms.length + " com tempo" : "sem tempos ainda")}${kp("Tempo total estimado", tms.length ? anaFmtH(sumT) : "—", tms.length ? "soma dos tempos medidos" : "")}${kp("Tempo ao acertar × errar", tok.length || terr.length ? anaFmtS(anaAvg(tok)) + " × " + anaFmtS(anaAvg(terr)) : "—", "médias do filtro")}${kp("Melhor disciplina", best ? best.s.nome : "—", best ? best.p + "% · " + best.n + " resp." : "mín. 3 respostas", "tg")}${kp("Pior disciplina", worst ? worst.s.nome : "—", worst ? worst.p + "% · " + worst.n + " resp." : "mín. 3 respostas em 2 disciplinas", "tr2")}</section>
+  <section class="an-g2"><article class="an-c"><h2>Respostas por ${ser.mode === "h" ? "hora" : ser.mode === "d" ? "dia" : ser.mode === "w" ? "semana" : "mês"}</h2><p class="an-l"><i class="sa"></i>acertos <i class="se"></i>erros</p>${anaBars(ser.items, "Respostas por período, acertos e erros")}</article><article class="an-c"><h2>Evolução do acerto</h2><p class="an-l">média das últimas 10 respostas</p>${anaLine(rows)}</article></section>
+  <section class="an-g2"><article class="an-c"><h2>Acerto por disciplina</h2><p class="an-l">verde ≥ 70% · âmbar 50–69% · vermelho &lt; 50%</p>${anaH(subs.filter(x => x.n).sort((p, q) => q.p - p.p).map(x => ({ l: x.s.nome, p: x.p, n: x.n, x: x.tt ? "tempo " + anaFmtS(x.tt) : "" })))}</article><article class="an-c"><h2>Tempo para responder</h2><p class="an-l">quantas respostas em cada faixa de tempo</p>${anaHist(tms)}<p class="an-l">Maior demora média por assunto</p>${slow.length ? '<ul class="hb">' + slow.map(o => `<li><span class="hb-l" title="${o.tn}">${o.tn}</span><span class="hb-b"><i class="tb" style="width:${Math.round(100 * o.tt / slow[0].tt)}%"></i></span><span class="hb-v"><b>${anaFmtS(o.tt)}</b><small>${o.ts.length} resp.</small></span></li>`).join("") + "</ul>" : '<p class="muted">Precisa de ao menos 2 respostas com tempo no mesmo assunto.</p>'}</article></section>
+  <section class="an-g3"><article class="an-c"><h2>Tipo de conteúdo</h2><p class="an-l">por bloco da prova</p>${anaH(grp(r => r.bl || "—", ANA_BL))}<p class="an-l">por prioridade do assunto</p>${anaH(grp(r => r.pr, { alta: "Prioridade alta", media: "Prioridade média", baixa: "Prioridade baixa" }))}<p class="an-l">por modo</p>${anaH(grp(r => r.m, ANA_MODO))}</article><article class="an-c"><h2>Por horário do dia</h2>${anaBars(hrs, "Respostas por horário")}<h2 class="mt">Por dia da semana</h2>${anaBars(wd, "Respostas por dia da semana")}</article></section>
+  <section class="an-c"><h2>Disciplinas: desempenho e progresso</h2><div class="an-tw"><table class="an-t"><thead><tr><th>Disciplina</th><th>Progresso no banco</th><th class="r">Resp.</th><th class="r">Acerto</th><th class="r">Tempo médio</th><th class="r">vs anterior</th></tr></thead><tbody>${subs.map(x => `<tr><td><button class="link" onclick="go('disc',{b:'${x.s.bloco}',d:'${x.s.id}',t:null})">${x.s.nome}</button></td><td><span class="pv-dpw"><span class="pv-dp" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${x.prog}" aria-label="Progresso em ${x.s.nome}"><i style="width:${x.prog}%"></i></span><em>${x.ac}/${x.tot} · ${x.prog}%</em></span></td><td class="r">${x.n}</td><td class="r">${x.n ? `<b class="pc-${anaTier(x.p)}">${x.p}%</b>` : "—"}</td><td class="r">${anaFmtS(x.tt)}</td><td class="r">${x.pp == null || !x.n ? "—" : (x.p - x.pp === 0 ? "=" : `<span class="${x.p > x.pp ? "pc-g" : "pc-r"}">${x.p > x.pp ? "▲" : "▼"} ${Math.abs(x.p - x.pp)} p.p.</span>`)}</td></tr>`).join("")}</tbody></table></div></section>
+  <section class="an-c"><h2>Pontos fracos: assuntos para reforçar</h2><p class="an-l">assuntos com 2+ respostas e menos de 70% de acerto, do pior para o melhor</p>${weak.length ? `<div class="an-tw"><table class="an-t"><thead><tr><th>Assunto</th><th>Disciplina</th><th class="r">Resp.</th><th class="r">Acerto</th><th class="r">Tempo médio</th><th></th></tr></thead><tbody>${weak.map(o => `<tr><td>${o.tn}</td><td>${o.sn}</td><td class="r">${o.n}</td><td class="r"><b class="pc-${anaTier(o.p)}">${o.p}%</b></td><td class="r">${anaFmtS(o.tt)}</td><td class="r"><button class="link" onclick="go('topic',{b:'${o.bl}',d:'${o.sid}',t:'${o.tid}',tab:'questoes'})">Treinar</button></td></tr>`).join("")}</tbody></table></div>` : '<p class="muted">Nenhum assunto abaixo de 70% com 2+ respostas neste filtro.</p>'}</section>
+  <section class="an-c"><h2>Histórico das respostas</h2>${(() => { const per = 12, tot = rows.length, pgs = Math.max(1, Math.ceil(tot / per)), pg = Math.min(ANA.pg, pgs - 1), list = window.ANA_ROWS.slice(pg * per, pg * per + per); return `<div class="an-tw"><table class="an-t"><thead><tr><th>Data e hora</th><th>Disciplina</th><th>Assunto</th><th>Modo</th><th>Resultado</th><th class="r">Tempo</th></tr></thead><tbody>${list.map(r => `<tr><td>${anaDt(r.t)}</td><td>${r.sn}</td><td>${r.tn}</td><td>${ANA_MODO[r.m] || r.m}</td><td><b class="${r.ok ? "pc-g" : "pc-r"}">${r.ok ? "Acertou" : "Errou"}</b></td><td class="r">${anaFmtS(r.d)}</td></tr>`).join("")}</tbody></table></div><div class="an-pg"><span>${pg * per + 1}–${Math.min(tot, pg * per + per)} de ${tot}</span><span><button class="b2 sm" ${pg ? "" : "disabled"} onclick="anaSet('pg',${pg - 1})">Anterior</button> <button class="b2 sm" ${pg < pgs - 1 ? "" : "disabled"} onclick="anaSet('pg',${pg + 1})">Próxima</button></span></div>`; })()}</section>
+  <p class="an-note">Como ler: o tempo é medido da primeira exibição da questão até a resposta (entre 2 s e 15 min). No simulado, vai da abertura da questão até a primeira alternativa marcada. Respostas anteriores a esta versão aparecem sem tempo. Os dados ficam só neste aparelho; "período anterior" é um intervalo do mesmo tamanho logo antes do atual.</p></div>`;
+  return h;
+}
 function vDash() {
   const L = LOG.slice().sort((a, b) => a.t - b.t), n = L.length, ok = L.filter(l => l.ok).length;
   if (!n) return `<h1>Meu desempenho</h1><div class="note">Ainda não há respostas registradas. Resolva questões ou faça um simulado: cada resposta é salva com data e hora e aparece aqui em gráficos.</div>`;
@@ -1207,7 +1410,7 @@ function vDash() {
   const ev = []; for (let k = 0; k < L.length; k++) { const w = L.slice(Math.max(0, k - 9), k + 1); ev.push(pct(w.filter(l => l.ok).length, w.length)); }
   const csv = "data_hora;questao;materia;assunto;resultado;modo\n" + L.map(l => `${new Date(l.t).toISOString()};${l.i};${QSUBJ[l.i]};${QS[l.i].t};${l.ok ? "certa" : "errada"};${l.m}`).join("\n");
   let h = `<h1>Meu desempenho</h1><p class="muted">Tudo o que você responde é registrado com data e hora neste navegador.</p>
-  <div class="kpis"><div class="kpi"><b>${n}</b><span>respostas registradas</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>de acerto geral</span></div><div class="kpi"><b>${uniq}</b><span>questões já acertadas (de ${QS.length})</span></div><div class="kpi"><b>${dk.length}</b><span>dias de estudo</span></div><div class="kpi"><b>${streak}</b><span>dias seguidos</span></div></div>
+  <div class="kpis"><div class="kpi"><b>${n}</b><span>respostas registradas</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>de acerto geral</span></div><div class="kpi"><b>${uniq}</b><span>questões já acertadas (de ${QS.length - HID.size})</span></div><div class="kpi"><b>${dk.length}</b><span>dias de estudo</span></div><div class="kpi"><b>${streak}</b><span>dias seguidos</span></div></div>
   <div class="card"><h2>Respostas por dia (últimos 14 dias)</h2><p class="muted"><span class="ok-t">■</span> certas &nbsp;<span class="no-t">■</span> erradas</p>${barSvg(last14, 560, 170, { label: "respostas por dia", sparse: 1 })}</div>
   <div class="card"><h2>Evolução do acerto</h2><p class="muted">Média das últimas 10 respostas, na ordem em que foram dadas.</p>${lineSvg(ev, 560, 150, "evolução do acerto")}</div>
   <div class="card"><h2>Por horário do dia</h2><p class="muted">Veja em que horários você mais estuda e em quais acerta mais.</p>${barSvg(hrs, 560, 150, { label: "respostas por hora", sparse: 2 })}</div>
@@ -1479,7 +1682,7 @@ function render(scroll) {
   const wantPos = window.__restorePos && document.body && document.body.classList && !document.body.classList.contains("locked");
   crumbs();
   const m = document.getElementById("main");
-  const V = { home: vHome, bloco: vBloco, disc: vDisc, topic: vTopic, todas: vTodas, sim: vSim, simrun: vSimRun, simres: vSimRes, dash: vDash, plan: vPlan, arq: vArq };
+  const V = { home: vHome, bloco: vBloco, disc: vDisc, topic: vTopic, todas: vTodas, sim: vSim, simrun: vSimRun, simres: vSimRes, dash: vDash, ana: vAna, plan: vPlan, arq: vArq };
   if (S.v === "simrun" && !SIM) S.v = "sim";
   m.innerHTML = (V[S.v] || vHome)();
   side();
@@ -1494,7 +1697,7 @@ function render(scroll) {
   const H_FULL="f5c0e32394bcda1d7398ad11a67ca7655229318e6327747da866eda02161f441", H_TRIAL="e552a301d65a81d4ad746a07ad3025e67c16dc5d4a390bc61cad62a01522c99d";
   const K="pcac_auth", KT="pcac_trial", TOTAL=60*60*1000;
   const $=id=>document.getElementById(id), b=document.body, f=$("gf"), i=$("gcode"), e=$("gerr");
-  $("gq").textContent=QS.length;
+  $("gq").textContent=QS.length-(typeof HID!=="undefined"?HID.size:0);
   const ls={g:k=>{try{return localStorage.getItem(k)}catch(x){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(x){}},d:k=>{try{localStorage.removeItem(k)}catch(x){}}};
   function clock(size,id){ // relógio estilizado (anel + marcas)
     let ticks=""; for(let n=0;n<60;n++){const a=n*6*Math.PI/180,m=n%5===0,r1=m?78:82,r2=88; ticks+=`<line class="tick${m?" m":""}" x1="${100+r1*Math.sin(a)}" y1="${100-r1*Math.cos(a)}" x2="${100+r2*Math.sin(a)}" y2="${100-r2*Math.cos(a)}"/>`;}
