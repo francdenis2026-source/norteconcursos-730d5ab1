@@ -903,8 +903,10 @@ html.dark .qlock{background:#2d2b3a;border-color:#4b4870;color:#c9c6ff}html.dark
 .endm-b{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:22px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.4)}
 .endm-b h2{margin:0 0 10px;font-size:20px}.endm-b p{margin:0 0 10px;line-height:1.55}
 .endm-a{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin-top:14px}
+html.emb .fsb:not(#shareb){display:none!important}
 </style>
 <script>
+try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
 window.addEventListener('message',function(e){
   if(e.source!==window.parent||!e.data||typeof e.data.ncDark!=='boolean')return;
   var r=document.documentElement;
