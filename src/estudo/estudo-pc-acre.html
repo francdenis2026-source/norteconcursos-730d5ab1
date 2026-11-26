@@ -908,6 +908,41 @@ html.emb .fsb:not(#shareb){display:none!important}
 .shm-b button{padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--acc);color:#fff;font:700 14px inherit;cursor:pointer}
 .shm-b .shm-x{background:transparent;color:var(--muted)}
 .shm-r{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.shm-r a{padding:9px;border-radius:10px;border:1px solid var(--line);text-align:center;color:var(--ink);text-decoration:none;font-weight:700;font-size:13.5px}.shm-r a:hover{border-color:var(--acc)}
+
+/* ---- Bloco: cabeçalho e cartões de disciplina ---- */
+.bh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 28px;align-items:center;padding:20px 24px;border:1px solid var(--line);border-radius:16px;background:var(--card);border-left:5px solid var(--acc)}
+.bh-t h1{margin:6px 0 4px;font-size:clamp(22px,2.4vw,30px)}.bh-t p{margin:0;color:var(--muted);font-size:14px}
+.bh-w{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;background:color-mix(in srgb,var(--acc) 16%,transparent);color:var(--ink)}
+.bh-k{display:grid;grid-template-columns:repeat(4,minmax(90px,1fr));gap:10px}
+.bh-k div{display:grid;gap:2px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;text-align:center}
+.bh-k b{font-size:22px;line-height:1.1}.bh-k small{font-size:13px;color:var(--muted)}.bh-k span{font-size:11.5px;color:var(--muted)}
+.bg{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-top:16px}
+.bc{display:grid;grid-template-rows:auto 1fr auto auto auto auto;gap:8px;text-align:left;padding:18px;min-height:210px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer;position:relative;box-shadow:var(--sh);transition:transform .15s,border-color .15s,box-shadow .15s}
+.bc:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:0 14px 30px rgba(0,0,0,.18)}
+.bc.soon{opacity:.6;cursor:default}.bc.soon:hover{transform:none;border-color:var(--line);box-shadow:var(--sh)}
+.bc-n{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:color-mix(in srgb,var(--acc) 18%,transparent);color:var(--acc);font-weight:800;font-size:14px}
+.bc-t{font-size:17px;font-weight:700;line-height:1.3;align-self:start}
+.bc-bar{display:block;height:8px;border-radius:99px;background:var(--line);overflow:hidden}.bc-bar i{display:block;height:100%;background:var(--ok);border-radius:99px}
+.bc-m{font-size:13px;color:var(--muted)}.bc-m b{color:var(--ink)}
+.bc-f{display:flex;flex-wrap:wrap;gap:6px;font-size:12px}.bc-f span{padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.bc-f .hot{border-color:#e08a6b;background:rgba(217,119,87,.14);color:var(--ink)}
+.bc-go{font-size:13px;font-weight:700;color:var(--acc)}
+@media(max-width:760px){.bh{grid-template-columns:1fr}.bh-k{grid-template-columns:repeat(2,1fr)}}
+/* ---- Meu desempenho ---- */
+.dsh-h h1{margin:0 0 4px;font-size:clamp(22px,2.4vw,30px)}.dsh-h p{margin:0 0 14px;color:var(--muted);font-size:14px}
+.dsh{display:grid;gap:14px}
+.dks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.dk{display:grid;gap:3px;padding:14px 16px;border:1px solid var(--line);border-top:4px solid var(--kc);border-radius:14px;background:var(--card)}
+.dk b{font-size:28px;line-height:1.1}.dk span{font-size:12.5px;color:var(--muted)}
+.dg2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.dc{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);min-width:0}
+.dc h2{margin:0 0 2px;font-size:16px}.dc>.muted{margin:0 0 10px;font-size:12.5px}
+.dsh svg{max-height:230px}.dsh svg line{stroke:var(--line)!important}.dsh svg text{fill:var(--muted)!important}
+.dm{display:grid;gap:4px;margin:10px 0}.dm>div{display:flex;justify-content:space-between;gap:10px;font-size:13.5px}.dm small{color:var(--muted);font-weight:400}
+.dmb{display:block;height:8px;border-radius:99px;background:var(--line);overflow:hidden}.dmb i{display:block;height:100%;border-radius:99px}
+.dsh .t{width:100%;font-size:13px}.dsh .t th{text-align:left;color:var(--muted);font-weight:600;padding:6px 4px}.dsh .t td{padding:7px 4px;border-top:1px solid var(--line)}
+.dbk summary{cursor:pointer;font-weight:700}.dbk textarea{width:100%;height:120px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;font:12px ui-monospace,monospace;box-sizing:border-box}
+@media(max-width:960px){.dks{grid-template-columns:repeat(2,minmax(0,1fr))}.dg2{grid-template-columns:1fr}}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1267,12 +1302,19 @@ function side() {
   n.innerHTML = h;
 }
 function vBloco() {
-  const b = blk();
-  let h = `<h1>${b.nome}</h1><p class="muted">${b.id === "especificos" ? "60 questões, peso 2. O edital não divide as questões por matéria; abaixo, as matérias na ordem do Anexo III." : `${b.total} questões, peso 1.`}</p><div class="grid">`;
+  const b = blk(), esp = b.id === "especificos";
+  const ready = b.discs.filter(d => d.pronto), allIds = [].concat(...ready.map(d => subQ(d.id)));
+  const c = certas(allIds), f = feitas(allIds), p = allIds.length ? Math.round(100 * c / allIds.length) : 0;
+  let h = `<section class="bh"><div class="bh-t"><span class="bh-w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h1>${b.nome.replace(" (gerais)", "")}</h1><p>${esp ? "O edital não divide as questões por matéria. As disciplinas seguem a ordem do Anexo III." : "Disciplinas deste bloco, com o seu progresso em cada uma."}</p></div>
+  <div class="bh-k"><div><b>${ready.length}<small>/${b.discs.length}</small></b><span>disciplinas com material</span></div><div><b>${allIds.length}</b><span>questões</span></div><div><b>${f}</b><span>respondidas</span></div><div><b>${p}%</b><span>acertadas</span></div></div></section><div class="bg">`;
   b.discs.forEach((d, i) => {
-    const q = b.id === "especificos" ? "" : `<span class="pill">${d.q} questões</span>`;
-    const n = d.pronto ? subQ(d.id).length : 0;
-    h += `<button class="tile ${d.pronto ? "" : "soon"}" onclick="${d.pronto ? `go('disc',{d:'${d.id}',t:null})` : "alert('Esta disciplina ainda não foi montada.')"}"><div class="k">${i + 1}</div><div class="n">${d.longo || d.nome}</div><div class="pills">${q}<span class="pill ${d.pronto ? "" : "w2"}">${d.pronto ? n + " questões" : "em breve"}</span></div></button>`;
+    const ids = d.pronto ? subQ(d.id) : [], ac = certas(ids), fe = feitas(ids), pp = ids.length ? Math.round(100 * ac / ids.length) : 0;
+    const tops = d.pronto ? (ST[d.id] || []) : [], alta = tops.filter(t => t.prio === "alta").length;
+    h += d.pronto ? `<button class="bc" onclick="go('disc',{d:'${d.id}',t:null})"><span class="bc-n">${i + 1}</span><span class="bc-t">${d.longo || d.nome}</span>
+      <span class="bc-bar" aria-hidden="true"><i style="width:${pp}%"></i></span>
+      <span class="bc-m"><b>${pp}%</b> acertadas · ${ac}/${ids.length}</span>
+      <span class="bc-f"><span>${ids.length} questões</span><span>${fe} feitas</span>${alta ? `<span class="hot">${alta} assunto${alta > 1 ? "s" : ""} de alta chance</span>` : ""}</span><span class="bc-go">Abrir disciplina →</span></button>`
+      : `<div class="bc soon"><span class="bc-n">${i + 1}</span><span class="bc-t">${d.longo || d.nome}</span><span class="bc-m">${esp ? "" : d.q + " questões na prova · "}em breve</span></div>`;
   });
   return h + `</div>`;
 }
@@ -1544,15 +1586,17 @@ function vDash() {
   // evolução: média móvel de 10 respostas
   const ev = []; for (let k = 0; k < L.length; k++) { const w = L.slice(Math.max(0, k - 9), k + 1); ev.push(pct(w.filter(l => l.ok).length, w.length)); }
   const csv = "data_hora;questao;materia;assunto;resultado;modo\n" + L.map(l => `${new Date(l.t).toISOString()};${l.i};${QSUBJ[l.i]};${QS[l.i].t};${l.ok ? "certa" : "errada"};${l.m}`).join("\n");
-  let h = `<h1>Meu desempenho</h1><p class="muted">Tudo o que você responde é registrado com data e hora neste navegador.</p>
-  <div class="kpis"><div class="kpi"><b>${n}</b><span>respostas registradas</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>de acerto geral</span></div><div class="kpi"><b>${uniq}</b><span>questões já acertadas (de ${QS.length - HID.size})</span></div><div class="kpi"><b>${dk.length}</b><span>dias de estudo</span></div><div class="kpi"><b>${streak}</b><span>dias seguidos</span></div></div>
-  <div class="card"><h2>Respostas por dia (últimos 14 dias)</h2><p class="muted"><span class="ok-t">■</span> certas &nbsp;<span class="no-t">■</span> erradas</p>${barSvg(last14, 560, 170, { label: "respostas por dia", sparse: 1 })}</div>
-  <div class="card"><h2>Evolução do acerto</h2><p class="muted">Média das últimas 10 respostas, na ordem em que foram dadas.</p>${lineSvg(ev, 560, 150, "evolução do acerto")}</div>
-  <div class="card"><h2>Por horário do dia</h2><p class="muted">Veja em que horários você mais estuda e em quais acerta mais.</p>${barSvg(hrs, 560, 150, { label: "respostas por hora", sparse: 2 })}</div>
-  <div class="card"><h2>Por matéria</h2>${bySubj.map(x => `<div style="margin:8px 0"><div style="display:flex;justify-content:space-between"><span>${x.s.nome}</span><b>${pct(x.ok, x.n)}% <span class="muted">(${x.ok}/${x.n})</span></b></div><div class="bar"><div style="width:${pct(x.ok, x.n)}%;background:${pct(x.ok, x.n) >= 70 ? "#178a4a" : pct(x.ok, x.n) >= 50 ? "#b7791f" : "#c4392b"}"></div></div></div>`).join("")}</div>
-  <div class="card"><h2>Assuntos para reforçar (menor acerto primeiro)</h2><table class="t"><tr><th>Assunto</th><th>Acerto</th><th>Resp.</th><th></th></tr>${byTop.slice(0, 15).map(x => `<tr><td>${x.tt.nome}</td><td>${pct(x.ok, x.n)}%</td><td>${x.n}</td><td><button class="link" onclick="go('topic',{b:'${sj(x.tt.sid).bloco}',d:'${x.tt.sid}',t:'${x.tt.id}',tab:'estudar'})">estudar</button></td></tr>`).join("")}</table></div>
-  <div class="card"><h2>Histórico recente (data e hora)</h2><table class="t"><tr><th>Quando</th><th>Assunto</th><th>Resultado</th><th>Modo</th></tr>${L.slice(-40).reverse().map(l => `<tr><td>${fmtD(l.t)}</td><td>${tp(QS[l.i].t) ? tp(QS[l.i].t).nome : ""}</td><td class="${l.ok ? "ok-t" : "no-t"}">${l.ok ? "Certa" : "Errada"}</td><td>${l.m}</td></tr>`).join("")}</table></div>
-  <div class="card"><h2>Backup dos dados</h2><p class="muted">O histórico fica salvo no navegador. Se limpar os dados do navegador, ele se perde; copie o texto abaixo para guardar.</p><details><summary>Ver dados (CSV)</summary><textarea style="width:100%;height:140px">${csv}</textarea></details><p><button class="link" onclick="if(confirm('Apagar TODO o histórico de desempenho?')){LOG=[];saveLog();HIT=null;render()}">Apagar histórico</button></p></div>`;
+  const col = v => v >= 70 ? "#178a4a" : v >= 50 ? "#b7791f" : "#c4392b";
+  const kp = (v, l, c) => `<div class="dk" style="--kc:${c}"><b>${v}</b><span>${l}</span></div>`;
+  let h = `<header class="dsh-h"><div><h1>Meu desempenho</h1><p>Cada resposta é registrada com data e hora.</p></div></header><div class="dsh">
+  <div class="dks">${kp(n, "respostas", "#3b82c4")}${kp(pct(ok, n) + "%", "acerto geral", "#2f855a")}${kp(uniq, "questões acertadas de " + (QS.length - HID.size), "#d97757")}${kp(dk.length, "dias de estudo", "#b7791f")}${kp(streak, "dias seguidos", "#8b5cf6")}</div>
+  <div class="dg2"><section class="dc"><h2>Respostas por dia</h2><p class="muted">Últimos 14 dias · <span class="ok-t">■</span> certas <span class="no-t">■</span> erradas</p>${barSvg(last14, 560, 190, { label: "respostas por dia", sparse: 1 })}</section>
+  <section class="dc"><h2>Evolução do acerto</h2><p class="muted">Média das últimas 10 respostas</p>${lineSvg(ev, 560, 190, "evolução do acerto")}</section></div>
+  <div class="dg2"><section class="dc"><h2>Por matéria</h2>${bySubj.map(x => `<div class="dm"><div><span>${x.s.nome}</span><b>${pct(x.ok, x.n)}% <small>${x.ok}/${x.n}</small></b></div><span class="dmb"><i style="width:${pct(x.ok, x.n)}%;background:${col(pct(x.ok, x.n))}"></i></span></div>`).join("")}</section>
+  <section class="dc"><h2>Por horário do dia</h2><p class="muted">Quando você mais estuda e acerta</p>${barSvg(hrs, 560, 190, { label: "respostas por hora", sparse: 2 })}</section></div>
+  <div class="dg2"><section class="dc"><h2>Assuntos para reforçar</h2><p class="muted">Menor acerto primeiro</p><table class="t"><tr><th>Assunto</th><th>Acerto</th><th>Resp.</th><th></th></tr>${byTop.slice(0, 10).map(x => `<tr><td>${x.tt.nome}</td><td style="color:${col(pct(x.ok, x.n))};font-weight:700">${pct(x.ok, x.n)}%</td><td>${x.n}</td><td><button class="link" onclick="go('topic',{b:'${sj(x.tt.sid).bloco}',d:'${x.tt.sid}',t:'${x.tt.id}',tab:'estudar'})">estudar</button></td></tr>`).join("")}</table></section>
+  <section class="dc"><h2>Histórico recente</h2><p class="muted">Últimas 12 respostas</p><table class="t"><tr><th>Quando</th><th>Assunto</th><th>Resultado</th></tr>${L.slice(-12).reverse().map(l => `<tr><td>${fmtD(l.t)}</td><td>${tp(QS[l.i].t) ? tp(QS[l.i].t).nome : ""}</td><td class="${l.ok ? "ok-t" : "no-t"}">${l.ok ? "Certa" : "Errada"}</td></tr>`).join("")}</table></section></div>
+  <details class="dc dbk"><summary>Backup dos dados</summary><p class="muted">O histórico fica salvo no navegador. Copie o texto abaixo para guardar.</p><textarea>${csv}</textarea><p><button class="link" onclick="if(confirm('Apagar TODO o histórico de desempenho?')){LOG=[];saveLog();HIT=null;render()}">Apagar histórico</button></p></details></div>`;
   return h;
 }
 
