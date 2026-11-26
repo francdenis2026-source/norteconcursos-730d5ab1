@@ -86,3 +86,7 @@
 @media print, (forced-colors: active) {
   .dev-strip { display: none; }
 }
+
+/* Área de estudo: cada pixel de altura conta, a assinatura fica fora desta tela. */
+html[data-study-area] .dev-strip { display: none !important; }
+html[data-study-area] body:has(> .dev-strip) { padding-bottom: 0 !important; }
