@@ -426,6 +426,11 @@ body.side-lock #lockb{background:#fff7d6;border-color:var(--ouro);color:#7a5a00}
  body.side-off.peek #side{position:fixed}
 }
 .chip.lk{background:#eef2ff;color:#3730a3;border-color:#c7d2fe}
+.orow{display:flex;gap:8px;align-items:stretch}.orow .opt{flex:1}
+.opt.pend{border-color:#0f3d2e;box-shadow:0 0 0 2px #0f3d2e33}
+.opt.strk{opacity:.45}.opt.strk span{text-decoration:line-through}
+.xs{border:1px solid #c9d2cc;background:#fff;border-radius:8px;padding:0 10px;font-size:12px;color:#555;cursor:pointer;white-space:nowrap}
+.confirm{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 4px;font-size:14px}
 </style>
 </head>
 <body>
@@ -576,6 +581,12 @@ function crumbs() {
   if (S.d) add(sj(S.d).nome.split(" e ")[0], () => go("disc"));
   if (S.t) add(tp(S.t).nome.split(" (")[0], () => go("topic"));
 }
+let PEND = {}, STK = {};
+try { STK = JSON.parse(localStorage.getItem("pcac_strike") || "{}") || {}; } catch (e) { STK = {}; }
+function saveStk() { try { localStorage.setItem("pcac_strike", JSON.stringify(STK)); } catch (e) {} }
+function strike(i, k) { const cur = STK[i] || []; const on = cur.includes(k); STK[i] = on ? cur.filter(x => x !== k) : cur.concat([k]); if (!on && PEND[i] === k) delete PEND[i]; saveStk(); render(i); }
+function pick(i, k) { if (ans[i] !== undefined || (STK[i] || []).includes(k)) return; PEND[i] = k; render(i); }
+function confirmar(i) { if (ans[i] !== undefined || PEND[i] === undefined) return; const k = PEND[i]; delete PEND[i]; choose(i, k); }
 function choose(i, o) { if (ans[i] !== undefined) return; ans[i] = o; save(); logAns(i, o === QS[i].c, "estudo", undefined, o); render(i); }
 function redo(i) { delete ans[i]; save(); render(i); }
 let MIX = 0; try { MIX = +(localStorage.getItem("pcac_mix") || 0); if (!MIX) { MIX = Math.floor(Math.random() * 1e9) + 1; localStorage.setItem("pcac_mix", String(MIX)); } } catch (e) { MIX = 7; }
@@ -616,10 +627,12 @@ function receitaHtml(r) {
 function qHtml(i, n) {
   const q = QS[i], done = ans[i] !== undefined, ok = done && ans[i] === q.c;
   let h = `<div class="q ${done ? (ok ? "ok" : "no") : ""}" id="q${i}"><div class="qh"><span class="qn">${n}</span>Questão ${n}${done ? ' <span class="chip lk">🔒 Respondida · registrada</span>' : ""}${hit(i) ? ' <span class="chip">✓ já acertada</span>' : seen(i) ? ' <span class="chip">já respondida</span>' : ""}</div><p class="qt">${q.q}</p>`;
+  const st = STK[i] || [], pd = PEND[i];
   q.ops.forEach((o, k) => {
-    let cl = "opt"; if (done) { if (k === q.c) cl += " right"; else if (k === ans[i]) cl += " wrong"; }
-    h += `<button class="${cl}" ${done ? "disabled" : ""} onclick="choose(${i},${k})"><b>${"ABCDE"[k]}</b><span>${o}</span></button>`;
+    let cl = "opt"; if (done) { if (k === q.c) cl += " right"; else if (k === ans[i]) cl += " wrong"; } else { if (k === pd) cl += " pend"; if (st.includes(k)) cl += " strk"; }
+    h += `<div class="orow"><button class="${cl}" ${done ? "disabled" : ""} onclick="pick(${i},${k})"><b>${"ABCDE"[k]}</b><span>${o}</span></button>${done ? "" : `<button class="xs" type="button" onclick="strike(${i},${k})">${st.includes(k) ? "Desfazer" : "Descartar"}</button>`}</div>`;
   });
+  if (!done && pd !== undefined) h += `<div class="confirm"><span>Alternativa ${"ABCDE"[pd]} marcada.</span> <button class="btn" type="button" onclick="confirmar(${i})">Confirmar alternativa ${"ABCDE"[pd]}</button></div>`;
   if (done) h += `<div class="fb ${ok ? "ok" : "no"}"><div class="fbh">${ok ? "✓ Você acertou" : "✗ Não foi dessa vez"} <span>Gabarito: <b>${"ABCDE"[q.c]}</b>${ok ? "" : ` · você marcou ${"ABCDE"[ans[i]]}`}</span></div>${solHtml(q)}${ok ? "" : `<p><button class="btn" onclick="redo(${i})">Refazer esta questão</button></p>`}</div>`;
   if (S.v === "topic") { const tq = tp(q.t); if (tq && tq.teoria) h += `<details class="explica"><summary>Não sei resolver: explicar o assunto desta questão</summary><div class="explica-b"><p class="muted" style="margin:0 0 8px"><b>Assunto:</b> ${tq.nome}</p>${tq.teoria}${exHtml(tq.exemplo)}${receitaHtml(tq.receita)}<div class="macete"><b>Macete:</b> ${tq.macete}</div></div></details>`; }
   return h + "</div>";
