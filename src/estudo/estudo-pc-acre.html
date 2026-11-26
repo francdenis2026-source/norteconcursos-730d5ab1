@@ -401,7 +401,7 @@ ol.steps li:last-child{padding-bottom:4px}
 #symtip b{color:#f6d55c}
 /* ---- compacto + barra lateral retrátil ---- */
 body{font-size:15px;line-height:1.5}
-main{max-width:1180px;padding:14px clamp(12px,2vw,24px) 36px}
+main{max-width:none;padding:14px clamp(12px,2vw,24px) 36px}
 h1{font-size:22px;margin:0 0 4px}
 .muted{font-size:13.5px}
 .top{height:50px}
@@ -461,7 +461,7 @@ html.dark .w2{background:#3a3018!important;color:#f5d57a!important}
 
 /* Destaque ao apontar: borda forte + sombra + sublinhado, para ficar claro que é clicável. */
 button:not(:disabled),a,.tile,.row,.opt{transition:border-color .15s,box-shadow .15s,background-color .15s,color .15s}
-button:not(:disabled):hover,a:hover{text-decoration:underline;text-underline-offset:3px}
+main button:not(:disabled):hover,main a:hover{text-decoration:underline;text-underline-offset:3px}
 .tile:hover,.row:hover{border-color:var(--acc);box-shadow:0 0 0 2px color-mix(in srgb,var(--acc) 35%,transparent)}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 
@@ -476,8 +476,44 @@ html.dark .w2,html.dark .pill.w2{background:#3d3418!important;color:#ffe08a!impo
 html.dark .bar{background:#2c4150}
 html.dark button,html.dark .btn{color:var(--ink);border-color:#4a6373}
 html.dark button:not(.prim):hover{background:#22404f;border-color:#7fe0ad}
-html.dark a{color:#9fe8c0}
+html.dark main a{color:#e8a58b}
 html.dark .tile.soon{opacity:.75;color:var(--muted)}
+
+/* ===== Painel redesenhado: largura total, hierarquia clara e destaques por bloco ===== */
+main{max-width:none!important;width:100%;margin:0!important;padding:20px clamp(16px,2.2vw,36px) 72px!important}
+main .dh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;padding:22px 28px;border-radius:16px;min-height:0}
+main .dh h1{font-size:clamp(22px,2.4vw,30px);margin:2px 0 4px}
+main .dh .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+main .dh .cta button{min-height:44px;padding:0 20px;border-radius:12px;font-weight:700}
+main .dh-i{justify-self:end}
+main .kp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:14px 0 4px}
+main .kp>div{display:flex;flex-direction:column;gap:2px;padding:14px 18px;border-radius:14px;border:1px solid var(--line);border-left:4px solid var(--acc);background:var(--card)}
+main .kp>div b{font-size:26px;line-height:1.1}
+main .sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+main .sh h2{margin:0;font-size:18px}
+main .bk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+main .bkc{--bc:var(--acc);border-top:4px solid var(--bc);border-radius:14px;text-align:left}
+main .bkc:nth-child(1){--bc:#2f855a}main .bkc:nth-child(2){--bc:#3b82c4}main .bkc:nth-child(3){--bc:#d97757}
+main .bkc .bar div{background:var(--bc)}
+main .ac{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+main .acc{border-radius:14px;min-height:96px}
+@media(max-width:900px){main .kp{grid-template-columns:repeat(2,minmax(0,1fr))}main .bk{grid-template-columns:1fr}main .dh{grid-template-columns:1fr}main .dh-i{justify-self:start}}
+html.dark main .dh{background:linear-gradient(135deg,#30302e,#262624)!important;border:1px solid var(--line)}
+html.dark main .dh .hi{color:#c2c0b6}
+html.dark main .dh .cd b{color:#faf9f5}
+html.dark main .b1{background:#d97757!important;color:#1f1e1d!important;border-color:#d97757!important}
+html.dark main .b2{background:transparent!important;color:#faf9f5!important;border:1px solid #6b6a65!important}
+html.dark main .b2:hover{background:#3d3d3a!important;border-color:#faf9f5!important}
+html.dark main .kp>div{border-left-color:#d97757}
+html.dark main .bkc .w{background:#3d3d3a;color:#faf9f5}
+html.dark main .bkc .w.g{background:#4a3a1c;color:#ffd98a}
+
+main .dh{padding:18px 26px}
+main .dh-i{min-width:250px}
+main .dh-i .ring{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:14px;white-space:nowrap}
+main .dh-i .ring small{display:block;white-space:normal;line-height:1.3}
+html.dark main .dh-i .ring{background:#3d3d3a!important;border:1px solid #4a4a46}
+html.dark main .dh-i .ring b{color:#faf9f5}
 </style>
 <script>
 window.addEventListener('message',function(e){

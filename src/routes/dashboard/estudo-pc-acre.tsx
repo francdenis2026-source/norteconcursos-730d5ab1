@@ -98,10 +98,10 @@ function EstudoPcAcre() {
           Carregando a área de estudo…
         </p>
       )}
-      <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 px-1 text-xs text-muted-foreground">
-        <span>Estatística em PDF (288 questões):</span>
+      <p className="mt-2 flex flex-wrap items-center justify-end gap-x-3 gap-y-1 px-1 text-xs text-muted-foreground">
+        <span className="whitespace-nowrap">Estatística em PDF (288 questões):</span>
         <a
-          className="underline underline-offset-2 hover:text-foreground"
+          className="whitespace-nowrap underline underline-offset-2 hover:text-foreground"
           href={questoesPdf}
           target="_blank"
           rel="noopener"
@@ -110,7 +110,7 @@ function EstudoPcAcre() {
         </a>
         <span aria-hidden="true">·</span>
         <a
-          className="underline underline-offset-2 hover:text-foreground"
+          className="whitespace-nowrap underline underline-offset-2 hover:text-foreground"
           href={gabaritoPdf}
           target="_blank"
           rel="noopener"
