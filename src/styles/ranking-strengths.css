@@ -6,7 +6,7 @@
 .rks__row[data-tone="hi"] { --c: #22c55e; }
 .rks__row[data-tone="mid"] { --c: #e5b85e; }
 .rks__row[data-tone="lo"] { --c: #f97316; }
-.rks__name { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rks__name { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .rks__bar { height: 4px; border-radius: 99px; background: color-mix(in oklab, currentColor 12%, transparent); overflow: hidden; }
 .rks__bar i { display: block; height: 100%; border-radius: inherit; background: var(--c); transform-origin: left; animation: rks-grow .7s cubic-bezier(.2,.8,.2,1) both; }
 .rks__pct { font-size: 12px; font-weight: 800; text-align: right; color: var(--c); font-variant-numeric: tabular-nums; }

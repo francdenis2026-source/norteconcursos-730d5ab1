@@ -82,26 +82,20 @@ export function RankingPodiumModal({
             </div>
           </header>
 
-          <dl className="rkm__stats">
-            <div>
-              <dt>
-                <BrainCircuit aria-hidden="true" /> Questões
-              </dt>
-              <dd>{number.format(c.questions)}</dd>
-            </div>
-            <div>
-              <dt>
-                <Target aria-hidden="true" /> Acerto
-              </dt>
-              <dd>{c.accuracy}%</dd>
-            </div>
-            <div>
-              <dt>
-                <Timer aria-hidden="true" /> Simulados
-              </dt>
-              <dd>{number.format(c.simulators)}</dd>
-            </div>
-          </dl>
+          <ul className="rkm__stats" aria-label="Estatísticas">
+            <li>
+              <BrainCircuit aria-hidden="true" />
+              <b>{number.format(c.questions)}</b> questões
+            </li>
+            <li>
+              <Target aria-hidden="true" />
+              <b>{c.accuracy}%</b> de acerto
+            </li>
+            <li>
+              <Timer aria-hidden="true" />
+              <b>{number.format(c.simulators)}</b> {c.simulators === 1 ? "simulado" : "simulados"}
+            </li>
+          </ul>
           {gap > 0 && (
             <p className="rkm__gap">
               A <b>{number.format(gap)} pontos</b> do 1º lugar.

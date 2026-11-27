@@ -9,9 +9,10 @@
   --m-hi: #4ade80;
   --m-mid: #e8bd5c;
   --m-lo: #f0896f;
-  width: min(26rem, calc(100vw - 24px));
+  width: min(26rem, calc(100vw - 24px)) !important;
+  max-width: min(26rem, calc(100vw - 24px)) !important;
   max-height: calc(100dvh - 24px);
-  margin: auto;
+  margin: auto !important;
   padding: 0;
   border: 1px solid color-mix(in srgb, var(--m-tone) 45%, transparent);
   border-radius: 20px;
@@ -69,11 +70,12 @@
 .rkm__pts b { font-size: 1.9rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--m-ink); }
 .rkm__pts small { margin-top: 4px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--m-dim); }
 
-.rkm__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; }
-.rkm__stats > div { display: grid; gap: 4px; padding: 9px 8px; border: 1px solid var(--m-line); border-radius: 12px; background: var(--m-raised); min-width: 0; }
-.rkm .rkm__stats dt { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px !important; line-height: 1.2 !important; font-weight: 600; letter-spacing: 0 !important; text-transform: none !important; white-space: nowrap; color: var(--m-dim); }
-.rkm__stats dt svg { width: 14px; height: 14px; color: var(--m-tone); flex: none; }
-.rkm .rkm__stats dd { margin: 0; font-size: 1.25rem !important; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--m-ink); }
+.rkm__stats { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin: 0; padding: 10px 0; border-block: 1px solid var(--m-line); list-style: none; }
+.rkm__stats li { display: inline-flex; align-items: center; gap: 6px; padding-inline: 10px; font-size: 13px; color: var(--m-dim); white-space: nowrap; }
+.rkm__stats li:first-child { padding-inline-start: 0; }
+.rkm__stats li:not(:first-child) { border-left: 1px solid var(--m-line); }
+.rkm__stats svg { width: 14px; height: 14px; color: var(--m-tone); flex: none; }
+.rkm__stats b { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--m-ink); }
 .rkm__gap { margin: -4px 0 0; font-size: 13px; color: var(--m-dim); }
 .rkm__gap b { color: var(--m-ink); }
 
