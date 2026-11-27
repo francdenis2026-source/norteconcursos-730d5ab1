@@ -1171,7 +1171,7 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
  main:has(.pv) .pv-side::-webkit-scrollbar{display:none}
  main:has(.pv) .pv-side>section{padding:8px 12px}
  main:has(.pv) .pv-nav{padding:8px}.pv-nav button{padding:5px 8px}.pv-ni{width:28px;height:28px}
- main:has(.pv) .pv-prow:nth-of-type(n+3){display:none}
+ main:has(.pv) .pv-prow:nth-of-type(n+4){display:none}
  main:has(.pv) .pv-prow{padding:5px 8px}
  main:has(.pv) .pv-week>p{display:none}
  main:has(.pv) .pv-wk{height:54px}
@@ -1191,7 +1191,8 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
  main:has(.pv) .pv-focus{padding:8px 12px}main:has(.pv) .pv-fi{padding:6px 8px}
  main:has(.pv) .pv-side{gap:6px}
 }
-@media(min-width:901px) and (max-height:780px){main:has(.pv) .pv-prow:nth-of-type(n+2){display:none}}
+@media(min-width:901px) and (max-height:860px){main:has(.pv) .pv-prow:nth-of-type(n+3){display:none}}
+@media(min-width:901px) and (max-height:740px){main:has(.pv) .pv-prow:nth-of-type(n+2){display:none}}
 
 /* ===== Blocos do Mapa do edital: linhas de uma linha, sem sobreposição (desktop) ===== */
 @media(min-width:901px){
@@ -1245,6 +1246,18 @@ html body main details.ordem .ordem-b:has(>p.muted){display:grid;grid-template-c
 html body main details.ordem .ordem-b:has(>p.muted)>p.muted:first-child{grid-column:1/-1}
 html body main details.ordem .ordem-b:has(>p.muted)>p{padding:6px 0 0;border-top:1px solid var(--line)}
 html body main details.ordem .ordem-b:has(>p.muted)>p:first-child{border-top:0;padding:0}
+
+/* ===== Coluna lateral do painel: cartões naturais, semana legível, atalhos sem corte ===== */
+@media(min-width:901px){
+ main:has(.pv) .pv-side{display:flex!important;flex-direction:column;gap:8px;align-content:start}
+ main:has(.pv) .pv-side>*{flex:none!important}
+ main:has(.pv) .pv-wk{height:auto!important;align-items:end}
+ main:has(.pv) .pv-wb{height:30px!important}
+ main:has(.pv) .pv-wk em{display:block!important;font-size:10px;line-height:12px;margin-top:2px;text-align:center}
+ main:has(.pv) .pv-nav button>svg:last-child{display:none}
+ main:has(.pv) .pv-nav .pv-nt b{font-size:12.5px!important}
+ main:has(.pv) .pv-side>section,main:has(.pv) .pv-nav{border-radius:12px}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
