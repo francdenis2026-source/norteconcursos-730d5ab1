@@ -42,6 +42,7 @@ html[data-norte-boot=ready] #norte-initial-loading .norte-boot-copy{transform:sc
 @keyframes norte-boot-progress{from{transform:translateX(-110%)}to{transform:translateX(250%)}}
 @media(prefers-reduced-motion:reduce){#norte-initial-loading .norte-boot-copy{transition:none}}
 html[data-norte-boot=ready] #norte-initial-loading{opacity:0;visibility:hidden;pointer-events:none}
+html[data-norte-skip-splash] #norte-initial-loading{display:none!important}
 html[data-norte-startup-stage=intro] #norte-initial-loading>:is(.norte-boot-copy,.norte-boot-sign){visibility:hidden}
 @media(orientation:portrait){#norte-initial-loading>picture img{object-position:70% 50%}}
 @media(max-height:500px){#norte-initial-loading .norte-boot-logo{width:clamp(90px,34vh,150px)}#norte-initial-loading .norte-boot-status{margin-top:10px}#norte-initial-loading .norte-boot-rule,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-sign:before{display:none}#norte-initial-loading .norte-boot-motto{margin-top:10px}}
@@ -51,7 +52,7 @@ html[data-norte-startup-stage=intro] #norte-initial-loading>:is(.norte-boot-copy
 `;
 
 // If hydration fails entirely, reveal SSR/error content instead of trapping the visitor.
-export const INITIAL_LOADING_WATCHDOG = `(()=>{const t=setTimeout(()=>{document.documentElement.dataset.norteBoot='ready'},6000);window.addEventListener('norte:boot-ready',()=>clearTimeout(t),{once:true})})();`;
+export const INITIAL_LOADING_WATCHDOG = `(()=>{try{if(sessionStorage.getItem('norte-booted')==='1'){var d=document.documentElement;d.dataset.norteSkipSplash='true';d.dataset.norteBoot='ready';d.dataset.norteStartupStage='ready';return}}catch(e){}const t=setTimeout(()=>{document.documentElement.dataset.norteBoot='ready'},6000);window.addEventListener('norte:boot-ready',()=>clearTimeout(t),{once:true})})();`;
 
 export function InitialLoadingScreen() {
   return (

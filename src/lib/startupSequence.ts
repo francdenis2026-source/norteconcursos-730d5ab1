@@ -29,6 +29,8 @@ export function finishInitialLoading() {
   if (typeof document === 'undefined' || document.documentElement.dataset['norteBoot'] === 'ready') return;
   document.documentElement.dataset['norteBoot'] = 'ready';
   document.documentElement.dataset['norteStartupStage'] = 'ready';
+  // A abertura animada só toca na primeira carga da sessão; atualizações (F5, deploy novo) abrem direto.
+  try { sessionStorage.setItem('norte-booted', '1'); } catch { /* storage is optional */ }
   window.dispatchEvent(new Event('norte:boot-ready'));
 }
 
