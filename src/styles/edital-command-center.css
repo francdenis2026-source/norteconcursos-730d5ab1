@@ -268,3 +268,5 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-bank__cta svg 
   stroke: oklch(0.2 0.03 70) !important;
 }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_) .ecc .ecc-bank__cta svg { width: 1rem !important; height: 1rem !important; stroke-width: 2.25 !important; opacity: 1 !important; }
+/* Sem o cartão do acervo (repetia o Catálogo do menu): o concurso ocupa toda a largura */
+@media (min-width: 1100px) { html body .ecc { grid-template-columns: minmax(0, 1fr) !important; } }

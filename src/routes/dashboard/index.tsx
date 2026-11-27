@@ -578,6 +578,7 @@ function StudentHome({ user }: { user: UserProfile }) {
               />
             ) : !plan ? (
               <>
+                {!cronogramaLocked && (
                 <div className="sh2-next">
                   <Sparkles aria-hidden="true" />
                   <div>
@@ -585,6 +586,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                     <small>{priority.reason}</small>
                   </div>
                 </div>
+                )}
                 {cronogramaLocked ? (
                   <p className="sh2-note" role="status">
                     Edital {objective?.agency} ativo: novos cronogramas ficam bloqueados. Troque o
@@ -707,7 +709,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                 {schedule?.blocks.length ? "Abrir atividades do dia" : "Abrir cronograma"}
                 <ArrowRight aria-hidden="true" />
               </Link>
-            ) : (
+            ) : priority.to === "/dashboard/question-trainer" && priority.label === "Resolver questões" ? null : (
               <Link
                 className="sh2-cta"
                 to={priority.to}

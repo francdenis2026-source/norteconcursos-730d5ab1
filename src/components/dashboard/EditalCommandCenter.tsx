@@ -6,17 +6,12 @@ import {
   ArrowUpRight,
   BookOpen,
   CalendarDays,
-  Database,
   FileText,
   GraduationCap,
   ListChecks,
   ScanSearch,
-  ShieldCheck,
   Target,
 } from "lucide-react";
-import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
-import { acreDateKey } from "@/lib/acreTime";
-import { platformDate } from "@/lib/platformClock";
 import "@/styles/edital-command-center.css";
 
 const EXAM_DATE = "2027-01-24";
@@ -68,17 +63,7 @@ const actions = [
 
 /** Concurso ativo e acervo da plataforma num só bloco, com ações diretas. */
 export function EditalCommandCenter() {
-  const summary = usePlatformQuestionSummary(true);
-  // Valor direto: a animação de contagem dependia de requestAnimationFrame e ficava presa em 0 em abas ocultas.
-  const registered = summary.data?.registered ?? 0;
-  const available = summary.data?.available ?? 0;
-  const today = acreDateKey(platformDate());
   const days = examDaysLeft(EXAM_DATE) ?? 0;
-  const share =
-    summary.data?.registered && summary.data.available !== undefined
-      ? Math.round((summary.data.available / summary.data.registered) * 100)
-      : null;
-
   return (
     <div className="ecc no-print">
       <article className="ecc-contest" aria-labelledby="ecc-title">
@@ -163,50 +148,7 @@ export function EditalCommandCenter() {
         </nav>
       </article>
 
-      <aside className="ecc-bank" aria-labelledby="ecc-bank-title">
-        <header>
-          <p className="ecc-eyebrow">Concursos públicos e ENEM</p>
-          <h3 id="ecc-bank-title">Acervo da plataforma</h3>
-        </header>
-        <dl className="ecc-bank__stats">
-          <div>
-            <dt>
-              <Database aria-hidden="true" /> Total cadastrado
-            </dt>
-            <dd>{summary.data ? registered.toLocaleString("pt-BR") : summary.isError ? "—" : "…"}</dd>
-            <small>Oficiais e autorais</small>
-          </div>
-          <div>
-            <dt>
-              <ShieldCheck aria-hidden="true" /> Disponíveis para treinar
-            </dt>
-            <dd>{summary.data ? available.toLocaleString("pt-BR") : summary.isError ? "—" : "…"}</dd>
-            <small>Publicadas e liberadas</small>
-          </div>
-        </dl>
-        {share !== null && (
-          <div className="ecc-bank__meter">
-            <div
-              role="meter"
-              aria-label="Parte do acervo disponível para treinar"
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-valuenow={share}
-            >
-              <i style={{ width: `${share}%` }} />
-            </div>
-            <span>{share}% do acervo liberado para treino</span>
-          </div>
-        )}
-        <div className="ecc-bank__links">
-          <Link to="/dashboard/question-bank" className="ecc-bank__more">
-            Catálogo completo
-          </Link>
-          <Link to="/dashboard/question-trainer" className="ecc-bank__cta">
-            Treinar agora <ArrowRight aria-hidden="true" />
-          </Link>
-        </div>
-      </aside>
+
     </div>
   );
 }
