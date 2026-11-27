@@ -17,7 +17,7 @@
   html body #plataforma .sx-card::after { font-size: 2.25rem !important; opacity: .18 !important; }
 
   /* Concursos: foto menor, cartão mais denso */
-  html body #concursos .sx-exam > img { height: 150px !important; aspect-ratio: auto !important; object-fit: cover !important; }
+  html body #concursos .sx-exam > img { width: 100% !important; height: auto !important; aspect-ratio: 1672 / 941 !important; object-fit: cover !important; object-position: 50% 50% !important; }
   html body #concursos .sx-exam__body { padding: 14px 16px !important; gap: 6px !important; }
 
   /* Desafio diário: bloco menos alto */
