@@ -19,6 +19,7 @@ import { GUEST_DAILY_LIMIT } from "@/lib/guestQuota";
 import "@/styles/home-saas.css";
 import "@/styles/home-refine.css";
 import "@/styles/home-cube.css";
+import "@/styles/pcac-tag.css";
 
 const FEATURES: { icon: LucideIcon; title: string; text: string }[] = [
   {
@@ -78,6 +79,13 @@ export function HomeIntro({ mobile = false }: { mobile?: boolean }) {
                 <NorteCube size={0.17} />
               </div>
             )}
+            <a href="#concurso-pcac" className="pcac-tag" aria-label="Concurso da Polícia Civil do Acre: edital aberto, prova em 24 de janeiro de 2027">
+              <span className="pcac-tag__live" aria-hidden="true" />
+              <b>PC-AC 2026</b>
+              <span className="pcac-tag__sep" aria-hidden="true" />
+              <span>Edital aberto · IDECAN · prova 24/01/2027</span>
+              <ArrowRight aria-hidden="true" />
+            </a>
             <span className="sx-eyebrow">
               <ShieldCheck aria-hidden="true" /> Preparação para carreiras policiais
             </span>

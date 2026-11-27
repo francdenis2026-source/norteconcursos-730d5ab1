@@ -12,7 +12,7 @@ export function PcacBanner({ mobile = false }: { mobile?: boolean }) {
   const suffix = mobile ? "-mobile" : "";
   const { isAuthenticated } = useAuthStatus();
   return (
-    <div className="sx sx-banner-wrap">
+    <div className="sx sx-banner-wrap" id={suffix ? undefined : "concurso-pcac"}>
       <article className="sx-banner" aria-labelledby={"sx-pcac-title" + suffix}>
         <img
           className="sx-banner__art"
