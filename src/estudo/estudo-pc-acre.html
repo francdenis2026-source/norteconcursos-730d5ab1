@@ -1192,6 +1192,26 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
  main:has(.pv) .pv-side{gap:6px}
 }
 @media(min-width:901px) and (max-height:780px){main:has(.pv) .pv-prow:nth-of-type(n+2){display:none}}
+
+/* ===== Blocos do Mapa do edital: linhas de uma linha, sem sobreposição (desktop) ===== */
+@media(min-width:901px){
+ main:has(.pv) .pv-d{grid-template-columns:minmax(0,1fr) auto 84px!important;grid-template-rows:auto!important;gap:0 8px!important;align-items:center;padding:1px 8px!important}
+ main:has(.pv) .pv-d .pv-dpw{grid-column:auto!important;display:flex;align-items:center}
+ main:has(.pv) .pv-d .pv-dpw em{display:none}
+ main:has(.pv) .pv-d .pv-dpw .pv-dp{flex:1;grid-column:auto;height:4px}
+ main:has(.pv) .pv-dn{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px!important;line-height:1.25}
+ main:has(.pv) .pv-blk li{flex:1 1 auto!important;min-height:30px!important}
+ main:has(.pv) .pv-blk ul{overflow:auto}
+ main:has(.pv) .pv-blk header{display:flex;flex-wrap:wrap;align-items:center;gap:3px 8px;padding:7px 12px!important}
+ main:has(.pv) .pv-blk header>*{margin:0!important}
+ main:has(.pv) .pv-blk header .m{display:none}
+ main:has(.pv) .pv-blk header .w{display:inline-flex;padding:2px 9px!important;font-size:11px!important;white-space:nowrap}
+ main:has(.pv) .pv-blk header h3{font-size:14.5px!important;flex:1 1 100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;line-height:1.2!important}
+ main:has(.pv) .pv-blk footer{display:flex!important;justify-content:space-around;align-items:center;gap:6px;padding:4px 12px!important}
+ main:has(.pv) .pv-blk footer .pv-bp{display:none}
+ main:has(.pv) .pv-blk footer>div{display:flex!important;flex-direction:row;align-items:baseline;gap:5px;margin:0!important}
+ main:has(.pv) .pv-blk footer b{font-size:15px}main:has(.pv) .pv-blk footer span{font-size:11px}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1564,7 +1584,7 @@ function vHome() {
     h += `<article class="pv-blk" data-i="${bi}"><header><span class="w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h3>${b.nome.replace(" (gerais)", "")}</h3><span class="m">${rd.length} de ${b.discs.length} disciplinas com material</span></header><ul>`;
     b.discs.forEach(d => {
       const dq = d.pronto ? subQ(d.id) : [], dc = certas(dq), dp = dq.length ? Math.round(100 * dc / dq.length) : 0;
-      h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}" title="${d.pronto ? dq.length + " questões" : ""}">${d.pronto ? dq.length + " q." : "em breve"}</span>${d.pronto ? `<span class="pv-dpw"><span class="pv-dp" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${dp}" aria-label="Progresso em ${d.nome}"><i style="width:${dp}%"></i></span><em>${dc}/${dq.length} · ${dp}%</em></span>` : ""}</button></li>`;
+      h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn" title="${d.nome}">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}" title="${d.pronto ? dq.length + " questões" : ""}">${d.pronto ? dq.length + " q." : "em breve"}</span>${d.pronto ? `<span class="pv-dpw" title="${dc}/${dq.length} acertadas · ${dp}%"><span class="pv-dp" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${dp}" aria-label="Progresso em ${d.nome}"><i style="width:${dp}%"></i></span><em>${dc}/${dq.length} · ${dp}%</em></span>` : ""}</button></li>`;
     });
     h += `</ul><footer><span class="pv-bp" aria-hidden="true"><i style="width:${p}%"></i></span><div><b>${c}</b><span>acertadas</span></div><div><b>${feitas(ids)}</b><span>respondidas</span></div><div><b>${p}%</b><span>do bloco</span></div></footer></article>`;
   });

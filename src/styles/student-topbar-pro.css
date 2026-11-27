@@ -165,3 +165,19 @@
 @media (min-width: 1101px) {
   html body .app-shell[data-area]:not(#_):not(#_):not(#_) { min-height: calc(100dvh - 32px) !important; }
 }
+
+/* ===== Barra superior do aluno, desktop: discreta (46 px), navegação só com ícones; o nome aparece ao apontar (AreaHint) ===== */
+@media (min-width: 1101px) {
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) { --app-topbar-h: 46px; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-topbar { height: 46px !important; min-height: 0 !important; padding-block: 0 !important; padding-inline: 14px !important; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation { height: 46px; min-height: 0; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation__brand { height: 36px; width: auto; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation__brand-emblem { width: 32px; height: 32px; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation__links { height: 46px; gap: 4px; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger { min-height: 34px !important; height: 34px !important; width: auto; padding: 0 8px !important; gap: 3px !important; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .student-top-navigation__icon-wrap { width: 26px; height: 26px; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions { height: 34px; padding: 0 4px; gap: 0; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) { width: 30px !important; height: 30px !important; min-width: 0 !important; min-height: 0 !important; }
+  html body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_) .app-topbar__actions svg { width: 16px; height: 16px; }
+}
