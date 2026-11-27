@@ -1171,7 +1171,27 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
  main:has(.pv) .pv-side::-webkit-scrollbar{display:none}
  main:has(.pv) .pv-side>section{padding:8px 12px}
  main:has(.pv) .pv-nav{padding:8px}.pv-nav button{padding:5px 8px}.pv-ni{width:28px;height:28px}
+ main:has(.pv) .pv-prow:nth-of-type(n+3){display:none}
+ main:has(.pv) .pv-prow{padding:5px 8px}
+ main:has(.pv) .pv-week>p{display:none}
+ main:has(.pv) .pv-wk{height:54px}
+ main:has(.pv) .pv-side h2{margin:0 0 4px!important;font-size:13px!important}
+ main:has(.pv) .pv-nav{grid-template-columns:1fr 1fr}
+ main:has(.pv) .pv-nav h2{grid-column:1/-1}
+ main:has(.pv) .pv-nav button{min-width:0}
+ main:has(.pv) .pv-nav small{display:none}
+ main:has(.pv) .pv-nav .pv-ni{display:none}
+ main:has(.pv) .pv-nav{gap:5px!important}
+ main:has(.pv) .pv-nav button{min-height:0!important;height:30px;padding:4px 8px!important;white-space:nowrap;overflow:hidden}
+ main:has(.pv) .pv-nav b{font-size:12.5px!important}
+ main:has(.pv) .pv-nav .pv-nt{overflow:hidden;text-overflow:ellipsis}
+ main:has(.pv) .pv-wk{height:40px!important}
+ main:has(.pv) .pv-ring{width:56px!important;height:56px!important}main:has(.pv) .pv-ring b{font-size:14px!important}
+ main:has(.pv) .pv-ringc{padding:6px 12px!important}
+ main:has(.pv) .pv-focus{padding:8px 12px}main:has(.pv) .pv-fi{padding:6px 8px}
+ main:has(.pv) .pv-side{gap:6px}
 }
+@media(min-width:901px) and (max-height:780px){main:has(.pv) .pv-prow:nth-of-type(n+2){display:none}}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
