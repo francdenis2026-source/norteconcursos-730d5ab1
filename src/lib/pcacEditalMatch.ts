@@ -22,3 +22,20 @@ export function pcacEditalMatch(title: string): PcacEditalHit | null {
   if (!hit) return null;
   return { ...(hit as PcacEditalHit), cargos: [...cargos] };
 }
+
+const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\bno[cç]oes de\b/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+const KEY: Array<[RegExp, 0 | 1 | 2]> = [
+  [/portugues|raciocinio|matematica|informatica|realidade do acre|acre/, 0],
+  [/direito|legislacao|penal|constitucional|administrativo|leis/, 1],
+  [/contabil|estatistic|arquivolog|tecnologia da informacao|seguranca da informacao|analise de dados|administracao|medicina legal|criminolog|gestao/, 2],
+];
+export const PCAC_BLOCKS = ["Conhecimentos básicos", "Conhecimentos jurídicos", "Conhecimentos específicos", "Outras disciplinas"] as const;
+
+/** Bloco do edital PC-AC (Oficial Investigador e demais cargos) a que pertence uma disciplina; 3 = fora do edital. */
+export function pcacBlockOf(name: string): 0 | 1 | 2 | 3 {
+  const n = norm(name);
+  const inEdital = pcAcVerticalCargos.some((c) => c.blocks.some((b) => b.disciplines.some((d) => { const dn = norm(d.name); return dn.includes(n) || n.includes(dn.split(" ").slice(0, 2).join(" ")); })));
+  if (!inEdital && !/acre|informatica|portugues|raciocinio|matematica/.test(n)) return 3;
+  for (const [re, b] of KEY) if (re.test(n)) return b;
+  return 3;
+}

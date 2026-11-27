@@ -35,6 +35,8 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
 import { disciplineCards, disciplineGroup, type DisciplineCard } from "@/lib/disciplineHub";
+import { PCAC_BLOCKS, pcacBlockOf } from "@/lib/pcacEditalMatch";
+import "@/styles/material-blocks.css";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
@@ -347,8 +349,13 @@ function MaterialHub() {
             ))}
           </div>
         ) : (
-          <ul className="ak-tiles">
-            <li>
+          <ul className="ak-tiles ak-tiles--blocks">
+            {PCAC_BLOCKS.map((title, i) => (
+              <li key={title} className="ak-block-head" data-block={i} aria-hidden="true">
+                <span>{title}</span>{i < 3 && <em>Edital PC-AC</em>}
+              </li>
+            ))}
+            <li data-block={0}>
               <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: "Realidade do Acre" } })} className="ak-tile" data-tone={TILE_TONES[nextTone()]}>
                 <span className="ak-tile__icon">
                   <Landmark aria-hidden="true" />
@@ -358,7 +365,7 @@ function MaterialHub() {
               </button>
             </li>
             {SUBJECT_GUIDES.filter((guide) => guide.id !== "administracao-publica" || !availableSubjects.some((entry) => entry.name === "Administração Pública")).map((guide) => (
-              <li key={guide.id}>
+              <li key={guide.id} data-block={pcacBlockOf(guide.name)}>
                 <button
                   type="button"
                   onClick={() => void navigate({ to: "/dashboard/library", search: { collection: "subjects", guia: guide.id } as never, hash: "materiais-atualizados-pcac" })}
@@ -375,7 +382,7 @@ function MaterialHub() {
             {availableSubjects.filter((entry) => disciplineGroup(entry.name) !== "Realidade do Acre").map((entry) => {
               const Icon = SUBJECT_ICONS[entry.icon];
               return (
-                <li key={entry.name}>
+                <li key={entry.name} data-block={pcacBlockOf(entry.name)}>
                   <AreaHint title={entry.name} description={subjectDescription(entry.name)}>
                   <button type="button" onClick={() => void navigate({ to: "/dashboard/disciplinas", search: { d: entry.name } })} className="ak-tile" data-tone={TILE_TONES[nextTone()]}>
                     <span className="ak-tile__icon">
