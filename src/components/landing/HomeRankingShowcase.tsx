@@ -28,12 +28,14 @@ const Stars = ({ n }: { n: number }) => (
 );
 
 import { StrengthBars, parseStrengths, type Strength } from "@/components/ranking/StrengthBars";
+import { RankingPodiumModal } from "@/components/landing/RankingPodiumModal";
 
 export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
   const [candidates, setCandidates] = useState<Candidate[] | null>(null);
   const [unavailable, setUnavailable] = useState(false);
   const [updated, setUpdated] = useState<Date | null>(null);
   const [strengths, setStrengths] = useState<Record<number, Strength[]>>({});
+  const [open, setOpen] = useState<Candidate | null>(null);
   useEffect(() => {
     let alive = true;
     let lastLoadedAt = 0;
@@ -132,11 +134,12 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
                       const name = c.display_name.trim() || "Candidato";
                       return (
                         <li key={`${pos}-${name}`} data-place={pos}>
-                          <Link
-                            to="/dashboard/ranking"
-                            search={rankingSearch}
+                          <button
+                            type="button"
                             className="rka-podium__card"
-                            aria-label={`${pos}º lugar: ${name}, ${c.points} pontos. Ver ranking completo`}
+                            aria-haspopup="dialog"
+                            aria-label={`${pos}º lugar: ${name}, ${c.points} pontos. Ver detalhes`}
+                            onClick={() => setOpen(c)}
                           >
                             <span className="rka-podium__glow" aria-hidden="true" />
                             <span className="rka-podium__medal">
@@ -152,7 +155,7 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
                             </span>
                             <StrengthBars items={strengths[pos] ?? []} compact />
                             <span className="rka-podium__step" aria-hidden="true">{pos}º</span>
-                          </Link>
+                          </button>
                         </li>
                       );
                     })}
@@ -206,6 +209,12 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
           </section>
         </div>
       </div>
+      <RankingPodiumModal
+        candidate={open}
+        strengths={open ? (strengths[open.rank_position] ?? []) : []}
+        leaderPoints={leader}
+        onClose={() => setOpen(null)}
+      />
     </section>
   );
 }

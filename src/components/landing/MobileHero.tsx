@@ -64,7 +64,7 @@ export function MobileHero() {
             </span>
           </a>
           <div className="mhx-cube" aria-hidden="true">
-            <NorteCube size={0.6} />
+            <NorteCube size={0.52} />
           </div>
         </div>
 
