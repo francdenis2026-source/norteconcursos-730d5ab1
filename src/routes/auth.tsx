@@ -62,6 +62,10 @@ export const Route = createFileRoute("/auth")({
     meta: [
       { title: "Acessar plataforma | Norte Concurso" },
       { name: "description", content: "Entre na sua central de preparação Norte Concurso." },
+      { property: "og:title", content: "Acessar plataforma | Norte Concurso" },
+      { property: "og:description", content: "Entre na sua central de preparação Norte Concurso." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
@@ -113,7 +117,7 @@ function AuthPage() {
       if (routeSearch.recovery || recovery) {
         setMode("reset");
         setRecoverySession(!!session);
-      } else if (session) navigate({ ...(takeAfterAuth() as never), replace: true });
+      } else if (session) navigate({ ...takeAfterAuth(), replace: true } as never);
     });
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "PASSWORD_RECOVERY" && session) {

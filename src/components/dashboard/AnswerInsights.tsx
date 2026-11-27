@@ -205,7 +205,7 @@ export function AnswerInsights({
               label: b.label,
               title: b.label,
               bars: [b.acertos, b.erros],
-              tag: b.total ? `${Math.round((b.acertos / b.total) * 100)}%` : undefined,
+              ...(b.total ? { tag: `${Math.round((b.acertos / b.total) * 100)}%` } : {}),
               extra: [
                 {
                   label: "Aproveitamento",
