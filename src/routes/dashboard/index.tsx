@@ -1,4 +1,4 @@
-import { ExamCountdown } from "@/components/dashboard/ExamCountdown";
+import { HeroCountdown } from "@/components/dashboard/HeroCountdown";
 import { examDaysLeft } from "@/lib/examClock";
 import "@/styles/student-home-lean.css";
 import { EditalCommandCenter } from "@/components/dashboard/EditalCommandCenter";
@@ -19,6 +19,7 @@ import { type SparkPoint } from "@/components/dashboard/charts/Sparkline";
 import { NvSparkline } from "@/components/dashboard/charts/NvChart";
 import "@/styles/nextvita-theme.css";
 import "@/styles/student-home-reveal.css";
+import "@/styles/student-hero-v3.css";
 import "@/styles/student-hero-tech.css";
 import "@/styles/student-image-clarity.css";
 import "@/styles/student-dash-refine.css";
@@ -344,11 +345,11 @@ function StudentHome({ user }: { user: UserProfile }) {
   };
   return (
     <div className="student-home student-hub student-desk student-overview sh2">
-      <header className="sh2-hero">
+      <header className="hx" aria-labelledby="student-home-title">
         {/* Só entra quando o objetivo já carregou: evita baixar a imagem genérica e trocá-la em seguida. */}
         {!q.objective.isPending && (
           <img
-            className="sh2-hero__art"
+            className="hx__art"
             src={
               isPcAcre
                 ? "/media/hero/landing-pcac.webp"
@@ -360,12 +361,14 @@ function StudentHome({ user }: { user: UserProfile }) {
             fetchPriority="high"
           />
         )}
-        <div className="sh2-hero__hello">
-          <p>
-            {hello}, {firstName}.
+        <div className="hx__head">
+          <p className="hx__hello">
+            {hello}, {firstName}
           </p>
-          <h1 id="student-home-title">Área do aluno</h1>
-          <span className="sh2-hero__date">
+          <h1 id="student-home-title" className="hx__title">
+            Área do aluno
+          </h1>
+          <span className="hx__date">
             <CalendarClock aria-hidden="true" />
             {new Intl.DateTimeFormat("pt-BR", {
               day: "2-digit",
@@ -375,56 +378,58 @@ function StudentHome({ user }: { user: UserProfile }) {
             · Acre
           </span>
         </div>
-        <section className="sh2-hero__contest" aria-label="Concurso e prova">
-          {isPcAcre ? (
-            <span className="student-hub__acre-flag" aria-label="Bandeira do Acre" role="img" />
-          ) : (
-            <Trophy className="sh2-hero__icon" aria-hidden="true" />
-          )}
-          <div className="sh2-hero__contest-copy">
-            <small>Concurso ativo</small>
-            <h2>
-              {objective?.agency ??
-                (q.objective.isPending
-                  ? "Carregando…"
-                  : q.objective.isError
-                    ? "Concurso indisponível"
-                    : "Nenhum concurso selecionado")}
-            </h2>
-            {objective && (
-              <p>{[objective.role, objective.examBoard].filter(Boolean).join(" · ")}</p>
+        <section className="hx__card" aria-label="Concurso e prova">
+          <div className="hx__contest">
+            {isPcAcre ? (
+              <img className="hx__crest" src="/media/brasao-acre-oficial.svg" alt="" aria-hidden="true" width={40} height={40} decoding="async" />
+            ) : (
+              <Trophy className="hx__crest hx__crest--icon" aria-hidden="true" />
+            )}
+            <div className="hx__who">
+              <small>Concurso ativo</small>
+              <h2>
+                {objective?.agency ??
+                  (q.objective.isPending
+                    ? "Carregando…"
+                    : q.objective.isError
+                      ? "Concurso indisponível"
+                      : "Nenhum concurso selecionado")}
+              </h2>
+              {objective && <p>{[objective.role, objective.examBoard].filter(Boolean).join(" · ")}</p>}
+            </div>
+            {q.objective.isError ? (
+              <button
+                type="button"
+                className="hx__swap"
+                onClick={() => void q.objective.refetch()}
+                disabled={q.objective.isFetching}
+              >
+                Tentar novamente
+              </button>
+            ) : (
+              <Link to="/dashboard/my-contest" className="hx__swap">
+                {objective ? "Trocar" : "Meu concurso"} <ArrowRight aria-hidden="true" />
+              </Link>
             )}
           </div>
           {objective && (
-            <div className="sh2-hero__exam">
+            <div className="hx__exam">
               {examDate && days !== null && days > 0 ? (
-                <ExamCountdown examDate={examDate} />
+                <HeroCountdown examDate={examDate} />
               ) : (
-                <>
-                  <small>Data da prova</small>
+                <div className="hx-cd hx-cd--text">
+                  <span className="hx-cd__label">Data da prova</span>
                   {examDate && days !== null ? (
-                    <time dateTime={examDate}>{formatExamDate(examDate)}</time>
+                    <time className="hx-cd__date" dateTime={examDate}>
+                      {formatExamDate(examDate)}
+                    </time>
                   ) : (
-                    <strong>A definir</strong>
+                    <strong className="hx-cd__date">A definir</strong>
                   )}
-                  {examCountdown && <p>{examCountdown}</p>}
-                </>
+                  {examCountdown && <p className="hx-cd__note">{examCountdown}</p>}
+                </div>
               )}
             </div>
-          )}
-          {q.objective.isError ? (
-            <button
-              type="button"
-              className="sh2-link"
-              onClick={() => void q.objective.refetch()}
-              disabled={q.objective.isFetching}
-            >
-              Tentar novamente
-            </button>
-          ) : (
-            <Link to="/dashboard/my-contest" className="sh2-link">
-              {objective ? "Trocar concurso" : "Meu concurso"} <ArrowRight aria-hidden="true" />
-            </Link>
           )}
         </section>
       </header>
