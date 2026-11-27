@@ -1346,6 +1346,23 @@ body.side-off.peek .shell{grid-template-columns:var(--sbw) minmax(0,1fr)}
 html.dark .sm-go{background:#e5b85e;color:#10151d}
 @media(max-width:900px){.sm{grid-template-columns:1fr}.sm-hero{min-height:180px}.sm-form{grid-template-columns:1fr}}
 @media(min-width:901px){main:has(.sm){display:flex;flex-direction:column;justify-content:center}main:has(.sm) .sm{min-height:min(440px,100%)}}
+
+/* Seletor próprio: lista com rolagem fina, item ativo marcado, abre em 120 ms */
+select.nsel-src{display:none!important}
+.nsel{position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:14px;font-weight:500;text-align:left;cursor:pointer;box-sizing:border-box;transition:border-color .12s,box-shadow .12s}
+.nsel span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nsel svg{flex:none;width:16px;height:16px;color:var(--muted);transition:transform .15s}
+.nsel:hover{border-color:#e5b85e}
+.nsel[aria-expanded=true]{border-color:#e5b85e;box-shadow:0 0 0 3px rgba(229,184,94,.2)}
+.nsel[aria-expanded=true] svg{transform:rotate(180deg)}
+.nsel:focus-visible{outline:2px solid #e5b85e;outline-offset:1px}
+.nsel-pop{position:fixed;z-index:99999;max-height:min(300px,50vh);overflow:auto;padding:5px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);box-shadow:0 18px 40px -12px rgba(0,0,0,.5);scrollbar-width:thin;opacity:0;transform:translateY(-4px);transition:opacity .12s,transform .12s}
+.nsel-pop.on{opacity:1;transform:none}
+.nsel-pop[data-up]{transform-origin:bottom}
+.nsel-o{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:8px 10px;border:0;border-radius:8px;background:none;color:inherit;font:inherit;font-size:13.5px;text-align:left;cursor:pointer}
+.nsel-o:hover,.nsel-o.hv{background:rgba(229,184,94,.14)}
+.nsel-o[aria-selected=true]{background:rgba(229,184,94,.22);font-weight:700}
+.nsel-o[aria-selected=true]::after{content:"";width:6px;height:11px;border:solid #e5b85e;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);flex:none}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -2400,6 +2417,39 @@ function restorePos() {
   } catch (e) {}
 }
 window.__restorePos = true;
+/* ---- seletor próprio (substitui a lista nativa, que não aceita estilo) ---- */
+let NSEL_POP = null;
+function nselClose() { if (NSEL_POP) { NSEL_POP.pop.remove(); NSEL_POP.btn.setAttribute("aria-expanded", "false"); NSEL_POP = null; } }
+function nselOpen(sel, btn) {
+  nselClose();
+  const pop = document.createElement("div"); pop.className = "nsel-pop"; pop.setAttribute("role", "listbox");
+  [...sel.options].forEach((o, i) => { const b = document.createElement("button"); b.type = "button"; b.className = "nsel-o"; b.setAttribute("role", "option"); b.setAttribute("aria-selected", String(i === sel.selectedIndex)); b.dataset.i = i; b.textContent = o.textContent; pop.appendChild(b); });
+  document.body.appendChild(pop);
+  const r = btn.getBoundingClientRect(), h = Math.min(pop.scrollHeight, 300), below = innerHeight - r.bottom - 8, up = below < h && r.top > below;
+  pop.style.minWidth = r.width + "px"; pop.style.left = Math.max(8, Math.min(r.left, innerWidth - Math.max(r.width, pop.offsetWidth) - 8)) + "px";
+  if (up) { pop.style.bottom = innerHeight - r.top + 6 + "px"; pop.dataset.up = "1"; pop.style.maxHeight = Math.min(300, r.top - 14) + "px"; } else { pop.style.top = r.bottom + 6 + "px"; pop.style.maxHeight = Math.min(300, below) + "px"; }
+  btn.setAttribute("aria-expanded", "true"); NSEL_POP = { pop, btn, sel };
+  requestAnimationFrame(() => pop.classList.add("on"));
+  const cur = pop.querySelector("[aria-selected=true]"); if (cur) pop.scrollTop = Math.max(0, cur.offsetTop - pop.clientHeight / 2 + cur.offsetHeight / 2);
+  pop.addEventListener("click", e => { const o = e.target.closest(".nsel-o"); if (!o) return; sel.selectedIndex = +o.dataset.i; btn.firstChild.textContent = sel.options[sel.selectedIndex].textContent; sel.dispatchEvent(new Event("change", { bubbles: true })); nselClose(); btn.focus(); });
+}
+function nselAll(root) {
+  (root || document).querySelectorAll("select:not(.nsel-src)").forEach(sel => {
+    sel.classList.add("nsel-src");
+    const btn = document.createElement("button"); btn.type = "button"; btn.className = "nsel"; btn.setAttribute("aria-haspopup", "listbox"); btn.setAttribute("aria-expanded", "false");
+    btn.innerHTML = `<span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
+    btn.firstChild.textContent = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].textContent : "";
+    sel.insertAdjacentElement("afterend", btn);
+    btn.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); (NSEL_POP && NSEL_POP.btn === btn) ? nselClose() : nselOpen(sel, btn); });
+    btn.addEventListener("keydown", e => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); const n = Math.max(0, Math.min(sel.options.length - 1, sel.selectedIndex + (e.key === "ArrowDown" ? 1 : -1))); if (n !== sel.selectedIndex) { sel.selectedIndex = n; btn.firstChild.textContent = sel.options[n].textContent; sel.dispatchEvent(new Event("change", { bubbles: true })); } }
+    });
+  });
+}
+document.addEventListener("click", e => { if (NSEL_POP && !e.target.closest(".nsel-pop")) nselClose(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") nselClose(); });
+addEventListener("resize", nselClose);
+document.addEventListener("scroll", e => { if (NSEL_POP && !(e.target.closest && e.target.closest(".nsel-pop"))) nselClose(); }, true);
 function render(scroll) {
   try { localStorage.setItem("pcac_view", JSON.stringify(S)); } catch (e) {}
   saveTrain();
@@ -2412,6 +2462,7 @@ function render(scroll) {
   if (TRAIN && (!TRAIN_VIEWS.includes(S.v) || (S.v === "topic" && S.tab === "estudar"))) m.insertAdjacentHTML("afterbegin", trainBanner());
   side();
   markSyms(m);
+  nselAll(m);
   updSync();
   if (wantPos) { window.__restorePos = false; setTimeout(restorePos, 80); }
   if (scroll === undefined && m.classList && m.classList.add) { m.classList.remove("fade"); void m.offsetWidth; m.classList.add("fade"); }
