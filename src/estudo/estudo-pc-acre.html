@@ -1600,6 +1600,28 @@ html body .opt:focus-visible{outline:2px solid #e5b85e;outline-offset:1px}
  main .qside .trainbox{grid-template-columns:1fr!important}
  main .sm-hero h1{font-size:22px!important}
 }
+/* ---- Celular: textos alinhados, passos compactos e largura máxima ---- */
+@media(max-width:760px){
+main{padding:6px 6px 12px!important}
+main .card,main .gc,main section.card{padding:10px 10px!important;border-radius:12px!important}
+main ul,main ol{padding-left:18px!important;margin:6px 0!important}
+main p,main li{font-size:16px!important;line-height:1.5!important;text-align:left!important}
+main ol.steps{padding-left:0!important;margin:0!important}
+ol.steps li{display:block!important;list-style:none!important;padding:1px 0 9px 30px!important;line-height:1.5!important}
+ol.steps li::before{width:22px!important;height:22px!important;top:1px!important;font:800 11.5px/22px var(--hd)!important}
+ol.steps li:not(:last-child)::after{left:10px!important;top:26px!important;width:2px!important}
+.wex,.rec{padding:2px 8px 6px!important;margin:10px 0!important;border-radius:12px!important}
+.wex-h{margin:10px 0 6px!important;font-size:14.5px!important}
+.wex-q{padding:8px 10px!important;margin-bottom:10px!important}
+.macete,.dica,.exemplo{padding:9px 10px!important;margin:8px 0!important}
+.note{padding:8px 10px!important}
+table.tb{width:100%!important;table-layout:auto!important;font-size:14.5px!important;border-collapse:collapse}
+table.tb th,table.tb td{padding:5px 6px!important;white-space:normal!important;text-align:center}
+table.tb th:first-child,table.tb td:first-child{text-align:left}
+}
+@media(max-width:760px){.wex-q,.wex-q p{font-size:15.5px!important;line-height:1.45!important}}
+html.dark ol.steps li:not(:last-child)::after{background:#2f4b42!important}
+html.dark ol.steps li::before{background:#1c3a30;color:#ffd978}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
