@@ -1040,7 +1040,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
           </header>
 
-          {fullscreen.active && (
+          {fullscreen.active && !isQuestionTrainerArea && (
             <div
               className="workspace-focus-controls no-print"
               role="toolbar"

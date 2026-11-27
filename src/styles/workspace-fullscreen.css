@@ -166,3 +166,7 @@ html[data-workspace-focus="true"] body::after {
 @media (prefers-reduced-motion: reduce) {
   html[data-workspace-focus="true"] body::after { animation: none; }
 }
+
+/* Treinador: a barra principal já tem tema, tela cheia e saída; esta segunda barra (tema + restaurar) ficava
+   escondida atrás dela, redundante. */
+html body .app-shell:has(.qs, .qx) .workspace-focus-controls { display: none !important; }
