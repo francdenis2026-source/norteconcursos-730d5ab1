@@ -18,3 +18,22 @@
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__clock { font-size:15px !important }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .sh2-link { grid-column:1 / -1 !important;justify-self:start !important;min-height:36px !important;padding:0 !important;font-size:13px !important }
 }
+
+/* Ritmo e Acertos e erros: um único cartão com abas, sempre compacto. */
+html body .student-home.sh2 .sh2-pair.sh2-pair--single { grid-template-columns: minmax(0, 1fr) !important; }
+html body .student-home.sh2 .sh2-pair--single > [hidden] { display: none !important; }
+html body .student-home.sh2 .ncx-section-head { flex-wrap: wrap; gap: 8px; }
+html body .student-home.sh2 .ncx-tabs button { min-height: 34px; padding: 0 12px; font-size: 13px; white-space: nowrap; }
+@media (max-width: 767px) {
+  html body .student-home.sh2 .sh2-pair--single .sh2-card__head { min-height: 0 !important; padding: 8px 12px !important; }
+  html body .student-home.sh2 .sh2-pair--single .sh2-card__head :is(h2, h3) { font-size: 15px !important; }
+  html body .student-home.sh2 .sh2-pair--single .sh2-card__head :is(svg, [class*="icon"]) { width: 28px !important; height: 28px !important; }
+  html body .student-home.sh2 .sh2-pair--single .sh2-card__body { padding: 8px 10px 10px !important; }
+  html body .student-home.sh2 .sh2-pair--single .nv-summary { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 6px !important; margin-bottom: 6px !important; }
+  html body .student-home.sh2 .sh2-pair--single .nv-summary--four { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  html body .student-home.sh2 .sh2-pair--single .nv-summary > div { padding: 6px 10px !important; }
+  html body .student-home.sh2 .sh2-pair--single .nv-summary dt { font-size: 12px !important; }
+  html body .student-home.sh2 .sh2-pair--single .nv-summary dd { font-size: 1.15rem !important; }
+  html body .student-home.sh2 .sh2-pair--single .nv-legend { font-size: 12px !important; margin: 2px 0 !important; }
+  html body .student-home.sh2 .sh2-pair--single .ncx-footer { padding-top: 4px !important; }
+}

@@ -1288,6 +1288,7 @@ const dkey = ts => { const d = new Date(ts); return d.getFullYear() + "-" + Stri
 function crumbs() {
   const c = document.getElementById("crumbs"); c.innerHTML = "";
   const add = (txt, fn) => { if (c.children.length) { const s = document.createElement("span"); s.textContent = "›"; c.appendChild(s); } const b = document.createElement("button"); b.textContent = txt; b.onclick = fn; c.appendChild(b); };
+  if (window.parent !== window) add("Áreas", () => { try { window.parent.postMessage({ ncNav: "/dashboard/study-room" }, "*"); } catch (e) {} });
   add("Início", () => go("home"));
   if (S.v === "plan") { add("Meu cronograma", () => go("plan")); return; }
   if (S.v === "prev") { add("Previsão da prova", () => go("prev", { run: undefined })); return; }

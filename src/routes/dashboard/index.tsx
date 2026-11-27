@@ -225,6 +225,7 @@ function StudentHome({ user }: { user: UserProfile }) {
     [q.training.data, today],
   );
   const [chartRange, setChartRange] = React.useState<ChartRange>("7d");
+  const [chartTab, setChartTab] = React.useState<"rhythm" | "answers">("rhythm");
   // Meta diária real do cronograma (horas semanais ÷ dias de estudo); sem cronograma, sem meta.
   const goalSeconds =
     plan && validDashboardConfig(plan.config) && plan.config.days.length && plan.config.weeklyHours > 0
@@ -848,9 +849,18 @@ function StudentHome({ user }: { user: UserProfile }) {
             </button>
           ))}
         </div>
+        <div className="ncx-range ncx-tabs" role="group" aria-label="Ver ritmo ou acertos e erros">
+          <button type="button" aria-pressed={chartTab === "rhythm"} onClick={() => setChartTab("rhythm")}>
+            Ritmo
+          </button>
+          <button type="button" aria-pressed={chartTab === "answers"} onClick={() => setChartTab("answers")}>
+            Acertos e erros
+          </button>
+        </div>
       </div>
-      <div className="sh2-pair">
+      <div className="sh2-pair sh2-pair--single">
         <section
+          hidden={chartTab !== "rhythm"}
           className="sh2-card sh2-card--wide sh2-card--chart"
           data-tone="gold"
           aria-labelledby="dashboard-rhythm-title"
@@ -887,6 +897,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         </section>
 
         <section
+          hidden={chartTab !== "answers"}
           className="sh2-card sh2-card--wide sh2-card--chart"
           data-tone="green"
           aria-labelledby="dashboard-answers-title"

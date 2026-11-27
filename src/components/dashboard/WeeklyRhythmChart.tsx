@@ -20,7 +20,7 @@ export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>) {
   React.useEffect(() => {
     const mq = window.matchMedia("(max-width: 640px)");
     const set = () => {
-      base.current = mq.matches ? 150 : 164;
+      base.current = mq.matches ? 128 : 164;
       setH((cur) => Math.max(cur, base.current));
     };
     set();
@@ -39,7 +39,7 @@ export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>) {
         const cs = getComputedStyle(body);
         const inner = body.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
         setH((cur) => {
-          const next = Math.round(Math.min(340, Math.max(base.current, cur + (inner - panel.offsetHeight))));
+          const next = Math.round(Math.min(window.matchMedia("(max-width: 640px)").matches ? base.current : 340, Math.max(base.current, cur + (inner - panel.offsetHeight))));
           return Math.abs(next - cur) >= 4 ? next : cur;
         });
       });

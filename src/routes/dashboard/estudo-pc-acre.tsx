@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import questoesPdf from "@/estudo/pdf/Estatistica_PC-AC_Questoes_Franc_DNis_Norte_Concursos.pdf?url";
 import gabaritoPdf from "@/estudo/pdf/Estatistica_PC-AC_Gabarito_Franc_DNis_Norte_Concursos.pdf?url";
 import { useQueryClient } from "@tanstack/react-query";
@@ -70,6 +70,7 @@ function EstudoPcAcre() {
   // Tema do site (classe "dark" em <html>): enviado ao iframe ao carregar e a cada troca na barra.
   const frame = useRef<HTMLIFrameElement>(null);
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
   // Respostas que o banco já tem (treinador, outro aparelho ou esta área) valem aqui: uma tentativa por questão.
   const postStatus = useCallback(() => {
     frame.current?.contentWindow?.postMessage(
@@ -159,6 +160,11 @@ function EstudoPcAcre() {
   useEffect(() => {
     const onMessage = (event: MessageEvent) => {
       if (event.origin !== window.location.origin) return;
+      const nav = (event.data as { ncNav?: unknown } | null)?.ncNav;
+      if (nav === "/dashboard/study-room") {
+        void navigate({ to: "/dashboard/study-room" });
+        return;
+      }
       const row = parseStudyMessage(event.data);
       if (!row) return;
       enqueueStudyAnswer(row);
