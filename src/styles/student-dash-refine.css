@@ -83,3 +83,22 @@ html body .student-home.sh2 .ncx-meters__value small, html body .student-home.sh
 html body .student-home.sh2 .ncx-flag { display: inline-flex !important; font-size: 0 !important; color: #f59e0b !important; padding: 0 !important; background: none !important; border: 0 !important; }
 html body .student-home.sh2 .ncx-flag svg { width: 14px !important; height: 14px !important; }
 html body .student-home.sh2 .nv-chart .nv-tag { font-size: 10.5px; font-weight: 700; }
+
+/* Hoje: cabeçalho e rodapé mais baixos, sem vão no corpo */
+@media (min-width: 900px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-board { gap: 12px !important; align-items: stretch; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card { border-radius: 14px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head { min-height: 0 !important; padding: 10px 14px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__head :is(h2, h3) { font-size: 14px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__body { padding: 10px 14px !important; gap: 8px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__foot { min-height: 0 !important; padding: 8px 14px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-card__foot :is(a, button) { min-height: 34px !important; padding-block: 6px !important; font-size: 13px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-stack { gap: 12px !important; }
+}
+
+/* Editais e acervo: os dias para a prova já aparecem no relógio da faixa do topo; aqui sobram */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-countdown { display: none !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest { gap: 10px !important; padding: 14px !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest__cover { width: 56px !important; height: auto !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-action { min-height: 46px !important; padding: 6px 10px !important; border-radius: 11px !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-bank { border-radius: 14px !important; }
