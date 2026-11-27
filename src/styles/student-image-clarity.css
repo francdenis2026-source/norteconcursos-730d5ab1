@@ -1,0 +1,23 @@
+/* Fotos da Área do aluno: nítidas e com cor viva. Sem desfoque por cima da imagem, sem luz amarela radial,
+   sem zoom animado e com degradê escuro só onde há texto. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest__bg {
+  width: 64% !important; opacity: 1 !important; animation: none !important; transform: none !important;
+  object-position: 80% 6% !important;
+  filter: saturate(1.12) contrast(1.04) brightness(1.04) !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest:hover .ecc-contest__bg { transform: none !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest::after {
+  background: linear-gradient(90deg, rgb(11 17 26 / 97%) 0%, rgb(11 17 26 / 92%) 30%, rgb(11 17 26 / 55%) 46%, rgb(11 17 26 / 0%) 66%) !important;
+}
+/* Botões e chips: fundo sólido, sem desfoque sobre a foto */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest :is(.ecc-action, .ecc-facts li, .ecc-countdown, .ecc-contest__cover) {
+  -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest .ecc-action { background: rgb(11 17 26 / 94%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest .ecc-action:hover { background: rgb(18 27 40 / 98%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest .ecc-countdown { animation: none !important; background: rgb(11 17 26 / 88%) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest .ecc-facts li { background: rgb(11 17 26 / 90%) !important; }
+
+/* Faixa de boas-vindas e demais fotos: sem véu amarelado nem filtro que apague a cor */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art { opacity: 1 !important; filter: saturate(1.1) contrast(1.04) !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile img { opacity: 1 !important; filter: saturate(1.1) contrast(1.03) !important; }
