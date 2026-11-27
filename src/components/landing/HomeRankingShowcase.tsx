@@ -163,6 +163,7 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
                     {rest.map((c, index) => {
                       const name = c.display_name.trim() || "Candidato";
                       const initial = name.charAt(0).toLocaleUpperCase("pt-BR");
+                      const best = strengths[c.rank_position]?.[0];
                       return (
                         <li key={`${c.rank_position}-${name}`} style={{ "--i": index } as CSSProperties}>
                           <Link to="/dashboard/ranking" search={rankingSearch} className="rka-row" aria-label={`${c.rank_position}º lugar: ${name}`}>
@@ -177,9 +178,9 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
                                 </span>
                               </span>
                             </span>
-                            {strengths[c.rank_position]?.[0] && (
-                              <span className="rka-row__best" title={`Ponto forte: ${strengths[c.rank_position][0].s}`}>
-                                {strengths[c.rank_position][0].s} · <b>{strengths[c.rank_position][0].pct}%</b>
+                            {best && (
+                              <span className="rka-row__best" title={`Ponto forte: ${best.s}`}>
+                                {best.s} · <b>{best.pct}%</b>
                               </span>
                             )}
                             <span className="rka-row__score">

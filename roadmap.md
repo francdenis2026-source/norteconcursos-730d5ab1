@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Corrigir disciplinas e percentuais do ranking para todas as respostas registradas, sem truncamento nem contagem de repetições; testar e conferir os dados reais.
+
 - [x] Repair the countdown duplicate export and strict typing errors blocking publication; 19 syntax, authentication and clock tests passed; automatic build OK.
 
 - [ ] Ocultar questões respondidas sem apagar histórico e priorizar outra inédita do mesmo assunto após erro na área PC-AC; validar regras e navegação.
