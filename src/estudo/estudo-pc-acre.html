@@ -1480,6 +1480,23 @@ select.nsel-src{display:none!important}
  main:has(.pv-cta) .dg2 .dm>div{line-height:1.25}
  main:has(.pv-cta) .dmb{height:4px;margin-top:1px}
 }
+
+/* Alternativas: um só padrão (borda fina, letra em círculo, destaque dourado) em claro e escuro */
+html body .opt{border:1px solid var(--line)!important;border-radius:11px!important;background:var(--card)!important;align-items:center!important;gap:12px!important;box-shadow:none}
+html body .opt b{display:grid!important;place-items:center;flex:none;width:24px!important;height:24px!important;margin:0!important;border:1.5px solid var(--line)!important;border-radius:50%!important;background:transparent!important;color:var(--muted)!important;font:700 12px/1 var(--hd,inherit)!important}
+html body .opt:hover:not(:disabled){border-color:#e5b85e!important;background:color-mix(in srgb,#e5b85e 10%,var(--card))!important}
+html body .opt:hover:not(:disabled) b{border-color:#e5b85e!important;color:#b8860b!important}
+html body .opt.sel,html body .opt.pend{border-color:#e5b85e!important;background:color-mix(in srgb,#e5b85e 16%,var(--card))!important;box-shadow:0 0 0 2px rgba(229,184,94,.22)!important}
+html body .opt.sel b,html body .opt.pend b{background:#e5b85e!important;border-color:#e5b85e!important;color:#1b1300!important}
+html body .opt.right{border-color:#1f9d57!important;background:color-mix(in srgb,#1f9d57 15%,var(--card))!important}
+html body .opt.right b{background:#1f9d57!important;border-color:#1f9d57!important;color:#fff!important}
+html body .opt.wrong{border-color:#d4493c!important;background:color-mix(in srgb,#d4493c 14%,var(--card))!important}
+html body .opt.wrong b{background:#d4493c!important;border-color:#d4493c!important;color:#fff!important}
+html body .opt.strk{opacity:.4}
+html body .orow .xs{border:0!important;background:none!important;color:var(--muted)!important;font-size:11.5px!important;font-weight:600;padding:4px 6px!important;min-height:0!important;text-decoration:underline;text-underline-offset:3px;text-decoration-color:transparent;transition:color .12s,text-decoration-color .12s}
+html body .orow .xs:hover{color:var(--ink)!important;text-decoration-color:currentColor}
+/* Barra Anterior/Próxima: botões com largura natural (a regra base os deixava com a largura da coluna) */
+@media(min-width:901px){main:has(.qstage) .qnavb button{display:inline-flex!important;align-items:center;justify-content:center;width:auto!important;min-width:0!important;max-width:none!important}}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
