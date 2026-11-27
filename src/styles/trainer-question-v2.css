@@ -1391,10 +1391,3 @@ html body .qx .qx-chip {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-/* Treinador em tela cheia: a barra superior do app ficava como uma faixa escura vazia sobre o cabeçalho
-   do treino. O treinador já tem Pausar, Encerrar, tela cheia e "Sair do treino"; a faixa é removida
-   para devolver a altura à questão. */
-html body .app-shell[data-focus-mode="true"]:has(.qx):not(#_):not(#_):not(#_) .app-topbar {
-  display: none !important;
-}
