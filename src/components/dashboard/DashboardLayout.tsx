@@ -507,9 +507,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   // O Treinador precisa manter a navegação principal disponível na tela de configuração.
   // Se a sessão anterior deixou o modo imersivo ativo, restaura o shell ao entrar nessa área.
+  // Só ao ENTRAR na área: se rodasse a cada mudança de `active`, desfaria o clique em "Tela cheia"
+  // do próprio treinador (o modo foco ligava e era desligado na hora).
+  const exitFocusRef = React.useRef(fullscreen.exit);
+  exitFocusRef.current = fullscreen.exit;
   React.useEffect(() => {
-    if (isQuestionTrainerArea && fullscreen.active) fullscreen.exit();
-  }, [isQuestionTrainerArea, fullscreen.active, fullscreen.exit]);
+    if (isQuestionTrainerArea) exitFocusRef.current();
+  }, [isQuestionTrainerArea]);
 
   const compactSidebar = !isQuestionTrainerArea && (isCollapsed || fullscreen.active);
   // Default estável igual ao SSR ("dark"); o tema real é sincronizado depois
