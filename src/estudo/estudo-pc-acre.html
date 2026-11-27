@@ -1297,6 +1297,29 @@ body.side-off.peek .shell{grid-template-columns:var(--sbw) minmax(0,1fr)}
 .pv-showc{border:0;background:none;color:var(--muted);font:inherit;font-size:12px;cursor:pointer;padding:2px 4px;text-decoration:underline;text-underline-offset:3px}
 .pv-showc:hover{color:var(--ink)}
 @media(max-width:640px){.pv-cont{flex-wrap:wrap!important}.pv-cont-a{width:100%;flex-wrap:wrap!important}.pv-cont-a button{flex:1}.pv-cont-a .bx{flex:0 0 28px}}
+
+/* ===== Questões do assunto: tudo numa janela, sem rolagem lateral (desktop) ===== */
+@media(min-width:901px){
+ main:has(.qstage){padding:8px 14px!important;overflow-x:hidden!important}
+ main:has(.qstage)>h1{font-size:17px!important;margin:0 0 2px!important}
+ main:has(.qstage)>p.muted{margin:0 0 6px!important;font-size:12.5px!important;line-height:1.35!important}
+ main:has(.qstage) .tabs{height:34px;min-height:0;margin:0 0 6px!important;padding:3px}
+ main:has(.qstage) .tabs>*{min-height:0!important;height:100%;padding:0 12px!important;font-size:13px!important}
+ main:has(.qstage) .q{padding:8px 12px!important}
+ main:has(.qstage) .qh{margin-bottom:2px!important}
+ main:has(.qstage) .qctx{margin:0 0 4px!important}
+ main:has(.qstage) .qctx>*{padding-block:1px!important;font-size:12px!important}
+ main:has(.qstage) .qt{font-size:14.5px!important;line-height:1.4!important;margin:0 0 6px!important}
+ main:has(.qstage) .orow{margin-bottom:4px!important}
+ main:has(.qstage) .orow .opt{padding-block:3px!important;margin-block:0!important;min-height:0!important;font-size:14px}
+ main:has(.qstage) .qnavb{padding:4px 0!important}
+ main:has(.qstage) .qnavb button{min-height:34px!important;height:34px}
+ main:has(.qstage) .nav2{margin-top:4px!important}
+ main:has(.qstage) .qside{min-width:0}
+ main:has(.qstage) :is(.qbar,.qonly){width:100%!important;max-width:100%;min-width:0!important;box-sizing:border-box}
+ main:has(.qstage) .qbar{flex-wrap:wrap}
+ main:has(.qstage) .qbar>span{min-width:0}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
