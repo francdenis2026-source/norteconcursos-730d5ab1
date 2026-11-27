@@ -1438,6 +1438,48 @@ select.nsel-src{display:none!important}
  main:has(.pl-f) .pl-err{margin:4px 0!important;min-height:0}
  main:has(.pl-f) .note{padding:10px 14px;font-size:12px;line-height:1.45}
 }
+
+/* Previsão da prova: duas colunas que dividem a altura, CTA em uma linha e lacunas em etiquetas */
+@media(min-width:901px){
+ main:has(.pv-cta){display:flex;flex-direction:column;gap:8px;padding-top:10px!important;padding-bottom:12px!important}
+ main:has(.pv-cta)>*{flex:0 0 auto;min-height:0}
+ main:has(.pv-cta)>.dsh-h{padding:0;margin:0}
+ main:has(.pv-cta) .dsh-h h1{margin:0 0 2px;font-size:19px;line-height:1.2}
+ main:has(.pv-cta) .dsh-h p{margin:0;font-size:12px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ main:has(.pv-cta)>.dsh{flex:1 1 0;min-height:0;display:flex;flex-direction:column;gap:8px}
+ main:has(.pv-cta) .dsh>*{margin:0}
+ main:has(.pv-cta) .dg2{flex:1 1 0;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:10px}
+ main:has(.pv-cta) .dc{padding:10px 14px;border-radius:12px;min-height:0}
+ main:has(.pv-cta) .dg2>.dc{overflow:auto;scrollbar-width:thin}
+ main:has(.pv-cta) .dc h2{margin:0 0 2px;font-size:14px}
+ main:has(.pv-cta) .dc>p.muted{margin:0 0 6px;font-size:11.5px;line-height:1.3}
+ main:has(.pv-cta) .dg2 .dm{margin:0 0 5px}
+ main:has(.pv-cta) .dg2 .dm>div{font-size:12.5px;gap:8px}
+ main:has(.pv-cta) .dg2 .dm small{font-size:11px}
+ main:has(.pv-cta) .dmb{height:5px;margin-top:2px}
+ main:has(.pv-cta) table.t{font-size:12px}
+ main:has(.pv-cta) table.t :is(td,th){padding:4px 8px!important}
+ main:has(.pv-cta) table.t td br{display:none}
+ main:has(.pv-cta) table.t td small{margin-left:6px;font-size:11px}
+ main:has(.pv-cta) .pv-cta{display:flex;align-items:center;justify-content:space-between;gap:16px}
+ main:has(.pv-cta) .pv-cta p{display:none}
+ main:has(.pv-cta) .pv-cta h2{margin:0}
+ main:has(.pv-cta) .dsh>.dc:last-child:not(:has(.pv-cta)){display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+ main:has(.pv-cta) .dsh>.dc:last-child:not(:has(.pv-cta))>:is(h2,p){flex:0 0 auto;margin:0}
+ main:has(.pv-cta) .dsh>.dc:last-child:not(:has(.pv-cta))>p{display:none}
+ main:has(.pv-cta) .dsh>.dc:last-child:not(:has(.pv-cta)) .dm{margin:0;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+ main:has(.pv-cta) .dsh>.dc:last-child:not(:has(.pv-cta)) .dm>div{font-size:12px;gap:6px}
+ main:has(.pv-cta) table.t{width:100%}
+ main:has(.pv-cta) table.t td:not(:first-child),main:has(.pv-cta) table.t th{white-space:nowrap}
+ main:has(.pv-cta) table.t .qprob{font-size:11px;padding:1px 7px;white-space:nowrap;display:inline-block}
+ main:has(.pv-cta) table.t td:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:0;width:100%}
+ main:has(.pv-cta) table.t :is(td,th){padding:2px 8px!important;line-height:1.2}
+ main:has(.pv-cta) table.t button.link{padding:0 4px}
+ main:has(.pv-cta) .dg2>.dc:nth-child(2)>p.muted{display:none}
+ main:has(.pv-cta) .dg2 .dm{margin:0 0 3px}
+ main:has(.pv-cta) .dg2 .dm>div{line-height:1.25}
+ main:has(.pv-cta) .dmb{height:4px;margin-top:1px}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
