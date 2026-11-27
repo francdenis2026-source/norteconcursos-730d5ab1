@@ -1,0 +1,35 @@
+/* Contagem para a prova (homepage) · painel de vidro escuro com anel dourado e módulos */
+.ek { --g: #ffc94a; display: inline-flex; align-items: center; gap: 14px; padding: 12px 16px 12px 12px; border-radius: 16px;
+  background: linear-gradient(160deg, rgb(12 20 32 / .86), rgb(8 13 22 / .92)); border: 1px solid rgb(255 255 255 / .1);
+  border-top-color: rgb(255 201 74 / .35); box-shadow: 0 18px 40px -20px rgb(0 0 0 / .8), inset 0 1px 0 rgb(255 255 255 / .06);
+  color: #fff; font-variant-numeric: tabular-nums; line-height: 1; }
+.ek__ring { position: relative; display: grid; place-items: center; align-content: center; width: 84px; height: 84px; flex: none; }
+.ek__ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.ek__ticks { fill: none; stroke: rgb(255 255 255 / .22); stroke-width: 2.5; stroke-dasharray: .6 4.32; }
+.ek__track { fill: rgb(255 255 255 / .03); stroke: rgb(255 255 255 / .08); stroke-width: 4; }
+.ek__arc { fill: none; stroke: var(--g); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 1s linear; filter: drop-shadow(0 0 5px rgb(255 201 74 / .6)); }
+.ek__ring b { position: relative; font: 800 28px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; letter-spacing: -.04em; }
+.ek__ring small { position: relative; margin-top: 3px; font: 800 9px/1 system-ui, sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--g); }
+.ek__side { display: grid; gap: 8px; }
+.ek__head { display: inline-flex; align-items: center; gap: 7px; font: 700 10.5px/1 system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #c9d4e2; white-space: nowrap; }
+.ek__head i { width: 7px; height: 7px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 3px rgb(61 220 132 / .2), 0 0 8px rgb(61 220 132 / .8); }
+.ek__cells { display: inline-flex; gap: 6px; }
+.ek__cell { display: grid; justify-items: center; gap: 5px; min-width: 52px; padding: 8px 8px 6px; border-radius: 9px;
+  background: linear-gradient(180deg, rgb(255 255 255 / .09), rgb(255 255 255 / .02)); border: 1px solid rgb(255 255 255 / .1);
+  box-shadow: inset 0 -10px 14px rgb(0 0 0 / .25); }
+.ek__cell b { font: 700 22px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; color: #fff; }
+.ek__cell small { font: 700 8.5px/1 system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #8fa6c4; }
+.sx-banner__clock { margin-top: 14px; }
+@media (min-width: 1024px) {
+  .sx-banner { position: relative; }
+  .sx-banner__clock { position: absolute; right: 22px; bottom: 20px; margin: 0; z-index: 3; }
+}
+@media (max-width: 420px) {
+  .ek { gap: 10px; padding: 10px; }
+  .ek__ring { width: 68px; height: 68px; }
+  .ek__ring b { font-size: 22px; }
+  .ek__cell { min-width: 42px; padding: 6px 5px 5px; }
+  .ek__cell b { font-size: 18px; }
+  .ek__head { font-size: 9.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .ek__arc { transition: none; } }

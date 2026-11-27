@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, FileText, Target } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { pcAcVerticalCargos } from "@/data/pcAcreVerticalizado";
+import { ExamClock } from "@/components/landing/ExamClock";
 
 const PCAC_EDITAL = "/media/editais/edital-pcac-001-2026-norte-concursos-v2.pdf";
 const PCAC_VAGAS = pcAcVerticalCargos.reduce((total, cargo) => total + cargo.vagas, 0);
@@ -73,6 +74,9 @@ export function PcacBanner({ mobile = false }: { mobile?: boolean }) {
               <FileText aria-hidden="true" /> Ver edital
             </a>
           </div>
+        </div>
+        <div className="sx-banner__clock">
+          <ExamClock examDate="2027-01-24" />
         </div>
       </article>
     </div>
