@@ -186,6 +186,10 @@
 .student-home.sh2 .sh2-pair > .sh2-card {
   margin: 0;
 }
+/* Só uma aba visível (Ritmo ou Acertos e erros): ela ocupa a linha inteira, sem coluna vazia ao lado */
+.student-home.sh2 .sh2-pair--single > .sh2-card:not([hidden]) {
+  grid-column: 1 / -1;
+}
 
 /* Editais e acervo em colunas, em vez de uma pilha estreita */
 @media (min-width: 1100px) {
