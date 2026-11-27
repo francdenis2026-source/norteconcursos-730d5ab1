@@ -11,6 +11,7 @@ import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { dispatchAimFeedback } from "@/lib/aimFeedback";
 import "@/styles/daily-challenge.css";
+import "@/styles/daily-mobile-fit.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {
   dailyGuestQuestionPreviews,

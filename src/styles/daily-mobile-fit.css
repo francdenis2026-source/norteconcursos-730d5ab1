@@ -1,0 +1,188 @@
+/* Desafio diário no celular: a apresentação e a questão cabem numa janela só, sem rolar a página.
+   Só o enunciado/explicação rola, dentro do próprio quadro; as ações ficam sempre à vista. */
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_)  { height:100vh !important;height:100dvh !important;min-height:0 !important;display:flex !important;flex-direction:column !important;overflow:hidden !important;padding-bottom:calc(36px + env(safe-area-inset-bottom,0px)) !important;box-sizing:border-box }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-controls { flex:none !important;margin:0 !important;padding:8px 12px 6px !important;min-height:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-main { flex:1 1 auto !important;min-height:0 !important;padding:0 12px 8px !important;margin:0 !important;overflow:hidden !important;display:flex !important;flex-direction:column !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-panel { flex:1 1 auto !important;min-height:0 !important;display:flex !important;flex-direction:column !important;overflow:hidden !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-photo { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-body { flex:1 1 auto !important;min-height:0 !important;display:flex !important;flex-direction:column !important;gap:10px !important;padding:14px !important;overflow:hidden !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-status { margin:0 !important;padding:0 0 8px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-hero { margin:0 !important;display:grid !important;gap:4px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-hero h1 { margin:0 !important;font-size:clamp(1.7rem,7.8vw,2.1rem) !important;line-height:1.08 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-hero p { margin:0 !important;font-size:14.5px !important;line-height:1.4 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-metrics { display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:0 !important;margin:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-metrics > div { padding:8px 10px !important;min-width:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-metrics dt { font-size:10.5px !important;letter-spacing:.12em !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-metrics dd { margin:0 !important;font-size:1.7rem !important;line-height:1.1 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-subjects { margin:0 !important;display:grid !important;gap:6px !important;min-width:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-subjects ul { display:flex !important;flex-wrap:nowrap !important;gap:6px !important;margin:0 !important;padding:0 0 4px !important;overflow-x:auto !important;scrollbar-width:none !important;-webkit-overflow-scrolling:touch }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-subjects ul::-webkit-scrollbar { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-subjects li { flex:none !important;white-space:nowrap !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-protocol { margin:0 !important;padding:0 !important;font-size:12px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-foot { margin-top:auto !important;display:grid !important;gap:8px !important;padding:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-start { min-height:54px !important;font-size:1.0625rem !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-foot__note { margin:0 !important;font-size:12px !important;line-height:1.3 !important;text-align:center !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .dt-foot__link { font-size:13px !important;justify-self:center !important;min-height:32px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-workspace { flex:1 1 auto !important;min-height:0 !important;display:flex !important;flex-direction:column !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-workspace[hidden] { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-player { flex:1 1 auto !important;min-height:0 !important;height:auto !important;display:flex !important;flex-direction:column !important;gap:8px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session { display:grid !important;grid-template-columns:minmax(0,1fr) auto !important;align-items:center !important;gap:8px !important;margin:0 !important;padding:8px 10px !important;flex:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session > :not(.rounded-xl):not(.daily-session__scores) { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session > .rounded-xl { margin:0 !important;padding:6px 10px !important;min-width:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session__scores { display:flex !important;gap:6px !important;margin:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session__scores > div { display:flex !important;align-items:baseline !important;gap:5px !important;min-width:0 !important;height:auto !important;padding:5px 10px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session__scores strong { font-size:1.1rem !important;line-height:1 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-session__scores span { font-size:11px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-column { flex:1 1 auto !important;min-height:0 !important;display:flex !important;flex-direction:column !important;gap:8px !important;height:auto !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-reading { flex:1 1 auto !important;min-height:0 !important;overflow-y:auto !important;overscroll-behavior:contain !important;-webkit-overflow-scrolling:touch;max-height:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-card > div { padding:12px 14px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-heading { display:flex !important;align-items:center !important;justify-content:space-between !important;gap:8px !important;margin:0 0 8px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-heading .daily-eyebrow { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-heading h2 { margin:0 !important;font-size:1.15rem !important;line-height:1.2 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .question-timing-row .tactical-clock__face { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-meta { display:flex !important;flex-wrap:nowrap !important;gap:6px !important;margin:0 0 8px !important;overflow-x:auto !important;scrollbar-width:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-meta::-webkit-scrollbar { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-question-meta > * { flex:none !important;white-space:nowrap !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-toolbar-row { display:flex !important;justify-content:flex-end !important;margin:0 0 4px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-toolbar-row [data-question-code] { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock { flex:none !important;margin:0 !important;padding:8px 0 0 !important;gap:0 !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock > p { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .tactical-crosshair { display:none !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .grid { margin:0 !important;gap:8px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .daily-answer { min-height:52px !important;padding:6px 12px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .flex.justify-end { margin:8px 0 0 !important;display:grid !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .flex.justify-end button { width:100% !important;min-height:50px !important }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_) .daily-reading, html body .daily-page:not(#_):not(#_) .daily-reading * { hyphens: manual !important; -webkit-hyphens: manual !important; }
+  html body .daily-page:not(#_):not(#_) .daily-session > .rounded-xl > div:first-child > span:last-child { display: none !important; }
+  html body .daily-page:not(#_):not(#_) .daily-session > .rounded-xl > div:first-child { margin-bottom: 4px !important; }
+  html body .daily-page:not(#_):not(#_) .daily-toolbar-row > * { transform: scale(0.8); transform-origin: right center; margin: -5px 0 -5px !important; }
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .flex.justify-end { grid-template-columns: minmax(0, 1fr) !important; justify-content: stretch !important; }
+  html body .daily-page:not(#_):not(#_) .daily-answer-dock .flex.justify-end button { justify-self: stretch !important; }
+}
+@media (max-width: 767px) {
+  html:has(.daily-page), body:has(.daily-page) { height: 100dvh !important; overflow: hidden !important; overscroll-behavior: none; }
+  html body .daily-page:not(#_):not(#_) .dt-status__tag { font-size: 10.5px !important; letter-spacing: 0.08em !important; line-height: 1.25 !important; }
+  html body .daily-page:not(#_):not(#_) .dt-metrics dt { font-size: 10px !important; letter-spacing: 0.06em !important; }
+  html body .daily-page:not(#_):not(#_) .dt-body { justify-content: space-between !important; }
+  html body .daily-page:not(#_):not(#_) .daily-session > .rounded-xl span.font-bold { white-space: nowrap !important; font-size: 12.5px !important; }
+  html body .daily-page:not(#_):not(#_) .daily-session__scores > div { padding: 4px 8px !important; gap: 4px !important; }
+  html body .daily-page:not(#_):not(#_) .daily-session__scores span { font-size: 10.5px !important; white-space: nowrap !important; }
+}
+@media (max-width: 767px) {
+  body:has(.daily-page) { position: fixed !important; inset: 0 !important; width: 100% !important; }
+  html body .daily-page:not(#_):not(#_) .dt-status__tag { font-size: 10px !important; letter-spacing: 0.05em !important; white-space: nowrap !important; }
+}
+@media (max-width: 767px) {
+  html body .daily-page:not(#_):not(#_), html body .daily-page:not(#_):not(#_) .daily-main, html body .daily-page:not(#_):not(#_) .daily-workspace,
+  html body .daily-page:not(#_):not(#_) .daily-player, html body .daily-page:not(#_):not(#_) .daily-question-column, html body .daily-page:not(#_):not(#_) .dt-panel { overflow: clip !important; }
+  html body .daily-page:not(#_):not(#_) .dt-status { display: flex !important; flex-wrap: nowrap !important; gap: 8px !important; justify-content: space-between !important; }
+  html body .daily-page:not(#_):not(#_) .dt-status__live { font-size: 10px !important; letter-spacing: 0.06em !important; white-space: nowrap !important; flex: none !important; }
+}
+@media (max-width: 767px) {
+  html:has(.daily-page), body:has(.daily-page) { overflow: clip !important; }
+}
