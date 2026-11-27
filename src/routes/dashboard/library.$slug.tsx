@@ -3,6 +3,7 @@ import "@/styles/student-library-media-workspaces.css";
 import "@/styles/library-discipline-fit.css";
 import "@/styles/material-pdf-page.css";
 import "@/styles/student-area-kit.css";
+import "@/styles/material-reader-full.css";
 import { disciplineTheme } from "@/lib/disciplineTheme";
 import { PortugueseStudyReading } from "@/components/library/PortugueseStudyReading";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";

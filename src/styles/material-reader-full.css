@@ -1,0 +1,36 @@
+/* Material de leitura: folha de PDF na largura inteira da janela, cabeçalho de uma faixa, abas finas.
+   Pedido do dono: aparência de PDF profissional, largura total, sem caixas nem barras extras. */
+html body .app-shell[data-area] .library-reading-workspace { gap: 8px !important; }
+html body .app-shell[data-area] .library-reading-workspace .library-body {
+  --sheet-w: 100%; max-width: 100% !important; width: 100% !important;
+  padding: clamp(1rem, 2.2vw, 2rem) clamp(1rem, 3.2vw, 3rem) !important;
+  border-radius: 6px !important; box-shadow: 0 1px 0 rgb(0 0 0 / .2), 0 14px 30px -24px rgb(0 0 0 / .7) !important;
+  font-size: 16px; line-height: 1.65;
+}
+html body .app-shell[data-area] .library-reading-workspace .library-body :is(p, li) { max-width: none; text-align: justify; hyphens: manual; text-wrap: pretty; }
+/* Cabeçalho do material: uma faixa baixa */
+html body .app-shell[data-area] .library-reading-workspace .lr-hero {
+  min-height: 0 !important; padding: 10px 16px !important; border-radius: 12px !important;
+  display: grid !important; grid-template-columns: minmax(0, 1fr) auto auto !important; align-items: center !important; gap: 8px 16px !important;
+}
+html body .app-shell[data-area] .library-reading-workspace .lr-hero h1 { font-size: clamp(1.125rem, 1.7vw, 1.375rem) !important; line-height: 1.2 !important; margin: 2px 0 4px !important; text-wrap: balance; }
+html body .app-shell[data-area] .library-reading-workspace .lr-hero .ak-hero__copy { min-width: 0; }
+html body .app-shell[data-area] .library-reading-workspace .lr-hero .ak-hero__copy :is(p, small) { font-size: 11.5px !important; margin: 0 !important; }
+html body .app-shell[data-area] .library-reading-workspace .lr-meta { display: flex !important; flex-wrap: wrap; gap: 6px !important; margin: 0 !important; }
+html body .app-shell[data-area] .library-reading-workspace .lr-meta li { padding: 3px 9px !important; font-size: 11px !important; border-radius: 6px !important; }
+html body .app-shell[data-area] .library-reading-workspace .lr-study-status { min-width: 220px; padding: 8px 12px !important; border-radius: 10px !important; }
+/* Abas Texto-base / Explicação / Praticar: faixa fina com sublinhado dourado */
+html body .app-shell[data-area] .library-reading-workspace [role="tablist"] { padding: 3px !important; border-radius: 10px !important; height: auto !important; }
+html body .app-shell[data-area] .library-reading-workspace [role="tab"] { height: 32px !important; font-size: 13px !important; border-radius: 8px !important; border: 0 !important; }
+html body .app-shell[data-area] .library-reading-workspace [role="tab"][data-state="active"] { background: color-mix(in oklab, #e5b85e 18%, transparent) !important; color: inherit !important; box-shadow: inset 0 -2px 0 #e5b85e !important; }
+@media (max-width: 900px) {
+  html body .app-shell[data-area] .library-reading-workspace .lr-hero { grid-template-columns: 1fr !important; }
+  html body .app-shell[data-area] .library-reading-workspace .library-body :is(p, li) { text-align: left; }
+}
+
+/* Disciplina: atalho discreto para o edital no lugar do cartão "Estudo orientado" */
+.discipline-edital-strip { display: inline-flex; align-items: center; gap: 10px; padding: 7px 12px; border-radius: 10px; border: 1px solid rgb(74 222 128 / .3);
+  background: rgb(74 222 128 / .06); font-size: 13px; text-decoration: none; color: inherit; transition: border-color .15s, background .15s; }
+.discipline-edital-strip:hover { border-color: rgb(74 222 128 / .6); background: rgb(74 222 128 / .12); }
+.discipline-edital-strip__tag { padding: 2px 7px; border-radius: 5px; background: rgb(74 222 128 / .16); color: #4ade80; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+html:root:not(.dark) .discipline-edital-strip__tag { color: #166534; }

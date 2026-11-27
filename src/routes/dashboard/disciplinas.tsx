@@ -50,6 +50,7 @@ import { disciplineTheme } from "@/lib/disciplineTheme";
 import { useSmartBack } from "@/components/dashboard/SmartBackLink";
 import { ACRE_DISCIPLINE, AcreRealityArea } from "@/components/dashboard/AcreRealityArea";
 import "@/styles/discipline-experience.css";
+import "@/styles/material-reader-full.css";
 import { AreaHint } from "@/components/ui/area-hint";
 import { LegalMapExplorer } from "@/components/dashboard/LegalMapExplorer";
 import { legalMapFor } from "@/data/legalMaps";
@@ -530,17 +531,13 @@ function DisciplineSyllabusPanel({
   onToggle: (topicId: string) => void;
 }) {
   if (!edition) {
+    // Sem edição ativa: o concurso do aluno é escolhido em "Meu concurso" (PC-AC); aqui só um atalho discreto.
     return (
-      <section className="discipline-edital-panel discipline-edital-panel--empty">
-        <div>
-          <span className="discipline-edital-panel__eyebrow">ESTUDO ORIENTADO</span>
-          <strong>Organize esta disciplina pelo seu edital</strong>
-          <p>Ative a edição do concurso que você vai prestar para acompanhar os assuntos e o progresso em cada matéria.</p>
-        </div>
-        <Link to="/dashboard/edital" className="discipline-edital-panel__action">
-          Escolher edital <ChevronRight aria-hidden="true" size={16} />
-        </Link>
-      </section>
+      <Link to="/dashboard/pc-acre-edital" search={{ view: "digital" } as never} className="discipline-edital-strip">
+        <span className="discipline-edital-strip__tag">Edital PC-AC</span>
+        <span>Ver o que o edital cobra desta disciplina</span>
+        <ChevronRight aria-hidden="true" size={15} />
+      </Link>
     );
   }
 
