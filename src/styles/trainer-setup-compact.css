@@ -326,3 +326,121 @@
   .qs-mobilebar b { font-size: 1.25rem; font-variant-numeric: tabular-nums; }
   .qs-mobilebar .qs-start { height: 2.75rem; }
 }
+
+/* ============================================================================================
+   Acabamento profissional (tela "Monte sua sessão")
+   - Dourado mais fechado e menos saturado (antes: mostarda vivo que cansava e parecia amador).
+   - Opção escolhida = fundo dourado translúcido + borda + texto claro, em vez de bloco amarelo
+     cheio; o contador (ex.: "372") fica legível porque não é mais cinza sobre dourado.
+   - Botão principal: ouro envelhecido com degradê curto, sem brilho metálico exagerado.
+   - A janela ocupa toda a altura disponível, sem rolagem da página.
+   ============================================================================================ */
+html body .qs {
+  --qs-gold: oklch(0.74 0.1 78);
+  --qs-gold-strong: oklch(0.8 0.105 80);
+  --qs-gold-ink: oklch(0.2 0.035 65);
+  --qs-line: color-mix(in oklab, var(--foreground) 12%, transparent);
+  --qs-soft: color-mix(in oklab, var(--foreground) 4%, transparent);
+  border-color: var(--qs-line);
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--card) 96%, #000);
+  box-shadow: 0 24px 60px -30px rgb(0 0 0 / 0.65);
+}
+html body .qs .qs-head {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--foreground) 4%, transparent), transparent);
+  padding: 0.75rem 1.5rem;
+}
+html body .qs .qs-head small { color: color-mix(in oklab, var(--qs-gold) 85%, var(--foreground)); letter-spacing: 0.12em; font-size: 0.72rem; }
+html body .qs .qs-head h1 { font-size: 1.25rem; letter-spacing: -0.01em; }
+html body .qs .qs-step { color: var(--foreground); font-size: 0.78rem; letter-spacing: 0.1em; }
+html body .qs .qs-step i {
+  background: color-mix(in oklab, var(--qs-gold) 18%, transparent);
+  color: var(--qs-gold-strong);
+  border: 1px solid color-mix(in oklab, var(--qs-gold) 55%, transparent);
+}
+html body .qs .qs-label { color: color-mix(in oklab, var(--foreground) 72%, transparent); font-size: 0.8125rem; }
+html body .qs .qs-label svg { color: color-mix(in oklab, var(--qs-gold) 80%, var(--foreground)); }
+
+/* Opções (radio em forma de botão) */
+html body .qs .qs-chips > button {
+  border-color: var(--qs-line);
+  background: var(--qs-soft);
+  border-radius: 0.625rem;
+}
+html body .qs .qs-chips > button:not(:disabled):hover {
+  border-color: color-mix(in oklab, var(--qs-gold) 55%, var(--qs-line));
+  background: color-mix(in oklab, var(--qs-gold) 8%, transparent);
+  transform: none;
+}
+html body .qs .qs-chips > button[aria-checked="true"] {
+  border-color: var(--qs-gold);
+  background: color-mix(in oklab, var(--qs-gold) 20%, var(--card));
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--qs-gold) 45%, transparent);
+}
+html body .qs .qs-chips > button[aria-checked="true"] small {
+  color: var(--qs-gold-strong) !important;
+  font-weight: 700;
+}
+html body .qs .qs-chips > button small { color: color-mix(in oklab, var(--foreground) 62%, transparent); }
+html body .qs .qs-chips > button:disabled { opacity: 0.4; }
+
+/* Filtros ativos e selo */
+html body .qs .qs-active li {
+  border-color: color-mix(in oklab, var(--qs-gold) 40%, var(--qs-line));
+  background: color-mix(in oklab, var(--qs-gold) 9%, var(--card));
+}
+html body .qs .qs-badge { background: var(--qs-gold); color: var(--qs-gold-ink); }
+html body .qs .qs-more > header button { background: var(--qs-gold); color: var(--qs-gold-ink); }
+
+/* Botão principal: ouro envelhecido (vence gold-palette.css, que usa !important) */
+html body .qs .qs-start.hero-primary-action:not(:disabled):not([aria-disabled="true"]) {
+  background: linear-gradient(180deg, oklch(0.8 0.1 82) 0%, oklch(0.71 0.1 76) 100%) !important;
+  color: oklch(0.2 0.035 65) !important;
+  border: 1px solid oklch(0.66 0.095 74) !important;
+  box-shadow: 0 8px 22px -12px oklch(0.7 0.1 78 / 0.7), inset 0 1px 0 oklch(1 0 0 / 0.22) !important;
+  text-shadow: none;
+  border-radius: 0.75rem;
+}
+html body .qs .qs-start.hero-primary-action:not(:disabled):not([aria-disabled="true"]):hover {
+  background: linear-gradient(180deg, oklch(0.84 0.1 83) 0%, oklch(0.74 0.105 77) 100%) !important;
+}
+html body .qs .qs-start.hero-primary-action:disabled { opacity: 0.45; }
+html body .qs .qs-sum b { color: var(--foreground); }
+
+/* Janela cheia: a tela ocupa toda a altura útil (sem rolagem da página) e distribui o espaço. */
+@media (min-width: 880px) {
+  html body .qs,
+  html body .app-shell[data-focus-mode="true"] .qs {
+    position: fixed;
+    top: calc(var(--app-topbar-h, 0px) + 0.5rem);
+    bottom: 0.5rem;
+    left: 0.75rem;
+    right: 2.25rem;
+    width: auto;
+    height: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    z-index: 20;
+  }
+  html body .qs .qs-col {
+    justify-content: flex-start;
+    gap: clamp(0.75rem, 2.4vh, 1.5rem);
+    padding: clamp(0.875rem, 2.4vh, 1.5rem) 1.5rem;
+  }
+  html body .qs .qs-chips > button { height: clamp(2.25rem, 5.4vh, 2.75rem); font-size: 0.875rem; }
+  html body .qs .qs-select { height: clamp(2.5rem, 5.6vh, 3rem); }
+  html body .qs .qs-go { background: color-mix(in oklab, var(--foreground) 3%, transparent); margin-inline: -1.5rem; margin-bottom: calc(-1 * clamp(0.875rem, 2.4vh, 1.5rem)); padding: 1rem 1.5rem 1.25rem; }
+  html body .qs .qs-sum b { font-size: 2rem; }
+  html body .qs .qs-start { height: 3rem; }
+}
+@media (min-width: 1101px) {
+  html body .qs, html body .app-shell[data-focus-mode="true"] .qs { bottom: 2.75rem; }
+}
+@media (min-width: 880px) and (max-height: 700px) {
+  html body .qs .qs-col { gap: 0.625rem; padding-block: 0.625rem; }
+  html body .qs .qs-chips > button { height: 2rem; }
+  html body .qs .qs-select { height: 2.25rem; }
+  html body .qs .qs-sum b { font-size: 1.5rem; }
+  html body .qs .qs-start { height: 2.5rem; }
+}
