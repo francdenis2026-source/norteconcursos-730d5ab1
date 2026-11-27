@@ -124,7 +124,7 @@ export function AnswerInsights({
 }) {
   const [view, setView] = React.useState<"chart" | "table">("chart");
   const panelRef = React.useRef<HTMLDivElement>(null);
-  const height = useChartHeight(panelRef);
+  const height = useChartHeight(panelRef, true);
   // Mesma regra do restante do painel: vale a primeira resposta de cada questão.
   const first = React.useMemo(() => {
     const seen = new Set<string>();

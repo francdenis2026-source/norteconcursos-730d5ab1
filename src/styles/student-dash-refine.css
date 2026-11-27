@@ -65,3 +65,21 @@ html body .student-home.sh2 .nv-legend { margin-bottom: 2px !important; }
 html body .student-home.sh2 .ncx-panel { gap: 8px !important; }
 html body .student-home.sh2 .ncx-footer { padding-top: 8px !important; }
 html body .student-home.sh2 .ncx-footer :is(button, a) { min-height: 32px !important; padding-block: 4px !important; font-size: 12.5px !important; }
+
+/* Acertos e erros: resumo em uma faixa de 4, gráfico baixo, disciplinas em lista densa de duas colunas */
+html body .student-home.sh2 .nv-summary.nv-summary--four { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+html body .student-home.sh2 .nv-summary dt { display: flex; align-items: center; gap: 6px; }
+html body .student-home.sh2 .ncx-meters { margin-top: 4px !important; }
+html body .student-home.sh2 .ncx-meters h3, html body .student-home.sh2 .ncx-meters > p { font-size: 10.5px !important; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin: 0 0 4px !important; }
+@media (min-width: 1100px) {
+  html body .student-home.sh2 .ncx-meters ul, html body .student-home.sh2 .ncx-meters ol { display: grid !important; grid-template-columns: 1fr 1fr; column-gap: 24px; }
+}
+html body .student-home.sh2 .ncx-meters li > * { display: grid !important; grid-template-columns: minmax(0, 1fr) 90px 52px 16px !important; align-items: center !important; gap: 10px !important; padding: 6px 4px !important; min-height: 0 !important; }
+html body .student-home.sh2 .ncx-meters li { border-bottom: 1px solid color-mix(in oklab, currentColor 8%, transparent) !important; }
+html body .student-home.sh2 .ncx-meters__name { font-size: 12.5px !important; white-space: nowrap !important; overflow: hidden; text-overflow: ellipsis; }
+html body .student-home.sh2 .ncx-meters__bar { height: 5px !important; border-radius: 99px; }
+html body .student-home.sh2 .ncx-meters__value { display: flex !important; flex-direction: column; align-items: flex-end; font-size: 12.5px !important; line-height: 1.1; font-variant-numeric: tabular-nums; }
+html body .student-home.sh2 .ncx-meters__value small, html body .student-home.sh2 .ncx-meters__value span { font-size: 10.5px !important; opacity: .65; }
+html body .student-home.sh2 .ncx-flag { display: inline-flex !important; font-size: 0 !important; color: #f59e0b !important; padding: 0 !important; background: none !important; border: 0 !important; }
+html body .student-home.sh2 .ncx-flag svg { width: 14px !important; height: 14px !important; }
+html body .student-home.sh2 .nv-chart .nv-tag { font-size: 10.5px; font-weight: 700; }
