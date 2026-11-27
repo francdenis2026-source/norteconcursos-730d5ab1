@@ -1221,6 +1221,20 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
  main{flex:1 1 0!important;min-height:0!important;overflow:auto!important}
  .g-side{height:100dvh!important;min-height:0!important;overflow:hidden}
 }
+
+/* ===== Treino pausado: pílula integrada à barra superior (desktop), sem ocupar linha no conteúdo ===== */
+@media(min-width:901px){
+ .trainbanner{position:fixed!important;top:6px!important;right:176px;z-index:40;margin:0!important;height:28px;padding:0 3px 0 12px!important;gap:10px!important;border-radius:999px!important;border:1px solid color-mix(in srgb,var(--acc) 55%,var(--line))!important;background:color-mix(in srgb,var(--acc) 10%,var(--card))!important;box-shadow:none!important;font-size:12px;color:var(--ink);white-space:nowrap}
+ .trainbanner>span:first-child{display:flex;align-items:center;gap:7px;color:var(--muted)}
+ .trainbanner>span:first-child::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc);flex:none}
+ .trainbanner .trainclk{color:var(--ink);font-variant-numeric:tabular-nums}
+ .trainbanner .tb-a{gap:3px!important}
+ .trainbanner button{min-height:22px!important;height:22px;padding:0 10px!important;font-size:11.5px!important;font-weight:600;border-radius:999px!important;border:1px solid transparent!important;background:transparent!important;color:var(--muted)!important}
+ .trainbanner button:first-child{background:var(--acc)!important;color:#fff!important}
+ html.dark .trainbanner button:first-child{background:#e5b85e!important;color:#1b1608!important}
+ .trainbanner button:hover{filter:brightness(1.08)}
+ .trainbanner button:last-child:hover{color:var(--ink)!important;background:color-mix(in srgb,var(--ink) 8%,transparent)!important}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
