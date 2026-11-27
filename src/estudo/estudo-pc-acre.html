@@ -1235,6 +1235,16 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
  .trainbanner button:hover{filter:brightness(1.08)}
  .trainbanner button:last-child:hover{color:var(--ink)!important;background:color-mix(in srgb,var(--ink) 8%,transparent)!important}
 }
+
+/* ===== Avisos recolhíveis (ordem/chance, provas reais): compactos ===== */
+html body main details.ordem{margin:6px 0!important;border-radius:10px!important}
+html body main details.ordem>summary{padding:7px 12px!important;font-size:13px!important;line-height:1.3}
+html body main details.ordem .ordem-b{padding:0 12px 9px!important;font-size:13px!important;line-height:1.5!important;max-width:none}
+html body main details.ordem .ordem-b p{margin:0 0 6px!important}
+html body main details.ordem .ordem-b:has(>p.muted){display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:2px 18px}
+html body main details.ordem .ordem-b:has(>p.muted)>p.muted:first-child{grid-column:1/-1}
+html body main details.ordem .ordem-b:has(>p.muted)>p{padding:6px 0 0;border-top:1px solid var(--line)}
+html body main details.ordem .ordem-b:has(>p.muted)>p:first-child{border-top:0;padding:0}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
