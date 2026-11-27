@@ -1,28 +1,34 @@
-/* Contagem da prova · faixa da Área do aluno. Seletor com dois IDs + !important para vencer o guarda-contraste. */
+/* Contagem da prova · módulo tecnológico da faixa da Área do aluno. Dois IDs + !important vencem o guarda-contraste. */
 #dashboard-content#dashboard-content .xc {
   --g: #ffc94a; --g2: #e79e0f;
-  display: inline-flex; align-items: center; gap: 12px; padding: 0; background: none; border: 0;
+  display: inline-flex; align-items: center; gap: 14px; padding: 0; background: none; border: 0;
   font-variant-numeric: tabular-nums; line-height: 1;
 }
-#dashboard-content#dashboard-content .xc__days { position: relative; display: grid; place-items: center; width: 52px; height: 52px; flex: none; }
-#dashboard-content#dashboard-content .xc__days svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); filter: drop-shadow(0 0 6px rgb(255 201 74 / .35)); }
-#dashboard-content#dashboard-content .xc__track { fill: rgb(255 201 74 / .06); stroke: rgb(255 255 255 / .1); stroke-width: 3; }
-#dashboard-content#dashboard-content .xc__arc { fill: none; stroke: var(--g); stroke-width: 3; stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
-#dashboard-content#dashboard-content .xc__days b { position: relative; font-size: 22px !important; font-weight: 800; letter-spacing: -.04em; color: var(--g) !important; opacity: 1 !important; }
-#dashboard-content#dashboard-content .xc__info { display: grid; gap: 4px; min-width: 11.5rem; }
-#dashboard-content#dashboard-content .xc__date { white-space: nowrap; }
-#dashboard-content#dashboard-content .xc__days b { min-width: 3ch; text-align: center; display: inline-flex; justify-content: center; }
-#dashboard-content#dashboard-content .xc__info small { font-size: 10.5px !important; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffd978 !important; opacity: 1 !important; }
-#dashboard-content#dashboard-content .xc__clock { display: inline-flex; align-items: baseline; gap: 1px; font: 700 19px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !important; color: #ffffff !important; opacity: 1 !important; }
-#dashboard-content#dashboard-content .xc__clock i { font-style: normal; font-size: 11px; font-weight: 600; color: #9fb3cc !important; margin: 0 5px 0 1px; }
-#dashboard-content#dashboard-content .xc__clock i:last-child { margin-right: 0; }
-#dashboard-content#dashboard-content .xc__date { font-size: 11.5px !important; font-weight: 600; text-transform: none; color: #c9d4e2 !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__days { position: relative; display: grid; place-items: center; align-content: center; width: 64px; height: 64px; flex: none; }
+#dashboard-content#dashboard-content .xc__days svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+#dashboard-content#dashboard-content .xc__ticks { fill: none; stroke: rgb(255 255 255 / .28); stroke-width: 3; stroke-dasharray: .7 2.76; }
+#dashboard-content#dashboard-content .xc__track { fill: rgb(8 16 28 / .55); stroke: rgb(255 255 255 / .09); stroke-width: 3; }
+#dashboard-content#dashboard-content .xc__arc { fill: none; stroke: var(--g); stroke-width: 3; stroke-linecap: round; transition: stroke-dashoffset 1s linear; filter: drop-shadow(0 0 4px rgb(255 201 74 / .55)); }
+#dashboard-content#dashboard-content .xc__days b { position: relative; display: inline-flex; justify-content: center; min-width: 2ch; margin-top: 3px; font: 800 21px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !important; letter-spacing: -.04em; color: #fff !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__days em { position: relative; margin-top: 2px; font-style: normal; font-size: 8.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--g) !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__info { display: grid; gap: 7px; }
+#dashboard-content#dashboard-content .xc__date { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 11.5px !important; font-weight: 600; text-transform: none; color: #c9d4e2 !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__date small { padding: 2px 6px; border-radius: 3px; background: rgb(255 201 74 / .14); border: 1px solid rgb(255 201 74 / .35); font-size: 9px !important; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #ffd978 !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__clock { display: inline-flex; align-items: stretch; gap: 5px; color: #fff !important; opacity: 1 !important; }
+#dashboard-content#dashboard-content .xc__cell { display: grid; justify-items: center; gap: 4px; min-width: 46px; padding: 6px 8px 5px; border-radius: 6px; border: 1px solid rgb(255 255 255 / .12); border-top-color: rgb(255 201 74 / .45); background: linear-gradient(180deg, rgb(255 255 255 / .09), rgb(255 255 255 / .02)); box-shadow: inset 0 -8px 12px rgb(0 0 0 / .22), 0 1px 0 rgb(0 0 0 / .4); font: 700 20px/1 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !important; color: #fff !important; }
+#dashboard-content#dashboard-content .xc__cell i { font: 700 8px/1 system-ui, sans-serif !important; font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: #8fa6c4 !important; margin: 0; }
 #dashboard-content#dashboard-content .xc .xr { display: inline-flex; overflow: hidden; height: 1.05em; color: inherit !important; }
 #dashboard-content#dashboard-content .xc .xr__d { display: inline-block; min-width: 1ch; text-align: center; color: inherit !important; }
 #dashboard-content#dashboard-content .xc[data-live="true"] .xr__d { animation: xr-in .38s cubic-bezier(.2,.8,.2,1); }
 @keyframes xr-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { #dashboard-content#dashboard-content .xc * { animation: none !important; transition: none !important; } }
+@media (max-width: 640px) {
+  #dashboard-content#dashboard-content .xc { gap: 10px; }
+  #dashboard-content#dashboard-content .xc__days { width: 54px; height: 54px; }
+  #dashboard-content#dashboard-content .xc__days b { font-size: 18px !important; }
+  #dashboard-content#dashboard-content .xc__cell { min-width: 40px; font-size: 17px !important; padding: 5px 6px 4px; }
+}
 
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__exam:has(.xc) {
-  padding: 0 0 0 16px !important; border: 0 !important; border-left: 1px solid rgb(255 255 255 / .14) !important; background: none !important; box-shadow: none !important;
+  padding: 0 0 0 20px !important; border: 0 !important; border-left: 1px solid rgb(255 255 255 / .14) !important; background: none !important; box-shadow: none !important;
 }
