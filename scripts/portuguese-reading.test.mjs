@@ -10,15 +10,16 @@ const native=createRequire(import.meta.url);
 function load(file,overrides={}) {
  const module={exports:{}};
  const code=ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
- vm.runInNewContext(code,{module,exports:module.exports,require:n=>overrides[n]??native(n)});return module.exports;
+ vm.runInNewContext(code,{module,exports:module.exports,require:n=>overrides[n]??(n.endsWith('.css')?{}:native(n))});return module.exports;
 }
 const markdown=load('src/components/library/Markdown.tsx',{
  './GlossaryText':{GlossaryText:({text})=>text},
  '@/lib/studySourceUrl':{isStudySourceUrl:v=>v.startsWith('https://')},
  '@/lib/internalNavigation':{dashboardHref:v=>v.startsWith('/dashboard/')?v:null},
  '@tanstack/react-router':{Link:({to,children,...props})=>React.createElement('a',{...props,href:to},children)},
+ '@/components/library/StudyPriorityBadges':{StudyPriorityBadges:()=>null},
 });
-const reader=load('src/components/library/PortugueseStudyReading.tsx',{'./Markdown':markdown});
+const reader=load('src/components/library/PortugueseStudyReading.tsx',{'./Markdown':markdown,'./StudyPriorityBadges':{StudyPriorityBadges:()=>null}});
 const pack=JSON.parse(readFileSync('supabase/imports/portugues-organizacao-2026-10-25/package.json','utf8'));
 
 test('Portuguese reader indexes the actual subjects, gives each a working unique anchor and opens only the first initially',()=>{
