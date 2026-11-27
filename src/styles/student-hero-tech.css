@@ -44,21 +44,24 @@
   html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__days em, html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__date small { color: #ffd978 !important; }
   html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__date { color: #d5deea !important; }
   html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__cell i { color: #9fb3cc !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc :is(.xr, .xr__d) { color: inherit !important; }
   html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .sh2-link { color: #ffd978 !important; }
 }
 
-/* ===== Modo claro · barra de menu: ícones com cor e contraste ===== */
+/* ===== Modo claro · barra de menu: ícones azul-marinho sobre cinza-azulado, ativo em marinho com ícone dourado ===== */
 @media (min-width: 900px) {
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger {
-    background: #fbe9b8 !important; color: #6b4300 !important; border: 1px solid #e2bb62 !important;
-    box-shadow: 0 1px 0 rgb(255 255 255 / .8) inset, 0 1px 2px rgb(120 80 0 / .18) !important;
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger { background: transparent !important; border: 0 !important; box-shadow: none !important; opacity: 1 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__icon-wrap {
+    background: #edf1f7 !important; border: 1px solid #cfd8e6 !important; color: #1b2a47 !important; box-shadow: 0 1px 2px rgb(20 35 63 / .08) !important;
   }
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger :is(svg, .student-top-navigation__chevron) { color: inherit !important; stroke: currentColor !important; }
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:hover { background: #f6d98a !important; color: #4a2f00 !important; border-color: #c99a2e !important; }
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:is([data-active="true"], [aria-current], [aria-expanded="true"], [data-state="open"]) {
-    background: linear-gradient(180deg, #f2c54d, #d9a21f) !important; color: #1b1300 !important; border-color: #b8860b !important; box-shadow: 0 2px 6px rgb(160 110 0 / .35) !important;
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__icon-wrap :is(svg, path, circle, rect, line, polyline) { color: #1b2a47 !important; stroke: #1b2a47 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__chevron { color: #5b6b86 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:hover .student-top-navigation__icon-wrap { background: #dde5f1 !important; border-color: #aebcd3 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:is([data-active="true"], [aria-current], [aria-expanded="true"], [data-state="open"]) .student-top-navigation__icon-wrap {
+    background: #14233f !important; border-color: #14233f !important; box-shadow: 0 2px 8px rgb(20 35 63 / .35) !important;
   }
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) { color: #1c2a47 !important; }
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) svg { color: #1c2a47 !important; stroke: currentColor !important; }
-  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger):hover { background: #e9eef8 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:is([data-active="true"], [aria-current], [aria-expanded="true"], [data-state="open"]) .student-top-navigation__icon-wrap :is(svg, path, circle, rect, line, polyline) { color: #ffd978 !important; stroke: #ffd978 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) { color: #1b2a47 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) svg { color: #1b2a47 !important; stroke: currentColor !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger):hover { background: #e5ebf5 !important; }
 }
