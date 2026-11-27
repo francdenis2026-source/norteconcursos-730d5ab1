@@ -55,6 +55,7 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { useLockedAnswers } from "@/hooks/useLockedAnswers";
 import { useReinforcement } from "@/hooks/useReinforcement";
 import {
@@ -2095,7 +2096,6 @@ type ExamFocusProps = {
 
 /** Montagem da sessão: uma única janela com duas etapas (o que treinar, como treinar) e o resumo para iniciar. */
 function TrainerSetup({
-  total,
   available,
   choices,
   facets,
@@ -2188,6 +2188,7 @@ function TrainerSetup({
     { to: "/dashboard/question-bank", icon: ListOrdered, label: "Banco de questões" },
     { to: "/dashboard/performance", icon: TrendingUp, label: "Desempenho" },
   ] as const;
+  const globalSummary = usePlatformQuestionSummary();
   return (
     <div
       className="qs animate-in fade-in duration-300"
@@ -2208,11 +2209,18 @@ function TrainerSetup({
           ))}
         </nav>
         <p className="qs-head__stats" aria-label="Resumo das questões">
-          <span>
-            <b>{total.toLocaleString("pt-BR")}</b> ativas
-          </span>
-          <span>
-            <b>{available.toLocaleString("pt-BR")}</b> na seleção
+          {globalSummary.data && (
+            <>
+              <span title="Total cadastrado na plataforma (Concursos + ENEM)">
+                <b>{globalSummary.data.registered.toLocaleString("pt-BR")}</b> cadastradas
+              </span>
+              <span title="Disponíveis para treinar na plataforma">
+                <b>{globalSummary.data.available.toLocaleString("pt-BR")}</b> disponíveis
+              </span>
+            </>
+          )}
+          <span title="Questões da seleção de estudo atual (filtros aplicados)">
+            <b>{available.toLocaleString("pt-BR")}</b> na seleção de estudo
           </span>
         </p>
       </header>

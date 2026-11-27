@@ -148,3 +148,8 @@ html body:not(#_):not(#_):not(#_) .hm2 .hm2-tile span { text-align: left !import
   html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-podium__card :is([class*="place"], [class*="rank"], [class*="badge"], [class*="pos"]) { color: #5a3a06 !important; }
   html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-board a, html:not(.dark) body:not(#_):not(#_):not(#_) .mobile-homepage .rka-board summary { color: #3d4757; }
 }
+
+/* Números da home (Total cadastrado / Disponíveis): o valor nunca quebra em duas linhas ("11.6 / 96");
+   o rótulo é que quebra, e a fonte encolhe um pouco se faltar largura. */
+.sx-stats dd { white-space: nowrap; font-variant-numeric: tabular-nums; font-size: clamp(1.25rem, 5.2vw, 2rem); }
+.sx-stats dt { text-wrap: balance; overflow-wrap: normal; hyphens: manual; }
