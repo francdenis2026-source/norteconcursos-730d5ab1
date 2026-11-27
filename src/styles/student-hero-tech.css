@@ -30,3 +30,35 @@
   }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .sh2-link:hover { background: rgb(255 201 74 / .18); border-color: rgb(255 201 74 / .8); }
 }
+
+/* ===== Modo claro · faixa do aluno: o painel segue escuro, então o texto fica claro e legível ===== */
+@media (min-width: 900px) {
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest { background: none !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello p { color: #9fb3cc !important; text-shadow: none !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__hello h1 { color: #ffffff !important; text-shadow: none !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__date { color: #d5deea !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest-copy small { color: #ffd978 !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest-copy h2 { color: #ffffff !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest-copy p { color: #cfd9e6 !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__days b, html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__cell { color: #ffffff !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__days em, html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__date small { color: #ffd978 !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__date { color: #d5deea !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .xc__cell i { color: #9fb3cc !important; }
+  html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero .sh2-link { color: #ffd978 !important; }
+}
+
+/* ===== Modo claro · barra de menu: ícones com cor e contraste ===== */
+@media (min-width: 900px) {
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger {
+    background: #fbe9b8 !important; color: #6b4300 !important; border: 1px solid #e2bb62 !important;
+    box-shadow: 0 1px 0 rgb(255 255 255 / .8) inset, 0 1px 2px rgb(120 80 0 / .18) !important;
+  }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger :is(svg, .student-top-navigation__chevron) { color: inherit !important; stroke: currentColor !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:hover { background: #f6d98a !important; color: #4a2f00 !important; border-color: #c99a2e !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-top-navigation__trigger:is([data-active="true"], [aria-current], [aria-expanded="true"], [data-state="open"]) {
+    background: linear-gradient(180deg, #f2c54d, #d9a21f) !important; color: #1b1300 !important; border-color: #b8860b !important; box-shadow: 0 2px 6px rgb(160 110 0 / .35) !important;
+  }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) { color: #1c2a47 !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger) svg { color: #1c2a47 !important; stroke: currentColor !important; }
+  html:root:not(.dark) body .app-shell.navigation-v2[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .app-topbar__actions :is(button, .panel-text-control__trigger):hover { background: #e9eef8 !important; }
+}
