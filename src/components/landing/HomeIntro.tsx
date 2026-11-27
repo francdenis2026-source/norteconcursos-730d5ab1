@@ -21,7 +21,7 @@ import "@/styles/home-refine.css";
 import "@/styles/home-cube.css";
 import "@/styles/pcac-tag.css";
 
-const FEATURES: { icon: LucideIcon; title: string; text: string }[] = [
+export const FEATURES: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: MapIcon,
     title: "Edital organizado",
