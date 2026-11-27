@@ -170,7 +170,7 @@
 .home-ranking-arena .rka-podium li[data-place="3"] { order: 3; }
 .home-ranking-arena .rka-podium__card {
   grid-template-columns: auto minmax(0, 1fr) auto;
-  grid-template-areas: "medal name step" "medal stars pts" "medal stats pts";
+  grid-template-areas: "medal name step" "medal stars pts" "medal stats pts" "strengths strengths strengths";
   justify-items: start;
   align-items: center;
   column-gap: 0.75rem;
@@ -182,10 +182,11 @@
 .home-ranking-arena .rka-podium__medal { grid-area: medal; }
 .home-ranking-arena .rka-podium__medal svg,
 .home-ranking-arena .rka-podium li[data-place="1"] .rka-podium__medal svg { width: 44px !important; height: 44px !important; }
-.home-ranking-arena .rka-podium__name { grid-area: name; font-size: 0.875rem; }
+.home-ranking-arena .rka-podium__name { grid-area: name; min-width: 0; font-size: 0.875rem; }
 .home-ranking-arena .rka-podium__card > .hra-stars { grid-area: stars; }
-.home-ranking-arena .rka-podium__points { grid-area: pts; font-size: 1.25rem; align-self: center; justify-self: end; }
-.home-ranking-arena .rka-podium__stats { grid-area: stats; font-size: 0.6875rem; }
+.home-ranking-arena .rka-podium__points { grid-area: pts; min-width: 0; font-size: 1.25rem; align-self: center; justify-self: end; white-space: nowrap; }
+.home-ranking-arena .rka-podium__stats { grid-area: stats; min-width: 0; overflow: hidden; font-size: 0.6875rem; white-space: nowrap; text-overflow: ellipsis; }
+.home-ranking-arena .rka-podium__card > .rks { grid-area: strengths; min-width: 0; }
 .home-ranking-arena .rka-podium__step {
   grid-area: step;
   position: static;
