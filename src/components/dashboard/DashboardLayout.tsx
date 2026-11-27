@@ -421,6 +421,31 @@ const IDECAN_TAB_PATHS = new Set([
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   useMobileAppShell();
   const topbar = useTopbarGlass();
+  // Em qualquer aparelho: se a barra do topo cobrir o começo da página, empurra o conteúdo na medida exata.
+  React.useEffect(() => {
+    const bar = document.querySelector<HTMLElement>(".app-topbar");
+    const box = document.getElementById("dashboard-content");
+    if (!bar || !box) return;
+    const fit = () => {
+      const first = box.querySelector<HTMLElement>(".app-content__inner > :first-child");
+      const cur = parseFloat(box.style.getPropertyValue("--topbar-overlap")) || 0;
+      const barBottom = bar.getBoundingClientRect().bottom;
+      const top = Math.max(box.getBoundingClientRect().top, first && box.scrollTop <= 1 ? first.getBoundingClientRect().top : 0);
+      const over = Math.max(0, Math.ceil(barBottom - (top - cur)));
+      if (over !== cur) box.style.setProperty("--topbar-overlap", `${over}px`);
+    };
+    fit();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(fit) : null;
+    ro?.observe(bar);
+    ro?.observe(box);
+    window.addEventListener("resize", fit);
+    const t = window.setTimeout(fit, 400);
+    return () => {
+      window.clearTimeout(t);
+      ro?.disconnect();
+      window.removeEventListener("resize", fit);
+    };
+  }, []);
   const location = useLocation();
   const navigate = useNavigate();
   const router = useRouter();

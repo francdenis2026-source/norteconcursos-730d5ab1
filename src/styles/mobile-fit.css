@@ -7,7 +7,7 @@
     overflow: visible;
   }
   html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) #dashboard-content > .app-content__inner {
-    padding-top: 12px !important;
+    padding-top: calc(12px + var(--topbar-overlap, 0px)) !important;
   }
 
   /* Tudo um pouco maior (rem): textos, botões e ícones ficam mais fáceis de ler e tocar. */
