@@ -1422,6 +1422,22 @@ select.nsel-src{display:none!important}
  main:has(.list>.row) .row .bar{margin-top:4px}
  main:has(.list>.row) .row .qprob{font-size:11px;padding:2px 8px;white-space:nowrap}
 }
+
+/* Cronograma (formulário): campos em três colunas, nota resumida; cabe numa janela */
+@media(min-width:901px){
+ main:has(.pl-f){display:flex;flex-direction:column;gap:10px;padding-top:10px!important;padding-bottom:12px!important}
+ main:has(.pl-f)>*{flex:0 0 auto;margin-block:0!important;min-height:0}
+ main:has(.pl-f)>h1{font-size:20px!important;line-height:1.15}
+ main:has(.pl-f)>p.muted{font-size:12.5px;line-height:1.4;max-width:none}
+ main:has(.pl-f) .pl-f{padding:12px 16px}
+ main:has(.pl-f) .pl-g{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px 14px!important}
+ main:has(.pl-f) .pl-g label{font-size:12.5px;gap:4px}
+ main:has(.pl-f) .pl-g :is(input,select){height:36px}
+ main:has(.pl-f) .pl-f>p.muted{margin:10px 0 4px!important;font-size:12.5px}
+ main:has(.pl-f) .pl-d{gap:6px 10px}
+ main:has(.pl-f) .pl-err{margin:4px 0!important;min-height:0}
+ main:has(.pl-f) .note{padding:10px 14px;font-size:12px;line-height:1.45}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
