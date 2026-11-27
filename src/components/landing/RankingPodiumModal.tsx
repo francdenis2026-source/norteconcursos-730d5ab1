@@ -41,6 +41,17 @@ export function RankingPodiumModal({
     if (!candidate && d.open) d.close();
   }, [candidate]);
 
+  useEffect(() => {
+    if (!candidate) return;
+    const { overflow, overscrollBehavior } = document.body.style;
+    document.body.style.overflow = "hidden";
+    document.body.style.overscrollBehavior = "contain";
+    return () => {
+      document.body.style.overflow = overflow;
+      document.body.style.overscrollBehavior = overscrollBehavior;
+    };
+  }, [candidate]);
+
   const c = candidate;
   const pos = c?.rank_position ?? 1;
   const tier = pos === 1 ? "gold" : pos === 2 ? "silver" : "bronze";
