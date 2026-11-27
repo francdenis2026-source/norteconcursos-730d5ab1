@@ -3,6 +3,7 @@ import "@/styles/ranking-professional-refinement.css";
 import "@/styles/ranking-arena.css";
 import "@/styles/ranking-arena-v2.css";
 import "@/styles/ranking-compact.css";
+import { StrengthBars, parseStrengths, type Strength } from "@/components/ranking/StrengthBars";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -132,10 +133,15 @@ const Stars = ({ n }: { n: number }) => (
 
 function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: () => void }) {
   const [p, setP] = React.useState<Profile | null | undefined>(undefined);
+  const [strengths, setStrengths] = React.useState<Strength[]>([]);
   React.useEffect(() => {
     if (!userId) return;
     let alive = true;
     setP(undefined);
+    setStrengths([]);
+    void supabase.rpc("get_ranking_strengths" as never, { _user: userId } as never).then(({ data, error }) => {
+      if (alive && !error) setStrengths(parseStrengths(data));
+    });
     void supabase
       .rpc("get_ranking_profile", { _user: userId })
       .maybeSingle()
@@ -245,6 +251,12 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                       <small>{p.streak === 1 ? "dia seguido" : "dias seguidos"}</small>
                     </div>
                   </dl>
+
+                  {strengths.length > 0 && (
+                    <section className="rkp-section" aria-label="Pontos fortes">
+                      <StrengthBars items={strengths} title="Pontos fortes · disciplinas com mais acertos" />
+                    </section>
+                  )}
 
                   <section className="rkp-section" aria-labelledby="rkp-points-title">
                     <h3 id="rkp-points-title">De onde vêm os pontos</h3>

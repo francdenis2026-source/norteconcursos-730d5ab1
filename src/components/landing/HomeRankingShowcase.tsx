@@ -27,10 +27,13 @@ const Stars = ({ n }: { n: number }) => (
   </span>
 );
 
+import { StrengthBars, parseStrengths, type Strength } from "@/components/ranking/StrengthBars";
+
 export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
   const [candidates, setCandidates] = useState<Candidate[] | null>(null);
   const [unavailable, setUnavailable] = useState(false);
   const [updated, setUpdated] = useState<Date | null>(null);
+  const [strengths, setStrengths] = useState<Record<number, Strength[]>>({});
   useEffect(() => {
     let alive = true;
     let lastLoadedAt = 0;
@@ -51,6 +54,15 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
           Number.isInteger(r.stars) && r.stars >= 0 && r.stars <= 5,
       ).slice(0, 4);
       setCandidates(valid);
+      // Pontos fortes: opcional; se a função ainda não existir no banco, os cartões ficam como antes.
+      void supabase.rpc("get_public_ranking_strengths" as never).then(({ data: st, error: stErr }) => {
+        if (!alive || stErr || !Array.isArray(st)) return;
+        const map: Record<number, Strength[]> = {};
+        for (const row of st as { rank_position: number; strengths: unknown }[]) {
+          if (Number.isInteger(row.rank_position) && !map[row.rank_position]) map[row.rank_position] = parseStrengths(row.strengths);
+        }
+        setStrengths(map);
+      });
       setUnavailable(false);
       const now = new Date();
       lastLoadedAt = now.getTime();
@@ -138,6 +150,7 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
                             <span className="rka-podium__stats">
                               {number.format(c.questions)} questões · {c.accuracy}%
                             </span>
+                            <StrengthBars items={strengths[pos] ?? []} compact />
                             <span className="rka-podium__step" aria-hidden="true">{pos}º</span>
                           </Link>
                         </li>
@@ -164,6 +177,11 @@ export function HomeRankingShowcase({ anchorId }: { anchorId?: string }) {
                                 </span>
                               </span>
                             </span>
+                            {strengths[c.rank_position]?.[0] && (
+                              <span className="rka-row__best" title={`Ponto forte: ${strengths[c.rank_position][0].s}`}>
+                                {strengths[c.rank_position][0].s} · <b>{strengths[c.rank_position][0].pct}%</b>
+                              </span>
+                            )}
                             <span className="rka-row__score">
                               <b>{number.format(c.points)}<small> pts</small></b>
                               <span className="rka-bar" aria-hidden="true">
