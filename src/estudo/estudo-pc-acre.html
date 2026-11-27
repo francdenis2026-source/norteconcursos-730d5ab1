@@ -1217,10 +1217,12 @@ html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
 /* ===== Desktop: a rolagem fica dentro do conteúdo; a página nunca rola, então o conteúdo não some ao usar a barra lateral ===== */
 @media(min-width:901px){
  html,body{height:100%!important;overflow:hidden!important}
- .shell{height:100dvh!important;min-height:0!important}
- .content{height:100dvh!important;min-height:0!important;overflow:hidden}
+ .shell{height:100%!important;min-height:0!important}
+ .content{height:100%!important;min-height:0!important;overflow:hidden}
  main{flex:1 1 0!important;min-height:0!important;overflow:auto!important}
- .g-side{height:100dvh!important;min-height:0!important;overflow:hidden}
+ #side{height:100%!important;position:relative!important;top:auto!important}
+ .g-side{min-height:0!important;overflow:hidden}
+ body.side-off.peek #side{position:fixed!important;height:100vh!important}
 }
 
 /* ===== Treino pausado: pílula integrada à barra superior (desktop), sem ocupar linha no conteúdo ===== */
