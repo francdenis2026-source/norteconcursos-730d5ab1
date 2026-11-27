@@ -1,3 +1,4 @@
+import { markActive } from "@/lib/activity";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import questoesPdf from "@/estudo/pdf/Estatistica_PC-AC_Questoes_Franc_DNis_Norte_Concursos.pdf?url";
@@ -167,6 +168,7 @@ function EstudoPcAcre() {
       }
       const row = parseStudyMessage(event.data);
       if (!row) return;
+      markActive(true);
       enqueueStudyAnswer(row);
       postStatus();
       void flushStudyAnswers().finally(postStatus);
@@ -184,7 +186,17 @@ function EstudoPcAcre() {
           ref={frame}
           title="Estudo PC-AC 2026"
           srcDoc={srcDoc}
-          onLoad={() => {
+          onLoad={(event) => {
+            // Eventos dentro do iframe não chegam à janela principal: repassa ao detector de atividade
+            // para o relógio de estudo não pausar enquanto o aluno usa a área de estudo.
+            try {
+              const inner = event.currentTarget.contentWindow;
+              for (const name of ["mousemove", "mousedown", "keydown", "scroll", "wheel", "touchstart", "pointerdown", "click"]) {
+                inner?.addEventListener(name, () => markActive(), { passive: true, capture: true });
+              }
+            } catch {
+              /* iframe inacessível: mantém o comportamento anterior */
+            }
             window.dispatchEvent(new Event("resize"));
             sendTheme();
             void flushStudyAnswers().finally(() => {
