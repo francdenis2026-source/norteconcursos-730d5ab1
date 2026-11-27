@@ -1,12 +1,12 @@
 # Questões da Área de estudo PC-AC no treinador
 
-Cadastra as 541 questões da Área de estudo (só conteúdo do cargo de Oficial Investigador) em `board_exam_questions`,
+Cadastra as 1018 questões da Área de estudo (só conteúdo do cargo de Oficial Investigador) em `board_exam_questions`,
 a mesma tabela das provas da IDECAN. Com elas no catálogo, o banco passa a guardar **uma única primeira tentativa por
 questão** (`question_first_answers`), valendo para o treinador, o simulado e a área.
 
 ## Como aplicar
-1. Rode os arquivos `01` a `13` no SQL Editor do Supabase, na ordem. Cada um é idempotente (`on conflict do nothing`).
-2. Rode `99-conferir.sql`: esperado `total = 541` e `sem_topico = 0`.
+1. Rode os arquivos `01` a `23` no SQL Editor do Supabase, na ordem. Cada um é idempotente (`on conflict do nothing`).
+2. Rode `99-conferir.sql`: esperado `total = 1018` e `sem_topico = 0`.
 3. Gerado por `scripts/build-pcac-area-catalog.py` (os ids vêm do enunciado; rodar de novo não os altera).
 
 ## Observações
