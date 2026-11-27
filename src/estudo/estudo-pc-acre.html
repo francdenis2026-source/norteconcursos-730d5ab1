@@ -1497,6 +1497,23 @@ html body .orow .xs{border:0!important;background:none!important;color:var(--mut
 html body .orow .xs:hover{color:var(--ink)!important;text-decoration-color:currentColor}
 /* Barra Anterior/Próxima: botões com largura natural (a regra base os deixava com a largura da coluna) */
 @media(min-width:901px){main:has(.qstage) .qnavb button{display:inline-flex!important;align-items:center;justify-content:center;width:auto!important;min-width:0!important;max-width:none!important}}
+
+/* Mapa do edital: cartão do bloco clicável */
+.pv-blk[role=link]{cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s}
+.pv-blk[role=link]:hover{border-color:var(--bc);box-shadow:0 10px 26px -14px var(--bc)}
+.pv-blk[role=link]:focus-visible{outline:2px solid var(--bc);outline-offset:2px}
+.pv-blk header{position:relative}
+.pv-open{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1px solid color-mix(in srgb,var(--bc) 55%,transparent);background:color-mix(in srgb,var(--bc) 12%,transparent);color:var(--bc);font-size:0;transition:background .15s,transform .15s}
+.pv-open svg{width:16px;height:16px}
+.pv-blk[role=link]:hover .pv-open{background:var(--bc);color:#fff;transform:translateY(-50%) translateX(2px)}
+.pv-blk .pv-d{cursor:pointer}
+/* Bloco: etiquetas didáticas */
+.bc-st{font-weight:700}
+.bc-f .bc-st.ok{border-color:#1f9d57;background:rgba(31,157,87,.14);color:var(--ink)}
+.bc-f .bc-st.mid{border-color:#e5b85e;background:rgba(229,184,94,.16);color:var(--ink)}
+.bc-f .bc-st.new{border-color:var(--line);color:var(--muted)}
+.bc-next{position:absolute;top:10px;right:10px;padding:2px 9px;border-radius:999px;background:#e5b85e;color:#1b1300;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.bc:has(.bc-next){border-color:#e5b85e;box-shadow:0 0 0 1px rgba(229,184,94,.35),var(--sh)}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1868,7 +1885,7 @@ function vHome() {
   <div class="pv-sh"><h2>Mapa do edital</h2><span class="muted">100 questões · 160 pontos · mínimo de 80</span></div><div class="pv-blocks">`;
   BLOCOS.forEach((b, bi) => {
     const rd = b.discs.filter(d => d.pronto), ids = [].concat(...rd.map(d => subQ(d.id))), c = certas(ids), p = ids.length ? Math.round(100 * c / ids.length) : 0;
-    h += `<article class="pv-blk" data-i="${bi}"><header><span class="w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h3>${b.nome.replace(" (gerais)", "")}</h3><span class="m">${rd.length} de ${b.discs.length} disciplinas com material</span></header><ul>`;
+    h += `<article class="pv-blk" data-i="${bi}" role="link" tabindex="0" aria-label="Abrir ${b.nome.replace(" (gerais)", "")}" onclick="if(!event.target.closest('.pv-d'))go('bloco',{b:'${b.id}',d:null,t:null})" onkeydown="if((event.key==='Enter'||event.key===' ')&&event.target===this){event.preventDefault();go('bloco',{b:'${b.id}',d:null,t:null})}"><header><span class="w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h3>${b.nome.replace(" (gerais)", "")}</h3><span class="m">${rd.length} de ${b.discs.length} disciplinas com material</span><span class="pv-open" aria-hidden="true">${IC.chev}</span></header><ul>`;
     b.discs.forEach(d => {
       const dq = d.pronto ? subQ(d.id) : [], dc = certas(dq), dp = dq.length ? Math.round(100 * dc / dq.length) : 0;
       h += `<li><button class="pv-d" ${d.pronto ? `onclick="go('disc',{b:'${b.id}',d:'${d.id}',t:null})"` : "disabled"}><span class="pv-dn" title="${d.nome}">${d.nome}</span><span class="pv-dt ${d.pronto ? "ok" : "soon"}" title="${d.pronto ? dq.length + " questões" : ""}">${d.pronto ? dq.length + " q." : "em breve"}</span>${d.pronto ? `<span class="pv-dpw" title="${dc}/${dq.length} acertadas · ${dp}%"><span class="pv-dp" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${dp}" aria-label="Progresso em ${d.nome}"><i style="width:${dp}%"></i></span><em>${dc}/${dq.length} · ${dp}%</em></span>` : ""}</button></li>`;
@@ -1908,15 +1925,17 @@ function vBloco() {
   const b = blk(), esp = b.id === "especificos";
   const ready = b.discs.filter(d => d.pronto), allIds = [].concat(...ready.map(d => subQ(d.id)));
   const c = certas(allIds), f = feitas(allIds), p = allIds.length ? Math.round(100 * c / allIds.length) : 0;
-  let h = `<section class="bh"><div class="bh-t"><span class="bh-w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h1>${b.nome.replace(" (gerais)", "")}</h1><p>${esp ? "O edital não divide as questões por matéria. As disciplinas seguem a ordem do Anexo III." : "Disciplinas deste bloco, com o seu progresso em cada uma."}</p></div>
+  let h = `<section class="bh"><div class="bh-t"><span class="bh-w ${b.peso === 2 ? "g" : ""}">Peso ${b.peso} · ${b.total} questões na prova</span><h1>${b.nome.replace(" (gerais)", "")}</h1><p>Vale ${b.total} das 100 questões (peso ${b.peso}). ${esp ? "O edital não divide as questões por matéria; as disciplinas seguem a ordem do Anexo III." : "Estude pela ordem sugerida e feche cada assunto com questões."} Comece pela disciplina marcada <b>Comece por aqui</b>.</p></div>
   <div class="bh-k"><div><b>${ready.length}<small>/${b.discs.length}</small></b><span>disciplinas com material</span></div><div><b>${allIds.length}</b><span>questões</span></div><div><b>${f}</b><span>respondidas</span></div><div><b>${p}%</b><span>acertadas</span></div></div></section><div class="bg">`;
+  const nxtId = (ready.slice().sort((a, b2) => { const f = x => { const q = subQ(x.id); return q.length ? certas(q) / q.length : 1; }; return f(a) - f(b2); })[0] || {}).id;
   b.discs.forEach((d, i) => {
     const ids = d.pronto ? subQ(d.id) : [], ac = certas(ids), fe = feitas(ids), pp = ids.length ? Math.round(100 * ac / ids.length) : 0;
+    const stt = !ids.length ? "" : pp >= 80 ? `<span class="bc-st ok">Dominada</span>` : fe ? `<span class="bc-st mid">Em andamento</span>` : `<span class="bc-st new">Não iniciada</span>`;
     const tops = d.pronto ? (ST[d.id] || []) : [], alta = tops.filter(t => tierOf(t.id) === "alta").length;
-    h += d.pronto ? `<button class="bc" onclick="go('disc',{d:'${d.id}',t:null})"><span class="bc-n">${i + 1}</span><span class="bc-t">${d.longo || d.nome}</span>
+    h += d.pronto ? `<button class="bc" onclick="go('disc',{d:'${d.id}',t:null})"><span class="bc-n">${i + 1}</span><span class="bc-t">${d.longo || d.nome}</span>${d.id === nxtId && pp < 80 ? `<span class="bc-next">Comece por aqui</span>` : ""}
       <span class="bc-bar" aria-hidden="true"><i style="width:${pp}%"></i></span>
       <span class="bc-m"><b>${pp}%</b> acertadas · ${ac}/${ids.length}</span>
-      <span class="bc-f"><span>${ids.length} questões</span><span>${fe} feitas</span>${alta ? `<span class="hot">${alta} assunto${alta > 1 ? "s" : ""} de alta chance</span>` : ""}</span><span class="bc-go">Abrir disciplina →</span></button>`
+      <span class="bc-f">${stt}<span>${ids.length} questões</span><span>${fe} feitas</span>${alta ? `<span class="hot">${alta} assunto${alta > 1 ? "s" : ""} de alta chance</span>` : ""}</span><span class="bc-go">Abrir disciplina →</span></button>`
       : `<div class="bc soon"><span class="bc-n">${i + 1}</span><span class="bc-t">${d.longo || d.nome}</span><span class="bc-m">${esp ? "" : d.q + " questões na prova · "}em breve</span></div>`;
   });
   return h + `</div>`;
