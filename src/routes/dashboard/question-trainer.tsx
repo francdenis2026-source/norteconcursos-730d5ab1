@@ -2417,22 +2417,6 @@ function TrainerSetup({
               ))}
             </div>
           </div>
-          <div className="qs-go">
-            <p className="qs-sum" aria-live="polite">
-              <b>{usedCount.toLocaleString("pt-BR")}</b>
-              <span>
-                {usedCount === 1 ? "questão" : "questões"} · cerca de {duration} · {orderLabel}
-              </span>
-            </p>
-            <div className="qs-actions">
-              <Button variant="ghost" onClick={reset} className="qs-reset" disabled={!active.length && !values.includeAnswered}>
-                <RotateCcw aria-hidden="true" /> Limpar
-              </Button>
-              <Button disabled={!available} onClick={start} className="qs-start hero-primary-action">
-                <Sparkles aria-hidden="true" /> Iniciar treinamento
-              </Button>
-            </div>
-          </div>
         </section>
 
         {moreOpen && (
@@ -2471,6 +2455,22 @@ function TrainerSetup({
         )}
       </div>
 
+        <div className="qs-go">
+          <p className="qs-sum" aria-live="polite">
+            <b>{usedCount.toLocaleString("pt-BR")}</b>
+            <span>
+              {usedCount === 1 ? "questão" : "questões"} · cerca de {duration} · {orderLabel}
+            </span>
+          </p>
+          <div className="qs-actions">
+            <Button variant="ghost" onClick={reset} className="qs-reset" disabled={!active.length && !values.includeAnswered}>
+              <RotateCcw aria-hidden="true" /> Limpar
+            </Button>
+            <Button disabled={!available} onClick={start} className="qs-start hero-primary-action">
+              <Sparkles aria-hidden="true" /> Iniciar treinamento
+            </Button>
+          </div>
+        </div>
 
       <div className="qs-mobilebar">
         <span>
