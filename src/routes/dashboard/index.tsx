@@ -21,6 +21,7 @@ import "@/styles/nextvita-theme.css";
 import "@/styles/student-home-reveal.css";
 import "@/styles/student-hero-tech.css";
 import "@/styles/student-image-clarity.css";
+import "@/styles/student-dash-refine.css";
 import {
   CHART_RANGES,
   dailyAnswerSeries,

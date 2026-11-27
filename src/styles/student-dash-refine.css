@@ -1,0 +1,35 @@
+/* Área do aluno · refinamento (claro e escuro) */
+@media (min-width: 900px) {
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi {
+    display: grid !important; grid-template-columns: 40px minmax(0, 1fr) auto !important; align-items: center !important; gap: 12px !important;
+    padding: 14px 16px !important; border-radius: 14px !important; min-height: 0 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > svg {
+    width: 40px !important; height: 40px !important; padding: 10px !important; border-radius: 11px !important; box-sizing: border-box; stroke-width: 2 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > span:not(.nv-spark) { display: grid !important; gap: 1px !important; min-width: 0; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi small { font-size: 11px !important; font-weight: 700 !important; letter-spacing: .06em; text-transform: uppercase; opacity: .8; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi strong { font-size: 1.5rem !important; line-height: 1.1 !important; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi em { font-style: normal; font-size: 12px !important; opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi .nv-spark { width: 72px !important; height: 28px !important; opacity: .9; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi .nv-spark svg { width: 72px !important; height: 28px !important; }
+
+  /* Acesso rápido: texto em duas linhas, sem corte; ícone discreto */
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile { border-radius: 14px !important; min-height: 120px; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile__body { padding: 10px 12px !important; gap: 8px !important; align-items: flex-end; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile__icon { width: 28px !important; height: 28px !important; border-radius: 8px !important; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile small {
+    white-space: normal !important; overflow: hidden !important; text-overflow: clip !important;
+    display: -webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 11.5px !important; line-height: 1.3 !important;
+  }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile strong { font-size: 14px !important; letter-spacing: -.01em; }
+  html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label { font-size: 12px !important; letter-spacing: .1em; text-transform: uppercase; }
+}
+
+/* Modo claro: cartões brancos com borda e sombra suaves, textos escuros */
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi {
+  background: #ffffff !important; border: 1px solid #dfe5ee !important; box-shadow: 0 1px 2px rgb(16 24 40 / .05), 0 8px 20px -14px rgb(16 24 40 / .18) !important; color: #162033 !important;
+}
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi :is(strong, small) { color: #162033 !important; }
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi em { color: #4b5770 !important; opacity: 1; }
+html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile { border: 1px solid #dfe5ee !important; box-shadow: 0 8px 20px -14px rgb(16 24 40 / .25) !important; }
