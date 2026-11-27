@@ -21,3 +21,13 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) 
 /* Faixa de boas-vindas e demais fotos: sem véu amarelado nem filtro que apague a cor */
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__art { opacity: 1 !important; filter: saturate(1.1) contrast(1.04) !important; }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile img { opacity: 1 !important; filter: saturate(1.1) contrast(1.03) !important; }
+
+/* Faixa de boas-vindas: caixa do concurso sem desfoque; capa do edital com cor original */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-hero__contest { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ecc-contest__cover { filter: none !important; }
+/* Cartões com foto: véu escuro só na base, onde fica o texto, deixando a cor da imagem aparecer */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile::after {
+  background: linear-gradient(180deg, transparent 45%, rgb(8 11 14 / 60%) 75%, rgb(8 11 14 / 90%) 100%) !important;
+}
+/* Qualquer caixa de vidro do dashboard do aluno: sem desfoque (o texto mantém contraste pelo fundo sólido) */
+html body .app-shell[data-area="student"]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 :is(li, .ecc-action, .ecc-countdown, .sh2-kpi, .sh2-link) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
