@@ -1320,6 +1320,32 @@ body.side-off.peek .shell{grid-template-columns:var(--sbw) minmax(0,1fr)}
  main:has(.qstage) .qbar{flex-wrap:wrap}
  main:has(.qstage) .qbar>span{min-width:0}
 }
+
+/* ===== Modo Simulado: hero + formulário lado a lado, numa janela ===== */
+.sm{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,1fr);gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);min-height:0}
+.sm-hero{display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:clamp(18px,3vh,32px);min-height:300px;color:#fff;background-size:cover;background-position:center}
+.sm-eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#e5b85e}
+.sm-hero h1{margin:0!important;font-size:clamp(24px,3.6vh,32px)!important;color:#fff}
+.sm-hero p{margin:0;max-width:46ch;font-size:13.5px;line-height:1.5;color:#d3dce6}
+.sm-facts{display:flex;gap:10px;margin:6px 0 0;padding:0;list-style:none;flex-wrap:wrap}
+.sm-facts li{display:grid;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
+.sm-facts b{font-size:16px;color:#fff;line-height:1.1}.sm-facts span{font-size:11px;color:#b9c6d4}
+.sm-form{display:grid;grid-template-columns:1fr 1fr;align-content:center;gap:14px 12px;padding:clamp(18px,3vh,30px)}
+.sm-wide{grid-column:1/-1}
+.sm-f{display:grid;gap:6px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.sm-f select,.sm-f input{height:40px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:14px;font-weight:500;width:100%;box-sizing:border-box}
+.sm-f select:focus,.sm-f input:focus{outline:2px solid #e5b85e;outline-offset:1px}
+.sm-sw{display:flex;gap:12px;align-items:center;cursor:pointer;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+.sm-sw input{position:absolute;opacity:0;pointer-events:none}
+.sm-sw i{flex:none;width:34px;height:20px;border-radius:999px;background:var(--line);position:relative;transition:background .15s}
+.sm-sw i::after{content:"";position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .15s}
+.sm-sw input:checked+i{background:#2f8f5b}.sm-sw input:checked+i::after{transform:translateX(14px)}
+.sm-sw input:focus-visible+i{outline:2px solid #e5b85e;outline-offset:2px}
+.sm-sw b{display:block;font-size:13.5px;color:var(--ink)}.sm-sw small{font-size:12px;color:var(--muted)}
+.sm-go{grid-column:1/-1;height:44px;font-size:15px;border-radius:12px}
+html.dark .sm-go{background:#e5b85e;color:#10151d}
+@media(max-width:900px){.sm{grid-template-columns:1fr}.sm-hero{min-height:180px}.sm-form{grid-template-columns:1fr}}
+@media(min-width:901px){main:has(.sm){display:flex;flex-direction:column;justify-content:center}main:has(.sm) .sm{min-height:min(440px,100%)}}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1877,12 +1903,16 @@ function simDrop() { SIM = null; try { SIMT = {}; SIMD = {}; } catch (e) {} rend
 let SIM = null;
 function vSim() {
   const pre = S.sel || "todas";
-  let h = `<h1>Modo Simulado</h1><p class="muted">Ambiente de prova: uma questão por vez, cronômetro, cartão-resposta. O gabarito e a explicação só aparecem depois de finalizar.</p><div class="card">
-  <label><b>Matéria</b><br><select id="sMat"><option value="todas" ${pre === "todas" ? "selected" : ""}>Todas as Específicas (misturadas)</option>${SUBJ.map(s => `<option value="${s.id}" ${pre === s.id ? "selected" : ""}>${s.nome}</option>`).join("")}</select></label><br><br>
-  <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="sExc" checked> Não repetir questões que já acertei</label><br><label><b>Nº de questões</b><br><select id="sN"><option>10</option><option selected>20</option><option>30</option><option>60</option></select></label><br><br>
-  <label><b>Minutos por questão</b> (a prova real tem 100 questões em 5 h, cerca de 3 min cada)<br><input type="number" id="sT" value="3" min="1" max="10" style="width:80px"></label><br><br>
-  <button class="btn" onclick="simStart()">Começar simulado</button></div>`;
-  return h;
+  return `<section class="sm"><div class="sm-hero" style="background-image:linear-gradient(90deg,rgba(8,14,22,.94) 0%,rgba(8,14,22,.72) 55%,rgba(8,14,22,.35) 100%),url('/media/hero/card-simulados.webp')">
+   <span class="sm-eyebrow">Treino · Oficial Investigador PC-AC</span><h1>Modo Simulado</h1>
+   <p>Ambiente de prova: uma questão por vez, cronômetro e cartão-resposta. Gabarito e explicação só depois de finalizar.</p>
+   <ul class="sm-facts"><li><b>100</b><span>questões na prova real</span></li><li><b>5 h</b><span>de duração</span></li><li><b>~3 min</b><span>por questão</span></li></ul></div>
+  <form class="sm-form" onsubmit="simStart();return false">
+   <label class="sm-f sm-wide"><span>Matéria</span><select id="sMat"><option value="todas" ${pre === "todas" ? "selected" : ""}>Todas as Específicas (misturadas)</option>${SUBJ.map(s => `<option value="${s.id}" ${pre === s.id ? "selected" : ""}>${s.nome}</option>`).join("")}</select></label>
+   <label class="sm-f"><span>Nº de questões</span><select id="sN"><option>10</option><option selected>20</option><option>30</option><option>60</option></select></label>
+   <label class="sm-f"><span>Minutos por questão</span><input type="number" id="sT" value="3" min="1" max="10"></label>
+   <label class="sm-sw sm-wide"><input type="checkbox" id="sExc" checked><i aria-hidden="true"></i><span><b>Não repetir questões que já acertei</b><small>Só entram questões ainda não acertadas.</small></span></label>
+   <button class="btn sm-go" type="submit">Começar simulado</button></form></section>`;
 }
 function simStart() {
   const m = document.getElementById("sMat").value, n = +document.getElementById("sN").value, mins = +document.getElementById("sT").value || 3;
