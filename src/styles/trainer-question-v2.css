@@ -1392,15 +1392,6 @@ html body .qx .qx-chip {
   text-overflow: ellipsis;
 }
 
-/* Desktop: a barra superior fica escondida no treinador (trainer-no-topbar.css), mas o cartão fixo
-   ainda começava 64px abaixo dela, deixando uma faixa escura vazia no topo. Sem barra, o cartão
-   começa no topo da janela. No celular a barra permanece e o espaço é mantido. */
-@media (min-width: 900px) {
-  html body .app-shell[data-area="student"]:has(.qx):not(#_):not(#_):not(#_):not(#_) .qx .qx-card {
-    top: 0 !important;
-  }
-}
-
 /* Janela restaurada (768–1100px): a assinatura fixa do rodapé só existe a partir de 1101px, então o
    cartão não reserva o espaço dela e vai até a base da janela (antes sobrava uma faixa vazia de 36px). */
 @media (min-width: 768px) and (max-width: 1100px) {
