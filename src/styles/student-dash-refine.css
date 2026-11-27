@@ -56,3 +56,12 @@ html body .student-home.sh2 .ncx-footer { border-top: 1px solid color-mix(in okl
 .nv-chart .nv-bars { transition-duration: 900ms !important; }
 .nv-chart .nv-bars path { transition: filter .18s ease; }
 @media (prefers-reduced-motion: reduce) { .nv-chart .nv-bars:hover path { filter: none; } }
+
+/* Ritmo de estudo: cartão mais enxuto */
+html body .student-home.sh2 .nv-summary > div { padding: 7px 14px !important; }
+html body .student-home.sh2 .nv-summary dd { font-size: 1.125rem !important; }
+html body .student-home.sh2 .nv-figure { margin: 6px 0 0 !important; }
+html body .student-home.sh2 .nv-legend { margin-bottom: 2px !important; }
+html body .student-home.sh2 .ncx-panel { gap: 8px !important; }
+html body .student-home.sh2 .ncx-footer { padding-top: 8px !important; }
+html body .student-home.sh2 .ncx-footer :is(button, a) { min-height: 32px !important; padding-block: 4px !important; font-size: 12.5px !important; }

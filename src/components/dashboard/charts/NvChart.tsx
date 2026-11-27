@@ -147,7 +147,7 @@ export function NvChart({
   const y = (v: number) => padT + innerH - (Math.max(0, v) / yMax) * innerH;
   const step = n ? innerW / n : 0;
   const cx = (i: number) => padL + step * i + step / 2;
-  const barW = Math.max(4, Math.min(36, step * 0.5));
+  const barW = Math.max(4, Math.min(26, step * 0.38));
   // Rótulos do eixo x nunca se encostam: afina conforme a largura real.
   const every = labelEvery > 0 ? Math.max(labelEvery, Math.ceil(46 / Math.max(1, step))) : 0;
 

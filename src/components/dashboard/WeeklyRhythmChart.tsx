@@ -15,7 +15,7 @@ type WeeklyRhythmChartProps = {
 };
 
 export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>, compact = false) {
-  const desktopBase = compact ? 172 : 196;
+  const desktopBase = compact ? 120 : 164;
   const [h, setH] = React.useState(desktopBase);
   const base = React.useRef(desktopBase);
   React.useEffect(() => {
