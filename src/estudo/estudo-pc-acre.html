@@ -1369,6 +1369,17 @@ select.nsel-src{display:none!important}
 .qside .trainbox>span:first-child{display:flex;flex-direction:column;gap:2px;line-height:1.15;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .qside .trainbox>span:first-child b{font-size:18px;letter-spacing:0;color:var(--ink);text-transform:none}
 .qside .trainbox button{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:36px!important;padding:0 8px!important;white-space:nowrap;font-size:12.5px!important;font-weight:700;border-radius:9px;line-height:1}
+
+/* Questões do assunto: título e abas nunca saem da área, barra Anterior/Próxima numa linha */
+@media(min-width:901px){
+ main:has(.qstage){justify-content:flex-start!important}
+ main:has(.qstage)>*{flex:0 0 auto!important;min-height:0}
+ main:has(.qstage)>.qstage{flex:1 1 auto!important}
+ main:has(.qstage) .tabs{height:34px!important;flex:none!important}
+ main:has(.qstage) .qnavb{flex-wrap:nowrap!important;gap:8px!important}
+ main:has(.qstage) .qnavb button{width:auto!important;flex:0 0 auto;padding:0 14px!important;white-space:nowrap}
+ main:has(.qstage) .qnavb .qhint{flex:1 1 0;min-width:0;text-align:center;font-size:12px;line-height:1.25}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
