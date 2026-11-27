@@ -1139,6 +1139,39 @@ html.dark .note{background:#121c28;border:1px solid #233447;border-left:3px soli
 html.dark details,html.dark .explica,html.dark .pl-w{background:#0e1721;border-color:#223041;color:var(--ink)}
 html.dark details summary{color:var(--muted)}
 html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
+
+/* ===== Painel de estudos: tudo numa janela, barra enxuta, sem vãos (desktop) ===== */
+@media(min-width:901px){
+ .top{height:40px!important;min-height:0!important;padding:0 14px!important;gap:8px!important}
+ .top .crumbs,.top .crumbs button{font-size:13px!important}
+ .top .crumbs button{padding:3px 6px!important}
+ .top button,.tools button,.sbt{min-width:30px!important;min-height:30px!important;width:30px;height:30px;padding:0!important;border-radius:8px!important}
+ .top .crumbs button{width:auto;height:auto;min-width:0!important;min-height:0!important}
+ .top svg{width:16px;height:16px}
+ .tools{gap:6px!important}
+ .tools .acflag{width:26px!important;height:auto!important}
+ body:has(.pv) .content{height:100vh;min-height:0}
+ main:has(.pv){display:flex;flex-direction:column;min-height:0;overflow:hidden;padding:10px 16px 10px!important}
+ body:has(.pv) .appfoot{display:none}
+ main:has(.pv) .pv{flex:1;min-height:0;align-items:stretch;gap:12px}
+ main:has(.pv) .pv-main{display:flex;flex-direction:column;gap:8px;min-height:0}
+ main:has(.pv) .pv-head h1{font-size:20px!important;margin:0!important}
+ main:has(.pv) .pv-count{padding:4px 12px}.pv-count b{font-size:22px}
+ main:has(.pv) .pv-cont{padding:8px 14px}
+ main:has(.pv) .pv-k{padding:6px 10px}.pv-k b{font-size:17px}
+ main:has(.pv) .pv-blocks{flex:1;min-height:0;align-items:stretch;gap:10px}
+ main:has(.pv) .pv-blk{display:flex;flex-direction:column;min-height:0}
+ main:has(.pv) .pv-blk header{padding:8px 12px 6px}
+ main:has(.pv) .pv-blk ul{flex:1;min-height:0;display:flex;flex-direction:column;padding:2px 6px;list-style:none}
+ main:has(.pv) .pv-blk li{flex:1 1 0;min-height:0;display:flex;border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+ main:has(.pv) .pv-blk li:last-child{border-bottom:0}
+ main:has(.pv) .pv-d{flex:1;align-content:center;padding:2px 8px}
+ main:has(.pv) .pv-blk footer{padding:6px 12px}
+ main:has(.pv) .pv-side{position:static;min-height:0;overflow:auto;gap:8px;scrollbar-width:none}
+ main:has(.pv) .pv-side::-webkit-scrollbar{display:none}
+ main:has(.pv) .pv-side>section{padding:8px 12px}
+ main:has(.pv) .pv-nav{padding:8px}.pv-nav button{padding:5px 8px}.pv-ni{width:28px;height:28px}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
