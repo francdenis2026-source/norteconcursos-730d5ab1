@@ -1400,3 +1400,12 @@ html body .qx .qx-chip {
     top: 0 !important;
   }
 }
+
+/* Janela restaurada (768–1100px): a assinatura fixa do rodapé só existe a partir de 1101px, então o
+   cartão não reserva o espaço dela e vai até a base da janela (antes sobrava uma faixa vazia de 36px). */
+@media (min-width: 768px) and (max-width: 1100px) {
+  html body .qx .qx-card:not(#_):not(#_):not(#_):not(#_),
+  html body .app-shell[data-focus-mode="true"]:not(#_):not(#_):not(#_):not(#_) .qx .qx-card {
+    bottom: 0;
+  }
+}
