@@ -47,3 +47,12 @@ html body .student-home.sh2 .nv-legend i { border-radius: 3px !important; }
 .nv-chart .nv-grid { stroke-dasharray: 2 4; opacity: .6; }
 .nv-chart .nv-axis { font-size: 11px; }
 html body .student-home.sh2 .ncx-footer { border-top: 1px solid color-mix(in oklab, currentColor 10%, transparent); padding-top: 10px !important; }
+
+/* Gráficos: interação mais evidente (coluna acesa ao apontar, barra com brilho, entrada mais visível) */
+.nv-chart { cursor: crosshair; }
+.nv-chart .nv-bars .nv-slot { transition: fill .18s ease; }
+.nv-chart .nv-bars:hover .nv-slot { fill: rgb(229 184 94 / .14); }
+.nv-chart .nv-bars:hover path { filter: drop-shadow(0 0 6px currentColor) brightness(1.15); }
+.nv-chart .nv-bars { transition-duration: 900ms !important; }
+.nv-chart .nv-bars path { transition: filter .18s ease; }
+@media (prefers-reduced-motion: reduce) { .nv-chart .nv-bars:hover path { filter: none; } }
