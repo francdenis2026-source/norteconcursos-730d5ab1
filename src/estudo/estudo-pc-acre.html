@@ -1262,6 +1262,21 @@ html body main details.ordem .ordem-b:has(>p.muted)>p:first-child{border-top:0;p
 /* Menu lateral recolhido: ao espiar (peek) a barra vira sobreposição e o conteúdo mantém a coluna 2 do grid, sem encolher. */
 .shell>.content{grid-column:2}
 body.side-off.peek .shell{grid-template-columns:var(--sbw) minmax(0,1fr)}
+
+/* ===== Treino pausado v2: status discreto em linha (sem pílula), divisor fino e ação em texto ===== */
+@media(min-width:901px){
+ .trainbanner{top:7px!important;right:172px;height:26px;padding:0 0 0 14px!important;gap:12px!important;border:0!important;border-left:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+ .trainbanner>span:first-child{gap:6px;font-size:12px;letter-spacing:.01em}
+ .trainbanner>span:first-child::before{width:6px;height:6px;box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 22%,transparent)}
+ .trainbanner .trainclk{font-weight:600}
+ .trainbanner button{height:24px;min-height:24px!important;padding:0 8px!important;border-radius:6px!important;font-size:12px!important;font-weight:600}
+ .trainbanner button:first-child,html.dark .trainbanner button:first-child{background:transparent!important;color:var(--acc)!important}
+ html.dark .trainbanner button:first-child{color:#e5b85e!important}
+ .trainbanner button:first-child::after{content:"\2192";margin-left:5px;display:inline-block;transition:transform .15s ease}
+ .trainbanner button:first-child:hover{background:color-mix(in srgb,var(--acc) 12%,transparent)!important;filter:none}
+ .trainbanner button:first-child:hover::after{transform:translateX(2px)}
+ .trainbanner button:last-child{color:var(--muted)!important;font-weight:500}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
