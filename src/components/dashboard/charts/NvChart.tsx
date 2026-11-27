@@ -147,7 +147,7 @@ export function NvChart({
   const y = (v: number) => padT + innerH - (Math.max(0, v) / yMax) * innerH;
   const step = n ? innerW / n : 0;
   const cx = (i: number) => padL + step * i + step / 2;
-  const barW = Math.max(4, Math.min(24, step * 0.56));
+  const barW = Math.max(4, Math.min(36, step * 0.5));
   // Rótulos do eixo x nunca se encostam: afina conforme a largura real.
   const every = labelEvery > 0 ? Math.max(labelEvery, Math.ceil(46 / Math.max(1, step))) : 0;
 
@@ -241,6 +241,7 @@ export function NvChart({
                 style={{ transitionDelay: `${i * 30}ms`, transformOrigin: `${cx(i)}px ${padT + innerH}px` }}
                 opacity={active === null || active === i ? 1 : 0.55}
               >
+                <rect x={cx(i) - barW / 2} y={padT} width={barW} height={innerH} rx={Math.min(6, barW / 2)} className="nv-slot" />
                 {parts.map((v, k) => {
                   if (v <= 0) return null;
                   const y0 = y(acc);
@@ -248,7 +249,7 @@ export function NvChart({
                   const y1 = y(acc);
                   const h = Math.max(0, y0 - y1);
                   const isTop = acc === top;
-                  const r = isTop ? Math.min(4, barW / 2, h) : 0;
+                  const r = isTop ? Math.min(6, barW / 2, h) : 0;
                   const x = cx(i) - barW / 2;
                   const gap = k > 0 ? 1 : 0;
                   return (

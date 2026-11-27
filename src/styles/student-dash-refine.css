@@ -33,3 +33,17 @@ html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):
 html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi :is(strong, small) { color: #162033 !important; }
 html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi em { color: #4b5770 !important; opacity: 1; }
 html:root:not(.dark) body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile { border: 1px solid #dfe5ee !important; box-shadow: 0 8px 20px -14px rgb(16 24 40 / .25) !important; }
+
+/* Seu ritmo de estudo: resumo em faixa única, gráfico mais alto, colunas com trilho */
+html body .student-home.sh2 .nv-summary { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 0 !important; padding: 0 !important; border: 1px solid color-mix(in oklab, currentColor 12%, transparent) !important; border-radius: 12px !important; overflow: hidden; background: color-mix(in oklab, currentColor 3%, transparent) !important; }
+html body .student-home.sh2 .nv-summary > div { display: grid !important; gap: 2px !important; padding: 10px 16px !important; border: 0 !important; border-radius: 0 !important; background: none !important; }
+html body .student-home.sh2 .nv-summary > div + div { border-left: 1px solid color-mix(in oklab, currentColor 12%, transparent) !important; }
+html body .student-home.sh2 .nv-summary dt { font-size: 10.5px !important; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+html body .student-home.sh2 .nv-summary dd { margin: 0; font-size: 1.375rem !important; font-weight: 750; letter-spacing: -.02em; font-variant-numeric: tabular-nums; text-align: left !important; }
+html body .student-home.sh2 .nv-summary dd span { font-size: 12px; font-weight: 500; opacity: .65; }
+html body .student-home.sh2 .nv-legend { font-size: 11.5px !important; gap: 14px !important; opacity: .85; }
+html body .student-home.sh2 .nv-legend i { border-radius: 3px !important; }
+.nv-slot { fill: color-mix(in oklab, currentColor 5%, transparent); }
+.nv-chart .nv-grid { stroke-dasharray: 2 4; opacity: .6; }
+.nv-chart .nv-axis { font-size: 11px; }
+html body .student-home.sh2 .ncx-footer { border-top: 1px solid color-mix(in oklab, currentColor 10%, transparent); padding-top: 10px !important; }
