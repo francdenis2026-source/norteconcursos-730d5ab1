@@ -1279,6 +1279,24 @@ body.side-off.peek .shell{grid-template-columns:var(--sbw) minmax(0,1fr)}
  .trainbanner button:first-child:hover::after{transform:translateX(2px)}
  .trainbanner button:last-child{color:var(--muted)!important;font-weight:500}
 }
+
+/* ===== Faixa "Continuar": uma linha baixa, com fechar e descartar simulado ===== */
+.pv-cont{position:relative;padding:8px 10px 8px 14px!important;gap:12px!important;flex-wrap:nowrap!important;border-radius:12px!important;align-items:center}
+.pv-cont .pv-ico{width:32px!important;height:32px!important;border-radius:9px!important}
+.pv-cont .pv-ico svg{width:16px;height:16px}
+.pv-cont-t{flex:1 1 auto!important;min-width:0!important;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pv-cont-t h2{font-size:15px!important;margin:0}
+.pv-cont-t p{font-size:12.5px!important;margin:0!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.pv-cont-a{gap:6px!important;flex-wrap:nowrap!important;margin-left:auto;align-items:center}
+.pv-cont-a button{min-height:30px!important;height:30px;padding:0 12px!important;border-radius:8px!important;font-size:12.5px;white-space:nowrap}
+.pv-cont-a .b2{border-color:rgba(255,255,255,.28)}
+.pv-cont-a .b3{background:transparent;border:1px solid transparent;color:#f1b0a6;font-weight:600}
+.pv-cont-a .b3:hover{background:rgba(255,120,100,.14)}
+.pv-cont-a .bx{min-height:28px!important;width:28px;height:28px;padding:0!important;border:0;background:transparent;color:#a3b3c6;font-size:20px;line-height:1;border-radius:7px!important;font-weight:400}
+.pv-cont-a .bx:hover{background:rgba(255,255,255,.1);color:#fff}
+.pv-showc{border:0;background:none;color:var(--muted);font:inherit;font-size:12px;cursor:pointer;padding:2px 4px;text-decoration:underline;text-underline-offset:3px}
+.pv-showc:hover{color:var(--ink)}
+@media(max-width:640px){.pv-cont{flex-wrap:wrap!important}.pv-cont-a{width:100%;flex-wrap:wrap!important}.pv-cont-a button{flex:1}.pv-cont-a .bx{flex:0 0 28px}}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
@@ -1642,10 +1660,10 @@ function vHome() {
   const R = 52, CR = 2 * Math.PI * R;
   let h = `<div class="pv"><div class="pv-main">
   <header class="pv-head"><div><span class="pv-eyebrow">${oi} · Oficial Investigador · PC-AC · IDECAN</span><h1>Painel de estudos</h1></div>
-  <div class="pv-count" role="status"><b>${dias}</b><span>dias para a prova<small>prevista para 24/01/2027</small></span></div></header>
-  <section class="pv-cont" aria-label="Continuar estudando"><span class="pv-ico">${IC.play}</span>
-  <div class="pv-cont-t"><h2>${lt ? "Continuar de onde parei" : "Começar pelos Específicos"}</h2><p>${lt ? "Último assunto: " + lt.nome : "Os Específicos valem 60 das 100 questões, com peso 2 (120 dos 160 pontos)."}</p></div>
-  <div class="pv-cont-a"><button class="b1" onclick="${cont}">${lt ? "Continuar" : "Começar agora"}</button><button class="b2" onclick="go('sim')">Fazer um simulado</button></div></section>
+  ${contOff() ? `<button class="pv-showc" type="button" onclick="contHide(false)">Mostrar atalho “Continuar”</button>` : ""}<div class="pv-count" role="status"><b>${dias}</b><span>dias para a prova<small>prevista para 24/01/2027</small></span></div></header>
+  ${contOff() ? "" : `<section class="pv-cont" aria-label="Continuar estudando"><span class="pv-ico">${IC.play}</span>
+  <div class="pv-cont-t"><h2>${lt ? "Continuar de onde parei" : "Começar pelos Específicos"}</h2><p>${lt ? "Último assunto: " + lt.nome : "Específicos: 60 das 100 questões, peso 2 (120 dos 160 pontos)."}</p></div>
+  <div class="pv-cont-a"><button class="b1" onclick="${cont}">${lt ? "Continuar" : "Começar agora"}</button><button class="b2" onclick="go('sim')">${SIM && SIM.ids ? "Retomar simulado" : "Fazer um simulado"}</button>${SIM && SIM.ids ? `<button class="b3" onclick="simDrop()" title="Descartar o simulado que ficou pela metade">Excluir simulado</button>` : ""}<button class="bx" type="button" onclick="contHide(true)" aria-label="Fechar esta faixa" title="Fechar esta faixa">${"\u00d7"}</button></div></section>`}
   <div class="pv-kpis">${kpi(IC.check, resp, "questões respondidas")}${kpi(IC.target, taxa + "%", "taxa de acerto")}${kpi(IC.done, ac, "acertadas (não repetem)")}${kpi(IC.flame, st, st === 1 ? "dia seguido de estudo" : "dias seguidos de estudo")}</div>
   <div class="pv-sh"><h2>Mapa do edital</h2><span class="muted">100 questões · 160 pontos · mínimo de 80</span></div><div class="pv-blocks">`;
   BLOCOS.forEach((b, bi) => {
@@ -1830,6 +1848,9 @@ function vTopic() {
 }
 
 /* ---------- Modo Simulado ---------- */
+function contOff() { try { return localStorage.getItem("pcac_cont_off") === "1"; } catch (e) { return false; } }
+function contHide(on) { try { localStorage.setItem("pcac_cont_off", on ? "1" : "0"); } catch (e) {} render(); }
+function simDrop() { SIM = null; try { SIMT = {}; SIMD = {}; } catch (e) {} render(); }
 let SIM = null;
 function vSim() {
   const pre = S.sel || "todas";
