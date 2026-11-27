@@ -471,22 +471,24 @@ function LegalCoursePage() {
             )}
           </section>
         ) : (
-          <div className={fm.focus ? "block" : "grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]"}>
+          <div className={fm.focus ? "block" : "grid gap-3 lg:grid-cols-[280px_minmax(0,1fr)]"}>
             {!fm.focus && (
               <aside
-                className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:self-start"
+                className="surface-card space-y-2 p-3 lg:sticky lg:top-4 lg:self-start"
                 aria-label="Navegação da lei"
               >
-                <p className="text-sm font-semibold">Artigos</p>
-                <label className="block text-sm">
-                  Buscar artigo ou expressão
-                  <input
-                    className="mt-1 w-full rounded-lg border bg-background p-2"
-                    type="search"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                  />
-                </label>
+                <input
+                  className="lcx-search w-full rounded-lg border bg-background px-3 py-2 text-sm"
+                  type="search"
+                  placeholder="Buscar artigo ou expressão"
+                  aria-label="Buscar artigo ou expressão"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+                <details className="lcx-filters">
+                  <summary>
+                    Filtros{filtering ? " · ativos" : ""} <span>{visible.length} dispositivos</span>
+                  </summary>
                 <label className="block text-sm">
                   Capítulo ou seção
                   <select
@@ -527,16 +529,14 @@ function LegalCoursePage() {
                   />
                   Mostrar dispositivos excluídos
                 </label>
-                <p className="text-xs text-muted-foreground">
-                  {visible.length} dispositivos neste filtro
-                </p>
                 {filtering && (
                   <button type="button" onClick={clearFilters} className="text-sm underline">
                     Limpar busca e filtros
                   </button>
                 )}
+                </details>
                 <nav
-                  className="max-h-[calc(100vh-22rem)] min-h-48 space-y-1 overflow-y-auto pr-1"
+                  className="lcx-artlist max-h-[calc(100dvh-13rem)] min-h-48 space-y-0.5 overflow-y-auto pr-1"
                   aria-label="Dispositivos da lei"
                 >
                   {visible.map((row) => (
@@ -545,7 +545,7 @@ function LegalCoursePage() {
                       key={row.id}
                       aria-current={selected?.id === row.id ? "true" : undefined}
                       onClick={() => setSelectedId(row.id)}
-                      className={`block w-full rounded-lg border p-2 text-left text-sm ${selected?.id === row.id ? "border-primary bg-primary/5" : "border-transparent hover:bg-muted"}`}
+                      className={`block w-full rounded-lg border px-2.5 py-1.5 text-left text-sm ${selected?.id === row.id ? "border-primary bg-primary/5" : "border-transparent hover:bg-muted"}`}
                     >
                       <span className="flex items-center gap-2">
                         <strong>{row.label}</strong>

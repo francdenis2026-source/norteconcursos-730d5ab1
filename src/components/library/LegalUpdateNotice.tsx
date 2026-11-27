@@ -100,8 +100,9 @@ export function LegalUpdateNotice({
     : null;
   const others = review?.changes ?? [];
   const total = curated.length + others.length;
+  if (!total) return null;
   return (
-    <details className="surface-card p-4 sm:p-5" aria-label="Atualização legislativa">
+    <details className="lcx-update surface-card px-4 py-2.5" aria-label="Atualização legislativa">
       <summary className="flex cursor-pointer flex-wrap items-center gap-x-3 gap-y-1 font-semibold">
         <span className="inline-flex items-center gap-2">
           <History className="h-4 w-4" /> Atualizações da lei
