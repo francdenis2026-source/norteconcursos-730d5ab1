@@ -1576,6 +1576,30 @@ html body .opt:focus-visible{outline:2px solid #e5b85e;outline-offset:1px}
  main:has(.pv) .pv-side{overflow:hidden}
  main:has(.pv) .pv-week .pv-wk{height:44px!important}
 }
+/* Celular e tablet: nada passa da largura da tela */
+@media(max-width:900px){
+ main{overflow-x:hidden}
+ main :is(.qstage,.qmain,.qside,.qbar,.qonly,.sm,.sm-hero,.sm-form,.dc,.card,.ordem,.ordem-b){min-width:0!important;max-width:100%!important;box-sizing:border-box}
+ main .qbar{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+ main .qbar>*{min-width:0}
+ main :is(table.t,table.tb){display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+ main :is(p,.ordem-b,.muted){overflow-wrap:anywhere}
+ main .sm{grid-template-columns:minmax(0,1fr)!important}
+ main .sm-hero{min-height:200px!important}
+ main .sm-facts{flex-wrap:wrap}
+ main .qside .trainbox{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+ main .qside .trainbox button{white-space:normal!important;line-height:1.15;min-height:40px!important}
+ main .qnavb{flex-wrap:nowrap!important;gap:8px}
+ main .qnavb .qhint{display:none}
+ main .qnavb button{flex:1 1 0;min-height:44px!important}
+ main .orow .xs{min-height:36px!important}
+ main .opt{min-height:44px}
+}
+@media(max-width:380px){
+ main .bh-k{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ main .qside .trainbox{grid-template-columns:1fr!important}
+ main .sm-hero h1{font-size:22px!important}
+}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
