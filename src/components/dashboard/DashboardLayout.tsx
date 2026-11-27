@@ -702,7 +702,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   const toggleTheme = () => {
-    setIsDarkMode(toggleStoredTheme() === "dark");
+    // A troca de cores acontece na hora (classe no <html>); a atualização do ícone é de baixa
+    // prioridade para não re-renderizar o painel inteiro no mesmo quadro da troca.
+    const next = toggleStoredTheme() === "dark";
+    React.startTransition(() => setIsDarkMode(next));
   };
 
   const [farewell, setFarewell] = React.useState<{ spent: number } | null>(null);

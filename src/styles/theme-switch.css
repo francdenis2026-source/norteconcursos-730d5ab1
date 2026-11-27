@@ -18,6 +18,8 @@ html, body { min-width: 0; }
   html { overflow-y: auto; }
 }
 /* Switching theme must never animate size, padding, fonts or layout. */
+/* Pausa (em vez de remover) as animações: remover o nome e devolvê-lo dois quadros depois fazia TODAS
+   recomeçarem do zero (entradas, brilhos, giros), o que pesava e piscava na troca de tema. */
 :root[data-theme-switching] *,
 :root[data-theme-switching] *::before,
-:root[data-theme-switching] *::after { animation-name: none !important; }
+:root[data-theme-switching] *::after { animation-play-state: paused !important; }
