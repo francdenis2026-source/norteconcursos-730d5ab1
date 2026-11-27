@@ -39,3 +39,11 @@
   html body :is(#plataforma, #desafio-diario-home, #concursos, #ranking-destaque, #planos) { padding-block: 28px !important; }
 }
 @media (prefers-reduced-motion: reduce) { html body :is(#plataforma .sx-card, #concursos .sx-exam, #planos .home-plan):hover { transform: none !important; } }
+
+/* Ranking na homepage: faixa compacta e pódio com interação */
+@media (min-width: 1024px) {
+  html body #ranking-destaque { padding-block: 22px !important; }
+  html body #ranking-destaque h2 { font-size: clamp(1.5rem, 2.2vw, 1.875rem) !important; line-height: 1.1 !important; }
+  html body #ranking-destaque .rka-podium__card { transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease !important; }
+  html body #ranking-destaque .rka-podium__card:hover { transform: translateY(-2px); border-color: rgb(229 184 94 / .6) !important; box-shadow: 0 14px 30px -18px rgb(229 184 94 / .45) !important; }
+}

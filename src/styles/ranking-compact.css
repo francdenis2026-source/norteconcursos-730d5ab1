@@ -1,0 +1,29 @@
+/* Ranking · versão compacta e sóbria (desktop e celular) */
+html body .rka.rka .rka-hero { min-height: 0 !important; padding: 18px 22px !important; border-radius: 16px !important; gap: 20px !important; align-items: center !important; }
+html body .rka.rka .rka-hero__bg { opacity: .35 !important; filter: saturate(.9) !important; }
+html body .rka.rka .rka-hero__copy { gap: 6px !important; display: grid !important; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+html body .rka.rka .rka-hero__trophy { grid-row: span 3; width: 44px !important; height: 44px !important; }
+html body .rka.rka .rka-hero__trophy svg { width: 44px !important; height: 44px !important; filter: drop-shadow(0 4px 10px rgb(255 190 60 / .35)); }
+html body .rka.rka .rka-hero h1 { font-size: clamp(1.5rem, 2.4vw, 2rem) !important; line-height: 1.05 !important; margin: 0 !important; }
+html body .rka.rka .rka-kicker { margin: 0 !important; font-size: 10.5px !important; letter-spacing: .14em !important; }
+html body .rka.rka .rka-hero__desc { margin: 0 !important; font-size: 13px !important; line-height: 1.45 !important; max-width: 46ch; opacity: .85; }
+html body .rka.rka .rka-me { padding: 14px 16px !important; border-radius: 14px !important; gap: 8px !important; min-width: 0; max-width: 400px;
+  background: linear-gradient(160deg, rgb(12 20 32 / .9), rgb(8 13 22 / .94)) !important; border: 1px solid rgb(255 201 74 / .3) !important; box-shadow: 0 16px 34px -22px rgb(0 0 0 / .8) !important; backdrop-filter: none !important; }
+html body .rka.rka .rka-me__main { gap: 12px !important; }
+html body .rka.rka .rka-ring { width: 54px !important; height: 54px !important; }
+html body .rka.rka .rka-ring svg.rk-emblem { width: 30px !important; height: 30px !important; }
+html body .rka.rka .rka-me :is(button, a) { min-height: 32px !important; padding: 4px 12px !important; font-size: 12.5px !important; }
+html body .rka.rka .rka-toolbar { padding: 8px 10px !important; border-radius: 14px !important; gap: 10px !important; min-height: 0 !important; }
+html body .rka.rka .rka-seg :is(button, a) { min-height: 32px !important; padding: 4px 12px !important; font-size: 13px !important; }
+html body .rka.rka .rka-search, html body .rka.rka .rka-size { min-height: 36px !important; }
+html body .rka.rka .rka-search input, html body .rka.rka .rka-size select { height: 36px !important; font-size: 13px !important; }
+html body .rka.rka .rka-board { padding: 14px 16px !important; border-radius: 14px !important; }
+html body .rka.rka .rka-board > header h2 { font-size: 16px !important; margin: 0 0 2px !important; }
+html body .rka.rka .rka-board > header p { font-size: 12.5px !important; margin: 0 !important; opacity: .75; }
+html body .rka.rka .rka-notice { padding: 8px 12px !important; font-size: 12.5px !important; border-radius: 10px !important; margin: 8px 0 !important; }
+html body .rka.rka .rka-podium { gap: 10px !important; margin-top: 10px !important; }
+html body .rka.rka .rka-podium > li { border-radius: 14px !important; }
+@media (max-width: 760px) {
+  html body .rka.rka .rka-hero { padding: 14px !important; }
+  html body .rka.rka .rka-me { max-width: none; }
+}

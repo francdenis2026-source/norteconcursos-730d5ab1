@@ -2,6 +2,7 @@ import "@/styles/exam-performance-workspaces.css";
 import "@/styles/ranking-professional-refinement.css";
 import "@/styles/ranking-arena.css";
 import "@/styles/ranking-arena-v2.css";
+import "@/styles/ranking-compact.css";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
