@@ -530,3 +530,29 @@ html body .qx:not(#_):not(#_) .qx-explain__lead { font-size: 0.8125rem; }
   html body .platform-signature__mark:not(#_) { font-size: 9px; }
   html body .platform-signature__origin:not(#_) { font-size: 8px; }
 }
+
+/* Desktop: leitura confortável. Telas largas ganham mais um degrau de tamanho; nada abaixo de 13 px. */
+@media (min-width: 1101px) {
+  html body .qs:not(#_):not(#_):not(#_) { font-size: 1rem; }
+  html body .qs:not(#_):not(#_):not(#_) .qs-head h1 { font-size: 1.5rem; }
+  html body .qs:not(#_):not(#_):not(#_) .qs-head small,
+  html body .qs:not(#_):not(#_):not(#_) .qs-step { font-size: 0.9375rem; }
+  html body .qs:not(#_):not(#_):not(#_) .qs-head__stats span,
+  html body .qs:not(#_):not(#_):not(#_) .qs-head__links a,
+  html body .qs:not(#_):not(#_):not(#_) .qs-head nav a,
+  html body .qs:not(#_):not(#_):not(#_) .qs-note,
+  html body .qs:not(#_):not(#_):not(#_) .qs-muted,
+  html body .qs:not(#_):not(#_):not(#_) .qs-sum span,
+  html body .qs:not(#_):not(#_):not(#_) .qs-reset { font-size: 0.9375rem; }
+  html body .qs:not(#_):not(#_):not(#_) .qs-label,
+  html body .qs:not(#_):not(#_):not(#_) .qs-chips > button,
+  html body .qs:not(#_):not(#_):not(#_) .qs-select,
+  html body .qs:not(#_):not(#_):not(#_) .qs-morebtn,
+  html body .qs:not(#_):not(#_):not(#_) .qs-toggle b { font-size: 1.0625rem; }
+  html body .qs:not(#_):not(#_):not(#_) .qs-chips > button small { font-size: 0.875rem; }
+  html body .qs:not(#_):not(#_):not(#_) .qs-sum b { font-size: 2.25rem; }
+}
+/* Sessão e barra superior: pisos mínimos. */
+html body .qx:not(#_):not(#_) :is(.qx-chip, .qx-label, .qx-item__tag, .qx-example__tag, .qx-top__live, .qx-explain__lead, .qx-chips__report, .qx-scale3d__labels span, .qx-scale3d figcaption, .qx-scale figcaption, .qx-info__count p) { font-size: 0.8125rem; }
+html body .question-header-progress:not(#_):not(#_) small,
+html body .question-header-progress:not(#_):not(#_) .question-header-progress__stat small { font-size: 0.75rem; }
