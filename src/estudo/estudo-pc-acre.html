@@ -1129,6 +1129,16 @@ html.dark .pb-chip[aria-pressed="true"]{color:#0c121b}
 html.dark details,html.dark .explica,html.dark .pl-w{background:var(--card)!important;border-color:var(--line)!important;color:var(--ink)!important}
 html.dark details summary,html.dark details b,html.dark details p{color:var(--ink)}
 html.dark details summary{color:var(--acc)!important}
+.trainbanner{display:flex;width:fit-content;max-width:100%;margin:0 0 6px auto;padding:3px 4px 3px 10px;gap:8px;flex-wrap:nowrap;font-size:12px;border-radius:999px;background:var(--card);border:1px solid var(--line);position:sticky;top:6px;z-index:5;box-shadow:0 4px 14px -8px rgba(0,0,0,.45)}
+.trainbanner .tb-a{flex-wrap:nowrap;gap:4px}
+.trainbanner button{min-height:26px;padding:0 10px;font-size:12px;border-radius:999px}
+.trainbanner button:last-child{color:var(--muted)}
+html.dark{--bg:#0b1118;--card:#111a24;--ink:#e6ecf2;--muted:#9aabbb;--line:#223041;--acc:#d4b06a;--acc2:#1a2230}
+html.dark body,html.dark main{background:var(--bg)}
+html.dark .note{background:#121c28;border:1px solid #233447;border-left:3px solid #c9a45c;color:var(--ink)}
+html.dark details,html.dark .explica,html.dark .pl-w{background:#0e1721;border-color:#223041;color:var(--ink)}
+html.dark details summary{color:var(--muted)}
+html.dark .exemplo{background:#101b26;border-color:#223041;color:var(--ink)}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}

@@ -14,13 +14,14 @@ type WeeklyRhythmChartProps = {
   formatDuration: (seconds: number) => string;
 };
 
-export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>) {
-  const [h, setH] = React.useState(164);
-  const base = React.useRef(164);
+export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>, compact = false) {
+  const desktopBase = compact ? 104 : 164;
+  const [h, setH] = React.useState(desktopBase);
+  const base = React.useRef(desktopBase);
   React.useEffect(() => {
     const mq = window.matchMedia("(max-width: 640px)");
     const set = () => {
-      base.current = mq.matches ? 128 : 164;
+      base.current = mq.matches ? (compact ? 96 : 128) : desktopBase;
       setH((cur) => Math.max(cur, base.current));
     };
     set();
@@ -39,7 +40,7 @@ export function useChartHeight(panelRef?: React.RefObject<HTMLElement | null>) {
         const cs = getComputedStyle(body);
         const inner = body.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
         setH((cur) => {
-          const next = Math.round(Math.min(window.matchMedia("(max-width: 640px)").matches ? base.current : 340, Math.max(base.current, cur + (inner - panel.offsetHeight))));
+          const next = Math.round(Math.min(window.matchMedia("(max-width: 640px)").matches ? base.current : compact ? base.current : 340, Math.max(base.current, cur + (inner - panel.offsetHeight))));
           return Math.abs(next - cur) >= 4 ? next : cur;
         });
       });
@@ -67,7 +68,7 @@ export function WeeklyRhythmChart({
   const [view, setView] = React.useState<"chart" | "table">("chart");
   const plotRef = React.useRef<HTMLDivElement>(null);
   const panelRef = React.useRef<HTMLDivElement>(null);
-  const height = useChartHeight(panelRef);
+  const height = useChartHeight(panelRef, true);
   const total = buckets.reduce((sum, b) => sum + b.seconds, 0);
   const active = buckets.filter((b) => b.seconds >= 60);
   const average = active.length ? Math.round(total / active.length) : 0;
