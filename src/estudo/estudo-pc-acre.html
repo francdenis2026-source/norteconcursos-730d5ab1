@@ -1258,6 +1258,10 @@ html body main details.ordem .ordem-b:has(>p.muted)>p:first-child{border-top:0;p
  main:has(.pv) .pv-nav .pv-nt b{font-size:12.5px!important}
  main:has(.pv) .pv-side>section,main:has(.pv) .pv-nav{border-radius:12px}
 }
+
+/* Menu lateral recolhido: ao espiar (peek) a barra vira sobreposição e o conteúdo mantém a coluna 2 do grid, sem encolher. */
+.shell>.content{grid-column:2}
+body.side-off.peek .shell{grid-template-columns:var(--sbw) minmax(0,1fr)}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
