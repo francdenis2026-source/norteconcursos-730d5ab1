@@ -215,3 +215,14 @@
     display: none;
   }
 }
+
+/* Cartão "Seu ritmo de estudo": compacto. Resumo mais baixo, gráfico baixo, rodapé enxuto. */
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .sh2-card__body { padding-block: 8px 10px; }
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .ncx-panel { gap: 6px; }
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .nv-summary { gap: 6px; }
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .nv-summary > div {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 6px 12px; min-height: 0;
+}
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .nv-summary dd { margin: 0; font-size: 1.05rem; }
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .nv-figure { gap: 2px; }
+.student-home.sh2 .sh2-card--chart[data-tone="gold"] .ncx-footer { margin-top: 0; padding-top: 0; }
