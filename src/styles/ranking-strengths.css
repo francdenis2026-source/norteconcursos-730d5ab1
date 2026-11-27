@@ -1,24 +1,24 @@
 /* Pontos fortes no ranking: lista densa de disciplinas com barra e % */
 .rks { display: grid; gap: 5px; width: 100%; text-align: left; }
 .rks__title { font-size: 9.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; opacity: .65; }
-.rks ul { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
-.rks li { --c: #e5b85e; display: grid; grid-template-columns: minmax(0, 1fr) 56px 34px auto; align-items: center; gap: 8px; font-size: 12px; line-height: 1.25; }
-.rks li[data-tone="hi"] { --c: #22c55e; }
-.rks li[data-tone="mid"] { --c: #e5b85e; }
-.rks li[data-tone="lo"] { --c: #f97316; }
+.rks__list { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.rks__row { --c: #e5b85e; display: grid; grid-template-columns: minmax(0, 1fr) 56px 34px auto; align-items: center; gap: 8px; font-size: 12px; line-height: 1.25; }
+.rks__row[data-tone="hi"] { --c: #22c55e; }
+.rks__row[data-tone="mid"] { --c: #e5b85e; }
+.rks__row[data-tone="lo"] { --c: #f97316; }
 .rks__name { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .rks__bar { height: 4px; border-radius: 99px; background: color-mix(in oklab, currentColor 12%, transparent); overflow: hidden; }
 .rks__bar i { display: block; height: 100%; border-radius: inherit; background: var(--c); transform-origin: left; animation: rks-grow .7s cubic-bezier(.2,.8,.2,1) both; }
 .rks__pct { font-size: 12px; font-weight: 800; text-align: right; color: var(--c); font-variant-numeric: tabular-nums; }
 .rks__n { font-size: 10.5px; opacity: .6; font-variant-numeric: tabular-nums; }
-.rks[data-compact] li { grid-template-columns: minmax(0, 1fr) 44px 32px; gap: 6px; font-size: 11px; }
+.rks[data-compact] .rks__row { grid-template-columns: minmax(0, 1fr) 44px 32px; gap: 6px; font-size: 11px; }
 .rks[data-compact] .rks__pct { font-size: 11px; }
 @keyframes rks-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (prefers-reduced-motion: reduce) { .rks__bar i { animation: none; } }
 /* Pódio da homepage: separador fino antes dos pontos fortes */
 .rka-podium__card .rks { margin-top: 8px; padding-top: 8px; border-top: 1px solid color-mix(in oklab, currentColor 12%, transparent); }
 .rka-row .rks { grid-column: 1 / -1; margin-top: 4px; }
-.rkp-section .rks li { font-size: 12.5px; }
+.rkp-section .rks__row { font-size: 12.5px; }
 .rka-row__best { justify-self: end; max-width: 220px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding: 2px 8px; border-radius: 999px;
   border: 1px solid rgb(34 197 94 / .35); background: rgb(34 197 94 / .08); font-size: 11px; opacity: .95; }
 .rka-row__best b { color: #22c55e; }
