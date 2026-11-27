@@ -3,7 +3,7 @@ import { materialPracticeSearch } from "@/lib/materialPractice";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { acreDate } from "@/lib/acreTime";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import "@/styles/student-area-kit.css";
 import { disciplineTheme, themeStyle } from "@/lib/disciplineTheme";
 import { createFileRoute, Link, useNavigate, useParams } from "@tanstack/react-router";
@@ -14,6 +14,8 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { CobrancaBadge, CobrancaCard, CargoSelect } from "@/components/library/Cobranca";
 import { cobrancaOf, topArticles } from "@/lib/cobrancaData";
+import { pcacEditalMatch } from "@/lib/pcacEditalMatch";
+import "@/styles/legal-course-compact.css";
 import { CARGO_GROUPS, CARGO_LABEL, countFor, heatOf, type CargoGroup } from "@/lib/cobrancas";
 import { toolsAreaFor } from "@/components/study/StudyTools";
 import { LockedState } from "@/components/dashboard/PageHero";
@@ -280,47 +282,53 @@ function LegalCoursePage() {
         )}
         {!fm.focus && (
           <header
-            className="workspace-banner workspace-banner--reading surface-card ak-themed-head overflow-hidden p-0"
+            className="lcx-head workspace-banner workspace-banner--reading surface-card ak-themed-head overflow-hidden p-0"
             style={themeStyle(disciplineTheme(course.title))}
           >
-            <div className="space-y-3 p-5 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
-                Percurso de legislação
-              </p>
-              <h1 className="text-2xl font-bold leading-tight sm:text-3xl">{course.title}</h1>
-              {coverage && (
-                <p className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                  Explicações cadastradas: {coverage.explained} de {coverage.total_units}
-                </p>
-              )}
-              <p className="max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
-                {course.overview.intro}
-              </p>
-            </div>
-            <div
-              className="grid grid-cols-2 gap-px border-t bg-border sm:grid-cols-4"
-              aria-label="Seu progresso nesta lei"
-            >
-              {(
-                [
-                  ["Lidos", `${summary.read}/${current.length}`],
-                  ["Fixados", summary.practiced],
-                  ["Dificuldades", summary.difficult],
-                  ["Revisões pendentes", summary.due],
-                ] as const
-              ).map(([label, value]) => (
-                <div key={label} className="bg-card p-4">
-                  <p className="text-xl font-bold">{value}</p>
-                  <p className="text-xs text-muted-foreground">{label}</p>
+            {(() => {
+              const edital = pcacEditalMatch(course.title);
+              const hits = topArticles(course.slug, "all", 999).reduce((t, x) => t + x.n, 0);
+              const heat = hits >= 12 ? ["alta", "Cai muito em prova"] : hits >= 4 ? ["media", "Cai com frequência"] : hits > 0 ? ["baixa", "Já caiu em prova"] : null;
+              const pct = Math.round((100 * summary.read) / Math.max(current.length, 1));
+              return (
+                <div className="lcx-head__grid">
+                  <div className="lcx-head__main">
+                    <p className="lcx-kicker">Percurso de legislação</p>
+                    <h1>{course.title}</h1>
+                    <div className="lcx-chips">
+                      {heat && (
+                        <span className="lcx-chip" data-heat={heat[0]} title={`${hits} questões das provas da plataforma citam artigos desta lei`}>
+                          <Flame aria-hidden /> {heat[1]} · {hits} questões
+                        </span>
+                      )}
+                      {edital && (
+                        <span className="lcx-chip" data-tone="edital" title={`${edital.text}\nCargos: ${edital.cargos.join(", ")}`}>
+                          Edital PC-AC · {edital.discipline} · item {edital.item}
+                        </span>
+                      )}
+                      {coverage && (
+                        <span className="lcx-chip">
+                          {coverage.explained}/{coverage.total_units} artigos explicados
+                        </span>
+                      )}
+                    </div>
+                    <p className="lcx-intro">{course.overview.intro}</p>
+                  </div>
+                  <div className="lcx-stats" aria-label="Seu progresso nesta lei">
+                    <div className="lcx-ring" style={{ "--p": pct } as CSSProperties}>
+                      <b>{pct}%</b>
+                      <small>lidos</small>
+                    </div>
+                    <dl>
+                      <div><dt>Lidos</dt><dd>{summary.read}/{current.length}</dd></div>
+                      <div><dt>Fixados</dt><dd>{summary.practiced}</dd></div>
+                      <div><dt>Dificuldades</dt><dd>{summary.difficult}</dd></div>
+                      <div><dt>Revisões</dt><dd>{summary.due}</dd></div>
+                    </dl>
+                  </div>
                 </div>
-              ))}
-            </div>
-            <progress
-              className="block h-1.5 w-full accent-primary"
-              max={Math.max(current.length, 1)}
-              value={summary.read}
-              aria-label="Dispositivos lidos"
-            />
+              );
+            })()}
           </header>
         )}
         {!fm.focus && (

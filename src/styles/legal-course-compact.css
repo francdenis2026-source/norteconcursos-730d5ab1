@@ -1,0 +1,37 @@
+/* Percurso de legislação · cabeçalho compacto, selos de cobrança e correlação com o edital */
+.lcx-head { border-radius: 14px !important; }
+.lcx-head__grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 14px 18px; }
+.lcx-kicker { margin: 0; font-size: 10.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--primary, #e5b85e); }
+.lcx-head h1 { margin: 2px 0 6px; font-size: clamp(1.25rem, 2vw, 1.625rem); font-weight: 750; line-height: 1.15; letter-spacing: -.015em; text-wrap: balance; }
+.lcx-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.lcx-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in oklab, currentColor 18%, transparent);
+  background: color-mix(in oklab, currentColor 5%, transparent); font-size: 11.5px; font-weight: 650; line-height: 1.3; white-space: nowrap; }
+.lcx-chip svg { width: 12px; height: 12px; }
+.lcx-chip[data-heat="alta"] { color: #f87171; border-color: rgb(248 113 113 / .45); background: rgb(248 113 113 / .1); }
+.lcx-chip[data-heat="media"] { color: #fbbf24; border-color: rgb(251 191 36 / .45); background: rgb(251 191 36 / .1); }
+.lcx-chip[data-heat="baixa"] { color: #93c5fd; border-color: rgb(147 197 253 / .4); background: rgb(147 197 253 / .08); }
+.lcx-chip[data-tone="edital"] { color: #4ade80; border-color: rgb(74 222 128 / .45); background: rgb(74 222 128 / .1); }
+.lcx-intro { margin: 0; max-width: 78ch; font-size: 13.5px; line-height: 1.5; color: var(--muted-foreground); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.lcx-stats { display: flex; align-items: center; gap: 14px; padding: 10px 14px; border-radius: 12px; border: 1px solid color-mix(in oklab, currentColor 12%, transparent); background: color-mix(in oklab, currentColor 3%, transparent); }
+.lcx-ring { --p: 0; position: relative; display: grid; place-items: center; align-content: center; width: 58px; height: 58px; flex: none; border-radius: 50%;
+  background: conic-gradient(var(--primary, #e5b85e) calc(var(--p) * 1%), color-mix(in oklab, currentColor 12%, transparent) 0); }
+.lcx-ring::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; background: var(--card, #111a24); }
+.lcx-ring b, .lcx-ring small { position: relative; line-height: 1; }
+.lcx-ring b { font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.lcx-ring small { margin-top: 2px; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; opacity: .7; }
+.lcx-stats dl { display: grid; grid-template-columns: repeat(2, auto); gap: 4px 18px; margin: 0; }
+.lcx-stats dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.lcx-stats dt { font-size: 11.5px; color: var(--muted-foreground); }
+.lcx-stats dd { margin: 0; font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; }
+html:root:not(.dark) .lcx-chip[data-heat="alta"] { color: #b42318; }
+html:root:not(.dark) .lcx-chip[data-heat="media"] { color: #92400e; }
+html:root:not(.dark) .lcx-chip[data-heat="baixa"] { color: #1d4ed8; }
+html:root:not(.dark) .lcx-chip[data-tone="edital"] { color: #166534; }
+@media (max-width: 760px) {
+  .lcx-head__grid { grid-template-columns: 1fr; padding: 12px; gap: 10px; }
+  .lcx-stats { justify-content: space-between; }
+  .lcx-chip { white-space: normal; }
+}
+/* Barra de modos e aviso de atualização mais baixos */
+.lcx-head ~ [role="group"][aria-label="Modo de estudo"] { padding: 4px !important; gap: 4px !important; border-radius: 12px !important; }
+.lcx-head ~ [role="group"][aria-label="Modo de estudo"] :is(button, a) { height: 34px !important; padding: 0 12px !important; font-size: 13px !important; }
