@@ -1363,6 +1363,12 @@ select.nsel-src{display:none!important}
 .nsel-o:hover,.nsel-o.hv{background:rgba(229,184,94,.14)}
 .nsel-o[aria-selected=true]{background:rgba(229,184,94,.22);font-weight:700}
 .nsel-o[aria-selected=true]::after{content:"";width:6px;height:11px;border:solid #e5b85e;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);flex:none}
+
+/* Treino no painel lateral: cronômetro + Pausar na primeira linha, Consultar teoria + Encerrar na segunda; botões numa linha só */
+.qside .trainbox{display:grid!important;grid-template-columns:1fr 1fr;align-items:center;gap:8px!important;padding:10px!important;font-size:13px!important}
+.qside .trainbox>span:first-child{display:flex;flex-direction:column;gap:2px;line-height:1.15;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.qside .trainbox>span:first-child b{font-size:18px;letter-spacing:0;color:var(--ink);text-transform:none}
+.qside .trainbox button{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:36px!important;padding:0 8px!important;white-space:nowrap;font-size:12.5px!important;font-weight:700;border-radius:9px;line-height:1}
 </style>
 <script>
 try{if(window.parent!==window)document.documentElement.classList.add('emb')}catch(e){}
