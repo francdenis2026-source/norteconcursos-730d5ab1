@@ -53,6 +53,7 @@ import "@/styles/student-home-layout.css";
 import "@/styles/student-calm.css";
 import "@/styles/mobile-fit.css";
 import "@/styles/student-topbar-redesign.css";
+import "@/styles/student-hero-mobile.css";
 import {
   DashboardNavigation,
   navigationActive as isActive,
