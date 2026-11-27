@@ -1391,3 +1391,12 @@ html body .qx .qx-chip {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Desktop: a barra superior fica escondida no treinador (trainer-no-topbar.css), mas o cartão fixo
+   ainda começava 64px abaixo dela, deixando uma faixa escura vazia no topo. Sem barra, o cartão
+   começa no topo da janela. No celular a barra permanece e o espaço é mantido. */
+@media (min-width: 900px) {
+  html body .app-shell[data-area="student"]:has(.qx):not(#_):not(#_):not(#_):not(#_) .qx .qx-card {
+    top: 0 !important;
+  }
+}
