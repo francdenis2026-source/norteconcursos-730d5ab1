@@ -1058,7 +1058,7 @@ button,.btn,.b1,.b2,.tabs button,.xs,.link{min-height:44px}
 .row{padding:14px}.nv{min-height:48px;font-size:16px}
 .top button,.tools button,.sbt{min-width:44px;min-height:44px}
 main{padding:8px 8px 14px!important}
-.top{height:auto!important;min-height:48px;padding:calc(6px + env(safe-area-inset-top,0px)) 8px 6px!important;gap:6px!important;flex-wrap:nowrap}
+.top{height:auto!important;min-height:48px;padding:6px 8px!important;gap:6px!important;flex-wrap:nowrap}
 .top .crumbs{min-width:0;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px}
 .tools{gap:4px!important;flex-shrink:0}
 .tools .acflag{width:26px}
@@ -1075,6 +1075,28 @@ main>p.muted .link{display:inline-flex;align-items:center;min-height:36px;paddin
 .opt{padding:10px 11px!important}
 .orow{gap:6px!important}
 .orow .xs{padding:4px 8px!important;min-height:36px;font-size:12.5px!important;flex-shrink:0}
+}
+html.dark .tabs{background:#141d2a!important;border-color:#26344a!important}
+html.dark .tabs button{background:transparent!important;color:#a3b3c6!important}
+html.dark .tabs button.on,html.dark .tabs button[aria-selected=true],html.dark .tabs button.act{background:#2a2415!important;color:#e5b85e!important}
+html.dark .macete,html.dark .dica{background:#2a2415!important;border-color:#4a3d1c!important;border-left-color:#e5b85e!important;color:#eaf0f7!important}
+html.dark .exemplo{background:#14261f!important;border-color:#24473a!important;border-left-color:#5fbf8f!important;color:#eaf0f7!important}
+html.dark .wex{background:#12221d!important;border-color:#24473a!important;color:#eaf0f7!important}
+html.dark .rec{background:#241f12!important;border-color:#4a3d1c!important;color:#eaf0f7!important}
+html.dark .wex-q{background:#141d2a!important;border-color:#26344a!important;color:#eaf0f7!important}
+html.dark :is(.macete,.dica,.exemplo,.wex,.rec) :is(p,li,span,div,b,strong,em,h3,h4){color:inherit}
+html.dark :is(.macete,.dica,.exemplo,.wex,.rec) :is(b,strong){color:#fff}
+html.dark .macete b:first-child,html.dark .exemplo b:first-child{color:#e5b85e}
+@media(max-width:760px){
+main .card,main .gc,main section.card{padding:14px 12px!important;border-radius:14px}
+main p,main li{line-height:1.6!important;text-align:left!important;overflow-wrap:break-word;hyphens:manual}
+main p,main li,main .sub{font-size:16.5px}
+main ul,main ol{padding-left:22px!important;margin:8px 0}
+main h2{font-size:19px!important;line-height:1.3!important;margin:16px 0 8px!important}
+main h3{font-size:17.5px!important;line-height:1.3!important;margin:14px 0 6px!important}
+.macete,.dica,.exemplo{padding:10px 12px!important;margin:10px 0!important}
+.wex,.rec{padding:4px 12px 10px!important;margin:12px 0!important}
+.wex-q{padding:10px 12px!important}
 }
 @media(max-width:760px){
 .row{display:grid!important;grid-template-columns:34px minmax(0,1fr)!important;gap:6px 10px!important;align-items:start!important;text-align:left}
