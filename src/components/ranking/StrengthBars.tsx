@@ -7,7 +7,7 @@ export function parseStrengths(v: unknown): Strength[] {
   if (!Array.isArray(v)) return [];
   return v
     .filter((x): x is Strength => !!x && typeof x.s === "string" && Number.isFinite(x.pct) && Number.isFinite(x.n))
-    .map((x) => ({ s: x.s.trim(), pct: Math.max(0, Math.min(100, Math.round(x.pct))), n: Math.max(0, Math.round(x.n)), c: Number.isFinite(x.c) ? Math.max(0, Math.round(x.c as number)) : undefined }))
+    .map((x) => ({ s: x.s.trim(), pct: Math.max(0, Math.min(100, Math.round(x.pct))), n: Math.max(0, Math.round(x.n)), ...(Number.isFinite(x.c) ? { c: Math.max(0, Math.round(x.c as number)) } : {}) }))
     .filter((x) => x.s);
 }
 
