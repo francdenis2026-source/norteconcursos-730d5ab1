@@ -1,0 +1,41 @@
+/* Homepage · camada final de refinamento (desktop): um só raio, sombras leves, cartões na proporção certa. */
+@media (min-width: 1024px) {
+  html body :is(#inicio, #plataforma, #desafio-diario-home, #concursos, #ranking-destaque, #planos) { --hr-r: 14px; }
+  html body #inicio :is(.sx-hero__panel, .sx-daily),
+  html body #plataforma .sx-card,
+  html body #desafio-diario-home .hd__inner,
+  html body #concursos .sx-exam,
+  html body #ranking-destaque :is(.hra-hero-cta, .rka-podium__card),
+  html body #planos .home-plan {
+    border-radius: var(--hr-r) !important;
+    box-shadow: 0 1px 0 rgb(255 255 255 / .05) inset, 0 12px 28px -22px rgb(0 0 0 / .7) !important;
+  }
+  html body #plataforma .sx-card { padding: 16px 18px !important; }
+  html body #plataforma .sx-card:hover, html body #concursos .sx-exam:hover, html body #planos .home-plan:hover { transform: translateY(-2px) !important; }
+
+  /* Numeração grande dos recursos: marca d'água discreta */
+  html body #plataforma .sx-card::after { font-size: 2.25rem !important; opacity: .18 !important; }
+
+  /* Concursos: foto menor, cartão mais denso */
+  html body #concursos .sx-exam > img { height: 150px !important; aspect-ratio: auto !important; object-fit: cover !important; }
+  html body #concursos .sx-exam__body { padding: 14px 16px !important; gap: 6px !important; }
+
+  /* Desafio diário: bloco menos alto */
+  html body #desafio-diario-home .hd__inner { min-height: 0 !important; }
+  html body #desafio-diario-home .hd__media { max-height: 380px; overflow: hidden; }
+  html body #desafio-diario-home .hd__media img { height: 100% !important; object-fit: cover; }
+
+  /* Planos: introdução compacta, foto discreta, preço em destaque */
+  html body #planos .home-plans__intro { padding-block: 0 !important; margin-bottom: 18px !important; gap: 20px !important; }
+  html body #planos .home-plans__intro h2 { font-size: clamp(1.75rem, 2.6vw, 2.25rem) !important; line-height: 1.1 !important; }
+  html body #planos .home-plan { padding: 16px !important; gap: 8px !important; }
+  html body #planos .home-plan__media { height: 72px !important; border-radius: 10px !important; overflow: hidden; }
+  html body #planos .home-plan__media img { height: 100% !important; object-fit: cover; object-position: 50% 30%; }
+  html body #planos .hr-plan-icon { display: none !important; }
+  html body #planos .home-plan__description { font-size: 13px !important; line-height: 1.4 !important; }
+  html body #planos .home-plan--featured { outline: 1px solid rgb(229 184 94 / .7); outline-offset: -1px; }
+
+  /* Seções: respiro uniforme */
+  html body :is(#plataforma, #desafio-diario-home, #concursos, #ranking-destaque, #planos) { padding-block: 28px !important; }
+}
+@media (prefers-reduced-motion: reduce) { html body :is(#plataforma .sx-card, #concursos .sx-exam, #planos .home-plan):hover { transform: none !important; } }
