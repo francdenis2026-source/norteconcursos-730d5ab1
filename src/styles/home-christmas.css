@@ -1,86 +1,98 @@
-/* Tema de Natal da homepage: faixa sazonal + neve leve. Ativo só de 1/12 a 6/1 (ver christmas.config.ts). */
+/* Tema de Natal da homepage: banner flutuante + neve leve. Ativo só de 1/12 a 6/1 (ver christmas.config.ts). */
 
-.xmas-banner {
-  position: relative;
-  z-index: 20;
-  background: linear-gradient(135deg, oklch(0.22 0.05 150) 0%, oklch(0.16 0.04 160) 60%, oklch(0.13 0.02 200) 100%);
-  border-bottom: 1px solid var(--gold-400);
-  color: oklch(0.97 0.01 90);
+.xmas-fab {
+  position: fixed;
+  right: 14px;
+  bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
 }
 
-.xmas-banner__inner {
+.xmas-fab__card,
+.xmas-fab__chip {
+  border-radius: 16px;
+  box-shadow: 0 14px 30px -14px oklch(0.1 0.02 230 / 55%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.xmas-fab__card {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.6rem 1rem;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.6rem;
+  width: min(300px, calc(100vw - 28px));
+  padding: 0.85rem 0.9rem;
+  background: linear-gradient(160deg, oklch(0.2 0.05 150) 0%, oklch(0.15 0.04 160) 55%, oklch(0.12 0.02 210) 100%);
+  border: 1px solid var(--gold-400);
+  color: oklch(0.97 0.01 90);
+  animation: xmas-fab-in 0.3s ease-out;
 }
 
-.xmas-banner__icon {
+.xmas-fab__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.1rem;
+  height: 2.1rem;
   flex-shrink: 0;
   border-radius: 999px;
   background: var(--gold-metal);
   color: var(--gold-ink);
 }
 
-.xmas-banner__icon svg {
+.xmas-fab__icon svg {
   width: 1.1rem;
   height: 1.1rem;
 }
 
-.xmas-banner__text {
+.xmas-fab__text {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.35rem;
   flex: 1 1 auto;
   min-width: 0;
-}
-
-.xmas-banner__headline {
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.xmas-banner__summary {
   font-size: 0.82rem;
-  color: oklch(0.88 0.02 90);
+  line-height: 1.35;
 }
 
-.xmas-banner__cta {
+.xmas-fab__text strong {
+  font-size: 0.88rem;
+}
+
+.xmas-fab__text span {
+  color: oklch(0.86 0.02 90);
+}
+
+.xmas-fab__cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.9rem;
+  gap: 0.35rem;
+  align-self: flex-start;
+  margin-top: 0.15rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 999px;
   background: var(--gold-metal);
   color: var(--gold-ink);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   white-space: nowrap;
   text-decoration: none;
-  flex-shrink: 0;
 }
 
-.xmas-banner__cta:hover {
+.xmas-fab__cta:hover {
   background: var(--gold-metal-hover);
 }
 
-.xmas-banner__cta svg {
-  width: 1rem;
-  height: 1rem;
+.xmas-fab__cta svg {
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
-.xmas-banner__close {
+.xmas-fab__close {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
   border-radius: 999px;
   border: none;
@@ -89,18 +101,59 @@
   cursor: pointer;
 }
 
-.xmas-banner__close svg {
+.xmas-fab__close svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.xmas-fab__close:hover {
+  background: oklch(1 0 0 / 18%);
+}
+
+.xmas-fab__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--gold-400);
+  background: oklch(0.18 0.03 160 / 90%);
+  color: var(--gold-300);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.xmas-fab__chip svg {
   width: 0.9rem;
   height: 0.9rem;
 }
 
-.xmas-banner__close:hover {
-  background: oklch(1 0 0 / 18%);
+.xmas-fab__chip:hover {
+  background: oklch(0.22 0.04 160 / 95%);
 }
 
-@media (max-width: 640px) {
-  .xmas-banner__summary {
-    display: none;
+@keyframes xmas-fab-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xmas-fab__card {
+    animation: none;
+  }
+}
+
+/* No mobile a navegação inferior é fixa: sobe o widget para não sobrepor. */
+@media (max-width: 768px) {
+  .xmas-fab {
+    right: 10px;
+    bottom: calc(82px + env(safe-area-inset-bottom, 0px));
   }
 }
 
