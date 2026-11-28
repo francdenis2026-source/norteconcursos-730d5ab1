@@ -1,0 +1,162 @@
+/* Tema de Natal da homepage: faixa sazonal + neve leve. Ativo só de 1/12 a 6/1 (ver christmas.config.ts). */
+
+.xmas-banner {
+  position: relative;
+  z-index: 20;
+  background: linear-gradient(135deg, oklch(0.22 0.05 150) 0%, oklch(0.16 0.04 160) 60%, oklch(0.13 0.02 200) 100%);
+  border-bottom: 1px solid var(--gold-400);
+  color: oklch(0.97 0.01 90);
+}
+
+.xmas-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  flex-wrap: wrap;
+}
+
+.xmas-banner__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--gold-metal);
+  color: var(--gold-ink);
+}
+
+.xmas-banner__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.xmas-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.xmas-banner__headline {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.xmas-banner__summary {
+  font-size: 0.82rem;
+  color: oklch(0.88 0.02 90);
+}
+
+.xmas-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--gold-metal);
+  color: var(--gold-ink);
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.xmas-banner__cta:hover {
+  background: var(--gold-metal-hover);
+}
+
+.xmas-banner__cta svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.xmas-banner__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: none;
+  background: oklch(1 0 0 / 10%);
+  color: inherit;
+  cursor: pointer;
+}
+
+.xmas-banner__close svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.xmas-banner__close:hover {
+  background: oklch(1 0 0 / 18%);
+}
+
+@media (max-width: 640px) {
+  .xmas-banner__summary {
+    display: none;
+  }
+}
+
+/* Neve leve: decorativa, não interfere em cliques nem em telas pequenas pesa demais. */
+.xmas-snow {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.xmas-snow__flake {
+  position: absolute;
+  top: -5vh;
+  left: calc((var(--xi) * 7.3%) + 2%);
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 999px;
+  background: oklch(0.95 0.01 90 / 70%);
+  box-shadow: 0 0 4px oklch(0.95 0.01 90 / 50%);
+  animation: xmas-fall linear infinite;
+  animation-duration: calc(11s + (var(--xi) * 1.3s));
+  animation-delay: calc(var(--xi) * -0.9s);
+}
+
+@keyframes xmas-fall {
+  0% {
+    transform: translateY(-5vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(105vh) translateX(2.5rem);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .xmas-snow__flake:nth-child(n + 8) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xmas-snow {
+    display: none;
+  }
+}
+
+:root[data-theme="light"] .xmas-banner {
+  background: linear-gradient(135deg, oklch(0.26 0.05 150) 0%, oklch(0.2 0.04 160) 60%, oklch(0.16 0.02 200) 100%);
+}
