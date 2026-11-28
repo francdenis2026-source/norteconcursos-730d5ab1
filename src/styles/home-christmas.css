@@ -183,20 +183,25 @@
   position: absolute;
   top: -5vh;
   left: calc((var(--xi) * 7.3%) + 2%);
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 999px;
-  background: oklch(0.98 0 0 / 90%);
-  box-shadow: 0 0 6px oklch(0.98 0 0 / 70%);
+  color: oklch(0.98 0 0 / 55%);
+  font-size: 0.75rem;
+  line-height: 1;
   animation: xmas-fall linear infinite;
-  animation-duration: calc(10s + (var(--xi) * 1.3s));
+  animation-duration: calc(12s + (var(--xi) * 1.3s));
   animation-delay: calc(var(--xi) * -0.9s);
 }
 
+.xmas-snow__flake::before {
+  content: "\2744\FE0E";
+}
+
 .xmas-snow__flake:nth-child(odd) {
-  width: 0.3rem;
-  height: 0.3rem;
-  box-shadow: 0 0 4px oklch(0.98 0 0 / 55%);
+  font-size: 0.55rem;
+  color: oklch(0.98 0 0 / 40%);
+}
+
+.xmas-snow__flake:nth-child(3n)::before {
+  content: "\2746\FE0E";
 }
 
 @keyframes xmas-fall {
@@ -205,13 +210,13 @@
     opacity: 0;
   }
   10% {
-    opacity: 0.95;
+    opacity: 0.8;
   }
   90% {
-    opacity: 0.75;
+    opacity: 0.6;
   }
   100% {
-    transform: translateY(105vh) translateX(2.5rem) rotate(90deg);
+    transform: translateY(105vh) translateX(2.5rem) rotate(180deg);
     opacity: 0;
   }
 }
