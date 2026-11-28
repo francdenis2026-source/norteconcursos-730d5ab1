@@ -23,6 +23,7 @@ import "@/styles/student-hero-v3.css";
 import "@/styles/student-hero-tech.css";
 import "@/styles/student-image-clarity.css";
 import "@/styles/student-dash-refine.css";
+import "@/styles/student-home-tight.css";
 import {
   CHART_RANGES,
   dailyAnswerSeries,
