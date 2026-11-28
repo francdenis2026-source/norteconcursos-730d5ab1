@@ -90,3 +90,15 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__art { width:62% !important }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx { min-height:112px !important }
 }
+
+/* Ajuste: cartão do concurso fora do rosto da policial (coluna da direita fica livre para a foto). */
+@media (min-width: 900px) {
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx { grid-template-columns:minmax(0,1fr) auto minmax(0,28%) !important;column-gap:16px !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__card { grid-column:2 !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__art { width:28% !important;min-width:0 !important;object-position:50% 12% !important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%) !important;mask-image:linear-gradient(90deg,transparent 0,#000 30%) !important }
+}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx::before { background:linear-gradient(90deg,rgb(7 13 24 / .97) 0%,rgb(7 13 24 / .9) 68%,rgb(7 13 24 / 0) 100%) !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form { height:30px !important;padding:0 3px 0 10px !important;gap:6px !important;border:1px solid var(--border) !important;border-radius:999px !important;background:var(--card) !important;box-shadow:none !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form input { height:100% !important;min-height:0 !important;margin:0 !important;padding:0 !important;border:0 !important;border-radius:0 !important;background:transparent !important;box-shadow:none !important;outline:0 !important;font-size:12px !important;color:var(--foreground) !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form button { width:24px !important;min-width:24px !important;height:24px !important;min-height:0 !important;margin:0 !important;padding:0 !important;border:0 !important;border-radius:999px !important;background:var(--primary) !important;color:var(--primary-foreground) !important;box-shadow:none !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form > svg { width:14px !important;height:14px !important }
