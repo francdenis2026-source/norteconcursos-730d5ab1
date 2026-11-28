@@ -102,3 +102,13 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form input { height:100% !important;min-height:0 !important;margin:0 !important;padding:0 !important;border:0 !important;border-radius:0 !important;background:transparent !important;box-shadow:none !important;outline:0 !important;font-size:12px !important;color:var(--foreground) !important }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form button { width:24px !important;min-width:24px !important;height:24px !important;min-height:0 !important;margin:0 !important;padding:0 !important;border:0 !important;border-radius:999px !important;background:var(--primary) !important;color:var(--primary-foreground) !important;box-shadow:none !important }
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form > svg { width:14px !important;height:14px !important }
+
+/* Ícone do botão de código: um estilo global de svg.lucide sobrescrevia a cor (ficava roxo sobre dourado). */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form button svg { color:var(--primary-foreground) !important;stroke:var(--primary-foreground) !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .qcl-mini__form > svg { color:var(--muted-foreground) !important;stroke:var(--muted-foreground) !important }
+
+/* Corrige quebra de palavra no meio ("Sem resp / ostas") quando o valor do indicador é um texto longo. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi strong { overflow-wrap:normal !important;word-break:normal !important;hyphens:none !important }
+@media (max-width: 640px) {
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi strong { font-size:1.05rem !important;line-height:1.2 !important }
+}

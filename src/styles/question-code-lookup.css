@@ -268,3 +268,15 @@
 .qcl__close:hover { background: var(--border); color: var(--foreground); }
 .qcl__close svg { width: 1rem; height: 1rem; }
 @media (max-width: 520px) { .qcl-mini { flex-basis: 11rem; } }
+
+/* Resultado da consulta como modal compacto e centralizado, sempre dentro da janela. */
+html body .app-shell .qcl-mini__overlay { position: fixed !important; inset: 0 !important; z-index: 1000 !important; display: grid !important; place-items: center !important; padding: 1rem !important; background: rgb(5 10 18 / 0.6) !important; backdrop-filter: blur(3px); }
+html body .app-shell .qcl-mini__pop { position: relative !important; inset: auto !important; top: auto !important; right: auto !important; width: min(30rem, 100%) !important; max-height: min(80dvh, 34rem) !important; overflow: auto !important; border-radius: 14px !important; box-shadow: 0 24px 60px -20px rgb(0 0 0 / .7) !important; }
+html body .app-shell .qcl-mini__pop .qcl__card { padding: 1rem 1.1rem !important; gap: .7rem !important; border-radius: 14px !important; }
+html body .app-shell .qcl-mini__pop * { text-transform: none !important; letter-spacing: normal !important; }
+html body .app-shell .qcl-mini__pop .qcl__meta { padding-right: 2rem !important; font-size: .78rem !important; }
+html body .app-shell .qcl-mini__pop .qcl__meta code { letter-spacing: .05em !important; }
+html body .app-shell .qcl-mini__pop .qcl__stem { font-size: .95rem !important; line-height: 1.5 !important; color: var(--card-foreground) !important; }
+html body .app-shell .qcl-mini__pop .qcl__options li { padding: .5rem .7rem !important; font-size: .9rem !important; }
+html body .app-shell .qcl-mini__pop .qcl__cta { min-height: 2.3rem !important; padding: 0 .9rem !important; font-size: .88rem !important; }
+html body .app-shell .qcl-mini__pop .qcl__msg { background: var(--card) !important; }

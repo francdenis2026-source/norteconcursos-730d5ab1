@@ -194,7 +194,19 @@ export function QuestionCodeLookup({
             )}
           </button>
         </form>
-        {(message || question) && <div className="qcl-mini__pop">{resultNode}</div>}
+        {(message || question) && (
+          <div
+            className="qcl-mini__overlay"
+            onClick={(event) => {
+              if (event.target === event.currentTarget) {
+                setQuestion(null);
+                setMessage(null);
+              }
+            }}
+          >
+            <div className="qcl-mini__pop">{resultNode}</div>
+          </div>
+        )}
       </div>
     );
   }
