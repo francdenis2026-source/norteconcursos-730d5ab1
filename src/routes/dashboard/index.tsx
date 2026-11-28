@@ -35,6 +35,7 @@ import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/S
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
+import { QuestionCodeLookup } from "@/components/questions/QuestionCodeLookup";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -491,7 +492,9 @@ function StudentHome({ user }: { user: UserProfile }) {
         />
       </section>
 
-      <SectionLabel step={2} title="Acesso rápido" />
+      <SectionLabel step={2} title="Acesso rápido">
+        <QuestionCodeLookup variant="compact" />
+      </SectionLabel>
       <nav className="ncx-tiles" aria-label="Acesso rápido">
         {destinations.map(({ to, title, text, image, icon: Icon }, i) => (
           <Link
@@ -961,12 +964,23 @@ function StudentHome({ user }: { user: UserProfile }) {
 
 const tileTones = ["gold", "teal", "blue", "violet", "amber", "rose"] as const;
 
-function SectionLabel({ title, id }: { step?: number; title: string; text?: string; id?: string }) {
+function SectionLabel({
+  title,
+  id,
+  children,
+}: {
+  step?: number;
+  title: string;
+  text?: string;
+  id?: string;
+  children?: React.ReactNode;
+}) {
   return (
     <div className="sh2-label sh2-label--compact">
       <p className="sh2-label__title" id={id}>
         {title}
       </p>
+      {children}
     </div>
   );
 }

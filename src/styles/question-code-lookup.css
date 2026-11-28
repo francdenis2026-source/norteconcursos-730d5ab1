@@ -196,3 +196,75 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* Versão discreta (Área do aluno): campo de uma linha; o resultado abre em painel flutuante. */
+.qcl-mini { position: relative; margin-left: auto; flex: 0 1 15rem; min-width: 0; }
+.qcl-mini__form {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 1.9rem;
+  padding: 0 0.2rem 0 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted-foreground);
+}
+.qcl-mini__form:focus-within { border-color: var(--foreground); }
+.qcl-mini__form > svg { width: 0.85rem; height: 0.85rem; flex: none; }
+.qcl-mini__form input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--foreground);
+  font: 600 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.06em;
+}
+.qcl-mini__form input::placeholder { font-family: inherit; font-weight: 500; letter-spacing: 0; color: var(--muted-foreground); }
+.qcl-mini__form button {
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  cursor: pointer;
+}
+.qcl-mini__form button svg { width: 0.8rem; height: 0.8rem; }
+.qcl-mini__form button:disabled { opacity: 0.45; cursor: not-allowed; }
+.qcl-mini__form button:focus-visible { outline: 2px solid var(--foreground); outline-offset: 2px; }
+.qcl-mini__pop {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  width: min(34rem, calc(100vw - 2rem));
+  max-height: min(70vh, 32rem);
+  overflow: auto;
+  border-radius: 0.9rem;
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.55);
+}
+.qcl-mini__pop .qcl__card, .qcl-mini__pop .qcl__msg { background: var(--card); position: relative; }
+.qcl__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+.qcl__close:hover { background: var(--border); color: var(--foreground); }
+.qcl__close svg { width: 1rem; height: 1rem; }
+@media (max-width: 520px) { .qcl-mini { flex-basis: 11rem; } }
