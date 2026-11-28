@@ -67,3 +67,26 @@ html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):
 @media (min-width: 1100px) {
 html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tiles { grid-template-columns:repeat(6,minmax(0,1fr)) !important }
 }
+
+/* Ajuste: um pouco mais alto e com o rosto da policial visível na faixa. */
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx { min-height:96px !important;padding:12px 18px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__title { font-size:clamp(1.2rem,1.6vw + .8rem,1.6rem) !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__hello { font-size:11px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__art { left:auto !important;right:0 !important;width:min(52%,640px) !important;height:100% !important;object-fit:cover !important;object-position:50% 14% !important;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%) !important;mask-image:linear-gradient(90deg,transparent 0,#000 38%) !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__card { padding:8px 12px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__who h2 { font-size:1rem !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi { padding:11px 14px !important;gap:11px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi > svg { width:32px !important;height:32px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi strong { font-size:1.45rem !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-kpi small { font-size:11px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile { height:72px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile__icon { width:30px !important;height:30px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile__icon svg { width:16px !important;height:16px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile strong { font-size:13.5px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile small { font-size:11.5px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .ncx-tile__body { padding:8px 11px !important;column-gap:10px !important }}
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .sh2-label__title { font-size:13px !important }}
+@media (max-width: 899px) {
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx__art { width:62% !important }
+html body .app-shell[data-area]:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .student-home.sh2 .hx { min-height:112px !important }
+}
