@@ -57,7 +57,6 @@ import "@/styles/general-access-banner.css";
 import { FullscreenToggle } from "@/components/landing/FullscreenToggle";
 import { GeneralAccessBanner } from "@/components/landing/GeneralAccessBanner";
 import { ChristmasBanner } from "@/components/landing/ChristmasBanner";
-import { ChristmasSnow } from "@/components/landing/ChristmasSnow";
 import "@/styles/home-christmas.css";
 import { BetaNotice } from "@/components/landing/BetaNotice";
 import { NorteBrand } from "@/components/brand/NorteBrand";
@@ -178,7 +177,6 @@ function Index() {
   return (
     <div className="home home-recomposition hr-canvas">
       <HomeDesktopFx />
-      <ChristmasSnow />
       <PublicAchievementSignal />
       <a href="#conteudo" className="home-skip home-skip--desktop">
         Pular para o conteúdo
