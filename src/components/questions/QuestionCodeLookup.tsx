@@ -1,6 +1,17 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { insertTrainerAnswer } from "@/lib/trainerAnswerQueue";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { ArrowRight, Eye, Loader2, LogIn, Search, X } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Eye,
+  Loader2,
+  LogIn,
+  Search,
+  Timer,
+  X,
+  XCircle,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/components/auth/AuthStatusProvider";
 import { questionCode, isQuestionTable } from "@/lib/questionIdentity";
@@ -34,13 +45,83 @@ export function QuestionCodeLookup({
   /** "compact": campo discreto de uma linha para a Área do aluno; o resultado abre em um painel flutuante. */
   variant?: "section" | "compact";
 }) {
-  const { isAuthenticated } = useAuthStatus();
+  const { isAuthenticated, user } = useAuthStatus();
+  const [selected, setSelected] = useState<string | null>(null);
+  const [result, setResult] = useState<{ correct: boolean; answer: string; first: boolean } | null>(
+    null,
+  );
+  const [saving, setSaving] = useState(false);
+  const [elapsed, setElapsed] = useState(0);
+  const startedRef = useRef(0);
   const navigate = useNavigate();
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [opening, setOpening] = useState(false);
   const [question, setQuestion] = useState<PublicQuestion | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+
+  const canAnswer = variant === "compact" && isAuthenticated && !!user;
+  useEffect(() => {
+    setSelected(null);
+    setResult(null);
+    setElapsed(0);
+    if (!question || !canAnswer) return;
+    startedRef.current = Date.now();
+    const id = window.setInterval(() => {
+      if (document.visibilityState === "visible")
+        setElapsed(Math.floor((Date.now() - startedRef.current) / 1000));
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, [question, canAnswer]);
+
+  const submitAnswer = async () => {
+    if (!question || !selected || !user || saving || result) return;
+    setSaving(true);
+    setMessage(null);
+    try {
+      const { data, error } = await supabase.rpc("resolve_question_short_code", {
+        p_code: question.code,
+      });
+      if (error) throw error;
+      const ref = Array.isArray(data) ? data[0] : data;
+      if (!ref || !isQuestionTable(ref.question_table)) throw new Error("code-not-resolved");
+      const id = crypto.randomUUID();
+      const seconds = Math.max(1, Math.round((Date.now() - startedRef.current) / 1000));
+      const err = await insertTrainerAnswer({
+        id,
+        user_id: user.id,
+        question_id: ref.question_id,
+        question_source: ref.question_table === "curated_question_catalog" ? "curated" : "official",
+        question_table: ref.question_table,
+        contest_name: question.contest,
+        subject: question.subject,
+        selected_answer: selected,
+        official_answer: selected, // o servidor substitui pelo gabarito oficial
+        is_correct: false, // o servidor recalcula
+        asked_for_help: false,
+        topic: null,
+        response_seconds: seconds,
+      });
+      if (err) throw err;
+      const { data: row, error: readError } = await supabase
+        .from("question_training_responses")
+        .select("is_correct,official_answer,ranking_first")
+        .eq("id", id)
+        .maybeSingle();
+      if (readError || !row) throw readError ?? new Error("answer-not-confirmed");
+      setResult({
+        correct: !!row.is_correct,
+        answer: String(row.official_answer),
+        first: !!(row as { ranking_first?: boolean }).ranking_first,
+      });
+      setElapsed(seconds);
+    } catch (error) {
+      console.error("Falha ao responder por código", error);
+      setMessage("Não foi possível registrar sua resposta. Tente novamente.");
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const search = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -119,6 +200,12 @@ export function QuestionCodeLookup({
           )}
           <div className="qcl__meta">
             <code>{question.code}</code>
+            {canAnswer && (
+              <span className="qcl__timer" aria-label="Tempo nesta questão">
+                <Timer aria-hidden="true" /> {String(Math.floor(elapsed / 60)).padStart(2, "0")}:
+                {String(elapsed % 60).padStart(2, "0")}
+              </span>
+            )}
             <span>{meta}</span>
           </div>
           {question.support_text && <p className="qcl__support">{question.support_text}</p>}
@@ -130,29 +217,90 @@ export function QuestionCodeLookup({
           )}
           <ol className="qcl__options">
             {Object.entries(question.options).map(([letter, text]) => (
-              <li key={letter}>
+              <li
+                key={letter}
+                data-state={
+                  result
+                    ? letter === result.answer
+                      ? "right"
+                      : letter === selected
+                        ? "wrong"
+                        : undefined
+                    : letter === selected
+                      ? "picked"
+                      : undefined
+                }
+                onClick={canAnswer && !result ? () => setSelected(letter) : undefined}
+                role={canAnswer ? "button" : undefined}
+                tabIndex={canAnswer && !result ? 0 : undefined}
+                onKeyDown={
+                  canAnswer && !result
+                    ? (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setSelected(letter);
+                        }
+                      }
+                    : undefined
+                }
+              >
                 <b>{letter}</b>
                 <span>{text}</span>
               </li>
             ))}
           </ol>
           <footer className="qcl__foot">
-            <span className="qcl__ro">
-              <Eye aria-hidden="true" /> Somente leitura · o gabarito não é exibido
-            </span>
-            {isAuthenticated ? (
-              <button type="button" className="qcl__cta" onClick={answer} disabled={opening}>
-                {opening ? (
-                  <Loader2 className="qcl__spin" aria-hidden="true" />
-                ) : (
-                  <ArrowRight aria-hidden="true" />
-                )}
-                Responder esta questão
-              </button>
+            {canAnswer ? (
+              result ? (
+                <span className={`qcl__verdict ${result.correct ? "is-right" : "is-wrong"}`}>
+                  {result.correct ? (
+                    <CheckCircle2 aria-hidden="true" />
+                  ) : (
+                    <XCircle aria-hidden="true" />
+                  )}
+                  {result.correct ? "Acertou" : `Errou · gabarito ${result.answer}`}
+                  {!result.first && " · já respondida antes (não pontua de novo)"}
+                </span>
+              ) : (
+                <>
+                  <span className="qcl__ro">
+                    {selected ? `Marcada: ${selected}` : "Escolha uma alternativa"}
+                  </span>
+                  <button
+                    type="button"
+                    className="qcl__cta"
+                    onClick={submitAnswer}
+                    disabled={!selected || saving}
+                  >
+                    {saving ? (
+                      <Loader2 className="qcl__spin" aria-hidden="true" />
+                    ) : (
+                      <CheckCircle2 aria-hidden="true" />
+                    )}
+                    Confirmar resposta
+                  </button>
+                </>
+              )
             ) : (
-              <Link to="/auth" className="qcl__cta">
-                <LogIn aria-hidden="true" /> Entrar para responder
-              </Link>
+              <>
+                <span className="qcl__ro">
+                  <Eye aria-hidden="true" /> Somente leitura · o gabarito não é exibido
+                </span>
+                {isAuthenticated ? (
+                  <button type="button" className="qcl__cta" onClick={answer} disabled={opening}>
+                    {opening ? (
+                      <Loader2 className="qcl__spin" aria-hidden="true" />
+                    ) : (
+                      <ArrowRight aria-hidden="true" />
+                    )}
+                    Responder esta questão
+                  </button>
+                ) : (
+                  <Link to="/auth" className="qcl__cta">
+                    <LogIn aria-hidden="true" /> Entrar para responder
+                  </Link>
+                )}
+              </>
             )}
           </footer>
         </article>

@@ -280,3 +280,15 @@ html body .app-shell .qcl-mini__pop .qcl__stem { font-size: .95rem !important; l
 html body .app-shell .qcl-mini__pop .qcl__options li { padding: .5rem .7rem !important; font-size: .9rem !important; }
 html body .app-shell .qcl-mini__pop .qcl__cta { min-height: 2.3rem !important; padding: 0 .9rem !important; font-size: .88rem !important; }
 html body .app-shell .qcl-mini__pop .qcl__msg { background: var(--card) !important; }
+
+html body .app-shell .qcl__timer { display:inline-flex !important;align-items:center !important;gap:.3rem !important;padding:.1rem .5rem !important;border-radius:999px !important;background:var(--muted) !important;color:var(--foreground) !important;font:600 .78rem/1.4 ui-monospace,monospace !important;font-variant-numeric:tabular-nums }
+html body .app-shell .qcl__timer svg { width:.85rem !important;height:.85rem !important;color:currentColor !important }
+html body .app-shell .qcl-mini__pop .qcl__options li[role="button"] { cursor:pointer }
+html body .app-shell .qcl-mini__pop .qcl__options li[role="button"]:hover { border-color:var(--primary) !important }
+html body .app-shell .qcl-mini__pop .qcl__options li[data-state="picked"] { border-color:var(--primary) !important;background:color-mix(in srgb,var(--primary) 14%,transparent) !important }
+html body .app-shell .qcl-mini__pop .qcl__options li[data-state="right"] { border-color:#22c55e !important;background:rgb(34 197 94 / .14) !important }
+html body .app-shell .qcl-mini__pop .qcl__options li[data-state="wrong"] { border-color:#ef4444 !important;background:rgb(239 68 68 / .14) !important }
+html body .app-shell .qcl__verdict { display:inline-flex !important;align-items:center !important;gap:.4rem !important;font-weight:700 !important;font-size:.9rem !important }
+html body .app-shell .qcl__verdict svg { width:1.1rem !important;height:1.1rem !important;color:currentColor !important }
+html body .app-shell .qcl__verdict.is-right { color:#22c55e !important }
+html body .app-shell .qcl__verdict.is-wrong { color:#ef4444 !important }
