@@ -1,4 +1,4 @@
-/* Tema de Natal da homepage: banner flutuante + neve leve. Ativo só de 1/12 a 6/1 (ver christmas.config.ts). */
+/* Tema de Natal da homepage: banner flutuante + neve leve. Ativo de 27/11 a 6/1 (ver christmas.config.ts). */
 
 .xmas-fab {
   position: fixed;
@@ -10,21 +10,33 @@
 .xmas-fab__card,
 .xmas-fab__chip {
   border-radius: 16px;
-  box-shadow: 0 14px 30px -14px oklch(0.1 0.02 230 / 55%);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 34px -14px oklch(0.15 0.1 25 / 55%);
 }
 
 .xmas-fab__card {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
   width: min(300px, calc(100vw - 28px));
-  padding: 0.85rem 0.9rem;
-  background: linear-gradient(160deg, oklch(0.2 0.05 150) 0%, oklch(0.15 0.04 160) 55%, oklch(0.12 0.02 210) 100%);
+  padding: 1rem 0.9rem 0.85rem;
+  background: linear-gradient(160deg, oklch(0.32 0.14 25) 0%, oklch(0.24 0.11 20) 55%, oklch(0.26 0.1 150) 100%);
   border: 1px solid var(--gold-400);
-  color: oklch(0.97 0.01 90);
+  color: oklch(0.98 0.01 90);
   animation: xmas-fab-in 0.3s ease-out;
+  overflow: hidden;
+}
+
+.xmas-fab__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    oklch(0.65 0.2 25) 0 10px,
+    oklch(0.96 0.01 90) 10px 20px
+  );
 }
 
 .xmas-fab__icon {
@@ -59,7 +71,7 @@
 }
 
 .xmas-fab__text span {
-  color: oklch(0.86 0.02 90);
+  color: oklch(0.92 0.02 90);
 }
 
 .xmas-fab__cta {
@@ -96,7 +108,7 @@
   flex-shrink: 0;
   border-radius: 999px;
   border: none;
-  background: oklch(1 0 0 / 10%);
+  background: oklch(1 0 0 / 14%);
   color: inherit;
   cursor: pointer;
 }
@@ -107,7 +119,7 @@
 }
 
 .xmas-fab__close:hover {
-  background: oklch(1 0 0 / 18%);
+  background: oklch(1 0 0 / 22%);
 }
 
 .xmas-fab__chip {
@@ -116,8 +128,8 @@
   gap: 0.35rem;
   padding: 0.55rem 0.9rem;
   border: 1px solid var(--gold-400);
-  background: oklch(0.18 0.03 160 / 90%);
-  color: var(--gold-300);
+  background: linear-gradient(135deg, oklch(0.32 0.14 25) 0%, oklch(0.26 0.1 150) 100%);
+  color: oklch(0.96 0.02 90);
   font-weight: 700;
   font-size: 0.8rem;
   cursor: pointer;
@@ -129,7 +141,7 @@
 }
 
 .xmas-fab__chip:hover {
-  background: oklch(0.22 0.04 160 / 95%);
+  filter: brightness(1.1);
 }
 
 @keyframes xmas-fab-in {
@@ -157,7 +169,7 @@
   }
 }
 
-/* Neve leve: decorativa, não interfere em cliques nem em telas pequenas pesa demais. */
+/* Neve: decorativa, não interfere em cliques. Flocos em dois tamanhos para dar profundidade. */
 .xmas-snow {
   position: fixed;
   inset: 0;
@@ -171,29 +183,35 @@
   position: absolute;
   top: -5vh;
   left: calc((var(--xi) * 7.3%) + 2%);
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: oklch(0.98 0 0 / 90%);
+  box-shadow: 0 0 6px oklch(0.98 0 0 / 70%);
+  animation: xmas-fall linear infinite;
+  animation-duration: calc(10s + (var(--xi) * 1.3s));
+  animation-delay: calc(var(--xi) * -0.9s);
+}
+
+.xmas-snow__flake:nth-child(odd) {
   width: 0.3rem;
   height: 0.3rem;
-  border-radius: 999px;
-  background: oklch(0.95 0.01 90 / 70%);
-  box-shadow: 0 0 4px oklch(0.95 0.01 90 / 50%);
-  animation: xmas-fall linear infinite;
-  animation-duration: calc(11s + (var(--xi) * 1.3s));
-  animation-delay: calc(var(--xi) * -0.9s);
+  box-shadow: 0 0 4px oklch(0.98 0 0 / 55%);
 }
 
 @keyframes xmas-fall {
   0% {
-    transform: translateY(-5vh) translateX(0);
+    transform: translateY(-5vh) translateX(0) rotate(0deg);
     opacity: 0;
   }
   10% {
-    opacity: 0.8;
+    opacity: 0.95;
   }
   90% {
-    opacity: 0.6;
+    opacity: 0.75;
   }
   100% {
-    transform: translateY(105vh) translateX(2.5rem);
+    transform: translateY(105vh) translateX(2.5rem) rotate(90deg);
     opacity: 0;
   }
 }
@@ -208,8 +226,4 @@
   .xmas-snow {
     display: none;
   }
-}
-
-:root[data-theme="light"] .xmas-banner {
-  background: linear-gradient(135deg, oklch(0.26 0.05 150) 0%, oklch(0.2 0.04 160) 60%, oklch(0.16 0.02 200) 100%);
 }
