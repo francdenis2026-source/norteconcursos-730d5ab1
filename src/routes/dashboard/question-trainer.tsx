@@ -141,6 +141,7 @@ import "@/styles/trainer-mobile-refine.css";
 import "@/styles/trainer-paused.css";
 import "@/styles/trainer-exam-focus.css";
 import "@/styles/trainer-setup-compact.css";
+import { QuestionCodeLookup } from "@/components/questions/QuestionCodeLookup";
 import "@/styles/trainer-no-topbar.css";
 import "@/styles/trainer-question-v2.css";
 import { useEditalIncidence } from "@/hooks/useEditalIncidence";
@@ -2224,6 +2225,7 @@ function TrainerSetup({
           </span>
         </p>
       </header>
+      <QuestionCodeLookup />
 
       <div className="qs-body">
         <section className="qs-col" aria-labelledby="qs-what">

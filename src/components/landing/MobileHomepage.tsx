@@ -6,6 +6,7 @@ import { PcacBanner } from "@/components/landing/PcacBanner";
 import "@/styles/mobile-home-v3.css";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { HomeRankingShowcase } from "@/components/landing/HomeRankingShowcase";
+import { QuestionCodeLookup } from "@/components/questions/QuestionCodeLookup";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { TESTING_LABEL, TESTING_PHASE } from "@/lib/launch.config";
 
@@ -37,6 +38,7 @@ export function MobileHomepage() {
       <section id="mobile-concursos" className="sx-section" aria-label="Concursos em foco">
         <ContestShowcase mobile />
       </section>
+      <QuestionCodeLookup />
       <HomeRankingShowcase anchorId="ranking-destaque-mobile" />
       <section id="mobile-planos" className="mhx-section mhx-plans" aria-labelledby="mobile-plans-title">
         <header className="mhx-sec-head">

@@ -1,0 +1,198 @@
+/* Consulta de questão por código. Usa só tokens semânticos do tema (claro e escuro). */
+.qcl {
+  padding: clamp(1.5rem, 4vw, 3rem) 1rem;
+}
+.qcl__inner {
+  margin-inline: auto;
+  max-width: 46rem;
+  display: grid;
+  gap: 1rem;
+}
+.qcl__head h2 {
+  margin: 0.4rem 0 0.35rem;
+  font-size: clamp(1.25rem, 3.4vw, 1.75rem);
+  line-height: 1.2;
+  color: var(--foreground);
+}
+.qcl__head p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.qcl__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.qcl__tag svg,
+.qcl__ro svg {
+  width: 1rem;
+  height: 1rem;
+}
+.qcl__form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.qcl__form input {
+  flex: 1 1 14rem;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: var(--card);
+  color: var(--card-foreground);
+  font: 600 1rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+}
+.qcl__form input:focus-visible,
+.qcl__form button:focus-visible,
+.qcl__cta:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+.qcl__form button,
+.qcl__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.qcl__form button:disabled,
+.qcl__cta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.qcl__form button svg,
+.qcl__cta svg {
+  width: 1rem;
+  height: 1rem;
+}
+.qcl__spin {
+  animation: qcl-spin 0.9s linear infinite;
+}
+@keyframes qcl-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qcl__spin {
+    animation: none;
+  }
+}
+.qcl__msg {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  color: var(--muted-foreground);
+  font-size: 0.92rem;
+}
+.qcl__card {
+  display: grid;
+  gap: 0.85rem;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--card);
+  color: var(--card-foreground);
+}
+.qcl__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+.qcl__meta code {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  color: var(--foreground);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.qcl__support,
+.qcl__stem {
+  margin: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.qcl__support {
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--border);
+  color: var(--muted-foreground);
+  font-size: 0.93rem;
+}
+.qcl__stem {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.qcl__note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+.qcl__options {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.qcl__options li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.qcl__options b {
+  flex: none;
+  min-width: 1.4rem;
+  color: var(--muted-foreground);
+}
+.qcl__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.qcl__ro {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--muted-foreground);
+}
+.qcl__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

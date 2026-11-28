@@ -71,6 +71,7 @@ import { MobileHomepage } from "@/components/landing/MobileHomepage";
 import { HomeDesktopFx } from "@/components/landing/HomeDesktopFx";
 import { HomePromo } from "@/components/landing/HomePromo";
 import { HomeDailyChallenge } from "@/components/landing/HomeDailyChallenge";
+import { QuestionCodeLookup } from "@/components/questions/QuestionCodeLookup";
 import "@/styles/home-refinement.css";
 import "@/styles/home-recomposition.css";
 import "@/styles/home-premium-system.css";
@@ -394,6 +395,7 @@ function Index() {
       <main id="conteudo" className="desktop-homepage hr-main" tabIndex={-1}>
         <HomeIntro />
         <HomeDailyChallenge />
+        <QuestionCodeLookup />
 
         <section id="concursos" className="sx-section" aria-label="Concursos em foco">
           <ContestShowcase />

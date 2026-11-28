@@ -331,6 +331,8 @@ function RankingPage() {
   const [pageData, setPageData] = React.useState<RankingPageData | null>(null);
   const [loadError, setLoadError] = React.useState(false);
   const [reload, setReload] = React.useState(0);
+  // Atualização automática: recarrega sem piscar a lista (só troca os dados quando chegam).
+  const silentReloadRef = React.useRef(false);
   const [viewing, setViewing] = React.useState<string | null>(null);
   const [locating, setLocating] = React.useState(false);
 
@@ -354,8 +356,12 @@ function RankingPage() {
       return;
     }
     let alive = true;
-    setPageData(null);
-    setLoadError(false);
+    const silent = silentReloadRef.current;
+    silentReloadRef.current = false;
+    if (!silent) {
+      setPageData(null);
+      setLoadError(false);
+    }
     const load = async () => {
       const { data, error } = await supabase.rpc("get_ranking_page", {
         _kind: kind,
@@ -379,12 +385,27 @@ function RankingPage() {
       }
     };
     void load().catch(() => {
-      if (alive) setLoadError(true);
+      if (alive && !silent) setLoadError(true);
     });
     return () => {
       alive = false;
     };
   }, [kind, period, real, isLoading, user?.id, search.page, search.size, search.q, reload]);
+
+  React.useEffect(() => {
+    if (isLoading || !real) return;
+    const refresh = () => {
+      if (document.visibilityState !== "visible") return;
+      silentReloadRef.current = true;
+      setReload((n) => n + 1);
+    };
+    const id = window.setInterval(refresh, 20_000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      window.clearInterval(id);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, [isLoading, real]);
 
   React.useEffect(() => {
     if (!locating || !pageData || !user) return;
